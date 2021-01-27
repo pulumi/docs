@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.managedservices.RegistrationDefi
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Registration definition.
-Latest API Version: 2019-09-01.
+API Version: 2019-09-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,26 +27,26 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var registrationDefinition = new AzureNextGen.ManagedServices.Latest.RegistrationDefinition("registrationDefinition", new AzureNextGen.ManagedServices.Latest.RegistrationDefinitionArgs
+        var registrationDefinition = new AzureNextGen.ManagedServices..RegistrationDefinition("registrationDefinition", new AzureNextGen.ManagedServices..RegistrationDefinitionArgs
         {
-            Plan = new AzureNextGen.ManagedServices.Latest.Inputs.PlanArgs
+            Plan = new AzureNextGen.ManagedServices..Inputs.PlanArgs
             {
                 Name = "addesai-plan",
                 Product = "test",
                 Publisher = "marketplace-test",
                 Version = "1.0.0",
             },
-            Properties = new AzureNextGen.ManagedServices.Latest.Inputs.RegistrationDefinitionPropertiesArgs
+            Properties = new AzureNextGen.ManagedServices..Inputs.RegistrationDefinitionPropertiesArgs
             {
                 Authorizations = 
                 {
-                    new AzureNextGen.ManagedServices.Latest.Inputs.AuthorizationArgs
+                    new AzureNextGen.ManagedServices..Inputs.AuthorizationArgs
                     {
                         PrincipalId = "f98d86a2-4cc4-4e9d-ad47-b3e80a1bcdfc",
                         PrincipalIdDisplayName = "Support User",
                         RoleDefinitionId = "acdd72a7-3385-48ef-bd42-f606fba81ae7",
                     },
-                    new AzureNextGen.ManagedServices.Latest.Inputs.AuthorizationArgs
+                    new AzureNextGen.ManagedServices..Inputs.AuthorizationArgs
                     {
                         DelegatedRoleDefinitionIds = 
                         {
@@ -78,7 +78,7 @@ class MyStack : Stack
 package main
 
 import (
-	managedservices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/managedservices/latest"
+	managedservices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/managedservices"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -131,21 +131,21 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-registration_definition = azure_nextgen.managedservices.latest.RegistrationDefinition("registrationDefinition",
-    plan=azure_nextgen.managedservices.latest.PlanArgs(
+registration_definition = azure_nextgen.managedservices.RegistrationDefinition("registrationDefinition",
+    plan=azure_nextgen.managedservices.PlanArgs(
         name="addesai-plan",
         product="test",
         publisher="marketplace-test",
         version="1.0.0",
     ),
-    properties=azure_nextgen.managedservices.latest.RegistrationDefinitionPropertiesArgs(
+    properties=azure_nextgen.managedservices.RegistrationDefinitionPropertiesArgs(
         authorizations=[
-            azure_nextgen.managedservices.latest.AuthorizationArgs(
+            azure_nextgen.managedservices.AuthorizationArgs(
                 principal_id="f98d86a2-4cc4-4e9d-ad47-b3e80a1bcdfc",
                 principal_id_display_name="Support User",
                 role_definition_id="acdd72a7-3385-48ef-bd42-f606fba81ae7",
             ),
-            azure_nextgen.managedservices.latest.AuthorizationArgs(
+            azure_nextgen.managedservices.AuthorizationArgs(
                 delegated_role_definition_ids=["b24988ac-6180-42a0-ab88-20f7382dd24c"],
                 principal_id="f98d86a2-4cc4-4e9d-ad47-b3e80a1bcdfc",
                 principal_id_display_name="User Access Administrator",
@@ -169,7 +169,7 @@ registration_definition = azure_nextgen.managedservices.latest.RegistrationDefin
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const registrationDefinition = new azure_nextgen.managedservices.latest.RegistrationDefinition("registrationDefinition", {
+const registrationDefinition = new azure_nextgen.managedservices.RegistrationDefinition("registrationDefinition", {
     plan: {
         name: "addesai-plan",
         product: "test",
@@ -409,7 +409,7 @@ The RegistrationDefinition resource accepts the following [input]({{< relref "/d
 <a href="#plan_csharp" style="color: inherit; text-decoration: inherit;">Plan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#plan">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Managed<wbr>Services.<wbr>Inputs.<wbr>Plan<wbr>Args</a></span>
+        <span class="property-type"><a href="#plan">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Managed<wbr>Services..<wbr>Inputs.<wbr>Plan<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Plan details for the managed services.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -418,7 +418,7 @@ The RegistrationDefinition resource accepts the following [input]({{< relref "/d
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#registrationdefinitionproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Managed<wbr>Services.<wbr>Inputs.<wbr>Registration<wbr>Definition<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#registrationdefinitionproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Managed<wbr>Services..<wbr>Inputs.<wbr>Registration<wbr>Definition<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties of a registration definition.{{% /md %}}</dd>
 </dl>
@@ -1390,7 +1390,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authorizations_csharp" style="color: inherit; text-decoration: inherit;">Authorizations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authorization">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Managed<wbr>Services.<wbr>Inputs.<wbr>Authorization<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#authorization">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Managed<wbr>Services..<wbr>Inputs.<wbr>Authorization<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Authorization tuple containing principal id of the user/security group or service principal and id of the build-in role.{{% /md %}}</dd>
     <dt class="property-required"
@@ -1560,7 +1560,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authorizations_csharp" style="color: inherit; text-decoration: inherit;">Authorizations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authorizationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Managed<wbr>Services.<wbr>Inputs.<wbr>Authorization<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#authorizationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Managed<wbr>Services..<wbr>Inputs.<wbr>Authorization<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Authorization tuple containing principal id of the user/security group or service principal and id of the build-in role.{{% /md %}}</dd>
     <dt class="property-required"
@@ -1796,7 +1796,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:managedservices/latest:RegistrationDefinition 26c128c2-fefa-4340-9bb1-6e081c90ada2 /subscriptions/0afefe50-734e-4610-8a82-a144ahf49dea/providers/Microsoft.ManagedServices/registrationDefinitions/26c128c2-fefa-4340-9bb1-6e081c90ada2 
+$ pulumi import azure-nextgen:managedservices:RegistrationDefinition 26c128c2-fefa-4340-9bb1-6e081c90ada2 /subscriptions/0afefe50-734e-4610-8a82-a144ahf49dea/providers/Microsoft.ManagedServices/registrationDefinitions/26c128c2-fefa-4340-9bb1-6e081c90ada2 
 ```
 
 

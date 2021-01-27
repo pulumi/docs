@@ -305,7 +305,7 @@ The following output properties are available:
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apimanagementserviceskupropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management.<wbr>Outputs.<wbr>Api<wbr>Management<wbr>Service<wbr>Sku<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#apimanagementserviceskupropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management..<wbr>Outputs.<wbr>Api<wbr>Management<wbr>Service<wbr>Sku<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}SKU properties of the API Management service.{{% /md %}}</dd>
     <dt class="property-"
@@ -332,7 +332,7 @@ The following output properties are available:
 <a href="#additionallocations_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Locations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionallocationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management.<wbr>Outputs.<wbr>Additional<wbr>Location<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#additionallocationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management..<wbr>Outputs.<wbr>Additional<wbr>Location<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Additional datacenter locations of the API Management service.{{% /md %}}</dd>
     <dt class="property-"
@@ -341,7 +341,7 @@ The following output properties are available:
 <a href="#apiversionconstraint_csharp" style="color: inherit; text-decoration: inherit;">Api<wbr>Version<wbr>Constraint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apiversionconstraintresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management.<wbr>Outputs.<wbr>Api<wbr>Version<wbr>Constraint<wbr>Response</a></span>
+        <span class="property-type"><a href="#apiversionconstraintresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management..<wbr>Outputs.<wbr>Api<wbr>Version<wbr>Constraint<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Control Plane Apis version constraint for the API Management service.{{% /md %}}</dd>
     <dt class="property-"
@@ -350,7 +350,7 @@ The following output properties are available:
 <a href="#certificates_csharp" style="color: inherit; text-decoration: inherit;">Certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificateconfigurationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management.<wbr>Outputs.<wbr>Certificate<wbr>Configuration<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#certificateconfigurationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management..<wbr>Outputs.<wbr>Certificate<wbr>Configuration<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of Certificates that need to be installed in the API Management service. Max supported certificates that can be installed is 10.{{% /md %}}</dd>
     <dt class="property-"
@@ -386,7 +386,7 @@ The following output properties are available:
 <a href="#hostnameconfigurations_csharp" style="color: inherit; text-decoration: inherit;">Hostname<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hostnameconfigurationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management.<wbr>Outputs.<wbr>Hostname<wbr>Configuration<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#hostnameconfigurationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management..<wbr>Outputs.<wbr>Hostname<wbr>Configuration<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Custom hostname configuration of the API Management service.{{% /md %}}</dd>
     <dt class="property-"
@@ -395,7 +395,7 @@ The following output properties are available:
 <a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apimanagementserviceidentityresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management.<wbr>Outputs.<wbr>Api<wbr>Management<wbr>Service<wbr>Identity<wbr>Response</a></span>
+        <span class="property-type"><a href="#apimanagementserviceidentityresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management..<wbr>Outputs.<wbr>Api<wbr>Management<wbr>Service<wbr>Identity<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Managed service identity of the Api Management service.{{% /md %}}</dd>
     <dt class="property-"
@@ -422,7 +422,7 @@ The following output properties are available:
 <a href="#virtualnetworkconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management.<wbr>Outputs.<wbr>Virtual<wbr>Network<wbr>Configuration<wbr>Response</a></span>
+        <span class="property-type"><a href="#virtualnetworkconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management..<wbr>Outputs.<wbr>Virtual<wbr>Network<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Virtual network configuration of the API Management service.{{% /md %}}</dd>
     <dt class="property-"
@@ -1350,7 +1350,7 @@ The following output properties are available:
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apimanagementserviceskupropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Api<wbr>Management<wbr>Service<wbr>Sku<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#apimanagementserviceskupropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management..<wbr>Inputs.<wbr>Api<wbr>Management<wbr>Service<wbr>Sku<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}SKU properties of the API Management service.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1368,7 +1368,7 @@ The following output properties are available:
 <a href="#virtualnetworkconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Virtual<wbr>Network<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnetworkconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management..<wbr>Inputs.<wbr>Virtual<wbr>Network<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Virtual network configuration for the location.{{% /md %}}</dd>
 </dl>
@@ -1624,7 +1624,7 @@ The following output properties are available:
 <a href="#userassignedidentities_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>User<wbr>Identity<wbr>Properties<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management..<wbr>Inputs.<wbr>User<wbr>Identity<wbr>Properties<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}The list of user identities associated with the resource. The user identity 
 dictionary key references will be ARM resource ids in the form: 
@@ -1963,7 +1963,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#certificate_csharp" style="color: inherit; text-decoration: inherit;">Certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificateinformationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Certificate<wbr>Information<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#certificateinformationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management..<wbr>Inputs.<wbr>Certificate<wbr>Information<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Certificate information.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2286,7 +2286,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#certificate_csharp" style="color: inherit; text-decoration: inherit;">Certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificateinformationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Certificate<wbr>Information<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#certificateinformationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management..<wbr>Inputs.<wbr>Certificate<wbr>Information<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Certificate information.{{% /md %}}</dd>
     <dt class="property-optional"

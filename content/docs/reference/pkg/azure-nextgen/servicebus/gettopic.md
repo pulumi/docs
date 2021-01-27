@@ -206,7 +206,7 @@ The following output properties are available:
 <a href="#countdetails_csharp" style="color: inherit; text-decoration: inherit;">Count<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#messagecountdetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Bus.<wbr>Outputs.<wbr>Message<wbr>Count<wbr>Details<wbr>Response</a></span>
+        <span class="property-type"><a href="#messagecountdetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Bus..<wbr>Outputs.<wbr>Message<wbr>Count<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Message count details{{% /md %}}</dd>
     <dt class="property-"

@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.eventgrid.SystemTopic resource w
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 EventGrid System Topic.
+API Version: 2020-04-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var systemTopic = new AzureNextGen.EventGrid.V20200401Preview.SystemTopic("systemTopic", new AzureNextGen.EventGrid.V20200401Preview.SystemTopicArgs
+        var systemTopic = new AzureNextGen.EventGrid..SystemTopic("systemTopic", new AzureNextGen.EventGrid..SystemTopicArgs
         {
             Location = "westus2",
             ResourceGroupName = "examplerg",
@@ -51,7 +52,7 @@ class MyStack : Stack
 package main
 
 import (
-	eventgrid "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/eventgrid/v20200401preview"
+	eventgrid "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/eventgrid"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -83,7 +84,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-system_topic = azure_nextgen.eventgrid.v20200401preview.SystemTopic("systemTopic",
+system_topic = azure_nextgen.eventgrid.SystemTopic("systemTopic",
     location="westus2",
     resource_group_name="examplerg",
     system_topic_name="exampleSystemTopic1",
@@ -102,7 +103,7 @@ system_topic = azure_nextgen.eventgrid.v20200401preview.SystemTopic("systemTopic
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const systemTopic = new azure_nextgen.eventgrid.v20200401preview.SystemTopic("systemTopic", {
+const systemTopic = new azure_nextgen.eventgrid.SystemTopic("systemTopic", {
     location: "westus2",
     resourceGroupName: "examplerg",
     systemTopicName: "exampleSystemTopic1",
@@ -758,7 +759,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:eventgrid/v20200401preview:SystemTopic exampleSystemTopic2 /subscriptions/5b4b650e-28b9-4790-b3ab-ddbd88d727c4/resourceGroups/examplerg/providers/Microsoft.EventGrid/systemTopics/exampleSystemTopic2 
+$ pulumi import azure-nextgen:eventgrid:SystemTopic exampleSystemTopic2 /subscriptions/5b4b650e-28b9-4790-b3ab-ddbd88d727c4/resourceGroups/examplerg/providers/Microsoft.EventGrid/systemTopics/exampleSystemTopic2 
 ```
 
 

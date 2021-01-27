@@ -260,7 +260,7 @@ The following output properties are available:
 <a href="#input_csharp" style="color: inherit; text-decoration: inherit;">Input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobinputassetresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Outputs.<wbr>Job<wbr>Input<wbr>Asset<wbr>Response</a> | <a href="#jobinputclipresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Outputs.<wbr>Job<wbr>Input<wbr>Clip<wbr>Response</a> | <a href="#jobinputhttpresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Outputs.<wbr>Job<wbr>Input<wbr>Http<wbr>Response</a> | <a href="#jobinputsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Outputs.<wbr>Job<wbr>Inputs<wbr>Response</a></span>
+        <span class="property-type"><a href="#jobinputassetresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Outputs.<wbr>Job<wbr>Input<wbr>Asset<wbr>Response</a> | <a href="#jobinputclipresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Outputs.<wbr>Job<wbr>Input<wbr>Clip<wbr>Response</a> | <a href="#jobinputhttpresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Outputs.<wbr>Job<wbr>Input<wbr>Http<wbr>Response</a> | <a href="#jobinputsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Outputs.<wbr>Job<wbr>Inputs<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The inputs for the Job.{{% /md %}}</dd>
     <dt class="property-"
@@ -287,7 +287,7 @@ The following output properties are available:
 <a href="#outputs_csharp" style="color: inherit; text-decoration: inherit;">Outputs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#joboutputassetresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Outputs.<wbr>Job<wbr>Output<wbr>Asset<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#joboutputassetresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Outputs.<wbr>Job<wbr>Output<wbr>Asset<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The outputs for the Job.{{% /md %}}</dd>
     <dt class="property-"
@@ -926,7 +926,7 @@ The following output properties are available:
 <a href="#details_csharp" style="color: inherit; text-decoration: inherit;">Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#joberrordetailresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Job<wbr>Error<wbr>Detail<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#joberrordetailresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Job<wbr>Error<wbr>Detail<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}An array of details about specific errors that led to this reported error.{{% /md %}}</dd>
     <dt class="property-required"
@@ -1128,7 +1128,7 @@ The following output properties are available:
 <a href="#end_csharp" style="color: inherit; text-decoration: inherit;">End</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#absolutecliptimeresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Absolute<wbr>Clip<wbr>Time<wbr>Response<wbr>Args</a> | <a href="#utccliptimeresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Utc<wbr>Clip<wbr>Time<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#absolutecliptimeresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Absolute<wbr>Clip<wbr>Time<wbr>Response<wbr>Args</a> | <a href="#utccliptimeresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Utc<wbr>Clip<wbr>Time<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines a point on the timeline of the input media at which processing will end. Defaults to the end of the input media.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1155,7 +1155,7 @@ The following output properties are available:
 <a href="#start_csharp" style="color: inherit; text-decoration: inherit;">Start</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#absolutecliptimeresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Absolute<wbr>Clip<wbr>Time<wbr>Response<wbr>Args</a> | <a href="#utccliptimeresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Utc<wbr>Clip<wbr>Time<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#absolutecliptimeresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Absolute<wbr>Clip<wbr>Time<wbr>Response<wbr>Args</a> | <a href="#utccliptimeresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Utc<wbr>Clip<wbr>Time<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines a point on the timeline of the input media at which processing will start. Defaults to the beginning of the input media.{{% /md %}}</dd>
 </dl>
@@ -1330,7 +1330,7 @@ The following output properties are available:
 <a href="#end_csharp" style="color: inherit; text-decoration: inherit;">End</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#absolutecliptimeresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Absolute<wbr>Clip<wbr>Time<wbr>Response<wbr>Args</a> | <a href="#utccliptimeresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Utc<wbr>Clip<wbr>Time<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#absolutecliptimeresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Absolute<wbr>Clip<wbr>Time<wbr>Response<wbr>Args</a> | <a href="#utccliptimeresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Utc<wbr>Clip<wbr>Time<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines a point on the timeline of the input media at which processing will end. Defaults to the end of the input media.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1357,7 +1357,7 @@ The following output properties are available:
 <a href="#start_csharp" style="color: inherit; text-decoration: inherit;">Start</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#absolutecliptimeresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Absolute<wbr>Clip<wbr>Time<wbr>Response<wbr>Args</a> | <a href="#utccliptimeresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Utc<wbr>Clip<wbr>Time<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#absolutecliptimeresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Absolute<wbr>Clip<wbr>Time<wbr>Response<wbr>Args</a> | <a href="#utccliptimeresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Utc<wbr>Clip<wbr>Time<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines a point on the timeline of the input media at which processing will start. Defaults to the beginning of the input media.{{% /md %}}</dd>
 </dl>
@@ -1514,7 +1514,7 @@ The following output properties are available:
 <a href="#end_csharp" style="color: inherit; text-decoration: inherit;">End</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#absolutecliptimeresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Absolute<wbr>Clip<wbr>Time<wbr>Response<wbr>Args</a> | <a href="#utccliptimeresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Utc<wbr>Clip<wbr>Time<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#absolutecliptimeresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Absolute<wbr>Clip<wbr>Time<wbr>Response<wbr>Args</a> | <a href="#utccliptimeresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Utc<wbr>Clip<wbr>Time<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines a point on the timeline of the input media at which processing will end. Defaults to the end of the input media.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1541,7 +1541,7 @@ The following output properties are available:
 <a href="#start_csharp" style="color: inherit; text-decoration: inherit;">Start</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#absolutecliptimeresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Absolute<wbr>Clip<wbr>Time<wbr>Response<wbr>Args</a> | <a href="#utccliptimeresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Utc<wbr>Clip<wbr>Time<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#absolutecliptimeresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Absolute<wbr>Clip<wbr>Time<wbr>Response<wbr>Args</a> | <a href="#utccliptimeresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Utc<wbr>Clip<wbr>Time<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines a point on the timeline of the input media at which processing will start. Defaults to the beginning of the input media.{{% /md %}}</dd>
 </dl>
@@ -1801,7 +1801,7 @@ The following output properties are available:
 <a href="#error_csharp" style="color: inherit; text-decoration: inherit;">Error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#joberrorresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Job<wbr>Error<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#joberrorresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Job<wbr>Error<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}If the JobOutput is in the Error state, it contains the details of the error.{{% /md %}}</dd>
     <dt class="property-required"

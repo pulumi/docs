@@ -215,7 +215,7 @@ The following output properties are available:
 <a href="#content_csharp" style="color: inherit; text-decoration: inherit;">Content</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#agreementcontentresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Outputs.<wbr>Agreement<wbr>Content<wbr>Response</a></span>
+        <span class="property-type"><a href="#agreementcontentresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Outputs.<wbr>Agreement<wbr>Content<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The agreement content.{{% /md %}}</dd>
     <dt class="property-"
@@ -233,7 +233,7 @@ The following output properties are available:
 <a href="#guestidentity_csharp" style="color: inherit; text-decoration: inherit;">Guest<wbr>Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#businessidentityresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Outputs.<wbr>Business<wbr>Identity<wbr>Response</a></span>
+        <span class="property-type"><a href="#businessidentityresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Outputs.<wbr>Business<wbr>Identity<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The business identity of the guest partner.{{% /md %}}</dd>
     <dt class="property-"
@@ -251,7 +251,7 @@ The following output properties are available:
 <a href="#hostidentity_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#businessidentityresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Outputs.<wbr>Business<wbr>Identity<wbr>Response</a></span>
+        <span class="property-type"><a href="#businessidentityresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Outputs.<wbr>Business<wbr>Identity<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The business identity of the host partner.{{% /md %}}</dd>
     <dt class="property-"
@@ -913,7 +913,7 @@ The following output properties are available:
 <a href="#receiveagreement_csharp" style="color: inherit; text-decoration: inherit;">Receive<wbr>Agreement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#as2onewayagreementresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>AS2One<wbr>Way<wbr>Agreement<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#as2onewayagreementresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>AS2One<wbr>Way<wbr>Agreement<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The AS2 one-way receive agreement.{{% /md %}}</dd>
     <dt class="property-required"
@@ -922,7 +922,7 @@ The following output properties are available:
 <a href="#sendagreement_csharp" style="color: inherit; text-decoration: inherit;">Send<wbr>Agreement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#as2onewayagreementresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>AS2One<wbr>Way<wbr>Agreement<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#as2onewayagreementresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>AS2One<wbr>Way<wbr>Agreement<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The AS2 one-way send agreement.{{% /md %}}</dd>
 </dl>
@@ -1860,7 +1860,7 @@ The following output properties are available:
 <a href="#protocolsettings_csharp" style="color: inherit; text-decoration: inherit;">Protocol<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#as2protocolsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>AS2Protocol<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#as2protocolsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>AS2Protocol<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The AS2 protocol settings.{{% /md %}}</dd>
     <dt class="property-required"
@@ -1869,7 +1869,7 @@ The following output properties are available:
 <a href="#receiverbusinessidentity_csharp" style="color: inherit; text-decoration: inherit;">Receiver<wbr>Business<wbr>Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#businessidentityresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>Business<wbr>Identity<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#businessidentityresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>Business<wbr>Identity<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The receiver business identity{{% /md %}}</dd>
     <dt class="property-required"
@@ -1878,7 +1878,7 @@ The following output properties are available:
 <a href="#senderbusinessidentity_csharp" style="color: inherit; text-decoration: inherit;">Sender<wbr>Business<wbr>Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#businessidentityresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>Business<wbr>Identity<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#businessidentityresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>Business<wbr>Identity<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The sender business identity{{% /md %}}</dd>
 </dl>
@@ -1999,7 +1999,7 @@ The following output properties are available:
 <a href="#acknowledgementconnectionsettings_csharp" style="color: inherit; text-decoration: inherit;">Acknowledgement<wbr>Connection<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#as2acknowledgementconnectionsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>AS2Acknowledgement<wbr>Connection<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#as2acknowledgementconnectionsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>AS2Acknowledgement<wbr>Connection<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The acknowledgement connection settings.{{% /md %}}</dd>
     <dt class="property-required"
@@ -2008,7 +2008,7 @@ The following output properties are available:
 <a href="#envelopesettings_csharp" style="color: inherit; text-decoration: inherit;">Envelope<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#as2envelopesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>AS2Envelope<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#as2envelopesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>AS2Envelope<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The envelope settings.{{% /md %}}</dd>
     <dt class="property-required"
@@ -2017,7 +2017,7 @@ The following output properties are available:
 <a href="#errorsettings_csharp" style="color: inherit; text-decoration: inherit;">Error<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#as2errorsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>AS2Error<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#as2errorsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>AS2Error<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The error settings.{{% /md %}}</dd>
     <dt class="property-required"
@@ -2026,7 +2026,7 @@ The following output properties are available:
 <a href="#mdnsettings_csharp" style="color: inherit; text-decoration: inherit;">Mdn<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#as2mdnsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>AS2Mdn<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#as2mdnsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>AS2Mdn<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The MDN settings.{{% /md %}}</dd>
     <dt class="property-required"
@@ -2035,7 +2035,7 @@ The following output properties are available:
 <a href="#messageconnectionsettings_csharp" style="color: inherit; text-decoration: inherit;">Message<wbr>Connection<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#as2messageconnectionsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>AS2Message<wbr>Connection<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#as2messageconnectionsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>AS2Message<wbr>Connection<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The message connection settings.{{% /md %}}</dd>
     <dt class="property-required"
@@ -2044,7 +2044,7 @@ The following output properties are available:
 <a href="#securitysettings_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#as2securitysettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>AS2Security<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#as2securitysettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>AS2Security<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The security settings.{{% /md %}}</dd>
     <dt class="property-required"
@@ -2053,7 +2053,7 @@ The following output properties are available:
 <a href="#validationsettings_csharp" style="color: inherit; text-decoration: inherit;">Validation<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#as2validationsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>AS2Validation<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#as2validationsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>AS2Validation<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The validation settings.{{% /md %}}</dd>
 </dl>
@@ -3064,7 +3064,7 @@ The following output properties are available:
 <a href="#as2_csharp" style="color: inherit; text-decoration: inherit;">AS2</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#as2agreementcontentresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>AS2Agreement<wbr>Content<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#as2agreementcontentresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>AS2Agreement<wbr>Content<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The AS2 agreement content.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3073,7 +3073,7 @@ The following output properties are available:
 <a href="#edifact_csharp" style="color: inherit; text-decoration: inherit;">Edifact</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactagreementcontentresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>Edifact<wbr>Agreement<wbr>Content<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#edifactagreementcontentresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>Edifact<wbr>Agreement<wbr>Content<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT agreement content.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3082,7 +3082,7 @@ The following output properties are available:
 <a href="#x12_csharp" style="color: inherit; text-decoration: inherit;">X12</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12agreementcontentresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>X12Agreement<wbr>Content<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#x12agreementcontentresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>X12Agreement<wbr>Content<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The X12 agreement content.{{% /md %}}</dd>
 </dl>
@@ -3733,7 +3733,7 @@ The following output properties are available:
 <a href="#receiveagreement_csharp" style="color: inherit; text-decoration: inherit;">Receive<wbr>Agreement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactonewayagreementresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>Edifact<wbr>One<wbr>Way<wbr>Agreement<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#edifactonewayagreementresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>Edifact<wbr>One<wbr>Way<wbr>Agreement<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT one-way receive agreement.{{% /md %}}</dd>
     <dt class="property-required"
@@ -3742,7 +3742,7 @@ The following output properties are available:
 <a href="#sendagreement_csharp" style="color: inherit; text-decoration: inherit;">Send<wbr>Agreement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactonewayagreementresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>Edifact<wbr>One<wbr>Way<wbr>Agreement<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#edifactonewayagreementresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>Edifact<wbr>One<wbr>Way<wbr>Agreement<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT one-way send agreement.{{% /md %}}</dd>
 </dl>
@@ -6938,7 +6938,7 @@ The following output properties are available:
 <a href="#protocolsettings_csharp" style="color: inherit; text-decoration: inherit;">Protocol<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactprotocolsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>Edifact<wbr>Protocol<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#edifactprotocolsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>Edifact<wbr>Protocol<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT protocol settings.{{% /md %}}</dd>
     <dt class="property-required"
@@ -6947,7 +6947,7 @@ The following output properties are available:
 <a href="#receiverbusinessidentity_csharp" style="color: inherit; text-decoration: inherit;">Receiver<wbr>Business<wbr>Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#businessidentityresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>Business<wbr>Identity<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#businessidentityresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>Business<wbr>Identity<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The receiver business identity{{% /md %}}</dd>
     <dt class="property-required"
@@ -6956,7 +6956,7 @@ The following output properties are available:
 <a href="#senderbusinessidentity_csharp" style="color: inherit; text-decoration: inherit;">Sender<wbr>Business<wbr>Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#businessidentityresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>Business<wbr>Identity<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#businessidentityresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>Business<wbr>Identity<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The sender business identity{{% /md %}}</dd>
 </dl>
@@ -7288,7 +7288,7 @@ The following output properties are available:
 <a href="#acknowledgementsettings_csharp" style="color: inherit; text-decoration: inherit;">Acknowledgement<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactacknowledgementsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>Edifact<wbr>Acknowledgement<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#edifactacknowledgementsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>Edifact<wbr>Acknowledgement<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT acknowledgement settings.{{% /md %}}</dd>
     <dt class="property-required"
@@ -7297,7 +7297,7 @@ The following output properties are available:
 <a href="#envelopesettings_csharp" style="color: inherit; text-decoration: inherit;">Envelope<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactenvelopesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>Edifact<wbr>Envelope<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#edifactenvelopesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>Edifact<wbr>Envelope<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT envelope settings.{{% /md %}}</dd>
     <dt class="property-required"
@@ -7306,7 +7306,7 @@ The following output properties are available:
 <a href="#framingsettings_csharp" style="color: inherit; text-decoration: inherit;">Framing<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactframingsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>Edifact<wbr>Framing<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#edifactframingsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>Edifact<wbr>Framing<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT framing settings.{{% /md %}}</dd>
     <dt class="property-required"
@@ -7315,7 +7315,7 @@ The following output properties are available:
 <a href="#messagefilter_csharp" style="color: inherit; text-decoration: inherit;">Message<wbr>Filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactmessagefilterresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>Edifact<wbr>Message<wbr>Filter<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#edifactmessagefilterresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>Edifact<wbr>Message<wbr>Filter<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT message filter.{{% /md %}}</dd>
     <dt class="property-required"
@@ -7324,7 +7324,7 @@ The following output properties are available:
 <a href="#processingsettings_csharp" style="color: inherit; text-decoration: inherit;">Processing<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactprocessingsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>Edifact<wbr>Processing<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#edifactprocessingsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>Edifact<wbr>Processing<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT processing Settings.{{% /md %}}</dd>
     <dt class="property-required"
@@ -7333,7 +7333,7 @@ The following output properties are available:
 <a href="#schemareferences_csharp" style="color: inherit; text-decoration: inherit;">Schema<wbr>References</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactschemareferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>Edifact<wbr>Schema<wbr>Reference<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#edifactschemareferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>Edifact<wbr>Schema<wbr>Reference<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT schema references.{{% /md %}}</dd>
     <dt class="property-required"
@@ -7342,7 +7342,7 @@ The following output properties are available:
 <a href="#validationsettings_csharp" style="color: inherit; text-decoration: inherit;">Validation<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactvalidationsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>Edifact<wbr>Validation<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#edifactvalidationsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>Edifact<wbr>Validation<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT validation settings.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -7351,7 +7351,7 @@ The following output properties are available:
 <a href="#edifactdelimiteroverrides_csharp" style="color: inherit; text-decoration: inherit;">Edifact<wbr>Delimiter<wbr>Overrides</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactdelimiteroverrideresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>Edifact<wbr>Delimiter<wbr>Override<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#edifactdelimiteroverrideresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>Edifact<wbr>Delimiter<wbr>Override<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT delimiter override settings.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -7360,7 +7360,7 @@ The following output properties are available:
 <a href="#envelopeoverrides_csharp" style="color: inherit; text-decoration: inherit;">Envelope<wbr>Overrides</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactenvelopeoverrideresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>Edifact<wbr>Envelope<wbr>Override<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#edifactenvelopeoverrideresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>Edifact<wbr>Envelope<wbr>Override<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT envelope override settings.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -7369,7 +7369,7 @@ The following output properties are available:
 <a href="#messagefilterlist_csharp" style="color: inherit; text-decoration: inherit;">Message<wbr>Filter<wbr>List</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactmessageidentifierresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>Edifact<wbr>Message<wbr>Identifier<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#edifactmessageidentifierresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>Edifact<wbr>Message<wbr>Identifier<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT message filter list.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -7378,7 +7378,7 @@ The following output properties are available:
 <a href="#validationoverrides_csharp" style="color: inherit; text-decoration: inherit;">Validation<wbr>Overrides</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactvalidationoverrideresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>Edifact<wbr>Validation<wbr>Override<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#edifactvalidationoverrideresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>Edifact<wbr>Validation<wbr>Override<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT validation override settings.{{% /md %}}</dd>
 </dl>
@@ -9243,7 +9243,7 @@ The following output properties are available:
 <a href="#receiveagreement_csharp" style="color: inherit; text-decoration: inherit;">Receive<wbr>Agreement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12onewayagreementresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>X12One<wbr>Way<wbr>Agreement<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#x12onewayagreementresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>X12One<wbr>Way<wbr>Agreement<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The X12 one-way receive agreement.{{% /md %}}</dd>
     <dt class="property-required"
@@ -9252,7 +9252,7 @@ The following output properties are available:
 <a href="#sendagreement_csharp" style="color: inherit; text-decoration: inherit;">Send<wbr>Agreement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12onewayagreementresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>X12One<wbr>Way<wbr>Agreement<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#x12onewayagreementresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>X12One<wbr>Way<wbr>Agreement<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The X12 one-way send agreement.{{% /md %}}</dd>
 </dl>
@@ -11404,7 +11404,7 @@ The following output properties are available:
 <a href="#protocolsettings_csharp" style="color: inherit; text-decoration: inherit;">Protocol<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12protocolsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>X12Protocol<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#x12protocolsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>X12Protocol<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The X12 protocol settings.{{% /md %}}</dd>
     <dt class="property-required"
@@ -11413,7 +11413,7 @@ The following output properties are available:
 <a href="#receiverbusinessidentity_csharp" style="color: inherit; text-decoration: inherit;">Receiver<wbr>Business<wbr>Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#businessidentityresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>Business<wbr>Identity<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#businessidentityresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>Business<wbr>Identity<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The receiver business identity{{% /md %}}</dd>
     <dt class="property-required"
@@ -11422,7 +11422,7 @@ The following output properties are available:
 <a href="#senderbusinessidentity_csharp" style="color: inherit; text-decoration: inherit;">Sender<wbr>Business<wbr>Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#businessidentityresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>Business<wbr>Identity<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#businessidentityresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>Business<wbr>Identity<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The sender business identity{{% /md %}}</dd>
 </dl>
@@ -11790,7 +11790,7 @@ The following output properties are available:
 <a href="#acknowledgementsettings_csharp" style="color: inherit; text-decoration: inherit;">Acknowledgement<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12acknowledgementsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>X12Acknowledgement<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#x12acknowledgementsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>X12Acknowledgement<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The X12 acknowledgment settings.{{% /md %}}</dd>
     <dt class="property-required"
@@ -11799,7 +11799,7 @@ The following output properties are available:
 <a href="#envelopesettings_csharp" style="color: inherit; text-decoration: inherit;">Envelope<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12envelopesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>X12Envelope<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#x12envelopesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>X12Envelope<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The X12 envelope settings.{{% /md %}}</dd>
     <dt class="property-required"
@@ -11808,7 +11808,7 @@ The following output properties are available:
 <a href="#framingsettings_csharp" style="color: inherit; text-decoration: inherit;">Framing<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12framingsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>X12Framing<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#x12framingsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>X12Framing<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The X12 framing settings.{{% /md %}}</dd>
     <dt class="property-required"
@@ -11817,7 +11817,7 @@ The following output properties are available:
 <a href="#messagefilter_csharp" style="color: inherit; text-decoration: inherit;">Message<wbr>Filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12messagefilterresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>X12Message<wbr>Filter<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#x12messagefilterresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>X12Message<wbr>Filter<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The X12 message filter.{{% /md %}}</dd>
     <dt class="property-required"
@@ -11826,7 +11826,7 @@ The following output properties are available:
 <a href="#processingsettings_csharp" style="color: inherit; text-decoration: inherit;">Processing<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12processingsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>X12Processing<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#x12processingsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>X12Processing<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The X12 processing settings.{{% /md %}}</dd>
     <dt class="property-required"
@@ -11835,7 +11835,7 @@ The following output properties are available:
 <a href="#schemareferences_csharp" style="color: inherit; text-decoration: inherit;">Schema<wbr>References</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12schemareferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>X12Schema<wbr>Reference<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#x12schemareferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>X12Schema<wbr>Reference<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The X12 schema references.{{% /md %}}</dd>
     <dt class="property-required"
@@ -11844,7 +11844,7 @@ The following output properties are available:
 <a href="#securitysettings_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12securitysettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>X12Security<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#x12securitysettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>X12Security<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The X12 security settings.{{% /md %}}</dd>
     <dt class="property-required"
@@ -11853,7 +11853,7 @@ The following output properties are available:
 <a href="#validationsettings_csharp" style="color: inherit; text-decoration: inherit;">Validation<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12validationsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>X12Validation<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#x12validationsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>X12Validation<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The X12 validation settings.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -11862,7 +11862,7 @@ The following output properties are available:
 <a href="#envelopeoverrides_csharp" style="color: inherit; text-decoration: inherit;">Envelope<wbr>Overrides</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12envelopeoverrideresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>X12Envelope<wbr>Override<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#x12envelopeoverrideresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>X12Envelope<wbr>Override<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The X12 envelope override settings.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -11871,7 +11871,7 @@ The following output properties are available:
 <a href="#messagefilterlist_csharp" style="color: inherit; text-decoration: inherit;">Message<wbr>Filter<wbr>List</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12messageidentifierresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>X12Message<wbr>Identifier<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#x12messageidentifierresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>X12Message<wbr>Identifier<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The X12 message filter list.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -11880,7 +11880,7 @@ The following output properties are available:
 <a href="#validationoverrides_csharp" style="color: inherit; text-decoration: inherit;">Validation<wbr>Overrides</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12validationoverrideresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>X12Validation<wbr>Override<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#x12validationoverrideresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>X12Validation<wbr>Override<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The X12 validation override settings.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -11889,7 +11889,7 @@ The following output properties are available:
 <a href="#x12delimiteroverrides_csharp" style="color: inherit; text-decoration: inherit;">X12Delimiter<wbr>Overrides</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12delimiteroverridesresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>X12Delimiter<wbr>Overrides<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#x12delimiteroverridesresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>X12Delimiter<wbr>Overrides<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The X12 delimiter override settings.{{% /md %}}</dd>
 </dl>

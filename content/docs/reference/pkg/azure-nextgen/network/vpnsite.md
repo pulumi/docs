@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.network.VpnSite resource with ex
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 VpnSite Resource.
-Latest API Version: 2020-08-01.
+API Version: 2020-08-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,9 +27,9 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var vpnSite = new AzureNextGen.Network.Latest.VpnSite("vpnSite", new AzureNextGen.Network.Latest.VpnSiteArgs
+        var vpnSite = new AzureNextGen.Network..VpnSite("vpnSite", new AzureNextGen.Network..VpnSiteArgs
         {
-            AddressSpace = new AzureNextGen.Network.Latest.Inputs.AddressSpaceArgs
+            AddressSpace = new AzureNextGen.Network..Inputs.AddressSpaceArgs
             {
                 AddressPrefixes = 
                 {
@@ -38,9 +38,9 @@ class MyStack : Stack
             },
             IsSecuritySite = false,
             Location = "West US",
-            O365Policy = new AzureNextGen.Network.Latest.Inputs.O365PolicyPropertiesArgs
+            O365Policy = new AzureNextGen.Network..Inputs.O365PolicyPropertiesArgs
             {
-                BreakOutCategories = new AzureNextGen.Network.Latest.Inputs.O365BreakOutCategoryPoliciesArgs
+                BreakOutCategories = new AzureNextGen.Network..Inputs.O365BreakOutCategoryPoliciesArgs
                 {
                     Allow = true,
                     Default = false,
@@ -52,22 +52,22 @@ class MyStack : Stack
             {
                 { "key1", "value1" },
             },
-            VirtualWan = new AzureNextGen.Network.Latest.Inputs.SubResourceArgs
+            VirtualWan = new AzureNextGen.Network..Inputs.SubResourceArgs
             {
                 Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualWANs/wan1",
             },
             VpnSiteLinks = 
             {
-                new AzureNextGen.Network.Latest.Inputs.VpnSiteLinkArgs
+                new AzureNextGen.Network..Inputs.VpnSiteLinkArgs
                 {
-                    BgpProperties = new AzureNextGen.Network.Latest.Inputs.VpnLinkBgpSettingsArgs
+                    BgpProperties = new AzureNextGen.Network..Inputs.VpnLinkBgpSettingsArgs
                     {
                         Asn = 1234,
                         BgpPeeringAddress = "192.168.0.0",
                     },
                     Fqdn = "link1.vpnsite1.contoso.com",
                     IpAddress = "50.50.50.56",
-                    LinkProperties = new AzureNextGen.Network.Latest.Inputs.VpnLinkProviderPropertiesArgs
+                    LinkProperties = new AzureNextGen.Network..Inputs.VpnLinkProviderPropertiesArgs
                     {
                         LinkProviderName = "vendor1",
                         LinkSpeedInMbps = 0,
@@ -91,7 +91,7 @@ class MyStack : Stack
 package main
 
 import (
-	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network/latest"
+	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -153,14 +153,14 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-vpn_site = azure_nextgen.network.latest.VpnSite("vpnSite",
-    address_space=azure_nextgen.network.latest.AddressSpaceArgs(
+vpn_site = azure_nextgen.network.VpnSite("vpnSite",
+    address_space=azure_nextgen.network.AddressSpaceArgs(
         address_prefixes=["10.0.0.0/16"],
     ),
     is_security_site=False,
     location="West US",
-    o365_policy=azure_nextgen.network.latest.O365PolicyPropertiesArgs(
-        break_out_categories=azure_nextgen.network.latest.O365BreakOutCategoryPoliciesArgs(
+    o365_policy=azure_nextgen.network.O365PolicyPropertiesArgs(
+        break_out_categories=azure_nextgen.network.O365BreakOutCategoryPoliciesArgs(
             allow=True,
             default=False,
             optimize=True,
@@ -170,17 +170,17 @@ vpn_site = azure_nextgen.network.latest.VpnSite("vpnSite",
     tags={
         "key1": "value1",
     },
-    virtual_wan=azure_nextgen.network.latest.SubResourceArgs(
+    virtual_wan=azure_nextgen.network.SubResourceArgs(
         id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualWANs/wan1",
     ),
-    vpn_site_links=[azure_nextgen.network.latest.VpnSiteLinkArgs(
-        bgp_properties=azure_nextgen.network.latest.VpnLinkBgpSettingsArgs(
+    vpn_site_links=[azure_nextgen.network.VpnSiteLinkArgs(
+        bgp_properties=azure_nextgen.network.VpnLinkBgpSettingsArgs(
             asn=1234,
             bgp_peering_address="192.168.0.0",
         ),
         fqdn="link1.vpnsite1.contoso.com",
         ip_address="50.50.50.56",
-        link_properties=azure_nextgen.network.latest.VpnLinkProviderPropertiesArgs(
+        link_properties=azure_nextgen.network.VpnLinkProviderPropertiesArgs(
             link_provider_name="vendor1",
             link_speed_in_mbps=0,
         ),
@@ -198,7 +198,7 @@ vpn_site = azure_nextgen.network.latest.VpnSite("vpnSite",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const vpnSite = new azure_nextgen.network.latest.VpnSite("vpnSite", {
+const vpnSite = new azure_nextgen.network.VpnSite("vpnSite", {
     addressSpace: {
         addressPrefixes: ["10.0.0.0/16"],
     },
@@ -454,7 +454,7 @@ The VpnSite resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#addressspace_csharp" style="color: inherit; text-decoration: inherit;">Address<wbr>Space</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#addressspace">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Address<wbr>Space<wbr>Args</a></span>
+        <span class="property-type"><a href="#addressspace">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Address<wbr>Space<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The AddressSpace that contains an array of IP address ranges.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -463,7 +463,7 @@ The VpnSite resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#bgpproperties_csharp" style="color: inherit; text-decoration: inherit;">Bgp<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bgpsettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Bgp<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#bgpsettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Bgp<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The set of bgp properties.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -472,7 +472,7 @@ The VpnSite resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#deviceproperties_csharp" style="color: inherit; text-decoration: inherit;">Device<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deviceproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Device<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#deviceproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Device<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The device properties.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -508,7 +508,7 @@ The VpnSite resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#o365policy_csharp" style="color: inherit; text-decoration: inherit;">O365Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#o365policyproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>O365Policy<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#o365policyproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>O365Policy<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Office365 Policy.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -535,7 +535,7 @@ The VpnSite resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#virtualwan_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Wan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The VirtualWAN to which the vpnSite belongs.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -544,7 +544,7 @@ The VpnSite resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#vpnsitelinks_csharp" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Site<wbr>Links</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnsitelink">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Vpn<wbr>Site<wbr>Link<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#vpnsitelink">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Vpn<wbr>Site<wbr>Link<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of all vpn site links.{{% /md %}}</dd>
 </dl>
@@ -1320,7 +1320,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bgppeeringaddresses_csharp" style="color: inherit; text-decoration: inherit;">Bgp<wbr>Peering<wbr>Addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipconfigurationbgppeeringaddress">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>IPConfiguration<wbr>Bgp<wbr>Peering<wbr>Address<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#ipconfigurationbgppeeringaddress">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>IPConfiguration<wbr>Bgp<wbr>Peering<wbr>Address<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}BGP peering address with IP configuration ID for virtual network gateway.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1490,7 +1490,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bgppeeringaddresses_csharp" style="color: inherit; text-decoration: inherit;">Bgp<wbr>Peering<wbr>Addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipconfigurationbgppeeringaddressresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>IPConfiguration<wbr>Bgp<wbr>Peering<wbr>Address<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#ipconfigurationbgppeeringaddressresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>IPConfiguration<wbr>Bgp<wbr>Peering<wbr>Address<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}BGP peering address with IP configuration ID for virtual network gateway.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2446,7 +2446,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#breakoutcategories_csharp" style="color: inherit; text-decoration: inherit;">Break<wbr>Out<wbr>Categories</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#o365breakoutcategorypolicies">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>O365Break<wbr>Out<wbr>Category<wbr>Policies<wbr>Args</a></span>
+        <span class="property-type"><a href="#o365breakoutcategorypolicies">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>O365Break<wbr>Out<wbr>Category<wbr>Policies<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Office365 breakout categories.{{% /md %}}</dd>
 </dl>
@@ -2508,7 +2508,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#breakoutcategories_csharp" style="color: inherit; text-decoration: inherit;">Break<wbr>Out<wbr>Categories</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#o365breakoutcategorypoliciesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>O365Break<wbr>Out<wbr>Category<wbr>Policies<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#o365breakoutcategorypoliciesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>O365Break<wbr>Out<wbr>Category<wbr>Policies<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Office365 breakout categories.{{% /md %}}</dd>
 </dl>
@@ -3086,7 +3086,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bgpproperties_csharp" style="color: inherit; text-decoration: inherit;">Bgp<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnlinkbgpsettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Vpn<wbr>Link<wbr>Bgp<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#vpnlinkbgpsettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Vpn<wbr>Link<wbr>Bgp<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The set of bgp properties.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3122,7 +3122,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linkproperties_csharp" style="color: inherit; text-decoration: inherit;">Link<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnlinkproviderproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Vpn<wbr>Link<wbr>Provider<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#vpnlinkproviderproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Vpn<wbr>Link<wbr>Provider<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The link provider properties.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3355,7 +3355,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bgpproperties_csharp" style="color: inherit; text-decoration: inherit;">Bgp<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnlinkbgpsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Vpn<wbr>Link<wbr>Bgp<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#vpnlinkbgpsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Vpn<wbr>Link<wbr>Bgp<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The set of bgp properties.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3391,7 +3391,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linkproperties_csharp" style="color: inherit; text-decoration: inherit;">Link<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnlinkproviderpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Vpn<wbr>Link<wbr>Provider<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#vpnlinkproviderpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Vpn<wbr>Link<wbr>Provider<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The link provider properties.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3672,7 +3672,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:network/latest:VpnSite vpnSite1 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/vpnSites/vpnSite1 
+$ pulumi import azure-nextgen:network:VpnSite vpnSite1 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/vpnSites/vpnSite1 
 ```
 
 

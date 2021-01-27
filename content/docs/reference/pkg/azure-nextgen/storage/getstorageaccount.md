@@ -206,7 +206,7 @@ The following output properties are available:
 <a href="#blobrestorestatus_csharp" style="color: inherit; text-decoration: inherit;">Blob<wbr>Restore<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#blobrestorestatusresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Outputs.<wbr>Blob<wbr>Restore<wbr>Status<wbr>Response</a></span>
+        <span class="property-type"><a href="#blobrestorestatusresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage..<wbr>Outputs.<wbr>Blob<wbr>Restore<wbr>Status<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Blob restore status{{% /md %}}</dd>
     <dt class="property-"
@@ -224,7 +224,7 @@ The following output properties are available:
 <a href="#customdomain_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Domain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customdomainresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Outputs.<wbr>Custom<wbr>Domain<wbr>Response</a></span>
+        <span class="property-type"><a href="#customdomainresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage..<wbr>Outputs.<wbr>Custom<wbr>Domain<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets the custom domain the user assigned to this storage account.{{% /md %}}</dd>
     <dt class="property-"
@@ -233,7 +233,7 @@ The following output properties are available:
 <a href="#encryption_csharp" style="color: inherit; text-decoration: inherit;">Encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Outputs.<wbr>Encryption<wbr>Response</a></span>
+        <span class="property-type"><a href="#encryptionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage..<wbr>Outputs.<wbr>Encryption<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets the encryption settings on the account. If unspecified, the account is unencrypted.{{% /md %}}</dd>
     <dt class="property-"
@@ -251,7 +251,7 @@ The following output properties are available:
 <a href="#georeplicationstats_csharp" style="color: inherit; text-decoration: inherit;">Geo<wbr>Replication<wbr>Stats</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#georeplicationstatsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Outputs.<wbr>Geo<wbr>Replication<wbr>Stats<wbr>Response</a></span>
+        <span class="property-type"><a href="#georeplicationstatsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage..<wbr>Outputs.<wbr>Geo<wbr>Replication<wbr>Stats<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Geo Replication Stats{{% /md %}}</dd>
     <dt class="property-"
@@ -305,7 +305,7 @@ The following output properties are available:
 <a href="#networkruleset_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Rule<wbr>Set</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkrulesetresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Outputs.<wbr>Network<wbr>Rule<wbr>Set<wbr>Response</a></span>
+        <span class="property-type"><a href="#networkrulesetresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage..<wbr>Outputs.<wbr>Network<wbr>Rule<wbr>Set<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Network rule set{{% /md %}}</dd>
     <dt class="property-"
@@ -314,7 +314,7 @@ The following output properties are available:
 <a href="#primaryendpoints_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Outputs.<wbr>Endpoints<wbr>Response</a></span>
+        <span class="property-type"><a href="#endpointsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage..<wbr>Outputs.<wbr>Endpoints<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets the URLs that are used to perform a retrieval of a public blob, queue, or table object. Note that Standard_ZRS and Premium_LRS accounts only return the blob endpoint.{{% /md %}}</dd>
     <dt class="property-"
@@ -332,7 +332,7 @@ The following output properties are available:
 <a href="#privateendpointconnections_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint<wbr>Connections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointconnectionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Outputs.<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#privateendpointconnectionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage..<wbr>Outputs.<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of private endpoint connection associated with the specified storage account{{% /md %}}</dd>
     <dt class="property-"
@@ -350,7 +350,7 @@ The following output properties are available:
 <a href="#secondaryendpoints_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Outputs.<wbr>Endpoints<wbr>Response</a></span>
+        <span class="property-type"><a href="#endpointsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage..<wbr>Outputs.<wbr>Endpoints<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets the URLs that are used to perform a retrieval of a public blob, queue, or table object from the secondary location of the storage account. Only available if the SKU name is Standard_RAGRS.{{% /md %}}</dd>
     <dt class="property-"
@@ -368,7 +368,7 @@ The following output properties are available:
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skuresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Outputs.<wbr>Sku<wbr>Response</a></span>
+        <span class="property-type"><a href="#skuresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage..<wbr>Outputs.<wbr>Sku<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets the SKU.{{% /md %}}</dd>
     <dt class="property-"
@@ -413,7 +413,7 @@ The following output properties are available:
 <a href="#azurefilesidentitybasedauthentication_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Files<wbr>Identity<wbr>Based<wbr>Authentication</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefilesidentitybasedauthenticationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Outputs.<wbr>Azure<wbr>Files<wbr>Identity<wbr>Based<wbr>Authentication<wbr>Response</a></span>
+        <span class="property-type"><a href="#azurefilesidentitybasedauthenticationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage..<wbr>Outputs.<wbr>Azure<wbr>Files<wbr>Identity<wbr>Based<wbr>Authentication<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Provides the identity based authentication settings for Azure Files.{{% /md %}}</dd>
     <dt class="property-"
@@ -431,7 +431,7 @@ The following output properties are available:
 <a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identityresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Outputs.<wbr>Identity<wbr>Response</a></span>
+        <span class="property-type"><a href="#identityresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage..<wbr>Outputs.<wbr>Identity<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The identity of the resource.{{% /md %}}</dd>
     <dt class="property-"
@@ -467,7 +467,7 @@ The following output properties are available:
 <a href="#routingpreference_csharp" style="color: inherit; text-decoration: inherit;">Routing<wbr>Preference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routingpreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Outputs.<wbr>Routing<wbr>Preference<wbr>Response</a></span>
+        <span class="property-type"><a href="#routingpreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage..<wbr>Outputs.<wbr>Routing<wbr>Preference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Maintains information about the network routing choice opted by the user for data transfer{{% /md %}}</dd>
     <dt class="property-"
@@ -1642,7 +1642,7 @@ The following output properties are available:
 <a href="#activedirectoryproperties_csharp" style="color: inherit; text-decoration: inherit;">Active<wbr>Directory<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activedirectorypropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Inputs.<wbr>Active<wbr>Directory<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#activedirectorypropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage..<wbr>Inputs.<wbr>Active<wbr>Directory<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required if choose AD.{{% /md %}}</dd>
 </dl>
@@ -1736,7 +1736,7 @@ The following output properties are available:
 <a href="#blobranges_csharp" style="color: inherit; text-decoration: inherit;">Blob<wbr>Ranges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#blobrestorerangeresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Inputs.<wbr>Blob<wbr>Restore<wbr>Range<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#blobrestorerangeresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage..<wbr>Inputs.<wbr>Blob<wbr>Restore<wbr>Range<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Blob ranges to restore.{{% /md %}}</dd>
     <dt class="property-required"
@@ -1951,7 +1951,7 @@ The following output properties are available:
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#blobrestoreparametersresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Inputs.<wbr>Blob<wbr>Restore<wbr>Parameters<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#blobrestoreparametersresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage..<wbr>Inputs.<wbr>Blob<wbr>Restore<wbr>Parameters<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Blob restore request parameters.{{% /md %}}</dd>
     <dt class="property-required"
@@ -2229,7 +2229,7 @@ The following output properties are available:
 <a href="#keyvaultproperties_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#keyvaultpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage..<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties provided by key vault.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2247,7 +2247,7 @@ The following output properties are available:
 <a href="#services_csharp" style="color: inherit; text-decoration: inherit;">Services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionservicesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Inputs.<wbr>Encryption<wbr>Services<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#encryptionservicesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage..<wbr>Inputs.<wbr>Encryption<wbr>Services<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List of services which support encryption.{{% /md %}}</dd>
 </dl>
@@ -2534,7 +2534,7 @@ The following output properties are available:
 <a href="#blob_csharp" style="color: inherit; text-decoration: inherit;">Blob</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionserviceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Inputs.<wbr>Encryption<wbr>Service<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#encryptionserviceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage..<wbr>Inputs.<wbr>Encryption<wbr>Service<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The encryption function of the blob storage service.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2543,7 +2543,7 @@ The following output properties are available:
 <a href="#file_csharp" style="color: inherit; text-decoration: inherit;">File</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionserviceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Inputs.<wbr>Encryption<wbr>Service<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#encryptionserviceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage..<wbr>Inputs.<wbr>Encryption<wbr>Service<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The encryption function of the file storage service.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2552,7 +2552,7 @@ The following output properties are available:
 <a href="#queue_csharp" style="color: inherit; text-decoration: inherit;">Queue</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionserviceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Inputs.<wbr>Encryption<wbr>Service<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#encryptionserviceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage..<wbr>Inputs.<wbr>Encryption<wbr>Service<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The encryption function of the queue storage service.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2561,7 +2561,7 @@ The following output properties are available:
 <a href="#table_csharp" style="color: inherit; text-decoration: inherit;">Table</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionserviceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Inputs.<wbr>Encryption<wbr>Service<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#encryptionserviceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage..<wbr>Inputs.<wbr>Encryption<wbr>Service<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The encryption function of the table storage service.{{% /md %}}</dd>
 </dl>
@@ -2763,7 +2763,7 @@ The following output properties are available:
 <a href="#internetendpoints_csharp" style="color: inherit; text-decoration: inherit;">Internet<wbr>Endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageaccountinternetendpointsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Inputs.<wbr>Storage<wbr>Account<wbr>Internet<wbr>Endpoints<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#storageaccountinternetendpointsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage..<wbr>Inputs.<wbr>Storage<wbr>Account<wbr>Internet<wbr>Endpoints<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets the internet routing storage endpoints{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2772,7 +2772,7 @@ The following output properties are available:
 <a href="#microsoftendpoints_csharp" style="color: inherit; text-decoration: inherit;">Microsoft<wbr>Endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageaccountmicrosoftendpointsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Inputs.<wbr>Storage<wbr>Account<wbr>Microsoft<wbr>Endpoints<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#storageaccountmicrosoftendpointsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage..<wbr>Inputs.<wbr>Storage<wbr>Account<wbr>Microsoft<wbr>Endpoints<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets the microsoft routing storage endpoints.{{% /md %}}</dd>
 </dl>
@@ -3638,7 +3638,7 @@ The following output properties are available:
 <a href="#iprules_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Inputs.<wbr>IPRule<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#ipruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage..<wbr>Inputs.<wbr>IPRule<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Sets the IP ACL rules{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3647,7 +3647,7 @@ The following output properties are available:
 <a href="#virtualnetworkrules_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Inputs.<wbr>Virtual<wbr>Network<wbr>Rule<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#virtualnetworkruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage..<wbr>Inputs.<wbr>Virtual<wbr>Network<wbr>Rule<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Sets the virtual network rules{{% /md %}}</dd>
 </dl>
@@ -3813,7 +3813,7 @@ The following output properties are available:
 <a href="#privatelinkserviceconnectionstate_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Inputs.<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage..<wbr>Inputs.<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A collection of information about the state of the connection between service consumer and provider.{{% /md %}}</dd>
     <dt class="property-required"
@@ -3840,7 +3840,7 @@ The following output properties are available:
 <a href="#privateendpoint_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#privateendpointresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage..<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The resource of private end point.{{% /md %}}</dd>
 </dl>

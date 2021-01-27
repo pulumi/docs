@@ -296,7 +296,7 @@ The following output properties are available:
 <a href="#action_csharp" style="color: inherit; text-decoration: inherit;">Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Bus.<wbr>Outputs.<wbr>Action<wbr>Response</a></span>
+        <span class="property-type"><a href="#actionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Bus..<wbr>Outputs.<wbr>Action<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Represents the filter actions which are allowed for the transformation of a message that have been matched by a filter expression.{{% /md %}}</dd>
     <dt class="property-"
@@ -305,7 +305,7 @@ The following output properties are available:
 <a href="#correlationfilter_csharp" style="color: inherit; text-decoration: inherit;">Correlation<wbr>Filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#correlationfilterresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Bus.<wbr>Outputs.<wbr>Correlation<wbr>Filter<wbr>Response</a></span>
+        <span class="property-type"><a href="#correlationfilterresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Bus..<wbr>Outputs.<wbr>Correlation<wbr>Filter<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Properties of correlationFilter{{% /md %}}</dd>
     <dt class="property-"
@@ -323,7 +323,7 @@ The following output properties are available:
 <a href="#sqlfilter_csharp" style="color: inherit; text-decoration: inherit;">Sql<wbr>Filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlfilterresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Bus.<wbr>Outputs.<wbr>Sql<wbr>Filter<wbr>Response</a></span>
+        <span class="property-type"><a href="#sqlfilterresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Bus..<wbr>Outputs.<wbr>Sql<wbr>Filter<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Properties of sqlFilter{{% /md %}}</dd>
 </dl>

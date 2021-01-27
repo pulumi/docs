@@ -168,7 +168,7 @@ The following output properties are available:
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#querykeyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Search.<wbr>Outputs.<wbr>Query<wbr>Key<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#querykeyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Search..<wbr>Outputs.<wbr>Query<wbr>Key<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The query keys for the Azure Cognitive Search service.{{% /md %}}</dd>
 </dl>

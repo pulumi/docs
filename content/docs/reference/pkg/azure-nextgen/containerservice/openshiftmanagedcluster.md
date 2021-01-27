@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.containerservice.OpenShiftManage
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 OpenShift Managed cluster.
-Latest API Version: 2019-04-30.
+API Version: 2019-04-30.
 
 {{% examples %}}
 ## Example Usage
@@ -27,11 +27,11 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var openShiftManagedCluster = new AzureNextGen.ContainerService.Latest.OpenShiftManagedCluster("openShiftManagedCluster", new AzureNextGen.ContainerService.Latest.OpenShiftManagedClusterArgs
+        var openShiftManagedCluster = new AzureNextGen.ContainerService..OpenShiftManagedCluster("openShiftManagedCluster", new AzureNextGen.ContainerService..OpenShiftManagedClusterArgs
         {
             AgentPoolProfiles = 
             {
-                new AzureNextGen.ContainerService.Latest.Inputs.OpenShiftManagedClusterAgentPoolProfileArgs
+                new AzureNextGen.ContainerService..Inputs.OpenShiftManagedClusterAgentPoolProfileArgs
                 {
                     Count = 2,
                     Name = "infra",
@@ -40,7 +40,7 @@ class MyStack : Stack
                     SubnetCidr = "10.0.0.0/24",
                     VmSize = "Standard_D4s_v3",
                 },
-                new AzureNextGen.ContainerService.Latest.Inputs.OpenShiftManagedClusterAgentPoolProfileArgs
+                new AzureNextGen.ContainerService..Inputs.OpenShiftManagedClusterAgentPoolProfileArgs
                 {
                     Count = 4,
                     Name = "compute",
@@ -50,14 +50,14 @@ class MyStack : Stack
                     VmSize = "Standard_D4s_v3",
                 },
             },
-            AuthProfile = new AzureNextGen.ContainerService.Latest.Inputs.OpenShiftManagedClusterAuthProfileArgs
+            AuthProfile = new AzureNextGen.ContainerService..Inputs.OpenShiftManagedClusterAuthProfileArgs
             {
                 IdentityProviders = 
                 {
-                    new AzureNextGen.ContainerService.Latest.Inputs.OpenShiftManagedClusterIdentityProviderArgs
+                    new AzureNextGen.ContainerService..Inputs.OpenShiftManagedClusterIdentityProviderArgs
                     {
                         Name = "Azure AD",
-                        Provider = new AzureNextGen.ContainerService.Latest.Inputs.OpenShiftManagedClusterAADIdentityProviderArgs
+                        Provider = new AzureNextGen.ContainerService..Inputs.OpenShiftManagedClusterAADIdentityProviderArgs
                         {
                             ClientId = "clientId",
                             CustomerAdminGroupId = "customerAdminGroupId",
@@ -69,7 +69,7 @@ class MyStack : Stack
                 },
             },
             Location = "location1",
-            MasterPoolProfile = new AzureNextGen.ContainerService.Latest.Inputs.OpenShiftManagedClusterMasterPoolProfileArgs
+            MasterPoolProfile = new AzureNextGen.ContainerService..Inputs.OpenShiftManagedClusterMasterPoolProfileArgs
             {
                 Count = 3,
                 Name = "master",
@@ -77,7 +77,7 @@ class MyStack : Stack
                 SubnetCidr = "10.0.0.0/24",
                 VmSize = "Standard_D4s_v3",
             },
-            NetworkProfile = new AzureNextGen.ContainerService.Latest.Inputs.NetworkProfileArgs
+            NetworkProfile = new AzureNextGen.ContainerService..Inputs.NetworkProfileArgs
             {
                 VnetCidr = "10.0.0.0/8",
             },
@@ -86,7 +86,7 @@ class MyStack : Stack
             ResourceName = "clustername1",
             RouterProfiles = 
             {
-                new AzureNextGen.ContainerService.Latest.Inputs.OpenShiftRouterProfileArgs
+                new AzureNextGen.ContainerService..Inputs.OpenShiftRouterProfileArgs
                 {
                     Name = "default",
                 },
@@ -111,7 +111,7 @@ class MyStack : Stack
 package main
 
 import (
-	containerservice "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/containerservice/latest"
+	containerservice "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/containerservice"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -191,9 +191,9 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-open_shift_managed_cluster = azure_nextgen.containerservice.latest.OpenShiftManagedCluster("openShiftManagedCluster",
+open_shift_managed_cluster = azure_nextgen.containerservice.OpenShiftManagedCluster("openShiftManagedCluster",
     agent_pool_profiles=[
-        azure_nextgen.containerservice.latest.OpenShiftManagedClusterAgentPoolProfileArgs(
+        azure_nextgen.containerservice.OpenShiftManagedClusterAgentPoolProfileArgs(
             count=2,
             name="infra",
             os_type="Linux",
@@ -201,7 +201,7 @@ open_shift_managed_cluster = azure_nextgen.containerservice.latest.OpenShiftMana
             subnet_cidr="10.0.0.0/24",
             vm_size="Standard_D4s_v3",
         ),
-        azure_nextgen.containerservice.latest.OpenShiftManagedClusterAgentPoolProfileArgs(
+        azure_nextgen.containerservice.OpenShiftManagedClusterAgentPoolProfileArgs(
             count=4,
             name="compute",
             os_type="Linux",
@@ -210,10 +210,10 @@ open_shift_managed_cluster = azure_nextgen.containerservice.latest.OpenShiftMana
             vm_size="Standard_D4s_v3",
         ),
     ],
-    auth_profile=azure_nextgen.containerservice.latest.OpenShiftManagedClusterAuthProfileArgs(
-        identity_providers=[azure_nextgen.containerservice.latest.OpenShiftManagedClusterIdentityProviderArgs(
+    auth_profile=azure_nextgen.containerservice.OpenShiftManagedClusterAuthProfileArgs(
+        identity_providers=[azure_nextgen.containerservice.OpenShiftManagedClusterIdentityProviderArgs(
             name="Azure AD",
-            provider=azure_nextgen.containerservice.latest.OpenShiftManagedClusterAADIdentityProviderArgs(
+            provider=azure_nextgen.containerservice.OpenShiftManagedClusterAADIdentityProviderArgs(
                 client_id="clientId",
                 customer_admin_group_id="customerAdminGroupId",
                 kind="AADIdentityProvider",
@@ -223,20 +223,20 @@ open_shift_managed_cluster = azure_nextgen.containerservice.latest.OpenShiftMana
         )],
     ),
     location="location1",
-    master_pool_profile=azure_nextgen.containerservice.latest.OpenShiftManagedClusterMasterPoolProfileArgs(
+    master_pool_profile=azure_nextgen.containerservice.OpenShiftManagedClusterMasterPoolProfileArgs(
         count=3,
         name="master",
         os_type="Linux",
         subnet_cidr="10.0.0.0/24",
         vm_size="Standard_D4s_v3",
     ),
-    network_profile=azure_nextgen.containerservice.latest.NetworkProfileArgs(
+    network_profile=azure_nextgen.containerservice.NetworkProfileArgs(
         vnet_cidr="10.0.0.0/8",
     ),
     open_shift_version="v3.11",
     resource_group_name="rg1",
     resource_name="clustername1",
-    router_profiles=[azure_nextgen.containerservice.latest.OpenShiftRouterProfileArgs(
+    router_profiles=[azure_nextgen.containerservice.OpenShiftRouterProfileArgs(
         name="default",
     )],
     tags={
@@ -254,7 +254,7 @@ open_shift_managed_cluster = azure_nextgen.containerservice.latest.OpenShiftMana
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const openShiftManagedCluster = new azure_nextgen.containerservice.latest.OpenShiftManagedCluster("openShiftManagedCluster", {
+const openShiftManagedCluster = new azure_nextgen.containerservice.OpenShiftManagedCluster("openShiftManagedCluster", {
     agentPoolProfiles: [
         {
             count: 2,
@@ -537,7 +537,7 @@ The OpenShiftManagedCluster resource accepts the following [input]({{< relref "/
 <a href="#agentpoolprofiles_csharp" style="color: inherit; text-decoration: inherit;">Agent<wbr>Pool<wbr>Profiles</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#openshiftmanagedclusteragentpoolprofile">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Open<wbr>Shift<wbr>Managed<wbr>Cluster<wbr>Agent<wbr>Pool<wbr>Profile<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#openshiftmanagedclusteragentpoolprofile">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service..<wbr>Inputs.<wbr>Open<wbr>Shift<wbr>Managed<wbr>Cluster<wbr>Agent<wbr>Pool<wbr>Profile<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Configuration of OpenShift cluster VMs.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -546,7 +546,7 @@ The OpenShiftManagedCluster resource accepts the following [input]({{< relref "/
 <a href="#authprofile_csharp" style="color: inherit; text-decoration: inherit;">Auth<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#openshiftmanagedclusterauthprofile">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Open<wbr>Shift<wbr>Managed<wbr>Cluster<wbr>Auth<wbr>Profile<wbr>Args</a></span>
+        <span class="property-type"><a href="#openshiftmanagedclusterauthprofile">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service..<wbr>Inputs.<wbr>Open<wbr>Shift<wbr>Managed<wbr>Cluster<wbr>Auth<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configures OpenShift authentication.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -555,7 +555,7 @@ The OpenShiftManagedCluster resource accepts the following [input]({{< relref "/
 <a href="#masterpoolprofile_csharp" style="color: inherit; text-decoration: inherit;">Master<wbr>Pool<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#openshiftmanagedclustermasterpoolprofile">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Open<wbr>Shift<wbr>Managed<wbr>Cluster<wbr>Master<wbr>Pool<wbr>Profile<wbr>Args</a></span>
+        <span class="property-type"><a href="#openshiftmanagedclustermasterpoolprofile">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service..<wbr>Inputs.<wbr>Open<wbr>Shift<wbr>Managed<wbr>Cluster<wbr>Master<wbr>Pool<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration for OpenShift master VMs.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -564,7 +564,7 @@ The OpenShiftManagedCluster resource accepts the following [input]({{< relref "/
 <a href="#networkprofile_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkprofile">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Network<wbr>Profile<wbr>Args</a></span>
+        <span class="property-type"><a href="#networkprofile">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service..<wbr>Inputs.<wbr>Network<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration for OpenShift networking.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -573,7 +573,7 @@ The OpenShiftManagedCluster resource accepts the following [input]({{< relref "/
 <a href="#plan_csharp" style="color: inherit; text-decoration: inherit;">Plan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#purchaseplan">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Purchase<wbr>Plan<wbr>Args</a></span>
+        <span class="property-type"><a href="#purchaseplan">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service..<wbr>Inputs.<wbr>Purchase<wbr>Plan<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Define the resource plan as required by ARM for billing purposes{{% /md %}}</dd>
     <dt class="property-optional"
@@ -582,7 +582,7 @@ The OpenShiftManagedCluster resource accepts the following [input]({{< relref "/
 <a href="#routerprofiles_csharp" style="color: inherit; text-decoration: inherit;">Router<wbr>Profiles</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#openshiftrouterprofile">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Open<wbr>Shift<wbr>Router<wbr>Profile<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#openshiftrouterprofile">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service..<wbr>Inputs.<wbr>Open<wbr>Shift<wbr>Router<wbr>Profile<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Configuration for OpenShift router(s).{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2204,7 +2204,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vmsize_csharp" style="color: inherit; text-decoration: inherit;">Vm<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#openshiftcontainerservicevmsize">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Open<wbr>Shift<wbr>Container<wbr>Service<wbr>VMSize</a></span>
+        <span class="property-type">string | <a href="#openshiftcontainerservicevmsize">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service..<wbr>Open<wbr>Shift<wbr>Container<wbr>Service<wbr>VMSize</a></span>
     </dt>
     <dd>{{% md %}}Size of agent VMs.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2213,7 +2213,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ostype_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#ostype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>OSType</a></span>
+        <span class="property-type">string | <a href="#ostype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service..<wbr>OSType</a></span>
     </dt>
     <dd>{{% md %}}OsType to be used to specify os type. Choose from Linux and Windows. Default to Linux.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2222,7 +2222,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#role_csharp" style="color: inherit; text-decoration: inherit;">Role</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#openshiftagentpoolprofilerole">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Open<wbr>Shift<wbr>Agent<wbr>Pool<wbr>Profile<wbr>Role</a></span>
+        <span class="property-type">string | <a href="#openshiftagentpoolprofilerole">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service..<wbr>Open<wbr>Shift<wbr>Agent<wbr>Pool<wbr>Profile<wbr>Role</a></span>
     </dt>
     <dd>{{% md %}}Define the role of the AgentPoolProfile.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2670,7 +2670,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#identityproviders_csharp" style="color: inherit; text-decoration: inherit;">Identity<wbr>Providers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#openshiftmanagedclusteridentityprovider">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Open<wbr>Shift<wbr>Managed<wbr>Cluster<wbr>Identity<wbr>Provider<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#openshiftmanagedclusteridentityprovider">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service..<wbr>Inputs.<wbr>Open<wbr>Shift<wbr>Managed<wbr>Cluster<wbr>Identity<wbr>Provider<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Type of authentication profile to use.{{% /md %}}</dd>
 </dl>
@@ -2732,7 +2732,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#identityproviders_csharp" style="color: inherit; text-decoration: inherit;">Identity<wbr>Providers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#openshiftmanagedclusteridentityproviderresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Open<wbr>Shift<wbr>Managed<wbr>Cluster<wbr>Identity<wbr>Provider<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#openshiftmanagedclusteridentityproviderresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service..<wbr>Inputs.<wbr>Open<wbr>Shift<wbr>Managed<wbr>Cluster<wbr>Identity<wbr>Provider<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Type of authentication profile to use.{{% /md %}}</dd>
 </dl>
@@ -2803,7 +2803,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provider_csharp" style="color: inherit; text-decoration: inherit;">Provider</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#openshiftmanagedclusteraadidentityprovider">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Open<wbr>Shift<wbr>Managed<wbr>Cluster<wbr>AADIdentity<wbr>Provider<wbr>Args</a></span>
+        <span class="property-type"><a href="#openshiftmanagedclusteraadidentityprovider">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service..<wbr>Inputs.<wbr>Open<wbr>Shift<wbr>Managed<wbr>Cluster<wbr>AADIdentity<wbr>Provider<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration of the provider.{{% /md %}}</dd>
 </dl>
@@ -2901,7 +2901,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provider_csharp" style="color: inherit; text-decoration: inherit;">Provider</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#openshiftmanagedclusteraadidentityproviderresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Open<wbr>Shift<wbr>Managed<wbr>Cluster<wbr>AADIdentity<wbr>Provider<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#openshiftmanagedclusteraadidentityproviderresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service..<wbr>Inputs.<wbr>Open<wbr>Shift<wbr>Managed<wbr>Cluster<wbr>AADIdentity<wbr>Provider<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration of the provider.{{% /md %}}</dd>
 </dl>
@@ -2999,7 +2999,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vmsize_csharp" style="color: inherit; text-decoration: inherit;">Vm<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#openshiftcontainerservicevmsize">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Open<wbr>Shift<wbr>Container<wbr>Service<wbr>VMSize</a></span>
+        <span class="property-type">string | <a href="#openshiftcontainerservicevmsize">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service..<wbr>Open<wbr>Shift<wbr>Container<wbr>Service<wbr>VMSize</a></span>
     </dt>
     <dd>{{% md %}}Size of agent VMs.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3017,7 +3017,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ostype_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#ostype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>OSType</a></span>
+        <span class="property-type">string | <a href="#ostype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service..<wbr>OSType</a></span>
     </dt>
     <dd>{{% md %}}OsType to be used to specify os type. Choose from Linux and Windows. Default to Linux.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3932,7 +3932,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:containerservice/latest:OpenShiftManagedCluster clustername1 /subscriptions/subid1/resourcegroups/rg1/providers/Microsoft.ContainerService/openShiftManagedClusters/clustername1 
+$ pulumi import azure-nextgen:containerservice:OpenShiftManagedCluster clustername1 /subscriptions/subid1/resourcegroups/rg1/providers/Microsoft.ContainerService/openShiftManagedClusters/clustername1 
 ```
 
 

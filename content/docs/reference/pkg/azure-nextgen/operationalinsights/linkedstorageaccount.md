@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.operationalinsights.LinkedStorag
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Linked storage accounts top level resource container.
-Latest API Version: 2020-08-01.
+API Version: 2020-08-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var linkedStorageAccount = new AzureNextGen.OperationalInsights.Latest.LinkedStorageAccount("linkedStorageAccount", new AzureNextGen.OperationalInsights.Latest.LinkedStorageAccountArgs
+        var linkedStorageAccount = new AzureNextGen.OperationalInsights..LinkedStorageAccount("linkedStorageAccount", new AzureNextGen.OperationalInsights..LinkedStorageAccountArgs
         {
             DataSourceType = "CustomLogs",
             ResourceGroupName = "mms-eus",
@@ -52,7 +52,7 @@ class MyStack : Stack
 package main
 
 import (
-	operationalinsights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/operationalinsights/latest"
+	operationalinsights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/operationalinsights"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -84,7 +84,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-linked_storage_account = azure_nextgen.operationalinsights.latest.LinkedStorageAccount("linkedStorageAccount",
+linked_storage_account = azure_nextgen.operationalinsights.LinkedStorageAccount("linkedStorageAccount",
     data_source_type="CustomLogs",
     resource_group_name="mms-eus",
     storage_account_ids=[
@@ -103,7 +103,7 @@ linked_storage_account = azure_nextgen.operationalinsights.latest.LinkedStorageA
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const linkedStorageAccount = new azure_nextgen.operationalinsights.latest.LinkedStorageAccount("linkedStorageAccount", {
+const linkedStorageAccount = new azure_nextgen.operationalinsights.LinkedStorageAccount("linkedStorageAccount", {
     dataSourceType: "CustomLogs",
     resourceGroupName: "mms-eus",
     storageAccountIds: [
@@ -615,7 +615,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:operationalinsights/latest:LinkedStorageAccount CustomLogs /subscriptions/00000000-0000-0000-0000-00000000000/resourcegroups/mms-eus/providers/microsoft.operationalinsights/workspaces/testLinkStorageAccountsWS/linkedStorageAccounts/CustomLogs 
+$ pulumi import azure-nextgen:operationalinsights:LinkedStorageAccount CustomLogs /subscriptions/00000000-0000-0000-0000-00000000000/resourcegroups/mms-eus/providers/microsoft.operationalinsights/workspaces/testLinkStorageAccountsWS/linkedStorageAccounts/CustomLogs 
 ```
 
 

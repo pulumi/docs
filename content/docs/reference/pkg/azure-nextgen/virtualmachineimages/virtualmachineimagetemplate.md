@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.virtualmachineimages.VirtualMach
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Image template is an ARM resource managed by Microsoft.VirtualMachineImages provider
-Latest API Version: 2020-02-14.
+API Version: 2020-02-14.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var virtualMachineImageTemplate = new AzureNextGen.VirtualMachineImages.Latest.VirtualMachineImageTemplate("virtualMachineImageTemplate", new AzureNextGen.VirtualMachineImages.Latest.VirtualMachineImageTemplateArgs
+        var virtualMachineImageTemplate = new AzureNextGen.VirtualMachineImages..VirtualMachineImageTemplate("virtualMachineImageTemplate", new AzureNextGen.VirtualMachineImages..VirtualMachineImageTemplateArgs
         {
             Customize = 
             {
@@ -52,7 +52,7 @@ class MyStack : Stack
                     { "type", "ManagedImage" },
                 },
             },
-            Identity = new AzureNextGen.VirtualMachineImages.Latest.Inputs.ImageTemplateIdentityArgs
+            Identity = new AzureNextGen.VirtualMachineImages..Inputs.ImageTemplateIdentityArgs
             {
                 Type = "UserAssigned",
                 UserAssignedIdentities = 
@@ -73,11 +73,11 @@ class MyStack : Stack
                 { "imagetemplate_tag1", "IT_T1" },
                 { "imagetemplate_tag2", "IT_T2" },
             },
-            VmProfile = new AzureNextGen.VirtualMachineImages.Latest.Inputs.ImageTemplateVmProfileArgs
+            VmProfile = new AzureNextGen.VirtualMachineImages..Inputs.ImageTemplateVmProfileArgs
             {
                 OsDiskSizeGB = 64,
                 VmSize = "Standard_D2s_v3",
-                VnetConfig = new AzureNextGen.VirtualMachineImages.Latest.Inputs.VirtualNetworkConfigArgs
+                VnetConfig = new AzureNextGen.VirtualMachineImages..Inputs.VirtualNetworkConfigArgs
                 {
                     SubnetId = "/subscriptions/{subscription-id}/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnet_name/subnets/subnet_name",
                 },
@@ -101,7 +101,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-virtual_machine_image_template = azure_nextgen.virtualmachineimages.latest.VirtualMachineImageTemplate("virtualMachineImageTemplate",
+virtual_machine_image_template = azure_nextgen.virtualmachineimages.VirtualMachineImageTemplate("virtualMachineImageTemplate",
     customize=[{
         "name": "Shell Customizer Example",
         "scriptUri": "https://example.com/path/to/script.sh",
@@ -116,7 +116,7 @@ virtual_machine_image_template = azure_nextgen.virtualmachineimages.latest.Virtu
         "runOutputName": "image_it_pir_1",
         "type": "ManagedImage",
     }],
-    identity=azure_nextgen.virtualmachineimages.latest.ImageTemplateIdentityArgs(
+    identity=azure_nextgen.virtualmachineimages.ImageTemplateIdentityArgs(
         type="UserAssigned",
         user_assigned_identities={
             "/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/rg1/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity_1": {},
@@ -133,10 +133,10 @@ virtual_machine_image_template = azure_nextgen.virtualmachineimages.latest.Virtu
         "imagetemplate_tag1": "IT_T1",
         "imagetemplate_tag2": "IT_T2",
     },
-    vm_profile=azure_nextgen.virtualmachineimages.latest.ImageTemplateVmProfileArgs(
+    vm_profile=azure_nextgen.virtualmachineimages.ImageTemplateVmProfileArgs(
         os_disk_size_gb=64,
         vm_size="Standard_D2s_v3",
-        vnet_config=azure_nextgen.virtualmachineimages.latest.VirtualNetworkConfigArgs(
+        vnet_config=azure_nextgen.virtualmachineimages.VirtualNetworkConfigArgs(
             subnet_id="/subscriptions/{subscription-id}/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnet_name/subnets/subnet_name",
         ),
     ))
@@ -151,7 +151,7 @@ virtual_machine_image_template = azure_nextgen.virtualmachineimages.latest.Virtu
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const virtualMachineImageTemplate = new azure_nextgen.virtualmachineimages.latest.VirtualMachineImageTemplate("virtualMachineImageTemplate", {
+const virtualMachineImageTemplate = new azure_nextgen.virtualmachineimages.VirtualMachineImageTemplate("virtualMachineImageTemplate", {
     customize: [{
         name: "Shell Customizer Example",
         scriptUri: "https://example.com/path/to/script.sh",
@@ -206,7 +206,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var virtualMachineImageTemplate = new AzureNextGen.VirtualMachineImages.Latest.VirtualMachineImageTemplate("virtualMachineImageTemplate", new AzureNextGen.VirtualMachineImages.Latest.VirtualMachineImageTemplateArgs
+        var virtualMachineImageTemplate = new AzureNextGen.VirtualMachineImages..VirtualMachineImageTemplate("virtualMachineImageTemplate", new AzureNextGen.VirtualMachineImages..VirtualMachineImageTemplateArgs
         {
             Customize = 
             {
@@ -316,7 +316,7 @@ class MyStack : Stack
                     { "type", "ManagedImage" },
                 },
             },
-            Identity = new AzureNextGen.VirtualMachineImages.Latest.Inputs.ImageTemplateIdentityArgs
+            Identity = new AzureNextGen.VirtualMachineImages..Inputs.ImageTemplateIdentityArgs
             {
                 Type = "UserAssigned",
                 UserAssignedIdentities = 
@@ -337,11 +337,11 @@ class MyStack : Stack
                 { "imagetemplate_tag1", "IT_T1" },
                 { "imagetemplate_tag2", "IT_T2" },
             },
-            VmProfile = new AzureNextGen.VirtualMachineImages.Latest.Inputs.ImageTemplateVmProfileArgs
+            VmProfile = new AzureNextGen.VirtualMachineImages..Inputs.ImageTemplateVmProfileArgs
             {
                 OsDiskSizeGB = 64,
                 VmSize = "Standard_D2s_v3",
-                VnetConfig = new AzureNextGen.VirtualMachineImages.Latest.Inputs.VirtualNetworkConfigArgs
+                VnetConfig = new AzureNextGen.VirtualMachineImages..Inputs.VirtualNetworkConfigArgs
                 {
                     SubnetId = "/subscriptions/{subscription-id}/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnet_name/subnets/subnet_name",
                 },
@@ -365,7 +365,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-virtual_machine_image_template = azure_nextgen.virtualmachineimages.latest.VirtualMachineImageTemplate("virtualMachineImageTemplate",
+virtual_machine_image_template = azure_nextgen.virtualmachineimages.VirtualMachineImageTemplate("virtualMachineImageTemplate",
     customize=[
         {
             "inline": [
@@ -451,7 +451,7 @@ virtual_machine_image_template = azure_nextgen.virtualmachineimages.latest.Virtu
         "runOutputName": "image_it_pir_1",
         "type": "ManagedImage",
     }],
-    identity=azure_nextgen.virtualmachineimages.latest.ImageTemplateIdentityArgs(
+    identity=azure_nextgen.virtualmachineimages.ImageTemplateIdentityArgs(
         type="UserAssigned",
         user_assigned_identities={
             "/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/rg1/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity_1": {},
@@ -468,10 +468,10 @@ virtual_machine_image_template = azure_nextgen.virtualmachineimages.latest.Virtu
         "imagetemplate_tag1": "IT_T1",
         "imagetemplate_tag2": "IT_T2",
     },
-    vm_profile=azure_nextgen.virtualmachineimages.latest.ImageTemplateVmProfileArgs(
+    vm_profile=azure_nextgen.virtualmachineimages.ImageTemplateVmProfileArgs(
         os_disk_size_gb=64,
         vm_size="Standard_D2s_v3",
-        vnet_config=azure_nextgen.virtualmachineimages.latest.VirtualNetworkConfigArgs(
+        vnet_config=azure_nextgen.virtualmachineimages.VirtualNetworkConfigArgs(
             subnet_id="/subscriptions/{subscription-id}/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnet_name/subnets/subnet_name",
         ),
     ))
@@ -486,7 +486,7 @@ virtual_machine_image_template = azure_nextgen.virtualmachineimages.latest.Virtu
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const virtualMachineImageTemplate = new azure_nextgen.virtualmachineimages.latest.VirtualMachineImageTemplate("virtualMachineImageTemplate", {
+const virtualMachineImageTemplate = new azure_nextgen.virtualmachineimages.VirtualMachineImageTemplate("virtualMachineImageTemplate", {
     customize: [
         {
             inline: [
@@ -800,7 +800,7 @@ The VirtualMachineImageTemplate resource accepts the following [input]({{< relre
 <a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imagetemplateidentity">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Virtual<wbr>Machine<wbr>Images.<wbr>Inputs.<wbr>Image<wbr>Template<wbr>Identity<wbr>Args</a></span>
+        <span class="property-type"><a href="#imagetemplateidentity">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Virtual<wbr>Machine<wbr>Images..<wbr>Inputs.<wbr>Image<wbr>Template<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The identity of the image template, if configured.{{% /md %}}</dd>
     <dt class="property-required"
@@ -836,7 +836,7 @@ The VirtualMachineImageTemplate resource accepts the following [input]({{< relre
 <a href="#source_csharp" style="color: inherit; text-decoration: inherit;">Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imagetemplatemanagedimagesource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Virtual<wbr>Machine<wbr>Images.<wbr>Inputs.<wbr>Image<wbr>Template<wbr>Managed<wbr>Image<wbr>Source<wbr>Args</a> | <a href="#imagetemplateplatformimagesource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Virtual<wbr>Machine<wbr>Images.<wbr>Inputs.<wbr>Image<wbr>Template<wbr>Platform<wbr>Image<wbr>Source<wbr>Args</a> | <a href="#imagetemplatesharedimageversionsource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Virtual<wbr>Machine<wbr>Images.<wbr>Inputs.<wbr>Image<wbr>Template<wbr>Shared<wbr>Image<wbr>Version<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#imagetemplatemanagedimagesource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Virtual<wbr>Machine<wbr>Images..<wbr>Inputs.<wbr>Image<wbr>Template<wbr>Managed<wbr>Image<wbr>Source<wbr>Args</a> | <a href="#imagetemplateplatformimagesource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Virtual<wbr>Machine<wbr>Images..<wbr>Inputs.<wbr>Image<wbr>Template<wbr>Platform<wbr>Image<wbr>Source<wbr>Args</a> | <a href="#imagetemplatesharedimageversionsource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Virtual<wbr>Machine<wbr>Images..<wbr>Inputs.<wbr>Image<wbr>Template<wbr>Shared<wbr>Image<wbr>Version<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the properties used to describe the source image.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -872,7 +872,7 @@ The VirtualMachineImageTemplate resource accepts the following [input]({{< relre
 <a href="#vmprofile_csharp" style="color: inherit; text-decoration: inherit;">Vm<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imagetemplatevmprofile">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Virtual<wbr>Machine<wbr>Images.<wbr>Inputs.<wbr>Image<wbr>Template<wbr>Vm<wbr>Profile<wbr>Args</a></span>
+        <span class="property-type"><a href="#imagetemplatevmprofile">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Virtual<wbr>Machine<wbr>Images..<wbr>Inputs.<wbr>Image<wbr>Template<wbr>Vm<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes how virtual machine is set up to build images{{% /md %}}</dd>
 </dl>
@@ -1191,7 +1191,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastrunstatus_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Run<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imagetemplatelastrunstatusresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Virtual<wbr>Machine<wbr>Images.<wbr>Outputs.<wbr>Image<wbr>Template<wbr>Last<wbr>Run<wbr>Status<wbr>Response</a></span>
+        <span class="property-type"><a href="#imagetemplatelastrunstatusresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Virtual<wbr>Machine<wbr>Images..<wbr>Outputs.<wbr>Image<wbr>Template<wbr>Last<wbr>Run<wbr>Status<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}State of 'run' that is currently executing or was last executed.{{% /md %}}</dd>
     <dt class="property-"
@@ -1209,7 +1209,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provisioningerror_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>Error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#provisioningerrorresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Virtual<wbr>Machine<wbr>Images.<wbr>Outputs.<wbr>Provisioning<wbr>Error<wbr>Response</a></span>
+        <span class="property-type"><a href="#provisioningerrorresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Virtual<wbr>Machine<wbr>Images..<wbr>Outputs.<wbr>Provisioning<wbr>Error<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Provisioning error, if any{{% /md %}}</dd>
     <dt class="property-"
@@ -1774,7 +1774,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidentitytype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Virtual<wbr>Machine<wbr>Images.<wbr>Resource<wbr>Identity<wbr>Type</a></span>
+        <span class="property-type"><a href="#resourceidentitytype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Virtual<wbr>Machine<wbr>Images..<wbr>Resource<wbr>Identity<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of identity used for the image template. The type 'None' will remove any identities from the image template.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1881,7 +1881,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userassignedidentities_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Virtual<wbr>Machine<wbr>Images.<wbr>Inputs.<wbr>Image<wbr>Template<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Virtual<wbr>Machine<wbr>Images..<wbr>Inputs.<wbr>Image<wbr>Template<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}The list of user identities associated with the image template. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd>
 </dl>
@@ -2747,7 +2747,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#planinfo_csharp" style="color: inherit; text-decoration: inherit;">Plan<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#platformimagepurchaseplan">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Virtual<wbr>Machine<wbr>Images.<wbr>Inputs.<wbr>Platform<wbr>Image<wbr>Purchase<wbr>Plan<wbr>Args</a></span>
+        <span class="property-type"><a href="#platformimagepurchaseplan">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Virtual<wbr>Machine<wbr>Images..<wbr>Inputs.<wbr>Platform<wbr>Image<wbr>Purchase<wbr>Plan<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional configuration of purchase plan for platform image.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2953,7 +2953,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#planinfo_csharp" style="color: inherit; text-decoration: inherit;">Plan<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#platformimagepurchaseplanresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Virtual<wbr>Machine<wbr>Images.<wbr>Inputs.<wbr>Platform<wbr>Image<wbr>Purchase<wbr>Plan<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#platformimagepurchaseplanresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Virtual<wbr>Machine<wbr>Images..<wbr>Inputs.<wbr>Platform<wbr>Image<wbr>Purchase<wbr>Plan<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional configuration of purchase plan for platform image.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4091,7 +4091,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storageaccounttype_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#sharedimagestorageaccounttype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Virtual<wbr>Machine<wbr>Images.<wbr>Shared<wbr>Image<wbr>Storage<wbr>Account<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#sharedimagestorageaccounttype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Virtual<wbr>Machine<wbr>Images..<wbr>Shared<wbr>Image<wbr>Storage<wbr>Account<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Storage account type to be used to store the shared image. Omit to use the default (Standard_LRS).{{% /md %}}</dd>
 </dl>
@@ -5208,7 +5208,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vnetconfig_csharp" style="color: inherit; text-decoration: inherit;">Vnet<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkconfig">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Virtual<wbr>Machine<wbr>Images.<wbr>Inputs.<wbr>Virtual<wbr>Network<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnetworkconfig">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Virtual<wbr>Machine<wbr>Images..<wbr>Inputs.<wbr>Virtual<wbr>Network<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional configuration of the virtual network to use to deploy the build virtual machine in. Omit if no specific virtual network needs to be used.{{% /md %}}</dd>
 </dl>
@@ -5342,7 +5342,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vnetconfig_csharp" style="color: inherit; text-decoration: inherit;">Vnet<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkconfigresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Virtual<wbr>Machine<wbr>Images.<wbr>Inputs.<wbr>Virtual<wbr>Network<wbr>Config<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnetworkconfigresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Virtual<wbr>Machine<wbr>Images..<wbr>Inputs.<wbr>Virtual<wbr>Network<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional configuration of the virtual network to use to deploy the build virtual machine in. Omit if no specific virtual network needs to be used.{{% /md %}}</dd>
 </dl>
@@ -6358,7 +6358,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:virtualmachineimages/latest:VirtualMachineImageTemplate myImageTemplate /subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.VirtualMachineImages/imageTemplates/myImageTemplate 
+$ pulumi import azure-nextgen:virtualmachineimages:VirtualMachineImageTemplate myImageTemplate /subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.VirtualMachineImages/imageTemplates/myImageTemplate 
 ```
 
 

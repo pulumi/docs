@@ -231,7 +231,7 @@ The following output properties are available:
 <a href="#compatibility_csharp" style="color: inherit; text-decoration: inherit;">Compatibility</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#compatibilityresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Azure<wbr>Stack.<wbr>Outputs.<wbr>Compatibility<wbr>Response</a></span>
+        <span class="property-type"><a href="#compatibilityresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Azure<wbr>Stack..<wbr>Outputs.<wbr>Compatibility<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Product compatibility with current device.{{% /md %}}</dd>
     <dt class="property-"
@@ -276,7 +276,7 @@ The following output properties are available:
 <a href="#iconuris_csharp" style="color: inherit; text-decoration: inherit;">Icon<wbr>Uris</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iconurisresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Azure<wbr>Stack.<wbr>Outputs.<wbr>Icon<wbr>Uris<wbr>Response</a></span>
+        <span class="property-type"><a href="#iconurisresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Azure<wbr>Stack..<wbr>Outputs.<wbr>Icon<wbr>Uris<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Additional links available for this product.{{% /md %}}</dd>
     <dt class="property-"
@@ -294,7 +294,7 @@ The following output properties are available:
 <a href="#links_csharp" style="color: inherit; text-decoration: inherit;">Links</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#productlinkresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Azure<wbr>Stack.<wbr>Outputs.<wbr>Product<wbr>Link<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#productlinkresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Azure<wbr>Stack..<wbr>Outputs.<wbr>Product<wbr>Link<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Additional links available for this product.{{% /md %}}</dd>
     <dt class="property-"
@@ -348,7 +348,7 @@ The following output properties are available:
 <a href="#productproperties_csharp" style="color: inherit; text-decoration: inherit;">Product<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#productpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Azure<wbr>Stack.<wbr>Outputs.<wbr>Product<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#productpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Azure<wbr>Stack..<wbr>Outputs.<wbr>Product<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Additional properties for the product.{{% /md %}}</dd>
     <dt class="property-"

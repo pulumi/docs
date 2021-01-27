@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.storagesync.StorageSyncService r
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Storage Sync Service object.
-Latest API Version: 2020-09-01.
+API Version: 2020-09-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var storageSyncService = new AzureNextGen.StorageSync.Latest.StorageSyncService("storageSyncService", new AzureNextGen.StorageSync.Latest.StorageSyncServiceArgs
+        var storageSyncService = new AzureNextGen.StorageSync..StorageSyncService("storageSyncService", new AzureNextGen.StorageSync..StorageSyncServiceArgs
         {
             IncomingTrafficPolicy = "AllowAllTraffic",
             Location = "WestUS",
@@ -49,7 +49,7 @@ class MyStack : Stack
 package main
 
 import (
-	storagesync "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/storagesync/latest"
+	storagesync "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/storagesync"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -79,7 +79,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-storage_sync_service = azure_nextgen.storagesync.latest.StorageSyncService("storageSyncService",
+storage_sync_service = azure_nextgen.storagesync.StorageSyncService("storageSyncService",
     incoming_traffic_policy="AllowAllTraffic",
     location="WestUS",
     resource_group_name="SampleResourceGroup_1",
@@ -96,7 +96,7 @@ storage_sync_service = azure_nextgen.storagesync.latest.StorageSyncService("stor
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const storageSyncService = new azure_nextgen.storagesync.latest.StorageSyncService("storageSyncService", {
+const storageSyncService = new azure_nextgen.storagesync.StorageSyncService("storageSyncService", {
     incomingTrafficPolicy: "AllowAllTraffic",
     location: "WestUS",
     resourceGroupName: "SampleResourceGroup_1",
@@ -324,7 +324,7 @@ The StorageSyncService resource accepts the following [input]({{< relref "/docs/
 <a href="#incomingtrafficpolicy_csharp" style="color: inherit; text-decoration: inherit;">Incoming<wbr>Traffic<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#incomingtrafficpolicy">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Sync.<wbr>Incoming<wbr>Traffic<wbr>Policy</a></span>
+        <span class="property-type">string | <a href="#incomingtrafficpolicy">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Sync..<wbr>Incoming<wbr>Traffic<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Incoming Traffic Policy{{% /md %}}</dd>
     <dt class="property-optional"
@@ -544,7 +544,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privateendpointconnections_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint<wbr>Connections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointconnectionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Sync.<wbr>Outputs.<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#privateendpointconnectionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Sync..<wbr>Outputs.<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of private endpoint connection associated with the specified storage sync service{{% /md %}}</dd>
     <dt class="property-"
@@ -924,7 +924,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privatelinkserviceconnectionstate_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Sync.<wbr>Inputs.<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Sync..<wbr>Inputs.<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A collection of information about the state of the connection between service consumer and provider.{{% /md %}}</dd>
     <dt class="property-required"
@@ -951,7 +951,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privateendpoint_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Sync.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#privateendpointresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Sync..<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The resource of private end point.{{% /md %}}</dd>
 </dl>
@@ -1338,7 +1338,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:storagesync/latest:StorageSyncService SampleStorageSyncService_1 /subscriptions/3a048283-338f-4002-a9dd-a50fdadcb392/resourceGroups/SampleResourceGroup_1/providers/Microsoft.StorageSync/storageSyncServices/SampleStorageSyncService_1 
+$ pulumi import azure-nextgen:storagesync:StorageSyncService SampleStorageSyncService_1 /subscriptions/3a048283-338f-4002-a9dd-a50fdadcb392/resourceGroups/SampleResourceGroup_1/providers/Microsoft.StorageSync/storageSyncServices/SampleStorageSyncService_1 
 ```
 
 

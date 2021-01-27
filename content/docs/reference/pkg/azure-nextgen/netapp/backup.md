@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.netapp.Backup resource with exam
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Backup of a Volume
-Latest API Version: 2020-09-01.
+API Version: 2020-09-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var backup = new AzureNextGen.NetApp.Latest.Backup("backup", new AzureNextGen.NetApp.Latest.BackupArgs
+        var backup = new AzureNextGen.NetApp..Backup("backup", new AzureNextGen.NetApp..BackupArgs
         {
             AccountName = "account1",
             BackupName = "backup1",
@@ -51,7 +51,7 @@ class MyStack : Stack
 package main
 
 import (
-	netapp "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/netapp/latest"
+	netapp "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/netapp"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -83,7 +83,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-backup = azure_nextgen.netapp.latest.Backup("backup",
+backup = azure_nextgen.netapp.Backup("backup",
     account_name="account1",
     backup_name="backup1",
     label="myLabel",
@@ -102,7 +102,7 @@ backup = azure_nextgen.netapp.latest.Backup("backup",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const backup = new azure_nextgen.netapp.latest.Backup("backup", {
+const backup = new azure_nextgen.netapp.Backup("backup", {
     accountName: "account1",
     backupName: "backup1",
     label: "myLabel",
@@ -902,7 +902,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:netapp/latest:Backup account1/pool1/volume1/backup1 /subscriptions/D633CC2E-722B-4AE1-B636-BBD9E4C60ED9/resourceGroups/myRG/providers/Microsoft.NetApp/netAppAccounts/account1/capacityPools/pool1/volumes/volume1/backups/backup1 
+$ pulumi import azure-nextgen:netapp:Backup account1/pool1/volume1/backup1 /subscriptions/D633CC2E-722B-4AE1-B636-BBD9E4C60ED9/resourceGroups/myRG/providers/Microsoft.NetApp/netAppAccounts/account1/capacityPools/pool1/volumes/volume1/backups/backup1 
 ```
 
 

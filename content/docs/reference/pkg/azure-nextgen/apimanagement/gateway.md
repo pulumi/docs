@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.apimanagement.Gateway resource w
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Gateway details.
-Latest API Version: 2019-12-01.
+API Version: 2019-12-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,11 +27,11 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var gateway = new AzureNextGen.ApiManagement.Latest.Gateway("gateway", new AzureNextGen.ApiManagement.Latest.GatewayArgs
+        var gateway = new AzureNextGen.ApiManagement..Gateway("gateway", new AzureNextGen.ApiManagement..GatewayArgs
         {
             Description = "my gateway 1",
             GatewayId = "gw1",
-            LocationData = new AzureNextGen.ApiManagement.Latest.Inputs.ResourceLocationDataContractArgs
+            LocationData = new AzureNextGen.ApiManagement..Inputs.ResourceLocationDataContractArgs
             {
                 Name = "my location",
             },
@@ -52,7 +52,7 @@ class MyStack : Stack
 package main
 
 import (
-	apimanagement "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/apimanagement/latest"
+	apimanagement "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/apimanagement"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -84,10 +84,10 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-gateway = azure_nextgen.apimanagement.latest.Gateway("gateway",
+gateway = azure_nextgen.apimanagement.Gateway("gateway",
     description="my gateway 1",
     gateway_id="gw1",
-    location_data=azure_nextgen.apimanagement.latest.ResourceLocationDataContractArgs(
+    location_data=azure_nextgen.apimanagement.ResourceLocationDataContractArgs(
         name="my location",
     ),
     resource_group_name="rg1",
@@ -103,7 +103,7 @@ gateway = azure_nextgen.apimanagement.latest.Gateway("gateway",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const gateway = new azure_nextgen.apimanagement.latest.Gateway("gateway", {
+const gateway = new azure_nextgen.apimanagement.Gateway("gateway", {
     description: "my gateway 1",
     gatewayId: "gw1",
     locationData: {
@@ -342,7 +342,7 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#locationdata_csharp" style="color: inherit; text-decoration: inherit;">Location<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcelocationdatacontract">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Resource<wbr>Location<wbr>Data<wbr>Contract<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcelocationdatacontract">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management..<wbr>Inputs.<wbr>Resource<wbr>Location<wbr>Data<wbr>Contract<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gateway location.{{% /md %}}</dd>
 </dl>
@@ -995,7 +995,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:apimanagement/latest:Gateway a1 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/gateways/gw1 
+$ pulumi import azure-nextgen:apimanagement:Gateway a1 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/gateways/gw1 
 ```
 
 

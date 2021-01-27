@@ -224,7 +224,7 @@ The following output properties are available:
 <a href="#firstquality_csharp" style="color: inherit; text-decoration: inherit;">First<wbr>Quality</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firstqualityresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Outputs.<wbr>First<wbr>Quality<wbr>Response</a></span>
+        <span class="property-type"><a href="#firstqualityresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Outputs.<wbr>First<wbr>Quality<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The first quality.{{% /md %}}</dd>
     <dt class="property-"
@@ -233,7 +233,7 @@ The following output properties are available:
 <a href="#presentationtimerange_csharp" style="color: inherit; text-decoration: inherit;">Presentation<wbr>Time<wbr>Range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#presentationtimerangeresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Outputs.<wbr>Presentation<wbr>Time<wbr>Range<wbr>Response</a></span>
+        <span class="property-type"><a href="#presentationtimerangeresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Outputs.<wbr>Presentation<wbr>Time<wbr>Range<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The presentation time range.{{% /md %}}</dd>
     <dt class="property-"
@@ -242,7 +242,7 @@ The following output properties are available:
 <a href="#tracks_csharp" style="color: inherit; text-decoration: inherit;">Tracks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#filtertrackselectionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Outputs.<wbr>Filter<wbr>Track<wbr>Selection<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#filtertrackselectionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Outputs.<wbr>Filter<wbr>Track<wbr>Selection<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The tracks selection conditions.{{% /md %}}</dd>
 </dl>
@@ -589,7 +589,7 @@ The following output properties are available:
 <a href="#trackselections_csharp" style="color: inherit; text-decoration: inherit;">Track<wbr>Selections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#filtertrackpropertyconditionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Filter<wbr>Track<wbr>Property<wbr>Condition<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#filtertrackpropertyconditionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Filter<wbr>Track<wbr>Property<wbr>Condition<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The track selections.{{% /md %}}</dd>
 </dl>

@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.alertsmanagement.HealthAlert res
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The health alert resource.
+API Version: 2020-08-04-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,11 +27,11 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var healthAlert = new AzureNextGen.AlertsManagement.V20200804Preview.HealthAlert("healthAlert", new AzureNextGen.AlertsManagement.V20200804Preview.HealthAlertArgs
+        var healthAlert = new AzureNextGen.AlertsManagement..HealthAlert("healthAlert", new AzureNextGen.AlertsManagement..HealthAlertArgs
         {
             Actions = 
             {
-                new AzureNextGen.AlertsManagement.V20200804Preview.Inputs.HealthAlertActionArgs
+                new AzureNextGen.AlertsManagement..Inputs.HealthAlertActionArgs
                 {
                     ActionGroupId = "/subscriptions/14ddf0c5-77c5-4b53-84f6-e1fa43ad68f7/resourcegroups/gigtest/providers/microsoft.insights/notificationgroups/group2",
                     WebHookProperties = 
@@ -40,19 +41,19 @@ class MyStack : Stack
                     },
                 },
             },
-            Criteria = new AzureNextGen.AlertsManagement.V20200804Preview.Inputs.HealthAlertCriteriaArgs
+            Criteria = new AzureNextGen.AlertsManagement..Inputs.HealthAlertCriteriaArgs
             {
                 AllOf = 
                 {
-                    new AzureNextGen.AlertsManagement.V20200804Preview.Inputs.VmGuestHealthAlertCriterionArgs
+                    new AzureNextGen.AlertsManagement..Inputs.VmGuestHealthAlertCriterionArgs
                     {
                         HealthStates = 
                         {
-                            new AzureNextGen.AlertsManagement.V20200804Preview.Inputs.HealthStateArgs
+                            new AzureNextGen.AlertsManagement..Inputs.HealthStateArgs
                             {
                                 Severity = 2,
                             },
-                            new AzureNextGen.AlertsManagement.V20200804Preview.Inputs.HealthStateArgs
+                            new AzureNextGen.AlertsManagement..Inputs.HealthStateArgs
                             {
                                 Severity = 3,
                             },
@@ -89,7 +90,7 @@ class MyStack : Stack
 package main
 
 import (
-	alertsmanagement "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/alertsmanagement/v20200804preview"
+	alertsmanagement "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/alertsmanagement"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -149,21 +150,21 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-health_alert = azure_nextgen.alertsmanagement.v20200804preview.HealthAlert("healthAlert",
-    actions=[azure_nextgen.alertsmanagement.v20200804preview.HealthAlertActionArgs(
+health_alert = azure_nextgen.alertsmanagement.HealthAlert("healthAlert",
+    actions=[azure_nextgen.alertsmanagement.HealthAlertActionArgs(
         action_group_id="/subscriptions/14ddf0c5-77c5-4b53-84f6-e1fa43ad68f7/resourcegroups/gigtest/providers/microsoft.insights/notificationgroups/group2",
         web_hook_properties={
             "key11": "value11",
             "key12": "value12",
         },
     )],
-    criteria=azure_nextgen.alertsmanagement.v20200804preview.HealthAlertCriteriaArgs(
-        all_of=[azure_nextgen.alertsmanagement.v20200804preview.VmGuestHealthAlertCriterionArgs(
+    criteria=azure_nextgen.alertsmanagement.HealthAlertCriteriaArgs(
+        all_of=[azure_nextgen.alertsmanagement.VmGuestHealthAlertCriterionArgs(
             health_states=[
-                azure_nextgen.alertsmanagement.v20200804preview.HealthStateArgs(
+                azure_nextgen.alertsmanagement.HealthStateArgs(
                     severity=2,
                 ),
-                azure_nextgen.alertsmanagement.v20200804preview.HealthStateArgs(
+                azure_nextgen.alertsmanagement.HealthStateArgs(
                     severity=3,
                 ),
             ],
@@ -188,7 +189,7 @@ health_alert = azure_nextgen.alertsmanagement.v20200804preview.HealthAlert("heal
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const healthAlert = new azure_nextgen.alertsmanagement.v20200804preview.HealthAlert("healthAlert", {
+const healthAlert = new azure_nextgen.alertsmanagement.HealthAlert("healthAlert", {
     actions: [{
         actionGroupId: "/subscriptions/14ddf0c5-77c5-4b53-84f6-e1fa43ad68f7/resourcegroups/gigtest/providers/microsoft.insights/notificationgroups/group2",
         webHookProperties: {
@@ -411,7 +412,7 @@ The HealthAlert resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#criteria_csharp" style="color: inherit; text-decoration: inherit;">Criteria</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healthalertcriteria">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Alerts<wbr>Management.<wbr>Inputs.<wbr>Health<wbr>Alert<wbr>Criteria<wbr>Args</a></span>
+        <span class="property-type"><a href="#healthalertcriteria">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Alerts<wbr>Management..<wbr>Inputs.<wbr>Health<wbr>Alert<wbr>Criteria<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}defines the specific alert criteria information.{{% /md %}}</dd>
     <dt class="property-required"
@@ -465,7 +466,7 @@ The HealthAlert resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#actions_csharp" style="color: inherit; text-decoration: inherit;">Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healthalertaction">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Alerts<wbr>Management.<wbr>Inputs.<wbr>Health<wbr>Alert<wbr>Action<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#healthalertaction">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Alerts<wbr>Management..<wbr>Inputs.<wbr>Health<wbr>Alert<wbr>Action<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}the array of actions that are performed when the alert rule becomes active, and when an alert condition is resolved.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1142,7 +1143,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allof_csharp" style="color: inherit; text-decoration: inherit;">All<wbr>Of</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vmguesthealthalertcriterion">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Alerts<wbr>Management.<wbr>Inputs.<wbr>Vm<wbr>Guest<wbr>Health<wbr>Alert<wbr>Criterion<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#vmguesthealthalertcriterion">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Alerts<wbr>Management..<wbr>Inputs.<wbr>Vm<wbr>Guest<wbr>Health<wbr>Alert<wbr>Criterion<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of metric criteria for this 'all of' operation. {{% /md %}}</dd>
 </dl>
@@ -1204,7 +1205,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allof_csharp" style="color: inherit; text-decoration: inherit;">All<wbr>Of</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vmguesthealthalertcriterionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Alerts<wbr>Management.<wbr>Inputs.<wbr>Vm<wbr>Guest<wbr>Health<wbr>Alert<wbr>Criterion<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#vmguesthealthalertcriterionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Alerts<wbr>Management..<wbr>Inputs.<wbr>Vm<wbr>Guest<wbr>Health<wbr>Alert<wbr>Criterion<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of metric criteria for this 'all of' operation. {{% /md %}}</dd>
 </dl>
@@ -1266,7 +1267,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#healthstatename_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>State<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#healthstatename">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Alerts<wbr>Management.<wbr>Health<wbr>State<wbr>Name</a></span>
+        <span class="property-type">string | <a href="#healthstatename">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Alerts<wbr>Management..<wbr>Health<wbr>State<wbr>Name</a></span>
     </dt>
     <dd>{{% md %}}Health state name{{% /md %}}</dd>
     <dt class="property-required"
@@ -1500,7 +1501,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#healthstates_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>States</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healthstate">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Alerts<wbr>Management.<wbr>Inputs.<wbr>Health<wbr>State<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#healthstate">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Alerts<wbr>Management..<wbr>Inputs.<wbr>Health<wbr>State<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Health states to alert on{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1634,7 +1635,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#healthstates_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>States</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healthstateresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Alerts<wbr>Management.<wbr>Inputs.<wbr>Health<wbr>State<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#healthstateresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Alerts<wbr>Management..<wbr>Inputs.<wbr>Health<wbr>State<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Health states to alert on{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1762,7 +1763,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:alertsmanagement/v20200804preview:HealthAlert myresource1 /subscriptions/14ddf0c5-77c5-4b53-84f6-e1fa43ad68f7/resourceGroups/gigtest/providers/providers/Microsoft.AlertsManagement/resourceHealthAlerts/highcpu 
+$ pulumi import azure-nextgen:alertsmanagement:HealthAlert myresource1 /subscriptions/14ddf0c5-77c5-4b53-84f6-e1fa43ad68f7/resourceGroups/gigtest/providers/providers/Microsoft.AlertsManagement/resourceHealthAlerts/highcpu 
 ```
 
 

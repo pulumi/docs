@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.apimanagement.Backend resource w
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Backend details.
-Latest API Version: 2019-12-01.
+API Version: 2019-12-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,12 +27,12 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var backend = new AzureNextGen.ApiManagement.Latest.Backend("backend", new AzureNextGen.ApiManagement.Latest.BackendArgs
+        var backend = new AzureNextGen.ApiManagement..Backend("backend", new AzureNextGen.ApiManagement..BackendArgs
         {
             BackendId = "proxybackend",
-            Credentials = new AzureNextGen.ApiManagement.Latest.Inputs.BackendCredentialsContractArgs
+            Credentials = new AzureNextGen.ApiManagement..Inputs.BackendCredentialsContractArgs
             {
-                Authorization = new AzureNextGen.ApiManagement.Latest.Inputs.BackendAuthorizationHeaderCredentialsArgs
+                Authorization = new AzureNextGen.ApiManagement..Inputs.BackendAuthorizationHeaderCredentialsArgs
                 {
                     Parameter = "opensesma",
                     Scheme = "Basic",
@@ -57,7 +57,7 @@ class MyStack : Stack
             },
             Description = "description5308",
             Protocol = "http",
-            Proxy = new AzureNextGen.ApiManagement.Latest.Inputs.BackendProxyContractArgs
+            Proxy = new AzureNextGen.ApiManagement..Inputs.BackendProxyContractArgs
             {
                 Password = "<password>",
                 Url = "http://192.168.1.1:8080",
@@ -65,7 +65,7 @@ class MyStack : Stack
             },
             ResourceGroupName = "rg1",
             ServiceName = "apimService1",
-            Tls = new AzureNextGen.ApiManagement.Latest.Inputs.BackendTlsPropertiesArgs
+            Tls = new AzureNextGen.ApiManagement..Inputs.BackendTlsPropertiesArgs
             {
                 ValidateCertificateChain = true,
                 ValidateCertificateName = true,
@@ -86,7 +86,7 @@ class MyStack : Stack
 package main
 
 import (
-	apimanagement "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/apimanagement/latest"
+	apimanagement "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/apimanagement"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -145,10 +145,10 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-backend = azure_nextgen.apimanagement.latest.Backend("backend",
+backend = azure_nextgen.apimanagement.Backend("backend",
     backend_id="proxybackend",
-    credentials=azure_nextgen.apimanagement.latest.BackendCredentialsContractArgs(
-        authorization=azure_nextgen.apimanagement.latest.BackendAuthorizationHeaderCredentialsArgs(
+    credentials=azure_nextgen.apimanagement.BackendCredentialsContractArgs(
+        authorization=azure_nextgen.apimanagement.BackendAuthorizationHeaderCredentialsArgs(
             parameter="opensesma",
             scheme="Basic",
         ),
@@ -168,14 +168,14 @@ backend = azure_nextgen.apimanagement.latest.Backend("backend",
     ),
     description="description5308",
     protocol="http",
-    proxy=azure_nextgen.apimanagement.latest.BackendProxyContractArgs(
+    proxy=azure_nextgen.apimanagement.BackendProxyContractArgs(
         password="<password>",
         url="http://192.168.1.1:8080",
         username="Contoso\\admin",
     ),
     resource_group_name="rg1",
     service_name="apimService1",
-    tls=azure_nextgen.apimanagement.latest.BackendTlsPropertiesArgs(
+    tls=azure_nextgen.apimanagement.BackendTlsPropertiesArgs(
         validate_certificate_chain=True,
         validate_certificate_name=True,
     ),
@@ -191,7 +191,7 @@ backend = azure_nextgen.apimanagement.latest.Backend("backend",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const backend = new azure_nextgen.apimanagement.latest.Backend("backend", {
+const backend = new azure_nextgen.apimanagement.Backend("backend", {
     backendId: "proxybackend",
     credentials: {
         authorization: {
@@ -242,13 +242,13 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var backend = new AzureNextGen.ApiManagement.Latest.Backend("backend", new AzureNextGen.ApiManagement.Latest.BackendArgs
+        var backend = new AzureNextGen.ApiManagement..Backend("backend", new AzureNextGen.ApiManagement..BackendArgs
         {
             BackendId = "sfbackend",
             Description = "Service Fabric Test App 1",
-            Properties = new AzureNextGen.ApiManagement.Latest.Inputs.BackendPropertiesArgs
+            Properties = new AzureNextGen.ApiManagement..Inputs.BackendPropertiesArgs
             {
-                ServiceFabricCluster = new AzureNextGen.ApiManagement.Latest.Inputs.BackendServiceFabricClusterPropertiesArgs
+                ServiceFabricCluster = new AzureNextGen.ApiManagement..Inputs.BackendServiceFabricClusterPropertiesArgs
                 {
                     ClientCertificatethumbprint = "EBA029198AA3E76EF0D70482626E5BCF148594A6",
                     ManagementEndpoints = 
@@ -258,7 +258,7 @@ class MyStack : Stack
                     MaxPartitionResolutionRetries = 5,
                     ServerX509Names = 
                     {
-                        new AzureNextGen.ApiManagement.Latest.Inputs.X509CertificateNameArgs
+                        new AzureNextGen.ApiManagement..Inputs.X509CertificateNameArgs
                         {
                             IssuerCertificateThumbprint = "IssuerCertificateThumbprint1",
                             Name = "ServerCommonName1",
@@ -285,7 +285,7 @@ class MyStack : Stack
 package main
 
 import (
-	apimanagement "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/apimanagement/latest"
+	apimanagement "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/apimanagement"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -331,15 +331,15 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-backend = azure_nextgen.apimanagement.latest.Backend("backend",
+backend = azure_nextgen.apimanagement.Backend("backend",
     backend_id="sfbackend",
     description="Service Fabric Test App 1",
-    properties=azure_nextgen.apimanagement.latest.BackendPropertiesArgs(
-        service_fabric_cluster=azure_nextgen.apimanagement.latest.BackendServiceFabricClusterPropertiesArgs(
+    properties=azure_nextgen.apimanagement.BackendPropertiesArgs(
+        service_fabric_cluster=azure_nextgen.apimanagement.BackendServiceFabricClusterPropertiesArgs(
             client_certificatethumbprint="EBA029198AA3E76EF0D70482626E5BCF148594A6",
             management_endpoints=["https://somecluster.com"],
             max_partition_resolution_retries=5,
-            server_x509_names=[azure_nextgen.apimanagement.latest.X509CertificateNameArgs(
+            server_x509_names=[azure_nextgen.apimanagement.X509CertificateNameArgs(
                 issuer_certificate_thumbprint="IssuerCertificateThumbprint1",
                 name="ServerCommonName1",
             )],
@@ -360,7 +360,7 @@ backend = azure_nextgen.apimanagement.latest.Backend("backend",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const backend = new azure_nextgen.apimanagement.latest.Backend("backend", {
+const backend = new azure_nextgen.apimanagement.Backend("backend", {
     backendId: "sfbackend",
     description: "Service Fabric Test App 1",
     properties: {
@@ -582,7 +582,7 @@ The Backend resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#protocol_csharp" style="color: inherit; text-decoration: inherit;">Protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#backendprotocol">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management.<wbr>Backend<wbr>Protocol</a></span>
+        <span class="property-type">string | <a href="#backendprotocol">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management..<wbr>Backend<wbr>Protocol</a></span>
     </dt>
     <dd>{{% md %}}Backend communication protocol.{{% /md %}}</dd>
     <dt class="property-required"
@@ -618,7 +618,7 @@ The Backend resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#credentials_csharp" style="color: inherit; text-decoration: inherit;">Credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendcredentialscontract">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Backend<wbr>Credentials<wbr>Contract<wbr>Args</a></span>
+        <span class="property-type"><a href="#backendcredentialscontract">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management..<wbr>Inputs.<wbr>Backend<wbr>Credentials<wbr>Contract<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Backend Credentials Contract Properties{{% /md %}}</dd>
     <dt class="property-optional"
@@ -636,7 +636,7 @@ The Backend resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Backend<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#backendproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management..<wbr>Inputs.<wbr>Backend<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Backend Properties contract{{% /md %}}</dd>
     <dt class="property-optional"
@@ -645,7 +645,7 @@ The Backend resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#proxy_csharp" style="color: inherit; text-decoration: inherit;">Proxy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendproxycontract">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Backend<wbr>Proxy<wbr>Contract<wbr>Args</a></span>
+        <span class="property-type"><a href="#backendproxycontract">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management..<wbr>Inputs.<wbr>Backend<wbr>Proxy<wbr>Contract<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Backend Proxy Contract Properties{{% /md %}}</dd>
     <dt class="property-optional"
@@ -672,7 +672,7 @@ The Backend resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#tls_csharp" style="color: inherit; text-decoration: inherit;">Tls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendtlsproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Backend<wbr>Tls<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#backendtlsproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management..<wbr>Inputs.<wbr>Backend<wbr>Tls<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Backend TLS Properties{{% /md %}}</dd>
 </dl>
@@ -1376,7 +1376,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authorization_csharp" style="color: inherit; text-decoration: inherit;">Authorization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendauthorizationheadercredentials">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Backend<wbr>Authorization<wbr>Header<wbr>Credentials<wbr>Args</a></span>
+        <span class="property-type"><a href="#backendauthorizationheadercredentials">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management..<wbr>Inputs.<wbr>Backend<wbr>Authorization<wbr>Header<wbr>Credentials<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Authorization header authentication{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1546,7 +1546,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authorization_csharp" style="color: inherit; text-decoration: inherit;">Authorization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendauthorizationheadercredentialsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Backend<wbr>Authorization<wbr>Header<wbr>Credentials<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#backendauthorizationheadercredentialsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management..<wbr>Inputs.<wbr>Backend<wbr>Authorization<wbr>Header<wbr>Credentials<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Authorization header authentication{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1716,7 +1716,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#servicefabriccluster_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Fabric<wbr>Cluster</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendservicefabricclusterproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Backend<wbr>Service<wbr>Fabric<wbr>Cluster<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#backendservicefabricclusterproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management..<wbr>Inputs.<wbr>Backend<wbr>Service<wbr>Fabric<wbr>Cluster<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Backend Service Fabric Cluster Properties{{% /md %}}</dd>
 </dl>
@@ -1778,7 +1778,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#servicefabriccluster_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Fabric<wbr>Cluster</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendservicefabricclusterpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Backend<wbr>Service<wbr>Fabric<wbr>Cluster<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#backendservicefabricclusterpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management..<wbr>Inputs.<wbr>Backend<wbr>Service<wbr>Fabric<wbr>Cluster<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Backend Service Fabric Cluster Properties{{% /md %}}</dd>
 </dl>
@@ -2182,7 +2182,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#serverx509names_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>X509Names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x509certificatename">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>X509Certificate<wbr>Name<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#x509certificatename">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management..<wbr>Inputs.<wbr>X509Certificate<wbr>Name<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Server X509 Certificate Names Collection{{% /md %}}</dd>
 </dl>
@@ -2388,7 +2388,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#serverx509names_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>X509Names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x509certificatenameresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>X509Certificate<wbr>Name<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#x509certificatenameresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management..<wbr>Inputs.<wbr>X509Certificate<wbr>Name<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Server X509 Certificate Names Collection{{% /md %}}</dd>
 </dl>
@@ -2944,7 +2944,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:apimanagement/latest:Backend sfbackend /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/backends/sfbackend 
+$ pulumi import azure-nextgen:apimanagement:Backend sfbackend /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/backends/sfbackend 
 ```
 
 

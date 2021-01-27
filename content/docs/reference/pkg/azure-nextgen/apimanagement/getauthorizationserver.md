@@ -350,7 +350,7 @@ The following output properties are available:
 <a href="#tokenbodyparameters_csharp" style="color: inherit; text-decoration: inherit;">Token<wbr>Body<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tokenbodyparametercontractresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management.<wbr>Outputs.<wbr>Token<wbr>Body<wbr>Parameter<wbr>Contract<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#tokenbodyparametercontractresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management..<wbr>Outputs.<wbr>Token<wbr>Body<wbr>Parameter<wbr>Contract<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Additional parameters required by the token endpoint of this authorization server represented as an array of JSON objects with name and value string properties, i.e. {"name" : "name value", "value": "a value"}.{{% /md %}}</dd>
     <dt class="property-"

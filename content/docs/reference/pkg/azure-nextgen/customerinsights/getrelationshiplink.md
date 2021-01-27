@@ -233,7 +233,7 @@ The following output properties are available:
 <a href="#profilepropertyreferences_csharp" style="color: inherit; text-decoration: inherit;">Profile<wbr>Property<wbr>References</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#participantprofilepropertyreferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights.<wbr>Outputs.<wbr>Participant<wbr>Profile<wbr>Property<wbr>Reference<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#participantprofilepropertyreferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights..<wbr>Outputs.<wbr>Participant<wbr>Profile<wbr>Property<wbr>Reference<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The property references for the Profile of the Relationship.{{% /md %}}</dd>
     <dt class="property-"
@@ -251,7 +251,7 @@ The following output properties are available:
 <a href="#relatedprofilepropertyreferences_csharp" style="color: inherit; text-decoration: inherit;">Related<wbr>Profile<wbr>Property<wbr>References</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#participantprofilepropertyreferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights.<wbr>Outputs.<wbr>Participant<wbr>Profile<wbr>Property<wbr>Reference<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#participantprofilepropertyreferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights..<wbr>Outputs.<wbr>Participant<wbr>Profile<wbr>Property<wbr>Reference<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The property references for the Related Profile of the Relationship.{{% /md %}}</dd>
     <dt class="property-"
@@ -314,7 +314,7 @@ The following output properties are available:
 <a href="#mappings_csharp" style="color: inherit; text-decoration: inherit;">Mappings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#relationshiplinkfieldmappingresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights.<wbr>Outputs.<wbr>Relationship<wbr>Link<wbr>Field<wbr>Mapping<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#relationshiplinkfieldmappingresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights..<wbr>Outputs.<wbr>Relationship<wbr>Link<wbr>Field<wbr>Mapping<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The mappings between Interaction and Relationship fields.{{% /md %}}</dd>
 </dl>

@@ -195,7 +195,7 @@ The following output properties are available:
 <a href="#usagedatacollectionpolicy_csharp" style="color: inherit; text-decoration: inherit;">Usage<wbr>Data<wbr>Collection<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edgeusagedatacollectionpolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Outputs.<wbr>Edge<wbr>Usage<wbr>Data<wbr>Collection<wbr>Policy<wbr>Response</a></span>
+        <span class="property-type"><a href="#edgeusagedatacollectionpolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Outputs.<wbr>Edge<wbr>Usage<wbr>Data<wbr>Collection<wbr>Policy<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 </dl>
@@ -286,7 +286,7 @@ The following output properties are available:
 <a href="#eventhubdetails_csharp" style="color: inherit; text-decoration: inherit;">Event<wbr>Hub<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edgeusagedataeventhubresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Edge<wbr>Usage<wbr>Data<wbr>Event<wbr>Hub<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#edgeusagedataeventhubresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Edge<wbr>Usage<wbr>Data<wbr>Event<wbr>Hub<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Details of Event Hub where the usage will be reported.{{% /md %}}</dd>
     <dt class="property-optional"

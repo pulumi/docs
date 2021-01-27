@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.signalrservice.SignalR resource 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 A class represent a SignalR service resource.
-Latest API Version: 2020-05-01.
+API Version: 2020-05-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,9 +27,9 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var signalR = new AzureNextGen.SignalRService.Latest.SignalR("signalR", new AzureNextGen.SignalRService.Latest.SignalRArgs
+        var signalR = new AzureNextGen.SignalRService..SignalR("signalR", new AzureNextGen.SignalRService..SignalRArgs
         {
-            Cors = new AzureNextGen.SignalRService.Latest.Inputs.SignalRCorsSettingsArgs
+            Cors = new AzureNextGen.SignalRService..Inputs.SignalRCorsSettingsArgs
             {
                 AllowedOrigins = 
                 {
@@ -39,19 +39,19 @@ class MyStack : Stack
             },
             Features = 
             {
-                new AzureNextGen.SignalRService.Latest.Inputs.SignalRFeatureArgs
+                new AzureNextGen.SignalRService..Inputs.SignalRFeatureArgs
                 {
                     Flag = "ServiceMode",
                     Properties = ,
                     Value = "Serverless",
                 },
-                new AzureNextGen.SignalRService.Latest.Inputs.SignalRFeatureArgs
+                new AzureNextGen.SignalRService..Inputs.SignalRFeatureArgs
                 {
                     Flag = "EnableConnectivityLogs",
                     Properties = ,
                     Value = "True",
                 },
-                new AzureNextGen.SignalRService.Latest.Inputs.SignalRFeatureArgs
+                new AzureNextGen.SignalRService..Inputs.SignalRFeatureArgs
                 {
                     Flag = "EnableMessagingLogs",
                     Properties = ,
@@ -60,12 +60,12 @@ class MyStack : Stack
             },
             Kind = "SignalR",
             Location = "eastus",
-            NetworkACLs = new AzureNextGen.SignalRService.Latest.Inputs.SignalRNetworkACLsArgs
+            NetworkACLs = new AzureNextGen.SignalRService..Inputs.SignalRNetworkACLsArgs
             {
                 DefaultAction = "Deny",
                 PrivateEndpoints = 
                 {
-                    new AzureNextGen.SignalRService.Latest.Inputs.PrivateEndpointACLArgs
+                    new AzureNextGen.SignalRService..Inputs.PrivateEndpointACLArgs
                     {
                         Allow = 
                         {
@@ -74,7 +74,7 @@ class MyStack : Stack
                         Name = "mySignalRService.1fa229cd-bf3f-47f0-8c49-afb36723997e",
                     },
                 },
-                PublicNetwork = new AzureNextGen.SignalRService.Latest.Inputs.NetworkACLArgs
+                PublicNetwork = new AzureNextGen.SignalRService..Inputs.NetworkACLArgs
                 {
                     Allow = 
                     {
@@ -84,7 +84,7 @@ class MyStack : Stack
             },
             ResourceGroupName = "myResourceGroup",
             ResourceName = "mySignalRService",
-            Sku = new AzureNextGen.SignalRService.Latest.Inputs.ResourceSkuArgs
+            Sku = new AzureNextGen.SignalRService..Inputs.ResourceSkuArgs
             {
                 Capacity = 1,
                 Name = "Standard_S1",
@@ -94,11 +94,11 @@ class MyStack : Stack
             {
                 { "key1", "value1" },
             },
-            Upstream = new AzureNextGen.SignalRService.Latest.Inputs.ServerlessUpstreamSettingsArgs
+            Upstream = new AzureNextGen.SignalRService..Inputs.ServerlessUpstreamSettingsArgs
             {
                 Templates = 
                 {
-                    new AzureNextGen.SignalRService.Latest.Inputs.UpstreamTemplateArgs
+                    new AzureNextGen.SignalRService..Inputs.UpstreamTemplateArgs
                     {
                         CategoryPattern = "*",
                         EventPattern = "connect,disconnect",
@@ -122,7 +122,7 @@ class MyStack : Stack
 package main
 
 import (
-	signalrservice "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/signalrservice/latest"
+	signalrservice "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/signalrservice"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -208,25 +208,25 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-signal_r = azure_nextgen.signalrservice.latest.SignalR("signalR",
-    cors=azure_nextgen.signalrservice.latest.SignalRCorsSettingsArgs(
+signal_r = azure_nextgen.signalrservice.SignalR("signalR",
+    cors=azure_nextgen.signalrservice.SignalRCorsSettingsArgs(
         allowed_origins=[
             "https://foo.com",
             "https://bar.com",
         ],
     ),
     features=[
-        azure_nextgen.signalrservice.latest.SignalRFeatureArgs(
+        azure_nextgen.signalrservice.SignalRFeatureArgs(
             flag="ServiceMode",
             properties={},
             value="Serverless",
         ),
-        azure_nextgen.signalrservice.latest.SignalRFeatureArgs(
+        azure_nextgen.signalrservice.SignalRFeatureArgs(
             flag="EnableConnectivityLogs",
             properties={},
             value="True",
         ),
-        azure_nextgen.signalrservice.latest.SignalRFeatureArgs(
+        azure_nextgen.signalrservice.SignalRFeatureArgs(
             flag="EnableMessagingLogs",
             properties={},
             value="False",
@@ -234,19 +234,19 @@ signal_r = azure_nextgen.signalrservice.latest.SignalR("signalR",
     ],
     kind="SignalR",
     location="eastus",
-    network_acls=azure_nextgen.signalrservice.latest.SignalRNetworkACLsArgs(
+    network_acls=azure_nextgen.signalrservice.SignalRNetworkACLsArgs(
         default_action="Deny",
-        private_endpoints=[azure_nextgen.signalrservice.latest.PrivateEndpointACLArgs(
+        private_endpoints=[azure_nextgen.signalrservice.PrivateEndpointACLArgs(
             allow=["ServerConnection"],
             name="mySignalRService.1fa229cd-bf3f-47f0-8c49-afb36723997e",
         )],
-        public_network=azure_nextgen.signalrservice.latest.NetworkACLArgs(
+        public_network=azure_nextgen.signalrservice.NetworkACLArgs(
             allow=["ClientConnection"],
         ),
     ),
     resource_group_name="myResourceGroup",
     resource_name="mySignalRService",
-    sku=azure_nextgen.signalrservice.latest.ResourceSkuArgs(
+    sku=azure_nextgen.signalrservice.ResourceSkuArgs(
         capacity=1,
         name="Standard_S1",
         tier="Standard",
@@ -254,8 +254,8 @@ signal_r = azure_nextgen.signalrservice.latest.SignalR("signalR",
     tags={
         "key1": "value1",
     },
-    upstream=azure_nextgen.signalrservice.latest.ServerlessUpstreamSettingsArgs(
-        templates=[azure_nextgen.signalrservice.latest.UpstreamTemplateArgs(
+    upstream=azure_nextgen.signalrservice.ServerlessUpstreamSettingsArgs(
+        templates=[azure_nextgen.signalrservice.UpstreamTemplateArgs(
             category_pattern="*",
             event_pattern="connect,disconnect",
             hub_pattern="*",
@@ -273,7 +273,7 @@ signal_r = azure_nextgen.signalrservice.latest.SignalR("signalR",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const signalR = new azure_nextgen.signalrservice.latest.SignalR("signalR", {
+const signalR = new azure_nextgen.signalrservice.SignalR("signalR", {
     cors: {
         allowedOrigins: [
             "https://foo.com",
@@ -540,7 +540,7 @@ The SignalR resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#cors_csharp" style="color: inherit; text-decoration: inherit;">Cors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#signalrcorssettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Signal<wbr>RService.<wbr>Inputs.<wbr>Signal<wbr>RCors<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#signalrcorssettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Signal<wbr>RService..<wbr>Inputs.<wbr>Signal<wbr>RCors<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Cross-Origin Resource Sharing (CORS) settings.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -549,7 +549,7 @@ The SignalR resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#features_csharp" style="color: inherit; text-decoration: inherit;">Features</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#signalrfeature">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Signal<wbr>RService.<wbr>Inputs.<wbr>Signal<wbr>RFeature<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#signalrfeature">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Signal<wbr>RService..<wbr>Inputs.<wbr>Signal<wbr>RFeature<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of SignalR featureFlags. e.g. ServiceMode.
 
@@ -563,7 +563,7 @@ But keep in mind, the default value doesn't mean "false". It varies in terms of 
 <a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#servicekind">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Signal<wbr>RService.<wbr>Service<wbr>Kind</a></span>
+        <span class="property-type">string | <a href="#servicekind">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Signal<wbr>RService..<wbr>Service<wbr>Kind</a></span>
     </dt>
     <dd>{{% md %}}The kind of the service - e.g. "SignalR", or "RawWebSockets" for "Microsoft.SignalRService/SignalR"{{% /md %}}</dd>
     <dt class="property-optional"
@@ -581,7 +581,7 @@ But keep in mind, the default value doesn't mean "false". It varies in terms of 
 <a href="#networkacls_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>ACLs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#signalrnetworkacls">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Signal<wbr>RService.<wbr>Inputs.<wbr>Signal<wbr>RNetwork<wbr>ACLs<wbr>Args</a></span>
+        <span class="property-type"><a href="#signalrnetworkacls">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Signal<wbr>RService..<wbr>Inputs.<wbr>Signal<wbr>RNetwork<wbr>ACLs<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Network ACLs{{% /md %}}</dd>
     <dt class="property-optional"
@@ -590,7 +590,7 @@ But keep in mind, the default value doesn't mean "false". It varies in terms of 
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcesku">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Signal<wbr>RService.<wbr>Inputs.<wbr>Resource<wbr>Sku<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcesku">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Signal<wbr>RService..<wbr>Inputs.<wbr>Resource<wbr>Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The billing information of the resource.(e.g. Free, Standard){{% /md %}}</dd>
     <dt class="property-optional"
@@ -608,7 +608,7 @@ But keep in mind, the default value doesn't mean "false". It varies in terms of 
 <a href="#upstream_csharp" style="color: inherit; text-decoration: inherit;">Upstream</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serverlessupstreamsettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Signal<wbr>RService.<wbr>Inputs.<wbr>Serverless<wbr>Upstream<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#serverlessupstreamsettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Signal<wbr>RService..<wbr>Inputs.<wbr>Serverless<wbr>Upstream<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Upstream settings when the Azure SignalR is in server-less mode.{{% /md %}}</dd>
 </dl>
@@ -979,7 +979,7 @@ The hostname will be of format: &lt;hostNamePrefix&gt;.service.signalr.net.{{% /
 <a href="#privateendpointconnections_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint<wbr>Connections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointconnectionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Signal<wbr>RService.<wbr>Outputs.<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#privateendpointconnectionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Signal<wbr>RService..<wbr>Outputs.<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Private endpoint connections to the SignalR resource.{{% /md %}}</dd>
     <dt class="property-"
@@ -1453,7 +1453,7 @@ The hostname will be of format: &lt;hostNamePrefix&gt;.service.signalr.net.{{% /
 <a href="#allow_csharp" style="color: inherit; text-decoration: inherit;">Allow</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Union&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Signal<wbr>RService.<wbr>Signal<wbr>RRequest<wbr>Type&gt;&gt;</span>
+        <span class="property-type">List&lt;Union&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Signal<wbr>RService..<wbr>Signal<wbr>RRequest<wbr>Type&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}Allowed request types. The value can be one or more of: ClientConnection, ServerConnection, RESTAPI.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1462,7 +1462,7 @@ The hostname will be of format: &lt;hostNamePrefix&gt;.service.signalr.net.{{% /
 <a href="#deny_csharp" style="color: inherit; text-decoration: inherit;">Deny</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Union&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Signal<wbr>RService.<wbr>Signal<wbr>RRequest<wbr>Type&gt;&gt;</span>
+        <span class="property-type">List&lt;Union&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Signal<wbr>RService..<wbr>Signal<wbr>RRequest<wbr>Type&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}Denied request types. The value can be one or more of: ClientConnection, ServerConnection, RESTAPI.{{% /md %}}</dd>
 </dl>
@@ -1658,7 +1658,7 @@ The hostname will be of format: &lt;hostNamePrefix&gt;.service.signalr.net.{{% /
 <a href="#allow_csharp" style="color: inherit; text-decoration: inherit;">Allow</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Union&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Signal<wbr>RService.<wbr>Signal<wbr>RRequest<wbr>Type&gt;&gt;</span>
+        <span class="property-type">List&lt;Union&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Signal<wbr>RService..<wbr>Signal<wbr>RRequest<wbr>Type&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}Allowed request types. The value can be one or more of: ClientConnection, ServerConnection, RESTAPI.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1667,7 +1667,7 @@ The hostname will be of format: &lt;hostNamePrefix&gt;.service.signalr.net.{{% /
 <a href="#deny_csharp" style="color: inherit; text-decoration: inherit;">Deny</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Union&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Signal<wbr>RService.<wbr>Signal<wbr>RRequest<wbr>Type&gt;&gt;</span>
+        <span class="property-type">List&lt;Union&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Signal<wbr>RService..<wbr>Signal<wbr>RRequest<wbr>Type&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}Denied request types. The value can be one or more of: ClientConnection, ServerConnection, RESTAPI.{{% /md %}}</dd>
 </dl>
@@ -1953,7 +1953,7 @@ The hostname will be of format: &lt;hostNamePrefix&gt;.service.signalr.net.{{% /
 <a href="#privateendpoint_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Signal<wbr>RService.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#privateendpointresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Signal<wbr>RService..<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Private endpoint associated with the private endpoint connection{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1962,7 +1962,7 @@ The hostname will be of format: &lt;hostNamePrefix&gt;.service.signalr.net.{{% /
 <a href="#privatelinkserviceconnectionstate_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Signal<wbr>RService.<wbr>Inputs.<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Signal<wbr>RService..<wbr>Inputs.<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Connection state{{% /md %}}</dd>
 </dl>
@@ -2379,7 +2379,7 @@ If present, following values are allowed:
 <a href="#tier_csharp" style="color: inherit; text-decoration: inherit;">Tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#signalrskutier">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Signal<wbr>RService.<wbr>Signal<wbr>RSku<wbr>Tier</a></span>
+        <span class="property-type">string | <a href="#signalrskutier">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Signal<wbr>RService..<wbr>Signal<wbr>RSku<wbr>Tier</a></span>
     </dt>
     <dd>{{% md %}}Optional tier of this particular SKU. 'Standard' or 'Free'. 
 
@@ -2759,7 +2759,7 @@ If present, following values are allowed:
 <a href="#templates_csharp" style="color: inherit; text-decoration: inherit;">Templates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#upstreamtemplate">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Signal<wbr>RService.<wbr>Inputs.<wbr>Upstream<wbr>Template<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#upstreamtemplate">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Signal<wbr>RService..<wbr>Inputs.<wbr>Upstream<wbr>Template<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the list of Upstream URL templates. Order matters, and the first matching template takes effects.{{% /md %}}</dd>
 </dl>
@@ -2821,7 +2821,7 @@ If present, following values are allowed:
 <a href="#templates_csharp" style="color: inherit; text-decoration: inherit;">Templates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#upstreamtemplateresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Signal<wbr>RService.<wbr>Inputs.<wbr>Upstream<wbr>Template<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#upstreamtemplateresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Signal<wbr>RService..<wbr>Inputs.<wbr>Upstream<wbr>Template<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the list of Upstream URL templates. Order matters, and the first matching template takes effects.{{% /md %}}</dd>
 </dl>
@@ -3045,7 +3045,7 @@ If present, following values are allowed:
 <a href="#flag_csharp" style="color: inherit; text-decoration: inherit;">Flag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#featureflags">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Signal<wbr>RService.<wbr>Feature<wbr>Flags</a></span>
+        <span class="property-type">string | <a href="#featureflags">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Signal<wbr>RService..<wbr>Feature<wbr>Flags</a></span>
     </dt>
     <dd>{{% md %}}FeatureFlags is the supported features of Azure SignalR service.
 - ServiceMode: Flag for backend server for SignalR service. Values allowed: "Default": have your own backend server; "Serverless": your application doesn't have a backend server; "Classic": for backward compatibility. Support both Default and Serverless mode but not recommended; "PredefinedOnly": for future use.
@@ -3329,7 +3329,7 @@ If present, following values are allowed:
 <a href="#defaultaction_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#aclaction">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Signal<wbr>RService.<wbr>ACLAction</a></span>
+        <span class="property-type">string | <a href="#aclaction">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Signal<wbr>RService..<wbr>ACLAction</a></span>
     </dt>
     <dd>{{% md %}}Default action when no other rule matches{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3338,7 +3338,7 @@ If present, following values are allowed:
 <a href="#privateendpoints_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointacl">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Signal<wbr>RService.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>ACLArgs&gt;</a></span>
+        <span class="property-type"><a href="#privateendpointacl">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Signal<wbr>RService..<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>ACLArgs&gt;</a></span>
     </dt>
     <dd>{{% md %}}ACLs for requests from private endpoints{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3347,7 +3347,7 @@ If present, following values are allowed:
 <a href="#publicnetwork_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkacl">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Signal<wbr>RService.<wbr>Inputs.<wbr>Network<wbr>ACLArgs</a></span>
+        <span class="property-type"><a href="#networkacl">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Signal<wbr>RService..<wbr>Inputs.<wbr>Network<wbr>ACLArgs</a></span>
     </dt>
     <dd>{{% md %}}ACL for requests from public network{{% /md %}}</dd>
 </dl>
@@ -3472,7 +3472,7 @@ If present, following values are allowed:
 <a href="#privateendpoints_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointaclresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Signal<wbr>RService.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>ACLResponse<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#privateendpointaclresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Signal<wbr>RService..<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>ACLResponse<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}ACLs for requests from private endpoints{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3481,7 +3481,7 @@ If present, following values are allowed:
 <a href="#publicnetwork_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkaclresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Signal<wbr>RService.<wbr>Inputs.<wbr>Network<wbr>ACLResponse<wbr>Args</a></span>
+        <span class="property-type"><a href="#networkaclresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Signal<wbr>RService..<wbr>Inputs.<wbr>Network<wbr>ACLResponse<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}ACL for requests from public network{{% /md %}}</dd>
 </dl>
@@ -4135,7 +4135,7 @@ There are 3 kind of patterns supported:
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:signalrservice/latest:SignalR mySignalRService /subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/myResourceGroup/providers/Microsoft.SignalRService/SignalR/mySignalRService 
+$ pulumi import azure-nextgen:signalrservice:SignalR mySignalRService /subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/myResourceGroup/providers/Microsoft.SignalRService/SignalR/mySignalRService 
 ```
 
 

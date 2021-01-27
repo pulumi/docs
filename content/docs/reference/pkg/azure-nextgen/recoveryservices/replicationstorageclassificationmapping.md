@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.recoveryservices.ReplicationStor
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Storage mapping object.
-Latest API Version: 2018-07-10.
+API Version: 2018-07-10.
 
 {{% examples %}}
 ## Example Usage
@@ -27,10 +27,10 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var replicationStorageClassificationMapping = new AzureNextGen.RecoveryServices.Latest.ReplicationStorageClassificationMapping("replicationStorageClassificationMapping", new AzureNextGen.RecoveryServices.Latest.ReplicationStorageClassificationMappingArgs
+        var replicationStorageClassificationMapping = new AzureNextGen.RecoveryServices..ReplicationStorageClassificationMapping("replicationStorageClassificationMapping", new AzureNextGen.RecoveryServices..ReplicationStorageClassificationMappingArgs
         {
             FabricName = "2a48e3770ac08aa2be8bfbd94fcfb1cbf2dcc487b78fb9d3bd778304441b06a0",
-            Properties = new AzureNextGen.RecoveryServices.Latest.Inputs.StorageMappingInputPropertiesArgs
+            Properties = new AzureNextGen.RecoveryServices..Inputs.StorageMappingInputPropertiesArgs
             {
                 TargetStorageClassificationId = "/Subscriptions/9112a37f-0f3e-46ec-9c00-060c6edca071/resourceGroups/resourceGroupPS1/providers/Microsoft.RecoveryServices/vaults/vault1/replicationFabrics/2a48e3770ac08aa2be8bfbd94fcfb1cbf2dcc487b78fb9d3bd778304441b06a0/replicationStorageClassifications/8891569e-aaef-4a46-a4a0-78c14f2d7b09",
             },
@@ -53,7 +53,7 @@ class MyStack : Stack
 package main
 
 import (
-	recoveryservices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/recoveryservices/latest"
+	recoveryservices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/recoveryservices"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -86,9 +86,9 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-replication_storage_classification_mapping = azure_nextgen.recoveryservices.latest.ReplicationStorageClassificationMapping("replicationStorageClassificationMapping",
+replication_storage_classification_mapping = azure_nextgen.recoveryservices.ReplicationStorageClassificationMapping("replicationStorageClassificationMapping",
     fabric_name="2a48e3770ac08aa2be8bfbd94fcfb1cbf2dcc487b78fb9d3bd778304441b06a0",
-    properties=azure_nextgen.recoveryservices.latest.StorageMappingInputPropertiesArgs(
+    properties=azure_nextgen.recoveryservices.StorageMappingInputPropertiesArgs(
         target_storage_classification_id="/Subscriptions/9112a37f-0f3e-46ec-9c00-060c6edca071/resourceGroups/resourceGroupPS1/providers/Microsoft.RecoveryServices/vaults/vault1/replicationFabrics/2a48e3770ac08aa2be8bfbd94fcfb1cbf2dcc487b78fb9d3bd778304441b06a0/replicationStorageClassifications/8891569e-aaef-4a46-a4a0-78c14f2d7b09",
     ),
     resource_group_name="resourceGroupPS1",
@@ -106,7 +106,7 @@ replication_storage_classification_mapping = azure_nextgen.recoveryservices.late
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const replicationStorageClassificationMapping = new azure_nextgen.recoveryservices.latest.ReplicationStorageClassificationMapping("replicationStorageClassificationMapping", {
+const replicationStorageClassificationMapping = new azure_nextgen.recoveryservices.ReplicationStorageClassificationMapping("replicationStorageClassificationMapping", {
     fabricName: "2a48e3770ac08aa2be8bfbd94fcfb1cbf2dcc487b78fb9d3bd778304441b06a0",
     properties: {
         targetStorageClassificationId: "/Subscriptions/9112a37f-0f3e-46ec-9c00-060c6edca071/resourceGroups/resourceGroupPS1/providers/Microsoft.RecoveryServices/vaults/vault1/replicationFabrics/2a48e3770ac08aa2be8bfbd94fcfb1cbf2dcc487b78fb9d3bd778304441b06a0/replicationStorageClassifications/8891569e-aaef-4a46-a4a0-78c14f2d7b09",
@@ -355,7 +355,7 @@ The ReplicationStorageClassificationMapping resource accepts the following [inpu
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storagemappinginputproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Storage<wbr>Mapping<wbr>Input<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#storagemappinginputproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Storage<wbr>Mapping<wbr>Input<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Storage mapping input properties.{{% /md %}}</dd>
 </dl>
@@ -855,7 +855,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:recoveryservices/latest:ReplicationStorageClassificationMapping testStorageMapping /Subscriptions/9112a37f-0f3e-46ec-9c00-060c6edca071/resourceGroups/resourceGroupPS1/providers/Microsoft.RecoveryServices/vaults/vault1/replicationFabrics/2a48e3770ac08aa2be8bfbd94fcfb1cbf2dcc487b78fb9d3bd778304441b06a0/replicationStorageClassifications/8891569e-aaef-4a46-a4a0-78c14f2d7b09/replicationStorageClassificationMappings/testStorageMapping 
+$ pulumi import azure-nextgen:recoveryservices:ReplicationStorageClassificationMapping testStorageMapping /Subscriptions/9112a37f-0f3e-46ec-9c00-060c6edca071/resourceGroups/resourceGroupPS1/providers/Microsoft.RecoveryServices/vaults/vault1/replicationFabrics/2a48e3770ac08aa2be8bfbd94fcfb1cbf2dcc487b78fb9d3bd778304441b06a0/replicationStorageClassifications/8891569e-aaef-4a46-a4a0-78c14f2d7b09/replicationStorageClassificationMappings/testStorageMapping 
 ```
 
 

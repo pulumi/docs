@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.network.PrivateDnsZoneGroup reso
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Private dns zone group resource.
-Latest API Version: 2020-08-01.
+API Version: 2020-08-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,11 +27,11 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var privateDnsZoneGroup = new AzureNextGen.Network.Latest.PrivateDnsZoneGroup("privateDnsZoneGroup", new AzureNextGen.Network.Latest.PrivateDnsZoneGroupArgs
+        var privateDnsZoneGroup = new AzureNextGen.Network..PrivateDnsZoneGroup("privateDnsZoneGroup", new AzureNextGen.Network..PrivateDnsZoneGroupArgs
         {
             PrivateDnsZoneConfigs = 
             {
-                new AzureNextGen.Network.Latest.Inputs.PrivateDnsZoneConfigArgs
+                new AzureNextGen.Network..Inputs.PrivateDnsZoneConfigArgs
                 {
                     PrivateDnsZoneId = "/subscriptions/subId/resourceGroups/rg1/providers/Microsoft.Network/privateDnsZones/zone1.com",
                 },
@@ -54,7 +54,7 @@ class MyStack : Stack
 package main
 
 import (
-	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network/latest"
+	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -87,8 +87,8 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-private_dns_zone_group = azure_nextgen.network.latest.PrivateDnsZoneGroup("privateDnsZoneGroup",
-    private_dns_zone_configs=[azure_nextgen.network.latest.PrivateDnsZoneConfigArgs(
+private_dns_zone_group = azure_nextgen.network.PrivateDnsZoneGroup("privateDnsZoneGroup",
+    private_dns_zone_configs=[azure_nextgen.network.PrivateDnsZoneConfigArgs(
         private_dns_zone_id="/subscriptions/subId/resourceGroups/rg1/providers/Microsoft.Network/privateDnsZones/zone1.com",
     )],
     private_dns_zone_group_name="testPdnsgroup",
@@ -105,7 +105,7 @@ private_dns_zone_group = azure_nextgen.network.latest.PrivateDnsZoneGroup("priva
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const privateDnsZoneGroup = new azure_nextgen.network.latest.PrivateDnsZoneGroup("privateDnsZoneGroup", {
+const privateDnsZoneGroup = new azure_nextgen.network.PrivateDnsZoneGroup("privateDnsZoneGroup", {
     privateDnsZoneConfigs: [{
         privateDnsZoneId: "/subscriptions/subId/resourceGroups/rg1/providers/Microsoft.Network/privateDnsZones/zone1.com",
     }],
@@ -352,7 +352,7 @@ The PrivateDnsZoneGroup resource accepts the following [input]({{< relref "/docs
 <a href="#privatednszoneconfigs_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Dns<wbr>Zone<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatednszoneconfig">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Private<wbr>Dns<wbr>Zone<wbr>Config<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#privatednszoneconfig">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Private<wbr>Dns<wbr>Zone<wbr>Config<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A collection of private dns zone configurations of the private dns zone group.{{% /md %}}</dd>
 </dl>
@@ -796,7 +796,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recordsets_csharp" style="color: inherit; text-decoration: inherit;">Record<wbr>Sets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recordsetresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Record<wbr>Set<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#recordsetresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Record<wbr>Set<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A collection of information regarding a recordSet, holding information to identify private resources.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1166,7 +1166,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:network/latest:PrivateDnsZoneGroup testPdnsgroup /subscriptions/subId/resourceGroups/rg1/providers/Microsoft.Network/privateLinkServices/testPe/privateDnsZoneGroups/testPdnsgroup 
+$ pulumi import azure-nextgen:network:PrivateDnsZoneGroup testPdnsgroup /subscriptions/subId/resourceGroups/rg1/providers/Microsoft.Network/privateLinkServices/testPe/privateDnsZoneGroups/testPdnsgroup 
 ```
 
 

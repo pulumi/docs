@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.network.ApplicationGateway resou
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Application gateway resource.
-Latest API Version: 2020-08-01.
+API Version: 2020-08-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,20 +27,20 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var applicationGateway = new AzureNextGen.Network.Latest.ApplicationGateway("applicationGateway", new AzureNextGen.Network.Latest.ApplicationGatewayArgs
+        var applicationGateway = new AzureNextGen.Network..ApplicationGateway("applicationGateway", new AzureNextGen.Network..ApplicationGatewayArgs
         {
             ApplicationGatewayName = "appgw",
             BackendAddressPools = 
             {
-                new AzureNextGen.Network.Latest.Inputs.ApplicationGatewayBackendAddressPoolArgs
+                new AzureNextGen.Network..Inputs.ApplicationGatewayBackendAddressPoolArgs
                 {
                     BackendAddresses = 
                     {
-                        new AzureNextGen.Network.Latest.Inputs.ApplicationGatewayBackendAddressArgs
+                        new AzureNextGen.Network..Inputs.ApplicationGatewayBackendAddressArgs
                         {
                             IpAddress = "10.0.1.1",
                         },
-                        new AzureNextGen.Network.Latest.Inputs.ApplicationGatewayBackendAddressArgs
+                        new AzureNextGen.Network..Inputs.ApplicationGatewayBackendAddressArgs
                         {
                             IpAddress = "10.0.1.2",
                         },
@@ -50,7 +50,7 @@ class MyStack : Stack
             },
             BackendHttpSettingsCollection = 
             {
-                new AzureNextGen.Network.Latest.Inputs.ApplicationGatewayBackendHttpSettingsArgs
+                new AzureNextGen.Network..Inputs.ApplicationGatewayBackendHttpSettingsArgs
                 {
                     CookieBasedAffinity = "Disabled",
                     Name = "appgwbhs",
@@ -61,10 +61,10 @@ class MyStack : Stack
             },
             FrontendIPConfigurations = 
             {
-                new AzureNextGen.Network.Latest.Inputs.ApplicationGatewayFrontendIPConfigurationArgs
+                new AzureNextGen.Network..Inputs.ApplicationGatewayFrontendIPConfigurationArgs
                 {
                     Name = "appgwfip",
-                    PublicIPAddress = new AzureNextGen.Network.Latest.Inputs.SubResourceArgs
+                    PublicIPAddress = new AzureNextGen.Network..Inputs.SubResourceArgs
                     {
                         Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/publicIPAddresses/appgwpip",
                     },
@@ -72,12 +72,12 @@ class MyStack : Stack
             },
             FrontendPorts = 
             {
-                new AzureNextGen.Network.Latest.Inputs.ApplicationGatewayFrontendPortArgs
+                new AzureNextGen.Network..Inputs.ApplicationGatewayFrontendPortArgs
                 {
                     Name = "appgwfp",
                     Port = 443,
                 },
-                new AzureNextGen.Network.Latest.Inputs.ApplicationGatewayFrontendPortArgs
+                new AzureNextGen.Network..Inputs.ApplicationGatewayFrontendPortArgs
                 {
                     Name = "appgwfp80",
                     Port = 80,
@@ -85,10 +85,10 @@ class MyStack : Stack
             },
             GatewayIPConfigurations = 
             {
-                new AzureNextGen.Network.Latest.Inputs.ApplicationGatewayIPConfigurationArgs
+                new AzureNextGen.Network..Inputs.ApplicationGatewayIPConfigurationArgs
                 {
                     Name = "appgwipc",
-                    Subnet = new AzureNextGen.Network.Latest.Inputs.SubResourceArgs
+                    Subnet = new AzureNextGen.Network..Inputs.SubResourceArgs
                     {
                         Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnet/subnets/appgwsubnet",
                     },
@@ -96,35 +96,35 @@ class MyStack : Stack
             },
             HttpListeners = 
             {
-                new AzureNextGen.Network.Latest.Inputs.ApplicationGatewayHttpListenerArgs
+                new AzureNextGen.Network..Inputs.ApplicationGatewayHttpListenerArgs
                 {
-                    FrontendIPConfiguration = new AzureNextGen.Network.Latest.Inputs.SubResourceArgs
+                    FrontendIPConfiguration = new AzureNextGen.Network..Inputs.SubResourceArgs
                     {
                         Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/frontendIPConfigurations/appgwfip",
                     },
-                    FrontendPort = new AzureNextGen.Network.Latest.Inputs.SubResourceArgs
+                    FrontendPort = new AzureNextGen.Network..Inputs.SubResourceArgs
                     {
                         Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/frontendPorts/appgwfp",
                     },
                     Name = "appgwhl",
                     Protocol = "Https",
                     RequireServerNameIndication = false,
-                    SslCertificate = new AzureNextGen.Network.Latest.Inputs.SubResourceArgs
+                    SslCertificate = new AzureNextGen.Network..Inputs.SubResourceArgs
                     {
                         Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/sslCertificates/sslcert",
                     },
-                    SslProfile = new AzureNextGen.Network.Latest.Inputs.SubResourceArgs
+                    SslProfile = new AzureNextGen.Network..Inputs.SubResourceArgs
                     {
                         Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/sslProfiles/sslProfile1",
                     },
                 },
-                new AzureNextGen.Network.Latest.Inputs.ApplicationGatewayHttpListenerArgs
+                new AzureNextGen.Network..Inputs.ApplicationGatewayHttpListenerArgs
                 {
-                    FrontendIPConfiguration = new AzureNextGen.Network.Latest.Inputs.SubResourceArgs
+                    FrontendIPConfiguration = new AzureNextGen.Network..Inputs.SubResourceArgs
                     {
                         Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/frontendIPConfigurations/appgwfip",
                     },
-                    FrontendPort = new AzureNextGen.Network.Latest.Inputs.SubResourceArgs
+                    FrontendPort = new AzureNextGen.Network..Inputs.SubResourceArgs
                     {
                         Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/frontendPorts/appgwfp80",
                     },
@@ -132,7 +132,7 @@ class MyStack : Stack
                     Protocol = "Http",
                 },
             },
-            Identity = new AzureNextGen.Network.Latest.Inputs.ManagedServiceIdentityArgs
+            Identity = new AzureNextGen.Network..Inputs.ManagedServiceIdentityArgs
             {
                 Type = "UserAssigned",
                 UserAssignedIdentities = 
@@ -143,38 +143,38 @@ class MyStack : Stack
             Location = "eastus",
             RequestRoutingRules = 
             {
-                new AzureNextGen.Network.Latest.Inputs.ApplicationGatewayRequestRoutingRuleArgs
+                new AzureNextGen.Network..Inputs.ApplicationGatewayRequestRoutingRuleArgs
                 {
-                    BackendAddressPool = new AzureNextGen.Network.Latest.Inputs.SubResourceArgs
+                    BackendAddressPool = new AzureNextGen.Network..Inputs.SubResourceArgs
                     {
                         Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/backendAddressPools/appgwpool",
                     },
-                    BackendHttpSettings = new AzureNextGen.Network.Latest.Inputs.SubResourceArgs
+                    BackendHttpSettings = new AzureNextGen.Network..Inputs.SubResourceArgs
                     {
                         Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/backendHttpSettingsCollection/appgwbhs",
                     },
-                    HttpListener = new AzureNextGen.Network.Latest.Inputs.SubResourceArgs
+                    HttpListener = new AzureNextGen.Network..Inputs.SubResourceArgs
                     {
                         Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/httpListeners/appgwhl",
                     },
                     Name = "appgwrule",
                     Priority = 10,
-                    RewriteRuleSet = new AzureNextGen.Network.Latest.Inputs.SubResourceArgs
+                    RewriteRuleSet = new AzureNextGen.Network..Inputs.SubResourceArgs
                     {
                         Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/rewriteRuleSets/rewriteRuleSet1",
                     },
                     RuleType = "Basic",
                 },
-                new AzureNextGen.Network.Latest.Inputs.ApplicationGatewayRequestRoutingRuleArgs
+                new AzureNextGen.Network..Inputs.ApplicationGatewayRequestRoutingRuleArgs
                 {
-                    HttpListener = new AzureNextGen.Network.Latest.Inputs.SubResourceArgs
+                    HttpListener = new AzureNextGen.Network..Inputs.SubResourceArgs
                     {
                         Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/httpListeners/appgwhttplistener",
                     },
                     Name = "appgwPathBasedRule",
                     Priority = 20,
                     RuleType = "PathBasedRouting",
-                    UrlPathMap = new AzureNextGen.Network.Latest.Inputs.SubResourceArgs
+                    UrlPathMap = new AzureNextGen.Network..Inputs.SubResourceArgs
                     {
                         Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/urlPathMaps/pathMap1",
                     },
@@ -183,18 +183,18 @@ class MyStack : Stack
             ResourceGroupName = "rg1",
             RewriteRuleSets = 
             {
-                new AzureNextGen.Network.Latest.Inputs.ApplicationGatewayRewriteRuleSetArgs
+                new AzureNextGen.Network..Inputs.ApplicationGatewayRewriteRuleSetArgs
                 {
                     Name = "rewriteRuleSet1",
                     RewriteRules = 
                     {
-                        new AzureNextGen.Network.Latest.Inputs.ApplicationGatewayRewriteRuleArgs
+                        new AzureNextGen.Network..Inputs.ApplicationGatewayRewriteRuleArgs
                         {
-                            ActionSet = new AzureNextGen.Network.Latest.Inputs.ApplicationGatewayRewriteRuleActionSetArgs
+                            ActionSet = new AzureNextGen.Network..Inputs.ApplicationGatewayRewriteRuleActionSetArgs
                             {
                                 RequestHeaderConfigurations = 
                                 {
-                                    new AzureNextGen.Network.Latest.Inputs.ApplicationGatewayHeaderConfigurationArgs
+                                    new AzureNextGen.Network..Inputs.ApplicationGatewayHeaderConfigurationArgs
                                     {
                                         HeaderName = "X-Forwarded-For",
                                         HeaderValue = "{var_add_x_forwarded_for_proxy}",
@@ -202,20 +202,20 @@ class MyStack : Stack
                                 },
                                 ResponseHeaderConfigurations = 
                                 {
-                                    new AzureNextGen.Network.Latest.Inputs.ApplicationGatewayHeaderConfigurationArgs
+                                    new AzureNextGen.Network..Inputs.ApplicationGatewayHeaderConfigurationArgs
                                     {
                                         HeaderName = "Strict-Transport-Security",
                                         HeaderValue = "max-age=31536000",
                                     },
                                 },
-                                UrlConfiguration = new AzureNextGen.Network.Latest.Inputs.ApplicationGatewayUrlConfigurationArgs
+                                UrlConfiguration = new AzureNextGen.Network..Inputs.ApplicationGatewayUrlConfigurationArgs
                                 {
                                     ModifiedPath = "/abc",
                                 },
                             },
                             Conditions = 
                             {
-                                new AzureNextGen.Network.Latest.Inputs.ApplicationGatewayRewriteRuleConditionArgs
+                                new AzureNextGen.Network..Inputs.ApplicationGatewayRewriteRuleConditionArgs
                                 {
                                     IgnoreCase = true,
                                     Negate = false,
@@ -229,7 +229,7 @@ class MyStack : Stack
                     },
                 },
             },
-            Sku = new AzureNextGen.Network.Latest.Inputs.ApplicationGatewaySkuArgs
+            Sku = new AzureNextGen.Network..Inputs.ApplicationGatewaySkuArgs
             {
                 Capacity = 3,
                 Name = "Standard_v2",
@@ -237,13 +237,13 @@ class MyStack : Stack
             },
             SslCertificates = 
             {
-                new AzureNextGen.Network.Latest.Inputs.ApplicationGatewaySslCertificateArgs
+                new AzureNextGen.Network..Inputs.ApplicationGatewaySslCertificateArgs
                 {
                     Data = "****",
                     Name = "sslcert",
                     Password = "****",
                 },
-                new AzureNextGen.Network.Latest.Inputs.ApplicationGatewaySslCertificateArgs
+                new AzureNextGen.Network..Inputs.ApplicationGatewaySslCertificateArgs
                 {
                     KeyVaultSecretId = "https://kv/secret",
                     Name = "sslcert2",
@@ -251,14 +251,14 @@ class MyStack : Stack
             },
             SslProfiles = 
             {
-                new AzureNextGen.Network.Latest.Inputs.ApplicationGatewaySslProfileArgs
+                new AzureNextGen.Network..Inputs.ApplicationGatewaySslProfileArgs
                 {
-                    ClientAuthConfiguration = new AzureNextGen.Network.Latest.Inputs.ApplicationGatewayClientAuthConfigurationArgs
+                    ClientAuthConfiguration = new AzureNextGen.Network..Inputs.ApplicationGatewayClientAuthConfigurationArgs
                     {
                         VerifyClientCertIssuerDN = true,
                     },
                     Name = "sslProfile1",
-                    SslPolicy = new AzureNextGen.Network.Latest.Inputs.ApplicationGatewaySslPolicyArgs
+                    SslPolicy = new AzureNextGen.Network..Inputs.ApplicationGatewaySslPolicyArgs
                     {
                         CipherSuites = 
                         {
@@ -269,7 +269,7 @@ class MyStack : Stack
                     },
                     TrustedClientCertificates = 
                     {
-                        new AzureNextGen.Network.Latest.Inputs.SubResourceArgs
+                        new AzureNextGen.Network..Inputs.SubResourceArgs
                         {
                             Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/trustedClientCertificates/clientcert",
                         },
@@ -278,7 +278,7 @@ class MyStack : Stack
             },
             TrustedClientCertificates = 
             {
-                new AzureNextGen.Network.Latest.Inputs.ApplicationGatewayTrustedClientCertificateArgs
+                new AzureNextGen.Network..Inputs.ApplicationGatewayTrustedClientCertificateArgs
                 {
                     Data = "****",
                     Name = "clientcert",
@@ -286,12 +286,12 @@ class MyStack : Stack
             },
             TrustedRootCertificates = 
             {
-                new AzureNextGen.Network.Latest.Inputs.ApplicationGatewayTrustedRootCertificateArgs
+                new AzureNextGen.Network..Inputs.ApplicationGatewayTrustedRootCertificateArgs
                 {
                     Data = "****",
                     Name = "rootcert",
                 },
-                new AzureNextGen.Network.Latest.Inputs.ApplicationGatewayTrustedRootCertificateArgs
+                new AzureNextGen.Network..Inputs.ApplicationGatewayTrustedRootCertificateArgs
                 {
                     KeyVaultSecretId = "https://kv/secret",
                     Name = "rootcert1",
@@ -299,30 +299,30 @@ class MyStack : Stack
             },
             UrlPathMaps = 
             {
-                new AzureNextGen.Network.Latest.Inputs.ApplicationGatewayUrlPathMapArgs
+                new AzureNextGen.Network..Inputs.ApplicationGatewayUrlPathMapArgs
                 {
-                    DefaultBackendAddressPool = new AzureNextGen.Network.Latest.Inputs.SubResourceArgs
+                    DefaultBackendAddressPool = new AzureNextGen.Network..Inputs.SubResourceArgs
                     {
                         Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/backendAddressPools/appgwpool",
                     },
-                    DefaultBackendHttpSettings = new AzureNextGen.Network.Latest.Inputs.SubResourceArgs
+                    DefaultBackendHttpSettings = new AzureNextGen.Network..Inputs.SubResourceArgs
                     {
                         Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/backendHttpSettingsCollection/appgwbhs",
                     },
-                    DefaultRewriteRuleSet = new AzureNextGen.Network.Latest.Inputs.SubResourceArgs
+                    DefaultRewriteRuleSet = new AzureNextGen.Network..Inputs.SubResourceArgs
                     {
                         Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/rewriteRuleSets/rewriteRuleSet1",
                     },
                     Name = "pathMap1",
                     PathRules = 
                     {
-                        new AzureNextGen.Network.Latest.Inputs.ApplicationGatewayPathRuleArgs
+                        new AzureNextGen.Network..Inputs.ApplicationGatewayPathRuleArgs
                         {
-                            BackendAddressPool = new AzureNextGen.Network.Latest.Inputs.SubResourceArgs
+                            BackendAddressPool = new AzureNextGen.Network..Inputs.SubResourceArgs
                             {
                                 Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/backendAddressPools/appgwpool",
                             },
-                            BackendHttpSettings = new AzureNextGen.Network.Latest.Inputs.SubResourceArgs
+                            BackendHttpSettings = new AzureNextGen.Network..Inputs.SubResourceArgs
                             {
                                 Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/backendHttpSettingsCollection/appgwbhs",
                             },
@@ -332,7 +332,7 @@ class MyStack : Stack
                                 "/api",
                                 "/v1/api",
                             },
-                            RewriteRuleSet = new AzureNextGen.Network.Latest.Inputs.SubResourceArgs
+                            RewriteRuleSet = new AzureNextGen.Network..Inputs.SubResourceArgs
                             {
                                 Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/rewriteRuleSets/rewriteRuleSet1",
                             },
@@ -355,7 +355,7 @@ class MyStack : Stack
 package main
 
 import (
-	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network/latest"
+	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -616,78 +616,78 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-application_gateway = azure_nextgen.network.latest.ApplicationGateway("applicationGateway",
+application_gateway = azure_nextgen.network.ApplicationGateway("applicationGateway",
     application_gateway_name="appgw",
-    backend_address_pools=[azure_nextgen.network.latest.ApplicationGatewayBackendAddressPoolArgs(
+    backend_address_pools=[azure_nextgen.network.ApplicationGatewayBackendAddressPoolArgs(
         backend_addresses=[
-            azure_nextgen.network.latest.ApplicationGatewayBackendAddressArgs(
+            azure_nextgen.network.ApplicationGatewayBackendAddressArgs(
                 ip_address="10.0.1.1",
             ),
-            azure_nextgen.network.latest.ApplicationGatewayBackendAddressArgs(
+            azure_nextgen.network.ApplicationGatewayBackendAddressArgs(
                 ip_address="10.0.1.2",
             ),
         ],
         name="appgwpool",
     )],
-    backend_http_settings_collection=[azure_nextgen.network.latest.ApplicationGatewayBackendHttpSettingsArgs(
+    backend_http_settings_collection=[azure_nextgen.network.ApplicationGatewayBackendHttpSettingsArgs(
         cookie_based_affinity="Disabled",
         name="appgwbhs",
         port=80,
         protocol="Http",
         request_timeout=30,
     )],
-    frontend_ip_configurations=[azure_nextgen.network.latest.ApplicationGatewayFrontendIPConfigurationArgs(
+    frontend_ip_configurations=[azure_nextgen.network.ApplicationGatewayFrontendIPConfigurationArgs(
         name="appgwfip",
-        public_ip_address=azure_nextgen.network.latest.SubResourceArgs(
+        public_ip_address=azure_nextgen.network.SubResourceArgs(
             id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/publicIPAddresses/appgwpip",
         ),
     )],
     frontend_ports=[
-        azure_nextgen.network.latest.ApplicationGatewayFrontendPortArgs(
+        azure_nextgen.network.ApplicationGatewayFrontendPortArgs(
             name="appgwfp",
             port=443,
         ),
-        azure_nextgen.network.latest.ApplicationGatewayFrontendPortArgs(
+        azure_nextgen.network.ApplicationGatewayFrontendPortArgs(
             name="appgwfp80",
             port=80,
         ),
     ],
-    gateway_ip_configurations=[azure_nextgen.network.latest.ApplicationGatewayIPConfigurationArgs(
+    gateway_ip_configurations=[azure_nextgen.network.ApplicationGatewayIPConfigurationArgs(
         name="appgwipc",
-        subnet=azure_nextgen.network.latest.SubResourceArgs(
+        subnet=azure_nextgen.network.SubResourceArgs(
             id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnet/subnets/appgwsubnet",
         ),
     )],
     http_listeners=[
-        azure_nextgen.network.latest.ApplicationGatewayHttpListenerArgs(
-            frontend_ip_configuration=azure_nextgen.network.latest.SubResourceArgs(
+        azure_nextgen.network.ApplicationGatewayHttpListenerArgs(
+            frontend_ip_configuration=azure_nextgen.network.SubResourceArgs(
                 id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/frontendIPConfigurations/appgwfip",
             ),
-            frontend_port=azure_nextgen.network.latest.SubResourceArgs(
+            frontend_port=azure_nextgen.network.SubResourceArgs(
                 id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/frontendPorts/appgwfp",
             ),
             name="appgwhl",
             protocol="Https",
             require_server_name_indication=False,
-            ssl_certificate=azure_nextgen.network.latest.SubResourceArgs(
+            ssl_certificate=azure_nextgen.network.SubResourceArgs(
                 id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/sslCertificates/sslcert",
             ),
-            ssl_profile=azure_nextgen.network.latest.SubResourceArgs(
+            ssl_profile=azure_nextgen.network.SubResourceArgs(
                 id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/sslProfiles/sslProfile1",
             ),
         ),
-        azure_nextgen.network.latest.ApplicationGatewayHttpListenerArgs(
-            frontend_ip_configuration=azure_nextgen.network.latest.SubResourceArgs(
+        azure_nextgen.network.ApplicationGatewayHttpListenerArgs(
+            frontend_ip_configuration=azure_nextgen.network.SubResourceArgs(
                 id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/frontendIPConfigurations/appgwfip",
             ),
-            frontend_port=azure_nextgen.network.latest.SubResourceArgs(
+            frontend_port=azure_nextgen.network.SubResourceArgs(
                 id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/frontendPorts/appgwfp80",
             ),
             name="appgwhttplistener",
             protocol="Http",
         ),
     ],
-    identity=azure_nextgen.network.latest.ManagedServiceIdentityArgs(
+    identity=azure_nextgen.network.ManagedServiceIdentityArgs(
         type="UserAssigned",
         user_assigned_identities={
             "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity1": {},
@@ -695,53 +695,53 @@ application_gateway = azure_nextgen.network.latest.ApplicationGateway("applicati
     ),
     location="eastus",
     request_routing_rules=[
-        azure_nextgen.network.latest.ApplicationGatewayRequestRoutingRuleArgs(
-            backend_address_pool=azure_nextgen.network.latest.SubResourceArgs(
+        azure_nextgen.network.ApplicationGatewayRequestRoutingRuleArgs(
+            backend_address_pool=azure_nextgen.network.SubResourceArgs(
                 id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/backendAddressPools/appgwpool",
             ),
-            backend_http_settings=azure_nextgen.network.latest.SubResourceArgs(
+            backend_http_settings=azure_nextgen.network.SubResourceArgs(
                 id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/backendHttpSettingsCollection/appgwbhs",
             ),
-            http_listener=azure_nextgen.network.latest.SubResourceArgs(
+            http_listener=azure_nextgen.network.SubResourceArgs(
                 id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/httpListeners/appgwhl",
             ),
             name="appgwrule",
             priority=10,
-            rewrite_rule_set=azure_nextgen.network.latest.SubResourceArgs(
+            rewrite_rule_set=azure_nextgen.network.SubResourceArgs(
                 id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/rewriteRuleSets/rewriteRuleSet1",
             ),
             rule_type="Basic",
         ),
-        azure_nextgen.network.latest.ApplicationGatewayRequestRoutingRuleArgs(
-            http_listener=azure_nextgen.network.latest.SubResourceArgs(
+        azure_nextgen.network.ApplicationGatewayRequestRoutingRuleArgs(
+            http_listener=azure_nextgen.network.SubResourceArgs(
                 id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/httpListeners/appgwhttplistener",
             ),
             name="appgwPathBasedRule",
             priority=20,
             rule_type="PathBasedRouting",
-            url_path_map=azure_nextgen.network.latest.SubResourceArgs(
+            url_path_map=azure_nextgen.network.SubResourceArgs(
                 id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/urlPathMaps/pathMap1",
             ),
         ),
     ],
     resource_group_name="rg1",
-    rewrite_rule_sets=[azure_nextgen.network.latest.ApplicationGatewayRewriteRuleSetArgs(
+    rewrite_rule_sets=[azure_nextgen.network.ApplicationGatewayRewriteRuleSetArgs(
         name="rewriteRuleSet1",
-        rewrite_rules=[azure_nextgen.network.latest.ApplicationGatewayRewriteRuleArgs(
-            action_set=azure_nextgen.network.latest.ApplicationGatewayRewriteRuleActionSetArgs(
-                request_header_configurations=[azure_nextgen.network.latest.ApplicationGatewayHeaderConfigurationArgs(
+        rewrite_rules=[azure_nextgen.network.ApplicationGatewayRewriteRuleArgs(
+            action_set=azure_nextgen.network.ApplicationGatewayRewriteRuleActionSetArgs(
+                request_header_configurations=[azure_nextgen.network.ApplicationGatewayHeaderConfigurationArgs(
                     header_name="X-Forwarded-For",
                     header_value="{var_add_x_forwarded_for_proxy}",
                 )],
-                response_header_configurations=[azure_nextgen.network.latest.ApplicationGatewayHeaderConfigurationArgs(
+                response_header_configurations=[azure_nextgen.network.ApplicationGatewayHeaderConfigurationArgs(
                     header_name="Strict-Transport-Security",
                     header_value="max-age=31536000",
                 )],
-                url_configuration=azure_nextgen.network.latest.ApplicationGatewayUrlConfigurationArgs(
+                url_configuration=azure_nextgen.network.ApplicationGatewayUrlConfigurationArgs(
                     modified_path="/abc",
                 ),
             ),
-            conditions=[azure_nextgen.network.latest.ApplicationGatewayRewriteRuleConditionArgs(
+            conditions=[azure_nextgen.network.ApplicationGatewayRewriteRuleConditionArgs(
                 ignore_case=True,
                 negate=False,
                 pattern="^Bearer",
@@ -751,66 +751,66 @@ application_gateway = azure_nextgen.network.latest.ApplicationGateway("applicati
             rule_sequence=102,
         )],
     )],
-    sku=azure_nextgen.network.latest.ApplicationGatewaySkuArgs(
+    sku=azure_nextgen.network.ApplicationGatewaySkuArgs(
         capacity=3,
         name="Standard_v2",
         tier="Standard_v2",
     ),
     ssl_certificates=[
-        azure_nextgen.network.latest.ApplicationGatewaySslCertificateArgs(
+        azure_nextgen.network.ApplicationGatewaySslCertificateArgs(
             data="****",
             name="sslcert",
             password="****",
         ),
-        azure_nextgen.network.latest.ApplicationGatewaySslCertificateArgs(
+        azure_nextgen.network.ApplicationGatewaySslCertificateArgs(
             key_vault_secret_id="https://kv/secret",
             name="sslcert2",
         ),
     ],
-    ssl_profiles=[azure_nextgen.network.latest.ApplicationGatewaySslProfileArgs(
-        client_auth_configuration=azure_nextgen.network.latest.ApplicationGatewayClientAuthConfigurationArgs(
+    ssl_profiles=[azure_nextgen.network.ApplicationGatewaySslProfileArgs(
+        client_auth_configuration=azure_nextgen.network.ApplicationGatewayClientAuthConfigurationArgs(
             verify_client_cert_issuer_dn=True,
         ),
         name="sslProfile1",
-        ssl_policy=azure_nextgen.network.latest.ApplicationGatewaySslPolicyArgs(
+        ssl_policy=azure_nextgen.network.ApplicationGatewaySslPolicyArgs(
             cipher_suites=["TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256"],
             min_protocol_version="TLSv1_1",
             policy_type="Custom",
         ),
-        trusted_client_certificates=[azure_nextgen.network.latest.SubResourceArgs(
+        trusted_client_certificates=[azure_nextgen.network.SubResourceArgs(
             id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/trustedClientCertificates/clientcert",
         )],
     )],
-    trusted_client_certificates=[azure_nextgen.network.latest.ApplicationGatewayTrustedClientCertificateArgs(
+    trusted_client_certificates=[azure_nextgen.network.ApplicationGatewayTrustedClientCertificateArgs(
         data="****",
         name="clientcert",
     )],
     trusted_root_certificates=[
-        azure_nextgen.network.latest.ApplicationGatewayTrustedRootCertificateArgs(
+        azure_nextgen.network.ApplicationGatewayTrustedRootCertificateArgs(
             data="****",
             name="rootcert",
         ),
-        azure_nextgen.network.latest.ApplicationGatewayTrustedRootCertificateArgs(
+        azure_nextgen.network.ApplicationGatewayTrustedRootCertificateArgs(
             key_vault_secret_id="https://kv/secret",
             name="rootcert1",
         ),
     ],
-    url_path_maps=[azure_nextgen.network.latest.ApplicationGatewayUrlPathMapArgs(
-        default_backend_address_pool=azure_nextgen.network.latest.SubResourceArgs(
+    url_path_maps=[azure_nextgen.network.ApplicationGatewayUrlPathMapArgs(
+        default_backend_address_pool=azure_nextgen.network.SubResourceArgs(
             id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/backendAddressPools/appgwpool",
         ),
-        default_backend_http_settings=azure_nextgen.network.latest.SubResourceArgs(
+        default_backend_http_settings=azure_nextgen.network.SubResourceArgs(
             id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/backendHttpSettingsCollection/appgwbhs",
         ),
-        default_rewrite_rule_set=azure_nextgen.network.latest.SubResourceArgs(
+        default_rewrite_rule_set=azure_nextgen.network.SubResourceArgs(
             id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/rewriteRuleSets/rewriteRuleSet1",
         ),
         name="pathMap1",
-        path_rules=[azure_nextgen.network.latest.ApplicationGatewayPathRuleArgs(
-            backend_address_pool=azure_nextgen.network.latest.SubResourceArgs(
+        path_rules=[azure_nextgen.network.ApplicationGatewayPathRuleArgs(
+            backend_address_pool=azure_nextgen.network.SubResourceArgs(
                 id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/backendAddressPools/appgwpool",
             ),
-            backend_http_settings=azure_nextgen.network.latest.SubResourceArgs(
+            backend_http_settings=azure_nextgen.network.SubResourceArgs(
                 id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/backendHttpSettingsCollection/appgwbhs",
             ),
             name="apiPaths",
@@ -818,7 +818,7 @@ application_gateway = azure_nextgen.network.latest.ApplicationGateway("applicati
                 "/api",
                 "/v1/api",
             ],
-            rewrite_rule_set=azure_nextgen.network.latest.SubResourceArgs(
+            rewrite_rule_set=azure_nextgen.network.SubResourceArgs(
                 id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/rewriteRuleSets/rewriteRuleSet1",
             ),
         )],
@@ -834,7 +834,7 @@ application_gateway = azure_nextgen.network.latest.ApplicationGateway("applicati
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const applicationGateway = new azure_nextgen.network.latest.ApplicationGateway("applicationGateway", {
+const applicationGateway = new azure_nextgen.network.ApplicationGateway("applicationGateway", {
     applicationGatewayName: "appgw",
     backendAddressPools: [{
         backendAddresses: [
@@ -1254,7 +1254,7 @@ The ApplicationGateway resource accepts the following [input]({{< relref "/docs/
 <a href="#authenticationcertificates_csharp" style="color: inherit; text-decoration: inherit;">Authentication<wbr>Certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayauthenticationcertificate">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Authentication<wbr>Certificate<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#applicationgatewayauthenticationcertificate">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Authentication<wbr>Certificate<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Authentication certificates of the application gateway resource. For default limits, see [Application Gateway limits](https://docs.microsoft.com/azure/azure-subscription-service-limits#application-gateway-limits).{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1263,7 +1263,7 @@ The ApplicationGateway resource accepts the following [input]({{< relref "/docs/
 <a href="#autoscaleconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Autoscale<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayautoscaleconfiguration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Autoscale<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationgatewayautoscaleconfiguration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Autoscale<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Autoscale Configuration.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1272,7 +1272,7 @@ The ApplicationGateway resource accepts the following [input]({{< relref "/docs/
 <a href="#backendaddresspools_csharp" style="color: inherit; text-decoration: inherit;">Backend<wbr>Address<wbr>Pools</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewaybackendaddresspool">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Backend<wbr>Address<wbr>Pool<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#applicationgatewaybackendaddresspool">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Backend<wbr>Address<wbr>Pool<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Backend address pool of the application gateway resource. For default limits, see [Application Gateway limits](https://docs.microsoft.com/azure/azure-subscription-service-limits#application-gateway-limits).{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1281,7 +1281,7 @@ The ApplicationGateway resource accepts the following [input]({{< relref "/docs/
 <a href="#backendhttpsettingscollection_csharp" style="color: inherit; text-decoration: inherit;">Backend<wbr>Http<wbr>Settings<wbr>Collection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewaybackendhttpsettings">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Backend<wbr>Http<wbr>Settings<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#applicationgatewaybackendhttpsettings">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Backend<wbr>Http<wbr>Settings<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Backend http settings of the application gateway resource. For default limits, see [Application Gateway limits](https://docs.microsoft.com/azure/azure-subscription-service-limits#application-gateway-limits).{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1290,7 +1290,7 @@ The ApplicationGateway resource accepts the following [input]({{< relref "/docs/
 <a href="#customerrorconfigurations_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Error<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewaycustomerror">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Custom<wbr>Error<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#applicationgatewaycustomerror">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Custom<wbr>Error<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Custom error configurations of the application gateway resource.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1317,7 +1317,7 @@ The ApplicationGateway resource accepts the following [input]({{< relref "/docs/
 <a href="#firewallpolicy_csharp" style="color: inherit; text-decoration: inherit;">Firewall<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Reference to the FirewallPolicy resource.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1335,7 +1335,7 @@ The ApplicationGateway resource accepts the following [input]({{< relref "/docs/
 <a href="#frontendipconfigurations_csharp" style="color: inherit; text-decoration: inherit;">Frontend<wbr>IPConfigurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayfrontendipconfiguration">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Frontend<wbr>IPConfiguration<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#applicationgatewayfrontendipconfiguration">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Frontend<wbr>IPConfiguration<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Frontend IP addresses of the application gateway resource. For default limits, see [Application Gateway limits](https://docs.microsoft.com/azure/azure-subscription-service-limits#application-gateway-limits).{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1344,7 +1344,7 @@ The ApplicationGateway resource accepts the following [input]({{< relref "/docs/
 <a href="#frontendports_csharp" style="color: inherit; text-decoration: inherit;">Frontend<wbr>Ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayfrontendport">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Frontend<wbr>Port<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#applicationgatewayfrontendport">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Frontend<wbr>Port<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Frontend ports of the application gateway resource. For default limits, see [Application Gateway limits](https://docs.microsoft.com/azure/azure-subscription-service-limits#application-gateway-limits).{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1353,7 +1353,7 @@ The ApplicationGateway resource accepts the following [input]({{< relref "/docs/
 <a href="#gatewayipconfigurations_csharp" style="color: inherit; text-decoration: inherit;">Gateway<wbr>IPConfigurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayipconfiguration">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>IPConfiguration<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#applicationgatewayipconfiguration">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>IPConfiguration<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Subnets of the application gateway resource. For default limits, see [Application Gateway limits](https://docs.microsoft.com/azure/azure-subscription-service-limits#application-gateway-limits).{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1362,7 +1362,7 @@ The ApplicationGateway resource accepts the following [input]({{< relref "/docs/
 <a href="#httplisteners_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Listeners</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayhttplistener">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Http<wbr>Listener<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#applicationgatewayhttplistener">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Http<wbr>Listener<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Http listeners of the application gateway resource. For default limits, see [Application Gateway limits](https://docs.microsoft.com/azure/azure-subscription-service-limits#application-gateway-limits).{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1380,7 +1380,7 @@ The ApplicationGateway resource accepts the following [input]({{< relref "/docs/
 <a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedserviceidentity">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Managed<wbr>Service<wbr>Identity<wbr>Args</a></span>
+        <span class="property-type"><a href="#managedserviceidentity">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Managed<wbr>Service<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The identity of the application gateway, if configured.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1398,7 +1398,7 @@ The ApplicationGateway resource accepts the following [input]({{< relref "/docs/
 <a href="#privatelinkconfigurations_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayprivatelinkconfiguration">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Private<wbr>Link<wbr>Configuration<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#applicationgatewayprivatelinkconfiguration">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Private<wbr>Link<wbr>Configuration<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}PrivateLink configurations on application gateway.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1407,7 +1407,7 @@ The ApplicationGateway resource accepts the following [input]({{< relref "/docs/
 <a href="#probes_csharp" style="color: inherit; text-decoration: inherit;">Probes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayprobe">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Probe<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#applicationgatewayprobe">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Probe<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Probes of the application gateway resource.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1416,7 +1416,7 @@ The ApplicationGateway resource accepts the following [input]({{< relref "/docs/
 <a href="#redirectconfigurations_csharp" style="color: inherit; text-decoration: inherit;">Redirect<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayredirectconfiguration">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Redirect<wbr>Configuration<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#applicationgatewayredirectconfiguration">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Redirect<wbr>Configuration<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Redirect configurations of the application gateway resource. For default limits, see [Application Gateway limits](https://docs.microsoft.com/azure/azure-subscription-service-limits#application-gateway-limits).{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1425,7 +1425,7 @@ The ApplicationGateway resource accepts the following [input]({{< relref "/docs/
 <a href="#requestroutingrules_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Routing<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayrequestroutingrule">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Request<wbr>Routing<wbr>Rule<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#applicationgatewayrequestroutingrule">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Request<wbr>Routing<wbr>Rule<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Request routing rules of the application gateway resource.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1434,7 +1434,7 @@ The ApplicationGateway resource accepts the following [input]({{< relref "/docs/
 <a href="#rewriterulesets_csharp" style="color: inherit; text-decoration: inherit;">Rewrite<wbr>Rule<wbr>Sets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayrewriteruleset">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Rewrite<wbr>Rule<wbr>Set<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#applicationgatewayrewriteruleset">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Rewrite<wbr>Rule<wbr>Set<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Rewrite rules for the application gateway resource.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1443,7 +1443,7 @@ The ApplicationGateway resource accepts the following [input]({{< relref "/docs/
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewaysku">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Sku<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationgatewaysku">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}SKU of the application gateway resource.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1452,7 +1452,7 @@ The ApplicationGateway resource accepts the following [input]({{< relref "/docs/
 <a href="#sslcertificates_csharp" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewaysslcertificate">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Ssl<wbr>Certificate<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#applicationgatewaysslcertificate">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Ssl<wbr>Certificate<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}SSL certificates of the application gateway resource. For default limits, see [Application Gateway limits](https://docs.microsoft.com/azure/azure-subscription-service-limits#application-gateway-limits).{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1461,7 +1461,7 @@ The ApplicationGateway resource accepts the following [input]({{< relref "/docs/
 <a href="#sslpolicy_csharp" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewaysslpolicy">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Ssl<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationgatewaysslpolicy">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Ssl<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}SSL policy of the application gateway resource.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1470,7 +1470,7 @@ The ApplicationGateway resource accepts the following [input]({{< relref "/docs/
 <a href="#sslprofiles_csharp" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Profiles</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewaysslprofile">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Ssl<wbr>Profile<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#applicationgatewaysslprofile">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Ssl<wbr>Profile<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}SSL profiles of the application gateway resource. For default limits, see [Application Gateway limits](https://docs.microsoft.com/azure/azure-subscription-service-limits#application-gateway-limits).{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1488,7 +1488,7 @@ The ApplicationGateway resource accepts the following [input]({{< relref "/docs/
 <a href="#trustedclientcertificates_csharp" style="color: inherit; text-decoration: inherit;">Trusted<wbr>Client<wbr>Certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewaytrustedclientcertificate">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Trusted<wbr>Client<wbr>Certificate<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#applicationgatewaytrustedclientcertificate">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Trusted<wbr>Client<wbr>Certificate<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Trusted client certificates of the application gateway resource. For default limits, see [Application Gateway limits](https://docs.microsoft.com/azure/azure-subscription-service-limits#application-gateway-limits).{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1497,7 +1497,7 @@ The ApplicationGateway resource accepts the following [input]({{< relref "/docs/
 <a href="#trustedrootcertificates_csharp" style="color: inherit; text-decoration: inherit;">Trusted<wbr>Root<wbr>Certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewaytrustedrootcertificate">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Trusted<wbr>Root<wbr>Certificate<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#applicationgatewaytrustedrootcertificate">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Trusted<wbr>Root<wbr>Certificate<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Trusted Root certificates of the application gateway resource. For default limits, see [Application Gateway limits](https://docs.microsoft.com/azure/azure-subscription-service-limits#application-gateway-limits).{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1506,7 +1506,7 @@ The ApplicationGateway resource accepts the following [input]({{< relref "/docs/
 <a href="#urlpathmaps_csharp" style="color: inherit; text-decoration: inherit;">Url<wbr>Path<wbr>Maps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayurlpathmap">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Url<wbr>Path<wbr>Map<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#applicationgatewayurlpathmap">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Url<wbr>Path<wbr>Map<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}URL path map of the application gateway resource. For default limits, see [Application Gateway limits](https://docs.microsoft.com/azure/azure-subscription-service-limits#application-gateway-limits).{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1515,7 +1515,7 @@ The ApplicationGateway resource accepts the following [input]({{< relref "/docs/
 <a href="#webapplicationfirewallconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Web<wbr>Application<wbr>Firewall<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewaywebapplicationfirewallconfiguration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Web<wbr>Application<wbr>Firewall<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationgatewaywebapplicationfirewallconfiguration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Web<wbr>Application<wbr>Firewall<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Web application firewall configuration.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2491,7 +2491,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privateendpointconnections_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint<wbr>Connections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayprivateendpointconnectionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Outputs.<wbr>Application<wbr>Gateway<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#applicationgatewayprivateendpointconnectionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Outputs.<wbr>Application<wbr>Gateway<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Private Endpoint connections on application gateway.{{% /md %}}</dd>
     <dt class="property-"
@@ -3449,7 +3449,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backendaddresses_csharp" style="color: inherit; text-decoration: inherit;">Backend<wbr>Addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewaybackendaddress">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Backend<wbr>Address<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#applicationgatewaybackendaddress">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Backend<wbr>Address<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Backend addresses.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3583,7 +3583,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backendipconfigurations_csharp" style="color: inherit; text-decoration: inherit;">Backend<wbr>IPConfigurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkinterfaceipconfigurationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Network<wbr>Interface<wbr>IPConfiguration<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#networkinterfaceipconfigurationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Network<wbr>Interface<wbr>IPConfiguration<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Collection of references to IPs defined in network interfaces.{{% /md %}}</dd>
     <dt class="property-required"
@@ -3619,7 +3619,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backendaddresses_csharp" style="color: inherit; text-decoration: inherit;">Backend<wbr>Addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewaybackendaddressresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Backend<wbr>Address<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#applicationgatewaybackendaddressresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Backend<wbr>Address<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Backend addresses.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3968,7 +3968,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authenticationcertificates_csharp" style="color: inherit; text-decoration: inherit;">Authentication<wbr>Certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#subresource">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Array of references to application gateway authentication certificates.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3977,7 +3977,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#connectiondraining_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>Draining</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayconnectiondraining">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Connection<wbr>Draining<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationgatewayconnectiondraining">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Connection<wbr>Draining<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Connection draining of the backend http settings resource.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3986,7 +3986,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cookiebasedaffinity_csharp" style="color: inherit; text-decoration: inherit;">Cookie<wbr>Based<wbr>Affinity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#applicationgatewaycookiebasedaffinity">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Application<wbr>Gateway<wbr>Cookie<wbr>Based<wbr>Affinity</a></span>
+        <span class="property-type">string | <a href="#applicationgatewaycookiebasedaffinity">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Application<wbr>Gateway<wbr>Cookie<wbr>Based<wbr>Affinity</a></span>
     </dt>
     <dd>{{% md %}}Cookie based affinity.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4049,7 +4049,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#probe_csharp" style="color: inherit; text-decoration: inherit;">Probe</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Probe resource of an application gateway.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4067,7 +4067,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protocol_csharp" style="color: inherit; text-decoration: inherit;">Protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#applicationgatewayprotocol">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Application<wbr>Gateway<wbr>Protocol</a></span>
+        <span class="property-type">string | <a href="#applicationgatewayprotocol">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Application<wbr>Gateway<wbr>Protocol</a></span>
     </dt>
     <dd>{{% md %}}The protocol used to communicate with the backend.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4085,7 +4085,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trustedrootcertificates_csharp" style="color: inherit; text-decoration: inherit;">Trusted<wbr>Root<wbr>Certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#subresource">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Array of references to application gateway trusted root certificates.{{% /md %}}</dd>
 </dl>
@@ -4561,7 +4561,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authenticationcertificates_csharp" style="color: inherit; text-decoration: inherit;">Authentication<wbr>Certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#subresourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Array of references to application gateway authentication certificates.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4570,7 +4570,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#connectiondraining_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>Draining</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayconnectiondrainingresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Connection<wbr>Draining<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationgatewayconnectiondrainingresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Connection<wbr>Draining<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Connection draining of the backend http settings resource.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4642,7 +4642,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#probe_csharp" style="color: inherit; text-decoration: inherit;">Probe</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Probe resource of an application gateway.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4678,7 +4678,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trustedrootcertificates_csharp" style="color: inherit; text-decoration: inherit;">Trusted<wbr>Root<wbr>Certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#subresourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Array of references to application gateway trusted root certificates.{{% /md %}}</dd>
 </dl>
@@ -5566,7 +5566,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#statuscode_csharp" style="color: inherit; text-decoration: inherit;">Status<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#applicationgatewaycustomerrorstatuscode">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Application<wbr>Gateway<wbr>Custom<wbr>Error<wbr>Status<wbr>Code</a></span>
+        <span class="property-type">string | <a href="#applicationgatewaycustomerrorstatuscode">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Application<wbr>Gateway<wbr>Custom<wbr>Error<wbr>Status<wbr>Code</a></span>
     </dt>
     <dd>{{% md %}}Status code of the application gateway customer error.{{% /md %}}</dd>
 </dl>
@@ -6320,7 +6320,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privateipallocationmethod_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>IPAllocation<wbr>Method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#ipallocationmethod">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>IPAllocation<wbr>Method</a></span>
+        <span class="property-type">string | <a href="#ipallocationmethod">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>IPAllocation<wbr>Method</a></span>
     </dt>
     <dd>{{% md %}}The private IP address allocation method.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -6329,7 +6329,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privatelinkconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Reference to the application gateway private link configuration.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -6338,7 +6338,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publicipaddress_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>IPAddress</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Reference to the PublicIP resource.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -6347,7 +6347,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subnet_csharp" style="color: inherit; text-decoration: inherit;">Subnet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Reference to the subnet resource.{{% /md %}}</dd>
 </dl>
@@ -6634,7 +6634,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privatelinkconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Reference to the application gateway private link configuration.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -6643,7 +6643,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publicipaddress_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>IPAddress</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Reference to the PublicIP resource.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -6652,7 +6652,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subnet_csharp" style="color: inherit; text-decoration: inherit;">Subnet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Reference to the subnet resource.{{% /md %}}</dd>
 </dl>
@@ -7529,7 +7529,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#customerrorconfigurations_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Error<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewaycustomerror">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Custom<wbr>Error<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#applicationgatewaycustomerror">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Custom<wbr>Error<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Custom error configurations of the HTTP listener.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -7538,7 +7538,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#firewallpolicy_csharp" style="color: inherit; text-decoration: inherit;">Firewall<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Reference to the FirewallPolicy resource.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -7547,7 +7547,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#frontendipconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Frontend<wbr>IPConfiguration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Frontend IP configuration resource of an application gateway.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -7556,7 +7556,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#frontendport_csharp" style="color: inherit; text-decoration: inherit;">Frontend<wbr>Port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Frontend port resource of an application gateway.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -7601,7 +7601,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protocol_csharp" style="color: inherit; text-decoration: inherit;">Protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#applicationgatewayprotocol">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Application<wbr>Gateway<wbr>Protocol</a></span>
+        <span class="property-type">string | <a href="#applicationgatewayprotocol">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Application<wbr>Gateway<wbr>Protocol</a></span>
     </dt>
     <dd>{{% md %}}Protocol of the HTTP listener.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -7619,7 +7619,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sslcertificate_csharp" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}SSL certificate resource of an application gateway.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -7628,7 +7628,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sslprofile_csharp" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}SSL profile resource of the application gateway.{{% /md %}}</dd>
 </dl>
@@ -8014,7 +8014,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#customerrorconfigurations_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Error<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewaycustomerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Custom<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#applicationgatewaycustomerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Custom<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Custom error configurations of the HTTP listener.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -8023,7 +8023,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#firewallpolicy_csharp" style="color: inherit; text-decoration: inherit;">Firewall<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Reference to the FirewallPolicy resource.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -8032,7 +8032,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#frontendipconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Frontend<wbr>IPConfiguration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Frontend IP configuration resource of an application gateway.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -8041,7 +8041,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#frontendport_csharp" style="color: inherit; text-decoration: inherit;">Frontend<wbr>Port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Frontend port resource of an application gateway.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -8104,7 +8104,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sslcertificate_csharp" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}SSL certificate resource of an application gateway.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -8113,7 +8113,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sslprofile_csharp" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}SSL profile resource of the application gateway.{{% /md %}}</dd>
 </dl>
@@ -8571,7 +8571,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subnet_csharp" style="color: inherit; text-decoration: inherit;">Subnet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Reference to the subnet resource. A subnet from where application gateway gets its private address.{{% /md %}}</dd>
 </dl>
@@ -8732,7 +8732,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subnet_csharp" style="color: inherit; text-decoration: inherit;">Subnet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Reference to the subnet resource. A subnet from where application gateway gets its private address.{{% /md %}}</dd>
 </dl>
@@ -8929,7 +8929,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backendaddresspool_csharp" style="color: inherit; text-decoration: inherit;">Backend<wbr>Address<wbr>Pool</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Backend address pool resource of URL path map path rule.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -8938,7 +8938,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backendhttpsettings_csharp" style="color: inherit; text-decoration: inherit;">Backend<wbr>Http<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Backend http settings resource of URL path map path rule.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -8947,7 +8947,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#firewallpolicy_csharp" style="color: inherit; text-decoration: inherit;">Firewall<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Reference to the FirewallPolicy resource.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -8983,7 +8983,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#redirectconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Redirect<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Redirect configuration resource of URL path map path rule.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -8992,7 +8992,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rewriteruleset_csharp" style="color: inherit; text-decoration: inherit;">Rewrite<wbr>Rule<wbr>Set</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Rewrite rule set resource of URL path map path rule.{{% /md %}}</dd>
 </dl>
@@ -9270,7 +9270,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backendaddresspool_csharp" style="color: inherit; text-decoration: inherit;">Backend<wbr>Address<wbr>Pool</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Backend address pool resource of URL path map path rule.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -9279,7 +9279,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backendhttpsettings_csharp" style="color: inherit; text-decoration: inherit;">Backend<wbr>Http<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Backend http settings resource of URL path map path rule.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -9288,7 +9288,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#firewallpolicy_csharp" style="color: inherit; text-decoration: inherit;">Firewall<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Reference to the FirewallPolicy resource.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -9324,7 +9324,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#redirectconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Redirect<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Redirect configuration resource of URL path map path rule.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -9333,7 +9333,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rewriteruleset_csharp" style="color: inherit; text-decoration: inherit;">Rewrite<wbr>Rule<wbr>Set</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Rewrite rule set resource of URL path map path rule.{{% /md %}}</dd>
 </dl>
@@ -9683,7 +9683,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privateendpoint_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#privateendpointresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The resource of private end point.{{% /md %}}</dd>
     <dt class="property-required"
@@ -9728,7 +9728,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privatelinkserviceconnectionstate_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A collection of information about the state of the connection between service consumer and provider.{{% /md %}}</dd>
 </dl>
@@ -9988,7 +9988,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipconfigurations_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayprivatelinkipconfiguration">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Private<wbr>Link<wbr>Ip<wbr>Configuration<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#applicationgatewayprivatelinkipconfiguration">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Private<wbr>Link<wbr>Ip<wbr>Configuration<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}An array of application gateway private link ip configurations.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -10149,7 +10149,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipconfigurations_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayprivatelinkipconfigurationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Private<wbr>Link<wbr>Ip<wbr>Configuration<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#applicationgatewayprivatelinkipconfigurationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Private<wbr>Link<wbr>Ip<wbr>Configuration<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}An array of application gateway private link ip configurations.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -10391,7 +10391,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privateipallocationmethod_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>IPAllocation<wbr>Method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#ipallocationmethod">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>IPAllocation<wbr>Method</a></span>
+        <span class="property-type">string | <a href="#ipallocationmethod">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>IPAllocation<wbr>Method</a></span>
     </dt>
     <dd>{{% md %}}The private IP address allocation method.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -10400,7 +10400,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subnet_csharp" style="color: inherit; text-decoration: inherit;">Subnet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Reference to the subnet resource.{{% /md %}}</dd>
 </dl>
@@ -10669,7 +10669,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subnet_csharp" style="color: inherit; text-decoration: inherit;">Subnet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Reference to the subnet resource.{{% /md %}}</dd>
 </dl>
@@ -10974,7 +10974,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#match_csharp" style="color: inherit; text-decoration: inherit;">Match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayprobehealthresponsematch">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Probe<wbr>Health<wbr>Response<wbr>Match<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationgatewayprobehealthresponsematch">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Probe<wbr>Health<wbr>Response<wbr>Match<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Criterion for classifying a healthy probe response.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -11028,7 +11028,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protocol_csharp" style="color: inherit; text-decoration: inherit;">Protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#applicationgatewayprotocol">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Application<wbr>Gateway<wbr>Protocol</a></span>
+        <span class="property-type">string | <a href="#applicationgatewayprotocol">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Application<wbr>Gateway<wbr>Protocol</a></span>
     </dt>
     <dd>{{% md %}}The protocol used for the probe.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -11655,7 +11655,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#match_csharp" style="color: inherit; text-decoration: inherit;">Match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayprobehealthresponsematchresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Probe<wbr>Health<wbr>Response<wbr>Match<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationgatewayprobehealthresponsematchresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Probe<wbr>Health<wbr>Response<wbr>Match<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Criterion for classifying a healthy probe response.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -12241,7 +12241,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pathrules_csharp" style="color: inherit; text-decoration: inherit;">Path<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#subresource">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Path rules specifying redirect configuration.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -12250,7 +12250,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#redirecttype_csharp" style="color: inherit; text-decoration: inherit;">Redirect<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#applicationgatewayredirecttype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Application<wbr>Gateway<wbr>Redirect<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#applicationgatewayredirecttype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Application<wbr>Gateway<wbr>Redirect<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}HTTP redirection type.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -12259,7 +12259,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#requestroutingrules_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Routing<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#subresource">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Request routing specifying redirect configuration.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -12268,7 +12268,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#targetlistener_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Listener</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Reference to a listener to redirect the request to.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -12286,7 +12286,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#urlpathmaps_csharp" style="color: inherit; text-decoration: inherit;">Url<wbr>Path<wbr>Maps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#subresource">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Url path maps specifying default redirect configuration.{{% /md %}}</dd>
 </dl>
@@ -12645,7 +12645,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pathrules_csharp" style="color: inherit; text-decoration: inherit;">Path<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#subresourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Path rules specifying redirect configuration.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -12663,7 +12663,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#requestroutingrules_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Routing<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#subresourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Request routing specifying redirect configuration.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -12672,7 +12672,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#targetlistener_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Listener</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Reference to a listener to redirect the request to.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -12690,7 +12690,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#urlpathmaps_csharp" style="color: inherit; text-decoration: inherit;">Url<wbr>Path<wbr>Maps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#subresourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Url path maps specifying default redirect configuration.{{% /md %}}</dd>
 </dl>
@@ -13103,7 +13103,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backendaddresspool_csharp" style="color: inherit; text-decoration: inherit;">Backend<wbr>Address<wbr>Pool</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Backend address pool resource of the application gateway.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -13112,7 +13112,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backendhttpsettings_csharp" style="color: inherit; text-decoration: inherit;">Backend<wbr>Http<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Backend http settings resource of the application gateway.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -13121,7 +13121,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#httplistener_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Listener</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Http listener resource of the application gateway.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -13157,7 +13157,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#redirectconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Redirect<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Redirect configuration resource of the application gateway.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -13166,7 +13166,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rewriteruleset_csharp" style="color: inherit; text-decoration: inherit;">Rewrite<wbr>Rule<wbr>Set</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Rewrite Rule Set resource in Basic rule of the application gateway.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -13175,7 +13175,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ruletype_csharp" style="color: inherit; text-decoration: inherit;">Rule<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#applicationgatewayrequestroutingruletype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Application<wbr>Gateway<wbr>Request<wbr>Routing<wbr>Rule<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#applicationgatewayrequestroutingruletype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Application<wbr>Gateway<wbr>Request<wbr>Routing<wbr>Rule<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Rule type.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -13184,7 +13184,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#urlpathmap_csharp" style="color: inherit; text-decoration: inherit;">Url<wbr>Path<wbr>Map</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}URL path map resource of the application gateway.{{% /md %}}</dd>
 </dl>
@@ -13516,7 +13516,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backendaddresspool_csharp" style="color: inherit; text-decoration: inherit;">Backend<wbr>Address<wbr>Pool</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Backend address pool resource of the application gateway.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -13525,7 +13525,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backendhttpsettings_csharp" style="color: inherit; text-decoration: inherit;">Backend<wbr>Http<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Backend http settings resource of the application gateway.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -13534,7 +13534,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#httplistener_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Listener</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Http listener resource of the application gateway.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -13570,7 +13570,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#redirectconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Redirect<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Redirect configuration resource of the application gateway.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -13579,7 +13579,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rewriteruleset_csharp" style="color: inherit; text-decoration: inherit;">Rewrite<wbr>Rule<wbr>Set</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Rewrite Rule Set resource in Basic rule of the application gateway.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -13597,7 +13597,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#urlpathmap_csharp" style="color: inherit; text-decoration: inherit;">Url<wbr>Path<wbr>Map</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}URL path map resource of the application gateway.{{% /md %}}</dd>
 </dl>
@@ -14021,7 +14021,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#actionset_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Set</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayrewriteruleactionset">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Rewrite<wbr>Rule<wbr>Action<wbr>Set<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationgatewayrewriteruleactionset">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Rewrite<wbr>Rule<wbr>Action<wbr>Set<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Set of actions to be done as part of the rewrite Rule.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -14030,7 +14030,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#conditions_csharp" style="color: inherit; text-decoration: inherit;">Conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayrewriterulecondition">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Rewrite<wbr>Rule<wbr>Condition<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#applicationgatewayrewriterulecondition">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Rewrite<wbr>Rule<wbr>Condition<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Conditions based on which the action set execution will be evaluated.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -14191,7 +14191,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#requestheaderconfigurations_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Header<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayheaderconfiguration">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Header<wbr>Configuration<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#applicationgatewayheaderconfiguration">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Header<wbr>Configuration<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Request Header Actions in the Action Set.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -14200,7 +14200,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#responseheaderconfigurations_csharp" style="color: inherit; text-decoration: inherit;">Response<wbr>Header<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayheaderconfiguration">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Header<wbr>Configuration<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#applicationgatewayheaderconfiguration">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Header<wbr>Configuration<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Response Header Actions in the Action Set.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -14209,7 +14209,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#urlconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Url<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayurlconfiguration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Url<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationgatewayurlconfiguration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Url<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Url Configuration Action in the Action Set.{{% /md %}}</dd>
 </dl>
@@ -14325,7 +14325,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#requestheaderconfigurations_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Header<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayheaderconfigurationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Header<wbr>Configuration<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#applicationgatewayheaderconfigurationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Header<wbr>Configuration<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Request Header Actions in the Action Set.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -14334,7 +14334,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#responseheaderconfigurations_csharp" style="color: inherit; text-decoration: inherit;">Response<wbr>Header<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayheaderconfigurationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Header<wbr>Configuration<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#applicationgatewayheaderconfigurationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Header<wbr>Configuration<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Response Header Actions in the Action Set.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -14343,7 +14343,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#urlconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Url<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayurlconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Url<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationgatewayurlconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Url<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Url Configuration Action in the Action Set.{{% /md %}}</dd>
 </dl>
@@ -14799,7 +14799,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#actionset_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Set</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayrewriteruleactionsetresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Rewrite<wbr>Rule<wbr>Action<wbr>Set<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationgatewayrewriteruleactionsetresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Rewrite<wbr>Rule<wbr>Action<wbr>Set<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Set of actions to be done as part of the rewrite Rule.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -14808,7 +14808,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#conditions_csharp" style="color: inherit; text-decoration: inherit;">Conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayrewriteruleconditionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Rewrite<wbr>Rule<wbr>Condition<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#applicationgatewayrewriteruleconditionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Rewrite<wbr>Rule<wbr>Condition<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Conditions based on which the action set execution will be evaluated.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -14987,7 +14987,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rewriterules_csharp" style="color: inherit; text-decoration: inherit;">Rewrite<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayrewriterule">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Rewrite<wbr>Rule<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#applicationgatewayrewriterule">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Rewrite<wbr>Rule<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Rewrite rules in the rewrite rule set.{{% /md %}}</dd>
 </dl>
@@ -15139,7 +15139,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rewriterules_csharp" style="color: inherit; text-decoration: inherit;">Rewrite<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayrewriteruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Rewrite<wbr>Rule<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#applicationgatewayrewriteruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Rewrite<wbr>Rule<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Rewrite rules in the rewrite rule set.{{% /md %}}</dd>
 </dl>
@@ -15318,7 +15318,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#applicationgatewayskuname">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Application<wbr>Gateway<wbr>Sku<wbr>Name</a></span>
+        <span class="property-type">string | <a href="#applicationgatewayskuname">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Application<wbr>Gateway<wbr>Sku<wbr>Name</a></span>
     </dt>
     <dd>{{% md %}}Name of an application gateway SKU.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -15327,7 +15327,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tier_csharp" style="color: inherit; text-decoration: inherit;">Tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#applicationgatewaytier">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Application<wbr>Gateway<wbr>Tier</a></span>
+        <span class="property-type">string | <a href="#applicationgatewaytier">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Application<wbr>Gateway<wbr>Tier</a></span>
     </dt>
     <dd>{{% md %}}Tier of an application gateway.{{% /md %}}</dd>
 </dl>
@@ -16457,7 +16457,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ciphersuites_csharp" style="color: inherit; text-decoration: inherit;">Cipher<wbr>Suites</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Union&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Application<wbr>Gateway<wbr>Ssl<wbr>Cipher<wbr>Suite&gt;&gt;</span>
+        <span class="property-type">List&lt;Union&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Application<wbr>Gateway<wbr>Ssl<wbr>Cipher<wbr>Suite&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}Ssl cipher suites to be enabled in the specified order to application gateway.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -16466,7 +16466,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disabledsslprotocols_csharp" style="color: inherit; text-decoration: inherit;">Disabled<wbr>Ssl<wbr>Protocols</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Union&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Application<wbr>Gateway<wbr>Ssl<wbr>Protocol&gt;&gt;</span>
+        <span class="property-type">List&lt;Union&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Application<wbr>Gateway<wbr>Ssl<wbr>Protocol&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}Ssl protocols to be disabled on application gateway.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -16475,7 +16475,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#minprotocolversion_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Protocol<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#applicationgatewaysslprotocol">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Application<wbr>Gateway<wbr>Ssl<wbr>Protocol</a></span>
+        <span class="property-type">string | <a href="#applicationgatewaysslprotocol">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Application<wbr>Gateway<wbr>Ssl<wbr>Protocol</a></span>
     </dt>
     <dd>{{% md %}}Minimum version of Ssl protocol to be supported on application gateway.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -16484,7 +16484,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policyname_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#applicationgatewaysslpolicyname">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Application<wbr>Gateway<wbr>Ssl<wbr>Policy<wbr>Name</a></span>
+        <span class="property-type">string | <a href="#applicationgatewaysslpolicyname">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Application<wbr>Gateway<wbr>Ssl<wbr>Policy<wbr>Name</a></span>
     </dt>
     <dd>{{% md %}}Name of Ssl predefined policy.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -16493,7 +16493,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policytype_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#applicationgatewaysslpolicytype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Application<wbr>Gateway<wbr>Ssl<wbr>Policy<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#applicationgatewaysslpolicytype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Application<wbr>Gateway<wbr>Ssl<wbr>Policy<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of Ssl Policy.{{% /md %}}</dd>
 </dl>
@@ -16953,7 +16953,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#clientauthconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Auth<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayclientauthconfiguration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Client<wbr>Auth<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationgatewayclientauthconfiguration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Client<wbr>Auth<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Client authentication configuration of the application gateway resource.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -16980,7 +16980,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sslpolicy_csharp" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewaysslpolicy">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Ssl<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationgatewaysslpolicy">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Ssl<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}SSL policy of the application gateway resource.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -16989,7 +16989,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trustedclientcertificates_csharp" style="color: inherit; text-decoration: inherit;">Trusted<wbr>Client<wbr>Certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#subresource">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Array of references to application gateway trusted client certificates.{{% /md %}}</dd>
 </dl>
@@ -17186,7 +17186,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#clientauthconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Auth<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayclientauthconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Client<wbr>Auth<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationgatewayclientauthconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Client<wbr>Auth<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Client authentication configuration of the application gateway resource.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -17213,7 +17213,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sslpolicy_csharp" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewaysslpolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Ssl<wbr>Policy<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationgatewaysslpolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Ssl<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}SSL policy of the application gateway resource.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -17222,7 +17222,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trustedclientcertificates_csharp" style="color: inherit; text-decoration: inherit;">Trusted<wbr>Client<wbr>Certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#subresourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Array of references to application gateway trusted client certificates.{{% /md %}}</dd>
 </dl>
@@ -18665,7 +18665,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#defaultbackendaddresspool_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Backend<wbr>Address<wbr>Pool</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Default backend address pool resource of URL path map.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -18674,7 +18674,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#defaultbackendhttpsettings_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Backend<wbr>Http<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Default backend http settings resource of URL path map.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -18683,7 +18683,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#defaultredirectconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Redirect<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Default redirect configuration resource of URL path map.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -18692,7 +18692,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#defaultrewriteruleset_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Rewrite<wbr>Rule<wbr>Set</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Default Rewrite rule set resource of URL path map.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -18719,7 +18719,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pathrules_csharp" style="color: inherit; text-decoration: inherit;">Path<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewaypathrule">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Path<wbr>Rule<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#applicationgatewaypathrule">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Path<wbr>Rule<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Path rule of URL path map resource.{{% /md %}}</dd>
 </dl>
@@ -18970,7 +18970,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#defaultbackendaddresspool_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Backend<wbr>Address<wbr>Pool</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Default backend address pool resource of URL path map.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -18979,7 +18979,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#defaultbackendhttpsettings_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Backend<wbr>Http<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Default backend http settings resource of URL path map.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -18988,7 +18988,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#defaultredirectconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Redirect<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Default redirect configuration resource of URL path map.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -18997,7 +18997,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#defaultrewriteruleset_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Rewrite<wbr>Rule<wbr>Set</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Default Rewrite rule set resource of URL path map.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -19024,7 +19024,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pathrules_csharp" style="color: inherit; text-decoration: inherit;">Path<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewaypathruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Path<wbr>Rule<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#applicationgatewaypathruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Path<wbr>Rule<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Path rule of URL path map resource.{{% /md %}}</dd>
 </dl>
@@ -19338,7 +19338,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#firewallmode_csharp" style="color: inherit; text-decoration: inherit;">Firewall<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#applicationgatewayfirewallmode">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Application<wbr>Gateway<wbr>Firewall<wbr>Mode</a></span>
+        <span class="property-type">string | <a href="#applicationgatewayfirewallmode">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Application<wbr>Gateway<wbr>Firewall<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}Web application firewall mode.{{% /md %}}</dd>
     <dt class="property-required"
@@ -19365,7 +19365,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disabledrulegroups_csharp" style="color: inherit; text-decoration: inherit;">Disabled<wbr>Rule<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayfirewalldisabledrulegroup">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Firewall<wbr>Disabled<wbr>Rule<wbr>Group<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#applicationgatewayfirewalldisabledrulegroup">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Firewall<wbr>Disabled<wbr>Rule<wbr>Group<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The disabled rule groups.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -19374,7 +19374,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#exclusions_csharp" style="color: inherit; text-decoration: inherit;">Exclusions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayfirewallexclusion">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Firewall<wbr>Exclusion<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#applicationgatewayfirewallexclusion">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Firewall<wbr>Exclusion<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The exclusion list.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -19751,7 +19751,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disabledrulegroups_csharp" style="color: inherit; text-decoration: inherit;">Disabled<wbr>Rule<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayfirewalldisabledrulegroupresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Firewall<wbr>Disabled<wbr>Rule<wbr>Group<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#applicationgatewayfirewalldisabledrulegroupresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Firewall<wbr>Disabled<wbr>Rule<wbr>Group<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The disabled rule groups.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -19760,7 +19760,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#exclusions_csharp" style="color: inherit; text-decoration: inherit;">Exclusions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayfirewallexclusionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Firewall<wbr>Exclusion<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#applicationgatewayfirewallexclusionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Firewall<wbr>Exclusion<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The exclusion list.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -20415,7 +20415,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backendipconfigurations_csharp" style="color: inherit; text-decoration: inherit;">Backend<wbr>IPConfigurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkinterfaceipconfigurationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Network<wbr>Interface<wbr>IPConfiguration<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#networkinterfaceipconfigurationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Network<wbr>Interface<wbr>IPConfiguration<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}An array of references to IP addresses defined in network interfaces.{{% /md %}}</dd>
     <dt class="property-required"
@@ -20433,7 +20433,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#loadbalancingrules_csharp" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancing<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#subresourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}An array of references to load balancing rules that use this backend address pool.{{% /md %}}</dd>
     <dt class="property-required"
@@ -20442,7 +20442,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#outboundrule_csharp" style="color: inherit; text-decoration: inherit;">Outbound<wbr>Rule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A reference to an outbound rule that uses this backend address pool.{{% /md %}}</dd>
     <dt class="property-required"
@@ -20451,7 +20451,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#outboundrules_csharp" style="color: inherit; text-decoration: inherit;">Outbound<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#subresourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}An array of references to outbound rules that use this backend address pool.{{% /md %}}</dd>
     <dt class="property-required"
@@ -20487,7 +20487,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#loadbalancerbackendaddresses_csharp" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer<wbr>Backend<wbr>Addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalancerbackendaddressresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Load<wbr>Balancer<wbr>Backend<wbr>Address<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#loadbalancerbackendaddressresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Load<wbr>Balancer<wbr>Backend<wbr>Address<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}An array of backend addresses.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -20935,7 +20935,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ddoscustompolicy_csharp" style="color: inherit; text-decoration: inherit;">Ddos<wbr>Custom<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The DDoS custom policy associated with the public IP.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -21579,7 +21579,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#flowanalyticsconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Flow<wbr>Analytics<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trafficanalyticspropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Traffic<wbr>Analytics<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#trafficanalyticspropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Traffic<wbr>Analytics<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Parameters that define the configuration of traffic analytics.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -21588,7 +21588,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#format_csharp" style="color: inherit; text-decoration: inherit;">Format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flowlogformatparametersresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Flow<wbr>Log<wbr>Format<wbr>Parameters<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#flowlogformatparametersresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Flow<wbr>Log<wbr>Format<wbr>Parameters<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Parameters that define the flow log format.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -21615,7 +21615,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retentionpolicy_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#retentionpolicyparametersresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Retention<wbr>Policy<wbr>Parameters<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#retentionpolicyparametersresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Retention<wbr>Policy<wbr>Parameters<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Parameters that define the retention policy for flow log.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -22046,7 +22046,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inboundnatpools_csharp" style="color: inherit; text-decoration: inherit;">Inbound<wbr>Nat<wbr>Pools</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#subresourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}An array of references to inbound pools that use this frontend IP.{{% /md %}}</dd>
     <dt class="property-required"
@@ -22055,7 +22055,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inboundnatrules_csharp" style="color: inherit; text-decoration: inherit;">Inbound<wbr>Nat<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#subresourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}An array of references to inbound rules that use this frontend IP.{{% /md %}}</dd>
     <dt class="property-required"
@@ -22064,7 +22064,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#loadbalancingrules_csharp" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancing<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#subresourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}An array of references to load balancing rules that use this frontend IP.{{% /md %}}</dd>
     <dt class="property-required"
@@ -22073,7 +22073,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#outboundrules_csharp" style="color: inherit; text-decoration: inherit;">Outbound<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#subresourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}An array of references to outbound rules that use this frontend IP.{{% /md %}}</dd>
     <dt class="property-required"
@@ -22145,7 +22145,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publicipaddress_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>IPAddress</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#publicipaddressresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Public<wbr>IPAddress<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#publicipaddressresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Public<wbr>IPAddress<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The reference to the Public IP resource.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -22154,7 +22154,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publicipprefix_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>IPPrefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The reference to the Public IP Prefix resource.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -22163,7 +22163,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subnet_csharp" style="color: inherit; text-decoration: inherit;">Subnet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subnetresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Subnet<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subnetresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Subnet<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The reference to the subnet resource.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -22722,7 +22722,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subnet_csharp" style="color: inherit; text-decoration: inherit;">Subnet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subnetresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Subnet<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subnetresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Subnet<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The reference to the subnet resource to create a container network interface ip configuration.{{% /md %}}</dd>
 </dl>
@@ -22973,7 +22973,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publicipaddress_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>IPAddress</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#publicipaddressresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Public<wbr>IPAddress<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#publicipaddressresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Public<wbr>IPAddress<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The reference to the public IP resource.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -22982,7 +22982,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subnet_csharp" style="color: inherit; text-decoration: inherit;">Subnet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subnetresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Subnet<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subnetresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Subnet<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The reference to the subnet resource.{{% /md %}}</dd>
 </dl>
@@ -23233,7 +23233,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backendipconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Backend<wbr>IPConfiguration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkinterfaceipconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Network<wbr>Interface<wbr>IPConfiguration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#networkinterfaceipconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Network<wbr>Interface<wbr>IPConfiguration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A reference to a private IP address defined on a network interface of a VM. Traffic sent to the frontend port of each of the frontend IP configurations is forwarded to the backend IP.{{% /md %}}</dd>
     <dt class="property-required"
@@ -23296,7 +23296,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#frontendipconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Frontend<wbr>IPConfiguration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A reference to frontend IP addresses.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -23825,7 +23825,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#networkinterfaceipconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Interface<wbr>IPConfiguration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Reference to IP address defined in network interfaces.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -23843,7 +23843,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#loadbalancerfrontendipconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer<wbr>Frontend<wbr>IPConfiguration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Reference to the frontend ip address configuration defined in regional loadbalancer.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -23861,7 +23861,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#virtualnetwork_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Reference to an existing virtual network.{{% /md %}}</dd>
 </dl>
@@ -24031,7 +24031,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidentitytype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Resource<wbr>Identity<wbr>Type</a></span>
+        <span class="property-type"><a href="#resourceidentitytype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Resource<wbr>Identity<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of identity used for the resource. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user assigned identities. The type 'None' will remove any identities from the virtual machine.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -24156,7 +24156,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userassignedidentities_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Managed<wbr>Service<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Managed<wbr>Service<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}The list of user identities associated with resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd>
 </dl>
@@ -24746,7 +24746,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privatelinkconnectionproperties_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Connection<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkinterfaceipconfigurationprivatelinkconnectionpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Network<wbr>Interface<wbr>IPConfiguration<wbr>Private<wbr>Link<wbr>Connection<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#networkinterfaceipconfigurationprivatelinkconnectionpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Network<wbr>Interface<wbr>IPConfiguration<wbr>Private<wbr>Link<wbr>Connection<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}PrivateLinkConnection properties for the network interface.{{% /md %}}</dd>
     <dt class="property-required"
@@ -24764,7 +24764,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#applicationgatewaybackendaddresspools_csharp" style="color: inherit; text-decoration: inherit;">Application<wbr>Gateway<wbr>Backend<wbr>Address<wbr>Pools</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewaybackendaddresspoolresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Backend<wbr>Address<wbr>Pool<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#applicationgatewaybackendaddresspoolresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Backend<wbr>Address<wbr>Pool<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The reference to ApplicationGatewayBackendAddressPool resource.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -24773,7 +24773,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#applicationsecuritygroups_csharp" style="color: inherit; text-decoration: inherit;">Application<wbr>Security<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationsecuritygroupresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Application<wbr>Security<wbr>Group<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#applicationsecuritygroupresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Application<wbr>Security<wbr>Group<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Application security groups in which the IP configuration is included.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -24791,7 +24791,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#loadbalancerbackendaddresspools_csharp" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer<wbr>Backend<wbr>Address<wbr>Pools</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendaddresspoolresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Backend<wbr>Address<wbr>Pool<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#backendaddresspoolresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Backend<wbr>Address<wbr>Pool<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The reference to LoadBalancerBackendAddressPool resource.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -24800,7 +24800,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#loadbalancerinboundnatrules_csharp" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer<wbr>Inbound<wbr>Nat<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inboundnatruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Inbound<wbr>Nat<wbr>Rule<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#inboundnatruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Inbound<wbr>Nat<wbr>Rule<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of references of LoadBalancerInboundNatRules.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -24854,7 +24854,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publicipaddress_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>IPAddress</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#publicipaddressresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Public<wbr>IPAddress<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#publicipaddressresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Public<wbr>IPAddress<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Public IP address bound to the IP configuration.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -24863,7 +24863,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subnet_csharp" style="color: inherit; text-decoration: inherit;">Subnet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subnetresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Subnet<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subnetresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Subnet<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Subnet bound to the IP configuration.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -24872,7 +24872,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#virtualnetworktaps_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Taps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworktapresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Virtual<wbr>Network<wbr>Tap<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#virtualnetworktapresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Virtual<wbr>Network<wbr>Tap<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The reference to Virtual Network Taps.{{% /md %}}</dd>
 </dl>
@@ -25339,7 +25339,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dscpconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Dscp<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A reference to the dscp configuration to which the network interface is linked.{{% /md %}}</dd>
     <dt class="property-required"
@@ -25393,7 +25393,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privateendpoint_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#privateendpointresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A reference to the private endpoint to which the network interface is linked.{{% /md %}}</dd>
     <dt class="property-required"
@@ -25420,7 +25420,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tapconfigurations_csharp" style="color: inherit; text-decoration: inherit;">Tap<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkinterfacetapconfigurationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Network<wbr>Interface<wbr>Tap<wbr>Configuration<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#networkinterfacetapconfigurationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Network<wbr>Interface<wbr>Tap<wbr>Configuration<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of TapConfigurations of the network interface.{{% /md %}}</dd>
     <dt class="property-required"
@@ -25438,7 +25438,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#virtualmachine_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Machine</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The reference to a virtual machine.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -25447,7 +25447,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dnssettings_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkinterfacednssettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Network<wbr>Interface<wbr>Dns<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#networkinterfacednssettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Network<wbr>Interface<wbr>Dns<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The DNS settings in network interface.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -25474,7 +25474,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extendedlocation_csharp" style="color: inherit; text-decoration: inherit;">Extended<wbr>Location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#extendedlocationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Extended<wbr>Location<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#extendedlocationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Extended<wbr>Location<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The extended location of the network interface.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -25492,7 +25492,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipconfigurations_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkinterfaceipconfigurationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Network<wbr>Interface<wbr>IPConfiguration<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#networkinterfaceipconfigurationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Network<wbr>Interface<wbr>IPConfiguration<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of IPConfigurations of the network interface.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -25510,7 +25510,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#networksecuritygroup_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Security<wbr>Group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networksecuritygroupresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Network<wbr>Security<wbr>Group<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#networksecuritygroupresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Network<wbr>Security<wbr>Group<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The reference to the NetworkSecurityGroup resource.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -26166,7 +26166,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#virtualnetworktap_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Tap</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworktapresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Virtual<wbr>Network<wbr>Tap<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnetworktapresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Virtual<wbr>Network<wbr>Tap<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The reference to the Virtual Network Tap resource.{{% /md %}}</dd>
 </dl>
@@ -26363,7 +26363,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#defaultsecurityrules_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Security<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securityruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Security<wbr>Rule<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#securityruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Security<wbr>Rule<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The default security rules of network security group.{{% /md %}}</dd>
     <dt class="property-required"
@@ -26381,7 +26381,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#flowlogs_csharp" style="color: inherit; text-decoration: inherit;">Flow<wbr>Logs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flowlogresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Flow<wbr>Log<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#flowlogresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Flow<wbr>Log<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A collection of references to flow log resources.{{% /md %}}</dd>
     <dt class="property-required"
@@ -26399,7 +26399,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#networkinterfaces_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Interfaces</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkinterfaceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Network<wbr>Interface<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#networkinterfaceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Network<wbr>Interface<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A collection of references to network interfaces.{{% /md %}}</dd>
     <dt class="property-required"
@@ -26426,7 +26426,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subnets_csharp" style="color: inherit; text-decoration: inherit;">Subnets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subnetresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Subnet<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#subnetresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Subnet<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A collection of references to subnets.{{% /md %}}</dd>
     <dt class="property-required"
@@ -26462,7 +26462,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#securityrules_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securityruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Security<wbr>Rule<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#securityruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Security<wbr>Rule<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A collection of security rules of the network security group.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -26875,7 +26875,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#networkinterfaces_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Interfaces</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkinterfaceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Network<wbr>Interface<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#networkinterfaceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Network<wbr>Interface<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}An array of references to the network interfaces created for this private endpoint.{{% /md %}}</dd>
     <dt class="property-required"
@@ -26902,7 +26902,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#customdnsconfigs_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Dns<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customdnsconfigpropertiesformatresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Custom<wbr>Dns<wbr>Config<wbr>Properties<wbr>Format<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#customdnsconfigpropertiesformatresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Custom<wbr>Dns<wbr>Config<wbr>Properties<wbr>Format<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}An array of custom dns configurations.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -26911,7 +26911,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extendedlocation_csharp" style="color: inherit; text-decoration: inherit;">Extended<wbr>Location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#extendedlocationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Extended<wbr>Location<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#extendedlocationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Extended<wbr>Location<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The extended location of the load balancer.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -26938,7 +26938,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#manualprivatelinkserviceconnections_csharp" style="color: inherit; text-decoration: inherit;">Manual<wbr>Private<wbr>Link<wbr>Service<wbr>Connections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkserviceconnectionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#privatelinkserviceconnectionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A grouping of information about the connection to the remote resource. Used when the network admin does not have access to approve connections to the remote resource.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -26947,7 +26947,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privatelinkserviceconnections_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Service<wbr>Connections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkserviceconnectionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#privatelinkserviceconnectionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A grouping of information about the connection to the remote resource.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -26956,7 +26956,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subnet_csharp" style="color: inherit; text-decoration: inherit;">Subnet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subnetresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Subnet<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subnetresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Subnet<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The ID of the subnet from which the private IP will be allocated.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -27405,7 +27405,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privatelinkserviceconnectionstate_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A collection of read-only information about the state of the connection to the remote resource.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -27978,7 +27978,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>IPConfiguration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#ipconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>IPConfiguration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The IP configuration associated with the public IP address.{{% /md %}}</dd>
     <dt class="property-required"
@@ -28023,7 +28023,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ddossettings_csharp" style="color: inherit; text-decoration: inherit;">Ddos<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ddossettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Ddos<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#ddossettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Ddos<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The DDoS protection custom policy associated with the public IP address.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -28032,7 +28032,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dnssettings_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#publicipaddressdnssettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Public<wbr>IPAddress<wbr>Dns<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#publicipaddressdnssettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Public<wbr>IPAddress<wbr>Dns<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The FQDN of the DNS record associated with the public IP address.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -28041,7 +28041,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extendedlocation_csharp" style="color: inherit; text-decoration: inherit;">Extended<wbr>Location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#extendedlocationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Extended<wbr>Location<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#extendedlocationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Extended<wbr>Location<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The extended location of the public ip address.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -28077,7 +28077,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#iptags_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iptagresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Ip<wbr>Tag<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#iptagresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Ip<wbr>Tag<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of tags associated with the public IP address.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -28113,7 +28113,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publicipprefix_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>IPPrefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Public IP Prefix this Public IP Address should be allocated from.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -28122,7 +28122,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#publicipaddressskuresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Public<wbr>IPAddress<wbr>Sku<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#publicipaddressskuresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Public<wbr>IPAddress<wbr>Sku<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The public IP address SKU.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -29629,7 +29629,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subnets_csharp" style="color: inherit; text-decoration: inherit;">Subnets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subnetresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Subnet<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#subnetresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Subnet<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A collection of references to subnets.{{% /md %}}</dd>
     <dt class="property-required"
@@ -29674,7 +29674,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#routes_csharp" style="color: inherit; text-decoration: inherit;">Routes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routeresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Route<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#routeresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Route<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Collection of routes contained within a route table.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -30087,7 +30087,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#destinationapplicationsecuritygroups_csharp" style="color: inherit; text-decoration: inherit;">Destination<wbr>Application<wbr>Security<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationsecuritygroupresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Application<wbr>Security<wbr>Group<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#applicationsecuritygroupresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Application<wbr>Security<wbr>Group<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The application security group specified as destination.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -30159,7 +30159,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourceapplicationsecuritygroups_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Application<wbr>Security<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationsecuritygroupresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Application<wbr>Security<wbr>Group<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#applicationsecuritygroupresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Application<wbr>Security<wbr>Group<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The application security group specified as source.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -31425,7 +31425,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subnets_csharp" style="color: inherit; text-decoration: inherit;">Subnets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subnetresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Subnet<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#subnetresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Subnet<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A collection of references to subnets.{{% /md %}}</dd>
     <dt class="property-required"
@@ -31461,7 +31461,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#serviceendpointpolicydefinitions_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Endpoint<wbr>Policy<wbr>Definitions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceendpointpolicydefinitionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Service<wbr>Endpoint<wbr>Policy<wbr>Definition<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#serviceendpointpolicydefinitionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Service<wbr>Endpoint<wbr>Policy<wbr>Definition<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A collection of service endpoint policy definitions of the service endpoint policy.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -32042,7 +32042,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipconfigurationprofiles_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Configuration<wbr>Profiles</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipconfigurationprofileresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>IPConfiguration<wbr>Profile<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#ipconfigurationprofileresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>IPConfiguration<wbr>Profile<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Array of IP configuration profiles which reference this subnet.{{% /md %}}</dd>
     <dt class="property-required"
@@ -32051,7 +32051,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipconfigurations_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipconfigurationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>IPConfiguration<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#ipconfigurationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>IPConfiguration<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}An array of references to the network interface IP configurations using subnet.{{% /md %}}</dd>
     <dt class="property-required"
@@ -32060,7 +32060,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privateendpoints_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#privateendpointresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}An array of references to private endpoints.{{% /md %}}</dd>
     <dt class="property-required"
@@ -32087,7 +32087,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resourcenavigationlinks_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Navigation<wbr>Links</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcenavigationlinkresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Resource<wbr>Navigation<wbr>Link<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#resourcenavigationlinkresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Resource<wbr>Navigation<wbr>Link<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}An array of references to the external resources using subnet.{{% /md %}}</dd>
     <dt class="property-required"
@@ -32096,7 +32096,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#serviceassociationlinks_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Association<wbr>Links</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceassociationlinkresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Service<wbr>Association<wbr>Link<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#serviceassociationlinkresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Service<wbr>Association<wbr>Link<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}An array of references to services injecting into this subnet.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -32123,7 +32123,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#delegations_csharp" style="color: inherit; text-decoration: inherit;">Delegations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#delegationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Delegation<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#delegationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Delegation<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}An array of references to the delegations on the subnet.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -32141,7 +32141,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipallocations_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Allocations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#subresourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Array of IpAllocation which reference this subnet.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -32159,7 +32159,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#natgateway_csharp" style="color: inherit; text-decoration: inherit;">Nat<wbr>Gateway</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Nat gateway associated with this subnet.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -32168,7 +32168,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#networksecuritygroup_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Security<wbr>Group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networksecuritygroupresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Network<wbr>Security<wbr>Group<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#networksecuritygroupresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Network<wbr>Security<wbr>Group<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The reference to the NetworkSecurityGroup resource.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -32195,7 +32195,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#routetable_csharp" style="color: inherit; text-decoration: inherit;">Route<wbr>Table</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routetableresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Route<wbr>Table<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#routetableresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Route<wbr>Table<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The reference to the RouteTable resource.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -32204,7 +32204,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#serviceendpointpolicies_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Endpoint<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceendpointpolicyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Service<wbr>Endpoint<wbr>Policy<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#serviceendpointpolicyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Service<wbr>Endpoint<wbr>Policy<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}An array of service endpoint policies.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -32213,7 +32213,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#serviceendpoints_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceendpointpropertiesformatresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Service<wbr>Endpoint<wbr>Properties<wbr>Format<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#serviceendpointpropertiesformatresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Service<wbr>Endpoint<wbr>Properties<wbr>Format<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}An array of service endpoints.{{% /md %}}</dd>
 </dl>
@@ -33021,7 +33021,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#networkwatcherflowanalyticsconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Watcher<wbr>Flow<wbr>Analytics<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trafficanalyticsconfigurationpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Traffic<wbr>Analytics<wbr>Configuration<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#trafficanalyticsconfigurationpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Traffic<wbr>Analytics<wbr>Configuration<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Parameters that define the configuration of traffic analytics.{{% /md %}}</dd>
 </dl>
@@ -33101,7 +33101,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#networkinterfacetapconfigurations_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Interface<wbr>Tap<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkinterfacetapconfigurationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Network<wbr>Interface<wbr>Tap<wbr>Configuration<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#networkinterfacetapconfigurationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Network<wbr>Interface<wbr>Tap<wbr>Configuration<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the list of resource IDs for the network interface IP configuration that needs to be tapped.{{% /md %}}</dd>
     <dt class="property-required"
@@ -33137,7 +33137,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#destinationloadbalancerfrontendipconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Destination<wbr>Load<wbr>Balancer<wbr>Front<wbr>End<wbr>IPConfiguration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#frontendipconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Frontend<wbr>IPConfiguration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#frontendipconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Frontend<wbr>IPConfiguration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The reference to the private IP address on the internal Load Balancer that will receive the tap.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -33146,7 +33146,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#destinationnetworkinterfaceipconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Destination<wbr>Network<wbr>Interface<wbr>IPConfiguration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkinterfaceipconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Network<wbr>Interface<wbr>IPConfiguration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#networkinterfaceipconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Network<wbr>Interface<wbr>IPConfiguration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The reference to the private IP Address of the collector nic that will receive the tap.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -33535,7 +33535,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:network/latest:ApplicationGateway appgw /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw 
+$ pulumi import azure-nextgen:network:ApplicationGateway appgw /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw 
 ```
 
 

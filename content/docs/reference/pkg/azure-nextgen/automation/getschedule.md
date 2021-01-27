@@ -233,7 +233,7 @@ The following output properties are available:
 <a href="#advancedschedule_csharp" style="color: inherit; text-decoration: inherit;">Advanced<wbr>Schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#advancedscheduleresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automation.<wbr>Outputs.<wbr>Advanced<wbr>Schedule<wbr>Response</a></span>
+        <span class="property-type"><a href="#advancedscheduleresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automation..<wbr>Outputs.<wbr>Advanced<wbr>Schedule<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the advanced schedule.{{% /md %}}</dd>
     <dt class="property-"
@@ -958,7 +958,7 @@ The following output properties are available:
 <a href="#monthlyoccurrences_csharp" style="color: inherit; text-decoration: inherit;">Monthly<wbr>Occurrences</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#advancedschedulemonthlyoccurrenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automation.<wbr>Inputs.<wbr>Advanced<wbr>Schedule<wbr>Monthly<wbr>Occurrence<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#advancedschedulemonthlyoccurrenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automation..<wbr>Inputs.<wbr>Advanced<wbr>Schedule<wbr>Monthly<wbr>Occurrence<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Occurrences of days within a month.{{% /md %}}</dd>
     <dt class="property-optional"

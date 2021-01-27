@@ -195,7 +195,7 @@ The following output properties are available:
 <a href="#connectiondetailslist_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>Details<wbr>List</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#controllerconnectiondetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Spaces.<wbr>Outputs.<wbr>Controller<wbr>Connection<wbr>Details<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#controllerconnectiondetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Spaces..<wbr>Outputs.<wbr>Controller<wbr>Connection<wbr>Details<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of Azure Dev Spaces Controller connection details.{{% /md %}}</dd>
 </dl>
@@ -268,7 +268,7 @@ The following output properties are available:
 <a href="#orchestratorspecificconnectiondetails_csharp" style="color: inherit; text-decoration: inherit;">Orchestrator<wbr>Specific<wbr>Connection<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesconnectiondetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Spaces.<wbr>Inputs.<wbr>Kubernetes<wbr>Connection<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#kubernetesconnectiondetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Spaces..<wbr>Inputs.<wbr>Kubernetes<wbr>Connection<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Base class for types that supply values used to connect to container orchestrators{{% /md %}}</dd>
 </dl>

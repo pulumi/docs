@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.apimanagement.ApiVersionSet reso
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Api Version Set Contract details.
-Latest API Version: 2019-12-01.
+API Version: 2019-12-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var apiVersionSet = new AzureNextGen.ApiManagement.Latest.ApiVersionSet("apiVersionSet", new AzureNextGen.ApiManagement.Latest.ApiVersionSetArgs
+        var apiVersionSet = new AzureNextGen.ApiManagement..ApiVersionSet("apiVersionSet", new AzureNextGen.ApiManagement..ApiVersionSetArgs
         {
             Description = "Version configuration",
             DisplayName = "api set 1",
@@ -50,7 +50,7 @@ class MyStack : Stack
 package main
 
 import (
-	apimanagement "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/apimanagement/latest"
+	apimanagement "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/apimanagement"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -81,7 +81,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-api_version_set = azure_nextgen.apimanagement.latest.ApiVersionSet("apiVersionSet",
+api_version_set = azure_nextgen.apimanagement.ApiVersionSet("apiVersionSet",
     description="Version configuration",
     display_name="api set 1",
     resource_group_name="rg1",
@@ -99,7 +99,7 @@ api_version_set = azure_nextgen.apimanagement.latest.ApiVersionSet("apiVersionSe
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const apiVersionSet = new azure_nextgen.apimanagement.latest.ApiVersionSet("apiVersionSet", {
+const apiVersionSet = new azure_nextgen.apimanagement.ApiVersionSet("apiVersionSet", {
     description: "Version configuration",
     displayName: "api set 1",
     resourceGroupName: "rg1",
@@ -337,7 +337,7 @@ The ApiVersionSet resource accepts the following [input]({{< relref "/docs/intro
 <a href="#versioningscheme_csharp" style="color: inherit; text-decoration: inherit;">Versioning<wbr>Scheme</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#versioningscheme">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management.<wbr>Versioning<wbr>Scheme</a></span>
+        <span class="property-type">string | <a href="#versioningscheme">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management..<wbr>Versioning<wbr>Scheme</a></span>
     </dt>
     <dd>{{% md %}}An value that determines where the API Version identifer will be located in a HTTP request.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -804,7 +804,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:apimanagement/latest:ApiVersionSet api1 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/apiVersionSets/api1 
+$ pulumi import azure-nextgen:apimanagement:ApiVersionSet api1 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/apiVersionSets/api1 
 ```
 
 

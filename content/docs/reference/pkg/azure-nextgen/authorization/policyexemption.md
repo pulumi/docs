@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.authorization.PolicyExemption re
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The policy exemption.
+API Version: 2020-07-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var policyExemption = new AzureNextGen.Authorization.V20200701Preview.PolicyExemption("policyExemption", new AzureNextGen.Authorization.V20200701Preview.PolicyExemptionArgs
+        var policyExemption = new AzureNextGen.Authorization..PolicyExemption("policyExemption", new AzureNextGen.Authorization..PolicyExemptionArgs
         {
             Description = "Exempt demo cluster from limit sku",
             DisplayName = "Exempt demo cluster",
@@ -57,7 +58,7 @@ class MyStack : Stack
 package main
 
 import (
-	authorization "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/authorization/v20200701preview"
+	authorization "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/authorization"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -94,7 +95,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-policy_exemption = azure_nextgen.authorization.v20200701preview.PolicyExemption("policyExemption",
+policy_exemption = azure_nextgen.authorization.PolicyExemption("policyExemption",
     description="Exempt demo cluster from limit sku",
     display_name="Exempt demo cluster",
     exemption_category="Waiver",
@@ -116,7 +117,7 @@ policy_exemption = azure_nextgen.authorization.v20200701preview.PolicyExemption(
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const policyExemption = new azure_nextgen.authorization.v20200701preview.PolicyExemption("policyExemption", {
+const policyExemption = new azure_nextgen.authorization.PolicyExemption("policyExemption", {
     description: "Exempt demo cluster from limit sku",
     displayName: "Exempt demo cluster",
     exemptionCategory: "Waiver",
@@ -322,7 +323,7 @@ The PolicyExemption resource accepts the following [input]({{< relref "/docs/int
 <a href="#exemptioncategory_csharp" style="color: inherit; text-decoration: inherit;">Exemption<wbr>Category</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#exemptioncategory">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Authorization.<wbr>Exemption<wbr>Category</a></span>
+        <span class="property-type">string | <a href="#exemptioncategory">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Authorization..<wbr>Exemption<wbr>Category</a></span>
     </dt>
     <dd>{{% md %}}The policy exemption category. Possible values are Waiver and Mitigated.{{% /md %}}</dd>
     <dt class="property-required"
@@ -695,7 +696,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#systemdata_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Authorization.<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
+        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Authorization..<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Azure Resource Manager metadata containing createdBy and modifiedBy information.{{% /md %}}</dd>
     <dt class="property-"
@@ -1131,7 +1132,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:authorization/v20200701preview:PolicyExemption DemoExpensiveVM /subscriptions/ae640e6b-ba3e-4256-9d62-2993eecfa6f2/resourceGroups/demoCluster/providers/Microsoft.Authorization/policyExemptions/DemoExpensiveVM 
+$ pulumi import azure-nextgen:authorization:PolicyExemption DemoExpensiveVM /subscriptions/ae640e6b-ba3e-4256-9d62-2993eecfa6f2/resourceGroups/demoCluster/providers/Microsoft.Authorization/policyExemptions/DemoExpensiveVM 
 ```
 
 

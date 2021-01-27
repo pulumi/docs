@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.cdn.Profile resource with exampl
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 CDN profile is a logical grouping of endpoints that share the same settings, such as CDN provider and pricing tier.
-Latest API Version: 2020-09-01.
+API Version: 2020-09-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,12 +27,12 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var profile = new AzureNextGen.Cdn.Latest.Profile("profile", new AzureNextGen.Cdn.Latest.ProfileArgs
+        var profile = new AzureNextGen.Cdn..Profile("profile", new AzureNextGen.Cdn..ProfileArgs
         {
             Location = "WestCentralUs",
             ProfileName = "profile1",
             ResourceGroupName = "RG",
-            Sku = new AzureNextGen.Cdn.Latest.Inputs.SkuArgs
+            Sku = new AzureNextGen.Cdn..Inputs.SkuArgs
             {
                 Name = "Standard_Verizon",
             },
@@ -51,7 +51,7 @@ class MyStack : Stack
 package main
 
 import (
-	cdn "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/cdn/latest"
+	cdn "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/cdn"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -82,11 +82,11 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-profile = azure_nextgen.cdn.latest.Profile("profile",
+profile = azure_nextgen.cdn.Profile("profile",
     location="WestCentralUs",
     profile_name="profile1",
     resource_group_name="RG",
-    sku=azure_nextgen.cdn.latest.SkuArgs(
+    sku=azure_nextgen.cdn.SkuArgs(
         name="Standard_Verizon",
     ))
 
@@ -100,7 +100,7 @@ profile = azure_nextgen.cdn.latest.Profile("profile",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const profile = new azure_nextgen.cdn.latest.Profile("profile", {
+const profile = new azure_nextgen.cdn.Profile("profile", {
     location: "WestCentralUs",
     profileName: "profile1",
     resourceGroupName: "RG",
@@ -329,7 +329,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sku">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn.<wbr>Inputs.<wbr>Sku<wbr>Args</a></span>
+        <span class="property-type"><a href="#sku">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn..<wbr>Inputs.<wbr>Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The pricing tier (defines a CDN provider, feature list and rate) of the CDN profile.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -558,7 +558,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#systemdata_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn.<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
+        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn..<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Read only system data{{% /md %}}</dd>
     <dt class="property-"
@@ -801,7 +801,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#skuname">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn.<wbr>Sku<wbr>Name</a></span>
+        <span class="property-type">string | <a href="#skuname">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn..<wbr>Sku<wbr>Name</a></span>
     </dt>
     <dd>{{% md %}}Name of the pricing tier.{{% /md %}}</dd>
 </dl>
@@ -1295,7 +1295,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:cdn/latest:Profile profile1 /subscriptions/subid/resourcegroups/RG/providers/Microsoft.Cdn/profiles/profile1 
+$ pulumi import azure-nextgen:cdn:Profile profile1 /subscriptions/subid/resourcegroups/RG/providers/Microsoft.Cdn/profiles/profile1 
 ```
 
 

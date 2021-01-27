@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.logic.IntegrationServiceEnvironm
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The managed api definition.
-Latest API Version: 2019-05-01.
+API Version: 2019-05-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var integrationServiceEnvironmentManagedApi = new AzureNextGen.Logic.Latest.IntegrationServiceEnvironmentManagedApi("integrationServiceEnvironmentManagedApi", new AzureNextGen.Logic.Latest.IntegrationServiceEnvironmentManagedApiArgs
+        var integrationServiceEnvironmentManagedApi = new AzureNextGen.Logic..IntegrationServiceEnvironmentManagedApi("integrationServiceEnvironmentManagedApi", new AzureNextGen.Logic..IntegrationServiceEnvironmentManagedApiArgs
         {
             ApiName = "servicebus",
             IntegrationServiceEnvironmentName = "testIntegrationServiceEnvironment",
@@ -47,7 +47,7 @@ class MyStack : Stack
 package main
 
 import (
-	logic "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/logic/latest"
+	logic "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/logic"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -75,7 +75,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-integration_service_environment_managed_api = azure_nextgen.logic.latest.IntegrationServiceEnvironmentManagedApi("integrationServiceEnvironmentManagedApi",
+integration_service_environment_managed_api = azure_nextgen.logic.IntegrationServiceEnvironmentManagedApi("integrationServiceEnvironmentManagedApi",
     api_name="servicebus",
     integration_service_environment_name="testIntegrationServiceEnvironment",
     resource_group="testResourceGroup")
@@ -90,7 +90,7 @@ integration_service_environment_managed_api = azure_nextgen.logic.latest.Integra
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const integrationServiceEnvironmentManagedApi = new azure_nextgen.logic.latest.IntegrationServiceEnvironmentManagedApi("integrationServiceEnvironmentManagedApi", {
+const integrationServiceEnvironmentManagedApi = new azure_nextgen.logic.IntegrationServiceEnvironmentManagedApi("integrationServiceEnvironmentManagedApi", {
     apiName: "servicebus",
     integrationServiceEnvironmentName: "testIntegrationServiceEnvironment",
     resourceGroup: "testResourceGroup",
@@ -446,7 +446,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apiresourcepropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Outputs.<wbr>Api<wbr>Resource<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#apiresourcepropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Outputs.<wbr>Api<wbr>Resource<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The api resource properties.{{% /md %}}</dd>
     <dt class="property-"
@@ -886,7 +886,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#packagecontentlink_csharp" style="color: inherit; text-decoration: inherit;">Package<wbr>Content<wbr>Link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apideploymentparametermetadataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>Api<wbr>Deployment<wbr>Parameter<wbr>Metadata<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#apideploymentparametermetadataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>Api<wbr>Deployment<wbr>Parameter<wbr>Metadata<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The package content link parameter.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -895,7 +895,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rediscacheconnectionstring_csharp" style="color: inherit; text-decoration: inherit;">Redis<wbr>Cache<wbr>Connection<wbr>String</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apideploymentparametermetadataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>Api<wbr>Deployment<wbr>Parameter<wbr>Metadata<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#apideploymentparametermetadataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>Api<wbr>Deployment<wbr>Parameter<wbr>Metadata<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The package content link parameter.{{% /md %}}</dd>
 </dl>
@@ -1413,7 +1413,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deploymentparameters_csharp" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apideploymentparametermetadatasetresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>Api<wbr>Deployment<wbr>Parameter<wbr>Metadata<wbr>Set<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#apideploymentparametermetadatasetresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>Api<wbr>Deployment<wbr>Parameter<wbr>Metadata<wbr>Set<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The connector deployment parameters metadata.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1467,7 +1467,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#wsdlservice_csharp" style="color: inherit; text-decoration: inherit;">Wsdl<wbr>Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#wsdlserviceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>Wsdl<wbr>Service<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#wsdlserviceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>Wsdl<wbr>Service<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The WSDL service.{{% /md %}}</dd>
 </dl>
@@ -1879,7 +1879,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#apidefinitions_csharp" style="color: inherit; text-decoration: inherit;">Api<wbr>Definitions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apiresourcedefinitionsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>Api<wbr>Resource<wbr>Definitions<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#apiresourcedefinitionsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>Api<wbr>Resource<wbr>Definitions<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The api definitions.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1888,7 +1888,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backendservice_csharp" style="color: inherit; text-decoration: inherit;">Backend<wbr>Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apiresourcebackendserviceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>Api<wbr>Resource<wbr>Backend<wbr>Service<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#apiresourcebackendserviceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>Api<wbr>Resource<wbr>Backend<wbr>Service<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The backend service.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1924,7 +1924,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#generalinformation_csharp" style="color: inherit; text-decoration: inherit;">General<wbr>Information</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apiresourcegeneralinformationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>Api<wbr>Resource<wbr>General<wbr>Information<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#apiresourcegeneralinformationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>Api<wbr>Resource<wbr>General<wbr>Information<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The api general information.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1933,7 +1933,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#integrationserviceenvironment_csharp" style="color: inherit; text-decoration: inherit;">Integration<wbr>Service<wbr>Environment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcereferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>Resource<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcereferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>Resource<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The integration service environment reference.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1942,7 +1942,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metadata_csharp" style="color: inherit; text-decoration: inherit;">Metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apiresourcemetadataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>Api<wbr>Resource<wbr>Metadata<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#apiresourcemetadataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>Api<wbr>Resource<wbr>Metadata<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The metadata.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1960,7 +1960,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policies_csharp" style="color: inherit; text-decoration: inherit;">Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apiresourcepoliciesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>Api<wbr>Resource<wbr>Policies<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#apiresourcepoliciesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>Api<wbr>Resource<wbr>Policies<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The policies for the API.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2590,7 +2590,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:logic/latest:IntegrationServiceEnvironmentManagedApi servicebus /subscriptions/80d4fe69-c95b-4dd2-a938-9250f1c8ab03/resourceGroups/rohithah-ise/providers/Microsoft.Logic/integrationServiceEnvironments/tes-ise-ga/managedApis/servicebus 
+$ pulumi import azure-nextgen:logic:IntegrationServiceEnvironmentManagedApi servicebus /subscriptions/80d4fe69-c95b-4dd2-a938-9250f1c8ab03/resourceGroups/rohithah-ise/providers/Microsoft.Logic/integrationServiceEnvironments/tes-ise-ga/managedApis/servicebus 
 ```
 
 

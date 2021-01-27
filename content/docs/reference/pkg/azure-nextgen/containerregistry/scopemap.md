@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.containerregistry.ScopeMap resou
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 An object that represents a scope map for a container registry.
+API Version: 2020-11-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var scopeMap = new AzureNextGen.ContainerRegistry.V20201101Preview.ScopeMap("scopeMap", new AzureNextGen.ContainerRegistry.V20201101Preview.ScopeMapArgs
+        var scopeMap = new AzureNextGen.ContainerRegistry..ScopeMap("scopeMap", new AzureNextGen.ContainerRegistry..ScopeMapArgs
         {
             Actions = 
             {
@@ -52,7 +53,7 @@ class MyStack : Stack
 package main
 
 import (
-	containerregistry "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/containerregistry/v20201101preview"
+	containerregistry "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/containerregistry"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -85,7 +86,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-scope_map = azure_nextgen.containerregistry.v20201101preview.ScopeMap("scopeMap",
+scope_map = azure_nextgen.containerregistry.ScopeMap("scopeMap",
     actions=[
         "repositories/myrepository/contentWrite",
         "repositories/myrepository/delete",
@@ -105,7 +106,7 @@ scope_map = azure_nextgen.containerregistry.v20201101preview.ScopeMap("scopeMap"
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const scopeMap = new azure_nextgen.containerregistry.v20201101preview.ScopeMap("scopeMap", {
+const scopeMap = new azure_nextgen.containerregistry.ScopeMap("scopeMap", {
     actions: [
         "repositories/myrepository/contentWrite",
         "repositories/myrepository/delete",
@@ -564,7 +565,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#systemdata_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry.<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
+        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry..<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Metadata pertaining to creation and last modification of the resource.{{% /md %}}</dd>
     <dt class="property-"
@@ -1016,7 +1017,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:containerregistry/v20201101preview:ScopeMap myScopeMap /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.ContainerRegistry/registries/myRegistry/scopeMaps/myScopeMap 
+$ pulumi import azure-nextgen:containerregistry:ScopeMap myScopeMap /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.ContainerRegistry/registries/myRegistry/scopeMaps/myScopeMap 
 ```
 
 

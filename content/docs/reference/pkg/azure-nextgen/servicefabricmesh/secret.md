@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.servicefabricmesh.Secret resourc
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 This type describes a secret resource.
+API Version: 2018-09-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var secret = new AzureNextGen.ServiceFabricMesh.V20180901Preview.Secret("secret", new AzureNextGen.ServiceFabricMesh.V20180901Preview.SecretArgs
+        var secret = new AzureNextGen.ServiceFabricMesh..Secret("secret", new AzureNextGen.ServiceFabricMesh..SecretArgs
         {
             Location = "EastUS",
             Properties = ,
@@ -48,7 +49,7 @@ class MyStack : Stack
 package main
 
 import (
-	servicefabricmesh "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/servicefabricmesh/v20180901preview"
+	servicefabricmesh "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/servicefabricmesh"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -78,9 +79,9 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-secret = azure_nextgen.servicefabricmesh.v20180901preview.Secret("secret",
+secret = azure_nextgen.servicefabricmesh.Secret("secret",
     location="EastUS",
-    properties=azure_nextgen.servicefabricmesh.v20180901preview.SecretResourcePropertiesArgs(),
+    properties=azure_nextgen.servicefabricmesh.SecretResourcePropertiesArgs(),
     resource_group_name="sbz_demo",
     secret_resource_name="dbConnectionString",
     tags={})
@@ -95,7 +96,7 @@ secret = azure_nextgen.servicefabricmesh.v20180901preview.Secret("secret",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const secret = new azure_nextgen.servicefabricmesh.v20180901preview.Secret("secret", {
+const secret = new azure_nextgen.servicefabricmesh.Secret("secret", {
     location: "EastUS",
     properties: {},
     resourceGroupName: "sbz_demo",
@@ -305,7 +306,7 @@ The Secret resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretresourceproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Secret<wbr>Resource<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#secretresourceproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh..<wbr>Inputs.<wbr>Secret<wbr>Resource<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the properties of a secret resource.{{% /md %}}</dd>
     <dt class="property-required"
@@ -949,7 +950,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:servicefabricmesh/v20180901preview:Secret dbConnectionString /subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/sbz_demo/providers/Microsoft.ServiceFabricMesh/secrets/dbConnectionString 
+$ pulumi import azure-nextgen:servicefabricmesh:Secret dbConnectionString /subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/sbz_demo/providers/Microsoft.ServiceFabricMesh/secrets/dbConnectionString 
 ```
 
 

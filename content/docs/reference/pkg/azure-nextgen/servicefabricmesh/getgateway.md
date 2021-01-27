@@ -161,7 +161,7 @@ The following output properties are available:
 <a href="#destinationnetwork_csharp" style="color: inherit; text-decoration: inherit;">Destination<wbr>Network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkrefresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Outputs.<wbr>Network<wbr>Ref<wbr>Response</a></span>
+        <span class="property-type"><a href="#networkrefresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh..<wbr>Outputs.<wbr>Network<wbr>Ref<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Network that the Application is using.{{% /md %}}</dd>
     <dt class="property-"
@@ -215,7 +215,7 @@ The following output properties are available:
 <a href="#sourcenetwork_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkrefresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Outputs.<wbr>Network<wbr>Ref<wbr>Response</a></span>
+        <span class="property-type"><a href="#networkrefresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh..<wbr>Outputs.<wbr>Network<wbr>Ref<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Network the gateway should listen on for requests.{{% /md %}}</dd>
     <dt class="property-"
@@ -260,7 +260,7 @@ The following output properties are available:
 <a href="#http_csharp" style="color: inherit; text-decoration: inherit;">Http</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpconfigresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Outputs.<wbr>Http<wbr>Config<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#httpconfigresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh..<wbr>Outputs.<wbr>Http<wbr>Config<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Configuration for http connectivity for this gateway.{{% /md %}}</dd>
     <dt class="property-"
@@ -278,7 +278,7 @@ The following output properties are available:
 <a href="#tcp_csharp" style="color: inherit; text-decoration: inherit;">Tcp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tcpconfigresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Outputs.<wbr>Tcp<wbr>Config<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#tcpconfigresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh..<wbr>Outputs.<wbr>Tcp<wbr>Config<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Configuration for tcp connectivity for this gateway.{{% /md %}}</dd>
 </dl>
@@ -908,7 +908,7 @@ The following output properties are available:
 <a href="#hosts_csharp" style="color: inherit; text-decoration: inherit;">Hosts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httphostconfigresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Http<wbr>Host<wbr>Config<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#httphostconfigresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh..<wbr>Inputs.<wbr>Http<wbr>Host<wbr>Config<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}description for routing.{{% /md %}}</dd>
     <dt class="property-required"
@@ -1056,7 +1056,7 @@ The following output properties are available:
 <a href="#routes_csharp" style="color: inherit; text-decoration: inherit;">Routes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httprouteconfigresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Http<wbr>Route<wbr>Config<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#httprouteconfigresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh..<wbr>Inputs.<wbr>Http<wbr>Route<wbr>Config<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Route information to use for routing. Routes are processed in the order they are specified. Specify routes that are more specific before routes that can handle general cases.{{% /md %}}</dd>
 </dl>
@@ -1150,7 +1150,7 @@ The following output properties are available:
 <a href="#destination_csharp" style="color: inherit; text-decoration: inherit;">Destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gatewaydestinationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Gateway<wbr>Destination<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#gatewaydestinationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh..<wbr>Inputs.<wbr>Gateway<wbr>Destination<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes destination endpoint for routing traffic.{{% /md %}}</dd>
     <dt class="property-required"
@@ -1159,7 +1159,7 @@ The following output properties are available:
 <a href="#match_csharp" style="color: inherit; text-decoration: inherit;">Match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httproutematchruleresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Http<wbr>Route<wbr>Match<wbr>Rule<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#httproutematchruleresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh..<wbr>Inputs.<wbr>Http<wbr>Route<wbr>Match<wbr>Rule<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes a rule for http route matching.{{% /md %}}</dd>
     <dt class="property-required"
@@ -1567,7 +1567,7 @@ The following output properties are available:
 <a href="#path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httproutematchpathresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Http<wbr>Route<wbr>Match<wbr>Path<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#httproutematchpathresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh..<wbr>Inputs.<wbr>Http<wbr>Route<wbr>Match<wbr>Path<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Path to match for routing.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1576,7 +1576,7 @@ The following output properties are available:
 <a href="#headers_csharp" style="color: inherit; text-decoration: inherit;">Headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httproutematchheaderresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Http<wbr>Route<wbr>Match<wbr>Header<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#httproutematchheaderresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh..<wbr>Inputs.<wbr>Http<wbr>Route<wbr>Match<wbr>Header<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}headers and their values to match in request.{{% /md %}}</dd>
 </dl>
@@ -1670,7 +1670,7 @@ The following output properties are available:
 <a href="#endpointrefs_csharp" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Refs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointrefresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Endpoint<wbr>Ref<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#endpointrefresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh..<wbr>Inputs.<wbr>Endpoint<wbr>Ref<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of endpoints that are exposed on this network.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1773,7 +1773,7 @@ The following output properties are available:
 <a href="#destination_csharp" style="color: inherit; text-decoration: inherit;">Destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gatewaydestinationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Gateway<wbr>Destination<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#gatewaydestinationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh..<wbr>Inputs.<wbr>Gateway<wbr>Destination<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes destination endpoint for routing traffic.{{% /md %}}</dd>
     <dt class="property-required"

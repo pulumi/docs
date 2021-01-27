@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.portal.Dashboard resource with e
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The shared dashboard resource definition.
+API Version: 2020-09-01-preview.
 
 
 
@@ -228,7 +229,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#lenses_csharp" style="color: inherit; text-decoration: inherit;">Lenses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardlens">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Portal.<wbr>Inputs.<wbr>Dashboard<wbr>Lens<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#dashboardlens">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Portal..<wbr>Inputs.<wbr>Dashboard<wbr>Lens<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The dashboard lenses.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -601,7 +602,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parts_csharp" style="color: inherit; text-decoration: inherit;">Parts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardparts">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Portal.<wbr>Inputs.<wbr>Dashboard<wbr>Parts<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#dashboardparts">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Portal..<wbr>Inputs.<wbr>Dashboard<wbr>Parts<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The dashboard parts.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -735,7 +736,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parts_csharp" style="color: inherit; text-decoration: inherit;">Parts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardpartsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Portal.<wbr>Inputs.<wbr>Dashboard<wbr>Parts<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#dashboardpartsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Portal..<wbr>Inputs.<wbr>Dashboard<wbr>Parts<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The dashboard parts.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -860,7 +861,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#position_csharp" style="color: inherit; text-decoration: inherit;">Position</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardpartsposition">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Portal.<wbr>Inputs.<wbr>Dashboard<wbr>Parts<wbr>Position<wbr>Args</a></span>
+        <span class="property-type"><a href="#dashboardpartsposition">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Portal..<wbr>Inputs.<wbr>Dashboard<wbr>Parts<wbr>Position<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The dashboard's part position.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -869,7 +870,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metadata_csharp" style="color: inherit; text-decoration: inherit;">Metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#markdownpartmetadata">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Portal.<wbr>Inputs.<wbr>Markdown<wbr>Part<wbr>Metadata<wbr>Args</a></span>
+        <span class="property-type"><a href="#markdownpartmetadata">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Portal..<wbr>Inputs.<wbr>Markdown<wbr>Part<wbr>Metadata<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The dashboard part's metadata.{{% /md %}}</dd>
 </dl>
@@ -1164,7 +1165,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#position_csharp" style="color: inherit; text-decoration: inherit;">Position</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardpartsresponseposition">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Portal.<wbr>Inputs.<wbr>Dashboard<wbr>Parts<wbr>Response<wbr>Position<wbr>Args</a></span>
+        <span class="property-type"><a href="#dashboardpartsresponseposition">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Portal..<wbr>Inputs.<wbr>Dashboard<wbr>Parts<wbr>Response<wbr>Position<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The dashboard's part position.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1173,7 +1174,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metadata_csharp" style="color: inherit; text-decoration: inherit;">Metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#markdownpartmetadataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Portal.<wbr>Inputs.<wbr>Markdown<wbr>Part<wbr>Metadata<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#markdownpartmetadataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Portal..<wbr>Inputs.<wbr>Markdown<wbr>Part<wbr>Metadata<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The dashboard part's metadata.{{% /md %}}</dd>
 </dl>
@@ -1477,7 +1478,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#settings_csharp" style="color: inherit; text-decoration: inherit;">Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#markdownpartmetadatasettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Portal.<wbr>Inputs.<wbr>Markdown<wbr>Part<wbr>Metadata<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#markdownpartmetadatasettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Portal..<wbr>Inputs.<wbr>Markdown<wbr>Part<wbr>Metadata<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Markdown part settings.{{% /md %}}</dd>
 </dl>
@@ -1566,7 +1567,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#settings_csharp" style="color: inherit; text-decoration: inherit;">Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#markdownpartmetadatasettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Portal.<wbr>Inputs.<wbr>Markdown<wbr>Part<wbr>Metadata<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#markdownpartmetadatasettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Portal..<wbr>Inputs.<wbr>Markdown<wbr>Part<wbr>Metadata<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The setting of the content of markdown part.{{% /md %}}</dd>
 </dl>
@@ -1637,7 +1638,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#settings_csharp" style="color: inherit; text-decoration: inherit;">Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#markdownpartmetadataresponsesettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Portal.<wbr>Inputs.<wbr>Markdown<wbr>Part<wbr>Metadata<wbr>Response<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#markdownpartmetadataresponsesettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Portal..<wbr>Inputs.<wbr>Markdown<wbr>Part<wbr>Metadata<wbr>Response<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Markdown part settings.{{% /md %}}</dd>
 </dl>
@@ -1726,7 +1727,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#settings_csharp" style="color: inherit; text-decoration: inherit;">Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#markdownpartmetadataresponsesettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Portal.<wbr>Inputs.<wbr>Markdown<wbr>Part<wbr>Metadata<wbr>Response<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#markdownpartmetadataresponsesettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Portal..<wbr>Inputs.<wbr>Markdown<wbr>Part<wbr>Metadata<wbr>Response<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The setting of the content of markdown part.{{% /md %}}</dd>
 </dl>
@@ -1788,7 +1789,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#content_csharp" style="color: inherit; text-decoration: inherit;">Content</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#markdownpartmetadataresponsecontent">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Portal.<wbr>Inputs.<wbr>Markdown<wbr>Part<wbr>Metadata<wbr>Response<wbr>Content<wbr>Args</a></span>
+        <span class="property-type"><a href="#markdownpartmetadataresponsecontent">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Portal..<wbr>Inputs.<wbr>Markdown<wbr>Part<wbr>Metadata<wbr>Response<wbr>Content<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The content of markdown part.{{% /md %}}</dd>
 </dl>
@@ -1850,7 +1851,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#content_csharp" style="color: inherit; text-decoration: inherit;">Content</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#markdownpartmetadatacontent">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Portal.<wbr>Inputs.<wbr>Markdown<wbr>Part<wbr>Metadata<wbr>Content<wbr>Args</a></span>
+        <span class="property-type"><a href="#markdownpartmetadatacontent">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Portal..<wbr>Inputs.<wbr>Markdown<wbr>Part<wbr>Metadata<wbr>Content<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The content of markdown part.{{% /md %}}</dd>
 </dl>

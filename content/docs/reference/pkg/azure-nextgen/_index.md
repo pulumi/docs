@@ -83,6 +83,7 @@ A Next Generation Pulumi package for creating and managing Azure resources.
     <li><a href="enterpriseknowledgegraph/" title="enterpriseknowledgegraph"><span class="symbol module"></span>enterpriseknowledgegraph</a></li>
     <li><a href="eventgrid/" title="eventgrid"><span class="symbol module"></span>eventgrid</a></li>
     <li><a href="eventhub/" title="eventhub"><span class="symbol module"></span>eventhub</a></li>
+    <li><a href="guestconfiguration/" title="guestconfiguration"><span class="symbol module"></span>guestconfiguration</a></li>
     <li><a href="hanaonazure/" title="hanaonazure"><span class="symbol module"></span>hanaonazure</a></li>
     <li><a href="hardwaresecuritymodules/" title="hardwaresecuritymodules"><span class="symbol module"></span>hardwaresecuritymodules</a></li>
     <li><a href="hdinsight/" title="hdinsight"><span class="symbol module"></span>hdinsight</a></li>
@@ -93,6 +94,7 @@ A Next Generation Pulumi package for creating and managing Azure resources.
     <li><a href="hybridnetwork/" title="hybridnetwork"><span class="symbol module"></span>hybridnetwork</a></li>
     <li><a href="importexport/" title="importexport"><span class="symbol module"></span>importexport</a></li>
     <li><a href="insights/" title="insights"><span class="symbol module"></span>insights</a></li>
+    <li><a href="intune/" title="intune"><span class="symbol module"></span>intune</a></li>
     <li><a href="iotcentral/" title="iotcentral"><span class="symbol module"></span>iotcentral</a></li>
     <li><a href="iotspaces/" title="iotspaces"><span class="symbol module"></span>iotspaces</a></li>
     <li><a href="keyvault/" title="keyvault"><span class="symbol module"></span>keyvault</a></li>
@@ -180,7 +182,7 @@ A Next Generation Pulumi package for creating and managing Azure resources.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.5.0</dd>
+	<dd>0.6.0</dd>
 </dl>
 
 

@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.appplatform.Binding resource wit
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Binding resource payload
-Latest API Version: 2020-07-01.
+API Version: 2020-07-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,11 +27,11 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var binding = new AzureNextGen.AppPlatform.Latest.Binding("binding", new AzureNextGen.AppPlatform.Latest.BindingArgs
+        var binding = new AzureNextGen.AppPlatform..Binding("binding", new AzureNextGen.AppPlatform..BindingArgs
         {
             AppName = "myapp",
             BindingName = "mybinding",
-            Properties = new AzureNextGen.AppPlatform.Latest.Inputs.BindingResourcePropertiesArgs
+            Properties = new AzureNextGen.AppPlatform..Inputs.BindingResourcePropertiesArgs
             {
                 BindingParameters = 
                 {
@@ -58,7 +58,7 @@ class MyStack : Stack
 package main
 
 import (
-	appplatform "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/appplatform/latest"
+	appplatform "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/appplatform"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -95,10 +95,10 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-binding = azure_nextgen.appplatform.latest.Binding("binding",
+binding = azure_nextgen.appplatform.Binding("binding",
     app_name="myapp",
     binding_name="mybinding",
-    properties=azure_nextgen.appplatform.latest.BindingResourcePropertiesArgs(
+    properties=azure_nextgen.appplatform.BindingResourcePropertiesArgs(
         binding_parameters={
             "apiType": "SQL",
             "databaseName": "db1",
@@ -119,7 +119,7 @@ binding = azure_nextgen.appplatform.latest.Binding("binding",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const binding = new azure_nextgen.appplatform.latest.Binding("binding", {
+const binding = new azure_nextgen.appplatform.Binding("binding", {
     appName: "myapp",
     bindingName: "mybinding",
     properties: {
@@ -363,7 +363,7 @@ The Binding resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bindingresourceproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>App<wbr>Platform.<wbr>Inputs.<wbr>Binding<wbr>Resource<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#bindingresourceproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>App<wbr>Platform..<wbr>Inputs.<wbr>Binding<wbr>Resource<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties of the Binding resource{{% /md %}}</dd>
 </dl>
@@ -1124,7 +1124,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:appplatform/latest:Binding mybinding /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.AppPlatform/Spring/myservice/apps/myapp/bindings/mybinding 
+$ pulumi import azure-nextgen:appplatform:Binding mybinding /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.AppPlatform/Spring/myservice/apps/myapp/bindings/mybinding 
 ```
 
 

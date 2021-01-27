@@ -72,7 +72,7 @@ The following arguments are supported:
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#consentlinkparameterdefinition">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web.<wbr>Inputs.<wbr>Consent<wbr>Link<wbr>Parameter<wbr>Definition<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#consentlinkparameterdefinition">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web..<wbr>Inputs.<wbr>Consent<wbr>Link<wbr>Parameter<wbr>Definition<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Collection of resources{{% /md %}}</dd>
     <dt class="property-optional"
@@ -231,7 +231,7 @@ The following output properties are available:
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#consentlinkdefinitionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web.<wbr>Outputs.<wbr>Consent<wbr>Link<wbr>Definition<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#consentlinkdefinitionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web..<wbr>Outputs.<wbr>Consent<wbr>Link<wbr>Definition<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Collection of resources{{% /md %}}</dd>
 </dl>

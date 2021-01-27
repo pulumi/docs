@@ -278,7 +278,7 @@ The following output properties are available:
 <a href="#destination_csharp" style="color: inherit; text-decoration: inherit;">Destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionmonitordestinationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Outputs.<wbr>Connection<wbr>Monitor<wbr>Destination<wbr>Response</a></span>
+        <span class="property-type"><a href="#connectionmonitordestinationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Outputs.<wbr>Connection<wbr>Monitor<wbr>Destination<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes the destination of connection monitor.{{% /md %}}</dd>
     <dt class="property-"
@@ -287,7 +287,7 @@ The following output properties are available:
 <a href="#endpoints_csharp" style="color: inherit; text-decoration: inherit;">Endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionmonitorendpointresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Outputs.<wbr>Connection<wbr>Monitor<wbr>Endpoint<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#connectionmonitorendpointresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Outputs.<wbr>Connection<wbr>Monitor<wbr>Endpoint<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of connection monitor endpoints.{{% /md %}}</dd>
     <dt class="property-"
@@ -323,7 +323,7 @@ The following output properties are available:
 <a href="#outputs_csharp" style="color: inherit; text-decoration: inherit;">Outputs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionmonitoroutputresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Outputs.<wbr>Connection<wbr>Monitor<wbr>Output<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#connectionmonitoroutputresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Outputs.<wbr>Connection<wbr>Monitor<wbr>Output<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of connection monitor outputs.{{% /md %}}</dd>
     <dt class="property-"
@@ -332,7 +332,7 @@ The following output properties are available:
 <a href="#source_csharp" style="color: inherit; text-decoration: inherit;">Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionmonitorsourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Outputs.<wbr>Connection<wbr>Monitor<wbr>Source<wbr>Response</a></span>
+        <span class="property-type"><a href="#connectionmonitorsourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Outputs.<wbr>Connection<wbr>Monitor<wbr>Source<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes the source of connection monitor.{{% /md %}}</dd>
     <dt class="property-"
@@ -350,7 +350,7 @@ The following output properties are available:
 <a href="#testconfigurations_csharp" style="color: inherit; text-decoration: inherit;">Test<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionmonitortestconfigurationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Outputs.<wbr>Connection<wbr>Monitor<wbr>Test<wbr>Configuration<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#connectionmonitortestconfigurationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Outputs.<wbr>Connection<wbr>Monitor<wbr>Test<wbr>Configuration<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of connection monitor test configurations.{{% /md %}}</dd>
     <dt class="property-"
@@ -359,7 +359,7 @@ The following output properties are available:
 <a href="#testgroups_csharp" style="color: inherit; text-decoration: inherit;">Test<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionmonitortestgroupresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Outputs.<wbr>Connection<wbr>Monitor<wbr>Test<wbr>Group<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#connectionmonitortestgroupresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Outputs.<wbr>Connection<wbr>Monitor<wbr>Test<wbr>Group<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of connection monitor test groups.{{% /md %}}</dd>
 </dl>
@@ -1160,7 +1160,7 @@ The following output properties are available:
 <a href="#items_csharp" style="color: inherit; text-decoration: inherit;">Items</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionmonitorendpointfilteritemresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Connection<wbr>Monitor<wbr>Endpoint<wbr>Filter<wbr>Item<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#connectionmonitorendpointfilteritemresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Connection<wbr>Monitor<wbr>Endpoint<wbr>Filter<wbr>Item<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of items in the filter.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1290,7 +1290,7 @@ The following output properties are available:
 <a href="#filter_csharp" style="color: inherit; text-decoration: inherit;">Filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionmonitorendpointfilterresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Connection<wbr>Monitor<wbr>Endpoint<wbr>Filter<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#connectionmonitorendpointfilterresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Connection<wbr>Monitor<wbr>Endpoint<wbr>Filter<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Filter for sub-items within the endpoint.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1308,7 +1308,7 @@ The following output properties are available:
 <a href="#scope_csharp" style="color: inherit; text-decoration: inherit;">Scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionmonitorendpointscoperesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Connection<wbr>Monitor<wbr>Endpoint<wbr>Scope<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#connectionmonitorendpointscoperesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Connection<wbr>Monitor<wbr>Endpoint<wbr>Scope<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Endpoint scope.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1613,7 +1613,7 @@ The following output properties are available:
 <a href="#exclude_csharp" style="color: inherit; text-decoration: inherit;">Exclude</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionmonitorendpointscopeitemresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Connection<wbr>Monitor<wbr>Endpoint<wbr>Scope<wbr>Item<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#connectionmonitorendpointscopeitemresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Connection<wbr>Monitor<wbr>Endpoint<wbr>Scope<wbr>Item<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of items which needs to be excluded from the endpoint scope.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1622,7 +1622,7 @@ The following output properties are available:
 <a href="#include_csharp" style="color: inherit; text-decoration: inherit;">Include</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionmonitorendpointscopeitemresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Connection<wbr>Monitor<wbr>Endpoint<wbr>Scope<wbr>Item<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#connectionmonitorendpointscopeitemresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Connection<wbr>Monitor<wbr>Endpoint<wbr>Scope<wbr>Item<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of items which needs to be included to the endpoint scope.{{% /md %}}</dd>
 </dl>
@@ -1752,7 +1752,7 @@ The following output properties are available:
 <a href="#requestheaders_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpheaderresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>HTTPHeader<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#httpheaderresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>HTTPHeader<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The HTTP headers to transmit with the request.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2039,7 +2039,7 @@ The following output properties are available:
 <a href="#workspacesettings_csharp" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionmonitorworkspacesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Connection<wbr>Monitor<wbr>Workspace<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#connectionmonitorworkspacesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Connection<wbr>Monitor<wbr>Workspace<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the settings for producing output into a log analytics workspace.{{% /md %}}</dd>
 </dl>
@@ -2496,7 +2496,7 @@ The following output properties are available:
 <a href="#httpconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionmonitorhttpconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Connection<wbr>Monitor<wbr>Http<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#connectionmonitorhttpconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Connection<wbr>Monitor<wbr>Http<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The parameters used to perform test evaluation over HTTP.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2505,7 +2505,7 @@ The following output properties are available:
 <a href="#icmpconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Icmp<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionmonitoricmpconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Connection<wbr>Monitor<wbr>Icmp<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#connectionmonitoricmpconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Connection<wbr>Monitor<wbr>Icmp<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The parameters used to perform test evaluation over ICMP.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2523,7 +2523,7 @@ The following output properties are available:
 <a href="#successthreshold_csharp" style="color: inherit; text-decoration: inherit;">Success<wbr>Threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionmonitorsuccessthresholdresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Connection<wbr>Monitor<wbr>Success<wbr>Threshold<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#connectionmonitorsuccessthresholdresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Connection<wbr>Monitor<wbr>Success<wbr>Threshold<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The threshold for declaring a test successful.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2532,7 +2532,7 @@ The following output properties are available:
 <a href="#tcpconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Tcp<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionmonitortcpconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Connection<wbr>Monitor<wbr>Tcp<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#connectionmonitortcpconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Connection<wbr>Monitor<wbr>Tcp<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The parameters used to perform test evaluation over TCP.{{% /md %}}</dd>
     <dt class="property-optional"

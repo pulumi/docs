@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.engagementfabric.Account resourc
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The EngagementFabric account
+API Version: 2018-09-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,12 +27,12 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var account = new AzureNextGen.EngagementFabric.V20180901Preview.Account("account", new AzureNextGen.EngagementFabric.V20180901Preview.AccountArgs
+        var account = new AzureNextGen.EngagementFabric..Account("account", new AzureNextGen.EngagementFabric..AccountArgs
         {
             AccountName = "ExampleAccount",
             Location = "WestUS",
             ResourceGroupName = "ExampleRg",
-            Sku = new AzureNextGen.EngagementFabric.V20180901Preview.Inputs.SKUArgs
+            Sku = new AzureNextGen.EngagementFabric..Inputs.SKUArgs
             {
                 Name = "B1",
             },
@@ -50,7 +51,7 @@ class MyStack : Stack
 package main
 
 import (
-	engagementfabric "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/engagementfabric/v20180901preview"
+	engagementfabric "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/engagementfabric"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -81,11 +82,11 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-account = azure_nextgen.engagementfabric.v20180901preview.Account("account",
+account = azure_nextgen.engagementfabric.Account("account",
     account_name="ExampleAccount",
     location="WestUS",
     resource_group_name="ExampleRg",
-    sku=azure_nextgen.engagementfabric.v20180901preview.SKUArgs(
+    sku=azure_nextgen.engagementfabric.SKUArgs(
         name="B1",
     ))
 
@@ -99,7 +100,7 @@ account = azure_nextgen.engagementfabric.v20180901preview.Account("account",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const account = new azure_nextgen.engagementfabric.v20180901preview.Account("account", {
+const account = new azure_nextgen.engagementfabric.Account("account", {
     accountName: "ExampleAccount",
     location: "WestUS",
     resourceGroupName: "ExampleRg",
@@ -328,7 +329,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sku">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Engagement<wbr>Fabric.<wbr>Inputs.<wbr>SKUArgs</a></span>
+        <span class="property-type"><a href="#sku">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Engagement<wbr>Fabric..<wbr>Inputs.<wbr>SKUArgs</a></span>
     </dt>
     <dd>{{% md %}}The SKU of the resource{{% /md %}}</dd>
     <dt class="property-optional"
@@ -846,7 +847,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:engagementfabric/v20180901preview:Account ExampleAccount subscriptions/EDBF0095-A524-4A84-95FB-F72DA41AA6A1/resourceGroups/ExampleRg/providers/Microsoft.EngagementFabric/Accounts/ExampleAccount 
+$ pulumi import azure-nextgen:engagementfabric:Account ExampleAccount subscriptions/EDBF0095-A524-4A84-95FB-F72DA41AA6A1/resourceGroups/ExampleRg/providers/Microsoft.EngagementFabric/Accounts/ExampleAccount 
 ```
 
 

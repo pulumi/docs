@@ -224,7 +224,7 @@ The following output properties are available:
 <a href="#participantpropertyreferences_csharp" style="color: inherit; text-decoration: inherit;">Participant<wbr>Property<wbr>References</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#participantpropertyreferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights.<wbr>Outputs.<wbr>Participant<wbr>Property<wbr>Reference<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#participantpropertyreferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights..<wbr>Outputs.<wbr>Participant<wbr>Property<wbr>Reference<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The properties that represent the participating profile.{{% /md %}}</dd>
     <dt class="property-"
@@ -314,7 +314,7 @@ The following output properties are available:
 <a href="#mappings_csharp" style="color: inherit; text-decoration: inherit;">Mappings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#typepropertiesmappingresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights.<wbr>Outputs.<wbr>Type<wbr>Properties<wbr>Mapping<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#typepropertiesmappingresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights..<wbr>Outputs.<wbr>Type<wbr>Properties<wbr>Mapping<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The set of properties mappings between the source and target Types.{{% /md %}}</dd>
     <dt class="property-"

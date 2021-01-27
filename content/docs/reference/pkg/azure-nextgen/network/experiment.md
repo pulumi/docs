@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.network.Experiment resource with
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Defines the properties of an Experiment
-Latest API Version: 2019-11-01.
+API Version: 2019-11-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,15 +27,15 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var experiment = new AzureNextGen.Network.Latest.Experiment("experiment", new AzureNextGen.Network.Latest.ExperimentArgs
+        var experiment = new AzureNextGen.Network..Experiment("experiment", new AzureNextGen.Network..ExperimentArgs
         {
             Description = "this is my first experiment!",
             EnabledState = "Enabled",
-            EndpointA = new AzureNextGen.Network.Latest.Inputs.EndpointArgs
+            EndpointA = new AzureNextGen.Network..Inputs.EndpointArgs
             {
                 Name = "endpoint A",
             },
-            EndpointB = new AzureNextGen.Network.Latest.Inputs.EndpointArgs
+            EndpointB = new AzureNextGen.Network..Inputs.EndpointArgs
             {
                 Name = "endpoint B",
             },
@@ -57,7 +57,7 @@ class MyStack : Stack
 package main
 
 import (
-	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network/latest"
+	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -93,13 +93,13 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-experiment = azure_nextgen.network.latest.Experiment("experiment",
+experiment = azure_nextgen.network.Experiment("experiment",
     description="this is my first experiment!",
     enabled_state="Enabled",
-    endpoint_a=azure_nextgen.network.latest.EndpointArgs(
+    endpoint_a=azure_nextgen.network.EndpointArgs(
         name="endpoint A",
     ),
-    endpoint_b=azure_nextgen.network.latest.EndpointArgs(
+    endpoint_b=azure_nextgen.network.EndpointArgs(
         name="endpoint B",
     ),
     experiment_name="MyExperiment",
@@ -116,7 +116,7 @@ experiment = azure_nextgen.network.latest.Experiment("experiment",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const experiment = new azure_nextgen.network.latest.Experiment("experiment", {
+const experiment = new azure_nextgen.network.Experiment("experiment", {
     description: "this is my first experiment!",
     enabledState: "Enabled",
     endpointA: {
@@ -359,7 +359,7 @@ The Experiment resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#enabledstate_csharp" style="color: inherit; text-decoration: inherit;">Enabled<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#state">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>State</a></span>
+        <span class="property-type">string | <a href="#state">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}The state of the Experiment{{% /md %}}</dd>
     <dt class="property-optional"
@@ -368,7 +368,7 @@ The Experiment resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#endpointa_csharp" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>A</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpoint">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Endpoint<wbr>Args</a></span>
+        <span class="property-type"><a href="#endpoint">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Endpoint<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The endpoint A of an experiment{{% /md %}}</dd>
     <dt class="property-optional"
@@ -377,7 +377,7 @@ The Experiment resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#endpointb_csharp" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>B</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpoint">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Endpoint<wbr>Args</a></span>
+        <span class="property-type"><a href="#endpoint">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Endpoint<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The endpoint B of an experiment{{% /md %}}</dd>
     <dt class="property-optional"
@@ -930,7 +930,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#customheaders_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointpropertiescustomheaders">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Endpoint<wbr>Properties<wbr>Custom<wbr>Headers<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#endpointpropertiescustomheaders">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Endpoint<wbr>Properties<wbr>Custom<wbr>Headers<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of custom headers.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -948,7 +948,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpointmonitorstatus_csharp" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Monitor<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#endpointmonitorstatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Endpoint<wbr>Monitor<wbr>Status</a></span>
+        <span class="property-type">string | <a href="#endpointmonitorstatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Endpoint<wbr>Monitor<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}The monitoring status of the endpoint.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -957,7 +957,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpointstatus_csharp" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#endpointstatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Endpoint<wbr>Status</a></span>
+        <span class="property-type">string | <a href="#endpointstatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Endpoint<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}The status of the endpoint. If the endpoint is Enabled, it is probed for endpoint health and is included in the traffic routing method.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1011,7 +1011,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subnets_csharp" style="color: inherit; text-decoration: inherit;">Subnets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointpropertiessubnets">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Endpoint<wbr>Properties<wbr>Subnets<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#endpointpropertiessubnets">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Endpoint<wbr>Properties<wbr>Subnets<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of subnets, IP addresses, and/or address ranges mapped to this endpoint when using the 'Subnet' traffic routing method. An empty list will match all ranges not covered by other endpoints.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1994,7 +1994,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#customheaders_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointpropertiesresponsecustomheaders">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Endpoint<wbr>Properties<wbr>Response<wbr>Custom<wbr>Headers<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#endpointpropertiesresponsecustomheaders">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Endpoint<wbr>Properties<wbr>Response<wbr>Custom<wbr>Headers<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of custom headers.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2075,7 +2075,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subnets_csharp" style="color: inherit; text-decoration: inherit;">Subnets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointpropertiesresponsesubnets">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Endpoint<wbr>Properties<wbr>Response<wbr>Subnets<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#endpointpropertiesresponsesubnets">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Endpoint<wbr>Properties<wbr>Response<wbr>Subnets<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of subnets, IP addresses, and/or address ranges mapped to this endpoint when using the 'Subnet' traffic routing method. An empty list will match all ranges not covered by other endpoints.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2594,7 +2594,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:network/latest:Experiment MyExperiment /subscriptions/subid/resourceGroups/MyResourceGroup/providers/Microsoft.Network/NetworkExperimentProfiles/MyProfile/Experiments/MyExperiment 
+$ pulumi import azure-nextgen:network:Experiment MyExperiment /subscriptions/subid/resourceGroups/MyResourceGroup/providers/Microsoft.Network/NetworkExperimentProfiles/MyProfile/Experiments/MyExperiment 
 ```
 
 

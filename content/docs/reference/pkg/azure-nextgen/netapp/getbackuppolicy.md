@@ -278,7 +278,7 @@ The following output properties are available:
 <a href="#volumebackups_csharp" style="color: inherit; text-decoration: inherit;">Volume<wbr>Backups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volumebackupsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Net<wbr>App.<wbr>Outputs.<wbr>Volume<wbr>Backups<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#volumebackupsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Net<wbr>App..<wbr>Outputs.<wbr>Volume<wbr>Backups<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of volumes assigned to this policy{{% /md %}}</dd>
     <dt class="property-"

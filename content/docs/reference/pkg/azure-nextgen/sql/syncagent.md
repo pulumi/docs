@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.sql.SyncAgent resource with exam
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 An Azure SQL Database sync agent.
+API Version: 2020-08-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var syncAgent = new AzureNextGen.Sql.V20200801Preview.SyncAgent("syncAgent", new AzureNextGen.Sql.V20200801Preview.SyncAgentArgs
+        var syncAgent = new AzureNextGen.Sql..SyncAgent("syncAgent", new AzureNextGen.Sql..SyncAgentArgs
         {
             ResourceGroupName = "syncagentcrud-65440",
             ServerName = "syncagentcrud-8475",
@@ -47,7 +48,7 @@ class MyStack : Stack
 package main
 
 import (
-	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql/v20200801preview"
+	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -76,7 +77,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-sync_agent = azure_nextgen.sql.v20200801preview.SyncAgent("syncAgent",
+sync_agent = azure_nextgen.sql.SyncAgent("syncAgent",
     resource_group_name="syncagentcrud-65440",
     server_name="syncagentcrud-8475",
     sync_agent_name="syncagentcrud-3187",
@@ -92,7 +93,7 @@ sync_agent = azure_nextgen.sql.v20200801preview.SyncAgent("syncAgent",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const syncAgent = new azure_nextgen.sql.v20200801preview.SyncAgent("syncAgent", {
+const syncAgent = new azure_nextgen.sql.SyncAgent("syncAgent", {
     resourceGroupName: "syncagentcrud-65440",
     serverName: "syncagentcrud-8475",
     syncAgentName: "syncagentcrud-3187",
@@ -113,7 +114,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var syncAgent = new AzureNextGen.Sql.V20200801Preview.SyncAgent("syncAgent", new AzureNextGen.Sql.V20200801Preview.SyncAgentArgs
+        var syncAgent = new AzureNextGen.Sql..SyncAgent("syncAgent", new AzureNextGen.Sql..SyncAgentArgs
         {
             ResourceGroupName = "syncagentcrud-65440",
             ServerName = "syncagentcrud-8475",
@@ -134,7 +135,7 @@ class MyStack : Stack
 package main
 
 import (
-	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql/v20200801preview"
+	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -163,7 +164,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-sync_agent = azure_nextgen.sql.v20200801preview.SyncAgent("syncAgent",
+sync_agent = azure_nextgen.sql.SyncAgent("syncAgent",
     resource_group_name="syncagentcrud-65440",
     server_name="syncagentcrud-8475",
     sync_agent_name="syncagentcrud-3187",
@@ -179,7 +180,7 @@ sync_agent = azure_nextgen.sql.v20200801preview.SyncAgent("syncAgent",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const syncAgent = new azure_nextgen.sql.v20200801preview.SyncAgent("syncAgent", {
+const syncAgent = new azure_nextgen.sql.SyncAgent("syncAgent", {
     resourceGroupName: "syncagentcrud-65440",
     serverName: "syncagentcrud-8475",
     syncAgentName: "syncagentcrud-3187",
@@ -868,7 +869,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:sql/v20200801preview:SyncAgent syncagent /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default-SQL-Onebox/providers/Microsoft.Sql/servers/syncagentcrud-8475/syncAgents/syncagentcrud-3187 
+$ pulumi import azure-nextgen:sql:SyncAgent syncagent /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default-SQL-Onebox/providers/Microsoft.Sql/servers/syncagentcrud-8475/syncAgents/syncagentcrud-3187 
 ```
 
 

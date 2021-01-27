@@ -332,7 +332,7 @@ The following output properties are available:
 <a href="#machines_csharp" style="color: inherit; text-decoration: inherit;">Machines</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#machinereferencewithhintsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Operational<wbr>Insights.<wbr>Outputs.<wbr>Machine<wbr>Reference<wbr>With<wbr>Hints<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#machinereferencewithhintsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Operational<wbr>Insights..<wbr>Outputs.<wbr>Machine<wbr>Reference<wbr>With<wbr>Hints<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}References of the machines in this group. The hints within each reference do not represent the current value of the corresponding fields. They are a snapshot created during the last time the machine group was updated.{{% /md %}}</dd>
 </dl>

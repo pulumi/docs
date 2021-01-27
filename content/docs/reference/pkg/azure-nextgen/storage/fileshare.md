@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.storage.FileShare resource with 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Properties of the file share, including Id, resource name, resource type, Etag.
-Latest API Version: 2019-06-01.
+API Version: 2019-06-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var fileShare = new AzureNextGen.Storage.Latest.FileShare("fileShare", new AzureNextGen.Storage.Latest.FileShareArgs
+        var fileShare = new AzureNextGen.Storage..FileShare("fileShare", new AzureNextGen.Storage..FileShareArgs
         {
             AccountName = "sto666",
             EnabledProtocols = "NFS",
@@ -48,7 +48,7 @@ class MyStack : Stack
 package main
 
 import (
-	storage "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/storage/latest"
+	storage "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/storage"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -77,7 +77,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-file_share = azure_nextgen.storage.latest.FileShare("fileShare",
+file_share = azure_nextgen.storage.FileShare("fileShare",
     account_name="sto666",
     enabled_protocols="NFS",
     resource_group_name="res346",
@@ -93,7 +93,7 @@ file_share = azure_nextgen.storage.latest.FileShare("fileShare",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const fileShare = new azure_nextgen.storage.latest.FileShare("fileShare", {
+const fileShare = new azure_nextgen.storage.FileShare("fileShare", {
     accountName: "sto666",
     enabledProtocols: "NFS",
     resourceGroupName: "res346",
@@ -114,7 +114,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var fileShare = new AzureNextGen.Storage.Latest.FileShare("fileShare", new AzureNextGen.Storage.Latest.FileShareArgs
+        var fileShare = new AzureNextGen.Storage..FileShare("fileShare", new AzureNextGen.Storage..FileShareArgs
         {
             AccountName = "sto328",
             ResourceGroupName = "res3376",
@@ -134,7 +134,7 @@ class MyStack : Stack
 package main
 
 import (
-	storage "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/storage/latest"
+	storage "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/storage"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -162,7 +162,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-file_share = azure_nextgen.storage.latest.FileShare("fileShare",
+file_share = azure_nextgen.storage.FileShare("fileShare",
     account_name="sto328",
     resource_group_name="res3376",
     share_name="share6185")
@@ -177,7 +177,7 @@ file_share = azure_nextgen.storage.latest.FileShare("fileShare",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const fileShare = new azure_nextgen.storage.latest.FileShare("fileShare", {
+const fileShare = new azure_nextgen.storage.FileShare("fileShare", {
     accountName: "sto328",
     resourceGroupName: "res3376",
     shareName: "share6185",
@@ -197,7 +197,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var fileShare = new AzureNextGen.Storage.Latest.FileShare("fileShare", new AzureNextGen.Storage.Latest.FileShareArgs
+        var fileShare = new AzureNextGen.Storage..FileShare("fileShare", new AzureNextGen.Storage..FileShareArgs
         {
             AccessTier = "Hot",
             AccountName = "sto666",
@@ -218,7 +218,7 @@ class MyStack : Stack
 package main
 
 import (
-	storage "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/storage/latest"
+	storage "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/storage"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -247,7 +247,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-file_share = azure_nextgen.storage.latest.FileShare("fileShare",
+file_share = azure_nextgen.storage.FileShare("fileShare",
     access_tier="Hot",
     account_name="sto666",
     resource_group_name="res346",
@@ -263,7 +263,7 @@ file_share = azure_nextgen.storage.latest.FileShare("fileShare",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const fileShare = new azure_nextgen.storage.latest.FileShare("fileShare", {
+const fileShare = new azure_nextgen.storage.FileShare("fileShare", {
     accessTier: "Hot",
     accountName: "sto666",
     resourceGroupName: "res346",
@@ -490,7 +490,7 @@ The FileShare resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#accesstier_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#shareaccesstier">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Share<wbr>Access<wbr>Tier</a></span>
+        <span class="property-type">string | <a href="#shareaccesstier">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage..<wbr>Share<wbr>Access<wbr>Tier</a></span>
     </dt>
     <dd>{{% md %}}Access tier for specific share. GpV2 account can choose between TransactionOptimized (default), Hot, and Cool. FileStorage account can choose Premium.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -499,7 +499,7 @@ The FileShare resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#enabledprotocols_csharp" style="color: inherit; text-decoration: inherit;">Enabled<wbr>Protocols</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#enabledprotocols">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Enabled<wbr>Protocols</a></span>
+        <span class="property-type">string | <a href="#enabledprotocols">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage..<wbr>Enabled<wbr>Protocols</a></span>
     </dt>
     <dd>{{% md %}}The authentication protocol that is used for the file share. Can only be specified when creating a share.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -517,7 +517,7 @@ The FileShare resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#rootsquash_csharp" style="color: inherit; text-decoration: inherit;">Root<wbr>Squash</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#rootsquashtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Root<wbr>Squash<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#rootsquashtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage..<wbr>Root<wbr>Squash<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The property is for NFS share only. The default is NoRootSquash.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1382,7 +1382,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:storage/latest:FileShare share1235 /subscriptions/{subscription-id}/resourceGroups/res346/providers/Microsoft.Storage/storageAccounts/sto666/fileServices/default/shares/share1235 
+$ pulumi import azure-nextgen:storage:FileShare share1235 /subscriptions/{subscription-id}/resourceGroups/res346/providers/Microsoft.Storage/storageAccounts/sto666/fileServices/default/shares/share1235 
 ```
 
 

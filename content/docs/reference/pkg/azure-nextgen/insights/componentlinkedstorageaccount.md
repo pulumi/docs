@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.insights.ComponentLinkedStorageA
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 An Application Insights component linked storage accounts
+API Version: 2020-03-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var componentLinkedStorageAccount = new AzureNextGen.Insights.V20200301Preview.ComponentLinkedStorageAccount("componentLinkedStorageAccount", new AzureNextGen.Insights.V20200301Preview.ComponentLinkedStorageAccountArgs
+        var componentLinkedStorageAccount = new AzureNextGen.Insights..ComponentLinkedStorageAccount("componentLinkedStorageAccount", new AzureNextGen.Insights..ComponentLinkedStorageAccountArgs
         {
             LinkedStorageAccount = "/subscriptions/86dc51d3-92ed-4d7e-947a-775ea79b4918/resourceGroups/someResourceGroupName/providers/Microsoft.Storage/storageAccounts/storageaccountname",
             ResourceGroupName = "someResourceGroupName",
@@ -47,7 +48,7 @@ class MyStack : Stack
 package main
 
 import (
-	insights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/insights/v20200301preview"
+	insights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/insights"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -76,7 +77,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-component_linked_storage_account = azure_nextgen.insights.v20200301preview.ComponentLinkedStorageAccount("componentLinkedStorageAccount",
+component_linked_storage_account = azure_nextgen.insights.ComponentLinkedStorageAccount("componentLinkedStorageAccount",
     linked_storage_account="/subscriptions/86dc51d3-92ed-4d7e-947a-775ea79b4918/resourceGroups/someResourceGroupName/providers/Microsoft.Storage/storageAccounts/storageaccountname",
     resource_group_name="someResourceGroupName",
     resource_name="myComponent",
@@ -92,7 +93,7 @@ component_linked_storage_account = azure_nextgen.insights.v20200301preview.Compo
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const componentLinkedStorageAccount = new azure_nextgen.insights.v20200301preview.ComponentLinkedStorageAccount("componentLinkedStorageAccount", {
+const componentLinkedStorageAccount = new azure_nextgen.insights.ComponentLinkedStorageAccount("componentLinkedStorageAccount", {
     linkedStorageAccount: "/subscriptions/86dc51d3-92ed-4d7e-947a-775ea79b4918/resourceGroups/someResourceGroupName/providers/Microsoft.Storage/storageAccounts/storageaccountname",
     resourceGroupName: "someResourceGroupName",
     resourceName: "myComponent",
@@ -601,7 +602,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:insights/v20200301preview:ComponentLinkedStorageAccount serviceprofile /subscriptions/86dc51d3-92ed-4d7e-947a-775ea79b4918/resourceGroups/someResourceGroupNameproviders/microsoft.insights/components/myComponent/linkedStorageAccounts/serviceprofiler 
+$ pulumi import azure-nextgen:insights:ComponentLinkedStorageAccount serviceprofile /subscriptions/86dc51d3-92ed-4d7e-947a-775ea79b4918/resourceGroups/someResourceGroupNameproviders/microsoft.insights/components/myComponent/linkedStorageAccounts/serviceprofiler 
 ```
 
 

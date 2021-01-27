@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.network.RulesEngine resource wit
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 A rules engine configuration containing a list of rules that will run to modify the runtime behavior of the request and response.
-Latest API Version: 2020-05-01.
+API Version: 2020-05-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,15 +27,15 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var rulesEngine = new AzureNextGen.Network.Latest.RulesEngine("rulesEngine", new AzureNextGen.Network.Latest.RulesEngineArgs
+        var rulesEngine = new AzureNextGen.Network..RulesEngine("rulesEngine", new AzureNextGen.Network..RulesEngineArgs
         {
             FrontDoorName = "frontDoor1",
             ResourceGroupName = "rg1",
             Rules = 
             {
-                new AzureNextGen.Network.Latest.Inputs.RulesEngineRuleArgs
+                new AzureNextGen.Network..Inputs.RulesEngineRuleArgs
                 {
-                    Action = new AzureNextGen.Network.Latest.Inputs.RulesEngineActionArgs
+                    Action = new AzureNextGen.Network..Inputs.RulesEngineActionArgs
                     {
                         RouteConfigurationOverride = 
                         {
@@ -50,7 +50,7 @@ class MyStack : Stack
                     },
                     MatchConditions = 
                     {
-                        new AzureNextGen.Network.Latest.Inputs.RulesEngineMatchConditionArgs
+                        new AzureNextGen.Network..Inputs.RulesEngineMatchConditionArgs
                         {
                             RulesEngineMatchValue = 
                             {
@@ -64,13 +64,13 @@ class MyStack : Stack
                     Name = "Rule1",
                     Priority = 1,
                 },
-                new AzureNextGen.Network.Latest.Inputs.RulesEngineRuleArgs
+                new AzureNextGen.Network..Inputs.RulesEngineRuleArgs
                 {
-                    Action = new AzureNextGen.Network.Latest.Inputs.RulesEngineActionArgs
+                    Action = new AzureNextGen.Network..Inputs.RulesEngineActionArgs
                     {
                         ResponseHeaderActions = 
                         {
-                            new AzureNextGen.Network.Latest.Inputs.HeaderActionArgs
+                            new AzureNextGen.Network..Inputs.HeaderActionArgs
                             {
                                 HeaderActionType = "Overwrite",
                                 HeaderName = "Cache-Control",
@@ -80,7 +80,7 @@ class MyStack : Stack
                     },
                     MatchConditions = 
                     {
-                        new AzureNextGen.Network.Latest.Inputs.RulesEngineMatchConditionArgs
+                        new AzureNextGen.Network..Inputs.RulesEngineMatchConditionArgs
                         {
                             RulesEngineMatchValue = 
                             {
@@ -97,17 +97,17 @@ class MyStack : Stack
                     Name = "Rule2",
                     Priority = 2,
                 },
-                new AzureNextGen.Network.Latest.Inputs.RulesEngineRuleArgs
+                new AzureNextGen.Network..Inputs.RulesEngineRuleArgs
                 {
-                    Action = new AzureNextGen.Network.Latest.Inputs.RulesEngineActionArgs
+                    Action = new AzureNextGen.Network..Inputs.RulesEngineActionArgs
                     {
                         RouteConfigurationOverride = 
                         {
-                            { "backendPool", new AzureNextGen.Network.Latest.Inputs.SubResourceArgs
+                            { "backendPool", new AzureNextGen.Network..Inputs.SubResourceArgs
                             {
                                 Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/frontDoors/frontDoor1/backendPools/backendPool1",
                             } },
-                            { "cacheConfiguration", new AzureNextGen.Network.Latest.Inputs.CacheConfigurationArgs
+                            { "cacheConfiguration", new AzureNextGen.Network..Inputs.CacheConfigurationArgs
                             {
                                 CacheDuration = "P1DT12H20M30S",
                                 DynamicCompression = "Disabled",
@@ -120,7 +120,7 @@ class MyStack : Stack
                     },
                     MatchConditions = 
                     {
-                        new AzureNextGen.Network.Latest.Inputs.RulesEngineMatchConditionArgs
+                        new AzureNextGen.Network..Inputs.RulesEngineMatchConditionArgs
                         {
                             NegateCondition = false,
                             RulesEngineMatchValue = 
@@ -160,12 +160,12 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-rules_engine = azure_nextgen.network.latest.RulesEngine("rulesEngine",
+rules_engine = azure_nextgen.network.RulesEngine("rulesEngine",
     front_door_name="frontDoor1",
     resource_group_name="rg1",
     rules=[
-        azure_nextgen.network.latest.RulesEngineRuleArgs(
-            action=azure_nextgen.network.latest.RulesEngineActionArgs(
+        azure_nextgen.network.RulesEngineRuleArgs(
+            action=azure_nextgen.network.RulesEngineActionArgs(
                 route_configuration_override={
                     "customFragment": "fragment",
                     "customHost": "www.bing.com",
@@ -176,7 +176,7 @@ rules_engine = azure_nextgen.network.latest.RulesEngine("rulesEngine",
                     "redirectType": "Moved",
                 },
             ),
-            match_conditions=[azure_nextgen.network.latest.RulesEngineMatchConditionArgs(
+            match_conditions=[azure_nextgen.network.RulesEngineMatchConditionArgs(
                 rules_engine_match_value=["CH"],
                 rules_engine_match_variable="RemoteAddr",
                 rules_engine_operator="GeoMatch",
@@ -185,15 +185,15 @@ rules_engine = azure_nextgen.network.latest.RulesEngine("rulesEngine",
             name="Rule1",
             priority=1,
         ),
-        azure_nextgen.network.latest.RulesEngineRuleArgs(
-            action=azure_nextgen.network.latest.RulesEngineActionArgs(
-                response_header_actions=[azure_nextgen.network.latest.HeaderActionArgs(
+        azure_nextgen.network.RulesEngineRuleArgs(
+            action=azure_nextgen.network.RulesEngineActionArgs(
+                response_header_actions=[azure_nextgen.network.HeaderActionArgs(
                     header_action_type="Overwrite",
                     header_name="Cache-Control",
                     value="public, max-age=31536000",
                 )],
             ),
-            match_conditions=[azure_nextgen.network.latest.RulesEngineMatchConditionArgs(
+            match_conditions=[azure_nextgen.network.RulesEngineMatchConditionArgs(
                 rules_engine_match_value=["jpg"],
                 rules_engine_match_variable="RequestFilenameExtension",
                 rules_engine_operator="Equal",
@@ -202,13 +202,13 @@ rules_engine = azure_nextgen.network.latest.RulesEngine("rulesEngine",
             name="Rule2",
             priority=2,
         ),
-        azure_nextgen.network.latest.RulesEngineRuleArgs(
-            action=azure_nextgen.network.latest.RulesEngineActionArgs(
+        azure_nextgen.network.RulesEngineRuleArgs(
+            action=azure_nextgen.network.RulesEngineActionArgs(
                 route_configuration_override={
-                    "backendPool": azure_nextgen.network.latest.SubResourceArgs(
+                    "backendPool": azure_nextgen.network.SubResourceArgs(
                         id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/frontDoors/frontDoor1/backendPools/backendPool1",
                     ),
-                    "cacheConfiguration": azure_nextgen.network.latest.CacheConfigurationArgs(
+                    "cacheConfiguration": azure_nextgen.network.CacheConfigurationArgs(
                         cache_duration="P1DT12H20M30S",
                         dynamic_compression="Disabled",
                         query_parameter_strip_directive="StripOnly",
@@ -218,7 +218,7 @@ rules_engine = azure_nextgen.network.latest.RulesEngine("rulesEngine",
                     "odataType": "#Microsoft.Azure.FrontDoor.Models.FrontdoorForwardingConfiguration",
                 },
             ),
-            match_conditions=[azure_nextgen.network.latest.RulesEngineMatchConditionArgs(
+            match_conditions=[azure_nextgen.network.RulesEngineMatchConditionArgs(
                 negate_condition=False,
                 rules_engine_match_value=["allowoverride"],
                 rules_engine_match_variable="RequestHeader",
@@ -242,7 +242,7 @@ rules_engine = azure_nextgen.network.latest.RulesEngine("rulesEngine",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const rulesEngine = new azure_nextgen.network.latest.RulesEngine("rulesEngine", {
+const rulesEngine = new azure_nextgen.network.RulesEngine("rulesEngine", {
     frontDoorName: "frontDoor1",
     resourceGroupName: "rg1",
     rules: [
@@ -535,7 +535,7 @@ The RulesEngine resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#rules_csharp" style="color: inherit; text-decoration: inherit;">Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulesenginerule">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Rules<wbr>Engine<wbr>Rule<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#rulesenginerule">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Rules<wbr>Engine<wbr>Rule<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of rules that define a particular Rules Engine Configuration.{{% /md %}}</dd>
 </dl>
@@ -872,7 +872,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dynamiccompression_csharp" style="color: inherit; text-decoration: inherit;">Dynamic<wbr>Compression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#dynamiccompressionenabled">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Dynamic<wbr>Compression<wbr>Enabled</a></span>
+        <span class="property-type">string | <a href="#dynamiccompressionenabled">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Dynamic<wbr>Compression<wbr>Enabled</a></span>
     </dt>
     <dd>{{% md %}}Whether to use dynamic compression for cached content{{% /md %}}</dd>
     <dt class="property-optional"
@@ -881,7 +881,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#queryparameterstripdirective_csharp" style="color: inherit; text-decoration: inherit;">Query<wbr>Parameter<wbr>Strip<wbr>Directive</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#frontdoorquery">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Front<wbr>Door<wbr>Query</a></span>
+        <span class="property-type">string | <a href="#frontdoorquery">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Front<wbr>Door<wbr>Query</a></span>
     </dt>
     <dd>{{% md %}}Treatment of URL query terms when forming the cache key.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1241,7 +1241,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backendpool_csharp" style="color: inherit; text-decoration: inherit;">Backend<wbr>Pool</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A reference to the BackendPool which this rule routes to.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1250,7 +1250,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cacheconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Cache<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cacheconfiguration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Cache<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#cacheconfiguration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Cache<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The caching configuration associated with this rule.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1268,7 +1268,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#forwardingprotocol_csharp" style="color: inherit; text-decoration: inherit;">Forwarding<wbr>Protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#frontdoorforwardingprotocol">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Front<wbr>Door<wbr>Forwarding<wbr>Protocol</a></span>
+        <span class="property-type">string | <a href="#frontdoorforwardingprotocol">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Front<wbr>Door<wbr>Forwarding<wbr>Protocol</a></span>
     </dt>
     <dd>{{% md %}}Protocol this rule will use when forwarding traffic to backends.{{% /md %}}</dd>
 </dl>
@@ -1411,7 +1411,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backendpool_csharp" style="color: inherit; text-decoration: inherit;">Backend<wbr>Pool</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A reference to the BackendPool which this rule routes to.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1420,7 +1420,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cacheconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Cache<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cacheconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Cache<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#cacheconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Cache<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The caching configuration associated with this rule.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1781,7 +1781,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#headeractiontype_csharp" style="color: inherit; text-decoration: inherit;">Header<wbr>Action<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#headeractiontype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Header<wbr>Action<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#headeractiontype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Header<wbr>Action<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Which type of manipulation to apply to the header.{{% /md %}}</dd>
     <dt class="property-required"
@@ -2169,7 +2169,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#redirectprotocol_csharp" style="color: inherit; text-decoration: inherit;">Redirect<wbr>Protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#frontdoorredirectprotocol">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Front<wbr>Door<wbr>Redirect<wbr>Protocol</a></span>
+        <span class="property-type">string | <a href="#frontdoorredirectprotocol">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Front<wbr>Door<wbr>Redirect<wbr>Protocol</a></span>
     </dt>
     <dd>{{% md %}}The protocol of the destination to where the traffic is redirected{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2178,7 +2178,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#redirecttype_csharp" style="color: inherit; text-decoration: inherit;">Redirect<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#frontdoorredirecttype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Front<wbr>Door<wbr>Redirect<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#frontdoorredirecttype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Front<wbr>Door<wbr>Redirect<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The redirect type the rule will use when redirecting traffic.{{% /md %}}</dd>
 </dl>
@@ -2617,7 +2617,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#requestheaderactions_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Header<wbr>Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#headeraction">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Header<wbr>Action<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#headeraction">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Header<wbr>Action<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of header actions to apply from the request from AFD to the origin.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2626,7 +2626,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#responseheaderactions_csharp" style="color: inherit; text-decoration: inherit;">Response<wbr>Header<wbr>Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#headeraction">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Header<wbr>Action<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#headeraction">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Header<wbr>Action<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of header actions to apply from the response from AFD to the client.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2635,7 +2635,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#routeconfigurationoverride_csharp" style="color: inherit; text-decoration: inherit;">Route<wbr>Configuration<wbr>Override</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#forwardingconfiguration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Forwarding<wbr>Configuration<wbr>Args</a> | <a href="#redirectconfiguration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Redirect<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#forwardingconfiguration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Forwarding<wbr>Configuration<wbr>Args</a> | <a href="#redirectconfiguration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Redirect<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Override the route configuration.{{% /md %}}</dd>
 </dl>
@@ -2751,7 +2751,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#requestheaderactions_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Header<wbr>Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#headeractionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Header<wbr>Action<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#headeractionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Header<wbr>Action<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of header actions to apply from the request from AFD to the origin.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2760,7 +2760,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#responseheaderactions_csharp" style="color: inherit; text-decoration: inherit;">Response<wbr>Header<wbr>Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#headeractionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Header<wbr>Action<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#headeractionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Header<wbr>Action<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of header actions to apply from the response from AFD to the client.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2769,7 +2769,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#routeconfigurationoverride_csharp" style="color: inherit; text-decoration: inherit;">Route<wbr>Configuration<wbr>Override</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#forwardingconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Forwarding<wbr>Configuration<wbr>Response<wbr>Args</a> | <a href="#redirectconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Redirect<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#forwardingconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Forwarding<wbr>Configuration<wbr>Response<wbr>Args</a> | <a href="#redirectconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Redirect<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Override the route configuration.{{% /md %}}</dd>
 </dl>
@@ -2894,7 +2894,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rulesenginematchvariable_csharp" style="color: inherit; text-decoration: inherit;">Rules<wbr>Engine<wbr>Match<wbr>Variable</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#rulesenginematchvariable">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Rules<wbr>Engine<wbr>Match<wbr>Variable</a></span>
+        <span class="property-type">string | <a href="#rulesenginematchvariable">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Rules<wbr>Engine<wbr>Match<wbr>Variable</a></span>
     </dt>
     <dd>{{% md %}}Match Variable{{% /md %}}</dd>
     <dt class="property-required"
@@ -2903,7 +2903,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rulesengineoperator_csharp" style="color: inherit; text-decoration: inherit;">Rules<wbr>Engine<wbr>Operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#rulesengineoperator">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Rules<wbr>Engine<wbr>Operator</a></span>
+        <span class="property-type">string | <a href="#rulesengineoperator">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Rules<wbr>Engine<wbr>Operator</a></span>
     </dt>
     <dd>{{% md %}}Describes operator to apply to the match condition.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2930,7 +2930,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transforms_csharp" style="color: inherit; text-decoration: inherit;">Transforms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Union&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Transform&gt;&gt;</span>
+        <span class="property-type">List&lt;Union&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Transform&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}List of transforms{{% /md %}}</dd>
 </dl>
@@ -3597,7 +3597,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#action_csharp" style="color: inherit; text-decoration: inherit;">Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulesengineaction">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Rules<wbr>Engine<wbr>Action<wbr>Args</a></span>
+        <span class="property-type"><a href="#rulesengineaction">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Rules<wbr>Engine<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Actions to perform on the request and response if all of the match conditions are met.{{% /md %}}</dd>
     <dt class="property-required"
@@ -3624,7 +3624,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#matchconditions_csharp" style="color: inherit; text-decoration: inherit;">Match<wbr>Conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulesenginematchcondition">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Rules<wbr>Engine<wbr>Match<wbr>Condition<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#rulesenginematchcondition">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Rules<wbr>Engine<wbr>Match<wbr>Condition<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of match conditions that must meet in order for the actions of this rule to run. Having no match conditions means the actions will always run.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3633,7 +3633,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#matchprocessingbehavior_csharp" style="color: inherit; text-decoration: inherit;">Match<wbr>Processing<wbr>Behavior</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#matchprocessingbehavior">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Match<wbr>Processing<wbr>Behavior</a></span>
+        <span class="property-type">string | <a href="#matchprocessingbehavior">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Match<wbr>Processing<wbr>Behavior</a></span>
     </dt>
     <dd>{{% md %}}If this rule is a match should the rules engine continue running the remaining rules or stop. If not present, defaults to Continue.{{% /md %}}</dd>
 </dl>
@@ -3803,7 +3803,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#action_csharp" style="color: inherit; text-decoration: inherit;">Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulesengineactionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Rules<wbr>Engine<wbr>Action<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#rulesengineactionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Rules<wbr>Engine<wbr>Action<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Actions to perform on the request and response if all of the match conditions are met.{{% /md %}}</dd>
     <dt class="property-required"
@@ -3830,7 +3830,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#matchconditions_csharp" style="color: inherit; text-decoration: inherit;">Match<wbr>Conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulesenginematchconditionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Rules<wbr>Engine<wbr>Match<wbr>Condition<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#rulesenginematchconditionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Rules<wbr>Engine<wbr>Match<wbr>Condition<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of match conditions that must meet in order for the actions of this rule to run. Having no match conditions means the actions will always run.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4197,7 +4197,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:network/latest:RulesEngine rulesEngine1 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/frontDoors/frontDoor1/rulesEngines/rulesEngine1 
+$ pulumi import azure-nextgen:network:RulesEngine rulesEngine1 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/frontDoors/frontDoor1/rulesEngines/rulesEngine1 
 ```
 
 

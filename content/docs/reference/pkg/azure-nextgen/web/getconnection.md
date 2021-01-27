@@ -215,7 +215,7 @@ The following output properties are available:
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apiconnectiondefinitionresponseproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web.<wbr>Outputs.<wbr>Api<wbr>Connection<wbr>Definition<wbr>Response<wbr>Properties</a></span>
+        <span class="property-type"><a href="#apiconnectiondefinitionresponseproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web..<wbr>Outputs.<wbr>Api<wbr>Connection<wbr>Definition<wbr>Response<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-"
@@ -486,7 +486,7 @@ The following output properties are available:
 <a href="#api_csharp" style="color: inherit; text-decoration: inherit;">Api</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apireferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web.<wbr>Inputs.<wbr>Api<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#apireferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web..<wbr>Inputs.<wbr>Api<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -549,7 +549,7 @@ The following output properties are available:
 <a href="#statuses_csharp" style="color: inherit; text-decoration: inherit;">Statuses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionstatusdefinitionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web.<wbr>Inputs.<wbr>Connection<wbr>Status<wbr>Definition<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#connectionstatusdefinitionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web..<wbr>Inputs.<wbr>Connection<wbr>Status<wbr>Definition<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Status of the connection{{% /md %}}</dd>
     <dt class="property-optional"
@@ -558,7 +558,7 @@ The following output properties are available:
 <a href="#testlinks_csharp" style="color: inherit; text-decoration: inherit;">Test<wbr>Links</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apiconnectiontestlinkresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web.<wbr>Inputs.<wbr>Api<wbr>Connection<wbr>Test<wbr>Link<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#apiconnectiontestlinkresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web..<wbr>Inputs.<wbr>Api<wbr>Connection<wbr>Test<wbr>Link<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Links to test the API connection{{% /md %}}</dd>
 </dl>
@@ -1582,7 +1582,7 @@ The following output properties are available:
 <a href="#error_csharp" style="color: inherit; text-decoration: inherit;">Error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionerrorresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web.<wbr>Inputs.<wbr>Connection<wbr>Error<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#connectionerrorresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web..<wbr>Inputs.<wbr>Connection<wbr>Error<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Connection error{{% /md %}}</dd>
     <dt class="property-optional"

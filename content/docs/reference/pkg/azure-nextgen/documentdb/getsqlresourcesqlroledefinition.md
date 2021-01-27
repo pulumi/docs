@@ -233,7 +233,7 @@ The following output properties are available:
 <a href="#permissions_csharp" style="color: inherit; text-decoration: inherit;">Permissions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#permissionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB.<wbr>Outputs.<wbr>Permission<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#permissionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB..<wbr>Outputs.<wbr>Permission<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The set of operations allowed through this Role Definition.{{% /md %}}</dd>
     <dt class="property-"

@@ -12,6 +12,8 @@ meta_desc: "Documentation for the azure-nextgen.servicefabric.ManagedCluster res
 
 The manged cluster resource
 
+API Version: 2020-01-01-preview.
+
 {{% examples %}}
 ## Example Usage
 
@@ -26,78 +28,22 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var managedCluster = new AzureNextGen.ServiceFabric.V20200101Preview.ManagedCluster("managedCluster", new AzureNextGen.ServiceFabric.V20200101Preview.ManagedClusterArgs
+        var managedCluster = new AzureNextGen.ServiceFabric..ManagedCluster("managedCluster", new AzureNextGen.ServiceFabric..ManagedClusterArgs
         {
             AdminPassword = "{vm-password}",
             AdminUserName = "vmadmin",
             ClientConnectionPort = 19000,
             ClusterCodeVersion = "7.1.168.9494",
             ClusterName = "myCluster",
-            ClusterUpgradeDescription = new AzureNextGen.ServiceFabric.V20200101Preview.Inputs.ClusterUpgradePolicyArgs
-            {
-                DeltaHealthPolicy = new AzureNextGen.ServiceFabric.V20200101Preview.Inputs.ClusterUpgradeDeltaHealthPolicyArgs
-                {
-                    ApplicationDeltaHealthPolicies = 
-                    {
-                        { "fabric:/myApp1", new AzureNextGen.ServiceFabric.V20200101Preview.Inputs.ApplicationDeltaHealthPolicyArgs
-                        {
-                            DefaultServiceTypeDeltaHealthPolicy = new AzureNextGen.ServiceFabric.V20200101Preview.Inputs.ServiceTypeDeltaHealthPolicyArgs
-                            {
-                                MaxPercentDeltaUnhealthyServices = 0,
-                            },
-                            ServiceTypeDeltaHealthPolicies = 
-                            {
-                                { "myServiceType1", new AzureNextGen.ServiceFabric.V20200101Preview.Inputs.ServiceTypeDeltaHealthPolicyArgs
-                                {
-                                    MaxPercentDeltaUnhealthyServices = 0,
-                                } },
-                            },
-                        } },
-                    },
-                    MaxPercentDeltaUnhealthyApplications = 0,
-                    MaxPercentDeltaUnhealthyNodes = 0,
-                    MaxPercentUpgradeDomainDeltaUnhealthyNodes = 0,
-                },
-                ForceRestart = false,
-                HealthCheckRetryTimeout = "00:05:00",
-                HealthCheckStableDuration = "00:00:30",
-                HealthCheckWaitDuration = "00:00:30",
-                HealthPolicy = new AzureNextGen.ServiceFabric.V20200101Preview.Inputs.ClusterHealthPolicyArgs
-                {
-                    ApplicationHealthPolicies = 
-                    {
-                        { "fabric:/myApp1", new AzureNextGen.ServiceFabric.V20200101Preview.Inputs.ApplicationHealthPolicyArgs
-                        {
-                            DefaultServiceTypeHealthPolicy = new AzureNextGen.ServiceFabric.V20200101Preview.Inputs.ServiceTypeHealthPolicyArgs
-                            {
-                                MaxPercentUnhealthyServices = 0,
-                            },
-                            ServiceTypeHealthPolicies = 
-                            {
-                                { "myServiceType1", new AzureNextGen.ServiceFabric.V20200101Preview.Inputs.ServiceTypeHealthPolicyArgs
-                                {
-                                    MaxPercentUnhealthyServices = 100,
-                                } },
-                            },
-                        } },
-                    },
-                    MaxPercentUnhealthyApplications = 0,
-                    MaxPercentUnhealthyNodes = 0,
-                },
-                UpgradeDomainTimeout = "00:15:00",
-                UpgradeReplicaSetCheckTimeout = "00:10:00",
-                UpgradeTimeout = "01:00:00",
-            },
-            ClusterUpgradeMode = "Manual",
             DnsName = "myCluster",
             FabricSettings = 
             {
-                new AzureNextGen.ServiceFabric.V20200101Preview.Inputs.SettingsSectionDescriptionArgs
+                new AzureNextGen.ServiceFabric..Inputs.SettingsSectionDescriptionArgs
                 {
                     Name = "ManagedIdentityTokenService",
                     Parameters = 
                     {
-                        new AzureNextGen.ServiceFabric.V20200101Preview.Inputs.SettingsParameterDescriptionArgs
+                        new AzureNextGen.ServiceFabric..Inputs.SettingsParameterDescriptionArgs
                         {
                             Name = "IsEnabled",
                             Value = "true",
@@ -108,21 +54,21 @@ class MyStack : Stack
             HttpGatewayConnectionPort = 19080,
             LoadBalancingRules = 
             {
-                new AzureNextGen.ServiceFabric.V20200101Preview.Inputs.LoadBalancingRuleArgs
+                new AzureNextGen.ServiceFabric..Inputs.LoadBalancingRuleArgs
                 {
                     BackendPort = 80,
                     FrontendPort = 80,
                     ProbeProtocol = "http",
                     Protocol = "http",
                 },
-                new AzureNextGen.ServiceFabric.V20200101Preview.Inputs.LoadBalancingRuleArgs
+                new AzureNextGen.ServiceFabric..Inputs.LoadBalancingRuleArgs
                 {
                     BackendPort = 443,
                     FrontendPort = 443,
                     ProbeProtocol = "http",
                     Protocol = "http",
                 },
-                new AzureNextGen.ServiceFabric.V20200101Preview.Inputs.LoadBalancingRuleArgs
+                new AzureNextGen.ServiceFabric..Inputs.LoadBalancingRuleArgs
                 {
                     BackendPort = 10000,
                     FrontendPort = 10000,
@@ -132,7 +78,7 @@ class MyStack : Stack
             },
             Location = "eastus",
             ResourceGroupName = "resRg",
-            Sku = new AzureNextGen.ServiceFabric.V20200101Preview.Inputs.SkuArgs
+            Sku = new AzureNextGen.ServiceFabric..Inputs.SkuArgs
             {
                 Name = "Basic",
             },
@@ -147,7 +93,72 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+
+```go
+package main
+
+import (
+	servicefabric "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/servicefabric"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := servicefabric.NewManagedCluster(ctx, "managedCluster", &servicefabric.ManagedClusterArgs{
+			AdminPassword:        pulumi.String("{vm-password}"),
+			AdminUserName:        pulumi.String("vmadmin"),
+			ClientConnectionPort: pulumi.Int(19000),
+			ClusterCodeVersion:   pulumi.String("7.1.168.9494"),
+			ClusterName:          pulumi.String("myCluster"),
+			DnsName:              pulumi.String("myCluster"),
+			FabricSettings: servicefabric.SettingsSectionDescriptionArray{
+				&servicefabric.SettingsSectionDescriptionArgs{
+					Name: pulumi.String("ManagedIdentityTokenService"),
+					Parameters: servicefabric.SettingsParameterDescriptionArray{
+						&servicefabric.SettingsParameterDescriptionArgs{
+							Name:  pulumi.String("IsEnabled"),
+							Value: pulumi.String("true"),
+						},
+					},
+				},
+			},
+			HttpGatewayConnectionPort: pulumi.Int(19080),
+			LoadBalancingRules: servicefabric.LoadBalancingRuleArray{
+				&servicefabric.LoadBalancingRuleArgs{
+					BackendPort:   pulumi.Int(80),
+					FrontendPort:  pulumi.Int(80),
+					ProbeProtocol: pulumi.String("http"),
+					Protocol:      pulumi.String("http"),
+				},
+				&servicefabric.LoadBalancingRuleArgs{
+					BackendPort:   pulumi.Int(443),
+					FrontendPort:  pulumi.Int(443),
+					ProbeProtocol: pulumi.String("http"),
+					Protocol:      pulumi.String("http"),
+				},
+				&servicefabric.LoadBalancingRuleArgs{
+					BackendPort:   pulumi.Int(10000),
+					FrontendPort:  pulumi.Int(10000),
+					ProbeProtocol: pulumi.String("http"),
+					Protocol:      pulumi.String("tcp"),
+				},
+			},
+			Location:          pulumi.String("eastus"),
+			ResourceGroupName: pulumi.String("resRg"),
+			Sku: &servicefabric.SkuArgs{
+				Name: pulumi.String("Basic"),
+			},
+			Tags: nil,
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -156,78 +167,35 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-managed_cluster = azure_nextgen.servicefabric.v20200101preview.ManagedCluster("managedCluster",
+managed_cluster = azure_nextgen.servicefabric.ManagedCluster("managedCluster",
     admin_password="{vm-password}",
     admin_user_name="vmadmin",
     client_connection_port=19000,
     cluster_code_version="7.1.168.9494",
     cluster_name="myCluster",
-    cluster_upgrade_description=azure_nextgen.servicefabric.v20200101preview.ClusterUpgradePolicyArgs(
-        delta_health_policy=azure_nextgen.servicefabric.v20200101preview.ClusterUpgradeDeltaHealthPolicyArgs(
-            application_delta_health_policies={
-                "fabric:/myApp1": azure_nextgen.servicefabric.v20200101preview.ApplicationDeltaHealthPolicyArgs(
-                    default_service_type_delta_health_policy=azure_nextgen.servicefabric.v20200101preview.ServiceTypeDeltaHealthPolicyArgs(
-                        max_percent_delta_unhealthy_services=0,
-                    ),
-                    service_type_delta_health_policies={
-                        "myServiceType1": azure_nextgen.servicefabric.v20200101preview.ServiceTypeDeltaHealthPolicyArgs(
-                            max_percent_delta_unhealthy_services=0,
-                        ),
-                    },
-                ),
-            },
-            max_percent_delta_unhealthy_applications=0,
-            max_percent_delta_unhealthy_nodes=0,
-            max_percent_upgrade_domain_delta_unhealthy_nodes=0,
-        ),
-        force_restart=False,
-        health_check_retry_timeout="00:05:00",
-        health_check_stable_duration="00:00:30",
-        health_check_wait_duration="00:00:30",
-        health_policy=azure_nextgen.servicefabric.v20200101preview.ClusterHealthPolicyArgs(
-            application_health_policies={
-                "fabric:/myApp1": azure_nextgen.servicefabric.v20200101preview.ApplicationHealthPolicyArgs(
-                    default_service_type_health_policy=azure_nextgen.servicefabric.v20200101preview.ServiceTypeHealthPolicyArgs(
-                        max_percent_unhealthy_services=0,
-                    ),
-                    service_type_health_policies={
-                        "myServiceType1": azure_nextgen.servicefabric.v20200101preview.ServiceTypeHealthPolicyArgs(
-                            max_percent_unhealthy_services=100,
-                        ),
-                    },
-                ),
-            },
-            max_percent_unhealthy_applications=0,
-            max_percent_unhealthy_nodes=0,
-        ),
-        upgrade_domain_timeout="00:15:00",
-        upgrade_replica_set_check_timeout="00:10:00",
-        upgrade_timeout="01:00:00",
-    ),
-    cluster_upgrade_mode="Manual",
     dns_name="myCluster",
-    fabric_settings=[azure_nextgen.servicefabric.v20200101preview.SettingsSectionDescriptionArgs(
+    fabric_settings=[azure_nextgen.servicefabric.SettingsSectionDescriptionArgs(
         name="ManagedIdentityTokenService",
-        parameters=[azure_nextgen.servicefabric.v20200101preview.SettingsParameterDescriptionArgs(
+        parameters=[azure_nextgen.servicefabric.SettingsParameterDescriptionArgs(
             name="IsEnabled",
             value="true",
         )],
     )],
     http_gateway_connection_port=19080,
     load_balancing_rules=[
-        azure_nextgen.servicefabric.v20200101preview.LoadBalancingRuleArgs(
+        azure_nextgen.servicefabric.LoadBalancingRuleArgs(
             backend_port=80,
             frontend_port=80,
             probe_protocol="http",
             protocol="http",
         ),
-        azure_nextgen.servicefabric.v20200101preview.LoadBalancingRuleArgs(
+        azure_nextgen.servicefabric.LoadBalancingRuleArgs(
             backend_port=443,
             frontend_port=443,
             probe_protocol="http",
             protocol="http",
         ),
-        azure_nextgen.servicefabric.v20200101preview.LoadBalancingRuleArgs(
+        azure_nextgen.servicefabric.LoadBalancingRuleArgs(
             backend_port=10000,
             frontend_port=10000,
             probe_protocol="http",
@@ -236,7 +204,7 @@ managed_cluster = azure_nextgen.servicefabric.v20200101preview.ManagedCluster("m
     ],
     location="eastus",
     resource_group_name="resRg",
-    sku=azure_nextgen.servicefabric.v20200101preview.SkuArgs(
+    sku=azure_nextgen.servicefabric.SkuArgs(
         name="Basic",
     ),
     tags={})
@@ -251,55 +219,12 @@ managed_cluster = azure_nextgen.servicefabric.v20200101preview.ManagedCluster("m
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const managedCluster = new azure_nextgen.servicefabric.v20200101preview.ManagedCluster("managedCluster", {
+const managedCluster = new azure_nextgen.servicefabric.ManagedCluster("managedCluster", {
     adminPassword: "{vm-password}",
     adminUserName: "vmadmin",
     clientConnectionPort: 19000,
     clusterCodeVersion: "7.1.168.9494",
     clusterName: "myCluster",
-    clusterUpgradeDescription: {
-        deltaHealthPolicy: {
-            applicationDeltaHealthPolicies: {
-                "fabric:/myApp1": {
-                    defaultServiceTypeDeltaHealthPolicy: {
-                        maxPercentDeltaUnhealthyServices: 0,
-                    },
-                    serviceTypeDeltaHealthPolicies: {
-                        myServiceType1: {
-                            maxPercentDeltaUnhealthyServices: 0,
-                        },
-                    },
-                },
-            },
-            maxPercentDeltaUnhealthyApplications: 0,
-            maxPercentDeltaUnhealthyNodes: 0,
-            maxPercentUpgradeDomainDeltaUnhealthyNodes: 0,
-        },
-        forceRestart: false,
-        healthCheckRetryTimeout: "00:05:00",
-        healthCheckStableDuration: "00:00:30",
-        healthCheckWaitDuration: "00:00:30",
-        healthPolicy: {
-            applicationHealthPolicies: {
-                "fabric:/myApp1": {
-                    defaultServiceTypeHealthPolicy: {
-                        maxPercentUnhealthyServices: 0,
-                    },
-                    serviceTypeHealthPolicies: {
-                        myServiceType1: {
-                            maxPercentUnhealthyServices: 100,
-                        },
-                    },
-                },
-            },
-            maxPercentUnhealthyApplications: 0,
-            maxPercentUnhealthyNodes: 0,
-        },
-        upgradeDomainTimeout: "00:15:00",
-        upgradeReplicaSetCheckTimeout: "00:10:00",
-        upgradeTimeout: "01:00:00",
-    },
-    clusterUpgradeMode: "Manual",
     dnsName: "myCluster",
     fabricSettings: [{
         name: "ManagedIdentityTokenService",
@@ -351,7 +276,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var managedCluster = new AzureNextGen.ServiceFabric.V20200101Preview.ManagedCluster("managedCluster", new AzureNextGen.ServiceFabric.V20200101Preview.ManagedClusterArgs
+        var managedCluster = new AzureNextGen.ServiceFabric..ManagedCluster("managedCluster", new AzureNextGen.ServiceFabric..ManagedClusterArgs
         {
             AdminPassword = "{vm-password}",
             AdminUserName = "vmadmin",
@@ -360,12 +285,12 @@ class MyStack : Stack
             DnsName = "myCluster",
             FabricSettings = 
             {
-                new AzureNextGen.ServiceFabric.V20200101Preview.Inputs.SettingsSectionDescriptionArgs
+                new AzureNextGen.ServiceFabric..Inputs.SettingsSectionDescriptionArgs
                 {
                     Name = "ManagedIdentityTokenService",
                     Parameters = 
                     {
-                        new AzureNextGen.ServiceFabric.V20200101Preview.Inputs.SettingsParameterDescriptionArgs
+                        new AzureNextGen.ServiceFabric..Inputs.SettingsParameterDescriptionArgs
                         {
                             Name = "IsEnabled",
                             Value = "true",
@@ -390,7 +315,7 @@ class MyStack : Stack
 package main
 
 import (
-	servicefabric "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/servicefabric/v20200101preview"
+	servicefabric "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/servicefabric"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -433,15 +358,15 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-managed_cluster = azure_nextgen.servicefabric.v20200101preview.ManagedCluster("managedCluster",
+managed_cluster = azure_nextgen.servicefabric.ManagedCluster("managedCluster",
     admin_password="{vm-password}",
     admin_user_name="vmadmin",
     cluster_code_version="7.1.168.9494",
     cluster_name="myCluster",
     dns_name="myCluster",
-    fabric_settings=[azure_nextgen.servicefabric.v20200101preview.SettingsSectionDescriptionArgs(
+    fabric_settings=[azure_nextgen.servicefabric.SettingsSectionDescriptionArgs(
         name="ManagedIdentityTokenService",
-        parameters=[azure_nextgen.servicefabric.v20200101preview.SettingsParameterDescriptionArgs(
+        parameters=[azure_nextgen.servicefabric.SettingsParameterDescriptionArgs(
             name="IsEnabled",
             value="true",
         )],
@@ -459,7 +384,7 @@ managed_cluster = azure_nextgen.servicefabric.v20200101preview.ManagedCluster("m
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const managedCluster = new azure_nextgen.servicefabric.v20200101preview.ManagedCluster("managedCluster", {
+const managedCluster = new azure_nextgen.servicefabric.ManagedCluster("managedCluster", {
     adminPassword: "{vm-password}",
     adminUserName: "vmadmin",
     clusterCodeVersion: "7.1.168.9494",
@@ -492,7 +417,7 @@ const managedCluster = new azure_nextgen.servicefabric.v20200101preview.ManagedC
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ManagedCluster</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">admin_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">admin_user_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">azure_active_directory</span><span class="p">:</span> <span class="nx">Optional[AzureActiveDirectoryArgs]</span> = None<span class="p">, </span><span class="nx">client_connection_port</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">clients</span><span class="p">:</span> <span class="nx">Optional[Sequence[ClientCertificateArgs]]</span> = None<span class="p">, </span><span class="nx">cluster_code_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cluster_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cluster_upgrade_description</span><span class="p">:</span> <span class="nx">Optional[ClusterUpgradePolicyArgs]</span> = None<span class="p">, </span><span class="nx">cluster_upgrade_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">dns_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">fabric_settings</span><span class="p">:</span> <span class="nx">Optional[Sequence[SettingsSectionDescriptionArgs]]</span> = None<span class="p">, </span><span class="nx">http_gateway_connection_port</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">load_balancing_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[LoadBalancingRuleArgs]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[SkuArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ManagedCluster</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">addon_features</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">admin_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">admin_user_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">azure_active_directory</span><span class="p">:</span> <span class="nx">Optional[AzureActiveDirectoryArgs]</span> = None<span class="p">, </span><span class="nx">client_connection_port</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">clients</span><span class="p">:</span> <span class="nx">Optional[Sequence[ClientCertificateArgs]]</span> = None<span class="p">, </span><span class="nx">cluster_code_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cluster_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">dns_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">fabric_settings</span><span class="p">:</span> <span class="nx">Optional[Sequence[SettingsSectionDescriptionArgs]]</span> = None<span class="p">, </span><span class="nx">http_gateway_connection_port</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">load_balancing_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[LoadBalancingRuleArgs]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[SkuArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -710,6 +635,15 @@ The ManagedCluster resource accepts the following [input]({{< relref "/docs/intr
     <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="addonfeatures_csharp">
+<a href="#addonfeatures_csharp" style="color: inherit; text-decoration: inherit;">Addon<wbr>Features</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}client certificates for the cluster.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="adminpassword_csharp">
 <a href="#adminpassword_csharp" style="color: inherit; text-decoration: inherit;">Admin<wbr>Password</a>
 </span>
@@ -723,7 +657,7 @@ The ManagedCluster resource accepts the following [input]({{< relref "/docs/intr
 <a href="#azureactivedirectory_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Active<wbr>Directory</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureactivedirectory">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric.<wbr>Inputs.<wbr>Azure<wbr>Active<wbr>Directory<wbr>Args</a></span>
+        <span class="property-type"><a href="#azureactivedirectory">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric..<wbr>Inputs.<wbr>Azure<wbr>Active<wbr>Directory<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Azure active directory.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -741,7 +675,7 @@ The ManagedCluster resource accepts the following [input]({{< relref "/docs/intr
 <a href="#clients_csharp" style="color: inherit; text-decoration: inherit;">Clients</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clientcertificate">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric.<wbr>Inputs.<wbr>Client<wbr>Certificate<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#clientcertificate">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric..<wbr>Inputs.<wbr>Client<wbr>Certificate<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}client certificates for the cluster.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -755,33 +689,11 @@ The ManagedCluster resource accepts the following [input]({{< relref "/docs/intr
     <dd>{{% md %}}The Service Fabric runtime version of the cluster. This property can only by set the user when **upgradeMode** is set to 'Manual'. To get list of available Service Fabric versions for new clusters use [ClusterVersion API](./ClusterVersion.md). To get the list of available version for existing clusters use **availableClusterVersions**.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="clusterupgradedescription_csharp">
-<a href="#clusterupgradedescription_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Upgrade<wbr>Description</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterupgradepolicy">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric.<wbr>Inputs.<wbr>Cluster<wbr>Upgrade<wbr>Policy<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}Describes the policy used when upgrading the cluster.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="clusterupgrademode_csharp">
-<a href="#clusterupgrademode_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Upgrade<wbr>Mode</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The upgrade mode of the cluster when new Service Fabric runtime version is available.
-
-  - Automatic - The cluster will be automatically upgraded to the latest Service Fabric runtime version as soon as it is available.
-  - Manual - The cluster will not be automatically upgraded to the latest Service Fabric runtime version. The cluster is upgraded by setting the **clusterCodeVersion** property in the cluster resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
         <span id="fabricsettings_csharp">
 <a href="#fabricsettings_csharp" style="color: inherit; text-decoration: inherit;">Fabric<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#settingssectiondescription">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric.<wbr>Inputs.<wbr>Settings<wbr>Section<wbr>Description<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#settingssectiondescription">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric..<wbr>Inputs.<wbr>Settings<wbr>Section<wbr>Description<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of custom fabric settings to configure the cluster.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -799,7 +711,7 @@ The ManagedCluster resource accepts the following [input]({{< relref "/docs/intr
 <a href="#loadbalancingrules_csharp" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancing<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalancingrule">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric.<wbr>Inputs.<wbr>Load<wbr>Balancing<wbr>Rule<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#loadbalancingrule">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric..<wbr>Inputs.<wbr>Load<wbr>Balancing<wbr>Rule<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Describes load balancing rules.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -808,7 +720,7 @@ The ManagedCluster resource accepts the following [input]({{< relref "/docs/intr
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sku">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric.<wbr>Inputs.<wbr>Sku<wbr>Args</a></span>
+        <span class="property-type"><a href="#sku">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric..<wbr>Inputs.<wbr>Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The sku of the managed cluster{{% /md %}}</dd>
     <dt class="property-optional"
@@ -873,6 +785,15 @@ The ManagedCluster resource accepts the following [input]({{< relref "/docs/intr
     <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="addonfeatures_go">
+<a href="#addonfeatures_go" style="color: inherit; text-decoration: inherit;">Addon<wbr>Features</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}client certificates for the cluster.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="adminpassword_go">
 <a href="#adminpassword_go" style="color: inherit; text-decoration: inherit;">Admin<wbr>Password</a>
 </span>
@@ -916,28 +837,6 @@ The ManagedCluster resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Service Fabric runtime version of the cluster. This property can only by set the user when **upgradeMode** is set to 'Manual'. To get list of available Service Fabric versions for new clusters use [ClusterVersion API](./ClusterVersion.md). To get the list of available version for existing clusters use **availableClusterVersions**.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="clusterupgradedescription_go">
-<a href="#clusterupgradedescription_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Upgrade<wbr>Description</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterupgradepolicy">Cluster<wbr>Upgrade<wbr>Policy</a></span>
-    </dt>
-    <dd>{{% md %}}Describes the policy used when upgrading the cluster.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="clusterupgrademode_go">
-<a href="#clusterupgrademode_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Upgrade<wbr>Mode</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The upgrade mode of the cluster when new Service Fabric runtime version is available.
-
-  - Automatic - The cluster will be automatically upgraded to the latest Service Fabric runtime version as soon as it is available.
-  - Manual - The cluster will not be automatically upgraded to the latest Service Fabric runtime version. The cluster is upgraded by setting the **clusterCodeVersion** property in the cluster resource.
-{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="fabricsettings_go">
@@ -1036,6 +935,15 @@ The ManagedCluster resource accepts the following [input]({{< relref "/docs/intr
     <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="addonfeatures_nodejs">
+<a href="#addonfeatures_nodejs" style="color: inherit; text-decoration: inherit;">addon<wbr>Features</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}client certificates for the cluster.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="adminpassword_nodejs">
 <a href="#adminpassword_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>Password</a>
 </span>
@@ -1079,28 +987,6 @@ The ManagedCluster resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Service Fabric runtime version of the cluster. This property can only by set the user when **upgradeMode** is set to 'Manual'. To get list of available Service Fabric versions for new clusters use [ClusterVersion API](./ClusterVersion.md). To get the list of available version for existing clusters use **availableClusterVersions**.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="clusterupgradedescription_nodejs">
-<a href="#clusterupgradedescription_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Upgrade<wbr>Description</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterupgradepolicy">Cluster<wbr>Upgrade<wbr>Policy</a></span>
-    </dt>
-    <dd>{{% md %}}Describes the policy used when upgrading the cluster.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="clusterupgrademode_nodejs">
-<a href="#clusterupgrademode_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Upgrade<wbr>Mode</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The upgrade mode of the cluster when new Service Fabric runtime version is available.
-
-  - Automatic - The cluster will be automatically upgraded to the latest Service Fabric runtime version as soon as it is available.
-  - Manual - The cluster will not be automatically upgraded to the latest Service Fabric runtime version. The cluster is upgraded by setting the **clusterCodeVersion** property in the cluster resource.
-{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="fabricsettings_nodejs">
@@ -1199,6 +1085,15 @@ The ManagedCluster resource accepts the following [input]({{< relref "/docs/intr
     <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="addon_features_python">
+<a href="#addon_features_python" style="color: inherit; text-decoration: inherit;">addon_<wbr>features</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}client certificates for the cluster.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="admin_password_python">
 <a href="#admin_password_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>password</a>
 </span>
@@ -1242,28 +1137,6 @@ The ManagedCluster resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Service Fabric runtime version of the cluster. This property can only by set the user when **upgradeMode** is set to 'Manual'. To get list of available Service Fabric versions for new clusters use [ClusterVersion API](./ClusterVersion.md). To get the list of available version for existing clusters use **availableClusterVersions**.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="cluster_upgrade_description_python">
-<a href="#cluster_upgrade_description_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>upgrade_<wbr>description</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterupgradepolicy">Cluster<wbr>Upgrade<wbr>Policy<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}Describes the policy used when upgrading the cluster.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="cluster_upgrade_mode_python">
-<a href="#cluster_upgrade_mode_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>upgrade_<wbr>mode</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The upgrade mode of the cluster when new Service Fabric runtime version is available.
-
-  - Automatic - The cluster will be automatically upgraded to the latest Service Fabric runtime version as soon as it is available.
-  - Manual - The cluster will not be automatically upgraded to the latest Service Fabric runtime version. The cluster is upgraded by setting the **clusterCodeVersion** property in the cluster resource.
-{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="fabric_settings_python">
@@ -1348,19 +1221,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The current state of the cluster.
-
-  - WaitingForNodes - Indicates that the cluster resource is created and the resource provider is waiting for Service Fabric VM extension to boot up and report to it.
-  - Deploying - Indicates that the Service Fabric runtime is being installed on the VMs. Cluster resource will be in this state until the cluster boots up and system services are up.
-  - BaselineUpgrade - Indicates that the cluster is upgrading to establishes the cluster version. This upgrade is automatically initiated when the cluster boots up for the first time.
-  - UpdatingUserConfiguration - Indicates that the cluster is being upgraded with the user provided configuration.
-  - UpdatingUserCertificate - Indicates that the cluster is being upgraded with the user provided certificate.
-  - UpdatingInfrastructure - Indicates that the cluster is being upgraded with the latest Service Fabric runtime version. This happens only when the **upgradeMode** is set to 'Automatic'.
-  - EnforcingClusterVersion - Indicates that cluster is on a different version than expected and the cluster is being upgraded to the expected version.
-  - UpgradeServiceUnreachable - Indicates that the system service in the cluster is no longer polling the Resource Provider. Clusters in this state cannot be managed by the Resource Provider.
-  - AutoScale - Indicates that the ReliabilityLevel of the cluster is being adjusted.
-  - Ready - Indicates that the cluster is in a stable state.
-{{% /md %}}</dd>
+    <dd>{{% md %}}The current state of the cluster.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="etag_csharp">
@@ -1447,19 +1308,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The current state of the cluster.
-
-  - WaitingForNodes - Indicates that the cluster resource is created and the resource provider is waiting for Service Fabric VM extension to boot up and report to it.
-  - Deploying - Indicates that the Service Fabric runtime is being installed on the VMs. Cluster resource will be in this state until the cluster boots up and system services are up.
-  - BaselineUpgrade - Indicates that the cluster is upgrading to establishes the cluster version. This upgrade is automatically initiated when the cluster boots up for the first time.
-  - UpdatingUserConfiguration - Indicates that the cluster is being upgraded with the user provided configuration.
-  - UpdatingUserCertificate - Indicates that the cluster is being upgraded with the user provided certificate.
-  - UpdatingInfrastructure - Indicates that the cluster is being upgraded with the latest Service Fabric runtime version. This happens only when the **upgradeMode** is set to 'Automatic'.
-  - EnforcingClusterVersion - Indicates that cluster is on a different version than expected and the cluster is being upgraded to the expected version.
-  - UpgradeServiceUnreachable - Indicates that the system service in the cluster is no longer polling the Resource Provider. Clusters in this state cannot be managed by the Resource Provider.
-  - AutoScale - Indicates that the ReliabilityLevel of the cluster is being adjusted.
-  - Ready - Indicates that the cluster is in a stable state.
-{{% /md %}}</dd>
+    <dd>{{% md %}}The current state of the cluster.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="etag_go">
@@ -1546,19 +1395,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The current state of the cluster.
-
-  - WaitingForNodes - Indicates that the cluster resource is created and the resource provider is waiting for Service Fabric VM extension to boot up and report to it.
-  - Deploying - Indicates that the Service Fabric runtime is being installed on the VMs. Cluster resource will be in this state until the cluster boots up and system services are up.
-  - BaselineUpgrade - Indicates that the cluster is upgrading to establishes the cluster version. This upgrade is automatically initiated when the cluster boots up for the first time.
-  - UpdatingUserConfiguration - Indicates that the cluster is being upgraded with the user provided configuration.
-  - UpdatingUserCertificate - Indicates that the cluster is being upgraded with the user provided certificate.
-  - UpdatingInfrastructure - Indicates that the cluster is being upgraded with the latest Service Fabric runtime version. This happens only when the **upgradeMode** is set to 'Automatic'.
-  - EnforcingClusterVersion - Indicates that cluster is on a different version than expected and the cluster is being upgraded to the expected version.
-  - UpgradeServiceUnreachable - Indicates that the system service in the cluster is no longer polling the Resource Provider. Clusters in this state cannot be managed by the Resource Provider.
-  - AutoScale - Indicates that the ReliabilityLevel of the cluster is being adjusted.
-  - Ready - Indicates that the cluster is in a stable state.
-{{% /md %}}</dd>
+    <dd>{{% md %}}The current state of the cluster.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="etag_nodejs">
@@ -1645,19 +1482,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The current state of the cluster.
-
-  - WaitingForNodes - Indicates that the cluster resource is created and the resource provider is waiting for Service Fabric VM extension to boot up and report to it.
-  - Deploying - Indicates that the Service Fabric runtime is being installed on the VMs. Cluster resource will be in this state until the cluster boots up and system services are up.
-  - BaselineUpgrade - Indicates that the cluster is upgrading to establishes the cluster version. This upgrade is automatically initiated when the cluster boots up for the first time.
-  - UpdatingUserConfiguration - Indicates that the cluster is being upgraded with the user provided configuration.
-  - UpdatingUserCertificate - Indicates that the cluster is being upgraded with the user provided certificate.
-  - UpdatingInfrastructure - Indicates that the cluster is being upgraded with the latest Service Fabric runtime version. This happens only when the **upgradeMode** is set to 'Automatic'.
-  - EnforcingClusterVersion - Indicates that cluster is on a different version than expected and the cluster is being upgraded to the expected version.
-  - UpgradeServiceUnreachable - Indicates that the system service in the cluster is no longer polling the Resource Provider. Clusters in this state cannot be managed by the Resource Provider.
-  - AutoScale - Indicates that the ReliabilityLevel of the cluster is being adjusted.
-  - Ready - Indicates that the cluster is in a stable state.
-{{% /md %}}</dd>
+    <dd>{{% md %}}The current state of the cluster.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="etag_python">
@@ -1724,398 +1549,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Supporting Types
 
 
-
-<h4 id="applicationdeltahealthpolicy">Application<wbr>Delta<wbr>Health<wbr>Policy</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="defaultservicetypedeltahealthpolicy_csharp">
-<a href="#defaultservicetypedeltahealthpolicy_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Service<wbr>Type<wbr>Delta<wbr>Health<wbr>Policy</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetypedeltahealthpolicy">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric.<wbr>Inputs.<wbr>Service<wbr>Type<wbr>Delta<wbr>Health<wbr>Policy<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}The delta health policy used by default to evaluate the health of a service type when upgrading the cluster.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="servicetypedeltahealthpolicies_csharp">
-<a href="#servicetypedeltahealthpolicies_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Type<wbr>Delta<wbr>Health<wbr>Policies</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric.<wbr>Inputs.<wbr>Service<wbr>Type<wbr>Delta<wbr>Health<wbr>Policy<wbr>Args&gt;</span>
-    </dt>
-    <dd>{{% md %}}The map with service type delta health policy per service type name. The map is empty by default.{{% /md %}}</dd>
-</dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="defaultservicetypedeltahealthpolicy_go">
-<a href="#defaultservicetypedeltahealthpolicy_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Service<wbr>Type<wbr>Delta<wbr>Health<wbr>Policy</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetypedeltahealthpolicy">Service<wbr>Type<wbr>Delta<wbr>Health<wbr>Policy</a></span>
-    </dt>
-    <dd>{{% md %}}The delta health policy used by default to evaluate the health of a service type when upgrading the cluster.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="servicetypedeltahealthpolicies_go">
-<a href="#servicetypedeltahealthpolicies_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Type<wbr>Delta<wbr>Health<wbr>Policies</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]Service<wbr>Type<wbr>Delta<wbr>Health<wbr>Policy</span>
-    </dt>
-    <dd>{{% md %}}The map with service type delta health policy per service type name. The map is empty by default.{{% /md %}}</dd>
-</dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="defaultservicetypedeltahealthpolicy_nodejs">
-<a href="#defaultservicetypedeltahealthpolicy_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Service<wbr>Type<wbr>Delta<wbr>Health<wbr>Policy</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetypedeltahealthpolicy">Service<wbr>Type<wbr>Delta<wbr>Health<wbr>Policy</a></span>
-    </dt>
-    <dd>{{% md %}}The delta health policy used by default to evaluate the health of a service type when upgrading the cluster.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="servicetypedeltahealthpolicies_nodejs">
-<a href="#servicetypedeltahealthpolicies_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Type<wbr>Delta<wbr>Health<wbr>Policies</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Service<wbr>Type<wbr>Delta<wbr>Health<wbr>Policy}</span>
-    </dt>
-    <dd>{{% md %}}The map with service type delta health policy per service type name. The map is empty by default.{{% /md %}}</dd>
-</dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="default_service_type_delta_health_policy_python">
-<a href="#default_service_type_delta_health_policy_python" style="color: inherit; text-decoration: inherit;">default_<wbr>service_<wbr>type_<wbr>delta_<wbr>health_<wbr>policy</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetypedeltahealthpolicy">Service<wbr>Type<wbr>Delta<wbr>Health<wbr>Policy<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}The delta health policy used by default to evaluate the health of a service type when upgrading the cluster.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="service_type_delta_health_policies_python">
-<a href="#service_type_delta_health_policies_python" style="color: inherit; text-decoration: inherit;">service_<wbr>type_<wbr>delta_<wbr>health_<wbr>policies</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Service<wbr>Type<wbr>Delta<wbr>Health<wbr>Policy<wbr>Args]</span>
-    </dt>
-    <dd>{{% md %}}The map with service type delta health policy per service type name. The map is empty by default.{{% /md %}}</dd>
-</dl>
-{{% /choosable %}}
-
-<h4 id="applicationdeltahealthpolicyresponse">Application<wbr>Delta<wbr>Health<wbr>Policy<wbr>Response</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="defaultservicetypedeltahealthpolicy_csharp">
-<a href="#defaultservicetypedeltahealthpolicy_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Service<wbr>Type<wbr>Delta<wbr>Health<wbr>Policy</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetypedeltahealthpolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric.<wbr>Inputs.<wbr>Service<wbr>Type<wbr>Delta<wbr>Health<wbr>Policy<wbr>Response<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}The delta health policy used by default to evaluate the health of a service type when upgrading the cluster.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="servicetypedeltahealthpolicies_csharp">
-<a href="#servicetypedeltahealthpolicies_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Type<wbr>Delta<wbr>Health<wbr>Policies</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric.<wbr>Inputs.<wbr>Service<wbr>Type<wbr>Delta<wbr>Health<wbr>Policy<wbr>Response<wbr>Args&gt;</span>
-    </dt>
-    <dd>{{% md %}}The map with service type delta health policy per service type name. The map is empty by default.{{% /md %}}</dd>
-</dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="defaultservicetypedeltahealthpolicy_go">
-<a href="#defaultservicetypedeltahealthpolicy_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Service<wbr>Type<wbr>Delta<wbr>Health<wbr>Policy</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetypedeltahealthpolicyresponse">Service<wbr>Type<wbr>Delta<wbr>Health<wbr>Policy<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}The delta health policy used by default to evaluate the health of a service type when upgrading the cluster.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="servicetypedeltahealthpolicies_go">
-<a href="#servicetypedeltahealthpolicies_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Type<wbr>Delta<wbr>Health<wbr>Policies</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]Service<wbr>Type<wbr>Delta<wbr>Health<wbr>Policy<wbr>Response</span>
-    </dt>
-    <dd>{{% md %}}The map with service type delta health policy per service type name. The map is empty by default.{{% /md %}}</dd>
-</dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="defaultservicetypedeltahealthpolicy_nodejs">
-<a href="#defaultservicetypedeltahealthpolicy_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Service<wbr>Type<wbr>Delta<wbr>Health<wbr>Policy</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetypedeltahealthpolicyresponse">Service<wbr>Type<wbr>Delta<wbr>Health<wbr>Policy<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}The delta health policy used by default to evaluate the health of a service type when upgrading the cluster.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="servicetypedeltahealthpolicies_nodejs">
-<a href="#servicetypedeltahealthpolicies_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Type<wbr>Delta<wbr>Health<wbr>Policies</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Service<wbr>Type<wbr>Delta<wbr>Health<wbr>Policy<wbr>Response}</span>
-    </dt>
-    <dd>{{% md %}}The map with service type delta health policy per service type name. The map is empty by default.{{% /md %}}</dd>
-</dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="default_service_type_delta_health_policy_python">
-<a href="#default_service_type_delta_health_policy_python" style="color: inherit; text-decoration: inherit;">default_<wbr>service_<wbr>type_<wbr>delta_<wbr>health_<wbr>policy</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetypedeltahealthpolicyresponse">Service<wbr>Type<wbr>Delta<wbr>Health<wbr>Policy<wbr>Response<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}The delta health policy used by default to evaluate the health of a service type when upgrading the cluster.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="service_type_delta_health_policies_python">
-<a href="#service_type_delta_health_policies_python" style="color: inherit; text-decoration: inherit;">service_<wbr>type_<wbr>delta_<wbr>health_<wbr>policies</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Service<wbr>Type<wbr>Delta<wbr>Health<wbr>Policy<wbr>Response<wbr>Args]</span>
-    </dt>
-    <dd>{{% md %}}The map with service type delta health policy per service type name. The map is empty by default.{{% /md %}}</dd>
-</dl>
-{{% /choosable %}}
-
-<h4 id="applicationhealthpolicy">Application<wbr>Health<wbr>Policy</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="defaultservicetypehealthpolicy_csharp">
-<a href="#defaultservicetypehealthpolicy_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Service<wbr>Type<wbr>Health<wbr>Policy</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetypehealthpolicy">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric.<wbr>Inputs.<wbr>Service<wbr>Type<wbr>Health<wbr>Policy<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}The health policy used by default to evaluate the health of a service type.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="servicetypehealthpolicies_csharp">
-<a href="#servicetypehealthpolicies_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Type<wbr>Health<wbr>Policies</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric.<wbr>Inputs.<wbr>Service<wbr>Type<wbr>Health<wbr>Policy<wbr>Args&gt;</span>
-    </dt>
-    <dd>{{% md %}}The map with service type health policy per service type name. The map is empty by default.{{% /md %}}</dd>
-</dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="defaultservicetypehealthpolicy_go">
-<a href="#defaultservicetypehealthpolicy_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Service<wbr>Type<wbr>Health<wbr>Policy</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetypehealthpolicy">Service<wbr>Type<wbr>Health<wbr>Policy</a></span>
-    </dt>
-    <dd>{{% md %}}The health policy used by default to evaluate the health of a service type.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="servicetypehealthpolicies_go">
-<a href="#servicetypehealthpolicies_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Type<wbr>Health<wbr>Policies</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]Service<wbr>Type<wbr>Health<wbr>Policy</span>
-    </dt>
-    <dd>{{% md %}}The map with service type health policy per service type name. The map is empty by default.{{% /md %}}</dd>
-</dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="defaultservicetypehealthpolicy_nodejs">
-<a href="#defaultservicetypehealthpolicy_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Service<wbr>Type<wbr>Health<wbr>Policy</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetypehealthpolicy">Service<wbr>Type<wbr>Health<wbr>Policy</a></span>
-    </dt>
-    <dd>{{% md %}}The health policy used by default to evaluate the health of a service type.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="servicetypehealthpolicies_nodejs">
-<a href="#servicetypehealthpolicies_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Type<wbr>Health<wbr>Policies</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Service<wbr>Type<wbr>Health<wbr>Policy}</span>
-    </dt>
-    <dd>{{% md %}}The map with service type health policy per service type name. The map is empty by default.{{% /md %}}</dd>
-</dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="default_service_type_health_policy_python">
-<a href="#default_service_type_health_policy_python" style="color: inherit; text-decoration: inherit;">default_<wbr>service_<wbr>type_<wbr>health_<wbr>policy</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetypehealthpolicy">Service<wbr>Type<wbr>Health<wbr>Policy<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}The health policy used by default to evaluate the health of a service type.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="service_type_health_policies_python">
-<a href="#service_type_health_policies_python" style="color: inherit; text-decoration: inherit;">service_<wbr>type_<wbr>health_<wbr>policies</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Service<wbr>Type<wbr>Health<wbr>Policy<wbr>Args]</span>
-    </dt>
-    <dd>{{% md %}}The map with service type health policy per service type name. The map is empty by default.{{% /md %}}</dd>
-</dl>
-{{% /choosable %}}
-
-<h4 id="applicationhealthpolicyresponse">Application<wbr>Health<wbr>Policy<wbr>Response</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="defaultservicetypehealthpolicy_csharp">
-<a href="#defaultservicetypehealthpolicy_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Service<wbr>Type<wbr>Health<wbr>Policy</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetypehealthpolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric.<wbr>Inputs.<wbr>Service<wbr>Type<wbr>Health<wbr>Policy<wbr>Response<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}The health policy used by default to evaluate the health of a service type.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="servicetypehealthpolicies_csharp">
-<a href="#servicetypehealthpolicies_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Type<wbr>Health<wbr>Policies</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric.<wbr>Inputs.<wbr>Service<wbr>Type<wbr>Health<wbr>Policy<wbr>Response<wbr>Args&gt;</span>
-    </dt>
-    <dd>{{% md %}}The map with service type health policy per service type name. The map is empty by default.{{% /md %}}</dd>
-</dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="defaultservicetypehealthpolicy_go">
-<a href="#defaultservicetypehealthpolicy_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Service<wbr>Type<wbr>Health<wbr>Policy</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetypehealthpolicyresponse">Service<wbr>Type<wbr>Health<wbr>Policy<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}The health policy used by default to evaluate the health of a service type.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="servicetypehealthpolicies_go">
-<a href="#servicetypehealthpolicies_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Type<wbr>Health<wbr>Policies</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]Service<wbr>Type<wbr>Health<wbr>Policy<wbr>Response</span>
-    </dt>
-    <dd>{{% md %}}The map with service type health policy per service type name. The map is empty by default.{{% /md %}}</dd>
-</dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="defaultservicetypehealthpolicy_nodejs">
-<a href="#defaultservicetypehealthpolicy_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Service<wbr>Type<wbr>Health<wbr>Policy</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetypehealthpolicyresponse">Service<wbr>Type<wbr>Health<wbr>Policy<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}The health policy used by default to evaluate the health of a service type.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="servicetypehealthpolicies_nodejs">
-<a href="#servicetypehealthpolicies_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Type<wbr>Health<wbr>Policies</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Service<wbr>Type<wbr>Health<wbr>Policy<wbr>Response}</span>
-    </dt>
-    <dd>{{% md %}}The map with service type health policy per service type name. The map is empty by default.{{% /md %}}</dd>
-</dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="default_service_type_health_policy_python">
-<a href="#default_service_type_health_policy_python" style="color: inherit; text-decoration: inherit;">default_<wbr>service_<wbr>type_<wbr>health_<wbr>policy</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetypehealthpolicyresponse">Service<wbr>Type<wbr>Health<wbr>Policy<wbr>Response<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}The health policy used by default to evaluate the health of a service type.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="service_type_health_policies_python">
-<a href="#service_type_health_policies_python" style="color: inherit; text-decoration: inherit;">service_<wbr>type_<wbr>health_<wbr>policies</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Service<wbr>Type<wbr>Health<wbr>Policy<wbr>Response<wbr>Args]</span>
-    </dt>
-    <dd>{{% md %}}The map with service type health policy per service type name. The map is empty by default.{{% /md %}}</dd>
-</dl>
-{{% /choosable %}}
 
 <h4 id="azureactivedirectory">Azure<wbr>Active<wbr>Directory</h4>
 
@@ -2416,7 +1849,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Issuer thumbprint for the certificate. Its only use CommonName is used.{{% /md %}}</dd>
+    <dd>{{% md %}}Issuer thumbprint for the certificate. Only used together with CommonName.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="thumbprint_csharp">
@@ -2458,7 +1891,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Issuer thumbprint for the certificate. Its only use CommonName is used.{{% /md %}}</dd>
+    <dd>{{% md %}}Issuer thumbprint for the certificate. Only used together with CommonName.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="thumbprint_go">
@@ -2500,7 +1933,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Issuer thumbprint for the certificate. Its only use CommonName is used.{{% /md %}}</dd>
+    <dd>{{% md %}}Issuer thumbprint for the certificate. Only used together with CommonName.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="thumbprint_nodejs">
@@ -2542,7 +1975,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Issuer thumbprint for the certificate. Its only use CommonName is used.{{% /md %}}</dd>
+    <dd>{{% md %}}Issuer thumbprint for the certificate. Only used together with CommonName.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="thumbprint_python">
@@ -2586,7 +2019,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Issuer thumbprint for the certificate. Its only use CommonName is used.{{% /md %}}</dd>
+    <dd>{{% md %}}Issuer thumbprint for the certificate. Only used together with CommonName.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="thumbprint_csharp">
@@ -2628,7 +2061,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Issuer thumbprint for the certificate. Its only use CommonName is used.{{% /md %}}</dd>
+    <dd>{{% md %}}Issuer thumbprint for the certificate. Only used together with CommonName.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="thumbprint_go">
@@ -2670,7 +2103,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Issuer thumbprint for the certificate. Its only use CommonName is used.{{% /md %}}</dd>
+    <dd>{{% md %}}Issuer thumbprint for the certificate. Only used together with CommonName.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="thumbprint_nodejs">
@@ -2712,7 +2145,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Issuer thumbprint for the certificate. Its only use CommonName is used.{{% /md %}}</dd>
+    <dd>{{% md %}}Issuer thumbprint for the certificate. Only used together with CommonName.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="thumbprint_python">
@@ -2722,1498 +2155,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Certificate Thumbprint.{{% /md %}}</dd>
-</dl>
-{{% /choosable %}}
-
-<h4 id="clusterhealthpolicy">Cluster<wbr>Health<wbr>Policy</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="applicationhealthpolicies_csharp">
-<a href="#applicationhealthpolicies_csharp" style="color: inherit; text-decoration: inherit;">Application<wbr>Health<wbr>Policies</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric.<wbr>Inputs.<wbr>Application<wbr>Health<wbr>Policy<wbr>Args&gt;</span>
-    </dt>
-    <dd>{{% md %}}Defines the application health policy map used to evaluate the health of an application or one of its children entities.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="maxpercentunhealthyapplications_csharp">
-<a href="#maxpercentunhealthyapplications_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Percent<wbr>Unhealthy<wbr>Applications</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The maximum allowed percentage of unhealthy applications before reporting an error. For example, to allow 10% of applications to be unhealthy, this value would be 10.
-
-The percentage represents the maximum tolerated percentage of applications that can be unhealthy before the cluster is considered in error.
-If the percentage is respected but there is at least one unhealthy application, the health is evaluated as Warning.
-This is calculated by dividing the number of unhealthy applications over the total number of application instances in the cluster, excluding applications of application types that are included in the ApplicationTypeHealthPolicyMap.
-The computation rounds up to tolerate one failure on small numbers of applications. Default percentage is zero.
-{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="maxpercentunhealthynodes_csharp">
-<a href="#maxpercentunhealthynodes_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Percent<wbr>Unhealthy<wbr>Nodes</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The maximum allowed percentage of unhealthy nodes before reporting an error. For example, to allow 10% of nodes to be unhealthy, this value would be 10.
-
-The percentage represents the maximum tolerated percentage of nodes that can be unhealthy before the cluster is considered in error.
-If the percentage is respected but there is at least one unhealthy node, the health is evaluated as Warning.
-The percentage is calculated by dividing the number of unhealthy nodes over the total number of nodes in the cluster.
-The computation rounds up to tolerate one failure on small numbers of nodes. Default percentage is zero.
-
-In large clusters, some nodes will always be down or out for repairs, so this percentage should be configured to tolerate that.
-{{% /md %}}</dd>
-</dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="applicationhealthpolicies_go">
-<a href="#applicationhealthpolicies_go" style="color: inherit; text-decoration: inherit;">Application<wbr>Health<wbr>Policies</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]Application<wbr>Health<wbr>Policy</span>
-    </dt>
-    <dd>{{% md %}}Defines the application health policy map used to evaluate the health of an application or one of its children entities.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="maxpercentunhealthyapplications_go">
-<a href="#maxpercentunhealthyapplications_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Percent<wbr>Unhealthy<wbr>Applications</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The maximum allowed percentage of unhealthy applications before reporting an error. For example, to allow 10% of applications to be unhealthy, this value would be 10.
-
-The percentage represents the maximum tolerated percentage of applications that can be unhealthy before the cluster is considered in error.
-If the percentage is respected but there is at least one unhealthy application, the health is evaluated as Warning.
-This is calculated by dividing the number of unhealthy applications over the total number of application instances in the cluster, excluding applications of application types that are included in the ApplicationTypeHealthPolicyMap.
-The computation rounds up to tolerate one failure on small numbers of applications. Default percentage is zero.
-{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="maxpercentunhealthynodes_go">
-<a href="#maxpercentunhealthynodes_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Percent<wbr>Unhealthy<wbr>Nodes</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The maximum allowed percentage of unhealthy nodes before reporting an error. For example, to allow 10% of nodes to be unhealthy, this value would be 10.
-
-The percentage represents the maximum tolerated percentage of nodes that can be unhealthy before the cluster is considered in error.
-If the percentage is respected but there is at least one unhealthy node, the health is evaluated as Warning.
-The percentage is calculated by dividing the number of unhealthy nodes over the total number of nodes in the cluster.
-The computation rounds up to tolerate one failure on small numbers of nodes. Default percentage is zero.
-
-In large clusters, some nodes will always be down or out for repairs, so this percentage should be configured to tolerate that.
-{{% /md %}}</dd>
-</dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="applicationhealthpolicies_nodejs">
-<a href="#applicationhealthpolicies_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Health<wbr>Policies</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Application<wbr>Health<wbr>Policy}</span>
-    </dt>
-    <dd>{{% md %}}Defines the application health policy map used to evaluate the health of an application or one of its children entities.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="maxpercentunhealthyapplications_nodejs">
-<a href="#maxpercentunhealthyapplications_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Percent<wbr>Unhealthy<wbr>Applications</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}The maximum allowed percentage of unhealthy applications before reporting an error. For example, to allow 10% of applications to be unhealthy, this value would be 10.
-
-The percentage represents the maximum tolerated percentage of applications that can be unhealthy before the cluster is considered in error.
-If the percentage is respected but there is at least one unhealthy application, the health is evaluated as Warning.
-This is calculated by dividing the number of unhealthy applications over the total number of application instances in the cluster, excluding applications of application types that are included in the ApplicationTypeHealthPolicyMap.
-The computation rounds up to tolerate one failure on small numbers of applications. Default percentage is zero.
-{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="maxpercentunhealthynodes_nodejs">
-<a href="#maxpercentunhealthynodes_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Percent<wbr>Unhealthy<wbr>Nodes</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}The maximum allowed percentage of unhealthy nodes before reporting an error. For example, to allow 10% of nodes to be unhealthy, this value would be 10.
-
-The percentage represents the maximum tolerated percentage of nodes that can be unhealthy before the cluster is considered in error.
-If the percentage is respected but there is at least one unhealthy node, the health is evaluated as Warning.
-The percentage is calculated by dividing the number of unhealthy nodes over the total number of nodes in the cluster.
-The computation rounds up to tolerate one failure on small numbers of nodes. Default percentage is zero.
-
-In large clusters, some nodes will always be down or out for repairs, so this percentage should be configured to tolerate that.
-{{% /md %}}</dd>
-</dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="application_health_policies_python">
-<a href="#application_health_policies_python" style="color: inherit; text-decoration: inherit;">application_<wbr>health_<wbr>policies</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Application<wbr>Health<wbr>Policy<wbr>Args]</span>
-    </dt>
-    <dd>{{% md %}}Defines the application health policy map used to evaluate the health of an application or one of its children entities.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="max_percent_unhealthy_applications_python">
-<a href="#max_percent_unhealthy_applications_python" style="color: inherit; text-decoration: inherit;">max_<wbr>percent_<wbr>unhealthy_<wbr>applications</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The maximum allowed percentage of unhealthy applications before reporting an error. For example, to allow 10% of applications to be unhealthy, this value would be 10.
-
-The percentage represents the maximum tolerated percentage of applications that can be unhealthy before the cluster is considered in error.
-If the percentage is respected but there is at least one unhealthy application, the health is evaluated as Warning.
-This is calculated by dividing the number of unhealthy applications over the total number of application instances in the cluster, excluding applications of application types that are included in the ApplicationTypeHealthPolicyMap.
-The computation rounds up to tolerate one failure on small numbers of applications. Default percentage is zero.
-{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="max_percent_unhealthy_nodes_python">
-<a href="#max_percent_unhealthy_nodes_python" style="color: inherit; text-decoration: inherit;">max_<wbr>percent_<wbr>unhealthy_<wbr>nodes</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The maximum allowed percentage of unhealthy nodes before reporting an error. For example, to allow 10% of nodes to be unhealthy, this value would be 10.
-
-The percentage represents the maximum tolerated percentage of nodes that can be unhealthy before the cluster is considered in error.
-If the percentage is respected but there is at least one unhealthy node, the health is evaluated as Warning.
-The percentage is calculated by dividing the number of unhealthy nodes over the total number of nodes in the cluster.
-The computation rounds up to tolerate one failure on small numbers of nodes. Default percentage is zero.
-
-In large clusters, some nodes will always be down or out for repairs, so this percentage should be configured to tolerate that.
-{{% /md %}}</dd>
-</dl>
-{{% /choosable %}}
-
-<h4 id="clusterhealthpolicyresponse">Cluster<wbr>Health<wbr>Policy<wbr>Response</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="applicationhealthpolicies_csharp">
-<a href="#applicationhealthpolicies_csharp" style="color: inherit; text-decoration: inherit;">Application<wbr>Health<wbr>Policies</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric.<wbr>Inputs.<wbr>Application<wbr>Health<wbr>Policy<wbr>Response<wbr>Args&gt;</span>
-    </dt>
-    <dd>{{% md %}}Defines the application health policy map used to evaluate the health of an application or one of its children entities.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="maxpercentunhealthyapplications_csharp">
-<a href="#maxpercentunhealthyapplications_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Percent<wbr>Unhealthy<wbr>Applications</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The maximum allowed percentage of unhealthy applications before reporting an error. For example, to allow 10% of applications to be unhealthy, this value would be 10.
-
-The percentage represents the maximum tolerated percentage of applications that can be unhealthy before the cluster is considered in error.
-If the percentage is respected but there is at least one unhealthy application, the health is evaluated as Warning.
-This is calculated by dividing the number of unhealthy applications over the total number of application instances in the cluster, excluding applications of application types that are included in the ApplicationTypeHealthPolicyMap.
-The computation rounds up to tolerate one failure on small numbers of applications. Default percentage is zero.
-{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="maxpercentunhealthynodes_csharp">
-<a href="#maxpercentunhealthynodes_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Percent<wbr>Unhealthy<wbr>Nodes</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The maximum allowed percentage of unhealthy nodes before reporting an error. For example, to allow 10% of nodes to be unhealthy, this value would be 10.
-
-The percentage represents the maximum tolerated percentage of nodes that can be unhealthy before the cluster is considered in error.
-If the percentage is respected but there is at least one unhealthy node, the health is evaluated as Warning.
-The percentage is calculated by dividing the number of unhealthy nodes over the total number of nodes in the cluster.
-The computation rounds up to tolerate one failure on small numbers of nodes. Default percentage is zero.
-
-In large clusters, some nodes will always be down or out for repairs, so this percentage should be configured to tolerate that.
-{{% /md %}}</dd>
-</dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="applicationhealthpolicies_go">
-<a href="#applicationhealthpolicies_go" style="color: inherit; text-decoration: inherit;">Application<wbr>Health<wbr>Policies</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]Application<wbr>Health<wbr>Policy<wbr>Response</span>
-    </dt>
-    <dd>{{% md %}}Defines the application health policy map used to evaluate the health of an application or one of its children entities.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="maxpercentunhealthyapplications_go">
-<a href="#maxpercentunhealthyapplications_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Percent<wbr>Unhealthy<wbr>Applications</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The maximum allowed percentage of unhealthy applications before reporting an error. For example, to allow 10% of applications to be unhealthy, this value would be 10.
-
-The percentage represents the maximum tolerated percentage of applications that can be unhealthy before the cluster is considered in error.
-If the percentage is respected but there is at least one unhealthy application, the health is evaluated as Warning.
-This is calculated by dividing the number of unhealthy applications over the total number of application instances in the cluster, excluding applications of application types that are included in the ApplicationTypeHealthPolicyMap.
-The computation rounds up to tolerate one failure on small numbers of applications. Default percentage is zero.
-{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="maxpercentunhealthynodes_go">
-<a href="#maxpercentunhealthynodes_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Percent<wbr>Unhealthy<wbr>Nodes</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The maximum allowed percentage of unhealthy nodes before reporting an error. For example, to allow 10% of nodes to be unhealthy, this value would be 10.
-
-The percentage represents the maximum tolerated percentage of nodes that can be unhealthy before the cluster is considered in error.
-If the percentage is respected but there is at least one unhealthy node, the health is evaluated as Warning.
-The percentage is calculated by dividing the number of unhealthy nodes over the total number of nodes in the cluster.
-The computation rounds up to tolerate one failure on small numbers of nodes. Default percentage is zero.
-
-In large clusters, some nodes will always be down or out for repairs, so this percentage should be configured to tolerate that.
-{{% /md %}}</dd>
-</dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="applicationhealthpolicies_nodejs">
-<a href="#applicationhealthpolicies_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Health<wbr>Policies</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Application<wbr>Health<wbr>Policy<wbr>Response}</span>
-    </dt>
-    <dd>{{% md %}}Defines the application health policy map used to evaluate the health of an application or one of its children entities.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="maxpercentunhealthyapplications_nodejs">
-<a href="#maxpercentunhealthyapplications_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Percent<wbr>Unhealthy<wbr>Applications</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}The maximum allowed percentage of unhealthy applications before reporting an error. For example, to allow 10% of applications to be unhealthy, this value would be 10.
-
-The percentage represents the maximum tolerated percentage of applications that can be unhealthy before the cluster is considered in error.
-If the percentage is respected but there is at least one unhealthy application, the health is evaluated as Warning.
-This is calculated by dividing the number of unhealthy applications over the total number of application instances in the cluster, excluding applications of application types that are included in the ApplicationTypeHealthPolicyMap.
-The computation rounds up to tolerate one failure on small numbers of applications. Default percentage is zero.
-{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="maxpercentunhealthynodes_nodejs">
-<a href="#maxpercentunhealthynodes_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Percent<wbr>Unhealthy<wbr>Nodes</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}The maximum allowed percentage of unhealthy nodes before reporting an error. For example, to allow 10% of nodes to be unhealthy, this value would be 10.
-
-The percentage represents the maximum tolerated percentage of nodes that can be unhealthy before the cluster is considered in error.
-If the percentage is respected but there is at least one unhealthy node, the health is evaluated as Warning.
-The percentage is calculated by dividing the number of unhealthy nodes over the total number of nodes in the cluster.
-The computation rounds up to tolerate one failure on small numbers of nodes. Default percentage is zero.
-
-In large clusters, some nodes will always be down or out for repairs, so this percentage should be configured to tolerate that.
-{{% /md %}}</dd>
-</dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="application_health_policies_python">
-<a href="#application_health_policies_python" style="color: inherit; text-decoration: inherit;">application_<wbr>health_<wbr>policies</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Application<wbr>Health<wbr>Policy<wbr>Response<wbr>Args]</span>
-    </dt>
-    <dd>{{% md %}}Defines the application health policy map used to evaluate the health of an application or one of its children entities.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="max_percent_unhealthy_applications_python">
-<a href="#max_percent_unhealthy_applications_python" style="color: inherit; text-decoration: inherit;">max_<wbr>percent_<wbr>unhealthy_<wbr>applications</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The maximum allowed percentage of unhealthy applications before reporting an error. For example, to allow 10% of applications to be unhealthy, this value would be 10.
-
-The percentage represents the maximum tolerated percentage of applications that can be unhealthy before the cluster is considered in error.
-If the percentage is respected but there is at least one unhealthy application, the health is evaluated as Warning.
-This is calculated by dividing the number of unhealthy applications over the total number of application instances in the cluster, excluding applications of application types that are included in the ApplicationTypeHealthPolicyMap.
-The computation rounds up to tolerate one failure on small numbers of applications. Default percentage is zero.
-{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="max_percent_unhealthy_nodes_python">
-<a href="#max_percent_unhealthy_nodes_python" style="color: inherit; text-decoration: inherit;">max_<wbr>percent_<wbr>unhealthy_<wbr>nodes</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The maximum allowed percentage of unhealthy nodes before reporting an error. For example, to allow 10% of nodes to be unhealthy, this value would be 10.
-
-The percentage represents the maximum tolerated percentage of nodes that can be unhealthy before the cluster is considered in error.
-If the percentage is respected but there is at least one unhealthy node, the health is evaluated as Warning.
-The percentage is calculated by dividing the number of unhealthy nodes over the total number of nodes in the cluster.
-The computation rounds up to tolerate one failure on small numbers of nodes. Default percentage is zero.
-
-In large clusters, some nodes will always be down or out for repairs, so this percentage should be configured to tolerate that.
-{{% /md %}}</dd>
-</dl>
-{{% /choosable %}}
-
-<h4 id="clusterupgradedeltahealthpolicy">Cluster<wbr>Upgrade<wbr>Delta<wbr>Health<wbr>Policy</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="maxpercentdeltaunhealthyapplications_csharp">
-<a href="#maxpercentdeltaunhealthyapplications_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Percent<wbr>Delta<wbr>Unhealthy<wbr>Applications</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The maximum allowed percentage of applications health degradation allowed during cluster upgrades.
-The delta is measured between the state of the applications at the beginning of upgrade and the state of the applications at the time of the health evaluation.
-The check is performed after every upgrade domain upgrade completion to make sure the global state of the cluster is within tolerated limits. System services are not included in this.
-{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="maxpercentdeltaunhealthynodes_csharp">
-<a href="#maxpercentdeltaunhealthynodes_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Percent<wbr>Delta<wbr>Unhealthy<wbr>Nodes</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The maximum allowed percentage of nodes health degradation allowed during cluster upgrades.
-The delta is measured between the state of the nodes at the beginning of upgrade and the state of the nodes at the time of the health evaluation.
-The check is performed after every upgrade domain upgrade completion to make sure the global state of the cluster is within tolerated limits.
-{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="maxpercentupgradedomaindeltaunhealthynodes_csharp">
-<a href="#maxpercentupgradedomaindeltaunhealthynodes_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Percent<wbr>Upgrade<wbr>Domain<wbr>Delta<wbr>Unhealthy<wbr>Nodes</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The maximum allowed percentage of upgrade domain nodes health degradation allowed during cluster upgrades.
-The delta is measured between the state of the upgrade domain nodes at the beginning of upgrade and the state of the upgrade domain nodes at the time of the health evaluation.
-The check is performed after every upgrade domain upgrade completion for all completed upgrade domains to make sure the state of the upgrade domains is within tolerated limits.
-{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="applicationdeltahealthpolicies_csharp">
-<a href="#applicationdeltahealthpolicies_csharp" style="color: inherit; text-decoration: inherit;">Application<wbr>Delta<wbr>Health<wbr>Policies</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric.<wbr>Inputs.<wbr>Application<wbr>Delta<wbr>Health<wbr>Policy<wbr>Args&gt;</span>
-    </dt>
-    <dd>{{% md %}}Defines the application delta health policy map used to evaluate the health of an application or one of its child entities when upgrading the cluster.{{% /md %}}</dd>
-</dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="maxpercentdeltaunhealthyapplications_go">
-<a href="#maxpercentdeltaunhealthyapplications_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Percent<wbr>Delta<wbr>Unhealthy<wbr>Applications</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The maximum allowed percentage of applications health degradation allowed during cluster upgrades.
-The delta is measured between the state of the applications at the beginning of upgrade and the state of the applications at the time of the health evaluation.
-The check is performed after every upgrade domain upgrade completion to make sure the global state of the cluster is within tolerated limits. System services are not included in this.
-{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="maxpercentdeltaunhealthynodes_go">
-<a href="#maxpercentdeltaunhealthynodes_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Percent<wbr>Delta<wbr>Unhealthy<wbr>Nodes</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The maximum allowed percentage of nodes health degradation allowed during cluster upgrades.
-The delta is measured between the state of the nodes at the beginning of upgrade and the state of the nodes at the time of the health evaluation.
-The check is performed after every upgrade domain upgrade completion to make sure the global state of the cluster is within tolerated limits.
-{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="maxpercentupgradedomaindeltaunhealthynodes_go">
-<a href="#maxpercentupgradedomaindeltaunhealthynodes_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Percent<wbr>Upgrade<wbr>Domain<wbr>Delta<wbr>Unhealthy<wbr>Nodes</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The maximum allowed percentage of upgrade domain nodes health degradation allowed during cluster upgrades.
-The delta is measured between the state of the upgrade domain nodes at the beginning of upgrade and the state of the upgrade domain nodes at the time of the health evaluation.
-The check is performed after every upgrade domain upgrade completion for all completed upgrade domains to make sure the state of the upgrade domains is within tolerated limits.
-{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="applicationdeltahealthpolicies_go">
-<a href="#applicationdeltahealthpolicies_go" style="color: inherit; text-decoration: inherit;">Application<wbr>Delta<wbr>Health<wbr>Policies</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]Application<wbr>Delta<wbr>Health<wbr>Policy</span>
-    </dt>
-    <dd>{{% md %}}Defines the application delta health policy map used to evaluate the health of an application or one of its child entities when upgrading the cluster.{{% /md %}}</dd>
-</dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="maxpercentdeltaunhealthyapplications_nodejs">
-<a href="#maxpercentdeltaunhealthyapplications_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Percent<wbr>Delta<wbr>Unhealthy<wbr>Applications</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}The maximum allowed percentage of applications health degradation allowed during cluster upgrades.
-The delta is measured between the state of the applications at the beginning of upgrade and the state of the applications at the time of the health evaluation.
-The check is performed after every upgrade domain upgrade completion to make sure the global state of the cluster is within tolerated limits. System services are not included in this.
-{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="maxpercentdeltaunhealthynodes_nodejs">
-<a href="#maxpercentdeltaunhealthynodes_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Percent<wbr>Delta<wbr>Unhealthy<wbr>Nodes</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}The maximum allowed percentage of nodes health degradation allowed during cluster upgrades.
-The delta is measured between the state of the nodes at the beginning of upgrade and the state of the nodes at the time of the health evaluation.
-The check is performed after every upgrade domain upgrade completion to make sure the global state of the cluster is within tolerated limits.
-{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="maxpercentupgradedomaindeltaunhealthynodes_nodejs">
-<a href="#maxpercentupgradedomaindeltaunhealthynodes_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Percent<wbr>Upgrade<wbr>Domain<wbr>Delta<wbr>Unhealthy<wbr>Nodes</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}The maximum allowed percentage of upgrade domain nodes health degradation allowed during cluster upgrades.
-The delta is measured between the state of the upgrade domain nodes at the beginning of upgrade and the state of the upgrade domain nodes at the time of the health evaluation.
-The check is performed after every upgrade domain upgrade completion for all completed upgrade domains to make sure the state of the upgrade domains is within tolerated limits.
-{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="applicationdeltahealthpolicies_nodejs">
-<a href="#applicationdeltahealthpolicies_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Delta<wbr>Health<wbr>Policies</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Application<wbr>Delta<wbr>Health<wbr>Policy}</span>
-    </dt>
-    <dd>{{% md %}}Defines the application delta health policy map used to evaluate the health of an application or one of its child entities when upgrading the cluster.{{% /md %}}</dd>
-</dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="max_percent_delta_unhealthy_applications_python">
-<a href="#max_percent_delta_unhealthy_applications_python" style="color: inherit; text-decoration: inherit;">max_<wbr>percent_<wbr>delta_<wbr>unhealthy_<wbr>applications</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The maximum allowed percentage of applications health degradation allowed during cluster upgrades.
-The delta is measured between the state of the applications at the beginning of upgrade and the state of the applications at the time of the health evaluation.
-The check is performed after every upgrade domain upgrade completion to make sure the global state of the cluster is within tolerated limits. System services are not included in this.
-{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="max_percent_delta_unhealthy_nodes_python">
-<a href="#max_percent_delta_unhealthy_nodes_python" style="color: inherit; text-decoration: inherit;">max_<wbr>percent_<wbr>delta_<wbr>unhealthy_<wbr>nodes</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The maximum allowed percentage of nodes health degradation allowed during cluster upgrades.
-The delta is measured between the state of the nodes at the beginning of upgrade and the state of the nodes at the time of the health evaluation.
-The check is performed after every upgrade domain upgrade completion to make sure the global state of the cluster is within tolerated limits.
-{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="max_percent_upgrade_domain_delta_unhealthy_nodes_python">
-<a href="#max_percent_upgrade_domain_delta_unhealthy_nodes_python" style="color: inherit; text-decoration: inherit;">max_<wbr>percent_<wbr>upgrade_<wbr>domain_<wbr>delta_<wbr>unhealthy_<wbr>nodes</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The maximum allowed percentage of upgrade domain nodes health degradation allowed during cluster upgrades.
-The delta is measured between the state of the upgrade domain nodes at the beginning of upgrade and the state of the upgrade domain nodes at the time of the health evaluation.
-The check is performed after every upgrade domain upgrade completion for all completed upgrade domains to make sure the state of the upgrade domains is within tolerated limits.
-{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="application_delta_health_policies_python">
-<a href="#application_delta_health_policies_python" style="color: inherit; text-decoration: inherit;">application_<wbr>delta_<wbr>health_<wbr>policies</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Application<wbr>Delta<wbr>Health<wbr>Policy<wbr>Args]</span>
-    </dt>
-    <dd>{{% md %}}Defines the application delta health policy map used to evaluate the health of an application or one of its child entities when upgrading the cluster.{{% /md %}}</dd>
-</dl>
-{{% /choosable %}}
-
-<h4 id="clusterupgradedeltahealthpolicyresponse">Cluster<wbr>Upgrade<wbr>Delta<wbr>Health<wbr>Policy<wbr>Response</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="maxpercentdeltaunhealthyapplications_csharp">
-<a href="#maxpercentdeltaunhealthyapplications_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Percent<wbr>Delta<wbr>Unhealthy<wbr>Applications</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The maximum allowed percentage of applications health degradation allowed during cluster upgrades.
-The delta is measured between the state of the applications at the beginning of upgrade and the state of the applications at the time of the health evaluation.
-The check is performed after every upgrade domain upgrade completion to make sure the global state of the cluster is within tolerated limits. System services are not included in this.
-{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="maxpercentdeltaunhealthynodes_csharp">
-<a href="#maxpercentdeltaunhealthynodes_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Percent<wbr>Delta<wbr>Unhealthy<wbr>Nodes</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The maximum allowed percentage of nodes health degradation allowed during cluster upgrades.
-The delta is measured between the state of the nodes at the beginning of upgrade and the state of the nodes at the time of the health evaluation.
-The check is performed after every upgrade domain upgrade completion to make sure the global state of the cluster is within tolerated limits.
-{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="maxpercentupgradedomaindeltaunhealthynodes_csharp">
-<a href="#maxpercentupgradedomaindeltaunhealthynodes_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Percent<wbr>Upgrade<wbr>Domain<wbr>Delta<wbr>Unhealthy<wbr>Nodes</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The maximum allowed percentage of upgrade domain nodes health degradation allowed during cluster upgrades.
-The delta is measured between the state of the upgrade domain nodes at the beginning of upgrade and the state of the upgrade domain nodes at the time of the health evaluation.
-The check is performed after every upgrade domain upgrade completion for all completed upgrade domains to make sure the state of the upgrade domains is within tolerated limits.
-{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="applicationdeltahealthpolicies_csharp">
-<a href="#applicationdeltahealthpolicies_csharp" style="color: inherit; text-decoration: inherit;">Application<wbr>Delta<wbr>Health<wbr>Policies</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric.<wbr>Inputs.<wbr>Application<wbr>Delta<wbr>Health<wbr>Policy<wbr>Response<wbr>Args&gt;</span>
-    </dt>
-    <dd>{{% md %}}Defines the application delta health policy map used to evaluate the health of an application or one of its child entities when upgrading the cluster.{{% /md %}}</dd>
-</dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="maxpercentdeltaunhealthyapplications_go">
-<a href="#maxpercentdeltaunhealthyapplications_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Percent<wbr>Delta<wbr>Unhealthy<wbr>Applications</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The maximum allowed percentage of applications health degradation allowed during cluster upgrades.
-The delta is measured between the state of the applications at the beginning of upgrade and the state of the applications at the time of the health evaluation.
-The check is performed after every upgrade domain upgrade completion to make sure the global state of the cluster is within tolerated limits. System services are not included in this.
-{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="maxpercentdeltaunhealthynodes_go">
-<a href="#maxpercentdeltaunhealthynodes_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Percent<wbr>Delta<wbr>Unhealthy<wbr>Nodes</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The maximum allowed percentage of nodes health degradation allowed during cluster upgrades.
-The delta is measured between the state of the nodes at the beginning of upgrade and the state of the nodes at the time of the health evaluation.
-The check is performed after every upgrade domain upgrade completion to make sure the global state of the cluster is within tolerated limits.
-{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="maxpercentupgradedomaindeltaunhealthynodes_go">
-<a href="#maxpercentupgradedomaindeltaunhealthynodes_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Percent<wbr>Upgrade<wbr>Domain<wbr>Delta<wbr>Unhealthy<wbr>Nodes</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The maximum allowed percentage of upgrade domain nodes health degradation allowed during cluster upgrades.
-The delta is measured between the state of the upgrade domain nodes at the beginning of upgrade and the state of the upgrade domain nodes at the time of the health evaluation.
-The check is performed after every upgrade domain upgrade completion for all completed upgrade domains to make sure the state of the upgrade domains is within tolerated limits.
-{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="applicationdeltahealthpolicies_go">
-<a href="#applicationdeltahealthpolicies_go" style="color: inherit; text-decoration: inherit;">Application<wbr>Delta<wbr>Health<wbr>Policies</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]Application<wbr>Delta<wbr>Health<wbr>Policy<wbr>Response</span>
-    </dt>
-    <dd>{{% md %}}Defines the application delta health policy map used to evaluate the health of an application or one of its child entities when upgrading the cluster.{{% /md %}}</dd>
-</dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="maxpercentdeltaunhealthyapplications_nodejs">
-<a href="#maxpercentdeltaunhealthyapplications_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Percent<wbr>Delta<wbr>Unhealthy<wbr>Applications</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}The maximum allowed percentage of applications health degradation allowed during cluster upgrades.
-The delta is measured between the state of the applications at the beginning of upgrade and the state of the applications at the time of the health evaluation.
-The check is performed after every upgrade domain upgrade completion to make sure the global state of the cluster is within tolerated limits. System services are not included in this.
-{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="maxpercentdeltaunhealthynodes_nodejs">
-<a href="#maxpercentdeltaunhealthynodes_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Percent<wbr>Delta<wbr>Unhealthy<wbr>Nodes</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}The maximum allowed percentage of nodes health degradation allowed during cluster upgrades.
-The delta is measured between the state of the nodes at the beginning of upgrade and the state of the nodes at the time of the health evaluation.
-The check is performed after every upgrade domain upgrade completion to make sure the global state of the cluster is within tolerated limits.
-{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="maxpercentupgradedomaindeltaunhealthynodes_nodejs">
-<a href="#maxpercentupgradedomaindeltaunhealthynodes_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Percent<wbr>Upgrade<wbr>Domain<wbr>Delta<wbr>Unhealthy<wbr>Nodes</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}The maximum allowed percentage of upgrade domain nodes health degradation allowed during cluster upgrades.
-The delta is measured between the state of the upgrade domain nodes at the beginning of upgrade and the state of the upgrade domain nodes at the time of the health evaluation.
-The check is performed after every upgrade domain upgrade completion for all completed upgrade domains to make sure the state of the upgrade domains is within tolerated limits.
-{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="applicationdeltahealthpolicies_nodejs">
-<a href="#applicationdeltahealthpolicies_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Delta<wbr>Health<wbr>Policies</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Application<wbr>Delta<wbr>Health<wbr>Policy<wbr>Response}</span>
-    </dt>
-    <dd>{{% md %}}Defines the application delta health policy map used to evaluate the health of an application or one of its child entities when upgrading the cluster.{{% /md %}}</dd>
-</dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="max_percent_delta_unhealthy_applications_python">
-<a href="#max_percent_delta_unhealthy_applications_python" style="color: inherit; text-decoration: inherit;">max_<wbr>percent_<wbr>delta_<wbr>unhealthy_<wbr>applications</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The maximum allowed percentage of applications health degradation allowed during cluster upgrades.
-The delta is measured between the state of the applications at the beginning of upgrade and the state of the applications at the time of the health evaluation.
-The check is performed after every upgrade domain upgrade completion to make sure the global state of the cluster is within tolerated limits. System services are not included in this.
-{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="max_percent_delta_unhealthy_nodes_python">
-<a href="#max_percent_delta_unhealthy_nodes_python" style="color: inherit; text-decoration: inherit;">max_<wbr>percent_<wbr>delta_<wbr>unhealthy_<wbr>nodes</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The maximum allowed percentage of nodes health degradation allowed during cluster upgrades.
-The delta is measured between the state of the nodes at the beginning of upgrade and the state of the nodes at the time of the health evaluation.
-The check is performed after every upgrade domain upgrade completion to make sure the global state of the cluster is within tolerated limits.
-{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="max_percent_upgrade_domain_delta_unhealthy_nodes_python">
-<a href="#max_percent_upgrade_domain_delta_unhealthy_nodes_python" style="color: inherit; text-decoration: inherit;">max_<wbr>percent_<wbr>upgrade_<wbr>domain_<wbr>delta_<wbr>unhealthy_<wbr>nodes</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The maximum allowed percentage of upgrade domain nodes health degradation allowed during cluster upgrades.
-The delta is measured between the state of the upgrade domain nodes at the beginning of upgrade and the state of the upgrade domain nodes at the time of the health evaluation.
-The check is performed after every upgrade domain upgrade completion for all completed upgrade domains to make sure the state of the upgrade domains is within tolerated limits.
-{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="application_delta_health_policies_python">
-<a href="#application_delta_health_policies_python" style="color: inherit; text-decoration: inherit;">application_<wbr>delta_<wbr>health_<wbr>policies</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Application<wbr>Delta<wbr>Health<wbr>Policy<wbr>Response<wbr>Args]</span>
-    </dt>
-    <dd>{{% md %}}Defines the application delta health policy map used to evaluate the health of an application or one of its child entities when upgrading the cluster.{{% /md %}}</dd>
-</dl>
-{{% /choosable %}}
-
-<h4 id="clusterupgradepolicy">Cluster<wbr>Upgrade<wbr>Policy</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="healthcheckretrytimeout_csharp">
-<a href="#healthcheckretrytimeout_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>Check<wbr>Retry<wbr>Timeout</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The amount of time to retry health evaluation when the application or cluster is unhealthy before the upgrade rolls back. The timeout can be in either hh:mm:ss or in d.hh:mm:ss.ms format.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="healthcheckstableduration_csharp">
-<a href="#healthcheckstableduration_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>Check<wbr>Stable<wbr>Duration</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The amount of time that the application or cluster must remain healthy before the upgrade proceeds to the next upgrade domain. The duration can be in either hh:mm:ss or in d.hh:mm:ss.ms format.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="healthcheckwaitduration_csharp">
-<a href="#healthcheckwaitduration_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>Check<wbr>Wait<wbr>Duration</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The length of time to wait after completing an upgrade domain before performing health checks. The duration can be in either hh:mm:ss or in d.hh:mm:ss.ms format.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="healthpolicy_csharp">
-<a href="#healthpolicy_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>Policy</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterhealthpolicy">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric.<wbr>Inputs.<wbr>Cluster<wbr>Health<wbr>Policy<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}The cluster health policy used when upgrading the cluster.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="upgradedomaintimeout_csharp">
-<a href="#upgradedomaintimeout_csharp" style="color: inherit; text-decoration: inherit;">Upgrade<wbr>Domain<wbr>Timeout</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The amount of time each upgrade domain has to complete before the upgrade rolls back. The timeout can be in either hh:mm:ss or in d.hh:mm:ss.ms format.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="upgradereplicasetchecktimeout_csharp">
-<a href="#upgradereplicasetchecktimeout_csharp" style="color: inherit; text-decoration: inherit;">Upgrade<wbr>Replica<wbr>Set<wbr>Check<wbr>Timeout</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The maximum amount of time to block processing of an upgrade domain and prevent loss of availability when there are unexpected issues. When this timeout expires, processing of the upgrade domain will proceed regardless of availability loss issues. The timeout is reset at the start of each upgrade domain. The timeout can be in either hh:mm:ss or in d.hh:mm:ss.ms format.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="upgradetimeout_csharp">
-<a href="#upgradetimeout_csharp" style="color: inherit; text-decoration: inherit;">Upgrade<wbr>Timeout</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The amount of time the overall upgrade has to complete before the upgrade rolls back. The timeout can be in either hh:mm:ss or in d.hh:mm:ss.ms format.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="deltahealthpolicy_csharp">
-<a href="#deltahealthpolicy_csharp" style="color: inherit; text-decoration: inherit;">Delta<wbr>Health<wbr>Policy</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterupgradedeltahealthpolicy">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric.<wbr>Inputs.<wbr>Cluster<wbr>Upgrade<wbr>Delta<wbr>Health<wbr>Policy<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}The cluster delta health policy used when upgrading the cluster.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="forcerestart_csharp">
-<a href="#forcerestart_csharp" style="color: inherit; text-decoration: inherit;">Force<wbr>Restart</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}If true, then processes are forcefully restarted during upgrade even when the code version has not changed (the upgrade only changes configuration or data).{{% /md %}}</dd>
-</dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="healthcheckretrytimeout_go">
-<a href="#healthcheckretrytimeout_go" style="color: inherit; text-decoration: inherit;">Health<wbr>Check<wbr>Retry<wbr>Timeout</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The amount of time to retry health evaluation when the application or cluster is unhealthy before the upgrade rolls back. The timeout can be in either hh:mm:ss or in d.hh:mm:ss.ms format.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="healthcheckstableduration_go">
-<a href="#healthcheckstableduration_go" style="color: inherit; text-decoration: inherit;">Health<wbr>Check<wbr>Stable<wbr>Duration</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The amount of time that the application or cluster must remain healthy before the upgrade proceeds to the next upgrade domain. The duration can be in either hh:mm:ss or in d.hh:mm:ss.ms format.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="healthcheckwaitduration_go">
-<a href="#healthcheckwaitduration_go" style="color: inherit; text-decoration: inherit;">Health<wbr>Check<wbr>Wait<wbr>Duration</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The length of time to wait after completing an upgrade domain before performing health checks. The duration can be in either hh:mm:ss or in d.hh:mm:ss.ms format.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="healthpolicy_go">
-<a href="#healthpolicy_go" style="color: inherit; text-decoration: inherit;">Health<wbr>Policy</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterhealthpolicy">Cluster<wbr>Health<wbr>Policy</a></span>
-    </dt>
-    <dd>{{% md %}}The cluster health policy used when upgrading the cluster.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="upgradedomaintimeout_go">
-<a href="#upgradedomaintimeout_go" style="color: inherit; text-decoration: inherit;">Upgrade<wbr>Domain<wbr>Timeout</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The amount of time each upgrade domain has to complete before the upgrade rolls back. The timeout can be in either hh:mm:ss or in d.hh:mm:ss.ms format.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="upgradereplicasetchecktimeout_go">
-<a href="#upgradereplicasetchecktimeout_go" style="color: inherit; text-decoration: inherit;">Upgrade<wbr>Replica<wbr>Set<wbr>Check<wbr>Timeout</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The maximum amount of time to block processing of an upgrade domain and prevent loss of availability when there are unexpected issues. When this timeout expires, processing of the upgrade domain will proceed regardless of availability loss issues. The timeout is reset at the start of each upgrade domain. The timeout can be in either hh:mm:ss or in d.hh:mm:ss.ms format.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="upgradetimeout_go">
-<a href="#upgradetimeout_go" style="color: inherit; text-decoration: inherit;">Upgrade<wbr>Timeout</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The amount of time the overall upgrade has to complete before the upgrade rolls back. The timeout can be in either hh:mm:ss or in d.hh:mm:ss.ms format.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="deltahealthpolicy_go">
-<a href="#deltahealthpolicy_go" style="color: inherit; text-decoration: inherit;">Delta<wbr>Health<wbr>Policy</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterupgradedeltahealthpolicy">Cluster<wbr>Upgrade<wbr>Delta<wbr>Health<wbr>Policy</a></span>
-    </dt>
-    <dd>{{% md %}}The cluster delta health policy used when upgrading the cluster.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="forcerestart_go">
-<a href="#forcerestart_go" style="color: inherit; text-decoration: inherit;">Force<wbr>Restart</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}If true, then processes are forcefully restarted during upgrade even when the code version has not changed (the upgrade only changes configuration or data).{{% /md %}}</dd>
-</dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="healthcheckretrytimeout_nodejs">
-<a href="#healthcheckretrytimeout_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Check<wbr>Retry<wbr>Timeout</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The amount of time to retry health evaluation when the application or cluster is unhealthy before the upgrade rolls back. The timeout can be in either hh:mm:ss or in d.hh:mm:ss.ms format.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="healthcheckstableduration_nodejs">
-<a href="#healthcheckstableduration_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Check<wbr>Stable<wbr>Duration</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The amount of time that the application or cluster must remain healthy before the upgrade proceeds to the next upgrade domain. The duration can be in either hh:mm:ss or in d.hh:mm:ss.ms format.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="healthcheckwaitduration_nodejs">
-<a href="#healthcheckwaitduration_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Check<wbr>Wait<wbr>Duration</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The length of time to wait after completing an upgrade domain before performing health checks. The duration can be in either hh:mm:ss or in d.hh:mm:ss.ms format.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="healthpolicy_nodejs">
-<a href="#healthpolicy_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Policy</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterhealthpolicy">Cluster<wbr>Health<wbr>Policy</a></span>
-    </dt>
-    <dd>{{% md %}}The cluster health policy used when upgrading the cluster.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="upgradedomaintimeout_nodejs">
-<a href="#upgradedomaintimeout_nodejs" style="color: inherit; text-decoration: inherit;">upgrade<wbr>Domain<wbr>Timeout</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The amount of time each upgrade domain has to complete before the upgrade rolls back. The timeout can be in either hh:mm:ss or in d.hh:mm:ss.ms format.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="upgradereplicasetchecktimeout_nodejs">
-<a href="#upgradereplicasetchecktimeout_nodejs" style="color: inherit; text-decoration: inherit;">upgrade<wbr>Replica<wbr>Set<wbr>Check<wbr>Timeout</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The maximum amount of time to block processing of an upgrade domain and prevent loss of availability when there are unexpected issues. When this timeout expires, processing of the upgrade domain will proceed regardless of availability loss issues. The timeout is reset at the start of each upgrade domain. The timeout can be in either hh:mm:ss or in d.hh:mm:ss.ms format.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="upgradetimeout_nodejs">
-<a href="#upgradetimeout_nodejs" style="color: inherit; text-decoration: inherit;">upgrade<wbr>Timeout</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The amount of time the overall upgrade has to complete before the upgrade rolls back. The timeout can be in either hh:mm:ss or in d.hh:mm:ss.ms format.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="deltahealthpolicy_nodejs">
-<a href="#deltahealthpolicy_nodejs" style="color: inherit; text-decoration: inherit;">delta<wbr>Health<wbr>Policy</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterupgradedeltahealthpolicy">Cluster<wbr>Upgrade<wbr>Delta<wbr>Health<wbr>Policy</a></span>
-    </dt>
-    <dd>{{% md %}}The cluster delta health policy used when upgrading the cluster.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="forcerestart_nodejs">
-<a href="#forcerestart_nodejs" style="color: inherit; text-decoration: inherit;">force<wbr>Restart</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
-    </dt>
-    <dd>{{% md %}}If true, then processes are forcefully restarted during upgrade even when the code version has not changed (the upgrade only changes configuration or data).{{% /md %}}</dd>
-</dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="health_check_retry_timeout_python">
-<a href="#health_check_retry_timeout_python" style="color: inherit; text-decoration: inherit;">health_<wbr>check_<wbr>retry_<wbr>timeout</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The amount of time to retry health evaluation when the application or cluster is unhealthy before the upgrade rolls back. The timeout can be in either hh:mm:ss or in d.hh:mm:ss.ms format.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="health_check_stable_duration_python">
-<a href="#health_check_stable_duration_python" style="color: inherit; text-decoration: inherit;">health_<wbr>check_<wbr>stable_<wbr>duration</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The amount of time that the application or cluster must remain healthy before the upgrade proceeds to the next upgrade domain. The duration can be in either hh:mm:ss or in d.hh:mm:ss.ms format.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="health_check_wait_duration_python">
-<a href="#health_check_wait_duration_python" style="color: inherit; text-decoration: inherit;">health_<wbr>check_<wbr>wait_<wbr>duration</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The length of time to wait after completing an upgrade domain before performing health checks. The duration can be in either hh:mm:ss or in d.hh:mm:ss.ms format.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="health_policy_python">
-<a href="#health_policy_python" style="color: inherit; text-decoration: inherit;">health_<wbr>policy</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterhealthpolicy">Cluster<wbr>Health<wbr>Policy<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}The cluster health policy used when upgrading the cluster.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="upgrade_domain_timeout_python">
-<a href="#upgrade_domain_timeout_python" style="color: inherit; text-decoration: inherit;">upgrade_<wbr>domain_<wbr>timeout</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The amount of time each upgrade domain has to complete before the upgrade rolls back. The timeout can be in either hh:mm:ss or in d.hh:mm:ss.ms format.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="upgrade_replica_set_check_timeout_python">
-<a href="#upgrade_replica_set_check_timeout_python" style="color: inherit; text-decoration: inherit;">upgrade_<wbr>replica_<wbr>set_<wbr>check_<wbr>timeout</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The maximum amount of time to block processing of an upgrade domain and prevent loss of availability when there are unexpected issues. When this timeout expires, processing of the upgrade domain will proceed regardless of availability loss issues. The timeout is reset at the start of each upgrade domain. The timeout can be in either hh:mm:ss or in d.hh:mm:ss.ms format.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="upgrade_timeout_python">
-<a href="#upgrade_timeout_python" style="color: inherit; text-decoration: inherit;">upgrade_<wbr>timeout</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The amount of time the overall upgrade has to complete before the upgrade rolls back. The timeout can be in either hh:mm:ss or in d.hh:mm:ss.ms format.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="delta_health_policy_python">
-<a href="#delta_health_policy_python" style="color: inherit; text-decoration: inherit;">delta_<wbr>health_<wbr>policy</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterupgradedeltahealthpolicy">Cluster<wbr>Upgrade<wbr>Delta<wbr>Health<wbr>Policy<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}The cluster delta health policy used when upgrading the cluster.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="force_restart_python">
-<a href="#force_restart_python" style="color: inherit; text-decoration: inherit;">force_<wbr>restart</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}If true, then processes are forcefully restarted during upgrade even when the code version has not changed (the upgrade only changes configuration or data).{{% /md %}}</dd>
-</dl>
-{{% /choosable %}}
-
-<h4 id="clusterupgradepolicyresponse">Cluster<wbr>Upgrade<wbr>Policy<wbr>Response</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="healthcheckretrytimeout_csharp">
-<a href="#healthcheckretrytimeout_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>Check<wbr>Retry<wbr>Timeout</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The amount of time to retry health evaluation when the application or cluster is unhealthy before the upgrade rolls back. The timeout can be in either hh:mm:ss or in d.hh:mm:ss.ms format.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="healthcheckstableduration_csharp">
-<a href="#healthcheckstableduration_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>Check<wbr>Stable<wbr>Duration</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The amount of time that the application or cluster must remain healthy before the upgrade proceeds to the next upgrade domain. The duration can be in either hh:mm:ss or in d.hh:mm:ss.ms format.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="healthcheckwaitduration_csharp">
-<a href="#healthcheckwaitduration_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>Check<wbr>Wait<wbr>Duration</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The length of time to wait after completing an upgrade domain before performing health checks. The duration can be in either hh:mm:ss or in d.hh:mm:ss.ms format.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="healthpolicy_csharp">
-<a href="#healthpolicy_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>Policy</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterhealthpolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric.<wbr>Inputs.<wbr>Cluster<wbr>Health<wbr>Policy<wbr>Response<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}The cluster health policy used when upgrading the cluster.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="upgradedomaintimeout_csharp">
-<a href="#upgradedomaintimeout_csharp" style="color: inherit; text-decoration: inherit;">Upgrade<wbr>Domain<wbr>Timeout</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The amount of time each upgrade domain has to complete before the upgrade rolls back. The timeout can be in either hh:mm:ss or in d.hh:mm:ss.ms format.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="upgradereplicasetchecktimeout_csharp">
-<a href="#upgradereplicasetchecktimeout_csharp" style="color: inherit; text-decoration: inherit;">Upgrade<wbr>Replica<wbr>Set<wbr>Check<wbr>Timeout</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The maximum amount of time to block processing of an upgrade domain and prevent loss of availability when there are unexpected issues. When this timeout expires, processing of the upgrade domain will proceed regardless of availability loss issues. The timeout is reset at the start of each upgrade domain. The timeout can be in either hh:mm:ss or in d.hh:mm:ss.ms format.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="upgradetimeout_csharp">
-<a href="#upgradetimeout_csharp" style="color: inherit; text-decoration: inherit;">Upgrade<wbr>Timeout</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The amount of time the overall upgrade has to complete before the upgrade rolls back. The timeout can be in either hh:mm:ss or in d.hh:mm:ss.ms format.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="deltahealthpolicy_csharp">
-<a href="#deltahealthpolicy_csharp" style="color: inherit; text-decoration: inherit;">Delta<wbr>Health<wbr>Policy</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterupgradedeltahealthpolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric.<wbr>Inputs.<wbr>Cluster<wbr>Upgrade<wbr>Delta<wbr>Health<wbr>Policy<wbr>Response<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}The cluster delta health policy used when upgrading the cluster.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="forcerestart_csharp">
-<a href="#forcerestart_csharp" style="color: inherit; text-decoration: inherit;">Force<wbr>Restart</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}If true, then processes are forcefully restarted during upgrade even when the code version has not changed (the upgrade only changes configuration or data).{{% /md %}}</dd>
-</dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="healthcheckretrytimeout_go">
-<a href="#healthcheckretrytimeout_go" style="color: inherit; text-decoration: inherit;">Health<wbr>Check<wbr>Retry<wbr>Timeout</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The amount of time to retry health evaluation when the application or cluster is unhealthy before the upgrade rolls back. The timeout can be in either hh:mm:ss or in d.hh:mm:ss.ms format.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="healthcheckstableduration_go">
-<a href="#healthcheckstableduration_go" style="color: inherit; text-decoration: inherit;">Health<wbr>Check<wbr>Stable<wbr>Duration</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The amount of time that the application or cluster must remain healthy before the upgrade proceeds to the next upgrade domain. The duration can be in either hh:mm:ss or in d.hh:mm:ss.ms format.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="healthcheckwaitduration_go">
-<a href="#healthcheckwaitduration_go" style="color: inherit; text-decoration: inherit;">Health<wbr>Check<wbr>Wait<wbr>Duration</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The length of time to wait after completing an upgrade domain before performing health checks. The duration can be in either hh:mm:ss or in d.hh:mm:ss.ms format.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="healthpolicy_go">
-<a href="#healthpolicy_go" style="color: inherit; text-decoration: inherit;">Health<wbr>Policy</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterhealthpolicyresponse">Cluster<wbr>Health<wbr>Policy<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}The cluster health policy used when upgrading the cluster.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="upgradedomaintimeout_go">
-<a href="#upgradedomaintimeout_go" style="color: inherit; text-decoration: inherit;">Upgrade<wbr>Domain<wbr>Timeout</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The amount of time each upgrade domain has to complete before the upgrade rolls back. The timeout can be in either hh:mm:ss or in d.hh:mm:ss.ms format.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="upgradereplicasetchecktimeout_go">
-<a href="#upgradereplicasetchecktimeout_go" style="color: inherit; text-decoration: inherit;">Upgrade<wbr>Replica<wbr>Set<wbr>Check<wbr>Timeout</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The maximum amount of time to block processing of an upgrade domain and prevent loss of availability when there are unexpected issues. When this timeout expires, processing of the upgrade domain will proceed regardless of availability loss issues. The timeout is reset at the start of each upgrade domain. The timeout can be in either hh:mm:ss or in d.hh:mm:ss.ms format.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="upgradetimeout_go">
-<a href="#upgradetimeout_go" style="color: inherit; text-decoration: inherit;">Upgrade<wbr>Timeout</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The amount of time the overall upgrade has to complete before the upgrade rolls back. The timeout can be in either hh:mm:ss or in d.hh:mm:ss.ms format.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="deltahealthpolicy_go">
-<a href="#deltahealthpolicy_go" style="color: inherit; text-decoration: inherit;">Delta<wbr>Health<wbr>Policy</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterupgradedeltahealthpolicyresponse">Cluster<wbr>Upgrade<wbr>Delta<wbr>Health<wbr>Policy<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}The cluster delta health policy used when upgrading the cluster.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="forcerestart_go">
-<a href="#forcerestart_go" style="color: inherit; text-decoration: inherit;">Force<wbr>Restart</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}If true, then processes are forcefully restarted during upgrade even when the code version has not changed (the upgrade only changes configuration or data).{{% /md %}}</dd>
-</dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="healthcheckretrytimeout_nodejs">
-<a href="#healthcheckretrytimeout_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Check<wbr>Retry<wbr>Timeout</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The amount of time to retry health evaluation when the application or cluster is unhealthy before the upgrade rolls back. The timeout can be in either hh:mm:ss or in d.hh:mm:ss.ms format.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="healthcheckstableduration_nodejs">
-<a href="#healthcheckstableduration_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Check<wbr>Stable<wbr>Duration</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The amount of time that the application or cluster must remain healthy before the upgrade proceeds to the next upgrade domain. The duration can be in either hh:mm:ss or in d.hh:mm:ss.ms format.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="healthcheckwaitduration_nodejs">
-<a href="#healthcheckwaitduration_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Check<wbr>Wait<wbr>Duration</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The length of time to wait after completing an upgrade domain before performing health checks. The duration can be in either hh:mm:ss or in d.hh:mm:ss.ms format.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="healthpolicy_nodejs">
-<a href="#healthpolicy_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Policy</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterhealthpolicyresponse">Cluster<wbr>Health<wbr>Policy<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}The cluster health policy used when upgrading the cluster.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="upgradedomaintimeout_nodejs">
-<a href="#upgradedomaintimeout_nodejs" style="color: inherit; text-decoration: inherit;">upgrade<wbr>Domain<wbr>Timeout</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The amount of time each upgrade domain has to complete before the upgrade rolls back. The timeout can be in either hh:mm:ss or in d.hh:mm:ss.ms format.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="upgradereplicasetchecktimeout_nodejs">
-<a href="#upgradereplicasetchecktimeout_nodejs" style="color: inherit; text-decoration: inherit;">upgrade<wbr>Replica<wbr>Set<wbr>Check<wbr>Timeout</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The maximum amount of time to block processing of an upgrade domain and prevent loss of availability when there are unexpected issues. When this timeout expires, processing of the upgrade domain will proceed regardless of availability loss issues. The timeout is reset at the start of each upgrade domain. The timeout can be in either hh:mm:ss or in d.hh:mm:ss.ms format.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="upgradetimeout_nodejs">
-<a href="#upgradetimeout_nodejs" style="color: inherit; text-decoration: inherit;">upgrade<wbr>Timeout</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The amount of time the overall upgrade has to complete before the upgrade rolls back. The timeout can be in either hh:mm:ss or in d.hh:mm:ss.ms format.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="deltahealthpolicy_nodejs">
-<a href="#deltahealthpolicy_nodejs" style="color: inherit; text-decoration: inherit;">delta<wbr>Health<wbr>Policy</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterupgradedeltahealthpolicyresponse">Cluster<wbr>Upgrade<wbr>Delta<wbr>Health<wbr>Policy<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}The cluster delta health policy used when upgrading the cluster.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="forcerestart_nodejs">
-<a href="#forcerestart_nodejs" style="color: inherit; text-decoration: inherit;">force<wbr>Restart</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
-    </dt>
-    <dd>{{% md %}}If true, then processes are forcefully restarted during upgrade even when the code version has not changed (the upgrade only changes configuration or data).{{% /md %}}</dd>
-</dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="health_check_retry_timeout_python">
-<a href="#health_check_retry_timeout_python" style="color: inherit; text-decoration: inherit;">health_<wbr>check_<wbr>retry_<wbr>timeout</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The amount of time to retry health evaluation when the application or cluster is unhealthy before the upgrade rolls back. The timeout can be in either hh:mm:ss or in d.hh:mm:ss.ms format.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="health_check_stable_duration_python">
-<a href="#health_check_stable_duration_python" style="color: inherit; text-decoration: inherit;">health_<wbr>check_<wbr>stable_<wbr>duration</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The amount of time that the application or cluster must remain healthy before the upgrade proceeds to the next upgrade domain. The duration can be in either hh:mm:ss or in d.hh:mm:ss.ms format.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="health_check_wait_duration_python">
-<a href="#health_check_wait_duration_python" style="color: inherit; text-decoration: inherit;">health_<wbr>check_<wbr>wait_<wbr>duration</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The length of time to wait after completing an upgrade domain before performing health checks. The duration can be in either hh:mm:ss or in d.hh:mm:ss.ms format.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="health_policy_python">
-<a href="#health_policy_python" style="color: inherit; text-decoration: inherit;">health_<wbr>policy</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterhealthpolicyresponse">Cluster<wbr>Health<wbr>Policy<wbr>Response<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}The cluster health policy used when upgrading the cluster.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="upgrade_domain_timeout_python">
-<a href="#upgrade_domain_timeout_python" style="color: inherit; text-decoration: inherit;">upgrade_<wbr>domain_<wbr>timeout</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The amount of time each upgrade domain has to complete before the upgrade rolls back. The timeout can be in either hh:mm:ss or in d.hh:mm:ss.ms format.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="upgrade_replica_set_check_timeout_python">
-<a href="#upgrade_replica_set_check_timeout_python" style="color: inherit; text-decoration: inherit;">upgrade_<wbr>replica_<wbr>set_<wbr>check_<wbr>timeout</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The maximum amount of time to block processing of an upgrade domain and prevent loss of availability when there are unexpected issues. When this timeout expires, processing of the upgrade domain will proceed regardless of availability loss issues. The timeout is reset at the start of each upgrade domain. The timeout can be in either hh:mm:ss or in d.hh:mm:ss.ms format.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="upgrade_timeout_python">
-<a href="#upgrade_timeout_python" style="color: inherit; text-decoration: inherit;">upgrade_<wbr>timeout</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The amount of time the overall upgrade has to complete before the upgrade rolls back. The timeout can be in either hh:mm:ss or in d.hh:mm:ss.ms format.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="delta_health_policy_python">
-<a href="#delta_health_policy_python" style="color: inherit; text-decoration: inherit;">delta_<wbr>health_<wbr>policy</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterupgradedeltahealthpolicyresponse">Cluster<wbr>Upgrade<wbr>Delta<wbr>Health<wbr>Policy<wbr>Response<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}The cluster delta health policy used when upgrading the cluster.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="force_restart_python">
-<a href="#force_restart_python" style="color: inherit; text-decoration: inherit;">force_<wbr>restart</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}If true, then processes are forcefully restarted during upgrade even when the code version has not changed (the upgrade only changes configuration or data).{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -4246,7 +2187,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#probeprotocol_csharp" style="color: inherit; text-decoration: inherit;">Probe<wbr>Protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#probeprotocol">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric.<wbr>Probe<wbr>Protocol</a></span>
+        <span class="property-type">string | <a href="#probeprotocol">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric..<wbr>Probe<wbr>Protocol</a></span>
     </dt>
     <dd>{{% md %}}the reference to the load balancer probe used by the load balancing rule.{{% /md %}}</dd>
     <dt class="property-required"
@@ -4255,7 +2196,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#protocol_csharp" style="color: inherit; text-decoration: inherit;">Protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#protocol">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric.<wbr>Protocol</a></span>
+        <span class="property-type">string | <a href="#protocol">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric..<wbr>Protocol</a></span>
     </dt>
     <dd>{{% md %}}The reference to the transport protocol used by the load balancing rule.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4713,286 +2654,6 @@ The check is performed after every upgrade domain upgrade completion for all com
 </dl>
 {{% /choosable %}}
 
-<h4 id="servicetypedeltahealthpolicy">Service<wbr>Type<wbr>Delta<wbr>Health<wbr>Policy</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="maxpercentdeltaunhealthyservices_csharp">
-<a href="#maxpercentdeltaunhealthyservices_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Percent<wbr>Delta<wbr>Unhealthy<wbr>Services</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The maximum allowed percentage of services health degradation allowed during cluster upgrades.
-The delta is measured between the state of the services at the beginning of upgrade and the state of the services at the time of the health evaluation.
-The check is performed after every upgrade domain upgrade completion to make sure the global state of the cluster is within tolerated limits.
-{{% /md %}}</dd>
-</dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="maxpercentdeltaunhealthyservices_go">
-<a href="#maxpercentdeltaunhealthyservices_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Percent<wbr>Delta<wbr>Unhealthy<wbr>Services</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The maximum allowed percentage of services health degradation allowed during cluster upgrades.
-The delta is measured between the state of the services at the beginning of upgrade and the state of the services at the time of the health evaluation.
-The check is performed after every upgrade domain upgrade completion to make sure the global state of the cluster is within tolerated limits.
-{{% /md %}}</dd>
-</dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="maxpercentdeltaunhealthyservices_nodejs">
-<a href="#maxpercentdeltaunhealthyservices_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Percent<wbr>Delta<wbr>Unhealthy<wbr>Services</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}The maximum allowed percentage of services health degradation allowed during cluster upgrades.
-The delta is measured between the state of the services at the beginning of upgrade and the state of the services at the time of the health evaluation.
-The check is performed after every upgrade domain upgrade completion to make sure the global state of the cluster is within tolerated limits.
-{{% /md %}}</dd>
-</dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="max_percent_delta_unhealthy_services_python">
-<a href="#max_percent_delta_unhealthy_services_python" style="color: inherit; text-decoration: inherit;">max_<wbr>percent_<wbr>delta_<wbr>unhealthy_<wbr>services</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The maximum allowed percentage of services health degradation allowed during cluster upgrades.
-The delta is measured between the state of the services at the beginning of upgrade and the state of the services at the time of the health evaluation.
-The check is performed after every upgrade domain upgrade completion to make sure the global state of the cluster is within tolerated limits.
-{{% /md %}}</dd>
-</dl>
-{{% /choosable %}}
-
-<h4 id="servicetypedeltahealthpolicyresponse">Service<wbr>Type<wbr>Delta<wbr>Health<wbr>Policy<wbr>Response</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="maxpercentdeltaunhealthyservices_csharp">
-<a href="#maxpercentdeltaunhealthyservices_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Percent<wbr>Delta<wbr>Unhealthy<wbr>Services</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The maximum allowed percentage of services health degradation allowed during cluster upgrades.
-The delta is measured between the state of the services at the beginning of upgrade and the state of the services at the time of the health evaluation.
-The check is performed after every upgrade domain upgrade completion to make sure the global state of the cluster is within tolerated limits.
-{{% /md %}}</dd>
-</dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="maxpercentdeltaunhealthyservices_go">
-<a href="#maxpercentdeltaunhealthyservices_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Percent<wbr>Delta<wbr>Unhealthy<wbr>Services</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The maximum allowed percentage of services health degradation allowed during cluster upgrades.
-The delta is measured between the state of the services at the beginning of upgrade and the state of the services at the time of the health evaluation.
-The check is performed after every upgrade domain upgrade completion to make sure the global state of the cluster is within tolerated limits.
-{{% /md %}}</dd>
-</dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="maxpercentdeltaunhealthyservices_nodejs">
-<a href="#maxpercentdeltaunhealthyservices_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Percent<wbr>Delta<wbr>Unhealthy<wbr>Services</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}The maximum allowed percentage of services health degradation allowed during cluster upgrades.
-The delta is measured between the state of the services at the beginning of upgrade and the state of the services at the time of the health evaluation.
-The check is performed after every upgrade domain upgrade completion to make sure the global state of the cluster is within tolerated limits.
-{{% /md %}}</dd>
-</dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="max_percent_delta_unhealthy_services_python">
-<a href="#max_percent_delta_unhealthy_services_python" style="color: inherit; text-decoration: inherit;">max_<wbr>percent_<wbr>delta_<wbr>unhealthy_<wbr>services</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The maximum allowed percentage of services health degradation allowed during cluster upgrades.
-The delta is measured between the state of the services at the beginning of upgrade and the state of the services at the time of the health evaluation.
-The check is performed after every upgrade domain upgrade completion to make sure the global state of the cluster is within tolerated limits.
-{{% /md %}}</dd>
-</dl>
-{{% /choosable %}}
-
-<h4 id="servicetypehealthpolicy">Service<wbr>Type<wbr>Health<wbr>Policy</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="maxpercentunhealthyservices_csharp">
-<a href="#maxpercentunhealthyservices_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Percent<wbr>Unhealthy<wbr>Services</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The maximum percentage of services allowed to be unhealthy before your application is considered in error.
-{{% /md %}}</dd>
-</dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="maxpercentunhealthyservices_go">
-<a href="#maxpercentunhealthyservices_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Percent<wbr>Unhealthy<wbr>Services</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The maximum percentage of services allowed to be unhealthy before your application is considered in error.
-{{% /md %}}</dd>
-</dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="maxpercentunhealthyservices_nodejs">
-<a href="#maxpercentunhealthyservices_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Percent<wbr>Unhealthy<wbr>Services</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}The maximum percentage of services allowed to be unhealthy before your application is considered in error.
-{{% /md %}}</dd>
-</dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="max_percent_unhealthy_services_python">
-<a href="#max_percent_unhealthy_services_python" style="color: inherit; text-decoration: inherit;">max_<wbr>percent_<wbr>unhealthy_<wbr>services</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The maximum percentage of services allowed to be unhealthy before your application is considered in error.
-{{% /md %}}</dd>
-</dl>
-{{% /choosable %}}
-
-<h4 id="servicetypehealthpolicyresponse">Service<wbr>Type<wbr>Health<wbr>Policy<wbr>Response</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="maxpercentunhealthyservices_csharp">
-<a href="#maxpercentunhealthyservices_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Percent<wbr>Unhealthy<wbr>Services</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The maximum percentage of services allowed to be unhealthy before your application is considered in error.
-{{% /md %}}</dd>
-</dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="maxpercentunhealthyservices_go">
-<a href="#maxpercentunhealthyservices_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Percent<wbr>Unhealthy<wbr>Services</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The maximum percentage of services allowed to be unhealthy before your application is considered in error.
-{{% /md %}}</dd>
-</dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="maxpercentunhealthyservices_nodejs">
-<a href="#maxpercentunhealthyservices_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Percent<wbr>Unhealthy<wbr>Services</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}The maximum percentage of services allowed to be unhealthy before your application is considered in error.
-{{% /md %}}</dd>
-</dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="max_percent_unhealthy_services_python">
-<a href="#max_percent_unhealthy_services_python" style="color: inherit; text-decoration: inherit;">max_<wbr>percent_<wbr>unhealthy_<wbr>services</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The maximum percentage of services allowed to be unhealthy before your application is considered in error.
-{{% /md %}}</dd>
-</dl>
-{{% /choosable %}}
-
 <h4 id="settingsparameterdescription">Settings<wbr>Parameter<wbr>Description</h4>
 
 {{% choosable language csharp %}}
@@ -5209,7 +2870,7 @@ The check is performed after every upgrade domain upgrade completion to make sur
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#settingsparameterdescription">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric.<wbr>Inputs.<wbr>Settings<wbr>Parameter<wbr>Description<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#settingsparameterdescription">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric..<wbr>Inputs.<wbr>Settings<wbr>Parameter<wbr>Description<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The collection of parameters in the section.{{% /md %}}</dd>
 </dl>
@@ -5307,7 +2968,7 @@ The check is performed after every upgrade domain upgrade completion to make sur
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#settingsparameterdescriptionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric.<wbr>Inputs.<wbr>Settings<wbr>Parameter<wbr>Description<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#settingsparameterdescriptionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric..<wbr>Inputs.<wbr>Settings<wbr>Parameter<wbr>Description<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The collection of parameters in the section.{{% /md %}}</dd>
 </dl>
@@ -5398,7 +3059,7 @@ The check is performed after every upgrade domain upgrade completion to make sur
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Sku Name. Basic will have a minimum of 3 seed nodes and Standard a minimum of 5. Basic only allows 1 node type.{{% /md %}}</dd>
+    <dd>{{% md %}}Sku Name.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -5413,7 +3074,7 @@ The check is performed after every upgrade domain upgrade completion to make sur
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Sku Name. Basic will have a minimum of 3 seed nodes and Standard a minimum of 5. Basic only allows 1 node type.{{% /md %}}</dd>
+    <dd>{{% md %}}Sku Name.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -5428,7 +3089,7 @@ The check is performed after every upgrade domain upgrade completion to make sur
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Sku Name. Basic will have a minimum of 3 seed nodes and Standard a minimum of 5. Basic only allows 1 node type.{{% /md %}}</dd>
+    <dd>{{% md %}}Sku Name.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -5443,7 +3104,7 @@ The check is performed after every upgrade domain upgrade completion to make sur
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Sku Name. Basic will have a minimum of 3 seed nodes and Standard a minimum of 5. Basic only allows 1 node type.{{% /md %}}</dd>
+    <dd>{{% md %}}Sku Name.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -5460,7 +3121,7 @@ The check is performed after every upgrade domain upgrade completion to make sur
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Sku Name. Basic will have a minimum of 3 seed nodes and Standard a minimum of 5. Basic only allows 1 node type.{{% /md %}}</dd>
+    <dd>{{% md %}}Sku Name.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -5475,7 +3136,7 @@ The check is performed after every upgrade domain upgrade completion to make sur
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Sku Name. Basic will have a minimum of 3 seed nodes and Standard a minimum of 5. Basic only allows 1 node type.{{% /md %}}</dd>
+    <dd>{{% md %}}Sku Name.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -5490,7 +3151,7 @@ The check is performed after every upgrade domain upgrade completion to make sur
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Sku Name. Basic will have a minimum of 3 seed nodes and Standard a minimum of 5. Basic only allows 1 node type.{{% /md %}}</dd>
+    <dd>{{% md %}}Sku Name.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -5505,7 +3166,7 @@ The check is performed after every upgrade domain upgrade completion to make sur
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Sku Name. Basic will have a minimum of 3 seed nodes and Standard a minimum of 5. Basic only allows 1 node type.{{% /md %}}</dd>
+    <dd>{{% md %}}Sku Name.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 ## Import
@@ -5514,7 +3175,7 @@ The check is performed after every upgrade domain upgrade completion to make sur
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:servicefabric/v20200101preview:ManagedCluster myCluster /subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/resRg/providers/Microsoft.ServiceFabric/managedClusters/myCluster 
+$ pulumi import azure-nextgen:servicefabric:ManagedCluster myCluster /subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/resRg/providers/Microsoft.ServiceFabric/managedClusters/myCluster 
 ```
 
 

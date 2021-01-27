@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.storsimple.VolumeContainer resou
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The volume container.
-Latest API Version: 2017-06-01.
+API Version: 2017-06-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,11 +27,11 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var volumeContainer = new AzureNextGen.StorSimple.Latest.VolumeContainer("volumeContainer", new AzureNextGen.StorSimple.Latest.VolumeContainerArgs
+        var volumeContainer = new AzureNextGen.StorSimple..VolumeContainer("volumeContainer", new AzureNextGen.StorSimple..VolumeContainerArgs
         {
             BandwidthSettingId = "/subscriptions/4385cf00-2d3a-425a-832f-f4285b1c9dce/resourceGroups/ResourceGroupForSDKTest/providers/Microsoft.StorSimple/managers/ManagerForSDKTest1/bandwidthSettings/bandwidthSetting1",
             DeviceName = "Device05ForSDKTest",
-            EncryptionKey = new AzureNextGen.StorSimple.Latest.Inputs.AsymmetricEncryptedSecretArgs
+            EncryptionKey = new AzureNextGen.StorSimple..Inputs.AsymmetricEncryptedSecretArgs
             {
                 EncryptionAlgorithm = "RSAES_PKCS1_v_1_5",
                 EncryptionCertThumbprint = "A872A2DF196AC7682EE24791E7DE2E2A360F5926",
@@ -56,7 +56,7 @@ class MyStack : Stack
 package main
 
 import (
-	storsimple "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/storsimple/latest"
+	storsimple "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/storsimple"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -92,10 +92,10 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-volume_container = azure_nextgen.storsimple.latest.VolumeContainer("volumeContainer",
+volume_container = azure_nextgen.storsimple.VolumeContainer("volumeContainer",
     bandwidth_setting_id="/subscriptions/4385cf00-2d3a-425a-832f-f4285b1c9dce/resourceGroups/ResourceGroupForSDKTest/providers/Microsoft.StorSimple/managers/ManagerForSDKTest1/bandwidthSettings/bandwidthSetting1",
     device_name="Device05ForSDKTest",
-    encryption_key=azure_nextgen.storsimple.latest.AsymmetricEncryptedSecretArgs(
+    encryption_key=azure_nextgen.storsimple.AsymmetricEncryptedSecretArgs(
         encryption_algorithm="RSAES_PKCS1_v_1_5",
         encryption_cert_thumbprint="A872A2DF196AC7682EE24791E7DE2E2A360F5926",
         value="R//pyVLx/fn58ia098JiLgZB5RY7fVT+6o8a4fmsvjy+ls2UgJphMf25XVqEQCZnsp/5uxteN1M/9ArPIICdhM7M1+b/Ur7kJ0FH0ktxfk7CrPWWJLI4q20LZoduJGI56lREav1VpuLdqw5F9fRcq7zbfgPQ3B/SD0mfumNRiV+AnwbC6msfavIuWrhVDl9iSzEPE+zU06/kpsexnrS81yYT2QlVVUbvpY4F3zfH8TQPpAROTbv2pld6JO4eGOrZ5O1iOr6XCg2TY2W/jf+Ev4z5tqC9VWXE5kh65gjBfpWN0bDWXKekqEhor2crHAxZi4dybdY8Ok1MDWd1CSU8kw==",
@@ -115,7 +115,7 @@ volume_container = azure_nextgen.storsimple.latest.VolumeContainer("volumeContai
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const volumeContainer = new azure_nextgen.storsimple.latest.VolumeContainer("volumeContainer", {
+const volumeContainer = new azure_nextgen.storsimple.VolumeContainer("volumeContainer", {
     bandwidthSettingId: "/subscriptions/4385cf00-2d3a-425a-832f-f4285b1c9dce/resourceGroups/ResourceGroupForSDKTest/providers/Microsoft.StorSimple/managers/ManagerForSDKTest1/bandwidthSettings/bandwidthSetting1",
     deviceName: "Device05ForSDKTest",
     encryptionKey: {
@@ -385,7 +385,7 @@ The VolumeContainer resource accepts the following [input]({{< relref "/docs/int
 <a href="#encryptionkey_csharp" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#asymmetricencryptedsecret">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stor<wbr>Simple.<wbr>Inputs.<wbr>Asymmetric<wbr>Encrypted<wbr>Secret<wbr>Args</a></span>
+        <span class="property-type"><a href="#asymmetricencryptedsecret">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stor<wbr>Simple..<wbr>Inputs.<wbr>Asymmetric<wbr>Encrypted<wbr>Secret<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The key used to encrypt data in the volume container. It is required when property 'EncryptionStatus' is "Enabled".{{% /md %}}</dd>
     <dt class="property-optional"
@@ -394,7 +394,7 @@ The VolumeContainer resource accepts the following [input]({{< relref "/docs/int
 <a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kind">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stor<wbr>Simple.<wbr>Kind</a></span>
+        <span class="property-type"><a href="#kind">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stor<wbr>Simple..<wbr>Kind</a></span>
     </dt>
     <dd>{{% md %}}The Kind of the object. Currently only Series8000 is supported{{% /md %}}</dd>
 </dl>
@@ -965,7 +965,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryptionalgorithm_csharp" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionalgorithm">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stor<wbr>Simple.<wbr>Encryption<wbr>Algorithm</a></span>
+        <span class="property-type"><a href="#encryptionalgorithm">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stor<wbr>Simple..<wbr>Encryption<wbr>Algorithm</a></span>
     </dt>
     <dd>{{% md %}}The algorithm used to encrypt "Value".{{% /md %}}</dd>
     <dt class="property-required"
@@ -1303,7 +1303,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:storsimple/latest:VolumeContainer VolumeContainerForSDKTest /subscriptions/4385cf00-2d3a-425a-832f-f4285b1c9dce/resourceGroups/ResourceGroupForSDKTest/providers/Microsoft.StorSimple/managers/ManagerForSDKTest1/devices/Device05ForSDKTest/volumeContainers/VolumeContainerForSDKTest 
+$ pulumi import azure-nextgen:storsimple:VolumeContainer VolumeContainerForSDKTest /subscriptions/4385cf00-2d3a-425a-832f-f4285b1c9dce/resourceGroups/ResourceGroupForSDKTest/providers/Microsoft.StorSimple/managers/ManagerForSDKTest1/devices/Device05ForSDKTest/volumeContainers/VolumeContainerForSDKTest 
 ```
 
 

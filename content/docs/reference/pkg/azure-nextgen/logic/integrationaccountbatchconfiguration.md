@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.logic.IntegrationAccountBatchCon
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The batch configuration resource definition.
-Latest API Version: 2019-05-01.
+API Version: 2019-05-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,19 +27,19 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var integrationAccountBatchConfiguration = new AzureNextGen.Logic.Latest.IntegrationAccountBatchConfiguration("integrationAccountBatchConfiguration", new AzureNextGen.Logic.Latest.IntegrationAccountBatchConfigurationArgs
+        var integrationAccountBatchConfiguration = new AzureNextGen.Logic..IntegrationAccountBatchConfiguration("integrationAccountBatchConfiguration", new AzureNextGen.Logic..IntegrationAccountBatchConfigurationArgs
         {
             BatchConfigurationName = "testBatchConfiguration",
             IntegrationAccountName = "testIntegrationAccount",
             Location = "westus",
-            Properties = new AzureNextGen.Logic.Latest.Inputs.BatchConfigurationPropertiesArgs
+            Properties = new AzureNextGen.Logic..Inputs.BatchConfigurationPropertiesArgs
             {
                 BatchGroupName = "DEFAULT",
-                ReleaseCriteria = new AzureNextGen.Logic.Latest.Inputs.BatchReleaseCriteriaArgs
+                ReleaseCriteria = new AzureNextGen.Logic..Inputs.BatchReleaseCriteriaArgs
                 {
                     BatchSize = 234567,
                     MessageCount = 10,
-                    Recurrence = new AzureNextGen.Logic.Latest.Inputs.WorkflowTriggerRecurrenceArgs
+                    Recurrence = new AzureNextGen.Logic..Inputs.WorkflowTriggerRecurrenceArgs
                     {
                         Frequency = "Minute",
                         Interval = 1,
@@ -64,7 +64,7 @@ class MyStack : Stack
 package main
 
 import (
-	logic "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/logic/latest"
+	logic "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/logic"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -106,16 +106,16 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-integration_account_batch_configuration = azure_nextgen.logic.latest.IntegrationAccountBatchConfiguration("integrationAccountBatchConfiguration",
+integration_account_batch_configuration = azure_nextgen.logic.IntegrationAccountBatchConfiguration("integrationAccountBatchConfiguration",
     batch_configuration_name="testBatchConfiguration",
     integration_account_name="testIntegrationAccount",
     location="westus",
-    properties=azure_nextgen.logic.latest.BatchConfigurationPropertiesArgs(
+    properties=azure_nextgen.logic.BatchConfigurationPropertiesArgs(
         batch_group_name="DEFAULT",
-        release_criteria=azure_nextgen.logic.latest.BatchReleaseCriteriaArgs(
+        release_criteria=azure_nextgen.logic.BatchReleaseCriteriaArgs(
             batch_size=234567,
             message_count=10,
-            recurrence=azure_nextgen.logic.latest.WorkflowTriggerRecurrenceArgs(
+            recurrence=azure_nextgen.logic.WorkflowTriggerRecurrenceArgs(
                 frequency="Minute",
                 interval=1,
                 start_time="2017-03-24T11:43:00",
@@ -135,7 +135,7 @@ integration_account_batch_configuration = azure_nextgen.logic.latest.Integration
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const integrationAccountBatchConfiguration = new azure_nextgen.logic.latest.IntegrationAccountBatchConfiguration("integrationAccountBatchConfiguration", {
+const integrationAccountBatchConfiguration = new azure_nextgen.logic.IntegrationAccountBatchConfiguration("integrationAccountBatchConfiguration", {
     batchConfigurationName: "testBatchConfiguration",
     integrationAccountName: "testIntegrationAccount",
     location: "westus",
@@ -366,7 +366,7 @@ The IntegrationAccountBatchConfiguration resource accepts the following [input](
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#batchconfigurationproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>Batch<wbr>Configuration<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#batchconfigurationproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>Batch<wbr>Configuration<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The batch configuration properties.{{% /md %}}</dd>
     <dt class="property-required"
@@ -748,7 +748,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#releasecriteria_csharp" style="color: inherit; text-decoration: inherit;">Release<wbr>Criteria</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#batchreleasecriteria">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>Batch<wbr>Release<wbr>Criteria<wbr>Args</a></span>
+        <span class="property-type"><a href="#batchreleasecriteria">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>Batch<wbr>Release<wbr>Criteria<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The batch release criteria.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -954,7 +954,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#releasecriteria_csharp" style="color: inherit; text-decoration: inherit;">Release<wbr>Criteria</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#batchreleasecriteriaresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>Batch<wbr>Release<wbr>Criteria<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#batchreleasecriteriaresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>Batch<wbr>Release<wbr>Criteria<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The batch release criteria.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1169,7 +1169,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recurrence_csharp" style="color: inherit; text-decoration: inherit;">Recurrence</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workflowtriggerrecurrence">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>Workflow<wbr>Trigger<wbr>Recurrence<wbr>Args</a></span>
+        <span class="property-type"><a href="#workflowtriggerrecurrence">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>Workflow<wbr>Trigger<wbr>Recurrence<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The recurrence.{{% /md %}}</dd>
 </dl>
@@ -1303,7 +1303,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recurrence_csharp" style="color: inherit; text-decoration: inherit;">Recurrence</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workflowtriggerrecurrenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>Workflow<wbr>Trigger<wbr>Recurrence<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#workflowtriggerrecurrenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>Workflow<wbr>Trigger<wbr>Recurrence<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The recurrence.{{% /md %}}</dd>
 </dl>
@@ -1688,7 +1688,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#monthlyoccurrences_csharp" style="color: inherit; text-decoration: inherit;">Monthly<wbr>Occurrences</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recurrencescheduleoccurrence">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>Recurrence<wbr>Schedule<wbr>Occurrence<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#recurrencescheduleoccurrence">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>Recurrence<wbr>Schedule<wbr>Occurrence<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The monthly occurrences.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1697,7 +1697,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#weekdays_csharp" style="color: inherit; text-decoration: inherit;">Week<wbr>Days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#daysofweek">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Days<wbr>Of<wbr>Week&gt;</a></span>
+        <span class="property-type"><a href="#daysofweek">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Days<wbr>Of<wbr>Week&gt;</a></span>
     </dt>
     <dd>{{% md %}}The days of the week.{{% /md %}}</dd>
 </dl>
@@ -1867,7 +1867,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#day_csharp" style="color: inherit; text-decoration: inherit;">Day</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dayofweek">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Day<wbr>Of<wbr>Week</a></span>
+        <span class="property-type"><a href="#dayofweek">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Day<wbr>Of<wbr>Week</a></span>
     </dt>
     <dd>{{% md %}}The day of the week.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2090,7 +2090,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#monthlyoccurrences_csharp" style="color: inherit; text-decoration: inherit;">Monthly<wbr>Occurrences</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recurrencescheduleoccurrenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>Recurrence<wbr>Schedule<wbr>Occurrence<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#recurrencescheduleoccurrenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>Recurrence<wbr>Schedule<wbr>Occurrence<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The monthly occurrences.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2278,7 +2278,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#frequency_csharp" style="color: inherit; text-decoration: inherit;">Frequency</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#recurrencefrequency">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Recurrence<wbr>Frequency</a></span>
+        <span class="property-type">string | <a href="#recurrencefrequency">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Recurrence<wbr>Frequency</a></span>
     </dt>
     <dd>{{% md %}}The frequency.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2296,7 +2296,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schedule_csharp" style="color: inherit; text-decoration: inherit;">Schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recurrenceschedule">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>Recurrence<wbr>Schedule<wbr>Args</a></span>
+        <span class="property-type"><a href="#recurrenceschedule">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>Recurrence<wbr>Schedule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The recurrence schedule.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2538,7 +2538,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schedule_csharp" style="color: inherit; text-decoration: inherit;">Schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recurrencescheduleresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>Recurrence<wbr>Schedule<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#recurrencescheduleresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>Recurrence<wbr>Schedule<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The recurrence schedule.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2747,7 +2747,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:logic/latest:IntegrationAccountBatchConfiguration testBatchConfiguration /subscriptions/34adfa4f-cedf-4dc0-ba29-b6d1a69ab345/resourceGroups/testResourceGroup/providers/Microsoft.Logic/integrationAccounts/testIntegrationAccount/batchConfigurations/testBatchConfiguration 
+$ pulumi import azure-nextgen:logic:IntegrationAccountBatchConfiguration testBatchConfiguration /subscriptions/34adfa4f-cedf-4dc0-ba29-b6d1a69ab345/resourceGroups/testResourceGroup/providers/Microsoft.Logic/integrationAccounts/testIntegrationAccount/batchConfigurations/testBatchConfiguration 
 ```
 
 

@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.appconfiguration.ConfigurationSt
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The configuration store along with all resource properties. The Configuration Store will have all information to begin utilizing it.
-Latest API Version: 2020-06-01.
+API Version: 2020-06-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,12 +27,12 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var configurationStore = new AzureNextGen.AppConfiguration.Latest.ConfigurationStore("configurationStore", new AzureNextGen.AppConfiguration.Latest.ConfigurationStoreArgs
+        var configurationStore = new AzureNextGen.AppConfiguration..ConfigurationStore("configurationStore", new AzureNextGen.AppConfiguration..ConfigurationStoreArgs
         {
             ConfigStoreName = "contoso",
             Location = "westus",
             ResourceGroupName = "myResourceGroup",
-            Sku = new AzureNextGen.AppConfiguration.Latest.Inputs.SkuArgs
+            Sku = new AzureNextGen.AppConfiguration..Inputs.SkuArgs
             {
                 Name = "Standard",
             },
@@ -55,7 +55,7 @@ class MyStack : Stack
 package main
 
 import (
-	appconfiguration "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/appconfiguration/latest"
+	appconfiguration "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/appconfiguration"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -89,11 +89,11 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-configuration_store = azure_nextgen.appconfiguration.latest.ConfigurationStore("configurationStore",
+configuration_store = azure_nextgen.appconfiguration.ConfigurationStore("configurationStore",
     config_store_name="contoso",
     location="westus",
     resource_group_name="myResourceGroup",
-    sku=azure_nextgen.appconfiguration.latest.SkuArgs(
+    sku=azure_nextgen.appconfiguration.SkuArgs(
         name="Standard",
     ),
     tags={
@@ -110,7 +110,7 @@ configuration_store = azure_nextgen.appconfiguration.latest.ConfigurationStore("
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const configurationStore = new azure_nextgen.appconfiguration.latest.ConfigurationStore("configurationStore", {
+const configurationStore = new azure_nextgen.appconfiguration.ConfigurationStore("configurationStore", {
     configStoreName: "contoso",
     location: "westus",
     resourceGroupName: "myResourceGroup",
@@ -136,10 +136,10 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var configurationStore = new AzureNextGen.AppConfiguration.Latest.ConfigurationStore("configurationStore", new AzureNextGen.AppConfiguration.Latest.ConfigurationStoreArgs
+        var configurationStore = new AzureNextGen.AppConfiguration..ConfigurationStore("configurationStore", new AzureNextGen.AppConfiguration..ConfigurationStoreArgs
         {
             ConfigStoreName = "contoso",
-            Identity = new AzureNextGen.AppConfiguration.Latest.Inputs.ResourceIdentityArgs
+            Identity = new AzureNextGen.AppConfiguration..Inputs.ResourceIdentityArgs
             {
                 Type = "SystemAssigned, UserAssigned",
                 UserAssignedIdentities = 
@@ -149,7 +149,7 @@ class MyStack : Stack
             },
             Location = "westus",
             ResourceGroupName = "myResourceGroup",
-            Sku = new AzureNextGen.AppConfiguration.Latest.Inputs.SkuArgs
+            Sku = new AzureNextGen.AppConfiguration..Inputs.SkuArgs
             {
                 Name = "Standard",
             },
@@ -172,7 +172,7 @@ class MyStack : Stack
 package main
 
 import (
-	appconfiguration "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/appconfiguration/latest"
+	appconfiguration "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/appconfiguration"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -212,9 +212,9 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-configuration_store = azure_nextgen.appconfiguration.latest.ConfigurationStore("configurationStore",
+configuration_store = azure_nextgen.appconfiguration.ConfigurationStore("configurationStore",
     config_store_name="contoso",
-    identity=azure_nextgen.appconfiguration.latest.ResourceIdentityArgs(
+    identity=azure_nextgen.appconfiguration.ResourceIdentityArgs(
         type="SystemAssigned, UserAssigned",
         user_assigned_identities={
             "/subscriptions/c80fb759-c965-4c6a-9110-9b2b2d038882/resourcegroups/myResourceGroup1/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity2": {},
@@ -222,7 +222,7 @@ configuration_store = azure_nextgen.appconfiguration.latest.ConfigurationStore("
     ),
     location="westus",
     resource_group_name="myResourceGroup",
-    sku=azure_nextgen.appconfiguration.latest.SkuArgs(
+    sku=azure_nextgen.appconfiguration.SkuArgs(
         name="Standard",
     ),
     tags={
@@ -239,7 +239,7 @@ configuration_store = azure_nextgen.appconfiguration.latest.ConfigurationStore("
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const configurationStore = new azure_nextgen.appconfiguration.latest.ConfigurationStore("configurationStore", {
+const configurationStore = new azure_nextgen.appconfiguration.ConfigurationStore("configurationStore", {
     configStoreName: "contoso",
     identity: {
         type: "SystemAssigned, UserAssigned",
@@ -477,7 +477,7 @@ The ConfigurationStore resource accepts the following [input]({{< relref "/docs/
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sku">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>App<wbr>Configuration.<wbr>Inputs.<wbr>Sku<wbr>Args</a></span>
+        <span class="property-type"><a href="#sku">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>App<wbr>Configuration..<wbr>Inputs.<wbr>Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The sku of the configuration store.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -486,7 +486,7 @@ The ConfigurationStore resource accepts the following [input]({{< relref "/docs/
 <a href="#encryption_csharp" style="color: inherit; text-decoration: inherit;">Encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>App<wbr>Configuration.<wbr>Inputs.<wbr>Encryption<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#encryptionproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>App<wbr>Configuration..<wbr>Inputs.<wbr>Encryption<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The encryption settings of the configuration store.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -495,7 +495,7 @@ The ConfigurationStore resource accepts the following [input]({{< relref "/docs/
 <a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidentity">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>App<wbr>Configuration.<wbr>Inputs.<wbr>Resource<wbr>Identity<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourceidentity">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>App<wbr>Configuration..<wbr>Inputs.<wbr>Resource<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The managed identity information, if configured.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -504,7 +504,7 @@ The ConfigurationStore resource accepts the following [input]({{< relref "/docs/
 <a href="#publicnetworkaccess_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Network<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#publicnetworkaccess">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>App<wbr>Configuration.<wbr>Public<wbr>Network<wbr>Access</a></span>
+        <span class="property-type">string | <a href="#publicnetworkaccess">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>App<wbr>Configuration..<wbr>Public<wbr>Network<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}Control permission for data plane traffic coming from public networks while private endpoint is enabled.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -805,7 +805,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privateendpointconnections_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint<wbr>Connections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointconnectionreferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>App<wbr>Configuration.<wbr>Outputs.<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Reference<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#privateendpointconnectionreferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>App<wbr>Configuration..<wbr>Outputs.<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Reference<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of private endpoint connections that are set up for this resource.{{% /md %}}</dd>
     <dt class="property-"
@@ -1057,7 +1057,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keyvaultproperties_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>App<wbr>Configuration.<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#keyvaultproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>App<wbr>Configuration..<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Key vault properties.{{% /md %}}</dd>
 </dl>
@@ -1119,7 +1119,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keyvaultproperties_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>App<wbr>Configuration.<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#keyvaultpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>App<wbr>Configuration..<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Key vault properties.{{% /md %}}</dd>
 </dl>
@@ -1449,7 +1449,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privatelinkserviceconnectionstate_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>App<wbr>Configuration.<wbr>Inputs.<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>App<wbr>Configuration..<wbr>Inputs.<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A collection of information about the state of the connection between service consumer and provider.{{% /md %}}</dd>
     <dt class="property-required"
@@ -1476,7 +1476,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privateendpoint_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>App<wbr>Configuration.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#privateendpointresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>App<wbr>Configuration..<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The resource of private endpoint.{{% /md %}}</dd>
 </dl>
@@ -1907,7 +1907,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#identitytype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>App<wbr>Configuration.<wbr>Identity<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#identitytype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>App<wbr>Configuration..<wbr>Identity<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of managed identity used. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user-assigned identities. The type 'None' will remove any identities.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2032,7 +2032,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userassignedidentities_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>App<wbr>Configuration.<wbr>Inputs.<wbr>User<wbr>Identity<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>App<wbr>Configuration..<wbr>Inputs.<wbr>User<wbr>Identity<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}The list of user-assigned identities associated with the resource. The user-assigned identity dictionary keys will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd>
 </dl>
@@ -2391,7 +2391,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:appconfiguration/latest:ConfigurationStore contoso /subscriptions/c80fb759-c965-4c6a-9110-9b2b2d038882/resourceGroups/myResourceGroup/providers/Microsoft.AppConfiguration/configurationStores/contoso 
+$ pulumi import azure-nextgen:appconfiguration:ConfigurationStore contoso /subscriptions/c80fb759-c965-4c6a-9110-9b2b2d038882/resourceGroups/myResourceGroup/providers/Microsoft.AppConfiguration/configurationStores/contoso 
 ```
 
 

@@ -233,7 +233,7 @@ The following output properties are available:
 <a href="#systemdata_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn.<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
+        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn..<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Read only system data{{% /md %}}</dd>
     <dt class="property-"
@@ -251,7 +251,7 @@ The following output properties are available:
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securitypolicywebapplicationfirewallparametersresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn.<wbr>Outputs.<wbr>Security<wbr>Policy<wbr>Web<wbr>Application<wbr>Firewall<wbr>Parameters<wbr>Response</a></span>
+        <span class="property-type"><a href="#securitypolicywebapplicationfirewallparametersresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn..<wbr>Outputs.<wbr>Security<wbr>Policy<wbr>Web<wbr>Application<wbr>Firewall<wbr>Parameters<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}object which contains security policy parameters{{% /md %}}</dd>
 </dl>
@@ -553,7 +553,7 @@ The following output properties are available:
 <a href="#domains_csharp" style="color: inherit; text-decoration: inherit;">Domains</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcereferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn.<wbr>Inputs.<wbr>Resource<wbr>Reference<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#resourcereferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn..<wbr>Inputs.<wbr>Resource<wbr>Reference<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of domains.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -656,7 +656,7 @@ The following output properties are available:
 <a href="#associations_csharp" style="color: inherit; text-decoration: inherit;">Associations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securitypolicywebapplicationfirewallassociationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn.<wbr>Inputs.<wbr>Security<wbr>Policy<wbr>Web<wbr>Application<wbr>Firewall<wbr>Association<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#securitypolicywebapplicationfirewallassociationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn..<wbr>Inputs.<wbr>Security<wbr>Policy<wbr>Web<wbr>Application<wbr>Firewall<wbr>Association<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Waf associations{{% /md %}}</dd>
     <dt class="property-optional"
@@ -665,7 +665,7 @@ The following output properties are available:
 <a href="#wafpolicy_csharp" style="color: inherit; text-decoration: inherit;">Waf<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcereferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn.<wbr>Inputs.<wbr>Resource<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcereferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn..<wbr>Inputs.<wbr>Resource<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
 </dl>

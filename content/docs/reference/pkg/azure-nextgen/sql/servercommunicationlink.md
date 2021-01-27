@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.sql.ServerCommunicationLink reso
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Server communication link.
-Latest API Version: 2014-04-01.
+API Version: 2014-04-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var serverCommunicationLink = new AzureNextGen.Sql.Latest.ServerCommunicationLink("serverCommunicationLink", new AzureNextGen.Sql.Latest.ServerCommunicationLinkArgs
+        var serverCommunicationLink = new AzureNextGen.Sql..ServerCommunicationLink("serverCommunicationLink", new AzureNextGen.Sql..ServerCommunicationLinkArgs
         {
             CommunicationLinkName = "link1",
             PartnerServer = "sqldcrudtest-test",
@@ -48,7 +48,7 @@ class MyStack : Stack
 package main
 
 import (
-	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql/latest"
+	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -77,7 +77,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-server_communication_link = azure_nextgen.sql.latest.ServerCommunicationLink("serverCommunicationLink",
+server_communication_link = azure_nextgen.sql.ServerCommunicationLink("serverCommunicationLink",
     communication_link_name="link1",
     partner_server="sqldcrudtest-test",
     resource_group_name="sqlcrudtest-7398",
@@ -93,7 +93,7 @@ server_communication_link = azure_nextgen.sql.latest.ServerCommunicationLink("se
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const serverCommunicationLink = new azure_nextgen.sql.latest.ServerCommunicationLink("serverCommunicationLink", {
+const serverCommunicationLink = new azure_nextgen.sql.ServerCommunicationLink("serverCommunicationLink", {
     communicationLinkName: "link1",
     partnerServer: "sqldcrudtest-test",
     resourceGroupName: "sqlcrudtest-7398",
@@ -710,7 +710,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:sql/latest:ServerCommunicationLink link1 /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/sqlcrudtest-7398/providers/Microsoft.Sql/servers/sqlcrudtest-4645/communicationLinks/link1 
+$ pulumi import azure-nextgen:sql:ServerCommunicationLink link1 /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/sqlcrudtest-7398/providers/Microsoft.Sql/servers/sqlcrudtest-4645/communicationLinks/link1 
 ```
 
 

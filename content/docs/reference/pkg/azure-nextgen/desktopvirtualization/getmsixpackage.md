@@ -269,7 +269,7 @@ The following output properties are available:
 <a href="#packageapplications_csharp" style="color: inherit; text-decoration: inherit;">Package<wbr>Applications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#msixpackageapplicationsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Desktop<wbr>Virtualization.<wbr>Outputs.<wbr>Msix<wbr>Package<wbr>Applications<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#msixpackageapplicationsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Desktop<wbr>Virtualization..<wbr>Outputs.<wbr>Msix<wbr>Package<wbr>Applications<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of package applications. {{% /md %}}</dd>
     <dt class="property-"
@@ -278,7 +278,7 @@ The following output properties are available:
 <a href="#packagedependencies_csharp" style="color: inherit; text-decoration: inherit;">Package<wbr>Dependencies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#msixpackagedependenciesresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Desktop<wbr>Virtualization.<wbr>Outputs.<wbr>Msix<wbr>Package<wbr>Dependencies<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#msixpackagedependenciesresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Desktop<wbr>Virtualization..<wbr>Outputs.<wbr>Msix<wbr>Package<wbr>Dependencies<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of package dependencies. {{% /md %}}</dd>
     <dt class="property-"

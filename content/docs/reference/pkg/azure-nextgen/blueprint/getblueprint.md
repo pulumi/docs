@@ -179,7 +179,7 @@ The following output properties are available:
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#blueprintstatusresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Blueprint.<wbr>Outputs.<wbr>Blueprint<wbr>Status<wbr>Response</a></span>
+        <span class="property-type"><a href="#blueprintstatusresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Blueprint..<wbr>Outputs.<wbr>Blueprint<wbr>Status<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Status of the blueprint. This field is readonly.{{% /md %}}</dd>
     <dt class="property-"
@@ -233,7 +233,7 @@ The following output properties are available:
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Blueprint.<wbr>Outputs.<wbr>Parameter<wbr>Definition<wbr>Response&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Blueprint..<wbr>Outputs.<wbr>Parameter<wbr>Definition<wbr>Response&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters required by this blueprint definition.{{% /md %}}</dd>
     <dt class="property-"
@@ -242,7 +242,7 @@ The following output properties are available:
 <a href="#resourcegroups_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Blueprint.<wbr>Outputs.<wbr>Resource<wbr>Group<wbr>Definition<wbr>Response&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Blueprint..<wbr>Outputs.<wbr>Resource<wbr>Group<wbr>Definition<wbr>Response&gt;</span>
     </dt>
     <dd>{{% md %}}Resource group placeholders defined by this blueprint definition.{{% /md %}}</dd>
     <dt class="property-"

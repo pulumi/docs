@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.network.ExpressRouteCrossConnect
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Peering in an ExpressRoute Cross Connection resource.
-Latest API Version: 2020-08-01.
+API Version: 2020-08-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,10 +27,10 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var expressRouteCrossConnectionPeering = new AzureNextGen.Network.Latest.ExpressRouteCrossConnectionPeering("expressRouteCrossConnectionPeering", new AzureNextGen.Network.Latest.ExpressRouteCrossConnectionPeeringArgs
+        var expressRouteCrossConnectionPeering = new AzureNextGen.Network..ExpressRouteCrossConnectionPeering("expressRouteCrossConnectionPeering", new AzureNextGen.Network..ExpressRouteCrossConnectionPeeringArgs
         {
             CrossConnectionName = "<circuitServiceKey>",
-            Ipv6PeeringConfig = new AzureNextGen.Network.Latest.Inputs.Ipv6ExpressRouteCircuitPeeringConfigArgs
+            Ipv6PeeringConfig = new AzureNextGen.Network..Inputs.Ipv6ExpressRouteCircuitPeeringConfigArgs
             {
                 PrimaryPeerAddressPrefix = "3FFE:FFFF:0:CD30::/126",
                 SecondaryPeerAddressPrefix = "3FFE:FFFF:0:CD30::4/126",
@@ -56,7 +56,7 @@ class MyStack : Stack
 package main
 
 import (
-	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network/latest"
+	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -92,9 +92,9 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-express_route_cross_connection_peering = azure_nextgen.network.latest.ExpressRouteCrossConnectionPeering("expressRouteCrossConnectionPeering",
+express_route_cross_connection_peering = azure_nextgen.network.ExpressRouteCrossConnectionPeering("expressRouteCrossConnectionPeering",
     cross_connection_name="<circuitServiceKey>",
-    ipv6_peering_config=azure_nextgen.network.latest.Ipv6ExpressRouteCircuitPeeringConfigArgs(
+    ipv6_peering_config=azure_nextgen.network.Ipv6ExpressRouteCircuitPeeringConfigArgs(
         primary_peer_address_prefix="3FFE:FFFF:0:CD30::/126",
         secondary_peer_address_prefix="3FFE:FFFF:0:CD30::4/126",
     ),
@@ -115,7 +115,7 @@ express_route_cross_connection_peering = azure_nextgen.network.latest.ExpressRou
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const expressRouteCrossConnectionPeering = new azure_nextgen.network.latest.ExpressRouteCrossConnectionPeering("expressRouteCrossConnectionPeering", {
+const expressRouteCrossConnectionPeering = new azure_nextgen.network.ExpressRouteCrossConnectionPeering("expressRouteCrossConnectionPeering", {
     crossConnectionName: "<circuitServiceKey>",
     ipv6PeeringConfig: {
         primaryPeerAddressPrefix: "3FFE:FFFF:0:CD30::/126",
@@ -367,7 +367,7 @@ The ExpressRouteCrossConnectionPeering resource accepts the following [input]({{
 <a href="#ipv6peeringconfig_csharp" style="color: inherit; text-decoration: inherit;">Ipv6Peering<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipv6expressroutecircuitpeeringconfig">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Ipv6Express<wbr>Route<wbr>Circuit<wbr>Peering<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#ipv6expressroutecircuitpeeringconfig">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Ipv6Express<wbr>Route<wbr>Circuit<wbr>Peering<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The IPv6 peering configuration.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -376,7 +376,7 @@ The ExpressRouteCrossConnectionPeering resource accepts the following [input]({{
 <a href="#microsoftpeeringconfig_csharp" style="color: inherit; text-decoration: inherit;">Microsoft<wbr>Peering<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#expressroutecircuitpeeringconfig">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Express<wbr>Route<wbr>Circuit<wbr>Peering<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#expressroutecircuitpeeringconfig">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Express<wbr>Route<wbr>Circuit<wbr>Peering<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Microsoft peering configuration.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -403,7 +403,7 @@ The ExpressRouteCrossConnectionPeering resource accepts the following [input]({{
 <a href="#peeringtype_csharp" style="color: inherit; text-decoration: inherit;">Peering<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#expressroutepeeringtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Express<wbr>Route<wbr>Peering<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#expressroutepeeringtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Express<wbr>Route<wbr>Peering<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The peering type.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -439,7 +439,7 @@ The ExpressRouteCrossConnectionPeering resource accepts the following [input]({{
 <a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#expressroutepeeringstate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Express<wbr>Route<wbr>Peering<wbr>State</a></span>
+        <span class="property-type">string | <a href="#expressroutepeeringstate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Express<wbr>Route<wbr>Peering<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}The peering state.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1751,7 +1751,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#microsoftpeeringconfig_csharp" style="color: inherit; text-decoration: inherit;">Microsoft<wbr>Peering<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#expressroutecircuitpeeringconfig">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Express<wbr>Route<wbr>Circuit<wbr>Peering<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#expressroutecircuitpeeringconfig">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Express<wbr>Route<wbr>Circuit<wbr>Peering<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Microsoft peering configuration.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1769,7 +1769,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#routefilter_csharp" style="color: inherit; text-decoration: inherit;">Route<wbr>Filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The reference to the RouteFilter resource.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1787,7 +1787,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#expressroutecircuitpeeringstate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Express<wbr>Route<wbr>Circuit<wbr>Peering<wbr>State</a></span>
+        <span class="property-type">string | <a href="#expressroutecircuitpeeringstate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Express<wbr>Route<wbr>Circuit<wbr>Peering<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}The state of peering.{{% /md %}}</dd>
 </dl>
@@ -1957,7 +1957,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#microsoftpeeringconfig_csharp" style="color: inherit; text-decoration: inherit;">Microsoft<wbr>Peering<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#expressroutecircuitpeeringconfigresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Express<wbr>Route<wbr>Circuit<wbr>Peering<wbr>Config<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#expressroutecircuitpeeringconfigresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Express<wbr>Route<wbr>Circuit<wbr>Peering<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Microsoft peering configuration.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1975,7 +1975,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#routefilter_csharp" style="color: inherit; text-decoration: inherit;">Route<wbr>Filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The reference to the RouteFilter resource.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2281,7 +2281,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:network/latest:ExpressRouteCrossConnectionPeering AzurePrivatePeering /subscriptions/subid/resourceGroups/CrossConnection-SiliconValley/providers/Microsoft.Network/expressRouteCrossConnections/<circuitServiceKey>/peerings/AzurePrivatePeering 
+$ pulumi import azure-nextgen:network:ExpressRouteCrossConnectionPeering AzurePrivatePeering /subscriptions/subid/resourceGroups/CrossConnection-Boydton1DC/providers/Microsoft.Network/expressRouteCrossConnections/<circuitServiceKey>/peerings/AzurePrivatePeering 
 ```
 
 

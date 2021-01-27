@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.datafactory.ManagedPrivateEndpoi
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Managed private endpoint resource type.
-Latest API Version: 2018-06-01.
+API Version: 2018-06-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,12 +27,12 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var managedPrivateEndpoint = new AzureNextGen.DataFactory.Latest.ManagedPrivateEndpoint("managedPrivateEndpoint", new AzureNextGen.DataFactory.Latest.ManagedPrivateEndpointArgs
+        var managedPrivateEndpoint = new AzureNextGen.DataFactory..ManagedPrivateEndpoint("managedPrivateEndpoint", new AzureNextGen.DataFactory..ManagedPrivateEndpointArgs
         {
             FactoryName = "exampleFactoryName",
             ManagedPrivateEndpointName = "exampleManagedPrivateEndpointName",
             ManagedVirtualNetworkName = "exampleManagedVirtualNetworkName",
-            Properties = new AzureNextGen.DataFactory.Latest.Inputs.ManagedPrivateEndpointArgs
+            Properties = new AzureNextGen.DataFactory..Inputs.ManagedPrivateEndpointArgs
             {
                 Fqdns = {},
                 GroupId = "blob",
@@ -54,7 +54,7 @@ class MyStack : Stack
 package main
 
 import (
-	datafactory "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datafactory/latest"
+	datafactory "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datafactory"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -88,11 +88,11 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-managed_private_endpoint = azure_nextgen.datafactory.latest.ManagedPrivateEndpoint("managedPrivateEndpoint",
+managed_private_endpoint = azure_nextgen.datafactory.ManagedPrivateEndpoint("managedPrivateEndpoint",
     factory_name="exampleFactoryName",
     managed_private_endpoint_name="exampleManagedPrivateEndpointName",
     managed_virtual_network_name="exampleManagedVirtualNetworkName",
-    properties=azure_nextgen.datafactory.latest.ManagedPrivateEndpointArgs(
+    properties=azure_nextgen.datafactory.ManagedPrivateEndpointArgs(
         fqdns=[],
         group_id="blob",
         private_link_resource_id="/subscriptions/12345678-1234-1234-1234-12345678abc/resourceGroups/exampleResourceGroup/providers/Microsoft.Storage/storageAccounts/exampleBlobStorage",
@@ -109,7 +109,7 @@ managed_private_endpoint = azure_nextgen.datafactory.latest.ManagedPrivateEndpoi
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const managedPrivateEndpoint = new azure_nextgen.datafactory.latest.ManagedPrivateEndpoint("managedPrivateEndpoint", {
+const managedPrivateEndpoint = new azure_nextgen.datafactory.ManagedPrivateEndpoint("managedPrivateEndpoint", {
     factoryName: "exampleFactoryName",
     managedPrivateEndpointName: "exampleManagedPrivateEndpointName",
     managedVirtualNetworkName: "exampleManagedVirtualNetworkName",
@@ -341,7 +341,7 @@ The ManagedPrivateEndpoint resource accepts the following [input]({{< relref "/d
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedprivateendpoint">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Managed<wbr>Private<wbr>Endpoint<wbr>Args</a></span>
+        <span class="property-type"><a href="#managedprivateendpoint">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Managed<wbr>Private<wbr>Endpoint<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Managed private endpoint properties.{{% /md %}}</dd>
     <dt class="property-required"
@@ -991,7 +991,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#connectionstate_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionstatepropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Connection<wbr>State<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#connectionstatepropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Connection<wbr>State<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The managed private endpoint connection state{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1209,7 +1209,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:datafactory/latest:ManagedPrivateEndpoint exampleManagedPrivateEndpointName /subscriptions/12345678-1234-1234-1234-12345678abc/resourceGroups/exampleResourceGroup/providers/Microsoft.DataFactory/factories/exampleFactoryName/managedVirtualNetworks/exampleManagedVirtualNetworkName/managedPrivateEndpoints/exampleManagedPrivateEndpointName 
+$ pulumi import azure-nextgen:datafactory:ManagedPrivateEndpoint exampleManagedPrivateEndpointName /subscriptions/12345678-1234-1234-1234-12345678abc/resourceGroups/exampleResourceGroup/providers/Microsoft.DataFactory/factories/exampleFactoryName/managedVirtualNetworks/exampleManagedVirtualNetworkName/managedPrivateEndpoints/exampleManagedPrivateEndpointName 
 ```
 
 

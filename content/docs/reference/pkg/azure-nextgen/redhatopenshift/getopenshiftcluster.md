@@ -197,7 +197,7 @@ The following output properties are available:
 <a href="#apiserverprofile_csharp" style="color: inherit; text-decoration: inherit;">Apiserver<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apiserverprofileresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Red<wbr>Hat<wbr>Open<wbr>Shift.<wbr>Outputs.<wbr>APIServer<wbr>Profile<wbr>Response</a></span>
+        <span class="property-type"><a href="#apiserverprofileresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Red<wbr>Hat<wbr>Open<wbr>Shift..<wbr>Outputs.<wbr>APIServer<wbr>Profile<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The cluster API server profile.{{% /md %}}</dd>
     <dt class="property-"
@@ -206,7 +206,7 @@ The following output properties are available:
 <a href="#clusterprofile_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterprofileresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Red<wbr>Hat<wbr>Open<wbr>Shift.<wbr>Outputs.<wbr>Cluster<wbr>Profile<wbr>Response</a></span>
+        <span class="property-type"><a href="#clusterprofileresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Red<wbr>Hat<wbr>Open<wbr>Shift..<wbr>Outputs.<wbr>Cluster<wbr>Profile<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The cluster profile.{{% /md %}}</dd>
     <dt class="property-"
@@ -215,7 +215,7 @@ The following output properties are available:
 <a href="#consoleprofile_csharp" style="color: inherit; text-decoration: inherit;">Console<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#consoleprofileresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Red<wbr>Hat<wbr>Open<wbr>Shift.<wbr>Outputs.<wbr>Console<wbr>Profile<wbr>Response</a></span>
+        <span class="property-type"><a href="#consoleprofileresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Red<wbr>Hat<wbr>Open<wbr>Shift..<wbr>Outputs.<wbr>Console<wbr>Profile<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The console profile.{{% /md %}}</dd>
     <dt class="property-"
@@ -224,7 +224,7 @@ The following output properties are available:
 <a href="#ingressprofiles_csharp" style="color: inherit; text-decoration: inherit;">Ingress<wbr>Profiles</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ingressprofileresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Red<wbr>Hat<wbr>Open<wbr>Shift.<wbr>Outputs.<wbr>Ingress<wbr>Profile<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#ingressprofileresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Red<wbr>Hat<wbr>Open<wbr>Shift..<wbr>Outputs.<wbr>Ingress<wbr>Profile<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The cluster ingress profiles.{{% /md %}}</dd>
     <dt class="property-"
@@ -233,7 +233,7 @@ The following output properties are available:
 <a href="#masterprofile_csharp" style="color: inherit; text-decoration: inherit;">Master<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#masterprofileresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Red<wbr>Hat<wbr>Open<wbr>Shift.<wbr>Outputs.<wbr>Master<wbr>Profile<wbr>Response</a></span>
+        <span class="property-type"><a href="#masterprofileresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Red<wbr>Hat<wbr>Open<wbr>Shift..<wbr>Outputs.<wbr>Master<wbr>Profile<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The cluster master profile.{{% /md %}}</dd>
     <dt class="property-"
@@ -242,7 +242,7 @@ The following output properties are available:
 <a href="#networkprofile_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkprofileresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Red<wbr>Hat<wbr>Open<wbr>Shift.<wbr>Outputs.<wbr>Network<wbr>Profile<wbr>Response</a></span>
+        <span class="property-type"><a href="#networkprofileresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Red<wbr>Hat<wbr>Open<wbr>Shift..<wbr>Outputs.<wbr>Network<wbr>Profile<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The cluster network profile.{{% /md %}}</dd>
     <dt class="property-"
@@ -260,7 +260,7 @@ The following output properties are available:
 <a href="#serviceprincipalprofile_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Principal<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceprincipalprofileresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Red<wbr>Hat<wbr>Open<wbr>Shift.<wbr>Outputs.<wbr>Service<wbr>Principal<wbr>Profile<wbr>Response</a></span>
+        <span class="property-type"><a href="#serviceprincipalprofileresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Red<wbr>Hat<wbr>Open<wbr>Shift..<wbr>Outputs.<wbr>Service<wbr>Principal<wbr>Profile<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The cluster service principal profile.{{% /md %}}</dd>
     <dt class="property-"
@@ -278,7 +278,7 @@ The following output properties are available:
 <a href="#workerprofiles_csharp" style="color: inherit; text-decoration: inherit;">Worker<wbr>Profiles</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workerprofileresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Red<wbr>Hat<wbr>Open<wbr>Shift.<wbr>Outputs.<wbr>Worker<wbr>Profile<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#workerprofileresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Red<wbr>Hat<wbr>Open<wbr>Shift..<wbr>Outputs.<wbr>Worker<wbr>Profile<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The cluster worker profiles.{{% /md %}}</dd>
 </dl>

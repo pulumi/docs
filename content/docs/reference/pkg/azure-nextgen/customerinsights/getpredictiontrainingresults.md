@@ -195,7 +195,7 @@ The following output properties are available:
 <a href="#canonicalprofiles_csharp" style="color: inherit; text-decoration: inherit;">Canonical<wbr>Profiles</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#canonicalprofiledefinitionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights.<wbr>Outputs.<wbr>Canonical<wbr>Profile<wbr>Definition<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#canonicalprofiledefinitionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights..<wbr>Outputs.<wbr>Canonical<wbr>Profile<wbr>Definition<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Canonical profiles.{{% /md %}}</dd>
     <dt class="property-"
@@ -204,7 +204,7 @@ The following output properties are available:
 <a href="#predictiondistribution_csharp" style="color: inherit; text-decoration: inherit;">Prediction<wbr>Distribution</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#predictiondistributiondefinitionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights.<wbr>Outputs.<wbr>Prediction<wbr>Distribution<wbr>Definition<wbr>Response</a></span>
+        <span class="property-type"><a href="#predictiondistributiondefinitionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights..<wbr>Outputs.<wbr>Prediction<wbr>Distribution<wbr>Definition<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Prediction distribution.{{% /md %}}</dd>
     <dt class="property-"
@@ -421,7 +421,7 @@ The following output properties are available:
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#canonicalprofiledefinitionresponseproperties">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights.<wbr>Inputs.<wbr>Canonical<wbr>Profile<wbr>Definition<wbr>Response<wbr>Properties<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#canonicalprofiledefinitionresponseproperties">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights..<wbr>Inputs.<wbr>Canonical<wbr>Profile<wbr>Definition<wbr>Response<wbr>Properties<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Properties of the canonical profile.{{% /md %}}</dd>
 </dl>
@@ -726,7 +726,7 @@ The following output properties are available:
 <a href="#distributions_csharp" style="color: inherit; text-decoration: inherit;">Distributions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#predictiondistributiondefinitionresponsedistributions">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights.<wbr>Inputs.<wbr>Prediction<wbr>Distribution<wbr>Definition<wbr>Response<wbr>Distributions<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#predictiondistributiondefinitionresponsedistributions">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights..<wbr>Inputs.<wbr>Prediction<wbr>Distribution<wbr>Definition<wbr>Response<wbr>Distributions<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Distributions of the prediction.{{% /md %}}</dd>
     <dt class="property-optional"

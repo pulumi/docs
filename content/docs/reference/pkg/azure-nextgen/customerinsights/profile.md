@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.customerinsights.Profile resourc
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The profile resource format.
-Latest API Version: 2017-04-26.
+API Version: 2017-04-26.
 
 {{% examples %}}
 ## Example Usage
@@ -27,40 +27,40 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var profile = new AzureNextGen.CustomerInsights.Latest.Profile("profile", new AzureNextGen.CustomerInsights.Latest.ProfileArgs
+        var profile = new AzureNextGen.CustomerInsights..Profile("profile", new AzureNextGen.CustomerInsights..ProfileArgs
         {
             ApiEntitySetName = "TestProfileType396",
             Fields = 
             {
-                new AzureNextGen.CustomerInsights.Latest.Inputs.PropertyDefinitionArgs
+                new AzureNextGen.CustomerInsights..Inputs.PropertyDefinitionArgs
                 {
                     FieldName = "Id",
                     FieldType = "Edm.String",
                     IsArray = false,
                     IsRequired = true,
                 },
-                new AzureNextGen.CustomerInsights.Latest.Inputs.PropertyDefinitionArgs
+                new AzureNextGen.CustomerInsights..Inputs.PropertyDefinitionArgs
                 {
                     FieldName = "ProfileId",
                     FieldType = "Edm.String",
                     IsArray = false,
                     IsRequired = true,
                 },
-                new AzureNextGen.CustomerInsights.Latest.Inputs.PropertyDefinitionArgs
+                new AzureNextGen.CustomerInsights..Inputs.PropertyDefinitionArgs
                 {
                     FieldName = "LastName",
                     FieldType = "Edm.String",
                     IsArray = false,
                     IsRequired = true,
                 },
-                new AzureNextGen.CustomerInsights.Latest.Inputs.PropertyDefinitionArgs
+                new AzureNextGen.CustomerInsights..Inputs.PropertyDefinitionArgs
                 {
                     FieldName = "TestProfileType396",
                     FieldType = "Edm.String",
                     IsArray = false,
                     IsRequired = true,
                 },
-                new AzureNextGen.CustomerInsights.Latest.Inputs.PropertyDefinitionArgs
+                new AzureNextGen.CustomerInsights..Inputs.PropertyDefinitionArgs
                 {
                     FieldName = "SavingAccountBalance",
                     FieldType = "Edm.Int32",
@@ -77,7 +77,7 @@ class MyStack : Stack
             SmallImage = "\\\\Images\\\\smallImage",
             StrongIds = 
             {
-                new AzureNextGen.CustomerInsights.Latest.Inputs.StrongIdArgs
+                new AzureNextGen.CustomerInsights..Inputs.StrongIdArgs
                 {
                     KeyPropertyNames = 
                     {
@@ -86,7 +86,7 @@ class MyStack : Stack
                     },
                     StrongIdName = "Id",
                 },
-                new AzureNextGen.CustomerInsights.Latest.Inputs.StrongIdArgs
+                new AzureNextGen.CustomerInsights..Inputs.StrongIdArgs
                 {
                     KeyPropertyNames = 
                     {
@@ -111,7 +111,7 @@ class MyStack : Stack
 package main
 
 import (
-	customerinsights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/customerinsights/latest"
+	customerinsights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/customerinsights"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -192,34 +192,34 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-profile = azure_nextgen.customerinsights.latest.Profile("profile",
+profile = azure_nextgen.customerinsights.Profile("profile",
     api_entity_set_name="TestProfileType396",
     fields=[
-        azure_nextgen.customerinsights.latest.PropertyDefinitionArgs(
+        azure_nextgen.customerinsights.PropertyDefinitionArgs(
             field_name="Id",
             field_type="Edm.String",
             is_array=False,
             is_required=True,
         ),
-        azure_nextgen.customerinsights.latest.PropertyDefinitionArgs(
+        azure_nextgen.customerinsights.PropertyDefinitionArgs(
             field_name="ProfileId",
             field_type="Edm.String",
             is_array=False,
             is_required=True,
         ),
-        azure_nextgen.customerinsights.latest.PropertyDefinitionArgs(
+        azure_nextgen.customerinsights.PropertyDefinitionArgs(
             field_name="LastName",
             field_type="Edm.String",
             is_array=False,
             is_required=True,
         ),
-        azure_nextgen.customerinsights.latest.PropertyDefinitionArgs(
+        azure_nextgen.customerinsights.PropertyDefinitionArgs(
             field_name="TestProfileType396",
             field_type="Edm.String",
             is_array=False,
             is_required=True,
         ),
-        azure_nextgen.customerinsights.latest.PropertyDefinitionArgs(
+        azure_nextgen.customerinsights.PropertyDefinitionArgs(
             field_name="SavingAccountBalance",
             field_type="Edm.Int32",
             is_array=False,
@@ -234,14 +234,14 @@ profile = azure_nextgen.customerinsights.latest.Profile("profile",
     schema_item_type_link="SchemaItemTypeLink",
     small_image="\\\\Images\\\\smallImage",
     strong_ids=[
-        azure_nextgen.customerinsights.latest.StrongIdArgs(
+        azure_nextgen.customerinsights.StrongIdArgs(
             key_property_names=[
                 "Id",
                 "SavingAccountBalance",
             ],
             strong_id_name="Id",
         ),
-        azure_nextgen.customerinsights.latest.StrongIdArgs(
+        azure_nextgen.customerinsights.StrongIdArgs(
             key_property_names=[
                 "ProfileId",
                 "LastName",
@@ -260,7 +260,7 @@ profile = azure_nextgen.customerinsights.latest.Profile("profile",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const profile = new azure_nextgen.customerinsights.latest.Profile("profile", {
+const profile = new azure_nextgen.customerinsights.Profile("profile", {
     apiEntitySetName: "TestProfileType396",
     fields: [
         {
@@ -575,7 +575,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#entitytype_csharp" style="color: inherit; text-decoration: inherit;">Entity<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#entitytypes">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights.<wbr>Entity<wbr>Types</a></span>
+        <span class="property-type"><a href="#entitytypes">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights..<wbr>Entity<wbr>Types</a></span>
     </dt>
     <dd>{{% md %}}Type of entity.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -584,7 +584,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#fields_csharp" style="color: inherit; text-decoration: inherit;">Fields</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#propertydefinition">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights.<wbr>Inputs.<wbr>Property<wbr>Definition<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#propertydefinition">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights..<wbr>Inputs.<wbr>Property<wbr>Definition<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The properties of the Profile.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -647,7 +647,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#strongids_csharp" style="color: inherit; text-decoration: inherit;">Strong<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#strongid">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights.<wbr>Inputs.<wbr>Strong<wbr>Id<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#strongid">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights..<wbr>Inputs.<wbr>Strong<wbr>Id<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The strong IDs.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1962,7 +1962,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enumvalidvalues_csharp" style="color: inherit; text-decoration: inherit;">Enum<wbr>Valid<wbr>Values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#profileenumvalidvaluesformat">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights.<wbr>Inputs.<wbr>Profile<wbr>Enum<wbr>Valid<wbr>Values<wbr>Format<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#profileenumvalidvaluesformat">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights..<wbr>Inputs.<wbr>Profile<wbr>Enum<wbr>Valid<wbr>Values<wbr>Format<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Describes valid values for an enum property.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2501,7 +2501,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datasourceprecedencerules_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Source<wbr>Precedence<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourceprecedenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights.<wbr>Inputs.<wbr>Data<wbr>Source<wbr>Precedence<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#datasourceprecedenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights..<wbr>Inputs.<wbr>Data<wbr>Source<wbr>Precedence<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}This is specific to interactions modeled as activities. Data sources are used to determine where data is stored and also in precedence rules.{{% /md %}}</dd>
     <dt class="property-required"
@@ -2537,7 +2537,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enumvalidvalues_csharp" style="color: inherit; text-decoration: inherit;">Enum<wbr>Valid<wbr>Values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#profileenumvalidvaluesformatresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights.<wbr>Inputs.<wbr>Profile<wbr>Enum<wbr>Valid<wbr>Values<wbr>Format<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#profileenumvalidvaluesformatresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights..<wbr>Inputs.<wbr>Profile<wbr>Enum<wbr>Valid<wbr>Values<wbr>Format<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Describes valid values for an enum property.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3437,7 +3437,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:customerinsights/latest:Profile azSdkTestHub/TestProfileType396 /subscriptions/c909e979-ef71-4def-a970-bc7c154db8c5/resourceGroups/TestHubRG/providers/Microsoft.CustomerInsights/hubs/azSdkTestHub/profiles/TestProfileType396 
+$ pulumi import azure-nextgen:customerinsights:Profile azSdkTestHub/TestProfileType396 /subscriptions/c909e979-ef71-4def-a970-bc7c154db8c5/resourceGroups/TestHubRG/providers/Microsoft.CustomerInsights/hubs/azSdkTestHub/profiles/TestProfileType396 
 ```
 
 

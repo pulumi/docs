@@ -204,7 +204,7 @@ The following output properties are available:
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backupitemresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web.<wbr>Outputs.<wbr>Backup<wbr>Item<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#backupitemresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web..<wbr>Outputs.<wbr>Backup<wbr>Item<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Collection of resources.{{% /md %}}</dd>
 </dl>
@@ -340,7 +340,7 @@ The following output properties are available:
 <a href="#databases_csharp" style="color: inherit; text-decoration: inherit;">Databases</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databasebackupsettingresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web.<wbr>Inputs.<wbr>Database<wbr>Backup<wbr>Setting<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#databasebackupsettingresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web..<wbr>Inputs.<wbr>Database<wbr>Backup<wbr>Setting<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of databases included in the backup.{{% /md %}}</dd>
     <dt class="property-required"
@@ -430,7 +430,7 @@ The following output properties are available:
 <a href="#systemdata_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web.<wbr>Inputs.<wbr>System<wbr>Data<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web..<wbr>Inputs.<wbr>System<wbr>Data<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The system metadata relating to this resource.{{% /md %}}</dd>
     <dt class="property-required"

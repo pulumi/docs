@@ -215,7 +215,7 @@ The following output properties are available:
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#solutionpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Outputs.<wbr>Solution<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#solutionpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate..<wbr>Outputs.<wbr>Solution<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the properties of the solution.{{% /md %}}</dd>
     <dt class="property-"
@@ -912,7 +912,7 @@ The following output properties are available:
 <a href="#details_csharp" style="color: inherit; text-decoration: inherit;">Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#solutiondetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Inputs.<wbr>Solution<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#solutiondetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate..<wbr>Inputs.<wbr>Solution<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the details of the solution.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -948,7 +948,7 @@ The following output properties are available:
 <a href="#summary_csharp" style="color: inherit; text-decoration: inherit;">Summary</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databasessolutionsummaryresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Inputs.<wbr>Databases<wbr>Solution<wbr>Summary<wbr>Response<wbr>Args</a> | <a href="#serverssolutionsummaryresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Inputs.<wbr>Servers<wbr>Solution<wbr>Summary<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#databasessolutionsummaryresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate..<wbr>Inputs.<wbr>Databases<wbr>Solution<wbr>Summary<wbr>Response<wbr>Args</a> | <a href="#serverssolutionsummaryresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate..<wbr>Inputs.<wbr>Servers<wbr>Solution<wbr>Summary<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the summary of the solution.{{% /md %}}</dd>
     <dt class="property-optional"

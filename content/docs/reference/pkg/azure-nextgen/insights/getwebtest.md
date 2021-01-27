@@ -179,7 +179,7 @@ The following output properties are available:
 <a href="#locations_csharp" style="color: inherit; text-decoration: inherit;">Locations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webtestgeolocationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Outputs.<wbr>Web<wbr>Test<wbr>Geolocation<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#webtestgeolocationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Outputs.<wbr>Web<wbr>Test<wbr>Geolocation<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of where to physically run the tests from to give global coverage for accessibility of your application.{{% /md %}}</dd>
     <dt class="property-"
@@ -242,7 +242,7 @@ The following output properties are available:
 <a href="#configuration_csharp" style="color: inherit; text-decoration: inherit;">Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webtestpropertiesresponseconfiguration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Outputs.<wbr>Web<wbr>Test<wbr>Properties<wbr>Response<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#webtestpropertiesresponseconfiguration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Outputs.<wbr>Web<wbr>Test<wbr>Properties<wbr>Response<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}An XML configuration specification for a WebTest.{{% /md %}}</dd>
     <dt class="property-"

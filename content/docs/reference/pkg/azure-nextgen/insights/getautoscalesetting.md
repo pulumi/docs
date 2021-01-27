@@ -188,7 +188,7 @@ The following output properties are available:
 <a href="#profiles_csharp" style="color: inherit; text-decoration: inherit;">Profiles</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscaleprofileresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Outputs.<wbr>Autoscale<wbr>Profile<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#autoscaleprofileresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Outputs.<wbr>Autoscale<wbr>Profile<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}the collection of automatic scaling profiles that specify different scaling parameters for different time periods. A maximum of 20 profiles can be specified.{{% /md %}}</dd>
     <dt class="property-"
@@ -215,7 +215,7 @@ The following output properties are available:
 <a href="#notifications_csharp" style="color: inherit; text-decoration: inherit;">Notifications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalenotificationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Outputs.<wbr>Autoscale<wbr>Notification<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#autoscalenotificationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Outputs.<wbr>Autoscale<wbr>Notification<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}the collection of notifications.{{% /md %}}</dd>
     <dt class="property-"
@@ -531,7 +531,7 @@ The following output properties are available:
 <a href="#email_csharp" style="color: inherit; text-decoration: inherit;">Email</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#emailnotificationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Inputs.<wbr>Email<wbr>Notification<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#emailnotificationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Inputs.<wbr>Email<wbr>Notification<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}the email notification.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -540,7 +540,7 @@ The following output properties are available:
 <a href="#webhooks_csharp" style="color: inherit; text-decoration: inherit;">Webhooks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webhooknotificationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Inputs.<wbr>Webhook<wbr>Notification<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#webhooknotificationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Inputs.<wbr>Webhook<wbr>Notification<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}the collection of webhook notifications.{{% /md %}}</dd>
 </dl>
@@ -661,7 +661,7 @@ The following output properties are available:
 <a href="#capacity_csharp" style="color: inherit; text-decoration: inherit;">Capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalecapacityresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Inputs.<wbr>Scale<wbr>Capacity<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#scalecapacityresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Inputs.<wbr>Scale<wbr>Capacity<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}the number of instances that can be used during this profile.{{% /md %}}</dd>
     <dt class="property-required"
@@ -679,7 +679,7 @@ The following output properties are available:
 <a href="#rules_csharp" style="color: inherit; text-decoration: inherit;">Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scaleruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Inputs.<wbr>Scale<wbr>Rule<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#scaleruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Inputs.<wbr>Scale<wbr>Rule<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}the collection of rules that provide the triggers and parameters for the scaling action. A maximum of 10 rules can be specified.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -688,7 +688,7 @@ The following output properties are available:
 <a href="#fixeddate_csharp" style="color: inherit; text-decoration: inherit;">Fixed<wbr>Date</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timewindowresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Inputs.<wbr>Time<wbr>Window<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#timewindowresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Inputs.<wbr>Time<wbr>Window<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}the specific date-time for the profile. This element is not used if the Recurrence element is used.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -697,7 +697,7 @@ The following output properties are available:
 <a href="#recurrence_csharp" style="color: inherit; text-decoration: inherit;">Recurrence</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recurrenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Inputs.<wbr>Recurrence<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#recurrenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Inputs.<wbr>Recurrence<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}the repeating times at which this profile begins. This element is not used if the FixedDate element is used.{{% /md %}}</dd>
 </dl>
@@ -1083,7 +1083,7 @@ The following output properties are available:
 <a href="#dimensions_csharp" style="color: inherit; text-decoration: inherit;">Dimensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalerulemetricdimensionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Inputs.<wbr>Scale<wbr>Rule<wbr>Metric<wbr>Dimension<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#scalerulemetricdimensionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Inputs.<wbr>Scale<wbr>Rule<wbr>Metric<wbr>Dimension<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of dimension conditions. For example: [{"DimensionName":"AppName","Operator":"Equals","Values":["App1"]},{"DimensionName":"Deployment","Operator":"Equals","Values":["default"]}].{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1411,7 +1411,7 @@ The following output properties are available:
 <a href="#schedule_csharp" style="color: inherit; text-decoration: inherit;">Schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recurrentscheduleresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Inputs.<wbr>Recurrent<wbr>Schedule<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#recurrentscheduleresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Inputs.<wbr>Recurrent<wbr>Schedule<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}the scheduling constraints for when the profile begins.{{% /md %}}</dd>
 </dl>
@@ -2133,7 +2133,7 @@ The following output properties are available:
 <a href="#metrictrigger_csharp" style="color: inherit; text-decoration: inherit;">Metric<wbr>Trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metrictriggerresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Inputs.<wbr>Metric<wbr>Trigger<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#metrictriggerresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Inputs.<wbr>Metric<wbr>Trigger<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}the trigger that results in a scaling action.{{% /md %}}</dd>
     <dt class="property-required"
@@ -2142,7 +2142,7 @@ The following output properties are available:
 <a href="#scaleaction_csharp" style="color: inherit; text-decoration: inherit;">Scale<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scaleactionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Inputs.<wbr>Scale<wbr>Action<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#scaleactionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Inputs.<wbr>Scale<wbr>Action<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}the parameters for the scaling action.{{% /md %}}</dd>
 </dl>

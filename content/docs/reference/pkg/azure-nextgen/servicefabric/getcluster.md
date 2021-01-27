@@ -161,7 +161,7 @@ The following output properties are available:
 <a href="#availableclusterversions_csharp" style="color: inherit; text-decoration: inherit;">Available<wbr>Cluster<wbr>Versions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterversiondetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric.<wbr>Outputs.<wbr>Cluster<wbr>Version<wbr>Details<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#clusterversiondetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric..<wbr>Outputs.<wbr>Cluster<wbr>Version<wbr>Details<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The Service Fabric runtime versions available for this cluster.{{% /md %}}</dd>
     <dt class="property-"
@@ -254,7 +254,7 @@ The following output properties are available:
 <a href="#nodetypes_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodetypedescriptionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric.<wbr>Outputs.<wbr>Node<wbr>Type<wbr>Description<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#nodetypedescriptionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric..<wbr>Outputs.<wbr>Node<wbr>Type<wbr>Description<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of node types in the cluster.{{% /md %}}</dd>
     <dt class="property-"
@@ -290,7 +290,7 @@ The following output properties are available:
 <a href="#applicationtypeversionscleanuppolicy_csharp" style="color: inherit; text-decoration: inherit;">Application<wbr>Type<wbr>Versions<wbr>Cleanup<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationtypeversionscleanuppolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric.<wbr>Outputs.<wbr>Application<wbr>Type<wbr>Versions<wbr>Cleanup<wbr>Policy<wbr>Response</a></span>
+        <span class="property-type"><a href="#applicationtypeversionscleanuppolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric..<wbr>Outputs.<wbr>Application<wbr>Type<wbr>Versions<wbr>Cleanup<wbr>Policy<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The policy used to clean up unused versions.{{% /md %}}</dd>
     <dt class="property-"
@@ -299,7 +299,7 @@ The following output properties are available:
 <a href="#azureactivedirectory_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Active<wbr>Directory</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureactivedirectoryresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric.<wbr>Outputs.<wbr>Azure<wbr>Active<wbr>Directory<wbr>Response</a></span>
+        <span class="property-type"><a href="#azureactivedirectoryresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric..<wbr>Outputs.<wbr>Azure<wbr>Active<wbr>Directory<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The AAD authentication settings of the cluster.{{% /md %}}</dd>
     <dt class="property-"
@@ -308,7 +308,7 @@ The following output properties are available:
 <a href="#certificate_csharp" style="color: inherit; text-decoration: inherit;">Certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatedescriptionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric.<wbr>Outputs.<wbr>Certificate<wbr>Description<wbr>Response</a></span>
+        <span class="property-type"><a href="#certificatedescriptionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric..<wbr>Outputs.<wbr>Certificate<wbr>Description<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The certificate to use for securing the cluster. The certificate provided will be used for node to node security within the cluster, SSL certificate for cluster management endpoint and default admin client.{{% /md %}}</dd>
     <dt class="property-"
@@ -317,7 +317,7 @@ The following output properties are available:
 <a href="#certificatecommonnames_csharp" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Common<wbr>Names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servercertificatecommonnamesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric.<wbr>Outputs.<wbr>Server<wbr>Certificate<wbr>Common<wbr>Names<wbr>Response</a></span>
+        <span class="property-type"><a href="#servercertificatecommonnamesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric..<wbr>Outputs.<wbr>Server<wbr>Certificate<wbr>Common<wbr>Names<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes a list of server certificates referenced by common name that are used to secure the cluster.{{% /md %}}</dd>
     <dt class="property-"
@@ -326,7 +326,7 @@ The following output properties are available:
 <a href="#clientcertificatecommonnames_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Certificate<wbr>Common<wbr>Names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clientcertificatecommonnameresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric.<wbr>Outputs.<wbr>Client<wbr>Certificate<wbr>Common<wbr>Name<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#clientcertificatecommonnameresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric..<wbr>Outputs.<wbr>Client<wbr>Certificate<wbr>Common<wbr>Name<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of client certificates referenced by common name that are allowed to manage the cluster.{{% /md %}}</dd>
     <dt class="property-"
@@ -335,7 +335,7 @@ The following output properties are available:
 <a href="#clientcertificatethumbprints_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Certificate<wbr>Thumbprints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clientcertificatethumbprintresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric.<wbr>Outputs.<wbr>Client<wbr>Certificate<wbr>Thumbprint<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#clientcertificatethumbprintresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric..<wbr>Outputs.<wbr>Client<wbr>Certificate<wbr>Thumbprint<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of client certificates referenced by thumbprint that are allowed to manage the cluster.{{% /md %}}</dd>
     <dt class="property-"
@@ -353,7 +353,7 @@ The following output properties are available:
 <a href="#diagnosticsstorageaccountconfig_csharp" style="color: inherit; text-decoration: inherit;">Diagnostics<wbr>Storage<wbr>Account<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diagnosticsstorageaccountconfigresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric.<wbr>Outputs.<wbr>Diagnostics<wbr>Storage<wbr>Account<wbr>Config<wbr>Response</a></span>
+        <span class="property-type"><a href="#diagnosticsstorageaccountconfigresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric..<wbr>Outputs.<wbr>Diagnostics<wbr>Storage<wbr>Account<wbr>Config<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The storage account information for storing Service Fabric diagnostic logs.{{% /md %}}</dd>
     <dt class="property-"
@@ -371,7 +371,7 @@ The following output properties are available:
 <a href="#fabricsettings_csharp" style="color: inherit; text-decoration: inherit;">Fabric<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#settingssectiondescriptionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric.<wbr>Outputs.<wbr>Settings<wbr>Section<wbr>Description<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#settingssectiondescriptionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric..<wbr>Outputs.<wbr>Settings<wbr>Section<wbr>Description<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of custom fabric settings to configure the cluster.{{% /md %}}</dd>
     <dt class="property-"
@@ -396,7 +396,7 @@ The following output properties are available:
 <a href="#reverseproxycertificate_csharp" style="color: inherit; text-decoration: inherit;">Reverse<wbr>Proxy<wbr>Certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatedescriptionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric.<wbr>Outputs.<wbr>Certificate<wbr>Description<wbr>Response</a></span>
+        <span class="property-type"><a href="#certificatedescriptionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric..<wbr>Outputs.<wbr>Certificate<wbr>Description<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The server certificate used by reverse proxy.{{% /md %}}</dd>
     <dt class="property-"
@@ -405,7 +405,7 @@ The following output properties are available:
 <a href="#reverseproxycertificatecommonnames_csharp" style="color: inherit; text-decoration: inherit;">Reverse<wbr>Proxy<wbr>Certificate<wbr>Common<wbr>Names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servercertificatecommonnamesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric.<wbr>Outputs.<wbr>Server<wbr>Certificate<wbr>Common<wbr>Names<wbr>Response</a></span>
+        <span class="property-type"><a href="#servercertificatecommonnamesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric..<wbr>Outputs.<wbr>Server<wbr>Certificate<wbr>Common<wbr>Names<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes a list of server certificates referenced by common name that are used to secure the cluster.{{% /md %}}</dd>
     <dt class="property-"
@@ -423,7 +423,7 @@ The following output properties are available:
 <a href="#upgradedescription_csharp" style="color: inherit; text-decoration: inherit;">Upgrade<wbr>Description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterupgradepolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric.<wbr>Outputs.<wbr>Cluster<wbr>Upgrade<wbr>Policy<wbr>Response</a></span>
+        <span class="property-type"><a href="#clusterupgradepolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric..<wbr>Outputs.<wbr>Cluster<wbr>Upgrade<wbr>Policy<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The policy to use when upgrading the cluster.{{% /md %}}</dd>
     <dt class="property-"
@@ -1370,7 +1370,7 @@ The following output properties are available:
 <a href="#defaultservicetypedeltahealthpolicy_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Service<wbr>Type<wbr>Delta<wbr>Health<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetypedeltahealthpolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric.<wbr>Inputs.<wbr>Service<wbr>Type<wbr>Delta<wbr>Health<wbr>Policy<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicetypedeltahealthpolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric..<wbr>Inputs.<wbr>Service<wbr>Type<wbr>Delta<wbr>Health<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The delta health policy used by default to evaluate the health of a service type when upgrading the cluster.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1379,7 +1379,7 @@ The following output properties are available:
 <a href="#servicetypedeltahealthpolicies_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Type<wbr>Delta<wbr>Health<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric.<wbr>Inputs.<wbr>Service<wbr>Type<wbr>Delta<wbr>Health<wbr>Policy<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric..<wbr>Inputs.<wbr>Service<wbr>Type<wbr>Delta<wbr>Health<wbr>Policy<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}The map with service type delta health policy per service type name. The map is empty by default.{{% /md %}}</dd>
 </dl>
@@ -1473,7 +1473,7 @@ The following output properties are available:
 <a href="#defaultservicetypehealthpolicy_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Service<wbr>Type<wbr>Health<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetypehealthpolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric.<wbr>Inputs.<wbr>Service<wbr>Type<wbr>Health<wbr>Policy<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicetypehealthpolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric..<wbr>Inputs.<wbr>Service<wbr>Type<wbr>Health<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The health policy used by default to evaluate the health of a service type.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1482,7 +1482,7 @@ The following output properties are available:
 <a href="#servicetypehealthpolicies_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Type<wbr>Health<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric.<wbr>Inputs.<wbr>Service<wbr>Type<wbr>Health<wbr>Policy<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric..<wbr>Inputs.<wbr>Service<wbr>Type<wbr>Health<wbr>Policy<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}The map with service type health policy per service type name. The map is empty by default.{{% /md %}}</dd>
 </dl>
@@ -2163,7 +2163,7 @@ The following output properties are available:
 <a href="#applicationhealthpolicies_csharp" style="color: inherit; text-decoration: inherit;">Application<wbr>Health<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric.<wbr>Inputs.<wbr>Application<wbr>Health<wbr>Policy<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric..<wbr>Inputs.<wbr>Application<wbr>Health<wbr>Policy<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}Defines the application health policy map used to evaluate the health of an application or one of its children entities.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2394,7 +2394,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#applicationdeltahealthpolicies_csharp" style="color: inherit; text-decoration: inherit;">Application<wbr>Delta<wbr>Health<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric.<wbr>Inputs.<wbr>Application<wbr>Delta<wbr>Health<wbr>Policy<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric..<wbr>Inputs.<wbr>Application<wbr>Delta<wbr>Health<wbr>Policy<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}Defines the application delta health policy map used to evaluate the health of an application or one of its child entities when upgrading the cluster.{{% /md %}}</dd>
 </dl>
@@ -2596,7 +2596,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#healthpolicy_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterhealthpolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric.<wbr>Inputs.<wbr>Cluster<wbr>Health<wbr>Policy<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusterhealthpolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric..<wbr>Inputs.<wbr>Cluster<wbr>Health<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The cluster health policy used when upgrading the cluster.{{% /md %}}</dd>
     <dt class="property-required"
@@ -2632,7 +2632,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#deltahealthpolicy_csharp" style="color: inherit; text-decoration: inherit;">Delta<wbr>Health<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterupgradedeltahealthpolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric.<wbr>Inputs.<wbr>Cluster<wbr>Upgrade<wbr>Delta<wbr>Health<wbr>Policy<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusterupgradedeltahealthpolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric..<wbr>Inputs.<wbr>Cluster<wbr>Upgrade<wbr>Delta<wbr>Health<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The cluster delta health policy used when upgrading the cluster.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3458,7 +3458,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#applicationports_csharp" style="color: inherit; text-decoration: inherit;">Application<wbr>Ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointrangedescriptionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric.<wbr>Inputs.<wbr>Endpoint<wbr>Range<wbr>Description<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#endpointrangedescriptionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric..<wbr>Inputs.<wbr>Endpoint<wbr>Range<wbr>Description<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The range of ports from which cluster assigned port to Service Fabric applications.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3490,7 +3490,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#ephemeralports_csharp" style="color: inherit; text-decoration: inherit;">Ephemeral<wbr>Ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointrangedescriptionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric.<wbr>Inputs.<wbr>Endpoint<wbr>Range<wbr>Description<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#endpointrangedescriptionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric..<wbr>Inputs.<wbr>Endpoint<wbr>Range<wbr>Description<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The range of ephemeral ports that nodes in this node type should be configured with.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3963,7 +3963,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#commonnames_csharp" style="color: inherit; text-decoration: inherit;">Common<wbr>Names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servercertificatecommonnameresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric.<wbr>Inputs.<wbr>Server<wbr>Certificate<wbr>Common<wbr>Name<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#servercertificatecommonnameresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric..<wbr>Inputs.<wbr>Server<wbr>Certificate<wbr>Common<wbr>Name<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of server certificates referenced by common name that are used to secure the cluster.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4328,7 +4328,7 @@ The check is performed after every upgrade domain upgrade completion to make sur
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#settingsparameterdescriptionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric.<wbr>Inputs.<wbr>Settings<wbr>Parameter<wbr>Description<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#settingsparameterdescriptionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric..<wbr>Inputs.<wbr>Settings<wbr>Parameter<wbr>Description<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The collection of parameters in the section.{{% /md %}}</dd>
 </dl>

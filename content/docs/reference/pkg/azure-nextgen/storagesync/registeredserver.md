@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.storagesync.RegisteredServer res
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Registered Server resource.
-Latest API Version: 2020-09-01.
+API Version: 2020-09-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var registeredServer = new AzureNextGen.StorageSync.Latest.RegisteredServer("registeredServer", new AzureNextGen.StorageSync.Latest.RegisteredServerArgs
+        var registeredServer = new AzureNextGen.StorageSync..RegisteredServer("registeredServer", new AzureNextGen.StorageSync..RegisteredServerArgs
         {
             AgentVersion = "1.0.277.0",
             FriendlyName = "afscv-2304-139",
@@ -52,7 +52,7 @@ class MyStack : Stack
 package main
 
 import (
-	storagesync "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/storagesync/latest"
+	storagesync "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/storagesync"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -85,7 +85,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-registered_server = azure_nextgen.storagesync.latest.RegisteredServer("registeredServer",
+registered_server = azure_nextgen.storagesync.RegisteredServer("registeredServer",
     agent_version="1.0.277.0",
     friendly_name="afscv-2304-139",
     resource_group_name="SampleResourceGroup_1",
@@ -105,7 +105,7 @@ registered_server = azure_nextgen.storagesync.latest.RegisteredServer("registere
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const registeredServer = new azure_nextgen.storagesync.latest.RegisteredServer("registeredServer", {
+const registeredServer = new azure_nextgen.storagesync.RegisteredServer("registeredServer", {
     agentVersion: "1.0.277.0",
     friendlyName: "afscv-2304-139",
     resourceGroupName: "SampleResourceGroup_1",
@@ -1374,7 +1374,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:storagesync/latest:RegisteredServer ankushb-prod3.redmond.corp.microsoft.com /subscriptions/52b8da2f-61e0-4a1f-8dde-336911f367fb/resourceGroups/SampleResourceGroup_1/providers/Microsoft.StorageSync/storageSyncServices/SampleStorageSyncService_1/registeredServers/530a0384-50ac-456d-8240-9d6621404151 
+$ pulumi import azure-nextgen:storagesync:RegisteredServer ankushb-prod3.redmond.corp.microsoft.com /subscriptions/52b8da2f-61e0-4a1f-8dde-336911f367fb/resourceGroups/SampleResourceGroup_1/providers/Microsoft.StorageSync/storageSyncServices/SampleStorageSyncService_1/registeredServers/530a0384-50ac-456d-8240-9d6621404151 
 ```
 
 

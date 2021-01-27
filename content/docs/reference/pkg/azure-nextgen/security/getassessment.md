@@ -215,7 +215,7 @@ The following output properties are available:
 <a href="#links_csharp" style="color: inherit; text-decoration: inherit;">Links</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#assessmentlinksresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security.<wbr>Outputs.<wbr>Assessment<wbr>Links<wbr>Response</a></span>
+        <span class="property-type"><a href="#assessmentlinksresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security..<wbr>Outputs.<wbr>Assessment<wbr>Links<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Links relevant to the assessment{{% /md %}}</dd>
     <dt class="property-"
@@ -233,7 +233,7 @@ The following output properties are available:
 <a href="#resourcedetails_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureresourcedetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security.<wbr>Outputs.<wbr>Azure<wbr>Resource<wbr>Details<wbr>Response</a> | <a href="#onpremiseresourcedetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security.<wbr>Outputs.<wbr>On<wbr>Premise<wbr>Resource<wbr>Details<wbr>Response</a> | <a href="#onpremisesqlresourcedetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security.<wbr>Outputs.<wbr>On<wbr>Premise<wbr>Sql<wbr>Resource<wbr>Details<wbr>Response</a></span>
+        <span class="property-type"><a href="#azureresourcedetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security..<wbr>Outputs.<wbr>Azure<wbr>Resource<wbr>Details<wbr>Response</a> | <a href="#onpremiseresourcedetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security..<wbr>Outputs.<wbr>On<wbr>Premise<wbr>Resource<wbr>Details<wbr>Response</a> | <a href="#onpremisesqlresourcedetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security..<wbr>Outputs.<wbr>On<wbr>Premise<wbr>Sql<wbr>Resource<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Details of the resource that was assessed{{% /md %}}</dd>
     <dt class="property-"
@@ -242,7 +242,7 @@ The following output properties are available:
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#assessmentstatusresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security.<wbr>Outputs.<wbr>Assessment<wbr>Status<wbr>Response</a></span>
+        <span class="property-type"><a href="#assessmentstatusresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security..<wbr>Outputs.<wbr>Assessment<wbr>Status<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The result of the assessment{{% /md %}}</dd>
     <dt class="property-"
@@ -269,7 +269,7 @@ The following output properties are available:
 <a href="#metadata_csharp" style="color: inherit; text-decoration: inherit;">Metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securityassessmentmetadatapropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security.<wbr>Outputs.<wbr>Security<wbr>Assessment<wbr>Metadata<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#securityassessmentmetadatapropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security..<wbr>Outputs.<wbr>Security<wbr>Assessment<wbr>Metadata<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes properties of an assessment metadata.{{% /md %}}</dd>
     <dt class="property-"
@@ -278,7 +278,7 @@ The following output properties are available:
 <a href="#partnersdata_csharp" style="color: inherit; text-decoration: inherit;">Partners<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securityassessmentpartnerdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security.<wbr>Outputs.<wbr>Security<wbr>Assessment<wbr>Partner<wbr>Data<wbr>Response</a></span>
+        <span class="property-type"><a href="#securityassessmentpartnerdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security..<wbr>Outputs.<wbr>Security<wbr>Assessment<wbr>Partner<wbr>Data<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Data regarding 3rd party partner integration{{% /md %}}</dd>
 </dl>
@@ -1491,7 +1491,7 @@ The following output properties are available:
 <a href="#partnerdata_csharp" style="color: inherit; text-decoration: inherit;">Partner<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securityassessmentmetadatapartnerdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security.<wbr>Inputs.<wbr>Security<wbr>Assessment<wbr>Metadata<wbr>Partner<wbr>Data<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#securityassessmentmetadatapartnerdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security..<wbr>Inputs.<wbr>Security<wbr>Assessment<wbr>Metadata<wbr>Partner<wbr>Data<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the partner that created the assessment{{% /md %}}</dd>
     <dt class="property-optional"

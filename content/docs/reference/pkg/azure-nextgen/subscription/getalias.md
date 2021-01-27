@@ -143,7 +143,7 @@ The following output properties are available:
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#putaliasresponsepropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Subscription.<wbr>Outputs.<wbr>Put<wbr>Alias<wbr>Response<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#putaliasresponsepropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Subscription..<wbr>Outputs.<wbr>Put<wbr>Alias<wbr>Response<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Put Alias response properties.{{% /md %}}</dd>
     <dt class="property-"

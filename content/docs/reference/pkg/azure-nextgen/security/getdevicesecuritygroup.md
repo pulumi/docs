@@ -188,7 +188,7 @@ The following output properties are available:
 <a href="#allowlistrules_csharp" style="color: inherit; text-decoration: inherit;">Allowlist<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#allowlistcustomalertruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security.<wbr>Outputs.<wbr>Allowlist<wbr>Custom<wbr>Alert<wbr>Rule<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#allowlistcustomalertruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security..<wbr>Outputs.<wbr>Allowlist<wbr>Custom<wbr>Alert<wbr>Rule<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The allow-list custom alert rules.{{% /md %}}</dd>
     <dt class="property-"
@@ -197,7 +197,7 @@ The following output properties are available:
 <a href="#denylistrules_csharp" style="color: inherit; text-decoration: inherit;">Denylist<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#denylistcustomalertruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security.<wbr>Outputs.<wbr>Denylist<wbr>Custom<wbr>Alert<wbr>Rule<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#denylistcustomalertruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security..<wbr>Outputs.<wbr>Denylist<wbr>Custom<wbr>Alert<wbr>Rule<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The deny-list custom alert rules.{{% /md %}}</dd>
     <dt class="property-"
@@ -206,7 +206,7 @@ The following output properties are available:
 <a href="#thresholdrules_csharp" style="color: inherit; text-decoration: inherit;">Threshold<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#thresholdcustomalertruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security.<wbr>Outputs.<wbr>Threshold<wbr>Custom<wbr>Alert<wbr>Rule<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#thresholdcustomalertruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security..<wbr>Outputs.<wbr>Threshold<wbr>Custom<wbr>Alert<wbr>Rule<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of custom alert threshold rules.{{% /md %}}</dd>
     <dt class="property-"
@@ -215,7 +215,7 @@ The following output properties are available:
 <a href="#timewindowrules_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Window<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timewindowcustomalertruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security.<wbr>Outputs.<wbr>Time<wbr>Window<wbr>Custom<wbr>Alert<wbr>Rule<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#timewindowcustomalertruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security..<wbr>Outputs.<wbr>Time<wbr>Window<wbr>Custom<wbr>Alert<wbr>Rule<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of custom alert time-window rules.{{% /md %}}</dd>
 </dl>

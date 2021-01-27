@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.servicefabric.Service resource w
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The service resource.
-Latest API Version: 2020-03-01.
+API Version: 2020-03-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,13 +27,13 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var service = new AzureNextGen.ServiceFabric.Latest.Service("service", new AzureNextGen.ServiceFabric.Latest.ServiceArgs
+        var service = new AzureNextGen.ServiceFabric..Service("service", new AzureNextGen.ServiceFabric..ServiceArgs
         {
             ApplicationName = "myApp",
             ClusterName = "myCluster",
             CorrelationScheme = 
             {
-                new AzureNextGen.ServiceFabric.Latest.Inputs.ServiceCorrelationDescriptionArgs
+                new AzureNextGen.ServiceFabric..Inputs.ServiceCorrelationDescriptionArgs
                 {
                     Scheme = "Affinity",
                     ServiceName = "fabric:/app1/app1~svc1",
@@ -50,7 +50,7 @@ class MyStack : Stack
             ServiceKind = "Stateless",
             ServiceLoadMetrics = 
             {
-                new AzureNextGen.ServiceFabric.Latest.Inputs.ServiceLoadMetricDescriptionArgs
+                new AzureNextGen.ServiceFabric..Inputs.ServiceLoadMetricDescriptionArgs
                 {
                     Name = "metric1",
                     Weight = "Low",
@@ -79,10 +79,10 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-service = azure_nextgen.servicefabric.latest.Service("service",
+service = azure_nextgen.servicefabric.Service("service",
     application_name="myApp",
     cluster_name="myCluster",
-    correlation_scheme=[azure_nextgen.servicefabric.latest.ServiceCorrelationDescriptionArgs(
+    correlation_scheme=[azure_nextgen.servicefabric.ServiceCorrelationDescriptionArgs(
         scheme="Affinity",
         service_name="fabric:/app1/app1~svc1",
     )],
@@ -94,7 +94,7 @@ service = azure_nextgen.servicefabric.latest.Service("service",
     resource_group_name="resRg",
     service_dns_name="my.service.dns",
     service_kind="Stateless",
-    service_load_metrics=[azure_nextgen.servicefabric.latest.ServiceLoadMetricDescriptionArgs(
+    service_load_metrics=[azure_nextgen.servicefabric.ServiceLoadMetricDescriptionArgs(
         name="metric1",
         weight="Low",
     )],
@@ -113,7 +113,7 @@ service = azure_nextgen.servicefabric.latest.Service("service",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const service = new azure_nextgen.servicefabric.latest.Service("service", {
+const service = new azure_nextgen.servicefabric.Service("service", {
     applicationName: "myApp",
     clusterName: "myCluster",
     correlationScheme: [{
@@ -152,7 +152,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var service = new AzureNextGen.ServiceFabric.Latest.Service("service", new AzureNextGen.ServiceFabric.Latest.ServiceArgs
+        var service = new AzureNextGen.ServiceFabric..Service("service", new AzureNextGen.ServiceFabric..ServiceArgs
         {
             ApplicationName = "myApp",
             ClusterName = "myCluster",
@@ -183,7 +183,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-service = azure_nextgen.servicefabric.latest.Service("service",
+service = azure_nextgen.servicefabric.Service("service",
     application_name="myApp",
     cluster_name="myCluster",
     partition_description={
@@ -204,7 +204,7 @@ service = azure_nextgen.servicefabric.latest.Service("service",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const service = new azure_nextgen.servicefabric.latest.Service("service", {
+const service = new azure_nextgen.servicefabric.Service("service", {
     applicationName: "myApp",
     clusterName: "myCluster",
     partitionDescription: {
@@ -436,7 +436,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#servicekind_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#servicekind">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric.<wbr>Service<wbr>Kind</a></span>
+        <span class="property-type">string | <a href="#servicekind">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric..<wbr>Service<wbr>Kind</a></span>
     </dt>
     <dd>{{% md %}}The kind of service (Stateless or Stateful).{{% /md %}}</dd>
     <dt class="property-required"
@@ -454,7 +454,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#correlationscheme_csharp" style="color: inherit; text-decoration: inherit;">Correlation<wbr>Scheme</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecorrelationdescription">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric.<wbr>Inputs.<wbr>Service<wbr>Correlation<wbr>Description<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#servicecorrelationdescription">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric..<wbr>Inputs.<wbr>Service<wbr>Correlation<wbr>Description<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list that describes the correlation of the service with other services.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -463,7 +463,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#defaultmovecost_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Move<wbr>Cost</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#movecost">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric.<wbr>Move<wbr>Cost</a></span>
+        <span class="property-type">string | <a href="#movecost">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric..<wbr>Move<wbr>Cost</a></span>
     </dt>
     <dd>{{% md %}}Specifies the move cost for the service.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -481,7 +481,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#partitiondescription_csharp" style="color: inherit; text-decoration: inherit;">Partition<wbr>Description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#namedpartitionschemedescription">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric.<wbr>Inputs.<wbr>Named<wbr>Partition<wbr>Scheme<wbr>Description<wbr>Args</a> | <a href="#singletonpartitionschemedescription">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric.<wbr>Inputs.<wbr>Singleton<wbr>Partition<wbr>Scheme<wbr>Description<wbr>Args</a> | <a href="#uniformint64rangepartitionschemedescription">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric.<wbr>Inputs.<wbr>Uniform<wbr>Int64Range<wbr>Partition<wbr>Scheme<wbr>Description<wbr>Args</a></span>
+        <span class="property-type"><a href="#namedpartitionschemedescription">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric..<wbr>Inputs.<wbr>Named<wbr>Partition<wbr>Scheme<wbr>Description<wbr>Args</a> | <a href="#singletonpartitionschemedescription">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric..<wbr>Inputs.<wbr>Singleton<wbr>Partition<wbr>Scheme<wbr>Description<wbr>Args</a> | <a href="#uniformint64rangepartitionschemedescription">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric..<wbr>Inputs.<wbr>Uniform<wbr>Int64Range<wbr>Partition<wbr>Scheme<wbr>Description<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes how the service is partitioned.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -508,7 +508,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#serviceloadmetrics_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Load<wbr>Metrics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceloadmetricdescription">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric.<wbr>Inputs.<wbr>Service<wbr>Load<wbr>Metric<wbr>Description<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#serviceloadmetricdescription">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric..<wbr>Inputs.<wbr>Service<wbr>Load<wbr>Metric<wbr>Description<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The service load metrics is given as an array of ServiceLoadMetricDescription objects.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -517,7 +517,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#servicepackageactivationmode_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Package<wbr>Activation<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#armservicepackageactivationmode">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric.<wbr>Arm<wbr>Service<wbr>Package<wbr>Activation<wbr>Mode</a></span>
+        <span class="property-type">string | <a href="#armservicepackageactivationmode">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric..<wbr>Arm<wbr>Service<wbr>Package<wbr>Activation<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}The activation Mode of the service package{{% /md %}}</dd>
     <dt class="property-optional"
@@ -526,7 +526,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#serviceplacementpolicies_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Placement<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceplacementpolicydescription">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric.<wbr>Inputs.<wbr>Service<wbr>Placement<wbr>Policy<wbr>Description<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#serviceplacementpolicydescription">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric..<wbr>Inputs.<wbr>Service<wbr>Placement<wbr>Policy<wbr>Description<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list that describes the correlation of the service with other services.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1520,7 +1520,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scheme_csharp" style="color: inherit; text-decoration: inherit;">Scheme</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#servicecorrelationscheme">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric.<wbr>Service<wbr>Correlation<wbr>Scheme</a></span>
+        <span class="property-type">string | <a href="#servicecorrelationscheme">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric..<wbr>Service<wbr>Correlation<wbr>Scheme</a></span>
     </dt>
     <dd>{{% md %}}The ServiceCorrelationScheme which describes the relationship between this service and the service specified via ServiceName.{{% /md %}}</dd>
     <dt class="property-required"
@@ -1852,7 +1852,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#weight_csharp" style="color: inherit; text-decoration: inherit;">Weight</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#serviceloadmetricweight">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric.<wbr>Service<wbr>Load<wbr>Metric<wbr>Weight</a></span>
+        <span class="property-type">string | <a href="#serviceloadmetricweight">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric..<wbr>Service<wbr>Load<wbr>Metric<wbr>Weight</a></span>
     </dt>
     <dd>{{% md %}}The service load metric relative weight, compared to other metrics configured for this service, as a number.{{% /md %}}</dd>
 </dl>
@@ -2282,7 +2282,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#serviceplacementpolicytype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric.<wbr>Service<wbr>Placement<wbr>Policy<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#serviceplacementpolicytype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric..<wbr>Service<wbr>Placement<wbr>Policy<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of placement policy for a service fabric service. Following are the possible values.{{% /md %}}</dd>
 </dl>
@@ -2822,7 +2822,7 @@ should be split between the partition ‘count’
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:servicefabric/latest:Service myCluster /subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/resRg/providers/Microsoft.ServiceFabric/clusters/myCluster/applications/myApp/services/myService 
+$ pulumi import azure-nextgen:servicefabric:Service myCluster /subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/resRg/providers/Microsoft.ServiceFabric/clusters/myCluster/applications/myApp/services/myService 
 ```
 
 

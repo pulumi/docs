@@ -206,7 +206,7 @@ The following output properties are available:
 <a href="#actions_csharp" style="color: inherit; text-decoration: inherit;">Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customrpactionroutedefinitionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Custom<wbr>Providers.<wbr>Outputs.<wbr>Custom<wbr>RPAction<wbr>Route<wbr>Definition<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#customrpactionroutedefinitionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Custom<wbr>Providers..<wbr>Outputs.<wbr>Custom<wbr>RPAction<wbr>Route<wbr>Definition<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of actions that the custom resource provider implements.{{% /md %}}</dd>
     <dt class="property-"
@@ -215,7 +215,7 @@ The following output properties are available:
 <a href="#resourcetypes_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customrpresourcetyperoutedefinitionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Custom<wbr>Providers.<wbr>Outputs.<wbr>Custom<wbr>RPResource<wbr>Type<wbr>Route<wbr>Definition<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#customrpresourcetyperoutedefinitionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Custom<wbr>Providers..<wbr>Outputs.<wbr>Custom<wbr>RPResource<wbr>Type<wbr>Route<wbr>Definition<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of resource types that the custom resource provider implements.{{% /md %}}</dd>
     <dt class="property-"
@@ -233,7 +233,7 @@ The following output properties are available:
 <a href="#validations_csharp" style="color: inherit; text-decoration: inherit;">Validations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customrpvalidationsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Custom<wbr>Providers.<wbr>Outputs.<wbr>Custom<wbr>RPValidations<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#customrpvalidationsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Custom<wbr>Providers..<wbr>Outputs.<wbr>Custom<wbr>RPValidations<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of validations to run on the custom resource provider's requests.{{% /md %}}</dd>
 </dl>

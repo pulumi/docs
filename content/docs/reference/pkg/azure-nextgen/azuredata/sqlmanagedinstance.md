@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.azuredata.SqlManagedInstance res
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 A SqlManagedInstance.
+API Version: 2020-09-08-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var sqlManagedInstance = new AzureNextGen.AzureData.V20200908Preview.SqlManagedInstance("sqlManagedInstance", new AzureNextGen.AzureData.V20200908Preview.SqlManagedInstanceArgs
+        var sqlManagedInstance = new AzureNextGen.AzureData..SqlManagedInstance("sqlManagedInstance", new AzureNextGen.AzureData..SqlManagedInstanceArgs
         {
             Admin = "Admin user",
             EndTime = "Instance end time",
@@ -54,7 +55,7 @@ class MyStack : Stack
 package main
 
 import (
-	azuredata "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/azuredata/v20200908preview"
+	azuredata "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/azuredata"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -89,7 +90,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-sql_managed_instance = azure_nextgen.azuredata.v20200908preview.SqlManagedInstance("sqlManagedInstance",
+sql_managed_instance = azure_nextgen.azuredata.SqlManagedInstance("sqlManagedInstance",
     admin="Admin user",
     end_time="Instance end time",
     instance_endpoint="The on premise instance endpoint",
@@ -111,7 +112,7 @@ sql_managed_instance = azure_nextgen.azuredata.v20200908preview.SqlManagedInstan
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const sqlManagedInstance = new azure_nextgen.azuredata.v20200908preview.SqlManagedInstance("sqlManagedInstance", {
+const sqlManagedInstance = new azure_nextgen.azuredata.SqlManagedInstance("sqlManagedInstance", {
     admin: "Admin user",
     endTime: "Instance end time",
     instanceEndpoint: "The on premise instance endpoint",
@@ -798,7 +799,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#systemdata_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Azure<wbr>Data.<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
+        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Azure<wbr>Data..<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Read only system data{{% /md %}}</dd>
     <dt class="property-"
@@ -1196,7 +1197,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:azuredata/v20200908preview:SqlManagedInstance testsqlManagedInstance /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg/providers/Microsoft.AzureData/sqlManagedInstances/testsqlManagedInstance 
+$ pulumi import azure-nextgen:azuredata:SqlManagedInstance testsqlManagedInstance /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg/providers/Microsoft.AzureData/sqlManagedInstances/testsqlManagedInstance 
 ```
 
 

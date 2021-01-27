@@ -314,7 +314,7 @@ The following output properties are available:
 <a href="#fields_csharp" style="color: inherit; text-decoration: inherit;">Fields</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#propertydefinitionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights.<wbr>Outputs.<wbr>Property<wbr>Definition<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#propertydefinitionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights..<wbr>Outputs.<wbr>Property<wbr>Definition<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The properties of the Relationship.{{% /md %}}</dd>
     <dt class="property-"
@@ -323,7 +323,7 @@ The following output properties are available:
 <a href="#lookupmappings_csharp" style="color: inherit; text-decoration: inherit;">Lookup<wbr>Mappings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#relationshiptypemappingresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights.<wbr>Outputs.<wbr>Relationship<wbr>Type<wbr>Mapping<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#relationshiptypemappingresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights..<wbr>Outputs.<wbr>Relationship<wbr>Type<wbr>Mapping<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Optional property to be used to map fields in profile to their strong ids in related profile.{{% /md %}}</dd>
 </dl>
@@ -1124,7 +1124,7 @@ The following output properties are available:
 <a href="#datasourceprecedencerules_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Source<wbr>Precedence<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourceprecedenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights.<wbr>Inputs.<wbr>Data<wbr>Source<wbr>Precedence<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#datasourceprecedenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights..<wbr>Inputs.<wbr>Data<wbr>Source<wbr>Precedence<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}This is specific to interactions modeled as activities. Data sources are used to determine where data is stored and also in precedence rules.{{% /md %}}</dd>
     <dt class="property-required"
@@ -1160,7 +1160,7 @@ The following output properties are available:
 <a href="#enumvalidvalues_csharp" style="color: inherit; text-decoration: inherit;">Enum<wbr>Valid<wbr>Values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#profileenumvalidvaluesformatresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights.<wbr>Inputs.<wbr>Profile<wbr>Enum<wbr>Valid<wbr>Values<wbr>Format<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#profileenumvalidvaluesformatresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights..<wbr>Inputs.<wbr>Profile<wbr>Enum<wbr>Valid<wbr>Values<wbr>Format<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Describes valid values for an enum property.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1834,7 +1834,7 @@ The following output properties are available:
 <a href="#fieldmappings_csharp" style="color: inherit; text-decoration: inherit;">Field<wbr>Mappings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#relationshiptypefieldmappingresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights.<wbr>Inputs.<wbr>Relationship<wbr>Type<wbr>Field<wbr>Mapping<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#relationshiptypefieldmappingresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights..<wbr>Inputs.<wbr>Relationship<wbr>Type<wbr>Field<wbr>Mapping<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Maps a profile property with the StrongId of related profile. This is an array to support StrongIds that are composite key as well.{{% /md %}}</dd>
 </dl>

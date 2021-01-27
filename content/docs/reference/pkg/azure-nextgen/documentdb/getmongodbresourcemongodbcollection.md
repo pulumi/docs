@@ -269,7 +269,7 @@ The following output properties are available:
 <a href="#options_csharp" style="color: inherit; text-decoration: inherit;">Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mongodbcollectiongetpropertiesresponseoptions">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB.<wbr>Outputs.<wbr>Mongo<wbr>DBCollection<wbr>Get<wbr>Properties<wbr>Response<wbr>Options</a></span>
+        <span class="property-type"><a href="#mongodbcollectiongetpropertiesresponseoptions">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB..<wbr>Outputs.<wbr>Mongo<wbr>DBCollection<wbr>Get<wbr>Properties<wbr>Response<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-"
@@ -278,7 +278,7 @@ The following output properties are available:
 <a href="#resource_csharp" style="color: inherit; text-decoration: inherit;">Resource</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mongodbcollectiongetpropertiesresponseresource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB.<wbr>Outputs.<wbr>Mongo<wbr>DBCollection<wbr>Get<wbr>Properties<wbr>Response<wbr>Resource</a></span>
+        <span class="property-type"><a href="#mongodbcollectiongetpropertiesresponseresource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB..<wbr>Outputs.<wbr>Mongo<wbr>DBCollection<wbr>Get<wbr>Properties<wbr>Response<wbr>Resource</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-"
@@ -589,7 +589,7 @@ The following output properties are available:
 <a href="#autoscalesettings_csharp" style="color: inherit; text-decoration: inherit;">Autoscale<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Autoscale<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#autoscalesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB..<wbr>Inputs.<wbr>Autoscale<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the Autoscale settings.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -737,7 +737,7 @@ The following output properties are available:
 <a href="#indexes_csharp" style="color: inherit; text-decoration: inherit;">Indexes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mongoindexresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Mongo<wbr>Index<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#mongoindexresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB..<wbr>Inputs.<wbr>Mongo<wbr>Index<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of index keys{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1145,7 +1145,7 @@ The following output properties are available:
 <a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mongoindexkeysresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Mongo<wbr>Index<wbr>Keys<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#mongoindexkeysresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB..<wbr>Inputs.<wbr>Mongo<wbr>Index<wbr>Keys<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Cosmos DB MongoDB collection index keys{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1154,7 +1154,7 @@ The following output properties are available:
 <a href="#options_csharp" style="color: inherit; text-decoration: inherit;">Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mongoindexoptionsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Mongo<wbr>Index<wbr>Options<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#mongoindexoptionsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB..<wbr>Inputs.<wbr>Mongo<wbr>Index<wbr>Options<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Cosmos DB MongoDB collection index key options{{% /md %}}</dd>
 </dl>

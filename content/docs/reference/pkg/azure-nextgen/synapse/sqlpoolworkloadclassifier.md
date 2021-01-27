@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.synapse.SqlPoolWorkloadClassifie
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Workload classifier operations for a data warehouse
-Latest API Version: 2020-12-01.
+API Version: 2020-12-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var sqlPoolWorkloadClassifier = new AzureNextGen.Synapse.Latest.SqlPoolWorkloadClassifier("sqlPoolWorkloadClassifier", new AzureNextGen.Synapse.Latest.SqlPoolWorkloadClassifierArgs
+        var sqlPoolWorkloadClassifier = new AzureNextGen.Synapse..SqlPoolWorkloadClassifier("sqlPoolWorkloadClassifier", new AzureNextGen.Synapse..SqlPoolWorkloadClassifierArgs
         {
             Context = "test_context",
             EndTime = "14:00",
@@ -55,7 +55,7 @@ class MyStack : Stack
 package main
 
 import (
-	synapse "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/synapse/latest"
+	synapse "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/synapse"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -91,7 +91,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-sql_pool_workload_classifier = azure_nextgen.synapse.latest.SqlPoolWorkloadClassifier("sqlPoolWorkloadClassifier",
+sql_pool_workload_classifier = azure_nextgen.synapse.SqlPoolWorkloadClassifier("sqlPoolWorkloadClassifier",
     context="test_context",
     end_time="14:00",
     importance="high",
@@ -114,7 +114,7 @@ sql_pool_workload_classifier = azure_nextgen.synapse.latest.SqlPoolWorkloadClass
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const sqlPoolWorkloadClassifier = new azure_nextgen.synapse.latest.SqlPoolWorkloadClassifier("sqlPoolWorkloadClassifier", {
+const sqlPoolWorkloadClassifier = new azure_nextgen.synapse.SqlPoolWorkloadClassifier("sqlPoolWorkloadClassifier", {
     context: "test_context",
     endTime: "14:00",
     importance: "high",
@@ -142,7 +142,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var sqlPoolWorkloadClassifier = new AzureNextGen.Synapse.Latest.SqlPoolWorkloadClassifier("sqlPoolWorkloadClassifier", new AzureNextGen.Synapse.Latest.SqlPoolWorkloadClassifierArgs
+        var sqlPoolWorkloadClassifier = new AzureNextGen.Synapse..SqlPoolWorkloadClassifier("sqlPoolWorkloadClassifier", new AzureNextGen.Synapse..SqlPoolWorkloadClassifierArgs
         {
             MemberName = "dbo",
             ResourceGroupName = "sqlcrudtest-6852",
@@ -165,7 +165,7 @@ class MyStack : Stack
 package main
 
 import (
-	synapse "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/synapse/latest"
+	synapse "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/synapse"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -196,7 +196,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-sql_pool_workload_classifier = azure_nextgen.synapse.latest.SqlPoolWorkloadClassifier("sqlPoolWorkloadClassifier",
+sql_pool_workload_classifier = azure_nextgen.synapse.SqlPoolWorkloadClassifier("sqlPoolWorkloadClassifier",
     member_name="dbo",
     resource_group_name="sqlcrudtest-6852",
     sql_pool_name="sqlcrudtest-9187",
@@ -214,7 +214,7 @@ sql_pool_workload_classifier = azure_nextgen.synapse.latest.SqlPoolWorkloadClass
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const sqlPoolWorkloadClassifier = new azure_nextgen.synapse.latest.SqlPoolWorkloadClassifier("sqlPoolWorkloadClassifier", {
+const sqlPoolWorkloadClassifier = new azure_nextgen.synapse.SqlPoolWorkloadClassifier("sqlPoolWorkloadClassifier", {
     memberName: "dbo",
     resourceGroupName: "sqlcrudtest-6852",
     sqlPoolName: "sqlcrudtest-9187",
@@ -977,7 +977,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:synapse/latest:SqlPoolWorkloadClassifier wlm_workloadclassifier /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/sqlcrudtest-6852/providers/Microsoft.Synapse/workspaces/sqlcrudtest-2080/sqlPools/sqlcrudtest-9187/workloadGroups/wlm_workloadgroup/workloadClassifiers/wlm_workloadclassifier 
+$ pulumi import azure-nextgen:synapse:SqlPoolWorkloadClassifier wlm_workloadclassifier /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/sqlcrudtest-6852/providers/Microsoft.Synapse/workspaces/sqlcrudtest-2080/sqlPools/sqlcrudtest-9187/workloadGroups/wlm_workloadgroup/workloadClassifiers/wlm_workloadclassifier 
 ```
 
 

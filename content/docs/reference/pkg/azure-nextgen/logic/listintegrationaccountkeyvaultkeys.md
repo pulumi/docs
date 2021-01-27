@@ -63,7 +63,7 @@ The following arguments are supported:
 <a href="#keyvault_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultreference">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#keyvaultreference">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The key vault reference.{{% /md %}}</dd>
     <dt class="property-required"
@@ -240,7 +240,7 @@ The following output properties are available:
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultkeyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Outputs.<wbr>Key<wbr>Vault<wbr>Key<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#keyvaultkeyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Outputs.<wbr>Key<wbr>Vault<wbr>Key<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The key vault keys.{{% /md %}}</dd>
 </dl>
@@ -340,7 +340,7 @@ The following output properties are available:
 <a href="#attributes_csharp" style="color: inherit; text-decoration: inherit;">Attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultkeyresponseattributes">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>Key<wbr>Response<wbr>Attributes<wbr>Args</a></span>
+        <span class="property-type"><a href="#keyvaultkeyresponseattributes">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>Key<wbr>Response<wbr>Attributes<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The key attributes.{{% /md %}}</dd>
     <dt class="property-optional"

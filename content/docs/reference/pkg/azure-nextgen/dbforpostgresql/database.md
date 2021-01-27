@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.dbforpostgresql.Database resourc
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Represents a Database.
-Latest API Version: 2017-12-01.
+API Version: 2017-12-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var database = new AzureNextGen.DBforPostgreSQL.Latest.Database("database", new AzureNextGen.DBforPostgreSQL.Latest.DatabaseArgs
+        var database = new AzureNextGen.DBforPostgreSQL..Database("database", new AzureNextGen.DBforPostgreSQL..DatabaseArgs
         {
             Charset = "UTF8",
             Collation = "English_United States.1252",
@@ -49,7 +49,7 @@ class MyStack : Stack
 package main
 
 import (
-	dbforpostgresql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/dbforpostgresql/latest"
+	dbforpostgresql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/dbforpostgresql"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -79,7 +79,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-database = azure_nextgen.dbforpostgresql.latest.Database("database",
+database = azure_nextgen.dbforpostgresql.Database("database",
     charset="UTF8",
     collation="English_United States.1252",
     database_name="db1",
@@ -96,7 +96,7 @@ database = azure_nextgen.dbforpostgresql.latest.Database("database",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const database = new azure_nextgen.dbforpostgresql.latest.Database("database", {
+const database = new azure_nextgen.dbforpostgresql.Database("database", {
     charset: "UTF8",
     collation: "English_United States.1252",
     databaseName: "db1",
@@ -642,7 +642,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:dbforpostgresql/latest:Database db1 /subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/TestGroup/providers/Microsoft.DBforPostgreSQL/servers/testserver/databases/db1 
+$ pulumi import azure-nextgen:dbforpostgresql:Database db1 /subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/TestGroup/providers/Microsoft.DBforPostgreSQL/servers/testserver/databases/db1 
 ```
 
 

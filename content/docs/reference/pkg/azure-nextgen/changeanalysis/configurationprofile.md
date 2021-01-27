@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.changeanalysis.ConfigurationProf
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 A profile object that contains change analysis configuration, such as notification settings, for this subscription
+API Version: 2020-04-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var configurationProfile = new AzureNextGen.ChangeAnalysis.V20200401Preview.ConfigurationProfile("configurationProfile", new AzureNextGen.ChangeAnalysis.V20200401Preview.ConfigurationProfileArgs
+        var configurationProfile = new AzureNextGen.ChangeAnalysis..ConfigurationProfile("configurationProfile", new AzureNextGen.ChangeAnalysis..ConfigurationProfileArgs
         {
             ProfileName = "default",
         });
@@ -44,7 +45,7 @@ class MyStack : Stack
 package main
 
 import (
-	changeanalysis "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/changeanalysis/v20200401preview"
+	changeanalysis "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/changeanalysis"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -70,7 +71,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-configuration_profile = azure_nextgen.changeanalysis.v20200401preview.ConfigurationProfile("configurationProfile", profile_name="default")
+configuration_profile = azure_nextgen.changeanalysis.ConfigurationProfile("configurationProfile", profile_name="default")
 
 ```
 
@@ -82,7 +83,7 @@ configuration_profile = azure_nextgen.changeanalysis.v20200401preview.Configurat
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const configurationProfile = new azure_nextgen.changeanalysis.v20200401preview.ConfigurationProfile("configurationProfile", {profileName: "default"});
+const configurationProfile = new azure_nextgen.changeanalysis.ConfigurationProfile("configurationProfile", {profileName: "default"});
 
 ```
 
@@ -98,7 +99,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var configurationProfile = new AzureNextGen.ChangeAnalysis.V20200401Preview.ConfigurationProfile("configurationProfile", new AzureNextGen.ChangeAnalysis.V20200401Preview.ConfigurationProfileArgs
+        var configurationProfile = new AzureNextGen.ChangeAnalysis..ConfigurationProfile("configurationProfile", new AzureNextGen.ChangeAnalysis..ConfigurationProfileArgs
         {
             ProfileName = "default",
         });
@@ -116,7 +117,7 @@ class MyStack : Stack
 package main
 
 import (
-	changeanalysis "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/changeanalysis/v20200401preview"
+	changeanalysis "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/changeanalysis"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -142,7 +143,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-configuration_profile = azure_nextgen.changeanalysis.v20200401preview.ConfigurationProfile("configurationProfile", profile_name="default")
+configuration_profile = azure_nextgen.changeanalysis.ConfigurationProfile("configurationProfile", profile_name="default")
 
 ```
 
@@ -154,7 +155,7 @@ configuration_profile = azure_nextgen.changeanalysis.v20200401preview.Configurat
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const configurationProfile = new azure_nextgen.changeanalysis.v20200401preview.ConfigurationProfile("configurationProfile", {profileName: "default"});
+const configurationProfile = new azure_nextgen.changeanalysis.ConfigurationProfile("configurationProfile", {profileName: "default"});
 
 ```
 
@@ -358,7 +359,7 @@ The ConfigurationProfile resource accepts the following [input]({{< relref "/doc
 <a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidentity">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Change<wbr>Analysis.<wbr>Inputs.<wbr>Resource<wbr>Identity<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourceidentity">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Change<wbr>Analysis..<wbr>Inputs.<wbr>Resource<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The identity block returned by ARM resource that supports managed identity.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -367,7 +368,7 @@ The ConfigurationProfile resource accepts the following [input]({{< relref "/doc
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configurationprofileresourceproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Change<wbr>Analysis.<wbr>Inputs.<wbr>Configuration<wbr>Profile<wbr>Resource<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#configurationprofileresourceproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Change<wbr>Analysis..<wbr>Inputs.<wbr>Configuration<wbr>Profile<wbr>Resource<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The properties of a configuration profile.{{% /md %}}</dd>
 </dl>
@@ -515,7 +516,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#systemdata_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Change<wbr>Analysis.<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
+        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Change<wbr>Analysis..<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Top level metadata https://github.com/Azure/azure-resource-manager-rpc/blob/master/v1.0/common-api-contracts.md#system-metadata-for-all-azure-resources{{% /md %}}</dd>
 </dl>
@@ -864,7 +865,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#notifications_csharp" style="color: inherit; text-decoration: inherit;">Notifications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#notificationsettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Change<wbr>Analysis.<wbr>Inputs.<wbr>Notification<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#notificationsettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Change<wbr>Analysis..<wbr>Inputs.<wbr>Notification<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings of change notification configuration for a subscription.{{% /md %}}</dd>
 </dl>
@@ -926,7 +927,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#notifications_csharp" style="color: inherit; text-decoration: inherit;">Notifications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#notificationsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Change<wbr>Analysis.<wbr>Inputs.<wbr>Notification<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#notificationsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Change<wbr>Analysis..<wbr>Inputs.<wbr>Notification<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings of change notification configuration for a subscription.{{% /md %}}</dd>
 </dl>
@@ -1026,7 +1027,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#activationstate_csharp" style="color: inherit; text-decoration: inherit;">Activation<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#notificationsstate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Change<wbr>Analysis.<wbr>Notifications<wbr>State</a></span>
+        <span class="property-type">string | <a href="#notificationsstate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Change<wbr>Analysis..<wbr>Notifications<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}The state of notifications feature.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1035,7 +1036,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azuremonitorworkspaceproperties_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Monitor<wbr>Workspace<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azuremonitorworkspaceproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Change<wbr>Analysis.<wbr>Inputs.<wbr>Azure<wbr>Monitor<wbr>Workspace<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#azuremonitorworkspaceproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Change<wbr>Analysis..<wbr>Inputs.<wbr>Azure<wbr>Monitor<wbr>Workspace<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration properties of an Azure Monitor workspace that receives change notifications.{{% /md %}}</dd>
 </dl>
@@ -1133,7 +1134,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azuremonitorworkspaceproperties_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Monitor<wbr>Workspace<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azuremonitorworkspacepropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Change<wbr>Analysis.<wbr>Inputs.<wbr>Azure<wbr>Monitor<wbr>Workspace<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azuremonitorworkspacepropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Change<wbr>Analysis..<wbr>Inputs.<wbr>Azure<wbr>Monitor<wbr>Workspace<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration properties of an Azure Monitor workspace that receives change notifications.{{% /md %}}</dd>
 </dl>
@@ -1268,7 +1269,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#managedidentitytypes">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Change<wbr>Analysis.<wbr>Managed<wbr>Identity<wbr>Types</a></span>
+        <span class="property-type">string | <a href="#managedidentitytypes">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Change<wbr>Analysis..<wbr>Managed<wbr>Identity<wbr>Types</a></span>
     </dt>
     <dd>{{% md %}}The type of managed identity used. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user-assigned identities. The type 'None' will remove any identities.{{% /md %}}</dd>
 </dl>
@@ -1700,7 +1701,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:changeanalysis/v20200401preview:ConfigurationProfile default /subscriptions/c80fb759-c965-4c6a-9110-9b2b2d038882/providers/Microsoft.ChangeAnalysis/profile/default 
+$ pulumi import azure-nextgen:changeanalysis:ConfigurationProfile default /subscriptions/c80fb759-c965-4c6a-9110-9b2b2d038882/providers/Microsoft.ChangeAnalysis/profile/default 
 ```
 
 

@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.storagecache.StorageTarget resou
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Type of the Storage Target.
-Latest API Version: 2020-10-01.
+API Version: 2020-10-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,19 +27,19 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var storageTarget = new AzureNextGen.StorageCache.Latest.StorageTarget("storageTarget", new AzureNextGen.StorageCache.Latest.StorageTargetArgs
+        var storageTarget = new AzureNextGen.StorageCache..StorageTarget("storageTarget", new AzureNextGen.StorageCache..StorageTargetArgs
         {
             CacheName = "sc1",
             Junctions = 
             {
-                new AzureNextGen.StorageCache.Latest.Inputs.NamespaceJunctionArgs
+                new AzureNextGen.StorageCache..Inputs.NamespaceJunctionArgs
                 {
                     NamespacePath = "/path/on/cache",
                     NfsAccessPolicy = "default",
                     NfsExport = "exp1",
                     TargetPath = "/path/on/exp1",
                 },
-                new AzureNextGen.StorageCache.Latest.Inputs.NamespaceJunctionArgs
+                new AzureNextGen.StorageCache..Inputs.NamespaceJunctionArgs
                 {
                     NamespacePath = "/path2/on/cache",
                     NfsAccessPolicy = "rootSquash",
@@ -47,7 +47,7 @@ class MyStack : Stack
                     TargetPath = "/path2/on/exp2",
                 },
             },
-            Nfs3 = new AzureNextGen.StorageCache.Latest.Inputs.Nfs3TargetArgs
+            Nfs3 = new AzureNextGen.StorageCache..Inputs.Nfs3TargetArgs
             {
                 Target = "10.0.44.44",
                 UsageModel = "READ_HEAVY_INFREQ",
@@ -70,7 +70,7 @@ class MyStack : Stack
 package main
 
 import (
-	storagecache "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/storagecache/latest"
+	storagecache "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/storagecache"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -117,23 +117,23 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-storage_target = azure_nextgen.storagecache.latest.StorageTarget("storageTarget",
+storage_target = azure_nextgen.storagecache.StorageTarget("storageTarget",
     cache_name="sc1",
     junctions=[
-        azure_nextgen.storagecache.latest.NamespaceJunctionArgs(
+        azure_nextgen.storagecache.NamespaceJunctionArgs(
             namespace_path="/path/on/cache",
             nfs_access_policy="default",
             nfs_export="exp1",
             target_path="/path/on/exp1",
         ),
-        azure_nextgen.storagecache.latest.NamespaceJunctionArgs(
+        azure_nextgen.storagecache.NamespaceJunctionArgs(
             namespace_path="/path2/on/cache",
             nfs_access_policy="rootSquash",
             nfs_export="exp2",
             target_path="/path2/on/exp2",
         ),
     ],
-    nfs3=azure_nextgen.storagecache.latest.Nfs3TargetArgs(
+    nfs3=azure_nextgen.storagecache.Nfs3TargetArgs(
         target="10.0.44.44",
         usage_model="READ_HEAVY_INFREQ",
     ),
@@ -151,7 +151,7 @@ storage_target = azure_nextgen.storagecache.latest.StorageTarget("storageTarget"
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const storageTarget = new azure_nextgen.storagecache.latest.StorageTarget("storageTarget", {
+const storageTarget = new azure_nextgen.storagecache.StorageTarget("storageTarget", {
     cacheName: "sc1",
     junctions: [
         {
@@ -190,10 +190,10 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var storageTarget = new AzureNextGen.StorageCache.Latest.StorageTarget("storageTarget", new AzureNextGen.StorageCache.Latest.StorageTargetArgs
+        var storageTarget = new AzureNextGen.StorageCache..StorageTarget("storageTarget", new AzureNextGen.StorageCache..StorageTargetArgs
         {
             CacheName = "sc1",
-            Nfs3 = new AzureNextGen.StorageCache.Latest.Inputs.Nfs3TargetArgs
+            Nfs3 = new AzureNextGen.StorageCache..Inputs.Nfs3TargetArgs
             {
                 Target = "10.0.44.44",
                 UsageModel = "READ_HEAVY_INFREQ",
@@ -216,7 +216,7 @@ class MyStack : Stack
 package main
 
 import (
-	storagecache "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/storagecache/latest"
+	storagecache "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/storagecache"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -249,9 +249,9 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-storage_target = azure_nextgen.storagecache.latest.StorageTarget("storageTarget",
+storage_target = azure_nextgen.storagecache.StorageTarget("storageTarget",
     cache_name="sc1",
-    nfs3=azure_nextgen.storagecache.latest.Nfs3TargetArgs(
+    nfs3=azure_nextgen.storagecache.Nfs3TargetArgs(
         target="10.0.44.44",
         usage_model="READ_HEAVY_INFREQ",
     ),
@@ -269,7 +269,7 @@ storage_target = azure_nextgen.storagecache.latest.StorageTarget("storageTarget"
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const storageTarget = new azure_nextgen.storagecache.latest.StorageTarget("storageTarget", {
+const storageTarget = new azure_nextgen.storagecache.StorageTarget("storageTarget", {
     cacheName: "sc1",
     nfs3: {
         target: "10.0.44.44",
@@ -500,7 +500,7 @@ The StorageTarget resource accepts the following [input]({{< relref "/docs/intro
 <a href="#targettype_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#storagetargettype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Cache.<wbr>Storage<wbr>Target<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#storagetargettype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Cache..<wbr>Storage<wbr>Target<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of the Storage Target.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -509,7 +509,7 @@ The StorageTarget resource accepts the following [input]({{< relref "/docs/intro
 <a href="#clfs_csharp" style="color: inherit; text-decoration: inherit;">Clfs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clfstarget">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Cache.<wbr>Inputs.<wbr>Clfs<wbr>Target<wbr>Args</a></span>
+        <span class="property-type"><a href="#clfstarget">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Cache..<wbr>Inputs.<wbr>Clfs<wbr>Target<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties when targetType is clfs.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -518,7 +518,7 @@ The StorageTarget resource accepts the following [input]({{< relref "/docs/intro
 <a href="#junctions_csharp" style="color: inherit; text-decoration: inherit;">Junctions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#namespacejunction">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Cache.<wbr>Inputs.<wbr>Namespace<wbr>Junction<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#namespacejunction">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Cache..<wbr>Inputs.<wbr>Namespace<wbr>Junction<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of Cache namespace junctions to target for namespace associations.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -527,7 +527,7 @@ The StorageTarget resource accepts the following [input]({{< relref "/docs/intro
 <a href="#nfs3_csharp" style="color: inherit; text-decoration: inherit;">Nfs3</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nfs3target">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Cache.<wbr>Inputs.<wbr>Nfs3Target<wbr>Args</a></span>
+        <span class="property-type"><a href="#nfs3target">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Cache..<wbr>Inputs.<wbr>Nfs3Target<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties when targetType is nfs3.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -536,7 +536,7 @@ The StorageTarget resource accepts the following [input]({{< relref "/docs/intro
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#provisioningstatetype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Cache.<wbr>Provisioning<wbr>State<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#provisioningstatetype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Cache..<wbr>Provisioning<wbr>State<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}ARM provisioning state, see https://github.com/Azure/azure-resource-manager-rpc/blob/master/v1.0/Addendum.md#provisioningstate-property{{% /md %}}</dd>
     <dt class="property-optional"
@@ -545,7 +545,7 @@ The StorageTarget resource accepts the following [input]({{< relref "/docs/intro
 <a href="#unknown_csharp" style="color: inherit; text-decoration: inherit;">Unknown</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#unknowntarget">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Cache.<wbr>Inputs.<wbr>Unknown<wbr>Target<wbr>Args</a></span>
+        <span class="property-type"><a href="#unknowntarget">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Cache..<wbr>Inputs.<wbr>Unknown<wbr>Target<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties when targetType is unknown.{{% /md %}}</dd>
 </dl>
@@ -855,7 +855,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#systemdata_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Cache.<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
+        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Cache..<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The system meta data relating to this resource.{{% /md %}}</dd>
     <dt class="property-"
@@ -2180,7 +2180,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:storagecache/latest:StorageTarget st1 /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/scgroup/providers/Microsoft.StorageCache/caches/sc1/storagetargets/st1 
+$ pulumi import azure-nextgen:storagecache:StorageTarget st1 /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/scgroup/providers/Microsoft.StorageCache/caches/sc1/storagetargets/st1 
 ```
 
 

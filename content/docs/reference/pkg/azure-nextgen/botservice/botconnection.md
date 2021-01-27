@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.botservice.BotConnection resourc
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Bot channel resource definition
-Latest API Version: 2020-06-02.
+API Version: 2020-06-02.
 
 {{% examples %}}
 ## Example Usage
@@ -27,23 +27,23 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var botConnection = new AzureNextGen.BotService.Latest.BotConnection("botConnection", new AzureNextGen.BotService.Latest.BotConnectionArgs
+        var botConnection = new AzureNextGen.BotService..BotConnection("botConnection", new AzureNextGen.BotService..BotConnectionArgs
         {
             ConnectionName = "sampleConnection",
             Etag = "etag1",
             Location = "West US",
-            Properties = new AzureNextGen.BotService.Latest.Inputs.ConnectionSettingPropertiesArgs
+            Properties = new AzureNextGen.BotService..Inputs.ConnectionSettingPropertiesArgs
             {
                 ClientId = "sampleclientid",
                 ClientSecret = "samplesecret",
                 Parameters = 
                 {
-                    new AzureNextGen.BotService.Latest.Inputs.ConnectionSettingParameterArgs
+                    new AzureNextGen.BotService..Inputs.ConnectionSettingParameterArgs
                     {
                         Key = "key1",
                         Value = "value1",
                     },
-                    new AzureNextGen.BotService.Latest.Inputs.ConnectionSettingParameterArgs
+                    new AzureNextGen.BotService..Inputs.ConnectionSettingParameterArgs
                     {
                         Key = "key2",
                         Value = "value2",
@@ -69,7 +69,7 @@ class MyStack : Stack
 package main
 
 import (
-	botservice "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/botservice/latest"
+	botservice "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/botservice"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -115,19 +115,19 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-bot_connection = azure_nextgen.botservice.latest.BotConnection("botConnection",
+bot_connection = azure_nextgen.botservice.BotConnection("botConnection",
     connection_name="sampleConnection",
     etag="etag1",
     location="West US",
-    properties=azure_nextgen.botservice.latest.ConnectionSettingPropertiesArgs(
+    properties=azure_nextgen.botservice.ConnectionSettingPropertiesArgs(
         client_id="sampleclientid",
         client_secret="samplesecret",
         parameters=[
-            azure_nextgen.botservice.latest.ConnectionSettingParameterArgs(
+            azure_nextgen.botservice.ConnectionSettingParameterArgs(
                 key="key1",
                 value="value1",
             ),
-            azure_nextgen.botservice.latest.ConnectionSettingParameterArgs(
+            azure_nextgen.botservice.ConnectionSettingParameterArgs(
                 key="key2",
                 value="value2",
             ),
@@ -148,7 +148,7 @@ bot_connection = azure_nextgen.botservice.latest.BotConnection("botConnection",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const botConnection = new azure_nextgen.botservice.latest.BotConnection("botConnection", {
+const botConnection = new azure_nextgen.botservice.BotConnection("botConnection", {
     connectionName: "sampleConnection",
     etag: "etag1",
     location: "West US",
@@ -401,7 +401,7 @@ The BotConnection resource accepts the following [input]({{< relref "/docs/intro
 <a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#kind">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service.<wbr>Kind</a></span>
+        <span class="property-type">string | <a href="#kind">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service..<wbr>Kind</a></span>
     </dt>
     <dd>{{% md %}}Required. Gets or sets the Kind of the resource.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -419,7 +419,7 @@ The BotConnection resource accepts the following [input]({{< relref "/docs/intro
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionsettingproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Connection<wbr>Setting<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#connectionsettingproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service..<wbr>Inputs.<wbr>Connection<wbr>Setting<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to bot channel resource{{% /md %}}</dd>
     <dt class="property-optional"
@@ -428,7 +428,7 @@ The BotConnection resource accepts the following [input]({{< relref "/docs/intro
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sku">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Sku<wbr>Args</a></span>
+        <span class="property-type"><a href="#sku">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service..<wbr>Inputs.<wbr>Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the SKU of the resource.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1078,7 +1078,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionsettingparameter">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Connection<wbr>Setting<wbr>Parameter<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#connectionsettingparameter">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service..<wbr>Inputs.<wbr>Connection<wbr>Setting<wbr>Parameter<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Service Provider Parameters associated with the Connection Setting{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1329,7 +1329,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionsettingparameterresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Connection<wbr>Setting<wbr>Parameter<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#connectionsettingparameterresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service..<wbr>Inputs.<wbr>Connection<wbr>Setting<wbr>Parameter<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Service Provider Parameters associated with the Connection Setting{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1634,7 +1634,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#skuname">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service.<wbr>Sku<wbr>Name</a></span>
+        <span class="property-type">string | <a href="#skuname">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service..<wbr>Sku<wbr>Name</a></span>
     </dt>
     <dd>{{% md %}}The sku name{{% /md %}}</dd>
 </dl>
@@ -1826,7 +1826,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:botservice/latest:BotConnection sampleConnection /subscriptions/subscription-id/resourceGroups/OneResourceGroupName/providers/Microsoft.BotService/botServices/samplebotname/connections/sampleConnection 
+$ pulumi import azure-nextgen:botservice:BotConnection sampleConnection /subscriptions/subscription-id/resourceGroups/OneResourceGroupName/providers/Microsoft.BotService/botServices/samplebotname/connections/sampleConnection 
 ```
 
 

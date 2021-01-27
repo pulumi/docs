@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.insights.MetricAlert resource wi
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The metric alert resource.
-Latest API Version: 2018-03-01.
+API Version: 2018-03-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,11 +27,11 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var metricAlert = new AzureNextGen.Insights.Latest.MetricAlert("metricAlert", new AzureNextGen.Insights.Latest.MetricAlertArgs
+        var metricAlert = new AzureNextGen.Insights..MetricAlert("metricAlert", new AzureNextGen.Insights..MetricAlertArgs
         {
             Actions = 
             {
-                new AzureNextGen.Insights.Latest.Inputs.MetricAlertActionArgs
+                new AzureNextGen.Insights..Inputs.MetricAlertActionArgs
                 {
                     ActionGroupId = "/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/gigtest/providers/microsoft.insights/actiongroups/group2",
                     WebHookProperties = 
@@ -51,7 +51,7 @@ class MyStack : Stack
                         { "alertSensitivity", "Medium" },
                         { "criterionType", "DynamicThresholdCriterion" },
                         { "dimensions", {} },
-                        { "failingPeriods", new AzureNextGen.Insights.Latest.Inputs.DynamicThresholdFailingPeriodsArgs
+                        { "failingPeriods", new AzureNextGen.Insights..Inputs.DynamicThresholdFailingPeriodsArgs
                         {
                             MinFailingPeriodsToAlert = 4,
                             NumberOfEvaluationPeriods = 4,
@@ -100,8 +100,8 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-metric_alert = azure_nextgen.insights.latest.MetricAlert("metricAlert",
-    actions=[azure_nextgen.insights.latest.MetricAlertActionArgs(
+metric_alert = azure_nextgen.insights.MetricAlert("metricAlert",
+    actions=[azure_nextgen.insights.MetricAlertActionArgs(
         action_group_id="/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/gigtest/providers/microsoft.insights/actiongroups/group2",
         web_hook_properties={
             "key11": "value11",
@@ -114,7 +114,7 @@ metric_alert = azure_nextgen.insights.latest.MetricAlert("metricAlert",
             "alertSensitivity": "Medium",
             "criterionType": "DynamicThresholdCriterion",
             "dimensions": [],
-            "failingPeriods": azure_nextgen.insights.latest.DynamicThresholdFailingPeriodsArgs(
+            "failingPeriods": azure_nextgen.insights.DynamicThresholdFailingPeriodsArgs(
                 min_failing_periods_to_alert=4,
                 number_of_evaluation_periods=4,
             ),
@@ -152,7 +152,7 @@ metric_alert = azure_nextgen.insights.latest.MetricAlert("metricAlert",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const metricAlert = new azure_nextgen.insights.latest.MetricAlert("metricAlert", {
+const metricAlert = new azure_nextgen.insights.MetricAlert("metricAlert", {
     actions: [{
         actionGroupId: "/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/gigtest/providers/microsoft.insights/actiongroups/group2",
         webHookProperties: {
@@ -209,11 +209,11 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var metricAlert = new AzureNextGen.Insights.Latest.MetricAlert("metricAlert", new AzureNextGen.Insights.Latest.MetricAlertArgs
+        var metricAlert = new AzureNextGen.Insights..MetricAlert("metricAlert", new AzureNextGen.Insights..MetricAlertArgs
         {
             Actions = 
             {
-                new AzureNextGen.Insights.Latest.Inputs.MetricAlertActionArgs
+                new AzureNextGen.Insights..Inputs.MetricAlertActionArgs
                 {
                     ActionGroupId = "/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/gigtest/providers/microsoft.insights/actiongroups/group2",
                     WebHookProperties = 
@@ -233,7 +233,7 @@ class MyStack : Stack
                         { "alertSensitivity", "Medium" },
                         { "criterionType", "DynamicThresholdCriterion" },
                         { "dimensions", {} },
-                        { "failingPeriods", new AzureNextGen.Insights.Latest.Inputs.DynamicThresholdFailingPeriodsArgs
+                        { "failingPeriods", new AzureNextGen.Insights..Inputs.DynamicThresholdFailingPeriodsArgs
                         {
                             MinFailingPeriodsToAlert = 4,
                             NumberOfEvaluationPeriods = 4,
@@ -280,8 +280,8 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-metric_alert = azure_nextgen.insights.latest.MetricAlert("metricAlert",
-    actions=[azure_nextgen.insights.latest.MetricAlertActionArgs(
+metric_alert = azure_nextgen.insights.MetricAlert("metricAlert",
+    actions=[azure_nextgen.insights.MetricAlertActionArgs(
         action_group_id="/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/gigtest/providers/microsoft.insights/actiongroups/group2",
         web_hook_properties={
             "key11": "value11",
@@ -294,7 +294,7 @@ metric_alert = azure_nextgen.insights.latest.MetricAlert("metricAlert",
             "alertSensitivity": "Medium",
             "criterionType": "DynamicThresholdCriterion",
             "dimensions": [],
-            "failingPeriods": azure_nextgen.insights.latest.DynamicThresholdFailingPeriodsArgs(
+            "failingPeriods": azure_nextgen.insights.DynamicThresholdFailingPeriodsArgs(
                 min_failing_periods_to_alert=4,
                 number_of_evaluation_periods=4,
             ),
@@ -328,7 +328,7 @@ metric_alert = azure_nextgen.insights.latest.MetricAlert("metricAlert",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const metricAlert = new azure_nextgen.insights.latest.MetricAlert("metricAlert", {
+const metricAlert = new azure_nextgen.insights.MetricAlert("metricAlert", {
     actions: [{
         actionGroupId: "/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/gigtest/providers/microsoft.insights/actiongroups/group2",
         webHookProperties: {
@@ -381,7 +381,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var metricAlert = new AzureNextGen.Insights.Latest.MetricAlert("metricAlert", new AzureNextGen.Insights.Latest.MetricAlertArgs
+        var metricAlert = new AzureNextGen.Insights..MetricAlert("metricAlert", new AzureNextGen.Insights..MetricAlertArgs
         {
             Actions = {},
             Criteria = 
@@ -428,7 +428,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-metric_alert = azure_nextgen.insights.latest.MetricAlert("metricAlert",
+metric_alert = azure_nextgen.insights.MetricAlert("metricAlert",
     actions=[],
     criteria={
         "componentId": "/subscriptions/12345678-1234-1234-1234-123456789101/resourcegroups/rg-example/providers/microsoft.insights/components/webtest-name-example",
@@ -463,7 +463,7 @@ metric_alert = azure_nextgen.insights.latest.MetricAlert("metricAlert",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const metricAlert = new azure_nextgen.insights.latest.MetricAlert("metricAlert", {
+const metricAlert = new azure_nextgen.insights.MetricAlert("metricAlert", {
     actions: [],
     criteria: {
         componentId: "/subscriptions/12345678-1234-1234-1234-123456789101/resourcegroups/rg-example/providers/microsoft.insights/components/webtest-name-example",
@@ -503,11 +503,11 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var metricAlert = new AzureNextGen.Insights.Latest.MetricAlert("metricAlert", new AzureNextGen.Insights.Latest.MetricAlertArgs
+        var metricAlert = new AzureNextGen.Insights..MetricAlert("metricAlert", new AzureNextGen.Insights..MetricAlertArgs
         {
             Actions = 
             {
-                new AzureNextGen.Insights.Latest.Inputs.MetricAlertActionArgs
+                new AzureNextGen.Insights..Inputs.MetricAlertActionArgs
                 {
                     ActionGroupId = "/subscriptions/14ddf0c5-77c5-4b53-84f6-e1fa43ad68f7/resourcegroups/gigtest/providers/microsoft.insights/actiongroups/group2",
                     WebHookProperties = 
@@ -571,8 +571,8 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-metric_alert = azure_nextgen.insights.latest.MetricAlert("metricAlert",
-    actions=[azure_nextgen.insights.latest.MetricAlertActionArgs(
+metric_alert = azure_nextgen.insights.MetricAlert("metricAlert",
+    actions=[azure_nextgen.insights.MetricAlertActionArgs(
         action_group_id="/subscriptions/14ddf0c5-77c5-4b53-84f6-e1fa43ad68f7/resourcegroups/gigtest/providers/microsoft.insights/actiongroups/group2",
         web_hook_properties={
             "key11": "value11",
@@ -619,7 +619,7 @@ metric_alert = azure_nextgen.insights.latest.MetricAlert("metricAlert",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const metricAlert = new azure_nextgen.insights.latest.MetricAlert("metricAlert", {
+const metricAlert = new azure_nextgen.insights.MetricAlert("metricAlert", {
     actions: [{
         actionGroupId: "/subscriptions/14ddf0c5-77c5-4b53-84f6-e1fa43ad68f7/resourcegroups/gigtest/providers/microsoft.insights/actiongroups/group2",
         webHookProperties: {
@@ -672,11 +672,11 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var metricAlert = new AzureNextGen.Insights.Latest.MetricAlert("metricAlert", new AzureNextGen.Insights.Latest.MetricAlertArgs
+        var metricAlert = new AzureNextGen.Insights..MetricAlert("metricAlert", new AzureNextGen.Insights..MetricAlertArgs
         {
             Actions = 
             {
-                new AzureNextGen.Insights.Latest.Inputs.MetricAlertActionArgs
+                new AzureNextGen.Insights..Inputs.MetricAlertActionArgs
                 {
                     ActionGroupId = "/subscriptions/14ddf0c5-77c5-4b53-84f6-e1fa43ad68f7/resourcegroups/gigtest/providers/microsoft.insights/actiongroups/group2",
                     WebHookProperties = 
@@ -736,8 +736,8 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-metric_alert = azure_nextgen.insights.latest.MetricAlert("metricAlert",
-    actions=[azure_nextgen.insights.latest.MetricAlertActionArgs(
+metric_alert = azure_nextgen.insights.MetricAlert("metricAlert",
+    actions=[azure_nextgen.insights.MetricAlertActionArgs(
         action_group_id="/subscriptions/14ddf0c5-77c5-4b53-84f6-e1fa43ad68f7/resourcegroups/gigtest/providers/microsoft.insights/actiongroups/group2",
         web_hook_properties={
             "key11": "value11",
@@ -778,7 +778,7 @@ metric_alert = azure_nextgen.insights.latest.MetricAlert("metricAlert",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const metricAlert = new azure_nextgen.insights.latest.MetricAlert("metricAlert", {
+const metricAlert = new azure_nextgen.insights.MetricAlert("metricAlert", {
     actions: [{
         actionGroupId: "/subscriptions/14ddf0c5-77c5-4b53-84f6-e1fa43ad68f7/resourcegroups/gigtest/providers/microsoft.insights/actiongroups/group2",
         webHookProperties: {
@@ -825,11 +825,11 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var metricAlert = new AzureNextGen.Insights.Latest.MetricAlert("metricAlert", new AzureNextGen.Insights.Latest.MetricAlertArgs
+        var metricAlert = new AzureNextGen.Insights..MetricAlert("metricAlert", new AzureNextGen.Insights..MetricAlertArgs
         {
             Actions = 
             {
-                new AzureNextGen.Insights.Latest.Inputs.MetricAlertActionArgs
+                new AzureNextGen.Insights..Inputs.MetricAlertActionArgs
                 {
                     ActionGroupId = "/subscriptions/14ddf0c5-77c5-4b53-84f6-e1fa43ad68f7/resourcegroups/gigtest/providers/microsoft.insights/actiongroups/group2",
                     WebHookProperties = 
@@ -893,8 +893,8 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-metric_alert = azure_nextgen.insights.latest.MetricAlert("metricAlert",
-    actions=[azure_nextgen.insights.latest.MetricAlertActionArgs(
+metric_alert = azure_nextgen.insights.MetricAlert("metricAlert",
+    actions=[azure_nextgen.insights.MetricAlertActionArgs(
         action_group_id="/subscriptions/14ddf0c5-77c5-4b53-84f6-e1fa43ad68f7/resourcegroups/gigtest/providers/microsoft.insights/actiongroups/group2",
         web_hook_properties={
             "key11": "value11",
@@ -941,7 +941,7 @@ metric_alert = azure_nextgen.insights.latest.MetricAlert("metricAlert",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const metricAlert = new azure_nextgen.insights.latest.MetricAlert("metricAlert", {
+const metricAlert = new azure_nextgen.insights.MetricAlert("metricAlert", {
     actions: [{
         actionGroupId: "/subscriptions/14ddf0c5-77c5-4b53-84f6-e1fa43ad68f7/resourcegroups/gigtest/providers/microsoft.insights/actiongroups/group2",
         webHookProperties: {
@@ -994,11 +994,11 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var metricAlert = new AzureNextGen.Insights.Latest.MetricAlert("metricAlert", new AzureNextGen.Insights.Latest.MetricAlertArgs
+        var metricAlert = new AzureNextGen.Insights..MetricAlert("metricAlert", new AzureNextGen.Insights..MetricAlertArgs
         {
             Actions = 
             {
-                new AzureNextGen.Insights.Latest.Inputs.MetricAlertActionArgs
+                new AzureNextGen.Insights..Inputs.MetricAlertActionArgs
                 {
                     ActionGroupId = "/subscriptions/14ddf0c5-77c5-4b53-84f6-e1fa43ad68f7/resourcegroups/gigtest/providers/microsoft.insights/actiongroups/group2",
                     WebHookProperties = 
@@ -1061,8 +1061,8 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-metric_alert = azure_nextgen.insights.latest.MetricAlert("metricAlert",
-    actions=[azure_nextgen.insights.latest.MetricAlertActionArgs(
+metric_alert = azure_nextgen.insights.MetricAlert("metricAlert",
+    actions=[azure_nextgen.insights.MetricAlertActionArgs(
         action_group_id="/subscriptions/14ddf0c5-77c5-4b53-84f6-e1fa43ad68f7/resourcegroups/gigtest/providers/microsoft.insights/actiongroups/group2",
         web_hook_properties={
             "key11": "value11",
@@ -1106,7 +1106,7 @@ metric_alert = azure_nextgen.insights.latest.MetricAlert("metricAlert",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const metricAlert = new azure_nextgen.insights.latest.MetricAlert("metricAlert", {
+const metricAlert = new azure_nextgen.insights.MetricAlert("metricAlert", {
     actions: [{
         actionGroupId: "/subscriptions/14ddf0c5-77c5-4b53-84f6-e1fa43ad68f7/resourcegroups/gigtest/providers/microsoft.insights/actiongroups/group2",
         webHookProperties: {
@@ -1156,11 +1156,11 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var metricAlert = new AzureNextGen.Insights.Latest.MetricAlert("metricAlert", new AzureNextGen.Insights.Latest.MetricAlertArgs
+        var metricAlert = new AzureNextGen.Insights..MetricAlert("metricAlert", new AzureNextGen.Insights..MetricAlertArgs
         {
             Actions = 
             {
-                new AzureNextGen.Insights.Latest.Inputs.MetricAlertActionArgs
+                new AzureNextGen.Insights..Inputs.MetricAlertActionArgs
                 {
                     ActionGroupId = "/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/gigtest/providers/microsoft.insights/actiongroups/group2",
                     WebHookProperties = 
@@ -1180,7 +1180,7 @@ class MyStack : Stack
                         { "criterionType", "StaticThresholdCriterion" },
                         { "dimensions", 
                         {
-                            new AzureNextGen.Insights.Latest.Inputs.MetricDimensionArgs
+                            new AzureNextGen.Insights..Inputs.MetricDimensionArgs
                             {
                                 Name = "ActivityName",
                                 Operator = "Include",
@@ -1189,7 +1189,7 @@ class MyStack : Stack
                                     "*",
                                 },
                             },
-                            new AzureNextGen.Insights.Latest.Inputs.MetricDimensionArgs
+                            new AzureNextGen.Insights..Inputs.MetricDimensionArgs
                             {
                                 Name = "StatusCode",
                                 Operator = "Include",
@@ -1241,8 +1241,8 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-metric_alert = azure_nextgen.insights.latest.MetricAlert("metricAlert",
-    actions=[azure_nextgen.insights.latest.MetricAlertActionArgs(
+metric_alert = azure_nextgen.insights.MetricAlert("metricAlert",
+    actions=[azure_nextgen.insights.MetricAlertActionArgs(
         action_group_id="/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/gigtest/providers/microsoft.insights/actiongroups/group2",
         web_hook_properties={
             "key11": "value11",
@@ -1254,12 +1254,12 @@ metric_alert = azure_nextgen.insights.latest.MetricAlert("metricAlert",
         "allOf": [{
             "criterionType": "StaticThresholdCriterion",
             "dimensions": [
-                azure_nextgen.insights.latest.MetricDimensionArgs(
+                azure_nextgen.insights.MetricDimensionArgs(
                     name="ActivityName",
                     operator="Include",
                     values=["*"],
                 ),
-                azure_nextgen.insights.latest.MetricDimensionArgs(
+                azure_nextgen.insights.MetricDimensionArgs(
                     name="StatusCode",
                     operator="Include",
                     values=["200"],
@@ -1295,7 +1295,7 @@ metric_alert = azure_nextgen.insights.latest.MetricAlert("metricAlert",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const metricAlert = new azure_nextgen.insights.latest.MetricAlert("metricAlert", {
+const metricAlert = new azure_nextgen.insights.MetricAlert("metricAlert", {
     actions: [{
         actionGroupId: "/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/gigtest/providers/microsoft.insights/actiongroups/group2",
         webHookProperties: {
@@ -1533,7 +1533,7 @@ The MetricAlert resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#criteria_csharp" style="color: inherit; text-decoration: inherit;">Criteria</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricalertmultipleresourcemultiplemetriccriteria">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Inputs.<wbr>Metric<wbr>Alert<wbr>Multiple<wbr>Resource<wbr>Multiple<wbr>Metric<wbr>Criteria<wbr>Args</a> | <a href="#metricalertsingleresourcemultiplemetriccriteria">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Inputs.<wbr>Metric<wbr>Alert<wbr>Single<wbr>Resource<wbr>Multiple<wbr>Metric<wbr>Criteria<wbr>Args</a> | <a href="#webtestlocationavailabilitycriteria">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Inputs.<wbr>Webtest<wbr>Location<wbr>Availability<wbr>Criteria<wbr>Args</a></span>
+        <span class="property-type"><a href="#metricalertmultipleresourcemultiplemetriccriteria">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Inputs.<wbr>Metric<wbr>Alert<wbr>Multiple<wbr>Resource<wbr>Multiple<wbr>Metric<wbr>Criteria<wbr>Args</a> | <a href="#metricalertsingleresourcemultiplemetriccriteria">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Inputs.<wbr>Metric<wbr>Alert<wbr>Single<wbr>Resource<wbr>Multiple<wbr>Metric<wbr>Criteria<wbr>Args</a> | <a href="#webtestlocationavailabilitycriteria">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Inputs.<wbr>Webtest<wbr>Location<wbr>Availability<wbr>Criteria<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}defines the specific alert criteria information.{{% /md %}}</dd>
     <dt class="property-required"
@@ -1614,7 +1614,7 @@ The MetricAlert resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#actions_csharp" style="color: inherit; text-decoration: inherit;">Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricalertaction">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Inputs.<wbr>Metric<wbr>Alert<wbr>Action<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#metricalertaction">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Inputs.<wbr>Metric<wbr>Alert<wbr>Action<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}the array of actions that are performed when the alert rule becomes active, and when an alert condition is resolved.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2382,7 +2382,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#alertsensitivity_csharp" style="color: inherit; text-decoration: inherit;">Alert<wbr>Sensitivity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#dynamicthresholdsensitivity">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Dynamic<wbr>Threshold<wbr>Sensitivity</a></span>
+        <span class="property-type">string | <a href="#dynamicthresholdsensitivity">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Dynamic<wbr>Threshold<wbr>Sensitivity</a></span>
     </dt>
     <dd>{{% md %}}The extent of deviation required to trigger an alert. This will affect how tight the threshold is to the metric series pattern.{{% /md %}}</dd>
     <dt class="property-required"
@@ -2391,7 +2391,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#failingperiods_csharp" style="color: inherit; text-decoration: inherit;">Failing<wbr>Periods</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dynamicthresholdfailingperiods">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Inputs.<wbr>Dynamic<wbr>Threshold<wbr>Failing<wbr>Periods<wbr>Args</a></span>
+        <span class="property-type"><a href="#dynamicthresholdfailingperiods">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Inputs.<wbr>Dynamic<wbr>Threshold<wbr>Failing<wbr>Periods<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The minimum number of violations required within the selected lookback time window required to raise an alert.{{% /md %}}</dd>
     <dt class="property-required"
@@ -2418,7 +2418,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operator_csharp" style="color: inherit; text-decoration: inherit;">Operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#dynamicthresholdoperator">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Dynamic<wbr>Threshold<wbr>Operator</a></span>
+        <span class="property-type">string | <a href="#dynamicthresholdoperator">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Dynamic<wbr>Threshold<wbr>Operator</a></span>
     </dt>
     <dd>{{% md %}}The operator used to compare the metric value against the threshold.{{% /md %}}</dd>
     <dt class="property-required"
@@ -2427,7 +2427,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timeaggregation_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Aggregation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#aggregationtypeenum">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Aggregation<wbr>Type<wbr>Enum</a></span>
+        <span class="property-type">string | <a href="#aggregationtypeenum">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Aggregation<wbr>Type<wbr>Enum</a></span>
     </dt>
     <dd>{{% md %}}the criteria time aggregation types.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2436,7 +2436,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dimensions_csharp" style="color: inherit; text-decoration: inherit;">Dimensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricdimension">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Inputs.<wbr>Metric<wbr>Dimension<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#metricdimension">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Inputs.<wbr>Metric<wbr>Dimension<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of dimension conditions.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2777,7 +2777,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#failingperiods_csharp" style="color: inherit; text-decoration: inherit;">Failing<wbr>Periods</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dynamicthresholdfailingperiodsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Inputs.<wbr>Dynamic<wbr>Threshold<wbr>Failing<wbr>Periods<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#dynamicthresholdfailingperiodsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Inputs.<wbr>Dynamic<wbr>Threshold<wbr>Failing<wbr>Periods<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The minimum number of violations required within the selected lookback time window required to raise an alert.{{% /md %}}</dd>
     <dt class="property-required"
@@ -2822,7 +2822,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dimensions_csharp" style="color: inherit; text-decoration: inherit;">Dimensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricdimensionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Inputs.<wbr>Metric<wbr>Dimension<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#metricdimensionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Inputs.<wbr>Metric<wbr>Dimension<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of dimension conditions.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3638,7 +3638,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allof_csharp" style="color: inherit; text-decoration: inherit;">All<wbr>Of</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Inputs.<wbr>Dynamic<wbr>Metric<wbr>Criteria<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Inputs.<wbr>Metric<wbr>Criteria<wbr>Args&gt;&gt;</span>
+        <span class="property-type">List&lt;Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Inputs.<wbr>Dynamic<wbr>Metric<wbr>Criteria<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Inputs.<wbr>Metric<wbr>Criteria<wbr>Args&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}the list of multiple metric criteria for this 'all of' operation. {{% /md %}}</dd>
 </dl>
@@ -3700,7 +3700,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allof_csharp" style="color: inherit; text-decoration: inherit;">All<wbr>Of</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Inputs.<wbr>Dynamic<wbr>Metric<wbr>Criteria<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Inputs.<wbr>Metric<wbr>Criteria<wbr>Response<wbr>Args&gt;&gt;</span>
+        <span class="property-type">List&lt;Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Inputs.<wbr>Dynamic<wbr>Metric<wbr>Criteria<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Inputs.<wbr>Metric<wbr>Criteria<wbr>Response<wbr>Args&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}the list of multiple metric criteria for this 'all of' operation. {{% /md %}}</dd>
 </dl>
@@ -3762,7 +3762,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allof_csharp" style="color: inherit; text-decoration: inherit;">All<wbr>Of</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metriccriteria">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Inputs.<wbr>Metric<wbr>Criteria<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#metriccriteria">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Inputs.<wbr>Metric<wbr>Criteria<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of metric criteria for this 'all of' operation. {{% /md %}}</dd>
 </dl>
@@ -3824,7 +3824,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allof_csharp" style="color: inherit; text-decoration: inherit;">All<wbr>Of</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metriccriteriaresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Inputs.<wbr>Metric<wbr>Criteria<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#metriccriteriaresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Inputs.<wbr>Metric<wbr>Criteria<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of metric criteria for this 'all of' operation. {{% /md %}}</dd>
 </dl>
@@ -3904,7 +3904,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operator_csharp" style="color: inherit; text-decoration: inherit;">Operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#operator">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Operator</a></span>
+        <span class="property-type">string | <a href="#operator">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Operator</a></span>
     </dt>
     <dd>{{% md %}}the criteria operator.{{% /md %}}</dd>
     <dt class="property-required"
@@ -3922,7 +3922,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timeaggregation_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Aggregation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#aggregationtypeenum">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Aggregation<wbr>Type<wbr>Enum</a></span>
+        <span class="property-type">string | <a href="#aggregationtypeenum">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Aggregation<wbr>Type<wbr>Enum</a></span>
     </dt>
     <dd>{{% md %}}the criteria time aggregation types.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3931,7 +3931,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dimensions_csharp" style="color: inherit; text-decoration: inherit;">Dimensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricdimension">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Inputs.<wbr>Metric<wbr>Dimension<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#metricdimension">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Inputs.<wbr>Metric<wbr>Dimension<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of dimension conditions.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4245,7 +4245,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dimensions_csharp" style="color: inherit; text-decoration: inherit;">Dimensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricdimensionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Inputs.<wbr>Metric<wbr>Dimension<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#metricdimensionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Inputs.<wbr>Metric<wbr>Dimension<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of dimension conditions.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -5074,7 +5074,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:insights/latest:MetricAlert webtest-name-example /subscriptions/14ddf0c5-77c5-4b53-84f6-e1fa43ad68f7/resourceGroups/gigtest/providers/providers/microsoft.insights/metricalerts/MetricAlertWithDimensions 
+$ pulumi import azure-nextgen:insights:MetricAlert webtest-name-example /subscriptions/14ddf0c5-77c5-4b53-84f6-e1fa43ad68f7/resourceGroups/gigtest/providers/providers/microsoft.insights/metricalerts/MetricAlertWithDimensions 
 ```
 
 

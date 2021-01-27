@@ -287,7 +287,7 @@ The following output properties are available:
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageclassificationmappingpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Outputs.<wbr>Storage<wbr>Classification<wbr>Mapping<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#storageclassificationmappingpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Outputs.<wbr>Storage<wbr>Classification<wbr>Mapping<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Properties of the storage mapping object.{{% /md %}}</dd>
     <dt class="property-"

@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.marketplace.PrivateStoreOffer re
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The privateStore offer data structure.
-Latest API Version: 2020-01-01.
+API Version: 2020-01-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var privateStoreOffer = new AzureNextGen.Marketplace.Latest.PrivateStoreOffer("privateStoreOffer", new AzureNextGen.Marketplace.Latest.PrivateStoreOfferArgs
+        var privateStoreOffer = new AzureNextGen.Marketplace..PrivateStoreOffer("privateStoreOffer", new AzureNextGen.Marketplace..PrivateStoreOfferArgs
         {
             OfferId = "marketplacetestthirdparty.md-test-third-party-2",
             PrivateStoreId = "a0e28e55-90c4-41d8-8e34-bb7ef7775406",
@@ -46,7 +46,7 @@ class MyStack : Stack
 package main
 
 import (
-	marketplace "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/marketplace/latest"
+	marketplace "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/marketplace"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -73,7 +73,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-private_store_offer = azure_nextgen.marketplace.latest.PrivateStoreOffer("privateStoreOffer",
+private_store_offer = azure_nextgen.marketplace.PrivateStoreOffer("privateStoreOffer",
     offer_id="marketplacetestthirdparty.md-test-third-party-2",
     private_store_id="a0e28e55-90c4-41d8-8e34-bb7ef7775406")
 
@@ -87,7 +87,7 @@ private_store_offer = azure_nextgen.marketplace.latest.PrivateStoreOffer("privat
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const privateStoreOffer = new azure_nextgen.marketplace.latest.PrivateStoreOffer("privateStoreOffer", {
+const privateStoreOffer = new azure_nextgen.marketplace.PrivateStoreOffer("privateStoreOffer", {
     offerId: "marketplacetestthirdparty.md-test-third-party-2",
     privateStoreId: "a0e28e55-90c4-41d8-8e34-bb7ef7775406",
 });
@@ -321,7 +321,7 @@ The PrivateStoreOffer resource accepts the following [input]({{< relref "/docs/i
 <a href="#plans_csharp" style="color: inherit; text-decoration: inherit;">Plans</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#plan">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Marketplace.<wbr>Inputs.<wbr>Plan<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#plan">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Marketplace..<wbr>Inputs.<wbr>Plan<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Offer plans{{% /md %}}</dd>
     <dt class="property-optional"
@@ -946,7 +946,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accessibility_csharp" style="color: inherit; text-decoration: inherit;">Accessibility</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#accessibility">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Marketplace.<wbr>Accessibility</a></span>
+        <span class="property-type">string | <a href="#accessibility">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Marketplace..<wbr>Accessibility</a></span>
     </dt>
     <dd>{{% md %}}Plan accessibility{{% /md %}}</dd>
 </dl>
@@ -1244,7 +1244,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:marketplace/latest:PrivateStoreOffer marketplacetestthirdparty.md-test-third-party-2 /providers/Microsoft.Marketplace/privateStores/a0e28e55-90c4-41d8-8e34-bb7ef7775406/offers/marketplacetestthirdparty.md-test-third-party-2 
+$ pulumi import azure-nextgen:marketplace:PrivateStoreOffer marketplacetestthirdparty.md-test-third-party-2 /providers/Microsoft.Marketplace/privateStores/a0e28e55-90c4-41d8-8e34-bb7ef7775406/offers/marketplacetestthirdparty.md-test-third-party-2 
 ```
 
 

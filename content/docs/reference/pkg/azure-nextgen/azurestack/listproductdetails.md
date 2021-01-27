@@ -204,7 +204,7 @@ The following output properties are available:
 <a href="#datadiskimages_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Disk<wbr>Images</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datadiskimageresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Azure<wbr>Stack.<wbr>Outputs.<wbr>Data<wbr>Disk<wbr>Image<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#datadiskimageresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Azure<wbr>Stack..<wbr>Outputs.<wbr>Data<wbr>Disk<wbr>Image<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of attached data disks.{{% /md %}}</dd>
     <dt class="property-"
@@ -231,7 +231,7 @@ The following output properties are available:
 <a href="#osdiskimage_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Disk<wbr>Image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#osdiskimageresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Azure<wbr>Stack.<wbr>Outputs.<wbr>Os<wbr>Disk<wbr>Image<wbr>Response</a></span>
+        <span class="property-type"><a href="#osdiskimageresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Azure<wbr>Stack..<wbr>Outputs.<wbr>Os<wbr>Disk<wbr>Image<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}OS disk image used by product.{{% /md %}}</dd>
     <dt class="property-"

@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.engagementfabric.Channel resourc
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The EngagementFabric channel
+API Version: 2018-09-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var channel = new AzureNextGen.EngagementFabric.V20180901Preview.Channel("channel", new AzureNextGen.EngagementFabric.V20180901Preview.ChannelArgs
+        var channel = new AzureNextGen.EngagementFabric..Channel("channel", new AzureNextGen.EngagementFabric..ChannelArgs
         {
             AccountName = "ExampleAccount",
             ChannelFunctions = 
@@ -57,7 +58,7 @@ class MyStack : Stack
 package main
 
 import (
-	engagementfabric "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/engagementfabric/v20180901preview"
+	engagementfabric "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/engagementfabric"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -94,7 +95,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-channel = azure_nextgen.engagementfabric.v20180901preview.Channel("channel",
+channel = azure_nextgen.engagementfabric.Channel("channel",
     account_name="ExampleAccount",
     channel_functions=[
         "MockFunction1",
@@ -118,7 +119,7 @@ channel = azure_nextgen.engagementfabric.v20180901preview.Channel("channel",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const channel = new azure_nextgen.engagementfabric.v20180901preview.Channel("channel", {
+const channel = new azure_nextgen.engagementfabric.Channel("channel", {
     accountName: "ExampleAccount",
     channelFunctions: [
         "MockFunction1",
@@ -707,7 +708,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:engagementfabric/v20180901preview:Channel ExampleChannel subscriptions/EDBF0095-A524-4A84-95FB-F72DA41AA6A1/resourceGroups/ExampleRg/providers/Microsoft.EngagementFabric/Accounts/ExampleAccount/Channels/ExampleChannel 
+$ pulumi import azure-nextgen:engagementfabric:Channel ExampleChannel subscriptions/EDBF0095-A524-4A84-95FB-F72DA41AA6A1/resourceGroups/ExampleRg/providers/Microsoft.EngagementFabric/Accounts/ExampleAccount/Channels/ExampleChannel 
 ```
 
 

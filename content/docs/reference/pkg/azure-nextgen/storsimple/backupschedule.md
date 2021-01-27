@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.storsimple.BackupSchedule resour
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The backup schedule.
-Latest API Version: 2017-06-01.
+API Version: 2017-06-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var backupSchedule = new AzureNextGen.StorSimple.Latest.BackupSchedule("backupSchedule", new AzureNextGen.StorSimple.Latest.BackupScheduleArgs
+        var backupSchedule = new AzureNextGen.StorSimple..BackupSchedule("backupSchedule", new AzureNextGen.StorSimple..BackupScheduleArgs
         {
             BackupPolicyName = "BkUpPolicy01ForSDKTest",
             BackupScheduleName = "schedule2",
@@ -37,7 +37,7 @@ class MyStack : Stack
             ManagerName = "ManagerForSDKTest1",
             ResourceGroupName = "ResourceGroupForSDKTest",
             RetentionCount = 1,
-            ScheduleRecurrence = new AzureNextGen.StorSimple.Latest.Inputs.ScheduleRecurrenceArgs
+            ScheduleRecurrence = new AzureNextGen.StorSimple..Inputs.ScheduleRecurrenceArgs
             {
                 RecurrenceType = "Weekly",
                 RecurrenceValue = 1,
@@ -69,7 +69,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-backup_schedule = azure_nextgen.storsimple.latest.BackupSchedule("backupSchedule",
+backup_schedule = azure_nextgen.storsimple.BackupSchedule("backupSchedule",
     backup_policy_name="BkUpPolicy01ForSDKTest",
     backup_schedule_name="schedule2",
     backup_type="CloudSnapshot",
@@ -78,7 +78,7 @@ backup_schedule = azure_nextgen.storsimple.latest.BackupSchedule("backupSchedule
     manager_name="ManagerForSDKTest1",
     resource_group_name="ResourceGroupForSDKTest",
     retention_count=1,
-    schedule_recurrence=azure_nextgen.storsimple.latest.ScheduleRecurrenceArgs(
+    schedule_recurrence=azure_nextgen.storsimple.ScheduleRecurrenceArgs(
         recurrence_type="Weekly",
         recurrence_value=1,
         weekly_days_list=[
@@ -100,7 +100,7 @@ backup_schedule = azure_nextgen.storsimple.latest.BackupSchedule("backupSchedule
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const backupSchedule = new azure_nextgen.storsimple.latest.BackupSchedule("backupSchedule", {
+const backupSchedule = new azure_nextgen.storsimple.BackupSchedule("backupSchedule", {
     backupPolicyName: "BkUpPolicy01ForSDKTest",
     backupScheduleName: "schedule2",
     backupType: "CloudSnapshot",
@@ -333,7 +333,7 @@ The BackupSchedule resource accepts the following [input]({{< relref "/docs/intr
 <a href="#backuptype_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backuptype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stor<wbr>Simple.<wbr>Backup<wbr>Type</a></span>
+        <span class="property-type"><a href="#backuptype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stor<wbr>Simple..<wbr>Backup<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of backup which needs to be taken.{{% /md %}}</dd>
     <dt class="property-required"
@@ -378,7 +378,7 @@ The BackupSchedule resource accepts the following [input]({{< relref "/docs/intr
 <a href="#schedulerecurrence_csharp" style="color: inherit; text-decoration: inherit;">Schedule<wbr>Recurrence</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#schedulerecurrence">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stor<wbr>Simple.<wbr>Inputs.<wbr>Schedule<wbr>Recurrence<wbr>Args</a></span>
+        <span class="property-type"><a href="#schedulerecurrence">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stor<wbr>Simple..<wbr>Inputs.<wbr>Schedule<wbr>Recurrence<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The schedule recurrence.{{% /md %}}</dd>
     <dt class="property-required"
@@ -387,7 +387,7 @@ The BackupSchedule resource accepts the following [input]({{< relref "/docs/intr
 <a href="#schedulestatus_csharp" style="color: inherit; text-decoration: inherit;">Schedule<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#schedulestatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stor<wbr>Simple.<wbr>Schedule<wbr>Status</a></span>
+        <span class="property-type"><a href="#schedulestatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stor<wbr>Simple..<wbr>Schedule<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}The schedule status.{{% /md %}}</dd>
     <dt class="property-required"
@@ -405,7 +405,7 @@ The BackupSchedule resource accepts the following [input]({{< relref "/docs/intr
 <a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kind">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stor<wbr>Simple.<wbr>Kind</a></span>
+        <span class="property-type"><a href="#kind">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stor<wbr>Simple..<wbr>Kind</a></span>
     </dt>
     <dd>{{% md %}}The Kind of the object. Currently only Series8000 is supported{{% /md %}}</dd>
 </dl>
@@ -1122,7 +1122,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recurrencetype_csharp" style="color: inherit; text-decoration: inherit;">Recurrence<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recurrencetype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stor<wbr>Simple.<wbr>Recurrence<wbr>Type</a></span>
+        <span class="property-type"><a href="#recurrencetype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stor<wbr>Simple..<wbr>Recurrence<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The recurrence type.{{% /md %}}</dd>
     <dt class="property-required"
@@ -1140,7 +1140,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#weeklydayslist_csharp" style="color: inherit; text-decoration: inherit;">Weekly<wbr>Days<wbr>List</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dayofweek">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stor<wbr>Simple.<wbr>Day<wbr>Of<wbr>Week&gt;</a></span>
+        <span class="property-type"><a href="#dayofweek">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stor<wbr>Simple..<wbr>Day<wbr>Of<wbr>Week&gt;</a></span>
     </dt>
     <dd>{{% md %}}The week days list. Applicable only for schedules of recurrence type 'weekly'.{{% /md %}}</dd>
 </dl>
@@ -1422,7 +1422,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:storsimple/latest:BackupSchedule schedule2 /subscriptions/4385cf00-2d3a-425a-832f-f4285b1c9dce/resourceGroups/ResourceGroupForSDKTest/providers/Microsoft.StorSimple/managers/ManagerForSDKTest1/devices/Device05ForSDKTest/backupPolicies/BkUpPolicy01ForSDKTest/schedules/schedule2 
+$ pulumi import azure-nextgen:storsimple:BackupSchedule schedule2 /subscriptions/4385cf00-2d3a-425a-832f-f4285b1c9dce/resourceGroups/ResourceGroupForSDKTest/providers/Microsoft.StorSimple/managers/ManagerForSDKTest1/devices/Device05ForSDKTest/backupPolicies/BkUpPolicy01ForSDKTest/schedules/schedule2 
 ```
 
 

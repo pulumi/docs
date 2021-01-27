@@ -260,7 +260,7 @@ The following output properties are available:
 <a href="#rules_csharp" style="color: inherit; text-decoration: inherit;">Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectreplicationpolicyruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Outputs.<wbr>Object<wbr>Replication<wbr>Policy<wbr>Rule<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#objectreplicationpolicyruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage..<wbr>Outputs.<wbr>Object<wbr>Replication<wbr>Policy<wbr>Rule<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The storage account object replication rules.{{% /md %}}</dd>
 </dl>
@@ -643,7 +643,7 @@ The following output properties are available:
 <a href="#filters_csharp" style="color: inherit; text-decoration: inherit;">Filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectreplicationpolicyfilterresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Inputs.<wbr>Object<wbr>Replication<wbr>Policy<wbr>Filter<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#objectreplicationpolicyfilterresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage..<wbr>Inputs.<wbr>Object<wbr>Replication<wbr>Policy<wbr>Filter<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. An object that defines the filter set.{{% /md %}}</dd>
     <dt class="property-optional"

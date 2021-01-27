@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.resources.TagAtScope resource wi
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Wrapper resource for tags API requests and responses.
-Latest API Version: 2020-08-01.
+API Version: 2020-08-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,9 +27,9 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var tagAtScope = new AzureNextGen.Resources.Latest.TagAtScope("tagAtScope", new AzureNextGen.Resources.Latest.TagAtScopeArgs
+        var tagAtScope = new AzureNextGen.Resources..TagAtScope("tagAtScope", new AzureNextGen.Resources..TagAtScopeArgs
         {
-            Properties = new AzureNextGen.Resources.Latest.Inputs.TagsArgs
+            Properties = new AzureNextGen.Resources..Inputs.TagsArgs
             {
                 Tags = 
                 {
@@ -53,7 +53,7 @@ class MyStack : Stack
 package main
 
 import (
-	resources "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/resources/latest"
+	resources "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/resources"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -85,8 +85,8 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-tag_at_scope = azure_nextgen.resources.latest.TagAtScope("tagAtScope",
-    properties=azure_nextgen.resources.latest.TagsArgs(
+tag_at_scope = azure_nextgen.resources.TagAtScope("tagAtScope",
+    properties=azure_nextgen.resources.TagsArgs(
         tags={
             "tagKey1": "tag-value-1",
             "tagKey2": "tag-value-2",
@@ -104,7 +104,7 @@ tag_at_scope = azure_nextgen.resources.latest.TagAtScope("tagAtScope",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const tagAtScope = new azure_nextgen.resources.latest.TagAtScope("tagAtScope", {
+const tagAtScope = new azure_nextgen.resources.TagAtScope("tagAtScope", {
     properties: {
         tags: {
             tagKey1: "tag-value-1",
@@ -128,9 +128,9 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var tagAtScope = new AzureNextGen.Resources.Latest.TagAtScope("tagAtScope", new AzureNextGen.Resources.Latest.TagAtScopeArgs
+        var tagAtScope = new AzureNextGen.Resources..TagAtScope("tagAtScope", new AzureNextGen.Resources..TagAtScopeArgs
         {
-            Properties = new AzureNextGen.Resources.Latest.Inputs.TagsArgs
+            Properties = new AzureNextGen.Resources..Inputs.TagsArgs
             {
                 Tags = 
                 {
@@ -154,7 +154,7 @@ class MyStack : Stack
 package main
 
 import (
-	resources "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/resources/latest"
+	resources "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/resources"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -186,8 +186,8 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-tag_at_scope = azure_nextgen.resources.latest.TagAtScope("tagAtScope",
-    properties=azure_nextgen.resources.latest.TagsArgs(
+tag_at_scope = azure_nextgen.resources.TagAtScope("tagAtScope",
+    properties=azure_nextgen.resources.TagsArgs(
         tags={
             "tagKey1": "tag-value-1",
             "tagKey2": "tag-value-2",
@@ -205,7 +205,7 @@ tag_at_scope = azure_nextgen.resources.latest.TagAtScope("tagAtScope",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const tagAtScope = new azure_nextgen.resources.latest.TagAtScope("tagAtScope", {
+const tagAtScope = new azure_nextgen.resources.TagAtScope("tagAtScope", {
     properties: {
         tags: {
             tagKey1: "tag-value-1",
@@ -408,7 +408,7 @@ The TagAtScope resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tags">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Resources.<wbr>Inputs.<wbr>Tags<wbr>Args</a></span>
+        <span class="property-type"><a href="#tags">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Resources..<wbr>Inputs.<wbr>Tags<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The set of tags.{{% /md %}}</dd>
     <dt class="property-required"
@@ -773,7 +773,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:resources/latest:TagAtScope myresource1 /{scope}/providers/Microsoft.Resources/tags/default 
+$ pulumi import azure-nextgen:resources:TagAtScope myresource1 /{scope}/providers/Microsoft.Resources/tags/default 
 ```
 
 

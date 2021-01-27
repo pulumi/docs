@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.sql.FailoverGroup resource with 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 A failover group.
+API Version: 2020-08-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var failoverGroup = new AzureNextGen.Sql.V20200801Preview.FailoverGroup("failoverGroup", new AzureNextGen.Sql.V20200801Preview.FailoverGroupArgs
+        var failoverGroup = new AzureNextGen.Sql..FailoverGroup("failoverGroup", new AzureNextGen.Sql..FailoverGroupArgs
         {
             Databases = 
             {
@@ -36,16 +37,16 @@ class MyStack : Stack
             FailoverGroupName = "failover-group-test-3",
             PartnerServers = 
             {
-                new AzureNextGen.Sql.V20200801Preview.Inputs.PartnerInfoArgs
+                new AzureNextGen.Sql..Inputs.PartnerInfoArgs
                 {
                     Id = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default/providers/Microsoft.Sql/servers/failover-group-secondary-server",
                 },
             },
-            ReadOnlyEndpoint = new AzureNextGen.Sql.V20200801Preview.Inputs.FailoverGroupReadOnlyEndpointArgs
+            ReadOnlyEndpoint = new AzureNextGen.Sql..Inputs.FailoverGroupReadOnlyEndpointArgs
             {
                 FailoverPolicy = "Disabled",
             },
-            ReadWriteEndpoint = new AzureNextGen.Sql.V20200801Preview.Inputs.FailoverGroupReadWriteEndpointArgs
+            ReadWriteEndpoint = new AzureNextGen.Sql..Inputs.FailoverGroupReadWriteEndpointArgs
             {
                 FailoverPolicy = "Automatic",
                 FailoverWithDataLossGracePeriodMinutes = 480,
@@ -67,7 +68,7 @@ class MyStack : Stack
 package main
 
 import (
-	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql/v20200801preview"
+	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -111,19 +112,19 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-failover_group = azure_nextgen.sql.v20200801preview.FailoverGroup("failoverGroup",
+failover_group = azure_nextgen.sql.FailoverGroup("failoverGroup",
     databases=[
         "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default/providers/Microsoft.Sql/servers/failover-group-primary-server/databases/testdb-1",
         "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default/providers/Microsoft.Sql/servers/failover-group-primary-server/databases/testdb-2",
     ],
     failover_group_name="failover-group-test-3",
-    partner_servers=[azure_nextgen.sql.v20200801preview.PartnerInfoArgs(
+    partner_servers=[azure_nextgen.sql.PartnerInfoArgs(
         id="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default/providers/Microsoft.Sql/servers/failover-group-secondary-server",
     )],
-    read_only_endpoint=azure_nextgen.sql.v20200801preview.FailoverGroupReadOnlyEndpointArgs(
+    read_only_endpoint=azure_nextgen.sql.FailoverGroupReadOnlyEndpointArgs(
         failover_policy="Disabled",
     ),
-    read_write_endpoint=azure_nextgen.sql.v20200801preview.FailoverGroupReadWriteEndpointArgs(
+    read_write_endpoint=azure_nextgen.sql.FailoverGroupReadWriteEndpointArgs(
         failover_policy="Automatic",
         failover_with_data_loss_grace_period_minutes=480,
     ),
@@ -140,7 +141,7 @@ failover_group = azure_nextgen.sql.v20200801preview.FailoverGroup("failoverGroup
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const failoverGroup = new azure_nextgen.sql.v20200801preview.FailoverGroup("failoverGroup", {
+const failoverGroup = new azure_nextgen.sql.FailoverGroup("failoverGroup", {
     databases: [
         "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default/providers/Microsoft.Sql/servers/failover-group-primary-server/databases/testdb-1",
         "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default/providers/Microsoft.Sql/servers/failover-group-primary-server/databases/testdb-2",
@@ -362,7 +363,7 @@ The FailoverGroup resource accepts the following [input]({{< relref "/docs/intro
 <a href="#partnerservers_csharp" style="color: inherit; text-decoration: inherit;">Partner<wbr>Servers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#partnerinfo">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql.<wbr>Inputs.<wbr>Partner<wbr>Info<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#partnerinfo">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql..<wbr>Inputs.<wbr>Partner<wbr>Info<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of partner server information for the failover group.{{% /md %}}</dd>
     <dt class="property-required"
@@ -371,7 +372,7 @@ The FailoverGroup resource accepts the following [input]({{< relref "/docs/intro
 <a href="#readwriteendpoint_csharp" style="color: inherit; text-decoration: inherit;">Read<wbr>Write<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#failovergroupreadwriteendpoint">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql.<wbr>Inputs.<wbr>Failover<wbr>Group<wbr>Read<wbr>Write<wbr>Endpoint<wbr>Args</a></span>
+        <span class="property-type"><a href="#failovergroupreadwriteendpoint">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql..<wbr>Inputs.<wbr>Failover<wbr>Group<wbr>Read<wbr>Write<wbr>Endpoint<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Read-write endpoint of the failover group instance.{{% /md %}}</dd>
     <dt class="property-required"
@@ -407,7 +408,7 @@ The FailoverGroup resource accepts the following [input]({{< relref "/docs/intro
 <a href="#readonlyendpoint_csharp" style="color: inherit; text-decoration: inherit;">Read<wbr>Only<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#failovergroupreadonlyendpoint">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql.<wbr>Inputs.<wbr>Failover<wbr>Group<wbr>Read<wbr>Only<wbr>Endpoint<wbr>Args</a></span>
+        <span class="property-type"><a href="#failovergroupreadonlyendpoint">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql..<wbr>Inputs.<wbr>Failover<wbr>Group<wbr>Read<wbr>Only<wbr>Endpoint<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Read-only endpoint of the failover group instance.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -924,7 +925,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#failoverpolicy_csharp" style="color: inherit; text-decoration: inherit;">Failover<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#readonlyendpointfailoverpolicy">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql.<wbr>Read<wbr>Only<wbr>Endpoint<wbr>Failover<wbr>Policy</a></span>
+        <span class="property-type">string | <a href="#readonlyendpointfailoverpolicy">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql..<wbr>Read<wbr>Only<wbr>Endpoint<wbr>Failover<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Failover policy of the read-only endpoint for the failover group.{{% /md %}}</dd>
 </dl>
@@ -1048,7 +1049,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#failoverpolicy_csharp" style="color: inherit; text-decoration: inherit;">Failover<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#readwriteendpointfailoverpolicy">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql.<wbr>Read<wbr>Write<wbr>Endpoint<wbr>Failover<wbr>Policy</a></span>
+        <span class="property-type">string | <a href="#readwriteendpointfailoverpolicy">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql..<wbr>Read<wbr>Write<wbr>Endpoint<wbr>Failover<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Failover policy of the read-write endpoint for the failover group. If failoverPolicy is Automatic then failoverWithDataLossGracePeriodMinutes is required.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1510,7 +1511,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:sql/v20200801preview:FailoverGroup failover-group-test-3 /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default/providers/Microsoft.Sql/servers/failover-group-primary-server/failoverGroups/failover-group-test-3 
+$ pulumi import azure-nextgen:sql:FailoverGroup failover-group-test-3 /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default/providers/Microsoft.Sql/servers/failover-group-primary-server/failoverGroups/failover-group-test-3 
 ```
 
 

@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.compute.DedicatedHostGroup resou
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Specifies information about the dedicated host group that the dedicated hosts should be assigned to. <br><br> Currently, a dedicated host can only be added to a dedicated host group at creation time. An existing dedicated host cannot be added to another dedicated host group.
-Latest API Version: 2020-06-01.
+API Version: 2020-06-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var dedicatedHostGroup = new AzureNextGen.Compute.Latest.DedicatedHostGroup("dedicatedHostGroup", new AzureNextGen.Compute.Latest.DedicatedHostGroupArgs
+        var dedicatedHostGroup = new AzureNextGen.Compute..DedicatedHostGroup("dedicatedHostGroup", new AzureNextGen.Compute..DedicatedHostGroupArgs
         {
             HostGroupName = "myDedicatedHostGroup",
             Location = "westus",
@@ -57,7 +57,7 @@ class MyStack : Stack
 package main
 
 import (
-	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute/latest"
+	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -93,7 +93,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-dedicated_host_group = azure_nextgen.compute.latest.DedicatedHostGroup("dedicatedHostGroup",
+dedicated_host_group = azure_nextgen.compute.DedicatedHostGroup("dedicatedHostGroup",
     host_group_name="myDedicatedHostGroup",
     location="westus",
     platform_fault_domain_count=3,
@@ -114,7 +114,7 @@ dedicated_host_group = azure_nextgen.compute.latest.DedicatedHostGroup("dedicate
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const dedicatedHostGroup = new azure_nextgen.compute.latest.DedicatedHostGroup("dedicatedHostGroup", {
+const dedicatedHostGroup = new azure_nextgen.compute.DedicatedHostGroup("dedicatedHostGroup", {
     hostGroupName: "myDedicatedHostGroup",
     location: "westus",
     platformFaultDomainCount: 3,
@@ -602,7 +602,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hosts_csharp" style="color: inherit; text-decoration: inherit;">Hosts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourcereadonlyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Outputs.<wbr>Sub<wbr>Resource<wbr>Read<wbr>Only<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#subresourcereadonlyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Outputs.<wbr>Sub<wbr>Resource<wbr>Read<wbr>Only<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of references to all dedicated hosts in the dedicated host group.{{% /md %}}</dd>
     <dt class="property-"
@@ -620,7 +620,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#instanceview_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>View</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dedicatedhostgroupinstanceviewresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Outputs.<wbr>Dedicated<wbr>Host<wbr>Group<wbr>Instance<wbr>View<wbr>Response</a></span>
+        <span class="property-type"><a href="#dedicatedhostgroupinstanceviewresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Outputs.<wbr>Dedicated<wbr>Host<wbr>Group<wbr>Instance<wbr>View<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The dedicated host group instance view, which has the list of instance view of the dedicated hosts under the dedicated host group.{{% /md %}}</dd>
     <dt class="property-"
@@ -916,7 +916,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allocatablevms_csharp" style="color: inherit; text-decoration: inherit;">Allocatable<wbr>VMs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dedicatedhostallocatablevmresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Dedicated<wbr>Host<wbr>Allocatable<wbr>VMResponse<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#dedicatedhostallocatablevmresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Inputs.<wbr>Dedicated<wbr>Host<wbr>Allocatable<wbr>VMResponse<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The unutilized capacity of the dedicated host represented in terms of each VM size that is allowed to be deployed to the dedicated host.{{% /md %}}</dd>
 </dl>
@@ -978,7 +978,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hosts_csharp" style="color: inherit; text-decoration: inherit;">Hosts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dedicatedhostinstanceviewwithnameresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Dedicated<wbr>Host<wbr>Instance<wbr>View<wbr>With<wbr>Name<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#dedicatedhostinstanceviewwithnameresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Inputs.<wbr>Dedicated<wbr>Host<wbr>Instance<wbr>View<wbr>With<wbr>Name<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of instance view of the dedicated hosts under the dedicated host group.{{% /md %}}</dd>
 </dl>
@@ -1058,7 +1058,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#availablecapacity_csharp" style="color: inherit; text-decoration: inherit;">Available<wbr>Capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dedicatedhostavailablecapacityresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Dedicated<wbr>Host<wbr>Available<wbr>Capacity<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#dedicatedhostavailablecapacityresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Inputs.<wbr>Dedicated<wbr>Host<wbr>Available<wbr>Capacity<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Unutilized capacity of the dedicated host.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1067,7 +1067,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#statuses_csharp" style="color: inherit; text-decoration: inherit;">Statuses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceviewstatusresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Instance<wbr>View<wbr>Status<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#instanceviewstatusresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Inputs.<wbr>Instance<wbr>View<wbr>Status<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The resource status information.{{% /md %}}</dd>
 </dl>
@@ -1472,7 +1472,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:compute/latest:DedicatedHostGroup myDedicatedHostGroup /subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/HostGroups/myDedicatedHostGroup 
+$ pulumi import azure-nextgen:compute:DedicatedHostGroup myDedicatedHostGroup /subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/HostGroups/myDedicatedHostGroup 
 ```
 
 

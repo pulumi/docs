@@ -179,7 +179,7 @@ The following output properties are available:
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#roleassignmentpropertieswithscoperesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Authorization.<wbr>Outputs.<wbr>Role<wbr>Assignment<wbr>Properties<wbr>With<wbr>Scope<wbr>Response</a></span>
+        <span class="property-type"><a href="#roleassignmentpropertieswithscoperesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Authorization..<wbr>Outputs.<wbr>Role<wbr>Assignment<wbr>Properties<wbr>With<wbr>Scope<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Role assignment properties.{{% /md %}}</dd>
     <dt class="property-"

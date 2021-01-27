@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.network.SecurityPartnerProvider 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Security Partner Provider resource.
-Latest API Version: 2020-08-01.
+API Version: 2020-08-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var securityPartnerProvider = new AzureNextGen.Network.Latest.SecurityPartnerProvider("securityPartnerProvider", new AzureNextGen.Network.Latest.SecurityPartnerProviderArgs
+        var securityPartnerProvider = new AzureNextGen.Network..SecurityPartnerProvider("securityPartnerProvider", new AzureNextGen.Network..SecurityPartnerProviderArgs
         {
             Location = "West US",
             ResourceGroupName = "rg1",
@@ -37,7 +37,7 @@ class MyStack : Stack
             {
                 { "key1", "value1" },
             },
-            VirtualHub = new AzureNextGen.Network.Latest.Inputs.SubResourceArgs
+            VirtualHub = new AzureNextGen.Network..Inputs.SubResourceArgs
             {
                 Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualHubs/hub1",
             },
@@ -56,7 +56,7 @@ class MyStack : Stack
 package main
 
 import (
-	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network/latest"
+	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -91,7 +91,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-security_partner_provider = azure_nextgen.network.latest.SecurityPartnerProvider("securityPartnerProvider",
+security_partner_provider = azure_nextgen.network.SecurityPartnerProvider("securityPartnerProvider",
     location="West US",
     resource_group_name="rg1",
     security_partner_provider_name="securityPartnerProvider",
@@ -99,7 +99,7 @@ security_partner_provider = azure_nextgen.network.latest.SecurityPartnerProvider
     tags={
         "key1": "value1",
     },
-    virtual_hub=azure_nextgen.network.latest.SubResourceArgs(
+    virtual_hub=azure_nextgen.network.SubResourceArgs(
         id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualHubs/hub1",
     ))
 
@@ -113,7 +113,7 @@ security_partner_provider = azure_nextgen.network.latest.SecurityPartnerProvider
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const securityPartnerProvider = new azure_nextgen.network.latest.SecurityPartnerProvider("securityPartnerProvider", {
+const securityPartnerProvider = new azure_nextgen.network.SecurityPartnerProvider("securityPartnerProvider", {
     location: "West US",
     resourceGroupName: "rg1",
     securityPartnerProviderName: "securityPartnerProvider",
@@ -355,7 +355,7 @@ The SecurityPartnerProvider resource accepts the following [input]({{< relref "/
 <a href="#securityprovidername_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Provider<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#securityprovidername">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Security<wbr>Provider<wbr>Name</a></span>
+        <span class="property-type">string | <a href="#securityprovidername">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Security<wbr>Provider<wbr>Name</a></span>
     </dt>
     <dd>{{% md %}}The security provider name.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -373,7 +373,7 @@ The SecurityPartnerProvider resource accepts the following [input]({{< relref "/
 <a href="#virtualhub_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Hub</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The virtualHub to which the Security Partner Provider belongs.{{% /md %}}</dd>
 </dl>
@@ -1018,7 +1018,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:network/latest:SecurityPartnerProvider securityPartnerProvider /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/securityPartnerProviders/securityPartnerProvider 
+$ pulumi import azure-nextgen:network:SecurityPartnerProvider securityPartnerProvider /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/securityPartnerProviders/securityPartnerProvider 
 ```
 
 

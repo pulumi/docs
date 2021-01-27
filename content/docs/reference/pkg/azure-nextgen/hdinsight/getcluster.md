@@ -179,7 +179,7 @@ The following output properties are available:
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustergetpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>HDInsight.<wbr>Outputs.<wbr>Cluster<wbr>Get<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#clustergetpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>HDInsight..<wbr>Outputs.<wbr>Cluster<wbr>Get<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The properties of the cluster.{{% /md %}}</dd>
     <dt class="property-"
@@ -206,7 +206,7 @@ The following output properties are available:
 <a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteridentityresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>HDInsight.<wbr>Outputs.<wbr>Cluster<wbr>Identity<wbr>Response</a></span>
+        <span class="property-type"><a href="#clusteridentityresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>HDInsight..<wbr>Outputs.<wbr>Cluster<wbr>Identity<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The identity of the cluster, if configured.{{% /md %}}</dd>
     <dt class="property-"
@@ -589,7 +589,7 @@ The following output properties are available:
 <a href="#schedule_csharp" style="color: inherit; text-decoration: inherit;">Schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalescheduleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>HDInsight.<wbr>Inputs.<wbr>Autoscale<wbr>Schedule<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#autoscalescheduleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>HDInsight..<wbr>Inputs.<wbr>Autoscale<wbr>Schedule<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Array of schedule-based autoscale rules{{% /md %}}</dd>
     <dt class="property-optional"
@@ -692,7 +692,7 @@ The following output properties are available:
 <a href="#capacity_csharp" style="color: inherit; text-decoration: inherit;">Capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalecapacityresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>HDInsight.<wbr>Inputs.<wbr>Autoscale<wbr>Capacity<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#autoscalecapacityresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>HDInsight..<wbr>Inputs.<wbr>Autoscale<wbr>Capacity<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Parameters for load-based autoscale{{% /md %}}</dd>
     <dt class="property-optional"
@@ -701,7 +701,7 @@ The following output properties are available:
 <a href="#recurrence_csharp" style="color: inherit; text-decoration: inherit;">Recurrence</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalerecurrenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>HDInsight.<wbr>Inputs.<wbr>Autoscale<wbr>Recurrence<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#autoscalerecurrenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>HDInsight..<wbr>Inputs.<wbr>Autoscale<wbr>Recurrence<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Parameters for schedule-based autoscale{{% /md %}}</dd>
 </dl>
@@ -804,7 +804,7 @@ The following output properties are available:
 <a href="#timeandcapacity_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>And<wbr>Capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscaletimeandcapacityresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>HDInsight.<wbr>Inputs.<wbr>Autoscale<wbr>Time<wbr>And<wbr>Capacity<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#autoscaletimeandcapacityresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>HDInsight..<wbr>Inputs.<wbr>Autoscale<wbr>Time<wbr>And<wbr>Capacity<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Time and capacity for a schedule-based autoscale rule{{% /md %}}</dd>
 </dl>
@@ -1315,7 +1315,7 @@ The following output properties are available:
 <a href="#clusterdefinition_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Definition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterdefinitionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>HDInsight.<wbr>Inputs.<wbr>Cluster<wbr>Definition<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusterdefinitionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>HDInsight..<wbr>Inputs.<wbr>Cluster<wbr>Definition<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The cluster definition.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1360,7 +1360,7 @@ The following output properties are available:
 <a href="#computeisolationproperties_csharp" style="color: inherit; text-decoration: inherit;">Compute<wbr>Isolation<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#computeisolationpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>HDInsight.<wbr>Inputs.<wbr>Compute<wbr>Isolation<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#computeisolationpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>HDInsight..<wbr>Inputs.<wbr>Compute<wbr>Isolation<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The compute isolation properties.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1369,7 +1369,7 @@ The following output properties are available:
 <a href="#computeprofile_csharp" style="color: inherit; text-decoration: inherit;">Compute<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#computeprofileresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>HDInsight.<wbr>Inputs.<wbr>Compute<wbr>Profile<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#computeprofileresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>HDInsight..<wbr>Inputs.<wbr>Compute<wbr>Profile<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The compute profile.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1378,7 +1378,7 @@ The following output properties are available:
 <a href="#connectivityendpoints_csharp" style="color: inherit; text-decoration: inherit;">Connectivity<wbr>Endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectivityendpointresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>HDInsight.<wbr>Inputs.<wbr>Connectivity<wbr>Endpoint<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#connectivityendpointresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>HDInsight..<wbr>Inputs.<wbr>Connectivity<wbr>Endpoint<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of connectivity endpoints.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1396,7 +1396,7 @@ The following output properties are available:
 <a href="#diskencryptionproperties_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Encryption<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diskencryptionpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>HDInsight.<wbr>Inputs.<wbr>Disk<wbr>Encryption<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#diskencryptionpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>HDInsight..<wbr>Inputs.<wbr>Disk<wbr>Encryption<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The disk encryption properties.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1405,7 +1405,7 @@ The following output properties are available:
 <a href="#encryptionintransitproperties_csharp" style="color: inherit; text-decoration: inherit;">Encryption<wbr>In<wbr>Transit<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionintransitpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>HDInsight.<wbr>Inputs.<wbr>Encryption<wbr>In<wbr>Transit<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#encryptionintransitpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>HDInsight..<wbr>Inputs.<wbr>Encryption<wbr>In<wbr>Transit<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The encryption-in-transit properties.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1414,7 +1414,7 @@ The following output properties are available:
 <a href="#errors_csharp" style="color: inherit; text-decoration: inherit;">Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#errorsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>HDInsight.<wbr>Inputs.<wbr>Errors<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#errorsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>HDInsight..<wbr>Inputs.<wbr>Errors<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of errors.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1423,7 +1423,7 @@ The following output properties are available:
 <a href="#excludedservicesconfig_csharp" style="color: inherit; text-decoration: inherit;">Excluded<wbr>Services<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#excludedservicesconfigresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>HDInsight.<wbr>Inputs.<wbr>Excluded<wbr>Services<wbr>Config<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#excludedservicesconfigresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>HDInsight..<wbr>Inputs.<wbr>Excluded<wbr>Services<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The excluded services config.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1432,7 +1432,7 @@ The following output properties are available:
 <a href="#kafkarestproperties_csharp" style="color: inherit; text-decoration: inherit;">Kafka<wbr>Rest<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkarestpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>HDInsight.<wbr>Inputs.<wbr>Kafka<wbr>Rest<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#kafkarestpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>HDInsight..<wbr>Inputs.<wbr>Kafka<wbr>Rest<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The cluster kafka rest proxy configuration.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1450,7 +1450,7 @@ The following output properties are available:
 <a href="#networkproperties_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>HDInsight.<wbr>Inputs.<wbr>Network<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#networkpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>HDInsight..<wbr>Inputs.<wbr>Network<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The network properties.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1477,7 +1477,7 @@ The following output properties are available:
 <a href="#quotainfo_csharp" style="color: inherit; text-decoration: inherit;">Quota<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#quotainforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>HDInsight.<wbr>Inputs.<wbr>Quota<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#quotainforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>HDInsight..<wbr>Inputs.<wbr>Quota<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The quota information.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1486,7 +1486,7 @@ The following output properties are available:
 <a href="#securityprofile_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securityprofileresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>HDInsight.<wbr>Inputs.<wbr>Security<wbr>Profile<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#securityprofileresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>HDInsight..<wbr>Inputs.<wbr>Security<wbr>Profile<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The security profile.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1495,7 +1495,7 @@ The following output properties are available:
 <a href="#storageprofile_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageprofileresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>HDInsight.<wbr>Inputs.<wbr>Storage<wbr>Profile<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#storageprofileresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>HDInsight..<wbr>Inputs.<wbr>Storage<wbr>Profile<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The storage profile.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2165,7 +2165,7 @@ The following output properties are available:
 <a href="#userassignedidentities_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>HDInsight.<wbr>Inputs.<wbr>Cluster<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>HDInsight..<wbr>Inputs.<wbr>Cluster<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}The list of user identities associated with the cluster. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd>
 </dl>
@@ -2555,7 +2555,7 @@ The following output properties are available:
 <a href="#roles_csharp" style="color: inherit; text-decoration: inherit;">Roles</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#roleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>HDInsight.<wbr>Inputs.<wbr>Role<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#roleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>HDInsight..<wbr>Inputs.<wbr>Role<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of roles in the cluster.{{% /md %}}</dd>
 </dl>
@@ -3559,7 +3559,7 @@ The following output properties are available:
 <a href="#clientgroupinfo_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Group<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clientgroupinforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>HDInsight.<wbr>Inputs.<wbr>Client<wbr>Group<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#clientgroupinforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>HDInsight..<wbr>Inputs.<wbr>Client<wbr>Group<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The information of AAD security group.{{% /md %}}</dd>
 </dl>
@@ -3635,7 +3635,7 @@ The following output properties are available:
 <a href="#sshprofile_csharp" style="color: inherit; text-decoration: inherit;">Ssh<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sshprofileresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>HDInsight.<wbr>Inputs.<wbr>Ssh<wbr>Profile<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sshprofileresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>HDInsight..<wbr>Inputs.<wbr>Ssh<wbr>Profile<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The SSH profile.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3868,7 +3868,7 @@ The following output properties are available:
 <a href="#linuxoperatingsystemprofile_csharp" style="color: inherit; text-decoration: inherit;">Linux<wbr>Operating<wbr>System<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linuxoperatingsystemprofileresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>HDInsight.<wbr>Inputs.<wbr>Linux<wbr>Operating<wbr>System<wbr>Profile<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#linuxoperatingsystemprofileresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>HDInsight..<wbr>Inputs.<wbr>Linux<wbr>Operating<wbr>System<wbr>Profile<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Linux OS profile.{{% /md %}}</dd>
 </dl>
@@ -4002,7 +4002,7 @@ The following output properties are available:
 <a href="#autoscaleconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Autoscale<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscaleresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>HDInsight.<wbr>Inputs.<wbr>Autoscale<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#autoscaleresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>HDInsight..<wbr>Inputs.<wbr>Autoscale<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The autoscale configurations.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4011,7 +4011,7 @@ The following output properties are available:
 <a href="#datadisksgroups_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Disks<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datadisksgroupsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>HDInsight.<wbr>Inputs.<wbr>Data<wbr>Disks<wbr>Groups<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#datadisksgroupsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>HDInsight..<wbr>Inputs.<wbr>Data<wbr>Disks<wbr>Groups<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The data disks groups for the role.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4029,7 +4029,7 @@ The following output properties are available:
 <a href="#hardwareprofile_csharp" style="color: inherit; text-decoration: inherit;">Hardware<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hardwareprofileresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>HDInsight.<wbr>Inputs.<wbr>Hardware<wbr>Profile<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#hardwareprofileresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>HDInsight..<wbr>Inputs.<wbr>Hardware<wbr>Profile<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The hardware profile.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4056,7 +4056,7 @@ The following output properties are available:
 <a href="#osprofile_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#osprofileresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>HDInsight.<wbr>Inputs.<wbr>Os<wbr>Profile<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#osprofileresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>HDInsight..<wbr>Inputs.<wbr>Os<wbr>Profile<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The operating system profile.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4065,7 +4065,7 @@ The following output properties are available:
 <a href="#scriptactions_csharp" style="color: inherit; text-decoration: inherit;">Script<wbr>Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scriptactionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>HDInsight.<wbr>Inputs.<wbr>Script<wbr>Action<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#scriptactionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>HDInsight..<wbr>Inputs.<wbr>Script<wbr>Action<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of script actions on the role.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4083,7 +4083,7 @@ The following output properties are available:
 <a href="#virtualnetworkprofile_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkprofileresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>HDInsight.<wbr>Inputs.<wbr>Virtual<wbr>Network<wbr>Profile<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnetworkprofileresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>HDInsight..<wbr>Inputs.<wbr>Virtual<wbr>Network<wbr>Profile<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The virtual network profile.{{% /md %}}</dd>
 </dl>
@@ -4887,7 +4887,7 @@ The following output properties are available:
 <a href="#publickeys_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sshpublickeyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>HDInsight.<wbr>Inputs.<wbr>Ssh<wbr>Public<wbr>Key<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#sshpublickeyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>HDInsight..<wbr>Inputs.<wbr>Ssh<wbr>Public<wbr>Key<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of SSH public keys.{{% /md %}}</dd>
 </dl>
@@ -5304,7 +5304,7 @@ The following output properties are available:
 <a href="#storageaccounts_csharp" style="color: inherit; text-decoration: inherit;">Storageaccounts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageaccountresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>HDInsight.<wbr>Inputs.<wbr>Storage<wbr>Account<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#storageaccountresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>HDInsight..<wbr>Inputs.<wbr>Storage<wbr>Account<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of storage accounts in the cluster.{{% /md %}}</dd>
 </dl>

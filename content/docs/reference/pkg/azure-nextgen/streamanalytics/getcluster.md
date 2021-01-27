@@ -188,7 +188,7 @@ The following output properties are available:
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Outputs.<wbr>Cluster<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#clusterpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics..<wbr>Outputs.<wbr>Cluster<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The properties associated with a Stream Analytics cluster.{{% /md %}}</dd>
     <dt class="property-"
@@ -215,7 +215,7 @@ The following output properties are available:
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterskuresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Outputs.<wbr>Cluster<wbr>Sku<wbr>Response</a></span>
+        <span class="property-type"><a href="#clusterskuresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics..<wbr>Outputs.<wbr>Cluster<wbr>Sku<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The SKU of the cluster. This determines the size/capacity of the cluster. Required on PUT (CreateOrUpdate) requests.{{% /md %}}</dd>
     <dt class="property-"

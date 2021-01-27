@@ -269,7 +269,7 @@ The following output properties are available:
 <a href="#modules_csharp" style="color: inherit; text-decoration: inherit;">Modules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#moduleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cache.<wbr>Outputs.<wbr>Module<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#moduleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cache..<wbr>Outputs.<wbr>Module<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Optional set of redis modules to enable in this database - modules can only be added at creation time.{{% /md %}}</dd>
     <dt class="property-"

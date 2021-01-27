@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.botservice.Channel resource with
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Bot channel resource definition
-Latest API Version: 2020-06-02.
+API Version: 2020-06-02.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var channel = new AzureNextGen.BotService.Latest.Channel("channel", new AzureNextGen.BotService.Latest.ChannelArgs
+        var channel = new AzureNextGen.BotService..Channel("channel", new AzureNextGen.BotService..ChannelArgs
         {
             ChannelName = "AlexaChannel",
             Location = "global",
@@ -61,7 +61,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-channel = azure_nextgen.botservice.latest.Channel("channel",
+channel = azure_nextgen.botservice.Channel("channel",
     channel_name="AlexaChannel",
     location="global",
     properties={
@@ -84,7 +84,7 @@ channel = azure_nextgen.botservice.latest.Channel("channel",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const channel = new azure_nextgen.botservice.latest.Channel("channel", {
+const channel = new azure_nextgen.botservice.Channel("channel", {
     channelName: "AlexaChannel",
     location: "global",
     properties: {
@@ -112,7 +112,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var channel = new AzureNextGen.BotService.Latest.Channel("channel", new AzureNextGen.BotService.Latest.ChannelArgs
+        var channel = new AzureNextGen.BotService..Channel("channel", new AzureNextGen.BotService..ChannelArgs
         {
             ChannelName = "EmailChannel",
             Location = "global",
@@ -147,7 +147,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-channel = azure_nextgen.botservice.latest.Channel("channel",
+channel = azure_nextgen.botservice.Channel("channel",
     channel_name="EmailChannel",
     location="global",
     properties={
@@ -171,7 +171,7 @@ channel = azure_nextgen.botservice.latest.Channel("channel",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const channel = new azure_nextgen.botservice.latest.Channel("channel", {
+const channel = new azure_nextgen.botservice.Channel("channel", {
     channelName: "EmailChannel",
     location: "global",
     properties: {
@@ -200,7 +200,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var channel = new AzureNextGen.BotService.Latest.Channel("channel", new AzureNextGen.BotService.Latest.ChannelArgs
+        var channel = new AzureNextGen.BotService..Channel("channel", new AzureNextGen.BotService..ChannelArgs
         {
             ChannelName = "DirectLineSpeechChannel",
             Location = "global",
@@ -234,7 +234,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-channel = azure_nextgen.botservice.latest.Channel("channel",
+channel = azure_nextgen.botservice.Channel("channel",
     channel_name="DirectLineSpeechChannel",
     location="global",
     properties={
@@ -257,7 +257,7 @@ channel = azure_nextgen.botservice.latest.Channel("channel",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const channel = new azure_nextgen.botservice.latest.Channel("channel", {
+const channel = new azure_nextgen.botservice.Channel("channel", {
     channelName: "DirectLineSpeechChannel",
     location: "global",
     properties: {
@@ -285,7 +285,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var channel = new AzureNextGen.BotService.Latest.Channel("channel", new AzureNextGen.BotService.Latest.ChannelArgs
+        var channel = new AzureNextGen.BotService..Channel("channel", new AzureNextGen.BotService..ChannelArgs
         {
             ChannelName = "LineChannel",
             Location = "global",
@@ -296,7 +296,7 @@ class MyStack : Stack
                 {
                     { "lineRegistrations", 
                     {
-                        new AzureNextGen.BotService.Latest.Inputs.LineRegistrationArgs
+                        new AzureNextGen.BotService..Inputs.LineRegistrationArgs
                         {
                             ChannelAccessToken = "channelAccessToken",
                             ChannelSecret = "channelSecret",
@@ -325,13 +325,13 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-channel = azure_nextgen.botservice.latest.Channel("channel",
+channel = azure_nextgen.botservice.Channel("channel",
     channel_name="LineChannel",
     location="global",
     properties={
         "channelName": "LineChannel",
         "properties": {
-            "lineRegistrations": [azure_nextgen.botservice.latest.LineRegistrationArgs(
+            "lineRegistrations": [azure_nextgen.botservice.LineRegistrationArgs(
                 channel_access_token="channelAccessToken",
                 channel_secret="channelSecret",
             )],
@@ -350,7 +350,7 @@ channel = azure_nextgen.botservice.latest.Channel("channel",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const channel = new azure_nextgen.botservice.latest.Channel("channel", {
+const channel = new azure_nextgen.botservice.Channel("channel", {
     channelName: "LineChannel",
     location: "global",
     properties: {
@@ -595,7 +595,7 @@ The Channel resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#kind">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service.<wbr>Kind</a></span>
+        <span class="property-type">string | <a href="#kind">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service..<wbr>Kind</a></span>
     </dt>
     <dd>{{% md %}}Required. Gets or sets the Kind of the resource.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -613,7 +613,7 @@ The Channel resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alexachannel">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Alexa<wbr>Channel<wbr>Args</a> | <a href="#directlinechannel">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Direct<wbr>Line<wbr>Channel<wbr>Args</a> | <a href="#directlinespeechchannel">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Direct<wbr>Line<wbr>Speech<wbr>Channel<wbr>Args</a> | <a href="#emailchannel">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Email<wbr>Channel<wbr>Args</a> | <a href="#facebookchannel">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Facebook<wbr>Channel<wbr>Args</a> | <a href="#kikchannel">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Kik<wbr>Channel<wbr>Args</a> | <a href="#linechannel">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Line<wbr>Channel<wbr>Args</a> | <a href="#msteamschannel">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Ms<wbr>Teams<wbr>Channel<wbr>Args</a> | <a href="#skypechannel">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Skype<wbr>Channel<wbr>Args</a> | <a href="#slackchannel">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Slack<wbr>Channel<wbr>Args</a> | <a href="#smschannel">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Sms<wbr>Channel<wbr>Args</a> | <a href="#telegramchannel">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Telegram<wbr>Channel<wbr>Args</a> | <a href="#webchatchannel">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Web<wbr>Chat<wbr>Channel<wbr>Args</a></span>
+        <span class="property-type"><a href="#alexachannel">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service..<wbr>Inputs.<wbr>Alexa<wbr>Channel<wbr>Args</a> | <a href="#directlinechannel">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service..<wbr>Inputs.<wbr>Direct<wbr>Line<wbr>Channel<wbr>Args</a> | <a href="#directlinespeechchannel">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service..<wbr>Inputs.<wbr>Direct<wbr>Line<wbr>Speech<wbr>Channel<wbr>Args</a> | <a href="#emailchannel">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service..<wbr>Inputs.<wbr>Email<wbr>Channel<wbr>Args</a> | <a href="#facebookchannel">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service..<wbr>Inputs.<wbr>Facebook<wbr>Channel<wbr>Args</a> | <a href="#kikchannel">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service..<wbr>Inputs.<wbr>Kik<wbr>Channel<wbr>Args</a> | <a href="#linechannel">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service..<wbr>Inputs.<wbr>Line<wbr>Channel<wbr>Args</a> | <a href="#msteamschannel">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service..<wbr>Inputs.<wbr>Ms<wbr>Teams<wbr>Channel<wbr>Args</a> | <a href="#skypechannel">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service..<wbr>Inputs.<wbr>Skype<wbr>Channel<wbr>Args</a> | <a href="#slackchannel">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service..<wbr>Inputs.<wbr>Slack<wbr>Channel<wbr>Args</a> | <a href="#smschannel">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service..<wbr>Inputs.<wbr>Sms<wbr>Channel<wbr>Args</a> | <a href="#telegramchannel">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service..<wbr>Inputs.<wbr>Telegram<wbr>Channel<wbr>Args</a> | <a href="#webchatchannel">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service..<wbr>Inputs.<wbr>Web<wbr>Chat<wbr>Channel<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to bot channel resource{{% /md %}}</dd>
     <dt class="property-optional"
@@ -622,7 +622,7 @@ The Channel resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sku">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Sku<wbr>Args</a></span>
+        <span class="property-type"><a href="#sku">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service..<wbr>Inputs.<wbr>Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the SKU of the resource.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1058,7 +1058,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alexachannelproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Alexa<wbr>Channel<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#alexachannelproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service..<wbr>Inputs.<wbr>Alexa<wbr>Channel<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to Alexa channel resource{{% /md %}}</dd>
 </dl>
@@ -1388,7 +1388,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alexachannelpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Alexa<wbr>Channel<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#alexachannelpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service..<wbr>Inputs.<wbr>Alexa<wbr>Channel<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to Alexa channel resource{{% /md %}}</dd>
 </dl>
@@ -1450,7 +1450,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#directlinechannelproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Direct<wbr>Line<wbr>Channel<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#directlinechannelproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service..<wbr>Inputs.<wbr>Direct<wbr>Line<wbr>Channel<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to Direct Line channel resource{{% /md %}}</dd>
 </dl>
@@ -1512,7 +1512,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sites_csharp" style="color: inherit; text-decoration: inherit;">Sites</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#directlinesite">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Direct<wbr>Line<wbr>Site<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#directlinesite">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service..<wbr>Inputs.<wbr>Direct<wbr>Line<wbr>Site<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of Direct Line sites{{% /md %}}</dd>
 </dl>
@@ -1574,7 +1574,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sites_csharp" style="color: inherit; text-decoration: inherit;">Sites</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#directlinesiteresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Direct<wbr>Line<wbr>Site<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#directlinesiteresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service..<wbr>Inputs.<wbr>Direct<wbr>Line<wbr>Site<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of Direct Line sites{{% /md %}}</dd>
 </dl>
@@ -1636,7 +1636,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#directlinechannelpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Direct<wbr>Line<wbr>Channel<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#directlinechannelpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service..<wbr>Inputs.<wbr>Direct<wbr>Line<wbr>Channel<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to Direct Line channel resource{{% /md %}}</dd>
 </dl>
@@ -2290,7 +2290,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#directlinespeechchannelproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Direct<wbr>Line<wbr>Speech<wbr>Channel<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#directlinespeechchannelproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service..<wbr>Inputs.<wbr>Direct<wbr>Line<wbr>Speech<wbr>Channel<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to DirectLine Speech channel resource{{% /md %}}</dd>
 </dl>
@@ -2764,7 +2764,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#directlinespeechchannelpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Direct<wbr>Line<wbr>Speech<wbr>Channel<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#directlinespeechchannelpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service..<wbr>Inputs.<wbr>Direct<wbr>Line<wbr>Speech<wbr>Channel<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to DirectLine Speech channel resource{{% /md %}}</dd>
 </dl>
@@ -2826,7 +2826,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#emailchannelproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Email<wbr>Channel<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#emailchannelproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service..<wbr>Inputs.<wbr>Email<wbr>Channel<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to email channel resource{{% /md %}}</dd>
 </dl>
@@ -3156,7 +3156,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#emailchannelpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Email<wbr>Channel<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#emailchannelpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service..<wbr>Inputs.<wbr>Email<wbr>Channel<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to email channel resource{{% /md %}}</dd>
 </dl>
@@ -3218,7 +3218,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#facebookchannelproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Facebook<wbr>Channel<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#facebookchannelproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service..<wbr>Inputs.<wbr>Facebook<wbr>Channel<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to bot facebook channel{{% /md %}}</dd>
 </dl>
@@ -3307,7 +3307,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pages_csharp" style="color: inherit; text-decoration: inherit;">Pages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#facebookpage">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Facebook<wbr>Page<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#facebookpage">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service..<wbr>Inputs.<wbr>Facebook<wbr>Page<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of Facebook pages{{% /md %}}</dd>
 </dl>
@@ -3495,7 +3495,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pages_csharp" style="color: inherit; text-decoration: inherit;">Pages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#facebookpageresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Facebook<wbr>Page<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#facebookpageresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service..<wbr>Inputs.<wbr>Facebook<wbr>Page<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of Facebook pages{{% /md %}}</dd>
 </dl>
@@ -3692,7 +3692,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#facebookchannelpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Facebook<wbr>Channel<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#facebookchannelpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service..<wbr>Inputs.<wbr>Facebook<wbr>Channel<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to bot facebook channel{{% /md %}}</dd>
 </dl>
@@ -3950,7 +3950,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kikchannelproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Kik<wbr>Channel<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#kikchannelproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service..<wbr>Inputs.<wbr>Kik<wbr>Channel<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to Kik channel resource{{% /md %}}</dd>
 </dl>
@@ -4352,7 +4352,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kikchannelpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Kik<wbr>Channel<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#kikchannelpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service..<wbr>Inputs.<wbr>Kik<wbr>Channel<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to Kik channel resource{{% /md %}}</dd>
 </dl>
@@ -4468,7 +4468,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linechannelproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Line<wbr>Channel<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#linechannelproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service..<wbr>Inputs.<wbr>Line<wbr>Channel<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to line channel resource{{% /md %}}</dd>
 </dl>
@@ -4530,7 +4530,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lineregistrations_csharp" style="color: inherit; text-decoration: inherit;">Line<wbr>Registrations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#lineregistration">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Line<wbr>Registration<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#lineregistration">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service..<wbr>Inputs.<wbr>Line<wbr>Registration<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of line channel registrations{{% /md %}}</dd>
 </dl>
@@ -4610,7 +4610,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lineregistrations_csharp" style="color: inherit; text-decoration: inherit;">Line<wbr>Registrations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#lineregistrationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Line<wbr>Registration<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#lineregistrationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service..<wbr>Inputs.<wbr>Line<wbr>Registration<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of line channel registrations{{% /md %}}</dd>
 </dl>
@@ -4726,7 +4726,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linechannelpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Line<wbr>Channel<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#linechannelpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service..<wbr>Inputs.<wbr>Line<wbr>Channel<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to line channel resource{{% /md %}}</dd>
 </dl>
@@ -5020,7 +5020,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#msteamschannelproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Ms<wbr>Teams<wbr>Channel<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#msteamschannelproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service..<wbr>Inputs.<wbr>Ms<wbr>Teams<wbr>Channel<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to Microsoft Teams channel resource{{% /md %}}</dd>
 </dl>
@@ -5350,7 +5350,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#msteamschannelpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Ms<wbr>Teams<wbr>Channel<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#msteamschannelpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service..<wbr>Inputs.<wbr>Ms<wbr>Teams<wbr>Channel<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to Microsoft Teams channel resource{{% /md %}}</dd>
 </dl>
@@ -5412,7 +5412,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#skuname">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service.<wbr>Sku<wbr>Name</a></span>
+        <span class="property-type">string | <a href="#skuname">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service..<wbr>Sku<wbr>Name</a></span>
     </dt>
     <dd>{{% md %}}The sku name{{% /md %}}</dd>
 </dl>
@@ -5610,7 +5610,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skypechannelproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Skype<wbr>Channel<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#skypechannelproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service..<wbr>Inputs.<wbr>Skype<wbr>Channel<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to Skype channel resource{{% /md %}}</dd>
 </dl>
@@ -6372,7 +6372,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skypechannelpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Skype<wbr>Channel<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#skypechannelpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service..<wbr>Inputs.<wbr>Skype<wbr>Channel<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to Skype channel resource{{% /md %}}</dd>
 </dl>
@@ -6434,7 +6434,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slackchannelproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Slack<wbr>Channel<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#slackchannelproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service..<wbr>Inputs.<wbr>Slack<wbr>Channel<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to Slack channel resource{{% /md %}}</dd>
 </dl>
@@ -7124,7 +7124,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slackchannelpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Slack<wbr>Channel<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#slackchannelpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service..<wbr>Inputs.<wbr>Slack<wbr>Channel<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to Slack channel resource{{% /md %}}</dd>
 </dl>
@@ -7186,7 +7186,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#smschannelproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Sms<wbr>Channel<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#smschannelproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service..<wbr>Inputs.<wbr>Sms<wbr>Channel<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to Sms channel resource{{% /md %}}</dd>
 </dl>
@@ -7660,7 +7660,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#smschannelpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Sms<wbr>Channel<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#smschannelpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service..<wbr>Inputs.<wbr>Sms<wbr>Channel<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to Sms channel resource{{% /md %}}</dd>
 </dl>
@@ -7722,7 +7722,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#telegramchannelproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Telegram<wbr>Channel<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#telegramchannelproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service..<wbr>Inputs.<wbr>Telegram<wbr>Channel<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to Telegram channel resource{{% /md %}}</dd>
 </dl>
@@ -8052,7 +8052,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#telegramchannelpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Telegram<wbr>Channel<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#telegramchannelpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service..<wbr>Inputs.<wbr>Telegram<wbr>Channel<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to Telegram channel resource{{% /md %}}</dd>
 </dl>
@@ -8114,7 +8114,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webchatchannelproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Web<wbr>Chat<wbr>Channel<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#webchatchannelproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service..<wbr>Inputs.<wbr>Web<wbr>Chat<wbr>Channel<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to Web Chat channel resource{{% /md %}}</dd>
 </dl>
@@ -8176,7 +8176,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sites_csharp" style="color: inherit; text-decoration: inherit;">Sites</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webchatsite">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Web<wbr>Chat<wbr>Site<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#webchatsite">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service..<wbr>Inputs.<wbr>Web<wbr>Chat<wbr>Site<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of Web Chat sites{{% /md %}}</dd>
 </dl>
@@ -8247,7 +8247,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sites_csharp" style="color: inherit; text-decoration: inherit;">Sites</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webchatsiteresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Web<wbr>Chat<wbr>Site<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#webchatsiteresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service..<wbr>Inputs.<wbr>Web<wbr>Chat<wbr>Site<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of Web Chat sites{{% /md %}}</dd>
 </dl>
@@ -8336,7 +8336,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webchatchannelpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Web<wbr>Chat<wbr>Channel<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#webchatchannelpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service..<wbr>Inputs.<wbr>Web<wbr>Chat<wbr>Channel<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to Web Chat channel resource{{% /md %}}</dd>
 </dl>
@@ -8768,7 +8768,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:botservice/latest:Channel myresource1 /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.BotService/botServices/{resourceName}/channels/{channelName} 
+$ pulumi import azure-nextgen:botservice:Channel myresource1 /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.BotService/botServices/{resourceName}/channels/{channelName} 
 ```
 
 

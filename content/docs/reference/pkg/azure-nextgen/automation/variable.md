@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.automation.Variable resource wit
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Definition of the variable.
-Latest API Version: 2019-06-01.
+API Version: 2019-06-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var variable = new AzureNextGen.Automation.Latest.Variable("variable", new AzureNextGen.Automation.Latest.VariableArgs
+        var variable = new AzureNextGen.Automation..Variable("variable", new AzureNextGen.Automation..VariableArgs
         {
             AutomationAccountName = "sampleAccount9",
             Description = "my description",
@@ -51,7 +51,7 @@ class MyStack : Stack
 package main
 
 import (
-	automation "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/automation/latest"
+	automation "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/automation"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -83,7 +83,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-variable = azure_nextgen.automation.latest.Variable("variable",
+variable = azure_nextgen.automation.Variable("variable",
     automation_account_name="sampleAccount9",
     description="my description",
     is_encrypted=False,
@@ -102,7 +102,7 @@ variable = azure_nextgen.automation.latest.Variable("variable",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const variable = new azure_nextgen.automation.latest.Variable("variable", {
+const variable = new azure_nextgen.automation.Variable("variable", {
     automationAccountName: "sampleAccount9",
     description: "my description",
     isEncrypted: false,
@@ -758,7 +758,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:automation/latest:Variable sampleVariable /subscriptions/subid/resourceGroups/rg/providers/Microsoft.Automation/automationAccounts/sampleAccount9/variables/sampleVariable 
+$ pulumi import azure-nextgen:automation:Variable sampleVariable /subscriptions/subid/resourceGroups/rg/providers/Microsoft.Automation/automationAccounts/sampleAccount9/variables/sampleVariable 
 ```
 
 

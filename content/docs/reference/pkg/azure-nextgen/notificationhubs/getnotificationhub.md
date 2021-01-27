@@ -224,7 +224,7 @@ The following output properties are available:
 <a href="#admcredential_csharp" style="color: inherit; text-decoration: inherit;">Adm<wbr>Credential</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#admcredentialresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Notification<wbr>Hubs.<wbr>Outputs.<wbr>Adm<wbr>Credential<wbr>Response</a></span>
+        <span class="property-type"><a href="#admcredentialresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Notification<wbr>Hubs..<wbr>Outputs.<wbr>Adm<wbr>Credential<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The AdmCredential of the created NotificationHub{{% /md %}}</dd>
     <dt class="property-"
@@ -233,7 +233,7 @@ The following output properties are available:
 <a href="#apnscredential_csharp" style="color: inherit; text-decoration: inherit;">Apns<wbr>Credential</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apnscredentialresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Notification<wbr>Hubs.<wbr>Outputs.<wbr>Apns<wbr>Credential<wbr>Response</a></span>
+        <span class="property-type"><a href="#apnscredentialresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Notification<wbr>Hubs..<wbr>Outputs.<wbr>Apns<wbr>Credential<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The ApnsCredential of the created NotificationHub{{% /md %}}</dd>
     <dt class="property-"
@@ -242,7 +242,7 @@ The following output properties are available:
 <a href="#authorizationrules_csharp" style="color: inherit; text-decoration: inherit;">Authorization<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sharedaccessauthorizationrulepropertiesresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Notification<wbr>Hubs.<wbr>Outputs.<wbr>Shared<wbr>Access<wbr>Authorization<wbr>Rule<wbr>Properties<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#sharedaccessauthorizationrulepropertiesresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Notification<wbr>Hubs..<wbr>Outputs.<wbr>Shared<wbr>Access<wbr>Authorization<wbr>Rule<wbr>Properties<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The AuthorizationRules of the created NotificationHub{{% /md %}}</dd>
     <dt class="property-"
@@ -251,7 +251,7 @@ The following output properties are available:
 <a href="#baiducredential_csharp" style="color: inherit; text-decoration: inherit;">Baidu<wbr>Credential</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#baiducredentialresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Notification<wbr>Hubs.<wbr>Outputs.<wbr>Baidu<wbr>Credential<wbr>Response</a></span>
+        <span class="property-type"><a href="#baiducredentialresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Notification<wbr>Hubs..<wbr>Outputs.<wbr>Baidu<wbr>Credential<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The BaiduCredential of the created NotificationHub{{% /md %}}</dd>
     <dt class="property-"
@@ -260,7 +260,7 @@ The following output properties are available:
 <a href="#gcmcredential_csharp" style="color: inherit; text-decoration: inherit;">Gcm<wbr>Credential</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gcmcredentialresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Notification<wbr>Hubs.<wbr>Outputs.<wbr>Gcm<wbr>Credential<wbr>Response</a></span>
+        <span class="property-type"><a href="#gcmcredentialresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Notification<wbr>Hubs..<wbr>Outputs.<wbr>Gcm<wbr>Credential<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The GcmCredential of the created NotificationHub{{% /md %}}</dd>
     <dt class="property-"
@@ -278,7 +278,7 @@ The following output properties are available:
 <a href="#mpnscredential_csharp" style="color: inherit; text-decoration: inherit;">Mpns<wbr>Credential</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mpnscredentialresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Notification<wbr>Hubs.<wbr>Outputs.<wbr>Mpns<wbr>Credential<wbr>Response</a></span>
+        <span class="property-type"><a href="#mpnscredentialresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Notification<wbr>Hubs..<wbr>Outputs.<wbr>Mpns<wbr>Credential<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The MpnsCredential of the created NotificationHub{{% /md %}}</dd>
     <dt class="property-"
@@ -296,7 +296,7 @@ The following output properties are available:
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skuresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Notification<wbr>Hubs.<wbr>Outputs.<wbr>Sku<wbr>Response</a></span>
+        <span class="property-type"><a href="#skuresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Notification<wbr>Hubs..<wbr>Outputs.<wbr>Sku<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The sku of the created namespace{{% /md %}}</dd>
     <dt class="property-"
@@ -314,7 +314,7 @@ The following output properties are available:
 <a href="#wnscredential_csharp" style="color: inherit; text-decoration: inherit;">Wns<wbr>Credential</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#wnscredentialresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Notification<wbr>Hubs.<wbr>Outputs.<wbr>Wns<wbr>Credential<wbr>Response</a></span>
+        <span class="property-type"><a href="#wnscredentialresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Notification<wbr>Hubs..<wbr>Outputs.<wbr>Wns<wbr>Credential<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The WnsCredential of the created NotificationHub{{% /md %}}</dd>
 </dl>

@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.sql.TransparentDataEncryption re
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Represents a database transparent data encryption configuration.
-Latest API Version: 2014-04-01.
+API Version: 2014-04-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var transparentDataEncryption = new AzureNextGen.Sql.Latest.TransparentDataEncryption("transparentDataEncryption", new AzureNextGen.Sql.Latest.TransparentDataEncryptionArgs
+        var transparentDataEncryption = new AzureNextGen.Sql..TransparentDataEncryption("transparentDataEncryption", new AzureNextGen.Sql..TransparentDataEncryptionArgs
         {
             DatabaseName = "sqlcrudtest-9187",
             ResourceGroupName = "sqlcrudtest-6852",
@@ -49,7 +49,7 @@ class MyStack : Stack
 package main
 
 import (
-	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql/latest"
+	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -79,7 +79,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-transparent_data_encryption = azure_nextgen.sql.latest.TransparentDataEncryption("transparentDataEncryption",
+transparent_data_encryption = azure_nextgen.sql.TransparentDataEncryption("transparentDataEncryption",
     database_name="sqlcrudtest-9187",
     resource_group_name="sqlcrudtest-6852",
     server_name="sqlcrudtest-2080",
@@ -96,7 +96,7 @@ transparent_data_encryption = azure_nextgen.sql.latest.TransparentDataEncryption
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const transparentDataEncryption = new azure_nextgen.sql.latest.TransparentDataEncryption("transparentDataEncryption", {
+const transparentDataEncryption = new azure_nextgen.sql.TransparentDataEncryption("transparentDataEncryption", {
     databaseName: "sqlcrudtest-9187",
     resourceGroupName: "sqlcrudtest-6852",
     serverName: "sqlcrudtest-2080",
@@ -333,7 +333,7 @@ The TransparentDataEncryption resource accepts the following [input]({{< relref 
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#transparentdataencryptionstatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql.<wbr>Transparent<wbr>Data<wbr>Encryption<wbr>Status</a></span>
+        <span class="property-type">string | <a href="#transparentdataencryptionstatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql..<wbr>Transparent<wbr>Data<wbr>Encryption<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}The status of the database transparent data encryption.{{% /md %}}</dd>
 </dl>
@@ -720,7 +720,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:sql/latest:TransparentDataEncryption current /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/sqlcrudtest-6852/providers/Microsoft.Sql/servers/sqlcrudtest-2080/databases/sqlcrudtest-9187/transparentDataEncryption/current 
+$ pulumi import azure-nextgen:sql:TransparentDataEncryption current /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/sqlcrudtest-6852/providers/Microsoft.Sql/servers/sqlcrudtest-2080/databases/sqlcrudtest-9187/transparentDataEncryption/current 
 ```
 
 

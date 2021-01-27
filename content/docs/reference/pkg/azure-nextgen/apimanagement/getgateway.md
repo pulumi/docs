@@ -233,7 +233,7 @@ The following output properties are available:
 <a href="#locationdata_csharp" style="color: inherit; text-decoration: inherit;">Location<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcelocationdatacontractresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management.<wbr>Outputs.<wbr>Resource<wbr>Location<wbr>Data<wbr>Contract<wbr>Response</a></span>
+        <span class="property-type"><a href="#resourcelocationdatacontractresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management..<wbr>Outputs.<wbr>Resource<wbr>Location<wbr>Data<wbr>Contract<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gateway location.{{% /md %}}</dd>
 </dl>

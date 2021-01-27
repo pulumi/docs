@@ -161,7 +161,7 @@ The following output properties are available:
 <a href="#dataflows_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Flows</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dataflowresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Outputs.<wbr>Data<wbr>Flow<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#dataflowresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Outputs.<wbr>Data<wbr>Flow<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The specification of data flows.{{% /md %}}</dd>
     <dt class="property-"
@@ -170,7 +170,7 @@ The following output properties are available:
 <a href="#destinations_csharp" style="color: inherit; text-decoration: inherit;">Destinations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datacollectionruleresponsedestinations">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Outputs.<wbr>Data<wbr>Collection<wbr>Rule<wbr>Response<wbr>Destinations</a></span>
+        <span class="property-type"><a href="#datacollectionruleresponsedestinations">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Outputs.<wbr>Data<wbr>Collection<wbr>Rule<wbr>Response<wbr>Destinations</a></span>
     </dt>
     <dd>{{% md %}}The specification of destinations.{{% /md %}}</dd>
     <dt class="property-"
@@ -233,7 +233,7 @@ The following output properties are available:
 <a href="#datasources_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Sources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datacollectionruleresponsedatasources">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Outputs.<wbr>Data<wbr>Collection<wbr>Rule<wbr>Response<wbr>Data<wbr>Sources</a></span>
+        <span class="property-type"><a href="#datacollectionruleresponsedatasources">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Outputs.<wbr>Data<wbr>Collection<wbr>Rule<wbr>Response<wbr>Data<wbr>Sources</a></span>
     </dt>
     <dd>{{% md %}}The specification of data sources. 
 This property is optional and can be omitted if the rule is meant to be used via direct calls to the provisioned endpoint.{{% /md %}}</dd>
@@ -598,7 +598,7 @@ This property is optional and can be omitted if the rule is meant to be used via
 <a href="#extensions_csharp" style="color: inherit; text-decoration: inherit;">Extensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#extensiondatasourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Inputs.<wbr>Extension<wbr>Data<wbr>Source<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#extensiondatasourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Inputs.<wbr>Extension<wbr>Data<wbr>Source<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of Azure VM extension data source configurations.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -607,7 +607,7 @@ This property is optional and can be omitted if the rule is meant to be used via
 <a href="#performancecounters_csharp" style="color: inherit; text-decoration: inherit;">Performance<wbr>Counters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#perfcounterdatasourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Inputs.<wbr>Perf<wbr>Counter<wbr>Data<wbr>Source<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#perfcounterdatasourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Inputs.<wbr>Perf<wbr>Counter<wbr>Data<wbr>Source<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of performance counter data source configurations.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -616,7 +616,7 @@ This property is optional and can be omitted if the rule is meant to be used via
 <a href="#syslog_csharp" style="color: inherit; text-decoration: inherit;">Syslog</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#syslogdatasourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Inputs.<wbr>Syslog<wbr>Data<wbr>Source<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#syslogdatasourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Inputs.<wbr>Syslog<wbr>Data<wbr>Source<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of Syslog data source configurations.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -625,7 +625,7 @@ This property is optional and can be omitted if the rule is meant to be used via
 <a href="#windowseventlogs_csharp" style="color: inherit; text-decoration: inherit;">Windows<wbr>Event<wbr>Logs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#windowseventlogdatasourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Inputs.<wbr>Windows<wbr>Event<wbr>Log<wbr>Data<wbr>Source<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#windowseventlogdatasourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Inputs.<wbr>Windows<wbr>Event<wbr>Log<wbr>Data<wbr>Source<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of Windows Event Log data source configurations.{{% /md %}}</dd>
 </dl>
@@ -773,7 +773,7 @@ This property is optional and can be omitted if the rule is meant to be used via
 <a href="#azuremonitormetrics_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Monitor<wbr>Metrics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#destinationsspecresponseazuremonitormetrics">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Inputs.<wbr>Destinations<wbr>Spec<wbr>Response<wbr>Azure<wbr>Monitor<wbr>Metrics<wbr>Args</a></span>
+        <span class="property-type"><a href="#destinationsspecresponseazuremonitormetrics">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Inputs.<wbr>Destinations<wbr>Spec<wbr>Response<wbr>Azure<wbr>Monitor<wbr>Metrics<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Azure Monitor Metrics destination.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -782,7 +782,7 @@ This property is optional and can be omitted if the rule is meant to be used via
 <a href="#loganalytics_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Analytics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loganalyticsdestinationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Inputs.<wbr>Log<wbr>Analytics<wbr>Destination<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#loganalyticsdestinationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Inputs.<wbr>Log<wbr>Analytics<wbr>Destination<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of Log Analytics destinations.{{% /md %}}</dd>
 </dl>

@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.network.VirtualRouterPeering res
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Virtual Router Peering resource.
-Latest API Version: 2020-08-01.
+API Version: 2020-08-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var virtualRouterPeering = new AzureNextGen.Network.Latest.VirtualRouterPeering("virtualRouterPeering", new AzureNextGen.Network.Latest.VirtualRouterPeeringArgs
+        var virtualRouterPeering = new AzureNextGen.Network..VirtualRouterPeering("virtualRouterPeering", new AzureNextGen.Network..VirtualRouterPeeringArgs
         {
             PeerAsn = 20000,
             PeerIp = "192.168.1.5",
@@ -49,7 +49,7 @@ class MyStack : Stack
 package main
 
 import (
-	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network/latest"
+	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -79,7 +79,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-virtual_router_peering = azure_nextgen.network.latest.VirtualRouterPeering("virtualRouterPeering",
+virtual_router_peering = azure_nextgen.network.VirtualRouterPeering("virtualRouterPeering",
     peer_asn=20000,
     peer_ip="192.168.1.5",
     peering_name="peering1",
@@ -96,7 +96,7 @@ virtual_router_peering = azure_nextgen.network.latest.VirtualRouterPeering("virt
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const virtualRouterPeering = new azure_nextgen.network.latest.VirtualRouterPeering("virtualRouterPeering", {
+const virtualRouterPeering = new azure_nextgen.network.VirtualRouterPeering("virtualRouterPeering", {
     peerAsn: 20000,
     peerIp: "192.168.1.5",
     peeringName: "peering1",
@@ -750,7 +750,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:network/latest:VirtualRouterPeering peering1 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualRouters/virtualRouter/peerings/peering1 
+$ pulumi import azure-nextgen:network:VirtualRouterPeering peering1 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualRouters/virtualRouter/peerings/peering1 
 ```
 
 

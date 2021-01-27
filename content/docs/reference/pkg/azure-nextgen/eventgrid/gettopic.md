@@ -224,7 +224,7 @@ The following output properties are available:
 <a href="#inboundiprules_csharp" style="color: inherit; text-decoration: inherit;">Inbound<wbr>Ip<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inboundipruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid.<wbr>Outputs.<wbr>Inbound<wbr>Ip<wbr>Rule<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#inboundipruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid..<wbr>Outputs.<wbr>Inbound<wbr>Ip<wbr>Rule<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}This can be used to restrict traffic from specific IPs instead of all IPs. Note: These are considered only if PublicNetworkAccess is enabled.{{% /md %}}</dd>
     <dt class="property-"
@@ -242,7 +242,7 @@ The following output properties are available:
 <a href="#inputschemamapping_csharp" style="color: inherit; text-decoration: inherit;">Input<wbr>Schema<wbr>Mapping</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jsoninputschemamappingresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid.<wbr>Outputs.<wbr>Json<wbr>Input<wbr>Schema<wbr>Mapping<wbr>Response</a></span>
+        <span class="property-type"><a href="#jsoninputschemamappingresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid..<wbr>Outputs.<wbr>Json<wbr>Input<wbr>Schema<wbr>Mapping<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}This enables publishing using custom event schemas. An InputSchemaMapping can be specified to map various properties of a source schema to various required properties of the EventGridEvent schema.{{% /md %}}</dd>
     <dt class="property-"
@@ -251,7 +251,7 @@ The following output properties are available:
 <a href="#privateendpointconnections_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint<wbr>Connections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointconnectionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid.<wbr>Outputs.<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#privateendpointconnectionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid..<wbr>Outputs.<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-"
@@ -1082,7 +1082,7 @@ You can further restrict to specific IPs by configuring <seealso cref="P:Microso
 <a href="#dataversion_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jsonfieldwithdefaultresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Json<wbr>Field<wbr>With<wbr>Default<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#jsonfieldwithdefaultresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid..<wbr>Inputs.<wbr>Json<wbr>Field<wbr>With<wbr>Default<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The mapping information for the DataVersion property of the Event Grid Event.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1091,7 +1091,7 @@ You can further restrict to specific IPs by configuring <seealso cref="P:Microso
 <a href="#eventtime_csharp" style="color: inherit; text-decoration: inherit;">Event<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jsonfieldresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Json<wbr>Field<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#jsonfieldresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid..<wbr>Inputs.<wbr>Json<wbr>Field<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The mapping information for the EventTime property of the Event Grid Event.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1100,7 +1100,7 @@ You can further restrict to specific IPs by configuring <seealso cref="P:Microso
 <a href="#eventtype_csharp" style="color: inherit; text-decoration: inherit;">Event<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jsonfieldwithdefaultresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Json<wbr>Field<wbr>With<wbr>Default<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#jsonfieldwithdefaultresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid..<wbr>Inputs.<wbr>Json<wbr>Field<wbr>With<wbr>Default<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The mapping information for the EventType property of the Event Grid Event.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1109,7 +1109,7 @@ You can further restrict to specific IPs by configuring <seealso cref="P:Microso
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jsonfieldresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Json<wbr>Field<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#jsonfieldresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid..<wbr>Inputs.<wbr>Json<wbr>Field<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The mapping information for the Id property of the Event Grid Event.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1118,7 +1118,7 @@ You can further restrict to specific IPs by configuring <seealso cref="P:Microso
 <a href="#subject_csharp" style="color: inherit; text-decoration: inherit;">Subject</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jsonfieldwithdefaultresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Json<wbr>Field<wbr>With<wbr>Default<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#jsonfieldwithdefaultresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid..<wbr>Inputs.<wbr>Json<wbr>Field<wbr>With<wbr>Default<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The mapping information for the Subject property of the Event Grid Event.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1127,7 +1127,7 @@ You can further restrict to specific IPs by configuring <seealso cref="P:Microso
 <a href="#topic_csharp" style="color: inherit; text-decoration: inherit;">Topic</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jsonfieldresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Json<wbr>Field<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#jsonfieldresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid..<wbr>Inputs.<wbr>Json<wbr>Field<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The mapping information for the Topic property of the Event Grid Event.{{% /md %}}</dd>
 </dl>
@@ -1365,7 +1365,7 @@ You can further restrict to specific IPs by configuring <seealso cref="P:Microso
 <a href="#privateendpoint_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#privateendpointresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid..<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Private Endpoint resource for this Connection.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1374,7 +1374,7 @@ You can further restrict to specific IPs by configuring <seealso cref="P:Microso
 <a href="#privatelinkserviceconnectionstate_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionstateresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Connection<wbr>State<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#connectionstateresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid..<wbr>Inputs.<wbr>Connection<wbr>State<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Details about the state of the connection.{{% /md %}}</dd>
     <dt class="property-optional"

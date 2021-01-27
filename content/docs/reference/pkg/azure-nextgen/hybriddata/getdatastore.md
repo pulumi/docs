@@ -242,7 +242,7 @@ The following output properties are available:
 <a href="#customersecrets_csharp" style="color: inherit; text-decoration: inherit;">Customer<wbr>Secrets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customersecretresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Data.<wbr>Outputs.<wbr>Customer<wbr>Secret<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#customersecretresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Data..<wbr>Outputs.<wbr>Customer<wbr>Secret<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of customer secrets containing a key identifier and key value. The key identifier is a way for the specific data source to understand the key. Value contains customer secret encrypted by the encryptionKeys.{{% /md %}}</dd>
     <dt class="property-"

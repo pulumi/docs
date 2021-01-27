@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.eventhub.Namespace resource with
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Single Namespace item in List or Get Operation
-Latest API Version: 2017-04-01.
+API Version: 2017-04-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,12 +27,12 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var @namespace = new AzureNextGen.EventHub.Latest.Namespace("namespace", new AzureNextGen.EventHub.Latest.NamespaceArgs
+        var @namespace = new AzureNextGen.EventHub..Namespace("namespace", new AzureNextGen.EventHub..NamespaceArgs
         {
             Location = "South Central US",
             NamespaceName = "sdk-Namespace-5849",
             ResourceGroupName = "ArunMonocle",
-            Sku = new AzureNextGen.EventHub.Latest.Inputs.SkuArgs
+            Sku = new AzureNextGen.EventHub..Inputs.SkuArgs
             {
                 Name = "Standard",
                 Tier = "Standard",
@@ -57,7 +57,7 @@ class MyStack : Stack
 package main
 
 import (
-	eventhub "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/eventhub/latest"
+	eventhub "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/eventhub"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -93,11 +93,11 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-namespace = azure_nextgen.eventhub.latest.Namespace("namespace",
+namespace = azure_nextgen.eventhub.Namespace("namespace",
     location="South Central US",
     namespace_name="sdk-Namespace-5849",
     resource_group_name="ArunMonocle",
-    sku=azure_nextgen.eventhub.latest.SkuArgs(
+    sku=azure_nextgen.eventhub.SkuArgs(
         name="Standard",
         tier="Standard",
     ),
@@ -116,7 +116,7 @@ namespace = azure_nextgen.eventhub.latest.Namespace("namespace",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const namespace = new azure_nextgen.eventhub.latest.Namespace("namespace", {
+const namespace = new azure_nextgen.eventhub.Namespace("namespace", {
     location: "South Central US",
     namespaceName: "sdk-Namespace-5849",
     resourceGroupName: "ArunMonocle",
@@ -377,7 +377,7 @@ The Namespace resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sku">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Hub.<wbr>Inputs.<wbr>Sku<wbr>Args</a></span>
+        <span class="property-type"><a href="#sku">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Hub..<wbr>Inputs.<wbr>Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties of sku resource{{% /md %}}</dd>
     <dt class="property-optional"
@@ -966,7 +966,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#skuname">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Hub.<wbr>Sku<wbr>Name</a></span>
+        <span class="property-type">string | <a href="#skuname">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Hub..<wbr>Sku<wbr>Name</a></span>
     </dt>
     <dd>{{% md %}}Name of this SKU.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -984,7 +984,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tier_csharp" style="color: inherit; text-decoration: inherit;">Tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#skutier">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Hub.<wbr>Sku<wbr>Tier</a></span>
+        <span class="property-type">string | <a href="#skutier">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Hub..<wbr>Sku<wbr>Tier</a></span>
     </dt>
     <dd>{{% md %}}The billing tier of this particular SKU.{{% /md %}}</dd>
 </dl>
@@ -1304,7 +1304,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:eventhub/latest:Namespace sdk-Namespace-5849 /subscriptions/5f750a97-50d9-4e36-8081-c9ee4c0210d4/resourceGroups/ArunMonocle/providers/Microsoft.EventHub/namespaces/sdk-Namespace-5849 
+$ pulumi import azure-nextgen:eventhub:Namespace sdk-Namespace-5849 /subscriptions/5f750a97-50d9-4e36-8081-c9ee4c0210d4/resourceGroups/ArunMonocle/providers/Microsoft.EventHub/namespaces/sdk-Namespace-5849 
 ```
 
 

@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.consumption.BudgetByResourceGrou
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 A budget resource.
-Latest API Version: 2018-10-01.
+API Version: 2018-10-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,13 +27,13 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var budgetByResourceGroupName = new AzureNextGen.Consumption.Latest.BudgetByResourceGroupName("budgetByResourceGroupName", new AzureNextGen.Consumption.Latest.BudgetByResourceGroupNameArgs
+        var budgetByResourceGroupName = new AzureNextGen.Consumption..BudgetByResourceGroupName("budgetByResourceGroupName", new AzureNextGen.Consumption..BudgetByResourceGroupNameArgs
         {
             Amount = 100.65,
             BudgetName = "TestBudget",
             Category = "Cost",
             ETag = "\"1d34d016a593709\"",
-            Filters = new AzureNextGen.Consumption.Latest.Inputs.FiltersArgs
+            Filters = new AzureNextGen.Consumption..Inputs.FiltersArgs
             {
                 Meters = 
                 {
@@ -64,7 +64,7 @@ class MyStack : Stack
             },
             Notifications = 
             {
-                { "Actual_GreaterThan_80_Percent", new AzureNextGen.Consumption.Latest.Inputs.NotificationArgs
+                { "Actual_GreaterThan_80_Percent", new AzureNextGen.Consumption..Inputs.NotificationArgs
                 {
                     ContactEmails = 
                     {
@@ -87,7 +87,7 @@ class MyStack : Stack
             },
             ResourceGroupName = "MYDEVTESTRG",
             TimeGrain = "Monthly",
-            TimePeriod = new AzureNextGen.Consumption.Latest.Inputs.BudgetTimePeriodArgs
+            TimePeriod = new AzureNextGen.Consumption..Inputs.BudgetTimePeriodArgs
             {
                 EndDate = "2018-10-31T00:00:00Z",
                 StartDate = "2017-10-01T00:00:00Z",
@@ -111,12 +111,12 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-budget_by_resource_group_name = azure_nextgen.consumption.latest.BudgetByResourceGroupName("budgetByResourceGroupName",
+budget_by_resource_group_name = azure_nextgen.consumption.BudgetByResourceGroupName("budgetByResourceGroupName",
     amount=100.65,
     budget_name="TestBudget",
     category="Cost",
     e_tag="\"1d34d016a593709\"",
-    filters=azure_nextgen.consumption.latest.FiltersArgs(
+    filters=azure_nextgen.consumption.FiltersArgs(
         meters=["00000000-0000-0000-0000-000000000000"],
         resource_groups=["MYDEVTESTRG"],
         resources=[
@@ -135,7 +135,7 @@ budget_by_resource_group_name = azure_nextgen.consumption.latest.BudgetByResourc
         },
     ),
     notifications={
-        "Actual_GreaterThan_80_Percent": azure_nextgen.consumption.latest.NotificationArgs(
+        "Actual_GreaterThan_80_Percent": azure_nextgen.consumption.NotificationArgs(
             contact_emails=[
                 "johndoe@contoso.com",
                 "janesmith@contoso.com",
@@ -152,7 +152,7 @@ budget_by_resource_group_name = azure_nextgen.consumption.latest.BudgetByResourc
     },
     resource_group_name="MYDEVTESTRG",
     time_grain="Monthly",
-    time_period=azure_nextgen.consumption.latest.BudgetTimePeriodArgs(
+    time_period=azure_nextgen.consumption.BudgetTimePeriodArgs(
         end_date="2018-10-31T00:00:00Z",
         start_date="2017-10-01T00:00:00Z",
     ))
@@ -167,7 +167,7 @@ budget_by_resource_group_name = azure_nextgen.consumption.latest.BudgetByResourc
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const budgetByResourceGroupName = new azure_nextgen.consumption.latest.BudgetByResourceGroupName("budgetByResourceGroupName", {
+const budgetByResourceGroupName = new azure_nextgen.consumption.BudgetByResourceGroupName("budgetByResourceGroupName", {
     amount: 100.65,
     budgetName: "TestBudget",
     category: "Cost",
@@ -425,7 +425,7 @@ The BudgetByResourceGroupName resource accepts the following [input]({{< relref 
 <a href="#category_csharp" style="color: inherit; text-decoration: inherit;">Category</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#categorytype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Consumption.<wbr>Category<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#categorytype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Consumption..<wbr>Category<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The category of the budget, whether the budget tracks cost or usage.{{% /md %}}</dd>
     <dt class="property-required"
@@ -443,7 +443,7 @@ The BudgetByResourceGroupName resource accepts the following [input]({{< relref 
 <a href="#timegrain_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Grain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#timegraintype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Consumption.<wbr>Time<wbr>Grain<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#timegraintype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Consumption..<wbr>Time<wbr>Grain<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The time covered by a budget. Tracking of the amount will be reset based on the time grain.{{% /md %}}</dd>
     <dt class="property-required"
@@ -452,7 +452,7 @@ The BudgetByResourceGroupName resource accepts the following [input]({{< relref 
 <a href="#timeperiod_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgettimeperiod">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Consumption.<wbr>Inputs.<wbr>Budget<wbr>Time<wbr>Period<wbr>Args</a></span>
+        <span class="property-type"><a href="#budgettimeperiod">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Consumption..<wbr>Inputs.<wbr>Budget<wbr>Time<wbr>Period<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Has start and end date of the budget. The start date must be first of the month and should be less than the end date. Budget start date must be on or after June 1, 2017. Future start date should not be more than three months. Past start date should  be selected within the timegrain period. There are no restrictions on the end date.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -470,7 +470,7 @@ The BudgetByResourceGroupName resource accepts the following [input]({{< relref 
 <a href="#filters_csharp" style="color: inherit; text-decoration: inherit;">Filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#filters">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Consumption.<wbr>Inputs.<wbr>Filters<wbr>Args</a></span>
+        <span class="property-type"><a href="#filters">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Consumption..<wbr>Inputs.<wbr>Filters<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}May be used to filter budgets by resource group, resource, or meter.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -479,7 +479,7 @@ The BudgetByResourceGroupName resource accepts the following [input]({{< relref 
 <a href="#notifications_csharp" style="color: inherit; text-decoration: inherit;">Notifications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Consumption.<wbr>Inputs.<wbr>Notification<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Consumption..<wbr>Inputs.<wbr>Notification<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}Dictionary of notifications associated with the budget. Budget can have up to five notifications.{{% /md %}}</dd>
 </dl>
@@ -762,7 +762,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#currentspend_csharp" style="color: inherit; text-decoration: inherit;">Current<wbr>Spend</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#currentspendresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Consumption.<wbr>Outputs.<wbr>Current<wbr>Spend<wbr>Response</a></span>
+        <span class="property-type"><a href="#currentspendresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Consumption..<wbr>Outputs.<wbr>Current<wbr>Spend<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The current amount of cost which is being tracked for a budget.{{% /md %}}</dd>
     <dt class="property-"
@@ -1632,7 +1632,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operator_csharp" style="color: inherit; text-decoration: inherit;">Operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#operatortype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Consumption.<wbr>Operator<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#operatortype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Consumption..<wbr>Operator<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The comparison operator.{{% /md %}}</dd>
     <dt class="property-required"
@@ -2184,7 +2184,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:consumption/latest:BudgetByResourceGroupName TestBudget subscriptions/{subscription-id}/providers/Microsoft.Consumption/budgets/TestBudget 
+$ pulumi import azure-nextgen:consumption:BudgetByResourceGroupName TestBudget subscriptions/{subscription-id}/providers/Microsoft.Consumption/budgets/TestBudget 
 ```
 
 

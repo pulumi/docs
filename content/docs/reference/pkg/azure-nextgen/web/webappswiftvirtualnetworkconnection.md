@@ -11,13 +11,13 @@ meta_desc: "Documentation for the azure-nextgen.web.WebAppSwiftVirtualNetworkCon
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Swift Virtual Network Contract. This is used to enable the new Swift way of doing virtual network integration.
-Latest API Version: 2020-09-01.
+API Version: 2020-09-01.
 ## Import
 
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:web/latest:WebAppSwiftVirtualNetworkConnection myresource1 /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/networkConfig/virtualNetwork 
+$ pulumi import azure-nextgen:web:WebAppSwiftVirtualNetworkConnection myresource1 /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/networkConfig/virtualNetwork 
 ```
 
 
@@ -429,7 +429,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#systemdata_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web.<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
+        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web..<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The system metadata relating to this resource.{{% /md %}}</dd>
     <dt class="property-"

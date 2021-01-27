@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.powerplatform.EnterprisePolicy r
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Definition of the EnterprisePolicy.
+API Version: 2020-10-30-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,10 +27,10 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var enterprisePolicy = new AzureNextGen.PowerPlatform.V20201030Preview.EnterprisePolicy("enterprisePolicy", new AzureNextGen.PowerPlatform.V20201030Preview.EnterprisePolicyArgs
+        var enterprisePolicy = new AzureNextGen.PowerPlatform..EnterprisePolicy("enterprisePolicy", new AzureNextGen.PowerPlatform..EnterprisePolicyArgs
         {
             EnterprisePolicyName = "enterprisePolicy",
-            Identity = new AzureNextGen.PowerPlatform.V20201030Preview.Inputs.EnterprisePolicyIdentityArgs
+            Identity = new AzureNextGen.PowerPlatform..Inputs.EnterprisePolicyIdentityArgs
             {
                 Type = "SystemAssigned",
             },
@@ -54,7 +55,7 @@ class MyStack : Stack
 package main
 
 import (
-	powerplatform "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/powerplatform/v20201030preview"
+	powerplatform "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/powerplatform"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -88,9 +89,9 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-enterprise_policy = azure_nextgen.powerplatform.v20201030preview.EnterprisePolicy("enterprisePolicy",
+enterprise_policy = azure_nextgen.powerplatform.EnterprisePolicy("enterprisePolicy",
     enterprise_policy_name="enterprisePolicy",
-    identity=azure_nextgen.powerplatform.v20201030preview.EnterprisePolicyIdentityArgs(
+    identity=azure_nextgen.powerplatform.EnterprisePolicyIdentityArgs(
         type="SystemAssigned",
     ),
     location="East US",
@@ -109,7 +110,7 @@ enterprise_policy = azure_nextgen.powerplatform.v20201030preview.EnterprisePolic
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const enterprisePolicy = new azure_nextgen.powerplatform.v20201030preview.EnterprisePolicy("enterprisePolicy", {
+const enterprisePolicy = new azure_nextgen.powerplatform.EnterprisePolicy("enterprisePolicy", {
     enterprisePolicyName: "enterprisePolicy",
     identity: {
         type: "SystemAssigned",
@@ -332,7 +333,7 @@ The EnterprisePolicy resource accepts the following [input]({{< relref "/docs/in
 <a href="#encryption_csharp" style="color: inherit; text-decoration: inherit;">Encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#propertiesencryption">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Power<wbr>Platform.<wbr>Inputs.<wbr>Properties<wbr>Encryption<wbr>Args</a></span>
+        <span class="property-type"><a href="#propertiesencryption">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Power<wbr>Platform..<wbr>Inputs.<wbr>Properties<wbr>Encryption<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The encryption settings for a configuration store.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -341,7 +342,7 @@ The EnterprisePolicy resource accepts the following [input]({{< relref "/docs/in
 <a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#enterprisepolicyidentity">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Power<wbr>Platform.<wbr>Inputs.<wbr>Enterprise<wbr>Policy<wbr>Identity<wbr>Args</a></span>
+        <span class="property-type"><a href="#enterprisepolicyidentity">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Power<wbr>Platform..<wbr>Inputs.<wbr>Enterprise<wbr>Policy<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The identity of the EnterprisePolicy.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -579,7 +580,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#systemdata_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Power<wbr>Platform.<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
+        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Power<wbr>Platform..<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Metadata pertaining to creation and last modification of the resource.{{% /md %}}</dd>
     <dt class="property-"
@@ -597,7 +598,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lockbox_csharp" style="color: inherit; text-decoration: inherit;">Lockbox</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#propertiesresponselockbox">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Power<wbr>Platform.<wbr>Outputs.<wbr>Properties<wbr>Response<wbr>Lockbox</a></span>
+        <span class="property-type"><a href="#propertiesresponselockbox">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Power<wbr>Platform..<wbr>Outputs.<wbr>Properties<wbr>Response<wbr>Lockbox</a></span>
     </dt>
     <dd>{{% md %}}Settings concerning lockbox.{{% /md %}}</dd>
 </dl>
@@ -777,7 +778,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidentitytype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Power<wbr>Platform.<wbr>Resource<wbr>Identity<wbr>Type</a></span>
+        <span class="property-type"><a href="#resourceidentitytype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Power<wbr>Platform..<wbr>Resource<wbr>Identity<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of identity used for the EnterprisePolicy. Currently, the only supported type is 'SystemAssigned', which implicitly creates an identity.{{% /md %}}</dd>
 </dl>
@@ -1178,7 +1179,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Power<wbr>Platform.<wbr>Inputs.<wbr>Key<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#keyproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Power<wbr>Platform..<wbr>Inputs.<wbr>Key<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Identity of the secret that includes name and version.{{% /md %}}</dd>
 </dl>
@@ -1285,7 +1286,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keypropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Power<wbr>Platform.<wbr>Inputs.<wbr>Key<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#keypropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Power<wbr>Platform..<wbr>Inputs.<wbr>Key<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Identity of the secret that includes name and version.{{% /md %}}</dd>
 </dl>
@@ -1401,7 +1402,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keyvaultproperties_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Power<wbr>Platform.<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#keyvaultproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Power<wbr>Platform..<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Key vault properties.{{% /md %}}</dd>
 </dl>
@@ -1463,7 +1464,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keyvaultproperties_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Power<wbr>Platform.<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#keyvaultpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Power<wbr>Platform..<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Key vault properties.{{% /md %}}</dd>
 </dl>
@@ -1861,7 +1862,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:powerplatform/v20201030preview:EnterprisePolicy enterprisePolicy /subscriptions/subid/resourceGroups/resourceGroup/providers/Microsoft.PowerPlatform/enterprisePolicies/enterprisePolicy 
+$ pulumi import azure-nextgen:powerplatform:EnterprisePolicy enterprisePolicy /subscriptions/subid/resourceGroups/resourceGroup/providers/Microsoft.PowerPlatform/enterprisePolicies/enterprisePolicy 
 ```
 
 

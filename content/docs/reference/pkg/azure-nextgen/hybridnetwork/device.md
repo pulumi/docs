@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.hybridnetwork.Device resource wi
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Device resource.
+API Version: 2020-01-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,9 +27,9 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var device = new AzureNextGen.HybridNetwork.V20200101Preview.Device("device", new AzureNextGen.HybridNetwork.V20200101Preview.DeviceArgs
+        var device = new AzureNextGen.HybridNetwork..Device("device", new AzureNextGen.HybridNetwork..DeviceArgs
         {
-            AzureStackEdge = new AzureNextGen.HybridNetwork.V20200101Preview.Inputs.SubResourceArgs
+            AzureStackEdge = new AzureNextGen.HybridNetwork..Inputs.SubResourceArgs
             {
                 Id = "/subscriptions/subid1/resourcegroups/rg2/providers/Microsoft.DataboxEdge/DataboxEdgeDevices/TestDataboxEdgeDeviceName",
             },
@@ -51,7 +52,7 @@ class MyStack : Stack
 package main
 
 import (
-	hybridnetwork "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/hybridnetwork/v20200101preview"
+	hybridnetwork "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/hybridnetwork"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -83,8 +84,8 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-device = azure_nextgen.hybridnetwork.v20200101preview.Device("device",
-    azure_stack_edge=azure_nextgen.hybridnetwork.v20200101preview.SubResourceArgs(
+device = azure_nextgen.hybridnetwork.Device("device",
+    azure_stack_edge=azure_nextgen.hybridnetwork.SubResourceArgs(
         id="/subscriptions/subid1/resourcegroups/rg2/providers/Microsoft.DataboxEdge/DataboxEdgeDevices/TestDataboxEdgeDeviceName",
     ),
     device_name="TestDevice",
@@ -102,7 +103,7 @@ device = azure_nextgen.hybridnetwork.v20200101preview.Device("device",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const device = new azure_nextgen.hybridnetwork.v20200101preview.Device("device", {
+const device = new azure_nextgen.hybridnetwork.Device("device", {
     azureStackEdge: {
         id: "/subscriptions/subid1/resourcegroups/rg2/providers/Microsoft.DataboxEdge/DataboxEdgeDevices/TestDataboxEdgeDeviceName",
     },
@@ -314,7 +315,7 @@ The Device resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#devicetype_csharp" style="color: inherit; text-decoration: inherit;">Device<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#devicetype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Network.<wbr>Device<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#devicetype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Network..<wbr>Device<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of the device.{{% /md %}}</dd>
     <dt class="property-required"
@@ -341,7 +342,7 @@ The Device resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#azurestackedge_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Stack<wbr>Edge</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Network..<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The reference to the Azure stack edge device.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -570,7 +571,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#networkfunctions_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Functions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Network.<wbr>Outputs.<wbr>Sub<wbr>Resource<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#subresourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Network..<wbr>Outputs.<wbr>Sub<wbr>Resource<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of network functions deployed on the device.{{% /md %}}</dd>
     <dt class="property-"
@@ -960,7 +961,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:hybridnetwork/v20200101preview:Device TestDevice /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.HybridNetwork/devices/TestDevice 
+$ pulumi import azure-nextgen:hybridnetwork:Device TestDevice /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.HybridNetwork/devices/TestDevice 
 ```
 
 

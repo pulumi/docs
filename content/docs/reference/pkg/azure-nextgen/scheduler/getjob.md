@@ -215,7 +215,7 @@ The following output properties are available:
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Scheduler.<wbr>Outputs.<wbr>Job<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#jobpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Scheduler..<wbr>Outputs.<wbr>Job<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the job properties.{{% /md %}}</dd>
     <dt class="property-"
@@ -692,7 +692,7 @@ The following output properties are available:
 <a href="#authentication_csharp" style="color: inherit; text-decoration: inherit;">Authentication</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#basicauthenticationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Scheduler.<wbr>Inputs.<wbr>Basic<wbr>Authentication<wbr>Response<wbr>Args</a> | <a href="#clientcertauthenticationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Scheduler.<wbr>Inputs.<wbr>Client<wbr>Cert<wbr>Authentication<wbr>Response<wbr>Args</a> | <a href="#oauthauthenticationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Scheduler.<wbr>Inputs.<wbr>OAuth<wbr>Authentication<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#basicauthenticationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Scheduler..<wbr>Inputs.<wbr>Basic<wbr>Authentication<wbr>Response<wbr>Args</a> | <a href="#clientcertauthenticationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Scheduler..<wbr>Inputs.<wbr>Client<wbr>Cert<wbr>Authentication<wbr>Response<wbr>Args</a> | <a href="#oauthauthenticationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Scheduler..<wbr>Inputs.<wbr>OAuth<wbr>Authentication<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the authentication method of the request.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -903,7 +903,7 @@ The following output properties are available:
 <a href="#erroraction_csharp" style="color: inherit; text-decoration: inherit;">Error<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#joberroractionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Scheduler.<wbr>Inputs.<wbr>Job<wbr>Error<wbr>Action<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#joberroractionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Scheduler..<wbr>Inputs.<wbr>Job<wbr>Error<wbr>Action<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the error action.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -912,7 +912,7 @@ The following output properties are available:
 <a href="#queuemessage_csharp" style="color: inherit; text-decoration: inherit;">Queue<wbr>Message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storagequeuemessageresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Scheduler.<wbr>Inputs.<wbr>Storage<wbr>Queue<wbr>Message<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#storagequeuemessageresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Scheduler..<wbr>Inputs.<wbr>Storage<wbr>Queue<wbr>Message<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the storage queue message.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -921,7 +921,7 @@ The following output properties are available:
 <a href="#request_csharp" style="color: inherit; text-decoration: inherit;">Request</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httprequestresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Scheduler.<wbr>Inputs.<wbr>Http<wbr>Request<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#httprequestresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Scheduler..<wbr>Inputs.<wbr>Http<wbr>Request<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the http requests.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -930,7 +930,7 @@ The following output properties are available:
 <a href="#retrypolicy_csharp" style="color: inherit; text-decoration: inherit;">Retry<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#retrypolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Scheduler.<wbr>Inputs.<wbr>Retry<wbr>Policy<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#retrypolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Scheduler..<wbr>Inputs.<wbr>Retry<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the retry policy.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -939,7 +939,7 @@ The following output properties are available:
 <a href="#servicebusqueuemessage_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Bus<wbr>Queue<wbr>Message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicebusqueuemessageresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Scheduler.<wbr>Inputs.<wbr>Service<wbr>Bus<wbr>Queue<wbr>Message<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicebusqueuemessageresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Scheduler..<wbr>Inputs.<wbr>Service<wbr>Bus<wbr>Queue<wbr>Message<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the service bus queue message.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -948,7 +948,7 @@ The following output properties are available:
 <a href="#servicebustopicmessage_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Bus<wbr>Topic<wbr>Message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicebustopicmessageresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Scheduler.<wbr>Inputs.<wbr>Service<wbr>Bus<wbr>Topic<wbr>Message<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicebustopicmessageresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Scheduler..<wbr>Inputs.<wbr>Service<wbr>Bus<wbr>Topic<wbr>Message<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the service bus topic message.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1186,7 +1186,7 @@ The following output properties are available:
 <a href="#queuemessage_csharp" style="color: inherit; text-decoration: inherit;">Queue<wbr>Message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storagequeuemessageresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Scheduler.<wbr>Inputs.<wbr>Storage<wbr>Queue<wbr>Message<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#storagequeuemessageresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Scheduler..<wbr>Inputs.<wbr>Storage<wbr>Queue<wbr>Message<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the storage queue message.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1195,7 +1195,7 @@ The following output properties are available:
 <a href="#request_csharp" style="color: inherit; text-decoration: inherit;">Request</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httprequestresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Scheduler.<wbr>Inputs.<wbr>Http<wbr>Request<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#httprequestresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Scheduler..<wbr>Inputs.<wbr>Http<wbr>Request<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the http requests.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1204,7 +1204,7 @@ The following output properties are available:
 <a href="#retrypolicy_csharp" style="color: inherit; text-decoration: inherit;">Retry<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#retrypolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Scheduler.<wbr>Inputs.<wbr>Retry<wbr>Policy<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#retrypolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Scheduler..<wbr>Inputs.<wbr>Retry<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the retry policy.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1213,7 +1213,7 @@ The following output properties are available:
 <a href="#servicebusqueuemessage_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Bus<wbr>Queue<wbr>Message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicebusqueuemessageresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Scheduler.<wbr>Inputs.<wbr>Service<wbr>Bus<wbr>Queue<wbr>Message<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicebusqueuemessageresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Scheduler..<wbr>Inputs.<wbr>Service<wbr>Bus<wbr>Queue<wbr>Message<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the service bus queue message.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1222,7 +1222,7 @@ The following output properties are available:
 <a href="#servicebustopicmessage_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Bus<wbr>Topic<wbr>Message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicebustopicmessageresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Scheduler.<wbr>Inputs.<wbr>Service<wbr>Bus<wbr>Topic<wbr>Message<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicebustopicmessageresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Scheduler..<wbr>Inputs.<wbr>Service<wbr>Bus<wbr>Topic<wbr>Message<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the service bus topic message.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1433,7 +1433,7 @@ The following output properties are available:
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobstatusresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Scheduler.<wbr>Inputs.<wbr>Job<wbr>Status<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#jobstatusresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Scheduler..<wbr>Inputs.<wbr>Job<wbr>Status<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets the job status.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1442,7 +1442,7 @@ The following output properties are available:
 <a href="#action_csharp" style="color: inherit; text-decoration: inherit;">Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobactionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Scheduler.<wbr>Inputs.<wbr>Job<wbr>Action<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#jobactionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Scheduler..<wbr>Inputs.<wbr>Job<wbr>Action<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the job action.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1451,7 +1451,7 @@ The following output properties are available:
 <a href="#recurrence_csharp" style="color: inherit; text-decoration: inherit;">Recurrence</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobrecurrenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Scheduler.<wbr>Inputs.<wbr>Job<wbr>Recurrence<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#jobrecurrenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Scheduler..<wbr>Inputs.<wbr>Job<wbr>Recurrence<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the job recurrence.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1680,7 +1680,7 @@ The following output properties are available:
 <a href="#schedule_csharp" style="color: inherit; text-decoration: inherit;">Schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobrecurrencescheduleresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Scheduler.<wbr>Inputs.<wbr>Job<wbr>Recurrence<wbr>Schedule<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#jobrecurrencescheduleresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Scheduler..<wbr>Inputs.<wbr>Job<wbr>Recurrence<wbr>Schedule<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 </dl>
@@ -1985,7 +1985,7 @@ The following output properties are available:
 <a href="#monthlyoccurrences_csharp" style="color: inherit; text-decoration: inherit;">Monthly<wbr>Occurrences</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobrecurrenceschedulemonthlyoccurrenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Scheduler.<wbr>Inputs.<wbr>Job<wbr>Recurrence<wbr>Schedule<wbr>Monthly<wbr>Occurrence<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#jobrecurrenceschedulemonthlyoccurrenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Scheduler..<wbr>Inputs.<wbr>Job<wbr>Recurrence<wbr>Schedule<wbr>Monthly<wbr>Occurrence<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the occurrences of days within a month.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3332,7 +3332,7 @@ The following output properties are available:
 <a href="#authentication_csharp" style="color: inherit; text-decoration: inherit;">Authentication</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicebusauthenticationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Scheduler.<wbr>Inputs.<wbr>Service<wbr>Bus<wbr>Authentication<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicebusauthenticationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Scheduler..<wbr>Inputs.<wbr>Service<wbr>Bus<wbr>Authentication<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the Service Bus authentication.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3341,7 +3341,7 @@ The following output properties are available:
 <a href="#brokeredmessageproperties_csharp" style="color: inherit; text-decoration: inherit;">Brokered<wbr>Message<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicebusbrokeredmessagepropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Scheduler.<wbr>Inputs.<wbr>Service<wbr>Bus<wbr>Brokered<wbr>Message<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicebusbrokeredmessagepropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Scheduler..<wbr>Inputs.<wbr>Service<wbr>Bus<wbr>Brokered<wbr>Message<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the brokered message properties.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3615,7 +3615,7 @@ The following output properties are available:
 <a href="#authentication_csharp" style="color: inherit; text-decoration: inherit;">Authentication</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicebusauthenticationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Scheduler.<wbr>Inputs.<wbr>Service<wbr>Bus<wbr>Authentication<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicebusauthenticationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Scheduler..<wbr>Inputs.<wbr>Service<wbr>Bus<wbr>Authentication<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the Service Bus authentication.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3624,7 +3624,7 @@ The following output properties are available:
 <a href="#brokeredmessageproperties_csharp" style="color: inherit; text-decoration: inherit;">Brokered<wbr>Message<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicebusbrokeredmessagepropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Scheduler.<wbr>Inputs.<wbr>Service<wbr>Bus<wbr>Brokered<wbr>Message<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicebusbrokeredmessagepropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Scheduler..<wbr>Inputs.<wbr>Service<wbr>Bus<wbr>Brokered<wbr>Message<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the brokered message properties.{{% /md %}}</dd>
     <dt class="property-optional"

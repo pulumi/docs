@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.network.FlowLog resource with ex
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 A flow log resource.
-Latest API Version: 2020-08-01.
+API Version: 2020-08-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,11 +27,11 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var flowLog = new AzureNextGen.Network.Latest.FlowLog("flowLog", new AzureNextGen.Network.Latest.FlowLogArgs
+        var flowLog = new AzureNextGen.Network..FlowLog("flowLog", new AzureNextGen.Network..FlowLogArgs
         {
             Enabled = true,
             FlowLogName = "fl",
-            Format = new AzureNextGen.Network.Latest.Inputs.FlowLogFormatParametersArgs
+            Format = new AzureNextGen.Network..Inputs.FlowLogFormatParametersArgs
             {
                 Type = "JSON",
                 Version = 1,
@@ -56,7 +56,7 @@ class MyStack : Stack
 package main
 
 import (
-	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network/latest"
+	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -92,10 +92,10 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-flow_log = azure_nextgen.network.latest.FlowLog("flowLog",
+flow_log = azure_nextgen.network.FlowLog("flowLog",
     enabled=True,
     flow_log_name="fl",
-    format=azure_nextgen.network.latest.FlowLogFormatParametersArgs(
+    format=azure_nextgen.network.FlowLogFormatParametersArgs(
         type="JSON",
         version=1,
     ),
@@ -115,7 +115,7 @@ flow_log = azure_nextgen.network.latest.FlowLog("flowLog",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const flowLog = new azure_nextgen.network.latest.FlowLog("flowLog", {
+const flowLog = new azure_nextgen.network.FlowLog("flowLog", {
     enabled: true,
     flowLogName: "fl",
     format: {
@@ -376,7 +376,7 @@ The FlowLog resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#flowanalyticsconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Flow<wbr>Analytics<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trafficanalyticsproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Traffic<wbr>Analytics<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#trafficanalyticsproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Traffic<wbr>Analytics<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Parameters that define the configuration of traffic analytics.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -385,7 +385,7 @@ The FlowLog resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#format_csharp" style="color: inherit; text-decoration: inherit;">Format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flowlogformatparameters">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Flow<wbr>Log<wbr>Format<wbr>Parameters<wbr>Args</a></span>
+        <span class="property-type"><a href="#flowlogformatparameters">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Flow<wbr>Log<wbr>Format<wbr>Parameters<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Parameters that define the flow log format.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -412,7 +412,7 @@ The FlowLog resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#retentionpolicy_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#retentionpolicyparameters">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Retention<wbr>Policy<wbr>Parameters<wbr>Args</a></span>
+        <span class="property-type"><a href="#retentionpolicyparameters">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Retention<wbr>Policy<wbr>Parameters<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Parameters that define the retention policy for flow log.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1037,7 +1037,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#flowlogformattype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Flow<wbr>Log<wbr>Format<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#flowlogformattype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Flow<wbr>Log<wbr>Format<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The file type of flow log.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1871,7 +1871,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#networkwatcherflowanalyticsconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Watcher<wbr>Flow<wbr>Analytics<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trafficanalyticsconfigurationproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Traffic<wbr>Analytics<wbr>Configuration<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#trafficanalyticsconfigurationproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Traffic<wbr>Analytics<wbr>Configuration<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Parameters that define the configuration of traffic analytics.{{% /md %}}</dd>
 </dl>
@@ -1933,7 +1933,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#networkwatcherflowanalyticsconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Watcher<wbr>Flow<wbr>Analytics<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trafficanalyticsconfigurationpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Traffic<wbr>Analytics<wbr>Configuration<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#trafficanalyticsconfigurationpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Traffic<wbr>Analytics<wbr>Configuration<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Parameters that define the configuration of traffic analytics.{{% /md %}}</dd>
 </dl>
@@ -1989,7 +1989,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:network/latest:FlowLog Microsoft.Networkdesmond-rgdesmondcentral-nsg /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/networkWatchers/nw/FlowLogs/fl 
+$ pulumi import azure-nextgen:network:FlowLog Microsoft.Networkdesmond-rgdesmondcentral-nsg /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/networkWatchers/nw/FlowLogs/fl 
 ```
 
 

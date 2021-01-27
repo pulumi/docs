@@ -287,7 +287,7 @@ The following output properties are available:
 <a href="#accounts_csharp" style="color: inherit; text-decoration: inherit;">Accounts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containeraccountresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Aad.<wbr>Outputs.<wbr>Container<wbr>Account<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#containeraccountresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Aad..<wbr>Outputs.<wbr>Container<wbr>Account<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of container accounts{{% /md %}}</dd>
     <dt class="property-"

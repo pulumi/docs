@@ -197,7 +197,7 @@ The following output properties are available:
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureskuresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Power<wbr>BI.<wbr>Outputs.<wbr>Azure<wbr>Sku<wbr>Response</a></span>
+        <span class="property-type"><a href="#azureskuresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Power<wbr>BI..<wbr>Outputs.<wbr>Azure<wbr>Sku<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-"

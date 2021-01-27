@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.machinelearningexperimentation.P
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 An object that represents a machine learning project.
+API Version: 2017-05-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var project = new AzureNextGen.MachineLearningExperimentation.V20170501Preview.Project("project", new AzureNextGen.MachineLearningExperimentation.V20170501Preview.ProjectArgs
+        var project = new AzureNextGen.MachineLearningExperimentation..Project("project", new AzureNextGen.MachineLearningExperimentation..ProjectArgs
         {
             AccountName = "testaccount",
             FriendlyName = "testName",
@@ -54,7 +55,7 @@ class MyStack : Stack
 package main
 
 import (
-	machinelearningexperimentation "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/machinelearningexperimentation/v20170501preview"
+	machinelearningexperimentation "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/machinelearningexperimentation"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -89,7 +90,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-project = azure_nextgen.machinelearningexperimentation.v20170501preview.Project("project",
+project = azure_nextgen.machinelearningexperimentation.Project("project",
     account_name="testaccount",
     friendly_name="testName",
     gitrepo="https://github/abc",
@@ -111,7 +112,7 @@ project = azure_nextgen.machinelearningexperimentation.v20170501preview.Project(
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const project = new azure_nextgen.machinelearningexperimentation.v20170501preview.Project("project", {
+const project = new azure_nextgen.machinelearningexperimentation.Project("project", {
     accountName: "testaccount",
     friendlyName: "testName",
     gitrepo: "https://github/abc",
@@ -986,7 +987,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:machinelearningexperimentation/v20170501preview:Project teamAccountcrud5678 /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.MachineLearningExperimentation/accounts/testaccount/workspaces/testworkspace/projects/testProject 
+$ pulumi import azure-nextgen:machinelearningexperimentation:Project teamAccountcrud5678 /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.MachineLearningExperimentation/accounts/testaccount/workspaces/testworkspace/projects/testProject 
 ```
 
 

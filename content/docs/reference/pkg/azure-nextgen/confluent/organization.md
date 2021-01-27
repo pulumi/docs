@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.confluent.Organization resource 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Organization resource.
-Latest API Version: 2020-03-01.
+API Version: 2020-03-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,10 +27,10 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var organization = new AzureNextGen.Confluent.Latest.Organization("organization", new AzureNextGen.Confluent.Latest.OrganizationArgs
+        var organization = new AzureNextGen.Confluent..Organization("organization", new AzureNextGen.Confluent..OrganizationArgs
         {
             Location = "West US",
-            OfferDetail = new AzureNextGen.Confluent.Latest.Inputs.OrganizationResourcePropertiesOfferDetailArgs
+            OfferDetail = new AzureNextGen.Confluent..Inputs.OrganizationResourcePropertiesOfferDetailArgs
             {
                 Id = "string",
                 PlanId = "string",
@@ -44,7 +44,7 @@ class MyStack : Stack
             {
                 { "Environment", "Dev" },
             },
-            UserDetail = new AzureNextGen.Confluent.Latest.Inputs.OrganizationResourcePropertiesUserDetailArgs
+            UserDetail = new AzureNextGen.Confluent..Inputs.OrganizationResourcePropertiesUserDetailArgs
             {
                 EmailAddress = "contoso@microsoft.com",
                 FirstName = "string",
@@ -65,7 +65,7 @@ class MyStack : Stack
 package main
 
 import (
-	confluent "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/confluent/latest"
+	confluent "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/confluent"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -108,9 +108,9 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-organization = azure_nextgen.confluent.latest.Organization("organization",
+organization = azure_nextgen.confluent.Organization("organization",
     location="West US",
-    offer_detail=azure_nextgen.confluent.latest.OrganizationResourcePropertiesOfferDetailArgs(
+    offer_detail=azure_nextgen.confluent.OrganizationResourcePropertiesOfferDetailArgs(
         id="string",
         plan_id="string",
         plan_name="string",
@@ -122,7 +122,7 @@ organization = azure_nextgen.confluent.latest.Organization("organization",
     tags={
         "Environment": "Dev",
     },
-    user_detail=azure_nextgen.confluent.latest.OrganizationResourcePropertiesUserDetailArgs(
+    user_detail=azure_nextgen.confluent.OrganizationResourcePropertiesUserDetailArgs(
         email_address="contoso@microsoft.com",
         first_name="string",
         last_name="string",
@@ -138,7 +138,7 @@ organization = azure_nextgen.confluent.latest.Organization("organization",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const organization = new azure_nextgen.confluent.latest.Organization("organization", {
+const organization = new azure_nextgen.confluent.Organization("organization", {
     location: "West US",
     offerDetail: {
         id: "string",
@@ -379,7 +379,7 @@ The Organization resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#offerdetail_csharp" style="color: inherit; text-decoration: inherit;">Offer<wbr>Detail</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#organizationresourcepropertiesofferdetail">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Confluent.<wbr>Inputs.<wbr>Organization<wbr>Resource<wbr>Properties<wbr>Offer<wbr>Detail<wbr>Args</a></span>
+        <span class="property-type"><a href="#organizationresourcepropertiesofferdetail">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Confluent..<wbr>Inputs.<wbr>Organization<wbr>Resource<wbr>Properties<wbr>Offer<wbr>Detail<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Confluent offer detail{{% /md %}}</dd>
     <dt class="property-optional"
@@ -388,7 +388,7 @@ The Organization resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#provisionstate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Confluent.<wbr>Provision<wbr>State</a></span>
+        <span class="property-type">string | <a href="#provisionstate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Confluent..<wbr>Provision<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}Provision states for confluent RP{{% /md %}}</dd>
     <dt class="property-optional"
@@ -406,7 +406,7 @@ The Organization resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#userdetail_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Detail</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#organizationresourcepropertiesuserdetail">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Confluent.<wbr>Inputs.<wbr>Organization<wbr>Resource<wbr>Properties<wbr>User<wbr>Detail<wbr>Args</a></span>
+        <span class="property-type"><a href="#organizationresourcepropertiesuserdetail">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Confluent..<wbr>Inputs.<wbr>Organization<wbr>Resource<wbr>Properties<wbr>User<wbr>Detail<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Subscriber detail{{% /md %}}</dd>
 </dl>
@@ -923,7 +923,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#saasofferstatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Confluent.<wbr>Saa<wbr>SOffer<wbr>Status</a></span>
+        <span class="property-type">string | <a href="#saasofferstatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Confluent..<wbr>Saa<wbr>SOffer<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}SaaS Offer Status{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1829,7 +1829,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:confluent/latest:Organization myOrganization /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.Confluent/organizations/myOrganization 
+$ pulumi import azure-nextgen:confluent:Organization myOrganization /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.Confluent/organizations/myOrganization 
 ```
 
 

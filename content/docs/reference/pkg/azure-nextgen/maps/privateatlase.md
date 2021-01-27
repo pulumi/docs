@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.maps.PrivateAtlase resource with
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 An Azure resource which represents which will provision the ability to create private location data.
+API Version: 2020-02-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var privateAtlase = new AzureNextGen.Maps.V20200201Preview.PrivateAtlase("privateAtlase", new AzureNextGen.Maps.V20200201Preview.PrivateAtlaseArgs
+        var privateAtlase = new AzureNextGen.Maps..PrivateAtlase("privateAtlase", new AzureNextGen.Maps..PrivateAtlaseArgs
         {
             AccountName = "myMapsAccount",
             Location = "unitedstates",
@@ -51,7 +52,7 @@ class MyStack : Stack
 package main
 
 import (
-	maps "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/maps/v20200201preview"
+	maps "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/maps"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -83,7 +84,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-private_atlase = azure_nextgen.maps.v20200201preview.PrivateAtlase("privateAtlase",
+private_atlase = azure_nextgen.maps.PrivateAtlase("privateAtlase",
     account_name="myMapsAccount",
     location="unitedstates",
     private_atlas_name="myPrivateAtlas",
@@ -102,7 +103,7 @@ private_atlase = azure_nextgen.maps.v20200201preview.PrivateAtlase("privateAtlas
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const privateAtlase = new azure_nextgen.maps.v20200201preview.PrivateAtlase("privateAtlase", {
+const privateAtlase = new azure_nextgen.maps.PrivateAtlase("privateAtlase", {
     accountName: "myMapsAccount",
     location: "unitedstates",
     privateAtlasName: "myPrivateAtlas",
@@ -534,7 +535,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateatlaspropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Maps.<wbr>Outputs.<wbr>Private<wbr>Atlas<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#privateatlaspropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Maps..<wbr>Outputs.<wbr>Private<wbr>Atlas<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The Private Atlas resource properties.{{% /md %}}</dd>
     <dt class="property-"
@@ -752,7 +753,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:maps/v20200201preview:PrivateAtlase myPrivateAtlas /subscriptions/21a9967a-e8a9-4656-a70b-96ff1c4d05a0/resourceGroups/myResourceGroup/providers/Microsoft.Maps/accounts/myMapsAccount/privateAtlases/myPrivateAtlas 
+$ pulumi import azure-nextgen:maps:PrivateAtlase myPrivateAtlas /subscriptions/21a9967a-e8a9-4656-a70b-96ff1c4d05a0/resourceGroups/myResourceGroup/providers/Microsoft.Maps/accounts/myMapsAccount/privateAtlases/myPrivateAtlas 
 ```
 
 

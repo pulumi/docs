@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.machinelearningservices.MachineL
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Machine Learning datastore object wrapped into ARM resource envelope.
+API Version: 2020-05-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var machineLearningDatastore = new AzureNextGen.MachineLearningServices.V20200501Preview.MachineLearningDatastore("machineLearningDatastore", new AzureNextGen.MachineLearningServices.V20200501Preview.MachineLearningDatastoreArgs
+        var machineLearningDatastore = new AzureNextGen.MachineLearningServices..MachineLearningDatastore("machineLearningDatastore", new AzureNextGen.MachineLearningServices..MachineLearningDatastoreArgs
         {
             ClientId = "233d7008-b157-4354-88d1-ba191f06a900",
             ClientSecret = "vdvgdvdvdv",
@@ -51,7 +52,7 @@ class MyStack : Stack
 package main
 
 import (
-	machinelearningservices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/machinelearningservices/v20200501preview"
+	machinelearningservices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/machinelearningservices"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -84,7 +85,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-machine_learning_datastore = azure_nextgen.machinelearningservices.v20200501preview.MachineLearningDatastore("machineLearningDatastore",
+machine_learning_datastore = azure_nextgen.machinelearningservices.MachineLearningDatastore("machineLearningDatastore",
     client_id="233d7008-b157-4354-88d1-ba191f06a900",
     client_secret="vdvgdvdvdv",
     data_store_type="adls",
@@ -104,7 +105,7 @@ machine_learning_datastore = azure_nextgen.machinelearningservices.v20200501prev
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const machineLearningDatastore = new azure_nextgen.machinelearningservices.v20200501preview.MachineLearningDatastore("machineLearningDatastore", {
+const machineLearningDatastore = new azure_nextgen.machinelearningservices.MachineLearningDatastore("machineLearningDatastore", {
     clientId: "233d7008-b157-4354-88d1-ba191f06a900",
     clientSecret: "vdvgdvdvdv",
     dataStoreType: "adls",
@@ -129,7 +130,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var machineLearningDatastore = new AzureNextGen.MachineLearningServices.V20200501Preview.MachineLearningDatastore("machineLearningDatastore", new AzureNextGen.MachineLearningServices.V20200501Preview.MachineLearningDatastoreArgs
+        var machineLearningDatastore = new AzureNextGen.MachineLearningServices..MachineLearningDatastore("machineLearningDatastore", new AzureNextGen.MachineLearningServices..MachineLearningDatastoreArgs
         {
             AccountName = "nicksadlsgen2storage",
             ClientId = "233d7008-b157-4354-88d1-ba191f06a900",
@@ -155,7 +156,7 @@ class MyStack : Stack
 package main
 
 import (
-	machinelearningservices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/machinelearningservices/v20200501preview"
+	machinelearningservices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/machinelearningservices"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -189,7 +190,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-machine_learning_datastore = azure_nextgen.machinelearningservices.v20200501preview.MachineLearningDatastore("machineLearningDatastore",
+machine_learning_datastore = azure_nextgen.machinelearningservices.MachineLearningDatastore("machineLearningDatastore",
     account_name="nicksadlsgen2storage",
     client_id="233d7008-b157-4354-88d1-ba191f06a900",
     client_secret="vdegbvedgeg",
@@ -210,7 +211,7 @@ machine_learning_datastore = azure_nextgen.machinelearningservices.v20200501prev
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const machineLearningDatastore = new azure_nextgen.machinelearningservices.v20200501preview.MachineLearningDatastore("machineLearningDatastore", {
+const machineLearningDatastore = new azure_nextgen.machinelearningservices.MachineLearningDatastore("machineLearningDatastore", {
     accountName: "nicksadlsgen2storage",
     clientId: "233d7008-b157-4354-88d1-ba191f06a900",
     clientSecret: "vdegbvedgeg",
@@ -236,7 +237,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var machineLearningDatastore = new AzureNextGen.MachineLearningServices.V20200501Preview.MachineLearningDatastore("machineLearningDatastore", new AzureNextGen.MachineLearningServices.V20200501Preview.MachineLearningDatastoreArgs
+        var machineLearningDatastore = new AzureNextGen.MachineLearningServices..MachineLearningDatastore("machineLearningDatastore", new AzureNextGen.MachineLearningServices..MachineLearningDatastoreArgs
         {
             AccountKey = "wddrfewfewsgewgrrwegwreg",
             AccountName = "acjainmleastus9484093746",
@@ -260,7 +261,7 @@ class MyStack : Stack
 package main
 
 import (
-	machinelearningservices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/machinelearningservices/v20200501preview"
+	machinelearningservices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/machinelearningservices"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -292,7 +293,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-machine_learning_datastore = azure_nextgen.machinelearningservices.v20200501preview.MachineLearningDatastore("machineLearningDatastore",
+machine_learning_datastore = azure_nextgen.machinelearningservices.MachineLearningDatastore("machineLearningDatastore",
     account_key="wddrfewfewsgewgrrwegwreg",
     account_name="acjainmleastus9484093746",
     container_name="azureml-blobstore-5da947c5-53aa-41a5-bb2b-074074e73b7",
@@ -311,7 +312,7 @@ machine_learning_datastore = azure_nextgen.machinelearningservices.v20200501prev
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const machineLearningDatastore = new azure_nextgen.machinelearningservices.v20200501preview.MachineLearningDatastore("machineLearningDatastore", {
+const machineLearningDatastore = new azure_nextgen.machinelearningservices.MachineLearningDatastore("machineLearningDatastore", {
     accountKey: "wddrfewfewsgewgrrwegwreg",
     accountName: "acjainmleastus9484093746",
     containerName: "azureml-blobstore-5da947c5-53aa-41a5-bb2b-074074e73b7",
@@ -335,7 +336,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var machineLearningDatastore = new AzureNextGen.MachineLearningServices.V20200501Preview.MachineLearningDatastore("machineLearningDatastore", new AzureNextGen.MachineLearningServices.V20200501Preview.MachineLearningDatastoreArgs
+        var machineLearningDatastore = new AzureNextGen.MachineLearningServices..MachineLearningDatastore("machineLearningDatastore", new AzureNextGen.MachineLearningServices..MachineLearningDatastoreArgs
         {
             DataStoreType = "dbfs",
             DatastoreName = "blobDatastore",
@@ -356,7 +357,7 @@ class MyStack : Stack
 package main
 
 import (
-	machinelearningservices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/machinelearningservices/v20200501preview"
+	machinelearningservices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/machinelearningservices"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -385,7 +386,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-machine_learning_datastore = azure_nextgen.machinelearningservices.v20200501preview.MachineLearningDatastore("machineLearningDatastore",
+machine_learning_datastore = azure_nextgen.machinelearningservices.MachineLearningDatastore("machineLearningDatastore",
     data_store_type="dbfs",
     datastore_name="blobDatastore",
     resource_group_name="acjain-mleastUS2",
@@ -401,7 +402,7 @@ machine_learning_datastore = azure_nextgen.machinelearningservices.v20200501prev
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const machineLearningDatastore = new azure_nextgen.machinelearningservices.v20200501preview.MachineLearningDatastore("machineLearningDatastore", {
+const machineLearningDatastore = new azure_nextgen.machinelearningservices.MachineLearningDatastore("machineLearningDatastore", {
     dataStoreType: "dbfs",
     datastoreName: "blobDatastore",
     resourceGroupName: "acjain-mleastUS2",
@@ -422,7 +423,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var machineLearningDatastore = new AzureNextGen.MachineLearningServices.V20200501Preview.MachineLearningDatastore("machineLearningDatastore", new AzureNextGen.MachineLearningServices.V20200501Preview.MachineLearningDatastoreArgs
+        var machineLearningDatastore = new AzureNextGen.MachineLearningServices..MachineLearningDatastore("machineLearningDatastore", new AzureNextGen.MachineLearningServices..MachineLearningDatastoreArgs
         {
             AccountKey = "wddrfewfewsgewgrrwegwreg",
             AccountName = "acjainmleastus9484093746",
@@ -446,7 +447,7 @@ class MyStack : Stack
 package main
 
 import (
-	machinelearningservices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/machinelearningservices/v20200501preview"
+	machinelearningservices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/machinelearningservices"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -478,7 +479,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-machine_learning_datastore = azure_nextgen.machinelearningservices.v20200501preview.MachineLearningDatastore("machineLearningDatastore",
+machine_learning_datastore = azure_nextgen.machinelearningservices.MachineLearningDatastore("machineLearningDatastore",
     account_key="wddrfewfewsgewgrrwegwreg",
     account_name="acjainmleastus9484093746",
     data_store_type="file",
@@ -497,7 +498,7 @@ machine_learning_datastore = azure_nextgen.machinelearningservices.v20200501prev
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const machineLearningDatastore = new azure_nextgen.machinelearningservices.v20200501preview.MachineLearningDatastore("machineLearningDatastore", {
+const machineLearningDatastore = new azure_nextgen.machinelearningservices.MachineLearningDatastore("machineLearningDatastore", {
     accountKey: "wddrfewfewsgewgrrwegwreg",
     accountName: "acjainmleastus9484093746",
     dataStoreType: "file",
@@ -521,7 +522,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var machineLearningDatastore = new AzureNextGen.MachineLearningServices.V20200501Preview.MachineLearningDatastore("machineLearningDatastore", new AzureNextGen.MachineLearningServices.V20200501Preview.MachineLearningDatastoreArgs
+        var machineLearningDatastore = new AzureNextGen.MachineLearningServices..MachineLearningDatastore("machineLearningDatastore", new AzureNextGen.MachineLearningServices..MachineLearningDatastoreArgs
         {
             DataStoreType = "mysqldb",
             DatabaseName = "dataset",
@@ -546,7 +547,7 @@ class MyStack : Stack
 package main
 
 import (
-	machinelearningservices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/machinelearningservices/v20200501preview"
+	machinelearningservices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/machinelearningservices"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -579,7 +580,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-machine_learning_datastore = azure_nextgen.machinelearningservices.v20200501preview.MachineLearningDatastore("machineLearningDatastore",
+machine_learning_datastore = azure_nextgen.machinelearningservices.MachineLearningDatastore("machineLearningDatastore",
     data_store_type="mysqldb",
     database_name="dataset",
     datastore_name="mySqlDatastore",
@@ -599,7 +600,7 @@ machine_learning_datastore = azure_nextgen.machinelearningservices.v20200501prev
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const machineLearningDatastore = new azure_nextgen.machinelearningservices.v20200501preview.MachineLearningDatastore("machineLearningDatastore", {
+const machineLearningDatastore = new azure_nextgen.machinelearningservices.MachineLearningDatastore("machineLearningDatastore", {
     dataStoreType: "mysqldb",
     databaseName: "dataset",
     datastoreName: "mySqlDatastore",
@@ -624,7 +625,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var machineLearningDatastore = new AzureNextGen.MachineLearningServices.V20200501Preview.MachineLearningDatastore("machineLearningDatastore", new AzureNextGen.MachineLearningServices.V20200501Preview.MachineLearningDatastoreArgs
+        var machineLearningDatastore = new AzureNextGen.MachineLearningServices..MachineLearningDatastore("machineLearningDatastore", new AzureNextGen.MachineLearningServices..MachineLearningDatastoreArgs
         {
             DataStoreType = "psqldb",
             DatabaseName = "dataset",
@@ -649,7 +650,7 @@ class MyStack : Stack
 package main
 
 import (
-	machinelearningservices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/machinelearningservices/v20200501preview"
+	machinelearningservices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/machinelearningservices"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -682,7 +683,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-machine_learning_datastore = azure_nextgen.machinelearningservices.v20200501preview.MachineLearningDatastore("machineLearningDatastore",
+machine_learning_datastore = azure_nextgen.machinelearningservices.MachineLearningDatastore("machineLearningDatastore",
     data_store_type="psqldb",
     database_name="dataset",
     datastore_name="postgreSqlDatastore",
@@ -702,7 +703,7 @@ machine_learning_datastore = azure_nextgen.machinelearningservices.v20200501prev
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const machineLearningDatastore = new azure_nextgen.machinelearningservices.v20200501preview.MachineLearningDatastore("machineLearningDatastore", {
+const machineLearningDatastore = new azure_nextgen.machinelearningservices.MachineLearningDatastore("machineLearningDatastore", {
     dataStoreType: "psqldb",
     databaseName: "dataset",
     datastoreName: "postgreSqlDatastore",
@@ -727,7 +728,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var machineLearningDatastore = new AzureNextGen.MachineLearningServices.V20200501Preview.MachineLearningDatastore("machineLearningDatastore", new AzureNextGen.MachineLearningServices.V20200501Preview.MachineLearningDatastoreArgs
+        var machineLearningDatastore = new AzureNextGen.MachineLearningServices..MachineLearningDatastore("machineLearningDatastore", new AzureNextGen.MachineLearningServices..MachineLearningDatastoreArgs
         {
             DataStoreType = "sqldb",
             DatabaseName = "dataset",
@@ -752,7 +753,7 @@ class MyStack : Stack
 package main
 
 import (
-	machinelearningservices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/machinelearningservices/v20200501preview"
+	machinelearningservices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/machinelearningservices"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -785,7 +786,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-machine_learning_datastore = azure_nextgen.machinelearningservices.v20200501preview.MachineLearningDatastore("machineLearningDatastore",
+machine_learning_datastore = azure_nextgen.machinelearningservices.MachineLearningDatastore("machineLearningDatastore",
     data_store_type="sqldb",
     database_name="dataset",
     datastore_name="sqlDatastore",
@@ -805,7 +806,7 @@ machine_learning_datastore = azure_nextgen.machinelearningservices.v20200501prev
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const machineLearningDatastore = new azure_nextgen.machinelearningservices.v20200501preview.MachineLearningDatastore("machineLearningDatastore", {
+const machineLearningDatastore = new azure_nextgen.machinelearningservices.MachineLearningDatastore("machineLearningDatastore", {
     dataStoreType: "sqldb",
     databaseName: "dataset",
     datastoreName: "sqlDatastore",
@@ -1009,7 +1010,7 @@ The MachineLearningDatastore resource accepts the following [input]({{< relref "
 <a href="#datastoretype_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Store<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#datastoretypearm">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Datastore<wbr>Type<wbr>Arm</a></span>
+        <span class="property-type">string | <a href="#datastoretypearm">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services..<wbr>Datastore<wbr>Type<wbr>Arm</a></span>
     </dt>
     <dd>{{% md %}}Specifies datastore type.{{% /md %}}</dd>
     <dt class="property-required"
@@ -2273,7 +2274,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datastoreresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Outputs.<wbr>Datastore<wbr>Response</a></span>
+        <span class="property-type"><a href="#datastoreresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services..<wbr>Outputs.<wbr>Datastore<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Datastore properties{{% /md %}}</dd>
     <dt class="property-"
@@ -2291,7 +2292,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identityresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Outputs.<wbr>Identity<wbr>Response</a></span>
+        <span class="property-type"><a href="#identityresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services..<wbr>Outputs.<wbr>Identity<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The identity of the resource.{{% /md %}}</dd>
     <dt class="property-"
@@ -2309,7 +2310,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skuresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Outputs.<wbr>Sku<wbr>Response</a></span>
+        <span class="property-type"><a href="#skuresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services..<wbr>Outputs.<wbr>Sku<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The sku of the workspace.{{% /md %}}</dd>
     <dt class="property-"
@@ -5140,7 +5141,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#clientcredentials_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clientcredentialsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Client<wbr>Credentials<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#clientcredentialsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services..<wbr>Inputs.<wbr>Client<wbr>Credentials<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -6092,7 +6093,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#createdby_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>By</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userinforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>User<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#userinforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services..<wbr>Inputs.<wbr>User<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The User who created the datastore.{{% /md %}}</dd>
     <dt class="property-required"
@@ -6110,7 +6111,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#modifiedby_csharp" style="color: inherit; text-decoration: inherit;">Modified<wbr>By</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userinforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>User<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#userinforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services..<wbr>Inputs.<wbr>User<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The User who modified the datastore.{{% /md %}}</dd>
     <dt class="property-required"
@@ -6137,7 +6138,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azuredatalakesection_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Data<wbr>Lake<wbr>Section</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azuredatalakesectionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Azure<wbr>Data<wbr>Lake<wbr>Section<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azuredatalakesectionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services..<wbr>Inputs.<wbr>Azure<wbr>Data<wbr>Lake<wbr>Section<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -6146,7 +6147,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azuremysqlsection_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>My<wbr>Sql<wbr>Section</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azuremysqlsectionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Azure<wbr>My<wbr>Sql<wbr>Section<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azuremysqlsectionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services..<wbr>Inputs.<wbr>Azure<wbr>My<wbr>Sql<wbr>Section<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -6155,7 +6156,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azurepostgresqlsection_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Postgre<wbr>Sql<wbr>Section</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurepostgresqlsectionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Azure<wbr>Postgre<wbr>Sql<wbr>Section<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurepostgresqlsectionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services..<wbr>Inputs.<wbr>Azure<wbr>Postgre<wbr>Sql<wbr>Section<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -6164,7 +6165,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azuresqldatabasesection_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Sql<wbr>Database<wbr>Section</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azuresqldatabasesectionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Azure<wbr>Sql<wbr>Database<wbr>Section<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azuresqldatabasesectionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services..<wbr>Inputs.<wbr>Azure<wbr>Sql<wbr>Database<wbr>Section<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -6173,7 +6174,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azurestoragesection_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Storage<wbr>Section</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurestoragesectionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Azure<wbr>Storage<wbr>Section<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurestoragesectionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services..<wbr>Inputs.<wbr>Azure<wbr>Storage<wbr>Section<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -6200,7 +6201,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#glusterfssection_csharp" style="color: inherit; text-decoration: inherit;">Gluster<wbr>Fs<wbr>Section</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#glusterfssectionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Gluster<wbr>Fs<wbr>Section<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#glusterfssectionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services..<wbr>Inputs.<wbr>Gluster<wbr>Fs<wbr>Section<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Data specific to GlusterFS.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -6218,7 +6219,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linkedinfo_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedinforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Linked<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#linkedinforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services..<wbr>Inputs.<wbr>Linked<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Info about origin if it is linked.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -6890,8 +6891,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The tenant ID of resource.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
@@ -6905,9 +6906,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userassignedidentities_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>User<wbr>Assigned<wbr>Identity<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services..<wbr>Inputs.<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities<wbr>Args&gt;</span>
     </dt>
-    <dd>{{% md %}}The user assigned identities associated with the resource.{{% /md %}}</dd>
+    <dd>{{% md %}}The list of user identities associated with resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -6932,8 +6933,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The tenant ID of resource.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
@@ -6947,9 +6948,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userassignedidentities_go" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]User<wbr>Assigned<wbr>Identity<wbr>Response</span>
+        <span class="property-type">map[string]Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities</span>
     </dt>
-    <dd>{{% md %}}The user assigned identities associated with the resource.{{% /md %}}</dd>
+    <dd>{{% md %}}The list of user identities associated with resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -6974,8 +6975,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The tenant ID of resource.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
@@ -6989,9 +6990,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userassignedidentities_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Assigned<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: User<wbr>Assigned<wbr>Identity<wbr>Response}</span>
+        <span class="property-type">{[key: string]: Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities}</span>
     </dt>
-    <dd>{{% md %}}The user assigned identities associated with the resource.{{% /md %}}</dd>
+    <dd>{{% md %}}The list of user identities associated with resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -7016,8 +7017,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The tenant ID of resource.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
@@ -7031,9 +7032,107 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#user_assigned_identities_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned_<wbr>identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, User<wbr>Assigned<wbr>Identity<wbr>Response<wbr>Args]</span>
+        <span class="property-type">Mapping[str, Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities<wbr>Args]</span>
     </dt>
-    <dd>{{% md %}}The user assigned identities associated with the resource.{{% /md %}}</dd>
+    <dd>{{% md %}}The list of user identities associated with resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="identityresponseuserassignedidentities">Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="clientid_csharp">
+<a href="#clientid_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The client id of user assigned identity.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="principalid_csharp">
+<a href="#principalid_csharp" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The principal id of user assigned identity.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="clientid_go">
+<a href="#clientid_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The client id of user assigned identity.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="principalid_go">
+<a href="#principalid_go" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The principal id of user assigned identity.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="clientid_nodejs">
+<a href="#clientid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The client id of user assigned identity.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="principalid_nodejs">
+<a href="#principalid_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The principal id of user assigned identity.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="client_id_python">
+<a href="#client_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The client id of user assigned identity.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="principal_id_python">
+<a href="#principal_id_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The principal id of user assigned identity.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -7266,140 +7365,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Tier of the sku like Basic or Enterprise{{% /md %}}</dd>
-</dl>
-{{% /choosable %}}
-
-<h4 id="userassignedidentityresponse">User<wbr>Assigned<wbr>Identity<wbr>Response</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="clientid_csharp">
-<a href="#clientid_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The clientId(aka appId) of the user assigned identity.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="principalid_csharp">
-<a href="#principalid_csharp" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The principal ID of the user assigned identity.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="tenantid_csharp">
-<a href="#tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The tenant ID of the user assigned identity.{{% /md %}}</dd>
-</dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="clientid_go">
-<a href="#clientid_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The clientId(aka appId) of the user assigned identity.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="principalid_go">
-<a href="#principalid_go" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The principal ID of the user assigned identity.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="tenantid_go">
-<a href="#tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The tenant ID of the user assigned identity.{{% /md %}}</dd>
-</dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="clientid_nodejs">
-<a href="#clientid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The clientId(aka appId) of the user assigned identity.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="principalid_nodejs">
-<a href="#principalid_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The principal ID of the user assigned identity.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="tenantid_nodejs">
-<a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The tenant ID of the user assigned identity.{{% /md %}}</dd>
-</dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="client_id_python">
-<a href="#client_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The clientId(aka appId) of the user assigned identity.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="principal_id_python">
-<a href="#principal_id_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The principal ID of the user assigned identity.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="tenant_id_python">
-<a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The tenant ID of the user assigned identity.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -7686,7 +7651,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:machinelearningservices/v20200501preview:MachineLearningDatastore sqlDatastore /subscriptions/35f16a99-532a-4a47-9e93-00305f6c40f2/resourceGroups/acjain-mleastUS2/providers/Microsoft.MachineLearningServices/workspaces/acjain-mleastUS2/datastores/sqlDatastore 
+$ pulumi import azure-nextgen:machinelearningservices:MachineLearningDatastore sqlDatastore /subscriptions/35f16a99-532a-4a47-9e93-00305f6c40f2/resourceGroups/acjain-mleastUS2/providers/Microsoft.MachineLearningServices/workspaces/acjain-mleastUS2/datastores/sqlDatastore 
 ```
 
 

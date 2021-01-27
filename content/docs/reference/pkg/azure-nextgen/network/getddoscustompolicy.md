@@ -188,7 +188,7 @@ The following output properties are available:
 <a href="#publicipaddresses_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>IPAddresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Outputs.<wbr>Sub<wbr>Resource<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#subresourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Outputs.<wbr>Sub<wbr>Resource<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of public IPs associated with the DDoS custom policy resource. This list is read-only.{{% /md %}}</dd>
     <dt class="property-"
@@ -233,7 +233,7 @@ The following output properties are available:
 <a href="#protocolcustomsettings_csharp" style="color: inherit; text-decoration: inherit;">Protocol<wbr>Custom<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#protocolcustomsettingsformatresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Outputs.<wbr>Protocol<wbr>Custom<wbr>Settings<wbr>Format<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#protocolcustomsettingsformatresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Outputs.<wbr>Protocol<wbr>Custom<wbr>Settings<wbr>Format<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The protocol-specific DDoS policy customization parameters.{{% /md %}}</dd>
     <dt class="property-"

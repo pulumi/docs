@@ -206,7 +206,7 @@ The following output properties are available:
 <a href="#systemdata_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security.<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
+        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security..<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Azure Resource Manager metadata containing createdBy and modifiedBy information.{{% /md %}}</dd>
     <dt class="property-"
@@ -224,7 +224,7 @@ The following output properties are available:
 <a href="#additionalworkspaces_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Workspaces</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalworkspacespropertiesresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security.<wbr>Outputs.<wbr>Additional<wbr>Workspaces<wbr>Properties<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#additionalworkspacespropertiesresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security..<wbr>Outputs.<wbr>Additional<wbr>Workspaces<wbr>Properties<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of additional workspaces{{% /md %}}</dd>
     <dt class="property-"
@@ -260,7 +260,7 @@ The following output properties are available:
 <a href="#recommendationsconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Recommendations<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recommendationconfigurationpropertiesresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security.<wbr>Outputs.<wbr>Recommendation<wbr>Configuration<wbr>Properties<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#recommendationconfigurationpropertiesresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security..<wbr>Outputs.<wbr>Recommendation<wbr>Configuration<wbr>Properties<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of the configuration status for each recommendation type.{{% /md %}}</dd>
     <dt class="property-"
@@ -296,7 +296,7 @@ The following output properties are available:
 <a href="#userdefinedresources_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Defined<wbr>Resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userdefinedresourcespropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security.<wbr>Outputs.<wbr>User<wbr>Defined<wbr>Resources<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#userdefinedresourcespropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security..<wbr>Outputs.<wbr>User<wbr>Defined<wbr>Resources<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Properties of the IoT Security solution's user defined resources.{{% /md %}}</dd>
     <dt class="property-"

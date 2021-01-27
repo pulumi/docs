@@ -159,7 +159,7 @@ The following output properties are available:
 <a href="#keys_csharp" style="color: inherit; text-decoration: inherit;">Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automation.<wbr>Outputs.<wbr>Key<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#keyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automation..<wbr>Outputs.<wbr>Key<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Lists the automation keys.{{% /md %}}</dd>
 </dl>

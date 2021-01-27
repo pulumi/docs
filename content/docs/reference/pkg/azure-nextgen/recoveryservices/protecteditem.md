@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.recoveryservices.ProtectedItem r
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Base class for backup items.
-Latest API Version: 2020-12-01.
+API Version: 2020-12-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var protectedItem = new AzureNextGen.RecoveryServices.Latest.ProtectedItem("protectedItem", new AzureNextGen.RecoveryServices.Latest.ProtectedItemArgs
+        var protectedItem = new AzureNextGen.RecoveryServices..ProtectedItem("protectedItem", new AzureNextGen.RecoveryServices..ProtectedItemArgs
         {
             ContainerName = "IaasVMContainer;iaasvmcontainerv2;netsdktestrg;netvmtestv2vm1",
             FabricName = "Azure",
@@ -59,7 +59,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-protected_item = azure_nextgen.recoveryservices.latest.ProtectedItem("protectedItem",
+protected_item = azure_nextgen.recoveryservices.ProtectedItem("protectedItem",
     container_name="IaasVMContainer;iaasvmcontainerv2;netsdktestrg;netvmtestv2vm1",
     fabric_name="Azure",
     properties={
@@ -81,7 +81,7 @@ protected_item = azure_nextgen.recoveryservices.latest.ProtectedItem("protectedI
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const protectedItem = new azure_nextgen.recoveryservices.latest.ProtectedItem("protectedItem", {
+const protectedItem = new azure_nextgen.recoveryservices.ProtectedItem("protectedItem", {
     containerName: "IaasVMContainer;iaasvmcontainerv2;netsdktestrg;netvmtestv2vm1",
     fabricName: "Azure",
     properties: {
@@ -108,7 +108,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var protectedItem = new AzureNextGen.RecoveryServices.Latest.ProtectedItem("protectedItem", new AzureNextGen.RecoveryServices.Latest.ProtectedItemArgs
+        var protectedItem = new AzureNextGen.RecoveryServices..ProtectedItem("protectedItem", new AzureNextGen.RecoveryServices..ProtectedItemArgs
         {
             ContainerName = "IaasVMContainer;iaasvmcontainerv2;netsdktestrg;netvmtestv2vm1",
             FabricName = "Azure",
@@ -140,7 +140,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-protected_item = azure_nextgen.recoveryservices.latest.ProtectedItem("protectedItem",
+protected_item = azure_nextgen.recoveryservices.ProtectedItem("protectedItem",
     container_name="IaasVMContainer;iaasvmcontainerv2;netsdktestrg;netvmtestv2vm1",
     fabric_name="Azure",
     properties={
@@ -162,7 +162,7 @@ protected_item = azure_nextgen.recoveryservices.latest.ProtectedItem("protectedI
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const protectedItem = new azure_nextgen.recoveryservices.latest.ProtectedItem("protectedItem", {
+const protectedItem = new azure_nextgen.recoveryservices.ProtectedItem("protectedItem", {
     containerName: "IaasVMContainer;iaasvmcontainerv2;netsdktestrg;netvmtestv2vm1",
     fabricName: "Azure",
     properties: {
@@ -431,7 +431,7 @@ The ProtectedItem resource accepts the following [input]({{< relref "/docs/intro
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefileshareprotecteditem">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Azure<wbr>Fileshare<wbr>Protected<wbr>Item<wbr>Args</a> | <a href="#azureiaasclassiccomputevmprotecteditem">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Azure<wbr>Iaa<wbr>SClassic<wbr>Compute<wbr>VMProtected<wbr>Item<wbr>Args</a> | <a href="#azureiaascomputevmprotecteditem">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Azure<wbr>Iaa<wbr>SCompute<wbr>VMProtected<wbr>Item<wbr>Args</a> | <a href="#azureiaasvmprotecteditem">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Azure<wbr>Iaa<wbr>SVMProtected<wbr>Item<wbr>Args</a> | <a href="#azuresqlprotecteditem">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Azure<wbr>Sql<wbr>Protected<wbr>Item<wbr>Args</a> | <a href="#azurevmworkloadprotecteditem">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Azure<wbr>Vm<wbr>Workload<wbr>Protected<wbr>Item<wbr>Args</a> | <a href="#azurevmworkloadsapasedatabaseprotecteditem">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Azure<wbr>Vm<wbr>Workload<wbr>SAPAse<wbr>Database<wbr>Protected<wbr>Item<wbr>Args</a> | <a href="#azurevmworkloadsaphanadatabaseprotecteditem">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Azure<wbr>Vm<wbr>Workload<wbr>SAPHana<wbr>Database<wbr>Protected<wbr>Item<wbr>Args</a> | <a href="#azurevmworkloadsqldatabaseprotecteditem">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Azure<wbr>Vm<wbr>Workload<wbr>SQLDatabase<wbr>Protected<wbr>Item<wbr>Args</a> | <a href="#dpmprotecteditem">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>DPMProtected<wbr>Item<wbr>Args</a> | <a href="#genericprotecteditem">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Generic<wbr>Protected<wbr>Item<wbr>Args</a> | <a href="#mabfilefolderprotecteditem">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Mab<wbr>File<wbr>Folder<wbr>Protected<wbr>Item<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurefileshareprotecteditem">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Azure<wbr>Fileshare<wbr>Protected<wbr>Item<wbr>Args</a> | <a href="#azureiaasclassiccomputevmprotecteditem">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Azure<wbr>Iaa<wbr>SClassic<wbr>Compute<wbr>VMProtected<wbr>Item<wbr>Args</a> | <a href="#azureiaascomputevmprotecteditem">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Azure<wbr>Iaa<wbr>SCompute<wbr>VMProtected<wbr>Item<wbr>Args</a> | <a href="#azureiaasvmprotecteditem">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Azure<wbr>Iaa<wbr>SVMProtected<wbr>Item<wbr>Args</a> | <a href="#azuresqlprotecteditem">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Azure<wbr>Sql<wbr>Protected<wbr>Item<wbr>Args</a> | <a href="#azurevmworkloadprotecteditem">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Azure<wbr>Vm<wbr>Workload<wbr>Protected<wbr>Item<wbr>Args</a> | <a href="#azurevmworkloadsapasedatabaseprotecteditem">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Azure<wbr>Vm<wbr>Workload<wbr>SAPAse<wbr>Database<wbr>Protected<wbr>Item<wbr>Args</a> | <a href="#azurevmworkloadsaphanadatabaseprotecteditem">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Azure<wbr>Vm<wbr>Workload<wbr>SAPHana<wbr>Database<wbr>Protected<wbr>Item<wbr>Args</a> | <a href="#azurevmworkloadsqldatabaseprotecteditem">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Azure<wbr>Vm<wbr>Workload<wbr>SQLDatabase<wbr>Protected<wbr>Item<wbr>Args</a> | <a href="#dpmprotecteditem">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>DPMProtected<wbr>Item<wbr>Args</a> | <a href="#genericprotecteditem">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Generic<wbr>Protected<wbr>Item<wbr>Args</a> | <a href="#mabfilefolderprotecteditem">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Mab<wbr>File<wbr>Folder<wbr>Protected<wbr>Item<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}ProtectedItemResource properties{{% /md %}}</dd>
     <dt class="property-optional"
@@ -867,7 +867,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupmanagementtype_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Management<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#backupmanagementtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Backup<wbr>Management<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#backupmanagementtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Backup<wbr>Management<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of backup management for the backed up item.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -894,7 +894,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#createmode_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#createmode">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Create<wbr>Mode</a></span>
+        <span class="property-type">string | <a href="#createmode">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Create<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}Create mode to indicate recovery of existing soft deleted data source or creation of new data source.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -921,7 +921,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extendedinfo_csharp" style="color: inherit; text-decoration: inherit;">Extended<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefileshareprotecteditemextendedinfo">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Azure<wbr>Fileshare<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurefileshareprotecteditemextendedinfo">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Azure<wbr>Fileshare<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Additional information with this backup item.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -966,7 +966,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kpishealths_csharp" style="color: inherit; text-decoration: inherit;">Kpis<wbr>Healths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>KPIResource<wbr>Health<wbr>Details<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>KPIResource<wbr>Health<wbr>Details<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}Health details of different KPIs{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1011,7 +1011,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protectionstate_csharp" style="color: inherit; text-decoration: inherit;">Protection<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#protectionstate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Protection<wbr>State</a></span>
+        <span class="property-type">string | <a href="#protectionstate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Protection<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}Backup state of this backup item.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1038,7 +1038,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workloadtype_csharp" style="color: inherit; text-decoration: inherit;">Workload<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#datasourcetype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Data<wbr>Source<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#datasourcetype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Data<wbr>Source<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of workload this item represents.{{% /md %}}</dd>
 </dl>
@@ -2007,7 +2007,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extendedinfo_csharp" style="color: inherit; text-decoration: inherit;">Extended<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefileshareprotecteditemextendedinforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Azure<wbr>Fileshare<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurefileshareprotecteditemextendedinforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Azure<wbr>Fileshare<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Additional information with this backup item.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2052,7 +2052,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kpishealths_csharp" style="color: inherit; text-decoration: inherit;">Kpis<wbr>Healths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>KPIResource<wbr>Health<wbr>Details<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>KPIResource<wbr>Health<wbr>Details<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}Health details of different KPIs{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2699,7 +2699,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupmanagementtype_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Management<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#backupmanagementtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Backup<wbr>Management<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#backupmanagementtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Backup<wbr>Management<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of backup management for the backed up item.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2726,7 +2726,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#createmode_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#createmode">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Create<wbr>Mode</a></span>
+        <span class="property-type">string | <a href="#createmode">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Create<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}Create mode to indicate recovery of existing soft deleted data source or creation of new data source.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2753,7 +2753,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extendedinfo_csharp" style="color: inherit; text-decoration: inherit;">Extended<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureiaasvmprotecteditemextendedinfo">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Azure<wbr>Iaa<wbr>SVMProtected<wbr>Item<wbr>Extended<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#azureiaasvmprotecteditemextendedinfo">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Azure<wbr>Iaa<wbr>SVMProtected<wbr>Item<wbr>Extended<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Additional information for this backup item.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2762,7 +2762,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extendedproperties_csharp" style="color: inherit; text-decoration: inherit;">Extended<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#extendedproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Extended<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#extendedproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Extended<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Extended Properties for Azure IaasVM Backup.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2780,7 +2780,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#healthstatus_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#healthstatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Health<wbr>Status</a></span>
+        <span class="property-type">string | <a href="#healthstatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Health<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}Health status of protected item.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2816,7 +2816,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kpishealths_csharp" style="color: inherit; text-decoration: inherit;">Kpis<wbr>Healths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>KPIResource<wbr>Health<wbr>Details<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>KPIResource<wbr>Health<wbr>Details<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}Health details of different KPIs{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2870,7 +2870,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protectionstate_csharp" style="color: inherit; text-decoration: inherit;">Protection<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#protectionstate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Protection<wbr>State</a></span>
+        <span class="property-type">string | <a href="#protectionstate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Protection<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}Backup state of this backup item.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2906,7 +2906,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workloadtype_csharp" style="color: inherit; text-decoration: inherit;">Workload<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#datasourcetype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Data<wbr>Source<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#datasourcetype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Data<wbr>Source<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of workload this item represents.{{% /md %}}</dd>
 </dl>
@@ -3643,7 +3643,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extendedinfo_csharp" style="color: inherit; text-decoration: inherit;">Extended<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureiaasvmprotecteditemextendedinforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Azure<wbr>Iaa<wbr>SVMProtected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azureiaasvmprotecteditemextendedinforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Azure<wbr>Iaa<wbr>SVMProtected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Additional information for this backup item.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3652,7 +3652,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extendedproperties_csharp" style="color: inherit; text-decoration: inherit;">Extended<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#extendedpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Extended<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#extendedpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Extended<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Extended Properties for Azure IaasVM Backup.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3670,7 +3670,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#healthdetails_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureiaasvmhealthdetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Azure<wbr>Iaa<wbr>SVMHealth<wbr>Details<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#azureiaasvmhealthdetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Azure<wbr>Iaa<wbr>SVMHealth<wbr>Details<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Health details on this backup item.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3715,7 +3715,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kpishealths_csharp" style="color: inherit; text-decoration: inherit;">Kpis<wbr>Healths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>KPIResource<wbr>Health<wbr>Details<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>KPIResource<wbr>Health<wbr>Details<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}Health details of different KPIs{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4515,7 +4515,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupmanagementtype_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Management<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#backupmanagementtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Backup<wbr>Management<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#backupmanagementtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Backup<wbr>Management<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of backup management for the backed up item.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4542,7 +4542,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#createmode_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#createmode">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Create<wbr>Mode</a></span>
+        <span class="property-type">string | <a href="#createmode">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Create<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}Create mode to indicate recovery of existing soft deleted data source or creation of new data source.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4569,7 +4569,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extendedinfo_csharp" style="color: inherit; text-decoration: inherit;">Extended<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureiaasvmprotecteditemextendedinfo">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Azure<wbr>Iaa<wbr>SVMProtected<wbr>Item<wbr>Extended<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#azureiaasvmprotecteditemextendedinfo">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Azure<wbr>Iaa<wbr>SVMProtected<wbr>Item<wbr>Extended<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Additional information for this backup item.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4578,7 +4578,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extendedproperties_csharp" style="color: inherit; text-decoration: inherit;">Extended<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#extendedproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Extended<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#extendedproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Extended<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Extended Properties for Azure IaasVM Backup.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4596,7 +4596,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#healthstatus_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#healthstatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Health<wbr>Status</a></span>
+        <span class="property-type">string | <a href="#healthstatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Health<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}Health status of protected item.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4632,7 +4632,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kpishealths_csharp" style="color: inherit; text-decoration: inherit;">Kpis<wbr>Healths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>KPIResource<wbr>Health<wbr>Details<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>KPIResource<wbr>Health<wbr>Details<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}Health details of different KPIs{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4686,7 +4686,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protectionstate_csharp" style="color: inherit; text-decoration: inherit;">Protection<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#protectionstate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Protection<wbr>State</a></span>
+        <span class="property-type">string | <a href="#protectionstate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Protection<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}Backup state of this backup item.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4722,7 +4722,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workloadtype_csharp" style="color: inherit; text-decoration: inherit;">Workload<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#datasourcetype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Data<wbr>Source<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#datasourcetype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Data<wbr>Source<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of workload this item represents.{{% /md %}}</dd>
 </dl>
@@ -5459,7 +5459,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extendedinfo_csharp" style="color: inherit; text-decoration: inherit;">Extended<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureiaasvmprotecteditemextendedinforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Azure<wbr>Iaa<wbr>SVMProtected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azureiaasvmprotecteditemextendedinforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Azure<wbr>Iaa<wbr>SVMProtected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Additional information for this backup item.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -5468,7 +5468,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extendedproperties_csharp" style="color: inherit; text-decoration: inherit;">Extended<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#extendedpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Extended<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#extendedpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Extended<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Extended Properties for Azure IaasVM Backup.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -5486,7 +5486,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#healthdetails_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureiaasvmhealthdetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Azure<wbr>Iaa<wbr>SVMHealth<wbr>Details<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#azureiaasvmhealthdetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Azure<wbr>Iaa<wbr>SVMHealth<wbr>Details<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Health details on this backup item.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -5531,7 +5531,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kpishealths_csharp" style="color: inherit; text-decoration: inherit;">Kpis<wbr>Healths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>KPIResource<wbr>Health<wbr>Details<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>KPIResource<wbr>Health<wbr>Details<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}Health details of different KPIs{{% /md %}}</dd>
     <dt class="property-optional"
@@ -6501,7 +6501,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupmanagementtype_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Management<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#backupmanagementtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Backup<wbr>Management<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#backupmanagementtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Backup<wbr>Management<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of backup management for the backed up item.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -6528,7 +6528,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#createmode_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#createmode">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Create<wbr>Mode</a></span>
+        <span class="property-type">string | <a href="#createmode">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Create<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}Create mode to indicate recovery of existing soft deleted data source or creation of new data source.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -6555,7 +6555,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extendedinfo_csharp" style="color: inherit; text-decoration: inherit;">Extended<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureiaasvmprotecteditemextendedinfo">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Azure<wbr>Iaa<wbr>SVMProtected<wbr>Item<wbr>Extended<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#azureiaasvmprotecteditemextendedinfo">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Azure<wbr>Iaa<wbr>SVMProtected<wbr>Item<wbr>Extended<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Additional information for this backup item.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -6564,7 +6564,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extendedproperties_csharp" style="color: inherit; text-decoration: inherit;">Extended<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#extendedproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Extended<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#extendedproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Extended<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Extended Properties for Azure IaasVM Backup.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -6582,7 +6582,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#healthstatus_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#healthstatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Health<wbr>Status</a></span>
+        <span class="property-type">string | <a href="#healthstatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Health<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}Health status of protected item.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -6618,7 +6618,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kpishealths_csharp" style="color: inherit; text-decoration: inherit;">Kpis<wbr>Healths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>KPIResource<wbr>Health<wbr>Details<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>KPIResource<wbr>Health<wbr>Details<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}Health details of different KPIs{{% /md %}}</dd>
     <dt class="property-optional"
@@ -6672,7 +6672,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protectionstate_csharp" style="color: inherit; text-decoration: inherit;">Protection<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#protectionstate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Protection<wbr>State</a></span>
+        <span class="property-type">string | <a href="#protectionstate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Protection<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}Backup state of this backup item.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -6708,7 +6708,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workloadtype_csharp" style="color: inherit; text-decoration: inherit;">Workload<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#datasourcetype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Data<wbr>Source<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#datasourcetype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Data<wbr>Source<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of workload this item represents.{{% /md %}}</dd>
 </dl>
@@ -7713,7 +7713,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extendedinfo_csharp" style="color: inherit; text-decoration: inherit;">Extended<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureiaasvmprotecteditemextendedinforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Azure<wbr>Iaa<wbr>SVMProtected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azureiaasvmprotecteditemextendedinforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Azure<wbr>Iaa<wbr>SVMProtected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Additional information for this backup item.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -7722,7 +7722,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extendedproperties_csharp" style="color: inherit; text-decoration: inherit;">Extended<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#extendedpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Extended<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#extendedpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Extended<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Extended Properties for Azure IaasVM Backup.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -7740,7 +7740,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#healthdetails_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureiaasvmhealthdetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Azure<wbr>Iaa<wbr>SVMHealth<wbr>Details<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#azureiaasvmhealthdetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Azure<wbr>Iaa<wbr>SVMHealth<wbr>Details<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Health details on this backup item.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -7785,7 +7785,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kpishealths_csharp" style="color: inherit; text-decoration: inherit;">Kpis<wbr>Healths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>KPIResource<wbr>Health<wbr>Details<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>KPIResource<wbr>Health<wbr>Details<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}Health details of different KPIs{{% /md %}}</dd>
     <dt class="property-optional"
@@ -8585,7 +8585,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupmanagementtype_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Management<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#backupmanagementtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Backup<wbr>Management<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#backupmanagementtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Backup<wbr>Management<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of backup management for the backed up item.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -8612,7 +8612,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#createmode_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#createmode">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Create<wbr>Mode</a></span>
+        <span class="property-type">string | <a href="#createmode">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Create<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}Create mode to indicate recovery of existing soft deleted data source or creation of new data source.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -8639,7 +8639,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extendedinfo_csharp" style="color: inherit; text-decoration: inherit;">Extended<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azuresqlprotecteditemextendedinfo">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Azure<wbr>Sql<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#azuresqlprotecteditemextendedinfo">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Azure<wbr>Sql<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Additional information for this backup item.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -8702,7 +8702,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protectionstate_csharp" style="color: inherit; text-decoration: inherit;">Protection<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#protecteditemstate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Protected<wbr>Item<wbr>State</a></span>
+        <span class="property-type">string | <a href="#protecteditemstate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Protected<wbr>Item<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}Backup state of the backed up item.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -8720,7 +8720,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workloadtype_csharp" style="color: inherit; text-decoration: inherit;">Workload<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#datasourcetype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Data<wbr>Source<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#datasourcetype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Data<wbr>Source<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of workload this item represents.{{% /md %}}</dd>
 </dl>
@@ -9509,7 +9509,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extendedinfo_csharp" style="color: inherit; text-decoration: inherit;">Extended<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azuresqlprotecteditemextendedinforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Azure<wbr>Sql<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azuresqlprotecteditemextendedinforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Azure<wbr>Sql<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Additional information for this backup item.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -10057,7 +10057,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupmanagementtype_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Management<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#backupmanagementtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Backup<wbr>Management<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#backupmanagementtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Backup<wbr>Management<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of backup management for the backed up item.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -10084,7 +10084,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#createmode_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#createmode">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Create<wbr>Mode</a></span>
+        <span class="property-type">string | <a href="#createmode">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Create<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}Create mode to indicate recovery of existing soft deleted data source or creation of new data source.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -10111,7 +10111,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extendedinfo_csharp" style="color: inherit; text-decoration: inherit;">Extended<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurevmworkloadprotecteditemextendedinfo">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Azure<wbr>Vm<wbr>Workload<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurevmworkloadprotecteditemextendedinfo">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Azure<wbr>Vm<wbr>Workload<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Additional information for this backup item.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -10156,7 +10156,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kpishealths_csharp" style="color: inherit; text-decoration: inherit;">Kpis<wbr>Healths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>KPIResource<wbr>Health<wbr>Details<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>KPIResource<wbr>Health<wbr>Details<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}Health details of different KPIs{{% /md %}}</dd>
     <dt class="property-optional"
@@ -10165,7 +10165,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastbackupstatus_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Backup<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#lastbackupstatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Last<wbr>Backup<wbr>Status</a></span>
+        <span class="property-type">string | <a href="#lastbackupstatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Last<wbr>Backup<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}Last backup operation status. Possible values: Healthy, Unhealthy.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -10228,7 +10228,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protecteditemhealthstatus_csharp" style="color: inherit; text-decoration: inherit;">Protected<wbr>Item<wbr>Health<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#protecteditemhealthstatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Protected<wbr>Item<wbr>Health<wbr>Status</a></span>
+        <span class="property-type">string | <a href="#protecteditemhealthstatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Protected<wbr>Item<wbr>Health<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}Health status of the backup item, evaluated based on last heartbeat received{{% /md %}}</dd>
     <dt class="property-optional"
@@ -10237,7 +10237,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protectionstate_csharp" style="color: inherit; text-decoration: inherit;">Protection<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#protectionstate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Protection<wbr>State</a></span>
+        <span class="property-type">string | <a href="#protectionstate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Protection<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}Backup state of this backup item.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -10273,7 +10273,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workloadtype_csharp" style="color: inherit; text-decoration: inherit;">Workload<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#datasourcetype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Data<wbr>Source<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#datasourcetype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Data<wbr>Source<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of workload this item represents.{{% /md %}}</dd>
 </dl>
@@ -11305,7 +11305,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extendedinfo_csharp" style="color: inherit; text-decoration: inherit;">Extended<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurevmworkloadprotecteditemextendedinforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Azure<wbr>Vm<wbr>Workload<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurevmworkloadprotecteditemextendedinforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Azure<wbr>Vm<wbr>Workload<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Additional information for this backup item.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -11350,7 +11350,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kpishealths_csharp" style="color: inherit; text-decoration: inherit;">Kpis<wbr>Healths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>KPIResource<wbr>Health<wbr>Details<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>KPIResource<wbr>Health<wbr>Details<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}Health details of different KPIs{{% /md %}}</dd>
     <dt class="property-optional"
@@ -11359,7 +11359,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastbackuperrordetail_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Backup<wbr>Error<wbr>Detail</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#errordetailresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Error<wbr>Detail<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#errordetailresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Error<wbr>Detail<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Error details in last backup{{% /md %}}</dd>
     <dt class="property-optional"
@@ -12213,7 +12213,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupmanagementtype_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Management<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#backupmanagementtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Backup<wbr>Management<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#backupmanagementtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Backup<wbr>Management<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of backup management for the backed up item.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -12240,7 +12240,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#createmode_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#createmode">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Create<wbr>Mode</a></span>
+        <span class="property-type">string | <a href="#createmode">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Create<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}Create mode to indicate recovery of existing soft deleted data source or creation of new data source.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -12267,7 +12267,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extendedinfo_csharp" style="color: inherit; text-decoration: inherit;">Extended<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurevmworkloadprotecteditemextendedinfo">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Azure<wbr>Vm<wbr>Workload<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurevmworkloadprotecteditemextendedinfo">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Azure<wbr>Vm<wbr>Workload<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Additional information for this backup item.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -12312,7 +12312,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kpishealths_csharp" style="color: inherit; text-decoration: inherit;">Kpis<wbr>Healths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>KPIResource<wbr>Health<wbr>Details<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>KPIResource<wbr>Health<wbr>Details<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}Health details of different KPIs{{% /md %}}</dd>
     <dt class="property-optional"
@@ -12321,7 +12321,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastbackupstatus_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Backup<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#lastbackupstatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Last<wbr>Backup<wbr>Status</a></span>
+        <span class="property-type">string | <a href="#lastbackupstatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Last<wbr>Backup<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}Last backup operation status. Possible values: Healthy, Unhealthy.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -12384,7 +12384,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protecteditemhealthstatus_csharp" style="color: inherit; text-decoration: inherit;">Protected<wbr>Item<wbr>Health<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#protecteditemhealthstatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Protected<wbr>Item<wbr>Health<wbr>Status</a></span>
+        <span class="property-type">string | <a href="#protecteditemhealthstatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Protected<wbr>Item<wbr>Health<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}Health status of the backup item, evaluated based on last heartbeat received{{% /md %}}</dd>
     <dt class="property-optional"
@@ -12393,7 +12393,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protectionstate_csharp" style="color: inherit; text-decoration: inherit;">Protection<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#protectionstate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Protection<wbr>State</a></span>
+        <span class="property-type">string | <a href="#protectionstate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Protection<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}Backup state of this backup item.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -12429,7 +12429,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workloadtype_csharp" style="color: inherit; text-decoration: inherit;">Workload<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#datasourcetype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Data<wbr>Source<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#datasourcetype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Data<wbr>Source<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of workload this item represents.{{% /md %}}</dd>
 </dl>
@@ -13193,7 +13193,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extendedinfo_csharp" style="color: inherit; text-decoration: inherit;">Extended<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurevmworkloadprotecteditemextendedinforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Azure<wbr>Vm<wbr>Workload<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurevmworkloadprotecteditemextendedinforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Azure<wbr>Vm<wbr>Workload<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Additional information for this backup item.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -13238,7 +13238,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kpishealths_csharp" style="color: inherit; text-decoration: inherit;">Kpis<wbr>Healths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>KPIResource<wbr>Health<wbr>Details<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>KPIResource<wbr>Health<wbr>Details<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}Health details of different KPIs{{% /md %}}</dd>
     <dt class="property-optional"
@@ -13247,7 +13247,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastbackuperrordetail_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Backup<wbr>Error<wbr>Detail</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#errordetailresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Error<wbr>Detail<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#errordetailresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Error<wbr>Detail<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Error details in last backup{{% /md %}}</dd>
     <dt class="property-optional"
@@ -14101,7 +14101,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupmanagementtype_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Management<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#backupmanagementtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Backup<wbr>Management<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#backupmanagementtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Backup<wbr>Management<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of backup management for the backed up item.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -14128,7 +14128,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#createmode_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#createmode">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Create<wbr>Mode</a></span>
+        <span class="property-type">string | <a href="#createmode">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Create<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}Create mode to indicate recovery of existing soft deleted data source or creation of new data source.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -14155,7 +14155,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extendedinfo_csharp" style="color: inherit; text-decoration: inherit;">Extended<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurevmworkloadprotecteditemextendedinfo">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Azure<wbr>Vm<wbr>Workload<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurevmworkloadprotecteditemextendedinfo">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Azure<wbr>Vm<wbr>Workload<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Additional information for this backup item.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -14200,7 +14200,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kpishealths_csharp" style="color: inherit; text-decoration: inherit;">Kpis<wbr>Healths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>KPIResource<wbr>Health<wbr>Details<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>KPIResource<wbr>Health<wbr>Details<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}Health details of different KPIs{{% /md %}}</dd>
     <dt class="property-optional"
@@ -14209,7 +14209,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastbackupstatus_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Backup<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#lastbackupstatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Last<wbr>Backup<wbr>Status</a></span>
+        <span class="property-type">string | <a href="#lastbackupstatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Last<wbr>Backup<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}Last backup operation status. Possible values: Healthy, Unhealthy.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -14272,7 +14272,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protecteditemhealthstatus_csharp" style="color: inherit; text-decoration: inherit;">Protected<wbr>Item<wbr>Health<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#protecteditemhealthstatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Protected<wbr>Item<wbr>Health<wbr>Status</a></span>
+        <span class="property-type">string | <a href="#protecteditemhealthstatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Protected<wbr>Item<wbr>Health<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}Health status of the backup item, evaluated based on last heartbeat received{{% /md %}}</dd>
     <dt class="property-optional"
@@ -14281,7 +14281,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protectionstate_csharp" style="color: inherit; text-decoration: inherit;">Protection<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#protectionstate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Protection<wbr>State</a></span>
+        <span class="property-type">string | <a href="#protectionstate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Protection<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}Backup state of this backup item.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -14317,7 +14317,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workloadtype_csharp" style="color: inherit; text-decoration: inherit;">Workload<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#datasourcetype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Data<wbr>Source<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#datasourcetype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Data<wbr>Source<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of workload this item represents.{{% /md %}}</dd>
 </dl>
@@ -15081,7 +15081,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extendedinfo_csharp" style="color: inherit; text-decoration: inherit;">Extended<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurevmworkloadprotecteditemextendedinforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Azure<wbr>Vm<wbr>Workload<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurevmworkloadprotecteditemextendedinforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Azure<wbr>Vm<wbr>Workload<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Additional information for this backup item.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -15126,7 +15126,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kpishealths_csharp" style="color: inherit; text-decoration: inherit;">Kpis<wbr>Healths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>KPIResource<wbr>Health<wbr>Details<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>KPIResource<wbr>Health<wbr>Details<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}Health details of different KPIs{{% /md %}}</dd>
     <dt class="property-optional"
@@ -15135,7 +15135,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastbackuperrordetail_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Backup<wbr>Error<wbr>Detail</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#errordetailresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Error<wbr>Detail<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#errordetailresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Error<wbr>Detail<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Error details in last backup{{% /md %}}</dd>
     <dt class="property-optional"
@@ -15989,7 +15989,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupmanagementtype_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Management<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#backupmanagementtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Backup<wbr>Management<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#backupmanagementtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Backup<wbr>Management<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of backup management for the backed up item.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -16016,7 +16016,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#createmode_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#createmode">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Create<wbr>Mode</a></span>
+        <span class="property-type">string | <a href="#createmode">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Create<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}Create mode to indicate recovery of existing soft deleted data source or creation of new data source.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -16043,7 +16043,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extendedinfo_csharp" style="color: inherit; text-decoration: inherit;">Extended<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurevmworkloadprotecteditemextendedinfo">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Azure<wbr>Vm<wbr>Workload<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurevmworkloadprotecteditemextendedinfo">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Azure<wbr>Vm<wbr>Workload<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Additional information for this backup item.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -16088,7 +16088,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kpishealths_csharp" style="color: inherit; text-decoration: inherit;">Kpis<wbr>Healths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>KPIResource<wbr>Health<wbr>Details<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>KPIResource<wbr>Health<wbr>Details<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}Health details of different KPIs{{% /md %}}</dd>
     <dt class="property-optional"
@@ -16097,7 +16097,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastbackupstatus_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Backup<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#lastbackupstatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Last<wbr>Backup<wbr>Status</a></span>
+        <span class="property-type">string | <a href="#lastbackupstatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Last<wbr>Backup<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}Last backup operation status. Possible values: Healthy, Unhealthy.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -16160,7 +16160,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protecteditemhealthstatus_csharp" style="color: inherit; text-decoration: inherit;">Protected<wbr>Item<wbr>Health<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#protecteditemhealthstatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Protected<wbr>Item<wbr>Health<wbr>Status</a></span>
+        <span class="property-type">string | <a href="#protecteditemhealthstatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Protected<wbr>Item<wbr>Health<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}Health status of the backup item, evaluated based on last heartbeat received{{% /md %}}</dd>
     <dt class="property-optional"
@@ -16169,7 +16169,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protectionstate_csharp" style="color: inherit; text-decoration: inherit;">Protection<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#protectionstate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Protection<wbr>State</a></span>
+        <span class="property-type">string | <a href="#protectionstate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Protection<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}Backup state of this backup item.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -16205,7 +16205,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workloadtype_csharp" style="color: inherit; text-decoration: inherit;">Workload<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#datasourcetype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Data<wbr>Source<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#datasourcetype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Data<wbr>Source<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of workload this item represents.{{% /md %}}</dd>
 </dl>
@@ -16969,7 +16969,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extendedinfo_csharp" style="color: inherit; text-decoration: inherit;">Extended<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurevmworkloadprotecteditemextendedinforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Azure<wbr>Vm<wbr>Workload<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurevmworkloadprotecteditemextendedinforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Azure<wbr>Vm<wbr>Workload<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Additional information for this backup item.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -17014,7 +17014,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kpishealths_csharp" style="color: inherit; text-decoration: inherit;">Kpis<wbr>Healths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>KPIResource<wbr>Health<wbr>Details<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>KPIResource<wbr>Health<wbr>Details<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}Health details of different KPIs{{% /md %}}</dd>
     <dt class="property-optional"
@@ -17023,7 +17023,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastbackuperrordetail_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Backup<wbr>Error<wbr>Detail</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#errordetailresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Error<wbr>Detail<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#errordetailresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Error<wbr>Detail<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Error details in last backup{{% /md %}}</dd>
     <dt class="property-optional"
@@ -18026,7 +18026,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupmanagementtype_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Management<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#backupmanagementtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Backup<wbr>Management<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#backupmanagementtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Backup<wbr>Management<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of backup management for the backed up item.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -18053,7 +18053,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#createmode_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#createmode">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Create<wbr>Mode</a></span>
+        <span class="property-type">string | <a href="#createmode">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Create<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}Create mode to indicate recovery of existing soft deleted data source or creation of new data source.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -18080,7 +18080,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extendedinfo_csharp" style="color: inherit; text-decoration: inherit;">Extended<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dpmprotecteditemextendedinfo">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>DPMProtected<wbr>Item<wbr>Extended<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#dpmprotecteditemextendedinfo">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>DPMProtected<wbr>Item<wbr>Extended<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Extended info of the backup item.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -18143,7 +18143,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protectionstate_csharp" style="color: inherit; text-decoration: inherit;">Protection<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#protecteditemstate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Protected<wbr>Item<wbr>State</a></span>
+        <span class="property-type">string | <a href="#protecteditemstate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Protected<wbr>Item<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}Protection state of the backup engine{{% /md %}}</dd>
     <dt class="property-optional"
@@ -18161,7 +18161,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workloadtype_csharp" style="color: inherit; text-decoration: inherit;">Workload<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#datasourcetype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Data<wbr>Source<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#datasourcetype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Data<wbr>Source<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of workload this item represents.{{% /md %}}</dd>
 </dl>
@@ -19778,7 +19778,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extendedinfo_csharp" style="color: inherit; text-decoration: inherit;">Extended<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dpmprotecteditemextendedinforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>DPMProtected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#dpmprotecteditemextendedinforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>DPMProtected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Extended info of the backup item.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -20825,7 +20825,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#diskexclusionproperties_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Exclusion<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diskexclusionproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Disk<wbr>Exclusion<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#diskexclusionproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Disk<wbr>Exclusion<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Extended Properties for Disk Exclusion.{{% /md %}}</dd>
 </dl>
@@ -20887,7 +20887,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#diskexclusionproperties_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Exclusion<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diskexclusionpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Disk<wbr>Exclusion<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#diskexclusionpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Disk<wbr>Exclusion<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Extended Properties for Disk Exclusion.{{% /md %}}</dd>
 </dl>
@@ -20949,7 +20949,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupmanagementtype_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Management<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#backupmanagementtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Backup<wbr>Management<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#backupmanagementtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Backup<wbr>Management<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of backup management for the backed up item.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -20976,7 +20976,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#createmode_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#createmode">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Create<wbr>Mode</a></span>
+        <span class="property-type">string | <a href="#createmode">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Create<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}Create mode to indicate recovery of existing soft deleted data source or creation of new data source.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -21084,7 +21084,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protectionstate_csharp" style="color: inherit; text-decoration: inherit;">Protection<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#protectionstate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Protection<wbr>State</a></span>
+        <span class="property-type">string | <a href="#protectionstate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Protection<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}Backup state of this backup item.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -21111,7 +21111,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workloadtype_csharp" style="color: inherit; text-decoration: inherit;">Workload<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#datasourcetype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Data<wbr>Source<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#datasourcetype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Data<wbr>Source<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of workload this item represents.{{% /md %}}</dd>
 </dl>
@@ -22423,7 +22423,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resourcehealthstatus_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Health<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#resourcehealthstatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Resource<wbr>Health<wbr>Status</a></span>
+        <span class="property-type">string | <a href="#resourcehealthstatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Resource<wbr>Health<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}Resource Health Status{{% /md %}}</dd>
 </dl>
@@ -22485,7 +22485,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resourcehealthdetails_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Health<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcehealthdetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Resource<wbr>Health<wbr>Details<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#resourcehealthdetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Resource<wbr>Health<wbr>Details<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Resource Health Status{{% /md %}}</dd>
     <dt class="property-optional"
@@ -22637,7 +22637,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupmanagementtype_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Management<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#backupmanagementtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Backup<wbr>Management<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#backupmanagementtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Backup<wbr>Management<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of backup management for the backed up item.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -22673,7 +22673,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#createmode_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#createmode">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Create<wbr>Mode</a></span>
+        <span class="property-type">string | <a href="#createmode">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Create<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}Create mode to indicate recovery of existing soft deleted data source or creation of new data source.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -22709,7 +22709,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extendedinfo_csharp" style="color: inherit; text-decoration: inherit;">Extended<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mabfilefolderprotecteditemextendedinfo">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Mab<wbr>File<wbr>Folder<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#mabfilefolderprotecteditemextendedinfo">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Mab<wbr>File<wbr>Folder<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Additional information with this backup item.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -22808,7 +22808,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workloadtype_csharp" style="color: inherit; text-decoration: inherit;">Workload<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#datasourcetype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Data<wbr>Source<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#datasourcetype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Data<wbr>Source<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of workload this item represents.{{% /md %}}</dd>
 </dl>
@@ -23723,7 +23723,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extendedinfo_csharp" style="color: inherit; text-decoration: inherit;">Extended<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mabfilefolderprotecteditemextendedinforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Mab<wbr>File<wbr>Folder<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#mabfilefolderprotecteditemextendedinforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Mab<wbr>File<wbr>Folder<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Additional information with this backup item.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -24833,7 +24833,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:recoveryservices/latest:ProtectedItem VM;iaasvmcontainerv2;netsdktestrg;netvmtestv2vm1 /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/PythonSDKBackupTestRg/providers/Microsoft.RecoveryServices/vaults/PySDKBackupTestRsVault/backupFabrics/Azure/protectionContainers/IaasVMContainer;iaasvmcontainerv2;netsdktestrg;netvmtestv2vm1/protectedItems/VM;iaasvmcontainerv2;netsdktestrg;netvmtestv2vm1 
+$ pulumi import azure-nextgen:recoveryservices:ProtectedItem VM;iaasvmcontainerv2;netsdktestrg;netvmtestv2vm1 /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/PythonSDKBackupTestRg/providers/Microsoft.RecoveryServices/vaults/PySDKBackupTestRsVault/backupFabrics/Azure/protectionContainers/IaasVMContainer;iaasvmcontainerv2;netsdktestrg;netvmtestv2vm1/protectedItems/VM;iaasvmcontainerv2;netsdktestrg;netvmtestv2vm1 
 ```
 
 

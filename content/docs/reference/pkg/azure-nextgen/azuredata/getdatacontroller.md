@@ -188,7 +188,7 @@ The following output properties are available:
 <a href="#onpremiseproperty_csharp" style="color: inherit; text-decoration: inherit;">On<wbr>Premise<wbr>Property</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#onpremisepropertyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Azure<wbr>Data.<wbr>Outputs.<wbr>On<wbr>Premise<wbr>Property<wbr>Response</a></span>
+        <span class="property-type"><a href="#onpremisepropertyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Azure<wbr>Data..<wbr>Outputs.<wbr>On<wbr>Premise<wbr>Property<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Properties from the on premise data controller{{% /md %}}</dd>
     <dt class="property-"
@@ -197,7 +197,7 @@ The following output properties are available:
 <a href="#systemdata_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Azure<wbr>Data.<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
+        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Azure<wbr>Data..<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Read only system data{{% /md %}}</dd>
     <dt class="property-"

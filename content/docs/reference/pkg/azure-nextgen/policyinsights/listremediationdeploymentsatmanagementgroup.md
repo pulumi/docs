@@ -240,7 +240,7 @@ The following output properties are available:
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#remediationdeploymentresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Policy<wbr>Insights.<wbr>Outputs.<wbr>Remediation<wbr>Deployment<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#remediationdeploymentresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Policy<wbr>Insights..<wbr>Outputs.<wbr>Remediation<wbr>Deployment<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Array of deployments for the remediation.{{% /md %}}</dd>
 </dl>
@@ -340,7 +340,7 @@ The following output properties are available:
 <a href="#additionalinfo_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#typederrorinforesponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Policy<wbr>Insights.<wbr>Inputs.<wbr>Typed<wbr>Error<wbr>Info<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#typederrorinforesponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Policy<wbr>Insights..<wbr>Inputs.<wbr>Typed<wbr>Error<wbr>Info<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Additional scenario specific error details.{{% /md %}}</dd>
     <dt class="property-required"
@@ -358,7 +358,7 @@ The following output properties are available:
 <a href="#details_csharp" style="color: inherit; text-decoration: inherit;">Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#errordefinitionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Policy<wbr>Insights.<wbr>Inputs.<wbr>Error<wbr>Definition<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#errordefinitionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Policy<wbr>Insights..<wbr>Inputs.<wbr>Error<wbr>Definition<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Internal error details.{{% /md %}}</dd>
     <dt class="property-required"
@@ -569,7 +569,7 @@ The following output properties are available:
 <a href="#error_csharp" style="color: inherit; text-decoration: inherit;">Error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#errordefinitionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Policy<wbr>Insights.<wbr>Inputs.<wbr>Error<wbr>Definition<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#errordefinitionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Policy<wbr>Insights..<wbr>Inputs.<wbr>Error<wbr>Definition<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Error encountered while remediated the resource.{{% /md %}}</dd>
     <dt class="property-required"

@@ -251,7 +251,7 @@ The following output properties are available:
 <a href="#capturedescription_csharp" style="color: inherit; text-decoration: inherit;">Capture<wbr>Description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#capturedescriptionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Hub.<wbr>Outputs.<wbr>Capture<wbr>Description<wbr>Response</a></span>
+        <span class="property-type"><a href="#capturedescriptionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Hub..<wbr>Outputs.<wbr>Capture<wbr>Description<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Properties of capture description{{% /md %}}</dd>
     <dt class="property-"
@@ -594,7 +594,7 @@ The following output properties are available:
 <a href="#destination_csharp" style="color: inherit; text-decoration: inherit;">Destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#destinationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Hub.<wbr>Inputs.<wbr>Destination<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#destinationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Hub..<wbr>Inputs.<wbr>Destination<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties of Destination where capture will be stored. (Storage Account, Blob Names){{% /md %}}</dd>
     <dt class="property-optional"

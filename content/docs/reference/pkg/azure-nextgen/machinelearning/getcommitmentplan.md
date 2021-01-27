@@ -188,7 +188,7 @@ The following output properties are available:
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#commitmentplanpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning.<wbr>Outputs.<wbr>Commitment<wbr>Plan<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#commitmentplanpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning..<wbr>Outputs.<wbr>Commitment<wbr>Plan<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The commitment plan properties.{{% /md %}}</dd>
     <dt class="property-"
@@ -215,7 +215,7 @@ The following output properties are available:
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceskuresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning.<wbr>Outputs.<wbr>Resource<wbr>Sku<wbr>Response</a></span>
+        <span class="property-type"><a href="#resourceskuresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning..<wbr>Outputs.<wbr>Resource<wbr>Sku<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The commitment plan SKU.{{% /md %}}</dd>
     <dt class="property-"
@@ -513,7 +513,7 @@ The following output properties are available:
 <a href="#includedquantities_csharp" style="color: inherit; text-decoration: inherit;">Included<wbr>Quantities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning.<wbr>Inputs.<wbr>Plan<wbr>Quantity<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning..<wbr>Inputs.<wbr>Plan<wbr>Quantity<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}The included resource quantities this plan gives you.{{% /md %}}</dd>
     <dt class="property-required"

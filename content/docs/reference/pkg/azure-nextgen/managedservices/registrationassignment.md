@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.managedservices.RegistrationAssi
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Registration assignment.
-Latest API Version: 2019-09-01.
+API Version: 2019-09-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,9 +27,9 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var registrationAssignment = new AzureNextGen.ManagedServices.Latest.RegistrationAssignment("registrationAssignment", new AzureNextGen.ManagedServices.Latest.RegistrationAssignmentArgs
+        var registrationAssignment = new AzureNextGen.ManagedServices..RegistrationAssignment("registrationAssignment", new AzureNextGen.ManagedServices..RegistrationAssignmentArgs
         {
-            Properties = new AzureNextGen.ManagedServices.Latest.Inputs.RegistrationAssignmentPropertiesArgs
+            Properties = new AzureNextGen.ManagedServices..Inputs.RegistrationAssignmentPropertiesArgs
             {
                 RegistrationDefinitionId = "/subscriptions/0afefe50-734e-4610-8a82-a144ahf49dea/providers/Microsoft.ManagedServices/registrationDefinitions/26c128c2-fefa-4340-9bb1-6e081c90ada2",
             },
@@ -50,7 +50,7 @@ class MyStack : Stack
 package main
 
 import (
-	managedservices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/managedservices/latest"
+	managedservices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/managedservices"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -80,8 +80,8 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-registration_assignment = azure_nextgen.managedservices.latest.RegistrationAssignment("registrationAssignment",
-    properties=azure_nextgen.managedservices.latest.RegistrationAssignmentPropertiesArgs(
+registration_assignment = azure_nextgen.managedservices.RegistrationAssignment("registrationAssignment",
+    properties=azure_nextgen.managedservices.RegistrationAssignmentPropertiesArgs(
         registration_definition_id="/subscriptions/0afefe50-734e-4610-8a82-a144ahf49dea/providers/Microsoft.ManagedServices/registrationDefinitions/26c128c2-fefa-4340-9bb1-6e081c90ada2",
     ),
     registration_assignment_id="26c128c2-fefa-4340-9bb1-6e081c90ada2",
@@ -97,7 +97,7 @@ registration_assignment = azure_nextgen.managedservices.latest.RegistrationAssig
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const registrationAssignment = new azure_nextgen.managedservices.latest.RegistrationAssignment("registrationAssignment", {
+const registrationAssignment = new azure_nextgen.managedservices.RegistrationAssignment("registrationAssignment", {
     properties: {
         registrationDefinitionId: "/subscriptions/0afefe50-734e-4610-8a82-a144ahf49dea/providers/Microsoft.ManagedServices/registrationDefinitions/26c128c2-fefa-4340-9bb1-6e081c90ada2",
     },
@@ -316,7 +316,7 @@ The RegistrationAssignment resource accepts the following [input]({{< relref "/d
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#registrationassignmentproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Managed<wbr>Services.<wbr>Inputs.<wbr>Registration<wbr>Assignment<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#registrationassignmentproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Managed<wbr>Services..<wbr>Inputs.<wbr>Registration<wbr>Assignment<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties of a registration assignment.{{% /md %}}</dd>
 </dl>
@@ -992,7 +992,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#registrationdefinition_csharp" style="color: inherit; text-decoration: inherit;">Registration<wbr>Definition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#registrationassignmentpropertiesresponseregistrationdefinition">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Managed<wbr>Services.<wbr>Inputs.<wbr>Registration<wbr>Assignment<wbr>Properties<wbr>Response<wbr>Registration<wbr>Definition<wbr>Args</a></span>
+        <span class="property-type"><a href="#registrationassignmentpropertiesresponseregistrationdefinition">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Managed<wbr>Services..<wbr>Inputs.<wbr>Registration<wbr>Assignment<wbr>Properties<wbr>Response<wbr>Registration<wbr>Definition<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Registration definition inside registration assignment.{{% /md %}}</dd>
     <dt class="property-required"
@@ -1117,7 +1117,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authorizations_csharp" style="color: inherit; text-decoration: inherit;">Authorizations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authorizationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Managed<wbr>Services.<wbr>Inputs.<wbr>Authorization<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#authorizationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Managed<wbr>Services..<wbr>Inputs.<wbr>Authorization<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Authorization tuple containing principal id of the user/security group or service principal and id of the build-in role.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1458,7 +1458,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#plan_csharp" style="color: inherit; text-decoration: inherit;">Plan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#planresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Managed<wbr>Services.<wbr>Inputs.<wbr>Plan<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#planresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Managed<wbr>Services..<wbr>Inputs.<wbr>Plan<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Plan details for the managed services.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1467,7 +1467,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#registrationassignmentpropertiesresponseproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Managed<wbr>Services.<wbr>Inputs.<wbr>Registration<wbr>Assignment<wbr>Properties<wbr>Response<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#registrationassignmentpropertiesresponseproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Managed<wbr>Services..<wbr>Inputs.<wbr>Registration<wbr>Assignment<wbr>Properties<wbr>Response<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties of registration definition inside registration assignment.{{% /md %}}</dd>
 </dl>
@@ -1631,7 +1631,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:managedservices/latest:RegistrationAssignment 484a7d5f-9729-4b87-bc9b-26610985a013 /subscriptions/0afefe50-734e-4610-8c82-a144aff49dea/providers/Microsoft.ManagedServices/registrationAssignments/484a7d5f-9729-4b87-bc9b-26610985a013 
+$ pulumi import azure-nextgen:managedservices:RegistrationAssignment 484a7d5f-9729-4b87-bc9b-26610985a013 /subscriptions/0afefe50-734e-4610-8c82-a144aff49dea/providers/Microsoft.ManagedServices/registrationAssignments/484a7d5f-9729-4b87-bc9b-26610985a013 
 ```
 
 

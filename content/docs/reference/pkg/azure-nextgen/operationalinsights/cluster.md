@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.operationalinsights.Cluster reso
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The top level Log Analytics cluster resource container.
-Latest API Version: 2020-10-01.
+API Version: 2020-10-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,12 +27,12 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var cluster = new AzureNextGen.OperationalInsights.Latest.Cluster("cluster", new AzureNextGen.OperationalInsights.Latest.ClusterArgs
+        var cluster = new AzureNextGen.OperationalInsights..Cluster("cluster", new AzureNextGen.OperationalInsights..ClusterArgs
         {
             ClusterName = "oiautorest6685",
             Location = "australiasoutheast",
             ResourceGroupName = "oiautorest6685",
-            Sku = new AzureNextGen.OperationalInsights.Latest.Inputs.ClusterSkuArgs
+            Sku = new AzureNextGen.OperationalInsights..Inputs.ClusterSkuArgs
             {
                 Capacity = 1000,
                 Name = "CapacityReservation",
@@ -56,7 +56,7 @@ class MyStack : Stack
 package main
 
 import (
-	operationalinsights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/operationalinsights/latest"
+	operationalinsights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/operationalinsights"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -91,11 +91,11 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-cluster = azure_nextgen.operationalinsights.latest.Cluster("cluster",
+cluster = azure_nextgen.operationalinsights.Cluster("cluster",
     cluster_name="oiautorest6685",
     location="australiasoutheast",
     resource_group_name="oiautorest6685",
-    sku=azure_nextgen.operationalinsights.latest.ClusterSkuArgs(
+    sku=azure_nextgen.operationalinsights.ClusterSkuArgs(
         capacity=1000,
         name="CapacityReservation",
     ),
@@ -113,7 +113,7 @@ cluster = azure_nextgen.operationalinsights.latest.Cluster("cluster",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const cluster = new azure_nextgen.operationalinsights.latest.Cluster("cluster", {
+const cluster = new azure_nextgen.operationalinsights.Cluster("cluster", {
     clusterName: "oiautorest6685",
     location: "australiasoutheast",
     resourceGroupName: "oiautorest6685",
@@ -346,7 +346,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#billingtype_csharp" style="color: inherit; text-decoration: inherit;">Billing<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#billingtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Operational<wbr>Insights.<wbr>Billing<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#billingtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Operational<wbr>Insights..<wbr>Billing<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Configures whether billing will be only on the cluster or each workspace will be billed by its proportional use. This does not change the overall billing, only how it will be distributed. Default value is 'Cluster'{{% /md %}}</dd>
     <dt class="property-optional"
@@ -355,7 +355,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identity">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Operational<wbr>Insights.<wbr>Inputs.<wbr>Identity<wbr>Args</a></span>
+        <span class="property-type"><a href="#identity">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Operational<wbr>Insights..<wbr>Inputs.<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The identity of the resource.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -382,7 +382,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#keyvaultproperties_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Operational<wbr>Insights.<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#keyvaultproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Operational<wbr>Insights..<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The associated key properties.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -391,7 +391,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustersku">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Operational<wbr>Insights.<wbr>Inputs.<wbr>Cluster<wbr>Sku<wbr>Args</a></span>
+        <span class="property-type"><a href="#clustersku">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Operational<wbr>Insights..<wbr>Inputs.<wbr>Cluster<wbr>Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The sku properties.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -773,7 +773,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#associatedworkspaces_csharp" style="color: inherit; text-decoration: inherit;">Associated<wbr>Workspaces</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#associatedworkspaceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Operational<wbr>Insights.<wbr>Outputs.<wbr>Associated<wbr>Workspace<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#associatedworkspaceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Operational<wbr>Insights..<wbr>Outputs.<wbr>Associated<wbr>Workspace<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of Log Analytics workspaces associated with the cluster{{% /md %}}</dd>
     <dt class="property-"
@@ -782,7 +782,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capacityreservationproperties_csharp" style="color: inherit; text-decoration: inherit;">Capacity<wbr>Reservation<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#capacityreservationpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Operational<wbr>Insights.<wbr>Outputs.<wbr>Capacity<wbr>Reservation<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#capacityreservationpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Operational<wbr>Insights..<wbr>Outputs.<wbr>Capacity<wbr>Reservation<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Additional properties for capacity reservation{{% /md %}}</dd>
 </dl>
@@ -1421,7 +1421,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#clusterskunameenum">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Operational<wbr>Insights.<wbr>Cluster<wbr>Sku<wbr>Name<wbr>Enum</a></span>
+        <span class="property-type">string | <a href="#clusterskunameenum">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Operational<wbr>Insights..<wbr>Cluster<wbr>Sku<wbr>Name<wbr>Enum</a></span>
     </dt>
     <dd>{{% md %}}The name of the SKU.{{% /md %}}</dd>
 </dl>
@@ -1638,7 +1638,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identitytype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Operational<wbr>Insights.<wbr>Identity<wbr>Type</a></span>
+        <span class="property-type"><a href="#identitytype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Operational<wbr>Insights..<wbr>Identity<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of identity used for the resource. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user assigned identities.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1763,7 +1763,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userassignedidentities_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Operational<wbr>Insights.<wbr>Inputs.<wbr>User<wbr>Identity<wbr>Properties<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Operational<wbr>Insights..<wbr>Inputs.<wbr>User<wbr>Identity<wbr>Properties<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}The list of user identities associated with the resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd>
 </dl>
@@ -2384,7 +2384,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:operationalinsights/latest:Cluster oiautorest6685 /subscriptions/594038b5-1093-476e-a366-482775671c11/resourcegroups/oiautorest6685/providers/microsoft.operationalinsights/clusters/oiautorest6685 
+$ pulumi import azure-nextgen:operationalinsights:Cluster oiautorest6685 /subscriptions/594038b5-1093-476e-a366-482775671c11/resourcegroups/oiautorest6685/providers/microsoft.operationalinsights/clusters/oiautorest6685 
 ```
 
 

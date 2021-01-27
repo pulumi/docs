@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.appplatform.App resource with ex
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 App resource payload
-Latest API Version: 2020-07-01.
+API Version: 2020-07-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,22 +27,22 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var app = new AzureNextGen.AppPlatform.Latest.App("app", new AzureNextGen.AppPlatform.Latest.AppArgs
+        var app = new AzureNextGen.AppPlatform..App("app", new AzureNextGen.AppPlatform..AppArgs
         {
             AppName = "myapp",
             Location = "eastus",
-            Properties = new AzureNextGen.AppPlatform.Latest.Inputs.AppResourcePropertiesArgs
+            Properties = new AzureNextGen.AppPlatform..Inputs.AppResourcePropertiesArgs
             {
                 ActiveDeploymentName = "mydeployment1",
                 Fqdn = "myapp.mydomain.com",
                 HttpsOnly = false,
-                PersistentDisk = new AzureNextGen.AppPlatform.Latest.Inputs.PersistentDiskArgs
+                PersistentDisk = new AzureNextGen.AppPlatform..Inputs.PersistentDiskArgs
                 {
                     MountPath = "mypersistentdisk",
                     SizeInGB = 2,
                 },
                 Public = true,
-                TemporaryDisk = new AzureNextGen.AppPlatform.Latest.Inputs.TemporaryDiskArgs
+                TemporaryDisk = new AzureNextGen.AppPlatform..Inputs.TemporaryDiskArgs
                 {
                     MountPath = "mytemporarydisk",
                     SizeInGB = 2,
@@ -65,7 +65,7 @@ class MyStack : Stack
 package main
 
 import (
-	appplatform "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/appplatform/latest"
+	appplatform "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/appplatform"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -108,19 +108,19 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-app = azure_nextgen.appplatform.latest.App("app",
+app = azure_nextgen.appplatform.App("app",
     app_name="myapp",
     location="eastus",
-    properties=azure_nextgen.appplatform.latest.AppResourcePropertiesArgs(
+    properties=azure_nextgen.appplatform.AppResourcePropertiesArgs(
         active_deployment_name="mydeployment1",
         fqdn="myapp.mydomain.com",
         https_only=False,
-        persistent_disk=azure_nextgen.appplatform.latest.PersistentDiskArgs(
+        persistent_disk=azure_nextgen.appplatform.PersistentDiskArgs(
             mount_path="mypersistentdisk",
             size_in_gb=2,
         ),
         public=True,
-        temporary_disk=azure_nextgen.appplatform.latest.TemporaryDiskArgs(
+        temporary_disk=azure_nextgen.appplatform.TemporaryDiskArgs(
             mount_path="mytemporarydisk",
             size_in_gb=2,
         ),
@@ -138,7 +138,7 @@ app = azure_nextgen.appplatform.latest.App("app",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const app = new azure_nextgen.appplatform.latest.App("app", {
+const app = new azure_nextgen.appplatform.App("app", {
     appName: "myapp",
     location: "eastus",
     properties: {
@@ -379,7 +379,7 @@ The App resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedidentityproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>App<wbr>Platform.<wbr>Inputs.<wbr>Managed<wbr>Identity<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#managedidentityproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>App<wbr>Platform..<wbr>Inputs.<wbr>Managed<wbr>Identity<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Managed Identity type of the app resource{{% /md %}}</dd>
     <dt class="property-optional"
@@ -397,7 +397,7 @@ The App resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appresourceproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>App<wbr>Platform.<wbr>Inputs.<wbr>App<wbr>Resource<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#appresourceproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>App<wbr>Platform..<wbr>Inputs.<wbr>App<wbr>Resource<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties of the App resource{{% /md %}}</dd>
 </dl>
@@ -770,7 +770,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#persistentdisk_csharp" style="color: inherit; text-decoration: inherit;">Persistent<wbr>Disk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#persistentdisk">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>App<wbr>Platform.<wbr>Inputs.<wbr>Persistent<wbr>Disk<wbr>Args</a></span>
+        <span class="property-type"><a href="#persistentdisk">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>App<wbr>Platform..<wbr>Inputs.<wbr>Persistent<wbr>Disk<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Persistent disk settings{{% /md %}}</dd>
     <dt class="property-optional"
@@ -788,7 +788,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#temporarydisk_csharp" style="color: inherit; text-decoration: inherit;">Temporary<wbr>Disk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#temporarydisk">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>App<wbr>Platform.<wbr>Inputs.<wbr>Temporary<wbr>Disk<wbr>Args</a></span>
+        <span class="property-type"><a href="#temporarydisk">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>App<wbr>Platform..<wbr>Inputs.<wbr>Temporary<wbr>Disk<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Temporary disk settings{{% /md %}}</dd>
 </dl>
@@ -1039,7 +1039,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#persistentdisk_csharp" style="color: inherit; text-decoration: inherit;">Persistent<wbr>Disk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#persistentdiskresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>App<wbr>Platform.<wbr>Inputs.<wbr>Persistent<wbr>Disk<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#persistentdiskresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>App<wbr>Platform..<wbr>Inputs.<wbr>Persistent<wbr>Disk<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Persistent disk settings{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1057,7 +1057,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#temporarydisk_csharp" style="color: inherit; text-decoration: inherit;">Temporary<wbr>Disk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#temporarydiskresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>App<wbr>Platform.<wbr>Inputs.<wbr>Temporary<wbr>Disk<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#temporarydiskresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>App<wbr>Platform..<wbr>Inputs.<wbr>Temporary<wbr>Disk<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Temporary disk settings{{% /md %}}</dd>
 </dl>
@@ -1353,7 +1353,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#managedidentitytype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>App<wbr>Platform.<wbr>Managed<wbr>Identity<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#managedidentitytype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>App<wbr>Platform..<wbr>Managed<wbr>Identity<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of the managed identity{{% /md %}}</dd>
 </dl>
@@ -2079,7 +2079,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:appplatform/latest:App myapp /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.AppPlatform/Spring/myservice/apps/myapp 
+$ pulumi import azure-nextgen:appplatform:App myapp /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.AppPlatform/Spring/myservice/apps/myapp 
 ```
 
 

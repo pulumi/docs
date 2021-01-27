@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.netapp.Volume resource with exam
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Volume resource
-Latest API Version: 2020-09-01.
+API Version: 2020-09-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var volume = new AzureNextGen.NetApp.Latest.Volume("volume", new AzureNextGen.NetApp.Latest.VolumeArgs
+        var volume = new AzureNextGen.NetApp..Volume("volume", new AzureNextGen.NetApp..VolumeArgs
         {
             AccountName = "account1",
             CreationToken = "my-unique-file-path",
@@ -54,7 +54,7 @@ class MyStack : Stack
 package main
 
 import (
-	netapp "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/netapp/latest"
+	netapp "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/netapp"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -89,7 +89,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-volume = azure_nextgen.netapp.latest.Volume("volume",
+volume = azure_nextgen.netapp.Volume("volume",
     account_name="account1",
     creation_token="my-unique-file-path",
     location="eastus",
@@ -111,7 +111,7 @@ volume = azure_nextgen.netapp.latest.Volume("volume",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const volume = new azure_nextgen.netapp.latest.Volume("volume", {
+const volume = new azure_nextgen.netapp.Volume("volume", {
     accountName: "account1",
     creationToken: "my-unique-file-path",
     location: "eastus",
@@ -398,7 +398,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#dataprotection_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Protection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volumepropertiesdataprotection">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Net<wbr>App.<wbr>Inputs.<wbr>Volume<wbr>Properties<wbr>Data<wbr>Protection<wbr>Args</a></span>
+        <span class="property-type"><a href="#volumepropertiesdataprotection">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Net<wbr>App..<wbr>Inputs.<wbr>Volume<wbr>Properties<wbr>Data<wbr>Protection<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}DataProtection type volumes include an object containing details of the replication{{% /md %}}</dd>
     <dt class="property-optional"
@@ -407,7 +407,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#exportpolicy_csharp" style="color: inherit; text-decoration: inherit;">Export<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volumepropertiesexportpolicy">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Net<wbr>App.<wbr>Inputs.<wbr>Volume<wbr>Properties<wbr>Export<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#volumepropertiesexportpolicy">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Net<wbr>App..<wbr>Inputs.<wbr>Volume<wbr>Properties<wbr>Export<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Set of export policy rules{{% /md %}}</dd>
     <dt class="property-optional"
@@ -434,7 +434,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#mounttargets_csharp" style="color: inherit; text-decoration: inherit;">Mount<wbr>Targets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mounttargetproperties">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Net<wbr>App.<wbr>Inputs.<wbr>Mount<wbr>Target<wbr>Properties<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#mounttargetproperties">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Net<wbr>App..<wbr>Inputs.<wbr>Mount<wbr>Target<wbr>Properties<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of mount targets{{% /md %}}</dd>
     <dt class="property-optional"
@@ -452,7 +452,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#securitystyle_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Style</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#securitystyle">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Net<wbr>App.<wbr>Security<wbr>Style</a></span>
+        <span class="property-type">string | <a href="#securitystyle">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Net<wbr>App..<wbr>Security<wbr>Style</a></span>
     </dt>
     <dd>{{% md %}}The security style of volume{{% /md %}}</dd>
     <dt class="property-optional"
@@ -461,7 +461,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#servicelevel_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#servicelevel">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Net<wbr>App.<wbr>Service<wbr>Level</a></span>
+        <span class="property-type">string | <a href="#servicelevel">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Net<wbr>App..<wbr>Service<wbr>Level</a></span>
     </dt>
     <dd>{{% md %}}The service level of the file system{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2839,7 +2839,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#replicationschedule_csharp" style="color: inherit; text-decoration: inherit;">Replication<wbr>Schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#replicationschedule">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Net<wbr>App.<wbr>Replication<wbr>Schedule</a></span>
+        <span class="property-type">string | <a href="#replicationschedule">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Net<wbr>App..<wbr>Replication<wbr>Schedule</a></span>
     </dt>
     <dd>{{% md %}}Schedule{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2848,7 +2848,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpointtype_csharp" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#endpointtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Net<wbr>App.<wbr>Endpoint<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#endpointtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Net<wbr>App..<wbr>Endpoint<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether the local volume is the source or destination for the Volume Replication{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3712,7 +3712,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backup_csharp" style="color: inherit; text-decoration: inherit;">Backup</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volumebackupproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Net<wbr>App.<wbr>Inputs.<wbr>Volume<wbr>Backup<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#volumebackupproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Net<wbr>App..<wbr>Inputs.<wbr>Volume<wbr>Backup<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Backup Properties{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3721,7 +3721,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#replication_csharp" style="color: inherit; text-decoration: inherit;">Replication</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#replicationobject">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Net<wbr>App.<wbr>Inputs.<wbr>Replication<wbr>Object<wbr>Args</a></span>
+        <span class="property-type"><a href="#replicationobject">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Net<wbr>App..<wbr>Inputs.<wbr>Replication<wbr>Object<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Replication properties{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3730,7 +3730,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#snapshot_csharp" style="color: inherit; text-decoration: inherit;">Snapshot</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volumesnapshotproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Net<wbr>App.<wbr>Inputs.<wbr>Volume<wbr>Snapshot<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#volumesnapshotproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Net<wbr>App..<wbr>Inputs.<wbr>Volume<wbr>Snapshot<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Snapshot properties.{{% /md %}}</dd>
 </dl>
@@ -3846,7 +3846,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rules_csharp" style="color: inherit; text-decoration: inherit;">Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#exportpolicyrule">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Net<wbr>App.<wbr>Inputs.<wbr>Export<wbr>Policy<wbr>Rule<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#exportpolicyrule">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Net<wbr>App..<wbr>Inputs.<wbr>Export<wbr>Policy<wbr>Rule<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Export policy rule{{% /md %}}</dd>
 </dl>
@@ -3908,7 +3908,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backup_csharp" style="color: inherit; text-decoration: inherit;">Backup</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volumebackuppropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Net<wbr>App.<wbr>Inputs.<wbr>Volume<wbr>Backup<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#volumebackuppropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Net<wbr>App..<wbr>Inputs.<wbr>Volume<wbr>Backup<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Backup Properties{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3917,7 +3917,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#replication_csharp" style="color: inherit; text-decoration: inherit;">Replication</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#replicationobjectresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Net<wbr>App.<wbr>Inputs.<wbr>Replication<wbr>Object<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#replicationobjectresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Net<wbr>App..<wbr>Inputs.<wbr>Replication<wbr>Object<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Replication properties{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3926,7 +3926,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#snapshot_csharp" style="color: inherit; text-decoration: inherit;">Snapshot</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volumesnapshotpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Net<wbr>App.<wbr>Inputs.<wbr>Volume<wbr>Snapshot<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#volumesnapshotpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Net<wbr>App..<wbr>Inputs.<wbr>Volume<wbr>Snapshot<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Snapshot properties.{{% /md %}}</dd>
 </dl>
@@ -4042,7 +4042,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rules_csharp" style="color: inherit; text-decoration: inherit;">Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#exportpolicyruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Net<wbr>App.<wbr>Inputs.<wbr>Export<wbr>Policy<wbr>Rule<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#exportpolicyruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Net<wbr>App..<wbr>Inputs.<wbr>Export<wbr>Policy<wbr>Rule<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Export policy rule{{% /md %}}</dd>
 </dl>
@@ -4222,7 +4222,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:netapp/latest:Volume account1/pool1/volume1 /subscriptions/D633CC2E-722B-4AE1-B636-BBD9E4C60ED9/resourceGroups/myRG/providers/Microsoft.NetApp/netAppAccounts/account1/capacityPools/pool1/volumes/volume1 
+$ pulumi import azure-nextgen:netapp:Volume account1/pool1/volume1 /subscriptions/D633CC2E-722B-4AE1-B636-BBD9E4C60ED9/resourceGroups/myRG/providers/Microsoft.NetApp/netAppAccounts/account1/capacityPools/pool1/volumes/volume1 
 ```
 
 

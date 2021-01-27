@@ -11,13 +11,13 @@ meta_desc: "Documentation for the azure-nextgen.devtestlab.NotificationChannel r
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 A notification.
-Latest API Version: 2018-09-15.
+API Version: 2018-09-15.
 ## Import
 
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:devtestlab/latest:NotificationChannel myresource1 /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DevTestLab/labs/{labName}/notificationchannels/{name} 
+$ pulumi import azure-nextgen:devtestlab:NotificationChannel myresource1 /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DevTestLab/labs/{labName}/notificationchannels/{name} 
 ```
 
 
@@ -254,7 +254,7 @@ The NotificationChannel resource accepts the following [input]({{< relref "/docs
 <a href="#events_csharp" style="color: inherit; text-decoration: inherit;">Events</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#event">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Event<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#event">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab..<wbr>Inputs.<wbr>Event<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of event for which this notification is enabled.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -816,7 +816,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#eventname_csharp" style="color: inherit; text-decoration: inherit;">Event<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#notificationchanneleventtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Notification<wbr>Channel<wbr>Event<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#notificationchanneleventtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab..<wbr>Notification<wbr>Channel<wbr>Event<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The event type for which this notification is enabled (i.e. AutoShutdown, Cost){{% /md %}}</dd>
 </dl>

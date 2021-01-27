@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.search.Service resource with exa
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Describes an Azure Cognitive Search service and its current state.
-Latest API Version: 2020-08-01.
+API Version: 2020-08-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var service = new AzureNextGen.Search.Latest.Service("service", new AzureNextGen.Search.Latest.ServiceArgs
+        var service = new AzureNextGen.Search..Service("service", new AzureNextGen.Search..ServiceArgs
         {
             HostingMode = "default",
             Location = "westus",
@@ -35,7 +35,7 @@ class MyStack : Stack
             ReplicaCount = 3,
             ResourceGroupName = "rg1",
             SearchServiceName = "mysearchservice",
-            Sku = new AzureNextGen.Search.Latest.Inputs.SkuArgs
+            Sku = new AzureNextGen.Search..Inputs.SkuArgs
             {
                 Name = "standard",
             },
@@ -58,7 +58,7 @@ class MyStack : Stack
 package main
 
 import (
-	search "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/search/latest"
+	search "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/search"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -95,14 +95,14 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-service = azure_nextgen.search.latest.Service("service",
+service = azure_nextgen.search.Service("service",
     hosting_mode="default",
     location="westus",
     partition_count=1,
     replica_count=3,
     resource_group_name="rg1",
     search_service_name="mysearchservice",
-    sku=azure_nextgen.search.latest.SkuArgs(
+    sku=azure_nextgen.search.SkuArgs(
         name="standard",
     ),
     tags={
@@ -119,7 +119,7 @@ service = azure_nextgen.search.latest.Service("service",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const service = new azure_nextgen.search.latest.Service("service", {
+const service = new azure_nextgen.search.Service("service", {
     hostingMode: "default",
     location: "westus",
     partitionCount: 1,
@@ -148,7 +148,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var service = new AzureNextGen.Search.Latest.Service("service", new AzureNextGen.Search.Latest.ServiceArgs
+        var service = new AzureNextGen.Search..Service("service", new AzureNextGen.Search..ServiceArgs
         {
             HostingMode = "default",
             Location = "westus",
@@ -157,7 +157,7 @@ class MyStack : Stack
             ReplicaCount = 3,
             ResourceGroupName = "rg1",
             SearchServiceName = "mysearchservice",
-            Sku = new AzureNextGen.Search.Latest.Inputs.SkuArgs
+            Sku = new AzureNextGen.Search..Inputs.SkuArgs
             {
                 Name = "standard",
             },
@@ -180,7 +180,7 @@ class MyStack : Stack
 package main
 
 import (
-	search "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/search/latest"
+	search "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/search"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -218,7 +218,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-service = azure_nextgen.search.latest.Service("service",
+service = azure_nextgen.search.Service("service",
     hosting_mode="default",
     location="westus",
     partition_count=1,
@@ -226,7 +226,7 @@ service = azure_nextgen.search.latest.Service("service",
     replica_count=3,
     resource_group_name="rg1",
     search_service_name="mysearchservice",
-    sku=azure_nextgen.search.latest.SkuArgs(
+    sku=azure_nextgen.search.SkuArgs(
         name="standard",
     ),
     tags={
@@ -243,7 +243,7 @@ service = azure_nextgen.search.latest.Service("service",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const service = new azure_nextgen.search.latest.Service("service", {
+const service = new azure_nextgen.search.Service("service", {
     hostingMode: "default",
     location: "westus",
     partitionCount: 1,
@@ -273,19 +273,19 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var service = new AzureNextGen.Search.Latest.Service("service", new AzureNextGen.Search.Latest.ServiceArgs
+        var service = new AzureNextGen.Search..Service("service", new AzureNextGen.Search..ServiceArgs
         {
             HostingMode = "default",
             Location = "westus",
-            NetworkRuleSet = new AzureNextGen.Search.Latest.Inputs.NetworkRuleSetArgs
+            NetworkRuleSet = new AzureNextGen.Search..Inputs.NetworkRuleSetArgs
             {
                 IpRules = 
                 {
-                    new AzureNextGen.Search.Latest.Inputs.IpRuleArgs
+                    new AzureNextGen.Search..Inputs.IpRuleArgs
                     {
                         Value = "123.4.5.6",
                     },
-                    new AzureNextGen.Search.Latest.Inputs.IpRuleArgs
+                    new AzureNextGen.Search..Inputs.IpRuleArgs
                     {
                         Value = "123.4.6.0/18",
                     },
@@ -295,7 +295,7 @@ class MyStack : Stack
             ReplicaCount = 1,
             ResourceGroupName = "rg1",
             SearchServiceName = "mysearchservice",
-            Sku = new AzureNextGen.Search.Latest.Inputs.SkuArgs
+            Sku = new AzureNextGen.Search..Inputs.SkuArgs
             {
                 Name = "standard",
             },
@@ -318,7 +318,7 @@ class MyStack : Stack
 package main
 
 import (
-	search "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/search/latest"
+	search "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/search"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -365,15 +365,15 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-service = azure_nextgen.search.latest.Service("service",
+service = azure_nextgen.search.Service("service",
     hosting_mode="default",
     location="westus",
-    network_rule_set=azure_nextgen.search.latest.NetworkRuleSetArgs(
+    network_rule_set=azure_nextgen.search.NetworkRuleSetArgs(
         ip_rules=[
-            azure_nextgen.search.latest.IpRuleArgs(
+            azure_nextgen.search.IpRuleArgs(
                 value="123.4.5.6",
             ),
-            azure_nextgen.search.latest.IpRuleArgs(
+            azure_nextgen.search.IpRuleArgs(
                 value="123.4.6.0/18",
             ),
         ],
@@ -382,7 +382,7 @@ service = azure_nextgen.search.latest.Service("service",
     replica_count=1,
     resource_group_name="rg1",
     search_service_name="mysearchservice",
-    sku=azure_nextgen.search.latest.SkuArgs(
+    sku=azure_nextgen.search.SkuArgs(
         name="standard",
     ),
     tags={
@@ -399,7 +399,7 @@ service = azure_nextgen.search.latest.Service("service",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const service = new azure_nextgen.search.latest.Service("service", {
+const service = new azure_nextgen.search.Service("service", {
     hostingMode: "default",
     location: "westus",
     networkRuleSet: {
@@ -438,10 +438,10 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var service = new AzureNextGen.Search.Latest.Service("service", new AzureNextGen.Search.Latest.ServiceArgs
+        var service = new AzureNextGen.Search..Service("service", new AzureNextGen.Search..ServiceArgs
         {
             HostingMode = "default",
-            Identity = new AzureNextGen.Search.Latest.Inputs.IdentityArgs
+            Identity = new AzureNextGen.Search..Inputs.IdentityArgs
             {
                 Type = "SystemAssigned",
             },
@@ -450,7 +450,7 @@ class MyStack : Stack
             ReplicaCount = 3,
             ResourceGroupName = "rg1",
             SearchServiceName = "mysearchservice",
-            Sku = new AzureNextGen.Search.Latest.Inputs.SkuArgs
+            Sku = new AzureNextGen.Search..Inputs.SkuArgs
             {
                 Name = "standard",
             },
@@ -473,7 +473,7 @@ class MyStack : Stack
 package main
 
 import (
-	search "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/search/latest"
+	search "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/search"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -513,9 +513,9 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-service = azure_nextgen.search.latest.Service("service",
+service = azure_nextgen.search.Service("service",
     hosting_mode="default",
-    identity=azure_nextgen.search.latest.IdentityArgs(
+    identity=azure_nextgen.search.IdentityArgs(
         type="SystemAssigned",
     ),
     location="westus",
@@ -523,7 +523,7 @@ service = azure_nextgen.search.latest.Service("service",
     replica_count=3,
     resource_group_name="rg1",
     search_service_name="mysearchservice",
-    sku=azure_nextgen.search.latest.SkuArgs(
+    sku=azure_nextgen.search.SkuArgs(
         name="standard",
     ),
     tags={
@@ -540,7 +540,7 @@ service = azure_nextgen.search.latest.Service("service",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const service = new azure_nextgen.search.latest.Service("service", {
+const service = new azure_nextgen.search.Service("service", {
     hostingMode: "default",
     identity: {
         type: "SystemAssigned",
@@ -778,7 +778,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#hostingmode_csharp" style="color: inherit; text-decoration: inherit;">Hosting<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hostingmode">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Search.<wbr>Hosting<wbr>Mode</a></span>
+        <span class="property-type"><a href="#hostingmode">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Search..<wbr>Hosting<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}Applicable only for the standard3 SKU. You can set this property to enable up to 3 high density partitions that allow up to 1000 indexes, which is much higher than the maximum indexes allowed for any other SKU. For the standard3 SKU, the value is either 'default' or 'highDensity'. For all other SKUs, this value must be 'default'.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -787,7 +787,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identity">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Search.<wbr>Inputs.<wbr>Identity<wbr>Args</a></span>
+        <span class="property-type"><a href="#identity">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Search..<wbr>Inputs.<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The identity of the resource.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -796,7 +796,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#networkruleset_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Rule<wbr>Set</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkruleset">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Search.<wbr>Inputs.<wbr>Network<wbr>Rule<wbr>Set<wbr>Args</a></span>
+        <span class="property-type"><a href="#networkruleset">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Search..<wbr>Inputs.<wbr>Network<wbr>Rule<wbr>Set<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Network specific rules that determine how the Azure Cognitive Search service may be reached.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -814,7 +814,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#publicnetworkaccess_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Network<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#publicnetworkaccess">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Search.<wbr>Public<wbr>Network<wbr>Access</a></span>
+        <span class="property-type"><a href="#publicnetworkaccess">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Search..<wbr>Public<wbr>Network<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}This value can be set to 'enabled' to avoid breaking changes on existing customer resources and templates. If set to 'disabled', traffic over public interface is not allowed, and private endpoint connections would be the exclusive access method.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -832,7 +832,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sku">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Search.<wbr>Inputs.<wbr>Sku<wbr>Args</a></span>
+        <span class="property-type"><a href="#sku">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Search..<wbr>Inputs.<wbr>Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The SKU of the Search Service, which determines price tier and capacity limits. This property is required when creating a new Search Service.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1196,7 +1196,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privateendpointconnections_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint<wbr>Connections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointconnectionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Search.<wbr>Outputs.<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#privateendpointconnectionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Search..<wbr>Outputs.<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of private endpoint connections to the Azure Cognitive Search service.{{% /md %}}</dd>
     <dt class="property-"
@@ -1214,7 +1214,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sharedprivatelinkresources_csharp" style="color: inherit; text-decoration: inherit;">Shared<wbr>Private<wbr>Link<wbr>Resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sharedprivatelinkresourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Search.<wbr>Outputs.<wbr>Shared<wbr>Private<wbr>Link<wbr>Resource<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#sharedprivatelinkresourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Search..<wbr>Outputs.<wbr>Shared<wbr>Private<wbr>Link<wbr>Resource<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of shared private link resources managed by the Azure Cognitive Search service.{{% /md %}}</dd>
     <dt class="property-"
@@ -1540,7 +1540,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identitytype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Search.<wbr>Identity<wbr>Type</a></span>
+        <span class="property-type"><a href="#identitytype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Search..<wbr>Identity<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The identity type.{{% /md %}}</dd>
 </dl>
@@ -1898,7 +1898,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#iprules_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iprule">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Search.<wbr>Inputs.<wbr>Ip<wbr>Rule<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#iprule">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Search..<wbr>Inputs.<wbr>Ip<wbr>Rule<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of IP restriction rules that defines the inbound network(s) with allowing access to the search service endpoint. At the meantime, all other public IP networks are blocked by the firewall. These restriction rules are applied only when the 'publicNetworkAccess' of the search service is 'enabled'; otherwise, traffic over public interface is not allowed even with any public IP rules, and private endpoint connections would be the exclusive access method.{{% /md %}}</dd>
 </dl>
@@ -1960,7 +1960,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#iprules_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Search.<wbr>Inputs.<wbr>Ip<wbr>Rule<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#ipruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Search..<wbr>Inputs.<wbr>Ip<wbr>Rule<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of IP restriction rules that defines the inbound network(s) with allowing access to the search service endpoint. At the meantime, all other public IP networks are blocked by the firewall. These restriction rules are applied only when the 'publicNetworkAccess' of the search service is 'enabled'; otherwise, traffic over public interface is not allowed even with any public IP rules, and private endpoint connections would be the exclusive access method.{{% /md %}}</dd>
 </dl>
@@ -2022,7 +2022,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privateendpoint_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointconnectionpropertiesresponseprivateendpoint">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Search.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Properties<wbr>Response<wbr>Private<wbr>Endpoint<wbr>Args</a></span>
+        <span class="property-type"><a href="#privateendpointconnectionpropertiesresponseprivateendpoint">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Search..<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Properties<wbr>Response<wbr>Private<wbr>Endpoint<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The private endpoint resource from Microsoft.Network provider.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2031,7 +2031,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privatelinkserviceconnectionstate_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointconnectionpropertiesresponseprivatelinkserviceconnectionstate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Search.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Properties<wbr>Response<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Args</a></span>
+        <span class="property-type"><a href="#privateendpointconnectionpropertiesresponseprivatelinkserviceconnectionstate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Search..<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Properties<wbr>Response<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the current state of an existing Private Link Service connection to the Azure Private Endpoint.{{% /md %}}</dd>
 </dl>
@@ -2343,7 +2343,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointconnectionpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Search.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#privateendpointconnectionpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Search..<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the properties of an existing Private Endpoint connection to the Azure Cognitive Search service.{{% /md %}}</dd>
 </dl>
@@ -2793,7 +2793,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sharedprivatelinkresourcepropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Search.<wbr>Inputs.<wbr>Shared<wbr>Private<wbr>Link<wbr>Resource<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sharedprivatelinkresourcepropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Search..<wbr>Inputs.<wbr>Shared<wbr>Private<wbr>Link<wbr>Resource<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the properties of a Shared Private Link Resource managed by the Azure Cognitive Search service.{{% /md %}}</dd>
 </dl>
@@ -2936,7 +2936,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skuname">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Search.<wbr>Sku<wbr>Name</a></span>
+        <span class="property-type"><a href="#skuname">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Search..<wbr>Sku<wbr>Name</a></span>
     </dt>
     <dd>{{% md %}}The SKU of the search service. Valid values include: 'free': Shared service. 'basic': Dedicated service with up to 3 replicas. 'standard': Dedicated service with up to 12 partitions and 12 replicas. 'standard2': Similar to standard, but with more capacity per search unit. 'standard3': The largest Standard offering with up to 12 partitions and 12 replicas (or up to 3 partitions with more indexes if you also set the hostingMode property to 'highDensity'). 'storage_optimized_l1': Supports 1TB per partition, up to 12 partitions. 'storage_optimized_l2': Supports 2TB per partition, up to 12 partitions.'{{% /md %}}</dd>
 </dl>
@@ -3132,7 +3132,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:search/latest:Service mysearchservice /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Search/searchServices/mysearchservice 
+$ pulumi import azure-nextgen:search:Service mysearchservice /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Search/searchServices/mysearchservice 
 ```
 
 

@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.containerregistry.PipelineRun re
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 An object that represents a pipeline run for a container registry.
+API Version: 2020-11-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,11 +27,11 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var pipelineRun = new AzureNextGen.ContainerRegistry.V20201101Preview.PipelineRun("pipelineRun", new AzureNextGen.ContainerRegistry.V20201101Preview.PipelineRunArgs
+        var pipelineRun = new AzureNextGen.ContainerRegistry..PipelineRun("pipelineRun", new AzureNextGen.ContainerRegistry..PipelineRunArgs
         {
             PipelineRunName = "myPipelineRun",
             RegistryName = "myRegistry",
-            Request = new AzureNextGen.ContainerRegistry.V20201101Preview.Inputs.PipelineRunRequestArgs
+            Request = new AzureNextGen.ContainerRegistry..Inputs.PipelineRunRequestArgs
             {
                 Artifacts = 
                 {
@@ -38,7 +39,7 @@ class MyStack : Stack
                     "sourceRepository2@sha256:00000000000000000000000000000000000",
                 },
                 PipelineResourceId = "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.ContainerRegistry/registries/myRegistry/exportPipelines/myExportPipeline",
-                Target = new AzureNextGen.ContainerRegistry.V20201101Preview.Inputs.PipelineRunTargetPropertiesArgs
+                Target = new AzureNextGen.ContainerRegistry..Inputs.PipelineRunTargetPropertiesArgs
                 {
                     Name = "myblob.tar.gz",
                     Type = "AzureStorageBlob",
@@ -60,7 +61,7 @@ class MyStack : Stack
 package main
 
 import (
-	containerregistry "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/containerregistry/v20201101preview"
+	containerregistry "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/containerregistry"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -99,16 +100,16 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-pipeline_run = azure_nextgen.containerregistry.v20201101preview.PipelineRun("pipelineRun",
+pipeline_run = azure_nextgen.containerregistry.PipelineRun("pipelineRun",
     pipeline_run_name="myPipelineRun",
     registry_name="myRegistry",
-    request=azure_nextgen.containerregistry.v20201101preview.PipelineRunRequestArgs(
+    request=azure_nextgen.containerregistry.PipelineRunRequestArgs(
         artifacts=[
             "sourceRepository/hello-world",
             "sourceRepository2@sha256:00000000000000000000000000000000000",
         ],
         pipeline_resource_id="/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.ContainerRegistry/registries/myRegistry/exportPipelines/myExportPipeline",
-        target=azure_nextgen.containerregistry.v20201101preview.PipelineRunTargetPropertiesArgs(
+        target=azure_nextgen.containerregistry.PipelineRunTargetPropertiesArgs(
             name="myblob.tar.gz",
             type="AzureStorageBlob",
         ),
@@ -125,7 +126,7 @@ pipeline_run = azure_nextgen.containerregistry.v20201101preview.PipelineRun("pip
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const pipelineRun = new azure_nextgen.containerregistry.v20201101preview.PipelineRun("pipelineRun", {
+const pipelineRun = new azure_nextgen.containerregistry.PipelineRun("pipelineRun", {
     pipelineRunName: "myPipelineRun",
     registryName: "myRegistry",
     request: {
@@ -156,16 +157,16 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var pipelineRun = new AzureNextGen.ContainerRegistry.V20201101Preview.PipelineRun("pipelineRun", new AzureNextGen.ContainerRegistry.V20201101Preview.PipelineRunArgs
+        var pipelineRun = new AzureNextGen.ContainerRegistry..PipelineRun("pipelineRun", new AzureNextGen.ContainerRegistry..PipelineRunArgs
         {
             ForceUpdateTag = "2020-03-04T17:23:21.9261521+00:00",
             PipelineRunName = "myPipelineRun",
             RegistryName = "myRegistry",
-            Request = new AzureNextGen.ContainerRegistry.V20201101Preview.Inputs.PipelineRunRequestArgs
+            Request = new AzureNextGen.ContainerRegistry..Inputs.PipelineRunRequestArgs
             {
                 CatalogDigest = "sha256@",
                 PipelineResourceId = "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.ContainerRegistry/registries/myRegistry/importPipelines/myImportPipeline",
-                Source = new AzureNextGen.ContainerRegistry.V20201101Preview.Inputs.PipelineRunSourcePropertiesArgs
+                Source = new AzureNextGen.ContainerRegistry..Inputs.PipelineRunSourcePropertiesArgs
                 {
                     Name = "myblob.tar.gz",
                     Type = "AzureStorageBlob",
@@ -187,7 +188,7 @@ class MyStack : Stack
 package main
 
 import (
-	containerregistry "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/containerregistry/v20201101preview"
+	containerregistry "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/containerregistry"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -224,14 +225,14 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-pipeline_run = azure_nextgen.containerregistry.v20201101preview.PipelineRun("pipelineRun",
+pipeline_run = azure_nextgen.containerregistry.PipelineRun("pipelineRun",
     force_update_tag="2020-03-04T17:23:21.9261521+00:00",
     pipeline_run_name="myPipelineRun",
     registry_name="myRegistry",
-    request=azure_nextgen.containerregistry.v20201101preview.PipelineRunRequestArgs(
+    request=azure_nextgen.containerregistry.PipelineRunRequestArgs(
         catalog_digest="sha256@",
         pipeline_resource_id="/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.ContainerRegistry/registries/myRegistry/importPipelines/myImportPipeline",
-        source=azure_nextgen.containerregistry.v20201101preview.PipelineRunSourcePropertiesArgs(
+        source=azure_nextgen.containerregistry.PipelineRunSourcePropertiesArgs(
             name="myblob.tar.gz",
             type="AzureStorageBlob",
         ),
@@ -248,7 +249,7 @@ pipeline_run = azure_nextgen.containerregistry.v20201101preview.PipelineRun("pip
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const pipelineRun = new azure_nextgen.containerregistry.v20201101preview.PipelineRun("pipelineRun", {
+const pipelineRun = new azure_nextgen.containerregistry.PipelineRun("pipelineRun", {
     forceUpdateTag: "2020-03-04T17:23:21.9261521+00:00",
     pipelineRunName: "myPipelineRun",
     registryName: "myRegistry",
@@ -492,7 +493,7 @@ The PipelineRun resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#request_csharp" style="color: inherit; text-decoration: inherit;">Request</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinerunrequest">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Pipeline<wbr>Run<wbr>Request<wbr>Args</a></span>
+        <span class="property-type"><a href="#pipelinerunrequest">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry..<wbr>Inputs.<wbr>Pipeline<wbr>Run<wbr>Request<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The request parameters for a pipeline run.{{% /md %}}</dd>
 </dl>
@@ -694,7 +695,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#response_csharp" style="color: inherit; text-decoration: inherit;">Response</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinerunresponseresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry.<wbr>Outputs.<wbr>Pipeline<wbr>Run<wbr>Response<wbr>Response</a></span>
+        <span class="property-type"><a href="#pipelinerunresponseresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry..<wbr>Outputs.<wbr>Pipeline<wbr>Run<wbr>Response<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The response of a pipeline run.{{% /md %}}</dd>
     <dt class="property-"
@@ -703,7 +704,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#systemdata_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry.<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
+        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry..<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Metadata pertaining to creation and last modification of the resource.{{% /md %}}</dd>
     <dt class="property-"
@@ -1233,7 +1234,7 @@ Specify an image by sha256-based manifest digest ('hello-world@sha256:abc123').{
 <a href="#source_csharp" style="color: inherit; text-decoration: inherit;">Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinerunsourceproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Pipeline<wbr>Run<wbr>Source<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#pipelinerunsourceproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry..<wbr>Inputs.<wbr>Pipeline<wbr>Run<wbr>Source<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The source properties of the pipeline run.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1242,7 +1243,7 @@ Specify an image by sha256-based manifest digest ('hello-world@sha256:abc123').{
 <a href="#target_csharp" style="color: inherit; text-decoration: inherit;">Target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelineruntargetproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Pipeline<wbr>Run<wbr>Target<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#pipelineruntargetproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry..<wbr>Inputs.<wbr>Pipeline<wbr>Run<wbr>Target<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The target properties of the pipeline run.{{% /md %}}</dd>
 </dl>
@@ -1451,7 +1452,7 @@ Specify an image by sha256-based manifest digest ('hello-world@sha256:abc123').{
 <a href="#source_csharp" style="color: inherit; text-decoration: inherit;">Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinerunsourcepropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Pipeline<wbr>Run<wbr>Source<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#pipelinerunsourcepropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry..<wbr>Inputs.<wbr>Pipeline<wbr>Run<wbr>Source<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The source properties of the pipeline run.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1460,7 +1461,7 @@ Specify an image by sha256-based manifest digest ('hello-world@sha256:abc123').{
 <a href="#target_csharp" style="color: inherit; text-decoration: inherit;">Target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelineruntargetpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Pipeline<wbr>Run<wbr>Target<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#pipelineruntargetpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry..<wbr>Inputs.<wbr>Pipeline<wbr>Run<wbr>Target<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The target properties of the pipeline run.{{% /md %}}</dd>
 </dl>
@@ -1675,7 +1676,7 @@ Specify an image by sha256-based manifest digest ('hello-world@sha256:abc123').{
 <a href="#progress_csharp" style="color: inherit; text-decoration: inherit;">Progress</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#progresspropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Progress<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#progresspropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry..<wbr>Inputs.<wbr>Progress<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The current progress of the copy operation.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1684,7 +1685,7 @@ Specify an image by sha256-based manifest digest ('hello-world@sha256:abc123').{
 <a href="#source_csharp" style="color: inherit; text-decoration: inherit;">Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#importpipelinesourcepropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Import<wbr>Pipeline<wbr>Source<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#importpipelinesourcepropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry..<wbr>Inputs.<wbr>Import<wbr>Pipeline<wbr>Source<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The source of the pipeline run.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1711,7 +1712,7 @@ Specify an image by sha256-based manifest digest ('hello-world@sha256:abc123').{
 <a href="#target_csharp" style="color: inherit; text-decoration: inherit;">Target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#exportpipelinetargetpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Export<wbr>Pipeline<wbr>Target<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#exportpipelinetargetpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry..<wbr>Inputs.<wbr>Export<wbr>Pipeline<wbr>Target<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The target of the pipeline run.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1720,7 +1721,7 @@ Specify an image by sha256-based manifest digest ('hello-world@sha256:abc123').{
 <a href="#trigger_csharp" style="color: inherit; text-decoration: inherit;">Trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinetriggerdescriptorresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Pipeline<wbr>Trigger<wbr>Descriptor<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#pipelinetriggerdescriptorresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry..<wbr>Inputs.<wbr>Pipeline<wbr>Trigger<wbr>Descriptor<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The trigger that caused the pipeline run.{{% /md %}}</dd>
 </dl>
@@ -2034,7 +2035,7 @@ Specify an image by sha256-based manifest digest ('hello-world@sha256:abc123').{
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#pipelinerunsourcetype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry.<wbr>Pipeline<wbr>Run<wbr>Source<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#pipelinerunsourcetype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry..<wbr>Pipeline<wbr>Run<wbr>Source<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of the source.{{% /md %}}</dd>
 </dl>
@@ -2260,7 +2261,7 @@ Specify an image by sha256-based manifest digest ('hello-world@sha256:abc123').{
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#pipelineruntargettype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry.<wbr>Pipeline<wbr>Run<wbr>Target<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#pipelineruntargettype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry..<wbr>Pipeline<wbr>Run<wbr>Target<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of the target.{{% /md %}}</dd>
 </dl>
@@ -2539,7 +2540,7 @@ Specify an image by sha256-based manifest digest ('hello-world@sha256:abc123').{
 <a href="#sourcetrigger_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinesourcetriggerdescriptorresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Pipeline<wbr>Source<wbr>Trigger<wbr>Descriptor<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#pipelinesourcetriggerdescriptorresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry..<wbr>Inputs.<wbr>Pipeline<wbr>Source<wbr>Trigger<wbr>Descriptor<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The source trigger that caused the pipeline run.{{% /md %}}</dd>
 </dl>
@@ -2899,7 +2900,7 @@ Specify an image by sha256-based manifest digest ('hello-world@sha256:abc123').{
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:containerregistry/v20201101preview:PipelineRun myPipelineRun /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.ContainerRegistry/registries/myRegistry/pipelineRuns/myPipelineRun 
+$ pulumi import azure-nextgen:containerregistry:PipelineRun myPipelineRun /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.ContainerRegistry/registries/myRegistry/pipelineRuns/myPipelineRun 
 ```
 
 

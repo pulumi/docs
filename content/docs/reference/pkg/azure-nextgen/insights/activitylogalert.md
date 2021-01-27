@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.insights.ActivityLogAlert resour
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 An activity log alert resource.
-Latest API Version: 2017-04-01.
+API Version: 2017-04-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,13 +27,13 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var activityLogAlert = new AzureNextGen.Insights.Latest.ActivityLogAlert("activityLogAlert", new AzureNextGen.Insights.Latest.ActivityLogAlertArgs
+        var activityLogAlert = new AzureNextGen.Insights..ActivityLogAlert("activityLogAlert", new AzureNextGen.Insights..ActivityLogAlertArgs
         {
-            Actions = new AzureNextGen.Insights.Latest.Inputs.ActivityLogAlertActionListArgs
+            Actions = new AzureNextGen.Insights..Inputs.ActivityLogAlertActionListArgs
             {
                 ActionGroups = 
                 {
-                    new AzureNextGen.Insights.Latest.Inputs.ActivityLogAlertActionGroupArgs
+                    new AzureNextGen.Insights..Inputs.ActivityLogAlertActionGroupArgs
                     {
                         ActionGroupId = "/subscriptions/187f412d-1758-44d9-b052-169e2564721d/resourceGroups/Default-ActionGroups/providers/microsoft.insights/actionGroups/SampleActionGroup",
                         WebhookProperties = 
@@ -44,16 +44,16 @@ class MyStack : Stack
                 },
             },
             ActivityLogAlertName = "SampleActivityLogAlert",
-            Condition = new AzureNextGen.Insights.Latest.Inputs.ActivityLogAlertAllOfConditionArgs
+            Condition = new AzureNextGen.Insights..Inputs.ActivityLogAlertAllOfConditionArgs
             {
                 AllOf = 
                 {
-                    new AzureNextGen.Insights.Latest.Inputs.ActivityLogAlertLeafConditionArgs
+                    new AzureNextGen.Insights..Inputs.ActivityLogAlertLeafConditionArgs
                     {
                         Equals = "Administrative",
                         Field = "Category",
                     },
-                    new AzureNextGen.Insights.Latest.Inputs.ActivityLogAlertLeafConditionArgs
+                    new AzureNextGen.Insights..Inputs.ActivityLogAlertLeafConditionArgs
                     {
                         Equals = "Error",
                         Field = "Level",
@@ -84,7 +84,7 @@ class MyStack : Stack
 package main
 
 import (
-	insights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/insights/latest"
+	insights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/insights"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -140,9 +140,9 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-activity_log_alert = azure_nextgen.insights.latest.ActivityLogAlert("activityLogAlert",
-    actions=azure_nextgen.insights.latest.ActivityLogAlertActionListArgs(
-        action_groups=[azure_nextgen.insights.latest.ActivityLogAlertActionGroupArgs(
+activity_log_alert = azure_nextgen.insights.ActivityLogAlert("activityLogAlert",
+    actions=azure_nextgen.insights.ActivityLogAlertActionListArgs(
+        action_groups=[azure_nextgen.insights.ActivityLogAlertActionGroupArgs(
             action_group_id="/subscriptions/187f412d-1758-44d9-b052-169e2564721d/resourceGroups/Default-ActionGroups/providers/microsoft.insights/actionGroups/SampleActionGroup",
             webhook_properties={
                 "sampleWebhookProperty": "samplePropertyValue",
@@ -150,13 +150,13 @@ activity_log_alert = azure_nextgen.insights.latest.ActivityLogAlert("activityLog
         )],
     ),
     activity_log_alert_name="SampleActivityLogAlert",
-    condition=azure_nextgen.insights.latest.ActivityLogAlertAllOfConditionArgs(
+    condition=azure_nextgen.insights.ActivityLogAlertAllOfConditionArgs(
         all_of=[
-            azure_nextgen.insights.latest.ActivityLogAlertLeafConditionArgs(
+            azure_nextgen.insights.ActivityLogAlertLeafConditionArgs(
                 equals="Administrative",
                 field="Category",
             ),
-            azure_nextgen.insights.latest.ActivityLogAlertLeafConditionArgs(
+            azure_nextgen.insights.ActivityLogAlertLeafConditionArgs(
                 equals="Error",
                 field="Level",
             ),
@@ -179,7 +179,7 @@ activity_log_alert = azure_nextgen.insights.latest.ActivityLogAlert("activityLog
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const activityLogAlert = new azure_nextgen.insights.latest.ActivityLogAlert("activityLogAlert", {
+const activityLogAlert = new azure_nextgen.insights.ActivityLogAlert("activityLogAlert", {
     actions: {
         actionGroups: [{
             actionGroupId: "/subscriptions/187f412d-1758-44d9-b052-169e2564721d/resourceGroups/Default-ActionGroups/providers/microsoft.insights/actionGroups/SampleActionGroup",
@@ -402,7 +402,7 @@ The ActivityLogAlert resource accepts the following [input]({{< relref "/docs/in
 <a href="#actions_csharp" style="color: inherit; text-decoration: inherit;">Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitylogalertactionlist">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Inputs.<wbr>Activity<wbr>Log<wbr>Alert<wbr>Action<wbr>List<wbr>Args</a></span>
+        <span class="property-type"><a href="#activitylogalertactionlist">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Inputs.<wbr>Activity<wbr>Log<wbr>Alert<wbr>Action<wbr>List<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The actions that will activate when the condition is met.{{% /md %}}</dd>
     <dt class="property-required"
@@ -420,7 +420,7 @@ The ActivityLogAlert resource accepts the following [input]({{< relref "/docs/in
 <a href="#condition_csharp" style="color: inherit; text-decoration: inherit;">Condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitylogalertallofcondition">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Inputs.<wbr>Activity<wbr>Log<wbr>Alert<wbr>All<wbr>Of<wbr>Condition<wbr>Args</a></span>
+        <span class="property-type"><a href="#activitylogalertallofcondition">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Inputs.<wbr>Activity<wbr>Log<wbr>Alert<wbr>All<wbr>Of<wbr>Condition<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The condition that will cause this alert to activate.{{% /md %}}</dd>
     <dt class="property-required"
@@ -1097,7 +1097,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#actiongroups_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitylogalertactiongroup">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Inputs.<wbr>Activity<wbr>Log<wbr>Alert<wbr>Action<wbr>Group<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#activitylogalertactiongroup">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Inputs.<wbr>Activity<wbr>Log<wbr>Alert<wbr>Action<wbr>Group<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of activity log alerts.{{% /md %}}</dd>
 </dl>
@@ -1159,7 +1159,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#actiongroups_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitylogalertactiongroupresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Inputs.<wbr>Activity<wbr>Log<wbr>Alert<wbr>Action<wbr>Group<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#activitylogalertactiongroupresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Inputs.<wbr>Activity<wbr>Log<wbr>Alert<wbr>Action<wbr>Group<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of activity log alerts.{{% /md %}}</dd>
 </dl>
@@ -1221,7 +1221,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allof_csharp" style="color: inherit; text-decoration: inherit;">All<wbr>Of</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitylogalertleafcondition">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Inputs.<wbr>Activity<wbr>Log<wbr>Alert<wbr>Leaf<wbr>Condition<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#activitylogalertleafcondition">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Inputs.<wbr>Activity<wbr>Log<wbr>Alert<wbr>Leaf<wbr>Condition<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of activity log alert conditions.{{% /md %}}</dd>
 </dl>
@@ -1283,7 +1283,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allof_csharp" style="color: inherit; text-decoration: inherit;">All<wbr>Of</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitylogalertleafconditionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Inputs.<wbr>Activity<wbr>Log<wbr>Alert<wbr>Leaf<wbr>Condition<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#activitylogalertleafconditionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Inputs.<wbr>Activity<wbr>Log<wbr>Alert<wbr>Leaf<wbr>Condition<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of activity log alert conditions.{{% /md %}}</dd>
 </dl>
@@ -1535,7 +1535,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:insights/latest:ActivityLogAlert SampleActivityLogAlert /subscriptions/187f412d-1758-44d9-b052-169e2564721d/resourceGroups/Default-ActivityLogAlerts/providers/microsoft.insights/activityLogAlerts/SampleActivityLogAlert 
+$ pulumi import azure-nextgen:insights:ActivityLogAlert SampleActivityLogAlert /subscriptions/187f412d-1758-44d9-b052-169e2564721d/resourceGroups/Default-NotificationRules/providers/microsoft.insights/activityLogAlerts/SampleActivityLogAlert 
 ```
 
 

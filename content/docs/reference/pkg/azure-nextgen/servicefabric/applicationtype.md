@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.servicefabric.ApplicationType re
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The application type name resource
-Latest API Version: 2020-03-01.
+API Version: 2020-03-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var applicationType = new AzureNextGen.ServiceFabric.Latest.ApplicationType("applicationType", new AzureNextGen.ServiceFabric.Latest.ApplicationTypeArgs
+        var applicationType = new AzureNextGen.ServiceFabric..ApplicationType("applicationType", new AzureNextGen.ServiceFabric..ApplicationTypeArgs
         {
             ApplicationTypeName = "myAppType",
             ClusterName = "myCluster",
@@ -47,7 +47,7 @@ class MyStack : Stack
 package main
 
 import (
-	servicefabric "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/servicefabric/latest"
+	servicefabric "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/servicefabric"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -75,7 +75,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-application_type = azure_nextgen.servicefabric.latest.ApplicationType("applicationType",
+application_type = azure_nextgen.servicefabric.ApplicationType("applicationType",
     application_type_name="myAppType",
     cluster_name="myCluster",
     resource_group_name="resRg")
@@ -90,7 +90,7 @@ application_type = azure_nextgen.servicefabric.latest.ApplicationType("applicati
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const applicationType = new azure_nextgen.servicefabric.latest.ApplicationType("applicationType", {
+const applicationType = new azure_nextgen.servicefabric.ApplicationType("applicationType", {
     applicationTypeName: "myAppType",
     clusterName: "myCluster",
     resourceGroupName: "resRg",
@@ -706,7 +706,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:servicefabric/latest:ApplicationType myCluster /subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/resRg/providers/Microsoft.ServiceFabric/clusters/myCluster/applicationTypes/myAppType 
+$ pulumi import azure-nextgen:servicefabric:ApplicationType myCluster /subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/resRg/providers/Microsoft.ServiceFabric/clusters/myCluster/applicationTypes/myAppType 
 ```
 
 

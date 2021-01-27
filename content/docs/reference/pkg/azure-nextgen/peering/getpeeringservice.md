@@ -224,7 +224,7 @@ The following output properties are available:
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#peeringserviceskuresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Peering.<wbr>Outputs.<wbr>Peering<wbr>Service<wbr>Sku<wbr>Response</a></span>
+        <span class="property-type"><a href="#peeringserviceskuresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Peering..<wbr>Outputs.<wbr>Peering<wbr>Service<wbr>Sku<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The SKU that defines the type of the peering service.{{% /md %}}</dd>
     <dt class="property-"

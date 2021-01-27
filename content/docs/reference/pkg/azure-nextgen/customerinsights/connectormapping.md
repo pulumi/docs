@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.customerinsights.ConnectorMappin
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The connector mapping resource format.
-Latest API Version: 2017-04-26.
+API Version: 2017-04-26.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var connectorMapping = new AzureNextGen.CustomerInsights.Latest.ConnectorMapping("connectorMapping", new AzureNextGen.CustomerInsights.Latest.ConnectorMappingArgs
+        var connectorMapping = new AzureNextGen.CustomerInsights..ConnectorMapping("connectorMapping", new AzureNextGen.CustomerInsights..ConnectorMappingArgs
         {
             ConnectorName = "testConnector8858",
             Description = "Test mapping",
@@ -36,26 +36,26 @@ class MyStack : Stack
             EntityTypeName = "TestInteractionType2967",
             HubName = "sdkTestHub",
             MappingName = "testMapping12491",
-            MappingProperties = new AzureNextGen.CustomerInsights.Latest.Inputs.ConnectorMappingPropertiesArgs
+            MappingProperties = new AzureNextGen.CustomerInsights..Inputs.ConnectorMappingPropertiesArgs
             {
-                Availability = new AzureNextGen.CustomerInsights.Latest.Inputs.ConnectorMappingAvailabilityArgs
+                Availability = new AzureNextGen.CustomerInsights..Inputs.ConnectorMappingAvailabilityArgs
                 {
                     Frequency = "Hour",
                     Interval = 5,
                 },
-                CompleteOperation = new AzureNextGen.CustomerInsights.Latest.Inputs.ConnectorMappingCompleteOperationArgs
+                CompleteOperation = new AzureNextGen.CustomerInsights..Inputs.ConnectorMappingCompleteOperationArgs
                 {
                     CompletionOperationType = "DeleteFile",
                     DestinationFolder = "fakePath",
                 },
-                ErrorManagement = new AzureNextGen.CustomerInsights.Latest.Inputs.ConnectorMappingErrorManagementArgs
+                ErrorManagement = new AzureNextGen.CustomerInsights..Inputs.ConnectorMappingErrorManagementArgs
                 {
                     ErrorLimit = 10,
                     ErrorManagementType = "StopImport",
                 },
                 FileFilter = "unknown",
                 FolderPath = "http://sample.dne/file",
-                Format = new AzureNextGen.CustomerInsights.Latest.Inputs.ConnectorMappingFormatArgs
+                Format = new AzureNextGen.CustomerInsights..Inputs.ConnectorMappingFormatArgs
                 {
                     ColumnDelimiter = "|",
                     FormatType = "TextFormat",
@@ -63,13 +63,13 @@ class MyStack : Stack
                 HasHeader = false,
                 Structure = 
                 {
-                    new AzureNextGen.CustomerInsights.Latest.Inputs.ConnectorMappingStructureArgs
+                    new AzureNextGen.CustomerInsights..Inputs.ConnectorMappingStructureArgs
                     {
                         ColumnName = "unknown1",
                         IsEncrypted = false,
                         PropertyName = "unknwon1",
                     },
-                    new AzureNextGen.CustomerInsights.Latest.Inputs.ConnectorMappingStructureArgs
+                    new AzureNextGen.CustomerInsights..Inputs.ConnectorMappingStructureArgs
                     {
                         ColumnName = "unknown2",
                         IsEncrypted = true,
@@ -93,7 +93,7 @@ class MyStack : Stack
 package main
 
 import (
-	customerinsights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/customerinsights/latest"
+	customerinsights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/customerinsights"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -159,7 +159,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-connector_mapping = azure_nextgen.customerinsights.latest.ConnectorMapping("connectorMapping",
+connector_mapping = azure_nextgen.customerinsights.ConnectorMapping("connectorMapping",
     connector_name="testConnector8858",
     description="Test mapping",
     display_name="testMapping12491",
@@ -167,33 +167,33 @@ connector_mapping = azure_nextgen.customerinsights.latest.ConnectorMapping("conn
     entity_type_name="TestInteractionType2967",
     hub_name="sdkTestHub",
     mapping_name="testMapping12491",
-    mapping_properties=azure_nextgen.customerinsights.latest.ConnectorMappingPropertiesArgs(
-        availability=azure_nextgen.customerinsights.latest.ConnectorMappingAvailabilityArgs(
+    mapping_properties=azure_nextgen.customerinsights.ConnectorMappingPropertiesArgs(
+        availability=azure_nextgen.customerinsights.ConnectorMappingAvailabilityArgs(
             frequency="Hour",
             interval=5,
         ),
-        complete_operation=azure_nextgen.customerinsights.latest.ConnectorMappingCompleteOperationArgs(
+        complete_operation=azure_nextgen.customerinsights.ConnectorMappingCompleteOperationArgs(
             completion_operation_type="DeleteFile",
             destination_folder="fakePath",
         ),
-        error_management=azure_nextgen.customerinsights.latest.ConnectorMappingErrorManagementArgs(
+        error_management=azure_nextgen.customerinsights.ConnectorMappingErrorManagementArgs(
             error_limit=10,
             error_management_type="StopImport",
         ),
         file_filter="unknown",
         folder_path="http://sample.dne/file",
-        format=azure_nextgen.customerinsights.latest.ConnectorMappingFormatArgs(
+        format=azure_nextgen.customerinsights.ConnectorMappingFormatArgs(
             column_delimiter="|",
             format_type="TextFormat",
         ),
         has_header=False,
         structure=[
-            azure_nextgen.customerinsights.latest.ConnectorMappingStructureArgs(
+            azure_nextgen.customerinsights.ConnectorMappingStructureArgs(
                 column_name="unknown1",
                 is_encrypted=False,
                 property_name="unknwon1",
             ),
-            azure_nextgen.customerinsights.latest.ConnectorMappingStructureArgs(
+            azure_nextgen.customerinsights.ConnectorMappingStructureArgs(
                 column_name="unknown2",
                 is_encrypted=True,
                 property_name="unknwon2",
@@ -212,7 +212,7 @@ connector_mapping = azure_nextgen.customerinsights.latest.ConnectorMapping("conn
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const connectorMapping = new azure_nextgen.customerinsights.latest.ConnectorMapping("connectorMapping", {
+const connectorMapping = new azure_nextgen.customerinsights.ConnectorMapping("connectorMapping", {
     connectorName: "testConnector8858",
     description: "Test mapping",
     displayName: "testMapping12491",
@@ -458,7 +458,7 @@ The ConnectorMapping resource accepts the following [input]({{< relref "/docs/in
 <a href="#entitytype_csharp" style="color: inherit; text-decoration: inherit;">Entity<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#entitytypes">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights.<wbr>Entity<wbr>Types</a></span>
+        <span class="property-type"><a href="#entitytypes">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights..<wbr>Entity<wbr>Types</a></span>
     </dt>
     <dd>{{% md %}}Defines which entity type the file should map to.{{% /md %}}</dd>
     <dt class="property-required"
@@ -494,7 +494,7 @@ The ConnectorMapping resource accepts the following [input]({{< relref "/docs/in
 <a href="#mappingproperties_csharp" style="color: inherit; text-decoration: inherit;">Mapping<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectormappingproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights.<wbr>Inputs.<wbr>Connector<wbr>Mapping<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#connectormappingproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights..<wbr>Inputs.<wbr>Connector<wbr>Mapping<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The properties of the mapping.{{% /md %}}</dd>
     <dt class="property-required"
@@ -512,7 +512,7 @@ The ConnectorMapping resource accepts the following [input]({{< relref "/docs/in
 <a href="#connectortype_csharp" style="color: inherit; text-decoration: inherit;">Connector<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#connectortypes">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights.<wbr>Connector<wbr>Types</a></span>
+        <span class="property-type">string | <a href="#connectortypes">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights..<wbr>Connector<wbr>Types</a></span>
     </dt>
     <dd>{{% md %}}Type of connector.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1327,7 +1327,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#frequency_csharp" style="color: inherit; text-decoration: inherit;">Frequency</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#frequencytypes">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights.<wbr>Frequency<wbr>Types</a></span>
+        <span class="property-type"><a href="#frequencytypes">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights..<wbr>Frequency<wbr>Types</a></span>
     </dt>
     <dd>{{% md %}}The frequency to update.{{% /md %}}</dd>
 </dl>
@@ -1514,7 +1514,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#completionoperationtype_csharp" style="color: inherit; text-decoration: inherit;">Completion<wbr>Operation<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#completionoperationtypes">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights.<wbr>Completion<wbr>Operation<wbr>Types</a></span>
+        <span class="property-type"><a href="#completionoperationtypes">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights..<wbr>Completion<wbr>Operation<wbr>Types</a></span>
     </dt>
     <dd>{{% md %}}The type of completion operation.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1710,7 +1710,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errormanagementtype_csharp" style="color: inherit; text-decoration: inherit;">Error<wbr>Management<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#errormanagementtypes">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights.<wbr>Error<wbr>Management<wbr>Types</a></span>
+        <span class="property-type"><a href="#errormanagementtypes">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights..<wbr>Error<wbr>Management<wbr>Types</a></span>
     </dt>
     <dd>{{% md %}}The type of error management to use for the mapping.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1906,7 +1906,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#formattype_csharp" style="color: inherit; text-decoration: inherit;">Format<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#formattypes">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights.<wbr>Format<wbr>Types</a></span>
+        <span class="property-type"><a href="#formattypes">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights..<wbr>Format<wbr>Types</a></span>
     </dt>
     <dd>{{% md %}}The type mapping format.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2390,7 +2390,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#availability_csharp" style="color: inherit; text-decoration: inherit;">Availability</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectormappingavailability">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights.<wbr>Inputs.<wbr>Connector<wbr>Mapping<wbr>Availability<wbr>Args</a></span>
+        <span class="property-type"><a href="#connectormappingavailability">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights..<wbr>Inputs.<wbr>Connector<wbr>Mapping<wbr>Availability<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The availability of mapping property.{{% /md %}}</dd>
     <dt class="property-required"
@@ -2399,7 +2399,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#completeoperation_csharp" style="color: inherit; text-decoration: inherit;">Complete<wbr>Operation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectormappingcompleteoperation">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights.<wbr>Inputs.<wbr>Connector<wbr>Mapping<wbr>Complete<wbr>Operation<wbr>Args</a></span>
+        <span class="property-type"><a href="#connectormappingcompleteoperation">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights..<wbr>Inputs.<wbr>Connector<wbr>Mapping<wbr>Complete<wbr>Operation<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The operation after import is done.{{% /md %}}</dd>
     <dt class="property-required"
@@ -2408,7 +2408,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errormanagement_csharp" style="color: inherit; text-decoration: inherit;">Error<wbr>Management</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectormappingerrormanagement">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights.<wbr>Inputs.<wbr>Connector<wbr>Mapping<wbr>Error<wbr>Management<wbr>Args</a></span>
+        <span class="property-type"><a href="#connectormappingerrormanagement">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights..<wbr>Inputs.<wbr>Connector<wbr>Mapping<wbr>Error<wbr>Management<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The error management setting for the mapping.{{% /md %}}</dd>
     <dt class="property-required"
@@ -2417,7 +2417,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#format_csharp" style="color: inherit; text-decoration: inherit;">Format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectormappingformat">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights.<wbr>Inputs.<wbr>Connector<wbr>Mapping<wbr>Format<wbr>Args</a></span>
+        <span class="property-type"><a href="#connectormappingformat">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights..<wbr>Inputs.<wbr>Connector<wbr>Mapping<wbr>Format<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The format of mapping property.{{% /md %}}</dd>
     <dt class="property-required"
@@ -2426,7 +2426,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#structure_csharp" style="color: inherit; text-decoration: inherit;">Structure</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectormappingstructure">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights.<wbr>Inputs.<wbr>Connector<wbr>Mapping<wbr>Structure<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#connectormappingstructure">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights..<wbr>Inputs.<wbr>Connector<wbr>Mapping<wbr>Structure<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Ingestion mapping information at property level.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2704,7 +2704,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#availability_csharp" style="color: inherit; text-decoration: inherit;">Availability</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectormappingavailabilityresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights.<wbr>Inputs.<wbr>Connector<wbr>Mapping<wbr>Availability<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#connectormappingavailabilityresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights..<wbr>Inputs.<wbr>Connector<wbr>Mapping<wbr>Availability<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The availability of mapping property.{{% /md %}}</dd>
     <dt class="property-required"
@@ -2713,7 +2713,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#completeoperation_csharp" style="color: inherit; text-decoration: inherit;">Complete<wbr>Operation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectormappingcompleteoperationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights.<wbr>Inputs.<wbr>Connector<wbr>Mapping<wbr>Complete<wbr>Operation<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#connectormappingcompleteoperationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights..<wbr>Inputs.<wbr>Connector<wbr>Mapping<wbr>Complete<wbr>Operation<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The operation after import is done.{{% /md %}}</dd>
     <dt class="property-required"
@@ -2722,7 +2722,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errormanagement_csharp" style="color: inherit; text-decoration: inherit;">Error<wbr>Management</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectormappingerrormanagementresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights.<wbr>Inputs.<wbr>Connector<wbr>Mapping<wbr>Error<wbr>Management<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#connectormappingerrormanagementresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights..<wbr>Inputs.<wbr>Connector<wbr>Mapping<wbr>Error<wbr>Management<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The error management setting for the mapping.{{% /md %}}</dd>
     <dt class="property-required"
@@ -2731,7 +2731,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#format_csharp" style="color: inherit; text-decoration: inherit;">Format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectormappingformatresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights.<wbr>Inputs.<wbr>Connector<wbr>Mapping<wbr>Format<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#connectormappingformatresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights..<wbr>Inputs.<wbr>Connector<wbr>Mapping<wbr>Format<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The format of mapping property.{{% /md %}}</dd>
     <dt class="property-required"
@@ -2740,7 +2740,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#structure_csharp" style="color: inherit; text-decoration: inherit;">Structure</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectormappingstructureresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights.<wbr>Inputs.<wbr>Connector<wbr>Mapping<wbr>Structure<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#connectormappingstructureresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights..<wbr>Inputs.<wbr>Connector<wbr>Mapping<wbr>Structure<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Ingestion mapping information at property level.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3614,7 +3614,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:customerinsights/latest:ConnectorMapping sdkTestHub/testConnector8858/testMapping12491 /subscriptions/c909e979-ef71-4def-a970-bc7c154db8c5/resourceGroups/TestHubRG/providers/Microsoft.CustomerInsights/hubs/sdkTestHub/connectors/testConnector8858/mappings/testMapping12491 
+$ pulumi import azure-nextgen:customerinsights:ConnectorMapping sdkTestHub/testConnector8858/testMapping12491 /subscriptions/c909e979-ef71-4def-a970-bc7c154db8c5/resourceGroups/TestHubRG/providers/Microsoft.CustomerInsights/hubs/sdkTestHub/connectors/testConnector8858/mappings/testMapping12491 
 ```
 
 

@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.signalrservice.SignalRPrivateEnd
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 A private endpoint connection to SignalR resource
-Latest API Version: 2020-05-01.
+API Version: 2020-05-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,14 +27,14 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var signalRPrivateEndpointConnection = new AzureNextGen.SignalRService.Latest.SignalRPrivateEndpointConnection("signalRPrivateEndpointConnection", new AzureNextGen.SignalRService.Latest.SignalRPrivateEndpointConnectionArgs
+        var signalRPrivateEndpointConnection = new AzureNextGen.SignalRService..SignalRPrivateEndpointConnection("signalRPrivateEndpointConnection", new AzureNextGen.SignalRService..SignalRPrivateEndpointConnectionArgs
         {
-            PrivateEndpoint = new AzureNextGen.SignalRService.Latest.Inputs.PrivateEndpointArgs
+            PrivateEndpoint = new AzureNextGen.SignalRService..Inputs.PrivateEndpointArgs
             {
                 Id = "/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/myResourceGroup/providers/Microsoft.Network/privateEndpoints/myPrivateEndpoint",
             },
             PrivateEndpointConnectionName = "mySignalRService.1fa229cd-bf3f-47f0-8c49-afb36723997e",
-            PrivateLinkServiceConnectionState = new AzureNextGen.SignalRService.Latest.Inputs.PrivateLinkServiceConnectionStateArgs
+            PrivateLinkServiceConnectionState = new AzureNextGen.SignalRService..Inputs.PrivateLinkServiceConnectionStateArgs
             {
                 ActionsRequired = "None",
                 Status = "Approved",
@@ -56,7 +56,7 @@ class MyStack : Stack
 package main
 
 import (
-	signalrservice "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/signalrservice/latest"
+	signalrservice "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/signalrservice"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -91,12 +91,12 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-signal_r_private_endpoint_connection = azure_nextgen.signalrservice.latest.SignalRPrivateEndpointConnection("signalRPrivateEndpointConnection",
-    private_endpoint=azure_nextgen.signalrservice.latest.PrivateEndpointArgs(
+signal_r_private_endpoint_connection = azure_nextgen.signalrservice.SignalRPrivateEndpointConnection("signalRPrivateEndpointConnection",
+    private_endpoint=azure_nextgen.signalrservice.PrivateEndpointArgs(
         id="/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/myResourceGroup/providers/Microsoft.Network/privateEndpoints/myPrivateEndpoint",
     ),
     private_endpoint_connection_name="mySignalRService.1fa229cd-bf3f-47f0-8c49-afb36723997e",
-    private_link_service_connection_state=azure_nextgen.signalrservice.latest.PrivateLinkServiceConnectionStateArgs(
+    private_link_service_connection_state=azure_nextgen.signalrservice.PrivateLinkServiceConnectionStateArgs(
         actions_required="None",
         status="Approved",
     ),
@@ -113,7 +113,7 @@ signal_r_private_endpoint_connection = azure_nextgen.signalrservice.latest.Signa
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const signalRPrivateEndpointConnection = new azure_nextgen.signalrservice.latest.SignalRPrivateEndpointConnection("signalRPrivateEndpointConnection", {
+const signalRPrivateEndpointConnection = new azure_nextgen.signalrservice.SignalRPrivateEndpointConnection("signalRPrivateEndpointConnection", {
     privateEndpoint: {
         id: "/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/myResourceGroup/providers/Microsoft.Network/privateEndpoints/myPrivateEndpoint",
     },
@@ -346,7 +346,7 @@ The SignalRPrivateEndpointConnection resource accepts the following [input]({{< 
 <a href="#privateendpoint_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpoint">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Signal<wbr>RService.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Args</a></span>
+        <span class="property-type"><a href="#privateendpoint">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Signal<wbr>RService..<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Private endpoint associated with the private endpoint connection{{% /md %}}</dd>
     <dt class="property-optional"
@@ -355,7 +355,7 @@ The SignalRPrivateEndpointConnection resource accepts the following [input]({{< 
 <a href="#privatelinkserviceconnectionstate_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkserviceconnectionstate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Signal<wbr>RService.<wbr>Inputs.<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Args</a></span>
+        <span class="property-type"><a href="#privatelinkserviceconnectionstate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Signal<wbr>RService..<wbr>Inputs.<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Connection state{{% /md %}}</dd>
 </dl>
@@ -852,7 +852,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#privatelinkserviceconnectionstatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Signal<wbr>RService.<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>Status</a></span>
+        <span class="property-type">string | <a href="#privatelinkserviceconnectionstatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Signal<wbr>RService..<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether the connection has been Approved/Rejected/Removed by the owner of the service.{{% /md %}}</dd>
 </dl>
@@ -1150,7 +1150,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:signalrservice/latest:SignalRPrivateEndpointConnection mySignalRService.1fa229cd-bf3f-47f0-8c49-afb36723997e /subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/myResourceGroup/providers/Microsoft.SignalRService/SignalR/mySignalRService/privateEndpointConnections/mySignalRService.1fa229cd-bf3f-47f0-8c49-afb36723997e 
+$ pulumi import azure-nextgen:signalrservice:SignalRPrivateEndpointConnection mySignalRService.1fa229cd-bf3f-47f0-8c49-afb36723997e /subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/myResourceGroup/providers/Microsoft.SignalRService/SignalR/mySignalRService/privateEndpointConnections/mySignalRService.1fa229cd-bf3f-47f0-8c49-afb36723997e 
 ```
 
 

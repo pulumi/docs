@@ -197,7 +197,7 @@ The following output properties are available:
 <a href="#intermediate_csharp" style="color: inherit; text-decoration: inherit;">Intermediate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatedetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Certificate<wbr>Registration.<wbr>Outputs.<wbr>Certificate<wbr>Details<wbr>Response</a></span>
+        <span class="property-type"><a href="#certificatedetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Certificate<wbr>Registration..<wbr>Outputs.<wbr>Certificate<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Intermediate certificate.{{% /md %}}</dd>
     <dt class="property-"
@@ -269,7 +269,7 @@ The following output properties are available:
 <a href="#root_csharp" style="color: inherit; text-decoration: inherit;">Root</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatedetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Certificate<wbr>Registration.<wbr>Outputs.<wbr>Certificate<wbr>Details<wbr>Response</a></span>
+        <span class="property-type"><a href="#certificatedetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Certificate<wbr>Registration..<wbr>Outputs.<wbr>Certificate<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Root certificate.{{% /md %}}</dd>
     <dt class="property-"
@@ -287,7 +287,7 @@ The following output properties are available:
 <a href="#signedcertificate_csharp" style="color: inherit; text-decoration: inherit;">Signed<wbr>Certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatedetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Certificate<wbr>Registration.<wbr>Outputs.<wbr>Certificate<wbr>Details<wbr>Response</a></span>
+        <span class="property-type"><a href="#certificatedetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Certificate<wbr>Registration..<wbr>Outputs.<wbr>Certificate<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Signed certificate.{{% /md %}}</dd>
     <dt class="property-"
@@ -305,7 +305,7 @@ The following output properties are available:
 <a href="#systemdata_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Certificate<wbr>Registration.<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
+        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Certificate<wbr>Registration..<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The system metadata relating to this resource.{{% /md %}}</dd>
     <dt class="property-"
@@ -332,7 +332,7 @@ The following output properties are available:
 <a href="#certificates_csharp" style="color: inherit; text-decoration: inherit;">Certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Certificate<wbr>Registration.<wbr>Outputs.<wbr>App<wbr>Service<wbr>Certificate<wbr>Response&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Certificate<wbr>Registration..<wbr>Outputs.<wbr>App<wbr>Service<wbr>Certificate<wbr>Response&gt;</span>
     </dt>
     <dd>{{% md %}}State of the Key Vault secret.{{% /md %}}</dd>
     <dt class="property-"

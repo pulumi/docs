@@ -242,7 +242,7 @@ The following output properties are available:
 <a href="#destination_csharp" style="color: inherit; text-decoration: inherit;">Destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventchanneldestinationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid.<wbr>Outputs.<wbr>Event<wbr>Channel<wbr>Destination<wbr>Response</a></span>
+        <span class="property-type"><a href="#eventchanneldestinationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid..<wbr>Outputs.<wbr>Event<wbr>Channel<wbr>Destination<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Represents the destination of an event channel.{{% /md %}}</dd>
     <dt class="property-"
@@ -261,7 +261,7 @@ the event channel and corresponding partner topic are deleted.{{% /md %}}</dd>
 <a href="#filter_csharp" style="color: inherit; text-decoration: inherit;">Filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventchannelfilterresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid.<wbr>Outputs.<wbr>Event<wbr>Channel<wbr>Filter<wbr>Response</a></span>
+        <span class="property-type"><a href="#eventchannelfilterresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid..<wbr>Outputs.<wbr>Event<wbr>Channel<wbr>Filter<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Information about the filter for the event channel.{{% /md %}}</dd>
     <dt class="property-"
@@ -280,7 +280,7 @@ This will be helpful to remove any ambiguity of the origin of creation of the pa
 <a href="#source_csharp" style="color: inherit; text-decoration: inherit;">Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventchannelsourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid.<wbr>Outputs.<wbr>Event<wbr>Channel<wbr>Source<wbr>Response</a></span>
+        <span class="property-type"><a href="#eventchannelsourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid..<wbr>Outputs.<wbr>Event<wbr>Channel<wbr>Source<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Source of the event channel. This represents a unique resource in the partner's resource model.{{% /md %}}</dd>
 </dl>

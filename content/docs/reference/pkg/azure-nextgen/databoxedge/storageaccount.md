@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.databoxedge.StorageAccount resou
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Represents a Storage Account on the  Data Box Edge/Gateway device.
-Latest API Version: 2020-09-01.
+API Version: 2020-09-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var storageAccount = new AzureNextGen.DataBoxEdge.Latest.StorageAccount("storageAccount", new AzureNextGen.DataBoxEdge.Latest.StorageAccountArgs
+        var storageAccount = new AzureNextGen.DataBoxEdge..StorageAccount("storageAccount", new AzureNextGen.DataBoxEdge..StorageAccountArgs
         {
             DataPolicy = "Cloud",
             Description = "It's an awesome storage account",
@@ -51,7 +51,7 @@ class MyStack : Stack
 package main
 
 import (
-	databoxedge "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/databoxedge/latest"
+	databoxedge "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/databoxedge"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -83,7 +83,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-storage_account = azure_nextgen.databoxedge.latest.StorageAccount("storageAccount",
+storage_account = azure_nextgen.databoxedge.StorageAccount("storageAccount",
     data_policy="Cloud",
     description="It's an awesome storage account",
     device_name="testedgedevice",
@@ -102,7 +102,7 @@ storage_account = azure_nextgen.databoxedge.latest.StorageAccount("storageAccoun
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const storageAccount = new azure_nextgen.databoxedge.latest.StorageAccount("storageAccount", {
+const storageAccount = new azure_nextgen.databoxedge.StorageAccount("storageAccount", {
     dataPolicy: "Cloud",
     description: "It's an awesome storage account",
     deviceName: "testedgedevice",
@@ -305,7 +305,7 @@ The StorageAccount resource accepts the following [input]({{< relref "/docs/intr
 <a href="#datapolicy_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#datapolicy">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Data<wbr>Policy</a></span>
+        <span class="property-type">string | <a href="#datapolicy">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge..<wbr>Data<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Data policy of the storage Account.{{% /md %}}</dd>
     <dt class="property-required"
@@ -359,7 +359,7 @@ The StorageAccount resource accepts the following [input]({{< relref "/docs/intr
 <a href="#storageaccountstatus_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#storageaccountstatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Storage<wbr>Account<wbr>Status</a></span>
+        <span class="property-type">string | <a href="#storageaccountstatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge..<wbr>Storage<wbr>Account<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}Current status of the storage account{{% /md %}}</dd>
 </dl>
@@ -624,7 +624,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#systemdata_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
+        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge..<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}StorageAccount object on ASE device{{% /md %}}</dd>
     <dt class="property-"
@@ -1176,7 +1176,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:databoxedge/latest:StorageAccount blobstorageaccount1 /subscriptions/4385cf00-2d3a-425a-832f-f4285b1c9dce/resourceGroups/GroupForDataBoxEdgeAutomation/providers/Microsoft.DataBoxEdge/dataBoxEdgeDevices/testedgedevice/storageAccounts/blobstorageaccount1 
+$ pulumi import azure-nextgen:databoxedge:StorageAccount blobstorageaccount1 /subscriptions/4385cf00-2d3a-425a-832f-f4285b1c9dce/resourceGroups/GroupForDataBoxEdgeAutomation/providers/Microsoft.DataBoxEdge/dataBoxEdgeDevices/testedgedevice/storageAccounts/blobstorageaccount1 
 ```
 
 

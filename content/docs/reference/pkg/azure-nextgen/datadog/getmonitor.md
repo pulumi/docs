@@ -188,7 +188,7 @@ The following output properties are available:
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#monitorpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Datadog.<wbr>Outputs.<wbr>Monitor<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#monitorpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Datadog..<wbr>Outputs.<wbr>Monitor<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Properties specific to the monitor resource.{{% /md %}}</dd>
     <dt class="property-"
@@ -206,7 +206,7 @@ The following output properties are available:
 <a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identitypropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Datadog.<wbr>Outputs.<wbr>Identity<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#identitypropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Datadog..<wbr>Outputs.<wbr>Identity<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-"
@@ -215,7 +215,7 @@ The following output properties are available:
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceskuresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Datadog.<wbr>Outputs.<wbr>Resource<wbr>Sku<wbr>Response</a></span>
+        <span class="property-type"><a href="#resourceskuresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Datadog..<wbr>Outputs.<wbr>Resource<wbr>Sku<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-"
@@ -872,7 +872,7 @@ The following output properties are available:
 <a href="#datadogorganizationproperties_csharp" style="color: inherit; text-decoration: inherit;">Datadog<wbr>Organization<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datadogorganizationpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Datadog.<wbr>Inputs.<wbr>Datadog<wbr>Organization<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#datadogorganizationpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Datadog..<wbr>Inputs.<wbr>Datadog<wbr>Organization<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Datadog organization properties{{% /md %}}</dd>
     <dt class="property-optional"
@@ -890,7 +890,7 @@ The following output properties are available:
 <a href="#userinfo_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userinforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Datadog.<wbr>Inputs.<wbr>User<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#userinforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Datadog..<wbr>Inputs.<wbr>User<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}User info{{% /md %}}</dd>
 </dl>

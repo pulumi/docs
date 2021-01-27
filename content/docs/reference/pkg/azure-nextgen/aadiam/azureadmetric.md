@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.aadiam.AzureADMetric resource wi
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 AzureADMetrics resource.
+API Version: 2020-07-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var azureADMetric = new AzureNextGen.AadIam.V20200701Preview.AzureADMetric("azureADMetric", new AzureNextGen.AadIam.V20200701Preview.AzureADMetricArgs
+        var azureADMetric = new AzureNextGen.AadIam..AzureADMetric("azureADMetric", new AzureNextGen.AadIam..AzureADMetricArgs
         {
             AzureADMetricsName = "ddb1",
             Location = "West US",
@@ -47,7 +48,7 @@ class MyStack : Stack
 package main
 
 import (
-	aadiam "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/aadiam/v20200701preview"
+	aadiam "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/aadiam"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -76,7 +77,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-azure_ad_metric = azure_nextgen.aadiam.v20200701preview.AzureADMetric("azureADMetric",
+azure_ad_metric = azure_nextgen.aadiam.AzureADMetric("azureADMetric",
     azure_ad_metrics_name="ddb1",
     location="West US",
     resource_group_name="rg1",
@@ -92,7 +93,7 @@ azure_ad_metric = azure_nextgen.aadiam.v20200701preview.AzureADMetric("azureADMe
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const azureADMetric = new azure_nextgen.aadiam.v20200701preview.AzureADMetric("azureADMetric", {
+const azureADMetric = new azure_nextgen.aadiam.AzureADMetric("azureADMetric", {
     azureADMetricsName: "ddb1",
     location: "West US",
     resourceGroupName: "rg1",
@@ -485,7 +486,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureadmetricspropertiesformatresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Aad<wbr>Iam.<wbr>Outputs.<wbr>Azure<wbr>ADMetrics<wbr>Properties<wbr>Format<wbr>Response</a></span>
+        <span class="property-type"><a href="#azureadmetricspropertiesformatresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Aad<wbr>Iam..<wbr>Outputs.<wbr>Azure<wbr>ADMetrics<wbr>Properties<wbr>Format<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-"
@@ -703,7 +704,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:aadiam/v20200701preview:azureADMetric ddb1 /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/rg1/providers/Microsoft.Aadiam/azureADMetrics/ddb1 
+$ pulumi import azure-nextgen:aadiam:azureADMetric ddb1 /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/rg1/providers/Microsoft.Aadiam/azureADMetrics/ddb1 
 ```
 
 

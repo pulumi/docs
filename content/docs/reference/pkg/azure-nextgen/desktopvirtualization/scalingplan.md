@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.desktopvirtualization.ScalingPla
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Represents a scaling plan definition.
+API Version: 2021-01-14-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,14 +27,14 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var scalingPlan = new AzureNextGen.DesktopVirtualization.V20201110Preview.ScalingPlan("scalingPlan", new AzureNextGen.DesktopVirtualization.V20201110Preview.ScalingPlanArgs
+        var scalingPlan = new AzureNextGen.DesktopVirtualization..ScalingPlan("scalingPlan", new AzureNextGen.DesktopVirtualization..ScalingPlanArgs
         {
             Description = "des1",
             ExclusionTag = "value",
             FriendlyName = "friendly",
             HostPoolReferences = 
             {
-                new AzureNextGen.DesktopVirtualization.V20201110Preview.Inputs.ScalingHostPoolReferenceArgs
+                new AzureNextGen.DesktopVirtualization..Inputs.ScalingHostPoolReferenceArgs
                 {
                     HostPoolArmPath = "/subscriptions/daefabc0-95b4-48b3-b645-8a753a63c4fa/resourceGroups/resourceGroup1/providers/Microsoft.DesktopVirtualization/hostPools/hostPool1",
                     ScalingPlanEnabled = true,
@@ -45,7 +46,7 @@ class MyStack : Stack
             ScalingPlanName = "scalingPlan1",
             Schedules = 
             {
-                new AzureNextGen.DesktopVirtualization.V20201110Preview.Inputs.ScalingScheduleArgs
+                new AzureNextGen.DesktopVirtualization..Inputs.ScalingScheduleArgs
                 {
                     DaysOfWeek = 
                     {
@@ -65,11 +66,11 @@ class MyStack : Stack
                     RampDownLoadBalancingAlgorithm = "DepthFirst",
                     RampDownMinimumHostsPct = 20,
                     RampDownNotificationMessage = "message",
+                    RampDownNotificationMinutes = 30,
                     RampDownStartTime = "2020-11-10T18:00:00.000Z",
-                    RampDownWaitTimeMinutes = 30,
+                    RampUpAlgorithm = "DepthFirst",
                     RampUpCapacityThresholdPct = 80,
-                    RampUpLoadBalancingAlgorithm = "DepthFirst",
-                    RampUpMinimumHostsPct = 20,
+                    RampUpMinimumHostPct = 20,
                     RampUpStartTime = "2020-11-10T06:00:00.000Z",
                 },
             },
@@ -94,7 +95,7 @@ class MyStack : Stack
 package main
 
 import (
-	desktopvirtualization "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/desktopvirtualization/v20201110preview"
+	desktopvirtualization "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/desktopvirtualization"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -133,11 +134,11 @@ func main() {
 					RampDownLoadBalancingAlgorithm: pulumi.String("DepthFirst"),
 					RampDownMinimumHostsPct:        pulumi.Int(20),
 					RampDownNotificationMessage:    pulumi.String("message"),
+					RampDownNotificationMinutes:    pulumi.Int(30),
 					RampDownStartTime:              pulumi.String("2020-11-10T18:00:00.000Z"),
-					RampDownWaitTimeMinutes:        pulumi.Int(30),
+					RampUpAlgorithm:                pulumi.String("DepthFirst"),
 					RampUpCapacityThresholdPct:     pulumi.Int(80),
-					RampUpLoadBalancingAlgorithm:   pulumi.String("DepthFirst"),
-					RampUpMinimumHostsPct:          pulumi.Int(20),
+					RampUpMinimumHostPct:           pulumi.Int(20),
 					RampUpStartTime:                pulumi.String("2020-11-10T06:00:00.000Z"),
 				},
 			},
@@ -164,11 +165,11 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-scaling_plan = azure_nextgen.desktopvirtualization.v20201110preview.ScalingPlan("scalingPlan",
+scaling_plan = azure_nextgen.desktopvirtualization.ScalingPlan("scalingPlan",
     description="des1",
     exclusion_tag="value",
     friendly_name="friendly",
-    host_pool_references=[azure_nextgen.desktopvirtualization.v20201110preview.ScalingHostPoolReferenceArgs(
+    host_pool_references=[azure_nextgen.desktopvirtualization.ScalingHostPoolReferenceArgs(
         host_pool_arm_path="/subscriptions/daefabc0-95b4-48b3-b645-8a753a63c4fa/resourceGroups/resourceGroup1/providers/Microsoft.DesktopVirtualization/hostPools/hostPool1",
         scaling_plan_enabled=True,
     )],
@@ -176,7 +177,7 @@ scaling_plan = azure_nextgen.desktopvirtualization.v20201110preview.ScalingPlan(
     location="centralus",
     resource_group_name="resourceGroup1",
     scaling_plan_name="scalingPlan1",
-    schedules=[azure_nextgen.desktopvirtualization.v20201110preview.ScalingScheduleArgs(
+    schedules=[azure_nextgen.desktopvirtualization.ScalingScheduleArgs(
         days_of_week=[
             "Monday",
             "Tuesday",
@@ -194,11 +195,11 @@ scaling_plan = azure_nextgen.desktopvirtualization.v20201110preview.ScalingPlan(
         ramp_down_load_balancing_algorithm="DepthFirst",
         ramp_down_minimum_hosts_pct=20,
         ramp_down_notification_message="message",
+        ramp_down_notification_minutes=30,
         ramp_down_start_time="2020-11-10T18:00:00.000Z",
-        ramp_down_wait_time_minutes=30,
+        ramp_up_algorithm="DepthFirst",
         ramp_up_capacity_threshold_pct=80,
-        ramp_up_load_balancing_algorithm="DepthFirst",
-        ramp_up_minimum_hosts_pct=20,
+        ramp_up_minimum_host_pct=20,
         ramp_up_start_time="2020-11-10T06:00:00.000Z",
     )],
     tags={
@@ -217,7 +218,7 @@ scaling_plan = azure_nextgen.desktopvirtualization.v20201110preview.ScalingPlan(
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const scalingPlan = new azure_nextgen.desktopvirtualization.v20201110preview.ScalingPlan("scalingPlan", {
+const scalingPlan = new azure_nextgen.desktopvirtualization.ScalingPlan("scalingPlan", {
     description: "des1",
     exclusionTag: "value",
     friendlyName: "friendly",
@@ -247,11 +248,11 @@ const scalingPlan = new azure_nextgen.desktopvirtualization.v20201110preview.Sca
         rampDownLoadBalancingAlgorithm: "DepthFirst",
         rampDownMinimumHostsPct: 20,
         rampDownNotificationMessage: "message",
+        rampDownNotificationMinutes: 30,
         rampDownStartTime: "2020-11-10T18:00:00.000Z",
-        rampDownWaitTimeMinutes: 30,
+        rampUpAlgorithm: "DepthFirst",
         rampUpCapacityThresholdPct: 80,
-        rampUpLoadBalancingAlgorithm: "DepthFirst",
-        rampUpMinimumHostsPct: 20,
+        rampUpMinimumHostPct: 20,
         rampUpStartTime: "2020-11-10T06:00:00.000Z",
     }],
     tags: {
@@ -508,7 +509,7 @@ The ScalingPlan resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#hostpoolreferences_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Pool<wbr>References</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalinghostpoolreference">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Desktop<wbr>Virtualization.<wbr>Inputs.<wbr>Scaling<wbr>Host<wbr>Pool<wbr>Reference<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#scalinghostpoolreference">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Desktop<wbr>Virtualization..<wbr>Inputs.<wbr>Scaling<wbr>Host<wbr>Pool<wbr>Reference<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of ScalingHostPoolReference definitions.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -517,7 +518,7 @@ The ScalingPlan resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#hostpooltype_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Pool<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#hostpooltype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Desktop<wbr>Virtualization.<wbr>Host<wbr>Pool<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#hostpooltype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Desktop<wbr>Virtualization..<wbr>Host<wbr>Pool<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}HostPool type for scaling plan.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -526,7 +527,7 @@ The ScalingPlan resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#schedules_csharp" style="color: inherit; text-decoration: inherit;">Schedules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalingschedule">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Desktop<wbr>Virtualization.<wbr>Inputs.<wbr>Scaling<wbr>Schedule<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#scalingschedule">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Desktop<wbr>Virtualization..<wbr>Inputs.<wbr>Scaling<wbr>Schedule<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of ScalingSchedule definitions.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1277,7 +1278,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#offpeakloadbalancingalgorithm_csharp" style="color: inherit; text-decoration: inherit;">Off<wbr>Peak<wbr>Load<wbr>Balancing<wbr>Algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#sessionhostloadbalancingalgorithm">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Desktop<wbr>Virtualization.<wbr>Session<wbr>Host<wbr>Load<wbr>Balancing<wbr>Algorithm</a></span>
+        <span class="property-type">string | <a href="#sessionhostloadbalancingalgorithm">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Desktop<wbr>Virtualization..<wbr>Session<wbr>Host<wbr>Load<wbr>Balancing<wbr>Algorithm</a></span>
     </dt>
     <dd>{{% md %}}Load balancing algorithm for off-peak period.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1295,7 +1296,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#peakloadbalancingalgorithm_csharp" style="color: inherit; text-decoration: inherit;">Peak<wbr>Load<wbr>Balancing<wbr>Algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#sessionhostloadbalancingalgorithm">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Desktop<wbr>Virtualization.<wbr>Session<wbr>Host<wbr>Load<wbr>Balancing<wbr>Algorithm</a></span>
+        <span class="property-type">string | <a href="#sessionhostloadbalancingalgorithm">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Desktop<wbr>Virtualization..<wbr>Session<wbr>Host<wbr>Load<wbr>Balancing<wbr>Algorithm</a></span>
     </dt>
     <dd>{{% md %}}Load balancing algorithm for peak period.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1331,7 +1332,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rampdownloadbalancingalgorithm_csharp" style="color: inherit; text-decoration: inherit;">Ramp<wbr>Down<wbr>Load<wbr>Balancing<wbr>Algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#sessionhostloadbalancingalgorithm">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Desktop<wbr>Virtualization.<wbr>Session<wbr>Host<wbr>Load<wbr>Balancing<wbr>Algorithm</a></span>
+        <span class="property-type">string | <a href="#sessionhostloadbalancingalgorithm">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Desktop<wbr>Virtualization..<wbr>Session<wbr>Host<wbr>Load<wbr>Balancing<wbr>Algorithm</a></span>
     </dt>
     <dd>{{% md %}}Load balancing algorithm for ramp down period.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1354,6 +1355,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Notification message for users during ramp down period.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="rampdownnotificationminutes_csharp">
+<a href="#rampdownnotificationminutes_csharp" style="color: inherit; text-decoration: inherit;">Ramp<wbr>Down<wbr>Notification<wbr>Minutes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Number of minutes to wait to stop hosts during ramp down period.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="rampdownstarttime_csharp">
 <a href="#rampdownstarttime_csharp" style="color: inherit; text-decoration: inherit;">Ramp<wbr>Down<wbr>Start<wbr>Time</a>
 </span>
@@ -1367,18 +1377,18 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rampdownstophostswhen_csharp" style="color: inherit; text-decoration: inherit;">Ramp<wbr>Down<wbr>Stop<wbr>Hosts<wbr>When</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#stophostswhen">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Desktop<wbr>Virtualization.<wbr>Stop<wbr>Hosts<wbr>When</a></span>
+        <span class="property-type">string | <a href="#stophostswhen">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Desktop<wbr>Virtualization..<wbr>Stop<wbr>Hosts<wbr>When</a></span>
     </dt>
     <dd>{{% md %}}Specifies when to stop hosts during ramp down period.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="rampdownwaittimeminutes_csharp">
-<a href="#rampdownwaittimeminutes_csharp" style="color: inherit; text-decoration: inherit;">Ramp<wbr>Down<wbr>Wait<wbr>Time<wbr>Minutes</a>
+        <span id="rampupalgorithm_csharp">
+<a href="#rampupalgorithm_csharp" style="color: inherit; text-decoration: inherit;">Ramp<wbr>Up<wbr>Algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">string | <a href="#sessionhostloadbalancingalgorithm">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Desktop<wbr>Virtualization..<wbr>Session<wbr>Host<wbr>Load<wbr>Balancing<wbr>Algorithm</a></span>
     </dt>
-    <dd>{{% md %}}Number of minutes to wait to stop hosts during ramp down period.{{% /md %}}</dd>
+    <dd>{{% md %}}Load balancing algorithm for ramp up period.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="rampupcapacitythresholdpct_csharp">
@@ -1390,17 +1400,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Capacity threshold for ramp up period.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="rampuploadbalancingalgorithm_csharp">
-<a href="#rampuploadbalancingalgorithm_csharp" style="color: inherit; text-decoration: inherit;">Ramp<wbr>Up<wbr>Load<wbr>Balancing<wbr>Algorithm</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#sessionhostloadbalancingalgorithm">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Desktop<wbr>Virtualization.<wbr>Session<wbr>Host<wbr>Load<wbr>Balancing<wbr>Algorithm</a></span>
-    </dt>
-    <dd>{{% md %}}Load balancing algorithm for ramp up period.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="rampupminimumhostspct_csharp">
-<a href="#rampupminimumhostspct_csharp" style="color: inherit; text-decoration: inherit;">Ramp<wbr>Up<wbr>Minimum<wbr>Hosts<wbr>Pct</a>
+        <span id="rampupminimumhostpct_csharp">
+<a href="#rampupminimumhostpct_csharp" style="color: inherit; text-decoration: inherit;">Ramp<wbr>Up<wbr>Minimum<wbr>Host<wbr>Pct</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
@@ -1522,6 +1523,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Notification message for users during ramp down period.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="rampdownnotificationminutes_go">
+<a href="#rampdownnotificationminutes_go" style="color: inherit; text-decoration: inherit;">Ramp<wbr>Down<wbr>Notification<wbr>Minutes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Number of minutes to wait to stop hosts during ramp down period.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="rampdownstarttime_go">
 <a href="#rampdownstarttime_go" style="color: inherit; text-decoration: inherit;">Ramp<wbr>Down<wbr>Start<wbr>Time</a>
 </span>
@@ -1540,13 +1550,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Specifies when to stop hosts during ramp down period.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="rampdownwaittimeminutes_go">
-<a href="#rampdownwaittimeminutes_go" style="color: inherit; text-decoration: inherit;">Ramp<wbr>Down<wbr>Wait<wbr>Time<wbr>Minutes</a>
+        <span id="rampupalgorithm_go">
+<a href="#rampupalgorithm_go" style="color: inherit; text-decoration: inherit;">Ramp<wbr>Up<wbr>Algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">string | <a href="#sessionhostloadbalancingalgorithm">Session<wbr>Host<wbr>Load<wbr>Balancing<wbr>Algorithm</a></span>
     </dt>
-    <dd>{{% md %}}Number of minutes to wait to stop hosts during ramp down period.{{% /md %}}</dd>
+    <dd>{{% md %}}Load balancing algorithm for ramp up period.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="rampupcapacitythresholdpct_go">
@@ -1558,17 +1568,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Capacity threshold for ramp up period.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="rampuploadbalancingalgorithm_go">
-<a href="#rampuploadbalancingalgorithm_go" style="color: inherit; text-decoration: inherit;">Ramp<wbr>Up<wbr>Load<wbr>Balancing<wbr>Algorithm</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#sessionhostloadbalancingalgorithm">Session<wbr>Host<wbr>Load<wbr>Balancing<wbr>Algorithm</a></span>
-    </dt>
-    <dd>{{% md %}}Load balancing algorithm for ramp up period.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="rampupminimumhostspct_go">
-<a href="#rampupminimumhostspct_go" style="color: inherit; text-decoration: inherit;">Ramp<wbr>Up<wbr>Minimum<wbr>Hosts<wbr>Pct</a>
+        <span id="rampupminimumhostpct_go">
+<a href="#rampupminimumhostpct_go" style="color: inherit; text-decoration: inherit;">Ramp<wbr>Up<wbr>Minimum<wbr>Host<wbr>Pct</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
@@ -1690,6 +1691,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Notification message for users during ramp down period.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="rampdownnotificationminutes_nodejs">
+<a href="#rampdownnotificationminutes_nodejs" style="color: inherit; text-decoration: inherit;">ramp<wbr>Down<wbr>Notification<wbr>Minutes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Number of minutes to wait to stop hosts during ramp down period.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="rampdownstarttime_nodejs">
 <a href="#rampdownstarttime_nodejs" style="color: inherit; text-decoration: inherit;">ramp<wbr>Down<wbr>Start<wbr>Time</a>
 </span>
@@ -1708,13 +1718,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Specifies when to stop hosts during ramp down period.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="rampdownwaittimeminutes_nodejs">
-<a href="#rampdownwaittimeminutes_nodejs" style="color: inherit; text-decoration: inherit;">ramp<wbr>Down<wbr>Wait<wbr>Time<wbr>Minutes</a>
+        <span id="rampupalgorithm_nodejs">
+<a href="#rampupalgorithm_nodejs" style="color: inherit; text-decoration: inherit;">ramp<wbr>Up<wbr>Algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">string | <a href="#sessionhostloadbalancingalgorithm">Session<wbr>Host<wbr>Load<wbr>Balancing<wbr>Algorithm</a></span>
     </dt>
-    <dd>{{% md %}}Number of minutes to wait to stop hosts during ramp down period.{{% /md %}}</dd>
+    <dd>{{% md %}}Load balancing algorithm for ramp up period.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="rampupcapacitythresholdpct_nodejs">
@@ -1726,17 +1736,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Capacity threshold for ramp up period.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="rampuploadbalancingalgorithm_nodejs">
-<a href="#rampuploadbalancingalgorithm_nodejs" style="color: inherit; text-decoration: inherit;">ramp<wbr>Up<wbr>Load<wbr>Balancing<wbr>Algorithm</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#sessionhostloadbalancingalgorithm">Session<wbr>Host<wbr>Load<wbr>Balancing<wbr>Algorithm</a></span>
-    </dt>
-    <dd>{{% md %}}Load balancing algorithm for ramp up period.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="rampupminimumhostspct_nodejs">
-<a href="#rampupminimumhostspct_nodejs" style="color: inherit; text-decoration: inherit;">ramp<wbr>Up<wbr>Minimum<wbr>Hosts<wbr>Pct</a>
+        <span id="rampupminimumhostpct_nodejs">
+<a href="#rampupminimumhostpct_nodejs" style="color: inherit; text-decoration: inherit;">ramp<wbr>Up<wbr>Minimum<wbr>Host<wbr>Pct</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
@@ -1858,6 +1859,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Notification message for users during ramp down period.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="ramp_down_notification_minutes_python">
+<a href="#ramp_down_notification_minutes_python" style="color: inherit; text-decoration: inherit;">ramp_<wbr>down_<wbr>notification_<wbr>minutes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Number of minutes to wait to stop hosts during ramp down period.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="ramp_down_start_time_python">
 <a href="#ramp_down_start_time_python" style="color: inherit; text-decoration: inherit;">ramp_<wbr>down_<wbr>start_<wbr>time</a>
 </span>
@@ -1876,13 +1886,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Specifies when to stop hosts during ramp down period.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="ramp_down_wait_time_minutes_python">
-<a href="#ramp_down_wait_time_minutes_python" style="color: inherit; text-decoration: inherit;">ramp_<wbr>down_<wbr>wait_<wbr>time_<wbr>minutes</a>
+        <span id="ramp_up_algorithm_python">
+<a href="#ramp_up_algorithm_python" style="color: inherit; text-decoration: inherit;">ramp_<wbr>up_<wbr>algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">str | <a href="#sessionhostloadbalancingalgorithm">Session<wbr>Host<wbr>Load<wbr>Balancing<wbr>Algorithm</a></span>
     </dt>
-    <dd>{{% md %}}Number of minutes to wait to stop hosts during ramp down period.{{% /md %}}</dd>
+    <dd>{{% md %}}Load balancing algorithm for ramp up period.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="ramp_up_capacity_threshold_pct_python">
@@ -1894,17 +1904,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Capacity threshold for ramp up period.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="ramp_up_load_balancing_algorithm_python">
-<a href="#ramp_up_load_balancing_algorithm_python" style="color: inherit; text-decoration: inherit;">ramp_<wbr>up_<wbr>load_<wbr>balancing_<wbr>algorithm</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#sessionhostloadbalancingalgorithm">Session<wbr>Host<wbr>Load<wbr>Balancing<wbr>Algorithm</a></span>
-    </dt>
-    <dd>{{% md %}}Load balancing algorithm for ramp up period.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="ramp_up_minimum_hosts_pct_python">
-<a href="#ramp_up_minimum_hosts_pct_python" style="color: inherit; text-decoration: inherit;">ramp_<wbr>up_<wbr>minimum_<wbr>hosts_<wbr>pct</a>
+        <span id="ramp_up_minimum_host_pct_python">
+<a href="#ramp_up_minimum_host_pct_python" style="color: inherit; text-decoration: inherit;">ramp_<wbr>up_<wbr>minimum_<wbr>host_<wbr>pct</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
@@ -2028,6 +2029,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Notification message for users during ramp down period.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="rampdownnotificationminutes_csharp">
+<a href="#rampdownnotificationminutes_csharp" style="color: inherit; text-decoration: inherit;">Ramp<wbr>Down<wbr>Notification<wbr>Minutes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Number of minutes to wait to stop hosts during ramp down period.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="rampdownstarttime_csharp">
 <a href="#rampdownstarttime_csharp" style="color: inherit; text-decoration: inherit;">Ramp<wbr>Down<wbr>Start<wbr>Time</a>
 </span>
@@ -2046,13 +2056,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Specifies when to stop hosts during ramp down period.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="rampdownwaittimeminutes_csharp">
-<a href="#rampdownwaittimeminutes_csharp" style="color: inherit; text-decoration: inherit;">Ramp<wbr>Down<wbr>Wait<wbr>Time<wbr>Minutes</a>
+        <span id="rampupalgorithm_csharp">
+<a href="#rampupalgorithm_csharp" style="color: inherit; text-decoration: inherit;">Ramp<wbr>Up<wbr>Algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Number of minutes to wait to stop hosts during ramp down period.{{% /md %}}</dd>
+    <dd>{{% md %}}Load balancing algorithm for ramp up period.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="rampupcapacitythresholdpct_csharp">
@@ -2064,17 +2074,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Capacity threshold for ramp up period.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="rampuploadbalancingalgorithm_csharp">
-<a href="#rampuploadbalancingalgorithm_csharp" style="color: inherit; text-decoration: inherit;">Ramp<wbr>Up<wbr>Load<wbr>Balancing<wbr>Algorithm</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Load balancing algorithm for ramp up period.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="rampupminimumhostspct_csharp">
-<a href="#rampupminimumhostspct_csharp" style="color: inherit; text-decoration: inherit;">Ramp<wbr>Up<wbr>Minimum<wbr>Hosts<wbr>Pct</a>
+        <span id="rampupminimumhostpct_csharp">
+<a href="#rampupminimumhostpct_csharp" style="color: inherit; text-decoration: inherit;">Ramp<wbr>Up<wbr>Minimum<wbr>Host<wbr>Pct</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
@@ -2196,6 +2197,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Notification message for users during ramp down period.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="rampdownnotificationminutes_go">
+<a href="#rampdownnotificationminutes_go" style="color: inherit; text-decoration: inherit;">Ramp<wbr>Down<wbr>Notification<wbr>Minutes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Number of minutes to wait to stop hosts during ramp down period.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="rampdownstarttime_go">
 <a href="#rampdownstarttime_go" style="color: inherit; text-decoration: inherit;">Ramp<wbr>Down<wbr>Start<wbr>Time</a>
 </span>
@@ -2214,13 +2224,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Specifies when to stop hosts during ramp down period.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="rampdownwaittimeminutes_go">
-<a href="#rampdownwaittimeminutes_go" style="color: inherit; text-decoration: inherit;">Ramp<wbr>Down<wbr>Wait<wbr>Time<wbr>Minutes</a>
+        <span id="rampupalgorithm_go">
+<a href="#rampupalgorithm_go" style="color: inherit; text-decoration: inherit;">Ramp<wbr>Up<wbr>Algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Number of minutes to wait to stop hosts during ramp down period.{{% /md %}}</dd>
+    <dd>{{% md %}}Load balancing algorithm for ramp up period.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="rampupcapacitythresholdpct_go">
@@ -2232,17 +2242,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Capacity threshold for ramp up period.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="rampuploadbalancingalgorithm_go">
-<a href="#rampuploadbalancingalgorithm_go" style="color: inherit; text-decoration: inherit;">Ramp<wbr>Up<wbr>Load<wbr>Balancing<wbr>Algorithm</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Load balancing algorithm for ramp up period.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="rampupminimumhostspct_go">
-<a href="#rampupminimumhostspct_go" style="color: inherit; text-decoration: inherit;">Ramp<wbr>Up<wbr>Minimum<wbr>Hosts<wbr>Pct</a>
+        <span id="rampupminimumhostpct_go">
+<a href="#rampupminimumhostpct_go" style="color: inherit; text-decoration: inherit;">Ramp<wbr>Up<wbr>Minimum<wbr>Host<wbr>Pct</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
@@ -2364,6 +2365,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Notification message for users during ramp down period.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="rampdownnotificationminutes_nodejs">
+<a href="#rampdownnotificationminutes_nodejs" style="color: inherit; text-decoration: inherit;">ramp<wbr>Down<wbr>Notification<wbr>Minutes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Number of minutes to wait to stop hosts during ramp down period.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="rampdownstarttime_nodejs">
 <a href="#rampdownstarttime_nodejs" style="color: inherit; text-decoration: inherit;">ramp<wbr>Down<wbr>Start<wbr>Time</a>
 </span>
@@ -2382,13 +2392,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Specifies when to stop hosts during ramp down period.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="rampdownwaittimeminutes_nodejs">
-<a href="#rampdownwaittimeminutes_nodejs" style="color: inherit; text-decoration: inherit;">ramp<wbr>Down<wbr>Wait<wbr>Time<wbr>Minutes</a>
+        <span id="rampupalgorithm_nodejs">
+<a href="#rampupalgorithm_nodejs" style="color: inherit; text-decoration: inherit;">ramp<wbr>Up<wbr>Algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Number of minutes to wait to stop hosts during ramp down period.{{% /md %}}</dd>
+    <dd>{{% md %}}Load balancing algorithm for ramp up period.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="rampupcapacitythresholdpct_nodejs">
@@ -2400,17 +2410,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Capacity threshold for ramp up period.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="rampuploadbalancingalgorithm_nodejs">
-<a href="#rampuploadbalancingalgorithm_nodejs" style="color: inherit; text-decoration: inherit;">ramp<wbr>Up<wbr>Load<wbr>Balancing<wbr>Algorithm</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Load balancing algorithm for ramp up period.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="rampupminimumhostspct_nodejs">
-<a href="#rampupminimumhostspct_nodejs" style="color: inherit; text-decoration: inherit;">ramp<wbr>Up<wbr>Minimum<wbr>Hosts<wbr>Pct</a>
+        <span id="rampupminimumhostpct_nodejs">
+<a href="#rampupminimumhostpct_nodejs" style="color: inherit; text-decoration: inherit;">ramp<wbr>Up<wbr>Minimum<wbr>Host<wbr>Pct</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
@@ -2532,6 +2533,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Notification message for users during ramp down period.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="ramp_down_notification_minutes_python">
+<a href="#ramp_down_notification_minutes_python" style="color: inherit; text-decoration: inherit;">ramp_<wbr>down_<wbr>notification_<wbr>minutes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Number of minutes to wait to stop hosts during ramp down period.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="ramp_down_start_time_python">
 <a href="#ramp_down_start_time_python" style="color: inherit; text-decoration: inherit;">ramp_<wbr>down_<wbr>start_<wbr>time</a>
 </span>
@@ -2550,13 +2560,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Specifies when to stop hosts during ramp down period.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="ramp_down_wait_time_minutes_python">
-<a href="#ramp_down_wait_time_minutes_python" style="color: inherit; text-decoration: inherit;">ramp_<wbr>down_<wbr>wait_<wbr>time_<wbr>minutes</a>
+        <span id="ramp_up_algorithm_python">
+<a href="#ramp_up_algorithm_python" style="color: inherit; text-decoration: inherit;">ramp_<wbr>up_<wbr>algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Number of minutes to wait to stop hosts during ramp down period.{{% /md %}}</dd>
+    <dd>{{% md %}}Load balancing algorithm for ramp up period.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="ramp_up_capacity_threshold_pct_python">
@@ -2568,17 +2578,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Capacity threshold for ramp up period.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="ramp_up_load_balancing_algorithm_python">
-<a href="#ramp_up_load_balancing_algorithm_python" style="color: inherit; text-decoration: inherit;">ramp_<wbr>up_<wbr>load_<wbr>balancing_<wbr>algorithm</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Load balancing algorithm for ramp up period.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="ramp_up_minimum_hosts_pct_python">
-<a href="#ramp_up_minimum_hosts_pct_python" style="color: inherit; text-decoration: inherit;">ramp_<wbr>up_<wbr>minimum_<wbr>hosts_<wbr>pct</a>
+        <span id="ramp_up_minimum_host_pct_python">
+<a href="#ramp_up_minimum_host_pct_python" style="color: inherit; text-decoration: inherit;">ramp_<wbr>up_<wbr>minimum_<wbr>host_<wbr>pct</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
@@ -2677,7 +2678,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:desktopvirtualization/v20201110preview:ScalingPlan scalingPlan1 /subscriptions/daefabc0-95b4-48b3-b645-8a753a63c4fa/resourceGroups/resourceGroup1/providers/Microsoft.DesktopVirtualization/scalingPlans/scalingPlan1 
+$ pulumi import azure-nextgen:desktopvirtualization:ScalingPlan scalingPlan1 /subscriptions/daefabc0-95b4-48b3-b645-8a753a63c4fa/resourceGroups/resourceGroup1/providers/Microsoft.DesktopVirtualization/scalingPlans/scalingPlan1 
 ```
 
 

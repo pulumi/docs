@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.appplatform.Deployment resource 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Deployment resource payload
-Latest API Version: 2020-07-01.
+API Version: 2020-07-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,13 +27,13 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var deployment = new AzureNextGen.AppPlatform.Latest.Deployment("deployment", new AzureNextGen.AppPlatform.Latest.DeploymentArgs
+        var deployment = new AzureNextGen.AppPlatform..Deployment("deployment", new AzureNextGen.AppPlatform..DeploymentArgs
         {
             AppName = "myapp",
             DeploymentName = "mydeployment",
-            Properties = new AzureNextGen.AppPlatform.Latest.Inputs.DeploymentResourcePropertiesArgs
+            Properties = new AzureNextGen.AppPlatform..Inputs.DeploymentResourcePropertiesArgs
             {
-                DeploymentSettings = new AzureNextGen.AppPlatform.Latest.Inputs.DeploymentSettingsArgs
+                DeploymentSettings = new AzureNextGen.AppPlatform..Inputs.DeploymentSettingsArgs
                 {
                     Cpu = 1,
                     EnvironmentVariables = 
@@ -44,7 +44,7 @@ class MyStack : Stack
                     MemoryInGB = 3,
                     RuntimeVersion = "Java_8",
                 },
-                Source = new AzureNextGen.AppPlatform.Latest.Inputs.UserSourceInfoArgs
+                Source = new AzureNextGen.AppPlatform..Inputs.UserSourceInfoArgs
                 {
                     ArtifactSelector = "sub-module-1",
                     RelativePath = "resources/a172cedcae47474b615c54d510a5d84a8dea3032e958587430b413538be3f333-2019082605-e3095339-1723-44b7-8b5e-31b1003978bc",
@@ -69,7 +69,7 @@ class MyStack : Stack
 package main
 
 import (
-	appplatform "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/appplatform/latest"
+	appplatform "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/appplatform"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -115,11 +115,11 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-deployment = azure_nextgen.appplatform.latest.Deployment("deployment",
+deployment = azure_nextgen.appplatform.Deployment("deployment",
     app_name="myapp",
     deployment_name="mydeployment",
-    properties=azure_nextgen.appplatform.latest.DeploymentResourcePropertiesArgs(
-        deployment_settings=azure_nextgen.appplatform.latest.DeploymentSettingsArgs(
+    properties=azure_nextgen.appplatform.DeploymentResourcePropertiesArgs(
+        deployment_settings=azure_nextgen.appplatform.DeploymentSettingsArgs(
             cpu=1,
             environment_variables={
                 "env": "test",
@@ -128,7 +128,7 @@ deployment = azure_nextgen.appplatform.latest.Deployment("deployment",
             memory_in_gb=3,
             runtime_version="Java_8",
         ),
-        source=azure_nextgen.appplatform.latest.UserSourceInfoArgs(
+        source=azure_nextgen.appplatform.UserSourceInfoArgs(
             artifact_selector="sub-module-1",
             relative_path="resources/a172cedcae47474b615c54d510a5d84a8dea3032e958587430b413538be3f333-2019082605-e3095339-1723-44b7-8b5e-31b1003978bc",
             type="Source",
@@ -148,7 +148,7 @@ deployment = azure_nextgen.appplatform.latest.Deployment("deployment",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const deployment = new azure_nextgen.appplatform.latest.Deployment("deployment", {
+const deployment = new azure_nextgen.appplatform.Deployment("deployment", {
     appName: "myapp",
     deploymentName: "mydeployment",
     properties: {
@@ -401,7 +401,7 @@ The Deployment resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentresourceproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>App<wbr>Platform.<wbr>Inputs.<wbr>Deployment<wbr>Resource<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#deploymentresourceproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>App<wbr>Platform..<wbr>Inputs.<wbr>Deployment<wbr>Resource<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties of the Deployment resource{{% /md %}}</dd>
     <dt class="property-optional"
@@ -410,7 +410,7 @@ The Deployment resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sku">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>App<wbr>Platform.<wbr>Inputs.<wbr>Sku<wbr>Args</a></span>
+        <span class="property-type"><a href="#sku">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>App<wbr>Platform..<wbr>Inputs.<wbr>Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Sku of the Deployment resource{{% /md %}}</dd>
 </dl>
@@ -962,7 +962,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deploymentsettings_csharp" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentsettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>App<wbr>Platform.<wbr>Inputs.<wbr>Deployment<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#deploymentsettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>App<wbr>Platform..<wbr>Inputs.<wbr>Deployment<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Deployment settings of the Deployment{{% /md %}}</dd>
     <dt class="property-optional"
@@ -971,7 +971,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_csharp" style="color: inherit; text-decoration: inherit;">Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#usersourceinfo">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>App<wbr>Platform.<wbr>Inputs.<wbr>User<wbr>Source<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#usersourceinfo">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>App<wbr>Platform..<wbr>Inputs.<wbr>User<wbr>Source<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Uploaded source information of the deployment.{{% /md %}}</dd>
 </dl>
@@ -1087,7 +1087,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#instances_csharp" style="color: inherit; text-decoration: inherit;">Instances</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentinstanceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>App<wbr>Platform.<wbr>Inputs.<wbr>Deployment<wbr>Instance<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#deploymentinstanceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>App<wbr>Platform..<wbr>Inputs.<wbr>Deployment<wbr>Instance<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Collection of instances belong to the Deployment{{% /md %}}</dd>
     <dt class="property-required"
@@ -1114,7 +1114,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deploymentsettings_csharp" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>App<wbr>Platform.<wbr>Inputs.<wbr>Deployment<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#deploymentsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>App<wbr>Platform..<wbr>Inputs.<wbr>Deployment<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Deployment settings of the Deployment{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1123,7 +1123,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_csharp" style="color: inherit; text-decoration: inherit;">Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#usersourceinforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>App<wbr>Platform.<wbr>Inputs.<wbr>User<wbr>Source<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#usersourceinforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>App<wbr>Platform..<wbr>Inputs.<wbr>User<wbr>Source<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Uploaded source information of the deployment.{{% /md %}}</dd>
 </dl>
@@ -1419,7 +1419,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#runtimeversion_csharp" style="color: inherit; text-decoration: inherit;">Runtime<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#runtimeversion">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>App<wbr>Platform.<wbr>Runtime<wbr>Version</a></span>
+        <span class="property-type">string | <a href="#runtimeversion">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>App<wbr>Platform..<wbr>Runtime<wbr>Version</a></span>
     </dt>
     <dd>{{% md %}}Runtime version{{% /md %}}</dd>
 </dl>
@@ -2191,7 +2191,7 @@ the relative path to the target module/project.{{% /md %}}</dd>
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#usersourcetype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>App<wbr>Platform.<wbr>User<wbr>Source<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#usersourcetype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>App<wbr>Platform..<wbr>User<wbr>Source<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of the source uploaded{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2560,7 +2560,7 @@ the relative path to the target module/project.{{% /md %}}</dd>
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:appplatform/latest:Deployment mydeployment /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.AppPlatform/Spring/myservice/apps/myapp/deployments/mydeployment 
+$ pulumi import azure-nextgen:appplatform:Deployment mydeployment /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.AppPlatform/Spring/myservice/apps/myapp/deployments/mydeployment 
 ```
 
 

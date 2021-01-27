@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.eventhub.NamespaceIpFilterRule r
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Single item in a List or Get IpFilterRules operation
+API Version: 2018-01-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var namespaceIpFilterRule = new AzureNextGen.EventHub.V20180101Preview.NamespaceIpFilterRule("namespaceIpFilterRule", new AzureNextGen.EventHub.V20180101Preview.NamespaceIpFilterRuleArgs
+        var namespaceIpFilterRule = new AzureNextGen.EventHub..NamespaceIpFilterRule("namespaceIpFilterRule", new AzureNextGen.EventHub..NamespaceIpFilterRuleArgs
         {
             Action = "Accept",
             FilterName = "sdk-IPFilterRules-7337",
@@ -49,7 +50,7 @@ class MyStack : Stack
 package main
 
 import (
-	eventhub "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/eventhub/v20180101preview"
+	eventhub "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/eventhub"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -80,7 +81,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-namespace_ip_filter_rule = azure_nextgen.eventhub.v20180101preview.NamespaceIpFilterRule("namespaceIpFilterRule",
+namespace_ip_filter_rule = azure_nextgen.eventhub.NamespaceIpFilterRule("namespaceIpFilterRule",
     action="Accept",
     filter_name="sdk-IPFilterRules-7337",
     ip_filter_rule_name="sdk-IPFilterRules-7337",
@@ -98,7 +99,7 @@ namespace_ip_filter_rule = azure_nextgen.eventhub.v20180101preview.NamespaceIpFi
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const namespaceIpFilterRule = new azure_nextgen.eventhub.v20180101preview.NamespaceIpFilterRule("namespaceIpFilterRule", {
+const namespaceIpFilterRule = new azure_nextgen.eventhub.NamespaceIpFilterRule("namespaceIpFilterRule", {
     action: "Accept",
     filterName: "sdk-IPFilterRules-7337",
     ipFilterRuleName: "sdk-IPFilterRules-7337",
@@ -327,7 +328,7 @@ The NamespaceIpFilterRule resource accepts the following [input]({{< relref "/do
 <a href="#action_csharp" style="color: inherit; text-decoration: inherit;">Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#ipaction">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Hub.<wbr>IPAction</a></span>
+        <span class="property-type">string | <a href="#ipaction">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Hub..<wbr>IPAction</a></span>
     </dt>
     <dd>{{% md %}}The IP Filter Action{{% /md %}}</dd>
     <dt class="property-optional"
@@ -723,7 +724,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:eventhub/v20180101preview:NamespaceIpFilterRule sdk-IPFilterRules-7337 /subscriptions/Subscription/resourceGroups/ResourceGroup/providers/Microsoft.EventHub/namespaces/sdk-Namespace-5232/ipfilterrules/sdk-IPFilterRules-7337 
+$ pulumi import azure-nextgen:eventhub:NamespaceIpFilterRule sdk-IPFilterRules-7337 /subscriptions/Subscription/resourceGroups/ResourceGroup/providers/Microsoft.EventHub/namespaces/sdk-Namespace-5232/ipfilterrules/sdk-IPFilterRules-7337 
 ```
 
 

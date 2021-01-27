@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.hdinsight.Application resource w
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The HDInsight cluster application
+API Version: 2018-06-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,20 +27,20 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var application = new AzureNextGen.HDInsight.V20180601Preview.Application("application", new AzureNextGen.HDInsight.V20180601Preview.ApplicationArgs
+        var application = new AzureNextGen.HDInsight..Application("application", new AzureNextGen.HDInsight..ApplicationArgs
         {
             ApplicationName = "hue",
             ClusterName = "cluster1",
-            Properties = new AzureNextGen.HDInsight.V20180601Preview.Inputs.ApplicationPropertiesArgs
+            Properties = new AzureNextGen.HDInsight..Inputs.ApplicationPropertiesArgs
             {
                 ApplicationType = "CustomApplication",
-                ComputeProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.ComputeProfileArgs
+                ComputeProfile = new AzureNextGen.HDInsight..Inputs.ComputeProfileArgs
                 {
                     Roles = 
                     {
-                        new AzureNextGen.HDInsight.V20180601Preview.Inputs.RoleArgs
+                        new AzureNextGen.HDInsight..Inputs.RoleArgs
                         {
-                            HardwareProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.HardwareProfileArgs
+                            HardwareProfile = new AzureNextGen.HDInsight..Inputs.HardwareProfileArgs
                             {
                                 VmSize = "Standard_D12_v2",
                             },
@@ -51,7 +52,7 @@ class MyStack : Stack
                 Errors = {},
                 HttpsEndpoints = 
                 {
-                    new AzureNextGen.HDInsight.V20180601Preview.Inputs.ApplicationGetHttpsEndpointArgs
+                    new AzureNextGen.HDInsight..Inputs.ApplicationGetHttpsEndpointArgs
                     {
                         AccessModes = 
                         {
@@ -63,7 +64,7 @@ class MyStack : Stack
                 },
                 InstallScriptActions = 
                 {
-                    new AzureNextGen.HDInsight.V20180601Preview.Inputs.RuntimeScriptActionArgs
+                    new AzureNextGen.HDInsight..Inputs.RuntimeScriptActionArgs
                     {
                         Name = "app-install-app1",
                         Parameters = "-version latest -port 20000",
@@ -92,7 +93,7 @@ class MyStack : Stack
 package main
 
 import (
-	hdinsight "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/hdinsight/v20180601preview"
+	hdinsight "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/hdinsight"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -155,14 +156,14 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-application = azure_nextgen.hdinsight.v20180601preview.Application("application",
+application = azure_nextgen.hdinsight.Application("application",
     application_name="hue",
     cluster_name="cluster1",
-    properties=azure_nextgen.hdinsight.v20180601preview.ApplicationPropertiesArgs(
+    properties=azure_nextgen.hdinsight.ApplicationPropertiesArgs(
         application_type="CustomApplication",
-        compute_profile=azure_nextgen.hdinsight.v20180601preview.ComputeProfileArgs(
-            roles=[azure_nextgen.hdinsight.v20180601preview.RoleArgs(
-                hardware_profile=azure_nextgen.hdinsight.v20180601preview.HardwareProfileArgs(
+        compute_profile=azure_nextgen.hdinsight.ComputeProfileArgs(
+            roles=[azure_nextgen.hdinsight.RoleArgs(
+                hardware_profile=azure_nextgen.hdinsight.HardwareProfileArgs(
                     vm_size="Standard_D12_v2",
                 ),
                 name="edgenode",
@@ -170,12 +171,12 @@ application = azure_nextgen.hdinsight.v20180601preview.Application("application"
             )],
         ),
         errors=[],
-        https_endpoints=[azure_nextgen.hdinsight.v20180601preview.ApplicationGetHttpsEndpointArgs(
+        https_endpoints=[azure_nextgen.hdinsight.ApplicationGetHttpsEndpointArgs(
             access_modes=["WebPage"],
             destination_port=20000,
             sub_domain_suffix="dss",
         )],
-        install_script_actions=[azure_nextgen.hdinsight.v20180601preview.RuntimeScriptActionArgs(
+        install_script_actions=[azure_nextgen.hdinsight.RuntimeScriptActionArgs(
             name="app-install-app1",
             parameters="-version latest -port 20000",
             roles=["edgenode"],
@@ -195,7 +196,7 @@ application = azure_nextgen.hdinsight.v20180601preview.Application("application"
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const application = new azure_nextgen.hdinsight.v20180601preview.Application("application", {
+const application = new azure_nextgen.hdinsight.Application("application", {
     applicationName: "hue",
     clusterName: "cluster1",
     properties: {
@@ -455,7 +456,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>HDInsight.<wbr>Inputs.<wbr>Application<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>HDInsight..<wbr>Inputs.<wbr>Application<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The properties of the application.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1643,7 +1644,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#computeprofile_csharp" style="color: inherit; text-decoration: inherit;">Compute<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#computeprofile">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>HDInsight.<wbr>Inputs.<wbr>Compute<wbr>Profile<wbr>Args</a></span>
+        <span class="property-type"><a href="#computeprofile">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>HDInsight..<wbr>Inputs.<wbr>Compute<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The list of roles in the cluster.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1652,7 +1653,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errors_csharp" style="color: inherit; text-decoration: inherit;">Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#errors">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>HDInsight.<wbr>Inputs.<wbr>Errors<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#errors">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>HDInsight..<wbr>Inputs.<wbr>Errors<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of errors.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1661,7 +1662,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#httpsendpoints_csharp" style="color: inherit; text-decoration: inherit;">Https<wbr>Endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgethttpsendpoint">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>HDInsight.<wbr>Inputs.<wbr>Application<wbr>Get<wbr>Https<wbr>Endpoint<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#applicationgethttpsendpoint">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>HDInsight..<wbr>Inputs.<wbr>Application<wbr>Get<wbr>Https<wbr>Endpoint<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of application HTTPS endpoints.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1670,7 +1671,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#installscriptactions_csharp" style="color: inherit; text-decoration: inherit;">Install<wbr>Script<wbr>Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#runtimescriptaction">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>HDInsight.<wbr>Inputs.<wbr>Runtime<wbr>Script<wbr>Action<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#runtimescriptaction">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>HDInsight..<wbr>Inputs.<wbr>Runtime<wbr>Script<wbr>Action<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of install script actions.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1679,7 +1680,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sshendpoints_csharp" style="color: inherit; text-decoration: inherit;">Ssh<wbr>Endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgetendpoint">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>HDInsight.<wbr>Inputs.<wbr>Application<wbr>Get<wbr>Endpoint<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#applicationgetendpoint">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>HDInsight..<wbr>Inputs.<wbr>Application<wbr>Get<wbr>Endpoint<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of application SSH endpoints.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1688,7 +1689,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uninstallscriptactions_csharp" style="color: inherit; text-decoration: inherit;">Uninstall<wbr>Script<wbr>Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#runtimescriptaction">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>HDInsight.<wbr>Inputs.<wbr>Runtime<wbr>Script<wbr>Action<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#runtimescriptaction">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>HDInsight..<wbr>Inputs.<wbr>Runtime<wbr>Script<wbr>Action<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of uninstall script actions.{{% /md %}}</dd>
 </dl>
@@ -1957,7 +1958,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#computeprofile_csharp" style="color: inherit; text-decoration: inherit;">Compute<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#computeprofileresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>HDInsight.<wbr>Inputs.<wbr>Compute<wbr>Profile<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#computeprofileresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>HDInsight..<wbr>Inputs.<wbr>Compute<wbr>Profile<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The list of roles in the cluster.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1966,7 +1967,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errors_csharp" style="color: inherit; text-decoration: inherit;">Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#errorsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>HDInsight.<wbr>Inputs.<wbr>Errors<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#errorsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>HDInsight..<wbr>Inputs.<wbr>Errors<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of errors.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1975,7 +1976,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#httpsendpoints_csharp" style="color: inherit; text-decoration: inherit;">Https<wbr>Endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgethttpsendpointresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>HDInsight.<wbr>Inputs.<wbr>Application<wbr>Get<wbr>Https<wbr>Endpoint<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#applicationgethttpsendpointresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>HDInsight..<wbr>Inputs.<wbr>Application<wbr>Get<wbr>Https<wbr>Endpoint<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of application HTTPS endpoints.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1984,7 +1985,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#installscriptactions_csharp" style="color: inherit; text-decoration: inherit;">Install<wbr>Script<wbr>Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#runtimescriptactionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>HDInsight.<wbr>Inputs.<wbr>Runtime<wbr>Script<wbr>Action<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#runtimescriptactionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>HDInsight..<wbr>Inputs.<wbr>Runtime<wbr>Script<wbr>Action<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of install script actions.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1993,7 +1994,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sshendpoints_csharp" style="color: inherit; text-decoration: inherit;">Ssh<wbr>Endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgetendpointresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>HDInsight.<wbr>Inputs.<wbr>Application<wbr>Get<wbr>Endpoint<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#applicationgetendpointresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>HDInsight..<wbr>Inputs.<wbr>Application<wbr>Get<wbr>Endpoint<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of application SSH endpoints.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2002,7 +2003,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uninstallscriptactions_csharp" style="color: inherit; text-decoration: inherit;">Uninstall<wbr>Script<wbr>Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#runtimescriptactionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>HDInsight.<wbr>Inputs.<wbr>Runtime<wbr>Script<wbr>Action<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#runtimescriptactionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>HDInsight..<wbr>Inputs.<wbr>Runtime<wbr>Script<wbr>Action<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of uninstall script actions.{{% /md %}}</dd>
 </dl>
@@ -2334,7 +2335,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capacity_csharp" style="color: inherit; text-decoration: inherit;">Capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalecapacity">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>HDInsight.<wbr>Inputs.<wbr>Autoscale<wbr>Capacity<wbr>Args</a></span>
+        <span class="property-type"><a href="#autoscalecapacity">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>HDInsight..<wbr>Inputs.<wbr>Autoscale<wbr>Capacity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Parameters for load-based autoscale{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2343,7 +2344,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recurrence_csharp" style="color: inherit; text-decoration: inherit;">Recurrence</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalerecurrence">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>HDInsight.<wbr>Inputs.<wbr>Autoscale<wbr>Recurrence<wbr>Args</a></span>
+        <span class="property-type"><a href="#autoscalerecurrence">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>HDInsight..<wbr>Inputs.<wbr>Autoscale<wbr>Recurrence<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Parameters for schedule-based autoscale{{% /md %}}</dd>
 </dl>
@@ -2628,7 +2629,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schedule_csharp" style="color: inherit; text-decoration: inherit;">Schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscaleschedule">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>HDInsight.<wbr>Inputs.<wbr>Autoscale<wbr>Schedule<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#autoscaleschedule">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>HDInsight..<wbr>Inputs.<wbr>Autoscale<wbr>Schedule<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Array of schedule-based autoscale rules{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2726,7 +2727,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schedule_csharp" style="color: inherit; text-decoration: inherit;">Schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalescheduleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>HDInsight.<wbr>Inputs.<wbr>Autoscale<wbr>Schedule<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#autoscalescheduleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>HDInsight..<wbr>Inputs.<wbr>Autoscale<wbr>Schedule<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Array of schedule-based autoscale rules{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2824,7 +2825,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capacity_csharp" style="color: inherit; text-decoration: inherit;">Capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalecapacityresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>HDInsight.<wbr>Inputs.<wbr>Autoscale<wbr>Capacity<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#autoscalecapacityresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>HDInsight..<wbr>Inputs.<wbr>Autoscale<wbr>Capacity<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Parameters for load-based autoscale{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2833,7 +2834,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recurrence_csharp" style="color: inherit; text-decoration: inherit;">Recurrence</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalerecurrenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>HDInsight.<wbr>Inputs.<wbr>Autoscale<wbr>Recurrence<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#autoscalerecurrenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>HDInsight..<wbr>Inputs.<wbr>Autoscale<wbr>Recurrence<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Parameters for schedule-based autoscale{{% /md %}}</dd>
 </dl>
@@ -2922,7 +2923,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#days_csharp" style="color: inherit; text-decoration: inherit;">Days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#daysofweek">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>HDInsight.<wbr>Days<wbr>Of<wbr>Week&gt;</a></span>
+        <span class="property-type"><a href="#daysofweek">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>HDInsight..<wbr>Days<wbr>Of<wbr>Week&gt;</a></span>
     </dt>
     <dd>{{% md %}}Days of the week for a schedule-based autoscale rule{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2931,7 +2932,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timeandcapacity_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>And<wbr>Capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscaletimeandcapacity">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>HDInsight.<wbr>Inputs.<wbr>Autoscale<wbr>Time<wbr>And<wbr>Capacity<wbr>Args</a></span>
+        <span class="property-type"><a href="#autoscaletimeandcapacity">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>HDInsight..<wbr>Inputs.<wbr>Autoscale<wbr>Time<wbr>And<wbr>Capacity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Time and capacity for a schedule-based autoscale rule{{% /md %}}</dd>
 </dl>
@@ -3029,7 +3030,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timeandcapacity_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>And<wbr>Capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscaletimeandcapacityresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>HDInsight.<wbr>Inputs.<wbr>Autoscale<wbr>Time<wbr>And<wbr>Capacity<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#autoscaletimeandcapacityresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>HDInsight..<wbr>Inputs.<wbr>Autoscale<wbr>Time<wbr>And<wbr>Capacity<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Time and capacity for a schedule-based autoscale rule{{% /md %}}</dd>
 </dl>
@@ -3386,7 +3387,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#roles_csharp" style="color: inherit; text-decoration: inherit;">Roles</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#role">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>HDInsight.<wbr>Inputs.<wbr>Role<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#role">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>HDInsight..<wbr>Inputs.<wbr>Role<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of roles in the cluster.{{% /md %}}</dd>
 </dl>
@@ -3448,7 +3449,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#roles_csharp" style="color: inherit; text-decoration: inherit;">Roles</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#roleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>HDInsight.<wbr>Inputs.<wbr>Role<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#roleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>HDInsight..<wbr>Inputs.<wbr>Role<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of roles in the cluster.{{% /md %}}</dd>
 </dl>
@@ -4113,7 +4114,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sshprofile_csharp" style="color: inherit; text-decoration: inherit;">Ssh<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sshprofile">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>HDInsight.<wbr>Inputs.<wbr>Ssh<wbr>Profile<wbr>Args</a></span>
+        <span class="property-type"><a href="#sshprofile">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>HDInsight..<wbr>Inputs.<wbr>Ssh<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The SSH profile.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4247,7 +4248,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sshprofile_csharp" style="color: inherit; text-decoration: inherit;">Ssh<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sshprofileresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>HDInsight.<wbr>Inputs.<wbr>Ssh<wbr>Profile<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sshprofileresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>HDInsight..<wbr>Inputs.<wbr>Ssh<wbr>Profile<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The SSH profile.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4372,7 +4373,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linuxoperatingsystemprofile_csharp" style="color: inherit; text-decoration: inherit;">Linux<wbr>Operating<wbr>System<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linuxoperatingsystemprofile">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>HDInsight.<wbr>Inputs.<wbr>Linux<wbr>Operating<wbr>System<wbr>Profile<wbr>Args</a></span>
+        <span class="property-type"><a href="#linuxoperatingsystemprofile">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>HDInsight..<wbr>Inputs.<wbr>Linux<wbr>Operating<wbr>System<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Linux OS profile.{{% /md %}}</dd>
 </dl>
@@ -4434,7 +4435,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linuxoperatingsystemprofile_csharp" style="color: inherit; text-decoration: inherit;">Linux<wbr>Operating<wbr>System<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linuxoperatingsystemprofileresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>HDInsight.<wbr>Inputs.<wbr>Linux<wbr>Operating<wbr>System<wbr>Profile<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#linuxoperatingsystemprofileresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>HDInsight..<wbr>Inputs.<wbr>Linux<wbr>Operating<wbr>System<wbr>Profile<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Linux OS profile.{{% /md %}}</dd>
 </dl>
@@ -4496,7 +4497,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#autoscaleconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Autoscale<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscale">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>HDInsight.<wbr>Inputs.<wbr>Autoscale<wbr>Args</a></span>
+        <span class="property-type"><a href="#autoscale">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>HDInsight..<wbr>Inputs.<wbr>Autoscale<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The autoscale configurations.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4505,7 +4506,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datadisksgroups_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Disks<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datadisksgroups">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>HDInsight.<wbr>Inputs.<wbr>Data<wbr>Disks<wbr>Groups<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#datadisksgroups">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>HDInsight..<wbr>Inputs.<wbr>Data<wbr>Disks<wbr>Groups<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The data disks groups for the role.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4523,7 +4524,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hardwareprofile_csharp" style="color: inherit; text-decoration: inherit;">Hardware<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hardwareprofile">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>HDInsight.<wbr>Inputs.<wbr>Hardware<wbr>Profile<wbr>Args</a></span>
+        <span class="property-type"><a href="#hardwareprofile">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>HDInsight..<wbr>Inputs.<wbr>Hardware<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The hardware profile.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4550,7 +4551,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#osprofile_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#osprofile">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>HDInsight.<wbr>Inputs.<wbr>Os<wbr>Profile<wbr>Args</a></span>
+        <span class="property-type"><a href="#osprofile">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>HDInsight..<wbr>Inputs.<wbr>Os<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The operating system profile.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4559,7 +4560,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scriptactions_csharp" style="color: inherit; text-decoration: inherit;">Script<wbr>Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scriptaction">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>HDInsight.<wbr>Inputs.<wbr>Script<wbr>Action<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#scriptaction">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>HDInsight..<wbr>Inputs.<wbr>Script<wbr>Action<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of script actions on the role.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4577,7 +4578,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#virtualnetworkprofile_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkprofile">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>HDInsight.<wbr>Inputs.<wbr>Virtual<wbr>Network<wbr>Profile<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnetworkprofile">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>HDInsight..<wbr>Inputs.<wbr>Virtual<wbr>Network<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The virtual network profile.{{% /md %}}</dd>
 </dl>
@@ -4882,7 +4883,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#autoscaleconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Autoscale<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscaleresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>HDInsight.<wbr>Inputs.<wbr>Autoscale<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#autoscaleresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>HDInsight..<wbr>Inputs.<wbr>Autoscale<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The autoscale configurations.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4891,7 +4892,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datadisksgroups_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Disks<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datadisksgroupsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>HDInsight.<wbr>Inputs.<wbr>Data<wbr>Disks<wbr>Groups<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#datadisksgroupsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>HDInsight..<wbr>Inputs.<wbr>Data<wbr>Disks<wbr>Groups<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The data disks groups for the role.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4909,7 +4910,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hardwareprofile_csharp" style="color: inherit; text-decoration: inherit;">Hardware<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hardwareprofileresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>HDInsight.<wbr>Inputs.<wbr>Hardware<wbr>Profile<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#hardwareprofileresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>HDInsight..<wbr>Inputs.<wbr>Hardware<wbr>Profile<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The hardware profile.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4936,7 +4937,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#osprofile_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#osprofileresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>HDInsight.<wbr>Inputs.<wbr>Os<wbr>Profile<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#osprofileresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>HDInsight..<wbr>Inputs.<wbr>Os<wbr>Profile<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The operating system profile.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4945,7 +4946,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scriptactions_csharp" style="color: inherit; text-decoration: inherit;">Script<wbr>Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scriptactionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>HDInsight.<wbr>Inputs.<wbr>Script<wbr>Action<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#scriptactionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>HDInsight..<wbr>Inputs.<wbr>Script<wbr>Action<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of script actions on the role.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4963,7 +4964,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#virtualnetworkprofile_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkprofileresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>HDInsight.<wbr>Inputs.<wbr>Virtual<wbr>Network<wbr>Profile<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnetworkprofileresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>HDInsight..<wbr>Inputs.<wbr>Virtual<wbr>Network<wbr>Profile<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The virtual network profile.{{% /md %}}</dd>
 </dl>
@@ -5912,7 +5913,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publickeys_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sshpublickey">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>HDInsight.<wbr>Inputs.<wbr>Ssh<wbr>Public<wbr>Key<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#sshpublickey">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>HDInsight..<wbr>Inputs.<wbr>Ssh<wbr>Public<wbr>Key<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of SSH public keys.{{% /md %}}</dd>
 </dl>
@@ -5974,7 +5975,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publickeys_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sshpublickeyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>HDInsight.<wbr>Inputs.<wbr>Ssh<wbr>Public<wbr>Key<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#sshpublickeyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>HDInsight..<wbr>Inputs.<wbr>Ssh<wbr>Public<wbr>Key<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of SSH public keys.{{% /md %}}</dd>
 </dl>
@@ -6350,7 +6351,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:hdinsight/v20180601preview:Application hue /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.HDInsight/clusters/cluster1/applications/hue 
+$ pulumi import azure-nextgen:hdinsight:Application hue /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.HDInsight/clusters/cluster1/applications/hue 
 ```
 
 

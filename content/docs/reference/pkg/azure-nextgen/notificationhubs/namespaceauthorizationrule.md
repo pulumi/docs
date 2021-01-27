@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.notificationhubs.NamespaceAuthor
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Description of a Namespace AuthorizationRules.
-Latest API Version: 2017-04-01.
+API Version: 2017-04-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,11 +27,11 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var namespaceAuthorizationRule = new AzureNextGen.NotificationHubs.Latest.NamespaceAuthorizationRule("namespaceAuthorizationRule", new AzureNextGen.NotificationHubs.Latest.NamespaceAuthorizationRuleArgs
+        var namespaceAuthorizationRule = new AzureNextGen.NotificationHubs..NamespaceAuthorizationRule("namespaceAuthorizationRule", new AzureNextGen.NotificationHubs..NamespaceAuthorizationRuleArgs
         {
             AuthorizationRuleName = "sdk-AuthRules-1788",
             NamespaceName = "nh-sdk-ns",
-            Properties = new AzureNextGen.NotificationHubs.Latest.Inputs.SharedAccessAuthorizationRulePropertiesArgs
+            Properties = new AzureNextGen.NotificationHubs..Inputs.SharedAccessAuthorizationRulePropertiesArgs
             {
                 Rights = 
                 {
@@ -59,10 +59,10 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-namespace_authorization_rule = azure_nextgen.notificationhubs.latest.NamespaceAuthorizationRule("namespaceAuthorizationRule",
+namespace_authorization_rule = azure_nextgen.notificationhubs.NamespaceAuthorizationRule("namespaceAuthorizationRule",
     authorization_rule_name="sdk-AuthRules-1788",
     namespace_name="nh-sdk-ns",
-    properties=azure_nextgen.notificationhubs.latest.SharedAccessAuthorizationRulePropertiesArgs(
+    properties=azure_nextgen.notificationhubs.SharedAccessAuthorizationRulePropertiesArgs(
         rights=[
             "Listen",
             "Send",
@@ -80,7 +80,7 @@ namespace_authorization_rule = azure_nextgen.notificationhubs.latest.NamespaceAu
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const namespaceAuthorizationRule = new azure_nextgen.notificationhubs.latest.NamespaceAuthorizationRule("namespaceAuthorizationRule", {
+const namespaceAuthorizationRule = new azure_nextgen.notificationhubs.NamespaceAuthorizationRule("namespaceAuthorizationRule", {
     authorizationRuleName: "sdk-AuthRules-1788",
     namespaceName: "nh-sdk-ns",
     properties: {
@@ -303,7 +303,7 @@ The NamespaceAuthorizationRule resource accepts the following [input]({{< relref
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sharedaccessauthorizationruleproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Notification<wbr>Hubs.<wbr>Inputs.<wbr>Shared<wbr>Access<wbr>Authorization<wbr>Rule<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#sharedaccessauthorizationruleproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Notification<wbr>Hubs..<wbr>Inputs.<wbr>Shared<wbr>Access<wbr>Authorization<wbr>Rule<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties of the Namespace AuthorizationRules.{{% /md %}}</dd>
     <dt class="property-required"
@@ -577,7 +577,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skuresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Notification<wbr>Hubs.<wbr>Outputs.<wbr>Sku<wbr>Response</a></span>
+        <span class="property-type"><a href="#skuresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Notification<wbr>Hubs..<wbr>Outputs.<wbr>Sku<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The sku of the created namespace{{% /md %}}</dd>
     <dt class="property-"
@@ -1082,7 +1082,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rights_csharp" style="color: inherit; text-decoration: inherit;">Rights</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accessrights">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Notification<wbr>Hubs.<wbr>Access<wbr>Rights&gt;</a></span>
+        <span class="property-type"><a href="#accessrights">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Notification<wbr>Hubs..<wbr>Access<wbr>Rights&gt;</a></span>
     </dt>
     <dd>{{% md %}}The rights associated with the rule.{{% /md %}}</dd>
 </dl>
@@ -1344,7 +1344,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:notificationhubs/latest:NamespaceAuthorizationRule sdk-AuthRules-1788 /subscriptions/29cfa613-cbbc-4512-b1d6-1b3a92c7fa40/resourceGroups/ArunMonocle/providers/Microsoft.NotificationHubs/namespaces/sdk-Namespace-6914/AuthorizationRules/sdk-AuthRules-1788 
+$ pulumi import azure-nextgen:notificationhubs:NamespaceAuthorizationRule sdk-AuthRules-1788 /subscriptions/29cfa613-cbbc-4512-b1d6-1b3a92c7fa40/resourceGroups/ArunMonocle/providers/Microsoft.NotificationHubs/namespaces/sdk-Namespace-6914/AuthorizationRules/sdk-AuthRules-1788 
 ```
 
 

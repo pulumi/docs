@@ -260,7 +260,7 @@ The following output properties are available:
 <a href="#privatelinkscopedresources_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Scoped<wbr>Resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkscopedresourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Outputs.<wbr>Private<wbr>Link<wbr>Scoped<wbr>Resource<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#privatelinkscopedresourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Outputs.<wbr>Private<wbr>Link<wbr>Scoped<wbr>Resource<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of linked private link scope resources.{{% /md %}}</dd>
     <dt class="property-"

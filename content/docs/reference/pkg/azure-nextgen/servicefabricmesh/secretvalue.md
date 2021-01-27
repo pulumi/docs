@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.servicefabricmesh.SecretValue re
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 This type describes a value of a secret resource. The name of this resource is the version identifier corresponding to this secret value.
+API Version: 2018-09-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var secretValue = new AzureNextGen.ServiceFabricMesh.V20180901Preview.SecretValue("secretValue", new AzureNextGen.ServiceFabricMesh.V20180901Preview.SecretValueArgs
+        var secretValue = new AzureNextGen.ServiceFabricMesh..SecretValue("secretValue", new AzureNextGen.ServiceFabricMesh..SecretValueArgs
         {
             ResourceGroupName = "sbz_demo",
             SecretResourceName = "dbConnectionString",
@@ -47,7 +48,7 @@ class MyStack : Stack
 package main
 
 import (
-	servicefabricmesh "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/servicefabricmesh/v20180901preview"
+	servicefabricmesh "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/servicefabricmesh"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -76,7 +77,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-secret_value = azure_nextgen.servicefabricmesh.v20180901preview.SecretValue("secretValue",
+secret_value = azure_nextgen.servicefabricmesh.SecretValue("secretValue",
     resource_group_name="sbz_demo",
     secret_resource_name="dbConnectionString",
     secret_value_resource_name="v1",
@@ -92,7 +93,7 @@ secret_value = azure_nextgen.servicefabricmesh.v20180901preview.SecretValue("sec
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const secretValue = new azure_nextgen.servicefabricmesh.v20180901preview.SecretValue("secretValue", {
+const secretValue = new azure_nextgen.servicefabricmesh.SecretValue("secretValue", {
     resourceGroupName: "sbz_demo",
     secretResourceName: "dbConnectionString",
     secretValueResourceName: "v1",
@@ -709,7 +710,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:servicefabricmesh/v20180901preview:SecretValue v1 /subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/sbz_demo/providers/Microsoft.ServiceFabricMesh/secrets/dbConnectionString/values/v1 
+$ pulumi import azure-nextgen:servicefabricmesh:SecretValue v1 /subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/sbz_demo/providers/Microsoft.ServiceFabricMesh/secrets/dbConnectionString/values/v1 
 ```
 
 

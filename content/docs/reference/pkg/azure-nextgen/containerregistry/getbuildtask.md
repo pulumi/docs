@@ -242,7 +242,7 @@ The following output properties are available:
 <a href="#platform_csharp" style="color: inherit; text-decoration: inherit;">Platform</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#platformpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry.<wbr>Outputs.<wbr>Platform<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#platformpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry..<wbr>Outputs.<wbr>Platform<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The platform properties against which the build has to happen.{{% /md %}}</dd>
     <dt class="property-"
@@ -260,7 +260,7 @@ The following output properties are available:
 <a href="#sourcerepository_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Repository</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sourcerepositorypropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry.<wbr>Outputs.<wbr>Source<wbr>Repository<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#sourcerepositorypropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry..<wbr>Outputs.<wbr>Source<wbr>Repository<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The properties that describes the source(code) for the build task.{{% /md %}}</dd>
     <dt class="property-"
@@ -662,22 +662,31 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="ostype_csharp">
-<a href="#ostype_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Type</a>
+        <span id="os_csharp">
+<a href="#os_csharp" style="color: inherit; text-decoration: inherit;">Os</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The operating system type required for the build.{{% /md %}}</dd>
+    <dd>{{% md %}}The operating system type required for the run.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="cpu_csharp">
-<a href="#cpu_csharp" style="color: inherit; text-decoration: inherit;">Cpu</a>
+        <span id="architecture_csharp">
+<a href="#architecture_csharp" style="color: inherit; text-decoration: inherit;">Architecture</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The CPU configuration in terms of number of cores required for the build.{{% /md %}}</dd>
+    <dd>{{% md %}}The OS architecture.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="variant_csharp">
+<a href="#variant_csharp" style="color: inherit; text-decoration: inherit;">Variant</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Variant of the CPU.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -686,22 +695,31 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="ostype_go">
-<a href="#ostype_go" style="color: inherit; text-decoration: inherit;">Os<wbr>Type</a>
+        <span id="os_go">
+<a href="#os_go" style="color: inherit; text-decoration: inherit;">Os</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The operating system type required for the build.{{% /md %}}</dd>
+    <dd>{{% md %}}The operating system type required for the run.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="cpu_go">
-<a href="#cpu_go" style="color: inherit; text-decoration: inherit;">Cpu</a>
+        <span id="architecture_go">
+<a href="#architecture_go" style="color: inherit; text-decoration: inherit;">Architecture</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The CPU configuration in terms of number of cores required for the build.{{% /md %}}</dd>
+    <dd>{{% md %}}The OS architecture.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="variant_go">
+<a href="#variant_go" style="color: inherit; text-decoration: inherit;">Variant</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Variant of the CPU.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -710,22 +728,31 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="ostype_nodejs">
-<a href="#ostype_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Type</a>
+        <span id="os_nodejs">
+<a href="#os_nodejs" style="color: inherit; text-decoration: inherit;">os</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The operating system type required for the build.{{% /md %}}</dd>
+    <dd>{{% md %}}The operating system type required for the run.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="cpu_nodejs">
-<a href="#cpu_nodejs" style="color: inherit; text-decoration: inherit;">cpu</a>
+        <span id="architecture_nodejs">
+<a href="#architecture_nodejs" style="color: inherit; text-decoration: inherit;">architecture</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The CPU configuration in terms of number of cores required for the build.{{% /md %}}</dd>
+    <dd>{{% md %}}The OS architecture.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="variant_nodejs">
+<a href="#variant_nodejs" style="color: inherit; text-decoration: inherit;">variant</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Variant of the CPU.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -734,22 +761,31 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="os_type_python">
-<a href="#os_type_python" style="color: inherit; text-decoration: inherit;">os_<wbr>type</a>
+        <span id="os_python">
+<a href="#os_python" style="color: inherit; text-decoration: inherit;">os</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The operating system type required for the build.{{% /md %}}</dd>
+    <dd>{{% md %}}The operating system type required for the run.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="cpu_python">
-<a href="#cpu_python" style="color: inherit; text-decoration: inherit;">cpu</a>
+        <span id="architecture_python">
+<a href="#architecture_python" style="color: inherit; text-decoration: inherit;">architecture</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The CPU configuration in terms of number of cores required for the build.{{% /md %}}</dd>
+    <dd>{{% md %}}The OS architecture.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="variant_python">
+<a href="#variant_python" style="color: inherit; text-decoration: inherit;">variant</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Variant of the CPU.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -1007,7 +1043,7 @@ The following output properties are available:
 <a href="#sourcecontrolauthproperties_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Control<wbr>Auth<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sourcecontrolauthinforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Source<wbr>Control<wbr>Auth<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sourcecontrolauthinforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry..<wbr>Inputs.<wbr>Source<wbr>Control<wbr>Auth<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The authorization properties for accessing the source code repository.{{% /md %}}</dd>
 </dl>

@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.quantum.Workspace resource with 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The resource proxy definition object for quantum workspace.
+API Version: 2019-11-04-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,22 +27,22 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var workspace = new AzureNextGen.Quantum.V20191104Preview.Workspace("workspace", new AzureNextGen.Quantum.V20191104Preview.WorkspaceArgs
+        var workspace = new AzureNextGen.Quantum..Workspace("workspace", new AzureNextGen.Quantum..WorkspaceArgs
         {
             Location = "West US",
             Providers = 
             {
-                new AzureNextGen.Quantum.V20191104Preview.Inputs.ProviderArgs
+                new AzureNextGen.Quantum..Inputs.ProviderArgs
                 {
                     ProviderId = "Honeywell",
                     ProviderSku = "Basic",
                 },
-                new AzureNextGen.Quantum.V20191104Preview.Inputs.ProviderArgs
+                new AzureNextGen.Quantum..Inputs.ProviderArgs
                 {
                     ProviderId = "IonQ",
                     ProviderSku = "Basic",
                 },
-                new AzureNextGen.Quantum.V20191104Preview.Inputs.ProviderArgs
+                new AzureNextGen.Quantum..Inputs.ProviderArgs
                 {
                     ProviderId = "OneQBit",
                     ProviderSku = "Basic",
@@ -65,7 +66,7 @@ class MyStack : Stack
 package main
 
 import (
-	quantum "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/quantum/v20191104preview"
+	quantum "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/quantum"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -108,18 +109,18 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-workspace = azure_nextgen.quantum.v20191104preview.Workspace("workspace",
+workspace = azure_nextgen.quantum.Workspace("workspace",
     location="West US",
     providers=[
-        azure_nextgen.quantum.v20191104preview.ProviderArgs(
+        azure_nextgen.quantum.ProviderArgs(
             provider_id="Honeywell",
             provider_sku="Basic",
         ),
-        azure_nextgen.quantum.v20191104preview.ProviderArgs(
+        azure_nextgen.quantum.ProviderArgs(
             provider_id="IonQ",
             provider_sku="Basic",
         ),
-        azure_nextgen.quantum.v20191104preview.ProviderArgs(
+        azure_nextgen.quantum.ProviderArgs(
             provider_id="OneQBit",
             provider_sku="Basic",
         ),
@@ -138,7 +139,7 @@ workspace = azure_nextgen.quantum.v20191104preview.Workspace("workspace",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const workspace = new azure_nextgen.quantum.v20191104preview.Workspace("workspace", {
+const workspace = new azure_nextgen.quantum.Workspace("workspace", {
     location: "West US",
     providers: [
         {
@@ -379,7 +380,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#quantumworkspaceidentity">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Quantum.<wbr>Inputs.<wbr>Quantum<wbr>Workspace<wbr>Identity<wbr>Args</a></span>
+        <span class="property-type"><a href="#quantumworkspaceidentity">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Quantum..<wbr>Inputs.<wbr>Quantum<wbr>Workspace<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Managed Identity information.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -388,7 +389,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#providers_csharp" style="color: inherit; text-decoration: inherit;">Providers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#provider">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Quantum.<wbr>Inputs.<wbr>Provider<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#provider">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Quantum..<wbr>Inputs.<wbr>Provider<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of Providers selected for this Workspace{{% /md %}}</dd>
     <dt class="property-optional"
@@ -923,7 +924,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#status">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Quantum.<wbr>Status</a></span>
+        <span class="property-type">string | <a href="#status">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Quantum..<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}Provisioning status field{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1371,7 +1372,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#resourceidentitytype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Quantum.<wbr>Resource<wbr>Identity<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#resourceidentitytype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Quantum..<wbr>Resource<wbr>Identity<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The identity type.{{% /md %}}</dd>
 </dl>
@@ -1669,7 +1670,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:quantum/v20191104preview:Workspace quantumworkspace1 /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/quantumResourcegroup/providers/Microsoft.Quantum/Workspaces/quantumworkspace1 
+$ pulumi import azure-nextgen:quantum:Workspace quantumworkspace1 /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/quantumResourcegroup/providers/Microsoft.Quantum/Workspaces/quantumworkspace1 
 ```
 
 

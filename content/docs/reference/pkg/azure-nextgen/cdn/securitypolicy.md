@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.cdn.SecurityPolicy resource with
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 SecurityPolicy association for AzureFrontDoor profile
-Latest API Version: 2020-09-01.
+API Version: 2020-09-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,21 +27,21 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var securityPolicy = new AzureNextGen.Cdn.Latest.SecurityPolicy("securityPolicy", new AzureNextGen.Cdn.Latest.SecurityPolicyArgs
+        var securityPolicy = new AzureNextGen.Cdn..SecurityPolicy("securityPolicy", new AzureNextGen.Cdn..SecurityPolicyArgs
         {
-            Parameters = new AzureNextGen.Cdn.Latest.Inputs.SecurityPolicyWebApplicationFirewallParametersArgs
+            Parameters = new AzureNextGen.Cdn..Inputs.SecurityPolicyWebApplicationFirewallParametersArgs
             {
                 Associations = 
                 {
-                    new AzureNextGen.Cdn.Latest.Inputs.SecurityPolicyWebApplicationFirewallAssociationArgs
+                    new AzureNextGen.Cdn..Inputs.SecurityPolicyWebApplicationFirewallAssociationArgs
                     {
                         Domains = 
                         {
-                            new AzureNextGen.Cdn.Latest.Inputs.ResourceReferenceArgs
+                            new AzureNextGen.Cdn..Inputs.ResourceReferenceArgs
                             {
                                 Id = "/subscriptions/subid/resourcegroups/RG/providers/Microsoft.Cdn/profiles/profile1/afddomains/testdomain1",
                             },
-                            new AzureNextGen.Cdn.Latest.Inputs.ResourceReferenceArgs
+                            new AzureNextGen.Cdn..Inputs.ResourceReferenceArgs
                             {
                                 Id = "/subscriptions/subid/resourcegroups/RG/providers/Microsoft.Cdn/profiles/profile1/afddomains/testdomain2",
                             },
@@ -54,7 +54,7 @@ class MyStack : Stack
                     },
                 },
                 Type = "WebApplicationFirewall",
-                WafPolicy = new AzureNextGen.Cdn.Latest.Inputs.ResourceReferenceArgs
+                WafPolicy = new AzureNextGen.Cdn..Inputs.ResourceReferenceArgs
                 {
                     Id = "/subscriptions/subid/resourcegroups/RG/providers/Microsoft.Network/frontdoorwebapplicationfirewallpolicies/wafTest",
                 },
@@ -77,7 +77,7 @@ class MyStack : Stack
 package main
 
 import (
-	cdn "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/cdn/latest"
+	cdn "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/cdn"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -127,14 +127,14 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-security_policy = azure_nextgen.cdn.latest.SecurityPolicy("securityPolicy",
-    parameters=azure_nextgen.cdn.latest.SecurityPolicyWebApplicationFirewallParametersArgs(
-        associations=[azure_nextgen.cdn.latest.SecurityPolicyWebApplicationFirewallAssociationArgs(
+security_policy = azure_nextgen.cdn.SecurityPolicy("securityPolicy",
+    parameters=azure_nextgen.cdn.SecurityPolicyWebApplicationFirewallParametersArgs(
+        associations=[azure_nextgen.cdn.SecurityPolicyWebApplicationFirewallAssociationArgs(
             domains=[
-                azure_nextgen.cdn.latest.ResourceReferenceArgs(
+                azure_nextgen.cdn.ResourceReferenceArgs(
                     id="/subscriptions/subid/resourcegroups/RG/providers/Microsoft.Cdn/profiles/profile1/afddomains/testdomain1",
                 ),
-                azure_nextgen.cdn.latest.ResourceReferenceArgs(
+                azure_nextgen.cdn.ResourceReferenceArgs(
                     id="/subscriptions/subid/resourcegroups/RG/providers/Microsoft.Cdn/profiles/profile1/afddomains/testdomain2",
                 ),
             ],
@@ -144,7 +144,7 @@ security_policy = azure_nextgen.cdn.latest.SecurityPolicy("securityPolicy",
             ],
         )],
         type="WebApplicationFirewall",
-        waf_policy=azure_nextgen.cdn.latest.ResourceReferenceArgs(
+        waf_policy=azure_nextgen.cdn.ResourceReferenceArgs(
             id="/subscriptions/subid/resourcegroups/RG/providers/Microsoft.Network/frontdoorwebapplicationfirewallpolicies/wafTest",
         ),
     ),
@@ -162,7 +162,7 @@ security_policy = azure_nextgen.cdn.latest.SecurityPolicy("securityPolicy",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const securityPolicy = new azure_nextgen.cdn.latest.SecurityPolicy("securityPolicy", {
+const securityPolicy = new azure_nextgen.cdn.SecurityPolicy("securityPolicy", {
     parameters: {
         associations: [{
             domains: [
@@ -408,7 +408,7 @@ The SecurityPolicy resource accepts the following [input]({{< relref "/docs/intr
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securitypolicywebapplicationfirewallparameters">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn.<wbr>Inputs.<wbr>Security<wbr>Policy<wbr>Web<wbr>Application<wbr>Firewall<wbr>Parameters<wbr>Args</a></span>
+        <span class="property-type"><a href="#securitypolicywebapplicationfirewallparameters">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn..<wbr>Inputs.<wbr>Security<wbr>Policy<wbr>Web<wbr>Application<wbr>Firewall<wbr>Parameters<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}object which contains security policy parameters{{% /md %}}</dd>
 </dl>
@@ -592,7 +592,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#systemdata_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn.<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
+        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn..<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Read only system data{{% /md %}}</dd>
     <dt class="property-"
@@ -932,7 +932,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#domains_csharp" style="color: inherit; text-decoration: inherit;">Domains</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcereference">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn.<wbr>Inputs.<wbr>Resource<wbr>Reference<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#resourcereference">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn..<wbr>Inputs.<wbr>Resource<wbr>Reference<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of domains.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1030,7 +1030,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#domains_csharp" style="color: inherit; text-decoration: inherit;">Domains</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcereferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn.<wbr>Inputs.<wbr>Resource<wbr>Reference<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#resourcereferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn..<wbr>Inputs.<wbr>Resource<wbr>Reference<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of domains.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1128,7 +1128,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#associations_csharp" style="color: inherit; text-decoration: inherit;">Associations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securitypolicywebapplicationfirewallassociation">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn.<wbr>Inputs.<wbr>Security<wbr>Policy<wbr>Web<wbr>Application<wbr>Firewall<wbr>Association<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#securitypolicywebapplicationfirewallassociation">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn..<wbr>Inputs.<wbr>Security<wbr>Policy<wbr>Web<wbr>Application<wbr>Firewall<wbr>Association<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Waf associations{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1137,7 +1137,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#wafpolicy_csharp" style="color: inherit; text-decoration: inherit;">Waf<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcereference">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn.<wbr>Inputs.<wbr>Resource<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcereference">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn..<wbr>Inputs.<wbr>Resource<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
 </dl>
@@ -1226,7 +1226,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#associations_csharp" style="color: inherit; text-decoration: inherit;">Associations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securitypolicywebapplicationfirewallassociationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn.<wbr>Inputs.<wbr>Security<wbr>Policy<wbr>Web<wbr>Application<wbr>Firewall<wbr>Association<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#securitypolicywebapplicationfirewallassociationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn..<wbr>Inputs.<wbr>Security<wbr>Policy<wbr>Web<wbr>Application<wbr>Firewall<wbr>Association<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Waf associations{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1235,7 +1235,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#wafpolicy_csharp" style="color: inherit; text-decoration: inherit;">Waf<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcereferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn.<wbr>Inputs.<wbr>Resource<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcereferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn..<wbr>Inputs.<wbr>Resource<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
 </dl>
@@ -1560,7 +1560,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:cdn/latest:SecurityPolicy securityPolicy1 /subscriptions/subid/resourcegroups/RG/providers/Microsoft.Cdn/profiles/profile1/securityPolicies/securityPolicy1 
+$ pulumi import azure-nextgen:cdn:SecurityPolicy securityPolicy1 /subscriptions/subid/resourcegroups/RG/providers/Microsoft.Cdn/profiles/profile1/securityPolicies/securityPolicy1 
 ```
 
 

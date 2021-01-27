@@ -179,7 +179,7 @@ The following output properties are available:
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Outputs.<wbr>Project<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#projectpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate..<wbr>Outputs.<wbr>Project<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Properties of the project.{{% /md %}}</dd>
     <dt class="property-"

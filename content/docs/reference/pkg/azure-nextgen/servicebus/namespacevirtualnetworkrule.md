@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.servicebus.NamespaceVirtualNetwo
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Single item in a List or Get VirtualNetworkRules operation
+API Version: 2018-01-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var namespaceVirtualNetworkRule = new AzureNextGen.ServiceBus.V20180101Preview.NamespaceVirtualNetworkRule("namespaceVirtualNetworkRule", new AzureNextGen.ServiceBus.V20180101Preview.NamespaceVirtualNetworkRuleArgs
+        var namespaceVirtualNetworkRule = new AzureNextGen.ServiceBus..NamespaceVirtualNetworkRule("namespaceVirtualNetworkRule", new AzureNextGen.ServiceBus..NamespaceVirtualNetworkRuleArgs
         {
             NamespaceName = "sdk-Namespace-6019",
             ResourceGroupName = "ResourceGroup",
@@ -47,7 +48,7 @@ class MyStack : Stack
 package main
 
 import (
-	servicebus "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/servicebus/v20180101preview"
+	servicebus "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/servicebus"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -76,7 +77,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-namespace_virtual_network_rule = azure_nextgen.servicebus.v20180101preview.NamespaceVirtualNetworkRule("namespaceVirtualNetworkRule",
+namespace_virtual_network_rule = azure_nextgen.servicebus.NamespaceVirtualNetworkRule("namespaceVirtualNetworkRule",
     namespace_name="sdk-Namespace-6019",
     resource_group_name="ResourceGroup",
     virtual_network_rule_name="sdk-VirtualNetworkRules-9191",
@@ -92,7 +93,7 @@ namespace_virtual_network_rule = azure_nextgen.servicebus.v20180101preview.Names
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const namespaceVirtualNetworkRule = new azure_nextgen.servicebus.v20180101preview.NamespaceVirtualNetworkRule("namespaceVirtualNetworkRule", {
+const namespaceVirtualNetworkRule = new azure_nextgen.servicebus.NamespaceVirtualNetworkRule("namespaceVirtualNetworkRule", {
     namespaceName: "sdk-Namespace-6019",
     resourceGroupName: "ResourceGroup",
     virtualNetworkRuleName: "sdk-VirtualNetworkRules-9191",
@@ -601,7 +602,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:servicebus/v20180101preview:NamespaceVirtualNetworkRule sdk-VirtualNetworkRules-9191 /subscriptions/Subscription/resourceGroups/ResourceGroup/providers/Microsoft.ServiceBus/namespaces/sdk-Namespace-6019/virtualnetworkrules/sdk-VirtualNetworkRules-9191 
+$ pulumi import azure-nextgen:servicebus:NamespaceVirtualNetworkRule sdk-VirtualNetworkRules-9191 /subscriptions/Subscription/resourceGroups/ResourceGroup/providers/Microsoft.ServiceBus/namespaces/sdk-Namespace-6019/virtualnetworkrules/sdk-VirtualNetworkRules-9191 
 ```
 
 

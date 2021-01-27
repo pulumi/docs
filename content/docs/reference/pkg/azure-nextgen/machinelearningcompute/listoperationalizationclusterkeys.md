@@ -159,7 +159,7 @@ The following output properties are available:
 <a href="#appinsights_csharp" style="color: inherit; text-decoration: inherit;">App<wbr>Insights</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appinsightscredentialsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Compute.<wbr>Outputs.<wbr>App<wbr>Insights<wbr>Credentials<wbr>Response</a></span>
+        <span class="property-type"><a href="#appinsightscredentialsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Compute..<wbr>Outputs.<wbr>App<wbr>Insights<wbr>Credentials<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Credentials for Azure AppInsights.{{% /md %}}</dd>
     <dt class="property-"
@@ -168,7 +168,7 @@ The following output properties are available:
 <a href="#containerregistry_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Registry</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerregistrycredentialsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Compute.<wbr>Outputs.<wbr>Container<wbr>Registry<wbr>Credentials<wbr>Response</a></span>
+        <span class="property-type"><a href="#containerregistrycredentialsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Compute..<wbr>Outputs.<wbr>Container<wbr>Registry<wbr>Credentials<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Credentials for Azure Container Registry.{{% /md %}}</dd>
     <dt class="property-"
@@ -177,7 +177,7 @@ The following output properties are available:
 <a href="#containerservice_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerservicecredentialsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Compute.<wbr>Outputs.<wbr>Container<wbr>Service<wbr>Credentials<wbr>Response</a></span>
+        <span class="property-type"><a href="#containerservicecredentialsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Compute..<wbr>Outputs.<wbr>Container<wbr>Service<wbr>Credentials<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Credentials for Azure Container Service.{{% /md %}}</dd>
     <dt class="property-"
@@ -186,7 +186,7 @@ The following output properties are available:
 <a href="#serviceauthconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Auth<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceauthconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Compute.<wbr>Outputs.<wbr>Service<wbr>Auth<wbr>Configuration<wbr>Response</a></span>
+        <span class="property-type"><a href="#serviceauthconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Compute..<wbr>Outputs.<wbr>Service<wbr>Auth<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Global authorization keys for all user services deployed in cluster. These are used if the service does not have auth keys.{{% /md %}}</dd>
     <dt class="property-"
@@ -195,7 +195,7 @@ The following output properties are available:
 <a href="#sslconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sslconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Compute.<wbr>Outputs.<wbr>Ssl<wbr>Configuration<wbr>Response</a></span>
+        <span class="property-type"><a href="#sslconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Compute..<wbr>Outputs.<wbr>Ssl<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The SSL configuration for the services.{{% /md %}}</dd>
     <dt class="property-"
@@ -204,7 +204,7 @@ The following output properties are available:
 <a href="#storageaccount_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageaccountcredentialsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Compute.<wbr>Outputs.<wbr>Storage<wbr>Account<wbr>Credentials<wbr>Response</a></span>
+        <span class="property-type"><a href="#storageaccountcredentialsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Compute..<wbr>Outputs.<wbr>Storage<wbr>Account<wbr>Credentials<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Credentials for the Storage Account.{{% /md %}}</dd>
 </dl>
@@ -708,7 +708,7 @@ The following output properties are available:
 <a href="#serviceprincipalconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Principal<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceprincipalpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Compute.<wbr>Inputs.<wbr>Service<wbr>Principal<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceprincipalpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Compute..<wbr>Inputs.<wbr>Service<wbr>Principal<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Service principal configuration used by Kubernetes.{{% /md %}}</dd>
 </dl>

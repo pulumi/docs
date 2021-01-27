@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.iotcentral.App resource with exa
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The IoT Central application.
-Latest API Version: 2018-09-01.
+API Version: 2018-09-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,13 +27,13 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var app = new AzureNextGen.IoTCentral.Latest.App("app", new AzureNextGen.IoTCentral.Latest.AppArgs
+        var app = new AzureNextGen.IoTCentral..App("app", new AzureNextGen.IoTCentral..AppArgs
         {
             DisplayName = "My IoT Central App",
             Location = "westus",
             ResourceGroupName = "resRg",
             ResourceName = "myIoTCentralApp",
-            Sku = new AzureNextGen.IoTCentral.Latest.Inputs.AppSkuInfoArgs
+            Sku = new AzureNextGen.IoTCentral..Inputs.AppSkuInfoArgs
             {
                 Name = "F1",
             },
@@ -54,7 +54,7 @@ class MyStack : Stack
 package main
 
 import (
-	iotcentral "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/iotcentral/latest"
+	iotcentral "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/iotcentral"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -88,12 +88,12 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-app = azure_nextgen.iotcentral.latest.App("app",
+app = azure_nextgen.iotcentral.App("app",
     display_name="My IoT Central App",
     location="westus",
     resource_group_name="resRg",
     resource_name="myIoTCentralApp",
-    sku=azure_nextgen.iotcentral.latest.AppSkuInfoArgs(
+    sku=azure_nextgen.iotcentral.AppSkuInfoArgs(
         name="F1",
     ),
     subdomain="my-iot-central-app",
@@ -109,7 +109,7 @@ app = azure_nextgen.iotcentral.latest.App("app",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const app = new azure_nextgen.iotcentral.latest.App("app", {
+const app = new azure_nextgen.iotcentral.App("app", {
     displayName: "My IoT Central App",
     location: "westus",
     resourceGroupName: "resRg",
@@ -341,7 +341,7 @@ The App resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appskuinfo">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Io<wbr>TCentral.<wbr>Inputs.<wbr>App<wbr>Sku<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#appskuinfo">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Io<wbr>TCentral..<wbr>Inputs.<wbr>App<wbr>Sku<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A valid instance SKU.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -875,7 +875,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#appsku">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Io<wbr>TCentral.<wbr>App<wbr>Sku</a></span>
+        <span class="property-type">string | <a href="#appsku">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Io<wbr>TCentral..<wbr>App<wbr>Sku</a></span>
     </dt>
     <dd>{{% md %}}The name of the SKU.{{% /md %}}</dd>
 </dl>
@@ -993,7 +993,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:iotcentral/latest:App myIoTCentralApp /subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/resRg/providers/Microsoft.IoTCentral/IoTApps/myIoTCentralApp 
+$ pulumi import azure-nextgen:iotcentral:App myIoTCentralApp /subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/resRg/providers/Microsoft.IoTCentral/IoTApps/myIoTCentralApp 
 ```
 
 

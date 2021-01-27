@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.synapse.SqlDatabase resource wit
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 A sql database resource.
+API Version: 2020-04-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var sqlDatabase = new AzureNextGen.Synapse.V20200401Preview.SqlDatabase("sqlDatabase", new AzureNextGen.Synapse.V20200401Preview.SqlDatabaseArgs
+        var sqlDatabase = new AzureNextGen.Synapse..SqlDatabase("sqlDatabase", new AzureNextGen.Synapse..SqlDatabaseArgs
         {
             Location = "westus",
             ResourceGroupName = "rg_88eed28c-5243-4f02-8251-bfa1e69e7057",
@@ -51,7 +52,7 @@ class MyStack : Stack
 package main
 
 import (
-	synapse "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/synapse/v20200401preview"
+	synapse "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/synapse"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -83,7 +84,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-sql_database = azure_nextgen.synapse.v20200401preview.SqlDatabase("sqlDatabase",
+sql_database = azure_nextgen.synapse.SqlDatabase("sqlDatabase",
     location="westus",
     resource_group_name="rg_88eed28c-5243-4f02-8251-bfa1e69e7057",
     sql_database_name="73164535-f22d-4daa-b014-1f23bbe361b7",
@@ -102,7 +103,7 @@ sql_database = azure_nextgen.synapse.v20200401preview.SqlDatabase("sqlDatabase",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const sqlDatabase = new azure_nextgen.synapse.v20200401preview.SqlDatabase("sqlDatabase", {
+const sqlDatabase = new azure_nextgen.synapse.SqlDatabase("sqlDatabase", {
     location: "westus",
     resourceGroupName: "rg_88eed28c-5243-4f02-8251-bfa1e69e7057",
     sqlDatabaseName: "73164535-f22d-4daa-b014-1f23bbe361b7",
@@ -624,7 +625,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#systemdata_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Synapse.<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
+        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Synapse..<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}SystemData of SqlDatabase.{{% /md %}}</dd>
     <dt class="property-"
@@ -1076,7 +1077,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:synapse/v20200401preview:SqlDatabase 73164535-f22d-4daa-b014-1f23bbe361b7 /subscriptions/d9e39bed-00e1-4f5e-883e-6d94be335056/resourceGroups/rg_88eed28c-5243-4f02-8251-bfa1e69e7057/providers/Microsoft.Synapse/workspaces/srv_85d31a1e-718b-4bda-9e53-a91230dd4ce5/sqlDatabases/73164535-f22d-4daa-b014-1f23bbe361b7 
+$ pulumi import azure-nextgen:synapse:SqlDatabase 428975cf-c682-4347-8412-468fcf11f988 /subscriptions/3e8c19f4-eeef-4cb9-bc14-2c3dd459e8a8/resourceGroups/rg_ce5b9d27-ae43-4fe0-986e-95d1df21adf5/providers/Microsoft.Synapse/workspaces/srv_6eeb976d-3b48-4a1f-b45f-d59797b23dac/sqlDatabases/428975cf-c682-4347-8412-468fcf11f988 
 ```
 
 

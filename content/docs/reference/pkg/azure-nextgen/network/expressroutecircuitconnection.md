@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.network.ExpressRouteCircuitConne
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Express Route Circuit Connection in an ExpressRouteCircuitPeering resource.
-Latest API Version: 2020-08-01.
+API Version: 2020-08-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,21 +27,21 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var expressRouteCircuitConnection = new AzureNextGen.Network.Latest.ExpressRouteCircuitConnection("expressRouteCircuitConnection", new AzureNextGen.Network.Latest.ExpressRouteCircuitConnectionArgs
+        var expressRouteCircuitConnection = new AzureNextGen.Network..ExpressRouteCircuitConnection("expressRouteCircuitConnection", new AzureNextGen.Network..ExpressRouteCircuitConnectionArgs
         {
             AddressPrefix = "10.0.0.0/29",
             AuthorizationKey = "946a1918-b7a2-4917-b43c-8c4cdaee006a",
             CircuitName = "ExpressRouteARMCircuitA",
             ConnectionName = "circuitConnectionUSAUS",
-            ExpressRouteCircuitPeering = new AzureNextGen.Network.Latest.Inputs.SubResourceArgs
+            ExpressRouteCircuitPeering = new AzureNextGen.Network..Inputs.SubResourceArgs
             {
                 Id = "/subscriptions/subid1/resourceGroups/dedharcktinit/providers/Microsoft.Network/expressRouteCircuits/dedharcktlocal/peerings/AzurePrivatePeering",
             },
-            Ipv6CircuitConnectionConfig = new AzureNextGen.Network.Latest.Inputs.Ipv6CircuitConnectionConfigArgs
+            Ipv6CircuitConnectionConfig = new AzureNextGen.Network..Inputs.Ipv6CircuitConnectionConfigArgs
             {
                 AddressPrefix = "aa:bb::/125",
             },
-            PeerExpressRouteCircuitPeering = new AzureNextGen.Network.Latest.Inputs.SubResourceArgs
+            PeerExpressRouteCircuitPeering = new AzureNextGen.Network..Inputs.SubResourceArgs
             {
                 Id = "/subscriptions/subid2/resourceGroups/dedharcktpeer/providers/Microsoft.Network/expressRouteCircuits/dedharcktremote/peerings/AzurePrivatePeering",
             },
@@ -62,7 +62,7 @@ class MyStack : Stack
 package main
 
 import (
-	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network/latest"
+	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -102,18 +102,18 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-express_route_circuit_connection = azure_nextgen.network.latest.ExpressRouteCircuitConnection("expressRouteCircuitConnection",
+express_route_circuit_connection = azure_nextgen.network.ExpressRouteCircuitConnection("expressRouteCircuitConnection",
     address_prefix="10.0.0.0/29",
     authorization_key="946a1918-b7a2-4917-b43c-8c4cdaee006a",
     circuit_name="ExpressRouteARMCircuitA",
     connection_name="circuitConnectionUSAUS",
-    express_route_circuit_peering=azure_nextgen.network.latest.SubResourceArgs(
+    express_route_circuit_peering=azure_nextgen.network.SubResourceArgs(
         id="/subscriptions/subid1/resourceGroups/dedharcktinit/providers/Microsoft.Network/expressRouteCircuits/dedharcktlocal/peerings/AzurePrivatePeering",
     ),
-    ipv6_circuit_connection_config=azure_nextgen.network.latest.Ipv6CircuitConnectionConfigArgs(
+    ipv6_circuit_connection_config=azure_nextgen.network.Ipv6CircuitConnectionConfigArgs(
         address_prefix="aa:bb::/125",
     ),
-    peer_express_route_circuit_peering=azure_nextgen.network.latest.SubResourceArgs(
+    peer_express_route_circuit_peering=azure_nextgen.network.SubResourceArgs(
         id="/subscriptions/subid2/resourceGroups/dedharcktpeer/providers/Microsoft.Network/expressRouteCircuits/dedharcktremote/peerings/AzurePrivatePeering",
     ),
     peering_name="AzurePrivatePeering",
@@ -129,7 +129,7 @@ express_route_circuit_connection = azure_nextgen.network.latest.ExpressRouteCirc
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const expressRouteCircuitConnection = new azure_nextgen.network.latest.ExpressRouteCircuitConnection("expressRouteCircuitConnection", {
+const expressRouteCircuitConnection = new azure_nextgen.network.ExpressRouteCircuitConnection("expressRouteCircuitConnection", {
     addressPrefix: "10.0.0.0/29",
     authorizationKey: "946a1918-b7a2-4917-b43c-8c4cdaee006a",
     circuitName: "ExpressRouteARMCircuitA",
@@ -394,7 +394,7 @@ The ExpressRouteCircuitConnection resource accepts the following [input]({{< rel
 <a href="#expressroutecircuitpeering_csharp" style="color: inherit; text-decoration: inherit;">Express<wbr>Route<wbr>Circuit<wbr>Peering</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Reference to Express Route Circuit Private Peering Resource of the circuit initiating connection.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -412,7 +412,7 @@ The ExpressRouteCircuitConnection resource accepts the following [input]({{< rel
 <a href="#ipv6circuitconnectionconfig_csharp" style="color: inherit; text-decoration: inherit;">Ipv6Circuit<wbr>Connection<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipv6circuitconnectionconfig">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Ipv6Circuit<wbr>Connection<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#ipv6circuitconnectionconfig">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Ipv6Circuit<wbr>Connection<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}IPv6 Address PrefixProperties of the express route circuit connection.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -430,7 +430,7 @@ The ExpressRouteCircuitConnection resource accepts the following [input]({{< rel
 <a href="#peerexpressroutecircuitpeering_csharp" style="color: inherit; text-decoration: inherit;">Peer<wbr>Express<wbr>Route<wbr>Circuit<wbr>Peering</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Reference to Express Route Circuit Private Peering Resource of the peered circuit.{{% /md %}}</dd>
 </dl>
@@ -1261,7 +1261,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:network/latest:ExpressRouteCircuitConnection circuitConnectionUSAUS /subscriptions/subid1/resourceGroups/dedharcktinit/providers/Microsoft.Network/expressRouteCircuits/ExpressRouteARMCircuitA/peerings/AzurePrivatePeering/connections/circuitConnectionUSAUS 
+$ pulumi import azure-nextgen:network:ExpressRouteCircuitConnection circuitConnectionUSAUS /subscriptions/subid1/resourceGroups/dedharcktinit/providers/Microsoft.Network/expressRouteCircuits/ExpressRouteARMCircuitA/peerings/AzurePrivatePeering/connections/circuitConnectionUSAUS 
 ```
 
 

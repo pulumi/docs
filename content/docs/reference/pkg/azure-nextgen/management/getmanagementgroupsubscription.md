@@ -197,7 +197,7 @@ The following output properties are available:
 <a href="#parent_csharp" style="color: inherit; text-decoration: inherit;">Parent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#descendantparentgroupinforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Management.<wbr>Outputs.<wbr>Descendant<wbr>Parent<wbr>Group<wbr>Info<wbr>Response</a></span>
+        <span class="property-type"><a href="#descendantparentgroupinforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Management..<wbr>Outputs.<wbr>Descendant<wbr>Parent<wbr>Group<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The ID of the parent management group.{{% /md %}}</dd>
     <dt class="property-"

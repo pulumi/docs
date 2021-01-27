@@ -332,7 +332,7 @@ The following output properties are available:
 <a href="#announcement_csharp" style="color: inherit; text-decoration: inherit;">Announcement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#labannouncementpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Outputs.<wbr>Lab<wbr>Announcement<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#labannouncementpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab..<wbr>Outputs.<wbr>Lab<wbr>Announcement<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The properties of any lab announcement associated with this lab{{% /md %}}</dd>
     <dt class="property-"
@@ -406,7 +406,7 @@ When its value is 'Disabled', only creation of standard data disks is allowed.{{
 <a href="#support_csharp" style="color: inherit; text-decoration: inherit;">Support</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#labsupportpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Outputs.<wbr>Lab<wbr>Support<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#labsupportpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab..<wbr>Outputs.<wbr>Lab<wbr>Support<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The properties of any lab support message associated with this lab{{% /md %}}</dd>
     <dt class="property-"

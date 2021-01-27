@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.compute.ProximityPlacementGroup 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Specifies information about the proximity placement group.
-Latest API Version: 2020-06-01.
+API Version: 2020-06-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var proximityPlacementGroup = new AzureNextGen.Compute.Latest.ProximityPlacementGroup("proximityPlacementGroup", new AzureNextGen.Compute.Latest.ProximityPlacementGroupArgs
+        var proximityPlacementGroup = new AzureNextGen.Compute..ProximityPlacementGroup("proximityPlacementGroup", new AzureNextGen.Compute..ProximityPlacementGroupArgs
         {
             Location = "westus",
             ProximityPlacementGroupName = "myProximityPlacementGroup",
@@ -48,7 +48,7 @@ class MyStack : Stack
 package main
 
 import (
-	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute/latest"
+	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -77,7 +77,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-proximity_placement_group = azure_nextgen.compute.latest.ProximityPlacementGroup("proximityPlacementGroup",
+proximity_placement_group = azure_nextgen.compute.ProximityPlacementGroup("proximityPlacementGroup",
     location="westus",
     proximity_placement_group_name="myProximityPlacementGroup",
     proximity_placement_group_type="Standard",
@@ -93,7 +93,7 @@ proximity_placement_group = azure_nextgen.compute.latest.ProximityPlacementGroup
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const proximityPlacementGroup = new azure_nextgen.compute.latest.ProximityPlacementGroup("proximityPlacementGroup", {
+const proximityPlacementGroup = new azure_nextgen.compute.ProximityPlacementGroup("proximityPlacementGroup", {
     location: "westus",
     proximityPlacementGroupName: "myProximityPlacementGroup",
     proximityPlacementGroupType: "Standard",
@@ -320,7 +320,7 @@ The ProximityPlacementGroup resource accepts the following [input]({{< relref "/
 <a href="#colocationstatus_csharp" style="color: inherit; text-decoration: inherit;">Colocation<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceviewstatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Instance<wbr>View<wbr>Status<wbr>Args</a></span>
+        <span class="property-type"><a href="#instanceviewstatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Inputs.<wbr>Instance<wbr>View<wbr>Status<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes colocation status of the Proximity Placement Group.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -329,7 +329,7 @@ The ProximityPlacementGroup resource accepts the following [input]({{< relref "/
 <a href="#proximityplacementgrouptype_csharp" style="color: inherit; text-decoration: inherit;">Proximity<wbr>Placement<wbr>Group<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#proximityplacementgrouptype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Proximity<wbr>Placement<wbr>Group<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#proximityplacementgrouptype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Proximity<wbr>Placement<wbr>Group<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Specifies the type of the proximity placement group. <br><br> Possible values are: <br><br> **Standard** : Co-locate resources within an Azure region or Availability Zone. <br><br> **Ultra** : For future use.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -540,7 +540,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#availabilitysets_csharp" style="color: inherit; text-decoration: inherit;">Availability<wbr>Sets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourcewithcolocationstatusresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Outputs.<wbr>Sub<wbr>Resource<wbr>With<wbr>Colocation<wbr>Status<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#subresourcewithcolocationstatusresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Outputs.<wbr>Sub<wbr>Resource<wbr>With<wbr>Colocation<wbr>Status<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of references to all availability sets in the proximity placement group.{{% /md %}}</dd>
     <dt class="property-"
@@ -576,7 +576,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#virtualmachinescalesets_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Machine<wbr>Scale<wbr>Sets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourcewithcolocationstatusresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Outputs.<wbr>Sub<wbr>Resource<wbr>With<wbr>Colocation<wbr>Status<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#subresourcewithcolocationstatusresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Outputs.<wbr>Sub<wbr>Resource<wbr>With<wbr>Colocation<wbr>Status<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of references to all virtual machine scale sets in the proximity placement group.{{% /md %}}</dd>
     <dt class="property-"
@@ -585,7 +585,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#virtualmachines_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Machines</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourcewithcolocationstatusresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Outputs.<wbr>Sub<wbr>Resource<wbr>With<wbr>Colocation<wbr>Status<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#subresourcewithcolocationstatusresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Outputs.<wbr>Sub<wbr>Resource<wbr>With<wbr>Colocation<wbr>Status<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of references to all virtual machines in the proximity placement group.{{% /md %}}</dd>
 </dl>
@@ -810,7 +810,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#level_csharp" style="color: inherit; text-decoration: inherit;">Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#statusleveltypes">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Status<wbr>Level<wbr>Types</a></span>
+        <span class="property-type"><a href="#statusleveltypes">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Status<wbr>Level<wbr>Types</a></span>
     </dt>
     <dd>{{% md %}}The level code.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1288,7 +1288,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#colocationstatus_csharp" style="color: inherit; text-decoration: inherit;">Colocation<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceviewstatusresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Instance<wbr>View<wbr>Status<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#instanceviewstatusresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Inputs.<wbr>Instance<wbr>View<wbr>Status<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes colocation status of a resource in the Proximity Placement Group.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1380,7 +1380,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:compute/latest:ProximityPlacementGroup myProximityPlacementGroup /subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/proximityPlacementGroups/myProximityPlacementGroup 
+$ pulumi import azure-nextgen:compute:ProximityPlacementGroup myProximityPlacementGroup /subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/proximityPlacementGroups/myProximityPlacementGroup 
 ```
 
 

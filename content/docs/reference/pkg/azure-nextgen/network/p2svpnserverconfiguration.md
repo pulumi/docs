@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.network.P2sVpnServerConfiguratio
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 P2SVpnServerConfiguration Resource.
-Latest API Version: 2019-07-01.
+API Version: 2019-07-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,11 +27,11 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var p2sVpnServerConfiguration = new AzureNextGen.Network.Latest.P2sVpnServerConfiguration("p2sVpnServerConfiguration", new AzureNextGen.Network.Latest.P2sVpnServerConfigurationArgs
+        var p2sVpnServerConfiguration = new AzureNextGen.Network..P2sVpnServerConfiguration("p2sVpnServerConfiguration", new AzureNextGen.Network..P2sVpnServerConfigurationArgs
         {
             P2SVpnServerConfigRadiusClientRootCertificates = 
             {
-                new AzureNextGen.Network.Latest.Inputs.P2SVpnServerConfigRadiusClientRootCertificateArgs
+                new AzureNextGen.Network..Inputs.P2SVpnServerConfigRadiusClientRootCertificateArgs
                 {
                     Name = "p2sVpnServerConfigRadiusClientRootCert1",
                     Thumbprint = "83FFBFC8848B5A5836C94D0112367E16148A286F",
@@ -39,7 +39,7 @@ class MyStack : Stack
             },
             P2SVpnServerConfigRadiusServerRootCertificates = 
             {
-                new AzureNextGen.Network.Latest.Inputs.P2SVpnServerConfigRadiusServerRootCertificateArgs
+                new AzureNextGen.Network..Inputs.P2SVpnServerConfigRadiusServerRootCertificateArgs
                 {
                     Name = "p2sVpnServerConfigRadiusServerRootCert1",
                     PublicCertData = "MIIC5zCCAc+gAwIBAgIQErQ0Hk4aDJxIA+Q5RagB+jANBgkqhkiG9w0BAQsFADAWMRQwEgYDVQQDDAtQMlNSb290Q2VydDAeFw0xNzEyMTQyMTA3MzhaFw0xODEyMTQyMTI3MzhaMBYxFDASBgNVBAMMC1AyU1Jvb3RDZXJ0MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArP7/NQXmW7cQ/ZR1mv3Y3I29Lt7HTOqzo/1KUOoVH3NItbQIRAQbwKy3UWrOFz4eGNX2GWtNRMdCyWsKeqy9Ltsdfcm1IbKXkl84DFeU/ZacXu4Dl3xX3gV5du4TLZjEowJELyur11Ea2YcjPRQ/FzAF9/hGuboS1HZQEPLx4FdUs9OxCYOtc0MxBCwLfVTTRqarb0Ne+arNYd4kCzIhAke1nOyKAJBda5ZL+VHy3S5S8qGlD46jm8HXugmAkUygS4oIIXOmj/1O9sNAi3LN60zufSzCmP8Rm/iUGX+DHAGGiXxwZOKQLEDaZXKqoHjMPP0XudmSWwOIbyeQVrLhkwIDAQABozEwLzAOBgNVHQ8BAf8EBAMCAgQwHQYDVR0OBBYEFEfeNU2trYxNLF9ONmuJUsT13pKDMA0GCSqGSIb3DQEBCwUAA4IBAQBmM6RJzsGGipxyMhimHKN2xlkejhVsgBoTAhOU0llW9aUSwINJ9zFUGgI8IzUFy1VG776fchHp0LMRmPSIUYk5btEPxbsrPtumPuMH8EQGrS+Rt4pD+78c8H1fEPkq5CmDl/PKu4JoFGv+aFcE+Od0hlILstIF10Qysf++QXDolKfzJa/56bgMeYKFiju73loiRM57ns8ddXpfLl792UVpRkFU62LNns6Y1LKTwapmUF4IvIuAIzd6LZNOQng64LAKXtKnViJ1JQiXwf4CEzhgvAti3/ejpb3U90hsrUcyZi6wBv9bZLcAJRWpz61JNYliM1d1grSwQDKGXNQE4xuM",
@@ -47,7 +47,7 @@ class MyStack : Stack
             },
             P2SVpnServerConfigVpnClientRevokedCertificates = 
             {
-                new AzureNextGen.Network.Latest.Inputs.P2SVpnServerConfigVpnClientRevokedCertificateArgs
+                new AzureNextGen.Network..Inputs.P2SVpnServerConfigVpnClientRevokedCertificateArgs
                 {
                     Name = "p2sVpnServerConfigVpnClientRevokedCert1",
                     Thumbprint = "83FFBFC8848B5A5836C94D0112367E16148A286F",
@@ -55,7 +55,7 @@ class MyStack : Stack
             },
             P2SVpnServerConfigVpnClientRootCertificates = 
             {
-                new AzureNextGen.Network.Latest.Inputs.P2SVpnServerConfigVpnClientRootCertificateArgs
+                new AzureNextGen.Network..Inputs.P2SVpnServerConfigVpnClientRootCertificateArgs
                 {
                     Name = "p2sVpnServerConfigVpnClientRootCert1",
                     PublicCertData = "MIIC5zCCAc+gAwIBAgIQErQ0Hk4aDJxIA+Q5RagB+jANBgkqhkiG9w0BAQsFADAWMRQwEgYDVQQDDAtQMlNSb290Q2VydDAeFw0xNzEyMTQyMTA3MzhaFw0xODEyMTQyMTI3MzhaMBYxFDASBgNVBAMMC1AyU1Jvb3RDZXJ0MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArP7/NQXmW7cQ/ZR1mv3Y3I29Lt7HTOqzo/1KUOoVH3NItbQIRAQbwKy3UWrOFz4eGNX2GWtNRMdCyWsKeqy9Ltsdfcm1IbKXkl84DFeU/ZacXu4Dl3xX3gV5du4TLZjEowJELyur11Ea2YcjPRQ/FzAF9/hGuboS1HZQEPLx4FdUs9OxCYOtc0MxBCwLfVTTRqarb0Ne+arNYd4kCzIhAke1nOyKAJBda5ZL+VHy3S5S8qGlD46jm8HXugmAkUygS4oIIXOmj/1O9sNAi3LN60zufSzCmP8Rm/iUGX+DHAGGiXxwZOKQLEDaZXKqoHjMPP0XudmSWwOIbyeQVrLhkwIDAQABozEwLzAOBgNVHQ8BAf8EBAMCAgQwHQYDVR0OBBYEFEfeNU2trYxNLF9ONmuJUsT13pKDMA0GCSqGSIb3DQEBCwUAA4IBAQBmM6RJzsGGipxyMhimHKN2xlkejhVsgBoTAhOU0llW9aUSwINJ9zFUGgI8IzUFy1VG776fchHp0LMRmPSIUYk5btEPxbsrPtumPuMH8EQGrS+Rt4pD+78c8H1fEPkq5CmDl/PKu4JoFGv+aFcE+Od0hlILstIF10Qysf++QXDolKfzJa/56bgMeYKFiju73loiRM57ns8ddXpfLl792UVpRkFU62LNns6Y1LKTwapmUF4IvIuAIzd6LZNOQng64LAKXtKnViJ1JQiXwf4CEzhgvAti3/ejpb3U90hsrUcyZi6wBv9bZLcAJRWpz61JNYliM1d1grSwQDKGXNQE4xuN",
@@ -68,7 +68,7 @@ class MyStack : Stack
             VirtualWanName = "virtualWan1",
             VpnClientIpsecPolicies = 
             {
-                new AzureNextGen.Network.Latest.Inputs.IpsecPolicyArgs
+                new AzureNextGen.Network..Inputs.IpsecPolicyArgs
                 {
                     DhGroup = "DHGroup14",
                     IkeEncryption = "AES256",
@@ -99,7 +99,7 @@ class MyStack : Stack
 package main
 
 import (
-	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network/latest"
+	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -168,20 +168,20 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-p2s_vpn_server_configuration = azure_nextgen.network.latest.P2sVpnServerConfiguration("p2sVpnServerConfiguration",
-    p2_s_vpn_server_config_radius_client_root_certificates=[azure_nextgen.network.latest.P2SVpnServerConfigRadiusClientRootCertificateArgs(
+p2s_vpn_server_configuration = azure_nextgen.network.P2sVpnServerConfiguration("p2sVpnServerConfiguration",
+    p2_s_vpn_server_config_radius_client_root_certificates=[azure_nextgen.network.P2SVpnServerConfigRadiusClientRootCertificateArgs(
         name="p2sVpnServerConfigRadiusClientRootCert1",
         thumbprint="83FFBFC8848B5A5836C94D0112367E16148A286F",
     )],
-    p2_s_vpn_server_config_radius_server_root_certificates=[azure_nextgen.network.latest.P2SVpnServerConfigRadiusServerRootCertificateArgs(
+    p2_s_vpn_server_config_radius_server_root_certificates=[azure_nextgen.network.P2SVpnServerConfigRadiusServerRootCertificateArgs(
         name="p2sVpnServerConfigRadiusServerRootCert1",
         public_cert_data="MIIC5zCCAc+gAwIBAgIQErQ0Hk4aDJxIA+Q5RagB+jANBgkqhkiG9w0BAQsFADAWMRQwEgYDVQQDDAtQMlNSb290Q2VydDAeFw0xNzEyMTQyMTA3MzhaFw0xODEyMTQyMTI3MzhaMBYxFDASBgNVBAMMC1AyU1Jvb3RDZXJ0MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArP7/NQXmW7cQ/ZR1mv3Y3I29Lt7HTOqzo/1KUOoVH3NItbQIRAQbwKy3UWrOFz4eGNX2GWtNRMdCyWsKeqy9Ltsdfcm1IbKXkl84DFeU/ZacXu4Dl3xX3gV5du4TLZjEowJELyur11Ea2YcjPRQ/FzAF9/hGuboS1HZQEPLx4FdUs9OxCYOtc0MxBCwLfVTTRqarb0Ne+arNYd4kCzIhAke1nOyKAJBda5ZL+VHy3S5S8qGlD46jm8HXugmAkUygS4oIIXOmj/1O9sNAi3LN60zufSzCmP8Rm/iUGX+DHAGGiXxwZOKQLEDaZXKqoHjMPP0XudmSWwOIbyeQVrLhkwIDAQABozEwLzAOBgNVHQ8BAf8EBAMCAgQwHQYDVR0OBBYEFEfeNU2trYxNLF9ONmuJUsT13pKDMA0GCSqGSIb3DQEBCwUAA4IBAQBmM6RJzsGGipxyMhimHKN2xlkejhVsgBoTAhOU0llW9aUSwINJ9zFUGgI8IzUFy1VG776fchHp0LMRmPSIUYk5btEPxbsrPtumPuMH8EQGrS+Rt4pD+78c8H1fEPkq5CmDl/PKu4JoFGv+aFcE+Od0hlILstIF10Qysf++QXDolKfzJa/56bgMeYKFiju73loiRM57ns8ddXpfLl792UVpRkFU62LNns6Y1LKTwapmUF4IvIuAIzd6LZNOQng64LAKXtKnViJ1JQiXwf4CEzhgvAti3/ejpb3U90hsrUcyZi6wBv9bZLcAJRWpz61JNYliM1d1grSwQDKGXNQE4xuM",
     )],
-    p2_s_vpn_server_config_vpn_client_revoked_certificates=[azure_nextgen.network.latest.P2SVpnServerConfigVpnClientRevokedCertificateArgs(
+    p2_s_vpn_server_config_vpn_client_revoked_certificates=[azure_nextgen.network.P2SVpnServerConfigVpnClientRevokedCertificateArgs(
         name="p2sVpnServerConfigVpnClientRevokedCert1",
         thumbprint="83FFBFC8848B5A5836C94D0112367E16148A286F",
     )],
-    p2_s_vpn_server_config_vpn_client_root_certificates=[azure_nextgen.network.latest.P2SVpnServerConfigVpnClientRootCertificateArgs(
+    p2_s_vpn_server_config_vpn_client_root_certificates=[azure_nextgen.network.P2SVpnServerConfigVpnClientRootCertificateArgs(
         name="p2sVpnServerConfigVpnClientRootCert1",
         public_cert_data="MIIC5zCCAc+gAwIBAgIQErQ0Hk4aDJxIA+Q5RagB+jANBgkqhkiG9w0BAQsFADAWMRQwEgYDVQQDDAtQMlNSb290Q2VydDAeFw0xNzEyMTQyMTA3MzhaFw0xODEyMTQyMTI3MzhaMBYxFDASBgNVBAMMC1AyU1Jvb3RDZXJ0MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArP7/NQXmW7cQ/ZR1mv3Y3I29Lt7HTOqzo/1KUOoVH3NItbQIRAQbwKy3UWrOFz4eGNX2GWtNRMdCyWsKeqy9Ltsdfcm1IbKXkl84DFeU/ZacXu4Dl3xX3gV5du4TLZjEowJELyur11Ea2YcjPRQ/FzAF9/hGuboS1HZQEPLx4FdUs9OxCYOtc0MxBCwLfVTTRqarb0Ne+arNYd4kCzIhAke1nOyKAJBda5ZL+VHy3S5S8qGlD46jm8HXugmAkUygS4oIIXOmj/1O9sNAi3LN60zufSzCmP8Rm/iUGX+DHAGGiXxwZOKQLEDaZXKqoHjMPP0XudmSWwOIbyeQVrLhkwIDAQABozEwLzAOBgNVHQ8BAf8EBAMCAgQwHQYDVR0OBBYEFEfeNU2trYxNLF9ONmuJUsT13pKDMA0GCSqGSIb3DQEBCwUAA4IBAQBmM6RJzsGGipxyMhimHKN2xlkejhVsgBoTAhOU0llW9aUSwINJ9zFUGgI8IzUFy1VG776fchHp0LMRmPSIUYk5btEPxbsrPtumPuMH8EQGrS+Rt4pD+78c8H1fEPkq5CmDl/PKu4JoFGv+aFcE+Od0hlILstIF10Qysf++QXDolKfzJa/56bgMeYKFiju73loiRM57ns8ddXpfLl792UVpRkFU62LNns6Y1LKTwapmUF4IvIuAIzd6LZNOQng64LAKXtKnViJ1JQiXwf4CEzhgvAti3/ejpb3U90hsrUcyZi6wBv9bZLcAJRWpz61JNYliM1d1grSwQDKGXNQE4xuN",
     )],
@@ -190,7 +190,7 @@ p2s_vpn_server_configuration = azure_nextgen.network.latest.P2sVpnServerConfigur
     radius_server_secret="<radiusServerSecret>",
     resource_group_name="rg1",
     virtual_wan_name="virtualWan1",
-    vpn_client_ipsec_policies=[azure_nextgen.network.latest.IpsecPolicyArgs(
+    vpn_client_ipsec_policies=[azure_nextgen.network.IpsecPolicyArgs(
         dh_group="DHGroup14",
         ike_encryption="AES256",
         ike_integrity="SHA384",
@@ -212,7 +212,7 @@ p2s_vpn_server_configuration = azure_nextgen.network.latest.P2sVpnServerConfigur
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const p2sVpnServerConfiguration = new azure_nextgen.network.latest.P2sVpnServerConfiguration("p2sVpnServerConfiguration", {
+const p2sVpnServerConfiguration = new azure_nextgen.network.P2sVpnServerConfiguration("p2sVpnServerConfiguration", {
     p2SVpnServerConfigRadiusClientRootCertificates: [{
         name: "p2sVpnServerConfigRadiusClientRootCert1",
         thumbprint: "83FFBFC8848B5A5836C94D0112367E16148A286F",
@@ -494,7 +494,7 @@ The P2sVpnServerConfiguration resource accepts the following [input]({{< relref 
 <a href="#p2svpnserverconfigradiusclientrootcertificates_csharp" style="color: inherit; text-decoration: inherit;">P2SVpn<wbr>Server<wbr>Config<wbr>Radius<wbr>Client<wbr>Root<wbr>Certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#p2svpnserverconfigradiusclientrootcertificate">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>P2SVpn<wbr>Server<wbr>Config<wbr>Radius<wbr>Client<wbr>Root<wbr>Certificate<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#p2svpnserverconfigradiusclientrootcertificate">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>P2SVpn<wbr>Server<wbr>Config<wbr>Radius<wbr>Client<wbr>Root<wbr>Certificate<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Radius client root certificate of P2SVpnServerConfiguration.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -503,7 +503,7 @@ The P2sVpnServerConfiguration resource accepts the following [input]({{< relref 
 <a href="#p2svpnserverconfigradiusserverrootcertificates_csharp" style="color: inherit; text-decoration: inherit;">P2SVpn<wbr>Server<wbr>Config<wbr>Radius<wbr>Server<wbr>Root<wbr>Certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#p2svpnserverconfigradiusserverrootcertificate">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>P2SVpn<wbr>Server<wbr>Config<wbr>Radius<wbr>Server<wbr>Root<wbr>Certificate<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#p2svpnserverconfigradiusserverrootcertificate">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>P2SVpn<wbr>Server<wbr>Config<wbr>Radius<wbr>Server<wbr>Root<wbr>Certificate<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Radius Server root certificate of P2SVpnServerConfiguration.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -512,7 +512,7 @@ The P2sVpnServerConfiguration resource accepts the following [input]({{< relref 
 <a href="#p2svpnserverconfigvpnclientrevokedcertificates_csharp" style="color: inherit; text-decoration: inherit;">P2SVpn<wbr>Server<wbr>Config<wbr>Vpn<wbr>Client<wbr>Revoked<wbr>Certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#p2svpnserverconfigvpnclientrevokedcertificate">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>P2SVpn<wbr>Server<wbr>Config<wbr>Vpn<wbr>Client<wbr>Revoked<wbr>Certificate<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#p2svpnserverconfigvpnclientrevokedcertificate">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>P2SVpn<wbr>Server<wbr>Config<wbr>Vpn<wbr>Client<wbr>Revoked<wbr>Certificate<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}VPN client revoked certificate of P2SVpnServerConfiguration.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -521,7 +521,7 @@ The P2sVpnServerConfiguration resource accepts the following [input]({{< relref 
 <a href="#p2svpnserverconfigvpnclientrootcertificates_csharp" style="color: inherit; text-decoration: inherit;">P2SVpn<wbr>Server<wbr>Config<wbr>Vpn<wbr>Client<wbr>Root<wbr>Certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#p2svpnserverconfigvpnclientrootcertificate">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>P2SVpn<wbr>Server<wbr>Config<wbr>Vpn<wbr>Client<wbr>Root<wbr>Certificate<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#p2svpnserverconfigvpnclientrootcertificate">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>P2SVpn<wbr>Server<wbr>Config<wbr>Vpn<wbr>Client<wbr>Root<wbr>Certificate<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}VPN client root certificate of P2SVpnServerConfiguration.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -548,7 +548,7 @@ The P2sVpnServerConfiguration resource accepts the following [input]({{< relref 
 <a href="#vpnclientipsecpolicies_csharp" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Client<wbr>Ipsec<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipsecpolicy">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Ipsec<wbr>Policy<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#ipsecpolicy">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Ipsec<wbr>Policy<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}VpnClientIpsecPolicies for P2SVpnServerConfiguration.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -557,7 +557,7 @@ The P2sVpnServerConfiguration resource accepts the following [input]({{< relref 
 <a href="#vpnprotocols_csharp" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Protocols</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Union&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Vpn<wbr>Gateway<wbr>Tunneling<wbr>Protocol&gt;&gt;</span>
+        <span class="property-type">List&lt;Union&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Vpn<wbr>Gateway<wbr>Tunneling<wbr>Protocol&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}VPN protocols for the P2SVpnServerConfiguration.{{% /md %}}</dd>
 </dl>
@@ -984,7 +984,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#p2svpngateways_csharp" style="color: inherit; text-decoration: inherit;">P2SVpn<wbr>Gateways</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Outputs.<wbr>Sub<wbr>Resource<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#subresourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Outputs.<wbr>Sub<wbr>Resource<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of references to P2SVpnGateways.{{% /md %}}</dd>
     <dt class="property-"
@@ -1517,7 +1517,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dhgroup_csharp" style="color: inherit; text-decoration: inherit;">Dh<wbr>Group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#dhgroup">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Dh<wbr>Group</a></span>
+        <span class="property-type">string | <a href="#dhgroup">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Dh<wbr>Group</a></span>
     </dt>
     <dd>{{% md %}}The DH Group used in IKE Phase 1 for initial SA.{{% /md %}}</dd>
     <dt class="property-required"
@@ -1526,7 +1526,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ikeencryption_csharp" style="color: inherit; text-decoration: inherit;">Ike<wbr>Encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#ikeencryption">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Ike<wbr>Encryption</a></span>
+        <span class="property-type">string | <a href="#ikeencryption">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Ike<wbr>Encryption</a></span>
     </dt>
     <dd>{{% md %}}The IKE encryption algorithm (IKE phase 2).{{% /md %}}</dd>
     <dt class="property-required"
@@ -1535,7 +1535,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ikeintegrity_csharp" style="color: inherit; text-decoration: inherit;">Ike<wbr>Integrity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#ikeintegrity">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Ike<wbr>Integrity</a></span>
+        <span class="property-type">string | <a href="#ikeintegrity">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Ike<wbr>Integrity</a></span>
     </dt>
     <dd>{{% md %}}The IKE integrity algorithm (IKE phase 2).{{% /md %}}</dd>
     <dt class="property-required"
@@ -1544,7 +1544,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipsecencryption_csharp" style="color: inherit; text-decoration: inherit;">Ipsec<wbr>Encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#ipsecencryption">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Ipsec<wbr>Encryption</a></span>
+        <span class="property-type">string | <a href="#ipsecencryption">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Ipsec<wbr>Encryption</a></span>
     </dt>
     <dd>{{% md %}}The IPSec encryption algorithm (IKE phase 1).{{% /md %}}</dd>
     <dt class="property-required"
@@ -1553,7 +1553,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipsecintegrity_csharp" style="color: inherit; text-decoration: inherit;">Ipsec<wbr>Integrity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#ipsecintegrity">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Ipsec<wbr>Integrity</a></span>
+        <span class="property-type">string | <a href="#ipsecintegrity">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Ipsec<wbr>Integrity</a></span>
     </dt>
     <dd>{{% md %}}The IPSec integrity algorithm (IKE phase 1).{{% /md %}}</dd>
     <dt class="property-required"
@@ -1562,7 +1562,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pfsgroup_csharp" style="color: inherit; text-decoration: inherit;">Pfs<wbr>Group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#pfsgroup">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Pfs<wbr>Group</a></span>
+        <span class="property-type">string | <a href="#pfsgroup">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Pfs<wbr>Group</a></span>
     </dt>
     <dd>{{% md %}}The Pfs Group used in IKE Phase 2 for new child SA.{{% /md %}}</dd>
     <dt class="property-required"
@@ -3837,7 +3837,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:network/latest:P2sVpnServerConfiguration p2sVpnServerConfiguration1 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualWans/virtualWan1/p2sVpnServerConfigurations//p2sVpnServerConfiguration1 
+$ pulumi import azure-nextgen:network:P2sVpnServerConfiguration p2sVpnServerConfiguration1 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualWans/virtualWan1/p2sVpnServerConfigurations//p2sVpnServerConfiguration1 
 ```
 
 

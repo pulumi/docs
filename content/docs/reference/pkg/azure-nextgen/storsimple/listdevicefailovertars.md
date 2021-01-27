@@ -231,7 +231,7 @@ The following output properties are available:
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#failovertargetresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stor<wbr>Simple.<wbr>Outputs.<wbr>Failover<wbr>Target<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#failovertargetresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stor<wbr>Simple..<wbr>Outputs.<wbr>Failover<wbr>Target<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of all the failover targets.{{% /md %}}</dd>
 </dl>
@@ -367,7 +367,7 @@ The following output properties are available:
 <a href="#eligibilityresult_csharp" style="color: inherit; text-decoration: inherit;">Eligibility<wbr>Result</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#targeteligibilityresultresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stor<wbr>Simple.<wbr>Inputs.<wbr>Target<wbr>Eligibility<wbr>Result<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#targeteligibilityresultresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stor<wbr>Simple..<wbr>Inputs.<wbr>Target<wbr>Eligibility<wbr>Result<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The eligibility result of the device, as a failover target device.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -879,7 +879,7 @@ The following output properties are available:
 <a href="#messages_csharp" style="color: inherit; text-decoration: inherit;">Messages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#targeteligibilityerrormessageresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stor<wbr>Simple.<wbr>Inputs.<wbr>Target<wbr>Eligibility<wbr>Error<wbr>Message<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#targeteligibilityerrormessageresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stor<wbr>Simple..<wbr>Inputs.<wbr>Target<wbr>Eligibility<wbr>Error<wbr>Message<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of error messages, if a device does not qualify as a failover target device.{{% /md %}}</dd>
 </dl>

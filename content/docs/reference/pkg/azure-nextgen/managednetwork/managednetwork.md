@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.managednetwork.ManagedNetwork re
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The Managed Network resource
+API Version: 2019-06-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,53 +27,53 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var managedNetwork = new AzureNextGen.ManagedNetwork.V20190601Preview.ManagedNetwork("managedNetwork", new AzureNextGen.ManagedNetwork.V20190601Preview.ManagedNetworkArgs
+        var managedNetwork = new AzureNextGen.ManagedNetwork..ManagedNetwork("managedNetwork", new AzureNextGen.ManagedNetwork..ManagedNetworkArgs
         {
             Location = "eastus",
             ManagedNetworkName = "myManagedNetwork",
             ResourceGroupName = "myResourceGroup",
-            Scope = new AzureNextGen.ManagedNetwork.V20190601Preview.Inputs.ScopeArgs
+            Scope = new AzureNextGen.ManagedNetwork..Inputs.ScopeArgs
             {
                 ManagementGroups = 
                 {
-                    new AzureNextGen.ManagedNetwork.V20190601Preview.Inputs.ResourceIdArgs
+                    new AzureNextGen.ManagedNetwork..Inputs.ResourceIdArgs
                     {
                         Id = "/providers/Microsoft.Management/managementGroups/20000000-0001-0000-0000-000000000000",
                     },
-                    new AzureNextGen.ManagedNetwork.V20190601Preview.Inputs.ResourceIdArgs
+                    new AzureNextGen.ManagedNetwork..Inputs.ResourceIdArgs
                     {
                         Id = "/providers/Microsoft.Management/managementGroups/20000000-0002-0000-0000-000000000000",
                     },
                 },
                 Subnets = 
                 {
-                    new AzureNextGen.ManagedNetwork.V20190601Preview.Inputs.ResourceIdArgs
+                    new AzureNextGen.ManagedNetwork..Inputs.ResourceIdArgs
                     {
                         Id = "/subscriptions/subscriptionC/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/VnetC/subnets/subnetA",
                     },
-                    new AzureNextGen.ManagedNetwork.V20190601Preview.Inputs.ResourceIdArgs
+                    new AzureNextGen.ManagedNetwork..Inputs.ResourceIdArgs
                     {
                         Id = "/subscriptions/subscriptionC/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/VnetC/subnets/subnetB",
                     },
                 },
                 Subscriptions = 
                 {
-                    new AzureNextGen.ManagedNetwork.V20190601Preview.Inputs.ResourceIdArgs
+                    new AzureNextGen.ManagedNetwork..Inputs.ResourceIdArgs
                     {
                         Id = "subscriptionA",
                     },
-                    new AzureNextGen.ManagedNetwork.V20190601Preview.Inputs.ResourceIdArgs
+                    new AzureNextGen.ManagedNetwork..Inputs.ResourceIdArgs
                     {
                         Id = "subscriptionB",
                     },
                 },
                 VirtualNetworks = 
                 {
-                    new AzureNextGen.ManagedNetwork.V20190601Preview.Inputs.ResourceIdArgs
+                    new AzureNextGen.ManagedNetwork..Inputs.ResourceIdArgs
                     {
                         Id = "/subscriptions/subscriptionC/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/VnetA",
                     },
-                    new AzureNextGen.ManagedNetwork.V20190601Preview.Inputs.ResourceIdArgs
+                    new AzureNextGen.ManagedNetwork..Inputs.ResourceIdArgs
                     {
                         Id = "/subscriptions/subscriptionC/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/VnetB",
                     },
@@ -94,7 +95,7 @@ class MyStack : Stack
 package main
 
 import (
-	managednetwork "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/managednetwork/v20190601preview"
+	managednetwork "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/managednetwork"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -157,40 +158,40 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-managed_network = azure_nextgen.managednetwork.v20190601preview.ManagedNetwork("managedNetwork",
+managed_network = azure_nextgen.managednetwork.ManagedNetwork("managedNetwork",
     location="eastus",
     managed_network_name="myManagedNetwork",
     resource_group_name="myResourceGroup",
-    scope=azure_nextgen.managednetwork.v20190601preview.ScopeArgs(
+    scope=azure_nextgen.managednetwork.ScopeArgs(
         management_groups=[
-            azure_nextgen.managednetwork.v20190601preview.ResourceIdArgs(
+            azure_nextgen.managednetwork.ResourceIdArgs(
                 id="/providers/Microsoft.Management/managementGroups/20000000-0001-0000-0000-000000000000",
             ),
-            azure_nextgen.managednetwork.v20190601preview.ResourceIdArgs(
+            azure_nextgen.managednetwork.ResourceIdArgs(
                 id="/providers/Microsoft.Management/managementGroups/20000000-0002-0000-0000-000000000000",
             ),
         ],
         subnets=[
-            azure_nextgen.managednetwork.v20190601preview.ResourceIdArgs(
+            azure_nextgen.managednetwork.ResourceIdArgs(
                 id="/subscriptions/subscriptionC/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/VnetC/subnets/subnetA",
             ),
-            azure_nextgen.managednetwork.v20190601preview.ResourceIdArgs(
+            azure_nextgen.managednetwork.ResourceIdArgs(
                 id="/subscriptions/subscriptionC/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/VnetC/subnets/subnetB",
             ),
         ],
         subscriptions=[
-            azure_nextgen.managednetwork.v20190601preview.ResourceIdArgs(
+            azure_nextgen.managednetwork.ResourceIdArgs(
                 id="subscriptionA",
             ),
-            azure_nextgen.managednetwork.v20190601preview.ResourceIdArgs(
+            azure_nextgen.managednetwork.ResourceIdArgs(
                 id="subscriptionB",
             ),
         ],
         virtual_networks=[
-            azure_nextgen.managednetwork.v20190601preview.ResourceIdArgs(
+            azure_nextgen.managednetwork.ResourceIdArgs(
                 id="/subscriptions/subscriptionC/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/VnetA",
             ),
-            azure_nextgen.managednetwork.v20190601preview.ResourceIdArgs(
+            azure_nextgen.managednetwork.ResourceIdArgs(
                 id="/subscriptions/subscriptionC/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/VnetB",
             ),
         ],
@@ -207,7 +208,7 @@ managed_network = azure_nextgen.managednetwork.v20190601preview.ManagedNetwork("
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const managedNetwork = new azure_nextgen.managednetwork.v20190601preview.ManagedNetwork("managedNetwork", {
+const managedNetwork = new azure_nextgen.managednetwork.ManagedNetwork("managedNetwork", {
     location: "eastus",
     managedNetworkName: "myManagedNetwork",
     resourceGroupName: "myResourceGroup",
@@ -468,7 +469,7 @@ The ManagedNetwork resource accepts the following [input]({{< relref "/docs/intr
 <a href="#scope_csharp" style="color: inherit; text-decoration: inherit;">Scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scope">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Managed<wbr>Network.<wbr>Inputs.<wbr>Scope<wbr>Args</a></span>
+        <span class="property-type"><a href="#scope">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Managed<wbr>Network..<wbr>Inputs.<wbr>Scope<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The collection of management groups, subscriptions, virtual networks, and subnets by the Managed Network. This is a read-only property that is reflective of all ScopeAssignments for this Managed Network{{% /md %}}</dd>
     <dt class="property-optional"
@@ -652,7 +653,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#connectivity_csharp" style="color: inherit; text-decoration: inherit;">Connectivity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectivitycollectionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Managed<wbr>Network.<wbr>Outputs.<wbr>Connectivity<wbr>Collection<wbr>Response</a></span>
+        <span class="property-type"><a href="#connectivitycollectionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Managed<wbr>Network..<wbr>Outputs.<wbr>Connectivity<wbr>Collection<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The collection of groups and policies concerned with connectivity{{% /md %}}</dd>
     <dt class="property-"
@@ -904,7 +905,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#groups_csharp" style="color: inherit; text-decoration: inherit;">Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managednetworkgroupresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Managed<wbr>Network.<wbr>Inputs.<wbr>Managed<wbr>Network<wbr>Group<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#managednetworkgroupresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Managed<wbr>Network..<wbr>Inputs.<wbr>Managed<wbr>Network<wbr>Group<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The collection of connectivity related Managed Network Groups within the Managed Network{{% /md %}}</dd>
     <dt class="property-required"
@@ -913,7 +914,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#peerings_csharp" style="color: inherit; text-decoration: inherit;">Peerings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managednetworkpeeringpolicyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Managed<wbr>Network.<wbr>Inputs.<wbr>Managed<wbr>Network<wbr>Peering<wbr>Policy<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#managednetworkpeeringpolicyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Managed<wbr>Network..<wbr>Inputs.<wbr>Managed<wbr>Network<wbr>Peering<wbr>Policy<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The collection of Managed Network Peering Policies within the Managed Network{{% /md %}}</dd>
 </dl>
@@ -1065,7 +1066,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#managementgroups_csharp" style="color: inherit; text-decoration: inherit;">Management<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Managed<wbr>Network.<wbr>Inputs.<wbr>Resource<wbr>Id<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#resourceidresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Managed<wbr>Network..<wbr>Inputs.<wbr>Resource<wbr>Id<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The collection of management groups covered by the Managed Network{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1074,7 +1075,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subnets_csharp" style="color: inherit; text-decoration: inherit;">Subnets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Managed<wbr>Network.<wbr>Inputs.<wbr>Resource<wbr>Id<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#resourceidresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Managed<wbr>Network..<wbr>Inputs.<wbr>Resource<wbr>Id<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The collection of  subnets covered by the Managed Network{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1083,7 +1084,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subscriptions_csharp" style="color: inherit; text-decoration: inherit;">Subscriptions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Managed<wbr>Network.<wbr>Inputs.<wbr>Resource<wbr>Id<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#resourceidresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Managed<wbr>Network..<wbr>Inputs.<wbr>Resource<wbr>Id<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The collection of subscriptions covered by the Managed Network{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1092,7 +1093,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#virtualnetworks_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Networks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Managed<wbr>Network.<wbr>Inputs.<wbr>Resource<wbr>Id<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#resourceidresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Managed<wbr>Network..<wbr>Inputs.<wbr>Resource<wbr>Id<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The collection of virtual nets covered by the Managed Network{{% /md %}}</dd>
 </dl>
@@ -1451,7 +1452,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hub_csharp" style="color: inherit; text-decoration: inherit;">Hub</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Managed<wbr>Network.<wbr>Inputs.<wbr>Resource<wbr>Id<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourceidresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Managed<wbr>Network..<wbr>Inputs.<wbr>Resource<wbr>Id<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the hub virtual network ID{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1460,7 +1461,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mesh_csharp" style="color: inherit; text-decoration: inherit;">Mesh</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Managed<wbr>Network.<wbr>Inputs.<wbr>Resource<wbr>Id<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#resourceidresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Managed<wbr>Network..<wbr>Inputs.<wbr>Resource<wbr>Id<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the mesh group IDs{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1469,7 +1470,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#spokes_csharp" style="color: inherit; text-decoration: inherit;">Spokes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Managed<wbr>Network.<wbr>Inputs.<wbr>Resource<wbr>Id<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#resourceidresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Managed<wbr>Network..<wbr>Inputs.<wbr>Resource<wbr>Id<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the spokes group IDs{{% /md %}}</dd>
 </dl>
@@ -1702,7 +1703,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managednetworkpeeringpolicypropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Managed<wbr>Network.<wbr>Inputs.<wbr>Managed<wbr>Network<wbr>Peering<wbr>Policy<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#managednetworkpeeringpolicypropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Managed<wbr>Network..<wbr>Inputs.<wbr>Managed<wbr>Network<wbr>Peering<wbr>Policy<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the properties of a Managed Network Policy{{% /md %}}</dd>
 </dl>
@@ -1996,7 +1997,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#managementgroups_csharp" style="color: inherit; text-decoration: inherit;">Management<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceid">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Managed<wbr>Network.<wbr>Inputs.<wbr>Resource<wbr>Id<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#resourceid">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Managed<wbr>Network..<wbr>Inputs.<wbr>Resource<wbr>Id<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The collection of management groups covered by the Managed Network{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2005,7 +2006,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subnets_csharp" style="color: inherit; text-decoration: inherit;">Subnets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceid">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Managed<wbr>Network.<wbr>Inputs.<wbr>Resource<wbr>Id<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#resourceid">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Managed<wbr>Network..<wbr>Inputs.<wbr>Resource<wbr>Id<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The collection of  subnets covered by the Managed Network{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2014,7 +2015,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subscriptions_csharp" style="color: inherit; text-decoration: inherit;">Subscriptions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceid">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Managed<wbr>Network.<wbr>Inputs.<wbr>Resource<wbr>Id<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#resourceid">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Managed<wbr>Network..<wbr>Inputs.<wbr>Resource<wbr>Id<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The collection of subscriptions covered by the Managed Network{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2023,7 +2024,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#virtualnetworks_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Networks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceid">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Managed<wbr>Network.<wbr>Inputs.<wbr>Resource<wbr>Id<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#resourceid">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Managed<wbr>Network..<wbr>Inputs.<wbr>Resource<wbr>Id<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The collection of virtual nets covered by the Managed Network{{% /md %}}</dd>
 </dl>
@@ -2166,7 +2167,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#managementgroups_csharp" style="color: inherit; text-decoration: inherit;">Management<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Managed<wbr>Network.<wbr>Inputs.<wbr>Resource<wbr>Id<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#resourceidresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Managed<wbr>Network..<wbr>Inputs.<wbr>Resource<wbr>Id<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The collection of management groups covered by the Managed Network{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2175,7 +2176,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subnets_csharp" style="color: inherit; text-decoration: inherit;">Subnets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Managed<wbr>Network.<wbr>Inputs.<wbr>Resource<wbr>Id<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#resourceidresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Managed<wbr>Network..<wbr>Inputs.<wbr>Resource<wbr>Id<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The collection of  subnets covered by the Managed Network{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2184,7 +2185,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subscriptions_csharp" style="color: inherit; text-decoration: inherit;">Subscriptions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Managed<wbr>Network.<wbr>Inputs.<wbr>Resource<wbr>Id<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#resourceidresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Managed<wbr>Network..<wbr>Inputs.<wbr>Resource<wbr>Id<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The collection of subscriptions covered by the Managed Network{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2193,7 +2194,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#virtualnetworks_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Networks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Managed<wbr>Network.<wbr>Inputs.<wbr>Resource<wbr>Id<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#resourceidresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Managed<wbr>Network..<wbr>Inputs.<wbr>Resource<wbr>Id<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The collection of virtual nets covered by the Managed Network{{% /md %}}</dd>
 </dl>
@@ -2330,7 +2331,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:managednetwork/v20190601preview:ManagedNetwork myManagedNetwork /subscriptions/subscriptionA/resourceGroups/myResourceGroup/providers/Microsoft.ManagedNetwork/managedNetworks/myManagedNetwork 
+$ pulumi import azure-nextgen:managednetwork:ManagedNetwork myManagedNetwork /subscriptions/subscriptionA/resourceGroups/myResourceGroup/providers/Microsoft.ManagedNetwork/managedNetworks/myManagedNetwork 
 ```
 
 

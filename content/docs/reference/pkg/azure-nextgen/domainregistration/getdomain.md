@@ -161,7 +161,7 @@ The following output properties are available:
 <a href="#consent_csharp" style="color: inherit; text-decoration: inherit;">Consent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainpurchaseconsentresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Domain<wbr>Registration.<wbr>Outputs.<wbr>Domain<wbr>Purchase<wbr>Consent<wbr>Response</a></span>
+        <span class="property-type"><a href="#domainpurchaseconsentresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Domain<wbr>Registration..<wbr>Outputs.<wbr>Domain<wbr>Purchase<wbr>Consent<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Legal agreement consent.{{% /md %}}</dd>
     <dt class="property-"
@@ -170,7 +170,7 @@ The following output properties are available:
 <a href="#contactadmin_csharp" style="color: inherit; text-decoration: inherit;">Contact<wbr>Admin</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contactresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Domain<wbr>Registration.<wbr>Outputs.<wbr>Contact<wbr>Response</a></span>
+        <span class="property-type"><a href="#contactresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Domain<wbr>Registration..<wbr>Outputs.<wbr>Contact<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Administrative contact.{{% /md %}}</dd>
     <dt class="property-"
@@ -179,7 +179,7 @@ The following output properties are available:
 <a href="#contactbilling_csharp" style="color: inherit; text-decoration: inherit;">Contact<wbr>Billing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contactresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Domain<wbr>Registration.<wbr>Outputs.<wbr>Contact<wbr>Response</a></span>
+        <span class="property-type"><a href="#contactresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Domain<wbr>Registration..<wbr>Outputs.<wbr>Contact<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Billing contact.{{% /md %}}</dd>
     <dt class="property-"
@@ -188,7 +188,7 @@ The following output properties are available:
 <a href="#contactregistrant_csharp" style="color: inherit; text-decoration: inherit;">Contact<wbr>Registrant</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contactresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Domain<wbr>Registration.<wbr>Outputs.<wbr>Contact<wbr>Response</a></span>
+        <span class="property-type"><a href="#contactresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Domain<wbr>Registration..<wbr>Outputs.<wbr>Contact<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Registrant contact.{{% /md %}}</dd>
     <dt class="property-"
@@ -197,7 +197,7 @@ The following output properties are available:
 <a href="#contacttech_csharp" style="color: inherit; text-decoration: inherit;">Contact<wbr>Tech</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contactresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Domain<wbr>Registration.<wbr>Outputs.<wbr>Contact<wbr>Response</a></span>
+        <span class="property-type"><a href="#contactresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Domain<wbr>Registration..<wbr>Outputs.<wbr>Contact<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Technical contact.{{% /md %}}</dd>
     <dt class="property-"
@@ -260,7 +260,7 @@ The following output properties are available:
 <a href="#managedhostnames_csharp" style="color: inherit; text-decoration: inherit;">Managed<wbr>Host<wbr>Names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hostnameresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Domain<wbr>Registration.<wbr>Outputs.<wbr>Host<wbr>Name<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#hostnameresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Domain<wbr>Registration..<wbr>Outputs.<wbr>Host<wbr>Name<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}All hostnames derived from the domain and assigned to Azure resources.{{% /md %}}</dd>
     <dt class="property-"
@@ -315,7 +315,7 @@ The following output properties are available:
 <a href="#systemdata_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Domain<wbr>Registration.<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
+        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Domain<wbr>Registration..<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The system metadata relating to this resource.{{% /md %}}</dd>
     <dt class="property-"
@@ -1457,7 +1457,7 @@ The following output properties are available:
 <a href="#addressmailing_csharp" style="color: inherit; text-decoration: inherit;">Address<wbr>Mailing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#addressresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Domain<wbr>Registration.<wbr>Inputs.<wbr>Address<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#addressresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Domain<wbr>Registration..<wbr>Inputs.<wbr>Address<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Mailing address.{{% /md %}}</dd>
     <dt class="property-optional"

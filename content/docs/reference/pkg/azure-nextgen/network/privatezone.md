@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.network.PrivateZone resource wit
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Describes a Private DNS zone.
-Latest API Version: 2020-06-01.
+API Version: 2020-06-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var privateZone = new AzureNextGen.Network.Latest.PrivateZone("privateZone", new AzureNextGen.Network.Latest.PrivateZoneArgs
+        var privateZone = new AzureNextGen.Network..PrivateZone("privateZone", new AzureNextGen.Network..PrivateZoneArgs
         {
             Location = "Global",
             PrivateZoneName = "privatezone1.com",
@@ -51,7 +51,7 @@ class MyStack : Stack
 package main
 
 import (
-	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network/latest"
+	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -82,7 +82,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-private_zone = azure_nextgen.network.latest.PrivateZone("privateZone",
+private_zone = azure_nextgen.network.PrivateZone("privateZone",
     location="Global",
     private_zone_name="privatezone1.com",
     resource_group_name="resourceGroup1",
@@ -100,7 +100,7 @@ private_zone = azure_nextgen.network.latest.PrivateZone("privateZone",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const privateZone = new azure_nextgen.network.latest.PrivateZone("privateZone", {
+const privateZone = new azure_nextgen.network.PrivateZone("privateZone", {
     location: "Global",
     privateZoneName: "privatezone1.com",
     resourceGroupName: "resourceGroup1",
@@ -935,7 +935,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:network/latest:PrivateZone privatezone1.com /subscriptions/subscriptionId/resourceGroups/resourceGroup1/providers/Microsoft.Network/privateDnsZones/privatezone1.com 
+$ pulumi import azure-nextgen:network:PrivateZone privatezone1.com /subscriptions/subscriptionId/resourceGroups/resourceGroup1/providers/Microsoft.Network/privateDnsZones/privatezone1.com 
 ```
 
 

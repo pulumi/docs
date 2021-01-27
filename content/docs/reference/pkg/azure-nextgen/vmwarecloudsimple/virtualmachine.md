@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.vmwarecloudsimple.VirtualMachine
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Virtual machine model
-Latest API Version: 2019-04-01.
+API Version: 2019-04-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,12 +27,12 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var virtualMachine = new AzureNextGen.VMwareCloudSimple.Latest.VirtualMachine("virtualMachine", new AzureNextGen.VMwareCloudSimple.Latest.VirtualMachineArgs
+        var virtualMachine = new AzureNextGen.VMwareCloudSimple..VirtualMachine("virtualMachine", new AzureNextGen.VMwareCloudSimple..VirtualMachineArgs
         {
             AmountOfRam = 4096,
             Disks = 
             {
-                new AzureNextGen.VMwareCloudSimple.Latest.Inputs.VirtualDiskArgs
+                new AzureNextGen.VMwareCloudSimple..Inputs.VirtualDiskArgs
                 {
                     ControllerId = "1000",
                     IndependenceMode = "persistent",
@@ -43,9 +43,9 @@ class MyStack : Stack
             Location = "westus2",
             Nics = 
             {
-                new AzureNextGen.VMwareCloudSimple.Latest.Inputs.VirtualNicArgs
+                new AzureNextGen.VMwareCloudSimple..Inputs.VirtualNicArgs
                 {
-                    Network = new AzureNextGen.VMwareCloudSimple.Latest.Inputs.VirtualNetworkArgs
+                    Network = new AzureNextGen.VMwareCloudSimple..Inputs.VirtualNetworkArgs
                     {
                         Id = "/subscriptions/{subscription-id}/providers/Microsoft.VMwareCloudSimple/locations/westus2/privateClouds/myPrivateCloud/virtualNetworks/dvportgroup-19",
                     },
@@ -57,7 +57,7 @@ class MyStack : Stack
             NumberOfCores = 2,
             PrivateCloudId = "/subscriptions/{subscription-id}/providers/Microsoft.VMwareCloudSimple/locations/westus2/privateClouds/myPrivateCloud",
             ResourceGroupName = "myResourceGroup",
-            ResourcePool = new AzureNextGen.VMwareCloudSimple.Latest.Inputs.ResourcePoolArgs
+            ResourcePool = new AzureNextGen.VMwareCloudSimple..Inputs.ResourcePoolArgs
             {
                 Id = "/subscriptions/{subscription-id}/providers/Microsoft.VMwareCloudSimple/locations/westus2/privateClouds/myPrivateCloud/resourcePools/resgroup-26",
             },
@@ -78,7 +78,7 @@ class MyStack : Stack
 package main
 
 import (
-	vmwarecloudsimple "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/vmwarecloudsimple/latest"
+	vmwarecloudsimple "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/vmwarecloudsimple"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -131,17 +131,17 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-virtual_machine = azure_nextgen.vmwarecloudsimple.latest.VirtualMachine("virtualMachine",
+virtual_machine = azure_nextgen.vmwarecloudsimple.VirtualMachine("virtualMachine",
     amount_of_ram=4096,
-    disks=[azure_nextgen.vmwarecloudsimple.latest.VirtualDiskArgs(
+    disks=[azure_nextgen.vmwarecloudsimple.VirtualDiskArgs(
         controller_id="1000",
         independence_mode="persistent",
         total_size=10485760,
         virtual_disk_id="2000",
     )],
     location="westus2",
-    nics=[azure_nextgen.vmwarecloudsimple.latest.VirtualNicArgs(
-        network=azure_nextgen.vmwarecloudsimple.latest.VirtualNetworkArgs(
+    nics=[azure_nextgen.vmwarecloudsimple.VirtualNicArgs(
+        network=azure_nextgen.vmwarecloudsimple.VirtualNetworkArgs(
             id="/subscriptions/{subscription-id}/providers/Microsoft.VMwareCloudSimple/locations/westus2/privateClouds/myPrivateCloud/virtualNetworks/dvportgroup-19",
         ),
         nic_type="E1000",
@@ -151,7 +151,7 @@ virtual_machine = azure_nextgen.vmwarecloudsimple.latest.VirtualMachine("virtual
     number_of_cores=2,
     private_cloud_id="/subscriptions/{subscription-id}/providers/Microsoft.VMwareCloudSimple/locations/westus2/privateClouds/myPrivateCloud",
     resource_group_name="myResourceGroup",
-    resource_pool=azure_nextgen.vmwarecloudsimple.latest.ResourcePoolArgs(
+    resource_pool=azure_nextgen.vmwarecloudsimple.ResourcePoolArgs(
         id="/subscriptions/{subscription-id}/providers/Microsoft.VMwareCloudSimple/locations/westus2/privateClouds/myPrivateCloud/resourcePools/resgroup-26",
     ),
     template_id="/subscriptions/{subscription-id}/providers/Microsoft.VMwareCloudSimple/locations/westus2/privateClouds/myPrivateCloud/virtualMachineTemplates/vm-34",
@@ -167,7 +167,7 @@ virtual_machine = azure_nextgen.vmwarecloudsimple.latest.VirtualMachine("virtual
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const virtualMachine = new azure_nextgen.vmwarecloudsimple.latest.VirtualMachine("virtualMachine", {
+const virtualMachine = new azure_nextgen.vmwarecloudsimple.VirtualMachine("virtualMachine", {
     amountOfRam: 4096,
     disks: [{
         controllerId: "1000",
@@ -441,7 +441,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 <a href="#customization_csharp" style="color: inherit; text-decoration: inherit;">Customization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestoscustomization">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>VMware<wbr>Cloud<wbr>Simple.<wbr>Inputs.<wbr>Guest<wbr>OSCustomization<wbr>Args</a></span>
+        <span class="property-type"><a href="#guestoscustomization">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>VMware<wbr>Cloud<wbr>Simple..<wbr>Inputs.<wbr>Guest<wbr>OSCustomization<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Virtual machine properties{{% /md %}}</dd>
     <dt class="property-optional"
@@ -450,7 +450,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 <a href="#disks_csharp" style="color: inherit; text-decoration: inherit;">Disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualdisk">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>VMware<wbr>Cloud<wbr>Simple.<wbr>Inputs.<wbr>Virtual<wbr>Disk<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#virtualdisk">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>VMware<wbr>Cloud<wbr>Simple..<wbr>Inputs.<wbr>Virtual<wbr>Disk<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of Virtual Disks{{% /md %}}</dd>
     <dt class="property-optional"
@@ -468,7 +468,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 <a href="#nics_csharp" style="color: inherit; text-decoration: inherit;">Nics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnic">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>VMware<wbr>Cloud<wbr>Simple.<wbr>Inputs.<wbr>Virtual<wbr>Nic<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#virtualnic">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>VMware<wbr>Cloud<wbr>Simple..<wbr>Inputs.<wbr>Virtual<wbr>Nic<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of Virtual NICs{{% /md %}}</dd>
     <dt class="property-optional"
@@ -486,7 +486,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 <a href="#resourcepool_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Pool</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcepool">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>VMware<wbr>Cloud<wbr>Simple.<wbr>Inputs.<wbr>Resource<wbr>Pool<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcepool">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>VMware<wbr>Cloud<wbr>Simple..<wbr>Inputs.<wbr>Resource<wbr>Pool<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Virtual Machines Resource Pool{{% /md %}}</dd>
     <dt class="property-optional"
@@ -994,7 +994,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#controllers_csharp" style="color: inherit; text-decoration: inherit;">Controllers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualdiskcontrollerresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>VMware<wbr>Cloud<wbr>Simple.<wbr>Outputs.<wbr>Virtual<wbr>Disk<wbr>Controller<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#virtualdiskcontrollerresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>VMware<wbr>Cloud<wbr>Simple..<wbr>Outputs.<wbr>Virtual<wbr>Disk<wbr>Controller<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of Virtual Disks' Controllers{{% /md %}}</dd>
     <dt class="property-"
@@ -2895,7 +2895,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#independencemode_csharp" style="color: inherit; text-decoration: inherit;">Independence<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diskindependencemode">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>VMware<wbr>Cloud<wbr>Simple.<wbr>Disk<wbr>Independence<wbr>Mode</a></span>
+        <span class="property-type"><a href="#diskindependencemode">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>VMware<wbr>Cloud<wbr>Simple..<wbr>Disk<wbr>Independence<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}Disk's independence mode type{{% /md %}}</dd>
     <dt class="property-required"
@@ -3736,7 +3736,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#network_csharp" style="color: inherit; text-decoration: inherit;">Network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetwork">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>VMware<wbr>Cloud<wbr>Simple.<wbr>Inputs.<wbr>Virtual<wbr>Network<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnetwork">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>VMware<wbr>Cloud<wbr>Simple..<wbr>Inputs.<wbr>Virtual<wbr>Network<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Virtual Network{{% /md %}}</dd>
     <dt class="property-required"
@@ -3745,7 +3745,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nictype_csharp" style="color: inherit; text-decoration: inherit;">Nic<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nictype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>VMware<wbr>Cloud<wbr>Simple.<wbr>NICType</a></span>
+        <span class="property-type"><a href="#nictype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>VMware<wbr>Cloud<wbr>Simple..<wbr>NICType</a></span>
     </dt>
     <dd>{{% md %}}NIC type{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3754,7 +3754,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#customization_csharp" style="color: inherit; text-decoration: inherit;">Customization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestosniccustomization">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>VMware<wbr>Cloud<wbr>Simple.<wbr>Inputs.<wbr>Guest<wbr>OSNICCustomization<wbr>Args</a></span>
+        <span class="property-type"><a href="#guestosniccustomization">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>VMware<wbr>Cloud<wbr>Simple..<wbr>Inputs.<wbr>Guest<wbr>OSNICCustomization<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}guest OS customization for nic{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4014,7 +4014,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#network_csharp" style="color: inherit; text-decoration: inherit;">Network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>VMware<wbr>Cloud<wbr>Simple.<wbr>Inputs.<wbr>Virtual<wbr>Network<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnetworkresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>VMware<wbr>Cloud<wbr>Simple..<wbr>Inputs.<wbr>Virtual<wbr>Network<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Virtual Network{{% /md %}}</dd>
     <dt class="property-required"
@@ -4041,7 +4041,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#customization_csharp" style="color: inherit; text-decoration: inherit;">Customization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestosniccustomizationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>VMware<wbr>Cloud<wbr>Simple.<wbr>Inputs.<wbr>Guest<wbr>OSNICCustomization<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#guestosniccustomizationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>VMware<wbr>Cloud<wbr>Simple..<wbr>Inputs.<wbr>Guest<wbr>OSNICCustomization<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}guest OS customization for nic{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4322,7 +4322,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:vmwarecloudsimple/latest:VirtualMachine myVirtualMachine /subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.VMwareCloudSimple/virtualMachines/myVirtualMachine 
+$ pulumi import azure-nextgen:vmwarecloudsimple:VirtualMachine myVirtualMachine /subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.VMwareCloudSimple/virtualMachines/myVirtualMachine 
 ```
 
 

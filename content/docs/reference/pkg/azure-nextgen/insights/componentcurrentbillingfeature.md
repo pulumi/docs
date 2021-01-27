@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.insights.ComponentCurrentBilling
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 An Application Insights component billing features
-Latest API Version: 2015-05-01.
+API Version: 2015-05-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,14 +27,14 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var componentCurrentBillingFeature = new AzureNextGen.Insights.Latest.ComponentCurrentBillingFeature("componentCurrentBillingFeature", new AzureNextGen.Insights.Latest.ComponentCurrentBillingFeatureArgs
+        var componentCurrentBillingFeature = new AzureNextGen.Insights..ComponentCurrentBillingFeature("componentCurrentBillingFeature", new AzureNextGen.Insights..ComponentCurrentBillingFeatureArgs
         {
             CurrentBillingFeatures = 
             {
                 "Basic",
                 "Application Insights Enterprise",
             },
-            DataVolumeCap = new AzureNextGen.Insights.Latest.Inputs.ApplicationInsightsComponentDataVolumeCapArgs
+            DataVolumeCap = new AzureNextGen.Insights..Inputs.ApplicationInsightsComponentDataVolumeCapArgs
             {
                 Cap = 100,
                 StopSendNotificationWhenHitCap = true,
@@ -56,7 +56,7 @@ class MyStack : Stack
 package main
 
 import (
-	insights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/insights/latest"
+	insights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/insights"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -91,12 +91,12 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-component_current_billing_feature = azure_nextgen.insights.latest.ComponentCurrentBillingFeature("componentCurrentBillingFeature",
+component_current_billing_feature = azure_nextgen.insights.ComponentCurrentBillingFeature("componentCurrentBillingFeature",
     current_billing_features=[
         "Basic",
         "Application Insights Enterprise",
     ],
-    data_volume_cap=azure_nextgen.insights.latest.ApplicationInsightsComponentDataVolumeCapArgs(
+    data_volume_cap=azure_nextgen.insights.ApplicationInsightsComponentDataVolumeCapArgs(
         cap=100,
         stop_send_notification_when_hit_cap=True,
     ),
@@ -113,7 +113,7 @@ component_current_billing_feature = azure_nextgen.insights.latest.ComponentCurre
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const componentCurrentBillingFeature = new azure_nextgen.insights.latest.ComponentCurrentBillingFeature("componentCurrentBillingFeature", {
+const componentCurrentBillingFeature = new azure_nextgen.insights.ComponentCurrentBillingFeature("componentCurrentBillingFeature", {
     currentBillingFeatures: [
         "Basic",
         "Application Insights Enterprise",
@@ -346,7 +346,7 @@ The ComponentCurrentBillingFeature resource accepts the following [input]({{< re
 <a href="#datavolumecap_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Volume<wbr>Cap</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationinsightscomponentdatavolumecap">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Inputs.<wbr>Application<wbr>Insights<wbr>Component<wbr>Data<wbr>Volume<wbr>Cap<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationinsightscomponentdatavolumecap">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Inputs.<wbr>Application<wbr>Insights<wbr>Component<wbr>Data<wbr>Volume<wbr>Cap<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An Application Insights component daily data volume cap{{% /md %}}</dd>
 </dl>
@@ -972,7 +972,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:insights/latest:ComponentCurrentBillingFeature myresource1 /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Insights/components/{resourceName}/currentbillingfeatures 
+$ pulumi import azure-nextgen:insights:ComponentCurrentBillingFeature myresource1 /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Insights/components/{resourceName}/currentbillingfeatures 
 ```
 
 

@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.eventhub.EventHub resource with 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Single item in List or Get Event Hub operation
-Latest API Version: 2017-04-01.
+API Version: 2017-04-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,11 +27,11 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var eventHub = new AzureNextGen.EventHub.Latest.EventHub("eventHub", new AzureNextGen.EventHub.Latest.EventHubArgs
+        var eventHub = new AzureNextGen.EventHub..EventHub("eventHub", new AzureNextGen.EventHub..EventHubArgs
         {
-            CaptureDescription = new AzureNextGen.EventHub.Latest.Inputs.CaptureDescriptionArgs
+            CaptureDescription = new AzureNextGen.EventHub..Inputs.CaptureDescriptionArgs
             {
-                Destination = new AzureNextGen.EventHub.Latest.Inputs.DestinationArgs
+                Destination = new AzureNextGen.EventHub..Inputs.DestinationArgs
                 {
                     ArchiveNameFormat = "{Namespace}/{EventHub}/{PartitionId}/{Year}/{Month}/{Day}/{Hour}/{Minute}/{Second}",
                     BlobContainer = "container",
@@ -64,7 +64,7 @@ class MyStack : Stack
 package main
 
 import (
-	eventhub "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/eventhub/latest"
+	eventhub "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/eventhub"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -107,9 +107,9 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-event_hub = azure_nextgen.eventhub.latest.EventHub("eventHub",
-    capture_description=azure_nextgen.eventhub.latest.CaptureDescriptionArgs(
-        destination=azure_nextgen.eventhub.latest.DestinationArgs(
+event_hub = azure_nextgen.eventhub.EventHub("eventHub",
+    capture_description=azure_nextgen.eventhub.CaptureDescriptionArgs(
+        destination=azure_nextgen.eventhub.DestinationArgs(
             archive_name_format="{Namespace}/{EventHub}/{PartitionId}/{Year}/{Month}/{Day}/{Hour}/{Minute}/{Second}",
             blob_container="container",
             name="EventHubArchive.AzureBlockBlob",
@@ -137,7 +137,7 @@ event_hub = azure_nextgen.eventhub.latest.EventHub("eventHub",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const eventHub = new azure_nextgen.eventhub.latest.EventHub("eventHub", {
+const eventHub = new azure_nextgen.eventhub.EventHub("eventHub", {
     captureDescription: {
         destination: {
             archiveNameFormat: "{Namespace}/{EventHub}/{PartitionId}/{Year}/{Month}/{Day}/{Hour}/{Minute}/{Second}",
@@ -378,7 +378,7 @@ The EventHub resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#capturedescription_csharp" style="color: inherit; text-decoration: inherit;">Capture<wbr>Description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#capturedescription">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Hub.<wbr>Inputs.<wbr>Capture<wbr>Description<wbr>Args</a></span>
+        <span class="property-type"><a href="#capturedescription">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Hub..<wbr>Inputs.<wbr>Capture<wbr>Description<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties of capture description{{% /md %}}</dd>
     <dt class="property-optional"
@@ -405,7 +405,7 @@ The EventHub resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#entitystatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Hub.<wbr>Entity<wbr>Status</a></span>
+        <span class="property-type"><a href="#entitystatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Hub..<wbr>Entity<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}Enumerates the possible values for the status of the Event Hub.{{% /md %}}</dd>
 </dl>
@@ -886,7 +886,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#destination_csharp" style="color: inherit; text-decoration: inherit;">Destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#destination">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Hub.<wbr>Inputs.<wbr>Destination<wbr>Args</a></span>
+        <span class="property-type"><a href="#destination">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Hub..<wbr>Inputs.<wbr>Destination<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties of Destination where capture will be stored. (Storage Account, Blob Names){{% /md %}}</dd>
     <dt class="property-optional"
@@ -904,7 +904,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encoding_csharp" style="color: inherit; text-decoration: inherit;">Encoding</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encodingcapturedescription">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Hub.<wbr>Encoding<wbr>Capture<wbr>Description</a></span>
+        <span class="property-type"><a href="#encodingcapturedescription">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Hub..<wbr>Encoding<wbr>Capture<wbr>Description</a></span>
     </dt>
     <dd>{{% md %}}Enumerates the possible values for the encoding format of capture description. Note: 'AvroDeflate' will be deprecated in New API Version{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1128,7 +1128,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#destination_csharp" style="color: inherit; text-decoration: inherit;">Destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#destinationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Hub.<wbr>Inputs.<wbr>Destination<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#destinationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Hub..<wbr>Inputs.<wbr>Destination<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties of Destination where capture will be stored. (Storage Account, Blob Names){{% /md %}}</dd>
     <dt class="property-optional"
@@ -1836,7 +1836,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:eventhub/latest:EventHub sdk-EventHub-10 /subscriptions/e2f361f0-3b27-4503-a9cc-21cfba380093/resourceGroups/Default-NotificationHubs-AustraliaEast/providers/Microsoft.EventHub/namespaces/sdk-Namespace-716/eventhubs/sdk-EventHub-10 
+$ pulumi import azure-nextgen:eventhub:EventHub sdk-EventHub-10 /subscriptions/e2f361f0-3b27-4503-a9cc-21cfba380093/resourceGroups/Default-NotificationHubs-AustraliaEast/providers/Microsoft.EventHub/namespaces/sdk-Namespace-716/eventhubs/sdk-EventHub-10 
 ```
 
 

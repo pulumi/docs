@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.healthbot.Bot resource with exam
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 HealthBot resource definition
-Latest API Version: 2020-12-08.
+API Version: 2020-12-08.
 
 {{% examples %}}
 ## Example Usage
@@ -27,12 +27,12 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var bot = new AzureNextGen.HealthBot.Latest.Bot("bot", new AzureNextGen.HealthBot.Latest.BotArgs
+        var bot = new AzureNextGen.HealthBot..Bot("bot", new AzureNextGen.HealthBot..BotArgs
         {
             BotName = "samplebotname",
             Location = "East US",
             ResourceGroupName = "healthbotClient",
-            Sku = new AzureNextGen.HealthBot.Latest.Inputs.SkuArgs
+            Sku = new AzureNextGen.HealthBot..Inputs.SkuArgs
             {
                 Name = "F0",
             },
@@ -51,7 +51,7 @@ class MyStack : Stack
 package main
 
 import (
-	healthbot "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/healthbot/latest"
+	healthbot "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/healthbot"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -82,11 +82,11 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-bot = azure_nextgen.healthbot.latest.Bot("bot",
+bot = azure_nextgen.healthbot.Bot("bot",
     bot_name="samplebotname",
     location="East US",
     resource_group_name="healthbotClient",
-    sku=azure_nextgen.healthbot.latest.SkuArgs(
+    sku=azure_nextgen.healthbot.SkuArgs(
         name="F0",
     ))
 
@@ -100,7 +100,7 @@ bot = azure_nextgen.healthbot.latest.Bot("bot",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const bot = new azure_nextgen.healthbot.latest.Bot("bot", {
+const bot = new azure_nextgen.healthbot.Bot("bot", {
     botName: "samplebotname",
     location: "East US",
     resourceGroupName: "healthbotClient",
@@ -329,7 +329,7 @@ The Bot resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sku">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Health<wbr>Bot.<wbr>Inputs.<wbr>Sku<wbr>Args</a></span>
+        <span class="property-type"><a href="#sku">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Health<wbr>Bot..<wbr>Inputs.<wbr>Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}SKU of the HealthBot.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -531,7 +531,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healthbotpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Health<wbr>Bot.<wbr>Outputs.<wbr>Health<wbr>Bot<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#healthbotpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Health<wbr>Bot..<wbr>Outputs.<wbr>Health<wbr>Bot<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to Healthbot resource.{{% /md %}}</dd>
     <dt class="property-"
@@ -540,7 +540,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#systemdata_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Health<wbr>Bot.<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
+        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Health<wbr>Bot..<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Metadata pertaining to creation and last modification of the resource{{% /md %}}</dd>
     <dt class="property-"
@@ -827,7 +827,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skuname">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Health<wbr>Bot.<wbr>Sku<wbr>Name</a></span>
+        <span class="property-type"><a href="#skuname">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Health<wbr>Bot..<wbr>Sku<wbr>Name</a></span>
     </dt>
     <dd>{{% md %}}The name of the HealthBot SKU{{% /md %}}</dd>
 </dl>
@@ -1233,7 +1233,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:healthbot/latest:Bot samplebotname /subscriptions/subscription-id/resourceGroups/OneResourceGroupName/providers/Microsoft.HealthBot/healthBots/samplebotname 
+$ pulumi import azure-nextgen:healthbot:Bot samplebotname /subscriptions/subscription-id/resourceGroups/OneResourceGroupName/providers/Microsoft.HealthBot/healthBots/samplebotname 
 ```
 
 

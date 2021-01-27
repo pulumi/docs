@@ -14,9 +14,6 @@ Explore the resources and functions of the billing module in the Azure NextGen p
     <li><a href="billingroleassignmentbybillingaccount" title="BillingRoleAssignmentByBillingAccount"><span class="symbol resource"></span>BillingRoleAssignmentByBillingAccount</a></li>
     <li><a href="billingroleassignmentbydepartment" title="BillingRoleAssignmentByDepartment"><span class="symbol resource"></span>BillingRoleAssignmentByDepartment</a></li>
     <li><a href="billingroleassignmentbyenrollmentaccount" title="BillingRoleAssignmentByEnrollmentAccount"><span class="symbol resource"></span>BillingRoleAssignmentByEnrollmentAccount</a></li>
-    <li><a href="costallocationrule" title="CostAllocationRule"><span class="symbol resource"></span>CostAllocationRule</a></li>
-    <li><a href="reportbybillingaccount" title="ReportByBillingAccount"><span class="symbol resource"></span>ReportByBillingAccount</a></li>
-    <li><a href="reportbydepartment" title="ReportByDepartment"><span class="symbol resource"></span>ReportByDepartment</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
@@ -24,9 +21,6 @@ Explore the resources and functions of the billing module in the Azure NextGen p
     <li><a href="getbillingroleassignmentbybillingaccount" title="GetBillingRoleAssignmentByBillingAccount"><span class="symbol function"></span>GetBillingRoleAssignmentByBillingAccount</a></li>
     <li><a href="getbillingroleassignmentbydepartment" title="GetBillingRoleAssignmentByDepartment"><span class="symbol function"></span>GetBillingRoleAssignmentByDepartment</a></li>
     <li><a href="getbillingroleassignmentbyenrollmentaccount" title="GetBillingRoleAssignmentByEnrollmentAccount"><span class="symbol function"></span>GetBillingRoleAssignmentByEnrollmentAccount</a></li>
-    <li><a href="getcostallocationrule" title="GetCostAllocationRule"><span class="symbol function"></span>GetCostAllocationRule</a></li>
-    <li><a href="getreportbybillingaccount" title="GetReportByBillingAccount"><span class="symbol function"></span>GetReportByBillingAccount</a></li>
-    <li><a href="getreportbydepartment" title="GetReportByDepartment"><span class="symbol function"></span>GetReportByDepartment</a></li>
     <li><a href="listbillingaccountinvoicesectionsbycreatesubscriptionpermission" title="ListBillingAccountInvoiceSectionsByCreateSubscriptionPermission"><span class="symbol function"></span>ListBillingAccountInvoiceSectionsByCreateSubscriptionPermission</a></li>
 </ul>
 
@@ -37,7 +31,7 @@ Explore the resources and functions of the billing module in the Azure NextGen p
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.5.0</dd>
+	<dd>0.6.0</dd>
 </dl>
 
 

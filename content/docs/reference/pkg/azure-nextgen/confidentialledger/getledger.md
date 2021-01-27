@@ -179,7 +179,7 @@ The following output properties are available:
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ledgerpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Confidential<wbr>Ledger.<wbr>Outputs.<wbr>Ledger<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#ledgerpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Confidential<wbr>Ledger..<wbr>Outputs.<wbr>Ledger<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Properties of Confidential Ledger Resource.{{% /md %}}</dd>
     <dt class="property-"
@@ -188,7 +188,7 @@ The following output properties are available:
 <a href="#systemdata_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Confidential<wbr>Ledger.<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
+        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Confidential<wbr>Ledger..<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Metadata pertaining to creation and last modification of the resource{{% /md %}}</dd>
     <dt class="property-"
@@ -562,7 +562,7 @@ The following output properties are available:
 <a href="#certusers_csharp" style="color: inherit; text-decoration: inherit;">Cert<wbr>Users</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#confidentialledgercertuserresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Confidential<wbr>Ledger.<wbr>Inputs.<wbr>Confidential<wbr>Ledger<wbr>Cert<wbr>User<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#confidentialledgercertuserresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Confidential<wbr>Ledger..<wbr>Inputs.<wbr>Confidential<wbr>Ledger<wbr>Cert<wbr>User<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Array of all the cert based users who can access Confidential Ledger{{% /md %}}</dd>
     <dt class="property-optional"

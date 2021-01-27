@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.digitaltwins.DigitalTwinsEndpoin
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 DigitalTwinsInstance endpoint resource.
-Latest API Version: 2020-12-01.
+API Version: 2020-12-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var digitalTwinsEndpoint = new AzureNextGen.DigitalTwins.Latest.DigitalTwinsEndpoint("digitalTwinsEndpoint", new AzureNextGen.DigitalTwins.Latest.DigitalTwinsEndpointArgs
+        var digitalTwinsEndpoint = new AzureNextGen.DigitalTwins..DigitalTwinsEndpoint("digitalTwinsEndpoint", new AzureNextGen.DigitalTwins..DigitalTwinsEndpointArgs
         {
             EndpointName = "myServiceBus",
             Properties = 
@@ -58,7 +58,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-digital_twins_endpoint = azure_nextgen.digitaltwins.latest.DigitalTwinsEndpoint("digitalTwinsEndpoint",
+digital_twins_endpoint = azure_nextgen.digitaltwins.DigitalTwinsEndpoint("digitalTwinsEndpoint",
     endpoint_name="myServiceBus",
     properties={
         "authenticationType": "KeyBased",
@@ -79,7 +79,7 @@ digital_twins_endpoint = azure_nextgen.digitaltwins.latest.DigitalTwinsEndpoint(
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const digitalTwinsEndpoint = new azure_nextgen.digitaltwins.latest.DigitalTwinsEndpoint("digitalTwinsEndpoint", {
+const digitalTwinsEndpoint = new azure_nextgen.digitaltwins.DigitalTwinsEndpoint("digitalTwinsEndpoint", {
     endpointName: "myServiceBus",
     properties: {
         authenticationType: "KeyBased",
@@ -105,7 +105,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var digitalTwinsEndpoint = new AzureNextGen.DigitalTwins.Latest.DigitalTwinsEndpoint("digitalTwinsEndpoint", new AzureNextGen.DigitalTwins.Latest.DigitalTwinsEndpointArgs
+        var digitalTwinsEndpoint = new AzureNextGen.DigitalTwins..DigitalTwinsEndpoint("digitalTwinsEndpoint", new AzureNextGen.DigitalTwins..DigitalTwinsEndpointArgs
         {
             EndpointName = "myServiceBus",
             Properties = 
@@ -136,7 +136,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-digital_twins_endpoint = azure_nextgen.digitaltwins.latest.DigitalTwinsEndpoint("digitalTwinsEndpoint",
+digital_twins_endpoint = azure_nextgen.digitaltwins.DigitalTwinsEndpoint("digitalTwinsEndpoint",
     endpoint_name="myServiceBus",
     properties={
         "authenticationType": "IdentityBased",
@@ -157,7 +157,7 @@ digital_twins_endpoint = azure_nextgen.digitaltwins.latest.DigitalTwinsEndpoint(
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const digitalTwinsEndpoint = new azure_nextgen.digitaltwins.latest.DigitalTwinsEndpoint("digitalTwinsEndpoint", {
+const digitalTwinsEndpoint = new azure_nextgen.digitaltwins.DigitalTwinsEndpoint("digitalTwinsEndpoint", {
     endpointName: "myServiceBus",
     properties: {
         authenticationType: "IdentityBased",
@@ -371,7 +371,7 @@ The DigitalTwinsEndpoint resource accepts the following [input]({{< relref "/doc
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventgrid">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Digital<wbr>Twins.<wbr>Inputs.<wbr>Event<wbr>Grid<wbr>Args</a> | <a href="#eventhub">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Digital<wbr>Twins.<wbr>Inputs.<wbr>Event<wbr>Hub<wbr>Args</a> | <a href="#servicebus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Digital<wbr>Twins.<wbr>Inputs.<wbr>Service<wbr>Bus<wbr>Args</a></span>
+        <span class="property-type"><a href="#eventgrid">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Digital<wbr>Twins..<wbr>Inputs.<wbr>Event<wbr>Grid<wbr>Args</a> | <a href="#eventhub">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Digital<wbr>Twins..<wbr>Inputs.<wbr>Event<wbr>Hub<wbr>Args</a> | <a href="#servicebus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Digital<wbr>Twins..<wbr>Inputs.<wbr>Service<wbr>Bus<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}DigitalTwinsInstance endpoint resource properties.{{% /md %}}</dd>
     <dt class="property-required"
@@ -746,7 +746,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authenticationtype_csharp" style="color: inherit; text-decoration: inherit;">Authentication<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#authenticationtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Digital<wbr>Twins.<wbr>Authentication<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#authenticationtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Digital<wbr>Twins..<wbr>Authentication<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Specifies the authentication type being used for connecting to the endpoint.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1275,7 +1275,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authenticationtype_csharp" style="color: inherit; text-decoration: inherit;">Authentication<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#authenticationtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Digital<wbr>Twins.<wbr>Authentication<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#authenticationtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Digital<wbr>Twins..<wbr>Authentication<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Specifies the authentication type being used for connecting to the endpoint.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1903,7 +1903,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authenticationtype_csharp" style="color: inherit; text-decoration: inherit;">Authentication<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#authenticationtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Digital<wbr>Twins.<wbr>Authentication<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#authenticationtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Digital<wbr>Twins..<wbr>Authentication<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Specifies the authentication type being used for connecting to the endpoint.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2525,7 +2525,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:digitaltwins/latest:DigitalTwinsEndpoint myServiceBus /subscriptions/50016170-c839-41ba-a724-51e9df440b9e/resourcegroups/resRg/providers/Microsoft.DigitalTwins/digitalTwinsInstances/myDigitalTwinsService/endpoints/myServiceBus 
+$ pulumi import azure-nextgen:digitaltwins:DigitalTwinsEndpoint myServiceBus /subscriptions/50016170-c839-41ba-a724-51e9df440b9e/resourcegroups/resRg/providers/Microsoft.DigitalTwins/digitalTwinsInstances/myDigitalTwinsService/endpoints/myServiceBus 
 ```
 
 

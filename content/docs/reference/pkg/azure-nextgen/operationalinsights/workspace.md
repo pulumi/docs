@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.operationalinsights.Workspace re
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The top level Workspace resource container.
-Latest API Version: 2020-10-01.
+API Version: 2020-10-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,12 +27,12 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var workspace = new AzureNextGen.OperationalInsights.Latest.Workspace("workspace", new AzureNextGen.OperationalInsights.Latest.WorkspaceArgs
+        var workspace = new AzureNextGen.OperationalInsights..Workspace("workspace", new AzureNextGen.OperationalInsights..WorkspaceArgs
         {
             Location = "australiasoutheast",
             ResourceGroupName = "oiautorest6685",
             RetentionInDays = 30,
-            Sku = new AzureNextGen.OperationalInsights.Latest.Inputs.WorkspaceSkuArgs
+            Sku = new AzureNextGen.OperationalInsights..Inputs.WorkspaceSkuArgs
             {
                 Name = "PerGB2018",
             },
@@ -56,7 +56,7 @@ class MyStack : Stack
 package main
 
 import (
-	operationalinsights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/operationalinsights/latest"
+	operationalinsights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/operationalinsights"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -91,11 +91,11 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-workspace = azure_nextgen.operationalinsights.latest.Workspace("workspace",
+workspace = azure_nextgen.operationalinsights.Workspace("workspace",
     location="australiasoutheast",
     resource_group_name="oiautorest6685",
     retention_in_days=30,
-    sku=azure_nextgen.operationalinsights.latest.WorkspaceSkuArgs(
+    sku=azure_nextgen.operationalinsights.WorkspaceSkuArgs(
         name="PerGB2018",
     ),
     tags={
@@ -113,7 +113,7 @@ workspace = azure_nextgen.operationalinsights.latest.Workspace("workspace",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const workspace = new azure_nextgen.operationalinsights.latest.Workspace("workspace", {
+const workspace = new azure_nextgen.operationalinsights.Workspace("workspace", {
     location: "australiasoutheast",
     resourceGroupName: "oiautorest6685",
     retentionInDays: 30,
@@ -364,7 +364,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#workspaceentitystatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Operational<wbr>Insights.<wbr>Workspace<wbr>Entity<wbr>Status</a></span>
+        <span class="property-type">string | <a href="#workspaceentitystatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Operational<wbr>Insights..<wbr>Workspace<wbr>Entity<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}The provisioning state of the workspace.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -373,7 +373,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#publicnetworkaccessforingestion_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Network<wbr>Access<wbr>For<wbr>Ingestion</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#publicnetworkaccesstype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Operational<wbr>Insights.<wbr>Public<wbr>Network<wbr>Access<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#publicnetworkaccesstype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Operational<wbr>Insights..<wbr>Public<wbr>Network<wbr>Access<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The network access type for accessing Log Analytics ingestion.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -382,7 +382,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#publicnetworkaccessforquery_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Network<wbr>Access<wbr>For<wbr>Query</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#publicnetworkaccesstype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Operational<wbr>Insights.<wbr>Public<wbr>Network<wbr>Access<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#publicnetworkaccesstype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Operational<wbr>Insights..<wbr>Public<wbr>Network<wbr>Access<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The network access type for accessing Log Analytics query.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -400,7 +400,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspacesku">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Operational<wbr>Insights.<wbr>Inputs.<wbr>Workspace<wbr>Sku<wbr>Args</a></span>
+        <span class="property-type"><a href="#workspacesku">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Operational<wbr>Insights..<wbr>Inputs.<wbr>Workspace<wbr>Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The SKU of the workspace.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -418,7 +418,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#workspacecapping_csharp" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Capping</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspacecapping">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Operational<wbr>Insights.<wbr>Inputs.<wbr>Workspace<wbr>Capping<wbr>Args</a></span>
+        <span class="property-type"><a href="#workspacecapping">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Operational<wbr>Insights..<wbr>Inputs.<wbr>Workspace<wbr>Capping<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The daily volume cap for ingestion.{{% /md %}}</dd>
 </dl>
@@ -809,7 +809,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privatelinkscopedresources_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Scoped<wbr>Resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkscopedresourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Operational<wbr>Insights.<wbr>Outputs.<wbr>Private<wbr>Link<wbr>Scoped<wbr>Resource<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#privatelinkscopedresourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Operational<wbr>Insights..<wbr>Outputs.<wbr>Private<wbr>Link<wbr>Scoped<wbr>Resource<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of linked private link scope resources.{{% /md %}}</dd>
     <dt class="property-"
@@ -1408,7 +1408,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#workspaceskunameenum">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Operational<wbr>Insights.<wbr>Workspace<wbr>Sku<wbr>Name<wbr>Enum</a></span>
+        <span class="property-type">string | <a href="#workspaceskunameenum">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Operational<wbr>Insights..<wbr>Workspace<wbr>Sku<wbr>Name<wbr>Enum</a></span>
     </dt>
     <dd>{{% md %}}The name of the SKU.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1756,7 +1756,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:operationalinsights/latest:Workspace AzTest2170 /subscriptions/00000000-0000-0000-0000-000000000005/resourcegroups/oiautorest6685/providers/microsoft.operationalinsights/workspaces/aztest2170 
+$ pulumi import azure-nextgen:operationalinsights:Workspace AzTest2170 /subscriptions/00000000-0000-0000-0000-000000000005/resourcegroups/oiautorest6685/providers/microsoft.operationalinsights/workspaces/aztest2170 
 ```
 
 

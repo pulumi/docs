@@ -161,7 +161,7 @@ The following output properties are available:
 <a href="#bootstrapconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Bootstrap<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bootstrapconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Ops.<wbr>Outputs.<wbr>Bootstrap<wbr>Configuration<wbr>Response</a></span>
+        <span class="property-type"><a href="#bootstrapconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Ops..<wbr>Outputs.<wbr>Bootstrap<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Configuration used to bootstrap the Pipeline.{{% /md %}}</dd>
     <dt class="property-"
@@ -206,7 +206,7 @@ The following output properties are available:
 <a href="#systemdata_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Ops.<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
+        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Ops..<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The system metadata pertaining to this resource.{{% /md %}}</dd>
     <dt class="property-"
@@ -625,7 +625,7 @@ The following output properties are available:
 <a href="#template_csharp" style="color: inherit; text-decoration: inherit;">Template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinetemplateresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Ops.<wbr>Inputs.<wbr>Pipeline<wbr>Template<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#pipelinetemplateresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Ops..<wbr>Inputs.<wbr>Pipeline<wbr>Template<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Template used to bootstrap the pipeline.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -634,7 +634,7 @@ The following output properties are available:
 <a href="#sourcerepository_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Repository</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#coderepositoryresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Ops.<wbr>Inputs.<wbr>Code<wbr>Repository<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#coderepositoryresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Ops..<wbr>Inputs.<wbr>Code<wbr>Repository<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Repository containing the source code for the pipeline. Currently only 'azurePipeline' pipeline type supports this.{{% /md %}}</dd>
 </dl>
@@ -755,7 +755,7 @@ The following output properties are available:
 <a href="#authorization_csharp" style="color: inherit; text-decoration: inherit;">Authorization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authorizationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Ops.<wbr>Inputs.<wbr>Authorization<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#authorizationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Ops..<wbr>Inputs.<wbr>Authorization<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Authorization info to access the code repository.{{% /md %}}</dd>
     <dt class="property-optional"

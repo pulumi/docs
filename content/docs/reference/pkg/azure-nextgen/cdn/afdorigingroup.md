@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.cdn.AFDOriginGroup resource with
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 AFDOrigin group comprising of origins is used for load balancing to origins when the content cannot be served from CDN.
-Latest API Version: 2020-09-01.
+API Version: 2020-09-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,16 +27,16 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var afdOriginGroup = new AzureNextGen.Cdn.Latest.AFDOriginGroup("afdOriginGroup", new AzureNextGen.Cdn.Latest.AFDOriginGroupArgs
+        var afdOriginGroup = new AzureNextGen.Cdn..AFDOriginGroup("afdOriginGroup", new AzureNextGen.Cdn..AFDOriginGroupArgs
         {
-            HealthProbeSettings = new AzureNextGen.Cdn.Latest.Inputs.HealthProbeParametersArgs
+            HealthProbeSettings = new AzureNextGen.Cdn..Inputs.HealthProbeParametersArgs
             {
                 ProbeIntervalInSeconds = 10,
                 ProbePath = "/path2",
                 ProbeProtocol = "NotSet",
                 ProbeRequestType = "NotSet",
             },
-            LoadBalancingSettings = new AzureNextGen.Cdn.Latest.Inputs.LoadBalancingSettingsParametersArgs
+            LoadBalancingSettings = new AzureNextGen.Cdn..Inputs.LoadBalancingSettingsParametersArgs
             {
                 AdditionalLatencyInMilliseconds = 1000,
                 SampleSize = 3,
@@ -61,7 +61,7 @@ class MyStack : Stack
 package main
 
 import (
-	cdn "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/cdn/latest"
+	cdn "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/cdn"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -101,14 +101,14 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-afd_origin_group = azure_nextgen.cdn.latest.AFDOriginGroup("afdOriginGroup",
-    health_probe_settings=azure_nextgen.cdn.latest.HealthProbeParametersArgs(
+afd_origin_group = azure_nextgen.cdn.AFDOriginGroup("afdOriginGroup",
+    health_probe_settings=azure_nextgen.cdn.HealthProbeParametersArgs(
         probe_interval_in_seconds=10,
         probe_path="/path2",
         probe_protocol="NotSet",
         probe_request_type="NotSet",
     ),
-    load_balancing_settings=azure_nextgen.cdn.latest.LoadBalancingSettingsParametersArgs(
+    load_balancing_settings=azure_nextgen.cdn.LoadBalancingSettingsParametersArgs(
         additional_latency_in_milliseconds=1000,
         sample_size=3,
         successful_samples_required=3,
@@ -128,7 +128,7 @@ afd_origin_group = azure_nextgen.cdn.latest.AFDOriginGroup("afdOriginGroup",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const afdOriginGroup = new azure_nextgen.cdn.latest.AFDOriginGroup("afdOriginGroup", {
+const afdOriginGroup = new azure_nextgen.cdn.AFDOriginGroup("afdOriginGroup", {
     healthProbeSettings: {
         probeIntervalInSeconds: 10,
         probePath: "/path2",
@@ -366,7 +366,7 @@ The AFDOriginGroup resource accepts the following [input]({{< relref "/docs/intr
 <a href="#healthprobesettings_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>Probe<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healthprobeparameters">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn.<wbr>Inputs.<wbr>Health<wbr>Probe<wbr>Parameters<wbr>Args</a></span>
+        <span class="property-type"><a href="#healthprobeparameters">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn..<wbr>Inputs.<wbr>Health<wbr>Probe<wbr>Parameters<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Health probe settings to the origin that is used to determine the health of the origin.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -375,7 +375,7 @@ The AFDOriginGroup resource accepts the following [input]({{< relref "/docs/intr
 <a href="#loadbalancingsettings_csharp" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancing<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalancingsettingsparameters">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn.<wbr>Inputs.<wbr>Load<wbr>Balancing<wbr>Settings<wbr>Parameters<wbr>Args</a></span>
+        <span class="property-type"><a href="#loadbalancingsettingsparameters">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn..<wbr>Inputs.<wbr>Load<wbr>Balancing<wbr>Settings<wbr>Parameters<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Load balancing settings for a backend pool{{% /md %}}</dd>
     <dt class="property-optional"
@@ -384,7 +384,7 @@ The AFDOriginGroup resource accepts the following [input]({{< relref "/docs/intr
 <a href="#responsebasedafdoriginerrordetectionsettings_csharp" style="color: inherit; text-decoration: inherit;">Response<wbr>Based<wbr>Afd<wbr>Origin<wbr>Error<wbr>Detection<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#responsebasedoriginerrordetectionparameters">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn.<wbr>Inputs.<wbr>Response<wbr>Based<wbr>Origin<wbr>Error<wbr>Detection<wbr>Parameters<wbr>Args</a></span>
+        <span class="property-type"><a href="#responsebasedoriginerrordetectionparameters">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn..<wbr>Inputs.<wbr>Response<wbr>Based<wbr>Origin<wbr>Error<wbr>Detection<wbr>Parameters<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The JSON object that contains the properties to determine origin health using real requests/responses. This property is currently not supported.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -393,7 +393,7 @@ The AFDOriginGroup resource accepts the following [input]({{< relref "/docs/intr
 <a href="#sessionaffinitystate_csharp" style="color: inherit; text-decoration: inherit;">Session<wbr>Affinity<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#enabledstate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn.<wbr>Enabled<wbr>State</a></span>
+        <span class="property-type">string | <a href="#enabledstate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn..<wbr>Enabled<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}Whether to allow session affinity on this host. Valid options are 'Enabled' or 'Disabled'{{% /md %}}</dd>
     <dt class="property-optional"
@@ -694,7 +694,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#systemdata_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn.<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
+        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn..<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Read only system data{{% /md %}}</dd>
     <dt class="property-"
@@ -966,7 +966,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#probeprotocol_csharp" style="color: inherit; text-decoration: inherit;">Probe<wbr>Protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#probeprotocol">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn.<wbr>Probe<wbr>Protocol</a></span>
+        <span class="property-type"><a href="#probeprotocol">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn..<wbr>Probe<wbr>Protocol</a></span>
     </dt>
     <dd>{{% md %}}Protocol to use for health probe.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -975,7 +975,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#proberequesttype_csharp" style="color: inherit; text-decoration: inherit;">Probe<wbr>Request<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healthproberequesttype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn.<wbr>Health<wbr>Probe<wbr>Request<wbr>Type</a></span>
+        <span class="property-type"><a href="#healthproberequesttype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn..<wbr>Health<wbr>Probe<wbr>Request<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of health probe request that is made.{{% /md %}}</dd>
 </dl>
@@ -1890,7 +1890,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#httperrorranges_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Error<wbr>Ranges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httperrorrangeparameters">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn.<wbr>Inputs.<wbr>Http<wbr>Error<wbr>Range<wbr>Parameters<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#httperrorrangeparameters">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn..<wbr>Inputs.<wbr>Http<wbr>Error<wbr>Range<wbr>Parameters<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of Http status code ranges that are considered as server errors for origin and it is marked as unhealthy.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1899,7 +1899,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#responsebaseddetectederrortypes_csharp" style="color: inherit; text-decoration: inherit;">Response<wbr>Based<wbr>Detected<wbr>Error<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#responsebaseddetectederrortypes">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn.<wbr>Response<wbr>Based<wbr>Detected<wbr>Error<wbr>Types</a></span>
+        <span class="property-type"><a href="#responsebaseddetectederrortypes">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn..<wbr>Response<wbr>Based<wbr>Detected<wbr>Error<wbr>Types</a></span>
     </dt>
     <dd>{{% md %}}Type of response errors for real user requests for which origin will be deemed unhealthy{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2024,7 +2024,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#httperrorranges_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Error<wbr>Ranges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httperrorrangeparametersresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn.<wbr>Inputs.<wbr>Http<wbr>Error<wbr>Range<wbr>Parameters<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#httperrorrangeparametersresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn..<wbr>Inputs.<wbr>Http<wbr>Error<wbr>Range<wbr>Parameters<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of Http status code ranges that are considered as server errors for origin and it is marked as unhealthy.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2394,7 +2394,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:cdn/latest:AFDOriginGroup origingroup1 /subscriptions/subid/resourcegroups/RG/providers/Microsoft.Cdn/profiles/profile1/origingroups/origingroup1 
+$ pulumi import azure-nextgen:cdn:AFDOriginGroup origingroup1 /subscriptions/subid/resourcegroups/RG/providers/Microsoft.Cdn/profiles/profile1/origingroups/origingroup1 
 ```
 
 

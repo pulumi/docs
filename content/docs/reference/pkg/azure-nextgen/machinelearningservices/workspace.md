@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.machinelearningservices.Workspac
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 An object that represents a machine learning workspace.
-Latest API Version: 2020-08-01.
+API Version: 2020-08-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,14 +27,14 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var workspace = new AzureNextGen.MachineLearningServices.Latest.Workspace("workspace", new AzureNextGen.MachineLearningServices.Latest.WorkspaceArgs
+        var workspace = new AzureNextGen.MachineLearningServices..Workspace("workspace", new AzureNextGen.MachineLearningServices..WorkspaceArgs
         {
             ApplicationInsights = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/workspace-1234/providers/microsoft.insights/components/testinsights",
             ContainerRegistry = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/workspace-1234/providers/Microsoft.ContainerRegistry/registries/testRegistry",
             Description = "test description",
-            Encryption = new AzureNextGen.MachineLearningServices.Latest.Inputs.EncryptionPropertyArgs
+            Encryption = new AzureNextGen.MachineLearningServices..Inputs.EncryptionPropertyArgs
             {
-                KeyVaultProperties = new AzureNextGen.MachineLearningServices.Latest.Inputs.KeyVaultPropertiesArgs
+                KeyVaultProperties = new AzureNextGen.MachineLearningServices..Inputs.KeyVaultPropertiesArgs
                 {
                     IdentityClientId = "",
                     KeyIdentifier = "https://testkv.vault.azure.net/keys/testkey/aabbccddee112233445566778899aabb",
@@ -44,7 +44,7 @@ class MyStack : Stack
             },
             FriendlyName = "HelloName",
             HbiWorkspace = false,
-            Identity = new AzureNextGen.MachineLearningServices.Latest.Inputs.IdentityArgs
+            Identity = new AzureNextGen.MachineLearningServices..Inputs.IdentityArgs
             {
                 Type = "SystemAssigned",
             },
@@ -53,7 +53,7 @@ class MyStack : Stack
             ResourceGroupName = "workspace-1234",
             SharedPrivateLinkResources = 
             {
-                new AzureNextGen.MachineLearningServices.Latest.Inputs.SharedPrivateLinkResourceArgs
+                new AzureNextGen.MachineLearningServices..Inputs.SharedPrivateLinkResourceArgs
                 {
                     GroupId = "Sql",
                     Name = "testdbresource",
@@ -62,7 +62,7 @@ class MyStack : Stack
                     Status = "Approved",
                 },
             },
-            Sku = new AzureNextGen.MachineLearningServices.Latest.Inputs.SkuArgs
+            Sku = new AzureNextGen.MachineLearningServices..Inputs.SkuArgs
             {
                 Name = "Basic",
                 Tier = "Basic",
@@ -84,7 +84,7 @@ class MyStack : Stack
 package main
 
 import (
-	machinelearningservices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/machinelearningservices/latest"
+	machinelearningservices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/machinelearningservices"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -143,12 +143,12 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-workspace = azure_nextgen.machinelearningservices.latest.Workspace("workspace",
+workspace = azure_nextgen.machinelearningservices.Workspace("workspace",
     application_insights="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/workspace-1234/providers/microsoft.insights/components/testinsights",
     container_registry="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/workspace-1234/providers/Microsoft.ContainerRegistry/registries/testRegistry",
     description="test description",
-    encryption=azure_nextgen.machinelearningservices.latest.EncryptionPropertyArgs(
-        key_vault_properties=azure_nextgen.machinelearningservices.latest.KeyVaultPropertiesArgs(
+    encryption=azure_nextgen.machinelearningservices.EncryptionPropertyArgs(
+        key_vault_properties=azure_nextgen.machinelearningservices.KeyVaultPropertiesArgs(
             identity_client_id="",
             key_identifier="https://testkv.vault.azure.net/keys/testkey/aabbccddee112233445566778899aabb",
             key_vault_arm_id="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/workspace-1234/providers/Microsoft.KeyVault/vaults/testkv",
@@ -157,20 +157,20 @@ workspace = azure_nextgen.machinelearningservices.latest.Workspace("workspace",
     ),
     friendly_name="HelloName",
     hbi_workspace=False,
-    identity=azure_nextgen.machinelearningservices.latest.IdentityArgs(
+    identity=azure_nextgen.machinelearningservices.IdentityArgs(
         type="SystemAssigned",
     ),
     key_vault="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/workspace-1234/providers/Microsoft.KeyVault/vaults/testkv",
     location="eastus2euap",
     resource_group_name="workspace-1234",
-    shared_private_link_resources=[azure_nextgen.machinelearningservices.latest.SharedPrivateLinkResourceArgs(
+    shared_private_link_resources=[azure_nextgen.machinelearningservices.SharedPrivateLinkResourceArgs(
         group_id="Sql",
         name="testdbresource",
         private_link_resource_id="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/workspace-1234/providers/Microsoft.DocumentDB/databaseAccounts/testdbresource/privateLinkResources/Sql",
         request_message="Please approve",
         status="Approved",
     )],
-    sku=azure_nextgen.machinelearningservices.latest.SkuArgs(
+    sku=azure_nextgen.machinelearningservices.SkuArgs(
         name="Basic",
         tier="Basic",
     ),
@@ -187,7 +187,7 @@ workspace = azure_nextgen.machinelearningservices.latest.Workspace("workspace",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const workspace = new azure_nextgen.machinelearningservices.latest.Workspace("workspace", {
+const workspace = new azure_nextgen.machinelearningservices.Workspace("workspace", {
     applicationInsights: "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/workspace-1234/providers/microsoft.insights/components/testinsights",
     containerRegistry: "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/workspace-1234/providers/Microsoft.ContainerRegistry/registries/testRegistry",
     description: "test description",
@@ -478,7 +478,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#encryption_csharp" style="color: inherit; text-decoration: inherit;">Encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionproperty">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Encryption<wbr>Property<wbr>Args</a></span>
+        <span class="property-type"><a href="#encryptionproperty">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services..<wbr>Inputs.<wbr>Encryption<wbr>Property<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The encryption settings of Azure ML workspace.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -505,7 +505,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identity">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Identity<wbr>Args</a></span>
+        <span class="property-type"><a href="#identity">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services..<wbr>Inputs.<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The identity of the resource.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -541,7 +541,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#sharedprivatelinkresources_csharp" style="color: inherit; text-decoration: inherit;">Shared<wbr>Private<wbr>Link<wbr>Resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sharedprivatelinkresource">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Shared<wbr>Private<wbr>Link<wbr>Resource<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#sharedprivatelinkresource">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services..<wbr>Inputs.<wbr>Shared<wbr>Private<wbr>Link<wbr>Resource<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of shared private link resources in this workspace.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -550,7 +550,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sku">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Sku<wbr>Args</a></span>
+        <span class="property-type"><a href="#sku">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services..<wbr>Inputs.<wbr>Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The sku of the workspace.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1121,7 +1121,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#notebookinfo_csharp" style="color: inherit; text-decoration: inherit;">Notebook<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#notebookresourceinforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Outputs.<wbr>Notebook<wbr>Resource<wbr>Info<wbr>Response</a></span>
+        <span class="property-type"><a href="#notebookresourceinforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services..<wbr>Outputs.<wbr>Notebook<wbr>Resource<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The notebook info of Azure ML workspace.{{% /md %}}</dd>
     <dt class="property-"
@@ -1130,7 +1130,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privateendpointconnections_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint<wbr>Connections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointconnectionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Outputs.<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#privateendpointconnectionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services..<wbr>Outputs.<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of private endpoint connections in the workspace.{{% /md %}}</dd>
     <dt class="property-"
@@ -1490,7 +1490,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keyvaultproperties_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#keyvaultproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services..<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Customer Key vault properties.{{% /md %}}</dd>
     <dt class="property-required"
@@ -1499,7 +1499,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#encryptionstatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Encryption<wbr>Status</a></span>
+        <span class="property-type">string | <a href="#encryptionstatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services..<wbr>Encryption<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether or not the encryption is enabled for the workspace.{{% /md %}}</dd>
 </dl>
@@ -1588,7 +1588,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keyvaultproperties_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#keyvaultpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services..<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Customer Key vault properties.{{% /md %}}</dd>
     <dt class="property-required"
@@ -1724,7 +1724,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidentitytype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Resource<wbr>Identity<wbr>Type</a></span>
+        <span class="property-type"><a href="#resourceidentitytype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services..<wbr>Resource<wbr>Identity<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The identity type.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1849,7 +1849,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userassignedidentities_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services..<wbr>Inputs.<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}The list of user identities associated with resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd>
 </dl>
@@ -2465,7 +2465,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#notebookpreparationerror_csharp" style="color: inherit; text-decoration: inherit;">Notebook<wbr>Preparation<wbr>Error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#notebookpreparationerrorresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Notebook<wbr>Preparation<wbr>Error<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#notebookpreparationerrorresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services..<wbr>Inputs.<wbr>Notebook<wbr>Preparation<wbr>Error<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The error that occurs when preparing notebook.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2608,7 +2608,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privatelinkserviceconnectionstate_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services..<wbr>Inputs.<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A collection of information about the state of the connection between service consumer and provider.{{% /md %}}</dd>
     <dt class="property-required"
@@ -2635,7 +2635,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privateendpoint_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#privateendpointresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services..<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The resource of private end point.{{% /md %}}</dd>
 </dl>
@@ -3180,7 +3180,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#privateendpointserviceconnectionstatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Private<wbr>Endpoint<wbr>Service<wbr>Connection<wbr>Status</a></span>
+        <span class="property-type">string | <a href="#privateendpointserviceconnectionstatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services..<wbr>Private<wbr>Endpoint<wbr>Service<wbr>Connection<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether the connection has been Approved/Rejected/Removed by the owner of the service.{{% /md %}}</dd>
 </dl>
@@ -3746,7 +3746,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:machinelearningservices/latest:Workspace testworkspace /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/workspace-1234/providers/Microsoft.MachineLearningServices/workspaces/testworkspace 
+$ pulumi import azure-nextgen:machinelearningservices:Workspace testworkspace /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/workspace-1234/providers/Microsoft.MachineLearningServices/workspaces/testworkspace 
 ```
 
 

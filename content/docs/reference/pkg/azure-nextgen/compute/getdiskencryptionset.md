@@ -188,7 +188,7 @@ The following output properties are available:
 <a href="#previouskeys_csharp" style="color: inherit; text-decoration: inherit;">Previous<wbr>Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyfordiskencryptionsetresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Outputs.<wbr>Key<wbr>For<wbr>Disk<wbr>Encryption<wbr>Set<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#keyfordiskencryptionsetresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Outputs.<wbr>Key<wbr>For<wbr>Disk<wbr>Encryption<wbr>Set<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}A readonly collection of key vault keys previously used by this disk encryption set while a key rotation is in progress. It will be empty if there is no ongoing key rotation.{{% /md %}}</dd>
     <dt class="property-"
@@ -215,7 +215,7 @@ The following output properties are available:
 <a href="#activekey_csharp" style="color: inherit; text-decoration: inherit;">Active<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyfordiskencryptionsetresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Outputs.<wbr>Key<wbr>For<wbr>Disk<wbr>Encryption<wbr>Set<wbr>Response</a></span>
+        <span class="property-type"><a href="#keyfordiskencryptionsetresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Outputs.<wbr>Key<wbr>For<wbr>Disk<wbr>Encryption<wbr>Set<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The key vault key which is currently used by this disk encryption set.{{% /md %}}</dd>
     <dt class="property-"
@@ -233,7 +233,7 @@ The following output properties are available:
 <a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionsetidentityresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Outputs.<wbr>Encryption<wbr>Set<wbr>Identity<wbr>Response</a></span>
+        <span class="property-type"><a href="#encryptionsetidentityresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Outputs.<wbr>Encryption<wbr>Set<wbr>Identity<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The managed identity for the disk encryption set. It should be given permission on the key vault before it can be used to encrypt disks.{{% /md %}}</dd>
     <dt class="property-"
@@ -706,7 +706,7 @@ The following output properties are available:
 <a href="#sourcevault_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Vault</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sourcevaultresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Source<wbr>Vault<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sourcevaultresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Inputs.<wbr>Source<wbr>Vault<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Resource id of the KeyVault containing the key or secret. This property is optional and cannot be used if the KeyVault subscription is not the same as the Disk Encryption Set subscription.{{% /md %}}</dd>
 </dl>

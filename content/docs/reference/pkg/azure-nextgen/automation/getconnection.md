@@ -251,7 +251,7 @@ The following output properties are available:
 <a href="#connectiontype_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectiontypeassociationpropertyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automation.<wbr>Outputs.<wbr>Connection<wbr>Type<wbr>Association<wbr>Property<wbr>Response</a></span>
+        <span class="property-type"><a href="#connectiontypeassociationpropertyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automation..<wbr>Outputs.<wbr>Connection<wbr>Type<wbr>Association<wbr>Property<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the connectionType of the connection.{{% /md %}}</dd>
     <dt class="property-"

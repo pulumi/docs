@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.costmanagement.Connector resourc
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The Connector model definition
+API Version: 2018-08-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var connector = new AzureNextGen.CostManagement.V20180801Preview.Connector("connector", new AzureNextGen.CostManagement.V20180801Preview.ConnectorArgs
+        var connector = new AzureNextGen.CostManagement..Connector("connector", new AzureNextGen.CostManagement..ConnectorArgs
         {
             ConnectorName = "AWSBillingAccount",
             CredentialsKey = "arn:aws:iam::123456789012:role/AzureCostManagementRole",
@@ -51,7 +52,7 @@ class MyStack : Stack
 package main
 
 import (
-	costmanagement "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/costmanagement/v20180801preview"
+	costmanagement "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/costmanagement"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -84,7 +85,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-connector = azure_nextgen.costmanagement.v20180801preview.Connector("connector",
+connector = azure_nextgen.costmanagement.Connector("connector",
     connector_name="AWSBillingAccount",
     credentials_key="arn:aws:iam::123456789012:role/AzureCostManagementRole",
     credentials_secret="external-id",
@@ -104,7 +105,7 @@ connector = azure_nextgen.costmanagement.v20180801preview.Connector("connector",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const connector = new azure_nextgen.costmanagement.v20180801preview.Connector("connector", {
+const connector = new azure_nextgen.costmanagement.Connector("connector", {
     connectorName: "AWSBillingAccount",
     credentialsKey: "arn:aws:iam::123456789012:role/AzureCostManagementRole",
     credentialsSecret: "external-id",
@@ -380,7 +381,7 @@ The Connector resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#connectorstatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cost<wbr>Management.<wbr>Connector<wbr>Status</a></span>
+        <span class="property-type">string | <a href="#connectorstatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cost<wbr>Management..<wbr>Connector<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}Connector status{{% /md %}}</dd>
     <dt class="property-optional"
@@ -699,7 +700,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#collection_csharp" style="color: inherit; text-decoration: inherit;">Collection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectorcollectioninforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cost<wbr>Management.<wbr>Outputs.<wbr>Connector<wbr>Collection<wbr>Info<wbr>Response</a></span>
+        <span class="property-type"><a href="#connectorcollectioninforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cost<wbr>Management..<wbr>Outputs.<wbr>Connector<wbr>Collection<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Collection information{{% /md %}}</dd>
     <dt class="property-"
@@ -1148,7 +1149,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#error_csharp" style="color: inherit; text-decoration: inherit;">Error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectorcollectionerrorinforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Connector<wbr>Collection<wbr>Error<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#connectorcollectionerrorinforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cost<wbr>Management..<wbr>Inputs.<wbr>Connector<wbr>Collection<wbr>Error<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Error information of last collection{{% /md %}}</dd>
 </dl>
@@ -1331,7 +1332,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:costmanagement/v20180801preview:Connector AWSBillingAccount /subscriptions/01234567-89ab-cdef-0123-456789abcdef/resourceGroups/rg1/providers/Microsoft.CostManagement/connectors/AWSBillingAccount 
+$ pulumi import azure-nextgen:costmanagement:Connector AWSBillingAccount /subscriptions/01234567-89ab-cdef-0123-456789abcdef/resourceGroups/rg1/providers/Microsoft.CostManagement/connectors/AWSBillingAccount 
 ```
 
 

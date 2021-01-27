@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.sql.ManagedInstance resource wit
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 An Azure SQL managed instance.
+API Version: 2020-08-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var managedInstance = new AzureNextGen.Sql.V20200801Preview.ManagedInstance("managedInstance", new AzureNextGen.Sql.V20200801Preview.ManagedInstanceArgs
+        var managedInstance = new AzureNextGen.Sql..ManagedInstance("managedInstance", new AzureNextGen.Sql..ManagedInstanceArgs
         {
             AdministratorLogin = "dummylogin",
             AdministratorLoginPassword = "<administratorLoginPassword>",
@@ -40,7 +41,7 @@ class MyStack : Stack
             ProxyOverride = "Redirect",
             PublicDataEndpointEnabled = false,
             ResourceGroupName = "testrg",
-            Sku = new AzureNextGen.Sql.V20200801Preview.Inputs.SkuArgs
+            Sku = new AzureNextGen.Sql..Inputs.SkuArgs
             {
                 Name = "GP_Gen5",
                 Tier = "GeneralPurpose",
@@ -69,7 +70,7 @@ class MyStack : Stack
 package main
 
 import (
-	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql/v20200801preview"
+	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -118,7 +119,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-managed_instance = azure_nextgen.sql.v20200801preview.ManagedInstance("managedInstance",
+managed_instance = azure_nextgen.sql.ManagedInstance("managedInstance",
     administrator_login="dummylogin",
     administrator_login_password="<administratorLoginPassword>",
     collation="SQL_Latin1_General_CP1_CI_AS",
@@ -131,7 +132,7 @@ managed_instance = azure_nextgen.sql.v20200801preview.ManagedInstance("managedIn
     proxy_override="Redirect",
     public_data_endpoint_enabled=False,
     resource_group_name="testrg",
-    sku=azure_nextgen.sql.v20200801preview.SkuArgs(
+    sku=azure_nextgen.sql.SkuArgs(
         name="GP_Gen5",
         tier="GeneralPurpose",
     ),
@@ -154,7 +155,7 @@ managed_instance = azure_nextgen.sql.v20200801preview.ManagedInstance("managedIn
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const managedInstance = new azure_nextgen.sql.v20200801preview.ManagedInstance("managedInstance", {
+const managedInstance = new azure_nextgen.sql.ManagedInstance("managedInstance", {
     administratorLogin: "dummylogin",
     administratorLoginPassword: "<administratorLoginPassword>",
     collation: "SQL_Latin1_General_CP1_CI_AS",
@@ -195,7 +196,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var managedInstance = new AzureNextGen.Sql.V20200801Preview.ManagedInstance("managedInstance", new AzureNextGen.Sql.V20200801Preview.ManagedInstanceArgs
+        var managedInstance = new AzureNextGen.Sql..ManagedInstance("managedInstance", new AzureNextGen.Sql..ManagedInstanceArgs
         {
             AdministratorLogin = "dummylogin",
             AdministratorLoginPassword = "<administratorLoginPassword>",
@@ -203,7 +204,7 @@ class MyStack : Stack
             Location = "Japan East",
             ManagedInstanceName = "testinstance",
             ResourceGroupName = "testrg",
-            Sku = new AzureNextGen.Sql.V20200801Preview.Inputs.SkuArgs
+            Sku = new AzureNextGen.Sql..Inputs.SkuArgs
             {
                 Name = "GP_Gen4",
                 Tier = "GeneralPurpose",
@@ -226,7 +227,7 @@ class MyStack : Stack
 package main
 
 import (
-	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql/v20200801preview"
+	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -264,14 +265,14 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-managed_instance = azure_nextgen.sql.v20200801preview.ManagedInstance("managedInstance",
+managed_instance = azure_nextgen.sql.ManagedInstance("managedInstance",
     administrator_login="dummylogin",
     administrator_login_password="<administratorLoginPassword>",
     license_type="LicenseIncluded",
     location="Japan East",
     managed_instance_name="testinstance",
     resource_group_name="testrg",
-    sku=azure_nextgen.sql.v20200801preview.SkuArgs(
+    sku=azure_nextgen.sql.SkuArgs(
         name="GP_Gen4",
         tier="GeneralPurpose",
     ),
@@ -289,7 +290,7 @@ managed_instance = azure_nextgen.sql.v20200801preview.ManagedInstance("managedIn
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const managedInstance = new azure_nextgen.sql.v20200801preview.ManagedInstance("managedInstance", {
+const managedInstance = new azure_nextgen.sql.ManagedInstance("managedInstance", {
     administratorLogin: "dummylogin",
     administratorLoginPassword: "<administratorLoginPassword>",
     licenseType: "LicenseIncluded",
@@ -561,7 +562,7 @@ The ManagedInstance resource accepts the following [input]({{< relref "/docs/int
 <a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidentity">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql.<wbr>Inputs.<wbr>Resource<wbr>Identity<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourceidentity">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql..<wbr>Inputs.<wbr>Resource<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Azure Active Directory identity of the managed instance.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -579,7 +580,7 @@ The ManagedInstance resource accepts the following [input]({{< relref "/docs/int
 <a href="#licensetype_csharp" style="color: inherit; text-decoration: inherit;">License<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#managedinstancelicensetype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql.<wbr>Managed<wbr>Instance<wbr>License<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#managedinstancelicensetype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql..<wbr>Managed<wbr>Instance<wbr>License<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The license type. Possible values are 'LicenseIncluded' (regular price inclusive of a new SQL license) and 'BasePrice' (discounted AHB price for bringing your own SQL licenses).{{% /md %}}</dd>
     <dt class="property-optional"
@@ -597,7 +598,7 @@ The ManagedInstance resource accepts the following [input]({{< relref "/docs/int
 <a href="#managedinstancecreatemode_csharp" style="color: inherit; text-decoration: inherit;">Managed<wbr>Instance<wbr>Create<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#managedservercreatemode">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql.<wbr>Managed<wbr>Server<wbr>Create<wbr>Mode</a></span>
+        <span class="property-type">string | <a href="#managedservercreatemode">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql..<wbr>Managed<wbr>Server<wbr>Create<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}Specifies the mode of database creation.
 
@@ -619,7 +620,7 @@ Restore: Creates an instance by restoring a set of backups to specific point in 
 <a href="#proxyoverride_csharp" style="color: inherit; text-decoration: inherit;">Proxy<wbr>Override</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#managedinstanceproxyoverride">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql.<wbr>Managed<wbr>Instance<wbr>Proxy<wbr>Override</a></span>
+        <span class="property-type">string | <a href="#managedinstanceproxyoverride">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql..<wbr>Managed<wbr>Instance<wbr>Proxy<wbr>Override</a></span>
     </dt>
     <dd>{{% md %}}Connection type used for connecting to the instance.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -646,7 +647,7 @@ Restore: Creates an instance by restoring a set of backups to specific point in 
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sku">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql.<wbr>Inputs.<wbr>Sku<wbr>Args</a></span>
+        <span class="property-type"><a href="#sku">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql..<wbr>Inputs.<wbr>Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Managed instance SKU. Allowed values for sku.name: GP_Gen4, GP_Gen5, BC_Gen4, BC_Gen5{{% /md %}}</dd>
     <dt class="property-optional"
@@ -664,7 +665,7 @@ Restore: Creates an instance by restoring a set of backups to specific point in 
 <a href="#storageaccounttype_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#storageaccounttype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql.<wbr>Storage<wbr>Account<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#storageaccounttype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql..<wbr>Storage<wbr>Account<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The storage account type used to store backups for this instance. The options are LRS (LocallyRedundantStorage), ZRS (ZoneRedundantStorage) and GRS (GeoRedundantStorage){{% /md %}}</dd>
     <dt class="property-optional"
@@ -1501,7 +1502,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privateendpointconnections_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint<wbr>Connections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedinstancepecpropertyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql.<wbr>Outputs.<wbr>Managed<wbr>Instance<wbr>Pec<wbr>Property<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#managedinstancepecpropertyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql..<wbr>Outputs.<wbr>Managed<wbr>Instance<wbr>Pec<wbr>Property<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of private endpoint connections on a managed instance.{{% /md %}}</dd>
     <dt class="property-"
@@ -1882,7 +1883,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedinstanceprivateendpointconnectionpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql.<wbr>Inputs.<wbr>Managed<wbr>Instance<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#managedinstanceprivateendpointconnectionpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql..<wbr>Inputs.<wbr>Managed<wbr>Instance<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Private endpoint connection properties{{% /md %}}</dd>
 </dl>
@@ -1980,7 +1981,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privateendpoint_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedinstanceprivateendpointpropertyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql.<wbr>Inputs.<wbr>Managed<wbr>Instance<wbr>Private<wbr>Endpoint<wbr>Property<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#managedinstanceprivateendpointpropertyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql..<wbr>Inputs.<wbr>Managed<wbr>Instance<wbr>Private<wbr>Endpoint<wbr>Property<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Private endpoint which the connection belongs to.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1989,7 +1990,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privatelinkserviceconnectionstate_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedinstanceprivatelinkserviceconnectionstatepropertyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql.<wbr>Inputs.<wbr>Managed<wbr>Instance<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Property<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#managedinstanceprivatelinkserviceconnectionstatepropertyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql..<wbr>Inputs.<wbr>Managed<wbr>Instance<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Property<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Connection State of the Private Endpoint Connection.{{% /md %}}</dd>
 </dl>
@@ -2385,7 +2386,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#identitytype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql.<wbr>Identity<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#identitytype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql..<wbr>Identity<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The identity type. Set this to 'SystemAssigned' in order to automatically create and assign an Azure Active Directory principal for the resource.{{% /md %}}</dd>
 </dl>
@@ -3033,7 +3034,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:sql/v20200801preview:ManagedInstance testinstance /subscriptions/20d7082a-0fc7-4468-82bd-542694d5042b/resourceGroups/testrg/providers/Microsoft.Sql/managedInstances/testinstance 
+$ pulumi import azure-nextgen:sql:ManagedInstance testinstance /subscriptions/20d7082a-0fc7-4468-82bd-542694d5042b/resourceGroups/testrg/providers/Microsoft.Sql/managedInstances/testinstance 
 ```
 
 

@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.cognitiveservices.Account resour
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Cognitive Services Account is an Azure resource representing the provisioned account, its type, location and SKU.
-Latest API Version: 2017-04-18.
+API Version: 2017-04-18.
 
 {{% examples %}}
 ## Example Usage
@@ -27,21 +27,21 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var account = new AzureNextGen.CognitiveServices.Latest.Account("account", new AzureNextGen.CognitiveServices.Latest.AccountArgs
+        var account = new AzureNextGen.CognitiveServices..Account("account", new AzureNextGen.CognitiveServices..AccountArgs
         {
             AccountName = "testCreate1",
-            Identity = new AzureNextGen.CognitiveServices.Latest.Inputs.IdentityArgs
+            Identity = new AzureNextGen.CognitiveServices..Inputs.IdentityArgs
             {
                 Type = "SystemAssigned",
             },
             Kind = "Emotion",
             Location = "West US",
-            Properties = new AzureNextGen.CognitiveServices.Latest.Inputs.CognitiveServicesAccountPropertiesArgs
+            Properties = new AzureNextGen.CognitiveServices..Inputs.CognitiveServicesAccountPropertiesArgs
             {
-                Encryption = new AzureNextGen.CognitiveServices.Latest.Inputs.EncryptionArgs
+                Encryption = new AzureNextGen.CognitiveServices..Inputs.EncryptionArgs
                 {
                     KeySource = "Microsoft.KeyVault",
-                    KeyVaultProperties = new AzureNextGen.CognitiveServices.Latest.Inputs.KeyVaultPropertiesArgs
+                    KeyVaultProperties = new AzureNextGen.CognitiveServices..Inputs.KeyVaultPropertiesArgs
                     {
                         KeyName = "KeyName",
                         KeyVaultUri = "https://pltfrmscrts-use-pc-dev.vault.azure.net/",
@@ -50,14 +50,14 @@ class MyStack : Stack
                 },
                 UserOwnedStorage = 
                 {
-                    new AzureNextGen.CognitiveServices.Latest.Inputs.UserOwnedStorageArgs
+                    new AzureNextGen.CognitiveServices..Inputs.UserOwnedStorageArgs
                     {
                         ResourceId = "/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/myResourceGroup/providers/Microsoft.Storage/storageAccounts/myStorageAccount",
                     },
                 },
             },
             ResourceGroupName = "myResourceGroup",
-            Sku = new AzureNextGen.CognitiveServices.Latest.Inputs.SkuArgs
+            Sku = new AzureNextGen.CognitiveServices..Inputs.SkuArgs
             {
                 Name = "S0",
             },
@@ -76,7 +76,7 @@ class MyStack : Stack
 package main
 
 import (
-	cognitiveservices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/cognitiveservices/latest"
+	cognitiveservices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/cognitiveservices"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -126,28 +126,28 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-account = azure_nextgen.cognitiveservices.latest.Account("account",
+account = azure_nextgen.cognitiveservices.Account("account",
     account_name="testCreate1",
-    identity=azure_nextgen.cognitiveservices.latest.IdentityArgs(
+    identity=azure_nextgen.cognitiveservices.IdentityArgs(
         type="SystemAssigned",
     ),
     kind="Emotion",
     location="West US",
-    properties=azure_nextgen.cognitiveservices.latest.CognitiveServicesAccountPropertiesArgs(
-        encryption=azure_nextgen.cognitiveservices.latest.EncryptionArgs(
+    properties=azure_nextgen.cognitiveservices.CognitiveServicesAccountPropertiesArgs(
+        encryption=azure_nextgen.cognitiveservices.EncryptionArgs(
             key_source="Microsoft.KeyVault",
-            key_vault_properties=azure_nextgen.cognitiveservices.latest.KeyVaultPropertiesArgs(
+            key_vault_properties=azure_nextgen.cognitiveservices.KeyVaultPropertiesArgs(
                 key_name="KeyName",
                 key_vault_uri="https://pltfrmscrts-use-pc-dev.vault.azure.net/",
                 key_version="891CF236-D241-4738-9462-D506AF493DFA",
             ),
         ),
-        user_owned_storage=[azure_nextgen.cognitiveservices.latest.UserOwnedStorageArgs(
+        user_owned_storage=[azure_nextgen.cognitiveservices.UserOwnedStorageArgs(
             resource_id="/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/myResourceGroup/providers/Microsoft.Storage/storageAccounts/myStorageAccount",
         )],
     ),
     resource_group_name="myResourceGroup",
-    sku=azure_nextgen.cognitiveservices.latest.SkuArgs(
+    sku=azure_nextgen.cognitiveservices.SkuArgs(
         name="S0",
     ))
 
@@ -161,7 +161,7 @@ account = azure_nextgen.cognitiveservices.latest.Account("account",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const account = new azure_nextgen.cognitiveservices.latest.Account("account", {
+const account = new azure_nextgen.cognitiveservices.Account("account", {
     accountName: "testCreate1",
     identity: {
         type: "SystemAssigned",
@@ -201,10 +201,10 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var account = new AzureNextGen.CognitiveServices.Latest.Account("account", new AzureNextGen.CognitiveServices.Latest.AccountArgs
+        var account = new AzureNextGen.CognitiveServices..Account("account", new AzureNextGen.CognitiveServices..AccountArgs
         {
             AccountName = "testCreate1",
-            Identity = new AzureNextGen.CognitiveServices.Latest.Inputs.IdentityArgs
+            Identity = new AzureNextGen.CognitiveServices..Inputs.IdentityArgs
             {
                 Type = "SystemAssigned",
             },
@@ -212,7 +212,7 @@ class MyStack : Stack
             Location = "West US",
             Properties = ,
             ResourceGroupName = "myResourceGroup",
-            Sku = new AzureNextGen.CognitiveServices.Latest.Inputs.SkuArgs
+            Sku = new AzureNextGen.CognitiveServices..Inputs.SkuArgs
             {
                 Name = "S0",
             },
@@ -231,7 +231,7 @@ class MyStack : Stack
 package main
 
 import (
-	cognitiveservices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/cognitiveservices/latest"
+	cognitiveservices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/cognitiveservices"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -267,16 +267,16 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-account = azure_nextgen.cognitiveservices.latest.Account("account",
+account = azure_nextgen.cognitiveservices.Account("account",
     account_name="testCreate1",
-    identity=azure_nextgen.cognitiveservices.latest.IdentityArgs(
+    identity=azure_nextgen.cognitiveservices.IdentityArgs(
         type="SystemAssigned",
     ),
     kind="CognitiveServices",
     location="West US",
-    properties=azure_nextgen.cognitiveservices.latest.CognitiveServicesAccountPropertiesArgs(),
+    properties=azure_nextgen.cognitiveservices.CognitiveServicesAccountPropertiesArgs(),
     resource_group_name="myResourceGroup",
-    sku=azure_nextgen.cognitiveservices.latest.SkuArgs(
+    sku=azure_nextgen.cognitiveservices.SkuArgs(
         name="S0",
     ))
 
@@ -290,7 +290,7 @@ account = azure_nextgen.cognitiveservices.latest.Account("account",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const account = new azure_nextgen.cognitiveservices.latest.Account("account", {
+const account = new azure_nextgen.cognitiveservices.Account("account", {
     accountName: "testCreate1",
     identity: {
         type: "SystemAssigned",
@@ -515,7 +515,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identity">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cognitive<wbr>Services.<wbr>Inputs.<wbr>Identity<wbr>Args</a></span>
+        <span class="property-type"><a href="#identity">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cognitive<wbr>Services..<wbr>Inputs.<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The identity of Cognitive Services account.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -542,7 +542,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cognitiveservicesaccountproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cognitive<wbr>Services.<wbr>Inputs.<wbr>Cognitive<wbr>Services<wbr>Account<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#cognitiveservicesaccountproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cognitive<wbr>Services..<wbr>Inputs.<wbr>Cognitive<wbr>Services<wbr>Account<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties of Cognitive Services account.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -551,7 +551,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sku">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cognitive<wbr>Services.<wbr>Inputs.<wbr>Sku<wbr>Args</a></span>
+        <span class="property-type"><a href="#sku">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cognitive<wbr>Services..<wbr>Inputs.<wbr>Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The SKU of Cognitive Services account.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1624,7 +1624,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#apiproperties_csharp" style="color: inherit; text-decoration: inherit;">Api<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cognitiveservicesaccountapiproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cognitive<wbr>Services.<wbr>Inputs.<wbr>Cognitive<wbr>Services<wbr>Account<wbr>Api<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#cognitiveservicesaccountapiproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cognitive<wbr>Services..<wbr>Inputs.<wbr>Cognitive<wbr>Services<wbr>Account<wbr>Api<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The api properties for special APIs.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1642,7 +1642,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryption_csharp" style="color: inherit; text-decoration: inherit;">Encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryption">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cognitive<wbr>Services.<wbr>Inputs.<wbr>Encryption<wbr>Args</a></span>
+        <span class="property-type"><a href="#encryption">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cognitive<wbr>Services..<wbr>Inputs.<wbr>Encryption<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The encryption properties for this resource.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1651,7 +1651,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#networkacls_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Acls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkruleset">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cognitive<wbr>Services.<wbr>Inputs.<wbr>Network<wbr>Rule<wbr>Set<wbr>Args</a></span>
+        <span class="property-type"><a href="#networkruleset">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cognitive<wbr>Services..<wbr>Inputs.<wbr>Network<wbr>Rule<wbr>Set<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A collection of rules governing the accessibility from specific network locations.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1660,7 +1660,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privateendpointconnections_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint<wbr>Connections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointconnection">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cognitive<wbr>Services.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#privateendpointconnection">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cognitive<wbr>Services..<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The private endpoint connection associated with the Cognitive Services account.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1669,7 +1669,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publicnetworkaccess_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Network<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#publicnetworkaccess">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cognitive<wbr>Services.<wbr>Public<wbr>Network<wbr>Access</a></span>
+        <span class="property-type">string | <a href="#publicnetworkaccess">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cognitive<wbr>Services..<wbr>Public<wbr>Network<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}Whether or not public endpoint access is allowed for this account. Value is optional but if passed in, must be 'Enabled' or 'Disabled'{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1678,7 +1678,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userownedstorage_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Owned<wbr>Storage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userownedstorage">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cognitive<wbr>Services.<wbr>Inputs.<wbr>User<wbr>Owned<wbr>Storage<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#userownedstorage">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cognitive<wbr>Services..<wbr>Inputs.<wbr>User<wbr>Owned<wbr>Storage<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The storage accounts for this resource.{{% /md %}}</dd>
 </dl>
@@ -1902,7 +1902,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capabilities_csharp" style="color: inherit; text-decoration: inherit;">Capabilities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skucapabilityresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cognitive<wbr>Services.<wbr>Inputs.<wbr>Sku<wbr>Capability<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#skucapabilityresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cognitive<wbr>Services..<wbr>Inputs.<wbr>Sku<wbr>Capability<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Gets the capabilities of the cognitive services account. Each item indicates the capability of a specific feature. The values are read-only and for reference only.{{% /md %}}</dd>
     <dt class="property-required"
@@ -1947,7 +1947,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#apiproperties_csharp" style="color: inherit; text-decoration: inherit;">Api<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cognitiveservicesaccountapipropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cognitive<wbr>Services.<wbr>Inputs.<wbr>Cognitive<wbr>Services<wbr>Account<wbr>Api<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#cognitiveservicesaccountapipropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cognitive<wbr>Services..<wbr>Inputs.<wbr>Cognitive<wbr>Services<wbr>Account<wbr>Api<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The api properties for special APIs.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1965,7 +1965,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryption_csharp" style="color: inherit; text-decoration: inherit;">Encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cognitive<wbr>Services.<wbr>Inputs.<wbr>Encryption<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#encryptionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cognitive<wbr>Services..<wbr>Inputs.<wbr>Encryption<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The encryption properties for this resource.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1974,7 +1974,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#networkacls_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Acls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkrulesetresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cognitive<wbr>Services.<wbr>Inputs.<wbr>Network<wbr>Rule<wbr>Set<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#networkrulesetresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cognitive<wbr>Services..<wbr>Inputs.<wbr>Network<wbr>Rule<wbr>Set<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A collection of rules governing the accessibility from specific network locations.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1983,7 +1983,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privateendpointconnections_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint<wbr>Connections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointconnectionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cognitive<wbr>Services.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#privateendpointconnectionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cognitive<wbr>Services..<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The private endpoint connection associated with the Cognitive Services account.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2001,7 +2001,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userownedstorage_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Owned<wbr>Storage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userownedstorageresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cognitive<wbr>Services.<wbr>Inputs.<wbr>User<wbr>Owned<wbr>Storage<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#userownedstorageresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cognitive<wbr>Services..<wbr>Inputs.<wbr>User<wbr>Owned<wbr>Storage<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The storage accounts for this resource.{{% /md %}}</dd>
 </dl>
@@ -2360,7 +2360,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keysource_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#keysource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cognitive<wbr>Services.<wbr>Key<wbr>Source</a></span>
+        <span class="property-type">string | <a href="#keysource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cognitive<wbr>Services..<wbr>Key<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}Enumerates the possible value of keySource for Encryption{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2369,7 +2369,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keyvaultproperties_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cognitive<wbr>Services.<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#keyvaultproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cognitive<wbr>Services..<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties of KeyVault{{% /md %}}</dd>
 </dl>
@@ -2467,7 +2467,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keyvaultproperties_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cognitive<wbr>Services.<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#keyvaultpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cognitive<wbr>Services..<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties of KeyVault{{% /md %}}</dd>
 </dl>
@@ -2556,7 +2556,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identitytype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cognitive<wbr>Services.<wbr>Identity<wbr>Type</a></span>
+        <span class="property-type"><a href="#identitytype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cognitive<wbr>Services..<wbr>Identity<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of managed service identity.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2565,7 +2565,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userassignedidentities_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cognitive<wbr>Services.<wbr>Inputs.<wbr>User<wbr>Assigned<wbr>Identity<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cognitive<wbr>Services..<wbr>Inputs.<wbr>User<wbr>Assigned<wbr>Identity<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}The list of user assigned identities associated with the resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}{{% /md %}}</dd>
 </dl>
@@ -2681,7 +2681,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userassignedidentities_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cognitive<wbr>Services.<wbr>Inputs.<wbr>User<wbr>Assigned<wbr>Identity<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cognitive<wbr>Services..<wbr>Inputs.<wbr>User<wbr>Assigned<wbr>Identity<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}The list of user assigned identities associated with the resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}{{% /md %}}</dd>
 </dl>
@@ -3338,7 +3338,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#defaultaction_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#networkruleaction">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cognitive<wbr>Services.<wbr>Network<wbr>Rule<wbr>Action</a></span>
+        <span class="property-type">string | <a href="#networkruleaction">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cognitive<wbr>Services..<wbr>Network<wbr>Rule<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}The default action when no rule from ipRules and from virtualNetworkRules match. This is only used after the bypass property has been evaluated.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3347,7 +3347,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#iprules_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iprule">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cognitive<wbr>Services.<wbr>Inputs.<wbr>Ip<wbr>Rule<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#iprule">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cognitive<wbr>Services..<wbr>Inputs.<wbr>Ip<wbr>Rule<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of IP address rules.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3356,7 +3356,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#virtualnetworkrules_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkrule">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cognitive<wbr>Services.<wbr>Inputs.<wbr>Virtual<wbr>Network<wbr>Rule<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#virtualnetworkrule">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cognitive<wbr>Services..<wbr>Inputs.<wbr>Virtual<wbr>Network<wbr>Rule<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of virtual network rules.{{% /md %}}</dd>
 </dl>
@@ -3481,7 +3481,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#iprules_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cognitive<wbr>Services.<wbr>Inputs.<wbr>Ip<wbr>Rule<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#ipruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cognitive<wbr>Services..<wbr>Inputs.<wbr>Ip<wbr>Rule<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of IP address rules.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3490,7 +3490,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#virtualnetworkrules_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cognitive<wbr>Services.<wbr>Inputs.<wbr>Virtual<wbr>Network<wbr>Rule<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#virtualnetworkruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cognitive<wbr>Services..<wbr>Inputs.<wbr>Virtual<wbr>Network<wbr>Rule<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of virtual network rules.{{% /md %}}</dd>
 </dl>
@@ -3606,7 +3606,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointconnectionproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cognitive<wbr>Services.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#privateendpointconnectionproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cognitive<wbr>Services..<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Resource properties.{{% /md %}}</dd>
 </dl>
@@ -3668,7 +3668,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privatelinkserviceconnectionstate_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkserviceconnectionstate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cognitive<wbr>Services.<wbr>Inputs.<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Args</a></span>
+        <span class="property-type"><a href="#privatelinkserviceconnectionstate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cognitive<wbr>Services..<wbr>Inputs.<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A collection of information about the state of the connection between service consumer and provider.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3766,7 +3766,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privatelinkserviceconnectionstate_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cognitive<wbr>Services.<wbr>Inputs.<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cognitive<wbr>Services..<wbr>Inputs.<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A collection of information about the state of the connection between service consumer and provider.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3784,7 +3784,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privateendpoint_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cognitive<wbr>Services.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#privateendpointresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cognitive<wbr>Services..<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The resource of private end point.{{% /md %}}</dd>
 </dl>
@@ -3927,7 +3927,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointconnectionpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cognitive<wbr>Services.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#privateendpointconnectionpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cognitive<wbr>Services..<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Resource properties.{{% /md %}}</dd>
 </dl>
@@ -4204,7 +4204,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#privateendpointserviceconnectionstatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cognitive<wbr>Services.<wbr>Private<wbr>Endpoint<wbr>Service<wbr>Connection<wbr>Status</a></span>
+        <span class="property-type">string | <a href="#privateendpointserviceconnectionstatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cognitive<wbr>Services..<wbr>Private<wbr>Endpoint<wbr>Service<wbr>Connection<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether the connection has been Approved/Rejected/Removed by the owner of the service.{{% /md %}}</dd>
 </dl>
@@ -5332,7 +5332,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:cognitiveservices/latest:Account testCreate1 /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/myResourceGroup/providers/Microsoft.CognitiveServices/accounts/testCreate1 
+$ pulumi import azure-nextgen:cognitiveservices:Account testCreate1 /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/myResourceGroup/providers/Microsoft.CognitiveServices/accounts/testCreate1 
 ```
 
 

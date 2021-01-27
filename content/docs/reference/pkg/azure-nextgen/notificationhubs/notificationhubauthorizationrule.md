@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.notificationhubs.NotificationHub
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Description of a Namespace AuthorizationRules.
-Latest API Version: 2017-04-01.
+API Version: 2017-04-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,12 +27,12 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var notificationHubAuthorizationRule = new AzureNextGen.NotificationHubs.Latest.NotificationHubAuthorizationRule("notificationHubAuthorizationRule", new AzureNextGen.NotificationHubs.Latest.NotificationHubAuthorizationRuleArgs
+        var notificationHubAuthorizationRule = new AzureNextGen.NotificationHubs..NotificationHubAuthorizationRule("notificationHubAuthorizationRule", new AzureNextGen.NotificationHubs..NotificationHubAuthorizationRuleArgs
         {
             AuthorizationRuleName = "DefaultListenSharedAccessSignature",
             NamespaceName = "nh-sdk-ns",
             NotificationHubName = "nh-sdk-hub",
-            Properties = new AzureNextGen.NotificationHubs.Latest.Inputs.SharedAccessAuthorizationRulePropertiesArgs
+            Properties = new AzureNextGen.NotificationHubs..Inputs.SharedAccessAuthorizationRulePropertiesArgs
             {
                 Rights = 
                 {
@@ -60,11 +60,11 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-notification_hub_authorization_rule = azure_nextgen.notificationhubs.latest.NotificationHubAuthorizationRule("notificationHubAuthorizationRule",
+notification_hub_authorization_rule = azure_nextgen.notificationhubs.NotificationHubAuthorizationRule("notificationHubAuthorizationRule",
     authorization_rule_name="DefaultListenSharedAccessSignature",
     namespace_name="nh-sdk-ns",
     notification_hub_name="nh-sdk-hub",
-    properties=azure_nextgen.notificationhubs.latest.SharedAccessAuthorizationRulePropertiesArgs(
+    properties=azure_nextgen.notificationhubs.SharedAccessAuthorizationRulePropertiesArgs(
         rights=[
             "Listen",
             "Send",
@@ -82,7 +82,7 @@ notification_hub_authorization_rule = azure_nextgen.notificationhubs.latest.Noti
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const notificationHubAuthorizationRule = new azure_nextgen.notificationhubs.latest.NotificationHubAuthorizationRule("notificationHubAuthorizationRule", {
+const notificationHubAuthorizationRule = new azure_nextgen.notificationhubs.NotificationHubAuthorizationRule("notificationHubAuthorizationRule", {
     authorizationRuleName: "DefaultListenSharedAccessSignature",
     namespaceName: "nh-sdk-ns",
     notificationHubName: "nh-sdk-hub",
@@ -315,7 +315,7 @@ The NotificationHubAuthorizationRule resource accepts the following [input]({{< 
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sharedaccessauthorizationruleproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Notification<wbr>Hubs.<wbr>Inputs.<wbr>Shared<wbr>Access<wbr>Authorization<wbr>Rule<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#sharedaccessauthorizationruleproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Notification<wbr>Hubs..<wbr>Inputs.<wbr>Shared<wbr>Access<wbr>Authorization<wbr>Rule<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties of the Namespace AuthorizationRules.{{% /md %}}</dd>
     <dt class="property-required"
@@ -616,7 +616,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skuresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Notification<wbr>Hubs.<wbr>Outputs.<wbr>Sku<wbr>Response</a></span>
+        <span class="property-type"><a href="#skuresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Notification<wbr>Hubs..<wbr>Outputs.<wbr>Sku<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The sku of the created namespace{{% /md %}}</dd>
     <dt class="property-"
@@ -1121,7 +1121,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rights_csharp" style="color: inherit; text-decoration: inherit;">Rights</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accessrights">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Notification<wbr>Hubs.<wbr>Access<wbr>Rights&gt;</a></span>
+        <span class="property-type"><a href="#accessrights">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Notification<wbr>Hubs..<wbr>Access<wbr>Rights&gt;</a></span>
     </dt>
     <dd>{{% md %}}The rights associated with the rule.{{% /md %}}</dd>
 </dl>
@@ -1383,7 +1383,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:notificationhubs/latest:NotificationHubAuthorizationRule DefaultListenSharedAccessSignature /subscriptions/29cfa613-cbbc-4512-b1d6-1b3a92c7fa40/resourceGroups/5ktrial/providers/Microsoft.NotificationHubs/namespaces/nh-sdk-ns/NotificationHubs/nh-sdk-hub/AuthorizationRules/DefaultListenSharedAccessSignature 
+$ pulumi import azure-nextgen:notificationhubs:NotificationHubAuthorizationRule DefaultListenSharedAccessSignature /subscriptions/29cfa613-cbbc-4512-b1d6-1b3a92c7fa40/resourceGroups/5ktrial/providers/Microsoft.NotificationHubs/namespaces/nh-sdk-ns/NotificationHubs/nh-sdk-hub/AuthorizationRules/DefaultListenSharedAccessSignature 
 ```
 
 

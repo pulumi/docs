@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.servicefabric.NodeType resource 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Describes a node type in the cluster, each node type represents sub set of nodes in the cluster.
+API Version: 2020-01-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var nodeType = new AzureNextGen.ServiceFabric.V20200101Preview.NodeType("nodeType", new AzureNextGen.ServiceFabric.V20200101Preview.NodeTypeArgs
+        var nodeType = new AzureNextGen.ServiceFabric..NodeType("nodeType", new AzureNextGen.ServiceFabric..NodeTypeArgs
         {
             Capacities = 
             {
@@ -45,7 +46,7 @@ class MyStack : Stack
             ResourceGroupName = "resRg",
             VmExtensions = 
             {
-                new AzureNextGen.ServiceFabric.V20200101Preview.Inputs.VMSSExtensionArgs
+                new AzureNextGen.ServiceFabric..Inputs.VMSSExtensionArgs
                 {
                     AutoUpgradeMinorVersion = true,
                     Name = "Microsoft.Azure.Geneva.GenevaMonitoring",
@@ -62,15 +63,15 @@ class MyStack : Stack
             VmInstanceCount = 10,
             VmSecrets = 
             {
-                new AzureNextGen.ServiceFabric.V20200101Preview.Inputs.VaultSecretGroupArgs
+                new AzureNextGen.ServiceFabric..Inputs.VaultSecretGroupArgs
                 {
-                    SourceVault = new AzureNextGen.ServiceFabric.V20200101Preview.Inputs.SubResourceArgs
+                    SourceVault = new AzureNextGen.ServiceFabric..Inputs.SubResourceArgs
                     {
                         Id = "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/resRg/providers/Microsoft.KeyVault/vaults/myVault",
                     },
                     VaultCertificates = 
                     {
-                        new AzureNextGen.ServiceFabric.V20200101Preview.Inputs.VaultCertificateArgs
+                        new AzureNextGen.ServiceFabric..Inputs.VaultCertificateArgs
                         {
                             CertificateStore = "My",
                             CertificateUrl = "https://myVault.vault.azure.net:443/secrets/myCert/ef1a31d39e1f46bca33def54b6cda54c",
@@ -94,7 +95,7 @@ class MyStack : Stack
 package main
 
 import (
-	servicefabric "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/servicefabric/v20200101preview"
+	servicefabric "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/servicefabric"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -161,7 +162,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-node_type = azure_nextgen.servicefabric.v20200101preview.NodeType("nodeType",
+node_type = azure_nextgen.servicefabric.NodeType("nodeType",
     capacities={
         "ClientConnections": "65536",
     },
@@ -175,7 +176,7 @@ node_type = azure_nextgen.servicefabric.v20200101preview.NodeType("nodeType",
         "SomeProperty": "5",
     },
     resource_group_name="resRg",
-    vm_extensions=[azure_nextgen.servicefabric.v20200101preview.VMSSExtensionArgs(
+    vm_extensions=[azure_nextgen.servicefabric.VMSSExtensionArgs(
         auto_upgrade_minor_version=True,
         name="Microsoft.Azure.Geneva.GenevaMonitoring",
         publisher="Microsoft.Azure.Geneva",
@@ -188,11 +189,11 @@ node_type = azure_nextgen.servicefabric.v20200101preview.NodeType("nodeType",
     vm_image_sku="2016-Datacenter-Server-Core",
     vm_image_version="latest",
     vm_instance_count=10,
-    vm_secrets=[azure_nextgen.servicefabric.v20200101preview.VaultSecretGroupArgs(
-        source_vault=azure_nextgen.servicefabric.v20200101preview.SubResourceArgs(
+    vm_secrets=[azure_nextgen.servicefabric.VaultSecretGroupArgs(
+        source_vault=azure_nextgen.servicefabric.SubResourceArgs(
             id="/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/resRg/providers/Microsoft.KeyVault/vaults/myVault",
         ),
-        vault_certificates=[azure_nextgen.servicefabric.v20200101preview.VaultCertificateArgs(
+        vault_certificates=[azure_nextgen.servicefabric.VaultCertificateArgs(
             certificate_store="My",
             certificate_url="https://myVault.vault.azure.net:443/secrets/myCert/ef1a31d39e1f46bca33def54b6cda54c",
         )],
@@ -209,7 +210,7 @@ node_type = azure_nextgen.servicefabric.v20200101preview.NodeType("nodeType",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const nodeType = new azure_nextgen.servicefabric.v20200101preview.NodeType("nodeType", {
+const nodeType = new azure_nextgen.servicefabric.NodeType("nodeType", {
     capacities: {
         ClientConnections: "65536",
     },
@@ -262,7 +263,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var nodeType = new AzureNextGen.ServiceFabric.V20200101Preview.NodeType("nodeType", new AzureNextGen.ServiceFabric.V20200101Preview.NodeTypeArgs
+        var nodeType = new AzureNextGen.ServiceFabric..NodeType("nodeType", new AzureNextGen.ServiceFabric..NodeTypeArgs
         {
             ClusterName = "myCluster",
             DataDiskSizeGB = 200,
@@ -290,7 +291,7 @@ class MyStack : Stack
 package main
 
 import (
-	servicefabric "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/servicefabric/v20200101preview"
+	servicefabric "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/servicefabric"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -326,7 +327,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-node_type = azure_nextgen.servicefabric.v20200101preview.NodeType("nodeType",
+node_type = azure_nextgen.servicefabric.NodeType("nodeType",
     cluster_name="myCluster",
     data_disk_size_gb=200,
     is_primary=False,
@@ -349,7 +350,7 @@ node_type = azure_nextgen.servicefabric.v20200101preview.NodeType("nodeType",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const nodeType = new azure_nextgen.servicefabric.v20200101preview.NodeType("nodeType", {
+const nodeType = new azure_nextgen.servicefabric.NodeType("nodeType", {
     clusterName: "myCluster",
     dataDiskSizeGB: 200,
     isPrimary: false,
@@ -610,7 +611,7 @@ The NodeType resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#applicationports_csharp" style="color: inherit; text-decoration: inherit;">Application<wbr>Ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointrangedescription">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric.<wbr>Inputs.<wbr>Endpoint<wbr>Range<wbr>Description<wbr>Args</a></span>
+        <span class="property-type"><a href="#endpointrangedescription">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric..<wbr>Inputs.<wbr>Endpoint<wbr>Range<wbr>Description<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The range of ports from which cluster assigned port to Service Fabric applications.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -628,7 +629,7 @@ The NodeType resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#ephemeralports_csharp" style="color: inherit; text-decoration: inherit;">Ephemeral<wbr>Ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointrangedescription">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric.<wbr>Inputs.<wbr>Endpoint<wbr>Range<wbr>Description<wbr>Args</a></span>
+        <span class="property-type"><a href="#endpointrangedescription">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric..<wbr>Inputs.<wbr>Endpoint<wbr>Range<wbr>Description<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The range of ephemeral ports that nodes in this node type should be configured with.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -655,7 +656,7 @@ The NodeType resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#vmextensions_csharp" style="color: inherit; text-decoration: inherit;">Vm<wbr>Extensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vmssextension">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric.<wbr>Inputs.<wbr>VMSSExtension<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#vmssextension">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric..<wbr>Inputs.<wbr>VMSSExtension<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Set of extensions that should be installed onto the virtual machines.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -700,7 +701,7 @@ The NodeType resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#vmsecrets_csharp" style="color: inherit; text-decoration: inherit;">Vm<wbr>Secrets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vaultsecretgroup">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric.<wbr>Inputs.<wbr>Vault<wbr>Secret<wbr>Group<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#vaultsecretgroup">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric..<wbr>Inputs.<wbr>Vault<wbr>Secret<wbr>Group<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The secrets to install in the virtual machines.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2667,7 +2668,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourcevault_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Vault</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric..<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The relative URL of the Key Vault containing all of the certificates in VaultCertificates.{{% /md %}}</dd>
     <dt class="property-required"
@@ -2676,7 +2677,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vaultcertificates_csharp" style="color: inherit; text-decoration: inherit;">Vault<wbr>Certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vaultcertificate">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric.<wbr>Inputs.<wbr>Vault<wbr>Certificate<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#vaultcertificate">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric..<wbr>Inputs.<wbr>Vault<wbr>Certificate<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of key vault references in SourceVault which contain certificates.{{% /md %}}</dd>
 </dl>
@@ -2765,7 +2766,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourcevault_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Vault</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric..<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The relative URL of the Key Vault containing all of the certificates in VaultCertificates.{{% /md %}}</dd>
     <dt class="property-required"
@@ -2774,7 +2775,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vaultcertificates_csharp" style="color: inherit; text-decoration: inherit;">Vault<wbr>Certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vaultcertificateresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric.<wbr>Inputs.<wbr>Vault<wbr>Certificate<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#vaultcertificateresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric..<wbr>Inputs.<wbr>Vault<wbr>Certificate<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of key vault references in SourceVault which contain certificates.{{% /md %}}</dd>
 </dl>
@@ -2857,7 +2858,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:servicefabric/v20200101preview:NodeType BE /subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/resRg/providers/Microsoft.ServiceFabric/managedClusters/myCluster/nodeTypes/BE 
+$ pulumi import azure-nextgen:servicefabric:NodeType BE /subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/resRg/providers/Microsoft.ServiceFabric/managedClusters/myCluster/nodeTypes/BE 
 ```
 
 

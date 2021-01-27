@@ -298,7 +298,7 @@ This only applies to Functions container.{{% /md %}}</dd>
 <a href="#slotswapstatus_csharp" style="color: inherit; text-decoration: inherit;">Slot<wbr>Swap<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slotswapstatusresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web.<wbr>Outputs.<wbr>Slot<wbr>Swap<wbr>Status<wbr>Response</a></span>
+        <span class="property-type"><a href="#slotswapstatusresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web..<wbr>Outputs.<wbr>Slot<wbr>Swap<wbr>Status<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Status of the last deployment slot swap operation.{{% /md %}}</dd>
     <dt class="property-"
@@ -325,7 +325,7 @@ This only applies to Functions container.{{% /md %}}</dd>
 <a href="#systemdata_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web.<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
+        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web..<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The system metadata relating to this resource.{{% /md %}}</dd>
     <dt class="property-"
@@ -409,7 +409,7 @@ This only applies to Functions container.{{% /md %}}</dd>
 <a href="#cloninginfo_csharp" style="color: inherit; text-decoration: inherit;">Cloning<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloninginforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web.<wbr>Outputs.<wbr>Cloning<wbr>Info<wbr>Response</a></span>
+        <span class="property-type"><a href="#cloninginforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web..<wbr>Outputs.<wbr>Cloning<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}If specified during app creation, the app is cloned from a source app.{{% /md %}}</dd>
     <dt class="property-"
@@ -454,7 +454,7 @@ This only applies to Functions container.{{% /md %}}</dd>
 <a href="#hostnamesslstates_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Name<wbr>Ssl<wbr>States</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hostnamesslstateresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web.<wbr>Outputs.<wbr>Host<wbr>Name<wbr>Ssl<wbr>State<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#hostnamesslstateresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web..<wbr>Outputs.<wbr>Host<wbr>Name<wbr>Ssl<wbr>State<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Hostname SSL states are used to manage the SSL bindings for app's hostnames.{{% /md %}}</dd>
     <dt class="property-"
@@ -473,7 +473,7 @@ This only applies to Functions container.{{% /md %}}</dd>
 <a href="#hostingenvironmentprofile_csharp" style="color: inherit; text-decoration: inherit;">Hosting<wbr>Environment<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hostingenvironmentprofileresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web.<wbr>Outputs.<wbr>Hosting<wbr>Environment<wbr>Profile<wbr>Response</a></span>
+        <span class="property-type"><a href="#hostingenvironmentprofileresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web..<wbr>Outputs.<wbr>Hosting<wbr>Environment<wbr>Profile<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}App Service Environment to use for the app.{{% /md %}}</dd>
     <dt class="property-"
@@ -501,7 +501,7 @@ http requests{{% /md %}}</dd>
 <a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedserviceidentityresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web.<wbr>Outputs.<wbr>Managed<wbr>Service<wbr>Identity<wbr>Response</a></span>
+        <span class="property-type"><a href="#managedserviceidentityresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web..<wbr>Outputs.<wbr>Managed<wbr>Service<wbr>Identity<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Managed service identity.{{% /md %}}</dd>
     <dt class="property-"
@@ -564,7 +564,7 @@ http requests{{% /md %}}</dd>
 <a href="#siteconfig_csharp" style="color: inherit; text-decoration: inherit;">Site<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#siteconfigresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web.<wbr>Outputs.<wbr>Site<wbr>Config<wbr>Response</a></span>
+        <span class="property-type"><a href="#siteconfigresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web..<wbr>Outputs.<wbr>Site<wbr>Config<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Configuration of the app.{{% /md %}}</dd>
     <dt class="property-"
@@ -2025,7 +2025,7 @@ http requests{{% /md %}}</dd>
 <a href="#customaction_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autohealcustomactionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web.<wbr>Inputs.<wbr>Auto<wbr>Heal<wbr>Custom<wbr>Action<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#autohealcustomactionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web..<wbr>Inputs.<wbr>Auto<wbr>Heal<wbr>Custom<wbr>Action<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Custom action to be taken.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2262,7 +2262,7 @@ before taking the action{{% /md %}}</dd>
 <a href="#actions_csharp" style="color: inherit; text-decoration: inherit;">Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autohealactionsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web.<wbr>Inputs.<wbr>Auto<wbr>Heal<wbr>Actions<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#autohealactionsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web..<wbr>Inputs.<wbr>Auto<wbr>Heal<wbr>Actions<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Actions to be executed when a rule is triggered.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2271,7 +2271,7 @@ before taking the action{{% /md %}}</dd>
 <a href="#triggers_csharp" style="color: inherit; text-decoration: inherit;">Triggers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autohealtriggersresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web.<wbr>Inputs.<wbr>Auto<wbr>Heal<wbr>Triggers<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#autohealtriggersresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web..<wbr>Inputs.<wbr>Auto<wbr>Heal<wbr>Triggers<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Conditions that describe when to execute the auto-heal actions.{{% /md %}}</dd>
 </dl>
@@ -2374,7 +2374,7 @@ before taking the action{{% /md %}}</dd>
 <a href="#requests_csharp" style="color: inherit; text-decoration: inherit;">Requests</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#requestsbasedtriggerresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web.<wbr>Inputs.<wbr>Requests<wbr>Based<wbr>Trigger<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#requestsbasedtriggerresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web..<wbr>Inputs.<wbr>Requests<wbr>Based<wbr>Trigger<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A rule based on total requests.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2383,7 +2383,7 @@ before taking the action{{% /md %}}</dd>
 <a href="#slowrequests_csharp" style="color: inherit; text-decoration: inherit;">Slow<wbr>Requests</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slowrequestsbasedtriggerresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web.<wbr>Inputs.<wbr>Slow<wbr>Requests<wbr>Based<wbr>Trigger<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#slowrequestsbasedtriggerresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web..<wbr>Inputs.<wbr>Slow<wbr>Requests<wbr>Based<wbr>Trigger<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A rule based on request execution time.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2392,7 +2392,7 @@ before taking the action{{% /md %}}</dd>
 <a href="#statuscodes_csharp" style="color: inherit; text-decoration: inherit;">Status<wbr>Codes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#statuscodesbasedtriggerresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web.<wbr>Inputs.<wbr>Status<wbr>Codes<wbr>Based<wbr>Trigger<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#statuscodesbasedtriggerresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web..<wbr>Inputs.<wbr>Status<wbr>Codes<wbr>Based<wbr>Trigger<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A rule based on status codes.{{% /md %}}</dd>
 </dl>
@@ -3241,7 +3241,7 @@ for more details.{{% /md %}}</dd>
 <a href="#rampuprules_csharp" style="color: inherit; text-decoration: inherit;">Ramp<wbr>Up<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rampupruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web.<wbr>Inputs.<wbr>Ramp<wbr>Up<wbr>Rule<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#rampupruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web..<wbr>Inputs.<wbr>Ramp<wbr>Up<wbr>Rule<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of ramp-up rules.{{% /md %}}</dd>
 </dl>
@@ -4359,7 +4359,7 @@ SubnetMask property must not be specified.{{% /md %}}</dd>
 <a href="#userassignedidentities_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web.<wbr>Inputs.<wbr>Managed<wbr>Service<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web..<wbr>Inputs.<wbr>Managed<wbr>Service<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}The list of user assigned identities associated with the resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}{{% /md %}}</dd>
 </dl>
@@ -4740,7 +4740,7 @@ SubnetMask property must not be specified.{{% /md %}}</dd>
 <a href="#systemdata_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web.<wbr>Inputs.<wbr>System<wbr>Data<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web..<wbr>Inputs.<wbr>System<wbr>Data<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The system metadata relating to this resource.{{% /md %}}</dd>
     <dt class="property-required"
@@ -5514,7 +5514,7 @@ can be provided in TiPCallback site extension which URL can be specified in <cod
 <a href="#machinekey_csharp" style="color: inherit; text-decoration: inherit;">Machine<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sitemachinekeyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web.<wbr>Inputs.<wbr>Site<wbr>Machine<wbr>Key<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sitemachinekeyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web..<wbr>Inputs.<wbr>Site<wbr>Machine<wbr>Key<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Site MachineKey.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -5532,7 +5532,7 @@ can be provided in TiPCallback site extension which URL can be specified in <cod
 <a href="#apidefinition_csharp" style="color: inherit; text-decoration: inherit;">Api<wbr>Definition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apidefinitioninforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web.<wbr>Inputs.<wbr>Api<wbr>Definition<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#apidefinitioninforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web..<wbr>Inputs.<wbr>Api<wbr>Definition<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information about the formal API definition for the app.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -5541,7 +5541,7 @@ can be provided in TiPCallback site extension which URL can be specified in <cod
 <a href="#apimanagementconfig_csharp" style="color: inherit; text-decoration: inherit;">Api<wbr>Management<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apimanagementconfigresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web.<wbr>Inputs.<wbr>Api<wbr>Management<wbr>Config<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#apimanagementconfigresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web..<wbr>Inputs.<wbr>Api<wbr>Management<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Azure API management settings linked to the app.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -5559,7 +5559,7 @@ can be provided in TiPCallback site extension which URL can be specified in <cod
 <a href="#appsettings_csharp" style="color: inherit; text-decoration: inherit;">App<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#namevaluepairresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web.<wbr>Inputs.<wbr>Name<wbr>Value<wbr>Pair<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#namevaluepairresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web..<wbr>Inputs.<wbr>Name<wbr>Value<wbr>Pair<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Application settings.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -5577,7 +5577,7 @@ can be provided in TiPCallback site extension which URL can be specified in <cod
 <a href="#autohealrules_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Heal<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autohealrulesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web.<wbr>Inputs.<wbr>Auto<wbr>Heal<wbr>Rules<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#autohealrulesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web..<wbr>Inputs.<wbr>Auto<wbr>Heal<wbr>Rules<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Auto Heal rules.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -5595,7 +5595,7 @@ can be provided in TiPCallback site extension which URL can be specified in <cod
 <a href="#connectionstrings_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>Strings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connstringinforesponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web.<wbr>Inputs.<wbr>Conn<wbr>String<wbr>Info<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#connstringinforesponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web..<wbr>Inputs.<wbr>Conn<wbr>String<wbr>Info<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Connection strings.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -5604,7 +5604,7 @@ can be provided in TiPCallback site extension which URL can be specified in <cod
 <a href="#cors_csharp" style="color: inherit; text-decoration: inherit;">Cors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#corssettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web.<wbr>Inputs.<wbr>Cors<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#corssettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web..<wbr>Inputs.<wbr>Cors<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Cross-Origin Resource Sharing (CORS) settings.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -5640,7 +5640,7 @@ can be provided in TiPCallback site extension which URL can be specified in <cod
 <a href="#experiments_csharp" style="color: inherit; text-decoration: inherit;">Experiments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#experimentsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web.<wbr>Inputs.<wbr>Experiments<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#experimentsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web..<wbr>Inputs.<wbr>Experiments<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This is work around for polymorphic types.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -5658,7 +5658,7 @@ can be provided in TiPCallback site extension which URL can be specified in <cod
 <a href="#handlermappings_csharp" style="color: inherit; text-decoration: inherit;">Handler<wbr>Mappings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#handlermappingresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web.<wbr>Inputs.<wbr>Handler<wbr>Mapping<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#handlermappingresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web..<wbr>Inputs.<wbr>Handler<wbr>Mapping<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Handler mappings.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -5694,7 +5694,7 @@ can be provided in TiPCallback site extension which URL can be specified in <cod
 <a href="#ipsecurityrestrictions_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Security<wbr>Restrictions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipsecurityrestrictionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web.<wbr>Inputs.<wbr>Ip<wbr>Security<wbr>Restriction<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#ipsecurityrestrictionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web..<wbr>Inputs.<wbr>Ip<wbr>Security<wbr>Restriction<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}IP security restrictions for main.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -5730,7 +5730,7 @@ can be provided in TiPCallback site extension which URL can be specified in <cod
 <a href="#limits_csharp" style="color: inherit; text-decoration: inherit;">Limits</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sitelimitsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web.<wbr>Inputs.<wbr>Site<wbr>Limits<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sitelimitsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web..<wbr>Inputs.<wbr>Site<wbr>Limits<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Site limits.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -5866,7 +5866,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd>
 <a href="#push_csharp" style="color: inherit; text-decoration: inherit;">Push</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pushsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web.<wbr>Inputs.<wbr>Push<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#pushsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web..<wbr>Inputs.<wbr>Push<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Push endpoint settings.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -5920,7 +5920,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd>
 <a href="#scmipsecurityrestrictions_csharp" style="color: inherit; text-decoration: inherit;">Scm<wbr>Ip<wbr>Security<wbr>Restrictions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipsecurityrestrictionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web.<wbr>Inputs.<wbr>Ip<wbr>Security<wbr>Restriction<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#ipsecurityrestrictionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web..<wbr>Inputs.<wbr>Ip<wbr>Security<wbr>Restriction<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}IP security restrictions for scm.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -5974,7 +5974,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd>
 <a href="#virtualapplications_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Applications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualapplicationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web.<wbr>Inputs.<wbr>Virtual<wbr>Application<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#virtualapplicationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web..<wbr>Inputs.<wbr>Virtual<wbr>Application<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Virtual applications.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -8705,7 +8705,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd>
 <a href="#virtualdirectories_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Directories</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualdirectoryresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web.<wbr>Inputs.<wbr>Virtual<wbr>Directory<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#virtualdirectoryresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web..<wbr>Inputs.<wbr>Virtual<wbr>Directory<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Virtual directories for virtual application.{{% /md %}}</dd>
     <dt class="property-optional"

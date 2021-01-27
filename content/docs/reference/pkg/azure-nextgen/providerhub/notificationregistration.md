@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.providerhub.NotificationRegistra
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The notification registration definition.
-Latest API Version: 2020-11-20.
+API Version: 2020-11-20.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var notificationRegistration = new AzureNextGen.ProviderHub.Latest.NotificationRegistration("notificationRegistration", new AzureNextGen.ProviderHub.Latest.NotificationRegistrationArgs
+        var notificationRegistration = new AzureNextGen.ProviderHub..NotificationRegistration("notificationRegistration", new AzureNextGen.ProviderHub..NotificationRegistrationArgs
         {
             NotificationRegistrationName = "fooNotificationRegistration",
             ProviderNamespace = "Microsoft.Contoso",
@@ -46,7 +46,7 @@ class MyStack : Stack
 package main
 
 import (
-	providerhub "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/providerhub/latest"
+	providerhub "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/providerhub"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -73,7 +73,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-notification_registration = azure_nextgen.providerhub.latest.NotificationRegistration("notificationRegistration",
+notification_registration = azure_nextgen.providerhub.NotificationRegistration("notificationRegistration",
     notification_registration_name="fooNotificationRegistration",
     provider_namespace="Microsoft.Contoso")
 
@@ -87,7 +87,7 @@ notification_registration = azure_nextgen.providerhub.latest.NotificationRegistr
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const notificationRegistration = new azure_nextgen.providerhub.latest.NotificationRegistration("notificationRegistration", {
+const notificationRegistration = new azure_nextgen.providerhub.NotificationRegistration("notificationRegistration", {
     notificationRegistrationName: "fooNotificationRegistration",
     providerNamespace: "Microsoft.Contoso",
 });
@@ -406,7 +406,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#notificationregistrationresponseproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Provider<wbr>Hub.<wbr>Outputs.<wbr>Notification<wbr>Registration<wbr>Response<wbr>Properties</a></span>
+        <span class="property-type"><a href="#notificationregistrationresponseproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Provider<wbr>Hub..<wbr>Outputs.<wbr>Notification<wbr>Registration<wbr>Response<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-"
@@ -684,7 +684,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#notificationendpoints_csharp" style="color: inherit; text-decoration: inherit;">Notification<wbr>Endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#notificationendpointresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Provider<wbr>Hub.<wbr>Inputs.<wbr>Notification<wbr>Endpoint<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#notificationendpointresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Provider<wbr>Hub..<wbr>Inputs.<wbr>Notification<wbr>Endpoint<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -830,7 +830,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:providerhub/latest:NotificationRegistration fooNotificationRegistration /subscriptions/ab7a8701-f7ef-471a-a2f4-d0ebbf494f77providers/Microsoft.ProviderHub/providerRegistrations/Microsoft.Contoso/notificationregistrations/fooNotificationRegistration 
+$ pulumi import azure-nextgen:providerhub:NotificationRegistration fooNotificationRegistration /subscriptions/ab7a8701-f7ef-471a-a2f4-d0ebbf494f77providers/Microsoft.ProviderHub/providerRegistrations/Microsoft.Contoso/notificationregistrations/fooNotificationRegistration 
 ```
 
 

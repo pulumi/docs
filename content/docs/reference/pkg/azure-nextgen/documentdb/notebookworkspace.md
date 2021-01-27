@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.documentdb.NotebookWorkspace res
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 A notebook workspace resource
-Latest API Version: 2020-09-01.
+API Version: 2020-09-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var notebookWorkspace = new AzureNextGen.DocumentDB.Latest.NotebookWorkspace("notebookWorkspace", new AzureNextGen.DocumentDB.Latest.NotebookWorkspaceArgs
+        var notebookWorkspace = new AzureNextGen.DocumentDB..NotebookWorkspace("notebookWorkspace", new AzureNextGen.DocumentDB..NotebookWorkspaceArgs
         {
             AccountName = "ddb1",
             NotebookWorkspaceName = "default",
@@ -47,7 +47,7 @@ class MyStack : Stack
 package main
 
 import (
-	documentdb "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/documentdb/latest"
+	documentdb "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/documentdb"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -75,7 +75,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-notebook_workspace = azure_nextgen.documentdb.latest.NotebookWorkspace("notebookWorkspace",
+notebook_workspace = azure_nextgen.documentdb.NotebookWorkspace("notebookWorkspace",
     account_name="ddb1",
     notebook_workspace_name="default",
     resource_group_name="rg1")
@@ -90,7 +90,7 @@ notebook_workspace = azure_nextgen.documentdb.latest.NotebookWorkspace("notebook
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const notebookWorkspace = new azure_nextgen.documentdb.latest.NotebookWorkspace("notebookWorkspace", {
+const notebookWorkspace = new azure_nextgen.documentdb.NotebookWorkspace("notebookWorkspace", {
     accountName: "ddb1",
     notebookWorkspaceName: "default",
     resourceGroupName: "rg1",
@@ -634,7 +634,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:documentdb/latest:NotebookWorkspace default /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.DocumentDB/databaseAccounts/ddb1/notebookWorkspaces/default 
+$ pulumi import azure-nextgen:documentdb:NotebookWorkspace default /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.DocumentDB/databaseAccounts/ddb1/notebookWorkspaces/default 
 ```
 
 

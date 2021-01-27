@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.machinelearning.Workspace resour
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 An object that represents a machine learning workspace.
-Latest API Version: 2019-10-01.
+API Version: 2019-10-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,12 +27,12 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var workspace = new AzureNextGen.MachineLearning.Latest.Workspace("workspace", new AzureNextGen.MachineLearning.Latest.WorkspaceArgs
+        var workspace = new AzureNextGen.MachineLearning..Workspace("workspace", new AzureNextGen.MachineLearning..WorkspaceArgs
         {
             Location = "West Europe",
             OwnerEmail = "abc@microsoft.com",
             ResourceGroupName = "myResourceGroup",
-            Sku = new AzureNextGen.MachineLearning.Latest.Inputs.SkuArgs
+            Sku = new AzureNextGen.MachineLearning..Inputs.SkuArgs
             {
                 Name = "Enterprise",
                 Tier = "Enterprise",
@@ -58,7 +58,7 @@ class MyStack : Stack
 package main
 
 import (
-	machinelearning "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/machinelearning/latest"
+	machinelearning "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/machinelearning"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -95,11 +95,11 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-workspace = azure_nextgen.machinelearning.latest.Workspace("workspace",
+workspace = azure_nextgen.machinelearning.Workspace("workspace",
     location="West Europe",
     owner_email="abc@microsoft.com",
     resource_group_name="myResourceGroup",
-    sku=azure_nextgen.machinelearning.latest.SkuArgs(
+    sku=azure_nextgen.machinelearning.SkuArgs(
         name="Enterprise",
         tier="Enterprise",
     ),
@@ -119,7 +119,7 @@ workspace = azure_nextgen.machinelearning.latest.Workspace("workspace",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const workspace = new azure_nextgen.machinelearning.latest.Workspace("workspace", {
+const workspace = new azure_nextgen.machinelearning.Workspace("workspace", {
     location: "West Europe",
     ownerEmail: "abc@microsoft.com",
     resourceGroupName: "myResourceGroup",
@@ -381,7 +381,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sku">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning.<wbr>Inputs.<wbr>Sku<wbr>Args</a></span>
+        <span class="property-type"><a href="#sku">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning..<wbr>Inputs.<wbr>Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The sku of the workspace.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1160,7 +1160,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:machinelearning/latest:Workspace testworkspace /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.MachineLearning/workspaces/testworkspace 
+$ pulumi import azure-nextgen:machinelearning:Workspace testworkspace /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.MachineLearning/workspaces/testworkspace 
 ```
 
 

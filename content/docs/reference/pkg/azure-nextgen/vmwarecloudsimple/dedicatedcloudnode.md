@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.vmwarecloudsimple.DedicatedCloud
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Dedicated cloud node model
-Latest API Version: 2019-04-01.
+API Version: 2019-04-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var dedicatedCloudNode = new AzureNextGen.VMwareCloudSimple.Latest.DedicatedCloudNode("dedicatedCloudNode", new AzureNextGen.VMwareCloudSimple.Latest.DedicatedCloudNodeArgs
+        var dedicatedCloudNode = new AzureNextGen.VMwareCloudSimple..DedicatedCloudNode("dedicatedCloudNode", new AzureNextGen.VMwareCloudSimple..DedicatedCloudNodeArgs
         {
             AvailabilityZoneId = "az1",
             DedicatedCloudNodeName = "myNode",
@@ -38,7 +38,7 @@ class MyStack : Stack
             PlacementGroupId = "n1",
             PurchaseId = "56acbd46-3d36-4bbf-9b08-57c30fdf6932",
             ResourceGroupName = "myResourceGroup",
-            Sku = new AzureNextGen.VMwareCloudSimple.Latest.Inputs.SkuArgs
+            Sku = new AzureNextGen.VMwareCloudSimple..Inputs.SkuArgs
             {
                 Name = "VMware_CloudSimple_CS28",
             },
@@ -57,7 +57,7 @@ class MyStack : Stack
 package main
 
 import (
-	vmwarecloudsimple "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/vmwarecloudsimple/latest"
+	vmwarecloudsimple "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/vmwarecloudsimple"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -94,7 +94,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-dedicated_cloud_node = azure_nextgen.vmwarecloudsimple.latest.DedicatedCloudNode("dedicatedCloudNode",
+dedicated_cloud_node = azure_nextgen.vmwarecloudsimple.DedicatedCloudNode("dedicatedCloudNode",
     availability_zone_id="az1",
     dedicated_cloud_node_name="myNode",
     id="general",
@@ -104,7 +104,7 @@ dedicated_cloud_node = azure_nextgen.vmwarecloudsimple.latest.DedicatedCloudNode
     placement_group_id="n1",
     purchase_id="56acbd46-3d36-4bbf-9b08-57c30fdf6932",
     resource_group_name="myResourceGroup",
-    sku=azure_nextgen.vmwarecloudsimple.latest.SkuArgs(
+    sku=azure_nextgen.vmwarecloudsimple.SkuArgs(
         name="VMware_CloudSimple_CS28",
     ))
 
@@ -118,7 +118,7 @@ dedicated_cloud_node = azure_nextgen.vmwarecloudsimple.latest.DedicatedCloudNode
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const dedicatedCloudNode = new azure_nextgen.vmwarecloudsimple.latest.DedicatedCloudNode("dedicatedCloudNode", {
+const dedicatedCloudNode = new azure_nextgen.vmwarecloudsimple.DedicatedCloudNode("dedicatedCloudNode", {
     availabilityZoneId: "az1",
     dedicatedCloudNodeName: "myNode",
     id: "general",
@@ -407,7 +407,7 @@ The DedicatedCloudNode resource accepts the following [input]({{< relref "/docs/
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sku">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>VMware<wbr>Cloud<wbr>Simple.<wbr>Inputs.<wbr>Sku<wbr>Args</a></span>
+        <span class="property-type"><a href="#sku">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>VMware<wbr>Cloud<wbr>Simple..<wbr>Inputs.<wbr>Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Dedicated Cloud Nodes SKU{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1591,7 +1591,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:vmwarecloudsimple/latest:DedicatedCloudNode myNode /subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.VMwareCloudSimple/dedicatedCloudNodes/myNode 
+$ pulumi import azure-nextgen:vmwarecloudsimple:DedicatedCloudNode myNode /subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.VMwareCloudSimple/dedicatedCloudNodes/myNode 
 ```
 
 

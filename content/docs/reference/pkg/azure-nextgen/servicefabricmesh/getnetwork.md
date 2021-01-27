@@ -188,7 +188,7 @@ The following output properties are available:
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkresourcepropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Outputs.<wbr>Network<wbr>Resource<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#networkresourcepropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh..<wbr>Outputs.<wbr>Network<wbr>Resource<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes properties of a network resource.{{% /md %}}</dd>
     <dt class="property-"

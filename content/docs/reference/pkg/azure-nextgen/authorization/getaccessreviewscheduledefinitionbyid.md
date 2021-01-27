@@ -296,7 +296,7 @@ The following output properties are available:
 <a href="#instances_csharp" style="color: inherit; text-decoration: inherit;">Instances</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accessreviewinstanceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Authorization.<wbr>Outputs.<wbr>Access<wbr>Review<wbr>Instance<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#accessreviewinstanceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Authorization..<wbr>Outputs.<wbr>Access<wbr>Review<wbr>Instance<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}This is the collection of instances returned when one does an expand on it.{{% /md %}}</dd>
     <dt class="property-"
@@ -359,7 +359,7 @@ The following output properties are available:
 <a href="#reviewers_csharp" style="color: inherit; text-decoration: inherit;">Reviewers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accessreviewreviewerresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Authorization.<wbr>Outputs.<wbr>Access<wbr>Review<wbr>Reviewer<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#accessreviewreviewerresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Authorization..<wbr>Outputs.<wbr>Access<wbr>Review<wbr>Reviewer<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}This is the collection of reviewers.{{% /md %}}</dd>
     <dt class="property-"

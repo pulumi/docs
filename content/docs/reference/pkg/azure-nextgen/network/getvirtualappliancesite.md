@@ -251,7 +251,7 @@ The following output properties are available:
 <a href="#o365policy_csharp" style="color: inherit; text-decoration: inherit;">O365Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#office365policypropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Outputs.<wbr>Office365Policy<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#office365policypropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Outputs.<wbr>Office365Policy<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Office 365 Policy.{{% /md %}}</dd>
 </dl>
@@ -625,7 +625,7 @@ The following output properties are available:
 <a href="#breakoutcategories_csharp" style="color: inherit; text-decoration: inherit;">Break<wbr>Out<wbr>Categories</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#breakoutcategorypoliciesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Break<wbr>Out<wbr>Category<wbr>Policies<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#breakoutcategorypoliciesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Break<wbr>Out<wbr>Category<wbr>Policies<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Office 365 breakout categories.{{% /md %}}</dd>
 </dl>

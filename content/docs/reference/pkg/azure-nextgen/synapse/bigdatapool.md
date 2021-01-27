@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.synapse.BigDataPool resource wit
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 A Big Data pool
-Latest API Version: 2020-12-01.
+API Version: 2020-12-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,14 +27,14 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var bigDataPool = new AzureNextGen.Synapse.Latest.BigDataPool("bigDataPool", new AzureNextGen.Synapse.Latest.BigDataPoolArgs
+        var bigDataPool = new AzureNextGen.Synapse..BigDataPool("bigDataPool", new AzureNextGen.Synapse..BigDataPoolArgs
         {
-            AutoPause = new AzureNextGen.Synapse.Latest.Inputs.AutoPausePropertiesArgs
+            AutoPause = new AzureNextGen.Synapse..Inputs.AutoPausePropertiesArgs
             {
                 DelayInMinutes = 15,
                 Enabled = true,
             },
-            AutoScale = new AzureNextGen.Synapse.Latest.Inputs.AutoScalePropertiesArgs
+            AutoScale = new AzureNextGen.Synapse..Inputs.AutoScalePropertiesArgs
             {
                 Enabled = true,
                 MaxNodeCount = 50,
@@ -42,7 +42,7 @@ class MyStack : Stack
             },
             BigDataPoolName = "ExamplePool",
             DefaultSparkLogFolder = "/logs",
-            LibraryRequirements = new AzureNextGen.Synapse.Latest.Inputs.LibraryRequirementsArgs
+            LibraryRequirements = new AzureNextGen.Synapse..Inputs.LibraryRequirementsArgs
             {
                 Content = "",
                 Filename = "requirements.txt",
@@ -74,7 +74,7 @@ class MyStack : Stack
 package main
 
 import (
-	synapse "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/synapse/latest"
+	synapse "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/synapse"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -125,19 +125,19 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-big_data_pool = azure_nextgen.synapse.latest.BigDataPool("bigDataPool",
-    auto_pause=azure_nextgen.synapse.latest.AutoPausePropertiesArgs(
+big_data_pool = azure_nextgen.synapse.BigDataPool("bigDataPool",
+    auto_pause=azure_nextgen.synapse.AutoPausePropertiesArgs(
         delay_in_minutes=15,
         enabled=True,
     ),
-    auto_scale=azure_nextgen.synapse.latest.AutoScalePropertiesArgs(
+    auto_scale=azure_nextgen.synapse.AutoScalePropertiesArgs(
         enabled=True,
         max_node_count=50,
         min_node_count=3,
     ),
     big_data_pool_name="ExamplePool",
     default_spark_log_folder="/logs",
-    library_requirements=azure_nextgen.synapse.latest.LibraryRequirementsArgs(
+    library_requirements=azure_nextgen.synapse.LibraryRequirementsArgs(
         content="",
         filename="requirements.txt",
     ),
@@ -163,7 +163,7 @@ big_data_pool = azure_nextgen.synapse.latest.BigDataPool("bigDataPool",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const bigDataPool = new azure_nextgen.synapse.latest.BigDataPool("bigDataPool", {
+const bigDataPool = new azure_nextgen.synapse.BigDataPool("bigDataPool", {
     autoPause: {
         delayInMinutes: 15,
         enabled: true,
@@ -421,7 +421,7 @@ The BigDataPool resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#autopause_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Pause</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autopauseproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Synapse.<wbr>Inputs.<wbr>Auto<wbr>Pause<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#autopauseproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Synapse..<wbr>Inputs.<wbr>Auto<wbr>Pause<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Auto-pausing properties{{% /md %}}</dd>
     <dt class="property-optional"
@@ -430,7 +430,7 @@ The BigDataPool resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#autoscale_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Scale</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscaleproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Synapse.<wbr>Inputs.<wbr>Auto<wbr>Scale<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#autoscaleproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Synapse..<wbr>Inputs.<wbr>Auto<wbr>Scale<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Auto-scaling properties{{% /md %}}</dd>
     <dt class="property-optional"
@@ -457,7 +457,7 @@ The BigDataPool resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#customlibraries_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Libraries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#libraryinfo">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Synapse.<wbr>Inputs.<wbr>Library<wbr>Info<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#libraryinfo">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Synapse..<wbr>Inputs.<wbr>Library<wbr>Info<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of custom libraries/packages associated with the spark pool.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -475,7 +475,7 @@ The BigDataPool resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#dynamicexecutorallocation_csharp" style="color: inherit; text-decoration: inherit;">Dynamic<wbr>Executor<wbr>Allocation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dynamicexecutorallocation">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Synapse.<wbr>Inputs.<wbr>Dynamic<wbr>Executor<wbr>Allocation<wbr>Args</a></span>
+        <span class="property-type"><a href="#dynamicexecutorallocation">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Synapse..<wbr>Inputs.<wbr>Dynamic<wbr>Executor<wbr>Allocation<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Dynamic Executor Allocation{{% /md %}}</dd>
     <dt class="property-optional"
@@ -502,7 +502,7 @@ The BigDataPool resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#libraryrequirements_csharp" style="color: inherit; text-decoration: inherit;">Library<wbr>Requirements</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#libraryrequirements">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Synapse.<wbr>Inputs.<wbr>Library<wbr>Requirements<wbr>Args</a></span>
+        <span class="property-type"><a href="#libraryrequirements">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Synapse..<wbr>Inputs.<wbr>Library<wbr>Requirements<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Library version requirements{{% /md %}}</dd>
     <dt class="property-optional"
@@ -520,7 +520,7 @@ The BigDataPool resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#nodesize_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#nodesize">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Synapse.<wbr>Node<wbr>Size</a></span>
+        <span class="property-type">string | <a href="#nodesize">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Synapse..<wbr>Node<wbr>Size</a></span>
     </dt>
     <dd>{{% md %}}The level of compute power that each node in the Big Data pool has.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -529,7 +529,7 @@ The BigDataPool resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#nodesizefamily_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Size<wbr>Family</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#nodesizefamily">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Synapse.<wbr>Node<wbr>Size<wbr>Family</a></span>
+        <span class="property-type">string | <a href="#nodesizefamily">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Synapse..<wbr>Node<wbr>Size<wbr>Family</a></span>
     </dt>
     <dd>{{% md %}}The kind of nodes that the Big Data pool provides.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -556,7 +556,7 @@ The BigDataPool resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#sparkconfigproperties_csharp" style="color: inherit; text-decoration: inherit;">Spark<wbr>Config<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#libraryrequirements">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Synapse.<wbr>Inputs.<wbr>Library<wbr>Requirements<wbr>Args</a></span>
+        <span class="property-type"><a href="#libraryrequirements">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Synapse..<wbr>Inputs.<wbr>Library<wbr>Requirements<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Spark configuration file to specify additional properties{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2802,7 +2802,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:synapse/latest:BigDataPool ExamplePool /subscriptions/01234567-89ab-4def-0123-456789abcdef/resourceGroups/ExampleResourceGroup/providers/Microsoft.Synapse/workspaces/ExampleWorkspace/bigDataPools/ExamplePool 
+$ pulumi import azure-nextgen:synapse:BigDataPool ExamplePool /subscriptions/01234567-89ab-4def-0123-456789abcdef/resourceGroups/ExampleResourceGroup/providers/Microsoft.Synapse/workspaces/ExampleWorkspace/bigDataPools/ExamplePool 
 ```
 
 

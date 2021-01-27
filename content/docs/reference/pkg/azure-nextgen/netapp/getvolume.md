@@ -332,7 +332,7 @@ The following output properties are available:
 <a href="#dataprotection_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Protection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volumepropertiesresponsedataprotection">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Net<wbr>App.<wbr>Outputs.<wbr>Volume<wbr>Properties<wbr>Response<wbr>Data<wbr>Protection</a></span>
+        <span class="property-type"><a href="#volumepropertiesresponsedataprotection">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Net<wbr>App..<wbr>Outputs.<wbr>Volume<wbr>Properties<wbr>Response<wbr>Data<wbr>Protection</a></span>
     </dt>
     <dd>{{% md %}}DataProtection type volumes include an object containing details of the replication{{% /md %}}</dd>
     <dt class="property-"
@@ -341,7 +341,7 @@ The following output properties are available:
 <a href="#exportpolicy_csharp" style="color: inherit; text-decoration: inherit;">Export<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volumepropertiesresponseexportpolicy">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Net<wbr>App.<wbr>Outputs.<wbr>Volume<wbr>Properties<wbr>Response<wbr>Export<wbr>Policy</a></span>
+        <span class="property-type"><a href="#volumepropertiesresponseexportpolicy">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Net<wbr>App..<wbr>Outputs.<wbr>Volume<wbr>Properties<wbr>Response<wbr>Export<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Set of export policy rules{{% /md %}}</dd>
     <dt class="property-"
@@ -368,7 +368,7 @@ The following output properties are available:
 <a href="#mounttargets_csharp" style="color: inherit; text-decoration: inherit;">Mount<wbr>Targets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mounttargetpropertiesresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Net<wbr>App.<wbr>Outputs.<wbr>Mount<wbr>Target<wbr>Properties<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#mounttargetpropertiesresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Net<wbr>App..<wbr>Outputs.<wbr>Mount<wbr>Target<wbr>Properties<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of mount targets{{% /md %}}</dd>
     <dt class="property-"
@@ -2302,7 +2302,7 @@ The following output properties are available:
 <a href="#backup_csharp" style="color: inherit; text-decoration: inherit;">Backup</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volumebackuppropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Net<wbr>App.<wbr>Inputs.<wbr>Volume<wbr>Backup<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#volumebackuppropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Net<wbr>App..<wbr>Inputs.<wbr>Volume<wbr>Backup<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Backup Properties{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2311,7 +2311,7 @@ The following output properties are available:
 <a href="#replication_csharp" style="color: inherit; text-decoration: inherit;">Replication</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#replicationobjectresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Net<wbr>App.<wbr>Inputs.<wbr>Replication<wbr>Object<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#replicationobjectresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Net<wbr>App..<wbr>Inputs.<wbr>Replication<wbr>Object<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Replication properties{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2320,7 +2320,7 @@ The following output properties are available:
 <a href="#snapshot_csharp" style="color: inherit; text-decoration: inherit;">Snapshot</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volumesnapshotpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Net<wbr>App.<wbr>Inputs.<wbr>Volume<wbr>Snapshot<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#volumesnapshotpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Net<wbr>App..<wbr>Inputs.<wbr>Volume<wbr>Snapshot<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Snapshot properties.{{% /md %}}</dd>
 </dl>
@@ -2441,7 +2441,7 @@ The following output properties are available:
 <a href="#rules_csharp" style="color: inherit; text-decoration: inherit;">Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#exportpolicyruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Net<wbr>App.<wbr>Inputs.<wbr>Export<wbr>Policy<wbr>Rule<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#exportpolicyruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Net<wbr>App..<wbr>Inputs.<wbr>Export<wbr>Policy<wbr>Rule<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Export policy rule{{% /md %}}</dd>
 </dl>

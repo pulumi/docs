@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.deploymentmanager.Step resource 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The resource representation of a rollout step.
+API Version: 2019-11-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var step = new AzureNextGen.DeploymentManager.V20191101Preview.Step("step", new AzureNextGen.DeploymentManager.V20191101Preview.StepArgs
+        var step = new AzureNextGen.DeploymentManager..Step("step", new AzureNextGen.DeploymentManager..StepArgs
         {
             Location = "centralus",
             Properties = 
@@ -35,10 +36,10 @@ class MyStack : Stack
                 {
                     { "healthChecks", 
                     {
-                        new AzureNextGen.DeploymentManager.V20191101Preview.Inputs.RestHealthCheckArgs
+                        new AzureNextGen.DeploymentManager..Inputs.RestHealthCheckArgs
                         {
                             Name = "appHealth",
-                            Request = new AzureNextGen.DeploymentManager.V20191101Preview.Inputs.RestRequestArgs
+                            Request = new AzureNextGen.DeploymentManager..Inputs.RestRequestArgs
                             {
                                 Authentication = 
                                 {
@@ -50,9 +51,9 @@ class MyStack : Stack
                                 Method = "GET",
                                 Uri = "https://resthealth.healthservice.com/api/applications/contosoApp/healthStatus",
                             },
-                            Response = new AzureNextGen.DeploymentManager.V20191101Preview.Inputs.RestResponseArgs
+                            Response = new AzureNextGen.DeploymentManager..Inputs.RestResponseArgs
                             {
-                                Regex = new AzureNextGen.DeploymentManager.V20191101Preview.Inputs.RestResponseRegexArgs
+                                Regex = new AzureNextGen.DeploymentManager..Inputs.RestResponseRegexArgs
                                 {
                                     MatchQuantifier = "All",
                                     Matches = 
@@ -69,10 +70,10 @@ class MyStack : Stack
                                 },
                             },
                         },
-                        new AzureNextGen.DeploymentManager.V20191101Preview.Inputs.RestHealthCheckArgs
+                        new AzureNextGen.DeploymentManager..Inputs.RestHealthCheckArgs
                         {
                             Name = "serviceHealth",
-                            Request = new AzureNextGen.DeploymentManager.V20191101Preview.Inputs.RestRequestArgs
+                            Request = new AzureNextGen.DeploymentManager..Inputs.RestRequestArgs
                             {
                                 Authentication = 
                                 {
@@ -84,9 +85,9 @@ class MyStack : Stack
                                 Method = "GET",
                                 Uri = "https://resthealth.healthservice.com/api/services/contosoService/healthStatus",
                             },
-                            Response = new AzureNextGen.DeploymentManager.V20191101Preview.Inputs.RestResponseArgs
+                            Response = new AzureNextGen.DeploymentManager..Inputs.RestResponseArgs
                             {
-                                Regex = new AzureNextGen.DeploymentManager.V20191101Preview.Inputs.RestResponseRegexArgs
+                                Regex = new AzureNextGen.DeploymentManager..Inputs.RestResponseRegexArgs
                                 {
                                     MatchQuantifier = "All",
                                     Matches = 
@@ -132,14 +133,14 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-step = azure_nextgen.deploymentmanager.v20191101preview.Step("step",
+step = azure_nextgen.deploymentmanager.Step("step",
     location="centralus",
     properties={
         "attributes": {
             "healthChecks": [
-                azure_nextgen.deploymentmanager.v20191101preview.RestHealthCheckArgs(
+                azure_nextgen.deploymentmanager.RestHealthCheckArgs(
                     name="appHealth",
-                    request=azure_nextgen.deploymentmanager.v20191101preview.RestRequestArgs(
+                    request=azure_nextgen.deploymentmanager.RestRequestArgs(
                         authentication={
                             "in": "Query",
                             "name": "Code",
@@ -149,8 +150,8 @@ step = azure_nextgen.deploymentmanager.v20191101preview.Step("step",
                         method="GET",
                         uri="https://resthealth.healthservice.com/api/applications/contosoApp/healthStatus",
                     ),
-                    response=azure_nextgen.deploymentmanager.v20191101preview.RestResponseArgs(
-                        regex=azure_nextgen.deploymentmanager.v20191101preview.RestResponseRegexArgs(
+                    response=azure_nextgen.deploymentmanager.RestResponseArgs(
+                        regex=azure_nextgen.deploymentmanager.RestResponseRegexArgs(
                             match_quantifier="All",
                             matches=[
                                 "(?i)Contoso-App",
@@ -162,9 +163,9 @@ step = azure_nextgen.deploymentmanager.v20191101preview.Step("step",
                         success_status_codes=["OK"],
                     ),
                 ),
-                azure_nextgen.deploymentmanager.v20191101preview.RestHealthCheckArgs(
+                azure_nextgen.deploymentmanager.RestHealthCheckArgs(
                     name="serviceHealth",
-                    request=azure_nextgen.deploymentmanager.v20191101preview.RestRequestArgs(
+                    request=azure_nextgen.deploymentmanager.RestRequestArgs(
                         authentication={
                             "in": "Header",
                             "name": "code",
@@ -174,8 +175,8 @@ step = azure_nextgen.deploymentmanager.v20191101preview.Step("step",
                         method="GET",
                         uri="https://resthealth.healthservice.com/api/services/contosoService/healthStatus",
                     ),
-                    response=azure_nextgen.deploymentmanager.v20191101preview.RestResponseArgs(
-                        regex=azure_nextgen.deploymentmanager.v20191101preview.RestResponseRegexArgs(
+                    response=azure_nextgen.deploymentmanager.RestResponseArgs(
+                        regex=azure_nextgen.deploymentmanager.RestResponseRegexArgs(
                             match_quantifier="All",
                             matches=[
                                 "(?i)Contoso-Service-EndToEnd",
@@ -208,7 +209,7 @@ step = azure_nextgen.deploymentmanager.v20191101preview.Step("step",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const step = new azure_nextgen.deploymentmanager.v20191101preview.Step("step", {
+const step = new azure_nextgen.deploymentmanager.Step("step", {
     location: "centralus",
     properties: {
         attributes: {
@@ -289,7 +290,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var step = new AzureNextGen.DeploymentManager.V20191101Preview.Step("step", new AzureNextGen.DeploymentManager.V20191101Preview.StepArgs
+        var step = new AzureNextGen.DeploymentManager..Step("step", new AzureNextGen.DeploymentManager..StepArgs
         {
             Location = "centralus",
             Properties = 
@@ -322,7 +323,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-step = azure_nextgen.deploymentmanager.v20191101preview.Step("step",
+step = azure_nextgen.deploymentmanager.Step("step",
     location="centralus",
     properties={
         "attributes": {
@@ -344,7 +345,7 @@ step = azure_nextgen.deploymentmanager.v20191101preview.Step("step",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const step = new azure_nextgen.deploymentmanager.v20191101preview.Step("step", {
+const step = new azure_nextgen.deploymentmanager.Step("step", {
     location: "centralus",
     properties: {
         attributes: {
@@ -559,7 +560,7 @@ The Step resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healthcheckstepproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Deployment<wbr>Manager.<wbr>Inputs.<wbr>Health<wbr>Check<wbr>Step<wbr>Properties<wbr>Args</a> | <a href="#waitstepproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Deployment<wbr>Manager.<wbr>Inputs.<wbr>Wait<wbr>Step<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#healthcheckstepproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Deployment<wbr>Manager..<wbr>Inputs.<wbr>Health<wbr>Check<wbr>Step<wbr>Properties<wbr>Args</a> | <a href="#waitstepproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Deployment<wbr>Manager..<wbr>Inputs.<wbr>Wait<wbr>Step<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The properties that define the step.{{% /md %}}</dd>
     <dt class="property-required"
@@ -905,7 +906,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#in_csharp" style="color: inherit; text-decoration: inherit;">In</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#restauthlocation">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Deployment<wbr>Manager.<wbr>Rest<wbr>Auth<wbr>Location</a></span>
+        <span class="property-type"><a href="#restauthlocation">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Deployment<wbr>Manager..<wbr>Rest<wbr>Auth<wbr>Location</a></span>
     </dt>
     <dd>{{% md %}}The location of the authentication key/value pair in the request.{{% /md %}}</dd>
     <dt class="property-required"
@@ -1173,7 +1174,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#attributes_csharp" style="color: inherit; text-decoration: inherit;">Attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resthealthcheckstepattributes">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Deployment<wbr>Manager.<wbr>Inputs.<wbr>Rest<wbr>Health<wbr>Check<wbr>Step<wbr>Attributes<wbr>Args</a></span>
+        <span class="property-type"><a href="#resthealthcheckstepattributes">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Deployment<wbr>Manager..<wbr>Inputs.<wbr>Rest<wbr>Health<wbr>Check<wbr>Step<wbr>Attributes<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The health check step attributes{{% /md %}}</dd>
 </dl>
@@ -1235,7 +1236,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#attributes_csharp" style="color: inherit; text-decoration: inherit;">Attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resthealthcheckstepattributesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Deployment<wbr>Manager.<wbr>Inputs.<wbr>Rest<wbr>Health<wbr>Check<wbr>Step<wbr>Attributes<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#resthealthcheckstepattributesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Deployment<wbr>Manager..<wbr>Inputs.<wbr>Rest<wbr>Health<wbr>Check<wbr>Step<wbr>Attributes<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The health check step attributes{{% /md %}}</dd>
 </dl>
@@ -1344,7 +1345,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#request_csharp" style="color: inherit; text-decoration: inherit;">Request</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#restrequest">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Deployment<wbr>Manager.<wbr>Inputs.<wbr>Rest<wbr>Request<wbr>Args</a></span>
+        <span class="property-type"><a href="#restrequest">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Deployment<wbr>Manager..<wbr>Inputs.<wbr>Rest<wbr>Request<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The request to the health provider.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1353,7 +1354,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#response_csharp" style="color: inherit; text-decoration: inherit;">Response</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#restresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Deployment<wbr>Manager.<wbr>Inputs.<wbr>Rest<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#restresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Deployment<wbr>Manager..<wbr>Inputs.<wbr>Rest<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The expected response from the health provider. If no expected response is provided, the default is to expect the received response to have an HTTP status code of 200 OK.{{% /md %}}</dd>
 </dl>
@@ -1478,7 +1479,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#request_csharp" style="color: inherit; text-decoration: inherit;">Request</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#restrequestresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Deployment<wbr>Manager.<wbr>Inputs.<wbr>Rest<wbr>Request<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#restrequestresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Deployment<wbr>Manager..<wbr>Inputs.<wbr>Rest<wbr>Request<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The request to the health provider.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1487,7 +1488,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#response_csharp" style="color: inherit; text-decoration: inherit;">Response</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#restresponseresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Deployment<wbr>Manager.<wbr>Inputs.<wbr>Rest<wbr>Response<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#restresponseresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Deployment<wbr>Manager..<wbr>Inputs.<wbr>Rest<wbr>Response<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The expected response from the health provider. If no expected response is provided, the default is to expect the received response to have an HTTP status code of 200 OK.{{% /md %}}</dd>
 </dl>
@@ -1603,7 +1604,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#healthchecks_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>Checks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resthealthcheck">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Deployment<wbr>Manager.<wbr>Inputs.<wbr>Rest<wbr>Health<wbr>Check<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#resthealthcheck">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Deployment<wbr>Manager..<wbr>Inputs.<wbr>Rest<wbr>Health<wbr>Check<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of checks that form the health check step.{{% /md %}}</dd>
     <dt class="property-required"
@@ -1773,7 +1774,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#healthchecks_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>Checks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resthealthcheckresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Deployment<wbr>Manager.<wbr>Inputs.<wbr>Rest<wbr>Health<wbr>Check<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#resthealthcheckresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Deployment<wbr>Manager..<wbr>Inputs.<wbr>Rest<wbr>Health<wbr>Check<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of checks that form the health check step.{{% /md %}}</dd>
     <dt class="property-required"
@@ -1981,7 +1982,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authentication_csharp" style="color: inherit; text-decoration: inherit;">Authentication</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apikeyauthentication">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Deployment<wbr>Manager.<wbr>Inputs.<wbr>Api<wbr>Key<wbr>Authentication<wbr>Args</a> | <a href="#rolloutidentityauthentication">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Deployment<wbr>Manager.<wbr>Inputs.<wbr>Rollout<wbr>Identity<wbr>Authentication<wbr>Args</a></span>
+        <span class="property-type"><a href="#apikeyauthentication">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Deployment<wbr>Manager..<wbr>Inputs.<wbr>Api<wbr>Key<wbr>Authentication<wbr>Args</a> | <a href="#rolloutidentityauthentication">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Deployment<wbr>Manager..<wbr>Inputs.<wbr>Rollout<wbr>Identity<wbr>Authentication<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The authentication information required in the request to the health provider.{{% /md %}}</dd>
     <dt class="property-required"
@@ -1990,7 +1991,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#method_csharp" style="color: inherit; text-decoration: inherit;">Method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#restrequestmethod">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Deployment<wbr>Manager.<wbr>Rest<wbr>Request<wbr>Method</a></span>
+        <span class="property-type"><a href="#restrequestmethod">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Deployment<wbr>Manager..<wbr>Rest<wbr>Request<wbr>Method</a></span>
     </dt>
     <dd>{{% md %}}The HTTP method to use for the request.{{% /md %}}</dd>
     <dt class="property-required"
@@ -2153,7 +2154,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authentication_csharp" style="color: inherit; text-decoration: inherit;">Authentication</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apikeyauthenticationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Deployment<wbr>Manager.<wbr>Inputs.<wbr>Api<wbr>Key<wbr>Authentication<wbr>Response<wbr>Args</a> | <a href="#rolloutidentityauthenticationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Deployment<wbr>Manager.<wbr>Inputs.<wbr>Rollout<wbr>Identity<wbr>Authentication<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#apikeyauthenticationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Deployment<wbr>Manager..<wbr>Inputs.<wbr>Api<wbr>Key<wbr>Authentication<wbr>Response<wbr>Args</a> | <a href="#rolloutidentityauthenticationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Deployment<wbr>Manager..<wbr>Inputs.<wbr>Rollout<wbr>Identity<wbr>Authentication<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The authentication information required in the request to the health provider.{{% /md %}}</dd>
     <dt class="property-required"
@@ -2287,7 +2288,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#regex_csharp" style="color: inherit; text-decoration: inherit;">Regex</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#restresponseregex">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Deployment<wbr>Manager.<wbr>Inputs.<wbr>Rest<wbr>Response<wbr>Regex<wbr>Args</a></span>
+        <span class="property-type"><a href="#restresponseregex">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Deployment<wbr>Manager..<wbr>Inputs.<wbr>Rest<wbr>Response<wbr>Regex<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The regular expressions to match the response content with.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2385,7 +2386,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#matchquantifier_csharp" style="color: inherit; text-decoration: inherit;">Match<wbr>Quantifier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#restmatchquantifier">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Deployment<wbr>Manager.<wbr>Rest<wbr>Match<wbr>Quantifier</a></span>
+        <span class="property-type"><a href="#restmatchquantifier">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Deployment<wbr>Manager..<wbr>Rest<wbr>Match<wbr>Quantifier</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether any or all of the expressions should match with the response content.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2483,7 +2484,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#regex_csharp" style="color: inherit; text-decoration: inherit;">Regex</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#restresponseresponseregex">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Deployment<wbr>Manager.<wbr>Inputs.<wbr>Rest<wbr>Response<wbr>Response<wbr>Regex<wbr>Args</a></span>
+        <span class="property-type"><a href="#restresponseresponseregex">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Deployment<wbr>Manager..<wbr>Inputs.<wbr>Rest<wbr>Response<wbr>Response<wbr>Regex<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The regular expressions to match the response content with.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2855,7 +2856,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#attributes_csharp" style="color: inherit; text-decoration: inherit;">Attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#waitstepattributes">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Deployment<wbr>Manager.<wbr>Inputs.<wbr>Wait<wbr>Step<wbr>Attributes<wbr>Args</a></span>
+        <span class="property-type"><a href="#waitstepattributes">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Deployment<wbr>Manager..<wbr>Inputs.<wbr>Wait<wbr>Step<wbr>Attributes<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Wait attributes{{% /md %}}</dd>
 </dl>
@@ -2917,7 +2918,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#attributes_csharp" style="color: inherit; text-decoration: inherit;">Attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#waitstepattributesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Deployment<wbr>Manager.<wbr>Inputs.<wbr>Wait<wbr>Step<wbr>Attributes<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#waitstepattributesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Deployment<wbr>Manager..<wbr>Inputs.<wbr>Wait<wbr>Step<wbr>Attributes<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Wait attributes{{% /md %}}</dd>
 </dl>
@@ -2973,7 +2974,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:deploymentmanager/v20191101preview:Step waitStep /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DeploymentManager/steps/{stepName} 
+$ pulumi import azure-nextgen:deploymentmanager:Step waitStep /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DeploymentManager/steps/{stepName} 
 ```
 
 

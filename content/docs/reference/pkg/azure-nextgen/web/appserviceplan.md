@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.web.AppServicePlan resource with
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 App Service plan.
-Latest API Version: 2020-09-01.
+API Version: 2020-09-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,13 +27,13 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var appServicePlan = new AzureNextGen.Web.Latest.AppServicePlan("appServicePlan", new AzureNextGen.Web.Latest.AppServicePlanArgs
+        var appServicePlan = new AzureNextGen.Web..AppServicePlan("appServicePlan", new AzureNextGen.Web..AppServicePlanArgs
         {
             Kind = "app",
             Location = "East US",
             Name = "testsf6141",
             ResourceGroupName = "testrg123",
-            Sku = new AzureNextGen.Web.Latest.Inputs.SkuDescriptionArgs
+            Sku = new AzureNextGen.Web..Inputs.SkuDescriptionArgs
             {
                 Capacity = 1,
                 Family = "P",
@@ -56,7 +56,7 @@ class MyStack : Stack
 package main
 
 import (
-	web "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/web/latest"
+	web "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/web"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -92,12 +92,12 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-app_service_plan = azure_nextgen.web.latest.AppServicePlan("appServicePlan",
+app_service_plan = azure_nextgen.web.AppServicePlan("appServicePlan",
     kind="app",
     location="East US",
     name="testsf6141",
     resource_group_name="testrg123",
-    sku=azure_nextgen.web.latest.SkuDescriptionArgs(
+    sku=azure_nextgen.web.SkuDescriptionArgs(
         capacity=1,
         family="P",
         name="P1",
@@ -115,7 +115,7 @@ app_service_plan = azure_nextgen.web.latest.AppServicePlan("appServicePlan",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const appServicePlan = new azure_nextgen.web.latest.AppServicePlan("appServicePlan", {
+const appServicePlan = new azure_nextgen.web.AppServicePlan("appServicePlan", {
     kind: "app",
     location: "East US",
     name: "testsf6141",
@@ -358,7 +358,7 @@ The AppServicePlan resource accepts the following [input]({{< relref "/docs/intr
 <a href="#hostingenvironmentprofile_csharp" style="color: inherit; text-decoration: inherit;">Hosting<wbr>Environment<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hostingenvironmentprofile">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web.<wbr>Inputs.<wbr>Hosting<wbr>Environment<wbr>Profile<wbr>Args</a></span>
+        <span class="property-type"><a href="#hostingenvironmentprofile">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web..<wbr>Inputs.<wbr>Hosting<wbr>Environment<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specification for the App Service Environment to use for the App Service plan.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -431,7 +431,7 @@ If <code>false</code>, apps assigned to this App Service plan will scale to all 
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skudescription">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web.<wbr>Inputs.<wbr>Sku<wbr>Description<wbr>Args</a></span>
+        <span class="property-type"><a href="#skudescription">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web..<wbr>Inputs.<wbr>Sku<wbr>Description<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Description of a SKU for a scalable resource.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1077,7 +1077,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#systemdata_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web.<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
+        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web..<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The system metadata relating to this resource.{{% /md %}}</dd>
     <dt class="property-"
@@ -2205,7 +2205,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capabilities_csharp" style="color: inherit; text-decoration: inherit;">Capabilities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#capability">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web.<wbr>Inputs.<wbr>Capability<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#capability">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web..<wbr>Inputs.<wbr>Capability<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Capabilities of the SKU, e.g., is traffic manager enabled?{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2259,7 +2259,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#skucapacity_csharp" style="color: inherit; text-decoration: inherit;">Sku<wbr>Capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skucapacity">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web.<wbr>Inputs.<wbr>Sku<wbr>Capacity<wbr>Args</a></span>
+        <span class="property-type"><a href="#skucapacity">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web..<wbr>Inputs.<wbr>Sku<wbr>Capacity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Min, max, and default scale values of the SKU.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2519,7 +2519,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capabilities_csharp" style="color: inherit; text-decoration: inherit;">Capabilities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#capabilityresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web.<wbr>Inputs.<wbr>Capability<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#capabilityresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web..<wbr>Inputs.<wbr>Capability<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Capabilities of the SKU, e.g., is traffic manager enabled?{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2573,7 +2573,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#skucapacity_csharp" style="color: inherit; text-decoration: inherit;">Sku<wbr>Capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skucapacityresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web.<wbr>Inputs.<wbr>Sku<wbr>Capacity<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#skucapacityresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web..<wbr>Inputs.<wbr>Sku<wbr>Capacity<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Min, max, and default scale values of the SKU.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3069,7 +3069,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:web/latest:AppServicePlan testsf6141 /subscriptions/34adfa4f-cedf-4dc0-ba29-b6d1a69ab345/resourceGroups/testrg123/providers/Microsoft.Web/serverfarms/testsf6141 
+$ pulumi import azure-nextgen:web:AppServicePlan testsf6141 /subscriptions/34adfa4f-cedf-4dc0-ba29-b6d1a69ab345/resourceGroups/testrg123/providers/Microsoft.Web/serverfarms/testsf6141 
 ```
 
 

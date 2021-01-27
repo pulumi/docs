@@ -215,7 +215,7 @@ The following output properties are available:
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedworkspacepropsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Outputs.<wbr>Linked<wbr>Workspace<wbr>Props<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedworkspacepropsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services..<wbr>Outputs.<wbr>Linked<wbr>Workspace<wbr>Props<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}LinkedWorkspace specific properties.{{% /md %}}</dd>
     <dt class="property-"

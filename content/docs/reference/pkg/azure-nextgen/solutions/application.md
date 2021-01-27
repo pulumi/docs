@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.solutions.Application resource w
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Information about managed application.
-Latest API Version: 2019-07-01.
+API Version: 2019-07-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var application = new AzureNextGen.Solutions.Latest.Application("application", new AzureNextGen.Solutions.Latest.ApplicationArgs
+        var application = new AzureNextGen.Solutions..Application("application", new AzureNextGen.Solutions..ApplicationArgs
         {
             ApplicationDefinitionId = "/subscriptions/subid/resourceGroups/rg/providers/Microsoft.Solutions/applicationDefinitions/myAppDef",
             ApplicationName = "myManagedApplication",
@@ -50,7 +50,7 @@ class MyStack : Stack
 package main
 
 import (
-	solutions "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/solutions/latest"
+	solutions "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/solutions"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -81,7 +81,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-application = azure_nextgen.solutions.latest.Application("application",
+application = azure_nextgen.solutions.Application("application",
     application_definition_id="/subscriptions/subid/resourceGroups/rg/providers/Microsoft.Solutions/applicationDefinitions/myAppDef",
     application_name="myManagedApplication",
     kind="ServiceCatalog",
@@ -99,7 +99,7 @@ application = azure_nextgen.solutions.latest.Application("application",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const application = new azure_nextgen.solutions.latest.Application("application", {
+const application = new azure_nextgen.solutions.Application("application", {
     applicationDefinitionId: "/subscriptions/subid/resourceGroups/rg/providers/Microsoft.Solutions/applicationDefinitions/myAppDef",
     applicationName: "myManagedApplication",
     kind: "ServiceCatalog",
@@ -337,7 +337,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identity">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Solutions.<wbr>Inputs.<wbr>Identity<wbr>Args</a></span>
+        <span class="property-type"><a href="#identity">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Solutions..<wbr>Inputs.<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The identity of the resource.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -346,7 +346,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#jitaccesspolicy_csharp" style="color: inherit; text-decoration: inherit;">Jit<wbr>Access<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationjitaccesspolicy">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Solutions.<wbr>Inputs.<wbr>Application<wbr>Jit<wbr>Access<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationjitaccesspolicy">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Solutions..<wbr>Inputs.<wbr>Application<wbr>Jit<wbr>Access<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The managed application Jit access policy.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -391,7 +391,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#plan_csharp" style="color: inherit; text-decoration: inherit;">Plan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#plan">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Solutions.<wbr>Inputs.<wbr>Plan<wbr>Args</a></span>
+        <span class="property-type"><a href="#plan">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Solutions..<wbr>Inputs.<wbr>Plan<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The plan information.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -400,7 +400,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sku">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Solutions.<wbr>Inputs.<wbr>Sku<wbr>Args</a></span>
+        <span class="property-type"><a href="#sku">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Solutions..<wbr>Inputs.<wbr>Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The SKU of the resource.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -800,7 +800,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#artifacts_csharp" style="color: inherit; text-decoration: inherit;">Artifacts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationartifactresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Solutions.<wbr>Outputs.<wbr>Application<wbr>Artifact<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#applicationartifactresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Solutions..<wbr>Outputs.<wbr>Application<wbr>Artifact<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The collection of managed application artifacts.{{% /md %}}</dd>
     <dt class="property-"
@@ -809,7 +809,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authorizations_csharp" style="color: inherit; text-decoration: inherit;">Authorizations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationauthorizationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Solutions.<wbr>Outputs.<wbr>Application<wbr>Authorization<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#applicationauthorizationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Solutions..<wbr>Outputs.<wbr>Application<wbr>Authorization<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The  read-only authorizations property that is retrieved from the application package.{{% /md %}}</dd>
     <dt class="property-"
@@ -818,7 +818,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#billingdetails_csharp" style="color: inherit; text-decoration: inherit;">Billing<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationbillingdetailsdefinitionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Solutions.<wbr>Outputs.<wbr>Application<wbr>Billing<wbr>Details<wbr>Definition<wbr>Response</a></span>
+        <span class="property-type"><a href="#applicationbillingdetailsdefinitionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Solutions..<wbr>Outputs.<wbr>Application<wbr>Billing<wbr>Details<wbr>Definition<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The managed application billing details.{{% /md %}}</dd>
     <dt class="property-"
@@ -827,7 +827,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#createdby_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>By</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationclientdetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Solutions.<wbr>Outputs.<wbr>Application<wbr>Client<wbr>Details<wbr>Response</a></span>
+        <span class="property-type"><a href="#applicationclientdetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Solutions..<wbr>Outputs.<wbr>Application<wbr>Client<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The client entity that created the JIT request.{{% /md %}}</dd>
     <dt class="property-"
@@ -836,7 +836,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#customersupport_csharp" style="color: inherit; text-decoration: inherit;">Customer<wbr>Support</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationpackagecontactresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Solutions.<wbr>Outputs.<wbr>Application<wbr>Package<wbr>Contact<wbr>Response</a></span>
+        <span class="property-type"><a href="#applicationpackagecontactresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Solutions..<wbr>Outputs.<wbr>Application<wbr>Package<wbr>Contact<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The read-only customer support property that is retrieved from the application package.{{% /md %}}</dd>
     <dt class="property-"
@@ -899,7 +899,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#supporturls_csharp" style="color: inherit; text-decoration: inherit;">Support<wbr>Urls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationpackagesupporturlsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Solutions.<wbr>Outputs.<wbr>Application<wbr>Package<wbr>Support<wbr>Urls<wbr>Response</a></span>
+        <span class="property-type"><a href="#applicationpackagesupporturlsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Solutions..<wbr>Outputs.<wbr>Application<wbr>Package<wbr>Support<wbr>Urls<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The read-only support URLs property that is retrieved from the application package.{{% /md %}}</dd>
     <dt class="property-"
@@ -917,7 +917,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#updatedby_csharp" style="color: inherit; text-decoration: inherit;">Updated<wbr>By</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationclientdetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Solutions.<wbr>Outputs.<wbr>Application<wbr>Client<wbr>Details<wbr>Response</a></span>
+        <span class="property-type"><a href="#applicationclientdetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Solutions..<wbr>Outputs.<wbr>Application<wbr>Client<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The client entity that last updated the JIT request.{{% /md %}}</dd>
 </dl>
@@ -1777,7 +1777,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#jitapprovalmode_csharp" style="color: inherit; text-decoration: inherit;">Jit<wbr>Approval<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#jitapprovalmode">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Solutions.<wbr>Jit<wbr>Approval<wbr>Mode</a></span>
+        <span class="property-type">string | <a href="#jitapprovalmode">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Solutions..<wbr>Jit<wbr>Approval<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}JIT approval mode.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1786,7 +1786,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#jitapprovers_csharp" style="color: inherit; text-decoration: inherit;">Jit<wbr>Approvers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jitapproverdefinition">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Solutions.<wbr>Inputs.<wbr>Jit<wbr>Approver<wbr>Definition<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#jitapproverdefinition">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Solutions..<wbr>Inputs.<wbr>Jit<wbr>Approver<wbr>Definition<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The JIT approvers{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1956,7 +1956,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#jitapprovers_csharp" style="color: inherit; text-decoration: inherit;">Jit<wbr>Approvers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jitapproverdefinitionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Solutions.<wbr>Inputs.<wbr>Jit<wbr>Approver<wbr>Definition<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#jitapproverdefinitionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Solutions..<wbr>Inputs.<wbr>Jit<wbr>Approver<wbr>Definition<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The JIT approvers{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2340,7 +2340,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidentitytype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Solutions.<wbr>Resource<wbr>Identity<wbr>Type</a></span>
+        <span class="property-type"><a href="#resourceidentitytype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Solutions..<wbr>Resource<wbr>Identity<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The identity type.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2465,7 +2465,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userassignedidentities_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Solutions.<wbr>Inputs.<wbr>User<wbr>Assigned<wbr>Resource<wbr>Identity<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Solutions..<wbr>Inputs.<wbr>User<wbr>Assigned<wbr>Resource<wbr>Identity<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}The list of user identities associated with the resource. The user identity dictionary key references will be resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd>
 </dl>
@@ -2672,7 +2672,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#jitapprovertype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Solutions.<wbr>Jit<wbr>Approver<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#jitapprovertype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Solutions..<wbr>Jit<wbr>Approver<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The approver type.{{% /md %}}</dd>
 </dl>
@@ -4002,7 +4002,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:solutions/latest:Application myManagedApplication /subscriptions/subid/resourceGroups/rg/providers/Microsoft.Solutions/applications/myManagedApplication 
+$ pulumi import azure-nextgen:solutions:Application myManagedApplication /subscriptions/subid/resourceGroups/rg/providers/Microsoft.Solutions/applications/myManagedApplication 
 ```
 
 

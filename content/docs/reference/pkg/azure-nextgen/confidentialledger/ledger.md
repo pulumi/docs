@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.confidentialledger.Ledger resour
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Confidential Ledger. Contains the properties of Confidential Ledger Resource.
+API Version: 2020-12-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,15 +27,15 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var ledger = new AzureNextGen.ConfidentialLedger.V20201201Preview.Ledger("ledger", new AzureNextGen.ConfidentialLedger.V20201201Preview.LedgerArgs
+        var ledger = new AzureNextGen.ConfidentialLedger..Ledger("ledger", new AzureNextGen.ConfidentialLedger..LedgerArgs
         {
             LedgerName = "DummyLedgerName",
             Location = "WestUS",
-            Properties = new AzureNextGen.ConfidentialLedger.V20201201Preview.Inputs.LedgerPropertiesArgs
+            Properties = new AzureNextGen.ConfidentialLedger..Inputs.LedgerPropertiesArgs
             {
                 CertUsers = 
                 {
-                    new AzureNextGen.ConfidentialLedger.V20201201Preview.Inputs.ConfidentialLedgerCertUserArgs
+                    new AzureNextGen.ConfidentialLedger..Inputs.ConfidentialLedgerCertUserArgs
                     {
                         Cert = "MIIDBTCCAe2gAwIBAgIQXVogj9BAf49IpuOSIvztNDANBgkqhkiG9w0BAQsFADAtMSswKQYDVQQDEyJhY2NvdW50cy5hY2Nlc3Njb250cm9sLndpbmRvd3MubmV0MB4XDTIwMDMxNzAwMDAwMFoXDTI1MDMxNzAwMDAwMFowLTErMCkGA1UEAxMiYWNjb3VudHMuYWNjZXNzY29udHJvbC53aW5kb3dzLm5ldDCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBANfLmdz9yIDskpZzrMXiDeVlCs75ZunrzwzBW5lz7UxdBjHu7Q9iT32otlBp++LOwBcKsVjuQ0GUbulX0FLsfLjEeCe58ZtSn//+6VRFSScg7i+WvDwEUWELR+vMPtCGcXBTpILEnYbSMz0No4+Jpkc1lyMIfDP/KSeqojo74xfW4RKtAgv39uwZ5Yz2hZ/IcWOvaQqMXp1lqhXLFIRWbwjLYYUbmwGwYpQ6++Cml0ucQoMkgYT88HpA/fzXQlLgrHamr3eE/lVp26ZWwfGLAvkdNBabQRSrk8k/c6BmY1mYpUFZo+795PI16mAdp1ioEwH8I5osis+/BR5GhPpwiA8CAwEAAaMhMB8wHQYDVR0OBBYEFF8MDGklOGhGNVJvsHHRCaqtzexcMA0GCSqGSIb3DQEBCwUAA4IBAQCKkegw/mdpCVl1lOpgU4G9RT+1gtcPqZK9kpimuDggSJju6KUQlOCi5/lIH5DCzpjFdmG17TjWVBNve5kowmrhLzovY0Ykk7+6hYTBK8dNNSmd4SK7zY++0aDIuOzHP2Cur+kgFC0gez50tPzotLDtMmp40gknXuzltwJfezNSw3gLgljDsGGcDIXK3qLSYh44qSuRGwulcN2EJUZBI9tIxoODpaWHIN8+z2uZvf8JBYFjA3+n9FRQn51X16CTcjq4QRTbNVpgVuQuyaYnEtx0ZnDvguB3RjGSPIXTRBkLl2x7e8/6uAZ6tchw8rhcOtPsFgJuoJokGjvcUSR/6Eqd",
                     },
@@ -62,7 +63,7 @@ class MyStack : Stack
 package main
 
 import (
-	confidentialledger "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/confidentialledger/v20201201preview"
+	confidentialledger "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/confidentialledger"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -102,11 +103,11 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-ledger = azure_nextgen.confidentialledger.v20201201preview.Ledger("ledger",
+ledger = azure_nextgen.confidentialledger.Ledger("ledger",
     ledger_name="DummyLedgerName",
     location="WestUS",
-    properties=azure_nextgen.confidentialledger.v20201201preview.LedgerPropertiesArgs(
-        cert_users=[azure_nextgen.confidentialledger.v20201201preview.ConfidentialLedgerCertUserArgs(
+    properties=azure_nextgen.confidentialledger.LedgerPropertiesArgs(
+        cert_users=[azure_nextgen.confidentialledger.ConfidentialLedgerCertUserArgs(
             cert="MIIDBTCCAe2gAwIBAgIQXVogj9BAf49IpuOSIvztNDANBgkqhkiG9w0BAQsFADAtMSswKQYDVQQDEyJhY2NvdW50cy5hY2Nlc3Njb250cm9sLndpbmRvd3MubmV0MB4XDTIwMDMxNzAwMDAwMFoXDTI1MDMxNzAwMDAwMFowLTErMCkGA1UEAxMiYWNjb3VudHMuYWNjZXNzY29udHJvbC53aW5kb3dzLm5ldDCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBANfLmdz9yIDskpZzrMXiDeVlCs75ZunrzwzBW5lz7UxdBjHu7Q9iT32otlBp++LOwBcKsVjuQ0GUbulX0FLsfLjEeCe58ZtSn//+6VRFSScg7i+WvDwEUWELR+vMPtCGcXBTpILEnYbSMz0No4+Jpkc1lyMIfDP/KSeqojo74xfW4RKtAgv39uwZ5Yz2hZ/IcWOvaQqMXp1lqhXLFIRWbwjLYYUbmwGwYpQ6++Cml0ucQoMkgYT88HpA/fzXQlLgrHamr3eE/lVp26ZWwfGLAvkdNBabQRSrk8k/c6BmY1mYpUFZo+795PI16mAdp1ioEwH8I5osis+/BR5GhPpwiA8CAwEAAaMhMB8wHQYDVR0OBBYEFF8MDGklOGhGNVJvsHHRCaqtzexcMA0GCSqGSIb3DQEBCwUAA4IBAQCKkegw/mdpCVl1lOpgU4G9RT+1gtcPqZK9kpimuDggSJju6KUQlOCi5/lIH5DCzpjFdmG17TjWVBNve5kowmrhLzovY0Ykk7+6hYTBK8dNNSmd4SK7zY++0aDIuOzHP2Cur+kgFC0gez50tPzotLDtMmp40gknXuzltwJfezNSw3gLgljDsGGcDIXK3qLSYh44qSuRGwulcN2EJUZBI9tIxoODpaWHIN8+z2uZvf8JBYFjA3+n9FRQn51X16CTcjq4QRTbNVpgVuQuyaYnEtx0ZnDvguB3RjGSPIXTRBkLl2x7e8/6uAZ6tchw8rhcOtPsFgJuoJokGjvcUSR/6Eqd",
         )],
         ledger_storage_account="dummyStorageAccount",
@@ -127,7 +128,7 @@ ledger = azure_nextgen.confidentialledger.v20201201preview.Ledger("ledger",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const ledger = new azure_nextgen.confidentialledger.v20201201preview.Ledger("ledger", {
+const ledger = new azure_nextgen.confidentialledger.Ledger("ledger", {
     ledgerName: "DummyLedgerName",
     location: "WestUS",
     properties: {
@@ -363,7 +364,7 @@ The Ledger resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ledgerproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Confidential<wbr>Ledger.<wbr>Inputs.<wbr>Ledger<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#ledgerproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Confidential<wbr>Ledger..<wbr>Inputs.<wbr>Ledger<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties of Confidential Ledger Resource.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -565,7 +566,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#systemdata_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Confidential<wbr>Ledger.<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
+        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Confidential<wbr>Ledger..<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Metadata pertaining to creation and last modification of the resource{{% /md %}}</dd>
     <dt class="property-"
@@ -851,7 +852,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#certusers_csharp" style="color: inherit; text-decoration: inherit;">Cert<wbr>Users</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#confidentialledgercertuser">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Confidential<wbr>Ledger.<wbr>Inputs.<wbr>Confidential<wbr>Ledger<wbr>Cert<wbr>User<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#confidentialledgercertuser">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Confidential<wbr>Ledger..<wbr>Inputs.<wbr>Confidential<wbr>Ledger<wbr>Cert<wbr>User<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Array of all the cert based users who can access Confidential Ledger{{% /md %}}</dd>
     <dt class="property-optional"
@@ -869,7 +870,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ledgertype_csharp" style="color: inherit; text-decoration: inherit;">Ledger<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#ledgertype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Confidential<wbr>Ledger.<wbr>Ledger<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#ledgertype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Confidential<wbr>Ledger..<wbr>Ledger<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of Confidential Ledger{{% /md %}}</dd>
 </dl>
@@ -1030,7 +1031,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#certusers_csharp" style="color: inherit; text-decoration: inherit;">Cert<wbr>Users</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#confidentialledgercertuserresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Confidential<wbr>Ledger.<wbr>Inputs.<wbr>Confidential<wbr>Ledger<wbr>Cert<wbr>User<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#confidentialledgercertuserresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Confidential<wbr>Ledger..<wbr>Inputs.<wbr>Confidential<wbr>Ledger<wbr>Cert<wbr>User<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Array of all the cert based users who can access Confidential Ledger{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1581,7 +1582,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:confidentialledger/v20201201preview:Ledger DummyLedgerName /subscriptions/00000000-0000-0000-0000-000000000001/providers/Microsoft.ConfidentialLedger/ledgers/DummyLedgerName 
+$ pulumi import azure-nextgen:confidentialledger:Ledger DummyLedgerName /subscriptions/00000000-0000-0000-0000-000000000001/providers/Microsoft.ConfidentialLedger/ledgers/DummyLedgerName 
 ```
 
 

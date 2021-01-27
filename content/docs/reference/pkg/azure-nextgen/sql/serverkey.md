@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.sql.ServerKey resource with exam
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 A server key.
+API Version: 2020-08-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var serverKey = new AzureNextGen.Sql.V20200801Preview.ServerKey("serverKey", new AzureNextGen.Sql.V20200801Preview.ServerKeyArgs
+        var serverKey = new AzureNextGen.Sql..ServerKey("serverKey", new AzureNextGen.Sql..ServerKeyArgs
         {
             KeyName = "someVault_someKey_01234567890123456789012345678901",
             ResourceGroupName = "sqlcrudtest-7398",
@@ -48,7 +49,7 @@ class MyStack : Stack
 package main
 
 import (
-	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql/v20200801preview"
+	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -78,7 +79,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-server_key = azure_nextgen.sql.v20200801preview.ServerKey("serverKey",
+server_key = azure_nextgen.sql.ServerKey("serverKey",
     key_name="someVault_someKey_01234567890123456789012345678901",
     resource_group_name="sqlcrudtest-7398",
     server_key_type="AzureKeyVault",
@@ -95,7 +96,7 @@ server_key = azure_nextgen.sql.v20200801preview.ServerKey("serverKey",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const serverKey = new azure_nextgen.sql.v20200801preview.ServerKey("serverKey", {
+const serverKey = new azure_nextgen.sql.ServerKey("serverKey", {
     keyName: "someVault_someKey_01234567890123456789012345678901",
     resourceGroupName: "sqlcrudtest-7398",
     serverKeyType: "AzureKeyVault",
@@ -314,7 +315,7 @@ The ServerKey resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#serverkeytype_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>Key<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#serverkeytype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql.<wbr>Server<wbr>Key<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#serverkeytype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql..<wbr>Server<wbr>Key<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The server key type like 'ServiceManaged', 'AzureKeyVault'.{{% /md %}}</dd>
     <dt class="property-required"
@@ -863,7 +864,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:sql/v20200801preview:ServerKey sqlcrudtest-4645 /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/sqlcrudtest-7398/providers/Microsoft.Sql/servers/sqlcrudtest-4645/keys/someVault_someKey_01234567890123456789012345678901 
+$ pulumi import azure-nextgen:sql:ServerKey sqlcrudtest-4645 /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/sqlcrudtest-7398/providers/Microsoft.Sql/servers/sqlcrudtest-4645/keys/someVault_someKey_01234567890123456789012345678901 
 ```
 
 

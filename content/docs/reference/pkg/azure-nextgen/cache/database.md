@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.cache.Database resource with exa
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Describes a database on the RedisEnterprise cluster
+API Version: 2020-10-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var database = new AzureNextGen.Cache.V20201001Preview.Database("database", new AzureNextGen.Cache.V20201001Preview.DatabaseArgs
+        var database = new AzureNextGen.Cache..Database("database", new AzureNextGen.Cache..DatabaseArgs
         {
             ClientProtocol = "Encrypted",
             ClusterName = "cache1",
@@ -35,17 +36,17 @@ class MyStack : Stack
             EvictionPolicy = "AllKeysLRU",
             Modules = 
             {
-                new AzureNextGen.Cache.V20201001Preview.Inputs.ModuleArgs
+                new AzureNextGen.Cache..Inputs.ModuleArgs
                 {
                     Args = "ERROR_RATE 0.00 INITIAL_SIZE 400",
                     Name = "RedisBloom",
                 },
-                new AzureNextGen.Cache.V20201001Preview.Inputs.ModuleArgs
+                new AzureNextGen.Cache..Inputs.ModuleArgs
                 {
                     Args = "RETENTION_POLICY 20",
                     Name = "RedisTimeSeries",
                 },
-                new AzureNextGen.Cache.V20201001Preview.Inputs.ModuleArgs
+                new AzureNextGen.Cache..Inputs.ModuleArgs
                 {
                     Name = "RediSearch",
                 },
@@ -67,7 +68,7 @@ class MyStack : Stack
 package main
 
 import (
-	cache "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/cache/v20201001preview"
+	cache "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/cache"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -112,22 +113,22 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-database = azure_nextgen.cache.v20201001preview.Database("database",
+database = azure_nextgen.cache.Database("database",
     client_protocol="Encrypted",
     cluster_name="cache1",
     clustering_policy="EnterpriseCluster",
     database_name="default",
     eviction_policy="AllKeysLRU",
     modules=[
-        azure_nextgen.cache.v20201001preview.ModuleArgs(
+        azure_nextgen.cache.ModuleArgs(
             args="ERROR_RATE 0.00 INITIAL_SIZE 400",
             name="RedisBloom",
         ),
-        azure_nextgen.cache.v20201001preview.ModuleArgs(
+        azure_nextgen.cache.ModuleArgs(
             args="RETENTION_POLICY 20",
             name="RedisTimeSeries",
         ),
-        azure_nextgen.cache.v20201001preview.ModuleArgs(
+        azure_nextgen.cache.ModuleArgs(
             name="RediSearch",
         ),
     ],
@@ -144,7 +145,7 @@ database = azure_nextgen.cache.v20201001preview.Database("database",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const database = new azure_nextgen.cache.v20201001preview.Database("database", {
+const database = new azure_nextgen.cache.Database("database", {
     clientProtocol: "Encrypted",
     clusterName: "cache1",
     clusteringPolicy: "EnterpriseCluster",
@@ -387,7 +388,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#clientprotocol_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#protocol">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cache.<wbr>Protocol</a></span>
+        <span class="property-type">string | <a href="#protocol">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cache..<wbr>Protocol</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether redis clients can connect using TLS-encrypted or plaintext redis protocols. Default is TLS-encrypted.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -396,7 +397,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#clusteringpolicy_csharp" style="color: inherit; text-decoration: inherit;">Clustering<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#clusteringpolicy">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cache.<wbr>Clustering<wbr>Policy</a></span>
+        <span class="property-type">string | <a href="#clusteringpolicy">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cache..<wbr>Clustering<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Clustering policy - default is OSSCluster. Specified at create time.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -405,7 +406,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#evictionpolicy_csharp" style="color: inherit; text-decoration: inherit;">Eviction<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#evictionpolicy">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cache.<wbr>Eviction<wbr>Policy</a></span>
+        <span class="property-type">string | <a href="#evictionpolicy">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cache..<wbr>Eviction<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Redis eviction policy - default is VolatileLRU{{% /md %}}</dd>
     <dt class="property-optional"
@@ -414,7 +415,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#modules_csharp" style="color: inherit; text-decoration: inherit;">Modules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#module">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cache.<wbr>Inputs.<wbr>Module<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#module">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cache..<wbr>Inputs.<wbr>Module<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Optional set of redis modules to enable in this database - modules can only be added at creation time.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1283,7 +1284,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:cache/v20201001preview:Database cache1/default /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Cache/redisEnterprise/cache1/databases/default 
+$ pulumi import azure-nextgen:cache:Database cache1/default /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Cache/redisEnterprise/cache1/databases/default 
 ```
 
 

@@ -143,7 +143,7 @@ The following output properties are available:
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configurationprofileresourcepropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Change<wbr>Analysis.<wbr>Outputs.<wbr>Configuration<wbr>Profile<wbr>Resource<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#configurationprofileresourcepropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Change<wbr>Analysis..<wbr>Outputs.<wbr>Configuration<wbr>Profile<wbr>Resource<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The properties of a configuration profile.{{% /md %}}</dd>
     <dt class="property-"
@@ -161,7 +161,7 @@ The following output properties are available:
 <a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidentityresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Change<wbr>Analysis.<wbr>Outputs.<wbr>Resource<wbr>Identity<wbr>Response</a></span>
+        <span class="property-type"><a href="#resourceidentityresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Change<wbr>Analysis..<wbr>Outputs.<wbr>Resource<wbr>Identity<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The identity block returned by ARM resource that supports managed identity.{{% /md %}}</dd>
     <dt class="property-"
@@ -170,7 +170,7 @@ The following output properties are available:
 <a href="#systemdata_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Change<wbr>Analysis.<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
+        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Change<wbr>Analysis..<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Top level metadata https://github.com/Azure/azure-resource-manager-rpc/blob/master/v1.0/common-api-contracts.md#system-metadata-for-all-azure-resources{{% /md %}}</dd>
 </dl>
@@ -481,7 +481,7 @@ The following output properties are available:
 <a href="#notifications_csharp" style="color: inherit; text-decoration: inherit;">Notifications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#notificationsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Change<wbr>Analysis.<wbr>Inputs.<wbr>Notification<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#notificationsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Change<wbr>Analysis..<wbr>Inputs.<wbr>Notification<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings of change notification configuration for a subscription.{{% /md %}}</dd>
 </dl>
@@ -557,7 +557,7 @@ The following output properties are available:
 <a href="#azuremonitorworkspaceproperties_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Monitor<wbr>Workspace<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azuremonitorworkspacepropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Change<wbr>Analysis.<wbr>Inputs.<wbr>Azure<wbr>Monitor<wbr>Workspace<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azuremonitorworkspacepropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Change<wbr>Analysis..<wbr>Inputs.<wbr>Azure<wbr>Monitor<wbr>Workspace<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration properties of an Azure Monitor workspace that receives change notifications.{{% /md %}}</dd>
 </dl>

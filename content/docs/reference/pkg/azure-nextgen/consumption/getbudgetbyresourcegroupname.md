@@ -179,7 +179,7 @@ The following output properties are available:
 <a href="#currentspend_csharp" style="color: inherit; text-decoration: inherit;">Current<wbr>Spend</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#currentspendresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Consumption.<wbr>Outputs.<wbr>Current<wbr>Spend<wbr>Response</a></span>
+        <span class="property-type"><a href="#currentspendresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Consumption..<wbr>Outputs.<wbr>Current<wbr>Spend<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The current amount of cost which is being tracked for a budget.{{% /md %}}</dd>
     <dt class="property-"
@@ -215,7 +215,7 @@ The following output properties are available:
 <a href="#timeperiod_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgettimeperiodresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Consumption.<wbr>Outputs.<wbr>Budget<wbr>Time<wbr>Period<wbr>Response</a></span>
+        <span class="property-type"><a href="#budgettimeperiodresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Consumption..<wbr>Outputs.<wbr>Budget<wbr>Time<wbr>Period<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Has start and end date of the budget. The start date must be first of the month and should be less than the end date. Budget start date must be on or after June 1, 2017. Future start date should not be more than three months. Past start date should  be selected within the timegrain period. There are no restrictions on the end date.{{% /md %}}</dd>
     <dt class="property-"
@@ -242,7 +242,7 @@ The following output properties are available:
 <a href="#filters_csharp" style="color: inherit; text-decoration: inherit;">Filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#filtersresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Consumption.<wbr>Outputs.<wbr>Filters<wbr>Response</a></span>
+        <span class="property-type"><a href="#filtersresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Consumption..<wbr>Outputs.<wbr>Filters<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}May be used to filter budgets by resource group, resource, or meter.{{% /md %}}</dd>
     <dt class="property-"
@@ -251,7 +251,7 @@ The following output properties are available:
 <a href="#notifications_csharp" style="color: inherit; text-decoration: inherit;">Notifications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Consumption.<wbr>Outputs.<wbr>Notification<wbr>Response&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Consumption..<wbr>Outputs.<wbr>Notification<wbr>Response&gt;</span>
     </dt>
     <dd>{{% md %}}Dictionary of notifications associated with the budget. Budget can have up to five notifications.{{% /md %}}</dd>
 </dl>

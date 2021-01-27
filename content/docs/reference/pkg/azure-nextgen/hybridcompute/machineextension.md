@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.hybridcompute.MachineExtension r
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Describes a Machine Extension.
-Latest API Version: 2020-08-02.
+API Version: 2020-08-02.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var machineExtension = new AzureNextGen.HybridCompute.Latest.MachineExtension("machineExtension", new AzureNextGen.HybridCompute.Latest.MachineExtensionArgs
+        var machineExtension = new AzureNextGen.HybridCompute..MachineExtension("machineExtension", new AzureNextGen.HybridCompute..MachineExtensionArgs
         {
             ExtensionName = "CustomScriptExtension",
             Location = "eastus2euap",
@@ -57,7 +57,7 @@ package main
 import (
 	"fmt"
 
-	hybridcompute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/hybridcompute/latest"
+	hybridcompute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/hybridcompute"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -92,7 +92,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-machine_extension = azure_nextgen.hybridcompute.latest.MachineExtension("machineExtension",
+machine_extension = azure_nextgen.hybridcompute.MachineExtension("machineExtension",
     extension_name="CustomScriptExtension",
     location="eastus2euap",
     name="myMachine",
@@ -114,7 +114,7 @@ machine_extension = azure_nextgen.hybridcompute.latest.MachineExtension("machine
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const machineExtension = new azure_nextgen.hybridcompute.latest.MachineExtension("machineExtension", {
+const machineExtension = new azure_nextgen.hybridcompute.MachineExtension("machineExtension", {
     extensionName: "CustomScriptExtension",
     location: "eastus2euap",
     name: "myMachine",
@@ -801,7 +801,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#instanceview_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>View</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#machineextensionpropertiesresponseinstanceview">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Compute.<wbr>Outputs.<wbr>Machine<wbr>Extension<wbr>Properties<wbr>Response<wbr>Instance<wbr>View</a></span>
+        <span class="property-type"><a href="#machineextensionpropertiesresponseinstanceview">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Compute..<wbr>Outputs.<wbr>Machine<wbr>Extension<wbr>Properties<wbr>Response<wbr>Instance<wbr>View</a></span>
     </dt>
     <dd>{{% md %}}The machine extension instance view.{{% /md %}}</dd>
 </dl>
@@ -1160,7 +1160,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#machineextensioninstanceviewresponsestatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Compute.<wbr>Inputs.<wbr>Machine<wbr>Extension<wbr>Instance<wbr>View<wbr>Response<wbr>Status<wbr>Args</a></span>
+        <span class="property-type"><a href="#machineextensioninstanceviewresponsestatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Compute..<wbr>Inputs.<wbr>Machine<wbr>Extension<wbr>Instance<wbr>View<wbr>Response<wbr>Status<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Instance view status.{{% /md %}}</dd>
 </dl>
@@ -1297,7 +1297,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:hybridcompute/latest:MachineExtension CustomScriptExtension /subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.HybridCompute/Machines/myMachine/Extensions/CustomScriptExtension 
+$ pulumi import azure-nextgen:hybridcompute:MachineExtension CustomScriptExtension /subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.HybridCompute/Machines/myMachine/Extensions/CustomScriptExtension 
 ```
 
 

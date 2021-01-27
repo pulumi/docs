@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.network.VirtualApplianceSite res
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Virtual Appliance Site resource.
-Latest API Version: 2020-08-01.
+API Version: 2020-08-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,13 +27,13 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var virtualApplianceSite = new AzureNextGen.Network.Latest.VirtualApplianceSite("virtualApplianceSite", new AzureNextGen.Network.Latest.VirtualApplianceSiteArgs
+        var virtualApplianceSite = new AzureNextGen.Network..VirtualApplianceSite("virtualApplianceSite", new AzureNextGen.Network..VirtualApplianceSiteArgs
         {
             AddressPrefix = "192.168.1.0/24",
             NetworkVirtualApplianceName = "nva",
-            O365Policy = new AzureNextGen.Network.Latest.Inputs.Office365PolicyPropertiesArgs
+            O365Policy = new AzureNextGen.Network..Inputs.Office365PolicyPropertiesArgs
             {
-                BreakOutCategories = new AzureNextGen.Network.Latest.Inputs.BreakOutCategoryPoliciesArgs
+                BreakOutCategories = new AzureNextGen.Network..Inputs.BreakOutCategoryPoliciesArgs
                 {
                     Allow = true,
                     Default = true,
@@ -57,7 +57,7 @@ class MyStack : Stack
 package main
 
 import (
-	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network/latest"
+	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -93,11 +93,11 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-virtual_appliance_site = azure_nextgen.network.latest.VirtualApplianceSite("virtualApplianceSite",
+virtual_appliance_site = azure_nextgen.network.VirtualApplianceSite("virtualApplianceSite",
     address_prefix="192.168.1.0/24",
     network_virtual_appliance_name="nva",
-    o365_policy=azure_nextgen.network.latest.Office365PolicyPropertiesArgs(
-        break_out_categories=azure_nextgen.network.latest.BreakOutCategoryPoliciesArgs(
+    o365_policy=azure_nextgen.network.Office365PolicyPropertiesArgs(
+        break_out_categories=azure_nextgen.network.BreakOutCategoryPoliciesArgs(
             allow=True,
             default=True,
             optimize=True,
@@ -116,7 +116,7 @@ virtual_appliance_site = azure_nextgen.network.latest.VirtualApplianceSite("virt
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const virtualApplianceSite = new azure_nextgen.network.latest.VirtualApplianceSite("virtualApplianceSite", {
+const virtualApplianceSite = new azure_nextgen.network.VirtualApplianceSite("virtualApplianceSite", {
     addressPrefix: "192.168.1.0/24",
     networkVirtualApplianceName: "nva",
     o365Policy: {
@@ -377,7 +377,7 @@ The VirtualApplianceSite resource accepts the following [input]({{< relref "/doc
 <a href="#o365policy_csharp" style="color: inherit; text-decoration: inherit;">O365Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#office365policyproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Office365Policy<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#office365policyproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Office365Policy<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Office 365 Policy.{{% /md %}}</dd>
 </dl>
@@ -1054,7 +1054,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#breakoutcategories_csharp" style="color: inherit; text-decoration: inherit;">Break<wbr>Out<wbr>Categories</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#breakoutcategorypolicies">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Break<wbr>Out<wbr>Category<wbr>Policies<wbr>Args</a></span>
+        <span class="property-type"><a href="#breakoutcategorypolicies">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Break<wbr>Out<wbr>Category<wbr>Policies<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Office 365 breakout categories.{{% /md %}}</dd>
 </dl>
@@ -1116,7 +1116,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#breakoutcategories_csharp" style="color: inherit; text-decoration: inherit;">Break<wbr>Out<wbr>Categories</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#breakoutcategorypoliciesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Break<wbr>Out<wbr>Category<wbr>Policies<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#breakoutcategorypoliciesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Break<wbr>Out<wbr>Category<wbr>Policies<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Office 365 breakout categories.{{% /md %}}</dd>
 </dl>
@@ -1172,7 +1172,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:network/latest:VirtualApplianceSite site1 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/networkVirtualAppliances/nva/virtualApplianceSites/site1 
+$ pulumi import azure-nextgen:network:VirtualApplianceSite site1 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/networkVirtualAppliances/nva/virtualApplianceSites/site1 
 ```
 
 

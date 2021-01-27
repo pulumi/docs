@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.network.AzureFirewall resource w
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Azure Firewall resource.
-Latest API Version: 2020-08-01.
+API Version: 2020-08-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,13 +27,13 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var azureFirewall = new AzureNextGen.Network.Latest.AzureFirewall("azureFirewall", new AzureNextGen.Network.Latest.AzureFirewallArgs
+        var azureFirewall = new AzureNextGen.Network..AzureFirewall("azureFirewall", new AzureNextGen.Network..AzureFirewallArgs
         {
             ApplicationRuleCollections = 
             {
-                new AzureNextGen.Network.Latest.Inputs.AzureFirewallApplicationRuleCollectionArgs
+                new AzureNextGen.Network..Inputs.AzureFirewallApplicationRuleCollectionArgs
                 {
-                    Action = new AzureNextGen.Network.Latest.Inputs.AzureFirewallRCActionArgs
+                    Action = new AzureNextGen.Network..Inputs.AzureFirewallRCActionArgs
                     {
                         Type = "Deny",
                     },
@@ -41,13 +41,13 @@ class MyStack : Stack
                     Priority = 110,
                     Rules = 
                     {
-                        new AzureNextGen.Network.Latest.Inputs.AzureFirewallApplicationRuleArgs
+                        new AzureNextGen.Network..Inputs.AzureFirewallApplicationRuleArgs
                         {
                             Description = "Deny inbound rule",
                             Name = "rule1",
                             Protocols = 
                             {
-                                new AzureNextGen.Network.Latest.Inputs.AzureFirewallApplicationRuleProtocolArgs
+                                new AzureNextGen.Network..Inputs.AzureFirewallApplicationRuleProtocolArgs
                                 {
                                     Port = 443,
                                     ProtocolType = "Https",
@@ -69,14 +69,14 @@ class MyStack : Stack
             AzureFirewallName = "azurefirewall",
             IpConfigurations = 
             {
-                new AzureNextGen.Network.Latest.Inputs.AzureFirewallIPConfigurationArgs
+                new AzureNextGen.Network..Inputs.AzureFirewallIPConfigurationArgs
                 {
                     Name = "azureFirewallIpConfiguration",
-                    PublicIPAddress = new AzureNextGen.Network.Latest.Inputs.SubResourceArgs
+                    PublicIPAddress = new AzureNextGen.Network..Inputs.SubResourceArgs
                     {
                         Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/publicIPAddresses/pipName",
                     },
-                    Subnet = new AzureNextGen.Network.Latest.Inputs.SubResourceArgs
+                    Subnet = new AzureNextGen.Network..Inputs.SubResourceArgs
                     {
                         Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnet2/subnets/AzureFirewallSubnet",
                     },
@@ -85,9 +85,9 @@ class MyStack : Stack
             Location = "West US",
             NatRuleCollections = 
             {
-                new AzureNextGen.Network.Latest.Inputs.AzureFirewallNatRuleCollectionArgs
+                new AzureNextGen.Network..Inputs.AzureFirewallNatRuleCollectionArgs
                 {
-                    Action = new AzureNextGen.Network.Latest.Inputs.AzureFirewallNatRCActionArgs
+                    Action = new AzureNextGen.Network..Inputs.AzureFirewallNatRCActionArgs
                     {
                         Type = "Dnat",
                     },
@@ -95,7 +95,7 @@ class MyStack : Stack
                     Priority = 112,
                     Rules = 
                     {
-                        new AzureNextGen.Network.Latest.Inputs.AzureFirewallNatRuleArgs
+                        new AzureNextGen.Network..Inputs.AzureFirewallNatRuleArgs
                         {
                             Description = "D-NAT all outbound web traffic for inspection",
                             DestinationAddresses = 
@@ -118,7 +118,7 @@ class MyStack : Stack
                             TranslatedAddress = "1.2.3.5",
                             TranslatedPort = "8443",
                         },
-                        new AzureNextGen.Network.Latest.Inputs.AzureFirewallNatRuleArgs
+                        new AzureNextGen.Network..Inputs.AzureFirewallNatRuleArgs
                         {
                             Description = "D-NAT all inbound web traffic for inspection",
                             DestinationAddresses = 
@@ -146,9 +146,9 @@ class MyStack : Stack
             },
             NetworkRuleCollections = 
             {
-                new AzureNextGen.Network.Latest.Inputs.AzureFirewallNetworkRuleCollectionArgs
+                new AzureNextGen.Network..Inputs.AzureFirewallNetworkRuleCollectionArgs
                 {
-                    Action = new AzureNextGen.Network.Latest.Inputs.AzureFirewallRCActionArgs
+                    Action = new AzureNextGen.Network..Inputs.AzureFirewallRCActionArgs
                     {
                         Type = "Deny",
                     },
@@ -156,7 +156,7 @@ class MyStack : Stack
                     Priority = 112,
                     Rules = 
                     {
-                        new AzureNextGen.Network.Latest.Inputs.AzureFirewallNetworkRuleArgs
+                        new AzureNextGen.Network..Inputs.AzureFirewallNetworkRuleArgs
                         {
                             Description = "Block traffic based on source IPs and ports",
                             DestinationAddresses = 
@@ -179,7 +179,7 @@ class MyStack : Stack
                                 "10.1.4.12-10.1.4.255",
                             },
                         },
-                        new AzureNextGen.Network.Latest.Inputs.AzureFirewallNetworkRuleArgs
+                        new AzureNextGen.Network..Inputs.AzureFirewallNetworkRuleArgs
                         {
                             Description = "Block traffic based on source IPs and ports to amazon",
                             DestinationFqdns = 
@@ -205,7 +205,7 @@ class MyStack : Stack
                 },
             },
             ResourceGroupName = "rg1",
-            Sku = new AzureNextGen.Network.Latest.Inputs.AzureFirewallSkuArgs
+            Sku = new AzureNextGen.Network..Inputs.AzureFirewallSkuArgs
             {
                 Name = "AZFW_VNet",
                 Tier = "Standard",
@@ -231,7 +231,7 @@ class MyStack : Stack
 package main
 
 import (
-	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network/latest"
+	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -400,17 +400,17 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-azure_firewall = azure_nextgen.network.latest.AzureFirewall("azureFirewall",
-    application_rule_collections=[azure_nextgen.network.latest.AzureFirewallApplicationRuleCollectionArgs(
-        action=azure_nextgen.network.latest.AzureFirewallRCActionArgs(
+azure_firewall = azure_nextgen.network.AzureFirewall("azureFirewall",
+    application_rule_collections=[azure_nextgen.network.AzureFirewallApplicationRuleCollectionArgs(
+        action=azure_nextgen.network.AzureFirewallRCActionArgs(
             type="Deny",
         ),
         name="apprulecoll",
         priority=110,
-        rules=[azure_nextgen.network.latest.AzureFirewallApplicationRuleArgs(
+        rules=[azure_nextgen.network.AzureFirewallApplicationRuleArgs(
             description="Deny inbound rule",
             name="rule1",
-            protocols=[azure_nextgen.network.latest.AzureFirewallApplicationRuleProtocolArgs(
+            protocols=[azure_nextgen.network.AzureFirewallApplicationRuleProtocolArgs(
                 port=443,
                 protocol_type="Https",
             )],
@@ -422,24 +422,24 @@ azure_firewall = azure_nextgen.network.latest.AzureFirewall("azureFirewall",
         )],
     )],
     azure_firewall_name="azurefirewall",
-    ip_configurations=[azure_nextgen.network.latest.AzureFirewallIPConfigurationArgs(
+    ip_configurations=[azure_nextgen.network.AzureFirewallIPConfigurationArgs(
         name="azureFirewallIpConfiguration",
-        public_ip_address=azure_nextgen.network.latest.SubResourceArgs(
+        public_ip_address=azure_nextgen.network.SubResourceArgs(
             id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/publicIPAddresses/pipName",
         ),
-        subnet=azure_nextgen.network.latest.SubResourceArgs(
+        subnet=azure_nextgen.network.SubResourceArgs(
             id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnet2/subnets/AzureFirewallSubnet",
         ),
     )],
     location="West US",
-    nat_rule_collections=[azure_nextgen.network.latest.AzureFirewallNatRuleCollectionArgs(
-        action=azure_nextgen.network.latest.AzureFirewallNatRCActionArgs(
+    nat_rule_collections=[azure_nextgen.network.AzureFirewallNatRuleCollectionArgs(
+        action=azure_nextgen.network.AzureFirewallNatRCActionArgs(
             type="Dnat",
         ),
         name="natrulecoll",
         priority=112,
         rules=[
-            azure_nextgen.network.latest.AzureFirewallNatRuleArgs(
+            azure_nextgen.network.AzureFirewallNatRuleArgs(
                 description="D-NAT all outbound web traffic for inspection",
                 destination_addresses=["1.2.3.4"],
                 destination_ports=["443"],
@@ -449,7 +449,7 @@ azure_firewall = azure_nextgen.network.latest.AzureFirewall("azureFirewall",
                 translated_address="1.2.3.5",
                 translated_port="8443",
             ),
-            azure_nextgen.network.latest.AzureFirewallNatRuleArgs(
+            azure_nextgen.network.AzureFirewallNatRuleArgs(
                 description="D-NAT all inbound web traffic for inspection",
                 destination_addresses=["1.2.3.4"],
                 destination_ports=["80"],
@@ -461,14 +461,14 @@ azure_firewall = azure_nextgen.network.latest.AzureFirewall("azureFirewall",
             ),
         ],
     )],
-    network_rule_collections=[azure_nextgen.network.latest.AzureFirewallNetworkRuleCollectionArgs(
-        action=azure_nextgen.network.latest.AzureFirewallRCActionArgs(
+    network_rule_collections=[azure_nextgen.network.AzureFirewallNetworkRuleCollectionArgs(
+        action=azure_nextgen.network.AzureFirewallRCActionArgs(
             type="Deny",
         ),
         name="netrulecoll",
         priority=112,
         rules=[
-            azure_nextgen.network.latest.AzureFirewallNetworkRuleArgs(
+            azure_nextgen.network.AzureFirewallNetworkRuleArgs(
                 description="Block traffic based on source IPs and ports",
                 destination_addresses=["*"],
                 destination_ports=[
@@ -482,7 +482,7 @@ azure_firewall = azure_nextgen.network.latest.AzureFirewall("azureFirewall",
                     "10.1.4.12-10.1.4.255",
                 ],
             ),
-            azure_nextgen.network.latest.AzureFirewallNetworkRuleArgs(
+            azure_nextgen.network.AzureFirewallNetworkRuleArgs(
                 description="Block traffic based on source IPs and ports to amazon",
                 destination_fqdns=["www.amazon.com"],
                 destination_ports=[
@@ -496,7 +496,7 @@ azure_firewall = azure_nextgen.network.latest.AzureFirewall("azureFirewall",
         ],
     )],
     resource_group_name="rg1",
-    sku=azure_nextgen.network.latest.AzureFirewallSkuArgs(
+    sku=azure_nextgen.network.AzureFirewallSkuArgs(
         name="AZFW_VNet",
         tier="Standard",
     ),
@@ -516,7 +516,7 @@ azure_firewall = azure_nextgen.network.latest.AzureFirewall("azureFirewall",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const azureFirewall = new azure_nextgen.network.latest.AzureFirewall("azureFirewall", {
+const azureFirewall = new azure_nextgen.network.AzureFirewall("azureFirewall", {
     applicationRuleCollections: [{
         action: {
             type: "Deny",
@@ -637,7 +637,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var azureFirewall = new AzureNextGen.Network.Latest.AzureFirewall("azureFirewall", new AzureNextGen.Network.Latest.AzureFirewallArgs
+        var azureFirewall = new AzureNextGen.Network..AzureFirewall("azureFirewall", new AzureNextGen.Network..AzureFirewallArgs
         {
             AdditionalProperties = 
             {
@@ -646,9 +646,9 @@ class MyStack : Stack
             },
             ApplicationRuleCollections = 
             {
-                new AzureNextGen.Network.Latest.Inputs.AzureFirewallApplicationRuleCollectionArgs
+                new AzureNextGen.Network..Inputs.AzureFirewallApplicationRuleCollectionArgs
                 {
-                    Action = new AzureNextGen.Network.Latest.Inputs.AzureFirewallRCActionArgs
+                    Action = new AzureNextGen.Network..Inputs.AzureFirewallRCActionArgs
                     {
                         Type = "Deny",
                     },
@@ -656,13 +656,13 @@ class MyStack : Stack
                     Priority = 110,
                     Rules = 
                     {
-                        new AzureNextGen.Network.Latest.Inputs.AzureFirewallApplicationRuleArgs
+                        new AzureNextGen.Network..Inputs.AzureFirewallApplicationRuleArgs
                         {
                             Description = "Deny inbound rule",
                             Name = "rule1",
                             Protocols = 
                             {
-                                new AzureNextGen.Network.Latest.Inputs.AzureFirewallApplicationRuleProtocolArgs
+                                new AzureNextGen.Network..Inputs.AzureFirewallApplicationRuleProtocolArgs
                                 {
                                     Port = 443,
                                     ProtocolType = "Https",
@@ -684,14 +684,14 @@ class MyStack : Stack
             AzureFirewallName = "azurefirewall",
             IpConfigurations = 
             {
-                new AzureNextGen.Network.Latest.Inputs.AzureFirewallIPConfigurationArgs
+                new AzureNextGen.Network..Inputs.AzureFirewallIPConfigurationArgs
                 {
                     Name = "azureFirewallIpConfiguration",
-                    PublicIPAddress = new AzureNextGen.Network.Latest.Inputs.SubResourceArgs
+                    PublicIPAddress = new AzureNextGen.Network..Inputs.SubResourceArgs
                     {
                         Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/publicIPAddresses/pipName",
                     },
-                    Subnet = new AzureNextGen.Network.Latest.Inputs.SubResourceArgs
+                    Subnet = new AzureNextGen.Network..Inputs.SubResourceArgs
                     {
                         Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnet2/subnets/AzureFirewallSubnet",
                     },
@@ -700,9 +700,9 @@ class MyStack : Stack
             Location = "West US",
             NatRuleCollections = 
             {
-                new AzureNextGen.Network.Latest.Inputs.AzureFirewallNatRuleCollectionArgs
+                new AzureNextGen.Network..Inputs.AzureFirewallNatRuleCollectionArgs
                 {
-                    Action = new AzureNextGen.Network.Latest.Inputs.AzureFirewallNatRCActionArgs
+                    Action = new AzureNextGen.Network..Inputs.AzureFirewallNatRCActionArgs
                     {
                         Type = "Dnat",
                     },
@@ -710,7 +710,7 @@ class MyStack : Stack
                     Priority = 112,
                     Rules = 
                     {
-                        new AzureNextGen.Network.Latest.Inputs.AzureFirewallNatRuleArgs
+                        new AzureNextGen.Network..Inputs.AzureFirewallNatRuleArgs
                         {
                             Description = "D-NAT all outbound web traffic for inspection",
                             DestinationAddresses = 
@@ -733,7 +733,7 @@ class MyStack : Stack
                             TranslatedAddress = "1.2.3.5",
                             TranslatedPort = "8443",
                         },
-                        new AzureNextGen.Network.Latest.Inputs.AzureFirewallNatRuleArgs
+                        new AzureNextGen.Network..Inputs.AzureFirewallNatRuleArgs
                         {
                             Description = "D-NAT all inbound web traffic for inspection",
                             DestinationAddresses = 
@@ -761,9 +761,9 @@ class MyStack : Stack
             },
             NetworkRuleCollections = 
             {
-                new AzureNextGen.Network.Latest.Inputs.AzureFirewallNetworkRuleCollectionArgs
+                new AzureNextGen.Network..Inputs.AzureFirewallNetworkRuleCollectionArgs
                 {
-                    Action = new AzureNextGen.Network.Latest.Inputs.AzureFirewallRCActionArgs
+                    Action = new AzureNextGen.Network..Inputs.AzureFirewallRCActionArgs
                     {
                         Type = "Deny",
                     },
@@ -771,7 +771,7 @@ class MyStack : Stack
                     Priority = 112,
                     Rules = 
                     {
-                        new AzureNextGen.Network.Latest.Inputs.AzureFirewallNetworkRuleArgs
+                        new AzureNextGen.Network..Inputs.AzureFirewallNetworkRuleArgs
                         {
                             Description = "Block traffic based on source IPs and ports",
                             DestinationAddresses = 
@@ -794,7 +794,7 @@ class MyStack : Stack
                                 "10.1.4.12-10.1.4.255",
                             },
                         },
-                        new AzureNextGen.Network.Latest.Inputs.AzureFirewallNetworkRuleArgs
+                        new AzureNextGen.Network..Inputs.AzureFirewallNetworkRuleArgs
                         {
                             Description = "Block traffic based on source IPs and ports to amazon",
                             DestinationFqdns = 
@@ -820,7 +820,7 @@ class MyStack : Stack
                 },
             },
             ResourceGroupName = "rg1",
-            Sku = new AzureNextGen.Network.Latest.Inputs.AzureFirewallSkuArgs
+            Sku = new AzureNextGen.Network..Inputs.AzureFirewallSkuArgs
             {
                 Name = "AZFW_VNet",
                 Tier = "Standard",
@@ -846,7 +846,7 @@ class MyStack : Stack
 package main
 
 import (
-	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network/latest"
+	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -1019,21 +1019,21 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-azure_firewall = azure_nextgen.network.latest.AzureFirewall("azureFirewall",
+azure_firewall = azure_nextgen.network.AzureFirewall("azureFirewall",
     additional_properties={
         "key1": "value1",
         "key2": "value2",
     },
-    application_rule_collections=[azure_nextgen.network.latest.AzureFirewallApplicationRuleCollectionArgs(
-        action=azure_nextgen.network.latest.AzureFirewallRCActionArgs(
+    application_rule_collections=[azure_nextgen.network.AzureFirewallApplicationRuleCollectionArgs(
+        action=azure_nextgen.network.AzureFirewallRCActionArgs(
             type="Deny",
         ),
         name="apprulecoll",
         priority=110,
-        rules=[azure_nextgen.network.latest.AzureFirewallApplicationRuleArgs(
+        rules=[azure_nextgen.network.AzureFirewallApplicationRuleArgs(
             description="Deny inbound rule",
             name="rule1",
-            protocols=[azure_nextgen.network.latest.AzureFirewallApplicationRuleProtocolArgs(
+            protocols=[azure_nextgen.network.AzureFirewallApplicationRuleProtocolArgs(
                 port=443,
                 protocol_type="Https",
             )],
@@ -1045,24 +1045,24 @@ azure_firewall = azure_nextgen.network.latest.AzureFirewall("azureFirewall",
         )],
     )],
     azure_firewall_name="azurefirewall",
-    ip_configurations=[azure_nextgen.network.latest.AzureFirewallIPConfigurationArgs(
+    ip_configurations=[azure_nextgen.network.AzureFirewallIPConfigurationArgs(
         name="azureFirewallIpConfiguration",
-        public_ip_address=azure_nextgen.network.latest.SubResourceArgs(
+        public_ip_address=azure_nextgen.network.SubResourceArgs(
             id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/publicIPAddresses/pipName",
         ),
-        subnet=azure_nextgen.network.latest.SubResourceArgs(
+        subnet=azure_nextgen.network.SubResourceArgs(
             id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnet2/subnets/AzureFirewallSubnet",
         ),
     )],
     location="West US",
-    nat_rule_collections=[azure_nextgen.network.latest.AzureFirewallNatRuleCollectionArgs(
-        action=azure_nextgen.network.latest.AzureFirewallNatRCActionArgs(
+    nat_rule_collections=[azure_nextgen.network.AzureFirewallNatRuleCollectionArgs(
+        action=azure_nextgen.network.AzureFirewallNatRCActionArgs(
             type="Dnat",
         ),
         name="natrulecoll",
         priority=112,
         rules=[
-            azure_nextgen.network.latest.AzureFirewallNatRuleArgs(
+            azure_nextgen.network.AzureFirewallNatRuleArgs(
                 description="D-NAT all outbound web traffic for inspection",
                 destination_addresses=["1.2.3.4"],
                 destination_ports=["443"],
@@ -1072,7 +1072,7 @@ azure_firewall = azure_nextgen.network.latest.AzureFirewall("azureFirewall",
                 translated_address="1.2.3.5",
                 translated_port="8443",
             ),
-            azure_nextgen.network.latest.AzureFirewallNatRuleArgs(
+            azure_nextgen.network.AzureFirewallNatRuleArgs(
                 description="D-NAT all inbound web traffic for inspection",
                 destination_addresses=["1.2.3.4"],
                 destination_ports=["80"],
@@ -1084,14 +1084,14 @@ azure_firewall = azure_nextgen.network.latest.AzureFirewall("azureFirewall",
             ),
         ],
     )],
-    network_rule_collections=[azure_nextgen.network.latest.AzureFirewallNetworkRuleCollectionArgs(
-        action=azure_nextgen.network.latest.AzureFirewallRCActionArgs(
+    network_rule_collections=[azure_nextgen.network.AzureFirewallNetworkRuleCollectionArgs(
+        action=azure_nextgen.network.AzureFirewallRCActionArgs(
             type="Deny",
         ),
         name="netrulecoll",
         priority=112,
         rules=[
-            azure_nextgen.network.latest.AzureFirewallNetworkRuleArgs(
+            azure_nextgen.network.AzureFirewallNetworkRuleArgs(
                 description="Block traffic based on source IPs and ports",
                 destination_addresses=["*"],
                 destination_ports=[
@@ -1105,7 +1105,7 @@ azure_firewall = azure_nextgen.network.latest.AzureFirewall("azureFirewall",
                     "10.1.4.12-10.1.4.255",
                 ],
             ),
-            azure_nextgen.network.latest.AzureFirewallNetworkRuleArgs(
+            azure_nextgen.network.AzureFirewallNetworkRuleArgs(
                 description="Block traffic based on source IPs and ports to amazon",
                 destination_fqdns=["www.amazon.com"],
                 destination_ports=[
@@ -1119,7 +1119,7 @@ azure_firewall = azure_nextgen.network.latest.AzureFirewall("azureFirewall",
         ],
     )],
     resource_group_name="rg1",
-    sku=azure_nextgen.network.latest.AzureFirewallSkuArgs(
+    sku=azure_nextgen.network.AzureFirewallSkuArgs(
         name="AZFW_VNet",
         tier="Standard",
     ),
@@ -1139,7 +1139,7 @@ azure_firewall = azure_nextgen.network.latest.AzureFirewall("azureFirewall",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const azureFirewall = new azure_nextgen.network.latest.AzureFirewall("azureFirewall", {
+const azureFirewall = new azure_nextgen.network.AzureFirewall("azureFirewall", {
     additionalProperties: {
         key1: "value1",
         key2: "value2",
@@ -1264,13 +1264,13 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var azureFirewall = new AzureNextGen.Network.Latest.AzureFirewall("azureFirewall", new AzureNextGen.Network.Latest.AzureFirewallArgs
+        var azureFirewall = new AzureNextGen.Network..AzureFirewall("azureFirewall", new AzureNextGen.Network..AzureFirewallArgs
         {
             ApplicationRuleCollections = 
             {
-                new AzureNextGen.Network.Latest.Inputs.AzureFirewallApplicationRuleCollectionArgs
+                new AzureNextGen.Network..Inputs.AzureFirewallApplicationRuleCollectionArgs
                 {
-                    Action = new AzureNextGen.Network.Latest.Inputs.AzureFirewallRCActionArgs
+                    Action = new AzureNextGen.Network..Inputs.AzureFirewallRCActionArgs
                     {
                         Type = "Deny",
                     },
@@ -1278,13 +1278,13 @@ class MyStack : Stack
                     Priority = 110,
                     Rules = 
                     {
-                        new AzureNextGen.Network.Latest.Inputs.AzureFirewallApplicationRuleArgs
+                        new AzureNextGen.Network..Inputs.AzureFirewallApplicationRuleArgs
                         {
                             Description = "Deny inbound rule",
                             Name = "rule1",
                             Protocols = 
                             {
-                                new AzureNextGen.Network.Latest.Inputs.AzureFirewallApplicationRuleProtocolArgs
+                                new AzureNextGen.Network..Inputs.AzureFirewallApplicationRuleProtocolArgs
                                 {
                                     Port = 443,
                                     ProtocolType = "Https",
@@ -1306,14 +1306,14 @@ class MyStack : Stack
             AzureFirewallName = "azurefirewall",
             IpConfigurations = 
             {
-                new AzureNextGen.Network.Latest.Inputs.AzureFirewallIPConfigurationArgs
+                new AzureNextGen.Network..Inputs.AzureFirewallIPConfigurationArgs
                 {
                     Name = "azureFirewallIpConfiguration",
-                    PublicIPAddress = new AzureNextGen.Network.Latest.Inputs.SubResourceArgs
+                    PublicIPAddress = new AzureNextGen.Network..Inputs.SubResourceArgs
                     {
                         Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/publicIPAddresses/pipName",
                     },
-                    Subnet = new AzureNextGen.Network.Latest.Inputs.SubResourceArgs
+                    Subnet = new AzureNextGen.Network..Inputs.SubResourceArgs
                     {
                         Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnet2/subnets/AzureFirewallSubnet",
                     },
@@ -1322,9 +1322,9 @@ class MyStack : Stack
             Location = "West US",
             NatRuleCollections = 
             {
-                new AzureNextGen.Network.Latest.Inputs.AzureFirewallNatRuleCollectionArgs
+                new AzureNextGen.Network..Inputs.AzureFirewallNatRuleCollectionArgs
                 {
-                    Action = new AzureNextGen.Network.Latest.Inputs.AzureFirewallNatRCActionArgs
+                    Action = new AzureNextGen.Network..Inputs.AzureFirewallNatRCActionArgs
                     {
                         Type = "Dnat",
                     },
@@ -1332,7 +1332,7 @@ class MyStack : Stack
                     Priority = 112,
                     Rules = 
                     {
-                        new AzureNextGen.Network.Latest.Inputs.AzureFirewallNatRuleArgs
+                        new AzureNextGen.Network..Inputs.AzureFirewallNatRuleArgs
                         {
                             Description = "D-NAT all outbound web traffic for inspection",
                             DestinationAddresses = 
@@ -1355,7 +1355,7 @@ class MyStack : Stack
                             TranslatedAddress = "1.2.3.5",
                             TranslatedPort = "8443",
                         },
-                        new AzureNextGen.Network.Latest.Inputs.AzureFirewallNatRuleArgs
+                        new AzureNextGen.Network..Inputs.AzureFirewallNatRuleArgs
                         {
                             Description = "D-NAT all inbound web traffic for inspection",
                             DestinationAddresses = 
@@ -1383,9 +1383,9 @@ class MyStack : Stack
             },
             NetworkRuleCollections = 
             {
-                new AzureNextGen.Network.Latest.Inputs.AzureFirewallNetworkRuleCollectionArgs
+                new AzureNextGen.Network..Inputs.AzureFirewallNetworkRuleCollectionArgs
                 {
-                    Action = new AzureNextGen.Network.Latest.Inputs.AzureFirewallRCActionArgs
+                    Action = new AzureNextGen.Network..Inputs.AzureFirewallRCActionArgs
                     {
                         Type = "Deny",
                     },
@@ -1393,7 +1393,7 @@ class MyStack : Stack
                     Priority = 112,
                     Rules = 
                     {
-                        new AzureNextGen.Network.Latest.Inputs.AzureFirewallNetworkRuleArgs
+                        new AzureNextGen.Network..Inputs.AzureFirewallNetworkRuleArgs
                         {
                             Description = "Block traffic based on source IPs and ports",
                             DestinationAddresses = 
@@ -1416,7 +1416,7 @@ class MyStack : Stack
                                 "10.1.4.12-10.1.4.255",
                             },
                         },
-                        new AzureNextGen.Network.Latest.Inputs.AzureFirewallNetworkRuleArgs
+                        new AzureNextGen.Network..Inputs.AzureFirewallNetworkRuleArgs
                         {
                             Description = "Block traffic based on source IPs and ports to amazon",
                             DestinationFqdns = 
@@ -1442,7 +1442,7 @@ class MyStack : Stack
                 },
             },
             ResourceGroupName = "rg1",
-            Sku = new AzureNextGen.Network.Latest.Inputs.AzureFirewallSkuArgs
+            Sku = new AzureNextGen.Network..Inputs.AzureFirewallSkuArgs
             {
                 Name = "AZFW_VNet",
                 Tier = "Standard",
@@ -1468,7 +1468,7 @@ class MyStack : Stack
 package main
 
 import (
-	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network/latest"
+	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -1637,17 +1637,17 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-azure_firewall = azure_nextgen.network.latest.AzureFirewall("azureFirewall",
-    application_rule_collections=[azure_nextgen.network.latest.AzureFirewallApplicationRuleCollectionArgs(
-        action=azure_nextgen.network.latest.AzureFirewallRCActionArgs(
+azure_firewall = azure_nextgen.network.AzureFirewall("azureFirewall",
+    application_rule_collections=[azure_nextgen.network.AzureFirewallApplicationRuleCollectionArgs(
+        action=azure_nextgen.network.AzureFirewallRCActionArgs(
             type="Deny",
         ),
         name="apprulecoll",
         priority=110,
-        rules=[azure_nextgen.network.latest.AzureFirewallApplicationRuleArgs(
+        rules=[azure_nextgen.network.AzureFirewallApplicationRuleArgs(
             description="Deny inbound rule",
             name="rule1",
-            protocols=[azure_nextgen.network.latest.AzureFirewallApplicationRuleProtocolArgs(
+            protocols=[azure_nextgen.network.AzureFirewallApplicationRuleProtocolArgs(
                 port=443,
                 protocol_type="Https",
             )],
@@ -1659,24 +1659,24 @@ azure_firewall = azure_nextgen.network.latest.AzureFirewall("azureFirewall",
         )],
     )],
     azure_firewall_name="azurefirewall",
-    ip_configurations=[azure_nextgen.network.latest.AzureFirewallIPConfigurationArgs(
+    ip_configurations=[azure_nextgen.network.AzureFirewallIPConfigurationArgs(
         name="azureFirewallIpConfiguration",
-        public_ip_address=azure_nextgen.network.latest.SubResourceArgs(
+        public_ip_address=azure_nextgen.network.SubResourceArgs(
             id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/publicIPAddresses/pipName",
         ),
-        subnet=azure_nextgen.network.latest.SubResourceArgs(
+        subnet=azure_nextgen.network.SubResourceArgs(
             id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnet2/subnets/AzureFirewallSubnet",
         ),
     )],
     location="West US",
-    nat_rule_collections=[azure_nextgen.network.latest.AzureFirewallNatRuleCollectionArgs(
-        action=azure_nextgen.network.latest.AzureFirewallNatRCActionArgs(
+    nat_rule_collections=[azure_nextgen.network.AzureFirewallNatRuleCollectionArgs(
+        action=azure_nextgen.network.AzureFirewallNatRCActionArgs(
             type="Dnat",
         ),
         name="natrulecoll",
         priority=112,
         rules=[
-            azure_nextgen.network.latest.AzureFirewallNatRuleArgs(
+            azure_nextgen.network.AzureFirewallNatRuleArgs(
                 description="D-NAT all outbound web traffic for inspection",
                 destination_addresses=["1.2.3.4"],
                 destination_ports=["443"],
@@ -1686,7 +1686,7 @@ azure_firewall = azure_nextgen.network.latest.AzureFirewall("azureFirewall",
                 translated_address="1.2.3.5",
                 translated_port="8443",
             ),
-            azure_nextgen.network.latest.AzureFirewallNatRuleArgs(
+            azure_nextgen.network.AzureFirewallNatRuleArgs(
                 description="D-NAT all inbound web traffic for inspection",
                 destination_addresses=["1.2.3.4"],
                 destination_ports=["80"],
@@ -1698,14 +1698,14 @@ azure_firewall = azure_nextgen.network.latest.AzureFirewall("azureFirewall",
             ),
         ],
     )],
-    network_rule_collections=[azure_nextgen.network.latest.AzureFirewallNetworkRuleCollectionArgs(
-        action=azure_nextgen.network.latest.AzureFirewallRCActionArgs(
+    network_rule_collections=[azure_nextgen.network.AzureFirewallNetworkRuleCollectionArgs(
+        action=azure_nextgen.network.AzureFirewallRCActionArgs(
             type="Deny",
         ),
         name="netrulecoll",
         priority=112,
         rules=[
-            azure_nextgen.network.latest.AzureFirewallNetworkRuleArgs(
+            azure_nextgen.network.AzureFirewallNetworkRuleArgs(
                 description="Block traffic based on source IPs and ports",
                 destination_addresses=["*"],
                 destination_ports=[
@@ -1719,7 +1719,7 @@ azure_firewall = azure_nextgen.network.latest.AzureFirewall("azureFirewall",
                     "10.1.4.12-10.1.4.255",
                 ],
             ),
-            azure_nextgen.network.latest.AzureFirewallNetworkRuleArgs(
+            azure_nextgen.network.AzureFirewallNetworkRuleArgs(
                 description="Block traffic based on source IPs and ports to amazon",
                 destination_fqdns=["www.amazon.com"],
                 destination_ports=[
@@ -1733,7 +1733,7 @@ azure_firewall = azure_nextgen.network.latest.AzureFirewall("azureFirewall",
         ],
     )],
     resource_group_name="rg1",
-    sku=azure_nextgen.network.latest.AzureFirewallSkuArgs(
+    sku=azure_nextgen.network.AzureFirewallSkuArgs(
         name="AZFW_VNet",
         tier="Standard",
     ),
@@ -1753,7 +1753,7 @@ azure_firewall = azure_nextgen.network.latest.AzureFirewall("azureFirewall",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const azureFirewall = new azure_nextgen.network.latest.AzureFirewall("azureFirewall", {
+const azureFirewall = new azure_nextgen.network.AzureFirewall("azureFirewall", {
     applicationRuleCollections: [{
         action: {
             type: "Deny",
@@ -1874,13 +1874,13 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var azureFirewall = new AzureNextGen.Network.Latest.AzureFirewall("azureFirewall", new AzureNextGen.Network.Latest.AzureFirewallArgs
+        var azureFirewall = new AzureNextGen.Network..AzureFirewall("azureFirewall", new AzureNextGen.Network..AzureFirewallArgs
         {
             ApplicationRuleCollections = 
             {
-                new AzureNextGen.Network.Latest.Inputs.AzureFirewallApplicationRuleCollectionArgs
+                new AzureNextGen.Network..Inputs.AzureFirewallApplicationRuleCollectionArgs
                 {
-                    Action = new AzureNextGen.Network.Latest.Inputs.AzureFirewallRCActionArgs
+                    Action = new AzureNextGen.Network..Inputs.AzureFirewallRCActionArgs
                     {
                         Type = "Deny",
                     },
@@ -1888,13 +1888,13 @@ class MyStack : Stack
                     Priority = 110,
                     Rules = 
                     {
-                        new AzureNextGen.Network.Latest.Inputs.AzureFirewallApplicationRuleArgs
+                        new AzureNextGen.Network..Inputs.AzureFirewallApplicationRuleArgs
                         {
                             Description = "Deny inbound rule",
                             Name = "rule1",
                             Protocols = 
                             {
-                                new AzureNextGen.Network.Latest.Inputs.AzureFirewallApplicationRuleProtocolArgs
+                                new AzureNextGen.Network..Inputs.AzureFirewallApplicationRuleProtocolArgs
                                 {
                                     Port = 443,
                                     ProtocolType = "Https",
@@ -1916,14 +1916,14 @@ class MyStack : Stack
             AzureFirewallName = "azurefirewall",
             IpConfigurations = 
             {
-                new AzureNextGen.Network.Latest.Inputs.AzureFirewallIPConfigurationArgs
+                new AzureNextGen.Network..Inputs.AzureFirewallIPConfigurationArgs
                 {
                     Name = "azureFirewallIpConfiguration",
-                    PublicIPAddress = new AzureNextGen.Network.Latest.Inputs.SubResourceArgs
+                    PublicIPAddress = new AzureNextGen.Network..Inputs.SubResourceArgs
                     {
                         Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/publicIPAddresses/pipName",
                     },
-                    Subnet = new AzureNextGen.Network.Latest.Inputs.SubResourceArgs
+                    Subnet = new AzureNextGen.Network..Inputs.SubResourceArgs
                     {
                         Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnet2/subnets/AzureFirewallSubnet",
                     },
@@ -1932,9 +1932,9 @@ class MyStack : Stack
             Location = "West US 2",
             NatRuleCollections = 
             {
-                new AzureNextGen.Network.Latest.Inputs.AzureFirewallNatRuleCollectionArgs
+                new AzureNextGen.Network..Inputs.AzureFirewallNatRuleCollectionArgs
                 {
-                    Action = new AzureNextGen.Network.Latest.Inputs.AzureFirewallNatRCActionArgs
+                    Action = new AzureNextGen.Network..Inputs.AzureFirewallNatRCActionArgs
                     {
                         Type = "Dnat",
                     },
@@ -1942,7 +1942,7 @@ class MyStack : Stack
                     Priority = 112,
                     Rules = 
                     {
-                        new AzureNextGen.Network.Latest.Inputs.AzureFirewallNatRuleArgs
+                        new AzureNextGen.Network..Inputs.AzureFirewallNatRuleArgs
                         {
                             Description = "D-NAT all outbound web traffic for inspection",
                             DestinationAddresses = 
@@ -1965,7 +1965,7 @@ class MyStack : Stack
                             TranslatedAddress = "1.2.3.5",
                             TranslatedPort = "8443",
                         },
-                        new AzureNextGen.Network.Latest.Inputs.AzureFirewallNatRuleArgs
+                        new AzureNextGen.Network..Inputs.AzureFirewallNatRuleArgs
                         {
                             Description = "D-NAT all inbound web traffic for inspection",
                             DestinationAddresses = 
@@ -1993,9 +1993,9 @@ class MyStack : Stack
             },
             NetworkRuleCollections = 
             {
-                new AzureNextGen.Network.Latest.Inputs.AzureFirewallNetworkRuleCollectionArgs
+                new AzureNextGen.Network..Inputs.AzureFirewallNetworkRuleCollectionArgs
                 {
-                    Action = new AzureNextGen.Network.Latest.Inputs.AzureFirewallRCActionArgs
+                    Action = new AzureNextGen.Network..Inputs.AzureFirewallRCActionArgs
                     {
                         Type = "Deny",
                     },
@@ -2003,7 +2003,7 @@ class MyStack : Stack
                     Priority = 112,
                     Rules = 
                     {
-                        new AzureNextGen.Network.Latest.Inputs.AzureFirewallNetworkRuleArgs
+                        new AzureNextGen.Network..Inputs.AzureFirewallNetworkRuleArgs
                         {
                             Description = "Block traffic based on source IPs and ports",
                             DestinationAddresses = 
@@ -2026,7 +2026,7 @@ class MyStack : Stack
                                 "10.1.4.12-10.1.4.255",
                             },
                         },
-                        new AzureNextGen.Network.Latest.Inputs.AzureFirewallNetworkRuleArgs
+                        new AzureNextGen.Network..Inputs.AzureFirewallNetworkRuleArgs
                         {
                             Description = "Block traffic based on source IPs and ports to amazon",
                             DestinationFqdns = 
@@ -2052,7 +2052,7 @@ class MyStack : Stack
                 },
             },
             ResourceGroupName = "rg1",
-            Sku = new AzureNextGen.Network.Latest.Inputs.AzureFirewallSkuArgs
+            Sku = new AzureNextGen.Network..Inputs.AzureFirewallSkuArgs
             {
                 Name = "AZFW_VNet",
                 Tier = "Standard",
@@ -2083,7 +2083,7 @@ class MyStack : Stack
 package main
 
 import (
-	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network/latest"
+	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -2256,17 +2256,17 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-azure_firewall = azure_nextgen.network.latest.AzureFirewall("azureFirewall",
-    application_rule_collections=[azure_nextgen.network.latest.AzureFirewallApplicationRuleCollectionArgs(
-        action=azure_nextgen.network.latest.AzureFirewallRCActionArgs(
+azure_firewall = azure_nextgen.network.AzureFirewall("azureFirewall",
+    application_rule_collections=[azure_nextgen.network.AzureFirewallApplicationRuleCollectionArgs(
+        action=azure_nextgen.network.AzureFirewallRCActionArgs(
             type="Deny",
         ),
         name="apprulecoll",
         priority=110,
-        rules=[azure_nextgen.network.latest.AzureFirewallApplicationRuleArgs(
+        rules=[azure_nextgen.network.AzureFirewallApplicationRuleArgs(
             description="Deny inbound rule",
             name="rule1",
-            protocols=[azure_nextgen.network.latest.AzureFirewallApplicationRuleProtocolArgs(
+            protocols=[azure_nextgen.network.AzureFirewallApplicationRuleProtocolArgs(
                 port=443,
                 protocol_type="Https",
             )],
@@ -2278,24 +2278,24 @@ azure_firewall = azure_nextgen.network.latest.AzureFirewall("azureFirewall",
         )],
     )],
     azure_firewall_name="azurefirewall",
-    ip_configurations=[azure_nextgen.network.latest.AzureFirewallIPConfigurationArgs(
+    ip_configurations=[azure_nextgen.network.AzureFirewallIPConfigurationArgs(
         name="azureFirewallIpConfiguration",
-        public_ip_address=azure_nextgen.network.latest.SubResourceArgs(
+        public_ip_address=azure_nextgen.network.SubResourceArgs(
             id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/publicIPAddresses/pipName",
         ),
-        subnet=azure_nextgen.network.latest.SubResourceArgs(
+        subnet=azure_nextgen.network.SubResourceArgs(
             id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnet2/subnets/AzureFirewallSubnet",
         ),
     )],
     location="West US 2",
-    nat_rule_collections=[azure_nextgen.network.latest.AzureFirewallNatRuleCollectionArgs(
-        action=azure_nextgen.network.latest.AzureFirewallNatRCActionArgs(
+    nat_rule_collections=[azure_nextgen.network.AzureFirewallNatRuleCollectionArgs(
+        action=azure_nextgen.network.AzureFirewallNatRCActionArgs(
             type="Dnat",
         ),
         name="natrulecoll",
         priority=112,
         rules=[
-            azure_nextgen.network.latest.AzureFirewallNatRuleArgs(
+            azure_nextgen.network.AzureFirewallNatRuleArgs(
                 description="D-NAT all outbound web traffic for inspection",
                 destination_addresses=["1.2.3.4"],
                 destination_ports=["443"],
@@ -2305,7 +2305,7 @@ azure_firewall = azure_nextgen.network.latest.AzureFirewall("azureFirewall",
                 translated_address="1.2.3.5",
                 translated_port="8443",
             ),
-            azure_nextgen.network.latest.AzureFirewallNatRuleArgs(
+            azure_nextgen.network.AzureFirewallNatRuleArgs(
                 description="D-NAT all inbound web traffic for inspection",
                 destination_addresses=["1.2.3.4"],
                 destination_ports=["80"],
@@ -2317,14 +2317,14 @@ azure_firewall = azure_nextgen.network.latest.AzureFirewall("azureFirewall",
             ),
         ],
     )],
-    network_rule_collections=[azure_nextgen.network.latest.AzureFirewallNetworkRuleCollectionArgs(
-        action=azure_nextgen.network.latest.AzureFirewallRCActionArgs(
+    network_rule_collections=[azure_nextgen.network.AzureFirewallNetworkRuleCollectionArgs(
+        action=azure_nextgen.network.AzureFirewallRCActionArgs(
             type="Deny",
         ),
         name="netrulecoll",
         priority=112,
         rules=[
-            azure_nextgen.network.latest.AzureFirewallNetworkRuleArgs(
+            azure_nextgen.network.AzureFirewallNetworkRuleArgs(
                 description="Block traffic based on source IPs and ports",
                 destination_addresses=["*"],
                 destination_ports=[
@@ -2338,7 +2338,7 @@ azure_firewall = azure_nextgen.network.latest.AzureFirewall("azureFirewall",
                     "10.1.4.12-10.1.4.255",
                 ],
             ),
-            azure_nextgen.network.latest.AzureFirewallNetworkRuleArgs(
+            azure_nextgen.network.AzureFirewallNetworkRuleArgs(
                 description="Block traffic based on source IPs and ports to amazon",
                 destination_fqdns=["www.amazon.com"],
                 destination_ports=[
@@ -2352,7 +2352,7 @@ azure_firewall = azure_nextgen.network.latest.AzureFirewall("azureFirewall",
         ],
     )],
     resource_group_name="rg1",
-    sku=azure_nextgen.network.latest.AzureFirewallSkuArgs(
+    sku=azure_nextgen.network.AzureFirewallSkuArgs(
         name="AZFW_VNet",
         tier="Standard",
     ),
@@ -2376,7 +2376,7 @@ azure_firewall = azure_nextgen.network.latest.AzureFirewall("azureFirewall",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const azureFirewall = new azure_nextgen.network.latest.AzureFirewall("azureFirewall", {
+const azureFirewall = new azure_nextgen.network.AzureFirewall("azureFirewall", {
     applicationRuleCollections: [{
         action: {
             type: "Deny",
@@ -2501,13 +2501,13 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var azureFirewall = new AzureNextGen.Network.Latest.AzureFirewall("azureFirewall", new AzureNextGen.Network.Latest.AzureFirewallArgs
+        var azureFirewall = new AzureNextGen.Network..AzureFirewall("azureFirewall", new AzureNextGen.Network..AzureFirewallArgs
         {
             ApplicationRuleCollections = 
             {
-                new AzureNextGen.Network.Latest.Inputs.AzureFirewallApplicationRuleCollectionArgs
+                new AzureNextGen.Network..Inputs.AzureFirewallApplicationRuleCollectionArgs
                 {
-                    Action = new AzureNextGen.Network.Latest.Inputs.AzureFirewallRCActionArgs
+                    Action = new AzureNextGen.Network..Inputs.AzureFirewallRCActionArgs
                     {
                         Type = "Deny",
                     },
@@ -2515,13 +2515,13 @@ class MyStack : Stack
                     Priority = 110,
                     Rules = 
                     {
-                        new AzureNextGen.Network.Latest.Inputs.AzureFirewallApplicationRuleArgs
+                        new AzureNextGen.Network..Inputs.AzureFirewallApplicationRuleArgs
                         {
                             Description = "Deny inbound rule",
                             Name = "rule1",
                             Protocols = 
                             {
-                                new AzureNextGen.Network.Latest.Inputs.AzureFirewallApplicationRuleProtocolArgs
+                                new AzureNextGen.Network..Inputs.AzureFirewallApplicationRuleProtocolArgs
                                 {
                                     Port = 443,
                                     ProtocolType = "Https",
@@ -2543,37 +2543,37 @@ class MyStack : Stack
             AzureFirewallName = "azurefirewall",
             IpConfigurations = 
             {
-                new AzureNextGen.Network.Latest.Inputs.AzureFirewallIPConfigurationArgs
+                new AzureNextGen.Network..Inputs.AzureFirewallIPConfigurationArgs
                 {
                     Name = "azureFirewallIpConfiguration",
-                    PublicIPAddress = new AzureNextGen.Network.Latest.Inputs.SubResourceArgs
+                    PublicIPAddress = new AzureNextGen.Network..Inputs.SubResourceArgs
                     {
                         Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/publicIPAddresses/pipName",
                     },
-                    Subnet = new AzureNextGen.Network.Latest.Inputs.SubResourceArgs
+                    Subnet = new AzureNextGen.Network..Inputs.SubResourceArgs
                     {
                         Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnet2/subnets/AzureFirewallSubnet",
                     },
                 },
             },
             Location = "West US",
-            ManagementIpConfiguration = new AzureNextGen.Network.Latest.Inputs.AzureFirewallIPConfigurationArgs
+            ManagementIpConfiguration = new AzureNextGen.Network..Inputs.AzureFirewallIPConfigurationArgs
             {
                 Name = "azureFirewallMgmtIpConfiguration",
-                PublicIPAddress = new AzureNextGen.Network.Latest.Inputs.SubResourceArgs
+                PublicIPAddress = new AzureNextGen.Network..Inputs.SubResourceArgs
                 {
                     Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/publicIPAddresses/managementPipName",
                 },
-                Subnet = new AzureNextGen.Network.Latest.Inputs.SubResourceArgs
+                Subnet = new AzureNextGen.Network..Inputs.SubResourceArgs
                 {
                     Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnet2/subnets/AzureFirewallManagementSubnet",
                 },
             },
             NatRuleCollections = 
             {
-                new AzureNextGen.Network.Latest.Inputs.AzureFirewallNatRuleCollectionArgs
+                new AzureNextGen.Network..Inputs.AzureFirewallNatRuleCollectionArgs
                 {
-                    Action = new AzureNextGen.Network.Latest.Inputs.AzureFirewallNatRCActionArgs
+                    Action = new AzureNextGen.Network..Inputs.AzureFirewallNatRCActionArgs
                     {
                         Type = "Dnat",
                     },
@@ -2581,7 +2581,7 @@ class MyStack : Stack
                     Priority = 112,
                     Rules = 
                     {
-                        new AzureNextGen.Network.Latest.Inputs.AzureFirewallNatRuleArgs
+                        new AzureNextGen.Network..Inputs.AzureFirewallNatRuleArgs
                         {
                             Description = "D-NAT all outbound web traffic for inspection",
                             DestinationAddresses = 
@@ -2604,7 +2604,7 @@ class MyStack : Stack
                             TranslatedAddress = "1.2.3.5",
                             TranslatedPort = "8443",
                         },
-                        new AzureNextGen.Network.Latest.Inputs.AzureFirewallNatRuleArgs
+                        new AzureNextGen.Network..Inputs.AzureFirewallNatRuleArgs
                         {
                             Description = "D-NAT all inbound web traffic for inspection",
                             DestinationAddresses = 
@@ -2632,9 +2632,9 @@ class MyStack : Stack
             },
             NetworkRuleCollections = 
             {
-                new AzureNextGen.Network.Latest.Inputs.AzureFirewallNetworkRuleCollectionArgs
+                new AzureNextGen.Network..Inputs.AzureFirewallNetworkRuleCollectionArgs
                 {
-                    Action = new AzureNextGen.Network.Latest.Inputs.AzureFirewallRCActionArgs
+                    Action = new AzureNextGen.Network..Inputs.AzureFirewallRCActionArgs
                     {
                         Type = "Deny",
                     },
@@ -2642,7 +2642,7 @@ class MyStack : Stack
                     Priority = 112,
                     Rules = 
                     {
-                        new AzureNextGen.Network.Latest.Inputs.AzureFirewallNetworkRuleArgs
+                        new AzureNextGen.Network..Inputs.AzureFirewallNetworkRuleArgs
                         {
                             Description = "Block traffic based on source IPs and ports",
                             DestinationAddresses = 
@@ -2665,7 +2665,7 @@ class MyStack : Stack
                                 "10.1.4.12-10.1.4.255",
                             },
                         },
-                        new AzureNextGen.Network.Latest.Inputs.AzureFirewallNetworkRuleArgs
+                        new AzureNextGen.Network..Inputs.AzureFirewallNetworkRuleArgs
                         {
                             Description = "Block traffic based on source IPs and ports to amazon",
                             DestinationFqdns = 
@@ -2691,7 +2691,7 @@ class MyStack : Stack
                 },
             },
             ResourceGroupName = "rg1",
-            Sku = new AzureNextGen.Network.Latest.Inputs.AzureFirewallSkuArgs
+            Sku = new AzureNextGen.Network..Inputs.AzureFirewallSkuArgs
             {
                 Name = "AZFW_VNet",
                 Tier = "Standard",
@@ -2717,7 +2717,7 @@ class MyStack : Stack
 package main
 
 import (
-	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network/latest"
+	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -2895,17 +2895,17 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-azure_firewall = azure_nextgen.network.latest.AzureFirewall("azureFirewall",
-    application_rule_collections=[azure_nextgen.network.latest.AzureFirewallApplicationRuleCollectionArgs(
-        action=azure_nextgen.network.latest.AzureFirewallRCActionArgs(
+azure_firewall = azure_nextgen.network.AzureFirewall("azureFirewall",
+    application_rule_collections=[azure_nextgen.network.AzureFirewallApplicationRuleCollectionArgs(
+        action=azure_nextgen.network.AzureFirewallRCActionArgs(
             type="Deny",
         ),
         name="apprulecoll",
         priority=110,
-        rules=[azure_nextgen.network.latest.AzureFirewallApplicationRuleArgs(
+        rules=[azure_nextgen.network.AzureFirewallApplicationRuleArgs(
             description="Deny inbound rule",
             name="rule1",
-            protocols=[azure_nextgen.network.latest.AzureFirewallApplicationRuleProtocolArgs(
+            protocols=[azure_nextgen.network.AzureFirewallApplicationRuleProtocolArgs(
                 port=443,
                 protocol_type="Https",
             )],
@@ -2917,33 +2917,33 @@ azure_firewall = azure_nextgen.network.latest.AzureFirewall("azureFirewall",
         )],
     )],
     azure_firewall_name="azurefirewall",
-    ip_configurations=[azure_nextgen.network.latest.AzureFirewallIPConfigurationArgs(
+    ip_configurations=[azure_nextgen.network.AzureFirewallIPConfigurationArgs(
         name="azureFirewallIpConfiguration",
-        public_ip_address=azure_nextgen.network.latest.SubResourceArgs(
+        public_ip_address=azure_nextgen.network.SubResourceArgs(
             id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/publicIPAddresses/pipName",
         ),
-        subnet=azure_nextgen.network.latest.SubResourceArgs(
+        subnet=azure_nextgen.network.SubResourceArgs(
             id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnet2/subnets/AzureFirewallSubnet",
         ),
     )],
     location="West US",
-    management_ip_configuration=azure_nextgen.network.latest.AzureFirewallIPConfigurationArgs(
+    management_ip_configuration=azure_nextgen.network.AzureFirewallIPConfigurationArgs(
         name="azureFirewallMgmtIpConfiguration",
-        public_ip_address=azure_nextgen.network.latest.SubResourceArgs(
+        public_ip_address=azure_nextgen.network.SubResourceArgs(
             id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/publicIPAddresses/managementPipName",
         ),
-        subnet=azure_nextgen.network.latest.SubResourceArgs(
+        subnet=azure_nextgen.network.SubResourceArgs(
             id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnet2/subnets/AzureFirewallManagementSubnet",
         ),
     ),
-    nat_rule_collections=[azure_nextgen.network.latest.AzureFirewallNatRuleCollectionArgs(
-        action=azure_nextgen.network.latest.AzureFirewallNatRCActionArgs(
+    nat_rule_collections=[azure_nextgen.network.AzureFirewallNatRuleCollectionArgs(
+        action=azure_nextgen.network.AzureFirewallNatRCActionArgs(
             type="Dnat",
         ),
         name="natrulecoll",
         priority=112,
         rules=[
-            azure_nextgen.network.latest.AzureFirewallNatRuleArgs(
+            azure_nextgen.network.AzureFirewallNatRuleArgs(
                 description="D-NAT all outbound web traffic for inspection",
                 destination_addresses=["1.2.3.4"],
                 destination_ports=["443"],
@@ -2953,7 +2953,7 @@ azure_firewall = azure_nextgen.network.latest.AzureFirewall("azureFirewall",
                 translated_address="1.2.3.5",
                 translated_port="8443",
             ),
-            azure_nextgen.network.latest.AzureFirewallNatRuleArgs(
+            azure_nextgen.network.AzureFirewallNatRuleArgs(
                 description="D-NAT all inbound web traffic for inspection",
                 destination_addresses=["1.2.3.4"],
                 destination_ports=["80"],
@@ -2965,14 +2965,14 @@ azure_firewall = azure_nextgen.network.latest.AzureFirewall("azureFirewall",
             ),
         ],
     )],
-    network_rule_collections=[azure_nextgen.network.latest.AzureFirewallNetworkRuleCollectionArgs(
-        action=azure_nextgen.network.latest.AzureFirewallRCActionArgs(
+    network_rule_collections=[azure_nextgen.network.AzureFirewallNetworkRuleCollectionArgs(
+        action=azure_nextgen.network.AzureFirewallRCActionArgs(
             type="Deny",
         ),
         name="netrulecoll",
         priority=112,
         rules=[
-            azure_nextgen.network.latest.AzureFirewallNetworkRuleArgs(
+            azure_nextgen.network.AzureFirewallNetworkRuleArgs(
                 description="Block traffic based on source IPs and ports",
                 destination_addresses=["*"],
                 destination_ports=[
@@ -2986,7 +2986,7 @@ azure_firewall = azure_nextgen.network.latest.AzureFirewall("azureFirewall",
                     "10.1.4.12-10.1.4.255",
                 ],
             ),
-            azure_nextgen.network.latest.AzureFirewallNetworkRuleArgs(
+            azure_nextgen.network.AzureFirewallNetworkRuleArgs(
                 description="Block traffic based on source IPs and ports to amazon",
                 destination_fqdns=["www.amazon.com"],
                 destination_ports=[
@@ -3000,7 +3000,7 @@ azure_firewall = azure_nextgen.network.latest.AzureFirewall("azureFirewall",
         ],
     )],
     resource_group_name="rg1",
-    sku=azure_nextgen.network.latest.AzureFirewallSkuArgs(
+    sku=azure_nextgen.network.AzureFirewallSkuArgs(
         name="AZFW_VNet",
         tier="Standard",
     ),
@@ -3020,7 +3020,7 @@ azure_firewall = azure_nextgen.network.latest.AzureFirewall("azureFirewall",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const azureFirewall = new azure_nextgen.network.latest.AzureFirewall("azureFirewall", {
+const azureFirewall = new azure_nextgen.network.AzureFirewall("azureFirewall", {
     applicationRuleCollections: [{
         action: {
             type: "Deny",
@@ -3150,16 +3150,16 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var azureFirewall = new AzureNextGen.Network.Latest.AzureFirewall("azureFirewall", new AzureNextGen.Network.Latest.AzureFirewallArgs
+        var azureFirewall = new AzureNextGen.Network..AzureFirewall("azureFirewall", new AzureNextGen.Network..AzureFirewallArgs
         {
             AzureFirewallName = "azurefirewall",
-            FirewallPolicy = new AzureNextGen.Network.Latest.Inputs.SubResourceArgs
+            FirewallPolicy = new AzureNextGen.Network..Inputs.SubResourceArgs
             {
                 Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/firewallPolicies/policy1",
             },
-            HubIPAddresses = new AzureNextGen.Network.Latest.Inputs.HubIPAddressesArgs
+            HubIPAddresses = new AzureNextGen.Network..Inputs.HubIPAddressesArgs
             {
-                PublicIPs = new AzureNextGen.Network.Latest.Inputs.HubPublicIPAddressesArgs
+                PublicIPs = new AzureNextGen.Network..Inputs.HubPublicIPAddressesArgs
                 {
                     Addresses = {},
                     Count = 1,
@@ -3167,7 +3167,7 @@ class MyStack : Stack
             },
             Location = "West US",
             ResourceGroupName = "rg1",
-            Sku = new AzureNextGen.Network.Latest.Inputs.AzureFirewallSkuArgs
+            Sku = new AzureNextGen.Network..Inputs.AzureFirewallSkuArgs
             {
                 Name = "AZFW_Hub",
                 Tier = "Standard",
@@ -3177,7 +3177,7 @@ class MyStack : Stack
                 { "key1", "value1" },
             },
             ThreatIntelMode = "Alert",
-            VirtualHub = new AzureNextGen.Network.Latest.Inputs.SubResourceArgs
+            VirtualHub = new AzureNextGen.Network..Inputs.SubResourceArgs
             {
                 Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualHubs/hub1",
             },
@@ -3197,7 +3197,7 @@ class MyStack : Stack
 package main
 
 import (
-	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network/latest"
+	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -3246,20 +3246,20 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-azure_firewall = azure_nextgen.network.latest.AzureFirewall("azureFirewall",
+azure_firewall = azure_nextgen.network.AzureFirewall("azureFirewall",
     azure_firewall_name="azurefirewall",
-    firewall_policy=azure_nextgen.network.latest.SubResourceArgs(
+    firewall_policy=azure_nextgen.network.SubResourceArgs(
         id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/firewallPolicies/policy1",
     ),
-    hub_ip_addresses=azure_nextgen.network.latest.HubIPAddressesArgs(
-        public_ips=azure_nextgen.network.latest.HubPublicIPAddressesArgs(
+    hub_ip_addresses=azure_nextgen.network.HubIPAddressesArgs(
+        public_ips=azure_nextgen.network.HubPublicIPAddressesArgs(
             addresses=[],
             count=1,
         ),
     ),
     location="West US",
     resource_group_name="rg1",
-    sku=azure_nextgen.network.latest.AzureFirewallSkuArgs(
+    sku=azure_nextgen.network.AzureFirewallSkuArgs(
         name="AZFW_Hub",
         tier="Standard",
     ),
@@ -3267,7 +3267,7 @@ azure_firewall = azure_nextgen.network.latest.AzureFirewall("azureFirewall",
         "key1": "value1",
     },
     threat_intel_mode="Alert",
-    virtual_hub=azure_nextgen.network.latest.SubResourceArgs(
+    virtual_hub=azure_nextgen.network.SubResourceArgs(
         id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualHubs/hub1",
     ),
     zones=[])
@@ -3282,7 +3282,7 @@ azure_firewall = azure_nextgen.network.latest.AzureFirewall("azureFirewall",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const azureFirewall = new azure_nextgen.network.latest.AzureFirewall("azureFirewall", {
+const azureFirewall = new azure_nextgen.network.AzureFirewall("azureFirewall", {
     azureFirewallName: "azurefirewall",
     firewallPolicy: {
         id: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/firewallPolicies/policy1",
@@ -3529,7 +3529,7 @@ The AzureFirewall resource accepts the following [input]({{< relref "/docs/intro
 <a href="#applicationrulecollections_csharp" style="color: inherit; text-decoration: inherit;">Application<wbr>Rule<wbr>Collections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefirewallapplicationrulecollection">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Azure<wbr>Firewall<wbr>Application<wbr>Rule<wbr>Collection<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#azurefirewallapplicationrulecollection">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Azure<wbr>Firewall<wbr>Application<wbr>Rule<wbr>Collection<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Collection of application rule collections used by Azure Firewall.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3538,7 +3538,7 @@ The AzureFirewall resource accepts the following [input]({{< relref "/docs/intro
 <a href="#firewallpolicy_csharp" style="color: inherit; text-decoration: inherit;">Firewall<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The firewallPolicy associated with this azure firewall.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3547,7 +3547,7 @@ The AzureFirewall resource accepts the following [input]({{< relref "/docs/intro
 <a href="#hubipaddresses_csharp" style="color: inherit; text-decoration: inherit;">Hub<wbr>IPAddresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hubipaddresses">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Hub<wbr>IPAddresses<wbr>Args</a></span>
+        <span class="property-type"><a href="#hubipaddresses">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Hub<wbr>IPAddresses<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}IP addresses associated with AzureFirewall.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3565,7 +3565,7 @@ The AzureFirewall resource accepts the following [input]({{< relref "/docs/intro
 <a href="#ipconfigurations_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefirewallipconfiguration">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Azure<wbr>Firewall<wbr>IPConfiguration<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#azurefirewallipconfiguration">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Azure<wbr>Firewall<wbr>IPConfiguration<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}IP configuration of the Azure Firewall resource.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3583,7 +3583,7 @@ The AzureFirewall resource accepts the following [input]({{< relref "/docs/intro
 <a href="#managementipconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Management<wbr>Ip<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefirewallipconfiguration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Azure<wbr>Firewall<wbr>IPConfiguration<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurefirewallipconfiguration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Azure<wbr>Firewall<wbr>IPConfiguration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}IP configuration of the Azure Firewall used for management traffic.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3592,7 +3592,7 @@ The AzureFirewall resource accepts the following [input]({{< relref "/docs/intro
 <a href="#natrulecollections_csharp" style="color: inherit; text-decoration: inherit;">Nat<wbr>Rule<wbr>Collections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefirewallnatrulecollection">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Azure<wbr>Firewall<wbr>Nat<wbr>Rule<wbr>Collection<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#azurefirewallnatrulecollection">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Azure<wbr>Firewall<wbr>Nat<wbr>Rule<wbr>Collection<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Collection of NAT rule collections used by Azure Firewall.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3601,7 +3601,7 @@ The AzureFirewall resource accepts the following [input]({{< relref "/docs/intro
 <a href="#networkrulecollections_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Rule<wbr>Collections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefirewallnetworkrulecollection">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Azure<wbr>Firewall<wbr>Network<wbr>Rule<wbr>Collection<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#azurefirewallnetworkrulecollection">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Azure<wbr>Firewall<wbr>Network<wbr>Rule<wbr>Collection<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Collection of network rule collections used by Azure Firewall.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3610,7 +3610,7 @@ The AzureFirewall resource accepts the following [input]({{< relref "/docs/intro
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefirewallsku">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Azure<wbr>Firewall<wbr>Sku<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurefirewallsku">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Azure<wbr>Firewall<wbr>Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Azure Firewall Resource SKU.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3628,7 +3628,7 @@ The AzureFirewall resource accepts the following [input]({{< relref "/docs/intro
 <a href="#threatintelmode_csharp" style="color: inherit; text-decoration: inherit;">Threat<wbr>Intel<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#azurefirewallthreatintelmode">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Azure<wbr>Firewall<wbr>Threat<wbr>Intel<wbr>Mode</a></span>
+        <span class="property-type">string | <a href="#azurefirewallthreatintelmode">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Azure<wbr>Firewall<wbr>Threat<wbr>Intel<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}The operation mode for Threat Intelligence.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3637,7 +3637,7 @@ The AzureFirewall resource accepts the following [input]({{< relref "/docs/intro
 <a href="#virtualhub_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Hub</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The virtualHub to which the firewall belongs.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4163,7 +4163,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipgroups_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefirewallipgroupsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Outputs.<wbr>Azure<wbr>Firewall<wbr>Ip<wbr>Groups<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#azurefirewallipgroupsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Outputs.<wbr>Azure<wbr>Firewall<wbr>Ip<wbr>Groups<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}IpGroups associated with AzureFirewall.{{% /md %}}</dd>
     <dt class="property-"
@@ -4424,7 +4424,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protocols_csharp" style="color: inherit; text-decoration: inherit;">Protocols</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefirewallapplicationruleprotocol">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Azure<wbr>Firewall<wbr>Application<wbr>Rule<wbr>Protocol<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#azurefirewallapplicationruleprotocol">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Azure<wbr>Firewall<wbr>Application<wbr>Rule<wbr>Protocol<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Array of ApplicationRuleProtocols.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4675,7 +4675,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#action_csharp" style="color: inherit; text-decoration: inherit;">Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefirewallrcaction">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Azure<wbr>Firewall<wbr>RCAction<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurefirewallrcaction">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Azure<wbr>Firewall<wbr>RCAction<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The action type of a rule collection.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4711,7 +4711,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rules_csharp" style="color: inherit; text-decoration: inherit;">Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefirewallapplicationrule">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Azure<wbr>Firewall<wbr>Application<wbr>Rule<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#azurefirewallapplicationrule">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Azure<wbr>Firewall<wbr>Application<wbr>Rule<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Collection of rules used by a application rule collection.{{% /md %}}</dd>
 </dl>
@@ -4899,7 +4899,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#action_csharp" style="color: inherit; text-decoration: inherit;">Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefirewallrcactionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Azure<wbr>Firewall<wbr>RCAction<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurefirewallrcactionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Azure<wbr>Firewall<wbr>RCAction<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The action type of a rule collection.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4935,7 +4935,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rules_csharp" style="color: inherit; text-decoration: inherit;">Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefirewallapplicationruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Azure<wbr>Firewall<wbr>Application<wbr>Rule<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#azurefirewallapplicationruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Azure<wbr>Firewall<wbr>Application<wbr>Rule<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Collection of rules used by a application rule collection.{{% /md %}}</dd>
 </dl>
@@ -5168,7 +5168,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protocoltype_csharp" style="color: inherit; text-decoration: inherit;">Protocol<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#azurefirewallapplicationruleprotocoltype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Azure<wbr>Firewall<wbr>Application<wbr>Rule<wbr>Protocol<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#azurefirewallapplicationruleprotocoltype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Azure<wbr>Firewall<wbr>Application<wbr>Rule<wbr>Protocol<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Protocol type.{{% /md %}}</dd>
 </dl>
@@ -5428,7 +5428,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protocols_csharp" style="color: inherit; text-decoration: inherit;">Protocols</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefirewallapplicationruleprotocolresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Azure<wbr>Firewall<wbr>Application<wbr>Rule<wbr>Protocol<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#azurefirewallapplicationruleprotocolresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Azure<wbr>Firewall<wbr>Application<wbr>Rule<wbr>Protocol<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Array of ApplicationRuleProtocols.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -5697,7 +5697,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publicipaddress_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>IPAddress</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Reference to the PublicIP resource. This field is a mandatory input if subnet is not null.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -5706,7 +5706,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subnet_csharp" style="color: inherit; text-decoration: inherit;">Subnet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Reference to the subnet resource. This resource must be named 'AzureFirewallSubnet' or 'AzureFirewallManagementSubnet'.{{% /md %}}</dd>
 </dl>
@@ -5903,7 +5903,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publicipaddress_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>IPAddress</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Reference to the PublicIP resource. This field is a mandatory input if subnet is not null.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -5912,7 +5912,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subnet_csharp" style="color: inherit; text-decoration: inherit;">Subnet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Reference to the subnet resource. This resource must be named 'AzureFirewallSubnet' or 'AzureFirewallManagementSubnet'.{{% /md %}}</dd>
 </dl>
@@ -6261,7 +6261,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#azurefirewallnatrcactiontype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Azure<wbr>Firewall<wbr>Nat<wbr>RCAction<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#azurefirewallnatrcactiontype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Azure<wbr>Firewall<wbr>Nat<wbr>RCAction<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of action.{{% /md %}}</dd>
 </dl>
@@ -6459,7 +6459,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protocols_csharp" style="color: inherit; text-decoration: inherit;">Protocols</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Union&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Azure<wbr>Firewall<wbr>Network<wbr>Rule<wbr>Protocol&gt;&gt;</span>
+        <span class="property-type">List&lt;Union&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Azure<wbr>Firewall<wbr>Network<wbr>Rule<wbr>Protocol&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}Array of AzureFirewallNetworkRuleProtocols applicable to this NAT rule.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -6809,7 +6809,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#action_csharp" style="color: inherit; text-decoration: inherit;">Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefirewallnatrcaction">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Azure<wbr>Firewall<wbr>Nat<wbr>RCAction<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurefirewallnatrcaction">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Azure<wbr>Firewall<wbr>Nat<wbr>RCAction<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The action type of a NAT rule collection.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -6845,7 +6845,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rules_csharp" style="color: inherit; text-decoration: inherit;">Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefirewallnatrule">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Azure<wbr>Firewall<wbr>Nat<wbr>Rule<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#azurefirewallnatrule">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Azure<wbr>Firewall<wbr>Nat<wbr>Rule<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Collection of rules used by a NAT rule collection.{{% /md %}}</dd>
 </dl>
@@ -7033,7 +7033,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#action_csharp" style="color: inherit; text-decoration: inherit;">Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefirewallnatrcactionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Azure<wbr>Firewall<wbr>Nat<wbr>RCAction<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurefirewallnatrcactionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Azure<wbr>Firewall<wbr>Nat<wbr>RCAction<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The action type of a NAT rule collection.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -7069,7 +7069,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rules_csharp" style="color: inherit; text-decoration: inherit;">Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefirewallnatruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Azure<wbr>Firewall<wbr>Nat<wbr>Rule<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#azurefirewallnatruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Azure<wbr>Firewall<wbr>Nat<wbr>Rule<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Collection of rules used by a NAT rule collection.{{% /md %}}</dd>
 </dl>
@@ -7733,7 +7733,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protocols_csharp" style="color: inherit; text-decoration: inherit;">Protocols</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Union&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Azure<wbr>Firewall<wbr>Network<wbr>Rule<wbr>Protocol&gt;&gt;</span>
+        <span class="property-type">List&lt;Union&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Azure<wbr>Firewall<wbr>Network<wbr>Rule<wbr>Protocol&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}Array of AzureFirewallNetworkRuleProtocols.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -8029,7 +8029,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#action_csharp" style="color: inherit; text-decoration: inherit;">Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefirewallrcaction">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Azure<wbr>Firewall<wbr>RCAction<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurefirewallrcaction">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Azure<wbr>Firewall<wbr>RCAction<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The action type of a rule collection.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -8065,7 +8065,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rules_csharp" style="color: inherit; text-decoration: inherit;">Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefirewallnetworkrule">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Azure<wbr>Firewall<wbr>Network<wbr>Rule<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#azurefirewallnetworkrule">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Azure<wbr>Firewall<wbr>Network<wbr>Rule<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Collection of rules used by a network rule collection.{{% /md %}}</dd>
 </dl>
@@ -8253,7 +8253,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#action_csharp" style="color: inherit; text-decoration: inherit;">Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefirewallrcactionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Azure<wbr>Firewall<wbr>RCAction<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurefirewallrcactionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Azure<wbr>Firewall<wbr>RCAction<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The action type of a rule collection.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -8289,7 +8289,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rules_csharp" style="color: inherit; text-decoration: inherit;">Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefirewallnetworkruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Azure<wbr>Firewall<wbr>Network<wbr>Rule<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#azurefirewallnetworkruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Azure<wbr>Firewall<wbr>Network<wbr>Rule<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Collection of rules used by a network rule collection.{{% /md %}}</dd>
 </dl>
@@ -9041,7 +9041,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#azurefirewallrcactiontype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Azure<wbr>Firewall<wbr>RCAction<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#azurefirewallrcactiontype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Azure<wbr>Firewall<wbr>RCAction<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of action.{{% /md %}}</dd>
 </dl>
@@ -9203,7 +9203,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#azurefirewallskuname">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Azure<wbr>Firewall<wbr>Sku<wbr>Name</a></span>
+        <span class="property-type">string | <a href="#azurefirewallskuname">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Azure<wbr>Firewall<wbr>Sku<wbr>Name</a></span>
     </dt>
     <dd>{{% md %}}Name of an Azure Firewall SKU.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -9212,7 +9212,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tier_csharp" style="color: inherit; text-decoration: inherit;">Tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#azurefirewallskutier">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Azure<wbr>Firewall<wbr>Sku<wbr>Tier</a></span>
+        <span class="property-type">string | <a href="#azurefirewallskutier">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Azure<wbr>Firewall<wbr>Sku<wbr>Tier</a></span>
     </dt>
     <dd>{{% md %}}Tier of an Azure Firewall.{{% /md %}}</dd>
 </dl>
@@ -9530,7 +9530,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publicips_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>IPs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hubpublicipaddresses">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Hub<wbr>Public<wbr>IPAddresses<wbr>Args</a></span>
+        <span class="property-type"><a href="#hubpublicipaddresses">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Hub<wbr>Public<wbr>IPAddresses<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Public IP addresses associated with azure firewall.{{% /md %}}</dd>
 </dl>
@@ -9628,7 +9628,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publicips_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>IPs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hubpublicipaddressesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Hub<wbr>Public<wbr>IPAddresses<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#hubpublicipaddressesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Hub<wbr>Public<wbr>IPAddresses<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Public IP addresses associated with azure firewall.{{% /md %}}</dd>
 </dl>
@@ -9717,7 +9717,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#addresses_csharp" style="color: inherit; text-decoration: inherit;">Addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefirewallpublicipaddress">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Azure<wbr>Firewall<wbr>Public<wbr>IPAddress<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#azurefirewallpublicipaddress">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Azure<wbr>Firewall<wbr>Public<wbr>IPAddress<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of Public IP addresses associated with azure firewall or IP addresses to be retained.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -9815,7 +9815,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#addresses_csharp" style="color: inherit; text-decoration: inherit;">Addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefirewallpublicipaddressresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Azure<wbr>Firewall<wbr>Public<wbr>IPAddress<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#azurefirewallpublicipaddressresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Azure<wbr>Firewall<wbr>Public<wbr>IPAddress<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of Public IP addresses associated with azure firewall or IP addresses to be retained.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -10031,7 +10031,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:network/latest:AzureFirewall azurefirewall /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/azureFirewalls/azurefirewall 
+$ pulumi import azure-nextgen:network:AzureFirewall azurefirewall /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/azureFirewalls/azurefirewall 
 ```
 
 

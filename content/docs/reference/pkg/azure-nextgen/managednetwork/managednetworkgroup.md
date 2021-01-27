@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.managednetwork.ManagedNetworkGro
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The Managed Network Group resource
+API Version: 2019-06-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var managedNetworkGroup = new AzureNextGen.ManagedNetwork.V20190601Preview.ManagedNetworkGroup("managedNetworkGroup", new AzureNextGen.ManagedNetwork.V20190601Preview.ManagedNetworkGroupArgs
+        var managedNetworkGroup = new AzureNextGen.ManagedNetwork..ManagedNetworkGroup("managedNetworkGroup", new AzureNextGen.ManagedNetwork..ManagedNetworkGroupArgs
         {
             ManagedNetworkGroupName = "myManagedNetworkGroup1",
             ManagedNetworkName = "myManagedNetwork",
@@ -34,7 +35,7 @@ class MyStack : Stack
             ResourceGroupName = "myResourceGroup",
             Subnets = 
             {
-                new AzureNextGen.ManagedNetwork.V20190601Preview.Inputs.ResourceIdArgs
+                new AzureNextGen.ManagedNetwork..Inputs.ResourceIdArgs
                 {
                     Id = "/subscriptionB/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/VnetA/subnets/subnetA",
                 },
@@ -42,11 +43,11 @@ class MyStack : Stack
             Subscriptions = {},
             VirtualNetworks = 
             {
-                new AzureNextGen.ManagedNetwork.V20190601Preview.Inputs.ResourceIdArgs
+                new AzureNextGen.ManagedNetwork..Inputs.ResourceIdArgs
                 {
                     Id = "/subscriptionB/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/VnetA",
                 },
-                new AzureNextGen.ManagedNetwork.V20190601Preview.Inputs.ResourceIdArgs
+                new AzureNextGen.ManagedNetwork..Inputs.ResourceIdArgs
                 {
                     Id = "/subscriptionB/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/VnetB",
                 },
@@ -66,7 +67,7 @@ class MyStack : Stack
 package main
 
 import (
-	managednetwork "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/managednetwork/v20190601preview"
+	managednetwork "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/managednetwork"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -109,20 +110,20 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-managed_network_group = azure_nextgen.managednetwork.v20190601preview.ManagedNetworkGroup("managedNetworkGroup",
+managed_network_group = azure_nextgen.managednetwork.ManagedNetworkGroup("managedNetworkGroup",
     managed_network_group_name="myManagedNetworkGroup1",
     managed_network_name="myManagedNetwork",
     management_groups=[],
     resource_group_name="myResourceGroup",
-    subnets=[azure_nextgen.managednetwork.v20190601preview.ResourceIdArgs(
+    subnets=[azure_nextgen.managednetwork.ResourceIdArgs(
         id="/subscriptionB/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/VnetA/subnets/subnetA",
     )],
     subscriptions=[],
     virtual_networks=[
-        azure_nextgen.managednetwork.v20190601preview.ResourceIdArgs(
+        azure_nextgen.managednetwork.ResourceIdArgs(
             id="/subscriptionB/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/VnetA",
         ),
-        azure_nextgen.managednetwork.v20190601preview.ResourceIdArgs(
+        azure_nextgen.managednetwork.ResourceIdArgs(
             id="/subscriptionB/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/VnetB",
         ),
     ])
@@ -137,7 +138,7 @@ managed_network_group = azure_nextgen.managednetwork.v20190601preview.ManagedNet
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const managedNetworkGroup = new azure_nextgen.managednetwork.v20190601preview.ManagedNetworkGroup("managedNetworkGroup", {
+const managedNetworkGroup = new azure_nextgen.managednetwork.ManagedNetworkGroup("managedNetworkGroup", {
     managedNetworkGroupName: "myManagedNetworkGroup1",
     managedNetworkName: "myManagedNetwork",
     managementGroups: [],
@@ -376,7 +377,7 @@ The ManagedNetworkGroup resource accepts the following [input]({{< relref "/docs
 <a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#kind">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Managed<wbr>Network.<wbr>Kind</a></span>
+        <span class="property-type">string | <a href="#kind">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Managed<wbr>Network..<wbr>Kind</a></span>
     </dt>
     <dd>{{% md %}}Responsibility role under which this Managed Network Group will be created{{% /md %}}</dd>
     <dt class="property-optional"
@@ -394,7 +395,7 @@ The ManagedNetworkGroup resource accepts the following [input]({{< relref "/docs
 <a href="#managementgroups_csharp" style="color: inherit; text-decoration: inherit;">Management<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceid">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Managed<wbr>Network.<wbr>Inputs.<wbr>Resource<wbr>Id<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#resourceid">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Managed<wbr>Network..<wbr>Inputs.<wbr>Resource<wbr>Id<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The collection of management groups covered by the Managed Network{{% /md %}}</dd>
     <dt class="property-optional"
@@ -403,7 +404,7 @@ The ManagedNetworkGroup resource accepts the following [input]({{< relref "/docs
 <a href="#subnets_csharp" style="color: inherit; text-decoration: inherit;">Subnets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceid">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Managed<wbr>Network.<wbr>Inputs.<wbr>Resource<wbr>Id<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#resourceid">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Managed<wbr>Network..<wbr>Inputs.<wbr>Resource<wbr>Id<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The collection of  subnets covered by the Managed Network{{% /md %}}</dd>
     <dt class="property-optional"
@@ -412,7 +413,7 @@ The ManagedNetworkGroup resource accepts the following [input]({{< relref "/docs
 <a href="#subscriptions_csharp" style="color: inherit; text-decoration: inherit;">Subscriptions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceid">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Managed<wbr>Network.<wbr>Inputs.<wbr>Resource<wbr>Id<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#resourceid">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Managed<wbr>Network..<wbr>Inputs.<wbr>Resource<wbr>Id<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The collection of subscriptions covered by the Managed Network{{% /md %}}</dd>
     <dt class="property-optional"
@@ -421,7 +422,7 @@ The ManagedNetworkGroup resource accepts the following [input]({{< relref "/docs
 <a href="#virtualnetworks_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Networks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceid">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Managed<wbr>Network.<wbr>Inputs.<wbr>Resource<wbr>Id<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#resourceid">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Managed<wbr>Network..<wbr>Inputs.<wbr>Resource<wbr>Id<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The collection of virtual nets covered by the Managed Network{{% /md %}}</dd>
 </dl>
@@ -1068,7 +1069,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:managednetwork/v20190601preview:ManagedNetworkGroup myManagedNetworkGroup1 /subscriptionB/resourceGroups/myResourceGroup/providers/Microsoft.ManagedNetwork/managedNetworks/myManagedNetwork/managedNetworkGroups/myManagedNetworkGroup1 
+$ pulumi import azure-nextgen:managednetwork:ManagedNetworkGroup myManagedNetworkGroup1 /subscriptionB/resourceGroups/myResourceGroup/providers/Microsoft.ManagedNetwork/managedNetworks/myManagedNetwork/managedNetworkGroups/myManagedNetworkGroup1 
 ```
 
 

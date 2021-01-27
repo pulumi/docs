@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.azuredata.DataController resourc
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Data controller resource
+API Version: 2020-09-08-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,11 +27,11 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var dataController = new AzureNextGen.AzureData.V20200908Preview.DataController("dataController", new AzureNextGen.AzureData.V20200908Preview.DataControllerArgs
+        var dataController = new AzureNextGen.AzureData..DataController("dataController", new AzureNextGen.AzureData..DataControllerArgs
         {
             DataControllerName = "testdataController",
             Location = "northeurope",
-            OnPremiseProperty = new AzureNextGen.AzureData.V20200908Preview.Inputs.OnPremisePropertyArgs
+            OnPremiseProperty = new AzureNextGen.AzureData..Inputs.OnPremisePropertyArgs
             {
                 Id = "12345678-1234-1234-ab12-1a2b3c4d5e6f",
                 PublicSigningKey = "publicOnPremSigningKey",
@@ -55,7 +56,7 @@ class MyStack : Stack
 package main
 
 import (
-	azuredata "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/azuredata/v20200908preview"
+	azuredata "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/azuredata"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -90,10 +91,10 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-data_controller = azure_nextgen.azuredata.v20200908preview.DataController("dataController",
+data_controller = azure_nextgen.azuredata.DataController("dataController",
     data_controller_name="testdataController",
     location="northeurope",
-    on_premise_property=azure_nextgen.azuredata.v20200908preview.OnPremisePropertyArgs(
+    on_premise_property=azure_nextgen.azuredata.OnPremisePropertyArgs(
         id="12345678-1234-1234-ab12-1a2b3c4d5e6f",
         public_signing_key="publicOnPremSigningKey",
     ),
@@ -112,7 +113,7 @@ data_controller = azure_nextgen.azuredata.v20200908preview.DataController("dataC
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const dataController = new azure_nextgen.azuredata.v20200908preview.DataController("dataController", {
+const dataController = new azure_nextgen.azuredata.DataController("dataController", {
     dataControllerName: "testdataController",
     location: "northeurope",
     onPremiseProperty: {
@@ -336,7 +337,7 @@ The DataController resource accepts the following [input]({{< relref "/docs/intr
 <a href="#onpremiseproperty_csharp" style="color: inherit; text-decoration: inherit;">On<wbr>Premise<wbr>Property</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#onpremiseproperty">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Azure<wbr>Data.<wbr>Inputs.<wbr>On<wbr>Premise<wbr>Property<wbr>Args</a></span>
+        <span class="property-type"><a href="#onpremiseproperty">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Azure<wbr>Data..<wbr>Inputs.<wbr>On<wbr>Premise<wbr>Property<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties from the on premise data controller{{% /md %}}</dd>
     <dt class="property-required"
@@ -619,7 +620,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#systemdata_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Azure<wbr>Data.<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
+        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Azure<wbr>Data..<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Read only system data{{% /md %}}</dd>
     <dt class="property-"
@@ -1285,7 +1286,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:azuredata/v20200908preview:DataController testdataController /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg/providers/Microsoft.AzureData/dataControllers/testdataController 
+$ pulumi import azure-nextgen:azuredata:DataController testdataController /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg/providers/Microsoft.AzureData/dataControllers/testdataController 
 ```
 
 

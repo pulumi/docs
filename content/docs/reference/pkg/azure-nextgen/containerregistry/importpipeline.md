@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.containerregistry.ImportPipeline
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 An object that represents an import pipeline for a container registry.
+API Version: 2020-11-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,9 +27,9 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var importPipeline = new AzureNextGen.ContainerRegistry.V20201101Preview.ImportPipeline("importPipeline", new AzureNextGen.ContainerRegistry.V20201101Preview.ImportPipelineArgs
+        var importPipeline = new AzureNextGen.ContainerRegistry..ImportPipeline("importPipeline", new AzureNextGen.ContainerRegistry..ImportPipelineArgs
         {
-            Identity = new AzureNextGen.ContainerRegistry.V20201101Preview.Inputs.IdentityPropertiesArgs
+            Identity = new AzureNextGen.ContainerRegistry..Inputs.IdentityPropertiesArgs
             {
                 Type = "UserAssigned",
                 UserAssignedIdentities = 
@@ -46,7 +47,7 @@ class MyStack : Stack
             },
             RegistryName = "myRegistry",
             ResourceGroupName = "myResourceGroup",
-            Source = new AzureNextGen.ContainerRegistry.V20201101Preview.Inputs.ImportPipelineSourcePropertiesArgs
+            Source = new AzureNextGen.ContainerRegistry..Inputs.ImportPipelineSourcePropertiesArgs
             {
                 KeyVaultUri = "https://myvault.vault.azure.net/secrets/acrimportsas",
                 Type = "AzureStorageBlobContainer",
@@ -71,11 +72,11 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-import_pipeline = azure_nextgen.containerregistry.v20201101preview.ImportPipeline("importPipeline",
-    identity=azure_nextgen.containerregistry.v20201101preview.IdentityPropertiesArgs(
+import_pipeline = azure_nextgen.containerregistry.ImportPipeline("importPipeline",
+    identity=azure_nextgen.containerregistry.IdentityPropertiesArgs(
         type="UserAssigned",
         user_assigned_identities={
-            "/subscriptions/f9d7ebed-adbd-4cb4-b973-aaf82c136138/resourcegroups/myResourceGroup/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity2": azure_nextgen.containerregistry.v20201101preview.UserIdentityPropertiesArgs(),
+            "/subscriptions/f9d7ebed-adbd-4cb4-b973-aaf82c136138/resourcegroups/myResourceGroup/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity2": azure_nextgen.containerregistry.UserIdentityPropertiesArgs(),
         },
     ),
     import_pipeline_name="myImportPipeline",
@@ -87,7 +88,7 @@ import_pipeline = azure_nextgen.containerregistry.v20201101preview.ImportPipelin
     ],
     registry_name="myRegistry",
     resource_group_name="myResourceGroup",
-    source=azure_nextgen.containerregistry.v20201101preview.ImportPipelineSourcePropertiesArgs(
+    source=azure_nextgen.containerregistry.ImportPipelineSourcePropertiesArgs(
         key_vault_uri="https://myvault.vault.azure.net/secrets/acrimportsas",
         type="AzureStorageBlobContainer",
         uri="https://accountname.blob.core.windows.net/containername",
@@ -103,7 +104,7 @@ import_pipeline = azure_nextgen.containerregistry.v20201101preview.ImportPipelin
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const importPipeline = new azure_nextgen.containerregistry.v20201101preview.ImportPipeline("importPipeline", {
+const importPipeline = new azure_nextgen.containerregistry.ImportPipeline("importPipeline", {
     identity: {
         type: "UserAssigned",
         userAssignedIdentities: {
@@ -346,7 +347,7 @@ The ImportPipeline resource accepts the following [input]({{< relref "/docs/intr
 <a href="#source_csharp" style="color: inherit; text-decoration: inherit;">Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#importpipelinesourceproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Import<wbr>Pipeline<wbr>Source<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#importpipelinesourceproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry..<wbr>Inputs.<wbr>Import<wbr>Pipeline<wbr>Source<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The source properties of the import pipeline.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -355,7 +356,7 @@ The ImportPipeline resource accepts the following [input]({{< relref "/docs/intr
 <a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identityproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Identity<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#identityproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry..<wbr>Inputs.<wbr>Identity<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The identity of the import pipeline.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -373,7 +374,7 @@ The ImportPipeline resource accepts the following [input]({{< relref "/docs/intr
 <a href="#options_csharp" style="color: inherit; text-decoration: inherit;">Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Union&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry.<wbr>Pipeline<wbr>Options&gt;&gt;</span>
+        <span class="property-type">List&lt;Union&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry..<wbr>Pipeline<wbr>Options&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}The list of all options configured for the pipeline.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -382,7 +383,7 @@ The ImportPipeline resource accepts the following [input]({{< relref "/docs/intr
 <a href="#trigger_csharp" style="color: inherit; text-decoration: inherit;">Trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinetriggerproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Pipeline<wbr>Trigger<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#pipelinetriggerproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry..<wbr>Inputs.<wbr>Pipeline<wbr>Trigger<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The properties that describe the trigger of the import pipeline.{{% /md %}}</dd>
 </dl>
@@ -665,7 +666,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#systemdata_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry.<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
+        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry..<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Metadata pertaining to creation and last modification of the resource.{{% /md %}}</dd>
     <dt class="property-"
@@ -872,7 +873,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidentitytype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry.<wbr>Resource<wbr>Identity<wbr>Type</a></span>
+        <span class="property-type"><a href="#resourceidentitytype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry..<wbr>Resource<wbr>Identity<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The identity type.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -881,7 +882,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userassignedidentities_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>User<wbr>Identity<wbr>Properties<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry..<wbr>Inputs.<wbr>User<wbr>Identity<wbr>Properties<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}The list of user identities associated with the resource. The user identity 
 dictionary key references will be ARM resource ids in the form: 
@@ -1063,7 +1064,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#userassignedidentities_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>User<wbr>Identity<wbr>Properties<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry..<wbr>Inputs.<wbr>User<wbr>Identity<wbr>Properties<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}The list of user identities associated with the resource. The user identity 
 dictionary key references will be ARM resource ids in the form: 
@@ -1227,7 +1228,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#pipelinesourcetype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry.<wbr>Pipeline<wbr>Source<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#pipelinesourcetype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry..<wbr>Pipeline<wbr>Source<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of source for the import pipeline.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1556,7 +1557,7 @@ When 'AzureStorageBlobContainer': "https://accountName.blob.core.windows.net/con
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#triggerstatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry.<wbr>Trigger<wbr>Status</a></span>
+        <span class="property-type">string | <a href="#triggerstatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry..<wbr>Trigger<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}The current status of the source trigger.{{% /md %}}</dd>
 </dl>
@@ -1710,7 +1711,7 @@ When 'AzureStorageBlobContainer': "https://accountName.blob.core.windows.net/con
 <a href="#sourcetrigger_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinesourcetriggerproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Pipeline<wbr>Source<wbr>Trigger<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#pipelinesourcetriggerproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry..<wbr>Inputs.<wbr>Pipeline<wbr>Source<wbr>Trigger<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The source trigger properties of the pipeline.{{% /md %}}</dd>
 </dl>
@@ -1772,7 +1773,7 @@ When 'AzureStorageBlobContainer': "https://accountName.blob.core.windows.net/con
 <a href="#sourcetrigger_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinesourcetriggerpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Pipeline<wbr>Source<wbr>Trigger<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#pipelinesourcetriggerpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry..<wbr>Inputs.<wbr>Pipeline<wbr>Source<wbr>Trigger<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The source trigger properties of the pipeline.{{% /md %}}</dd>
 </dl>
@@ -2123,37 +2124,37 @@ When 'AzureStorageBlobContainer': "https://accountName.blob.core.windows.net/con
 
 {{% choosable language csharp %}}
 <dl class="tabular">
-    <dt>Enabled</dt>
-    <dd>Enabled</dd>
     <dt>Disabled</dt>
     <dd>Disabled</dd>
+    <dt>Enabled</dt>
+    <dd>Enabled</dd>
 </dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
 <dl class="tabular">
-    <dt>Trigger<wbr>Status<wbr>Enabled</dt>
-    <dd>Enabled</dd>
     <dt>Trigger<wbr>Status<wbr>Disabled</dt>
     <dd>Disabled</dd>
+    <dt>Trigger<wbr>Status<wbr>Enabled</dt>
+    <dd>Enabled</dd>
 </dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
 <dl class="tabular">
-    <dt>Enabled</dt>
-    <dd>Enabled</dd>
     <dt>Disabled</dt>
     <dd>Disabled</dd>
+    <dt>Enabled</dt>
+    <dd>Enabled</dd>
 </dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <dl class="tabular">
-    <dt>ENABLED</dt>
-    <dd>Enabled</dd>
     <dt>DISABLED</dt>
     <dd>Disabled</dd>
+    <dt>ENABLED</dt>
+    <dd>Enabled</dd>
 </dl>
 {{% /choosable %}}
 
@@ -2358,7 +2359,7 @@ When 'AzureStorageBlobContainer': "https://accountName.blob.core.windows.net/con
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:containerregistry/v20201101preview:ImportPipeline myImportPipeline /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.ContainerRegistry/registries/myRegistry/importPipelines/myImportPipeline 
+$ pulumi import azure-nextgen:containerregistry:ImportPipeline myImportPipeline /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.ContainerRegistry/registries/myRegistry/importPipelines/myImportPipeline 
 ```
 
 

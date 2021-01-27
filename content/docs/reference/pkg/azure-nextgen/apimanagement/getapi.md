@@ -287,7 +287,7 @@ The following output properties are available:
 <a href="#apiversionset_csharp" style="color: inherit; text-decoration: inherit;">Api<wbr>Version<wbr>Set</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apiversionsetcontractdetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management.<wbr>Outputs.<wbr>Api<wbr>Version<wbr>Set<wbr>Contract<wbr>Details<wbr>Response</a></span>
+        <span class="property-type"><a href="#apiversionsetcontractdetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management..<wbr>Outputs.<wbr>Api<wbr>Version<wbr>Set<wbr>Contract<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Version set details{{% /md %}}</dd>
     <dt class="property-"
@@ -305,7 +305,7 @@ The following output properties are available:
 <a href="#authenticationsettings_csharp" style="color: inherit; text-decoration: inherit;">Authentication<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authenticationsettingscontractresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management.<wbr>Outputs.<wbr>Authentication<wbr>Settings<wbr>Contract<wbr>Response</a></span>
+        <span class="property-type"><a href="#authenticationsettingscontractresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management..<wbr>Outputs.<wbr>Authentication<wbr>Settings<wbr>Contract<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Collection of authentication settings included into this API.{{% /md %}}</dd>
     <dt class="property-"
@@ -368,7 +368,7 @@ The following output properties are available:
 <a href="#subscriptionkeyparameternames_csharp" style="color: inherit; text-decoration: inherit;">Subscription<wbr>Key<wbr>Parameter<wbr>Names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subscriptionkeyparameternamescontractresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management.<wbr>Outputs.<wbr>Subscription<wbr>Key<wbr>Parameter<wbr>Names<wbr>Contract<wbr>Response</a></span>
+        <span class="property-type"><a href="#subscriptionkeyparameternamescontractresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management..<wbr>Outputs.<wbr>Subscription<wbr>Key<wbr>Parameter<wbr>Names<wbr>Contract<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Protocols over which API is made available.{{% /md %}}</dd>
     <dt class="property-"
@@ -1237,7 +1237,7 @@ The following output properties are available:
 <a href="#oauth2_csharp" style="color: inherit; text-decoration: inherit;">OAuth2</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oauth2authenticationsettingscontractresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>OAuth2Authentication<wbr>Settings<wbr>Contract<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#oauth2authenticationsettingscontractresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management..<wbr>Inputs.<wbr>OAuth2Authentication<wbr>Settings<wbr>Contract<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}OAuth2 Authentication settings{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1246,7 +1246,7 @@ The following output properties are available:
 <a href="#openid_csharp" style="color: inherit; text-decoration: inherit;">Openid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#openidauthenticationsettingscontractresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Open<wbr>Id<wbr>Authentication<wbr>Settings<wbr>Contract<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#openidauthenticationsettingscontractresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management..<wbr>Inputs.<wbr>Open<wbr>Id<wbr>Authentication<wbr>Settings<wbr>Contract<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}OpenID Connect Authentication Settings{{% /md %}}</dd>
 </dl>

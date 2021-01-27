@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.datashare.Invitation resource wi
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 A Invitation data transfer object.
-Latest API Version: 2019-11-01.
+API Version: 2019-11-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var invitation = new AzureNextGen.DataShare.Latest.Invitation("invitation", new AzureNextGen.DataShare.Latest.InvitationArgs
+        var invitation = new AzureNextGen.DataShare..Invitation("invitation", new AzureNextGen.DataShare..InvitationArgs
         {
             AccountName = "Account1",
             InvitationName = "Invitation1",
@@ -49,7 +49,7 @@ class MyStack : Stack
 package main
 
 import (
-	datashare "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datashare/latest"
+	datashare "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datashare"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -79,7 +79,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-invitation = azure_nextgen.datashare.latest.Invitation("invitation",
+invitation = azure_nextgen.datashare.Invitation("invitation",
     account_name="Account1",
     invitation_name="Invitation1",
     resource_group_name="SampleResourceGroup",
@@ -96,7 +96,7 @@ invitation = azure_nextgen.datashare.latest.Invitation("invitation",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const invitation = new azure_nextgen.datashare.latest.Invitation("invitation", {
+const invitation = new azure_nextgen.datashare.Invitation("invitation", {
     accountName: "Account1",
     invitationName: "Invitation1",
     resourceGroupName: "SampleResourceGroup",
@@ -938,7 +938,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:datashare/latest:Invitation Invitation1 /subscriptions/433a8dfd-e5d5-4e77-ad86-90acdc75eb1a/resourceGroups/SampleResourceGroup/providers/Microsoft.DataShare/accounts/Account1/shares/Share1/invitations/Invitation1 
+$ pulumi import azure-nextgen:datashare:Invitation Invitation1 /subscriptions/433a8dfd-e5d5-4e77-ad86-90acdc75eb1a/resourceGroups/SampleResourceGroup/providers/Microsoft.DataShare/accounts/Account1/shares/Share1/invitations/Invitation1 
 ```
 
 

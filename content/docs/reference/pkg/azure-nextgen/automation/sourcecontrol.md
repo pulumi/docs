@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.automation.SourceControl resourc
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Definition of the source control.
-Latest API Version: 2019-06-01.
+API Version: 2019-06-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var sourceControl = new AzureNextGen.Automation.Latest.SourceControl("sourceControl", new AzureNextGen.Automation.Latest.SourceControlArgs
+        var sourceControl = new AzureNextGen.Automation..SourceControl("sourceControl", new AzureNextGen.Automation..SourceControlArgs
         {
             AutoSync = true,
             AutomationAccountName = "sampleAccount9",
@@ -37,7 +37,7 @@ class MyStack : Stack
             PublishRunbook = true,
             RepoUrl = "https://sampleUser.visualstudio.com/myProject/_git/myRepository",
             ResourceGroupName = "rg",
-            SecurityToken = new AzureNextGen.Automation.Latest.Inputs.SourceControlSecurityTokenPropertiesArgs
+            SecurityToken = new AzureNextGen.Automation..Inputs.SourceControlSecurityTokenPropertiesArgs
             {
                 AccessToken = "3a326f7a0dcd343ea58fee21f2fd5fb4c1234567",
                 TokenType = "PersonalAccessToken",
@@ -59,7 +59,7 @@ class MyStack : Stack
 package main
 
 import (
-	automation "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/automation/latest"
+	automation "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/automation"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -98,7 +98,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-source_control = azure_nextgen.automation.latest.SourceControl("sourceControl",
+source_control = azure_nextgen.automation.SourceControl("sourceControl",
     auto_sync=True,
     automation_account_name="sampleAccount9",
     branch="master",
@@ -107,7 +107,7 @@ source_control = azure_nextgen.automation.latest.SourceControl("sourceControl",
     publish_runbook=True,
     repo_url="https://sampleUser.visualstudio.com/myProject/_git/myRepository",
     resource_group_name="rg",
-    security_token=azure_nextgen.automation.latest.SourceControlSecurityTokenPropertiesArgs(
+    security_token=azure_nextgen.automation.SourceControlSecurityTokenPropertiesArgs(
         access_token="3a326f7a0dcd343ea58fee21f2fd5fb4c1234567",
         token_type="PersonalAccessToken",
     ),
@@ -124,7 +124,7 @@ source_control = azure_nextgen.automation.latest.SourceControl("sourceControl",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const sourceControl = new azure_nextgen.automation.latest.SourceControl("sourceControl", {
+const sourceControl = new azure_nextgen.automation.SourceControl("sourceControl", {
     autoSync: true,
     automationAccountName: "sampleAccount9",
     branch: "master",
@@ -415,7 +415,7 @@ The SourceControl resource accepts the following [input]({{< relref "/docs/intro
 <a href="#securitytoken_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sourcecontrolsecuritytokenproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automation.<wbr>Inputs.<wbr>Source<wbr>Control<wbr>Security<wbr>Token<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#sourcecontrolsecuritytokenproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automation..<wbr>Inputs.<wbr>Source<wbr>Control<wbr>Security<wbr>Token<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The authorization token for the repo of the source control.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -424,7 +424,7 @@ The SourceControl resource accepts the following [input]({{< relref "/docs/intro
 <a href="#sourcetype_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#sourcetype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automation.<wbr>Source<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#sourcetype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automation..<wbr>Source<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The source type. Must be one of VsoGit, VsoTfvc, GitHub, case sensitive.{{% /md %}}</dd>
 </dl>
@@ -995,7 +995,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tokentype_csharp" style="color: inherit; text-decoration: inherit;">Token<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#tokentype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automation.<wbr>Token<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#tokentype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automation..<wbr>Token<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The token type. Must be either PersonalAccessToken or Oauth.{{% /md %}}</dd>
 </dl>
@@ -1189,7 +1189,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:automation/latest:SourceControl sampleSourceControl /subscriptions/subid/resourceGroups/rg/providers/Microsoft.Automation/automationAccounts/sampleAccount9/sourcecontrols/sampleSourceControl 
+$ pulumi import azure-nextgen:automation:SourceControl sampleSourceControl /subscriptions/subid/resourceGroups/rg/providers/Microsoft.Automation/automationAccounts/sampleAccount9/sourcecontrols/sampleSourceControl 
 ```
 
 

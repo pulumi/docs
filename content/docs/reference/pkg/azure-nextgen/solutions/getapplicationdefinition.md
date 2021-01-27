@@ -197,7 +197,7 @@ The following output properties are available:
 <a href="#artifacts_csharp" style="color: inherit; text-decoration: inherit;">Artifacts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationdefinitionartifactresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Solutions.<wbr>Outputs.<wbr>Application<wbr>Definition<wbr>Artifact<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#applicationdefinitionartifactresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Solutions..<wbr>Outputs.<wbr>Application<wbr>Definition<wbr>Artifact<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The collection of managed application artifacts. The portal will use the files specified as artifacts to construct the user experience of creating a managed application from a managed application definition.{{% /md %}}</dd>
     <dt class="property-"
@@ -206,7 +206,7 @@ The following output properties are available:
 <a href="#authorizations_csharp" style="color: inherit; text-decoration: inherit;">Authorizations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationauthorizationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Solutions.<wbr>Outputs.<wbr>Application<wbr>Authorization<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#applicationauthorizationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Solutions..<wbr>Outputs.<wbr>Application<wbr>Authorization<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The managed application provider authorizations.{{% /md %}}</dd>
     <dt class="property-"
@@ -224,7 +224,7 @@ The following output properties are available:
 <a href="#deploymentpolicy_csharp" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationdeploymentpolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Solutions.<wbr>Outputs.<wbr>Application<wbr>Deployment<wbr>Policy<wbr>Response</a></span>
+        <span class="property-type"><a href="#applicationdeploymentpolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Solutions..<wbr>Outputs.<wbr>Application<wbr>Deployment<wbr>Policy<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The managed application deployment policy.{{% /md %}}</dd>
     <dt class="property-"
@@ -269,7 +269,7 @@ The following output properties are available:
 <a href="#lockingpolicy_csharp" style="color: inherit; text-decoration: inherit;">Locking<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationpackagelockingpolicydefinitionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Solutions.<wbr>Outputs.<wbr>Application<wbr>Package<wbr>Locking<wbr>Policy<wbr>Definition<wbr>Response</a></span>
+        <span class="property-type"><a href="#applicationpackagelockingpolicydefinitionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Solutions..<wbr>Outputs.<wbr>Application<wbr>Package<wbr>Locking<wbr>Policy<wbr>Definition<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The managed application locking policy.{{% /md %}}</dd>
     <dt class="property-"
@@ -296,7 +296,7 @@ The following output properties are available:
 <a href="#managementpolicy_csharp" style="color: inherit; text-decoration: inherit;">Management<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationmanagementpolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Solutions.<wbr>Outputs.<wbr>Application<wbr>Management<wbr>Policy<wbr>Response</a></span>
+        <span class="property-type"><a href="#applicationmanagementpolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Solutions..<wbr>Outputs.<wbr>Application<wbr>Management<wbr>Policy<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The managed application management policy that determines publisher's access to the managed resource group.{{% /md %}}</dd>
     <dt class="property-"
@@ -305,7 +305,7 @@ The following output properties are available:
 <a href="#notificationpolicy_csharp" style="color: inherit; text-decoration: inherit;">Notification<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationnotificationpolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Solutions.<wbr>Outputs.<wbr>Application<wbr>Notification<wbr>Policy<wbr>Response</a></span>
+        <span class="property-type"><a href="#applicationnotificationpolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Solutions..<wbr>Outputs.<wbr>Application<wbr>Notification<wbr>Policy<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The managed application notification policy.{{% /md %}}</dd>
     <dt class="property-"
@@ -323,7 +323,7 @@ The following output properties are available:
 <a href="#policies_csharp" style="color: inherit; text-decoration: inherit;">Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationpolicyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Solutions.<wbr>Outputs.<wbr>Application<wbr>Policy<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#applicationpolicyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Solutions..<wbr>Outputs.<wbr>Application<wbr>Policy<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The managed application provider policies.{{% /md %}}</dd>
     <dt class="property-"
@@ -332,7 +332,7 @@ The following output properties are available:
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skuresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Solutions.<wbr>Outputs.<wbr>Sku<wbr>Response</a></span>
+        <span class="property-type"><a href="#skuresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Solutions..<wbr>Outputs.<wbr>Sku<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The SKU of the resource.{{% /md %}}</dd>
     <dt class="property-"
@@ -1397,7 +1397,7 @@ The following output properties are available:
 <a href="#notificationendpoints_csharp" style="color: inherit; text-decoration: inherit;">Notification<wbr>Endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationnotificationendpointresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Solutions.<wbr>Inputs.<wbr>Application<wbr>Notification<wbr>Endpoint<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#applicationnotificationendpointresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Solutions..<wbr>Inputs.<wbr>Application<wbr>Notification<wbr>Endpoint<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The managed application notification endpoint.{{% /md %}}</dd>
 </dl>

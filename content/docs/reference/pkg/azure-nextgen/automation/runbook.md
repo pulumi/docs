@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.automation.Runbook resource with
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Definition of the runbook type.
-Latest API Version: 2019-06-01.
+API Version: 2019-06-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var runbook = new AzureNextGen.Automation.Latest.Runbook("runbook", new AzureNextGen.Automation.Latest.RunbookArgs
+        var runbook = new AzureNextGen.Automation..Runbook("runbook", new AzureNextGen.Automation..RunbookArgs
         {
             AutomationAccountName = "ContoseAutomationAccount",
             Description = "Description of the Runbook",
@@ -36,9 +36,9 @@ class MyStack : Stack
             LogProgress = true,
             LogVerbose = false,
             Name = "Get-AzureVMTutorial",
-            PublishContentLink = new AzureNextGen.Automation.Latest.Inputs.ContentLinkArgs
+            PublishContentLink = new AzureNextGen.Automation..Inputs.ContentLinkArgs
             {
-                ContentHash = new AzureNextGen.Automation.Latest.Inputs.ContentHashArgs
+                ContentHash = new AzureNextGen.Automation..Inputs.ContentHashArgs
                 {
                     Algorithm = "SHA256",
                     Value = "115775B8FF2BE672D8A946BD0B489918C724DDE15A440373CA54461D53010A80",
@@ -68,7 +68,7 @@ class MyStack : Stack
 package main
 
 import (
-	automation "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/automation/latest"
+	automation "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/automation"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -114,7 +114,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-runbook = azure_nextgen.automation.latest.Runbook("runbook",
+runbook = azure_nextgen.automation.Runbook("runbook",
     automation_account_name="ContoseAutomationAccount",
     description="Description of the Runbook",
     location="East US 2",
@@ -122,8 +122,8 @@ runbook = azure_nextgen.automation.latest.Runbook("runbook",
     log_progress=True,
     log_verbose=False,
     name="Get-AzureVMTutorial",
-    publish_content_link=azure_nextgen.automation.latest.ContentLinkArgs(
-        content_hash=azure_nextgen.automation.latest.ContentHashArgs(
+    publish_content_link=azure_nextgen.automation.ContentLinkArgs(
+        content_hash=azure_nextgen.automation.ContentHashArgs(
             algorithm="SHA256",
             value="115775B8FF2BE672D8A946BD0B489918C724DDE15A440373CA54461D53010A80",
         ),
@@ -147,7 +147,7 @@ runbook = azure_nextgen.automation.latest.Runbook("runbook",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const runbook = new azure_nextgen.automation.latest.Runbook("runbook", {
+const runbook = new azure_nextgen.automation.Runbook("runbook", {
     automationAccountName: "ContoseAutomationAccount",
     description: "Description of the Runbook",
     location: "East US 2",
@@ -185,7 +185,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var runbook = new AzureNextGen.Automation.Latest.Runbook("runbook", new AzureNextGen.Automation.Latest.RunbookArgs
+        var runbook = new AzureNextGen.Automation..Runbook("runbook", new AzureNextGen.Automation..RunbookArgs
         {
             AutomationAccountName = "ContoseAutomationAccount",
             Description = "Description of the Runbook",
@@ -217,7 +217,7 @@ class MyStack : Stack
 package main
 
 import (
-	automation "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/automation/latest"
+	automation "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/automation"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -256,10 +256,10 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-runbook = azure_nextgen.automation.latest.Runbook("runbook",
+runbook = azure_nextgen.automation.Runbook("runbook",
     automation_account_name="ContoseAutomationAccount",
     description="Description of the Runbook",
-    draft=azure_nextgen.automation.latest.RunbookDraftArgs(),
+    draft=azure_nextgen.automation.RunbookDraftArgs(),
     location="East US 2",
     log_progress=False,
     log_verbose=False,
@@ -282,7 +282,7 @@ runbook = azure_nextgen.automation.latest.Runbook("runbook",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const runbook = new azure_nextgen.automation.latest.Runbook("runbook", {
+const runbook = new azure_nextgen.automation.Runbook("runbook", {
     automationAccountName: "ContoseAutomationAccount",
     description: "Description of the Runbook",
     draft: {},
@@ -519,7 +519,7 @@ The Runbook resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#runbooktype_csharp" style="color: inherit; text-decoration: inherit;">Runbook<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#runbooktypeenum">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automation.<wbr>Runbook<wbr>Type<wbr>Enum</a></span>
+        <span class="property-type">string | <a href="#runbooktypeenum">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automation..<wbr>Runbook<wbr>Type<wbr>Enum</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the type of the runbook.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -537,7 +537,7 @@ The Runbook resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#draft_csharp" style="color: inherit; text-decoration: inherit;">Draft</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#runbookdraft">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automation.<wbr>Inputs.<wbr>Runbook<wbr>Draft<wbr>Args</a></span>
+        <span class="property-type"><a href="#runbookdraft">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automation..<wbr>Inputs.<wbr>Runbook<wbr>Draft<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the draft runbook properties.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -591,7 +591,7 @@ The Runbook resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#publishcontentlink_csharp" style="color: inherit; text-decoration: inherit;">Publish<wbr>Content<wbr>Link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentlink">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automation.<wbr>Inputs.<wbr>Content<wbr>Link<wbr>Args</a></span>
+        <span class="property-type"><a href="#contentlink">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automation..<wbr>Inputs.<wbr>Content<wbr>Link<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the published runbook content link.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1063,7 +1063,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automation.<wbr>Outputs.<wbr>Runbook<wbr>Parameter<wbr>Response&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automation..<wbr>Outputs.<wbr>Runbook<wbr>Parameter<wbr>Response&gt;</span>
     </dt>
     <dd>{{% md %}}Gets or sets the runbook parameters.{{% /md %}}</dd>
     <dt class="property-"
@@ -1619,7 +1619,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#contenthash_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Hash</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contenthash">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automation.<wbr>Inputs.<wbr>Content<wbr>Hash<wbr>Args</a></span>
+        <span class="property-type"><a href="#contenthash">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automation..<wbr>Inputs.<wbr>Content<wbr>Hash<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the hash.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1753,7 +1753,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#contenthash_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Hash</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contenthashresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automation.<wbr>Inputs.<wbr>Content<wbr>Hash<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#contenthashresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automation..<wbr>Inputs.<wbr>Content<wbr>Hash<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the hash.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1896,7 +1896,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#draftcontentlink_csharp" style="color: inherit; text-decoration: inherit;">Draft<wbr>Content<wbr>Link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentlink">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automation.<wbr>Inputs.<wbr>Content<wbr>Link<wbr>Args</a></span>
+        <span class="property-type"><a href="#contentlink">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automation..<wbr>Inputs.<wbr>Content<wbr>Link<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the draft runbook content link.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1932,7 +1932,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automation.<wbr>Inputs.<wbr>Runbook<wbr>Parameter<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automation..<wbr>Inputs.<wbr>Runbook<wbr>Parameter<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}Gets or sets the runbook draft parameters.{{% /md %}}</dd>
 </dl>
@@ -2138,7 +2138,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#draftcontentlink_csharp" style="color: inherit; text-decoration: inherit;">Draft<wbr>Content<wbr>Link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentlinkresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automation.<wbr>Inputs.<wbr>Content<wbr>Link<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#contentlinkresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automation..<wbr>Inputs.<wbr>Content<wbr>Link<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the draft runbook content link.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2174,7 +2174,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automation.<wbr>Inputs.<wbr>Runbook<wbr>Parameter<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automation..<wbr>Inputs.<wbr>Runbook<wbr>Parameter<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}Gets or sets the runbook draft parameters.{{% /md %}}</dd>
 </dl>
@@ -2775,7 +2775,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:automation/latest:Runbook Get-AzureVMTutorial /subscriptions/subid/resourceGroups/rg/providers/Microsoft.Automation/automationAccounts/ContoseAutomationAccount/runbooks/Get-AzureVMTutorial 
+$ pulumi import azure-nextgen:automation:Runbook Get-AzureVMTutorial /subscriptions/subid/resourceGroups/rg/providers/Microsoft.Automation/automationAccounts/ContoseAutomationAccount/runbooks/Get-AzureVMTutorial 
 ```
 
 

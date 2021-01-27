@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.servicebus.MigrationConfig resou
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Single item in List or Get Migration Config operation
-Latest API Version: 2017-04-01.
+API Version: 2017-04-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var migrationConfig = new AzureNextGen.ServiceBus.Latest.MigrationConfig("migrationConfig", new AzureNextGen.ServiceBus.Latest.MigrationConfigArgs
+        var migrationConfig = new AzureNextGen.ServiceBus..MigrationConfig("migrationConfig", new AzureNextGen.ServiceBus..MigrationConfigArgs
         {
             ConfigName = "$default",
             NamespaceName = "sdk-Namespace-41",
@@ -51,7 +51,7 @@ package main
 import (
 	"fmt"
 
-	servicebus "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/servicebus/latest"
+	servicebus "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/servicebus"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -81,7 +81,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-migration_config = azure_nextgen.servicebus.latest.MigrationConfig("migrationConfig",
+migration_config = azure_nextgen.servicebus.MigrationConfig("migrationConfig",
     config_name="$default",
     namespace_name="sdk-Namespace-41",
     post_migration_name="sdk-PostMigration-5919",
@@ -98,7 +98,7 @@ migration_config = azure_nextgen.servicebus.latest.MigrationConfig("migrationCon
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const migrationConfig = new azure_nextgen.servicebus.latest.MigrationConfig("migrationConfig", {
+const migrationConfig = new azure_nextgen.servicebus.MigrationConfig("migrationConfig", {
     configName: `$default`,
     namespaceName: "sdk-Namespace-41",
     postMigrationName: "sdk-PostMigration-5919",
@@ -752,7 +752,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:servicebus/latest:MigrationConfig sdk-Namespace-41 /subscriptions/SubscriptionId/resourceGroups/ResourceGroup/providers/Microsoft.ServiceBus/namespaces/sdk-Namespace-41/migrationConfigs/$default 
+$ pulumi import azure-nextgen:servicebus:MigrationConfig sdk-Namespace-41 /subscriptions/SubscriptionId/resourceGroups/ResourceGroup/providers/Microsoft.ServiceBus/namespaces/sdk-Namespace-41/migrationConfigs/$default 
 ```
 
 

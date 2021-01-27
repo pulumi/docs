@@ -152,7 +152,7 @@ The following output properties are available:
 <a href="#alertnotifications_csharp" style="color: inherit; text-decoration: inherit;">Alert<wbr>Notifications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securitycontactpropertiesresponsealertnotifications">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security.<wbr>Outputs.<wbr>Security<wbr>Contact<wbr>Properties<wbr>Response<wbr>Alert<wbr>Notifications</a></span>
+        <span class="property-type"><a href="#securitycontactpropertiesresponsealertnotifications">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security..<wbr>Outputs.<wbr>Security<wbr>Contact<wbr>Properties<wbr>Response<wbr>Alert<wbr>Notifications</a></span>
     </dt>
     <dd>{{% md %}}Defines whether to send email notifications about new security alerts{{% /md %}}</dd>
     <dt class="property-"
@@ -170,7 +170,7 @@ The following output properties are available:
 <a href="#notificationsbyrole_csharp" style="color: inherit; text-decoration: inherit;">Notifications<wbr>By<wbr>Role</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securitycontactpropertiesresponsenotificationsbyrole">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security.<wbr>Outputs.<wbr>Security<wbr>Contact<wbr>Properties<wbr>Response<wbr>Notifications<wbr>By<wbr>Role</a></span>
+        <span class="property-type"><a href="#securitycontactpropertiesresponsenotificationsbyrole">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security..<wbr>Outputs.<wbr>Security<wbr>Contact<wbr>Properties<wbr>Response<wbr>Notifications<wbr>By<wbr>Role</a></span>
     </dt>
     <dd>{{% md %}}Defines whether to send email notifications from Azure Security Center to persons with specific RBAC roles on the subscription.{{% /md %}}</dd>
     <dt class="property-"

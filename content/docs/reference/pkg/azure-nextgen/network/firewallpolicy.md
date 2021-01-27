@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.network.FirewallPolicy resource 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 FirewallPolicy Resource.
-Latest API Version: 2020-08-01.
+API Version: 2020-08-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,9 +27,9 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var firewallPolicy = new AzureNextGen.Network.Latest.FirewallPolicy("firewallPolicy", new AzureNextGen.Network.Latest.FirewallPolicyArgs
+        var firewallPolicy = new AzureNextGen.Network..FirewallPolicy("firewallPolicy", new AzureNextGen.Network..FirewallPolicyArgs
         {
-            DnsSettings = new AzureNextGen.Network.Latest.Inputs.DnsSettingsArgs
+            DnsSettings = new AzureNextGen.Network..Inputs.DnsSettingsArgs
             {
                 EnableProxy = true,
                 RequireProxyForNetworkRules = false,
@@ -39,13 +39,13 @@ class MyStack : Stack
                 },
             },
             FirewallPolicyName = "firewallPolicy",
-            IntrusionDetection = new AzureNextGen.Network.Latest.Inputs.FirewallPolicyIntrusionDetectionArgs
+            IntrusionDetection = new AzureNextGen.Network..Inputs.FirewallPolicyIntrusionDetectionArgs
             {
-                Configuration = new AzureNextGen.Network.Latest.Inputs.FirewallPolicyIntrusionDetectionConfigurationArgs
+                Configuration = new AzureNextGen.Network..Inputs.FirewallPolicyIntrusionDetectionConfigurationArgs
                 {
                     BypassTrafficSettings = 
                     {
-                        new AzureNextGen.Network.Latest.Inputs.FirewallPolicyIntrusionDetectionBypassTrafficSpecificationsArgs
+                        new AzureNextGen.Network..Inputs.FirewallPolicyIntrusionDetectionBypassTrafficSpecificationsArgs
                         {
                             Description = "Rule 1",
                             DestinationAddresses = 
@@ -66,7 +66,7 @@ class MyStack : Stack
                     },
                     SignatureOverrides = 
                     {
-                        new AzureNextGen.Network.Latest.Inputs.FirewallPolicyIntrusionDetectionSignatureSpecificationArgs
+                        new AzureNextGen.Network..Inputs.FirewallPolicyIntrusionDetectionSignatureSpecificationArgs
                         {
                             Id = "2525004",
                             Mode = "Deny",
@@ -77,7 +77,7 @@ class MyStack : Stack
             },
             Location = "West US",
             ResourceGroupName = "rg1",
-            Sku = new AzureNextGen.Network.Latest.Inputs.FirewallPolicySkuArgs
+            Sku = new AzureNextGen.Network..Inputs.FirewallPolicySkuArgs
             {
                 Tier = "Premium",
             },
@@ -86,7 +86,7 @@ class MyStack : Stack
                 { "key1", "value1" },
             },
             ThreatIntelMode = "Alert",
-            ThreatIntelWhitelist = new AzureNextGen.Network.Latest.Inputs.FirewallPolicyThreatIntelWhitelistArgs
+            ThreatIntelWhitelist = new AzureNextGen.Network..Inputs.FirewallPolicyThreatIntelWhitelistArgs
             {
                 Fqdns = 
                 {
@@ -97,9 +97,9 @@ class MyStack : Stack
                     "20.3.4.5",
                 },
             },
-            TransportSecurity = new AzureNextGen.Network.Latest.Inputs.FirewallPolicyTransportSecurityArgs
+            TransportSecurity = new AzureNextGen.Network..Inputs.FirewallPolicyTransportSecurityArgs
             {
-                CertificateAuthority = new AzureNextGen.Network.Latest.Inputs.FirewallPolicyCertificateAuthorityArgs
+                CertificateAuthority = new AzureNextGen.Network..Inputs.FirewallPolicyCertificateAuthorityArgs
                 {
                     KeyVaultSecretId = "https://kv/secret",
                     Name = "clientcert",
@@ -120,7 +120,7 @@ class MyStack : Stack
 package main
 
 import (
-	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network/latest"
+	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -203,16 +203,16 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-firewall_policy = azure_nextgen.network.latest.FirewallPolicy("firewallPolicy",
-    dns_settings=azure_nextgen.network.latest.DnsSettingsArgs(
+firewall_policy = azure_nextgen.network.FirewallPolicy("firewallPolicy",
+    dns_settings=azure_nextgen.network.DnsSettingsArgs(
         enable_proxy=True,
         require_proxy_for_network_rules=False,
         servers=["30.3.4.5"],
     ),
     firewall_policy_name="firewallPolicy",
-    intrusion_detection=azure_nextgen.network.latest.FirewallPolicyIntrusionDetectionArgs(
-        configuration=azure_nextgen.network.latest.FirewallPolicyIntrusionDetectionConfigurationArgs(
-            bypass_traffic_settings=[azure_nextgen.network.latest.FirewallPolicyIntrusionDetectionBypassTrafficSpecificationsArgs(
+    intrusion_detection=azure_nextgen.network.FirewallPolicyIntrusionDetectionArgs(
+        configuration=azure_nextgen.network.FirewallPolicyIntrusionDetectionConfigurationArgs(
+            bypass_traffic_settings=[azure_nextgen.network.FirewallPolicyIntrusionDetectionBypassTrafficSpecificationsArgs(
                 description="Rule 1",
                 destination_addresses=["5.6.7.8"],
                 destination_ports=["*"],
@@ -220,7 +220,7 @@ firewall_policy = azure_nextgen.network.latest.FirewallPolicy("firewallPolicy",
                 protocol="TCP",
                 source_addresses=["1.2.3.4"],
             )],
-            signature_overrides=[azure_nextgen.network.latest.FirewallPolicyIntrusionDetectionSignatureSpecificationArgs(
+            signature_overrides=[azure_nextgen.network.FirewallPolicyIntrusionDetectionSignatureSpecificationArgs(
                 id="2525004",
                 mode="Deny",
             )],
@@ -229,19 +229,19 @@ firewall_policy = azure_nextgen.network.latest.FirewallPolicy("firewallPolicy",
     ),
     location="West US",
     resource_group_name="rg1",
-    sku=azure_nextgen.network.latest.FirewallPolicySkuArgs(
+    sku=azure_nextgen.network.FirewallPolicySkuArgs(
         tier="Premium",
     ),
     tags={
         "key1": "value1",
     },
     threat_intel_mode="Alert",
-    threat_intel_whitelist=azure_nextgen.network.latest.FirewallPolicyThreatIntelWhitelistArgs(
+    threat_intel_whitelist=azure_nextgen.network.FirewallPolicyThreatIntelWhitelistArgs(
         fqdns=["*.microsoft.com"],
         ip_addresses=["20.3.4.5"],
     ),
-    transport_security=azure_nextgen.network.latest.FirewallPolicyTransportSecurityArgs(
-        certificate_authority=azure_nextgen.network.latest.FirewallPolicyCertificateAuthorityArgs(
+    transport_security=azure_nextgen.network.FirewallPolicyTransportSecurityArgs(
+        certificate_authority=azure_nextgen.network.FirewallPolicyCertificateAuthorityArgs(
             key_vault_secret_id="https://kv/secret",
             name="clientcert",
         ),
@@ -257,7 +257,7 @@ firewall_policy = azure_nextgen.network.latest.FirewallPolicy("firewallPolicy",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const firewallPolicy = new azure_nextgen.network.latest.FirewallPolicy("firewallPolicy", {
+const firewallPolicy = new azure_nextgen.network.FirewallPolicy("firewallPolicy", {
     dnsSettings: {
         enableProxy: true,
         requireProxyForNetworkRules: false,
@@ -513,7 +513,7 @@ The FirewallPolicy resource accepts the following [input]({{< relref "/docs/intr
 <a href="#basepolicy_csharp" style="color: inherit; text-decoration: inherit;">Base<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The parent firewall policy from which rules are inherited.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -522,7 +522,7 @@ The FirewallPolicy resource accepts the following [input]({{< relref "/docs/intr
 <a href="#dnssettings_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dnssettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Dns<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#dnssettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Dns<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}DNS Proxy Settings definition.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -540,7 +540,7 @@ The FirewallPolicy resource accepts the following [input]({{< relref "/docs/intr
 <a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedserviceidentity">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Managed<wbr>Service<wbr>Identity<wbr>Args</a></span>
+        <span class="property-type"><a href="#managedserviceidentity">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Managed<wbr>Service<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The identity of the firewall policy.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -549,7 +549,7 @@ The FirewallPolicy resource accepts the following [input]({{< relref "/docs/intr
 <a href="#intrusiondetection_csharp" style="color: inherit; text-decoration: inherit;">Intrusion<wbr>Detection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicyintrusiondetection">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Firewall<wbr>Policy<wbr>Intrusion<wbr>Detection<wbr>Args</a></span>
+        <span class="property-type"><a href="#firewallpolicyintrusiondetection">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Firewall<wbr>Policy<wbr>Intrusion<wbr>Detection<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration for Intrusion detection.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -567,7 +567,7 @@ The FirewallPolicy resource accepts the following [input]({{< relref "/docs/intr
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicysku">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Firewall<wbr>Policy<wbr>Sku<wbr>Args</a></span>
+        <span class="property-type"><a href="#firewallpolicysku">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Firewall<wbr>Policy<wbr>Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Firewall Policy SKU.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -585,7 +585,7 @@ The FirewallPolicy resource accepts the following [input]({{< relref "/docs/intr
 <a href="#threatintelmode_csharp" style="color: inherit; text-decoration: inherit;">Threat<wbr>Intel<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#azurefirewallthreatintelmode">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Azure<wbr>Firewall<wbr>Threat<wbr>Intel<wbr>Mode</a></span>
+        <span class="property-type">string | <a href="#azurefirewallthreatintelmode">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Azure<wbr>Firewall<wbr>Threat<wbr>Intel<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}The operation mode for Threat Intelligence.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -594,7 +594,7 @@ The FirewallPolicy resource accepts the following [input]({{< relref "/docs/intr
 <a href="#threatintelwhitelist_csharp" style="color: inherit; text-decoration: inherit;">Threat<wbr>Intel<wbr>Whitelist</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicythreatintelwhitelist">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Firewall<wbr>Policy<wbr>Threat<wbr>Intel<wbr>Whitelist<wbr>Args</a></span>
+        <span class="property-type"><a href="#firewallpolicythreatintelwhitelist">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Firewall<wbr>Policy<wbr>Threat<wbr>Intel<wbr>Whitelist<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}ThreatIntel Whitelist for Firewall Policy.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -603,7 +603,7 @@ The FirewallPolicy resource accepts the following [input]({{< relref "/docs/intr
 <a href="#transportsecurity_csharp" style="color: inherit; text-decoration: inherit;">Transport<wbr>Security</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicytransportsecurity">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Firewall<wbr>Policy<wbr>Transport<wbr>Security<wbr>Args</a></span>
+        <span class="property-type"><a href="#firewallpolicytransportsecurity">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Firewall<wbr>Policy<wbr>Transport<wbr>Security<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}TLS Configuration definition.{{% /md %}}</dd>
 </dl>
@@ -994,7 +994,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#childpolicies_csharp" style="color: inherit; text-decoration: inherit;">Child<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Outputs.<wbr>Sub<wbr>Resource<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#subresourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Outputs.<wbr>Sub<wbr>Resource<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of references to Child Firewall Policies.{{% /md %}}</dd>
     <dt class="property-"
@@ -1012,7 +1012,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#firewalls_csharp" style="color: inherit; text-decoration: inherit;">Firewalls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Outputs.<wbr>Sub<wbr>Resource<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#subresourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Outputs.<wbr>Sub<wbr>Resource<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of references to Azure Firewalls that this Firewall Policy is associated with.{{% /md %}}</dd>
     <dt class="property-"
@@ -1048,7 +1048,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rulecollectiongroups_csharp" style="color: inherit; text-decoration: inherit;">Rule<wbr>Collection<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Outputs.<wbr>Sub<wbr>Resource<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#subresourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Outputs.<wbr>Sub<wbr>Resource<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of references to FirewallPolicyRuleCollectionGroups.{{% /md %}}</dd>
     <dt class="property-"
@@ -1828,7 +1828,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#configuration_csharp" style="color: inherit; text-decoration: inherit;">Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicyintrusiondetectionconfiguration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Firewall<wbr>Policy<wbr>Intrusion<wbr>Detection<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#firewallpolicyintrusiondetectionconfiguration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Firewall<wbr>Policy<wbr>Intrusion<wbr>Detection<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Intrusion detection configuration properties.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1837,7 +1837,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mode_csharp" style="color: inherit; text-decoration: inherit;">Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#firewallpolicyintrusiondetectionstatetype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Firewall<wbr>Policy<wbr>Intrusion<wbr>Detection<wbr>State<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#firewallpolicyintrusiondetectionstatetype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Firewall<wbr>Policy<wbr>Intrusion<wbr>Detection<wbr>State<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Intrusion detection general state.{{% /md %}}</dd>
 </dl>
@@ -1971,7 +1971,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protocol_csharp" style="color: inherit; text-decoration: inherit;">Protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#firewallpolicyintrusiondetectionprotocol">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Firewall<wbr>Policy<wbr>Intrusion<wbr>Detection<wbr>Protocol</a></span>
+        <span class="property-type">string | <a href="#firewallpolicyintrusiondetectionprotocol">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Firewall<wbr>Policy<wbr>Intrusion<wbr>Detection<wbr>Protocol</a></span>
     </dt>
     <dd>{{% md %}}The rule bypass protocol.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2554,7 +2554,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bypasstrafficsettings_csharp" style="color: inherit; text-decoration: inherit;">Bypass<wbr>Traffic<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicyintrusiondetectionbypasstrafficspecifications">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Firewall<wbr>Policy<wbr>Intrusion<wbr>Detection<wbr>Bypass<wbr>Traffic<wbr>Specifications<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#firewallpolicyintrusiondetectionbypasstrafficspecifications">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Firewall<wbr>Policy<wbr>Intrusion<wbr>Detection<wbr>Bypass<wbr>Traffic<wbr>Specifications<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of rules for traffic to bypass.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2563,7 +2563,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#signatureoverrides_csharp" style="color: inherit; text-decoration: inherit;">Signature<wbr>Overrides</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicyintrusiondetectionsignaturespecification">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Firewall<wbr>Policy<wbr>Intrusion<wbr>Detection<wbr>Signature<wbr>Specification<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#firewallpolicyintrusiondetectionsignaturespecification">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Firewall<wbr>Policy<wbr>Intrusion<wbr>Detection<wbr>Signature<wbr>Specification<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of specific signatures states.{{% /md %}}</dd>
 </dl>
@@ -2652,7 +2652,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bypasstrafficsettings_csharp" style="color: inherit; text-decoration: inherit;">Bypass<wbr>Traffic<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicyintrusiondetectionbypasstrafficspecificationsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Firewall<wbr>Policy<wbr>Intrusion<wbr>Detection<wbr>Bypass<wbr>Traffic<wbr>Specifications<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#firewallpolicyintrusiondetectionbypasstrafficspecificationsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Firewall<wbr>Policy<wbr>Intrusion<wbr>Detection<wbr>Bypass<wbr>Traffic<wbr>Specifications<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of rules for traffic to bypass.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2661,7 +2661,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#signatureoverrides_csharp" style="color: inherit; text-decoration: inherit;">Signature<wbr>Overrides</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicyintrusiondetectionsignaturespecificationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Firewall<wbr>Policy<wbr>Intrusion<wbr>Detection<wbr>Signature<wbr>Specification<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#firewallpolicyintrusiondetectionsignaturespecificationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Firewall<wbr>Policy<wbr>Intrusion<wbr>Detection<wbr>Signature<wbr>Specification<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of specific signatures states.{{% /md %}}</dd>
 </dl>
@@ -2804,7 +2804,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#configuration_csharp" style="color: inherit; text-decoration: inherit;">Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicyintrusiondetectionconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Firewall<wbr>Policy<wbr>Intrusion<wbr>Detection<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#firewallpolicyintrusiondetectionconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Firewall<wbr>Policy<wbr>Intrusion<wbr>Detection<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Intrusion detection configuration properties.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2911,7 +2911,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mode_csharp" style="color: inherit; text-decoration: inherit;">Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#firewallpolicyintrusiondetectionstatetype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Firewall<wbr>Policy<wbr>Intrusion<wbr>Detection<wbr>State<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#firewallpolicyintrusiondetectionstatetype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Firewall<wbr>Policy<wbr>Intrusion<wbr>Detection<wbr>State<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The signature state.{{% /md %}}</dd>
 </dl>
@@ -3144,7 +3144,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tier_csharp" style="color: inherit; text-decoration: inherit;">Tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#firewallpolicyskutier">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Firewall<wbr>Policy<wbr>Sku<wbr>Tier</a></span>
+        <span class="property-type">string | <a href="#firewallpolicyskutier">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Firewall<wbr>Policy<wbr>Sku<wbr>Tier</a></span>
     </dt>
     <dd>{{% md %}}Tier of Firewall Policy.{{% /md %}}</dd>
 </dl>
@@ -3502,7 +3502,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#certificateauthority_csharp" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Authority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicycertificateauthority">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Firewall<wbr>Policy<wbr>Certificate<wbr>Authority<wbr>Args</a></span>
+        <span class="property-type"><a href="#firewallpolicycertificateauthority">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Firewall<wbr>Policy<wbr>Certificate<wbr>Authority<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The CA used for intermediate CA generation.{{% /md %}}</dd>
 </dl>
@@ -3564,7 +3564,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#certificateauthority_csharp" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Authority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicycertificateauthorityresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Firewall<wbr>Policy<wbr>Certificate<wbr>Authority<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#firewallpolicycertificateauthorityresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Firewall<wbr>Policy<wbr>Certificate<wbr>Authority<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The CA used for intermediate CA generation.{{% /md %}}</dd>
 </dl>
@@ -3626,7 +3626,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidentitytype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Resource<wbr>Identity<wbr>Type</a></span>
+        <span class="property-type"><a href="#resourceidentitytype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Resource<wbr>Identity<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of identity used for the resource. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user assigned identities. The type 'None' will remove any identities from the virtual machine.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3751,7 +3751,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userassignedidentities_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Managed<wbr>Service<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Managed<wbr>Service<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}The list of user identities associated with resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd>
 </dl>
@@ -4164,7 +4164,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:network/latest:FirewallPolicy firewallPolicy /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/firewallPolicies/firewallPolicy 
+$ pulumi import azure-nextgen:network:FirewallPolicy firewallPolicy /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/firewallPolicies/firewallPolicy 
 ```
 
 

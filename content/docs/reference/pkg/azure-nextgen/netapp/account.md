@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.netapp.Account resource with exa
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 NetApp account resource
-Latest API Version: 2020-09-01.
+API Version: 2020-09-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,12 +27,12 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var account = new AzureNextGen.NetApp.Latest.Account("account", new AzureNextGen.NetApp.Latest.AccountArgs
+        var account = new AzureNextGen.NetApp..Account("account", new AzureNextGen.NetApp..AccountArgs
         {
             AccountName = "account1",
             ActiveDirectories = 
             {
-                new AzureNextGen.NetApp.Latest.Inputs.ActiveDirectoryArgs
+                new AzureNextGen.NetApp..Inputs.ActiveDirectoryArgs
                 {
                     AesEncryption = true,
                     Dns = "10.10.10.3, 10.10.10.4",
@@ -62,7 +62,7 @@ class MyStack : Stack
 package main
 
 import (
-	netapp "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/netapp/latest"
+	netapp "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/netapp"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -103,9 +103,9 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-account = azure_nextgen.netapp.latest.Account("account",
+account = azure_nextgen.netapp.Account("account",
     account_name="account1",
-    active_directories=[azure_nextgen.netapp.latest.ActiveDirectoryArgs(
+    active_directories=[azure_nextgen.netapp.ActiveDirectoryArgs(
         aes_encryption=True,
         dns="10.10.10.3, 10.10.10.4",
         domain="10.10.10.3",
@@ -129,7 +129,7 @@ account = azure_nextgen.netapp.latest.Account("account",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const account = new azure_nextgen.netapp.latest.Account("account", {
+const account = new azure_nextgen.netapp.Account("account", {
     accountName: "account1",
     activeDirectories: [{
         aesEncryption: true,
@@ -366,7 +366,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#activedirectories_csharp" style="color: inherit; text-decoration: inherit;">Active<wbr>Directories</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activedirectory">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Net<wbr>App.<wbr>Inputs.<wbr>Active<wbr>Directory<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#activedirectory">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Net<wbr>App..<wbr>Inputs.<wbr>Active<wbr>Directory<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Active Directories{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1928,7 +1928,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:netapp/latest:Account account1 /subscriptions/D633CC2E-722B-4AE1-B636-BBD9E4C60ED9/resourceGroups/myRG/providers/Microsoft.NetApp/netAppAccounts/account1 
+$ pulumi import azure-nextgen:netapp:Account account1 /subscriptions/D633CC2E-722B-4AE1-B636-BBD9E4C60ED9/resourceGroups/myRG/providers/Microsoft.NetApp/netAppAccounts/account1 
 ```
 
 

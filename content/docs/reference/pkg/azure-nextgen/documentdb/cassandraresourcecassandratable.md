@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.documentdb.CassandraResourceCass
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 An Azure Cosmos DB Cassandra table.
-Latest API Version: 2020-09-01.
+API Version: 2020-09-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,21 +27,21 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var cassandraResourceCassandraTable = new AzureNextGen.DocumentDB.Latest.CassandraResourceCassandraTable("cassandraResourceCassandraTable", new AzureNextGen.DocumentDB.Latest.CassandraResourceCassandraTableArgs
+        var cassandraResourceCassandraTable = new AzureNextGen.DocumentDB..CassandraResourceCassandraTable("cassandraResourceCassandraTable", new AzureNextGen.DocumentDB..CassandraResourceCassandraTableArgs
         {
             AccountName = "ddb1",
             KeyspaceName = "keyspaceName",
             Location = "West US",
             Options = ,
-            Resource = new AzureNextGen.DocumentDB.Latest.Inputs.CassandraTableResourceArgs
+            Resource = new AzureNextGen.DocumentDB..Inputs.CassandraTableResourceArgs
             {
                 DefaultTtl = 100,
                 Id = "tableName",
-                Schema = new AzureNextGen.DocumentDB.Latest.Inputs.CassandraSchemaArgs
+                Schema = new AzureNextGen.DocumentDB..Inputs.CassandraSchemaArgs
                 {
                     ClusterKeys = 
                     {
-                        new AzureNextGen.DocumentDB.Latest.Inputs.ClusterKeyArgs
+                        new AzureNextGen.DocumentDB..Inputs.ClusterKeyArgs
                         {
                             Name = "columnA",
                             OrderBy = "Asc",
@@ -49,7 +49,7 @@ class MyStack : Stack
                     },
                     Columns = 
                     {
-                        new AzureNextGen.DocumentDB.Latest.Inputs.ColumnArgs
+                        new AzureNextGen.DocumentDB..Inputs.ColumnArgs
                         {
                             Name = "columnA",
                             Type = "Ascii",
@@ -57,7 +57,7 @@ class MyStack : Stack
                     },
                     PartitionKeys = 
                     {
-                        new AzureNextGen.DocumentDB.Latest.Inputs.CassandraPartitionKeyArgs
+                        new AzureNextGen.DocumentDB..Inputs.CassandraPartitionKeyArgs
                         {
                             Name = "columnA",
                         },
@@ -82,7 +82,7 @@ class MyStack : Stack
 package main
 
 import (
-	documentdb "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/documentdb/latest"
+	documentdb "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/documentdb"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -137,24 +137,24 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-cassandra_resource_cassandra_table = azure_nextgen.documentdb.latest.CassandraResourceCassandraTable("cassandraResourceCassandraTable",
+cassandra_resource_cassandra_table = azure_nextgen.documentdb.CassandraResourceCassandraTable("cassandraResourceCassandraTable",
     account_name="ddb1",
     keyspace_name="keyspaceName",
     location="West US",
-    options=azure_nextgen.documentdb.latest.CreateUpdateOptionsArgs(),
-    resource=azure_nextgen.documentdb.latest.CassandraTableResourceArgs(
+    options=azure_nextgen.documentdb.CreateUpdateOptionsArgs(),
+    resource=azure_nextgen.documentdb.CassandraTableResourceArgs(
         default_ttl=100,
         id="tableName",
-        schema=azure_nextgen.documentdb.latest.CassandraSchemaArgs(
-            cluster_keys=[azure_nextgen.documentdb.latest.ClusterKeyArgs(
+        schema=azure_nextgen.documentdb.CassandraSchemaArgs(
+            cluster_keys=[azure_nextgen.documentdb.ClusterKeyArgs(
                 name="columnA",
                 order_by="Asc",
             )],
-            columns=[azure_nextgen.documentdb.latest.ColumnArgs(
+            columns=[azure_nextgen.documentdb.ColumnArgs(
                 name="columnA",
                 type="Ascii",
             )],
-            partition_keys=[azure_nextgen.documentdb.latest.CassandraPartitionKeyArgs(
+            partition_keys=[azure_nextgen.documentdb.CassandraPartitionKeyArgs(
                 name="columnA",
             )],
         ),
@@ -173,7 +173,7 @@ cassandra_resource_cassandra_table = azure_nextgen.documentdb.latest.CassandraRe
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const cassandraResourceCassandraTable = new azure_nextgen.documentdb.latest.CassandraResourceCassandraTable("cassandraResourceCassandraTable", {
+const cassandraResourceCassandraTable = new azure_nextgen.documentdb.CassandraResourceCassandraTable("cassandraResourceCassandraTable", {
     accountName: "ddb1",
     keyspaceName: "keyspaceName",
     location: "West US",
@@ -411,7 +411,7 @@ The CassandraResourceCassandraTable resource accepts the following [input]({{< r
 <a href="#resource_csharp" style="color: inherit; text-decoration: inherit;">Resource</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cassandratableresource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Cassandra<wbr>Table<wbr>Resource<wbr>Args</a></span>
+        <span class="property-type"><a href="#cassandratableresource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB..<wbr>Inputs.<wbr>Cassandra<wbr>Table<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The standard JSON format of a Cassandra table{{% /md %}}</dd>
     <dt class="property-required"
@@ -447,7 +447,7 @@ The CassandraResourceCassandraTable resource accepts the following [input]({{< r
 <a href="#options_csharp" style="color: inherit; text-decoration: inherit;">Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#createupdateoptions">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Create<wbr>Update<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#createupdateoptions">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB..<wbr>Inputs.<wbr>Create<wbr>Update<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A key-value pair of options to be applied for the request. This corresponds to the headers sent with the request.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1104,7 +1104,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#clusterkeys_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterkey">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Cluster<wbr>Key<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#clusterkey">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB..<wbr>Inputs.<wbr>Cluster<wbr>Key<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of cluster key.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1113,7 +1113,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#columns_csharp" style="color: inherit; text-decoration: inherit;">Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#column">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Column<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#column">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB..<wbr>Inputs.<wbr>Column<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of Cassandra table columns.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1122,7 +1122,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#partitionkeys_csharp" style="color: inherit; text-decoration: inherit;">Partition<wbr>Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cassandrapartitionkey">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Cassandra<wbr>Partition<wbr>Key<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#cassandrapartitionkey">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB..<wbr>Inputs.<wbr>Cassandra<wbr>Partition<wbr>Key<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of partition key.{{% /md %}}</dd>
 </dl>
@@ -1238,7 +1238,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#clusterkeys_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterkeyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Cluster<wbr>Key<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#clusterkeyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB..<wbr>Inputs.<wbr>Cluster<wbr>Key<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of cluster key.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1247,7 +1247,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#columns_csharp" style="color: inherit; text-decoration: inherit;">Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#columnresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Column<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#columnresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB..<wbr>Inputs.<wbr>Column<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of Cassandra table columns.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1256,7 +1256,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#partitionkeys_csharp" style="color: inherit; text-decoration: inherit;">Partition<wbr>Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cassandrapartitionkeyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Cassandra<wbr>Partition<wbr>Key<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#cassandrapartitionkeyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB..<wbr>Inputs.<wbr>Cassandra<wbr>Partition<wbr>Key<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of partition key.{{% /md %}}</dd>
 </dl>
@@ -1372,7 +1372,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#autoscalesettings_csharp" style="color: inherit; text-decoration: inherit;">Autoscale<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Autoscale<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#autoscalesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB..<wbr>Inputs.<wbr>Autoscale<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the Autoscale settings.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1524,7 +1524,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schema_csharp" style="color: inherit; text-decoration: inherit;">Schema</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cassandraschemaresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Cassandra<wbr>Schema<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#cassandraschemaresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB..<wbr>Inputs.<wbr>Cassandra<wbr>Schema<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Schema of the Cosmos DB Cassandra table{{% /md %}}</dd>
 </dl>
@@ -1766,7 +1766,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schema_csharp" style="color: inherit; text-decoration: inherit;">Schema</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cassandraschema">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Cassandra<wbr>Schema<wbr>Args</a></span>
+        <span class="property-type"><a href="#cassandraschema">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB..<wbr>Inputs.<wbr>Cassandra<wbr>Schema<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Schema of the Cosmos DB Cassandra table{{% /md %}}</dd>
 </dl>
@@ -2274,7 +2274,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#autoscalesettings_csharp" style="color: inherit; text-decoration: inherit;">Autoscale<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalesettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Autoscale<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#autoscalesettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB..<wbr>Inputs.<wbr>Autoscale<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the Autoscale settings.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2366,7 +2366,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:documentdb/latest:CassandraResourceCassandraTable tableName /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.DocumentDB/databaseAccounts/ddb1/cassandraKeyspaces/keyspaceName/cassandraTables/tableName 
+$ pulumi import azure-nextgen:documentdb:CassandraResourceCassandraTable tableName /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.DocumentDB/databaseAccounts/ddb1/cassandraKeyspaces/keyspaceName/cassandraTables/tableName 
 ```
 
 

@@ -278,7 +278,7 @@ The following output properties are available:
 <a href="#schedule_csharp" style="color: inherit; text-decoration: inherit;">Schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobscheduleresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql.<wbr>Outputs.<wbr>Job<wbr>Schedule<wbr>Response</a></span>
+        <span class="property-type"><a href="#jobscheduleresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql..<wbr>Outputs.<wbr>Job<wbr>Schedule<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Schedule properties of the job.{{% /md %}}</dd>
 </dl>

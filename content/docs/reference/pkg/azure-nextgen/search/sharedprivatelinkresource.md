@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.search.SharedPrivateLinkResource
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Describes a Shared Private Link Resource managed by the Azure Cognitive Search service.
-Latest API Version: 2020-08-01.
+API Version: 2020-08-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,9 +27,9 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var sharedPrivateLinkResource = new AzureNextGen.Search.Latest.SharedPrivateLinkResource("sharedPrivateLinkResource", new AzureNextGen.Search.Latest.SharedPrivateLinkResourceArgs
+        var sharedPrivateLinkResource = new AzureNextGen.Search..SharedPrivateLinkResource("sharedPrivateLinkResource", new AzureNextGen.Search..SharedPrivateLinkResourceArgs
         {
-            Properties = new AzureNextGen.Search.Latest.Inputs.SharedPrivateLinkResourcePropertiesArgs
+            Properties = new AzureNextGen.Search..Inputs.SharedPrivateLinkResourcePropertiesArgs
             {
                 GroupId = "blob",
                 PrivateLinkResourceId = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Storage/storageAccounts/storageAccountName",
@@ -53,7 +53,7 @@ class MyStack : Stack
 package main
 
 import (
-	search "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/search/latest"
+	search "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/search"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -86,8 +86,8 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-shared_private_link_resource = azure_nextgen.search.latest.SharedPrivateLinkResource("sharedPrivateLinkResource",
-    properties=azure_nextgen.search.latest.SharedPrivateLinkResourcePropertiesArgs(
+shared_private_link_resource = azure_nextgen.search.SharedPrivateLinkResource("sharedPrivateLinkResource",
+    properties=azure_nextgen.search.SharedPrivateLinkResourcePropertiesArgs(
         group_id="blob",
         private_link_resource_id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Storage/storageAccounts/storageAccountName",
         request_message="please approve",
@@ -106,7 +106,7 @@ shared_private_link_resource = azure_nextgen.search.latest.SharedPrivateLinkReso
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const sharedPrivateLinkResource = new azure_nextgen.search.latest.SharedPrivateLinkResource("sharedPrivateLinkResource", {
+const sharedPrivateLinkResource = new azure_nextgen.search.SharedPrivateLinkResource("sharedPrivateLinkResource", {
     properties: {
         groupId: "blob",
         privateLinkResourceId: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Storage/storageAccounts/storageAccountName",
@@ -337,7 +337,7 @@ The SharedPrivateLinkResource resource accepts the following [input]({{< relref 
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sharedprivatelinkresourceproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Search.<wbr>Inputs.<wbr>Shared<wbr>Private<wbr>Link<wbr>Resource<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#sharedprivatelinkresourceproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Search..<wbr>Inputs.<wbr>Shared<wbr>Private<wbr>Link<wbr>Resource<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the properties of a Shared Private Link Resource managed by the Azure Cognitive Search service.{{% /md %}}</dd>
 </dl>
@@ -647,7 +647,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sharedprivatelinkresourceprovisioningstate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Search.<wbr>Shared<wbr>Private<wbr>Link<wbr>Resource<wbr>Provisioning<wbr>State</a></span>
+        <span class="property-type"><a href="#sharedprivatelinkresourceprovisioningstate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Search..<wbr>Shared<wbr>Private<wbr>Link<wbr>Resource<wbr>Provisioning<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}The provisioning state of the shared private link resource. Can be Updating, Deleting, Failed, Succeeded or Incomplete.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -674,7 +674,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sharedprivatelinkresourcestatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Search.<wbr>Shared<wbr>Private<wbr>Link<wbr>Resource<wbr>Status</a></span>
+        <span class="property-type"><a href="#sharedprivatelinkresourcestatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Search..<wbr>Shared<wbr>Private<wbr>Link<wbr>Resource<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}Status of the shared private link resource. Can be Pending, Approved, Rejected or Disconnected.{{% /md %}}</dd>
 </dl>
@@ -1223,7 +1223,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:search/latest:SharedPrivateLinkResource testResource /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Search/searchServices/mysearchservice/sharedPrivateLinkResources/testResource 
+$ pulumi import azure-nextgen:search:SharedPrivateLinkResource testResource /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Search/searchServices/mysearchservice/sharedPrivateLinkResources/testResource 
 ```
 
 

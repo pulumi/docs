@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.datafactory.IntegrationRuntime r
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Integration runtime resource type.
-Latest API Version: 2018-06-01.
+API Version: 2018-06-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var integrationRuntime = new AzureNextGen.DataFactory.Latest.IntegrationRuntime("integrationRuntime", new AzureNextGen.DataFactory.Latest.IntegrationRuntimeArgs
+        var integrationRuntime = new AzureNextGen.DataFactory..IntegrationRuntime("integrationRuntime", new AzureNextGen.DataFactory..IntegrationRuntimeArgs
         {
             FactoryName = "exampleFactoryName",
             IntegrationRuntimeName = "exampleIntegrationRuntime",
@@ -56,7 +56,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-integration_runtime = azure_nextgen.datafactory.latest.IntegrationRuntime("integrationRuntime",
+integration_runtime = azure_nextgen.datafactory.IntegrationRuntime("integrationRuntime",
     factory_name="exampleFactoryName",
     integration_runtime_name="exampleIntegrationRuntime",
     properties={
@@ -75,7 +75,7 @@ integration_runtime = azure_nextgen.datafactory.latest.IntegrationRuntime("integ
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const integrationRuntime = new azure_nextgen.datafactory.latest.IntegrationRuntime("integrationRuntime", {
+const integrationRuntime = new azure_nextgen.datafactory.IntegrationRuntime("integrationRuntime", {
     factoryName: "exampleFactoryName",
     integrationRuntimeName: "exampleIntegrationRuntime",
     properties: {
@@ -296,7 +296,7 @@ The IntegrationRuntime resource accepts the following [input]({{< relref "/docs/
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedintegrationruntime">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Managed<wbr>Integration<wbr>Runtime<wbr>Args</a> | <a href="#selfhostedintegrationruntime">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Self<wbr>Hosted<wbr>Integration<wbr>Runtime<wbr>Args</a></span>
+        <span class="property-type"><a href="#managedintegrationruntime">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Managed<wbr>Integration<wbr>Runtime<wbr>Args</a> | <a href="#selfhostedintegrationruntime">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Self<wbr>Hosted<wbr>Integration<wbr>Runtime<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Integration runtime properties.{{% /md %}}</dd>
     <dt class="property-required"
@@ -766,7 +766,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#store_csharp" style="color: inherit; text-decoration: inherit;">Store</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereference">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#linkedservicereference">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Azure Key Vault linked service reference.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -900,7 +900,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#store_csharp" style="color: inherit; text-decoration: inherit;">Store</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Azure Key Vault linked service reference.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1025,7 +1025,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreference">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Args</a> | <a href="#securestring">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreference">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Args</a> | <a href="#securestring">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The password of data source access.{{% /md %}}</dd>
     <dt class="property-required"
@@ -1159,7 +1159,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The password of data source access.{{% /md %}}</dd>
     <dt class="property-required"
@@ -1302,7 +1302,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#licensekey_csharp" style="color: inherit; text-decoration: inherit;">License<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreference">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Args</a> | <a href="#securestring">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreference">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Args</a> | <a href="#securestring">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The license key to activate the component.{{% /md %}}</dd>
 </dl>
@@ -1400,7 +1400,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#licensekey_csharp" style="color: inherit; text-decoration: inherit;">License<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The license key to activate the component.{{% /md %}}</dd>
 </dl>
@@ -1544,7 +1544,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#integrationruntimeentityreferencetype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Integration<wbr>Runtime<wbr>Entity<wbr>Reference<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#integrationruntimeentityreferencetype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Integration<wbr>Runtime<wbr>Entity<wbr>Reference<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of this referenced entity.{{% /md %}}</dd>
 </dl>
@@ -1927,7 +1927,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dataflowproperties_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Flow<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimedataflowproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Data<wbr>Flow<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimedataflowproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Data<wbr>Flow<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Data flow properties for managed integration runtime.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1972,7 +1972,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vnetproperties_csharp" style="color: inherit; text-decoration: inherit;">VNet<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimevnetproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>VNet<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimevnetproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>VNet<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}VNet properties for managed integration runtime.{{% /md %}}</dd>
 </dl>
@@ -2169,7 +2169,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dataflowproperties_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Flow<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimedataflowpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Data<wbr>Flow<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimedataflowpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Data<wbr>Flow<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Data flow properties for managed integration runtime.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2214,7 +2214,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vnetproperties_csharp" style="color: inherit; text-decoration: inherit;">VNet<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimevnetpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>VNet<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimevnetpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>VNet<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}VNet properties for managed integration runtime.{{% /md %}}</dd>
 </dl>
@@ -2420,7 +2420,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sastoken_csharp" style="color: inherit; text-decoration: inherit;">Sas<wbr>Token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securestring">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Args</a></span>
+        <span class="property-type"><a href="#securestring">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The SAS token of the Azure blob container.{{% /md %}}</dd>
 </dl>
@@ -2518,7 +2518,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sastoken_csharp" style="color: inherit; text-decoration: inherit;">Sas<wbr>Token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The SAS token of the Azure blob container.{{% /md %}}</dd>
 </dl>
@@ -2607,7 +2607,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#computetype_csharp" style="color: inherit; text-decoration: inherit;">Compute<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#dataflowcomputetype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Data<wbr>Flow<wbr>Compute<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#dataflowcomputetype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Data<wbr>Flow<wbr>Compute<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Compute type of the cluster which will execute data flow job.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2875,7 +2875,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#connectvia_csharp" style="color: inherit; text-decoration: inherit;">Connect<wbr>Via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#entityreference">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Entity<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#entityreference">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Entity<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The self-hosted integration runtime reference.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2893,7 +2893,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#staginglinkedservice_csharp" style="color: inherit; text-decoration: inherit;">Staging<wbr>Linked<wbr>Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#entityreference">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Entity<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#entityreference">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Entity<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The staging linked service reference.{{% /md %}}</dd>
 </dl>
@@ -3009,7 +3009,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#connectvia_csharp" style="color: inherit; text-decoration: inherit;">Connect<wbr>Via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#entityreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Entity<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#entityreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Entity<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The self-hosted integration runtime reference.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3027,7 +3027,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#staginglinkedservice_csharp" style="color: inherit; text-decoration: inherit;">Staging<wbr>Linked<wbr>Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#entityreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Entity<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#entityreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Entity<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The staging linked service reference.{{% /md %}}</dd>
 </dl>
@@ -3257,7 +3257,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#catalogadminpassword_csharp" style="color: inherit; text-decoration: inherit;">Catalog<wbr>Admin<wbr>Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securestring">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Args</a></span>
+        <span class="property-type"><a href="#securestring">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The password of the administrator user account of the catalog database.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3275,7 +3275,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#catalogpricingtier_csharp" style="color: inherit; text-decoration: inherit;">Catalog<wbr>Pricing<wbr>Tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#integrationruntimessiscatalogpricingtier">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Integration<wbr>Runtime<wbr>Ssis<wbr>Catalog<wbr>Pricing<wbr>Tier</a></span>
+        <span class="property-type">string | <a href="#integrationruntimessiscatalogpricingtier">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Integration<wbr>Runtime<wbr>Ssis<wbr>Catalog<wbr>Pricing<wbr>Tier</a></span>
     </dt>
     <dd>{{% md %}}The pricing tier for the catalog database. The valid values could be found in https://azure.microsoft.com/en-us/pricing/details/sql-database/{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3463,7 +3463,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#catalogadminpassword_csharp" style="color: inherit; text-decoration: inherit;">Catalog<wbr>Admin<wbr>Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The password of the administrator user account of the catalog database.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3723,7 +3723,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cataloginfo_csharp" style="color: inherit; text-decoration: inherit;">Catalog<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimessiscataloginfo">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Ssis<wbr>Catalog<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimessiscataloginfo">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Ssis<wbr>Catalog<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Catalog information for managed dedicated integration runtime.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3732,7 +3732,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#customsetupscriptproperties_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Setup<wbr>Script<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimecustomsetupscriptproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Custom<wbr>Setup<wbr>Script<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimecustomsetupscriptproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Custom<wbr>Setup<wbr>Script<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Custom setup script properties for a managed dedicated integration runtime.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3741,7 +3741,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dataproxyproperties_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Proxy<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimedataproxyproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Data<wbr>Proxy<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimedataproxyproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Data<wbr>Proxy<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Data proxy properties for a managed dedicated integration runtime.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3750,7 +3750,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#edition_csharp" style="color: inherit; text-decoration: inherit;">Edition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#integrationruntimeedition">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Integration<wbr>Runtime<wbr>Edition</a></span>
+        <span class="property-type">string | <a href="#integrationruntimeedition">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Integration<wbr>Runtime<wbr>Edition</a></span>
     </dt>
     <dd>{{% md %}}The edition for the SSIS Integration Runtime{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3768,7 +3768,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#licensetype_csharp" style="color: inherit; text-decoration: inherit;">License<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#integrationruntimelicensetype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Integration<wbr>Runtime<wbr>License<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#integrationruntimelicensetype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Integration<wbr>Runtime<wbr>License<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}License type for bringing your own license scenario.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3777,7 +3777,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#packagestores_csharp" style="color: inherit; text-decoration: inherit;">Package<wbr>Stores</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#packagestore">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Package<wbr>Store<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#packagestore">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Package<wbr>Store<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Package stores for the SSIS Integration Runtime.{{% /md %}}</dd>
 </dl>
@@ -4001,7 +4001,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cataloginfo_csharp" style="color: inherit; text-decoration: inherit;">Catalog<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimessiscataloginforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Ssis<wbr>Catalog<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimessiscataloginforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Ssis<wbr>Catalog<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Catalog information for managed dedicated integration runtime.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4010,7 +4010,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#customsetupscriptproperties_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Setup<wbr>Script<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimecustomsetupscriptpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Custom<wbr>Setup<wbr>Script<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimecustomsetupscriptpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Custom<wbr>Setup<wbr>Script<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Custom setup script properties for a managed dedicated integration runtime.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4019,7 +4019,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dataproxyproperties_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Proxy<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimedataproxypropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Data<wbr>Proxy<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimedataproxypropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Data<wbr>Proxy<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Data proxy properties for a managed dedicated integration runtime.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4055,7 +4055,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#packagestores_csharp" style="color: inherit; text-decoration: inherit;">Package<wbr>Stores</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#packagestoreresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Package<wbr>Store<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#packagestoreresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Package<wbr>Store<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Package stores for the SSIS Integration Runtime.{{% /md %}}</dd>
 </dl>
@@ -4547,7 +4547,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securestring">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Args</a></span>
+        <span class="property-type"><a href="#securestring">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The key used for authorization.{{% /md %}}</dd>
 </dl>
@@ -4609,7 +4609,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The key used for authorization.{{% /md %}}</dd>
 </dl>
@@ -5063,7 +5063,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#computeproperties_csharp" style="color: inherit; text-decoration: inherit;">Compute<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimecomputeproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Compute<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimecomputeproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Compute<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The compute resource for managed integration runtime.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -5081,7 +5081,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#managedvirtualnetwork_csharp" style="color: inherit; text-decoration: inherit;">Managed<wbr>Virtual<wbr>Network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedvirtualnetworkreference">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Managed<wbr>Virtual<wbr>Network<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#managedvirtualnetworkreference">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Managed<wbr>Virtual<wbr>Network<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Managed Virtual Network reference.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -5090,7 +5090,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ssisproperties_csharp" style="color: inherit; text-decoration: inherit;">Ssis<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimessisproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Ssis<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimessisproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Ssis<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}SSIS properties for managed integration runtime.{{% /md %}}</dd>
 </dl>
@@ -5242,7 +5242,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#computeproperties_csharp" style="color: inherit; text-decoration: inherit;">Compute<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimecomputepropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Compute<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimecomputepropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Compute<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The compute resource for managed integration runtime.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -5260,7 +5260,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#managedvirtualnetwork_csharp" style="color: inherit; text-decoration: inherit;">Managed<wbr>Virtual<wbr>Network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedvirtualnetworkreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Managed<wbr>Virtual<wbr>Network<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#managedvirtualnetworkreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Managed<wbr>Virtual<wbr>Network<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Managed Virtual Network reference.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -5269,7 +5269,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ssisproperties_csharp" style="color: inherit; text-decoration: inherit;">Ssis<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimessispropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Ssis<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimessispropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Ssis<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}SSIS properties for managed integration runtime.{{% /md %}}</dd>
 </dl>
@@ -5644,7 +5644,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#packagestorelinkedservice_csharp" style="color: inherit; text-decoration: inherit;">Package<wbr>Store<wbr>Linked<wbr>Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#entityreference">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Entity<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#entityreference">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Entity<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The package store linked service reference.{{% /md %}}</dd>
 </dl>
@@ -5742,7 +5742,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#packagestorelinkedservice_csharp" style="color: inherit; text-decoration: inherit;">Package<wbr>Store<wbr>Linked<wbr>Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#entityreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Entity<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#entityreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Entity<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The package store linked service reference.{{% /md %}}</dd>
 </dl>
@@ -5964,7 +5964,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linkedinfo_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedintegrationruntimekeyauthorization">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Integration<wbr>Runtime<wbr>Key<wbr>Authorization<wbr>Args</a> | <a href="#linkedintegrationruntimerbacauthorization">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Integration<wbr>Runtime<wbr>Rbac<wbr>Authorization<wbr>Args</a></span>
+        <span class="property-type"><a href="#linkedintegrationruntimekeyauthorization">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Linked<wbr>Integration<wbr>Runtime<wbr>Key<wbr>Authorization<wbr>Args</a> | <a href="#linkedintegrationruntimerbacauthorization">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Linked<wbr>Integration<wbr>Runtime<wbr>Rbac<wbr>Authorization<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The base definition of a linked integration runtime.{{% /md %}}</dd>
 </dl>
@@ -6062,7 +6062,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linkedinfo_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedintegrationruntimekeyauthorizationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Integration<wbr>Runtime<wbr>Key<wbr>Authorization<wbr>Response<wbr>Args</a> | <a href="#linkedintegrationruntimerbacauthorizationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Integration<wbr>Runtime<wbr>Rbac<wbr>Authorization<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#linkedintegrationruntimekeyauthorizationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Linked<wbr>Integration<wbr>Runtime<wbr>Key<wbr>Authorization<wbr>Response<wbr>Args</a> | <a href="#linkedintegrationruntimerbacauthorizationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Linked<wbr>Integration<wbr>Runtime<wbr>Rbac<wbr>Authorization<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The base definition of a linked integration runtime.{{% /md %}}</dd>
 </dl>
@@ -6145,7 +6145,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:datafactory/latest:IntegrationRuntime exampleIntegrationRuntime /subscriptions/12345678-1234-1234-1234-12345678abc/resourceGroups/exampleResourceGroup/providers/Microsoft.DataFactory/factories/exampleFactoryName/integrationruntimes/exampleIntegrationRuntime 
+$ pulumi import azure-nextgen:datafactory:IntegrationRuntime exampleIntegrationRuntime /subscriptions/12345678-1234-1234-1234-12345678abc/resourceGroups/exampleResourceGroup/providers/Microsoft.DataFactory/factories/exampleFactoryName/integrationruntimes/exampleIntegrationRuntime 
 ```
 
 

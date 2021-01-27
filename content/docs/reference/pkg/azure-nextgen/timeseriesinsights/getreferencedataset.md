@@ -215,7 +215,7 @@ The following output properties are available:
 <a href="#keyproperties_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#referencedatasetkeypropertyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Time<wbr>Series<wbr>Insights.<wbr>Outputs.<wbr>Reference<wbr>Data<wbr>Set<wbr>Key<wbr>Property<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#referencedatasetkeypropertyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Time<wbr>Series<wbr>Insights..<wbr>Outputs.<wbr>Reference<wbr>Data<wbr>Set<wbr>Key<wbr>Property<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of key properties for the reference data set.{{% /md %}}</dd>
     <dt class="property-"

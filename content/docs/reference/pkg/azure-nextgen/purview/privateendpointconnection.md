@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.purview.PrivateEndpointConnectio
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 A private endpoint connection class.
+API Version: 2020-12-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,11 +27,11 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var privateEndpointConnection = new AzureNextGen.Purview.V20201201Preview.PrivateEndpointConnection("privateEndpointConnection", new AzureNextGen.Purview.V20201201Preview.PrivateEndpointConnectionArgs
+        var privateEndpointConnection = new AzureNextGen.Purview..PrivateEndpointConnection("privateEndpointConnection", new AzureNextGen.Purview..PrivateEndpointConnectionArgs
         {
             AccountName = "account1",
             PrivateEndpointConnectionName = "privateEndpointConnection1",
-            PrivateLinkServiceConnectionState = new AzureNextGen.Purview.V20201201Preview.Inputs.PrivateLinkServiceConnectionStateArgs
+            PrivateLinkServiceConnectionState = new AzureNextGen.Purview..Inputs.PrivateLinkServiceConnectionStateArgs
             {
                 Description = "Approved by johndoe@company.com",
                 Status = "Approved",
@@ -51,7 +52,7 @@ class MyStack : Stack
 package main
 
 import (
-	purview "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/purview/v20201201preview"
+	purview "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/purview"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -83,10 +84,10 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-private_endpoint_connection = azure_nextgen.purview.v20201201preview.PrivateEndpointConnection("privateEndpointConnection",
+private_endpoint_connection = azure_nextgen.purview.PrivateEndpointConnection("privateEndpointConnection",
     account_name="account1",
     private_endpoint_connection_name="privateEndpointConnection1",
-    private_link_service_connection_state=azure_nextgen.purview.v20201201preview.PrivateLinkServiceConnectionStateArgs(
+    private_link_service_connection_state=azure_nextgen.purview.PrivateLinkServiceConnectionStateArgs(
         description="Approved by johndoe@company.com",
         status="Approved",
     ),
@@ -102,7 +103,7 @@ private_endpoint_connection = azure_nextgen.purview.v20201201preview.PrivateEndp
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const privateEndpointConnection = new azure_nextgen.purview.v20201201preview.PrivateEndpointConnection("privateEndpointConnection", {
+const privateEndpointConnection = new azure_nextgen.purview.PrivateEndpointConnection("privateEndpointConnection", {
     accountName: "account1",
     privateEndpointConnectionName: "privateEndpointConnection1",
     privateLinkServiceConnectionState: {
@@ -332,7 +333,7 @@ The PrivateEndpointConnection resource accepts the following [input]({{< relref 
 <a href="#privateendpoint_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpoint">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Purview.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Args</a></span>
+        <span class="property-type"><a href="#privateendpoint">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Purview..<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The private endpoint information.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -341,7 +342,7 @@ The PrivateEndpointConnection resource accepts the following [input]({{< relref 
 <a href="#privatelinkserviceconnectionstate_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkserviceconnectionstate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Purview.<wbr>Inputs.<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Args</a></span>
+        <span class="property-type"><a href="#privatelinkserviceconnectionstate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Purview..<wbr>Inputs.<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The private link service connection state.{{% /md %}}</dd>
 </dl>
@@ -838,7 +839,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#status">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Purview.<wbr>Status</a></span>
+        <span class="property-type">string | <a href="#status">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Purview..<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}The status.{{% /md %}}</dd>
 </dl>
@@ -1144,7 +1145,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:purview/v20201201preview:PrivateEndpointConnection privateEndpointConnection1 /subscriptions/12345678-1234-1234-12345678abc/resourceGroups/SampleResourceGroup/providers/Microsoft.Purview/accounts/account1/privateEndpointConnections/privateEndpointConnection1 
+$ pulumi import azure-nextgen:purview:PrivateEndpointConnection privateEndpointConnection1 /subscriptions/12345678-1234-1234-12345678abc/resourceGroups/SampleResourceGroup/providers/Microsoft.Purview/accounts/account1/privateEndpointConnections/privateEndpointConnection1 
 ```
 
 

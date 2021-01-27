@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.databoxedge.MonitoringConfig res
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The metric setting details for the role
-Latest API Version: 2020-09-01.
+API Version: 2020-09-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,20 +27,20 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var monitoringConfig = new AzureNextGen.DataBoxEdge.Latest.MonitoringConfig("monitoringConfig", new AzureNextGen.DataBoxEdge.Latest.MonitoringConfigArgs
+        var monitoringConfig = new AzureNextGen.DataBoxEdge..MonitoringConfig("monitoringConfig", new AzureNextGen.DataBoxEdge..MonitoringConfigArgs
         {
             DeviceName = "testedgedevice",
             MetricConfigurations = 
             {
-                new AzureNextGen.DataBoxEdge.Latest.Inputs.MetricConfigurationArgs
+                new AzureNextGen.DataBoxEdge..Inputs.MetricConfigurationArgs
                 {
                     CounterSets = 
                     {
-                        new AzureNextGen.DataBoxEdge.Latest.Inputs.MetricCounterSetArgs
+                        new AzureNextGen.DataBoxEdge..Inputs.MetricCounterSetArgs
                         {
                             Counters = 
                             {
-                                new AzureNextGen.DataBoxEdge.Latest.Inputs.MetricCounterArgs
+                                new AzureNextGen.DataBoxEdge..Inputs.MetricCounterArgs
                                 {
                                     Name = "test",
                                 },
@@ -69,7 +69,7 @@ class MyStack : Stack
 package main
 
 import (
-	databoxedge "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/databoxedge/latest"
+	databoxedge "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/databoxedge"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -113,11 +113,11 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-monitoring_config = azure_nextgen.databoxedge.latest.MonitoringConfig("monitoringConfig",
+monitoring_config = azure_nextgen.databoxedge.MonitoringConfig("monitoringConfig",
     device_name="testedgedevice",
-    metric_configurations=[azure_nextgen.databoxedge.latest.MetricConfigurationArgs(
-        counter_sets=[azure_nextgen.databoxedge.latest.MetricCounterSetArgs(
-            counters=[azure_nextgen.databoxedge.latest.MetricCounterArgs(
+    metric_configurations=[azure_nextgen.databoxedge.MetricConfigurationArgs(
+        counter_sets=[azure_nextgen.databoxedge.MetricCounterSetArgs(
+            counters=[azure_nextgen.databoxedge.MetricCounterArgs(
                 name="test",
             )],
         )],
@@ -138,7 +138,7 @@ monitoring_config = azure_nextgen.databoxedge.latest.MonitoringConfig("monitorin
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const monitoringConfig = new azure_nextgen.databoxedge.latest.MonitoringConfig("monitoringConfig", {
+const monitoringConfig = new azure_nextgen.databoxedge.MonitoringConfig("monitoringConfig", {
     deviceName: "testedgedevice",
     metricConfigurations: [{
         counterSets: [{
@@ -356,7 +356,7 @@ The MonitoringConfig resource accepts the following [input]({{< relref "/docs/in
 <a href="#metricconfigurations_csharp" style="color: inherit; text-decoration: inherit;">Metric<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricconfiguration">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Inputs.<wbr>Metric<wbr>Configuration<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#metricconfiguration">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge..<wbr>Inputs.<wbr>Metric<wbr>Configuration<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The metrics configuration details{{% /md %}}</dd>
     <dt class="property-required"
@@ -666,7 +666,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#countersets_csharp" style="color: inherit; text-decoration: inherit;">Counter<wbr>Sets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metriccounterset">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Inputs.<wbr>Metric<wbr>Counter<wbr>Set<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#metriccounterset">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge..<wbr>Inputs.<wbr>Metric<wbr>Counter<wbr>Set<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Host name for the IoT hub associated to the device.{{% /md %}}</dd>
     <dt class="property-required"
@@ -836,7 +836,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#countersets_csharp" style="color: inherit; text-decoration: inherit;">Counter<wbr>Sets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metriccountersetresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Inputs.<wbr>Metric<wbr>Counter<wbr>Set<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#metriccountersetresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge..<wbr>Inputs.<wbr>Metric<wbr>Counter<wbr>Set<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Host name for the IoT hub associated to the device.{{% /md %}}</dd>
     <dt class="property-required"
@@ -1015,7 +1015,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#additionaldimensions_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Dimensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricdimension">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Inputs.<wbr>Metric<wbr>Dimension<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#metricdimension">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge..<wbr>Inputs.<wbr>Metric<wbr>Dimension<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The additional dimensions to be added to metric.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1024,7 +1024,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dimensionfilter_csharp" style="color: inherit; text-decoration: inherit;">Dimension<wbr>Filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricdimension">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Inputs.<wbr>Metric<wbr>Dimension<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#metricdimension">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge..<wbr>Inputs.<wbr>Metric<wbr>Dimension<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The dimension filter.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1185,7 +1185,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#additionaldimensions_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Dimensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricdimensionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Inputs.<wbr>Metric<wbr>Dimension<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#metricdimensionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge..<wbr>Inputs.<wbr>Metric<wbr>Dimension<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The additional dimensions to be added to metric.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1194,7 +1194,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dimensionfilter_csharp" style="color: inherit; text-decoration: inherit;">Dimension<wbr>Filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricdimensionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Inputs.<wbr>Metric<wbr>Dimension<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#metricdimensionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge..<wbr>Inputs.<wbr>Metric<wbr>Dimension<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The dimension filter.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1346,7 +1346,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#counters_csharp" style="color: inherit; text-decoration: inherit;">Counters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metriccounter">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Inputs.<wbr>Metric<wbr>Counter<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#metriccounter">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge..<wbr>Inputs.<wbr>Metric<wbr>Counter<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The counters that should be collected in this set.{{% /md %}}</dd>
 </dl>
@@ -1408,7 +1408,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#counters_csharp" style="color: inherit; text-decoration: inherit;">Counters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metriccounterresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Inputs.<wbr>Metric<wbr>Counter<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#metriccounterresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge..<wbr>Inputs.<wbr>Metric<wbr>Counter<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The counters that should be collected in this set.{{% /md %}}</dd>
 </dl>
@@ -1660,7 +1660,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:databoxedge/latest:MonitoringConfig myresource1 /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DataBoxEdge/dataBoxEdgeDevices/{deviceName}/roles/{roleName}/monitoringConfig/default 
+$ pulumi import azure-nextgen:databoxedge:MonitoringConfig myresource1 /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DataBoxEdge/dataBoxEdgeDevices/{deviceName}/roles/{roleName}/monitoringConfig/default 
 ```
 
 

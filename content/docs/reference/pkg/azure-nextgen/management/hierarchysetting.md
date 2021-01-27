@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.management.HierarchySetting reso
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Settings defined at the Management Group scope.
-Latest API Version: 2020-05-01.
+API Version: 2020-05-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var hierarchySetting = new AzureNextGen.Management.Latest.HierarchySetting("hierarchySetting", new AzureNextGen.Management.Latest.HierarchySettingArgs
+        var hierarchySetting = new AzureNextGen.Management..HierarchySetting("hierarchySetting", new AzureNextGen.Management..HierarchySettingArgs
         {
             DefaultManagementGroup = "/providers/Microsoft.Management/managementGroups/DefaultGroup",
             GroupId = "root",
@@ -47,7 +47,7 @@ class MyStack : Stack
 package main
 
 import (
-	management "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/management/latest"
+	management "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/management"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -75,7 +75,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-hierarchy_setting = azure_nextgen.management.latest.HierarchySetting("hierarchySetting",
+hierarchy_setting = azure_nextgen.management.HierarchySetting("hierarchySetting",
     default_management_group="/providers/Microsoft.Management/managementGroups/DefaultGroup",
     group_id="root",
     require_authorization_for_group_creation=True)
@@ -90,7 +90,7 @@ hierarchy_setting = azure_nextgen.management.latest.HierarchySetting("hierarchyS
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const hierarchySetting = new azure_nextgen.management.latest.HierarchySetting("hierarchySetting", {
+const hierarchySetting = new azure_nextgen.management.HierarchySetting("hierarchySetting", {
     defaultManagementGroup: "/providers/Microsoft.Management/managementGroups/DefaultGroup",
     groupId: "root",
     requireAuthorizationForGroupCreation: true,
@@ -598,7 +598,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:management/latest:HierarchySetting root /providers/Microsoft.Management/managementGroups/root/settings/default 
+$ pulumi import azure-nextgen:management:HierarchySetting root /providers/Microsoft.Management/managementGroups/root/settings/default 
 ```
 
 

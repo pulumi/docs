@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.storsimple.FileShare resource wi
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The File Share.
-Latest API Version: 2016-10-01.
+API Version: 2016-10-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var fileShare = new AzureNextGen.StorSimple.Latest.FileShare("fileShare", new AzureNextGen.StorSimple.Latest.FileShareArgs
+        var fileShare = new AzureNextGen.StorSimple..FileShare("fileShare", new AzureNextGen.StorSimple..FileShareArgs
         {
             AdminUser = "fareast\\idcdlslb",
             DataPolicy = "Tiered",
@@ -55,7 +55,7 @@ class MyStack : Stack
 package main
 
 import (
-	storsimple "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/storsimple/latest"
+	storsimple "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/storsimple"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -91,7 +91,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-file_share = azure_nextgen.storsimple.latest.FileShare("fileShare",
+file_share = azure_nextgen.storsimple.FileShare("fileShare",
     admin_user="fareast\\idcdlslb",
     data_policy="Tiered",
     description="Demo FileShare for SDK Test Tiered",
@@ -114,7 +114,7 @@ file_share = azure_nextgen.storsimple.latest.FileShare("fileShare",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const fileShare = new azure_nextgen.storsimple.latest.FileShare("fileShare", {
+const fileShare = new azure_nextgen.storsimple.FileShare("fileShare", {
     adminUser: "fareast\\idcdlslb",
     dataPolicy: "Tiered",
     description: "Demo FileShare for SDK Test Tiered",
@@ -330,7 +330,7 @@ The FileShare resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#datapolicy_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datapolicy">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stor<wbr>Simple.<wbr>Data<wbr>Policy</a></span>
+        <span class="property-type"><a href="#datapolicy">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stor<wbr>Simple..<wbr>Data<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}The data policy{{% /md %}}</dd>
     <dt class="property-required"
@@ -366,7 +366,7 @@ The FileShare resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#monitoringstatus_csharp" style="color: inherit; text-decoration: inherit;">Monitoring<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#monitoringstatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stor<wbr>Simple.<wbr>Monitoring<wbr>Status</a></span>
+        <span class="property-type"><a href="#monitoringstatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stor<wbr>Simple..<wbr>Monitoring<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}The monitoring status{{% /md %}}</dd>
     <dt class="property-required"
@@ -402,7 +402,7 @@ The FileShare resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#sharestatus_csharp" style="color: inherit; text-decoration: inherit;">Share<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sharestatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stor<wbr>Simple.<wbr>Share<wbr>Status</a></span>
+        <span class="property-type"><a href="#sharestatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stor<wbr>Simple..<wbr>Share<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}The Share Status{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1088,7 +1088,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:storsimple/latest:FileShare Auto-TestFileShare1 /subscriptions/9eb689cd-7243-43b4-b6f6-5c65cb296641/resourceGroups/ResourceGroupForSDKTest/providers/Microsoft.StorSimple/managers/hAzureSDKOperations/devices/hsdk-4xy4fi2ivg/fileServers/HSDK-4XY4FI2IVG/shares/Auto-TestFileShare1 
+$ pulumi import azure-nextgen:storsimple:FileShare Auto-TestFileShare1 /subscriptions/9eb689cd-7243-43b4-b6f6-5c65cb296641/resourceGroups/ResourceGroupForSDKTest/providers/Microsoft.StorSimple/managers/hAzureSDKOperations/devices/hsdk-4xy4fi2ivg/fileServers/HSDK-4XY4FI2IVG/shares/Auto-TestFileShare1 
 ```
 
 

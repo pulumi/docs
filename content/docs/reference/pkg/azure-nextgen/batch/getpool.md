@@ -215,7 +215,7 @@ The following output properties are available:
 <a href="#autoscalerun_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Scale<wbr>Run</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalerunresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch.<wbr>Outputs.<wbr>Auto<wbr>Scale<wbr>Run<wbr>Response</a></span>
+        <span class="property-type"><a href="#autoscalerunresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch..<wbr>Outputs.<wbr>Auto<wbr>Scale<wbr>Run<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}This property is set only if the pool automatically scales, i.e. autoScaleSettings are used.{{% /md %}}</dd>
     <dt class="property-"
@@ -305,7 +305,7 @@ The following output properties are available:
 <a href="#resizeoperationstatus_csharp" style="color: inherit; text-decoration: inherit;">Resize<wbr>Operation<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resizeoperationstatusresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch.<wbr>Outputs.<wbr>Resize<wbr>Operation<wbr>Status<wbr>Response</a></span>
+        <span class="property-type"><a href="#resizeoperationstatusresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch..<wbr>Outputs.<wbr>Resize<wbr>Operation<wbr>Status<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes either the current operation (if the pool AllocationState is Resizing) or the previously completed operation (if the AllocationState is Steady).{{% /md %}}</dd>
     <dt class="property-"
@@ -332,7 +332,7 @@ The following output properties are available:
 <a href="#applicationpackages_csharp" style="color: inherit; text-decoration: inherit;">Application<wbr>Packages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationpackagereferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch.<wbr>Outputs.<wbr>Application<wbr>Package<wbr>Reference<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#applicationpackagereferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch..<wbr>Outputs.<wbr>Application<wbr>Package<wbr>Reference<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Changes to application package references affect all new compute nodes joining the pool, but do not affect compute nodes that are already in the pool until they are rebooted or reimaged. There is a maximum of 10 application package references on any given pool.{{% /md %}}</dd>
     <dt class="property-"
@@ -341,7 +341,7 @@ The following output properties are available:
 <a href="#certificates_csharp" style="color: inherit; text-decoration: inherit;">Certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatereferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch.<wbr>Outputs.<wbr>Certificate<wbr>Reference<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#certificatereferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch..<wbr>Outputs.<wbr>Certificate<wbr>Reference<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}For Windows compute nodes, the Batch service installs the certificates to the specified certificate store and location. For Linux compute nodes, the certificates are stored in a directory inside the task working directory and an environment variable AZ_BATCH_CERTIFICATES_DIR is supplied to the task to query for this location. For certificates with visibility of 'remoteUser', a 'certs' directory is created in the user's home directory (e.g., /home/{user-name}/certs) and certificates are placed in that directory.{{% /md %}}</dd>
     <dt class="property-"
@@ -350,7 +350,7 @@ The following output properties are available:
 <a href="#deploymentconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch.<wbr>Outputs.<wbr>Deployment<wbr>Configuration<wbr>Response</a></span>
+        <span class="property-type"><a href="#deploymentconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch..<wbr>Outputs.<wbr>Deployment<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Using CloudServiceConfiguration specifies that the nodes should be creating using Azure Cloud Services (PaaS), while VirtualMachineConfiguration uses Azure Virtual Machines (IaaS).{{% /md %}}</dd>
     <dt class="property-"
@@ -368,7 +368,7 @@ The following output properties are available:
 <a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#batchpoolidentityresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch.<wbr>Outputs.<wbr>Batch<wbr>Pool<wbr>Identity<wbr>Response</a></span>
+        <span class="property-type"><a href="#batchpoolidentityresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch..<wbr>Outputs.<wbr>Batch<wbr>Pool<wbr>Identity<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The type of identity used for the Batch Pool.{{% /md %}}</dd>
     <dt class="property-"
@@ -386,7 +386,7 @@ The following output properties are available:
 <a href="#metadata_csharp" style="color: inherit; text-decoration: inherit;">Metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metadataitemresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch.<wbr>Outputs.<wbr>Metadata<wbr>Item<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#metadataitemresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch..<wbr>Outputs.<wbr>Metadata<wbr>Item<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The Batch service does not assign any meaning to metadata; it is solely for the use of user code.{{% /md %}}</dd>
     <dt class="property-"
@@ -395,7 +395,7 @@ The following output properties are available:
 <a href="#mountconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Mount<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mountconfigurationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch.<wbr>Outputs.<wbr>Mount<wbr>Configuration<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#mountconfigurationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch..<wbr>Outputs.<wbr>Mount<wbr>Configuration<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}This supports Azure Files, NFS, CIFS/SMB, and Blobfuse.{{% /md %}}</dd>
     <dt class="property-"
@@ -404,7 +404,7 @@ The following output properties are available:
 <a href="#networkconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch.<wbr>Outputs.<wbr>Network<wbr>Configuration<wbr>Response</a></span>
+        <span class="property-type"><a href="#networkconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch..<wbr>Outputs.<wbr>Network<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The network configuration for a pool.{{% /md %}}</dd>
     <dt class="property-"
@@ -413,7 +413,7 @@ The following output properties are available:
 <a href="#scalesettings_csharp" style="color: inherit; text-decoration: inherit;">Scale<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch.<wbr>Outputs.<wbr>Scale<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#scalesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch..<wbr>Outputs.<wbr>Scale<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Defines the desired size of the pool. This can either be 'fixedScale' where the requested targetDedicatedNodes is specified, or 'autoScale' which defines a formula which is periodically reevaluated. If this property is not specified, the pool will have a fixed scale with 0 targetDedicatedNodes.{{% /md %}}</dd>
     <dt class="property-"
@@ -422,7 +422,7 @@ The following output properties are available:
 <a href="#starttask_csharp" style="color: inherit; text-decoration: inherit;">Start<wbr>Task</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#starttaskresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch.<wbr>Outputs.<wbr>Start<wbr>Task<wbr>Response</a></span>
+        <span class="property-type"><a href="#starttaskresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch..<wbr>Outputs.<wbr>Start<wbr>Task<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}In an PATCH (update) operation, this property can be set to an empty object to remove the start task from the pool.{{% /md %}}</dd>
     <dt class="property-"
@@ -431,7 +431,7 @@ The following output properties are available:
 <a href="#taskschedulingpolicy_csharp" style="color: inherit; text-decoration: inherit;">Task<wbr>Scheduling<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#taskschedulingpolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch.<wbr>Outputs.<wbr>Task<wbr>Scheduling<wbr>Policy<wbr>Response</a></span>
+        <span class="property-type"><a href="#taskschedulingpolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch..<wbr>Outputs.<wbr>Task<wbr>Scheduling<wbr>Policy<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}If not specified, the default is spread.{{% /md %}}</dd>
     <dt class="property-"
@@ -449,7 +449,7 @@ The following output properties are available:
 <a href="#useraccounts_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Accounts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#useraccountresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch.<wbr>Outputs.<wbr>User<wbr>Account<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#useraccountresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch..<wbr>Outputs.<wbr>User<wbr>Account<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-"
@@ -1435,7 +1435,7 @@ The following output properties are available:
 <a href="#details_csharp" style="color: inherit; text-decoration: inherit;">Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalerunerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch.<wbr>Inputs.<wbr>Auto<wbr>Scale<wbr>Run<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#autoscalerunerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch..<wbr>Inputs.<wbr>Auto<wbr>Scale<wbr>Run<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 </dl>
@@ -1565,7 +1565,7 @@ The following output properties are available:
 <a href="#error_csharp" style="color: inherit; text-decoration: inherit;">Error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalerunerrorresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch.<wbr>Inputs.<wbr>Auto<wbr>Scale<wbr>Run<wbr>Error<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#autoscalerunerrorresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch..<wbr>Inputs.<wbr>Auto<wbr>Scale<wbr>Run<wbr>Error<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2368,7 +2368,7 @@ The following output properties are available:
 <a href="#userassignedidentities_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch.<wbr>Inputs.<wbr>Batch<wbr>Pool<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch..<wbr>Inputs.<wbr>Batch<wbr>Pool<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}The list of user identities associated with the Batch pool. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd>
 </dl>
@@ -3072,7 +3072,7 @@ The following output properties are available:
 <a href="#containerregistries_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Registries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerregistryresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch.<wbr>Inputs.<wbr>Container<wbr>Registry<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#containerregistryresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch..<wbr>Inputs.<wbr>Container<wbr>Registry<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}If any images must be downloaded from a private registry which requires credentials, then those credentials must be provided here.{{% /md %}}</dd>
 </dl>
@@ -3543,7 +3543,7 @@ The following output properties are available:
 <a href="#cloudserviceconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Service<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudserviceconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch.<wbr>Inputs.<wbr>Cloud<wbr>Service<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#cloudserviceconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch..<wbr>Inputs.<wbr>Cloud<wbr>Service<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This property and virtualMachineConfiguration are mutually exclusive and one of the properties must be specified. This property cannot be specified if the Batch account was created with its poolAllocationMode property set to 'UserSubscription'.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3552,7 +3552,7 @@ The following output properties are available:
 <a href="#virtualmachineconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Machine<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch.<wbr>Inputs.<wbr>Virtual<wbr>Machine<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualmachineconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch..<wbr>Inputs.<wbr>Virtual<wbr>Machine<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This property and cloudServiceConfiguration are mutually exclusive and one of the properties must be specified.{{% /md %}}</dd>
 </dl>
@@ -4247,7 +4247,7 @@ The following output properties are available:
 <a href="#networksecuritygrouprules_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Security<wbr>Group<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networksecuritygroupruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch.<wbr>Inputs.<wbr>Network<wbr>Security<wbr>Group<wbr>Rule<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#networksecuritygroupruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch..<wbr>Inputs.<wbr>Network<wbr>Security<wbr>Group<wbr>Rule<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The maximum number of rules that can be specified across all the endpoints on a Batch pool is 25. If no network security group rules are specified, a default rule will be created to allow inbound access to the specified backendPort. If the maximum number of network security group rules is exceeded the request fails with HTTP status code 400.{{% /md %}}</dd>
 </dl>
@@ -4691,7 +4691,7 @@ The following output properties are available:
 <a href="#azureblobfilesystemconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Blob<wbr>File<wbr>System<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureblobfilesystemconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>File<wbr>System<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azureblobfilesystemconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch..<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>File<wbr>System<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This property is mutually exclusive with all other properties.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4700,7 +4700,7 @@ The following output properties are available:
 <a href="#azurefileshareconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>File<wbr>Share<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefileshareconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch.<wbr>Inputs.<wbr>Azure<wbr>File<wbr>Share<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurefileshareconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch..<wbr>Inputs.<wbr>Azure<wbr>File<wbr>Share<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This property is mutually exclusive with all other properties.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4709,7 +4709,7 @@ The following output properties are available:
 <a href="#cifsmountconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Cifs<wbr>Mount<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cifsmountconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch.<wbr>Inputs.<wbr>CIFSMount<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#cifsmountconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch..<wbr>Inputs.<wbr>CIFSMount<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This property is mutually exclusive with all other properties.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4718,7 +4718,7 @@ The following output properties are available:
 <a href="#nfsmountconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Nfs<wbr>Mount<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nfsmountconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch.<wbr>Inputs.<wbr>NFSMount<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#nfsmountconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch..<wbr>Inputs.<wbr>NFSMount<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This property is mutually exclusive with all other properties.{{% /md %}}</dd>
 </dl>
@@ -5005,7 +5005,7 @@ The following output properties are available:
 <a href="#endpointconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#poolendpointconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch.<wbr>Inputs.<wbr>Pool<wbr>Endpoint<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#poolendpointconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch..<wbr>Inputs.<wbr>Pool<wbr>Endpoint<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Pool endpoint configuration is only supported on pools with the virtualMachineConfiguration property.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -5014,7 +5014,7 @@ The following output properties are available:
 <a href="#publicipaddressconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>IPAddress<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#publicipaddressconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch.<wbr>Inputs.<wbr>Public<wbr>IPAddress<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#publicipaddressconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch..<wbr>Inputs.<wbr>Public<wbr>IPAddress<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This property is only supported on Pools with the virtualMachineConfiguration property.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -5386,7 +5386,7 @@ The following output properties are available:
 <a href="#inboundnatpools_csharp" style="color: inherit; text-decoration: inherit;">Inbound<wbr>Nat<wbr>Pools</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inboundnatpoolresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch.<wbr>Inputs.<wbr>Inbound<wbr>Nat<wbr>Pool<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#inboundnatpoolresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch..<wbr>Inputs.<wbr>Inbound<wbr>Nat<wbr>Pool<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The maximum number of inbound NAT pools per Batch pool is 5. If the maximum number of inbound NAT pools is exceeded the request fails with HTTP status code 400. This cannot be specified if the IPAddressProvisioningType is NoPublicIPAddresses.{{% /md %}}</dd>
 </dl>
@@ -5574,7 +5574,7 @@ The following output properties are available:
 <a href="#details_csharp" style="color: inherit; text-decoration: inherit;">Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resizeerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch.<wbr>Inputs.<wbr>Resize<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#resizeerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch..<wbr>Inputs.<wbr>Resize<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 </dl>
@@ -5695,7 +5695,7 @@ The following output properties are available:
 <a href="#errors_csharp" style="color: inherit; text-decoration: inherit;">Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resizeerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch.<wbr>Inputs.<wbr>Resize<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#resizeerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch..<wbr>Inputs.<wbr>Resize<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}This property is set only if an error occurred during the last pool resize, and only when the pool allocationState is Steady.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -6189,7 +6189,7 @@ The following output properties are available:
 <a href="#autoscale_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Scale</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch.<wbr>Inputs.<wbr>Auto<wbr>Scale<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#autoscalesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch..<wbr>Inputs.<wbr>Auto<wbr>Scale<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This property and fixedScale are mutually exclusive and one of the properties must be specified.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -6198,7 +6198,7 @@ The following output properties are available:
 <a href="#fixedscale_csharp" style="color: inherit; text-decoration: inherit;">Fixed<wbr>Scale</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fixedscalesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch.<wbr>Inputs.<wbr>Fixed<wbr>Scale<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#fixedscalesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch..<wbr>Inputs.<wbr>Fixed<wbr>Scale<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This property and autoScale are mutually exclusive and one of the properties must be specified.{{% /md %}}</dd>
 </dl>
@@ -6301,7 +6301,7 @@ The following output properties are available:
 <a href="#containersettings_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#taskcontainersettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch.<wbr>Inputs.<wbr>Task<wbr>Container<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#taskcontainersettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch..<wbr>Inputs.<wbr>Task<wbr>Container<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}When this is specified, all directories recursively below the AZ_BATCH_NODE_ROOT_DIR (the root of Azure Batch directories on the node) are mapped into the container, all task environment variables are mapped into the container, and the task command line is executed in the container.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -6310,7 +6310,7 @@ The following output properties are available:
 <a href="#environmentsettings_csharp" style="color: inherit; text-decoration: inherit;">Environment<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentsettingresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch.<wbr>Inputs.<wbr>Environment<wbr>Setting<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#environmentsettingresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch..<wbr>Inputs.<wbr>Environment<wbr>Setting<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -6328,7 +6328,7 @@ The following output properties are available:
 <a href="#resourcefiles_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Files</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcefileresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch.<wbr>Inputs.<wbr>Resource<wbr>File<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#resourcefileresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch..<wbr>Inputs.<wbr>Resource<wbr>File<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -6337,7 +6337,7 @@ The following output properties are available:
 <a href="#useridentity_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#useridentityresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch.<wbr>Inputs.<wbr>User<wbr>Identity<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#useridentityresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch..<wbr>Inputs.<wbr>User<wbr>Identity<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}If omitted, the task runs as a non-administrative user unique to the task.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -6593,7 +6593,7 @@ The following output properties are available:
 <a href="#registry_csharp" style="color: inherit; text-decoration: inherit;">Registry</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerregistryresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch.<wbr>Inputs.<wbr>Container<wbr>Registry<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#containerregistryresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch..<wbr>Inputs.<wbr>Container<wbr>Registry<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This setting can be omitted if was already provided at pool creation.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -6844,7 +6844,7 @@ The following output properties are available:
 <a href="#linuxuserconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Linux<wbr>User<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linuxuserconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch.<wbr>Inputs.<wbr>Linux<wbr>User<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#linuxuserconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch..<wbr>Inputs.<wbr>Linux<wbr>User<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This property is ignored if specified on a Windows pool. If not specified, the user is created with the default options.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -6853,7 +6853,7 @@ The following output properties are available:
 <a href="#windowsuserconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Windows<wbr>User<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#windowsuserconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch.<wbr>Inputs.<wbr>Windows<wbr>User<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#windowsuserconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch..<wbr>Inputs.<wbr>Windows<wbr>User<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This property can only be specified if the user is on a Windows pool. If not specified and on a Windows pool, the user is created with the default options.{{% /md %}}</dd>
 </dl>
@@ -7028,7 +7028,7 @@ The following output properties are available:
 <a href="#autouser_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>User</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autouserspecificationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch.<wbr>Inputs.<wbr>Auto<wbr>User<wbr>Specification<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#autouserspecificationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch..<wbr>Inputs.<wbr>Auto<wbr>User<wbr>Specification<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The userName and autoUser properties are mutually exclusive; you must specify one but not both.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -7450,7 +7450,7 @@ The following output properties are available:
 <a href="#imagereference_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imagereferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch.<wbr>Inputs.<wbr>Image<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#imagereferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch..<wbr>Inputs.<wbr>Image<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-required"
@@ -7468,7 +7468,7 @@ The following output properties are available:
 <a href="#containerconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch.<wbr>Inputs.<wbr>Container<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#containerconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch..<wbr>Inputs.<wbr>Container<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}If specified, setup is performed on each node in the pool to allow tasks to run in containers. All regular tasks and job manager tasks run on this pool must specify the containerSettings property, and all other tasks may specify it.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -7477,7 +7477,7 @@ The following output properties are available:
 <a href="#datadisks_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datadiskresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch.<wbr>Inputs.<wbr>Data<wbr>Disk<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#datadiskresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch..<wbr>Inputs.<wbr>Data<wbr>Disk<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}This property must be specified if the compute nodes in the pool need to have empty data disks attached to them.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -7486,7 +7486,7 @@ The following output properties are available:
 <a href="#diskencryptionconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Encryption<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diskencryptionconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch.<wbr>Inputs.<wbr>Disk<wbr>Encryption<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#diskencryptionconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch..<wbr>Inputs.<wbr>Disk<wbr>Encryption<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}If specified, encryption is performed on each node in the pool during node provisioning.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -7495,7 +7495,7 @@ The following output properties are available:
 <a href="#extensions_csharp" style="color: inherit; text-decoration: inherit;">Extensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vmextensionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch.<wbr>Inputs.<wbr>VMExtension<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#vmextensionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch..<wbr>Inputs.<wbr>VMExtension<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}If specified, the extensions mentioned in this configuration will be installed on each node.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -7517,7 +7517,7 @@ The following output properties are available:
 <a href="#nodeplacementconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Placement<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodeplacementconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch.<wbr>Inputs.<wbr>Node<wbr>Placement<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#nodeplacementconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch..<wbr>Inputs.<wbr>Node<wbr>Placement<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This configuration will specify rules on how nodes in the pool will be physically allocated.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -7526,7 +7526,7 @@ The following output properties are available:
 <a href="#windowsconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Windows<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#windowsconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch.<wbr>Inputs.<wbr>Windows<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#windowsconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch..<wbr>Inputs.<wbr>Windows<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This property must not be specified if the imageReference specifies a Linux OS image.{{% /md %}}</dd>
 </dl>

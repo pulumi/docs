@@ -161,7 +161,7 @@ The following output properties are available:
 <a href="#health_csharp" style="color: inherit; text-decoration: inherit;">Health</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cachehealthresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Cache.<wbr>Outputs.<wbr>Cache<wbr>Health<wbr>Response</a></span>
+        <span class="property-type"><a href="#cachehealthresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Cache..<wbr>Outputs.<wbr>Cache<wbr>Health<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Health of the Cache.{{% /md %}}</dd>
     <dt class="property-"
@@ -197,7 +197,7 @@ The following output properties are available:
 <a href="#systemdata_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Cache.<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
+        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Cache..<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The system meta data relating to this resource.{{% /md %}}</dd>
     <dt class="property-"
@@ -224,7 +224,7 @@ The following output properties are available:
 <a href="#directoryservicessettings_csharp" style="color: inherit; text-decoration: inherit;">Directory<wbr>Services<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cachedirectorysettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Cache.<wbr>Outputs.<wbr>Cache<wbr>Directory<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#cachedirectorysettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Cache..<wbr>Outputs.<wbr>Cache<wbr>Directory<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies Directory Services settings of the cache.{{% /md %}}</dd>
     <dt class="property-"
@@ -233,7 +233,7 @@ The following output properties are available:
 <a href="#encryptionsettings_csharp" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cacheencryptionsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Cache.<wbr>Outputs.<wbr>Cache<wbr>Encryption<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#cacheencryptionsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Cache..<wbr>Outputs.<wbr>Cache<wbr>Encryption<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies encryption settings of the cache.{{% /md %}}</dd>
     <dt class="property-"
@@ -242,7 +242,7 @@ The following output properties are available:
 <a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cacheidentityresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Cache.<wbr>Outputs.<wbr>Cache<wbr>Identity<wbr>Response</a></span>
+        <span class="property-type"><a href="#cacheidentityresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Cache..<wbr>Outputs.<wbr>Cache<wbr>Identity<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The identity of the cache, if configured.{{% /md %}}</dd>
     <dt class="property-"
@@ -260,7 +260,7 @@ The following output properties are available:
 <a href="#networksettings_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cachenetworksettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Cache.<wbr>Outputs.<wbr>Cache<wbr>Network<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#cachenetworksettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Cache..<wbr>Outputs.<wbr>Cache<wbr>Network<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies network settings of the cache.{{% /md %}}</dd>
     <dt class="property-"
@@ -278,7 +278,7 @@ The following output properties are available:
 <a href="#securitysettings_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cachesecuritysettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Cache.<wbr>Outputs.<wbr>Cache<wbr>Security<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#cachesecuritysettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Cache..<wbr>Outputs.<wbr>Cache<wbr>Security<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies security settings of the cache.{{% /md %}}</dd>
     <dt class="property-"
@@ -287,7 +287,7 @@ The following output properties are available:
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cacheresponsesku">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Cache.<wbr>Outputs.<wbr>Cache<wbr>Response<wbr>Sku</a></span>
+        <span class="property-type"><a href="#cacheresponsesku">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Cache..<wbr>Outputs.<wbr>Cache<wbr>Response<wbr>Sku</a></span>
     </dt>
     <dd>{{% md %}}SKU for the Cache.{{% /md %}}</dd>
     <dt class="property-"
@@ -314,7 +314,7 @@ The following output properties are available:
 <a href="#upgradestatus_csharp" style="color: inherit; text-decoration: inherit;">Upgrade<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cacheupgradestatusresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Cache.<wbr>Outputs.<wbr>Cache<wbr>Upgrade<wbr>Status<wbr>Response</a></span>
+        <span class="property-type"><a href="#cacheupgradestatusresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Cache..<wbr>Outputs.<wbr>Cache<wbr>Upgrade<wbr>Status<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Upgrade status of the Cache.{{% /md %}}</dd>
 </dl>
@@ -891,7 +891,7 @@ The following output properties are available:
 <a href="#credentials_csharp" style="color: inherit; text-decoration: inherit;">Credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cacheactivedirectorysettingsresponsecredentials">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Cache.<wbr>Inputs.<wbr>Cache<wbr>Active<wbr>Directory<wbr>Settings<wbr>Response<wbr>Credentials<wbr>Args</a></span>
+        <span class="property-type"><a href="#cacheactivedirectorysettingsresponsecredentials">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Cache..<wbr>Inputs.<wbr>Cache<wbr>Active<wbr>Directory<wbr>Settings<wbr>Response<wbr>Credentials<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Active Directory admin credentials used to join the HPC Cache to a domain.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1232,7 +1232,7 @@ The following output properties are available:
 <a href="#activedirectory_csharp" style="color: inherit; text-decoration: inherit;">Active<wbr>Directory</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cacheactivedirectorysettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Cache.<wbr>Inputs.<wbr>Cache<wbr>Active<wbr>Directory<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#cacheactivedirectorysettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Cache..<wbr>Inputs.<wbr>Cache<wbr>Active<wbr>Directory<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies settings for joining the HPC Cache to an Active Directory domain.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1241,7 +1241,7 @@ The following output properties are available:
 <a href="#usernamedownload_csharp" style="color: inherit; text-decoration: inherit;">Username<wbr>Download</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cacheusernamedownloadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Cache.<wbr>Inputs.<wbr>Cache<wbr>Username<wbr>Download<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#cacheusernamedownloadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Cache..<wbr>Inputs.<wbr>Cache<wbr>Username<wbr>Download<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies settings for Extended Groups. Extended Groups allows users to be members of more than 16 groups.{{% /md %}}</dd>
 </dl>
@@ -1335,7 +1335,7 @@ The following output properties are available:
 <a href="#keyencryptionkey_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Encryption<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultkeyreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Cache.<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>Key<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#keyvaultkeyreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Cache..<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>Key<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the location of the key encryption key in Key Vault.{{% /md %}}</dd>
 </dl>
@@ -1814,7 +1814,7 @@ The following output properties are available:
 <a href="#accesspolicies_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nfsaccesspolicyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Cache.<wbr>Inputs.<wbr>Nfs<wbr>Access<wbr>Policy<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#nfsaccesspolicyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Cache..<wbr>Inputs.<wbr>Nfs<wbr>Access<wbr>Policy<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}NFS access policies defined for this cache.{{% /md %}}</dd>
 </dl>
@@ -2119,7 +2119,7 @@ The following output properties are available:
 <a href="#credentials_csharp" style="color: inherit; text-decoration: inherit;">Credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cacheusernamedownloadsettingsresponsecredentials">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Cache.<wbr>Inputs.<wbr>Cache<wbr>Username<wbr>Download<wbr>Settings<wbr>Response<wbr>Credentials<wbr>Args</a></span>
+        <span class="property-type"><a href="#cacheusernamedownloadsettingsresponsecredentials">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Cache..<wbr>Inputs.<wbr>Cache<wbr>Username<wbr>Download<wbr>Settings<wbr>Response<wbr>Credentials<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}When present, these are the credentials for the secure LDAP connection.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2667,7 +2667,7 @@ The following output properties are available:
 <a href="#sourcevault_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Vault</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultkeyreferenceresponsesourcevault">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Cache.<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>Key<wbr>Reference<wbr>Response<wbr>Source<wbr>Vault<wbr>Args</a></span>
+        <span class="property-type"><a href="#keyvaultkeyreferenceresponsesourcevault">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Cache..<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>Key<wbr>Reference<wbr>Response<wbr>Source<wbr>Vault<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes a resource Id to source Key Vault.{{% /md %}}</dd>
 </dl>
@@ -2828,7 +2828,7 @@ The following output properties are available:
 <a href="#accessrules_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nfsaccessruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Cache.<wbr>Inputs.<wbr>Nfs<wbr>Access<wbr>Rule<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#nfsaccessruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Cache..<wbr>Inputs.<wbr>Nfs<wbr>Access<wbr>Rule<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The set of rules describing client accesses allowed under this policy.{{% /md %}}</dd>
     <dt class="property-required"

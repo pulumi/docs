@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.keyvault.Vault resource with exa
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Resource information with extended details.
-Latest API Version: 2019-09-01.
+API Version: 2019-09-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,17 +27,17 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var vault = new AzureNextGen.KeyVault.Latest.Vault("vault", new AzureNextGen.KeyVault.Latest.VaultArgs
+        var vault = new AzureNextGen.KeyVault..Vault("vault", new AzureNextGen.KeyVault..VaultArgs
         {
             Location = "westus",
-            Properties = new AzureNextGen.KeyVault.Latest.Inputs.VaultPropertiesArgs
+            Properties = new AzureNextGen.KeyVault..Inputs.VaultPropertiesArgs
             {
                 AccessPolicies = 
                 {
-                    new AzureNextGen.KeyVault.Latest.Inputs.AccessPolicyEntryArgs
+                    new AzureNextGen.KeyVault..Inputs.AccessPolicyEntryArgs
                     {
                         ObjectId = "00000000-0000-0000-0000-000000000000",
-                        Permissions = new AzureNextGen.KeyVault.Latest.Inputs.PermissionsArgs
+                        Permissions = new AzureNextGen.KeyVault..Inputs.PermissionsArgs
                         {
                             Certificates = 
                             {
@@ -93,7 +93,7 @@ class MyStack : Stack
                 EnabledForDeployment = true,
                 EnabledForDiskEncryption = true,
                 EnabledForTemplateDeployment = true,
-                Sku = new AzureNextGen.KeyVault.Latest.Inputs.SkuArgs
+                Sku = new AzureNextGen.KeyVault..Inputs.SkuArgs
                 {
                     Family = "A",
                     Name = "standard",
@@ -117,7 +117,7 @@ class MyStack : Stack
 package main
 
 import (
-	keyvault "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/keyvault/latest"
+	keyvault "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/keyvault"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -207,12 +207,12 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-vault = azure_nextgen.keyvault.latest.Vault("vault",
+vault = azure_nextgen.keyvault.Vault("vault",
     location="westus",
-    properties=azure_nextgen.keyvault.latest.VaultPropertiesArgs(
-        access_policies=[azure_nextgen.keyvault.latest.AccessPolicyEntryArgs(
+    properties=azure_nextgen.keyvault.VaultPropertiesArgs(
+        access_policies=[azure_nextgen.keyvault.AccessPolicyEntryArgs(
             object_id="00000000-0000-0000-0000-000000000000",
-            permissions=azure_nextgen.keyvault.latest.PermissionsArgs(
+            permissions=azure_nextgen.keyvault.PermissionsArgs(
                 certificates=[
                     "get",
                     "list",
@@ -263,7 +263,7 @@ vault = azure_nextgen.keyvault.latest.Vault("vault",
         enabled_for_deployment=True,
         enabled_for_disk_encryption=True,
         enabled_for_template_deployment=True,
-        sku=azure_nextgen.keyvault.latest.SkuArgs(
+        sku=azure_nextgen.keyvault.SkuArgs(
             family="A",
             name="standard",
         ),
@@ -282,7 +282,7 @@ vault = azure_nextgen.keyvault.latest.Vault("vault",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const vault = new azure_nextgen.keyvault.latest.Vault("vault", {
+const vault = new azure_nextgen.keyvault.Vault("vault", {
     location: "westus",
     properties: {
         accessPolicies: [{
@@ -362,38 +362,38 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var vault = new AzureNextGen.KeyVault.Latest.Vault("vault", new AzureNextGen.KeyVault.Latest.VaultArgs
+        var vault = new AzureNextGen.KeyVault..Vault("vault", new AzureNextGen.KeyVault..VaultArgs
         {
             Location = "westus",
-            Properties = new AzureNextGen.KeyVault.Latest.Inputs.VaultPropertiesArgs
+            Properties = new AzureNextGen.KeyVault..Inputs.VaultPropertiesArgs
             {
                 EnabledForDeployment = true,
                 EnabledForDiskEncryption = true,
                 EnabledForTemplateDeployment = true,
-                NetworkAcls = new AzureNextGen.KeyVault.Latest.Inputs.NetworkRuleSetArgs
+                NetworkAcls = new AzureNextGen.KeyVault..Inputs.NetworkRuleSetArgs
                 {
                     Bypass = "AzureServices",
                     DefaultAction = "Deny",
                     IpRules = 
                     {
-                        new AzureNextGen.KeyVault.Latest.Inputs.IPRuleArgs
+                        new AzureNextGen.KeyVault..Inputs.IPRuleArgs
                         {
                             Value = "124.56.78.91",
                         },
-                        new AzureNextGen.KeyVault.Latest.Inputs.IPRuleArgs
+                        new AzureNextGen.KeyVault..Inputs.IPRuleArgs
                         {
                             Value = "'10.91.4.0/24'",
                         },
                     },
                     VirtualNetworkRules = 
                     {
-                        new AzureNextGen.KeyVault.Latest.Inputs.VirtualNetworkRuleArgs
+                        new AzureNextGen.KeyVault..Inputs.VirtualNetworkRuleArgs
                         {
                             Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/test-vnet/subnets/subnet1",
                         },
                     },
                 },
-                Sku = new AzureNextGen.KeyVault.Latest.Inputs.SkuArgs
+                Sku = new AzureNextGen.KeyVault..Inputs.SkuArgs
                 {
                     Family = "A",
                     Name = "standard",
@@ -417,7 +417,7 @@ class MyStack : Stack
 package main
 
 import (
-	keyvault "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/keyvault/latest"
+	keyvault "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/keyvault"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -472,28 +472,28 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-vault = azure_nextgen.keyvault.latest.Vault("vault",
+vault = azure_nextgen.keyvault.Vault("vault",
     location="westus",
-    properties=azure_nextgen.keyvault.latest.VaultPropertiesArgs(
+    properties=azure_nextgen.keyvault.VaultPropertiesArgs(
         enabled_for_deployment=True,
         enabled_for_disk_encryption=True,
         enabled_for_template_deployment=True,
-        network_acls=azure_nextgen.keyvault.latest.NetworkRuleSetArgs(
+        network_acls=azure_nextgen.keyvault.NetworkRuleSetArgs(
             bypass="AzureServices",
             default_action="Deny",
             ip_rules=[
-                azure_nextgen.keyvault.latest.IPRuleArgs(
+                azure_nextgen.keyvault.IPRuleArgs(
                     value="124.56.78.91",
                 ),
-                azure_nextgen.keyvault.latest.IPRuleArgs(
+                azure_nextgen.keyvault.IPRuleArgs(
                     value="'10.91.4.0/24'",
                 ),
             ],
-            virtual_network_rules=[azure_nextgen.keyvault.latest.VirtualNetworkRuleArgs(
+            virtual_network_rules=[azure_nextgen.keyvault.VirtualNetworkRuleArgs(
                 id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/test-vnet/subnets/subnet1",
             )],
         ),
-        sku=azure_nextgen.keyvault.latest.SkuArgs(
+        sku=azure_nextgen.keyvault.SkuArgs(
             family="A",
             name="standard",
         ),
@@ -512,7 +512,7 @@ vault = azure_nextgen.keyvault.latest.Vault("vault",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const vault = new azure_nextgen.keyvault.latest.Vault("vault", {
+const vault = new azure_nextgen.keyvault.Vault("vault", {
     location: "westus",
     properties: {
         enabledForDeployment: true,
@@ -745,7 +745,7 @@ The Vault resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vaultproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Key<wbr>Vault.<wbr>Inputs.<wbr>Vault<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#vaultproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Key<wbr>Vault..<wbr>Inputs.<wbr>Vault<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties of the vault{{% /md %}}</dd>
     <dt class="property-required"
@@ -1100,7 +1100,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#permissions_csharp" style="color: inherit; text-decoration: inherit;">Permissions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#permissions">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Key<wbr>Vault.<wbr>Inputs.<wbr>Permissions<wbr>Args</a></span>
+        <span class="property-type"><a href="#permissions">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Key<wbr>Vault..<wbr>Inputs.<wbr>Permissions<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Permissions the identity has for keys, secrets and certificates.{{% /md %}}</dd>
     <dt class="property-required"
@@ -1270,7 +1270,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#permissions_csharp" style="color: inherit; text-decoration: inherit;">Permissions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#permissionsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Key<wbr>Vault.<wbr>Inputs.<wbr>Permissions<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#permissionsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Key<wbr>Vault..<wbr>Inputs.<wbr>Permissions<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Permissions the identity has for keys, secrets and certificates.{{% /md %}}</dd>
     <dt class="property-required"
@@ -1985,7 +1985,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bypass_csharp" style="color: inherit; text-decoration: inherit;">Bypass</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#networkrulebypassoptions">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Key<wbr>Vault.<wbr>Network<wbr>Rule<wbr>Bypass<wbr>Options</a></span>
+        <span class="property-type">string | <a href="#networkrulebypassoptions">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Key<wbr>Vault..<wbr>Network<wbr>Rule<wbr>Bypass<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}Tells what traffic can bypass network rules. This can be 'AzureServices' or 'None'.  If not specified the default is 'AzureServices'.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1994,7 +1994,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#defaultaction_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#networkruleaction">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Key<wbr>Vault.<wbr>Network<wbr>Rule<wbr>Action</a></span>
+        <span class="property-type">string | <a href="#networkruleaction">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Key<wbr>Vault..<wbr>Network<wbr>Rule<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}The default action when no rule from ipRules and from virtualNetworkRules match. This is only used after the bypass property has been evaluated.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2003,7 +2003,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#iprules_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iprule">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Key<wbr>Vault.<wbr>Inputs.<wbr>IPRule<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#iprule">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Key<wbr>Vault..<wbr>Inputs.<wbr>IPRule<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of IP address rules.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2012,7 +2012,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#virtualnetworkrules_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkrule">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Key<wbr>Vault.<wbr>Inputs.<wbr>Virtual<wbr>Network<wbr>Rule<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#virtualnetworkrule">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Key<wbr>Vault..<wbr>Inputs.<wbr>Virtual<wbr>Network<wbr>Rule<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of virtual network rules.{{% /md %}}</dd>
 </dl>
@@ -2173,7 +2173,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#iprules_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Key<wbr>Vault.<wbr>Inputs.<wbr>IPRule<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#ipruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Key<wbr>Vault..<wbr>Inputs.<wbr>IPRule<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of IP address rules.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2182,7 +2182,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#virtualnetworkrules_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Key<wbr>Vault.<wbr>Inputs.<wbr>Virtual<wbr>Network<wbr>Rule<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#virtualnetworkruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Key<wbr>Vault..<wbr>Inputs.<wbr>Virtual<wbr>Network<wbr>Rule<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of virtual network rules.{{% /md %}}</dd>
 </dl>
@@ -2325,7 +2325,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#certificates_csharp" style="color: inherit; text-decoration: inherit;">Certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Union&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Key<wbr>Vault.<wbr>Certificate<wbr>Permissions&gt;&gt;</span>
+        <span class="property-type">List&lt;Union&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Key<wbr>Vault..<wbr>Certificate<wbr>Permissions&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}Permissions to certificates{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2334,7 +2334,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keys_csharp" style="color: inherit; text-decoration: inherit;">Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Union&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Key<wbr>Vault.<wbr>Key<wbr>Permissions&gt;&gt;</span>
+        <span class="property-type">List&lt;Union&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Key<wbr>Vault..<wbr>Key<wbr>Permissions&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}Permissions to keys{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2343,7 +2343,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secrets_csharp" style="color: inherit; text-decoration: inherit;">Secrets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Union&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Key<wbr>Vault.<wbr>Secret<wbr>Permissions&gt;&gt;</span>
+        <span class="property-type">List&lt;Union&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Key<wbr>Vault..<wbr>Secret<wbr>Permissions&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}Permissions to secrets{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2352,7 +2352,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storage_csharp" style="color: inherit; text-decoration: inherit;">Storage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Union&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Key<wbr>Vault.<wbr>Storage<wbr>Permissions&gt;&gt;</span>
+        <span class="property-type">List&lt;Union&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Key<wbr>Vault..<wbr>Storage<wbr>Permissions&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}Permissions to storage accounts{{% /md %}}</dd>
 </dl>
@@ -2674,7 +2674,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privateendpoint_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Key<wbr>Vault.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#privateendpointresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Key<wbr>Vault..<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties of the private endpoint object.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2683,7 +2683,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privatelinkserviceconnectionstate_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Key<wbr>Vault.<wbr>Inputs.<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Key<wbr>Vault..<wbr>Inputs.<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Approval state of the private link connection.{{% /md %}}</dd>
 </dl>
@@ -3089,7 +3089,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#family_csharp" style="color: inherit; text-decoration: inherit;">Family</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#skufamily">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Key<wbr>Vault.<wbr>Sku<wbr>Family</a></span>
+        <span class="property-type">string | <a href="#skufamily">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Key<wbr>Vault..<wbr>Sku<wbr>Family</a></span>
     </dt>
     <dd>{{% md %}}SKU family name{{% /md %}}</dd>
     <dt class="property-required"
@@ -3098,7 +3098,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skuname">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Key<wbr>Vault.<wbr>Sku<wbr>Name</a></span>
+        <span class="property-type"><a href="#skuname">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Key<wbr>Vault..<wbr>Sku<wbr>Name</a></span>
     </dt>
     <dd>{{% md %}}SKU name to specify whether the key vault is a standard vault or a premium vault.{{% /md %}}</dd>
 </dl>
@@ -3495,7 +3495,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sku">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Key<wbr>Vault.<wbr>Inputs.<wbr>Sku<wbr>Args</a></span>
+        <span class="property-type"><a href="#sku">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Key<wbr>Vault..<wbr>Inputs.<wbr>Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}SKU details{{% /md %}}</dd>
     <dt class="property-required"
@@ -3513,7 +3513,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accesspolicies_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accesspolicyentry">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Key<wbr>Vault.<wbr>Inputs.<wbr>Access<wbr>Policy<wbr>Entry<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#accesspolicyentry">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Key<wbr>Vault..<wbr>Inputs.<wbr>Access<wbr>Policy<wbr>Entry<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}An array of 0 to 1024 identities that have access to the key vault. All identities in the array must use the same tenant ID as the key vault's tenant ID. When `createMode` is set to `recover`, access policies are not required. Otherwise, access policies are required.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3522,7 +3522,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#createmode_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#createmode">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Key<wbr>Vault.<wbr>Create<wbr>Mode</a></span>
+        <span class="property-type"><a href="#createmode">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Key<wbr>Vault..<wbr>Create<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}The vault's create mode to indicate whether the vault need to be recovered or not.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3585,7 +3585,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#networkacls_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Acls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkruleset">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Key<wbr>Vault.<wbr>Inputs.<wbr>Network<wbr>Rule<wbr>Set<wbr>Args</a></span>
+        <span class="property-type"><a href="#networkruleset">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Key<wbr>Vault..<wbr>Inputs.<wbr>Network<wbr>Rule<wbr>Set<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Rules governing the accessibility of the key vault from specific network locations.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3594,7 +3594,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#vaultprovisioningstate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Key<wbr>Vault.<wbr>Vault<wbr>Provisioning<wbr>State</a></span>
+        <span class="property-type">string | <a href="#vaultprovisioningstate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Key<wbr>Vault..<wbr>Vault<wbr>Provisioning<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}Provisioning state of the vault.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4025,7 +4025,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privateendpointconnections_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint<wbr>Connections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointconnectionitemresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Key<wbr>Vault.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Item<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#privateendpointconnectionitemresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Key<wbr>Vault..<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Item<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of private endpoint connections associated with the key vault.{{% /md %}}</dd>
     <dt class="property-required"
@@ -4034,7 +4034,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skuresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Key<wbr>Vault.<wbr>Inputs.<wbr>Sku<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#skuresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Key<wbr>Vault..<wbr>Inputs.<wbr>Sku<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}SKU details{{% /md %}}</dd>
     <dt class="property-required"
@@ -4052,7 +4052,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accesspolicies_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accesspolicyentryresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Key<wbr>Vault.<wbr>Inputs.<wbr>Access<wbr>Policy<wbr>Entry<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#accesspolicyentryresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Key<wbr>Vault..<wbr>Inputs.<wbr>Access<wbr>Policy<wbr>Entry<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}An array of 0 to 1024 identities that have access to the key vault. All identities in the array must use the same tenant ID as the key vault's tenant ID. When `createMode` is set to `recover`, access policies are not required. Otherwise, access policies are required.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4124,7 +4124,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#networkacls_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Acls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkrulesetresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Key<wbr>Vault.<wbr>Inputs.<wbr>Network<wbr>Rule<wbr>Set<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#networkrulesetresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Key<wbr>Vault..<wbr>Inputs.<wbr>Network<wbr>Rule<wbr>Set<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Rules governing the accessibility of the key vault from specific network locations.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4747,7 +4747,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:keyvault/latest:Vault sample-vault /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/sample-resource-group/providers/Microsoft.KeyVault/vaults/sample-vault 
+$ pulumi import azure-nextgen:keyvault:Vault sample-vault /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/sample-resource-group/providers/Microsoft.KeyVault/vaults/sample-vault 
 ```
 
 

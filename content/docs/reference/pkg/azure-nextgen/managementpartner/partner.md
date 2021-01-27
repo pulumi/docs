@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.managementpartner.Partner resour
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 this is the management partner operations response
-Latest API Version: 2018-02-01.
+API Version: 2018-02-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var partner = new AzureNextGen.ManagementPartner.Latest.Partner("partner", new AzureNextGen.ManagementPartner.Latest.PartnerArgs
+        var partner = new AzureNextGen.ManagementPartner..Partner("partner", new AzureNextGen.ManagementPartner..PartnerArgs
         {
             PartnerId = "123456",
         });
@@ -45,7 +45,7 @@ class MyStack : Stack
 package main
 
 import (
-	managementpartner "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/managementpartner/latest"
+	managementpartner "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/managementpartner"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -71,7 +71,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-partner = azure_nextgen.managementpartner.latest.Partner("partner", partner_id="123456")
+partner = azure_nextgen.managementpartner.Partner("partner", partner_id="123456")
 
 ```
 
@@ -83,7 +83,7 @@ partner = azure_nextgen.managementpartner.latest.Partner("partner", partner_id="
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const partner = new azure_nextgen.managementpartner.latest.Partner("partner", {partnerId: "123456"});
+const partner = new azure_nextgen.managementpartner.Partner("partner", {partnerId: "123456"});
 
 ```
 
@@ -731,7 +731,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:managementpartner/latest:Partner 123456 /providers/microsoft.managementpartner/partners/123456 
+$ pulumi import azure-nextgen:managementpartner:Partner 123456 /providers/microsoft.managementpartner/partners/123456 
 ```
 
 

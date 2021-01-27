@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.documentdb.DatabaseAccountMongoD
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 An Azure Cosmos DB MongoDB database.
-Latest API Version: 2016-03-31.
+API Version: 2016-03-31.
 
 {{% examples %}}
 ## Example Usage
@@ -27,12 +27,12 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var databaseAccountMongoDBDatabase = new AzureNextGen.DocumentDB.Latest.DatabaseAccountMongoDBDatabase("databaseAccountMongoDBDatabase", new AzureNextGen.DocumentDB.Latest.DatabaseAccountMongoDBDatabaseArgs
+        var databaseAccountMongoDBDatabase = new AzureNextGen.DocumentDB..DatabaseAccountMongoDBDatabase("databaseAccountMongoDBDatabase", new AzureNextGen.DocumentDB..DatabaseAccountMongoDBDatabaseArgs
         {
             AccountName = "ddb1",
             DatabaseName = "databaseName",
             Options = ,
-            Resource = new AzureNextGen.DocumentDB.Latest.Inputs.MongoDBDatabaseResourceArgs
+            Resource = new AzureNextGen.DocumentDB..Inputs.MongoDBDatabaseResourceArgs
             {
                 Id = "updatedDatabaseName",
             },
@@ -52,7 +52,7 @@ class MyStack : Stack
 package main
 
 import (
-	documentdb "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/documentdb/latest"
+	documentdb "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/documentdb"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -84,11 +84,11 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-database_account_mongo_db_database = azure_nextgen.documentdb.latest.DatabaseAccountMongoDBDatabase("databaseAccountMongoDBDatabase",
+database_account_mongo_db_database = azure_nextgen.documentdb.DatabaseAccountMongoDBDatabase("databaseAccountMongoDBDatabase",
     account_name="ddb1",
     database_name="databaseName",
     options={},
-    resource=azure_nextgen.documentdb.latest.MongoDBDatabaseResourceArgs(
+    resource=azure_nextgen.documentdb.MongoDBDatabaseResourceArgs(
         id="updatedDatabaseName",
     ),
     resource_group_name="rg1")
@@ -103,7 +103,7 @@ database_account_mongo_db_database = azure_nextgen.documentdb.latest.DatabaseAcc
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const databaseAccountMongoDBDatabase = new azure_nextgen.documentdb.latest.DatabaseAccountMongoDBDatabase("databaseAccountMongoDBDatabase", {
+const databaseAccountMongoDBDatabase = new azure_nextgen.documentdb.DatabaseAccountMongoDBDatabase("databaseAccountMongoDBDatabase", {
     accountName: "ddb1",
     databaseName: "databaseName",
     options: {},
@@ -333,7 +333,7 @@ The DatabaseAccountMongoDBDatabase resource accepts the following [input]({{< re
 <a href="#resource_csharp" style="color: inherit; text-decoration: inherit;">Resource</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mongodbdatabaseresource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Mongo<wbr>DBDatabase<wbr>Resource<wbr>Args</a></span>
+        <span class="property-type"><a href="#mongodbdatabaseresource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB..<wbr>Inputs.<wbr>Mongo<wbr>DBDatabase<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The standard JSON format of a MongoDB database{{% /md %}}</dd>
     <dt class="property-required"
@@ -789,7 +789,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:documentdb/latest:DatabaseAccountMongoDBDatabase updatedDatabaseName updatedDatabaseName 
+$ pulumi import azure-nextgen:documentdb:DatabaseAccountMongoDBDatabase updatedDatabaseName updatedDatabaseName 
 ```
 
 

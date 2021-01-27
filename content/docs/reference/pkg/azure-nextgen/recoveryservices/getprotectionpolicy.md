@@ -215,7 +215,7 @@ The following output properties are available:
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefileshareprotectionpolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Outputs.<wbr>Azure<wbr>File<wbr>Share<wbr>Protection<wbr>Policy<wbr>Response</a> | <a href="#azureiaasvmprotectionpolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Outputs.<wbr>Azure<wbr>Iaa<wbr>SVMProtection<wbr>Policy<wbr>Response</a> | <a href="#azuresqlprotectionpolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Outputs.<wbr>Azure<wbr>Sql<wbr>Protection<wbr>Policy<wbr>Response</a> | <a href="#azurevmworkloadprotectionpolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Outputs.<wbr>Azure<wbr>Vm<wbr>Workload<wbr>Protection<wbr>Policy<wbr>Response</a> | <a href="#genericprotectionpolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Outputs.<wbr>Generic<wbr>Protection<wbr>Policy<wbr>Response</a> | <a href="#mabprotectionpolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Outputs.<wbr>Mab<wbr>Protection<wbr>Policy<wbr>Response</a></span>
+        <span class="property-type"><a href="#azurefileshareprotectionpolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Outputs.<wbr>Azure<wbr>File<wbr>Share<wbr>Protection<wbr>Policy<wbr>Response</a> | <a href="#azureiaasvmprotectionpolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Outputs.<wbr>Azure<wbr>Iaa<wbr>SVMProtection<wbr>Policy<wbr>Response</a> | <a href="#azuresqlprotectionpolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Outputs.<wbr>Azure<wbr>Sql<wbr>Protection<wbr>Policy<wbr>Response</a> | <a href="#azurevmworkloadprotectionpolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Outputs.<wbr>Azure<wbr>Vm<wbr>Workload<wbr>Protection<wbr>Policy<wbr>Response</a> | <a href="#genericprotectionpolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Outputs.<wbr>Generic<wbr>Protection<wbr>Policy<wbr>Response</a> | <a href="#mabprotectionpolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Outputs.<wbr>Mab<wbr>Protection<wbr>Policy<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}ProtectionPolicyResource properties{{% /md %}}</dd>
     <dt class="property-"
@@ -495,7 +495,7 @@ The following output properties are available:
 <a href="#retentionpolicy_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#longtermretentionpolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Long<wbr>Term<wbr>Retention<wbr>Policy<wbr>Response<wbr>Args</a> | <a href="#simpleretentionpolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Simple<wbr>Retention<wbr>Policy<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#longtermretentionpolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Long<wbr>Term<wbr>Retention<wbr>Policy<wbr>Response<wbr>Args</a> | <a href="#simpleretentionpolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Simple<wbr>Retention<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Retention policy with the details on backup copy retention ranges.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -504,7 +504,7 @@ The following output properties are available:
 <a href="#schedulepolicy_csharp" style="color: inherit; text-decoration: inherit;">Schedule<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#logschedulepolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Log<wbr>Schedule<wbr>Policy<wbr>Response<wbr>Args</a> | <a href="#longtermschedulepolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Long<wbr>Term<wbr>Schedule<wbr>Policy<wbr>Response<wbr>Args</a> | <a href="#simpleschedulepolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Simple<wbr>Schedule<wbr>Policy<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#logschedulepolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Log<wbr>Schedule<wbr>Policy<wbr>Response<wbr>Args</a> | <a href="#longtermschedulepolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Long<wbr>Term<wbr>Schedule<wbr>Policy<wbr>Response<wbr>Args</a> | <a href="#simpleschedulepolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Simple<wbr>Schedule<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Backup schedule specified as part of backup policy.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -697,7 +697,7 @@ The following output properties are available:
 <a href="#instantrpdetails_csharp" style="color: inherit; text-decoration: inherit;">Instant<wbr>RPDetails</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instantrpadditionaldetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Instant<wbr>RPAdditional<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#instantrpadditionaldetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Instant<wbr>RPAdditional<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -724,7 +724,7 @@ The following output properties are available:
 <a href="#retentionpolicy_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#longtermretentionpolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Long<wbr>Term<wbr>Retention<wbr>Policy<wbr>Response<wbr>Args</a> | <a href="#simpleretentionpolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Simple<wbr>Retention<wbr>Policy<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#longtermretentionpolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Long<wbr>Term<wbr>Retention<wbr>Policy<wbr>Response<wbr>Args</a> | <a href="#simpleretentionpolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Simple<wbr>Retention<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Retention policy with the details on backup copy retention ranges.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -733,7 +733,7 @@ The following output properties are available:
 <a href="#schedulepolicy_csharp" style="color: inherit; text-decoration: inherit;">Schedule<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#logschedulepolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Log<wbr>Schedule<wbr>Policy<wbr>Response<wbr>Args</a> | <a href="#longtermschedulepolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Long<wbr>Term<wbr>Schedule<wbr>Policy<wbr>Response<wbr>Args</a> | <a href="#simpleschedulepolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Simple<wbr>Schedule<wbr>Policy<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#logschedulepolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Log<wbr>Schedule<wbr>Policy<wbr>Response<wbr>Args</a> | <a href="#longtermschedulepolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Long<wbr>Term<wbr>Schedule<wbr>Policy<wbr>Response<wbr>Args</a> | <a href="#simpleschedulepolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Simple<wbr>Schedule<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Backup schedule specified as part of backup policy.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -953,7 +953,7 @@ The following output properties are available:
 <a href="#retentionpolicy_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#longtermretentionpolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Long<wbr>Term<wbr>Retention<wbr>Policy<wbr>Response<wbr>Args</a> | <a href="#simpleretentionpolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Simple<wbr>Retention<wbr>Policy<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#longtermretentionpolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Long<wbr>Term<wbr>Retention<wbr>Policy<wbr>Response<wbr>Args</a> | <a href="#simpleretentionpolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Simple<wbr>Retention<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Retention policy details.{{% /md %}}</dd>
 </dl>
@@ -1065,7 +1065,7 @@ The following output properties are available:
 <a href="#settings_csharp" style="color: inherit; text-decoration: inherit;">Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#settingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#settingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Common settings for the backup management{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1074,7 +1074,7 @@ The following output properties are available:
 <a href="#subprotectionpolicy_csharp" style="color: inherit; text-decoration: inherit;">Sub<wbr>Protection<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subprotectionpolicyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Sub<wbr>Protection<wbr>Policy<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#subprotectionpolicyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Sub<wbr>Protection<wbr>Policy<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of sub-protection policies which includes schedule and retention{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1258,7 +1258,7 @@ The following output properties are available:
 <a href="#daysofthemonth_csharp" style="color: inherit; text-decoration: inherit;">Days<wbr>Of<wbr>The<wbr>Month</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dayresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Day<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#dayresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Day<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of days of the month.{{% /md %}}</dd>
 </dl>
@@ -1325,7 +1325,7 @@ The following output properties are available:
 <a href="#retentionduration_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#retentiondurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Retention<wbr>Duration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#retentiondurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Retention<wbr>Duration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Retention duration of retention Policy.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1549,7 +1549,7 @@ The following output properties are available:
 <a href="#subprotectionpolicy_csharp" style="color: inherit; text-decoration: inherit;">Sub<wbr>Protection<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subprotectionpolicyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Sub<wbr>Protection<wbr>Policy<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#subprotectionpolicyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Sub<wbr>Protection<wbr>Policy<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of sub-protection policies which includes schedule and retention{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1876,7 +1876,7 @@ The following output properties are available:
 <a href="#dailyschedule_csharp" style="color: inherit; text-decoration: inherit;">Daily<wbr>Schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dailyretentionscheduleresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Daily<wbr>Retention<wbr>Schedule<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#dailyretentionscheduleresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Daily<wbr>Retention<wbr>Schedule<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Daily retention schedule of the protection policy.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1885,7 +1885,7 @@ The following output properties are available:
 <a href="#monthlyschedule_csharp" style="color: inherit; text-decoration: inherit;">Monthly<wbr>Schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#monthlyretentionscheduleresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Monthly<wbr>Retention<wbr>Schedule<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#monthlyretentionscheduleresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Monthly<wbr>Retention<wbr>Schedule<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Monthly retention schedule of the protection policy.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1894,7 +1894,7 @@ The following output properties are available:
 <a href="#weeklyschedule_csharp" style="color: inherit; text-decoration: inherit;">Weekly<wbr>Schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#weeklyretentionscheduleresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Weekly<wbr>Retention<wbr>Schedule<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#weeklyretentionscheduleresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Weekly<wbr>Retention<wbr>Schedule<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Weekly retention schedule of the protection policy.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1903,7 +1903,7 @@ The following output properties are available:
 <a href="#yearlyschedule_csharp" style="color: inherit; text-decoration: inherit;">Yearly<wbr>Schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#yearlyretentionscheduleresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Yearly<wbr>Retention<wbr>Schedule<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#yearlyretentionscheduleresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Yearly<wbr>Retention<wbr>Schedule<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Yearly retention schedule of the protection policy.{{% /md %}}</dd>
 </dl>
@@ -2091,7 +2091,7 @@ The following output properties are available:
 <a href="#retentionpolicy_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#longtermretentionpolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Long<wbr>Term<wbr>Retention<wbr>Policy<wbr>Response<wbr>Args</a> | <a href="#simpleretentionpolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Simple<wbr>Retention<wbr>Policy<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#longtermretentionpolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Long<wbr>Term<wbr>Retention<wbr>Policy<wbr>Response<wbr>Args</a> | <a href="#simpleretentionpolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Simple<wbr>Retention<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Retention policy details.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2100,7 +2100,7 @@ The following output properties are available:
 <a href="#schedulepolicy_csharp" style="color: inherit; text-decoration: inherit;">Schedule<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#logschedulepolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Log<wbr>Schedule<wbr>Policy<wbr>Response<wbr>Args</a> | <a href="#longtermschedulepolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Long<wbr>Term<wbr>Schedule<wbr>Policy<wbr>Response<wbr>Args</a> | <a href="#simpleschedulepolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Simple<wbr>Schedule<wbr>Policy<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#logschedulepolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Log<wbr>Schedule<wbr>Policy<wbr>Response<wbr>Args</a> | <a href="#longtermschedulepolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Long<wbr>Term<wbr>Schedule<wbr>Policy<wbr>Response<wbr>Args</a> | <a href="#simpleschedulepolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Simple<wbr>Schedule<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Backup schedule of backup policy.{{% /md %}}</dd>
 </dl>
@@ -2221,7 +2221,7 @@ The following output properties are available:
 <a href="#retentionduration_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#retentiondurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Retention<wbr>Duration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#retentiondurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Retention<wbr>Duration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Retention duration of retention Policy.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2230,7 +2230,7 @@ The following output properties are available:
 <a href="#retentionscheduledaily_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Schedule<wbr>Daily</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dailyretentionformatresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Daily<wbr>Retention<wbr>Format<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#dailyretentionformatresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Daily<wbr>Retention<wbr>Format<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Daily retention format for monthly retention policy.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2248,7 +2248,7 @@ The following output properties are available:
 <a href="#retentionscheduleweekly_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Schedule<wbr>Weekly</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#weeklyretentionformatresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Weekly<wbr>Retention<wbr>Format<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#weeklyretentionformatresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Weekly<wbr>Retention<wbr>Format<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Weekly retention format for monthly retention policy.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2682,7 +2682,7 @@ will be deprecated once clients upgrade to consider this flag.{{% /md %}}</dd>
 <a href="#retentionduration_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#retentiondurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Retention<wbr>Duration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#retentiondurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Retention<wbr>Duration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Retention duration of the protection policy.{{% /md %}}</dd>
 </dl>
@@ -2933,7 +2933,7 @@ will be deprecated once clients upgrade to consider this flag.{{% /md %}}</dd>
 <a href="#retentionpolicy_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#longtermretentionpolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Long<wbr>Term<wbr>Retention<wbr>Policy<wbr>Response<wbr>Args</a> | <a href="#simpleretentionpolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Simple<wbr>Retention<wbr>Policy<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#longtermretentionpolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Long<wbr>Term<wbr>Retention<wbr>Policy<wbr>Response<wbr>Args</a> | <a href="#simpleretentionpolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Simple<wbr>Retention<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Retention policy with the details on backup copy retention ranges.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2942,7 +2942,7 @@ will be deprecated once clients upgrade to consider this flag.{{% /md %}}</dd>
 <a href="#schedulepolicy_csharp" style="color: inherit; text-decoration: inherit;">Schedule<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#logschedulepolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Log<wbr>Schedule<wbr>Policy<wbr>Response<wbr>Args</a> | <a href="#longtermschedulepolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Long<wbr>Term<wbr>Schedule<wbr>Policy<wbr>Response<wbr>Args</a> | <a href="#simpleschedulepolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Simple<wbr>Schedule<wbr>Policy<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#logschedulepolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Log<wbr>Schedule<wbr>Policy<wbr>Response<wbr>Args</a> | <a href="#longtermschedulepolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Long<wbr>Term<wbr>Schedule<wbr>Policy<wbr>Response<wbr>Args</a> | <a href="#simpleschedulepolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Simple<wbr>Schedule<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Backup schedule specified as part of backup policy.{{% /md %}}</dd>
 </dl>
@@ -3175,7 +3175,7 @@ will be deprecated once clients upgrade to consider this flag.{{% /md %}}</dd>
 <a href="#retentionduration_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#retentiondurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Retention<wbr>Duration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#retentiondurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Retention<wbr>Duration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Retention duration of retention Policy.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3314,7 +3314,7 @@ will be deprecated once clients upgrade to consider this flag.{{% /md %}}</dd>
 <a href="#retentionduration_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#retentiondurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Retention<wbr>Duration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#retentiondurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Retention<wbr>Duration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Retention duration of retention Policy.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3323,7 +3323,7 @@ will be deprecated once clients upgrade to consider this flag.{{% /md %}}</dd>
 <a href="#retentionscheduledaily_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Schedule<wbr>Daily</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dailyretentionformatresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Daily<wbr>Retention<wbr>Format<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#dailyretentionformatresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Daily<wbr>Retention<wbr>Format<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Daily retention format for yearly retention policy.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3341,7 +3341,7 @@ will be deprecated once clients upgrade to consider this flag.{{% /md %}}</dd>
 <a href="#retentionscheduleweekly_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Schedule<wbr>Weekly</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#weeklyretentionformatresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Weekly<wbr>Retention<wbr>Format<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#weeklyretentionformatresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Weekly<wbr>Retention<wbr>Format<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Weekly retention format for yearly retention policy.{{% /md %}}</dd>
     <dt class="property-optional"

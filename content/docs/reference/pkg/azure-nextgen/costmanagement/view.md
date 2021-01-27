@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.costmanagement.View resource wit
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 States and configurations of Cost Analysis.
-Latest API Version: 2020-06-01.
+API Version: 2020-06-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,15 +27,15 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var view = new AzureNextGen.CostManagement.Latest.View("view", new AzureNextGen.CostManagement.Latest.ViewArgs
+        var view = new AzureNextGen.CostManagement..View("view", new AzureNextGen.CostManagement..ViewArgs
         {
             Accumulated = "true",
             Chart = "Table",
-            Dataset = new AzureNextGen.CostManagement.Latest.Inputs.ReportConfigDatasetArgs
+            Dataset = new AzureNextGen.CostManagement..Inputs.ReportConfigDatasetArgs
             {
                 Aggregation = 
                 {
-                    { "totalCost", new AzureNextGen.CostManagement.Latest.Inputs.ReportConfigAggregationArgs
+                    { "totalCost", new AzureNextGen.CostManagement..Inputs.ReportConfigAggregationArgs
                     {
                         Function = "Sum",
                         Name = "PreTaxCost",
@@ -45,7 +45,7 @@ class MyStack : Stack
                 Grouping = {},
                 Sorting = 
                 {
-                    new AzureNextGen.CostManagement.Latest.Inputs.ReportConfigSortingArgs
+                    new AzureNextGen.CostManagement..Inputs.ReportConfigSortingArgs
                     {
                         Direction = "Ascending",
                         Name = "UsageDate",
@@ -56,12 +56,12 @@ class MyStack : Stack
             ETag = "\"1d4ff9fe66f1d10\"",
             Kpis = 
             {
-                new AzureNextGen.CostManagement.Latest.Inputs.KpiPropertiesArgs
+                new AzureNextGen.CostManagement..Inputs.KpiPropertiesArgs
                 {
                     Enabled = true,
                     Type = "Forecast",
                 },
-                new AzureNextGen.CostManagement.Latest.Inputs.KpiPropertiesArgs
+                new AzureNextGen.CostManagement..Inputs.KpiPropertiesArgs
                 {
                     Enabled = true,
                     Id = "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/MYDEVTESTRG/providers/Microsoft.Consumption/budgets/swaggerDemo",
@@ -71,17 +71,17 @@ class MyStack : Stack
             Metric = "ActualCost",
             Pivots = 
             {
-                new AzureNextGen.CostManagement.Latest.Inputs.PivotPropertiesArgs
+                new AzureNextGen.CostManagement..Inputs.PivotPropertiesArgs
                 {
                     Name = "ServiceName",
                     Type = "Dimension",
                 },
-                new AzureNextGen.CostManagement.Latest.Inputs.PivotPropertiesArgs
+                new AzureNextGen.CostManagement..Inputs.PivotPropertiesArgs
                 {
                     Name = "MeterCategory",
                     Type = "Dimension",
                 },
-                new AzureNextGen.CostManagement.Latest.Inputs.PivotPropertiesArgs
+                new AzureNextGen.CostManagement..Inputs.PivotPropertiesArgs
                 {
                     Name = "swaggerTagKey",
                     Type = "TagKey",
@@ -109,19 +109,19 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-view = azure_nextgen.costmanagement.latest.View("view",
+view = azure_nextgen.costmanagement.View("view",
     accumulated="true",
     chart="Table",
-    dataset=azure_nextgen.costmanagement.latest.ReportConfigDatasetArgs(
+    dataset=azure_nextgen.costmanagement.ReportConfigDatasetArgs(
         aggregation={
-            "totalCost": azure_nextgen.costmanagement.latest.ReportConfigAggregationArgs(
+            "totalCost": azure_nextgen.costmanagement.ReportConfigAggregationArgs(
                 function="Sum",
                 name="PreTaxCost",
             ),
         },
         granularity="Daily",
         grouping=[],
-        sorting=[azure_nextgen.costmanagement.latest.ReportConfigSortingArgs(
+        sorting=[azure_nextgen.costmanagement.ReportConfigSortingArgs(
             direction="Ascending",
             name="UsageDate",
         )],
@@ -129,11 +129,11 @@ view = azure_nextgen.costmanagement.latest.View("view",
     display_name="swagger Example",
     e_tag="\"1d4ff9fe66f1d10\"",
     kpis=[
-        azure_nextgen.costmanagement.latest.KpiPropertiesArgs(
+        azure_nextgen.costmanagement.KpiPropertiesArgs(
             enabled=True,
             type="Forecast",
         ),
-        azure_nextgen.costmanagement.latest.KpiPropertiesArgs(
+        azure_nextgen.costmanagement.KpiPropertiesArgs(
             enabled=True,
             id="/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/MYDEVTESTRG/providers/Microsoft.Consumption/budgets/swaggerDemo",
             type="Budget",
@@ -141,15 +141,15 @@ view = azure_nextgen.costmanagement.latest.View("view",
     ],
     metric="ActualCost",
     pivots=[
-        azure_nextgen.costmanagement.latest.PivotPropertiesArgs(
+        azure_nextgen.costmanagement.PivotPropertiesArgs(
             name="ServiceName",
             type="Dimension",
         ),
-        azure_nextgen.costmanagement.latest.PivotPropertiesArgs(
+        azure_nextgen.costmanagement.PivotPropertiesArgs(
             name="MeterCategory",
             type="Dimension",
         ),
-        azure_nextgen.costmanagement.latest.PivotPropertiesArgs(
+        azure_nextgen.costmanagement.PivotPropertiesArgs(
             name="swaggerTagKey",
             type="TagKey",
         ),
@@ -168,7 +168,7 @@ view = azure_nextgen.costmanagement.latest.View("view",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const view = new azure_nextgen.costmanagement.latest.View("view", {
+const view = new azure_nextgen.costmanagement.View("view", {
     accumulated: "true",
     chart: "Table",
     dataset: {
@@ -411,7 +411,7 @@ The View resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#timeframe_csharp" style="color: inherit; text-decoration: inherit;">Timeframe</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#reporttimeframetype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cost<wbr>Management.<wbr>Report<wbr>Timeframe<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#reporttimeframetype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cost<wbr>Management..<wbr>Report<wbr>Timeframe<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The time frame for pulling data for the report. If custom, then a specific time period must be provided.{{% /md %}}</dd>
     <dt class="property-required"
@@ -420,7 +420,7 @@ The View resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#reporttype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cost<wbr>Management.<wbr>Report<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#reporttype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cost<wbr>Management..<wbr>Report<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of the report. Usage represents actual usage, forecast represents forecasted data and UsageAndForecast represents both usage and forecasted data. Actual usage and forecasted data can be differentiated based on dates.{{% /md %}}</dd>
     <dt class="property-required"
@@ -438,7 +438,7 @@ The View resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#accumulated_csharp" style="color: inherit; text-decoration: inherit;">Accumulated</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#accumulatedtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cost<wbr>Management.<wbr>Accumulated<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#accumulatedtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cost<wbr>Management..<wbr>Accumulated<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Show costs accumulated over time.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -447,7 +447,7 @@ The View resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#chart_csharp" style="color: inherit; text-decoration: inherit;">Chart</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#charttype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cost<wbr>Management.<wbr>Chart<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#charttype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cost<wbr>Management..<wbr>Chart<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Chart type of the main view in Cost Analysis. Required.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -456,7 +456,7 @@ The View resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#dataset_csharp" style="color: inherit; text-decoration: inherit;">Dataset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportconfigdataset">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Report<wbr>Config<wbr>Dataset<wbr>Args</a></span>
+        <span class="property-type"><a href="#reportconfigdataset">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cost<wbr>Management..<wbr>Inputs.<wbr>Report<wbr>Config<wbr>Dataset<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Has definition for data in this report config.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -483,7 +483,7 @@ The View resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#kpis_csharp" style="color: inherit; text-decoration: inherit;">Kpis</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kpiproperties">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Kpi<wbr>Properties<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#kpiproperties">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cost<wbr>Management..<wbr>Inputs.<wbr>Kpi<wbr>Properties<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of KPIs to show in Cost Analysis UI.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -492,7 +492,7 @@ The View resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#metric_csharp" style="color: inherit; text-decoration: inherit;">Metric</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#metrictype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cost<wbr>Management.<wbr>Metric<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#metrictype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cost<wbr>Management..<wbr>Metric<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Metric to use when displaying costs.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -501,7 +501,7 @@ The View resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#pivots_csharp" style="color: inherit; text-decoration: inherit;">Pivots</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pivotproperties">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Pivot<wbr>Properties<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#pivotproperties">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cost<wbr>Management..<wbr>Inputs.<wbr>Pivot<wbr>Properties<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Configuration of 3 sub-views in the Cost Analysis UI.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -519,7 +519,7 @@ The View resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#timeperiod_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportconfigtimeperiod">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Report<wbr>Config<wbr>Time<wbr>Period<wbr>Args</a></span>
+        <span class="property-type"><a href="#reportconfigtimeperiod">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cost<wbr>Management..<wbr>Inputs.<wbr>Report<wbr>Config<wbr>Time<wbr>Period<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Has time period for pulling data for the report.{{% /md %}}</dd>
 </dl>
@@ -1238,7 +1238,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#kpitypetype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cost<wbr>Management.<wbr>Kpi<wbr>Type<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#kpitypetype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cost<wbr>Management..<wbr>Kpi<wbr>Type<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}KPI type (Forecast, Budget).{{% /md %}}</dd>
 </dl>
@@ -1619,7 +1619,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#pivottypetype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cost<wbr>Management.<wbr>Pivot<wbr>Type<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#pivottypetype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cost<wbr>Management..<wbr>Pivot<wbr>Type<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Data type to show in view.{{% /md %}}</dd>
 </dl>
@@ -1844,7 +1844,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#function_csharp" style="color: inherit; text-decoration: inherit;">Function</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#functiontype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cost<wbr>Management.<wbr>Function<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#functiontype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cost<wbr>Management..<wbr>Function<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The name of the aggregation function to use.{{% /md %}}</dd>
     <dt class="property-required"
@@ -2087,7 +2087,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operator_csharp" style="color: inherit; text-decoration: inherit;">Operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#operatortype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cost<wbr>Management.<wbr>Operator<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#operatortype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cost<wbr>Management..<wbr>Operator<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The operator to use for comparison.{{% /md %}}</dd>
     <dt class="property-required"
@@ -2346,7 +2346,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#aggregation_csharp" style="color: inherit; text-decoration: inherit;">Aggregation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Report<wbr>Config<wbr>Aggregation<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cost<wbr>Management..<wbr>Inputs.<wbr>Report<wbr>Config<wbr>Aggregation<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}Dictionary of aggregation expression to use in the report. The key of each item in the dictionary is the alias for the aggregated column. Report can have up to 2 aggregation clauses.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2355,7 +2355,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#configuration_csharp" style="color: inherit; text-decoration: inherit;">Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportconfigdatasetconfiguration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Report<wbr>Config<wbr>Dataset<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#reportconfigdatasetconfiguration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cost<wbr>Management..<wbr>Inputs.<wbr>Report<wbr>Config<wbr>Dataset<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Has configuration information for the data in the report. The configuration will be ignored if aggregation and grouping are provided.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2364,7 +2364,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filter_csharp" style="color: inherit; text-decoration: inherit;">Filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportconfigfilter">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Report<wbr>Config<wbr>Filter<wbr>Args</a></span>
+        <span class="property-type"><a href="#reportconfigfilter">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cost<wbr>Management..<wbr>Inputs.<wbr>Report<wbr>Config<wbr>Filter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Has filter expression to use in the report.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2373,7 +2373,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#granularity_csharp" style="color: inherit; text-decoration: inherit;">Granularity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#reportgranularitytype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cost<wbr>Management.<wbr>Report<wbr>Granularity<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#reportgranularitytype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cost<wbr>Management..<wbr>Report<wbr>Granularity<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The granularity of rows in the report.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2382,7 +2382,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#grouping_csharp" style="color: inherit; text-decoration: inherit;">Grouping</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportconfiggrouping">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Report<wbr>Config<wbr>Grouping<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#reportconfiggrouping">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cost<wbr>Management..<wbr>Inputs.<wbr>Report<wbr>Config<wbr>Grouping<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Array of group by expression to use in the report. Report can have up to 2 group by clauses.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2391,7 +2391,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sorting_csharp" style="color: inherit; text-decoration: inherit;">Sorting</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportconfigsorting">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Report<wbr>Config<wbr>Sorting<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#reportconfigsorting">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cost<wbr>Management..<wbr>Inputs.<wbr>Report<wbr>Config<wbr>Sorting<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Array of order by expression to use in the report.{{% /md %}}</dd>
 </dl>
@@ -2712,7 +2712,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#aggregation_csharp" style="color: inherit; text-decoration: inherit;">Aggregation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Report<wbr>Config<wbr>Aggregation<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cost<wbr>Management..<wbr>Inputs.<wbr>Report<wbr>Config<wbr>Aggregation<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}Dictionary of aggregation expression to use in the report. The key of each item in the dictionary is the alias for the aggregated column. Report can have up to 2 aggregation clauses.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2721,7 +2721,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#configuration_csharp" style="color: inherit; text-decoration: inherit;">Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportconfigdatasetconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Report<wbr>Config<wbr>Dataset<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#reportconfigdatasetconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cost<wbr>Management..<wbr>Inputs.<wbr>Report<wbr>Config<wbr>Dataset<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Has configuration information for the data in the report. The configuration will be ignored if aggregation and grouping are provided.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2730,7 +2730,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filter_csharp" style="color: inherit; text-decoration: inherit;">Filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportconfigfilterresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Report<wbr>Config<wbr>Filter<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#reportconfigfilterresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cost<wbr>Management..<wbr>Inputs.<wbr>Report<wbr>Config<wbr>Filter<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Has filter expression to use in the report.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2748,7 +2748,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#grouping_csharp" style="color: inherit; text-decoration: inherit;">Grouping</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportconfiggroupingresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Report<wbr>Config<wbr>Grouping<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#reportconfiggroupingresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cost<wbr>Management..<wbr>Inputs.<wbr>Report<wbr>Config<wbr>Grouping<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Array of group by expression to use in the report. Report can have up to 2 group by clauses.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2757,7 +2757,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sorting_csharp" style="color: inherit; text-decoration: inherit;">Sorting</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportconfigsortingresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Report<wbr>Config<wbr>Sorting<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#reportconfigsortingresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cost<wbr>Management..<wbr>Inputs.<wbr>Report<wbr>Config<wbr>Sorting<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Array of order by expression to use in the report.{{% /md %}}</dd>
 </dl>
@@ -2954,7 +2954,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#and_csharp" style="color: inherit; text-decoration: inherit;">And</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportconfigfilter">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Report<wbr>Config<wbr>Filter<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#reportconfigfilter">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cost<wbr>Management..<wbr>Inputs.<wbr>Report<wbr>Config<wbr>Filter<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The logical "AND" expression. Must have at least 2 items.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2963,7 +2963,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dimension_csharp" style="color: inherit; text-decoration: inherit;">Dimension</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportconfigcomparisonexpression">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Report<wbr>Config<wbr>Comparison<wbr>Expression<wbr>Args</a></span>
+        <span class="property-type"><a href="#reportconfigcomparisonexpression">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cost<wbr>Management..<wbr>Inputs.<wbr>Report<wbr>Config<wbr>Comparison<wbr>Expression<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Has comparison expression for a dimension{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2972,7 +2972,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#not_csharp" style="color: inherit; text-decoration: inherit;">Not</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportconfigfilter">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Report<wbr>Config<wbr>Filter<wbr>Args</a></span>
+        <span class="property-type"><a href="#reportconfigfilter">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cost<wbr>Management..<wbr>Inputs.<wbr>Report<wbr>Config<wbr>Filter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The logical "NOT" expression.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2981,7 +2981,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#or_csharp" style="color: inherit; text-decoration: inherit;">Or</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportconfigfilter">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Report<wbr>Config<wbr>Filter<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#reportconfigfilter">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cost<wbr>Management..<wbr>Inputs.<wbr>Report<wbr>Config<wbr>Filter<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The logical "OR" expression. Must have at least 2 items.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2990,7 +2990,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tag_csharp" style="color: inherit; text-decoration: inherit;">Tag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportconfigcomparisonexpression">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Report<wbr>Config<wbr>Comparison<wbr>Expression<wbr>Args</a></span>
+        <span class="property-type"><a href="#reportconfigcomparisonexpression">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cost<wbr>Management..<wbr>Inputs.<wbr>Report<wbr>Config<wbr>Comparison<wbr>Expression<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Has comparison expression for a tag{{% /md %}}</dd>
 </dl>
@@ -3160,7 +3160,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#and_csharp" style="color: inherit; text-decoration: inherit;">And</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportconfigfilterresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Report<wbr>Config<wbr>Filter<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#reportconfigfilterresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cost<wbr>Management..<wbr>Inputs.<wbr>Report<wbr>Config<wbr>Filter<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The logical "AND" expression. Must have at least 2 items.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3169,7 +3169,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dimension_csharp" style="color: inherit; text-decoration: inherit;">Dimension</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportconfigcomparisonexpressionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Report<wbr>Config<wbr>Comparison<wbr>Expression<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#reportconfigcomparisonexpressionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cost<wbr>Management..<wbr>Inputs.<wbr>Report<wbr>Config<wbr>Comparison<wbr>Expression<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Has comparison expression for a dimension{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3178,7 +3178,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#not_csharp" style="color: inherit; text-decoration: inherit;">Not</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportconfigfilterresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Report<wbr>Config<wbr>Filter<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#reportconfigfilterresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cost<wbr>Management..<wbr>Inputs.<wbr>Report<wbr>Config<wbr>Filter<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The logical "NOT" expression.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3187,7 +3187,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#or_csharp" style="color: inherit; text-decoration: inherit;">Or</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportconfigfilterresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Report<wbr>Config<wbr>Filter<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#reportconfigfilterresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cost<wbr>Management..<wbr>Inputs.<wbr>Report<wbr>Config<wbr>Filter<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The logical "OR" expression. Must have at least 2 items.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3196,7 +3196,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tag_csharp" style="color: inherit; text-decoration: inherit;">Tag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportconfigcomparisonexpressionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Report<wbr>Config<wbr>Comparison<wbr>Expression<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#reportconfigcomparisonexpressionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cost<wbr>Management..<wbr>Inputs.<wbr>Report<wbr>Config<wbr>Comparison<wbr>Expression<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Has comparison expression for a tag{{% /md %}}</dd>
 </dl>
@@ -3375,7 +3375,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#reportconfigcolumntype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cost<wbr>Management.<wbr>Report<wbr>Config<wbr>Column<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#reportconfigcolumntype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cost<wbr>Management..<wbr>Report<wbr>Config<wbr>Column<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Has type of the column to group.{{% /md %}}</dd>
 </dl>
@@ -4070,7 +4070,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:costmanagement/latest:View swaggerExample /providers/Microsoft.CostManagement/views/swaggerExample 
+$ pulumi import azure-nextgen:costmanagement:View swaggerExample /providers/Microsoft.CostManagement/views/swaggerExample 
 ```
 
 

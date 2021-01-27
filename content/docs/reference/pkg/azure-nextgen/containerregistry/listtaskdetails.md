@@ -231,7 +231,7 @@ The following output properties are available:
 <a href="#platform_csharp" style="color: inherit; text-decoration: inherit;">Platform</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#platformpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry.<wbr>Outputs.<wbr>Platform<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#platformpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry..<wbr>Outputs.<wbr>Platform<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The platform properties against which the run has to happen.{{% /md %}}</dd>
     <dt class="property-"
@@ -249,7 +249,7 @@ The following output properties are available:
 <a href="#step_csharp" style="color: inherit; text-decoration: inherit;">Step</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dockerbuildstepresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry.<wbr>Outputs.<wbr>Docker<wbr>Build<wbr>Step<wbr>Response</a> | <a href="#encodedtaskstepresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry.<wbr>Outputs.<wbr>Encoded<wbr>Task<wbr>Step<wbr>Response</a> | <a href="#filetaskstepresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry.<wbr>Outputs.<wbr>File<wbr>Task<wbr>Step<wbr>Response</a></span>
+        <span class="property-type"><a href="#dockerbuildstepresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry..<wbr>Outputs.<wbr>Docker<wbr>Build<wbr>Step<wbr>Response</a> | <a href="#encodedtaskstepresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry..<wbr>Outputs.<wbr>Encoded<wbr>Task<wbr>Step<wbr>Response</a> | <a href="#filetaskstepresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry..<wbr>Outputs.<wbr>File<wbr>Task<wbr>Step<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The properties of a task step.{{% /md %}}</dd>
     <dt class="property-"
@@ -267,7 +267,7 @@ The following output properties are available:
 <a href="#agentconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Agent<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#agentpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry.<wbr>Outputs.<wbr>Agent<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#agentpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry..<wbr>Outputs.<wbr>Agent<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The machine configuration of the run agent.{{% /md %}}</dd>
     <dt class="property-"
@@ -276,7 +276,7 @@ The following output properties are available:
 <a href="#credentials_csharp" style="color: inherit; text-decoration: inherit;">Credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#credentialsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry.<wbr>Outputs.<wbr>Credentials<wbr>Response</a></span>
+        <span class="property-type"><a href="#credentialsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry..<wbr>Outputs.<wbr>Credentials<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The properties that describes a set of credentials that will be used when this run is invoked.{{% /md %}}</dd>
     <dt class="property-"
@@ -285,7 +285,7 @@ The following output properties are available:
 <a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identitypropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry.<wbr>Outputs.<wbr>Identity<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#identitypropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry..<wbr>Outputs.<wbr>Identity<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Identity for the resource.{{% /md %}}</dd>
     <dt class="property-"
@@ -321,7 +321,7 @@ The following output properties are available:
 <a href="#trigger_csharp" style="color: inherit; text-decoration: inherit;">Trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry.<wbr>Outputs.<wbr>Trigger<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#triggerpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry..<wbr>Outputs.<wbr>Trigger<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The properties that describe all triggers for the task.{{% /md %}}</dd>
 </dl>
@@ -1539,7 +1539,7 @@ The following output properties are available:
 <a href="#customregistries_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Registries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Custom<wbr>Registry<wbr>Credentials<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry..<wbr>Inputs.<wbr>Custom<wbr>Registry<wbr>Credentials<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}Describes the credential parameters for accessing other custom registries. The key
 for the dictionary item will be the registry login server (myregistry.azurecr.io) and
@@ -1550,7 +1550,7 @@ the value of the item will be the registry credentials for accessing the registr
 <a href="#sourceregistry_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Registry</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sourceregistrycredentialsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Source<wbr>Registry<wbr>Credentials<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sourceregistrycredentialsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry..<wbr>Inputs.<wbr>Source<wbr>Registry<wbr>Credentials<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the credential parameters for accessing the source registry.{{% /md %}}</dd>
 </dl>
@@ -1663,7 +1663,7 @@ source of authentication used for accessing the registry.{{% /md %}}</dd>
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretobjectresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Secret<wbr>Object<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#secretobjectresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry..<wbr>Inputs.<wbr>Secret<wbr>Object<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The password for logging into the custom registry. The password is a secret 
 object that allows multiple ways of providing the value for it.{{% /md %}}</dd>
@@ -1673,7 +1673,7 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd>
 <a href="#username_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretobjectresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Secret<wbr>Object<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#secretobjectresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry..<wbr>Inputs.<wbr>Secret<wbr>Object<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The username for logging into the custom registry.{{% /md %}}</dd>
 </dl>
@@ -1809,7 +1809,7 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd>
 <a href="#baseimagedependencies_csharp" style="color: inherit; text-decoration: inherit;">Base<wbr>Image<wbr>Dependencies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#baseimagedependencyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Base<wbr>Image<wbr>Dependency<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#baseimagedependencyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry..<wbr>Inputs.<wbr>Base<wbr>Image<wbr>Dependency<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of base image dependencies for a step.{{% /md %}}</dd>
     <dt class="property-required"
@@ -1827,7 +1827,7 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd>
 <a href="#arguments_csharp" style="color: inherit; text-decoration: inherit;">Arguments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#argumentresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Argument<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#argumentresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry..<wbr>Inputs.<wbr>Argument<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The collection of override arguments to be used when executing this build step.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2164,7 +2164,7 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd>
 <a href="#baseimagedependencies_csharp" style="color: inherit; text-decoration: inherit;">Base<wbr>Image<wbr>Dependencies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#baseimagedependencyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Base<wbr>Image<wbr>Dependency<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#baseimagedependencyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry..<wbr>Inputs.<wbr>Base<wbr>Image<wbr>Dependency<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of base image dependencies for a step.{{% /md %}}</dd>
     <dt class="property-required"
@@ -2209,7 +2209,7 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd>
 <a href="#values_csharp" style="color: inherit; text-decoration: inherit;">Values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#setvalueresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Set<wbr>Value<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#setvalueresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry..<wbr>Inputs.<wbr>Set<wbr>Value<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The collection of overridable values that can be passed when running a task.{{% /md %}}</dd>
 </dl>
@@ -2411,7 +2411,7 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd>
 <a href="#baseimagedependencies_csharp" style="color: inherit; text-decoration: inherit;">Base<wbr>Image<wbr>Dependencies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#baseimagedependencyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Base<wbr>Image<wbr>Dependency<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#baseimagedependencyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry..<wbr>Inputs.<wbr>Base<wbr>Image<wbr>Dependency<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of base image dependencies for a step.{{% /md %}}</dd>
     <dt class="property-required"
@@ -2447,7 +2447,7 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd>
 <a href="#values_csharp" style="color: inherit; text-decoration: inherit;">Values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#setvalueresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Set<wbr>Value<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#setvalueresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry..<wbr>Inputs.<wbr>Set<wbr>Value<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The collection of overridable values that can be passed when running a task.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2685,7 +2685,7 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd>
 <a href="#userassignedidentities_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>User<wbr>Identity<wbr>Properties<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry..<wbr>Inputs.<wbr>User<wbr>Identity<wbr>Properties<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}The list of user identities associated with the resource. The user identity 
 dictionary key references will be ARM resource ids in the form: 
@@ -3265,7 +3265,7 @@ used as is without any modification.{{% /md %}}</dd>
 <a href="#sourcecontrolauthproperties_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Control<wbr>Auth<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authinforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Auth<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#authinforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry..<wbr>Inputs.<wbr>Auth<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The authorization properties for accessing the source code repository and to set up
 webhooks for notifications.{{% /md %}}</dd>
@@ -3501,7 +3501,7 @@ the source registry during the run.{{% /md %}}</dd>
 <a href="#sourcerepository_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Repository</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sourcepropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Source<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sourcepropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry..<wbr>Inputs.<wbr>Source<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The properties that describes the source(code) for the task.{{% /md %}}</dd>
     <dt class="property-required"
@@ -3806,7 +3806,7 @@ the source registry during the run.{{% /md %}}</dd>
 <a href="#baseimagetrigger_csharp" style="color: inherit; text-decoration: inherit;">Base<wbr>Image<wbr>Trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#baseimagetriggerresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Base<wbr>Image<wbr>Trigger<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#baseimagetriggerresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry..<wbr>Inputs.<wbr>Base<wbr>Image<wbr>Trigger<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The trigger based on base image dependencies.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3815,7 +3815,7 @@ the source registry during the run.{{% /md %}}</dd>
 <a href="#sourcetriggers_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Triggers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sourcetriggerresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Source<wbr>Trigger<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#sourcetriggerresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry..<wbr>Inputs.<wbr>Source<wbr>Trigger<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The collection of triggers based on source code repository.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3824,7 +3824,7 @@ the source registry during the run.{{% /md %}}</dd>
 <a href="#timertriggers_csharp" style="color: inherit; text-decoration: inherit;">Timer<wbr>Triggers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timertriggerresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Timer<wbr>Trigger<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#timertriggerresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry..<wbr>Inputs.<wbr>Timer<wbr>Trigger<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The collection of timer triggers.{{% /md %}}</dd>
 </dl>

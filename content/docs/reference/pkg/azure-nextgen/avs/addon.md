@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.avs.Addon resource with examples
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 An addon resource
+API Version: 2020-07-17-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var addon = new AzureNextGen.AVS.V20200717Preview.Addon("addon", new AzureNextGen.AVS.V20200717Preview.AddonArgs
+        var addon = new AzureNextGen.AVS..Addon("addon", new AzureNextGen.AVS..AddonArgs
         {
             AddonName = "srm",
             AddonType = "SRM",
@@ -48,7 +49,7 @@ class MyStack : Stack
 package main
 
 import (
-	avs "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/avs/v20200717preview"
+	avs "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/avs"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -78,7 +79,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-addon = azure_nextgen.avs.v20200717preview.Addon("addon",
+addon = azure_nextgen.avs.Addon("addon",
     addon_name="srm",
     addon_type="SRM",
     license_key="41915178-A8FF-4A4D-B683-6D735AF5E3F5",
@@ -95,7 +96,7 @@ addon = azure_nextgen.avs.v20200717preview.Addon("addon",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const addon = new azure_nextgen.avs.v20200717preview.Addon("addon", {
+const addon = new azure_nextgen.avs.Addon("addon", {
     addonName: "srm",
     addonType: "SRM",
     licenseKey: "41915178-A8FF-4A4D-B683-6D735AF5E3F5",
@@ -323,7 +324,7 @@ The Addon resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#addontype_csharp" style="color: inherit; text-decoration: inherit;">Addon<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#addontype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>AVS.<wbr>Addon<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#addontype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>AVS..<wbr>Addon<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of private cloud addon{{% /md %}}</dd>
     <dt class="property-optional"
@@ -719,7 +720,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:avs/v20200717preview:Addon srm /subscriptions/{subscription-id}/resourceGroups/group1/providers/Microsoft.AVS/privateClouds/cloud1/addons/srm 
+$ pulumi import azure-nextgen:avs:Addon srm /subscriptions/{subscription-id}/resourceGroups/group1/providers/Microsoft.AVS/privateClouds/cloud1/addons/srm 
 ```
 
 

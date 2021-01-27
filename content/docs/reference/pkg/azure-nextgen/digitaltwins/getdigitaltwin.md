@@ -233,7 +233,7 @@ The following output properties are available:
 <a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#digitaltwinsidentityresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Digital<wbr>Twins.<wbr>Outputs.<wbr>Digital<wbr>Twins<wbr>Identity<wbr>Response</a></span>
+        <span class="property-type"><a href="#digitaltwinsidentityresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Digital<wbr>Twins..<wbr>Outputs.<wbr>Digital<wbr>Twins<wbr>Identity<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The managed identity for the DigitalTwinsInstance.{{% /md %}}</dd>
     <dt class="property-"
@@ -242,7 +242,7 @@ The following output properties are available:
 <a href="#privateendpointconnections_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint<wbr>Connections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointconnectionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Digital<wbr>Twins.<wbr>Outputs.<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#privateendpointconnectionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Digital<wbr>Twins..<wbr>Outputs.<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-"
@@ -993,7 +993,7 @@ The following output properties are available:
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointconnectionresponseproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Digital<wbr>Twins.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Response<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#privateendpointconnectionresponseproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Digital<wbr>Twins..<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Response<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-required"
@@ -1168,7 +1168,7 @@ The following output properties are available:
 <a href="#privateendpoint_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionpropertiesresponseprivateendpoint">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Digital<wbr>Twins.<wbr>Inputs.<wbr>Connection<wbr>Properties<wbr>Response<wbr>Private<wbr>Endpoint<wbr>Args</a></span>
+        <span class="property-type"><a href="#connectionpropertiesresponseprivateendpoint">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Digital<wbr>Twins..<wbr>Inputs.<wbr>Connection<wbr>Properties<wbr>Response<wbr>Private<wbr>Endpoint<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1177,7 +1177,7 @@ The following output properties are available:
 <a href="#privatelinkserviceconnectionstate_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionpropertiesresponseprivatelinkserviceconnectionstate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Digital<wbr>Twins.<wbr>Inputs.<wbr>Connection<wbr>Properties<wbr>Response<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Args</a></span>
+        <span class="property-type"><a href="#connectionpropertiesresponseprivatelinkserviceconnectionstate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Digital<wbr>Twins..<wbr>Inputs.<wbr>Connection<wbr>Properties<wbr>Response<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 </dl>

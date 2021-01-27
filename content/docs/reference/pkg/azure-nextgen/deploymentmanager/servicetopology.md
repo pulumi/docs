@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.deploymentmanager.ServiceTopolog
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The resource representation of a service topology.
+API Version: 2019-11-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var serviceTopology = new AzureNextGen.DeploymentManager.V20191101Preview.ServiceTopology("serviceTopology", new AzureNextGen.DeploymentManager.V20191101Preview.ServiceTopologyArgs
+        var serviceTopology = new AzureNextGen.DeploymentManager..ServiceTopology("serviceTopology", new AzureNextGen.DeploymentManager..ServiceTopologyArgs
         {
             ArtifactSourceId = "Microsoft.DeploymentManager/artifactSources/myArtifactSource",
             Location = "centralus",
@@ -48,7 +49,7 @@ class MyStack : Stack
 package main
 
 import (
-	deploymentmanager "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/deploymentmanager/v20191101preview"
+	deploymentmanager "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/deploymentmanager"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -78,7 +79,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-service_topology = azure_nextgen.deploymentmanager.v20191101preview.ServiceTopology("serviceTopology",
+service_topology = azure_nextgen.deploymentmanager.ServiceTopology("serviceTopology",
     artifact_source_id="Microsoft.DeploymentManager/artifactSources/myArtifactSource",
     location="centralus",
     resource_group_name="myResourceGroup",
@@ -95,7 +96,7 @@ service_topology = azure_nextgen.deploymentmanager.v20191101preview.ServiceTopol
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const serviceTopology = new azure_nextgen.deploymentmanager.v20191101preview.ServiceTopology("serviceTopology", {
+const serviceTopology = new azure_nextgen.deploymentmanager.ServiceTopology("serviceTopology", {
     artifactSourceId: "Microsoft.DeploymentManager/artifactSources/myArtifactSource",
     location: "centralus",
     resourceGroupName: "myResourceGroup",
@@ -117,7 +118,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var serviceTopology = new AzureNextGen.DeploymentManager.V20191101Preview.ServiceTopology("serviceTopology", new AzureNextGen.DeploymentManager.V20191101Preview.ServiceTopologyArgs
+        var serviceTopology = new AzureNextGen.DeploymentManager..ServiceTopology("serviceTopology", new AzureNextGen.DeploymentManager..ServiceTopologyArgs
         {
             Location = "centralus",
             ResourceGroupName = "myResourceGroup",
@@ -138,7 +139,7 @@ class MyStack : Stack
 package main
 
 import (
-	deploymentmanager "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/deploymentmanager/v20191101preview"
+	deploymentmanager "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/deploymentmanager"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -167,7 +168,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-service_topology = azure_nextgen.deploymentmanager.v20191101preview.ServiceTopology("serviceTopology",
+service_topology = azure_nextgen.deploymentmanager.ServiceTopology("serviceTopology",
     location="centralus",
     resource_group_name="myResourceGroup",
     service_topology_name="myTopology",
@@ -183,7 +184,7 @@ service_topology = azure_nextgen.deploymentmanager.v20191101preview.ServiceTopol
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const serviceTopology = new azure_nextgen.deploymentmanager.v20191101preview.ServiceTopology("serviceTopology", {
+const serviceTopology = new azure_nextgen.deploymentmanager.ServiceTopology("serviceTopology", {
     location: "centralus",
     resourceGroupName: "myResourceGroup",
     serviceTopologyName: "myTopology",
@@ -728,7 +729,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:deploymentmanager/v20191101preview:ServiceTopology myTopology /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DeploymentManager/serviceTopologies/{serviceTopologyName} 
+$ pulumi import azure-nextgen:deploymentmanager:ServiceTopology myTopology /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DeploymentManager/serviceTopologies/{serviceTopologyName} 
 ```
 
 

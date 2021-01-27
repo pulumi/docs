@@ -27,6 +27,7 @@ Explore the resources and functions of the insights module in the Azure NextGen 
     <li><a href="guestdiagnosticssetting" title="GuestDiagnosticsSetting"><span class="symbol resource"></span>GuestDiagnosticsSetting</a></li>
     <li><a href="guestdiagnosticssettingsassociation" title="GuestDiagnosticsSettingsAssociation"><span class="symbol resource"></span>GuestDiagnosticsSettingsAssociation</a></li>
     <li><a href="logprofile" title="LogProfile"><span class="symbol resource"></span>LogProfile</a></li>
+    <li><a href="managementgroupdiagnosticsetting" title="ManagementGroupDiagnosticSetting"><span class="symbol resource"></span>ManagementGroupDiagnosticSetting</a></li>
     <li><a href="metricalert" title="MetricAlert"><span class="symbol resource"></span>MetricAlert</a></li>
     <li><a href="myworkbook" title="MyWorkbook"><span class="symbol resource"></span>MyWorkbook</a></li>
     <li><a href="privateendpointconnection" title="PrivateEndpointConnection"><span class="symbol resource"></span>PrivateEndpointConnection</a></li>
@@ -56,6 +57,7 @@ Explore the resources and functions of the insights module in the Azure NextGen 
     <li><a href="getfavorite" title="GetFavorite"><span class="symbol function"></span>GetFavorite</a></li>
     <li><a href="getguestdiagnosticssettingsassociation" title="GetGuestDiagnosticsSettingsAssociation"><span class="symbol function"></span>GetGuestDiagnosticsSettingsAssociation</a></li>
     <li><a href="getlogprofile" title="GetLogProfile"><span class="symbol function"></span>GetLogProfile</a></li>
+    <li><a href="getmanagementgroupdiagnosticsetting" title="GetManagementGroupDiagnosticSetting"><span class="symbol function"></span>GetManagementGroupDiagnosticSetting</a></li>
     <li><a href="getmetricalert" title="GetMetricAlert"><span class="symbol function"></span>GetMetricAlert</a></li>
     <li><a href="getmyworkbook" title="GetMyWorkbook"><span class="symbol function"></span>GetMyWorkbook</a></li>
     <li><a href="getprivateendpointconnection" title="GetPrivateEndpointConnection"><span class="symbol function"></span>GetPrivateEndpointConnection</a></li>
@@ -78,7 +80,7 @@ Explore the resources and functions of the insights module in the Azure NextGen 
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.5.0</dd>
+	<dd>0.6.0</dd>
 </dl>
 
 

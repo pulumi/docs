@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.blueprint.Blueprint resource wit
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Represents a Blueprint definition.
+API Version: 2018-11-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,23 +27,23 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var blueprint = new AzureNextGen.Blueprint.V20181101Preview.Blueprint("blueprint", new AzureNextGen.Blueprint.V20181101Preview.BlueprintArgs
+        var blueprint = new AzureNextGen.Blueprint..Blueprint("blueprint", new AzureNextGen.Blueprint..BlueprintArgs
         {
             BlueprintName = "simpleBlueprint",
             Description = "blueprint contains all artifact kinds {'template', 'rbac', 'policy'}",
             Parameters = 
             {
-                { "costCenter", new AzureNextGen.Blueprint.V20181101Preview.Inputs.ParameterDefinitionArgs
+                { "costCenter", new AzureNextGen.Blueprint..Inputs.ParameterDefinitionArgs
                 {
                     DisplayName = "force cost center tag for all resources under given subscription.",
                     Type = "string",
                 } },
-                { "owners", new AzureNextGen.Blueprint.V20181101Preview.Inputs.ParameterDefinitionArgs
+                { "owners", new AzureNextGen.Blueprint..Inputs.ParameterDefinitionArgs
                 {
                     DisplayName = "assign owners to subscription along with blueprint assignment.",
                     Type = "array",
                 } },
-                { "storageAccountType", new AzureNextGen.Blueprint.V20181101Preview.Inputs.ParameterDefinitionArgs
+                { "storageAccountType", new AzureNextGen.Blueprint..Inputs.ParameterDefinitionArgs
                 {
                     DisplayName = "storage account type.",
                     Type = "string",
@@ -50,7 +51,7 @@ class MyStack : Stack
             },
             ResourceGroups = 
             {
-                { "storageRG", new AzureNextGen.Blueprint.V20181101Preview.Inputs.ResourceGroupDefinitionArgs
+                { "storageRG", new AzureNextGen.Blueprint..Inputs.ResourceGroupDefinitionArgs
                 {
                     Description = "Contains storageAccounts that collect all shoebox logs.",
                     DisplayName = "storage resource group",
@@ -77,25 +78,25 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-blueprint = azure_nextgen.blueprint.v20181101preview.Blueprint("blueprint",
+blueprint = azure_nextgen.blueprint.Blueprint("blueprint",
     blueprint_name="simpleBlueprint",
     description="blueprint contains all artifact kinds {'template', 'rbac', 'policy'}",
     parameters={
-        "costCenter": azure_nextgen.blueprint.v20181101preview.ParameterDefinitionArgs(
+        "costCenter": azure_nextgen.blueprint.ParameterDefinitionArgs(
             display_name="force cost center tag for all resources under given subscription.",
             type="string",
         ),
-        "owners": azure_nextgen.blueprint.v20181101preview.ParameterDefinitionArgs(
+        "owners": azure_nextgen.blueprint.ParameterDefinitionArgs(
             display_name="assign owners to subscription along with blueprint assignment.",
             type="array",
         ),
-        "storageAccountType": azure_nextgen.blueprint.v20181101preview.ParameterDefinitionArgs(
+        "storageAccountType": azure_nextgen.blueprint.ParameterDefinitionArgs(
             display_name="storage account type.",
             type="string",
         ),
     },
     resource_groups={
-        "storageRG": azure_nextgen.blueprint.v20181101preview.ResourceGroupDefinitionArgs(
+        "storageRG": azure_nextgen.blueprint.ResourceGroupDefinitionArgs(
             description="Contains storageAccounts that collect all shoebox logs.",
             display_name="storage resource group",
         ),
@@ -113,7 +114,7 @@ blueprint = azure_nextgen.blueprint.v20181101preview.Blueprint("blueprint",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const blueprint = new azure_nextgen.blueprint.v20181101preview.Blueprint("blueprint", {
+const blueprint = new azure_nextgen.blueprint.Blueprint("blueprint", {
     blueprintName: "simpleBlueprint",
     description: "blueprint contains all artifact kinds {'template', 'rbac', 'policy'}",
     parameters: {
@@ -154,13 +155,13 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var blueprint = new AzureNextGen.Blueprint.V20181101Preview.Blueprint("blueprint", new AzureNextGen.Blueprint.V20181101Preview.BlueprintArgs
+        var blueprint = new AzureNextGen.Blueprint..Blueprint("blueprint", new AzureNextGen.Blueprint..BlueprintArgs
         {
             BlueprintName = "simpleBlueprint",
             Description = "An example blueprint containing an RG with two tags.",
             ResourceGroups = 
             {
-                { "myRGName", new AzureNextGen.Blueprint.V20181101Preview.Inputs.ResourceGroupDefinitionArgs
+                { "myRGName", new AzureNextGen.Blueprint..Inputs.ResourceGroupDefinitionArgs
                 {
                     DisplayName = "My Resource Group",
                     Location = "westus",
@@ -193,11 +194,11 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-blueprint = azure_nextgen.blueprint.v20181101preview.Blueprint("blueprint",
+blueprint = azure_nextgen.blueprint.Blueprint("blueprint",
     blueprint_name="simpleBlueprint",
     description="An example blueprint containing an RG with two tags.",
     resource_groups={
-        "myRGName": azure_nextgen.blueprint.v20181101preview.ResourceGroupDefinitionArgs(
+        "myRGName": azure_nextgen.blueprint.ResourceGroupDefinitionArgs(
             display_name="My Resource Group",
             location="westus",
             name="myRGName",
@@ -220,7 +221,7 @@ blueprint = azure_nextgen.blueprint.v20181101preview.Blueprint("blueprint",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const blueprint = new azure_nextgen.blueprint.v20181101preview.Blueprint("blueprint", {
+const blueprint = new azure_nextgen.blueprint.Blueprint("blueprint", {
     blueprintName: "simpleBlueprint",
     description: "An example blueprint containing an RG with two tags.",
     resourceGroups: {
@@ -252,23 +253,23 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var blueprint = new AzureNextGen.Blueprint.V20181101Preview.Blueprint("blueprint", new AzureNextGen.Blueprint.V20181101Preview.BlueprintArgs
+        var blueprint = new AzureNextGen.Blueprint..Blueprint("blueprint", new AzureNextGen.Blueprint..BlueprintArgs
         {
             BlueprintName = "simpleBlueprint",
             Description = "blueprint contains all artifact kinds {'template', 'rbac', 'policy'}",
             Parameters = 
             {
-                { "costCenter", new AzureNextGen.Blueprint.V20181101Preview.Inputs.ParameterDefinitionArgs
+                { "costCenter", new AzureNextGen.Blueprint..Inputs.ParameterDefinitionArgs
                 {
                     DisplayName = "force cost center tag for all resources under given subscription.",
                     Type = "string",
                 } },
-                { "owners", new AzureNextGen.Blueprint.V20181101Preview.Inputs.ParameterDefinitionArgs
+                { "owners", new AzureNextGen.Blueprint..Inputs.ParameterDefinitionArgs
                 {
                     DisplayName = "assign owners to subscription along with blueprint assignment.",
                     Type = "array",
                 } },
-                { "storageAccountType", new AzureNextGen.Blueprint.V20181101Preview.Inputs.ParameterDefinitionArgs
+                { "storageAccountType", new AzureNextGen.Blueprint..Inputs.ParameterDefinitionArgs
                 {
                     DisplayName = "storage account type.",
                     Type = "string",
@@ -276,7 +277,7 @@ class MyStack : Stack
             },
             ResourceGroups = 
             {
-                { "storageRG", new AzureNextGen.Blueprint.V20181101Preview.Inputs.ResourceGroupDefinitionArgs
+                { "storageRG", new AzureNextGen.Blueprint..Inputs.ResourceGroupDefinitionArgs
                 {
                     Description = "Contains storageAccounts that collect all shoebox logs.",
                     DisplayName = "storage resource group",
@@ -303,25 +304,25 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-blueprint = azure_nextgen.blueprint.v20181101preview.Blueprint("blueprint",
+blueprint = azure_nextgen.blueprint.Blueprint("blueprint",
     blueprint_name="simpleBlueprint",
     description="blueprint contains all artifact kinds {'template', 'rbac', 'policy'}",
     parameters={
-        "costCenter": azure_nextgen.blueprint.v20181101preview.ParameterDefinitionArgs(
+        "costCenter": azure_nextgen.blueprint.ParameterDefinitionArgs(
             display_name="force cost center tag for all resources under given subscription.",
             type="string",
         ),
-        "owners": azure_nextgen.blueprint.v20181101preview.ParameterDefinitionArgs(
+        "owners": azure_nextgen.blueprint.ParameterDefinitionArgs(
             display_name="assign owners to subscription along with blueprint assignment.",
             type="array",
         ),
-        "storageAccountType": azure_nextgen.blueprint.v20181101preview.ParameterDefinitionArgs(
+        "storageAccountType": azure_nextgen.blueprint.ParameterDefinitionArgs(
             display_name="storage account type.",
             type="string",
         ),
     },
     resource_groups={
-        "storageRG": azure_nextgen.blueprint.v20181101preview.ResourceGroupDefinitionArgs(
+        "storageRG": azure_nextgen.blueprint.ResourceGroupDefinitionArgs(
             description="Contains storageAccounts that collect all shoebox logs.",
             display_name="storage resource group",
         ),
@@ -339,7 +340,7 @@ blueprint = azure_nextgen.blueprint.v20181101preview.Blueprint("blueprint",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const blueprint = new azure_nextgen.blueprint.v20181101preview.Blueprint("blueprint", {
+const blueprint = new azure_nextgen.blueprint.Blueprint("blueprint", {
     blueprintName: "simpleBlueprint",
     description: "blueprint contains all artifact kinds {'template', 'rbac', 'policy'}",
     parameters: {
@@ -577,7 +578,7 @@ The Blueprint resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#targetscope_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#blueprinttargetscope">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Blueprint.<wbr>Blueprint<wbr>Target<wbr>Scope</a></span>
+        <span class="property-type">string | <a href="#blueprinttargetscope">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Blueprint..<wbr>Blueprint<wbr>Target<wbr>Scope</a></span>
     </dt>
     <dd>{{% md %}}The scope where this blueprint definition can be assigned.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -613,7 +614,7 @@ The Blueprint resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Blueprint.<wbr>Inputs.<wbr>Parameter<wbr>Definition<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Blueprint..<wbr>Inputs.<wbr>Parameter<wbr>Definition<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters required by this blueprint definition.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -622,7 +623,7 @@ The Blueprint resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#resourcegroups_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Blueprint.<wbr>Inputs.<wbr>Resource<wbr>Group<wbr>Definition<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Blueprint..<wbr>Inputs.<wbr>Resource<wbr>Group<wbr>Definition<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}Resource group placeholders defined by this blueprint definition.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -932,7 +933,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#blueprintstatusresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Blueprint.<wbr>Outputs.<wbr>Blueprint<wbr>Status<wbr>Response</a></span>
+        <span class="property-type"><a href="#blueprintstatusresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Blueprint..<wbr>Outputs.<wbr>Blueprint<wbr>Status<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Status of the blueprint. This field is readonly.{{% /md %}}</dd>
     <dt class="property-"
@@ -1230,7 +1231,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#templateparametertype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Blueprint.<wbr>Template<wbr>Parameter<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#templateparametertype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Blueprint..<wbr>Template<wbr>Parameter<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Allowed data types for Resource Manager template parameters.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2342,7 +2343,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:blueprint/v20181101preview:Blueprint simpleBlueprint /subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Blueprint/blueprints/simpleBlueprint 
+$ pulumi import azure-nextgen:blueprint:Blueprint simpleBlueprint /subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Blueprint/blueprints/simpleBlueprint 
 ```
 
 

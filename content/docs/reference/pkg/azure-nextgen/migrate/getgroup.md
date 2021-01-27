@@ -215,7 +215,7 @@ The following output properties are available:
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#grouppropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Outputs.<wbr>Group<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#grouppropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate..<wbr>Outputs.<wbr>Group<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Properties of the group.{{% /md %}}</dd>
     <dt class="property-"

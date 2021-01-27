@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.compute.GalleryApplicationVersio
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Specifies information about the gallery Application Version that you want to create or update.
-Latest API Version: 2020-09-30.
+API Version: 2020-09-30.
 
 {{% examples %}}
 ## Example Usage
@@ -27,29 +27,29 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var galleryApplicationVersion = new AzureNextGen.Compute.Latest.GalleryApplicationVersion("galleryApplicationVersion", new AzureNextGen.Compute.Latest.GalleryApplicationVersionArgs
+        var galleryApplicationVersion = new AzureNextGen.Compute..GalleryApplicationVersion("galleryApplicationVersion", new AzureNextGen.Compute..GalleryApplicationVersionArgs
         {
             GalleryApplicationName = "myGalleryApplicationName",
             GalleryApplicationVersionName = "1.0.0",
             GalleryName = "myGalleryName",
             Location = "West US",
-            PublishingProfile = new AzureNextGen.Compute.Latest.Inputs.GalleryApplicationVersionPublishingProfileArgs
+            PublishingProfile = new AzureNextGen.Compute..Inputs.GalleryApplicationVersionPublishingProfileArgs
             {
                 EndOfLifeDate = "2019-07-01T07:00:00Z",
-                ManageActions = new AzureNextGen.Compute.Latest.Inputs.UserArtifactManageArgs
+                ManageActions = new AzureNextGen.Compute..Inputs.UserArtifactManageArgs
                 {
                     Install = "powershell -command \"Expand-Archive -Path package.zip -DestinationPath C:\\package\"",
                     Remove = "del C:\\package ",
                 },
                 ReplicaCount = 1,
-                Source = new AzureNextGen.Compute.Latest.Inputs.UserArtifactSourceArgs
+                Source = new AzureNextGen.Compute..Inputs.UserArtifactSourceArgs
                 {
                     MediaLink = "https://mystorageaccount.blob.core.windows.net/mycontainer/package.zip?{sasKey}",
                 },
                 StorageAccountType = "Standard_LRS",
                 TargetRegions = 
                 {
-                    new AzureNextGen.Compute.Latest.Inputs.TargetRegionArgs
+                    new AzureNextGen.Compute..Inputs.TargetRegionArgs
                     {
                         Name = "West US",
                         RegionalReplicaCount = 1,
@@ -73,7 +73,7 @@ class MyStack : Stack
 package main
 
 import (
-	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute/latest"
+	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -122,23 +122,23 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-gallery_application_version = azure_nextgen.compute.latest.GalleryApplicationVersion("galleryApplicationVersion",
+gallery_application_version = azure_nextgen.compute.GalleryApplicationVersion("galleryApplicationVersion",
     gallery_application_name="myGalleryApplicationName",
     gallery_application_version_name="1.0.0",
     gallery_name="myGalleryName",
     location="West US",
-    publishing_profile=azure_nextgen.compute.latest.GalleryApplicationVersionPublishingProfileArgs(
+    publishing_profile=azure_nextgen.compute.GalleryApplicationVersionPublishingProfileArgs(
         end_of_life_date="2019-07-01T07:00:00Z",
-        manage_actions=azure_nextgen.compute.latest.UserArtifactManageArgs(
+        manage_actions=azure_nextgen.compute.UserArtifactManageArgs(
             install="powershell -command \"Expand-Archive -Path package.zip -DestinationPath C:\\package\"",
             remove="del C:\\package ",
         ),
         replica_count=1,
-        source=azure_nextgen.compute.latest.UserArtifactSourceArgs(
+        source=azure_nextgen.compute.UserArtifactSourceArgs(
             media_link="https://mystorageaccount.blob.core.windows.net/mycontainer/package.zip?{sasKey}",
         ),
         storage_account_type="Standard_LRS",
-        target_regions=[azure_nextgen.compute.latest.TargetRegionArgs(
+        target_regions=[azure_nextgen.compute.TargetRegionArgs(
             name="West US",
             regional_replica_count=1,
             storage_account_type="Standard_LRS",
@@ -156,7 +156,7 @@ gallery_application_version = azure_nextgen.compute.latest.GalleryApplicationVer
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const galleryApplicationVersion = new azure_nextgen.compute.latest.GalleryApplicationVersion("galleryApplicationVersion", {
+const galleryApplicationVersion = new azure_nextgen.compute.GalleryApplicationVersion("galleryApplicationVersion", {
     galleryApplicationName: "myGalleryApplicationName",
     galleryApplicationVersionName: "1.0.0",
     galleryName: "myGalleryName",
@@ -410,7 +410,7 @@ The GalleryApplicationVersion resource accepts the following [input]({{< relref 
 <a href="#publishingprofile_csharp" style="color: inherit; text-decoration: inherit;">Publishing<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#galleryapplicationversionpublishingprofile">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Gallery<wbr>Application<wbr>Version<wbr>Publishing<wbr>Profile<wbr>Args</a></span>
+        <span class="property-type"><a href="#galleryapplicationversionpublishingprofile">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Inputs.<wbr>Gallery<wbr>Application<wbr>Version<wbr>Publishing<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The publishing profile of a gallery image version.{{% /md %}}</dd>
     <dt class="property-required"
@@ -684,7 +684,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#replicationstatus_csharp" style="color: inherit; text-decoration: inherit;">Replication<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#replicationstatusresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Outputs.<wbr>Replication<wbr>Status<wbr>Response</a></span>
+        <span class="property-type"><a href="#replicationstatusresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Outputs.<wbr>Replication<wbr>Status<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}This is the replication status of the gallery image version.{{% /md %}}</dd>
     <dt class="property-"
@@ -1069,7 +1069,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datadiskimages_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Disk<wbr>Images</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datadiskimageencryption">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Data<wbr>Disk<wbr>Image<wbr>Encryption<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#datadiskimageencryption">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Inputs.<wbr>Data<wbr>Disk<wbr>Image<wbr>Encryption<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of encryption specifications for data disk images.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1078,7 +1078,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#osdiskimage_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Disk<wbr>Image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#osdiskimageencryption">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>OSDisk<wbr>Image<wbr>Encryption<wbr>Args</a></span>
+        <span class="property-type"><a href="#osdiskimageencryption">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Inputs.<wbr>OSDisk<wbr>Image<wbr>Encryption<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Contains encryption settings for an OS disk image.{{% /md %}}</dd>
 </dl>
@@ -1167,7 +1167,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datadiskimages_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Disk<wbr>Images</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datadiskimageencryptionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Data<wbr>Disk<wbr>Image<wbr>Encryption<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#datadiskimageencryptionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Inputs.<wbr>Data<wbr>Disk<wbr>Image<wbr>Encryption<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of encryption specifications for data disk images.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1176,7 +1176,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#osdiskimage_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Disk<wbr>Image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#osdiskimageencryptionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>OSDisk<wbr>Image<wbr>Encryption<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#osdiskimageencryptionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Inputs.<wbr>OSDisk<wbr>Image<wbr>Encryption<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Contains encryption settings for an OS disk image.{{% /md %}}</dd>
 </dl>
@@ -1265,7 +1265,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_csharp" style="color: inherit; text-decoration: inherit;">Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userartifactsource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>User<wbr>Artifact<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#userartifactsource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Inputs.<wbr>User<wbr>Artifact<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The source image from which the Image Version is going to be created.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1301,7 +1301,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#manageactions_csharp" style="color: inherit; text-decoration: inherit;">Manage<wbr>Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userartifactmanage">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>User<wbr>Artifact<wbr>Manage<wbr>Args</a></span>
+        <span class="property-type"><a href="#userartifactmanage">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Inputs.<wbr>User<wbr>Artifact<wbr>Manage<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1319,7 +1319,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storageaccounttype_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#storageaccounttype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Storage<wbr>Account<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#storageaccounttype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Storage<wbr>Account<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Specifies the storage account type to be used to store the image. This property is not updatable.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1328,7 +1328,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#targetregions_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Regions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#targetregion">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Target<wbr>Region<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#targetregion">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Inputs.<wbr>Target<wbr>Region<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The target regions where the Image Version is going to be replicated to. This property is updatable.{{% /md %}}</dd>
 </dl>
@@ -1588,7 +1588,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_csharp" style="color: inherit; text-decoration: inherit;">Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userartifactsourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>User<wbr>Artifact<wbr>Source<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#userartifactsourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Inputs.<wbr>User<wbr>Artifact<wbr>Source<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The source image from which the Image Version is going to be created.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1624,7 +1624,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#manageactions_csharp" style="color: inherit; text-decoration: inherit;">Manage<wbr>Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userartifactmanageresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>User<wbr>Artifact<wbr>Manage<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#userartifactmanageresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Inputs.<wbr>User<wbr>Artifact<wbr>Manage<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1651,7 +1651,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#targetregions_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Regions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#targetregionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Target<wbr>Region<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#targetregionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Inputs.<wbr>Target<wbr>Region<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The target regions where the Image Version is going to be replicated to. This property is updatable.{{% /md %}}</dd>
 </dl>
@@ -2232,7 +2232,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#summary_csharp" style="color: inherit; text-decoration: inherit;">Summary</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionalreplicationstatusresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Regional<wbr>Replication<wbr>Status<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#regionalreplicationstatusresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Inputs.<wbr>Regional<wbr>Replication<wbr>Status<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}This is a summary of replication status for each region.{{% /md %}}</dd>
 </dl>
@@ -2376,7 +2376,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryption_csharp" style="color: inherit; text-decoration: inherit;">Encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionimages">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Encryption<wbr>Images<wbr>Args</a></span>
+        <span class="property-type"><a href="#encryptionimages">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Inputs.<wbr>Encryption<wbr>Images<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Allows users to provide customer managed keys for encrypting the OS and data disks in the gallery artifact.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2394,7 +2394,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storageaccounttype_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#storageaccounttype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Storage<wbr>Account<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#storageaccounttype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Storage<wbr>Account<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Specifies the storage account type to be used to store the image. This property is not updatable.{{% /md %}}</dd>
 </dl>
@@ -2546,7 +2546,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryption_csharp" style="color: inherit; text-decoration: inherit;">Encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionimagesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Encryption<wbr>Images<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#encryptionimagesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Inputs.<wbr>Encryption<wbr>Images<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Allows users to provide customer managed keys for encrypting the OS and data disks in the gallery artifact.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3165,7 +3165,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:compute/latest:GalleryApplicationVersion 1.0.0 /subscriptions/01523d7c-60da-455e-adef-521b547922c4/resourceGroups/galleryPsTestRg98/providers/Microsoft.Compute/galleries/galleryPsTestGallery6165/applications/galleryPsTestGalleryApplication7825/versions/1.0.0 
+$ pulumi import azure-nextgen:compute:GalleryApplicationVersion 1.0.0 /subscriptions/01523d7c-60da-455e-adef-521b547922c4/resourceGroups/galleryPsTestRg98/providers/Microsoft.Compute/galleries/galleryPsTestGallery6165/applications/galleryPsTestGalleryApplication7825/versions/1.0.0 
 ```
 
 

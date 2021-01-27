@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.logic.IntegrationAccountAgreemen
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The integration account agreement.
-Latest API Version: 2019-05-01.
+API Version: 2019-05-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,26 +27,26 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var integrationAccountAgreement = new AzureNextGen.Logic.Latest.IntegrationAccountAgreement("integrationAccountAgreement", new AzureNextGen.Logic.Latest.IntegrationAccountAgreementArgs
+        var integrationAccountAgreement = new AzureNextGen.Logic..IntegrationAccountAgreement("integrationAccountAgreement", new AzureNextGen.Logic..IntegrationAccountAgreementArgs
         {
             AgreementName = "testAgreement",
             AgreementType = "AS2",
-            Content = new AzureNextGen.Logic.Latest.Inputs.AgreementContentArgs
+            Content = new AzureNextGen.Logic..Inputs.AgreementContentArgs
             {
-                AS2 = new AzureNextGen.Logic.Latest.Inputs.AS2AgreementContentArgs
+                AS2 = new AzureNextGen.Logic..Inputs.AS2AgreementContentArgs
                 {
-                    ReceiveAgreement = new AzureNextGen.Logic.Latest.Inputs.AS2OneWayAgreementArgs
+                    ReceiveAgreement = new AzureNextGen.Logic..Inputs.AS2OneWayAgreementArgs
                     {
-                        ProtocolSettings = new AzureNextGen.Logic.Latest.Inputs.AS2ProtocolSettingsArgs
+                        ProtocolSettings = new AzureNextGen.Logic..Inputs.AS2ProtocolSettingsArgs
                         {
-                            AcknowledgementConnectionSettings = new AzureNextGen.Logic.Latest.Inputs.AS2AcknowledgementConnectionSettingsArgs
+                            AcknowledgementConnectionSettings = new AzureNextGen.Logic..Inputs.AS2AcknowledgementConnectionSettingsArgs
                             {
                                 IgnoreCertificateNameMismatch = true,
                                 KeepHttpConnectionAlive = true,
                                 SupportHttpStatusCodeContinue = true,
                                 UnfoldHttpHeaders = true,
                             },
-                            EnvelopeSettings = new AzureNextGen.Logic.Latest.Inputs.AS2EnvelopeSettingsArgs
+                            EnvelopeSettings = new AzureNextGen.Logic..Inputs.AS2EnvelopeSettingsArgs
                             {
                                 AutogenerateFileName = true,
                                 FileNameTemplate = "Test",
@@ -54,12 +54,12 @@ class MyStack : Stack
                                 SuspendMessageOnFileNameGenerationError = true,
                                 TransmitFileNameInMimeHeader = true,
                             },
-                            ErrorSettings = new AzureNextGen.Logic.Latest.Inputs.AS2ErrorSettingsArgs
+                            ErrorSettings = new AzureNextGen.Logic..Inputs.AS2ErrorSettingsArgs
                             {
                                 ResendIfMDNNotReceived = true,
                                 SuspendDuplicateMessage = true,
                             },
-                            MdnSettings = new AzureNextGen.Logic.Latest.Inputs.AS2MdnSettingsArgs
+                            MdnSettings = new AzureNextGen.Logic..Inputs.AS2MdnSettingsArgs
                             {
                                 DispositionNotificationTo = "http://tempuri.org",
                                 MdnText = "Sample",
@@ -71,14 +71,14 @@ class MyStack : Stack
                                 SignMDN = true,
                                 SignOutboundMDNIfOptional = true,
                             },
-                            MessageConnectionSettings = new AzureNextGen.Logic.Latest.Inputs.AS2MessageConnectionSettingsArgs
+                            MessageConnectionSettings = new AzureNextGen.Logic..Inputs.AS2MessageConnectionSettingsArgs
                             {
                                 IgnoreCertificateNameMismatch = true,
                                 KeepHttpConnectionAlive = true,
                                 SupportHttpStatusCodeContinue = true,
                                 UnfoldHttpHeaders = true,
                             },
-                            SecuritySettings = new AzureNextGen.Logic.Latest.Inputs.AS2SecuritySettingsArgs
+                            SecuritySettings = new AzureNextGen.Logic..Inputs.AS2SecuritySettingsArgs
                             {
                                 EnableNRRForInboundDecodedMessages = true,
                                 EnableNRRForInboundEncodedMessages = true,
@@ -88,7 +88,7 @@ class MyStack : Stack
                                 EnableNRRForOutboundMDN = true,
                                 OverrideGroupSigningCertificate = false,
                             },
-                            ValidationSettings = new AzureNextGen.Logic.Latest.Inputs.AS2ValidationSettingsArgs
+                            ValidationSettings = new AzureNextGen.Logic..Inputs.AS2ValidationSettingsArgs
                             {
                                 CheckCertificateRevocationListOnReceive = true,
                                 CheckCertificateRevocationListOnSend = true,
@@ -101,29 +101,29 @@ class MyStack : Stack
                                 SignMessage = false,
                             },
                         },
-                        ReceiverBusinessIdentity = new AzureNextGen.Logic.Latest.Inputs.BusinessIdentityArgs
+                        ReceiverBusinessIdentity = new AzureNextGen.Logic..Inputs.BusinessIdentityArgs
                         {
                             Qualifier = "ZZ",
                             Value = "ZZ",
                         },
-                        SenderBusinessIdentity = new AzureNextGen.Logic.Latest.Inputs.BusinessIdentityArgs
+                        SenderBusinessIdentity = new AzureNextGen.Logic..Inputs.BusinessIdentityArgs
                         {
                             Qualifier = "AA",
                             Value = "AA",
                         },
                     },
-                    SendAgreement = new AzureNextGen.Logic.Latest.Inputs.AS2OneWayAgreementArgs
+                    SendAgreement = new AzureNextGen.Logic..Inputs.AS2OneWayAgreementArgs
                     {
-                        ProtocolSettings = new AzureNextGen.Logic.Latest.Inputs.AS2ProtocolSettingsArgs
+                        ProtocolSettings = new AzureNextGen.Logic..Inputs.AS2ProtocolSettingsArgs
                         {
-                            AcknowledgementConnectionSettings = new AzureNextGen.Logic.Latest.Inputs.AS2AcknowledgementConnectionSettingsArgs
+                            AcknowledgementConnectionSettings = new AzureNextGen.Logic..Inputs.AS2AcknowledgementConnectionSettingsArgs
                             {
                                 IgnoreCertificateNameMismatch = true,
                                 KeepHttpConnectionAlive = true,
                                 SupportHttpStatusCodeContinue = true,
                                 UnfoldHttpHeaders = true,
                             },
-                            EnvelopeSettings = new AzureNextGen.Logic.Latest.Inputs.AS2EnvelopeSettingsArgs
+                            EnvelopeSettings = new AzureNextGen.Logic..Inputs.AS2EnvelopeSettingsArgs
                             {
                                 AutogenerateFileName = true,
                                 FileNameTemplate = "Test",
@@ -131,12 +131,12 @@ class MyStack : Stack
                                 SuspendMessageOnFileNameGenerationError = true,
                                 TransmitFileNameInMimeHeader = true,
                             },
-                            ErrorSettings = new AzureNextGen.Logic.Latest.Inputs.AS2ErrorSettingsArgs
+                            ErrorSettings = new AzureNextGen.Logic..Inputs.AS2ErrorSettingsArgs
                             {
                                 ResendIfMDNNotReceived = true,
                                 SuspendDuplicateMessage = true,
                             },
-                            MdnSettings = new AzureNextGen.Logic.Latest.Inputs.AS2MdnSettingsArgs
+                            MdnSettings = new AzureNextGen.Logic..Inputs.AS2MdnSettingsArgs
                             {
                                 DispositionNotificationTo = "http://tempuri.org",
                                 MdnText = "Sample",
@@ -148,14 +148,14 @@ class MyStack : Stack
                                 SignMDN = true,
                                 SignOutboundMDNIfOptional = true,
                             },
-                            MessageConnectionSettings = new AzureNextGen.Logic.Latest.Inputs.AS2MessageConnectionSettingsArgs
+                            MessageConnectionSettings = new AzureNextGen.Logic..Inputs.AS2MessageConnectionSettingsArgs
                             {
                                 IgnoreCertificateNameMismatch = true,
                                 KeepHttpConnectionAlive = true,
                                 SupportHttpStatusCodeContinue = true,
                                 UnfoldHttpHeaders = true,
                             },
-                            SecuritySettings = new AzureNextGen.Logic.Latest.Inputs.AS2SecuritySettingsArgs
+                            SecuritySettings = new AzureNextGen.Logic..Inputs.AS2SecuritySettingsArgs
                             {
                                 EnableNRRForInboundDecodedMessages = true,
                                 EnableNRRForInboundEncodedMessages = true,
@@ -165,7 +165,7 @@ class MyStack : Stack
                                 EnableNRRForOutboundMDN = true,
                                 OverrideGroupSigningCertificate = false,
                             },
-                            ValidationSettings = new AzureNextGen.Logic.Latest.Inputs.AS2ValidationSettingsArgs
+                            ValidationSettings = new AzureNextGen.Logic..Inputs.AS2ValidationSettingsArgs
                             {
                                 CheckCertificateRevocationListOnReceive = true,
                                 CheckCertificateRevocationListOnSend = true,
@@ -178,12 +178,12 @@ class MyStack : Stack
                                 SignMessage = false,
                             },
                         },
-                        ReceiverBusinessIdentity = new AzureNextGen.Logic.Latest.Inputs.BusinessIdentityArgs
+                        ReceiverBusinessIdentity = new AzureNextGen.Logic..Inputs.BusinessIdentityArgs
                         {
                             Qualifier = "AA",
                             Value = "AA",
                         },
-                        SenderBusinessIdentity = new AzureNextGen.Logic.Latest.Inputs.BusinessIdentityArgs
+                        SenderBusinessIdentity = new AzureNextGen.Logic..Inputs.BusinessIdentityArgs
                         {
                             Qualifier = "ZZ",
                             Value = "ZZ",
@@ -191,13 +191,13 @@ class MyStack : Stack
                     },
                 },
             },
-            GuestIdentity = new AzureNextGen.Logic.Latest.Inputs.BusinessIdentityArgs
+            GuestIdentity = new AzureNextGen.Logic..Inputs.BusinessIdentityArgs
             {
                 Qualifier = "AA",
                 Value = "AA",
             },
             GuestPartner = "GuestPartner",
-            HostIdentity = new AzureNextGen.Logic.Latest.Inputs.BusinessIdentityArgs
+            HostIdentity = new AzureNextGen.Logic..Inputs.BusinessIdentityArgs
             {
                 Qualifier = "ZZ",
                 Value = "ZZ",
@@ -226,7 +226,7 @@ class MyStack : Stack
 package main
 
 import (
-	logic "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/logic/latest"
+	logic "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/logic"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -406,31 +406,31 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-integration_account_agreement = azure_nextgen.logic.latest.IntegrationAccountAgreement("integrationAccountAgreement",
+integration_account_agreement = azure_nextgen.logic.IntegrationAccountAgreement("integrationAccountAgreement",
     agreement_name="testAgreement",
     agreement_type="AS2",
-    content=azure_nextgen.logic.latest.AgreementContentArgs(
-        a_s2=azure_nextgen.logic.latest.AS2AgreementContentArgs(
-            receive_agreement=azure_nextgen.logic.latest.AS2OneWayAgreementArgs(
-                protocol_settings=azure_nextgen.logic.latest.AS2ProtocolSettingsArgs(
-                    acknowledgement_connection_settings=azure_nextgen.logic.latest.AS2AcknowledgementConnectionSettingsArgs(
+    content=azure_nextgen.logic.AgreementContentArgs(
+        a_s2=azure_nextgen.logic.AS2AgreementContentArgs(
+            receive_agreement=azure_nextgen.logic.AS2OneWayAgreementArgs(
+                protocol_settings=azure_nextgen.logic.AS2ProtocolSettingsArgs(
+                    acknowledgement_connection_settings=azure_nextgen.logic.AS2AcknowledgementConnectionSettingsArgs(
                         ignore_certificate_name_mismatch=True,
                         keep_http_connection_alive=True,
                         support_http_status_code_continue=True,
                         unfold_http_headers=True,
                     ),
-                    envelope_settings=azure_nextgen.logic.latest.AS2EnvelopeSettingsArgs(
+                    envelope_settings=azure_nextgen.logic.AS2EnvelopeSettingsArgs(
                         autogenerate_file_name=True,
                         file_name_template="Test",
                         message_content_type="text/plain",
                         suspend_message_on_file_name_generation_error=True,
                         transmit_file_name_in_mime_header=True,
                     ),
-                    error_settings=azure_nextgen.logic.latest.AS2ErrorSettingsArgs(
+                    error_settings=azure_nextgen.logic.AS2ErrorSettingsArgs(
                         resend_if_mdn_not_received=True,
                         suspend_duplicate_message=True,
                     ),
-                    mdn_settings=azure_nextgen.logic.latest.AS2MdnSettingsArgs(
+                    mdn_settings=azure_nextgen.logic.AS2MdnSettingsArgs(
                         disposition_notification_to="http://tempuri.org",
                         mdn_text="Sample",
                         mic_hashing_algorithm="SHA1",
@@ -441,13 +441,13 @@ integration_account_agreement = azure_nextgen.logic.latest.IntegrationAccountAgr
                         sign_mdn=True,
                         sign_outbound_mdn_if_optional=True,
                     ),
-                    message_connection_settings=azure_nextgen.logic.latest.AS2MessageConnectionSettingsArgs(
+                    message_connection_settings=azure_nextgen.logic.AS2MessageConnectionSettingsArgs(
                         ignore_certificate_name_mismatch=True,
                         keep_http_connection_alive=True,
                         support_http_status_code_continue=True,
                         unfold_http_headers=True,
                     ),
-                    security_settings=azure_nextgen.logic.latest.AS2SecuritySettingsArgs(
+                    security_settings=azure_nextgen.logic.AS2SecuritySettingsArgs(
                         enable_nrr_for_inbound_decoded_messages=True,
                         enable_nrr_for_inbound_encoded_messages=True,
                         enable_nrr_for_inbound_mdn=True,
@@ -456,7 +456,7 @@ integration_account_agreement = azure_nextgen.logic.latest.IntegrationAccountAgr
                         enable_nrr_for_outbound_mdn=True,
                         override_group_signing_certificate=False,
                     ),
-                    validation_settings=azure_nextgen.logic.latest.AS2ValidationSettingsArgs(
+                    validation_settings=azure_nextgen.logic.AS2ValidationSettingsArgs(
                         check_certificate_revocation_list_on_receive=True,
                         check_certificate_revocation_list_on_send=True,
                         check_duplicate_message=True,
@@ -468,35 +468,35 @@ integration_account_agreement = azure_nextgen.logic.latest.IntegrationAccountAgr
                         sign_message=False,
                     ),
                 ),
-                receiver_business_identity=azure_nextgen.logic.latest.BusinessIdentityArgs(
+                receiver_business_identity=azure_nextgen.logic.BusinessIdentityArgs(
                     qualifier="ZZ",
                     value="ZZ",
                 ),
-                sender_business_identity=azure_nextgen.logic.latest.BusinessIdentityArgs(
+                sender_business_identity=azure_nextgen.logic.BusinessIdentityArgs(
                     qualifier="AA",
                     value="AA",
                 ),
             ),
-            send_agreement=azure_nextgen.logic.latest.AS2OneWayAgreementArgs(
-                protocol_settings=azure_nextgen.logic.latest.AS2ProtocolSettingsArgs(
-                    acknowledgement_connection_settings=azure_nextgen.logic.latest.AS2AcknowledgementConnectionSettingsArgs(
+            send_agreement=azure_nextgen.logic.AS2OneWayAgreementArgs(
+                protocol_settings=azure_nextgen.logic.AS2ProtocolSettingsArgs(
+                    acknowledgement_connection_settings=azure_nextgen.logic.AS2AcknowledgementConnectionSettingsArgs(
                         ignore_certificate_name_mismatch=True,
                         keep_http_connection_alive=True,
                         support_http_status_code_continue=True,
                         unfold_http_headers=True,
                     ),
-                    envelope_settings=azure_nextgen.logic.latest.AS2EnvelopeSettingsArgs(
+                    envelope_settings=azure_nextgen.logic.AS2EnvelopeSettingsArgs(
                         autogenerate_file_name=True,
                         file_name_template="Test",
                         message_content_type="text/plain",
                         suspend_message_on_file_name_generation_error=True,
                         transmit_file_name_in_mime_header=True,
                     ),
-                    error_settings=azure_nextgen.logic.latest.AS2ErrorSettingsArgs(
+                    error_settings=azure_nextgen.logic.AS2ErrorSettingsArgs(
                         resend_if_mdn_not_received=True,
                         suspend_duplicate_message=True,
                     ),
-                    mdn_settings=azure_nextgen.logic.latest.AS2MdnSettingsArgs(
+                    mdn_settings=azure_nextgen.logic.AS2MdnSettingsArgs(
                         disposition_notification_to="http://tempuri.org",
                         mdn_text="Sample",
                         mic_hashing_algorithm="SHA1",
@@ -507,13 +507,13 @@ integration_account_agreement = azure_nextgen.logic.latest.IntegrationAccountAgr
                         sign_mdn=True,
                         sign_outbound_mdn_if_optional=True,
                     ),
-                    message_connection_settings=azure_nextgen.logic.latest.AS2MessageConnectionSettingsArgs(
+                    message_connection_settings=azure_nextgen.logic.AS2MessageConnectionSettingsArgs(
                         ignore_certificate_name_mismatch=True,
                         keep_http_connection_alive=True,
                         support_http_status_code_continue=True,
                         unfold_http_headers=True,
                     ),
-                    security_settings=azure_nextgen.logic.latest.AS2SecuritySettingsArgs(
+                    security_settings=azure_nextgen.logic.AS2SecuritySettingsArgs(
                         enable_nrr_for_inbound_decoded_messages=True,
                         enable_nrr_for_inbound_encoded_messages=True,
                         enable_nrr_for_inbound_mdn=True,
@@ -522,7 +522,7 @@ integration_account_agreement = azure_nextgen.logic.latest.IntegrationAccountAgr
                         enable_nrr_for_outbound_mdn=True,
                         override_group_signing_certificate=False,
                     ),
-                    validation_settings=azure_nextgen.logic.latest.AS2ValidationSettingsArgs(
+                    validation_settings=azure_nextgen.logic.AS2ValidationSettingsArgs(
                         check_certificate_revocation_list_on_receive=True,
                         check_certificate_revocation_list_on_send=True,
                         check_duplicate_message=True,
@@ -534,23 +534,23 @@ integration_account_agreement = azure_nextgen.logic.latest.IntegrationAccountAgr
                         sign_message=False,
                     ),
                 ),
-                receiver_business_identity=azure_nextgen.logic.latest.BusinessIdentityArgs(
+                receiver_business_identity=azure_nextgen.logic.BusinessIdentityArgs(
                     qualifier="AA",
                     value="AA",
                 ),
-                sender_business_identity=azure_nextgen.logic.latest.BusinessIdentityArgs(
+                sender_business_identity=azure_nextgen.logic.BusinessIdentityArgs(
                     qualifier="ZZ",
                     value="ZZ",
                 ),
             ),
         ),
     ),
-    guest_identity=azure_nextgen.logic.latest.BusinessIdentityArgs(
+    guest_identity=azure_nextgen.logic.BusinessIdentityArgs(
         qualifier="AA",
         value="AA",
     ),
     guest_partner="GuestPartner",
-    host_identity=azure_nextgen.logic.latest.BusinessIdentityArgs(
+    host_identity=azure_nextgen.logic.BusinessIdentityArgs(
         qualifier="ZZ",
         value="ZZ",
     ),
@@ -573,7 +573,7 @@ integration_account_agreement = azure_nextgen.logic.latest.IntegrationAccountAgr
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const integrationAccountAgreement = new azure_nextgen.logic.latest.IntegrationAccountAgreement("integrationAccountAgreement", {
+const integrationAccountAgreement = new azure_nextgen.logic.IntegrationAccountAgreement("integrationAccountAgreement", {
     agreementName: "testAgreement",
     agreementType: "AS2",
     content: {
@@ -933,7 +933,7 @@ The IntegrationAccountAgreement resource accepts the following [input]({{< relre
 <a href="#agreementtype_csharp" style="color: inherit; text-decoration: inherit;">Agreement<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#agreementtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Agreement<wbr>Type</a></span>
+        <span class="property-type"><a href="#agreementtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Agreement<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The agreement type.{{% /md %}}</dd>
     <dt class="property-required"
@@ -942,7 +942,7 @@ The IntegrationAccountAgreement resource accepts the following [input]({{< relre
 <a href="#content_csharp" style="color: inherit; text-decoration: inherit;">Content</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#agreementcontent">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>Agreement<wbr>Content<wbr>Args</a></span>
+        <span class="property-type"><a href="#agreementcontent">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>Agreement<wbr>Content<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The agreement content.{{% /md %}}</dd>
     <dt class="property-required"
@@ -951,7 +951,7 @@ The IntegrationAccountAgreement resource accepts the following [input]({{< relre
 <a href="#guestidentity_csharp" style="color: inherit; text-decoration: inherit;">Guest<wbr>Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#businessidentity">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>Business<wbr>Identity<wbr>Args</a></span>
+        <span class="property-type"><a href="#businessidentity">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>Business<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The business identity of the guest partner.{{% /md %}}</dd>
     <dt class="property-required"
@@ -969,7 +969,7 @@ The IntegrationAccountAgreement resource accepts the following [input]({{< relre
 <a href="#hostidentity_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#businessidentity">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>Business<wbr>Identity<wbr>Args</a></span>
+        <span class="property-type"><a href="#businessidentity">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>Business<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The business identity of the host partner.{{% /md %}}</dd>
     <dt class="property-required"
@@ -1943,7 +1943,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#receiveagreement_csharp" style="color: inherit; text-decoration: inherit;">Receive<wbr>Agreement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#as2onewayagreement">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>AS2One<wbr>Way<wbr>Agreement<wbr>Args</a></span>
+        <span class="property-type"><a href="#as2onewayagreement">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>AS2One<wbr>Way<wbr>Agreement<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The AS2 one-way receive agreement.{{% /md %}}</dd>
     <dt class="property-required"
@@ -1952,7 +1952,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sendagreement_csharp" style="color: inherit; text-decoration: inherit;">Send<wbr>Agreement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#as2onewayagreement">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>AS2One<wbr>Way<wbr>Agreement<wbr>Args</a></span>
+        <span class="property-type"><a href="#as2onewayagreement">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>AS2One<wbr>Way<wbr>Agreement<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The AS2 one-way send agreement.{{% /md %}}</dd>
 </dl>
@@ -2041,7 +2041,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#receiveagreement_csharp" style="color: inherit; text-decoration: inherit;">Receive<wbr>Agreement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#as2onewayagreementresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>AS2One<wbr>Way<wbr>Agreement<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#as2onewayagreementresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>AS2One<wbr>Way<wbr>Agreement<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The AS2 one-way receive agreement.{{% /md %}}</dd>
     <dt class="property-required"
@@ -2050,7 +2050,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sendagreement_csharp" style="color: inherit; text-decoration: inherit;">Send<wbr>Agreement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#as2onewayagreementresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>AS2One<wbr>Way<wbr>Agreement<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#as2onewayagreementresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>AS2One<wbr>Way<wbr>Agreement<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The AS2 one-way send agreement.{{% /md %}}</dd>
 </dl>
@@ -2747,7 +2747,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#michashingalgorithm_csharp" style="color: inherit; text-decoration: inherit;">Mic<wbr>Hashing<wbr>Algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#hashingalgorithm">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Hashing<wbr>Algorithm</a></span>
+        <span class="property-type">string | <a href="#hashingalgorithm">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Hashing<wbr>Algorithm</a></span>
     </dt>
     <dd>{{% md %}}The signing or hashing algorithm.{{% /md %}}</dd>
     <dt class="property-required"
@@ -3787,7 +3787,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protocolsettings_csharp" style="color: inherit; text-decoration: inherit;">Protocol<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#as2protocolsettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>AS2Protocol<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#as2protocolsettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>AS2Protocol<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The AS2 protocol settings.{{% /md %}}</dd>
     <dt class="property-required"
@@ -3796,7 +3796,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#receiverbusinessidentity_csharp" style="color: inherit; text-decoration: inherit;">Receiver<wbr>Business<wbr>Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#businessidentity">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>Business<wbr>Identity<wbr>Args</a></span>
+        <span class="property-type"><a href="#businessidentity">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>Business<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The receiver business identity{{% /md %}}</dd>
     <dt class="property-required"
@@ -3805,7 +3805,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#senderbusinessidentity_csharp" style="color: inherit; text-decoration: inherit;">Sender<wbr>Business<wbr>Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#businessidentity">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>Business<wbr>Identity<wbr>Args</a></span>
+        <span class="property-type"><a href="#businessidentity">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>Business<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The sender business identity{{% /md %}}</dd>
 </dl>
@@ -3921,7 +3921,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protocolsettings_csharp" style="color: inherit; text-decoration: inherit;">Protocol<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#as2protocolsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>AS2Protocol<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#as2protocolsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>AS2Protocol<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The AS2 protocol settings.{{% /md %}}</dd>
     <dt class="property-required"
@@ -3930,7 +3930,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#receiverbusinessidentity_csharp" style="color: inherit; text-decoration: inherit;">Receiver<wbr>Business<wbr>Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#businessidentityresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>Business<wbr>Identity<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#businessidentityresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>Business<wbr>Identity<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The receiver business identity{{% /md %}}</dd>
     <dt class="property-required"
@@ -3939,7 +3939,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#senderbusinessidentity_csharp" style="color: inherit; text-decoration: inherit;">Sender<wbr>Business<wbr>Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#businessidentityresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>Business<wbr>Identity<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#businessidentityresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>Business<wbr>Identity<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The sender business identity{{% /md %}}</dd>
 </dl>
@@ -4055,7 +4055,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#acknowledgementconnectionsettings_csharp" style="color: inherit; text-decoration: inherit;">Acknowledgement<wbr>Connection<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#as2acknowledgementconnectionsettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>AS2Acknowledgement<wbr>Connection<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#as2acknowledgementconnectionsettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>AS2Acknowledgement<wbr>Connection<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The acknowledgement connection settings.{{% /md %}}</dd>
     <dt class="property-required"
@@ -4064,7 +4064,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#envelopesettings_csharp" style="color: inherit; text-decoration: inherit;">Envelope<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#as2envelopesettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>AS2Envelope<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#as2envelopesettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>AS2Envelope<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The envelope settings.{{% /md %}}</dd>
     <dt class="property-required"
@@ -4073,7 +4073,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errorsettings_csharp" style="color: inherit; text-decoration: inherit;">Error<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#as2errorsettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>AS2Error<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#as2errorsettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>AS2Error<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The error settings.{{% /md %}}</dd>
     <dt class="property-required"
@@ -4082,7 +4082,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mdnsettings_csharp" style="color: inherit; text-decoration: inherit;">Mdn<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#as2mdnsettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>AS2Mdn<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#as2mdnsettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>AS2Mdn<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The MDN settings.{{% /md %}}</dd>
     <dt class="property-required"
@@ -4091,7 +4091,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#messageconnectionsettings_csharp" style="color: inherit; text-decoration: inherit;">Message<wbr>Connection<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#as2messageconnectionsettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>AS2Message<wbr>Connection<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#as2messageconnectionsettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>AS2Message<wbr>Connection<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The message connection settings.{{% /md %}}</dd>
     <dt class="property-required"
@@ -4100,7 +4100,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#securitysettings_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#as2securitysettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>AS2Security<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#as2securitysettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>AS2Security<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The security settings.{{% /md %}}</dd>
     <dt class="property-required"
@@ -4109,7 +4109,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validationsettings_csharp" style="color: inherit; text-decoration: inherit;">Validation<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#as2validationsettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>AS2Validation<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#as2validationsettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>AS2Validation<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The validation settings.{{% /md %}}</dd>
 </dl>
@@ -4333,7 +4333,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#acknowledgementconnectionsettings_csharp" style="color: inherit; text-decoration: inherit;">Acknowledgement<wbr>Connection<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#as2acknowledgementconnectionsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>AS2Acknowledgement<wbr>Connection<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#as2acknowledgementconnectionsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>AS2Acknowledgement<wbr>Connection<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The acknowledgement connection settings.{{% /md %}}</dd>
     <dt class="property-required"
@@ -4342,7 +4342,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#envelopesettings_csharp" style="color: inherit; text-decoration: inherit;">Envelope<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#as2envelopesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>AS2Envelope<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#as2envelopesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>AS2Envelope<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The envelope settings.{{% /md %}}</dd>
     <dt class="property-required"
@@ -4351,7 +4351,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errorsettings_csharp" style="color: inherit; text-decoration: inherit;">Error<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#as2errorsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>AS2Error<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#as2errorsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>AS2Error<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The error settings.{{% /md %}}</dd>
     <dt class="property-required"
@@ -4360,7 +4360,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mdnsettings_csharp" style="color: inherit; text-decoration: inherit;">Mdn<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#as2mdnsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>AS2Mdn<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#as2mdnsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>AS2Mdn<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The MDN settings.{{% /md %}}</dd>
     <dt class="property-required"
@@ -4369,7 +4369,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#messageconnectionsettings_csharp" style="color: inherit; text-decoration: inherit;">Message<wbr>Connection<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#as2messageconnectionsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>AS2Message<wbr>Connection<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#as2messageconnectionsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>AS2Message<wbr>Connection<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The message connection settings.{{% /md %}}</dd>
     <dt class="property-required"
@@ -4378,7 +4378,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#securitysettings_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#as2securitysettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>AS2Security<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#as2securitysettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>AS2Security<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The security settings.{{% /md %}}</dd>
     <dt class="property-required"
@@ -4387,7 +4387,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validationsettings_csharp" style="color: inherit; text-decoration: inherit;">Validation<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#as2validationsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>AS2Validation<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#as2validationsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>AS2Validation<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The validation settings.{{% /md %}}</dd>
 </dl>
@@ -5428,7 +5428,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryptionalgorithm_csharp" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#encryptionalgorithm">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Encryption<wbr>Algorithm</a></span>
+        <span class="property-type">string | <a href="#encryptionalgorithm">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Encryption<wbr>Algorithm</a></span>
     </dt>
     <dd>{{% md %}}The encryption algorithm.{{% /md %}}</dd>
     <dt class="property-required"
@@ -5464,7 +5464,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#signingalgorithm_csharp" style="color: inherit; text-decoration: inherit;">Signing<wbr>Algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#signingalgorithm">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Signing<wbr>Algorithm</a></span>
+        <span class="property-type">string | <a href="#signingalgorithm">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Signing<wbr>Algorithm</a></span>
     </dt>
     <dd>{{% md %}}The signing algorithm.{{% /md %}}</dd>
 </dl>
@@ -6155,7 +6155,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#as2_csharp" style="color: inherit; text-decoration: inherit;">AS2</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#as2agreementcontent">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>AS2Agreement<wbr>Content<wbr>Args</a></span>
+        <span class="property-type"><a href="#as2agreementcontent">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>AS2Agreement<wbr>Content<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The AS2 agreement content.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -6164,7 +6164,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#edifact_csharp" style="color: inherit; text-decoration: inherit;">Edifact</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactagreementcontent">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>Edifact<wbr>Agreement<wbr>Content<wbr>Args</a></span>
+        <span class="property-type"><a href="#edifactagreementcontent">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>Edifact<wbr>Agreement<wbr>Content<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT agreement content.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -6173,7 +6173,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#x12_csharp" style="color: inherit; text-decoration: inherit;">X12</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12agreementcontent">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>X12Agreement<wbr>Content<wbr>Args</a></span>
+        <span class="property-type"><a href="#x12agreementcontent">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>X12Agreement<wbr>Content<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The X12 agreement content.{{% /md %}}</dd>
 </dl>
@@ -6289,7 +6289,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#as2_csharp" style="color: inherit; text-decoration: inherit;">AS2</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#as2agreementcontentresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>AS2Agreement<wbr>Content<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#as2agreementcontentresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>AS2Agreement<wbr>Content<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The AS2 agreement content.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -6298,7 +6298,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#edifact_csharp" style="color: inherit; text-decoration: inherit;">Edifact</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactagreementcontentresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>Edifact<wbr>Agreement<wbr>Content<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#edifactagreementcontentresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>Edifact<wbr>Agreement<wbr>Content<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT agreement content.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -6307,7 +6307,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#x12_csharp" style="color: inherit; text-decoration: inherit;">X12</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12agreementcontentresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>X12Agreement<wbr>Content<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#x12agreementcontentresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>X12Agreement<wbr>Content<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The X12 agreement content.{{% /md %}}</dd>
 </dl>
@@ -7517,7 +7517,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#receiveagreement_csharp" style="color: inherit; text-decoration: inherit;">Receive<wbr>Agreement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactonewayagreement">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>Edifact<wbr>One<wbr>Way<wbr>Agreement<wbr>Args</a></span>
+        <span class="property-type"><a href="#edifactonewayagreement">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>Edifact<wbr>One<wbr>Way<wbr>Agreement<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT one-way receive agreement.{{% /md %}}</dd>
     <dt class="property-required"
@@ -7526,7 +7526,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sendagreement_csharp" style="color: inherit; text-decoration: inherit;">Send<wbr>Agreement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactonewayagreement">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>Edifact<wbr>One<wbr>Way<wbr>Agreement<wbr>Args</a></span>
+        <span class="property-type"><a href="#edifactonewayagreement">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>Edifact<wbr>One<wbr>Way<wbr>Agreement<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT one-way send agreement.{{% /md %}}</dd>
 </dl>
@@ -7615,7 +7615,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#receiveagreement_csharp" style="color: inherit; text-decoration: inherit;">Receive<wbr>Agreement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactonewayagreementresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>Edifact<wbr>One<wbr>Way<wbr>Agreement<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#edifactonewayagreementresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>Edifact<wbr>One<wbr>Way<wbr>Agreement<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT one-way receive agreement.{{% /md %}}</dd>
     <dt class="property-required"
@@ -7624,7 +7624,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sendagreement_csharp" style="color: inherit; text-decoration: inherit;">Send<wbr>Agreement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactonewayagreementresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>Edifact<wbr>One<wbr>Way<wbr>Agreement<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#edifactonewayagreementresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>Edifact<wbr>One<wbr>Way<wbr>Agreement<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT one-way send agreement.{{% /md %}}</dd>
 </dl>
@@ -7919,7 +7919,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#decimalpointindicator_csharp" style="color: inherit; text-decoration: inherit;">Decimal<wbr>Point<wbr>Indicator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactdecimalindicator">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Edifact<wbr>Decimal<wbr>Indicator</a></span>
+        <span class="property-type"><a href="#edifactdecimalindicator">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Edifact<wbr>Decimal<wbr>Indicator</a></span>
     </dt>
     <dd>{{% md %}}The decimal point indicator.{{% /md %}}</dd>
     <dt class="property-required"
@@ -7955,7 +7955,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#segmentterminatorsuffix_csharp" style="color: inherit; text-decoration: inherit;">Segment<wbr>Terminator<wbr>Suffix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#segmentterminatorsuffix">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Segment<wbr>Terminator<wbr>Suffix</a></span>
+        <span class="property-type"><a href="#segmentterminatorsuffix">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Segment<wbr>Terminator<wbr>Suffix</a></span>
     </dt>
     <dd>{{% md %}}The segment terminator suffix.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -12953,7 +12953,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#characterset_csharp" style="color: inherit; text-decoration: inherit;">Character<wbr>Set</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#edifactcharacterset">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Edifact<wbr>Character<wbr>Set</a></span>
+        <span class="property-type">string | <a href="#edifactcharacterset">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Edifact<wbr>Character<wbr>Set</a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT frame setting characterSet.{{% /md %}}</dd>
     <dt class="property-required"
@@ -12980,7 +12980,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#decimalpointindicator_csharp" style="color: inherit; text-decoration: inherit;">Decimal<wbr>Point<wbr>Indicator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactdecimalindicator">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Edifact<wbr>Decimal<wbr>Indicator</a></span>
+        <span class="property-type"><a href="#edifactdecimalindicator">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Edifact<wbr>Decimal<wbr>Indicator</a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT frame setting decimal indicator.{{% /md %}}</dd>
     <dt class="property-required"
@@ -13025,7 +13025,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#segmentterminatorsuffix_csharp" style="color: inherit; text-decoration: inherit;">Segment<wbr>Terminator<wbr>Suffix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#segmentterminatorsuffix">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Segment<wbr>Terminator<wbr>Suffix</a></span>
+        <span class="property-type"><a href="#segmentterminatorsuffix">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Segment<wbr>Terminator<wbr>Suffix</a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT frame setting segment terminator suffix.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -13797,7 +13797,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#messagefiltertype_csharp" style="color: inherit; text-decoration: inherit;">Message<wbr>Filter<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#messagefiltertype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Message<wbr>Filter<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#messagefiltertype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Message<wbr>Filter<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The message filter type.{{% /md %}}</dd>
 </dl>
@@ -14045,7 +14045,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protocolsettings_csharp" style="color: inherit; text-decoration: inherit;">Protocol<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactprotocolsettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>Edifact<wbr>Protocol<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#edifactprotocolsettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>Edifact<wbr>Protocol<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT protocol settings.{{% /md %}}</dd>
     <dt class="property-required"
@@ -14054,7 +14054,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#receiverbusinessidentity_csharp" style="color: inherit; text-decoration: inherit;">Receiver<wbr>Business<wbr>Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#businessidentity">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>Business<wbr>Identity<wbr>Args</a></span>
+        <span class="property-type"><a href="#businessidentity">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>Business<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The receiver business identity{{% /md %}}</dd>
     <dt class="property-required"
@@ -14063,7 +14063,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#senderbusinessidentity_csharp" style="color: inherit; text-decoration: inherit;">Sender<wbr>Business<wbr>Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#businessidentity">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>Business<wbr>Identity<wbr>Args</a></span>
+        <span class="property-type"><a href="#businessidentity">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>Business<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The sender business identity{{% /md %}}</dd>
 </dl>
@@ -14179,7 +14179,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protocolsettings_csharp" style="color: inherit; text-decoration: inherit;">Protocol<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactprotocolsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>Edifact<wbr>Protocol<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#edifactprotocolsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>Edifact<wbr>Protocol<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT protocol settings.{{% /md %}}</dd>
     <dt class="property-required"
@@ -14188,7 +14188,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#receiverbusinessidentity_csharp" style="color: inherit; text-decoration: inherit;">Receiver<wbr>Business<wbr>Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#businessidentityresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>Business<wbr>Identity<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#businessidentityresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>Business<wbr>Identity<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The receiver business identity{{% /md %}}</dd>
     <dt class="property-required"
@@ -14197,7 +14197,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#senderbusinessidentity_csharp" style="color: inherit; text-decoration: inherit;">Sender<wbr>Business<wbr>Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#businessidentityresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>Business<wbr>Identity<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#businessidentityresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>Business<wbr>Identity<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The sender business identity{{% /md %}}</dd>
 </dl>
@@ -14725,7 +14725,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#acknowledgementsettings_csharp" style="color: inherit; text-decoration: inherit;">Acknowledgement<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactacknowledgementsettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>Edifact<wbr>Acknowledgement<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#edifactacknowledgementsettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>Edifact<wbr>Acknowledgement<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT acknowledgement settings.{{% /md %}}</dd>
     <dt class="property-required"
@@ -14734,7 +14734,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#envelopesettings_csharp" style="color: inherit; text-decoration: inherit;">Envelope<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactenvelopesettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>Edifact<wbr>Envelope<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#edifactenvelopesettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>Edifact<wbr>Envelope<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT envelope settings.{{% /md %}}</dd>
     <dt class="property-required"
@@ -14743,7 +14743,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#framingsettings_csharp" style="color: inherit; text-decoration: inherit;">Framing<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactframingsettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>Edifact<wbr>Framing<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#edifactframingsettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>Edifact<wbr>Framing<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT framing settings.{{% /md %}}</dd>
     <dt class="property-required"
@@ -14752,7 +14752,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#messagefilter_csharp" style="color: inherit; text-decoration: inherit;">Message<wbr>Filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactmessagefilter">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>Edifact<wbr>Message<wbr>Filter<wbr>Args</a></span>
+        <span class="property-type"><a href="#edifactmessagefilter">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>Edifact<wbr>Message<wbr>Filter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT message filter.{{% /md %}}</dd>
     <dt class="property-required"
@@ -14761,7 +14761,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#processingsettings_csharp" style="color: inherit; text-decoration: inherit;">Processing<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactprocessingsettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>Edifact<wbr>Processing<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#edifactprocessingsettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>Edifact<wbr>Processing<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT processing Settings.{{% /md %}}</dd>
     <dt class="property-required"
@@ -14770,7 +14770,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schemareferences_csharp" style="color: inherit; text-decoration: inherit;">Schema<wbr>References</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactschemareference">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>Edifact<wbr>Schema<wbr>Reference<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#edifactschemareference">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>Edifact<wbr>Schema<wbr>Reference<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT schema references.{{% /md %}}</dd>
     <dt class="property-required"
@@ -14779,7 +14779,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validationsettings_csharp" style="color: inherit; text-decoration: inherit;">Validation<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactvalidationsettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>Edifact<wbr>Validation<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#edifactvalidationsettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>Edifact<wbr>Validation<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT validation settings.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -14788,7 +14788,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#edifactdelimiteroverrides_csharp" style="color: inherit; text-decoration: inherit;">Edifact<wbr>Delimiter<wbr>Overrides</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactdelimiteroverride">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>Edifact<wbr>Delimiter<wbr>Override<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#edifactdelimiteroverride">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>Edifact<wbr>Delimiter<wbr>Override<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT delimiter override settings.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -14797,7 +14797,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#envelopeoverrides_csharp" style="color: inherit; text-decoration: inherit;">Envelope<wbr>Overrides</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactenvelopeoverride">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>Edifact<wbr>Envelope<wbr>Override<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#edifactenvelopeoverride">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>Edifact<wbr>Envelope<wbr>Override<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT envelope override settings.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -14806,7 +14806,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#messagefilterlist_csharp" style="color: inherit; text-decoration: inherit;">Message<wbr>Filter<wbr>List</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactmessageidentifier">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>Edifact<wbr>Message<wbr>Identifier<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#edifactmessageidentifier">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>Edifact<wbr>Message<wbr>Identifier<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT message filter list.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -14815,7 +14815,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validationoverrides_csharp" style="color: inherit; text-decoration: inherit;">Validation<wbr>Overrides</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactvalidationoverride">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>Edifact<wbr>Validation<wbr>Override<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#edifactvalidationoverride">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>Edifact<wbr>Validation<wbr>Override<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT validation override settings.{{% /md %}}</dd>
 </dl>
@@ -15147,7 +15147,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#acknowledgementsettings_csharp" style="color: inherit; text-decoration: inherit;">Acknowledgement<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactacknowledgementsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>Edifact<wbr>Acknowledgement<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#edifactacknowledgementsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>Edifact<wbr>Acknowledgement<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT acknowledgement settings.{{% /md %}}</dd>
     <dt class="property-required"
@@ -15156,7 +15156,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#envelopesettings_csharp" style="color: inherit; text-decoration: inherit;">Envelope<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactenvelopesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>Edifact<wbr>Envelope<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#edifactenvelopesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>Edifact<wbr>Envelope<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT envelope settings.{{% /md %}}</dd>
     <dt class="property-required"
@@ -15165,7 +15165,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#framingsettings_csharp" style="color: inherit; text-decoration: inherit;">Framing<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactframingsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>Edifact<wbr>Framing<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#edifactframingsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>Edifact<wbr>Framing<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT framing settings.{{% /md %}}</dd>
     <dt class="property-required"
@@ -15174,7 +15174,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#messagefilter_csharp" style="color: inherit; text-decoration: inherit;">Message<wbr>Filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactmessagefilterresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>Edifact<wbr>Message<wbr>Filter<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#edifactmessagefilterresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>Edifact<wbr>Message<wbr>Filter<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT message filter.{{% /md %}}</dd>
     <dt class="property-required"
@@ -15183,7 +15183,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#processingsettings_csharp" style="color: inherit; text-decoration: inherit;">Processing<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactprocessingsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>Edifact<wbr>Processing<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#edifactprocessingsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>Edifact<wbr>Processing<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT processing Settings.{{% /md %}}</dd>
     <dt class="property-required"
@@ -15192,7 +15192,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schemareferences_csharp" style="color: inherit; text-decoration: inherit;">Schema<wbr>References</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactschemareferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>Edifact<wbr>Schema<wbr>Reference<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#edifactschemareferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>Edifact<wbr>Schema<wbr>Reference<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT schema references.{{% /md %}}</dd>
     <dt class="property-required"
@@ -15201,7 +15201,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validationsettings_csharp" style="color: inherit; text-decoration: inherit;">Validation<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactvalidationsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>Edifact<wbr>Validation<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#edifactvalidationsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>Edifact<wbr>Validation<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT validation settings.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -15210,7 +15210,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#edifactdelimiteroverrides_csharp" style="color: inherit; text-decoration: inherit;">Edifact<wbr>Delimiter<wbr>Overrides</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactdelimiteroverrideresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>Edifact<wbr>Delimiter<wbr>Override<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#edifactdelimiteroverrideresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>Edifact<wbr>Delimiter<wbr>Override<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT delimiter override settings.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -15219,7 +15219,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#envelopeoverrides_csharp" style="color: inherit; text-decoration: inherit;">Envelope<wbr>Overrides</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactenvelopeoverrideresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>Edifact<wbr>Envelope<wbr>Override<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#edifactenvelopeoverrideresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>Edifact<wbr>Envelope<wbr>Override<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT envelope override settings.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -15228,7 +15228,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#messagefilterlist_csharp" style="color: inherit; text-decoration: inherit;">Message<wbr>Filter<wbr>List</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactmessageidentifierresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>Edifact<wbr>Message<wbr>Identifier<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#edifactmessageidentifierresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>Edifact<wbr>Message<wbr>Identifier<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT message filter list.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -15237,7 +15237,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validationoverrides_csharp" style="color: inherit; text-decoration: inherit;">Validation<wbr>Overrides</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactvalidationoverrideresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>Edifact<wbr>Validation<wbr>Override<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#edifactvalidationoverrideresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>Edifact<wbr>Validation<wbr>Override<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT validation override settings.{{% /md %}}</dd>
 </dl>
@@ -16152,7 +16152,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trailingseparatorpolicy_csharp" style="color: inherit; text-decoration: inherit;">Trailing<wbr>Separator<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#trailingseparatorpolicy">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Trailing<wbr>Separator<wbr>Policy</a></span>
+        <span class="property-type">string | <a href="#trailingseparatorpolicy">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Trailing<wbr>Separator<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}The trailing separator policy.{{% /md %}}</dd>
     <dt class="property-required"
@@ -16726,7 +16726,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trailingseparatorpolicy_csharp" style="color: inherit; text-decoration: inherit;">Trailing<wbr>Separator<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#trailingseparatorpolicy">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Trailing<wbr>Separator<wbr>Policy</a></span>
+        <span class="property-type">string | <a href="#trailingseparatorpolicy">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Trailing<wbr>Separator<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}The trailing separator policy.{{% /md %}}</dd>
     <dt class="property-required"
@@ -19027,7 +19027,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#receiveagreement_csharp" style="color: inherit; text-decoration: inherit;">Receive<wbr>Agreement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12onewayagreement">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>X12One<wbr>Way<wbr>Agreement<wbr>Args</a></span>
+        <span class="property-type"><a href="#x12onewayagreement">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>X12One<wbr>Way<wbr>Agreement<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The X12 one-way receive agreement.{{% /md %}}</dd>
     <dt class="property-required"
@@ -19036,7 +19036,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sendagreement_csharp" style="color: inherit; text-decoration: inherit;">Send<wbr>Agreement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12onewayagreement">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>X12One<wbr>Way<wbr>Agreement<wbr>Args</a></span>
+        <span class="property-type"><a href="#x12onewayagreement">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>X12One<wbr>Way<wbr>Agreement<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The X12 one-way send agreement.{{% /md %}}</dd>
 </dl>
@@ -19125,7 +19125,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#receiveagreement_csharp" style="color: inherit; text-decoration: inherit;">Receive<wbr>Agreement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12onewayagreementresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>X12One<wbr>Way<wbr>Agreement<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#x12onewayagreementresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>X12One<wbr>Way<wbr>Agreement<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The X12 one-way receive agreement.{{% /md %}}</dd>
     <dt class="property-required"
@@ -19134,7 +19134,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sendagreement_csharp" style="color: inherit; text-decoration: inherit;">Send<wbr>Agreement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12onewayagreementresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>X12One<wbr>Way<wbr>Agreement<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#x12onewayagreementresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>X12One<wbr>Way<wbr>Agreement<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The X12 one-way send agreement.{{% /md %}}</dd>
 </dl>
@@ -19368,7 +19368,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#segmentterminatorsuffix_csharp" style="color: inherit; text-decoration: inherit;">Segment<wbr>Terminator<wbr>Suffix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#segmentterminatorsuffix">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Segment<wbr>Terminator<wbr>Suffix</a></span>
+        <span class="property-type"><a href="#segmentterminatorsuffix">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Segment<wbr>Terminator<wbr>Suffix</a></span>
     </dt>
     <dd>{{% md %}}The segment terminator suffix.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -20023,7 +20023,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dateformat_csharp" style="color: inherit; text-decoration: inherit;">Date<wbr>Format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#x12dateformat">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>X12Date<wbr>Format</a></span>
+        <span class="property-type">string | <a href="#x12dateformat">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>X12Date<wbr>Format</a></span>
     </dt>
     <dd>{{% md %}}The date format.{{% /md %}}</dd>
     <dt class="property-required"
@@ -20095,7 +20095,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timeformat_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#x12timeformat">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>X12Time<wbr>Format</a></span>
+        <span class="property-type">string | <a href="#x12timeformat">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>X12Time<wbr>Format</a></span>
     </dt>
     <dd>{{% md %}}The time format.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -20849,7 +20849,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#groupheaderdateformat_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Header<wbr>Date<wbr>Format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#x12dateformat">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>X12Date<wbr>Format</a></span>
+        <span class="property-type">string | <a href="#x12dateformat">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>X12Date<wbr>Format</a></span>
     </dt>
     <dd>{{% md %}}The group header date format.{{% /md %}}</dd>
     <dt class="property-required"
@@ -20858,7 +20858,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#groupheadertimeformat_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Header<wbr>Time<wbr>Format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#x12timeformat">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>X12Time<wbr>Format</a></span>
+        <span class="property-type">string | <a href="#x12timeformat">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>X12Time<wbr>Format</a></span>
     </dt>
     <dd>{{% md %}}The group header time format.{{% /md %}}</dd>
     <dt class="property-required"
@@ -20966,7 +20966,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#usageindicator_csharp" style="color: inherit; text-decoration: inherit;">Usage<wbr>Indicator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#usageindicator">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Usage<wbr>Indicator</a></span>
+        <span class="property-type">string | <a href="#usageindicator">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Usage<wbr>Indicator</a></span>
     </dt>
     <dd>{{% md %}}The usage indicator.{{% /md %}}</dd>
     <dt class="property-required"
@@ -22575,7 +22575,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#characterset_csharp" style="color: inherit; text-decoration: inherit;">Character<wbr>Set</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#x12characterset">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>X12Character<wbr>Set</a></span>
+        <span class="property-type">string | <a href="#x12characterset">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>X12Character<wbr>Set</a></span>
     </dt>
     <dd>{{% md %}}The X12 character set.{{% /md %}}</dd>
     <dt class="property-required"
@@ -22629,7 +22629,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#segmentterminatorsuffix_csharp" style="color: inherit; text-decoration: inherit;">Segment<wbr>Terminator<wbr>Suffix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#segmentterminatorsuffix">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Segment<wbr>Terminator<wbr>Suffix</a></span>
+        <span class="property-type"><a href="#segmentterminatorsuffix">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Segment<wbr>Terminator<wbr>Suffix</a></span>
     </dt>
     <dd>{{% md %}}The segment terminator suffix.{{% /md %}}</dd>
 </dl>
@@ -23131,7 +23131,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#messagefiltertype_csharp" style="color: inherit; text-decoration: inherit;">Message<wbr>Filter<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#messagefiltertype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Message<wbr>Filter<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#messagefiltertype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Message<wbr>Filter<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The message filter type.{{% /md %}}</dd>
 </dl>
@@ -23379,7 +23379,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protocolsettings_csharp" style="color: inherit; text-decoration: inherit;">Protocol<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12protocolsettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>X12Protocol<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#x12protocolsettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>X12Protocol<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The X12 protocol settings.{{% /md %}}</dd>
     <dt class="property-required"
@@ -23388,7 +23388,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#receiverbusinessidentity_csharp" style="color: inherit; text-decoration: inherit;">Receiver<wbr>Business<wbr>Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#businessidentity">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>Business<wbr>Identity<wbr>Args</a></span>
+        <span class="property-type"><a href="#businessidentity">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>Business<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The receiver business identity{{% /md %}}</dd>
     <dt class="property-required"
@@ -23397,7 +23397,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#senderbusinessidentity_csharp" style="color: inherit; text-decoration: inherit;">Sender<wbr>Business<wbr>Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#businessidentity">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>Business<wbr>Identity<wbr>Args</a></span>
+        <span class="property-type"><a href="#businessidentity">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>Business<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The sender business identity{{% /md %}}</dd>
 </dl>
@@ -23513,7 +23513,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protocolsettings_csharp" style="color: inherit; text-decoration: inherit;">Protocol<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12protocolsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>X12Protocol<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#x12protocolsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>X12Protocol<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The X12 protocol settings.{{% /md %}}</dd>
     <dt class="property-required"
@@ -23522,7 +23522,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#receiverbusinessidentity_csharp" style="color: inherit; text-decoration: inherit;">Receiver<wbr>Business<wbr>Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#businessidentityresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>Business<wbr>Identity<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#businessidentityresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>Business<wbr>Identity<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The receiver business identity{{% /md %}}</dd>
     <dt class="property-required"
@@ -23531,7 +23531,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#senderbusinessidentity_csharp" style="color: inherit; text-decoration: inherit;">Sender<wbr>Business<wbr>Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#businessidentityresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>Business<wbr>Identity<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#businessidentityresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>Business<wbr>Identity<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The sender business identity{{% /md %}}</dd>
 </dl>
@@ -24131,7 +24131,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#acknowledgementsettings_csharp" style="color: inherit; text-decoration: inherit;">Acknowledgement<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12acknowledgementsettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>X12Acknowledgement<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#x12acknowledgementsettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>X12Acknowledgement<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The X12 acknowledgment settings.{{% /md %}}</dd>
     <dt class="property-required"
@@ -24140,7 +24140,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#envelopesettings_csharp" style="color: inherit; text-decoration: inherit;">Envelope<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12envelopesettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>X12Envelope<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#x12envelopesettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>X12Envelope<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The X12 envelope settings.{{% /md %}}</dd>
     <dt class="property-required"
@@ -24149,7 +24149,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#framingsettings_csharp" style="color: inherit; text-decoration: inherit;">Framing<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12framingsettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>X12Framing<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#x12framingsettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>X12Framing<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The X12 framing settings.{{% /md %}}</dd>
     <dt class="property-required"
@@ -24158,7 +24158,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#messagefilter_csharp" style="color: inherit; text-decoration: inherit;">Message<wbr>Filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12messagefilter">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>X12Message<wbr>Filter<wbr>Args</a></span>
+        <span class="property-type"><a href="#x12messagefilter">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>X12Message<wbr>Filter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The X12 message filter.{{% /md %}}</dd>
     <dt class="property-required"
@@ -24167,7 +24167,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#processingsettings_csharp" style="color: inherit; text-decoration: inherit;">Processing<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12processingsettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>X12Processing<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#x12processingsettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>X12Processing<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The X12 processing settings.{{% /md %}}</dd>
     <dt class="property-required"
@@ -24176,7 +24176,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schemareferences_csharp" style="color: inherit; text-decoration: inherit;">Schema<wbr>References</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12schemareference">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>X12Schema<wbr>Reference<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#x12schemareference">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>X12Schema<wbr>Reference<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The X12 schema references.{{% /md %}}</dd>
     <dt class="property-required"
@@ -24185,7 +24185,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#securitysettings_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12securitysettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>X12Security<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#x12securitysettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>X12Security<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The X12 security settings.{{% /md %}}</dd>
     <dt class="property-required"
@@ -24194,7 +24194,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validationsettings_csharp" style="color: inherit; text-decoration: inherit;">Validation<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12validationsettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>X12Validation<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#x12validationsettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>X12Validation<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The X12 validation settings.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -24203,7 +24203,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#envelopeoverrides_csharp" style="color: inherit; text-decoration: inherit;">Envelope<wbr>Overrides</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12envelopeoverride">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>X12Envelope<wbr>Override<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#x12envelopeoverride">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>X12Envelope<wbr>Override<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The X12 envelope override settings.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -24212,7 +24212,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#messagefilterlist_csharp" style="color: inherit; text-decoration: inherit;">Message<wbr>Filter<wbr>List</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12messageidentifier">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>X12Message<wbr>Identifier<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#x12messageidentifier">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>X12Message<wbr>Identifier<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The X12 message filter list.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -24221,7 +24221,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validationoverrides_csharp" style="color: inherit; text-decoration: inherit;">Validation<wbr>Overrides</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12validationoverride">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>X12Validation<wbr>Override<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#x12validationoverride">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>X12Validation<wbr>Override<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The X12 validation override settings.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -24230,7 +24230,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#x12delimiteroverrides_csharp" style="color: inherit; text-decoration: inherit;">X12Delimiter<wbr>Overrides</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12delimiteroverrides">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>X12Delimiter<wbr>Overrides<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#x12delimiteroverrides">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>X12Delimiter<wbr>Overrides<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The X12 delimiter override settings.{{% /md %}}</dd>
 </dl>
@@ -24589,7 +24589,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#acknowledgementsettings_csharp" style="color: inherit; text-decoration: inherit;">Acknowledgement<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12acknowledgementsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>X12Acknowledgement<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#x12acknowledgementsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>X12Acknowledgement<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The X12 acknowledgment settings.{{% /md %}}</dd>
     <dt class="property-required"
@@ -24598,7 +24598,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#envelopesettings_csharp" style="color: inherit; text-decoration: inherit;">Envelope<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12envelopesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>X12Envelope<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#x12envelopesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>X12Envelope<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The X12 envelope settings.{{% /md %}}</dd>
     <dt class="property-required"
@@ -24607,7 +24607,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#framingsettings_csharp" style="color: inherit; text-decoration: inherit;">Framing<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12framingsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>X12Framing<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#x12framingsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>X12Framing<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The X12 framing settings.{{% /md %}}</dd>
     <dt class="property-required"
@@ -24616,7 +24616,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#messagefilter_csharp" style="color: inherit; text-decoration: inherit;">Message<wbr>Filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12messagefilterresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>X12Message<wbr>Filter<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#x12messagefilterresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>X12Message<wbr>Filter<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The X12 message filter.{{% /md %}}</dd>
     <dt class="property-required"
@@ -24625,7 +24625,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#processingsettings_csharp" style="color: inherit; text-decoration: inherit;">Processing<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12processingsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>X12Processing<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#x12processingsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>X12Processing<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The X12 processing settings.{{% /md %}}</dd>
     <dt class="property-required"
@@ -24634,7 +24634,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schemareferences_csharp" style="color: inherit; text-decoration: inherit;">Schema<wbr>References</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12schemareferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>X12Schema<wbr>Reference<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#x12schemareferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>X12Schema<wbr>Reference<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The X12 schema references.{{% /md %}}</dd>
     <dt class="property-required"
@@ -24643,7 +24643,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#securitysettings_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12securitysettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>X12Security<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#x12securitysettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>X12Security<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The X12 security settings.{{% /md %}}</dd>
     <dt class="property-required"
@@ -24652,7 +24652,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validationsettings_csharp" style="color: inherit; text-decoration: inherit;">Validation<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12validationsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>X12Validation<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#x12validationsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>X12Validation<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The X12 validation settings.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -24661,7 +24661,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#envelopeoverrides_csharp" style="color: inherit; text-decoration: inherit;">Envelope<wbr>Overrides</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12envelopeoverrideresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>X12Envelope<wbr>Override<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#x12envelopeoverrideresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>X12Envelope<wbr>Override<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The X12 envelope override settings.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -24670,7 +24670,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#messagefilterlist_csharp" style="color: inherit; text-decoration: inherit;">Message<wbr>Filter<wbr>List</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12messageidentifierresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>X12Message<wbr>Identifier<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#x12messageidentifierresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>X12Message<wbr>Identifier<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The X12 message filter list.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -24679,7 +24679,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validationoverrides_csharp" style="color: inherit; text-decoration: inherit;">Validation<wbr>Overrides</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12validationoverrideresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>X12Validation<wbr>Override<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#x12validationoverrideresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>X12Validation<wbr>Override<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The X12 validation override settings.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -24688,7 +24688,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#x12delimiteroverrides_csharp" style="color: inherit; text-decoration: inherit;">X12Delimiter<wbr>Overrides</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12delimiteroverridesresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>X12Delimiter<wbr>Overrides<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#x12delimiteroverridesresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>X12Delimiter<wbr>Overrides<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The X12 delimiter override settings.{{% /md %}}</dd>
 </dl>
@@ -25807,7 +25807,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trailingseparatorpolicy_csharp" style="color: inherit; text-decoration: inherit;">Trailing<wbr>Separator<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#trailingseparatorpolicy">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Trailing<wbr>Separator<wbr>Policy</a></span>
+        <span class="property-type">string | <a href="#trailingseparatorpolicy">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Trailing<wbr>Separator<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}The trailing separator policy.{{% /md %}}</dd>
     <dt class="property-required"
@@ -26390,7 +26390,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trailingseparatorpolicy_csharp" style="color: inherit; text-decoration: inherit;">Trailing<wbr>Separator<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#trailingseparatorpolicy">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Trailing<wbr>Separator<wbr>Policy</a></span>
+        <span class="property-type">string | <a href="#trailingseparatorpolicy">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Trailing<wbr>Separator<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}The trailing separator policy.{{% /md %}}</dd>
     <dt class="property-required"
@@ -27111,7 +27111,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:logic/latest:IntegrationAccountAgreement <IntegrationAccountAgreementName> /subscriptions/34adfa4f-cedf-4dc0-ba29-b6d1a69ab345/resourceGroups/testResourceGroup/providers/Microsoft.Logic/integrationAccounts/IntegrationAccount4533/agreements/<IntegrationAccountAgreementName> 
+$ pulumi import azure-nextgen:logic:IntegrationAccountAgreement <IntegrationAccountAgreementName> /subscriptions/34adfa4f-cedf-4dc0-ba29-b6d1a69ab345/resourceGroups/testResourceGroup/providers/Microsoft.Logic/integrationAccounts/IntegrationAccount4533/agreements/<IntegrationAccountAgreementName> 
 ```
 
 

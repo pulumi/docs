@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.hybridcompute.PrivateLinkScopedR
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 A private link scoped resource
+API Version: 2020-08-15-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var privateLinkScopedResource = new AzureNextGen.HybridCompute.V20200815Preview.PrivateLinkScopedResource("privateLinkScopedResource", new AzureNextGen.HybridCompute.V20200815Preview.PrivateLinkScopedResourceArgs
+        var privateLinkScopedResource = new AzureNextGen.HybridCompute..PrivateLinkScopedResource("privateLinkScopedResource", new AzureNextGen.HybridCompute..PrivateLinkScopedResourceArgs
         {
             LinkedResourceId = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/myResourceGroup/providers/Microsoft.HybridCompute/Machines/machineName1",
             Name = "scoped-resource-name",
@@ -47,7 +48,7 @@ class MyStack : Stack
 package main
 
 import (
-	hybridcompute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/hybridcompute/v20200815preview"
+	hybridcompute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/hybridcompute"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -76,7 +77,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-private_link_scoped_resource = azure_nextgen.hybridcompute.v20200815preview.PrivateLinkScopedResource("privateLinkScopedResource",
+private_link_scoped_resource = azure_nextgen.hybridcompute.PrivateLinkScopedResource("privateLinkScopedResource",
     linked_resource_id="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/myResourceGroup/providers/Microsoft.HybridCompute/Machines/machineName1",
     name="scoped-resource-name",
     resource_group_name="myResourceGroup",
@@ -92,7 +93,7 @@ private_link_scoped_resource = azure_nextgen.hybridcompute.v20200815preview.Priv
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const privateLinkScopedResource = new azure_nextgen.hybridcompute.v20200815preview.PrivateLinkScopedResource("privateLinkScopedResource", {
+const privateLinkScopedResource = new azure_nextgen.hybridcompute.PrivateLinkScopedResource("privateLinkScopedResource", {
     linkedResourceId: "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/myResourceGroup/providers/Microsoft.HybridCompute/Machines/machineName1",
     name: "scoped-resource-name",
     resourceGroupName: "myResourceGroup",
@@ -601,7 +602,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:hybridcompute/v20200815preview:PrivateLinkScopedResource scoped-resource-name /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/myResourceGroup/providers/Microsoft.HybridCompute/privateLinkScopes/myPrivateLinkScope/scopedResources/scoped-resource-name 
+$ pulumi import azure-nextgen:hybridcompute:PrivateLinkScopedResource scoped-resource-name /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/myResourceGroup/providers/Microsoft.HybridCompute/privateLinkScopes/myPrivateLinkScope/scopedResources/scoped-resource-name 
 ```
 
 

@@ -195,7 +195,7 @@ The following output properties are available:
 <a href="#assetfileencryptionmetadata_csharp" style="color: inherit; text-decoration: inherit;">Asset<wbr>File<wbr>Encryption<wbr>Metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#assetfileencryptionmetadataresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Outputs.<wbr>Asset<wbr>File<wbr>Encryption<wbr>Metadata<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#assetfileencryptionmetadataresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Outputs.<wbr>Asset<wbr>File<wbr>Encryption<wbr>Metadata<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Asset File encryption metadata.{{% /md %}}</dd>
     <dt class="property-"

@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.network.DdosCustomPolicy resourc
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 A DDoS custom policy in a resource group.
-Latest API Version: 2020-08-01.
+API Version: 2020-08-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,13 +27,13 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var ddosCustomPolicy = new AzureNextGen.Network.Latest.DdosCustomPolicy("ddosCustomPolicy", new AzureNextGen.Network.Latest.DdosCustomPolicyArgs
+        var ddosCustomPolicy = new AzureNextGen.Network..DdosCustomPolicy("ddosCustomPolicy", new AzureNextGen.Network..DdosCustomPolicyArgs
         {
             DdosCustomPolicyName = "test-ddos-custom-policy",
             Location = "centraluseuap",
             ProtocolCustomSettings = 
             {
-                new AzureNextGen.Network.Latest.Inputs.ProtocolCustomSettingsFormatArgs
+                new AzureNextGen.Network..Inputs.ProtocolCustomSettingsFormatArgs
                 {
                     Protocol = "Tcp",
                 },
@@ -54,7 +54,7 @@ class MyStack : Stack
 package main
 
 import (
-	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network/latest"
+	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -87,10 +87,10 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-ddos_custom_policy = azure_nextgen.network.latest.DdosCustomPolicy("ddosCustomPolicy",
+ddos_custom_policy = azure_nextgen.network.DdosCustomPolicy("ddosCustomPolicy",
     ddos_custom_policy_name="test-ddos-custom-policy",
     location="centraluseuap",
-    protocol_custom_settings=[azure_nextgen.network.latest.ProtocolCustomSettingsFormatArgs(
+    protocol_custom_settings=[azure_nextgen.network.ProtocolCustomSettingsFormatArgs(
         protocol="Tcp",
     )],
     resource_group_name="rg1")
@@ -105,7 +105,7 @@ ddos_custom_policy = azure_nextgen.network.latest.DdosCustomPolicy("ddosCustomPo
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const ddosCustomPolicy = new azure_nextgen.network.latest.DdosCustomPolicy("ddosCustomPolicy", {
+const ddosCustomPolicy = new azure_nextgen.network.DdosCustomPolicy("ddosCustomPolicy", {
     ddosCustomPolicyName: "test-ddos-custom-policy",
     location: "centraluseuap",
     protocolCustomSettings: [{
@@ -343,7 +343,7 @@ The DdosCustomPolicy resource accepts the following [input]({{< relref "/docs/in
 <a href="#protocolcustomsettings_csharp" style="color: inherit; text-decoration: inherit;">Protocol<wbr>Custom<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#protocolcustomsettingsformat">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Protocol<wbr>Custom<wbr>Settings<wbr>Format<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#protocolcustomsettingsformat">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Protocol<wbr>Custom<wbr>Settings<wbr>Format<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The protocol-specific DDoS policy customization parameters.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -590,7 +590,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publicipaddresses_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>IPAddresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Outputs.<wbr>Sub<wbr>Resource<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#subresourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Outputs.<wbr>Sub<wbr>Resource<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of public IPs associated with the DDoS custom policy resource. This list is read-only.{{% /md %}}</dd>
     <dt class="property-"
@@ -942,7 +942,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protocol_csharp" style="color: inherit; text-decoration: inherit;">Protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#ddoscustompolicyprotocol">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Ddos<wbr>Custom<wbr>Policy<wbr>Protocol</a></span>
+        <span class="property-type">string | <a href="#ddoscustompolicyprotocol">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Ddos<wbr>Custom<wbr>Policy<wbr>Protocol</a></span>
     </dt>
     <dd>{{% md %}}The protocol for which the DDoS protection policy is being customized.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -969,7 +969,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#triggersensitivityoverride_csharp" style="color: inherit; text-decoration: inherit;">Trigger<wbr>Sensitivity<wbr>Override</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#ddoscustompolicytriggersensitivityoverride">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Ddos<wbr>Custom<wbr>Policy<wbr>Trigger<wbr>Sensitivity<wbr>Override</a></span>
+        <span class="property-type">string | <a href="#ddoscustompolicytriggersensitivityoverride">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Ddos<wbr>Custom<wbr>Policy<wbr>Trigger<wbr>Sensitivity<wbr>Override</a></span>
     </dt>
     <dd>{{% md %}}The customized DDoS protection trigger rate sensitivity degrees. High: Trigger rate set with most sensitivity w.r.t. normal traffic. Default: Trigger rate set with moderate sensitivity w.r.t. normal traffic. Low: Trigger rate set with less sensitivity w.r.t. normal traffic. Relaxed: Trigger rate set with least sensitivity w.r.t. normal traffic.{{% /md %}}</dd>
 </dl>
@@ -1338,7 +1338,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:network/latest:DdosCustomPolicy test-ddos-custom-policy /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/ddosCustomPolicies/test-ddos-custom-policy 
+$ pulumi import azure-nextgen:network:DdosCustomPolicy test-ddos-custom-policy /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/ddosCustomPolicies/test-ddos-custom-policy 
 ```
 
 

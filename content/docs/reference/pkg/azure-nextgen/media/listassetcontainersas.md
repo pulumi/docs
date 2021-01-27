@@ -90,7 +90,7 @@ The following arguments are supported:
 <a href="#permissions_csharp" style="color: inherit; text-decoration: inherit;">Permissions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#assetcontainerpermission">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Asset<wbr>Container<wbr>Permission</a></span>
+        <span class="property-type">string | <a href="#assetcontainerpermission">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Asset<wbr>Container<wbr>Permission</a></span>
     </dt>
     <dd>{{% md %}}The permissions to set on the SAS URL.{{% /md %}}</dd>
 </dl>

@@ -305,7 +305,7 @@ The following output properties are available:
 <a href="#request_csharp" style="color: inherit; text-decoration: inherit;">Request</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#requestcontractresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management.<wbr>Outputs.<wbr>Request<wbr>Contract<wbr>Response</a></span>
+        <span class="property-type"><a href="#requestcontractresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management..<wbr>Outputs.<wbr>Request<wbr>Contract<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}An entity containing request details.{{% /md %}}</dd>
     <dt class="property-"
@@ -314,7 +314,7 @@ The following output properties are available:
 <a href="#responses_csharp" style="color: inherit; text-decoration: inherit;">Responses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#responsecontractresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management.<wbr>Outputs.<wbr>Response<wbr>Contract<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#responsecontractresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management..<wbr>Outputs.<wbr>Response<wbr>Contract<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Array of Operation responses.{{% /md %}}</dd>
     <dt class="property-"
@@ -323,7 +323,7 @@ The following output properties are available:
 <a href="#templateparameters_csharp" style="color: inherit; text-decoration: inherit;">Template<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#parametercontractresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management.<wbr>Outputs.<wbr>Parameter<wbr>Contract<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#parametercontractresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management..<wbr>Outputs.<wbr>Parameter<wbr>Contract<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Collection of URL template parameters.{{% /md %}}</dd>
 </dl>
@@ -922,7 +922,7 @@ The following output properties are available:
 <a href="#formparameters_csharp" style="color: inherit; text-decoration: inherit;">Form<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#parametercontractresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Parameter<wbr>Contract<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#parametercontractresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management..<wbr>Inputs.<wbr>Parameter<wbr>Contract<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Collection of form parameters. Required if 'contentType' value is either 'application/x-www-form-urlencoded' or 'multipart/form-data'..{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1133,7 +1133,7 @@ The following output properties are available:
 <a href="#headers_csharp" style="color: inherit; text-decoration: inherit;">Headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#parametercontractresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Parameter<wbr>Contract<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#parametercontractresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management..<wbr>Inputs.<wbr>Parameter<wbr>Contract<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Collection of operation request headers.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1142,7 +1142,7 @@ The following output properties are available:
 <a href="#queryparameters_csharp" style="color: inherit; text-decoration: inherit;">Query<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#parametercontractresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Parameter<wbr>Contract<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#parametercontractresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management..<wbr>Inputs.<wbr>Parameter<wbr>Contract<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Collection of operation request query parameters.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1151,7 +1151,7 @@ The following output properties are available:
 <a href="#representations_csharp" style="color: inherit; text-decoration: inherit;">Representations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#representationcontractresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Representation<wbr>Contract<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#representationcontractresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management..<wbr>Inputs.<wbr>Representation<wbr>Contract<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Collection of operation request representations.{{% /md %}}</dd>
 </dl>
@@ -1317,7 +1317,7 @@ The following output properties are available:
 <a href="#headers_csharp" style="color: inherit; text-decoration: inherit;">Headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#parametercontractresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Parameter<wbr>Contract<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#parametercontractresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management..<wbr>Inputs.<wbr>Parameter<wbr>Contract<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Collection of operation response headers.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1326,7 +1326,7 @@ The following output properties are available:
 <a href="#representations_csharp" style="color: inherit; text-decoration: inherit;">Representations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#representationcontractresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Representation<wbr>Contract<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#representationcontractresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management..<wbr>Inputs.<wbr>Representation<wbr>Contract<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Collection of operation response representations.{{% /md %}}</dd>
 </dl>

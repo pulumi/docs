@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.avs.Cluster resource with exampl
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 A cluster resource
-Latest API Version: 2020-03-20.
+API Version: 2020-03-20.
 
 {{% examples %}}
 ## Example Usage
@@ -27,13 +27,13 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var cluster = new AzureNextGen.AVS.Latest.Cluster("cluster", new AzureNextGen.AVS.Latest.ClusterArgs
+        var cluster = new AzureNextGen.AVS..Cluster("cluster", new AzureNextGen.AVS..ClusterArgs
         {
             ClusterName = "cluster1",
             ClusterSize = 3,
             PrivateCloudName = "cloud1",
             ResourceGroupName = "group1",
-            Sku = new AzureNextGen.AVS.Latest.Inputs.SkuArgs
+            Sku = new AzureNextGen.AVS..Inputs.SkuArgs
             {
                 Name = "AV20",
             },
@@ -52,7 +52,7 @@ class MyStack : Stack
 package main
 
 import (
-	avs "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/avs/latest"
+	avs "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/avs"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -84,12 +84,12 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-cluster = azure_nextgen.avs.latest.Cluster("cluster",
+cluster = azure_nextgen.avs.Cluster("cluster",
     cluster_name="cluster1",
     cluster_size=3,
     private_cloud_name="cloud1",
     resource_group_name="group1",
-    sku=azure_nextgen.avs.latest.SkuArgs(
+    sku=azure_nextgen.avs.SkuArgs(
         name="AV20",
     ))
 
@@ -103,7 +103,7 @@ cluster = azure_nextgen.avs.latest.Cluster("cluster",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const cluster = new azure_nextgen.avs.latest.Cluster("cluster", {
+const cluster = new azure_nextgen.avs.Cluster("cluster", {
     clusterName: "cluster1",
     clusterSize: 3,
     privateCloudName: "cloud1",
@@ -342,7 +342,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sku">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>AVS.<wbr>Inputs.<wbr>Sku<wbr>Args</a></span>
+        <span class="property-type"><a href="#sku">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>AVS..<wbr>Inputs.<wbr>Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The cluster SKU{{% /md %}}</dd>
 </dl>
@@ -887,7 +887,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:avs/latest:Cluster cluster1 /subscriptions/{subscription-id}/resourceGroups/group1/providers/Microsoft.AVS/privateClouds/cloud1/clusters/cluster1 
+$ pulumi import azure-nextgen:avs:Cluster cluster1 /subscriptions/{subscription-id}/resourceGroups/group1/providers/Microsoft.AVS/privateClouds/cloud1/clusters/cluster1 
 ```
 
 

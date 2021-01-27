@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.automanage.Account resource with
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Definition of the Automanage account.
+API Version: 2020-06-30-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,10 +27,10 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var account = new AzureNextGen.Automanage.V20200630Preview.Account("account", new AzureNextGen.Automanage.V20200630Preview.AccountArgs
+        var account = new AzureNextGen.Automanage..Account("account", new AzureNextGen.Automanage..AccountArgs
         {
             AccountName = "account",
-            Identity = new AzureNextGen.Automanage.V20200630Preview.Inputs.AccountIdentityArgs
+            Identity = new AzureNextGen.Automanage..Inputs.AccountIdentityArgs
             {
                 Type = "SystemAssigned",
             },
@@ -54,7 +55,7 @@ class MyStack : Stack
 package main
 
 import (
-	automanage "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/automanage/v20200630preview"
+	automanage "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/automanage"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -88,9 +89,9 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-account = azure_nextgen.automanage.v20200630preview.Account("account",
+account = azure_nextgen.automanage.Account("account",
     account_name="account",
-    identity=azure_nextgen.automanage.v20200630preview.AccountIdentityArgs(
+    identity=azure_nextgen.automanage.AccountIdentityArgs(
         type="SystemAssigned",
     ),
     location="East US",
@@ -109,7 +110,7 @@ account = azure_nextgen.automanage.v20200630preview.Account("account",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const account = new azure_nextgen.automanage.v20200630preview.Account("account", {
+const account = new azure_nextgen.automanage.Account("account", {
     accountName: "account",
     identity: {
         type: "SystemAssigned",
@@ -341,7 +342,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accountidentity">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automanage.<wbr>Inputs.<wbr>Account<wbr>Identity<wbr>Args</a></span>
+        <span class="property-type"><a href="#accountidentity">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automanage..<wbr>Inputs.<wbr>Account<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The identity of the Automanage account.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -669,7 +670,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidentitytype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automanage.<wbr>Resource<wbr>Identity<wbr>Type</a></span>
+        <span class="property-type"><a href="#resourceidentitytype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automanage..<wbr>Resource<wbr>Identity<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of identity used for the Automanage account. Currently, the only supported type is 'SystemAssigned', which implicitly creates an identity.{{% /md %}}</dd>
 </dl>
@@ -897,7 +898,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:automanage/v20200630preview:Account account /subscriptions/subid/resourceGroups/rg/providers/Microsoft.Automanage/accounts/account 
+$ pulumi import azure-nextgen:automanage:Account account /subscriptions/subid/resourceGroups/rg/providers/Microsoft.Automanage/accounts/account 
 ```
 
 

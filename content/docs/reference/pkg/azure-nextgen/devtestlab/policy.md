@@ -11,13 +11,13 @@ meta_desc: "Documentation for the azure-nextgen.devtestlab.Policy resource with 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 A Policy.
-Latest API Version: 2018-09-15.
+API Version: 2018-09-15.
 ## Import
 
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:devtestlab/latest:Policy myresource1 /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DevTestLab/labs/{labName}/policysets/{policySetName}/policies/{name} 
+$ pulumi import azure-nextgen:devtestlab:Policy myresource1 /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DevTestLab/labs/{labName}/policysets/{policySetName}/policies/{name} 
 ```
 
 
@@ -254,7 +254,7 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#evaluatortype_csharp" style="color: inherit; text-decoration: inherit;">Evaluator<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#policyevaluatortype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Policy<wbr>Evaluator<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#policyevaluatortype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab..<wbr>Policy<wbr>Evaluator<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The evaluator type of the policy (i.e. AllowedValuesPolicy, MaxValuePolicy).{{% /md %}}</dd>
     <dt class="property-optional"
@@ -272,7 +272,7 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#factname_csharp" style="color: inherit; text-decoration: inherit;">Fact<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#policyfactname">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Policy<wbr>Fact<wbr>Name</a></span>
+        <span class="property-type">string | <a href="#policyfactname">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab..<wbr>Policy<wbr>Fact<wbr>Name</a></span>
     </dt>
     <dd>{{% md %}}The fact name of the policy (e.g. LabVmCount, LabVmSize, MaxVmsAllowedPerLab, etc.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -290,7 +290,7 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#policystatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Policy<wbr>Status</a></span>
+        <span class="property-type">string | <a href="#policystatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab..<wbr>Policy<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}The status of the policy.{{% /md %}}</dd>
     <dt class="property-optional"

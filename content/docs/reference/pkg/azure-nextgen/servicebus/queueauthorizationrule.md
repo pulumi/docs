@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.servicebus.QueueAuthorizationRul
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Description of a namespace authorization rule.
-Latest API Version: 2017-04-01.
+API Version: 2017-04-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var queueAuthorizationRule = new AzureNextGen.ServiceBus.Latest.QueueAuthorizationRule("queueAuthorizationRule", new AzureNextGen.ServiceBus.Latest.QueueAuthorizationRuleArgs
+        var queueAuthorizationRule = new AzureNextGen.ServiceBus..QueueAuthorizationRule("queueAuthorizationRule", new AzureNextGen.ServiceBus..QueueAuthorizationRuleArgs
         {
             AuthorizationRuleName = "sdk-AuthRules-5800",
             NamespaceName = "sdk-Namespace-7982",
@@ -57,7 +57,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-queue_authorization_rule = azure_nextgen.servicebus.latest.QueueAuthorizationRule("queueAuthorizationRule",
+queue_authorization_rule = azure_nextgen.servicebus.QueueAuthorizationRule("queueAuthorizationRule",
     authorization_rule_name="sdk-AuthRules-5800",
     namespace_name="sdk-Namespace-7982",
     queue_name="sdk-Queues-2317",
@@ -77,7 +77,7 @@ queue_authorization_rule = azure_nextgen.servicebus.latest.QueueAuthorizationRul
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const queueAuthorizationRule = new azure_nextgen.servicebus.latest.QueueAuthorizationRule("queueAuthorizationRule", {
+const queueAuthorizationRule = new azure_nextgen.servicebus.QueueAuthorizationRule("queueAuthorizationRule", {
     authorizationRuleName: "sdk-AuthRules-5800",
     namespaceName: "sdk-Namespace-7982",
     queueName: "sdk-Queues-2317",
@@ -317,7 +317,7 @@ The QueueAuthorizationRule resource accepts the following [input]({{< relref "/d
 <a href="#rights_csharp" style="color: inherit; text-decoration: inherit;">Rights</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accessrights">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Bus.<wbr>Access<wbr>Rights&gt;</a></span>
+        <span class="property-type"><a href="#accessrights">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Bus..<wbr>Access<wbr>Rights&gt;</a></span>
     </dt>
     <dd>{{% md %}}The rights associated with the rule.{{% /md %}}</dd>
 </dl>
@@ -676,7 +676,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:servicebus/latest:QueueAuthorizationRule sdk-AuthRules-5800 /subscriptions/5f750a97-50d9-4e36-8081-c9ee4c0210d4/resourceGroups/ArunMonocle/providers/Microsoft.ServiceBus/namespaces/sdk-Namespace-7982/queues/sdk-Queues-2317/authorizationRules/sdk-AuthRules-5800 
+$ pulumi import azure-nextgen:servicebus:QueueAuthorizationRule sdk-AuthRules-5800 /subscriptions/5f750a97-50d9-4e36-8081-c9ee4c0210d4/resourceGroups/ArunMonocle/providers/Microsoft.ServiceBus/namespaces/sdk-Namespace-7982/queues/sdk-Queues-2317/authorizationRules/sdk-AuthRules-5800 
 ```
 
 

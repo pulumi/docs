@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.documentdb.SqlResourceSqlContain
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 An Azure Cosmos DB container.
-Latest API Version: 2020-09-01.
+API Version: 2020-09-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,39 +27,39 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var sqlResourceSqlContainer = new AzureNextGen.DocumentDB.Latest.SqlResourceSqlContainer("sqlResourceSqlContainer", new AzureNextGen.DocumentDB.Latest.SqlResourceSqlContainerArgs
+        var sqlResourceSqlContainer = new AzureNextGen.DocumentDB..SqlResourceSqlContainer("sqlResourceSqlContainer", new AzureNextGen.DocumentDB..SqlResourceSqlContainerArgs
         {
             AccountName = "ddb1",
             ContainerName = "containerName",
             DatabaseName = "databaseName",
             Location = "West US",
             Options = ,
-            Resource = new AzureNextGen.DocumentDB.Latest.Inputs.SqlContainerResourceArgs
+            Resource = new AzureNextGen.DocumentDB..Inputs.SqlContainerResourceArgs
             {
-                ConflictResolutionPolicy = new AzureNextGen.DocumentDB.Latest.Inputs.ConflictResolutionPolicyArgs
+                ConflictResolutionPolicy = new AzureNextGen.DocumentDB..Inputs.ConflictResolutionPolicyArgs
                 {
                     ConflictResolutionPath = "/path",
                     Mode = "LastWriterWins",
                 },
                 DefaultTtl = 100,
                 Id = "containerName",
-                IndexingPolicy = new AzureNextGen.DocumentDB.Latest.Inputs.IndexingPolicyArgs
+                IndexingPolicy = new AzureNextGen.DocumentDB..Inputs.IndexingPolicyArgs
                 {
                     Automatic = true,
                     ExcludedPaths = {},
                     IncludedPaths = 
                     {
-                        new AzureNextGen.DocumentDB.Latest.Inputs.IncludedPathArgs
+                        new AzureNextGen.DocumentDB..Inputs.IncludedPathArgs
                         {
                             Indexes = 
                             {
-                                new AzureNextGen.DocumentDB.Latest.Inputs.IndexesArgs
+                                new AzureNextGen.DocumentDB..Inputs.IndexesArgs
                                 {
                                     DataType = "String",
                                     Kind = "Range",
                                     Precision = -1,
                                 },
-                                new AzureNextGen.DocumentDB.Latest.Inputs.IndexesArgs
+                                new AzureNextGen.DocumentDB..Inputs.IndexesArgs
                                 {
                                     DataType = "Number",
                                     Kind = "Range",
@@ -71,7 +71,7 @@ class MyStack : Stack
                     },
                     IndexingMode = "Consistent",
                 },
-                PartitionKey = new AzureNextGen.DocumentDB.Latest.Inputs.ContainerPartitionKeyArgs
+                PartitionKey = new AzureNextGen.DocumentDB..Inputs.ContainerPartitionKeyArgs
                 {
                     Kind = "Hash",
                     Paths = 
@@ -79,11 +79,11 @@ class MyStack : Stack
                         "/AccountNumber",
                     },
                 },
-                UniqueKeyPolicy = new AzureNextGen.DocumentDB.Latest.Inputs.UniqueKeyPolicyArgs
+                UniqueKeyPolicy = new AzureNextGen.DocumentDB..Inputs.UniqueKeyPolicyArgs
                 {
                     UniqueKeys = 
                     {
-                        new AzureNextGen.DocumentDB.Latest.Inputs.UniqueKeyArgs
+                        new AzureNextGen.DocumentDB..Inputs.UniqueKeyArgs
                         {
                             Paths = 
                             {
@@ -110,7 +110,7 @@ class MyStack : Stack
 package main
 
 import (
-	documentdb "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/documentdb/latest"
+	documentdb "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/documentdb"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -187,30 +187,30 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-sql_resource_sql_container = azure_nextgen.documentdb.latest.SqlResourceSqlContainer("sqlResourceSqlContainer",
+sql_resource_sql_container = azure_nextgen.documentdb.SqlResourceSqlContainer("sqlResourceSqlContainer",
     account_name="ddb1",
     container_name="containerName",
     database_name="databaseName",
     location="West US",
-    options=azure_nextgen.documentdb.latest.CreateUpdateOptionsArgs(),
-    resource=azure_nextgen.documentdb.latest.SqlContainerResourceArgs(
-        conflict_resolution_policy=azure_nextgen.documentdb.latest.ConflictResolutionPolicyArgs(
+    options=azure_nextgen.documentdb.CreateUpdateOptionsArgs(),
+    resource=azure_nextgen.documentdb.SqlContainerResourceArgs(
+        conflict_resolution_policy=azure_nextgen.documentdb.ConflictResolutionPolicyArgs(
             conflict_resolution_path="/path",
             mode="LastWriterWins",
         ),
         default_ttl=100,
         id="containerName",
-        indexing_policy=azure_nextgen.documentdb.latest.IndexingPolicyArgs(
+        indexing_policy=azure_nextgen.documentdb.IndexingPolicyArgs(
             automatic=True,
             excluded_paths=[],
-            included_paths=[azure_nextgen.documentdb.latest.IncludedPathArgs(
+            included_paths=[azure_nextgen.documentdb.IncludedPathArgs(
                 indexes=[
-                    azure_nextgen.documentdb.latest.IndexesArgs(
+                    azure_nextgen.documentdb.IndexesArgs(
                         data_type="String",
                         kind="Range",
                         precision=-1,
                     ),
-                    azure_nextgen.documentdb.latest.IndexesArgs(
+                    azure_nextgen.documentdb.IndexesArgs(
                         data_type="Number",
                         kind="Range",
                         precision=-1,
@@ -220,12 +220,12 @@ sql_resource_sql_container = azure_nextgen.documentdb.latest.SqlResourceSqlConta
             )],
             indexing_mode="Consistent",
         ),
-        partition_key=azure_nextgen.documentdb.latest.ContainerPartitionKeyArgs(
+        partition_key=azure_nextgen.documentdb.ContainerPartitionKeyArgs(
             kind="Hash",
             paths=["/AccountNumber"],
         ),
-        unique_key_policy=azure_nextgen.documentdb.latest.UniqueKeyPolicyArgs(
-            unique_keys=[azure_nextgen.documentdb.latest.UniqueKeyArgs(
+        unique_key_policy=azure_nextgen.documentdb.UniqueKeyPolicyArgs(
+            unique_keys=[azure_nextgen.documentdb.UniqueKeyArgs(
                 paths=["/testPath"],
             )],
         ),
@@ -243,7 +243,7 @@ sql_resource_sql_container = azure_nextgen.documentdb.latest.SqlResourceSqlConta
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const sqlResourceSqlContainer = new azure_nextgen.documentdb.latest.SqlResourceSqlContainer("sqlResourceSqlContainer", {
+const sqlResourceSqlContainer = new azure_nextgen.documentdb.SqlResourceSqlContainer("sqlResourceSqlContainer", {
     accountName: "ddb1",
     containerName: "containerName",
     databaseName: "databaseName",
@@ -510,7 +510,7 @@ The SqlResourceSqlContainer resource accepts the following [input]({{< relref "/
 <a href="#resource_csharp" style="color: inherit; text-decoration: inherit;">Resource</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlcontainerresource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Sql<wbr>Container<wbr>Resource<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlcontainerresource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB..<wbr>Inputs.<wbr>Sql<wbr>Container<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The standard JSON format of a container{{% /md %}}</dd>
     <dt class="property-required"
@@ -537,7 +537,7 @@ The SqlResourceSqlContainer resource accepts the following [input]({{< relref "/
 <a href="#options_csharp" style="color: inherit; text-decoration: inherit;">Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#createupdateoptions">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Create<wbr>Update<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#createupdateoptions">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB..<wbr>Inputs.<wbr>Create<wbr>Update<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A key-value pair of options to be applied for the request. This corresponds to the headers sent with the request.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1070,7 +1070,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#order_csharp" style="color: inherit; text-decoration: inherit;">Order</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#compositepathsortorder">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB.<wbr>Composite<wbr>Path<wbr>Sort<wbr>Order</a></span>
+        <span class="property-type">string | <a href="#compositepathsortorder">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB..<wbr>Composite<wbr>Path<wbr>Sort<wbr>Order</a></span>
     </dt>
     <dd>{{% md %}}Sort order for composite paths.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1360,7 +1360,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mode_csharp" style="color: inherit; text-decoration: inherit;">Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#conflictresolutionmode">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB.<wbr>Conflict<wbr>Resolution<wbr>Mode</a></span>
+        <span class="property-type">string | <a href="#conflictresolutionmode">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB..<wbr>Conflict<wbr>Resolution<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}Indicates the conflict resolution mode.{{% /md %}}</dd>
 </dl>
@@ -1610,7 +1610,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#partitionkind">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB.<wbr>Partition<wbr>Kind</a></span>
+        <span class="property-type">string | <a href="#partitionkind">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB..<wbr>Partition<wbr>Kind</a></span>
     </dt>
     <dd>{{% md %}}Indicates the kind of algorithm used for partitioning{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1878,7 +1878,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#autoscalesettings_csharp" style="color: inherit; text-decoration: inherit;">Autoscale<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalesettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Autoscale<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#autoscalesettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB..<wbr>Inputs.<wbr>Autoscale<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the Autoscale settings.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2170,7 +2170,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#indexes_csharp" style="color: inherit; text-decoration: inherit;">Indexes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#indexes">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Indexes<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#indexes">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB..<wbr>Inputs.<wbr>Indexes<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of indexes for this path{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2268,7 +2268,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#indexes_csharp" style="color: inherit; text-decoration: inherit;">Indexes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#indexesresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Indexes<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#indexesresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB..<wbr>Inputs.<wbr>Indexes<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of indexes for this path{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2412,7 +2412,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datatype_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#datatype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB.<wbr>Data<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#datatype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB..<wbr>Data<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The datatype for which the indexing behavior is applied to.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2421,7 +2421,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#indexkind">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB.<wbr>Index<wbr>Kind</a></span>
+        <span class="property-type">string | <a href="#indexkind">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB..<wbr>Index<wbr>Kind</a></span>
     </dt>
     <dd>{{% md %}}Indicates the type of index.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2735,7 +2735,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#compositeindexes_csharp" style="color: inherit; text-decoration: inherit;">Composite<wbr>Indexes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#compositepath">List&lt;Immutable<wbr>Array&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Composite<wbr>Path<wbr>Args&gt;&gt;</a></span>
+        <span class="property-type"><a href="#compositepath">List&lt;Immutable<wbr>Array&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB..<wbr>Inputs.<wbr>Composite<wbr>Path<wbr>Args&gt;&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of composite path list{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2744,7 +2744,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#excludedpaths_csharp" style="color: inherit; text-decoration: inherit;">Excluded<wbr>Paths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#excludedpath">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Excluded<wbr>Path<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#excludedpath">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB..<wbr>Inputs.<wbr>Excluded<wbr>Path<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of paths to exclude from indexing{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2753,7 +2753,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#includedpaths_csharp" style="color: inherit; text-decoration: inherit;">Included<wbr>Paths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#includedpath">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Included<wbr>Path<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#includedpath">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB..<wbr>Inputs.<wbr>Included<wbr>Path<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of paths to include in the indexing{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2762,7 +2762,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#indexingmode_csharp" style="color: inherit; text-decoration: inherit;">Indexing<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#indexingmode">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB.<wbr>Indexing<wbr>Mode</a></span>
+        <span class="property-type">string | <a href="#indexingmode">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB..<wbr>Indexing<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}Indicates the indexing mode.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2771,7 +2771,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#spatialindexes_csharp" style="color: inherit; text-decoration: inherit;">Spatial<wbr>Indexes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spatialspec">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Spatial<wbr>Spec<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#spatialspec">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB..<wbr>Inputs.<wbr>Spatial<wbr>Spec<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of spatial specifics{{% /md %}}</dd>
 </dl>
@@ -2977,7 +2977,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#compositeindexes_csharp" style="color: inherit; text-decoration: inherit;">Composite<wbr>Indexes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#compositepathresponse">List&lt;Immutable<wbr>Array&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Composite<wbr>Path<wbr>Response<wbr>Args&gt;&gt;</a></span>
+        <span class="property-type"><a href="#compositepathresponse">List&lt;Immutable<wbr>Array&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB..<wbr>Inputs.<wbr>Composite<wbr>Path<wbr>Response<wbr>Args&gt;&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of composite path list{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2986,7 +2986,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#excludedpaths_csharp" style="color: inherit; text-decoration: inherit;">Excluded<wbr>Paths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#excludedpathresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Excluded<wbr>Path<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#excludedpathresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB..<wbr>Inputs.<wbr>Excluded<wbr>Path<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of paths to exclude from indexing{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2995,7 +2995,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#includedpaths_csharp" style="color: inherit; text-decoration: inherit;">Included<wbr>Paths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#includedpathresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Included<wbr>Path<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#includedpathresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB..<wbr>Inputs.<wbr>Included<wbr>Path<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of paths to include in the indexing{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3013,7 +3013,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#spatialindexes_csharp" style="color: inherit; text-decoration: inherit;">Spatial<wbr>Indexes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spatialspecresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Spatial<wbr>Spec<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#spatialspecresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB..<wbr>Inputs.<wbr>Spatial<wbr>Spec<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of spatial specifics{{% /md %}}</dd>
 </dl>
@@ -3257,7 +3257,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#types_csharp" style="color: inherit; text-decoration: inherit;">Types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Union&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB.<wbr>Spatial<wbr>Type&gt;&gt;</span>
+        <span class="property-type">List&lt;Union&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB..<wbr>Spatial<wbr>Type&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}List of path's spatial type{{% /md %}}</dd>
 </dl>
@@ -3498,7 +3498,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#autoscalesettings_csharp" style="color: inherit; text-decoration: inherit;">Autoscale<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Autoscale<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#autoscalesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB..<wbr>Inputs.<wbr>Autoscale<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the Autoscale settings.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3641,7 +3641,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#conflictresolutionpolicy_csharp" style="color: inherit; text-decoration: inherit;">Conflict<wbr>Resolution<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#conflictresolutionpolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Conflict<wbr>Resolution<wbr>Policy<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#conflictresolutionpolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB..<wbr>Inputs.<wbr>Conflict<wbr>Resolution<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The conflict resolution policy for the container.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3659,7 +3659,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#indexingpolicy_csharp" style="color: inherit; text-decoration: inherit;">Indexing<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#indexingpolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Indexing<wbr>Policy<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#indexingpolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB..<wbr>Inputs.<wbr>Indexing<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration of the indexing policy. By default, the indexing is automatic for all document paths within the container{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3668,7 +3668,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#partitionkey_csharp" style="color: inherit; text-decoration: inherit;">Partition<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerpartitionkeyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Container<wbr>Partition<wbr>Key<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#containerpartitionkeyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB..<wbr>Inputs.<wbr>Container<wbr>Partition<wbr>Key<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration of the partition key to be used for partitioning data into multiple partitions{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3677,7 +3677,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uniquekeypolicy_csharp" style="color: inherit; text-decoration: inherit;">Unique<wbr>Key<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#uniquekeypolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Unique<wbr>Key<wbr>Policy<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#uniquekeypolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB..<wbr>Inputs.<wbr>Unique<wbr>Key<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The unique key policy configuration for specifying uniqueness constraints on documents in the collection in the Azure Cosmos DB service.{{% /md %}}</dd>
 </dl>
@@ -4000,7 +4000,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#conflictresolutionpolicy_csharp" style="color: inherit; text-decoration: inherit;">Conflict<wbr>Resolution<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#conflictresolutionpolicy">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Conflict<wbr>Resolution<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#conflictresolutionpolicy">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB..<wbr>Inputs.<wbr>Conflict<wbr>Resolution<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The conflict resolution policy for the container.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4018,7 +4018,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#indexingpolicy_csharp" style="color: inherit; text-decoration: inherit;">Indexing<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#indexingpolicy">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Indexing<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#indexingpolicy">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB..<wbr>Inputs.<wbr>Indexing<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration of the indexing policy. By default, the indexing is automatic for all document paths within the container{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4027,7 +4027,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#partitionkey_csharp" style="color: inherit; text-decoration: inherit;">Partition<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerpartitionkey">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Container<wbr>Partition<wbr>Key<wbr>Args</a></span>
+        <span class="property-type"><a href="#containerpartitionkey">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB..<wbr>Inputs.<wbr>Container<wbr>Partition<wbr>Key<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration of the partition key to be used for partitioning data into multiple partitions{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4036,7 +4036,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uniquekeypolicy_csharp" style="color: inherit; text-decoration: inherit;">Unique<wbr>Key<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#uniquekeypolicy">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Unique<wbr>Key<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#uniquekeypolicy">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB..<wbr>Inputs.<wbr>Unique<wbr>Key<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The unique key policy configuration for specifying uniqueness constraints on documents in the collection in the Azure Cosmos DB service.{{% /md %}}</dd>
 </dl>
@@ -4322,7 +4322,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uniquekeys_csharp" style="color: inherit; text-decoration: inherit;">Unique<wbr>Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#uniquekey">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Unique<wbr>Key<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#uniquekey">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB..<wbr>Inputs.<wbr>Unique<wbr>Key<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of unique keys on that enforces uniqueness constraint on documents in the collection in the Azure Cosmos DB service.{{% /md %}}</dd>
 </dl>
@@ -4384,7 +4384,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uniquekeys_csharp" style="color: inherit; text-decoration: inherit;">Unique<wbr>Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#uniquekeyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Unique<wbr>Key<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#uniquekeyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB..<wbr>Inputs.<wbr>Unique<wbr>Key<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of unique keys on that enforces uniqueness constraint on documents in the collection in the Azure Cosmos DB service.{{% /md %}}</dd>
 </dl>
@@ -4502,7 +4502,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:documentdb/latest:SqlResourceSqlContainer containerName /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.DocumentDB/databaseAccounts/ddb1/sqlDatabases/databaseName/sqlContainers/containerName 
+$ pulumi import azure-nextgen:documentdb:SqlResourceSqlContainer containerName /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.DocumentDB/databaseAccounts/ddb1/sqlDatabases/databaseName/sqlContainers/containerName 
 ```
 
 

@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.automation.Certificate resource 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Definition of the certificate.
-Latest API Version: 2019-06-01.
+API Version: 2019-06-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var certificate = new AzureNextGen.Automation.Latest.Certificate("certificate", new AzureNextGen.Automation.Latest.CertificateArgs
+        var certificate = new AzureNextGen.Automation..Certificate("certificate", new AzureNextGen.Automation..CertificateArgs
         {
             AutomationAccountName = "myAutomationAccount18",
             Base64Value = "base 64 value of cert",
@@ -52,7 +52,7 @@ class MyStack : Stack
 package main
 
 import (
-	automation "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/automation/latest"
+	automation "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/automation"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -85,7 +85,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-certificate = azure_nextgen.automation.latest.Certificate("certificate",
+certificate = azure_nextgen.automation.Certificate("certificate",
     automation_account_name="myAutomationAccount18",
     base64_value="base 64 value of cert",
     certificate_name="testCert",
@@ -105,7 +105,7 @@ certificate = azure_nextgen.automation.latest.Certificate("certificate",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const certificate = new azure_nextgen.automation.latest.Certificate("certificate", {
+const certificate = new azure_nextgen.automation.Certificate("certificate", {
     automationAccountName: "myAutomationAccount18",
     base64Value: "base 64 value of cert",
     certificateName: "testCert",
@@ -834,7 +834,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:automation/latest:Certificate testCert /subscriptions/subid/resourceGroups/rg/providers/Microsoft.Automation/automationAccounts/myAutomationAccount33/certificates/testCert 
+$ pulumi import azure-nextgen:automation:Certificate testCert /subscriptions/subid/resourceGroups/rg/providers/Microsoft.Automation/automationAccounts/myAutomationAccount33/certificates/testCert 
 ```
 
 

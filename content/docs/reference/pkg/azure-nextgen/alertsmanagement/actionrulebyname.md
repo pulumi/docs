@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.alertsmanagement.ActionRuleByNam
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Action rule object containing target scope, conditions and suppression logic
+API Version: 2019-05-05-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,15 +27,15 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var actionRuleByName = new AzureNextGen.AlertsManagement.V20190505Preview.ActionRuleByName("actionRuleByName", new AzureNextGen.AlertsManagement.V20190505Preview.ActionRuleByNameArgs
+        var actionRuleByName = new AzureNextGen.AlertsManagement..ActionRuleByName("actionRuleByName", new AzureNextGen.AlertsManagement..ActionRuleByNameArgs
         {
             ActionRuleName = "DailySuppression",
             Location = "Global",
             Properties = 
             {
-                { "conditions", new AzureNextGen.AlertsManagement.V20190505Preview.Inputs.ConditionsArgs
+                { "conditions", new AzureNextGen.AlertsManagement..Inputs.ConditionsArgs
                 {
-                    MonitorCondition = new AzureNextGen.AlertsManagement.V20190505Preview.Inputs.ConditionArgs
+                    MonitorCondition = new AzureNextGen.AlertsManagement..Inputs.ConditionArgs
                     {
                         Operator = "Equals",
                         Values = 
@@ -42,7 +43,7 @@ class MyStack : Stack
                             "Fired",
                         },
                     },
-                    MonitorService = new AzureNextGen.AlertsManagement.V20190505Preview.Inputs.ConditionArgs
+                    MonitorService = new AzureNextGen.AlertsManagement..Inputs.ConditionArgs
                     {
                         Operator = "Equals",
                         Values = 
@@ -51,7 +52,7 @@ class MyStack : Stack
                             "Application Insights",
                         },
                     },
-                    Severity = new AzureNextGen.AlertsManagement.V20190505Preview.Inputs.ConditionArgs
+                    Severity = new AzureNextGen.AlertsManagement..Inputs.ConditionArgs
                     {
                         Operator = "Equals",
                         Values = 
@@ -60,7 +61,7 @@ class MyStack : Stack
                             "Sev2",
                         },
                     },
-                    TargetResourceType = new AzureNextGen.AlertsManagement.V20190505Preview.Inputs.ConditionArgs
+                    TargetResourceType = new AzureNextGen.AlertsManagement..Inputs.ConditionArgs
                     {
                         Operator = "NotEquals",
                         Values = 
@@ -70,7 +71,7 @@ class MyStack : Stack
                     },
                 } },
                 { "description", "Action rule on resource group for daily suppression" },
-                { "scope", new AzureNextGen.AlertsManagement.V20190505Preview.Inputs.ScopeArgs
+                { "scope", new AzureNextGen.AlertsManagement..Inputs.ScopeArgs
                 {
                     ScopeType = "ResourceGroup",
                     Values = 
@@ -79,10 +80,10 @@ class MyStack : Stack
                     },
                 } },
                 { "status", "Enabled" },
-                { "suppressionConfig", new AzureNextGen.AlertsManagement.V20190505Preview.Inputs.SuppressionConfigArgs
+                { "suppressionConfig", new AzureNextGen.AlertsManagement..Inputs.SuppressionConfigArgs
                 {
                     RecurrenceType = "Daily",
-                    Schedule = new AzureNextGen.AlertsManagement.V20190505Preview.Inputs.SuppressionScheduleArgs
+                    Schedule = new AzureNextGen.AlertsManagement..Inputs.SuppressionScheduleArgs
                     {
                         EndDate = "12/18/2018",
                         EndTime = "14:00:00",
@@ -113,43 +114,43 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-action_rule_by_name = azure_nextgen.alertsmanagement.v20190505preview.ActionRuleByName("actionRuleByName",
+action_rule_by_name = azure_nextgen.alertsmanagement.ActionRuleByName("actionRuleByName",
     action_rule_name="DailySuppression",
     location="Global",
     properties={
-        "conditions": azure_nextgen.alertsmanagement.v20190505preview.ConditionsArgs(
-            monitor_condition=azure_nextgen.alertsmanagement.v20190505preview.ConditionArgs(
+        "conditions": azure_nextgen.alertsmanagement.ConditionsArgs(
+            monitor_condition=azure_nextgen.alertsmanagement.ConditionArgs(
                 operator="Equals",
                 values=["Fired"],
             ),
-            monitor_service=azure_nextgen.alertsmanagement.v20190505preview.ConditionArgs(
+            monitor_service=azure_nextgen.alertsmanagement.ConditionArgs(
                 operator="Equals",
                 values=[
                     "Platform",
                     "Application Insights",
                 ],
             ),
-            severity=azure_nextgen.alertsmanagement.v20190505preview.ConditionArgs(
+            severity=azure_nextgen.alertsmanagement.ConditionArgs(
                 operator="Equals",
                 values=[
                     "Sev0",
                     "Sev2",
                 ],
             ),
-            target_resource_type=azure_nextgen.alertsmanagement.v20190505preview.ConditionArgs(
+            target_resource_type=azure_nextgen.alertsmanagement.ConditionArgs(
                 operator="NotEquals",
                 values=["Microsoft.Compute/VirtualMachines"],
             ),
         ),
         "description": "Action rule on resource group for daily suppression",
-        "scope": azure_nextgen.alertsmanagement.v20190505preview.ScopeArgs(
+        "scope": azure_nextgen.alertsmanagement.ScopeArgs(
             scope_type="ResourceGroup",
             values=["/subscriptions/1e3ff1c0-771a-4119-a03b-be82a51e232d/resourceGroups/alertscorrelationrg"],
         ),
         "status": "Enabled",
-        "suppressionConfig": azure_nextgen.alertsmanagement.v20190505preview.SuppressionConfigArgs(
+        "suppressionConfig": azure_nextgen.alertsmanagement.SuppressionConfigArgs(
             recurrence_type="Daily",
-            schedule=azure_nextgen.alertsmanagement.v20190505preview.SuppressionScheduleArgs(
+            schedule=azure_nextgen.alertsmanagement.SuppressionScheduleArgs(
                 end_date="12/18/2018",
                 end_time="14:00:00",
                 start_date="12/09/2018",
@@ -171,7 +172,7 @@ action_rule_by_name = azure_nextgen.alertsmanagement.v20190505preview.ActionRule
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const actionRuleByName = new azure_nextgen.alertsmanagement.v20190505preview.ActionRuleByName("actionRuleByName", {
+const actionRuleByName = new azure_nextgen.alertsmanagement.ActionRuleByName("actionRuleByName", {
     actionRuleName: "DailySuppression",
     location: "Global",
     properties: {
@@ -440,7 +441,7 @@ The ActionRuleByName resource accepts the following [input]({{< relref "/docs/in
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongroup">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Alerts<wbr>Management.<wbr>Inputs.<wbr>Action<wbr>Group<wbr>Args</a> | <a href="#diagnostics">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Alerts<wbr>Management.<wbr>Inputs.<wbr>Diagnostics<wbr>Args</a> | <a href="#suppression">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Alerts<wbr>Management.<wbr>Inputs.<wbr>Suppression<wbr>Args</a></span>
+        <span class="property-type"><a href="#actiongroup">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Alerts<wbr>Management..<wbr>Inputs.<wbr>Action<wbr>Group<wbr>Args</a> | <a href="#diagnostics">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Alerts<wbr>Management..<wbr>Inputs.<wbr>Diagnostics<wbr>Args</a> | <a href="#suppression">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Alerts<wbr>Management..<wbr>Inputs.<wbr>Suppression<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}action rule properties{{% /md %}}</dd>
     <dt class="property-optional"
@@ -777,7 +778,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#conditions_csharp" style="color: inherit; text-decoration: inherit;">Conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#conditions">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Alerts<wbr>Management.<wbr>Inputs.<wbr>Conditions<wbr>Args</a></span>
+        <span class="property-type"><a href="#conditions">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Alerts<wbr>Management..<wbr>Inputs.<wbr>Conditions<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}conditions on which alerts will be filtered{{% /md %}}</dd>
     <dt class="property-optional"
@@ -795,7 +796,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scope_csharp" style="color: inherit; text-decoration: inherit;">Scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scope">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Alerts<wbr>Management.<wbr>Inputs.<wbr>Scope<wbr>Args</a></span>
+        <span class="property-type"><a href="#scope">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Alerts<wbr>Management..<wbr>Inputs.<wbr>Scope<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}scope on which action rule will apply{{% /md %}}</dd>
     <dt class="property-optional"
@@ -804,7 +805,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#actionrulestatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Alerts<wbr>Management.<wbr>Action<wbr>Rule<wbr>Status</a></span>
+        <span class="property-type">string | <a href="#actionrulestatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Alerts<wbr>Management..<wbr>Action<wbr>Rule<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}Indicates if the given action rule is enabled or disabled{{% /md %}}</dd>
 </dl>
@@ -1019,7 +1020,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#conditions_csharp" style="color: inherit; text-decoration: inherit;">Conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#conditionsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Alerts<wbr>Management.<wbr>Inputs.<wbr>Conditions<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#conditionsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Alerts<wbr>Management..<wbr>Inputs.<wbr>Conditions<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}conditions on which alerts will be filtered{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1037,7 +1038,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scope_csharp" style="color: inherit; text-decoration: inherit;">Scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scoperesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Alerts<wbr>Management.<wbr>Inputs.<wbr>Scope<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#scoperesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Alerts<wbr>Management..<wbr>Inputs.<wbr>Scope<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}scope on which action rule will apply{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1362,7 +1363,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operator_csharp" style="color: inherit; text-decoration: inherit;">Operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#operator">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Alerts<wbr>Management.<wbr>Operator</a></span>
+        <span class="property-type">string | <a href="#operator">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Alerts<wbr>Management..<wbr>Operator</a></span>
     </dt>
     <dd>{{% md %}}operator for a given condition{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1558,7 +1559,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#alertcontext_csharp" style="color: inherit; text-decoration: inherit;">Alert<wbr>Context</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#condition">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Alerts<wbr>Management.<wbr>Inputs.<wbr>Condition<wbr>Args</a></span>
+        <span class="property-type"><a href="#condition">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Alerts<wbr>Management..<wbr>Inputs.<wbr>Condition<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}filter alerts by alert context (payload){{% /md %}}</dd>
     <dt class="property-optional"
@@ -1567,7 +1568,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#alertruleid_csharp" style="color: inherit; text-decoration: inherit;">Alert<wbr>Rule<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#condition">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Alerts<wbr>Management.<wbr>Inputs.<wbr>Condition<wbr>Args</a></span>
+        <span class="property-type"><a href="#condition">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Alerts<wbr>Management..<wbr>Inputs.<wbr>Condition<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}filter alerts by alert rule id{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1576,7 +1577,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#condition">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Alerts<wbr>Management.<wbr>Inputs.<wbr>Condition<wbr>Args</a></span>
+        <span class="property-type"><a href="#condition">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Alerts<wbr>Management..<wbr>Inputs.<wbr>Condition<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}filter alerts by alert rule description{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1585,7 +1586,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#monitorcondition_csharp" style="color: inherit; text-decoration: inherit;">Monitor<wbr>Condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#condition">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Alerts<wbr>Management.<wbr>Inputs.<wbr>Condition<wbr>Args</a></span>
+        <span class="property-type"><a href="#condition">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Alerts<wbr>Management..<wbr>Inputs.<wbr>Condition<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}filter alerts by monitor condition{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1594,7 +1595,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#monitorservice_csharp" style="color: inherit; text-decoration: inherit;">Monitor<wbr>Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#condition">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Alerts<wbr>Management.<wbr>Inputs.<wbr>Condition<wbr>Args</a></span>
+        <span class="property-type"><a href="#condition">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Alerts<wbr>Management..<wbr>Inputs.<wbr>Condition<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}filter alerts by monitor service{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1603,7 +1604,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#severity_csharp" style="color: inherit; text-decoration: inherit;">Severity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#condition">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Alerts<wbr>Management.<wbr>Inputs.<wbr>Condition<wbr>Args</a></span>
+        <span class="property-type"><a href="#condition">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Alerts<wbr>Management..<wbr>Inputs.<wbr>Condition<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}filter alerts by severity{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1612,7 +1613,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#targetresourcetype_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Resource<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#condition">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Alerts<wbr>Management.<wbr>Inputs.<wbr>Condition<wbr>Args</a></span>
+        <span class="property-type"><a href="#condition">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Alerts<wbr>Management..<wbr>Inputs.<wbr>Condition<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}filter alerts by target resource type{{% /md %}}</dd>
 </dl>
@@ -1836,7 +1837,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#alertcontext_csharp" style="color: inherit; text-decoration: inherit;">Alert<wbr>Context</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#conditionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Alerts<wbr>Management.<wbr>Inputs.<wbr>Condition<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#conditionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Alerts<wbr>Management..<wbr>Inputs.<wbr>Condition<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}filter alerts by alert context (payload){{% /md %}}</dd>
     <dt class="property-optional"
@@ -1845,7 +1846,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#alertruleid_csharp" style="color: inherit; text-decoration: inherit;">Alert<wbr>Rule<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#conditionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Alerts<wbr>Management.<wbr>Inputs.<wbr>Condition<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#conditionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Alerts<wbr>Management..<wbr>Inputs.<wbr>Condition<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}filter alerts by alert rule id{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1854,7 +1855,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#conditionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Alerts<wbr>Management.<wbr>Inputs.<wbr>Condition<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#conditionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Alerts<wbr>Management..<wbr>Inputs.<wbr>Condition<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}filter alerts by alert rule description{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1863,7 +1864,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#monitorcondition_csharp" style="color: inherit; text-decoration: inherit;">Monitor<wbr>Condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#conditionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Alerts<wbr>Management.<wbr>Inputs.<wbr>Condition<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#conditionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Alerts<wbr>Management..<wbr>Inputs.<wbr>Condition<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}filter alerts by monitor condition{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1872,7 +1873,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#monitorservice_csharp" style="color: inherit; text-decoration: inherit;">Monitor<wbr>Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#conditionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Alerts<wbr>Management.<wbr>Inputs.<wbr>Condition<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#conditionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Alerts<wbr>Management..<wbr>Inputs.<wbr>Condition<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}filter alerts by monitor service{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1881,7 +1882,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#severity_csharp" style="color: inherit; text-decoration: inherit;">Severity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#conditionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Alerts<wbr>Management.<wbr>Inputs.<wbr>Condition<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#conditionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Alerts<wbr>Management..<wbr>Inputs.<wbr>Condition<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}filter alerts by severity{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1890,7 +1891,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#targetresourcetype_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Resource<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#conditionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Alerts<wbr>Management.<wbr>Inputs.<wbr>Condition<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#conditionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Alerts<wbr>Management..<wbr>Inputs.<wbr>Condition<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}filter alerts by target resource type{{% /md %}}</dd>
 </dl>
@@ -2114,7 +2115,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#conditions_csharp" style="color: inherit; text-decoration: inherit;">Conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#conditions">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Alerts<wbr>Management.<wbr>Inputs.<wbr>Conditions<wbr>Args</a></span>
+        <span class="property-type"><a href="#conditions">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Alerts<wbr>Management..<wbr>Inputs.<wbr>Conditions<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}conditions on which alerts will be filtered{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2132,7 +2133,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scope_csharp" style="color: inherit; text-decoration: inherit;">Scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scope">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Alerts<wbr>Management.<wbr>Inputs.<wbr>Scope<wbr>Args</a></span>
+        <span class="property-type"><a href="#scope">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Alerts<wbr>Management..<wbr>Inputs.<wbr>Scope<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}scope on which action rule will apply{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2141,7 +2142,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#actionrulestatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Alerts<wbr>Management.<wbr>Action<wbr>Rule<wbr>Status</a></span>
+        <span class="property-type">string | <a href="#actionrulestatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Alerts<wbr>Management..<wbr>Action<wbr>Rule<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}Indicates if the given action rule is enabled or disabled{{% /md %}}</dd>
 </dl>
@@ -2320,7 +2321,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#conditions_csharp" style="color: inherit; text-decoration: inherit;">Conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#conditionsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Alerts<wbr>Management.<wbr>Inputs.<wbr>Conditions<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#conditionsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Alerts<wbr>Management..<wbr>Inputs.<wbr>Conditions<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}conditions on which alerts will be filtered{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2338,7 +2339,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scope_csharp" style="color: inherit; text-decoration: inherit;">Scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scoperesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Alerts<wbr>Management.<wbr>Inputs.<wbr>Scope<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#scoperesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Alerts<wbr>Management..<wbr>Inputs.<wbr>Scope<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}scope on which action rule will apply{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2652,7 +2653,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scopetype_csharp" style="color: inherit; text-decoration: inherit;">Scope<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#scopetype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Alerts<wbr>Management.<wbr>Scope<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#scopetype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Alerts<wbr>Management..<wbr>Scope<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}type of target scope{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2894,7 +2895,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#suppressionconfig_csharp" style="color: inherit; text-decoration: inherit;">Suppression<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#suppressionconfig">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Alerts<wbr>Management.<wbr>Inputs.<wbr>Suppression<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#suppressionconfig">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Alerts<wbr>Management..<wbr>Inputs.<wbr>Suppression<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}suppression configuration for the action rule{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2903,7 +2904,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#conditions_csharp" style="color: inherit; text-decoration: inherit;">Conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#conditions">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Alerts<wbr>Management.<wbr>Inputs.<wbr>Conditions<wbr>Args</a></span>
+        <span class="property-type"><a href="#conditions">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Alerts<wbr>Management..<wbr>Inputs.<wbr>Conditions<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}conditions on which alerts will be filtered{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2921,7 +2922,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scope_csharp" style="color: inherit; text-decoration: inherit;">Scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scope">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Alerts<wbr>Management.<wbr>Inputs.<wbr>Scope<wbr>Args</a></span>
+        <span class="property-type"><a href="#scope">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Alerts<wbr>Management..<wbr>Inputs.<wbr>Scope<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}scope on which action rule will apply{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2930,7 +2931,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#actionrulestatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Alerts<wbr>Management.<wbr>Action<wbr>Rule<wbr>Status</a></span>
+        <span class="property-type">string | <a href="#actionrulestatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Alerts<wbr>Management..<wbr>Action<wbr>Rule<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}Indicates if the given action rule is enabled or disabled{{% /md %}}</dd>
 </dl>
@@ -3100,7 +3101,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recurrencetype_csharp" style="color: inherit; text-decoration: inherit;">Recurrence<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#suppressiontype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Alerts<wbr>Management.<wbr>Suppression<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#suppressiontype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Alerts<wbr>Management..<wbr>Suppression<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Specifies when the suppression should be applied{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3109,7 +3110,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schedule_csharp" style="color: inherit; text-decoration: inherit;">Schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#suppressionschedule">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Alerts<wbr>Management.<wbr>Inputs.<wbr>Suppression<wbr>Schedule<wbr>Args</a></span>
+        <span class="property-type"><a href="#suppressionschedule">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Alerts<wbr>Management..<wbr>Inputs.<wbr>Suppression<wbr>Schedule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}suppression schedule configuration{{% /md %}}</dd>
 </dl>
@@ -3207,7 +3208,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schedule_csharp" style="color: inherit; text-decoration: inherit;">Schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#suppressionscheduleresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Alerts<wbr>Management.<wbr>Inputs.<wbr>Suppression<wbr>Schedule<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#suppressionscheduleresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Alerts<wbr>Management..<wbr>Inputs.<wbr>Suppression<wbr>Schedule<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}suppression schedule configuration{{% /md %}}</dd>
 </dl>
@@ -3332,7 +3333,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#suppressionconfig_csharp" style="color: inherit; text-decoration: inherit;">Suppression<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#suppressionconfigresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Alerts<wbr>Management.<wbr>Inputs.<wbr>Suppression<wbr>Config<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#suppressionconfigresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Alerts<wbr>Management..<wbr>Inputs.<wbr>Suppression<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}suppression configuration for the action rule{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3341,7 +3342,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#conditions_csharp" style="color: inherit; text-decoration: inherit;">Conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#conditionsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Alerts<wbr>Management.<wbr>Inputs.<wbr>Conditions<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#conditionsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Alerts<wbr>Management..<wbr>Inputs.<wbr>Conditions<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}conditions on which alerts will be filtered{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3359,7 +3360,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scope_csharp" style="color: inherit; text-decoration: inherit;">Scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scoperesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Alerts<wbr>Management.<wbr>Inputs.<wbr>Scope<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#scoperesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Alerts<wbr>Management..<wbr>Inputs.<wbr>Scope<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}scope on which action rule will apply{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4114,7 +4115,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:alertsmanagement/v20190505preview:ActionRuleByName DailySuppression /subscriptions/1e3ff1c0-771a-4119-a03b-be82a51e232d/resourceGroups/alertscorrelationrg/providers/Microsoft.AlertsManagement/actionRules/DailySuppression 
+$ pulumi import azure-nextgen:alertsmanagement:ActionRuleByName DailySuppression /subscriptions/1e3ff1c0-771a-4119-a03b-be82a51e232d/resourceGroups/alertscorrelationrg/providers/Microsoft.AlertsManagement/actionRules/DailySuppression 
 ```
 
 

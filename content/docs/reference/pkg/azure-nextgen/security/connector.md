@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.security.Connector resource with
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The connector setting
+API Version: 2020-01-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var connector = new AzureNextGen.Security.V20200101Preview.Connector("connector", new AzureNextGen.Security.V20200101Preview.ConnectorArgs
+        var connector = new AzureNextGen.Security..Connector("connector", new AzureNextGen.Security..ConnectorArgs
         {
             AuthenticationDetails = 
             {
@@ -35,17 +36,17 @@ class MyStack : Stack
                 { "awsExternalId", "20ff7fc3-e762-44dd-bd96-b71116dcdc23" },
             },
             ConnectorName = "aws_dev2",
-            HybridComputeSettings = new AzureNextGen.Security.V20200101Preview.Inputs.HybridComputeSettingsPropertiesArgs
+            HybridComputeSettings = new AzureNextGen.Security..Inputs.HybridComputeSettingsPropertiesArgs
             {
                 AutoProvision = "On",
-                ProxyServer = new AzureNextGen.Security.V20200101Preview.Inputs.ProxyServerPropertiesArgs
+                ProxyServer = new AzureNextGen.Security..Inputs.ProxyServerPropertiesArgs
                 {
                     Ip = "167.220.197.140",
                     Port = "34",
                 },
                 Region = "West US 2",
                 ResourceGroupName = "AwsConnectorRG",
-                ServicePrincipal = new AzureNextGen.Security.V20200101Preview.Inputs.ServicePrincipalPropertiesArgs
+                ServicePrincipal = new AzureNextGen.Security..Inputs.ServicePrincipalPropertiesArgs
                 {
                     ApplicationId = "ad9bcd79-be9c-45ab-abd8-80ca1654a7d1",
                     Secret = "<secret>",
@@ -70,22 +71,22 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-connector = azure_nextgen.security.v20200101preview.Connector("connector",
+connector = azure_nextgen.security.Connector("connector",
     authentication_details={
         "authenticationType": "awsAssumeRole",
         "awsAssumeRoleArn": "arn:aws:iam::81231569658:role/AscConnector",
         "awsExternalId": "20ff7fc3-e762-44dd-bd96-b71116dcdc23",
     },
     connector_name="aws_dev2",
-    hybrid_compute_settings=azure_nextgen.security.v20200101preview.HybridComputeSettingsPropertiesArgs(
+    hybrid_compute_settings=azure_nextgen.security.HybridComputeSettingsPropertiesArgs(
         auto_provision="On",
-        proxy_server=azure_nextgen.security.v20200101preview.ProxyServerPropertiesArgs(
+        proxy_server=azure_nextgen.security.ProxyServerPropertiesArgs(
             ip="167.220.197.140",
             port="34",
         ),
         region="West US 2",
         resource_group_name="AwsConnectorRG",
-        service_principal=azure_nextgen.security.v20200101preview.ServicePrincipalPropertiesArgs(
+        service_principal=azure_nextgen.security.ServicePrincipalPropertiesArgs(
             application_id="ad9bcd79-be9c-45ab-abd8-80ca1654a7d1",
             secret="<secret>",
         ),
@@ -101,7 +102,7 @@ connector = azure_nextgen.security.v20200101preview.Connector("connector",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const connector = new azure_nextgen.security.v20200101preview.Connector("connector", {
+const connector = new azure_nextgen.security.Connector("connector", {
     authenticationDetails: {
         authenticationType: "awsAssumeRole",
         awsAssumeRoleArn: "arn:aws:iam::81231569658:role/AscConnector",
@@ -137,7 +138,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var connector = new AzureNextGen.Security.V20200101Preview.Connector("connector", new AzureNextGen.Security.V20200101Preview.ConnectorArgs
+        var connector = new AzureNextGen.Security..Connector("connector", new AzureNextGen.Security..ConnectorArgs
         {
             AuthenticationDetails = 
             {
@@ -146,17 +147,17 @@ class MyStack : Stack
                 { "awsSecretAccessKey", "<awsSecretAccessKey>" },
             },
             ConnectorName = "aws_dev1",
-            HybridComputeSettings = new AzureNextGen.Security.V20200101Preview.Inputs.HybridComputeSettingsPropertiesArgs
+            HybridComputeSettings = new AzureNextGen.Security..Inputs.HybridComputeSettingsPropertiesArgs
             {
                 AutoProvision = "On",
-                ProxyServer = new AzureNextGen.Security.V20200101Preview.Inputs.ProxyServerPropertiesArgs
+                ProxyServer = new AzureNextGen.Security..Inputs.ProxyServerPropertiesArgs
                 {
                     Ip = "167.220.197.140",
                     Port = "34",
                 },
                 Region = "West US 2",
                 ResourceGroupName = "AwsConnectorRG",
-                ServicePrincipal = new AzureNextGen.Security.V20200101Preview.Inputs.ServicePrincipalPropertiesArgs
+                ServicePrincipal = new AzureNextGen.Security..Inputs.ServicePrincipalPropertiesArgs
                 {
                     ApplicationId = "ad9bcd79-be9c-45ab-abd8-80ca1654a7d1",
                     Secret = "<secret>",
@@ -181,22 +182,22 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-connector = azure_nextgen.security.v20200101preview.Connector("connector",
+connector = azure_nextgen.security.Connector("connector",
     authentication_details={
         "authenticationType": "awsCreds",
         "awsAccessKeyId": "AKIARPZCNODDNAEQFSOE",
         "awsSecretAccessKey": "<awsSecretAccessKey>",
     },
     connector_name="aws_dev1",
-    hybrid_compute_settings=azure_nextgen.security.v20200101preview.HybridComputeSettingsPropertiesArgs(
+    hybrid_compute_settings=azure_nextgen.security.HybridComputeSettingsPropertiesArgs(
         auto_provision="On",
-        proxy_server=azure_nextgen.security.v20200101preview.ProxyServerPropertiesArgs(
+        proxy_server=azure_nextgen.security.ProxyServerPropertiesArgs(
             ip="167.220.197.140",
             port="34",
         ),
         region="West US 2",
         resource_group_name="AwsConnectorRG",
-        service_principal=azure_nextgen.security.v20200101preview.ServicePrincipalPropertiesArgs(
+        service_principal=azure_nextgen.security.ServicePrincipalPropertiesArgs(
             application_id="ad9bcd79-be9c-45ab-abd8-80ca1654a7d1",
             secret="<secret>",
         ),
@@ -212,7 +213,7 @@ connector = azure_nextgen.security.v20200101preview.Connector("connector",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const connector = new azure_nextgen.security.v20200101preview.Connector("connector", {
+const connector = new azure_nextgen.security.Connector("connector", {
     authenticationDetails: {
         authenticationType: "awsCreds",
         awsAccessKeyId: "AKIARPZCNODDNAEQFSOE",
@@ -248,7 +249,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var connector = new AzureNextGen.Security.V20200101Preview.Connector("connector", new AzureNextGen.Security.V20200101Preview.ConnectorArgs
+        var connector = new AzureNextGen.Security..Connector("connector", new AzureNextGen.Security..ConnectorArgs
         {
             AuthenticationDetails = 
             {
@@ -294,7 +295,7 @@ Am0ShoXTF6QYIbsaUiUGoa/NlHcw9V/lj4AqBRbxbaYMD+hz2J/od9cb268eJKY8
                 { "type", "service_account" },
             },
             ConnectorName = "gcp_dev",
-            HybridComputeSettings = new AzureNextGen.Security.V20200101Preview.Inputs.HybridComputeSettingsPropertiesArgs
+            HybridComputeSettings = new AzureNextGen.Security..Inputs.HybridComputeSettingsPropertiesArgs
             {
                 AutoProvision = "Off",
             },
@@ -317,7 +318,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-connector = azure_nextgen.security.v20200101preview.Connector("connector",
+connector = azure_nextgen.security.Connector("connector",
     authentication_details={
         "authProviderX509CertUrl": "https://www.googleapis.com/oauth2/v1/certs",
         "authUri": "https://accounts.google.com/o/oauth2/auth",
@@ -361,7 +362,7 @@ Am0ShoXTF6QYIbsaUiUGoa/NlHcw9V/lj4AqBRbxbaYMD+hz2J/od9cb268eJKY8
         "type": "service_account",
     },
     connector_name="gcp_dev",
-    hybrid_compute_settings=azure_nextgen.security.v20200101preview.HybridComputeSettingsPropertiesArgs(
+    hybrid_compute_settings=azure_nextgen.security.HybridComputeSettingsPropertiesArgs(
         auto_provision="Off",
     ))
 
@@ -375,7 +376,7 @@ Am0ShoXTF6QYIbsaUiUGoa/NlHcw9V/lj4AqBRbxbaYMD+hz2J/od9cb268eJKY8
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const connector = new azure_nextgen.security.v20200101preview.Connector("connector", {
+const connector = new azure_nextgen.security.Connector("connector", {
     authenticationDetails: {
         authProviderX509CertUrl: "https://www.googleapis.com/oauth2/v1/certs",
         authUri: "https://accounts.google.com/o/oauth2/auth",
@@ -626,7 +627,7 @@ The Connector resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#authenticationdetails_csharp" style="color: inherit; text-decoration: inherit;">Authentication<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#awassumeroleauthenticationdetailsproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security.<wbr>Inputs.<wbr>Aw<wbr>Assume<wbr>Role<wbr>Authentication<wbr>Details<wbr>Properties<wbr>Args</a> | <a href="#awscredsauthenticationdetailsproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security.<wbr>Inputs.<wbr>Aws<wbr>Creds<wbr>Authentication<wbr>Details<wbr>Properties<wbr>Args</a> | <a href="#gcpcredentialsdetailsproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security.<wbr>Inputs.<wbr>Gcp<wbr>Credentials<wbr>Details<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#awassumeroleauthenticationdetailsproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security..<wbr>Inputs.<wbr>Aw<wbr>Assume<wbr>Role<wbr>Authentication<wbr>Details<wbr>Properties<wbr>Args</a> | <a href="#awscredsauthenticationdetailsproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security..<wbr>Inputs.<wbr>Aws<wbr>Creds<wbr>Authentication<wbr>Details<wbr>Properties<wbr>Args</a> | <a href="#gcpcredentialsdetailsproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security..<wbr>Inputs.<wbr>Gcp<wbr>Credentials<wbr>Details<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings for authentication management, these settings are relevant only for the cloud connector.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -635,7 +636,7 @@ The Connector resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#hybridcomputesettings_csharp" style="color: inherit; text-decoration: inherit;">Hybrid<wbr>Compute<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hybridcomputesettingsproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security.<wbr>Inputs.<wbr>Hybrid<wbr>Compute<wbr>Settings<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#hybridcomputesettingsproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security..<wbr>Inputs.<wbr>Hybrid<wbr>Compute<wbr>Settings<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings for hybrid compute management. These settings are relevant only for Arc autoProvision (Hybrid Compute).{{% /md %}}</dd>
 </dl>
@@ -2462,7 +2463,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#autoprovision_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Provision</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#autoprovision">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security.<wbr>Auto<wbr>Provision</a></span>
+        <span class="property-type">string | <a href="#autoprovision">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security..<wbr>Auto<wbr>Provision</a></span>
     </dt>
     <dd>{{% md %}}Whether or not to automatically install Azure Arc (hybrid compute) agents on machines{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2471,7 +2472,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#proxyserver_csharp" style="color: inherit; text-decoration: inherit;">Proxy<wbr>Server</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#proxyserverproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security.<wbr>Inputs.<wbr>Proxy<wbr>Server<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#proxyserverproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security..<wbr>Inputs.<wbr>Proxy<wbr>Server<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}For a non-Azure machine that is not connected directly to the internet, specify a proxy server that the non-Azure machine can use.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2498,7 +2499,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#serviceprincipal_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Principal</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceprincipalproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security.<wbr>Inputs.<wbr>Service<wbr>Principal<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceprincipalproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security..<wbr>Inputs.<wbr>Service<wbr>Principal<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An object to access resources that are secured by an Azure AD tenant.{{% /md %}}</dd>
 </dl>
@@ -2686,7 +2687,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#proxyserver_csharp" style="color: inherit; text-decoration: inherit;">Proxy<wbr>Server</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#proxyserverpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security.<wbr>Inputs.<wbr>Proxy<wbr>Server<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#proxyserverpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security..<wbr>Inputs.<wbr>Proxy<wbr>Server<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}For a non-Azure machine that is not connected directly to the internet, specify a proxy server that the non-Azure machine can use.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2713,7 +2714,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#serviceprincipal_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Principal</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceprincipalpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security.<wbr>Inputs.<wbr>Service<wbr>Principal<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceprincipalpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security..<wbr>Inputs.<wbr>Service<wbr>Principal<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An object to access resources that are secured by an Azure AD tenant.{{% /md %}}</dd>
 </dl>
@@ -3296,7 +3297,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:security/v20200101preview:Connector gcp_dev /subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23/providers/Microsoft.Security/connectors/gcp_dev 
+$ pulumi import azure-nextgen:security:Connector gcp_dev /subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23/providers/Microsoft.Security/connectors/gcp_dev 
 ```
 
 

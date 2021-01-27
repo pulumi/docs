@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.automation.JobSchedule resource 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Definition of the job schedule.
-Latest API Version: 2019-06-01.
+API Version: 2019-06-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var jobSchedule = new AzureNextGen.Automation.Latest.JobSchedule("jobSchedule", new AzureNextGen.Automation.Latest.JobScheduleArgs
+        var jobSchedule = new AzureNextGen.Automation..JobSchedule("jobSchedule", new AzureNextGen.Automation..JobScheduleArgs
         {
             AutomationAccountName = "ContoseAutomationAccount",
             JobScheduleId = "0fa462ba-3aa2-4138-83ca-9ebc3bc55cdc",
@@ -37,11 +37,11 @@ class MyStack : Stack
                 { "jobscheduletag02", "jobschedulevalue02" },
             },
             ResourceGroupName = "rg",
-            Runbook = new AzureNextGen.Automation.Latest.Inputs.RunbookAssociationPropertyArgs
+            Runbook = new AzureNextGen.Automation..Inputs.RunbookAssociationPropertyArgs
             {
                 Name = "TestRunbook",
             },
-            Schedule = new AzureNextGen.Automation.Latest.Inputs.ScheduleAssociationPropertyArgs
+            Schedule = new AzureNextGen.Automation..Inputs.ScheduleAssociationPropertyArgs
             {
                 Name = "ScheduleNameGoesHere332204b5-debe-4348-a5c7-6357457189f2",
             },
@@ -60,7 +60,7 @@ class MyStack : Stack
 package main
 
 import (
-	automation "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/automation/latest"
+	automation "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/automation"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -98,7 +98,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-job_schedule = azure_nextgen.automation.latest.JobSchedule("jobSchedule",
+job_schedule = azure_nextgen.automation.JobSchedule("jobSchedule",
     automation_account_name="ContoseAutomationAccount",
     job_schedule_id="0fa462ba-3aa2-4138-83ca-9ebc3bc55cdc",
     parameters={
@@ -106,10 +106,10 @@ job_schedule = azure_nextgen.automation.latest.JobSchedule("jobSchedule",
         "jobscheduletag02": "jobschedulevalue02",
     },
     resource_group_name="rg",
-    runbook=azure_nextgen.automation.latest.RunbookAssociationPropertyArgs(
+    runbook=azure_nextgen.automation.RunbookAssociationPropertyArgs(
         name="TestRunbook",
     ),
-    schedule=azure_nextgen.automation.latest.ScheduleAssociationPropertyArgs(
+    schedule=azure_nextgen.automation.ScheduleAssociationPropertyArgs(
         name="ScheduleNameGoesHere332204b5-debe-4348-a5c7-6357457189f2",
     ))
 
@@ -123,7 +123,7 @@ job_schedule = azure_nextgen.automation.latest.JobSchedule("jobSchedule",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const jobSchedule = new azure_nextgen.automation.latest.JobSchedule("jobSchedule", {
+const jobSchedule = new azure_nextgen.automation.JobSchedule("jobSchedule", {
     automationAccountName: "ContoseAutomationAccount",
     jobScheduleId: "0fa462ba-3aa2-4138-83ca-9ebc3bc55cdc",
     parameters: {
@@ -359,7 +359,7 @@ The JobSchedule resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#runbook_csharp" style="color: inherit; text-decoration: inherit;">Runbook</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#runbookassociationproperty">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automation.<wbr>Inputs.<wbr>Runbook<wbr>Association<wbr>Property<wbr>Args</a></span>
+        <span class="property-type"><a href="#runbookassociationproperty">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automation..<wbr>Inputs.<wbr>Runbook<wbr>Association<wbr>Property<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the runbook.{{% /md %}}</dd>
     <dt class="property-required"
@@ -368,7 +368,7 @@ The JobSchedule resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#schedule_csharp" style="color: inherit; text-decoration: inherit;">Schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scheduleassociationproperty">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automation.<wbr>Inputs.<wbr>Schedule<wbr>Association<wbr>Property<wbr>Args</a></span>
+        <span class="property-type"><a href="#scheduleassociationproperty">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automation..<wbr>Inputs.<wbr>Schedule<wbr>Association<wbr>Property<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the schedule.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1001,7 +1001,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:automation/latest:JobSchedule myresource1 /subscriptions/subid/resourceGroups/rg/providers/Microsoft.Automation/automationAccounts/ContoseAutomationAccount/jobSchedules/0fa462ba-3aa2-4138-83ca-9ebc3bc55cdc 
+$ pulumi import azure-nextgen:automation:JobSchedule myresource1 /subscriptions/subid/resourceGroups/rg/providers/Microsoft.Automation/automationAccounts/ContoseAutomationAccount/jobSchedules/0fa462ba-3aa2-4138-83ca-9ebc3bc55cdc 
 ```
 
 

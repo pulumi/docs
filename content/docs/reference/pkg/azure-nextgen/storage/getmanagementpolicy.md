@@ -224,7 +224,7 @@ The following output properties are available:
 <a href="#policy_csharp" style="color: inherit; text-decoration: inherit;">Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementpolicyschemaresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Outputs.<wbr>Management<wbr>Policy<wbr>Schema<wbr>Response</a></span>
+        <span class="property-type"><a href="#managementpolicyschemaresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage..<wbr>Outputs.<wbr>Management<wbr>Policy<wbr>Schema<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The Storage Account ManagementPolicy, in JSON format. See more details in: https://docs.microsoft.com/en-us/azure/storage/common/storage-lifecycle-managment-concepts.{{% /md %}}</dd>
     <dt class="property-"
@@ -548,7 +548,7 @@ The following output properties are available:
 <a href="#baseblob_csharp" style="color: inherit; text-decoration: inherit;">Base<wbr>Blob</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementpolicybaseblobresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Inputs.<wbr>Management<wbr>Policy<wbr>Base<wbr>Blob<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#managementpolicybaseblobresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage..<wbr>Inputs.<wbr>Management<wbr>Policy<wbr>Base<wbr>Blob<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The management policy action for base blob{{% /md %}}</dd>
     <dt class="property-optional"
@@ -557,7 +557,7 @@ The following output properties are available:
 <a href="#snapshot_csharp" style="color: inherit; text-decoration: inherit;">Snapshot</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementpolicysnapshotresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Inputs.<wbr>Management<wbr>Policy<wbr>Snap<wbr>Shot<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#managementpolicysnapshotresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage..<wbr>Inputs.<wbr>Management<wbr>Policy<wbr>Snap<wbr>Shot<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The management policy action for snapshot{{% /md %}}</dd>
 </dl>
@@ -651,7 +651,7 @@ The following output properties are available:
 <a href="#delete_csharp" style="color: inherit; text-decoration: inherit;">Delete</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dateaftermodificationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Inputs.<wbr>Date<wbr>After<wbr>Modification<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#dateaftermodificationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage..<wbr>Inputs.<wbr>Date<wbr>After<wbr>Modification<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The function to delete the blob{{% /md %}}</dd>
     <dt class="property-optional"
@@ -660,7 +660,7 @@ The following output properties are available:
 <a href="#tiertoarchive_csharp" style="color: inherit; text-decoration: inherit;">Tier<wbr>To<wbr>Archive</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dateaftermodificationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Inputs.<wbr>Date<wbr>After<wbr>Modification<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#dateaftermodificationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage..<wbr>Inputs.<wbr>Date<wbr>After<wbr>Modification<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The function to tier blobs to archive storage. Support blobs currently at Hot or Cool tier{{% /md %}}</dd>
     <dt class="property-optional"
@@ -669,7 +669,7 @@ The following output properties are available:
 <a href="#tiertocool_csharp" style="color: inherit; text-decoration: inherit;">Tier<wbr>To<wbr>Cool</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dateaftermodificationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Inputs.<wbr>Date<wbr>After<wbr>Modification<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#dateaftermodificationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage..<wbr>Inputs.<wbr>Date<wbr>After<wbr>Modification<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The function to tier blobs to cool storage. Support blobs currently at Hot tier{{% /md %}}</dd>
 </dl>
@@ -790,7 +790,7 @@ The following output properties are available:
 <a href="#actions_csharp" style="color: inherit; text-decoration: inherit;">Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementpolicyactionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Inputs.<wbr>Management<wbr>Policy<wbr>Action<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#managementpolicyactionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage..<wbr>Inputs.<wbr>Management<wbr>Policy<wbr>Action<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An object that defines the action set.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -799,7 +799,7 @@ The following output properties are available:
 <a href="#filters_csharp" style="color: inherit; text-decoration: inherit;">Filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementpolicyfilterresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Inputs.<wbr>Management<wbr>Policy<wbr>Filter<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#managementpolicyfilterresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage..<wbr>Inputs.<wbr>Management<wbr>Policy<wbr>Filter<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An object that defines the filter set.{{% /md %}}</dd>
 </dl>
@@ -902,7 +902,7 @@ The following output properties are available:
 <a href="#blobindexmatch_csharp" style="color: inherit; text-decoration: inherit;">Blob<wbr>Index<wbr>Match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tagfilterresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Inputs.<wbr>Tag<wbr>Filter<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#tagfilterresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage..<wbr>Inputs.<wbr>Tag<wbr>Filter<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}An array of blob index tag based filters, there can be at most 10 tag filters{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1032,7 +1032,7 @@ The following output properties are available:
 <a href="#definition_csharp" style="color: inherit; text-decoration: inherit;">Definition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementpolicydefinitionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Inputs.<wbr>Management<wbr>Policy<wbr>Definition<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#managementpolicydefinitionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage..<wbr>Inputs.<wbr>Management<wbr>Policy<wbr>Definition<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An object that defines the Lifecycle rule.{{% /md %}}</dd>
     <dt class="property-required"
@@ -1207,7 +1207,7 @@ The following output properties are available:
 <a href="#rules_csharp" style="color: inherit; text-decoration: inherit;">Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementpolicyruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Inputs.<wbr>Management<wbr>Policy<wbr>Rule<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#managementpolicyruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage..<wbr>Inputs.<wbr>Management<wbr>Policy<wbr>Rule<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The Storage Account ManagementPolicies Rules. See more details in: https://docs.microsoft.com/en-us/azure/storage/common/storage-lifecycle-managment-concepts.{{% /md %}}</dd>
 </dl>
@@ -1274,7 +1274,7 @@ The following output properties are available:
 <a href="#delete_csharp" style="color: inherit; text-decoration: inherit;">Delete</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dateaftercreationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Inputs.<wbr>Date<wbr>After<wbr>Creation<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#dateaftercreationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage..<wbr>Inputs.<wbr>Date<wbr>After<wbr>Creation<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The function to delete the blob snapshot{{% /md %}}</dd>
 </dl>

@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.securityinsights.IncidentComment
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Represents an incident comment
+API Version: 2019-01-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var incidentComment = new AzureNextGen.SecurityInsights.V20190101Preview.IncidentComment("incidentComment", new AzureNextGen.SecurityInsights.V20190101Preview.IncidentCommentArgs
+        var incidentComment = new AzureNextGen.SecurityInsights..IncidentComment("incidentComment", new AzureNextGen.SecurityInsights..IncidentCommentArgs
         {
             IncidentCommentId = "4bb36b7b-26ff-4d1c-9cbe-0d8ab3da0014",
             IncidentId = "73e01a99-5cd7-4139-a149-9f2736ff2ab5",
@@ -49,7 +50,7 @@ class MyStack : Stack
 package main
 
 import (
-	securityinsights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/securityinsights/v20190101preview"
+	securityinsights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/securityinsights"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -80,7 +81,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-incident_comment = azure_nextgen.securityinsights.v20190101preview.IncidentComment("incidentComment",
+incident_comment = azure_nextgen.securityinsights.IncidentComment("incidentComment",
     incident_comment_id="4bb36b7b-26ff-4d1c-9cbe-0d8ab3da0014",
     incident_id="73e01a99-5cd7-4139-a149-9f2736ff2ab5",
     message="Some message",
@@ -98,7 +99,7 @@ incident_comment = azure_nextgen.securityinsights.v20190101preview.IncidentComme
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const incidentComment = new azure_nextgen.securityinsights.v20190101preview.IncidentComment("incidentComment", {
+const incidentComment = new azure_nextgen.securityinsights.IncidentComment("incidentComment", {
     incidentCommentId: "4bb36b7b-26ff-4d1c-9cbe-0d8ab3da0014",
     incidentId: "73e01a99-5cd7-4139-a149-9f2736ff2ab5",
     message: "Some message",
@@ -583,7 +584,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#author_csharp" style="color: inherit; text-decoration: inherit;">Author</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clientinforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security<wbr>Insights.<wbr>Outputs.<wbr>Client<wbr>Info<wbr>Response</a></span>
+        <span class="property-type"><a href="#clientinforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security<wbr>Insights..<wbr>Outputs.<wbr>Client<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes the client that created the comment{{% /md %}}</dd>
     <dt class="property-"
@@ -999,7 +1000,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:securityinsights/v20190101preview:IncidentComment 4bb36b7b-26ff-4d1c-9cbe-0d8ab3da0014 /subscriptions/d0cfe6b2-9ac0-4464-9919-dccaee2e48c0/resourceGroups/myRg/providers/Microsoft.OperationalIinsights/workspaces/myWorkspace/providers/Microsoft.SecurityInsights/incidents/73e01a99-5cd7-4139-a149-9f2736ff2ab5/comments/4bb36b7b-26ff-4d1c-9cbe-0d8ab3da0014 
+$ pulumi import azure-nextgen:securityinsights:IncidentComment 4bb36b7b-26ff-4d1c-9cbe-0d8ab3da0014 /subscriptions/d0cfe6b2-9ac0-4464-9919-dccaee2e48c0/resourceGroups/myRg/providers/Microsoft.OperationalIinsights/workspaces/myWorkspace/providers/Microsoft.SecurityInsights/incidents/73e01a99-5cd7-4139-a149-9f2736ff2ab5/comments/4bb36b7b-26ff-4d1c-9cbe-0d8ab3da0014 
 ```
 
 

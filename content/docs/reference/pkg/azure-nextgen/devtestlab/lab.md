@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.devtestlab.Lab resource with exa
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 A lab.
-Latest API Version: 2018-09-15.
+API Version: 2018-09-15.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var lab = new AzureNextGen.DevTestLab.Latest.Lab("lab", new AzureNextGen.DevTestLab.Latest.LabArgs
+        var lab = new AzureNextGen.DevTestLab..Lab("lab", new AzureNextGen.DevTestLab..LabArgs
         {
             LabStorageType = "{Standard|Premium}",
             Location = "{azure-location}",
@@ -52,7 +52,7 @@ class MyStack : Stack
 package main
 
 import (
-	devtestlab "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/devtestlab/latest"
+	devtestlab "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/devtestlab"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -84,7 +84,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-lab = azure_nextgen.devtestlab.latest.Lab("lab",
+lab = azure_nextgen.devtestlab.Lab("lab",
     lab_storage_type="{Standard|Premium}",
     location="{azure-location}",
     name="{devtestlab-name}",
@@ -103,7 +103,7 @@ lab = azure_nextgen.devtestlab.latest.Lab("lab",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const lab = new azure_nextgen.devtestlab.latest.Lab("lab", {
+const lab = new azure_nextgen.devtestlab.Lab("lab", {
     labStorageType: "{Standard|Premium}",
     location: "{azure-location}",
     name: "{devtestlab-name}",
@@ -324,7 +324,7 @@ The Lab resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#announcement_csharp" style="color: inherit; text-decoration: inherit;">Announcement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#labannouncementproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Lab<wbr>Announcement<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#labannouncementproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab..<wbr>Inputs.<wbr>Lab<wbr>Announcement<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The properties of any lab announcement associated with this lab{{% /md %}}</dd>
     <dt class="property-optional"
@@ -333,7 +333,7 @@ The Lab resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#environmentpermission_csharp" style="color: inherit; text-decoration: inherit;">Environment<wbr>Permission</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#environmentpermission">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Environment<wbr>Permission</a></span>
+        <span class="property-type">string | <a href="#environmentpermission">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab..<wbr>Environment<wbr>Permission</a></span>
     </dt>
     <dd>{{% md %}}The access rights to be granted to the user when provisioning an environment{{% /md %}}</dd>
     <dt class="property-optional"
@@ -351,7 +351,7 @@ The Lab resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#labstoragetype_csharp" style="color: inherit; text-decoration: inherit;">Lab<wbr>Storage<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#storagetype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Storage<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#storagetype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab..<wbr>Storage<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of storage used by the lab. It can be either Premium or Standard. Default is Premium.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -387,7 +387,7 @@ The Lab resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#premiumdatadisks_csharp" style="color: inherit; text-decoration: inherit;">Premium<wbr>Data<wbr>Disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#premiumdatadisk">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Premium<wbr>Data<wbr>Disk</a></span>
+        <span class="property-type">string | <a href="#premiumdatadisk">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab..<wbr>Premium<wbr>Data<wbr>Disk</a></span>
     </dt>
     <dd>{{% md %}}The setting to enable usage of premium data disks.
 When its value is 'Enabled', creation of standard or premium data disks is allowed.
@@ -398,7 +398,7 @@ When its value is 'Disabled', only creation of standard data disks is allowed.{{
 <a href="#support_csharp" style="color: inherit; text-decoration: inherit;">Support</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#labsupportproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Lab<wbr>Support<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#labsupportproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab..<wbr>Inputs.<wbr>Lab<wbr>Support<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The properties of any lab support message associated with this lab{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1393,7 +1393,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#enablestatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Enable<wbr>Status</a></span>
+        <span class="property-type">string | <a href="#enablestatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab..<wbr>Enable<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}Is the lab announcement active/enabled at this time?{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1877,7 +1877,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#enablestatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Enable<wbr>Status</a></span>
+        <span class="property-type">string | <a href="#enablestatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab..<wbr>Enable<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}Is the lab support banner active/enabled at this time?{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2151,7 +2151,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:devtestlab/latest:Lab {devtestlab-name} /subscriptions/{subscription-id}/resourcegroups/myResourceGroup/providers/microsoft.devtestlab/labs/{devtestlab-name} 
+$ pulumi import azure-nextgen:devtestlab:Lab {devtestlab-name} /subscriptions/{subscription-id}/resourcegroups/myResourceGroup/providers/microsoft.devtestlab/labs/{devtestlab-name} 
 ```
 
 

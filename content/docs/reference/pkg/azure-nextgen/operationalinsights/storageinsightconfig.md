@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.operationalinsights.StorageInsig
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The top level storage insight resource container.
-Latest API Version: 2020-08-01.
+API Version: 2020-08-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,14 +27,14 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var storageInsightConfig = new AzureNextGen.OperationalInsights.Latest.StorageInsightConfig("storageInsightConfig", new AzureNextGen.OperationalInsights.Latest.StorageInsightConfigArgs
+        var storageInsightConfig = new AzureNextGen.OperationalInsights..StorageInsightConfig("storageInsightConfig", new AzureNextGen.OperationalInsights..StorageInsightConfigArgs
         {
             Containers = 
             {
                 "wad-iis-logfiles",
             },
             ResourceGroupName = "OIAutoRest5123",
-            StorageAccount = new AzureNextGen.OperationalInsights.Latest.Inputs.StorageAccountArgs
+            StorageAccount = new AzureNextGen.OperationalInsights..Inputs.StorageAccountArgs
             {
                 Id = "/subscriptions/00000000-0000-0000-0000-000000000005/resourcegroups/OIAutoRest6987/providers/microsoft.storage/storageaccounts/AzTestFakeSA9945",
                 Key = "1234",
@@ -61,7 +61,7 @@ class MyStack : Stack
 package main
 
 import (
-	operationalinsights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/operationalinsights/latest"
+	operationalinsights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/operationalinsights"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -100,10 +100,10 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-storage_insight_config = azure_nextgen.operationalinsights.latest.StorageInsightConfig("storageInsightConfig",
+storage_insight_config = azure_nextgen.operationalinsights.StorageInsightConfig("storageInsightConfig",
     containers=["wad-iis-logfiles"],
     resource_group_name="OIAutoRest5123",
-    storage_account=azure_nextgen.operationalinsights.latest.StorageAccountArgs(
+    storage_account=azure_nextgen.operationalinsights.StorageAccountArgs(
         id="/subscriptions/00000000-0000-0000-0000-000000000005/resourcegroups/OIAutoRest6987/providers/microsoft.storage/storageaccounts/AzTestFakeSA9945",
         key="1234",
     ),
@@ -124,7 +124,7 @@ storage_insight_config = azure_nextgen.operationalinsights.latest.StorageInsight
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const storageInsightConfig = new azure_nextgen.operationalinsights.latest.StorageInsightConfig("storageInsightConfig", {
+const storageInsightConfig = new azure_nextgen.operationalinsights.StorageInsightConfig("storageInsightConfig", {
     containers: ["wad-iis-logfiles"],
     resourceGroupName: "OIAutoRest5123",
     storageAccount: {
@@ -341,7 +341,7 @@ The StorageInsightConfig resource accepts the following [input]({{< relref "/doc
 <a href="#storageaccount_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageaccount">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Operational<wbr>Insights.<wbr>Inputs.<wbr>Storage<wbr>Account<wbr>Args</a></span>
+        <span class="property-type"><a href="#storageaccount">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Operational<wbr>Insights..<wbr>Inputs.<wbr>Storage<wbr>Account<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The storage account connection details{{% /md %}}</dd>
     <dt class="property-required"
@@ -669,7 +669,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageinsightstatusresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Operational<wbr>Insights.<wbr>Outputs.<wbr>Storage<wbr>Insight<wbr>Status<wbr>Response</a></span>
+        <span class="property-type"><a href="#storageinsightstatusresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Operational<wbr>Insights..<wbr>Outputs.<wbr>Storage<wbr>Insight<wbr>Status<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The status of the storage insight{{% /md %}}</dd>
     <dt class="property-"
@@ -1119,7 +1119,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:operationalinsights/latest:StorageInsightConfig AzTestSI1110 /subscriptions/00000000-0000-0000-0000-000000000005/resourcegroups/oiautorest6987/providers/microsoft.operationalinsights/workspaces/aztest5048/storageinsightconfigs/AzTestSI1110 
+$ pulumi import azure-nextgen:operationalinsights:StorageInsightConfig AzTestSI1110 /subscriptions/00000000-0000-0000-0000-000000000005/resourcegroups/oiautorest6987/providers/microsoft.operationalinsights/workspaces/aztest5048/storageinsightconfigs/AzTestSI1110 
 ```
 
 

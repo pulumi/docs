@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.automation.AutomationAccount res
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Definition of the automation account type.
-Latest API Version: 2019-06-01.
+API Version: 2019-06-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,13 +27,13 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var automationAccount = new AzureNextGen.Automation.Latest.AutomationAccount("automationAccount", new AzureNextGen.Automation.Latest.AutomationAccountArgs
+        var automationAccount = new AzureNextGen.Automation..AutomationAccount("automationAccount", new AzureNextGen.Automation..AutomationAccountArgs
         {
             AutomationAccountName = "myAutomationAccount9",
             Location = "East US 2",
             Name = "myAutomationAccount9",
             ResourceGroupName = "rg",
-            Sku = new AzureNextGen.Automation.Latest.Inputs.SkuArgs
+            Sku = new AzureNextGen.Automation..Inputs.SkuArgs
             {
                 Name = "Free",
             },
@@ -52,7 +52,7 @@ class MyStack : Stack
 package main
 
 import (
-	automation "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/automation/latest"
+	automation "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/automation"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -84,12 +84,12 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-automation_account = azure_nextgen.automation.latest.AutomationAccount("automationAccount",
+automation_account = azure_nextgen.automation.AutomationAccount("automationAccount",
     automation_account_name="myAutomationAccount9",
     location="East US 2",
     name="myAutomationAccount9",
     resource_group_name="rg",
-    sku=azure_nextgen.automation.latest.SkuArgs(
+    sku=azure_nextgen.automation.SkuArgs(
         name="Free",
     ))
 
@@ -103,7 +103,7 @@ automation_account = azure_nextgen.automation.latest.AutomationAccount("automati
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const automationAccount = new azure_nextgen.automation.latest.AutomationAccount("automationAccount", {
+const automationAccount = new azure_nextgen.automation.AutomationAccount("automationAccount", {
     automationAccountName: "myAutomationAccount9",
     location: "East US 2",
     name: "myAutomationAccount9",
@@ -342,7 +342,7 @@ The AutomationAccount resource accepts the following [input]({{< relref "/docs/i
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sku">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automation.<wbr>Inputs.<wbr>Sku<wbr>Args</a></span>
+        <span class="property-type"><a href="#sku">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automation..<wbr>Inputs.<wbr>Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets account SKU.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -877,7 +877,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#skunameenum">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automation.<wbr>Sku<wbr>Name<wbr>Enum</a></span>
+        <span class="property-type">string | <a href="#skunameenum">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automation..<wbr>Sku<wbr>Name<wbr>Enum</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the SKU name of the account.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1177,7 +1177,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:automation/latest:AutomationAccount ContoseAutomationAccount /subscriptions/subid/resourceGroups/rg/providers/Microsoft.Automation/automationAccounts/myAutomationAccount9 
+$ pulumi import azure-nextgen:automation:AutomationAccount ContoseAutomationAccount /subscriptions/subid/resourceGroups/rg/providers/Microsoft.Automation/automationAccounts/myAutomationAccount9 
 ```
 
 

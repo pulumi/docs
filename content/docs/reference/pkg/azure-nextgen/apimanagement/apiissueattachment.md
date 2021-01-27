@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.apimanagement.ApiIssueAttachment
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Issue Attachment Contract details.
-Latest API Version: 2019-12-01.
+API Version: 2019-12-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var apiIssueAttachment = new AzureNextGen.ApiManagement.Latest.ApiIssueAttachment("apiIssueAttachment", new AzureNextGen.ApiManagement.Latest.ApiIssueAttachmentArgs
+        var apiIssueAttachment = new AzureNextGen.ApiManagement..ApiIssueAttachment("apiIssueAttachment", new AzureNextGen.ApiManagement..ApiIssueAttachmentArgs
         {
             ApiId = "57d1f7558aa04f15146d9d8a",
             AttachmentId = "57d2ef278aa04f0888cba3f3",
@@ -52,7 +52,7 @@ class MyStack : Stack
 package main
 
 import (
-	apimanagement "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/apimanagement/latest"
+	apimanagement "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/apimanagement"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -85,7 +85,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-api_issue_attachment = azure_nextgen.apimanagement.latest.ApiIssueAttachment("apiIssueAttachment",
+api_issue_attachment = azure_nextgen.apimanagement.ApiIssueAttachment("apiIssueAttachment",
     api_id="57d1f7558aa04f15146d9d8a",
     attachment_id="57d2ef278aa04f0888cba3f3",
     content="IEJhc2U2NA==",
@@ -105,7 +105,7 @@ api_issue_attachment = azure_nextgen.apimanagement.latest.ApiIssueAttachment("ap
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const apiIssueAttachment = new azure_nextgen.apimanagement.latest.ApiIssueAttachment("apiIssueAttachment", {
+const apiIssueAttachment = new azure_nextgen.apimanagement.ApiIssueAttachment("apiIssueAttachment", {
     apiId: "57d1f7558aa04f15146d9d8a",
     attachmentId: "57d2ef278aa04f0888cba3f3",
     content: "IEJhc2U2NA==",
@@ -762,7 +762,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:apimanagement/latest:ApiIssueAttachment 57d2ef278aa04f0888cba3f3 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/apis/57d1f7558aa04f15146d9d8a/issues/57d2ef278aa04f0ad01d6cdc/attachments/57d2ef278aa04f0888cba3f3 
+$ pulumi import azure-nextgen:apimanagement:ApiIssueAttachment 57d2ef278aa04f0888cba3f3 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/apis/57d1f7558aa04f15146d9d8a/issues/57d2ef278aa04f0ad01d6cdc/attachments/57d2ef278aa04f0888cba3f3 
 ```
 
 

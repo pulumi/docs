@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.peering.PeerAsn resource with ex
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The essential information related to the peer's ASN.
-Latest API Version: 2020-10-01.
+API Version: 2020-10-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,25 +27,25 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var peerAsn = new AzureNextGen.Peering.Latest.PeerAsn("peerAsn", new AzureNextGen.Peering.Latest.PeerAsnArgs
+        var peerAsn = new AzureNextGen.Peering..PeerAsn("peerAsn", new AzureNextGen.Peering..PeerAsnArgs
         {
             PeerAsn = 65000,
             PeerAsnName = "peerAsnName",
             PeerContactDetail = 
             {
-                new AzureNextGen.Peering.Latest.Inputs.ContactDetailArgs
+                new AzureNextGen.Peering..Inputs.ContactDetailArgs
                 {
                     Email = "noc@contoso.com",
                     Phone = "+1 (234) 567-8999",
                     Role = "Noc",
                 },
-                new AzureNextGen.Peering.Latest.Inputs.ContactDetailArgs
+                new AzureNextGen.Peering..Inputs.ContactDetailArgs
                 {
                     Email = "abc@contoso.com",
                     Phone = "+1 (234) 567-8900",
                     Role = "Policy",
                 },
-                new AzureNextGen.Peering.Latest.Inputs.ContactDetailArgs
+                new AzureNextGen.Peering..Inputs.ContactDetailArgs
                 {
                     Email = "xyz@contoso.com",
                     Phone = "+1 (234) 567-8900",
@@ -68,7 +68,7 @@ class MyStack : Stack
 package main
 
 import (
-	peering "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/peering/latest"
+	peering "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/peering"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -113,21 +113,21 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-peer_asn = azure_nextgen.peering.latest.PeerAsn("peerAsn",
+peer_asn = azure_nextgen.peering.PeerAsn("peerAsn",
     peer_asn=65000,
     peer_asn_name="peerAsnName",
     peer_contact_detail=[
-        azure_nextgen.peering.latest.ContactDetailArgs(
+        azure_nextgen.peering.ContactDetailArgs(
             email="noc@contoso.com",
             phone="+1 (234) 567-8999",
             role="Noc",
         ),
-        azure_nextgen.peering.latest.ContactDetailArgs(
+        azure_nextgen.peering.ContactDetailArgs(
             email="abc@contoso.com",
             phone="+1 (234) 567-8900",
             role="Policy",
         ),
-        azure_nextgen.peering.latest.ContactDetailArgs(
+        azure_nextgen.peering.ContactDetailArgs(
             email="xyz@contoso.com",
             phone="+1 (234) 567-8900",
             role="Technical",
@@ -145,7 +145,7 @@ peer_asn = azure_nextgen.peering.latest.PeerAsn("peerAsn",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const peerAsn = new azure_nextgen.peering.latest.PeerAsn("peerAsn", {
+const peerAsn = new azure_nextgen.peering.PeerAsn("peerAsn", {
     peerAsn: 65000,
     peerAsnName: "peerAsnName",
     peerContactDetail: [
@@ -379,7 +379,7 @@ The PeerAsn resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#peercontactdetail_csharp" style="color: inherit; text-decoration: inherit;">Peer<wbr>Contact<wbr>Detail</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contactdetail">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Peering.<wbr>Inputs.<wbr>Contact<wbr>Detail<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#contactdetail">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Peering..<wbr>Inputs.<wbr>Contact<wbr>Detail<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The contact details of the peer.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -397,7 +397,7 @@ The PeerAsn resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#validationstate_csharp" style="color: inherit; text-decoration: inherit;">Validation<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#validationstate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Peering.<wbr>Validation<wbr>State</a></span>
+        <span class="property-type">string | <a href="#validationstate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Peering..<wbr>Validation<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}The validation state of the ASN associated with the peer.{{% /md %}}</dd>
 </dl>
@@ -770,7 +770,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#role_csharp" style="color: inherit; text-decoration: inherit;">Role</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#role">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Peering.<wbr>Role</a></span>
+        <span class="property-type">string | <a href="#role">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Peering..<wbr>Role</a></span>
     </dt>
     <dd>{{% md %}}The role of the contact.{{% /md %}}</dd>
 </dl>
@@ -1138,7 +1138,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:peering/latest:PeerAsn peerAsnName /subscriptions/subId/providers/Microsoft.Peering/peerAsns/peerAsnName 
+$ pulumi import azure-nextgen:peering:PeerAsn peerAsnName /subscriptions/subId/providers/Microsoft.Peering/peerAsns/peerAsnName 
 ```
 
 

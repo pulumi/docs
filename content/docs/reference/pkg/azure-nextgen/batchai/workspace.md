@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.batchai.Workspace resource with 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Batch AI Workspace information.
-Latest API Version: 2018-05-01.
+API Version: 2018-05-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var workspace = new AzureNextGen.BatchAI.Latest.Workspace("workspace", new AzureNextGen.BatchAI.Latest.WorkspaceArgs
+        var workspace = new AzureNextGen.BatchAI..Workspace("workspace", new AzureNextGen.BatchAI..WorkspaceArgs
         {
             Location = "eastus",
             ResourceGroupName = "demo_resource_group",
@@ -47,7 +47,7 @@ class MyStack : Stack
 package main
 
 import (
-	batchai "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/batchai/latest"
+	batchai "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/batchai"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -75,7 +75,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-workspace = azure_nextgen.batchai.latest.Workspace("workspace",
+workspace = azure_nextgen.batchai.Workspace("workspace",
     location="eastus",
     resource_group_name="demo_resource_group",
     workspace_name="demo_workspace")
@@ -90,7 +90,7 @@ workspace = azure_nextgen.batchai.latest.Workspace("workspace",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const workspace = new azure_nextgen.batchai.latest.Workspace("workspace", {
+const workspace = new azure_nextgen.batchai.Workspace("workspace", {
     location: "eastus",
     resourceGroupName: "demo_resource_group",
     workspaceName: "demo_workspace",
@@ -706,7 +706,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:batchai/latest:Workspace demo_worksapce /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/demo_resource_group/providers/Microsoft.BatchAI/workspaces/demo_workspace 
+$ pulumi import azure-nextgen:batchai:Workspace demo_worksapce /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/demo_resource_group/providers/Microsoft.BatchAI/workspaces/demo_workspace 
 ```
 
 

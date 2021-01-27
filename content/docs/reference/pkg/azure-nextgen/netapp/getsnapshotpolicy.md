@@ -242,7 +242,7 @@ The following output properties are available:
 <a href="#dailyschedule_csharp" style="color: inherit; text-decoration: inherit;">Daily<wbr>Schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dailyscheduleresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Net<wbr>App.<wbr>Outputs.<wbr>Daily<wbr>Schedule<wbr>Response</a></span>
+        <span class="property-type"><a href="#dailyscheduleresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Net<wbr>App..<wbr>Outputs.<wbr>Daily<wbr>Schedule<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Schedule for daily snapshots{{% /md %}}</dd>
     <dt class="property-"
@@ -260,7 +260,7 @@ The following output properties are available:
 <a href="#hourlyschedule_csharp" style="color: inherit; text-decoration: inherit;">Hourly<wbr>Schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hourlyscheduleresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Net<wbr>App.<wbr>Outputs.<wbr>Hourly<wbr>Schedule<wbr>Response</a></span>
+        <span class="property-type"><a href="#hourlyscheduleresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Net<wbr>App..<wbr>Outputs.<wbr>Hourly<wbr>Schedule<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Schedule for hourly snapshots{{% /md %}}</dd>
     <dt class="property-"
@@ -269,7 +269,7 @@ The following output properties are available:
 <a href="#monthlyschedule_csharp" style="color: inherit; text-decoration: inherit;">Monthly<wbr>Schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#monthlyscheduleresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Net<wbr>App.<wbr>Outputs.<wbr>Monthly<wbr>Schedule<wbr>Response</a></span>
+        <span class="property-type"><a href="#monthlyscheduleresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Net<wbr>App..<wbr>Outputs.<wbr>Monthly<wbr>Schedule<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Schedule for monthly snapshots{{% /md %}}</dd>
     <dt class="property-"
@@ -287,7 +287,7 @@ The following output properties are available:
 <a href="#weeklyschedule_csharp" style="color: inherit; text-decoration: inherit;">Weekly<wbr>Schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#weeklyscheduleresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Net<wbr>App.<wbr>Outputs.<wbr>Weekly<wbr>Schedule<wbr>Response</a></span>
+        <span class="property-type"><a href="#weeklyscheduleresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Net<wbr>App..<wbr>Outputs.<wbr>Weekly<wbr>Schedule<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Schedule for weekly snapshots{{% /md %}}</dd>
 </dl>

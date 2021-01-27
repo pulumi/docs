@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.network.PacketCapture resource w
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Information about packet capture session.
-Latest API Version: 2020-08-01.
+API Version: 2020-08-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,12 +27,12 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var packetCapture = new AzureNextGen.Network.Latest.PacketCapture("packetCapture", new AzureNextGen.Network.Latest.PacketCaptureArgs
+        var packetCapture = new AzureNextGen.Network..PacketCapture("packetCapture", new AzureNextGen.Network..PacketCaptureArgs
         {
             BytesToCapturePerPacket = 10000,
             Filters = 
             {
-                new AzureNextGen.Network.Latest.Inputs.PacketCaptureFilterArgs
+                new AzureNextGen.Network..Inputs.PacketCaptureFilterArgs
                 {
                     LocalIPAddress = "10.0.0.4",
                     LocalPort = "80",
@@ -42,7 +42,7 @@ class MyStack : Stack
             NetworkWatcherName = "nw1",
             PacketCaptureName = "pc1",
             ResourceGroupName = "rg1",
-            StorageLocation = new AzureNextGen.Network.Latest.Inputs.PacketCaptureStorageLocationArgs
+            StorageLocation = new AzureNextGen.Network..Inputs.PacketCaptureStorageLocationArgs
             {
                 FilePath = "D:\\capture\\pc1.cap",
                 StorageId = "/subscriptions/subid/resourceGroups/rg2/providers/Microsoft.Storage/storageAccounts/pcstore",
@@ -66,7 +66,7 @@ class MyStack : Stack
 package main
 
 import (
-	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network/latest"
+	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -110,9 +110,9 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-packet_capture = azure_nextgen.network.latest.PacketCapture("packetCapture",
+packet_capture = azure_nextgen.network.PacketCapture("packetCapture",
     bytes_to_capture_per_packet=10000,
-    filters=[azure_nextgen.network.latest.PacketCaptureFilterArgs(
+    filters=[azure_nextgen.network.PacketCaptureFilterArgs(
         local_ip_address="10.0.0.4",
         local_port="80",
         protocol="TCP",
@@ -120,7 +120,7 @@ packet_capture = azure_nextgen.network.latest.PacketCapture("packetCapture",
     network_watcher_name="nw1",
     packet_capture_name="pc1",
     resource_group_name="rg1",
-    storage_location=azure_nextgen.network.latest.PacketCaptureStorageLocationArgs(
+    storage_location=azure_nextgen.network.PacketCaptureStorageLocationArgs(
         file_path="D:\\capture\\pc1.cap",
         storage_id="/subscriptions/subid/resourceGroups/rg2/providers/Microsoft.Storage/storageAccounts/pcstore",
         storage_path="https://mytestaccountname.blob.core.windows.net/capture/pc1.cap",
@@ -139,7 +139,7 @@ packet_capture = azure_nextgen.network.latest.PacketCapture("packetCapture",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const packetCapture = new azure_nextgen.network.latest.PacketCapture("packetCapture", {
+const packetCapture = new azure_nextgen.network.PacketCapture("packetCapture", {
     bytesToCapturePerPacket: 10000,
     filters: [{
         localIPAddress: "10.0.0.4",
@@ -379,7 +379,7 @@ The PacketCapture resource accepts the following [input]({{< relref "/docs/intro
 <a href="#storagelocation_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#packetcapturestoragelocation">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Packet<wbr>Capture<wbr>Storage<wbr>Location<wbr>Args</a></span>
+        <span class="property-type"><a href="#packetcapturestoragelocation">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Packet<wbr>Capture<wbr>Storage<wbr>Location<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The storage location for a packet capture session.{{% /md %}}</dd>
     <dt class="property-required"
@@ -406,7 +406,7 @@ The PacketCapture resource accepts the following [input]({{< relref "/docs/intro
 <a href="#filters_csharp" style="color: inherit; text-decoration: inherit;">Filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#packetcapturefilter">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Packet<wbr>Capture<wbr>Filter<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#packetcapturefilter">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Packet<wbr>Capture<wbr>Filter<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of packet capture filters.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -905,7 +905,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protocol_csharp" style="color: inherit; text-decoration: inherit;">Protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#pcprotocol">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Pc<wbr>Protocol</a></span>
+        <span class="property-type">string | <a href="#pcprotocol">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Pc<wbr>Protocol</a></span>
     </dt>
     <dd>{{% md %}}Protocol to be filtered on.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1607,7 +1607,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:network/latest:PacketCapture pc1 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/networkWatchers/nw1/packetCaptures/pc1 
+$ pulumi import azure-nextgen:network:PacketCapture pc1 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/networkWatchers/nw1/packetCaptures/pc1 
 ```
 
 

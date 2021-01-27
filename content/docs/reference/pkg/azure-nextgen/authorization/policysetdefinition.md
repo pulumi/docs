@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.authorization.PolicySetDefinitio
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The policy set definition.
-Latest API Version: 2020-09-01.
+API Version: 2020-09-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var policySetDefinition = new AzureNextGen.Authorization.Latest.PolicySetDefinition("policySetDefinition", new AzureNextGen.Authorization.Latest.PolicySetDefinitionArgs
+        var policySetDefinition = new AzureNextGen.Authorization..PolicySetDefinition("policySetDefinition", new AzureNextGen.Authorization..PolicySetDefinitionArgs
         {
             Description = "Policies to enforce low cost storage SKUs",
             DisplayName = "Cost Management",
@@ -37,10 +37,10 @@ class MyStack : Stack
             },
             Parameters = 
             {
-                { "namePrefix", new AzureNextGen.Authorization.Latest.Inputs.ParameterDefinitionsValueArgs
+                { "namePrefix", new AzureNextGen.Authorization..Inputs.ParameterDefinitionsValueArgs
                 {
                     DefaultValue = "myPrefix",
-                    Metadata = new AzureNextGen.Authorization.Latest.Inputs.ParameterDefinitionsValueMetadataArgs
+                    Metadata = new AzureNextGen.Authorization..Inputs.ParameterDefinitionsValueMetadataArgs
                     {
                         DisplayName = "Prefix to enforce on resource names",
                     },
@@ -49,11 +49,11 @@ class MyStack : Stack
             },
             PolicyDefinitions = 
             {
-                new AzureNextGen.Authorization.Latest.Inputs.PolicyDefinitionReferenceArgs
+                new AzureNextGen.Authorization..Inputs.PolicyDefinitionReferenceArgs
                 {
                     Parameters = 
                     {
-                        { "listOfAllowedSKUs", new AzureNextGen.Authorization.Latest.Inputs.ParameterValuesValueArgs
+                        { "listOfAllowedSKUs", new AzureNextGen.Authorization..Inputs.ParameterValuesValueArgs
                         {
                             Value = 
                             {
@@ -65,15 +65,15 @@ class MyStack : Stack
                     PolicyDefinitionId = "/subscriptions/ae640e6b-ba3e-4256-9d62-2993eecfa6f2/providers/Microsoft.Authorization/policyDefinitions/7433c107-6db4-4ad1-b57a-a76dce0154a1",
                     PolicyDefinitionReferenceId = "Limit_Skus",
                 },
-                new AzureNextGen.Authorization.Latest.Inputs.PolicyDefinitionReferenceArgs
+                new AzureNextGen.Authorization..Inputs.PolicyDefinitionReferenceArgs
                 {
                     Parameters = 
                     {
-                        { "prefix", new AzureNextGen.Authorization.Latest.Inputs.ParameterValuesValueArgs
+                        { "prefix", new AzureNextGen.Authorization..Inputs.ParameterValuesValueArgs
                         {
                             Value = "[parameters('namePrefix')]",
                         } },
-                        { "suffix", new AzureNextGen.Authorization.Latest.Inputs.ParameterValuesValueArgs
+                        { "suffix", new AzureNextGen.Authorization..Inputs.ParameterValuesValueArgs
                         {
                             Value = "-LC",
                         } },
@@ -102,25 +102,25 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-policy_set_definition = azure_nextgen.authorization.latest.PolicySetDefinition("policySetDefinition",
+policy_set_definition = azure_nextgen.authorization.PolicySetDefinition("policySetDefinition",
     description="Policies to enforce low cost storage SKUs",
     display_name="Cost Management",
     metadata={
         "category": "Cost Management",
     },
     parameters={
-        "namePrefix": azure_nextgen.authorization.latest.ParameterDefinitionsValueArgs(
+        "namePrefix": azure_nextgen.authorization.ParameterDefinitionsValueArgs(
             default_value="myPrefix",
-            metadata=azure_nextgen.authorization.latest.ParameterDefinitionsValueMetadataArgs(
+            metadata=azure_nextgen.authorization.ParameterDefinitionsValueMetadataArgs(
                 display_name="Prefix to enforce on resource names",
             ),
             type="String",
         ),
     },
     policy_definitions=[
-        azure_nextgen.authorization.latest.PolicyDefinitionReferenceArgs(
+        azure_nextgen.authorization.PolicyDefinitionReferenceArgs(
             parameters={
-                "listOfAllowedSKUs": azure_nextgen.authorization.latest.ParameterValuesValueArgs(
+                "listOfAllowedSKUs": azure_nextgen.authorization.ParameterValuesValueArgs(
                     value=[
                         "Standard_GRS",
                         "Standard_LRS",
@@ -130,12 +130,12 @@ policy_set_definition = azure_nextgen.authorization.latest.PolicySetDefinition("
             policy_definition_id="/subscriptions/ae640e6b-ba3e-4256-9d62-2993eecfa6f2/providers/Microsoft.Authorization/policyDefinitions/7433c107-6db4-4ad1-b57a-a76dce0154a1",
             policy_definition_reference_id="Limit_Skus",
         ),
-        azure_nextgen.authorization.latest.PolicyDefinitionReferenceArgs(
+        azure_nextgen.authorization.PolicyDefinitionReferenceArgs(
             parameters={
-                "prefix": azure_nextgen.authorization.latest.ParameterValuesValueArgs(
+                "prefix": azure_nextgen.authorization.ParameterValuesValueArgs(
                     value="[parameters('namePrefix')]",
                 ),
-                "suffix": azure_nextgen.authorization.latest.ParameterValuesValueArgs(
+                "suffix": azure_nextgen.authorization.ParameterValuesValueArgs(
                     value="-LC",
                 ),
             },
@@ -155,7 +155,7 @@ policy_set_definition = azure_nextgen.authorization.latest.PolicySetDefinition("
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const policySetDefinition = new azure_nextgen.authorization.latest.PolicySetDefinition("policySetDefinition", {
+const policySetDefinition = new azure_nextgen.authorization.PolicySetDefinition("policySetDefinition", {
     description: "Policies to enforce low cost storage SKUs",
     displayName: "Cost Management",
     metadata: {
@@ -213,7 +213,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var policySetDefinition = new AzureNextGen.Authorization.Latest.PolicySetDefinition("policySetDefinition", new AzureNextGen.Authorization.Latest.PolicySetDefinitionArgs
+        var policySetDefinition = new AzureNextGen.Authorization..PolicySetDefinition("policySetDefinition", new AzureNextGen.Authorization..PolicySetDefinitionArgs
         {
             Description = "Policies to enforce low cost storage SKUs",
             DisplayName = "Cost Management",
@@ -223,13 +223,13 @@ class MyStack : Stack
             },
             PolicyDefinitionGroups = 
             {
-                new AzureNextGen.Authorization.Latest.Inputs.PolicyDefinitionGroupArgs
+                new AzureNextGen.Authorization..Inputs.PolicyDefinitionGroupArgs
                 {
                     Description = "Policies designed to control spend within a subscription.",
                     DisplayName = "Cost Management Policies",
                     Name = "CostSaving",
                 },
-                new AzureNextGen.Authorization.Latest.Inputs.PolicyDefinitionGroupArgs
+                new AzureNextGen.Authorization..Inputs.PolicyDefinitionGroupArgs
                 {
                     Description = "Policies that help enforce resource organization standards within a subscription.",
                     DisplayName = "Organizational Policies",
@@ -238,7 +238,7 @@ class MyStack : Stack
             },
             PolicyDefinitions = 
             {
-                new AzureNextGen.Authorization.Latest.Inputs.PolicyDefinitionReferenceArgs
+                new AzureNextGen.Authorization..Inputs.PolicyDefinitionReferenceArgs
                 {
                     GroupNames = 
                     {
@@ -246,7 +246,7 @@ class MyStack : Stack
                     },
                     Parameters = 
                     {
-                        { "listOfAllowedSKUs", new AzureNextGen.Authorization.Latest.Inputs.ParameterValuesValueArgs
+                        { "listOfAllowedSKUs", new AzureNextGen.Authorization..Inputs.ParameterValuesValueArgs
                         {
                             Value = 
                             {
@@ -258,7 +258,7 @@ class MyStack : Stack
                     PolicyDefinitionId = "/subscriptions/ae640e6b-ba3e-4256-9d62-2993eecfa6f2/providers/Microsoft.Authorization/policyDefinitions/7433c107-6db4-4ad1-b57a-a76dce0154a1",
                     PolicyDefinitionReferenceId = "Limit_Skus",
                 },
-                new AzureNextGen.Authorization.Latest.Inputs.PolicyDefinitionReferenceArgs
+                new AzureNextGen.Authorization..Inputs.PolicyDefinitionReferenceArgs
                 {
                     GroupNames = 
                     {
@@ -266,11 +266,11 @@ class MyStack : Stack
                     },
                     Parameters = 
                     {
-                        { "prefix", new AzureNextGen.Authorization.Latest.Inputs.ParameterValuesValueArgs
+                        { "prefix", new AzureNextGen.Authorization..Inputs.ParameterValuesValueArgs
                         {
                             Value = "DeptA",
                         } },
-                        { "suffix", new AzureNextGen.Authorization.Latest.Inputs.ParameterValuesValueArgs
+                        { "suffix", new AzureNextGen.Authorization..Inputs.ParameterValuesValueArgs
                         {
                             Value = "-LC",
                         } },
@@ -299,29 +299,29 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-policy_set_definition = azure_nextgen.authorization.latest.PolicySetDefinition("policySetDefinition",
+policy_set_definition = azure_nextgen.authorization.PolicySetDefinition("policySetDefinition",
     description="Policies to enforce low cost storage SKUs",
     display_name="Cost Management",
     metadata={
         "category": "Cost Management",
     },
     policy_definition_groups=[
-        azure_nextgen.authorization.latest.PolicyDefinitionGroupArgs(
+        azure_nextgen.authorization.PolicyDefinitionGroupArgs(
             description="Policies designed to control spend within a subscription.",
             display_name="Cost Management Policies",
             name="CostSaving",
         ),
-        azure_nextgen.authorization.latest.PolicyDefinitionGroupArgs(
+        azure_nextgen.authorization.PolicyDefinitionGroupArgs(
             description="Policies that help enforce resource organization standards within a subscription.",
             display_name="Organizational Policies",
             name="Organizational",
         ),
     ],
     policy_definitions=[
-        azure_nextgen.authorization.latest.PolicyDefinitionReferenceArgs(
+        azure_nextgen.authorization.PolicyDefinitionReferenceArgs(
             group_names=["CostSaving"],
             parameters={
-                "listOfAllowedSKUs": azure_nextgen.authorization.latest.ParameterValuesValueArgs(
+                "listOfAllowedSKUs": azure_nextgen.authorization.ParameterValuesValueArgs(
                     value=[
                         "Standard_GRS",
                         "Standard_LRS",
@@ -331,13 +331,13 @@ policy_set_definition = azure_nextgen.authorization.latest.PolicySetDefinition("
             policy_definition_id="/subscriptions/ae640e6b-ba3e-4256-9d62-2993eecfa6f2/providers/Microsoft.Authorization/policyDefinitions/7433c107-6db4-4ad1-b57a-a76dce0154a1",
             policy_definition_reference_id="Limit_Skus",
         ),
-        azure_nextgen.authorization.latest.PolicyDefinitionReferenceArgs(
+        azure_nextgen.authorization.PolicyDefinitionReferenceArgs(
             group_names=["Organizational"],
             parameters={
-                "prefix": azure_nextgen.authorization.latest.ParameterValuesValueArgs(
+                "prefix": azure_nextgen.authorization.ParameterValuesValueArgs(
                     value="DeptA",
                 ),
-                "suffix": azure_nextgen.authorization.latest.ParameterValuesValueArgs(
+                "suffix": azure_nextgen.authorization.ParameterValuesValueArgs(
                     value="-LC",
                 ),
             },
@@ -357,7 +357,7 @@ policy_set_definition = azure_nextgen.authorization.latest.PolicySetDefinition("
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const policySetDefinition = new azure_nextgen.authorization.latest.PolicySetDefinition("policySetDefinition", {
+const policySetDefinition = new azure_nextgen.authorization.PolicySetDefinition("policySetDefinition", {
     description: "Policies to enforce low cost storage SKUs",
     displayName: "Cost Management",
     metadata: {
@@ -599,7 +599,7 @@ The PolicySetDefinition resource accepts the following [input]({{< relref "/docs
 <a href="#policydefinitions_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Definitions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policydefinitionreference">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Authorization.<wbr>Inputs.<wbr>Policy<wbr>Definition<wbr>Reference<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#policydefinitionreference">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Authorization..<wbr>Inputs.<wbr>Policy<wbr>Definition<wbr>Reference<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}An array of policy definition references.{{% /md %}}</dd>
     <dt class="property-required"
@@ -644,7 +644,7 @@ The PolicySetDefinition resource accepts the following [input]({{< relref "/docs
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Authorization.<wbr>Inputs.<wbr>Parameter<wbr>Definitions<wbr>Value<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Authorization..<wbr>Inputs.<wbr>Parameter<wbr>Definitions<wbr>Value<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}The policy set definition parameters that can be used in policy definition references.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -653,7 +653,7 @@ The PolicySetDefinition resource accepts the following [input]({{< relref "/docs
 <a href="#policydefinitiongroups_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Definition<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policydefinitiongroup">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Authorization.<wbr>Inputs.<wbr>Policy<wbr>Definition<wbr>Group<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#policydefinitiongroup">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Authorization..<wbr>Inputs.<wbr>Policy<wbr>Definition<wbr>Group<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The metadata describing groups of policy definition references within the policy set definition.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -662,7 +662,7 @@ The PolicySetDefinition resource accepts the following [input]({{< relref "/docs
 <a href="#policytype_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#policytype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Authorization.<wbr>Policy<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#policytype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Authorization..<wbr>Policy<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of policy definition. Possible values are NotSpecified, BuiltIn, Custom, and Static.{{% /md %}}</dd>
 </dl>
@@ -1080,7 +1080,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metadata_csharp" style="color: inherit; text-decoration: inherit;">Metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#parameterdefinitionsvaluemetadata">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Authorization.<wbr>Inputs.<wbr>Parameter<wbr>Definitions<wbr>Value<wbr>Metadata<wbr>Args</a></span>
+        <span class="property-type"><a href="#parameterdefinitionsvaluemetadata">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Authorization..<wbr>Inputs.<wbr>Parameter<wbr>Definitions<wbr>Value<wbr>Metadata<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}General metadata for the parameter.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1089,7 +1089,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#parametertype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Authorization.<wbr>Parameter<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#parametertype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Authorization..<wbr>Parameter<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The data type of the parameter.{{% /md %}}</dd>
 </dl>
@@ -1420,7 +1420,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metadata_csharp" style="color: inherit; text-decoration: inherit;">Metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#parameterdefinitionsvalueresponsemetadata">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Authorization.<wbr>Inputs.<wbr>Parameter<wbr>Definitions<wbr>Value<wbr>Response<wbr>Metadata<wbr>Args</a></span>
+        <span class="property-type"><a href="#parameterdefinitionsvalueresponsemetadata">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Authorization..<wbr>Inputs.<wbr>Parameter<wbr>Definitions<wbr>Value<wbr>Response<wbr>Metadata<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}General metadata for the parameter.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2374,7 +2374,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Authorization.<wbr>Inputs.<wbr>Parameter<wbr>Values<wbr>Value<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Authorization..<wbr>Inputs.<wbr>Parameter<wbr>Values<wbr>Value<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}The parameter values for the referenced policy rule. The keys are the parameter names.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2544,7 +2544,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Authorization.<wbr>Inputs.<wbr>Parameter<wbr>Values<wbr>Value<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Authorization..<wbr>Inputs.<wbr>Parameter<wbr>Values<wbr>Value<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}The parameter values for the referenced policy rule. The keys are the parameter names.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2744,7 +2744,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:authorization/latest:PolicySetDefinition CostManagement /subscriptions/ae640e6b-ba3e-4256-9d62-2993eecfa6f2/providers/Microsoft.Authorization/policySetDefinitions/CostManagement 
+$ pulumi import azure-nextgen:authorization:PolicySetDefinition CostManagement /subscriptions/ae640e6b-ba3e-4256-9d62-2993eecfa6f2/providers/Microsoft.Authorization/policySetDefinitions/CostManagement 
 ```
 
 

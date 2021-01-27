@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.operationalinsights.Query resour
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 A Log Analytics QueryPack-Query definition.
+API Version: 2019-09-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var query = new AzureNextGen.OperationalInsights.V20190901Preview.Query("query", new AzureNextGen.OperationalInsights.V20190901Preview.QueryArgs
+        var query = new AzureNextGen.OperationalInsights..Query("query", new AzureNextGen.OperationalInsights..QueryArgs
         {
             Body = @"let newExceptionsTimeRange = 1d;
 let timeRangeToCheckBefore = 7d;
@@ -45,7 +46,7 @@ exceptions
             DisplayName = "Exceptions - New in the last 24 hours",
             Id = "a449f8af-8e64-4b3a-9b16-5a7165ff98c4",
             QueryPackName = "my-querypack",
-            Related = new AzureNextGen.OperationalInsights.V20190901Preview.Inputs.LogAnalyticsQueryPackQueryPropertiesRelatedArgs
+            Related = new AzureNextGen.OperationalInsights..Inputs.LogAnalyticsQueryPackQueryPropertiesRelatedArgs
             {
                 Categories = 
                 {
@@ -79,7 +80,7 @@ exceptions
 package main
 
 import (
-	operationalinsights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/operationalinsights/v20190901preview"
+	operationalinsights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/operationalinsights"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -123,7 +124,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-query = azure_nextgen.operationalinsights.v20190901preview.Query("query",
+query = azure_nextgen.operationalinsights.Query("query",
     body="""let newExceptionsTimeRange = 1d;
 let timeRangeToCheckBefore = 7d;
 exceptions
@@ -141,7 +142,7 @@ exceptions
     display_name="Exceptions - New in the last 24 hours",
     id="a449f8af-8e64-4b3a-9b16-5a7165ff98c4",
     query_pack_name="my-querypack",
-    related=azure_nextgen.operationalinsights.v20190901preview.LogAnalyticsQueryPackQueryPropertiesRelatedArgs(
+    related=azure_nextgen.operationalinsights.LogAnalyticsQueryPackQueryPropertiesRelatedArgs(
         categories=["analytics"],
     ),
     resource_group_name="my-resource-group",
@@ -160,7 +161,7 @@ exceptions
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const query = new azure_nextgen.operationalinsights.v20190901preview.Query("query", {
+const query = new azure_nextgen.operationalinsights.Query("query", {
     body: `let newExceptionsTimeRange = 1d;
 let timeRangeToCheckBefore = 7d;
 exceptions
@@ -444,7 +445,7 @@ The Query resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#related_csharp" style="color: inherit; text-decoration: inherit;">Related</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loganalyticsquerypackquerypropertiesrelated">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Operational<wbr>Insights.<wbr>Inputs.<wbr>Log<wbr>Analytics<wbr>Query<wbr>Pack<wbr>Query<wbr>Properties<wbr>Related<wbr>Args</a></span>
+        <span class="property-type"><a href="#loganalyticsquerypackquerypropertiesrelated">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Operational<wbr>Insights..<wbr>Inputs.<wbr>Log<wbr>Analytics<wbr>Query<wbr>Pack<wbr>Query<wbr>Properties<wbr>Related<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The related metadata items for the function.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -763,7 +764,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#systemdata_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Operational<wbr>Insights.<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
+        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Operational<wbr>Insights..<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Read only system data{{% /md %}}</dd>
     <dt class="property-"
@@ -1528,7 +1529,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:operationalinsights/v20190901preview:Query a449f8af-8e64-4b3a-9b16-5a7165ff98c4 /subscriptions/86dc51d3-92ed-4d7e-947a-775ea79b4918/resourceGroups/my-resource-group/providers/microsoft.operationalinsights/queryPacks/my-querypack/queries/a449f8af-8e64-4b3a-9b16-5a7165ff98c4 
+$ pulumi import azure-nextgen:operationalinsights:Query a449f8af-8e64-4b3a-9b16-5a7165ff98c4 /subscriptions/86dc51d3-92ed-4d7e-947a-775ea79b4918/resourceGroups/my-resource-group/providers/microsoft.operationalinsights/queryPacks/my-querypack/queries/a449f8af-8e64-4b3a-9b16-5a7165ff98c4 
 ```
 
 

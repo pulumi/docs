@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.apimanagement.ApiOperation resou
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Api Operation details.
-Latest API Version: 2019-12-01.
+API Version: 2019-12-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,21 +27,21 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var apiOperation = new AzureNextGen.ApiManagement.Latest.ApiOperation("apiOperation", new AzureNextGen.ApiManagement.Latest.ApiOperationArgs
+        var apiOperation = new AzureNextGen.ApiManagement..ApiOperation("apiOperation", new AzureNextGen.ApiManagement..ApiOperationArgs
         {
             ApiId = "PetStoreTemplate2",
             Description = "This can only be done by the logged in user.",
             DisplayName = "createUser2",
             Method = "POST",
             OperationId = "newoperations",
-            Request = new AzureNextGen.ApiManagement.Latest.Inputs.RequestContractArgs
+            Request = new AzureNextGen.ApiManagement..Inputs.RequestContractArgs
             {
                 Description = "Created user object",
                 Headers = {},
                 QueryParameters = {},
                 Representations = 
                 {
-                    new AzureNextGen.ApiManagement.Latest.Inputs.RepresentationContractArgs
+                    new AzureNextGen.ApiManagement..Inputs.RepresentationContractArgs
                     {
                         ContentType = "application/json",
                         SchemaId = "592f6c1d0af5840ca8897f0c",
@@ -52,17 +52,17 @@ class MyStack : Stack
             ResourceGroupName = "rg1",
             Responses = 
             {
-                new AzureNextGen.ApiManagement.Latest.Inputs.ResponseContractArgs
+                new AzureNextGen.ApiManagement..Inputs.ResponseContractArgs
                 {
                     Description = "successful operation",
                     Headers = {},
                     Representations = 
                     {
-                        new AzureNextGen.ApiManagement.Latest.Inputs.RepresentationContractArgs
+                        new AzureNextGen.ApiManagement..Inputs.RepresentationContractArgs
                         {
                             ContentType = "application/xml",
                         },
-                        new AzureNextGen.ApiManagement.Latest.Inputs.RepresentationContractArgs
+                        new AzureNextGen.ApiManagement..Inputs.RepresentationContractArgs
                         {
                             ContentType = "application/json",
                         },
@@ -88,7 +88,7 @@ class MyStack : Stack
 package main
 
 import (
-	apimanagement "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/apimanagement/latest"
+	apimanagement "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/apimanagement"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -149,31 +149,31 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-api_operation = azure_nextgen.apimanagement.latest.ApiOperation("apiOperation",
+api_operation = azure_nextgen.apimanagement.ApiOperation("apiOperation",
     api_id="PetStoreTemplate2",
     description="This can only be done by the logged in user.",
     display_name="createUser2",
     method="POST",
     operation_id="newoperations",
-    request=azure_nextgen.apimanagement.latest.RequestContractArgs(
+    request=azure_nextgen.apimanagement.RequestContractArgs(
         description="Created user object",
         headers=[],
         query_parameters=[],
-        representations=[azure_nextgen.apimanagement.latest.RepresentationContractArgs(
+        representations=[azure_nextgen.apimanagement.RepresentationContractArgs(
             content_type="application/json",
             schema_id="592f6c1d0af5840ca8897f0c",
             type_name="User",
         )],
     ),
     resource_group_name="rg1",
-    responses=[azure_nextgen.apimanagement.latest.ResponseContractArgs(
+    responses=[azure_nextgen.apimanagement.ResponseContractArgs(
         description="successful operation",
         headers=[],
         representations=[
-            azure_nextgen.apimanagement.latest.RepresentationContractArgs(
+            azure_nextgen.apimanagement.RepresentationContractArgs(
                 content_type="application/xml",
             ),
-            azure_nextgen.apimanagement.latest.RepresentationContractArgs(
+            azure_nextgen.apimanagement.RepresentationContractArgs(
                 content_type="application/json",
             ),
         ],
@@ -193,7 +193,7 @@ api_operation = azure_nextgen.apimanagement.latest.ApiOperation("apiOperation",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const apiOperation = new azure_nextgen.apimanagement.latest.ApiOperation("apiOperation", {
+const apiOperation = new azure_nextgen.apimanagement.ApiOperation("apiOperation", {
     apiId: "PetStoreTemplate2",
     description: "This can only be done by the logged in user.",
     displayName: "createUser2",
@@ -502,7 +502,7 @@ The ApiOperation resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#request_csharp" style="color: inherit; text-decoration: inherit;">Request</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#requestcontract">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Request<wbr>Contract<wbr>Args</a></span>
+        <span class="property-type"><a href="#requestcontract">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management..<wbr>Inputs.<wbr>Request<wbr>Contract<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An entity containing request details.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -511,7 +511,7 @@ The ApiOperation resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#responses_csharp" style="color: inherit; text-decoration: inherit;">Responses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#responsecontract">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Response<wbr>Contract<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#responsecontract">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management..<wbr>Inputs.<wbr>Response<wbr>Contract<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Array of Operation responses.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -520,7 +520,7 @@ The ApiOperation resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#templateparameters_csharp" style="color: inherit; text-decoration: inherit;">Template<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#parametercontract">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Parameter<wbr>Contract<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#parametercontract">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management..<wbr>Inputs.<wbr>Parameter<wbr>Contract<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Collection of URL template parameters.{{% /md %}}</dd>
 </dl>
@@ -1521,7 +1521,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#formparameters_csharp" style="color: inherit; text-decoration: inherit;">Form<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#parametercontract">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Parameter<wbr>Contract<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#parametercontract">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management..<wbr>Inputs.<wbr>Parameter<wbr>Contract<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Collection of form parameters. Required if 'contentType' value is either 'application/x-www-form-urlencoded' or 'multipart/form-data'..{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1727,7 +1727,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#formparameters_csharp" style="color: inherit; text-decoration: inherit;">Form<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#parametercontractresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Parameter<wbr>Contract<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#parametercontractresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management..<wbr>Inputs.<wbr>Parameter<wbr>Contract<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Collection of form parameters. Required if 'contentType' value is either 'application/x-www-form-urlencoded' or 'multipart/form-data'..{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1933,7 +1933,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#headers_csharp" style="color: inherit; text-decoration: inherit;">Headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#parametercontract">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Parameter<wbr>Contract<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#parametercontract">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management..<wbr>Inputs.<wbr>Parameter<wbr>Contract<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Collection of operation request headers.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1942,7 +1942,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#queryparameters_csharp" style="color: inherit; text-decoration: inherit;">Query<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#parametercontract">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Parameter<wbr>Contract<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#parametercontract">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management..<wbr>Inputs.<wbr>Parameter<wbr>Contract<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Collection of operation request query parameters.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1951,7 +1951,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#representations_csharp" style="color: inherit; text-decoration: inherit;">Representations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#representationcontract">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Representation<wbr>Contract<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#representationcontract">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management..<wbr>Inputs.<wbr>Representation<wbr>Contract<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Collection of operation request representations.{{% /md %}}</dd>
 </dl>
@@ -2103,7 +2103,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#headers_csharp" style="color: inherit; text-decoration: inherit;">Headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#parametercontractresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Parameter<wbr>Contract<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#parametercontractresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management..<wbr>Inputs.<wbr>Parameter<wbr>Contract<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Collection of operation request headers.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2112,7 +2112,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#queryparameters_csharp" style="color: inherit; text-decoration: inherit;">Query<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#parametercontractresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Parameter<wbr>Contract<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#parametercontractresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management..<wbr>Inputs.<wbr>Parameter<wbr>Contract<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Collection of operation request query parameters.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2121,7 +2121,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#representations_csharp" style="color: inherit; text-decoration: inherit;">Representations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#representationcontractresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Representation<wbr>Contract<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#representationcontractresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management..<wbr>Inputs.<wbr>Representation<wbr>Contract<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Collection of operation request representations.{{% /md %}}</dd>
 </dl>
@@ -2282,7 +2282,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#headers_csharp" style="color: inherit; text-decoration: inherit;">Headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#parametercontract">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Parameter<wbr>Contract<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#parametercontract">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management..<wbr>Inputs.<wbr>Parameter<wbr>Contract<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Collection of operation response headers.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2291,7 +2291,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#representations_csharp" style="color: inherit; text-decoration: inherit;">Representations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#representationcontract">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Representation<wbr>Contract<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#representationcontract">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management..<wbr>Inputs.<wbr>Representation<wbr>Contract<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Collection of operation response representations.{{% /md %}}</dd>
 </dl>
@@ -2452,7 +2452,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#headers_csharp" style="color: inherit; text-decoration: inherit;">Headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#parametercontractresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Parameter<wbr>Contract<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#parametercontractresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management..<wbr>Inputs.<wbr>Parameter<wbr>Contract<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Collection of operation response headers.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2461,7 +2461,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#representations_csharp" style="color: inherit; text-decoration: inherit;">Representations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#representationcontractresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Representation<wbr>Contract<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#representationcontractresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management..<wbr>Inputs.<wbr>Representation<wbr>Contract<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Collection of operation response representations.{{% /md %}}</dd>
 </dl>
@@ -2598,7 +2598,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:apimanagement/latest:ApiOperation newoperations /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/apis/PetStoreTemplate2/operations/newoperations 
+$ pulumi import azure-nextgen:apimanagement:ApiOperation newoperations /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/apis/PetStoreTemplate2/operations/newoperations 
 ```
 
 

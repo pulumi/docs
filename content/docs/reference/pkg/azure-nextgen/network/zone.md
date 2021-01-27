@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.network.Zone resource with examp
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Describes a DNS zone.
-Latest API Version: 2018-05-01.
+API Version: 2018-05-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var zone = new AzureNextGen.Network.Latest.Zone("zone", new AzureNextGen.Network.Latest.ZoneArgs
+        var zone = new AzureNextGen.Network..Zone("zone", new AzureNextGen.Network..ZoneArgs
         {
             Location = "Global",
             ResourceGroupName = "rg1",
@@ -51,7 +51,7 @@ class MyStack : Stack
 package main
 
 import (
-	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network/latest"
+	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -82,7 +82,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-zone = azure_nextgen.network.latest.Zone("zone",
+zone = azure_nextgen.network.Zone("zone",
     location="Global",
     resource_group_name="rg1",
     tags={
@@ -100,7 +100,7 @@ zone = azure_nextgen.network.latest.Zone("zone",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const zone = new azure_nextgen.network.latest.Zone("zone", {
+const zone = new azure_nextgen.network.Zone("zone", {
     location: "Global",
     resourceGroupName: "rg1",
     tags: {
@@ -338,7 +338,7 @@ The Zone resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#registrationvirtualnetworks_csharp" style="color: inherit; text-decoration: inherit;">Registration<wbr>Virtual<wbr>Networks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#subresource">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of references to virtual networks that register hostnames in this DNS zone. This is a only when ZoneType is Private.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -347,7 +347,7 @@ The Zone resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#resolutionvirtualnetworks_csharp" style="color: inherit; text-decoration: inherit;">Resolution<wbr>Virtual<wbr>Networks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#subresource">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of references to virtual networks that resolve records in this DNS zone. This is a only when ZoneType is Private.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -365,7 +365,7 @@ The Zone resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#zonetype_csharp" style="color: inherit; text-decoration: inherit;">Zone<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#zonetype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Zone<wbr>Type</a></span>
+        <span class="property-type"><a href="#zonetype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Zone<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of this DNS zone (Public or Private).{{% /md %}}</dd>
 </dl>
@@ -1065,7 +1065,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:network/latest:Zone zone1 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/dnsZones/zone1 
+$ pulumi import azure-nextgen:network:Zone zone1 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/dnsZones/zone1 
 ```
 
 

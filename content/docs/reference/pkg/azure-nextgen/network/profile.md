@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.network.Profile resource with ex
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Class representing a Traffic Manager profile.
-Latest API Version: 2018-04-01.
+API Version: 2018-04-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,15 +27,15 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var profile = new AzureNextGen.Network.Latest.Profile("profile", new AzureNextGen.Network.Latest.ProfileArgs
+        var profile = new AzureNextGen.Network..Profile("profile", new AzureNextGen.Network..ProfileArgs
         {
-            DnsConfig = new AzureNextGen.Network.Latest.Inputs.DnsConfigArgs
+            DnsConfig = new AzureNextGen.Network..Inputs.DnsConfigArgs
             {
                 RelativeName = "azsmnet6386",
                 Ttl = 35,
             },
             Location = "global",
-            MonitorConfig = new AzureNextGen.Network.Latest.Inputs.MonitorConfigArgs
+            MonitorConfig = new AzureNextGen.Network..Inputs.MonitorConfigArgs
             {
                 Path = "/testpath.aspx",
                 Port = 80,
@@ -60,7 +60,7 @@ class MyStack : Stack
 package main
 
 import (
-	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network/latest"
+	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -99,13 +99,13 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-profile = azure_nextgen.network.latest.Profile("profile",
-    dns_config=azure_nextgen.network.latest.DnsConfigArgs(
+profile = azure_nextgen.network.Profile("profile",
+    dns_config=azure_nextgen.network.DnsConfigArgs(
         relative_name="azsmnet6386",
         ttl=35,
     ),
     location="global",
-    monitor_config=azure_nextgen.network.latest.MonitorConfigArgs(
+    monitor_config=azure_nextgen.network.MonitorConfigArgs(
         path="/testpath.aspx",
         port=80,
         protocol="HTTP",
@@ -125,7 +125,7 @@ profile = azure_nextgen.network.latest.Profile("profile",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const profile = new azure_nextgen.network.latest.Profile("profile", {
+const profile = new azure_nextgen.network.Profile("profile", {
     dnsConfig: {
         relativeName: "azsmnet6386",
         ttl: 35,
@@ -156,20 +156,20 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var profile = new AzureNextGen.Network.Latest.Profile("profile", new AzureNextGen.Network.Latest.ProfileArgs
+        var profile = new AzureNextGen.Network..Profile("profile", new AzureNextGen.Network..ProfileArgs
         {
-            DnsConfig = new AzureNextGen.Network.Latest.Inputs.DnsConfigArgs
+            DnsConfig = new AzureNextGen.Network..Inputs.DnsConfigArgs
             {
                 RelativeName = "azuresdkfornetautoresttrafficmanager6192",
                 Ttl = 35,
             },
             Endpoints = 
             {
-                new AzureNextGen.Network.Latest.Inputs.EndpointArgs
+                new AzureNextGen.Network..Inputs.EndpointArgs
                 {
                     CustomHeaders = 
                     {
-                        new AzureNextGen.Network.Latest.Inputs.EndpointPropertiesCustomHeadersArgs
+                        new AzureNextGen.Network..Inputs.EndpointPropertiesCustomHeadersArgs
                         {
                             Name = "header-2",
                             Value = "value-2-overridden",
@@ -183,16 +183,16 @@ class MyStack : Stack
                 },
             },
             Location = "global",
-            MonitorConfig = new AzureNextGen.Network.Latest.Inputs.MonitorConfigArgs
+            MonitorConfig = new AzureNextGen.Network..Inputs.MonitorConfigArgs
             {
                 CustomHeaders = 
                 {
-                    new AzureNextGen.Network.Latest.Inputs.MonitorConfigCustomHeadersArgs
+                    new AzureNextGen.Network..Inputs.MonitorConfigCustomHeadersArgs
                     {
                         Name = "header-1",
                         Value = "value-1",
                     },
-                    new AzureNextGen.Network.Latest.Inputs.MonitorConfigCustomHeadersArgs
+                    new AzureNextGen.Network..Inputs.MonitorConfigCustomHeadersArgs
                     {
                         Name = "header-2",
                         Value = "value-2",
@@ -200,12 +200,12 @@ class MyStack : Stack
                 },
                 ExpectedStatusCodeRanges = 
                 {
-                    new AzureNextGen.Network.Latest.Inputs.MonitorConfigExpectedStatusCodeRangesArgs
+                    new AzureNextGen.Network..Inputs.MonitorConfigExpectedStatusCodeRangesArgs
                     {
                         Max = 205,
                         Min = 200,
                     },
-                    new AzureNextGen.Network.Latest.Inputs.MonitorConfigExpectedStatusCodeRangesArgs
+                    new AzureNextGen.Network..Inputs.MonitorConfigExpectedStatusCodeRangesArgs
                     {
                         Max = 410,
                         Min = 400,
@@ -238,7 +238,7 @@ class MyStack : Stack
 package main
 
 import (
-	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network/latest"
+	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -316,13 +316,13 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-profile = azure_nextgen.network.latest.Profile("profile",
-    dns_config=azure_nextgen.network.latest.DnsConfigArgs(
+profile = azure_nextgen.network.Profile("profile",
+    dns_config=azure_nextgen.network.DnsConfigArgs(
         relative_name="azuresdkfornetautoresttrafficmanager6192",
         ttl=35,
     ),
-    endpoints=[azure_nextgen.network.latest.EndpointArgs(
-        custom_headers=[azure_nextgen.network.latest.EndpointPropertiesCustomHeadersArgs(
+    endpoints=[azure_nextgen.network.EndpointArgs(
+        custom_headers=[azure_nextgen.network.EndpointPropertiesCustomHeadersArgs(
             name="header-2",
             value="value-2-overridden",
         )],
@@ -333,23 +333,23 @@ profile = azure_nextgen.network.latest.Profile("profile",
         type="Microsoft.network/TrafficManagerProfiles/ExternalEndpoints",
     )],
     location="global",
-    monitor_config=azure_nextgen.network.latest.MonitorConfigArgs(
+    monitor_config=azure_nextgen.network.MonitorConfigArgs(
         custom_headers=[
-            azure_nextgen.network.latest.MonitorConfigCustomHeadersArgs(
+            azure_nextgen.network.MonitorConfigCustomHeadersArgs(
                 name="header-1",
                 value="value-1",
             ),
-            azure_nextgen.network.latest.MonitorConfigCustomHeadersArgs(
+            azure_nextgen.network.MonitorConfigCustomHeadersArgs(
                 name="header-2",
                 value="value-2",
             ),
         ],
         expected_status_code_ranges=[
-            azure_nextgen.network.latest.MonitorConfigExpectedStatusCodeRangesArgs(
+            azure_nextgen.network.MonitorConfigExpectedStatusCodeRangesArgs(
                 max=205,
                 min=200,
             ),
-            azure_nextgen.network.latest.MonitorConfigExpectedStatusCodeRangesArgs(
+            azure_nextgen.network.MonitorConfigExpectedStatusCodeRangesArgs(
                 max=410,
                 min=400,
             ),
@@ -377,7 +377,7 @@ profile = azure_nextgen.network.latest.Profile("profile",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const profile = new azure_nextgen.network.latest.Profile("profile", {
+const profile = new azure_nextgen.network.Profile("profile", {
     dnsConfig: {
         relativeName: "azuresdkfornetautoresttrafficmanager6192",
         ttl: 35,
@@ -443,16 +443,16 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var profile = new AzureNextGen.Network.Latest.Profile("profile", new AzureNextGen.Network.Latest.ProfileArgs
+        var profile = new AzureNextGen.Network..Profile("profile", new AzureNextGen.Network..ProfileArgs
         {
-            DnsConfig = new AzureNextGen.Network.Latest.Inputs.DnsConfigArgs
+            DnsConfig = new AzureNextGen.Network..Inputs.DnsConfigArgs
             {
                 RelativeName = "azuresdkfornetautoresttrafficmanager6192",
                 Ttl = 35,
             },
             Endpoints = 
             {
-                new AzureNextGen.Network.Latest.Inputs.EndpointArgs
+                new AzureNextGen.Network..Inputs.EndpointArgs
                 {
                     EndpointLocation = "North Europe",
                     EndpointStatus = "Enabled",
@@ -462,7 +462,7 @@ class MyStack : Stack
                 },
             },
             Location = "global",
-            MonitorConfig = new AzureNextGen.Network.Latest.Inputs.MonitorConfigArgs
+            MonitorConfig = new AzureNextGen.Network..Inputs.MonitorConfigArgs
             {
                 IntervalInSeconds = 10,
                 Path = "/testpath.aspx",
@@ -490,7 +490,7 @@ class MyStack : Stack
 package main
 
 import (
-	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network/latest"
+	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -541,12 +541,12 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-profile = azure_nextgen.network.latest.Profile("profile",
-    dns_config=azure_nextgen.network.latest.DnsConfigArgs(
+profile = azure_nextgen.network.Profile("profile",
+    dns_config=azure_nextgen.network.DnsConfigArgs(
         relative_name="azuresdkfornetautoresttrafficmanager6192",
         ttl=35,
     ),
-    endpoints=[azure_nextgen.network.latest.EndpointArgs(
+    endpoints=[azure_nextgen.network.EndpointArgs(
         endpoint_location="North Europe",
         endpoint_status="Enabled",
         name="My external endpoint",
@@ -554,7 +554,7 @@ profile = azure_nextgen.network.latest.Profile("profile",
         type="Microsoft.network/TrafficManagerProfiles/ExternalEndpoints",
     )],
     location="global",
-    monitor_config=azure_nextgen.network.latest.MonitorConfigArgs(
+    monitor_config=azure_nextgen.network.MonitorConfigArgs(
         interval_in_seconds=10,
         path="/testpath.aspx",
         port=80,
@@ -577,7 +577,7 @@ profile = azure_nextgen.network.latest.Profile("profile",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const profile = new azure_nextgen.network.latest.Profile("profile", {
+const profile = new azure_nextgen.network.Profile("profile", {
     dnsConfig: {
         relativeName: "azuresdkfornetautoresttrafficmanager6192",
         ttl: 35,
@@ -815,7 +815,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#dnsconfig_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dnsconfig">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Dns<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#dnsconfig">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Dns<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The DNS settings of the Traffic Manager profile.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -824,7 +824,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#endpoints_csharp" style="color: inherit; text-decoration: inherit;">Endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpoint">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Endpoint<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#endpoint">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Endpoint<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of endpoints in the Traffic Manager profile.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -860,7 +860,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#monitorconfig_csharp" style="color: inherit; text-decoration: inherit;">Monitor<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#monitorconfig">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Monitor<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#monitorconfig">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Monitor<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The endpoint monitoring settings of the Traffic Manager profile.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -878,7 +878,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#profilestatus_csharp" style="color: inherit; text-decoration: inherit;">Profile<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#profilestatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Profile<wbr>Status</a></span>
+        <span class="property-type">string | <a href="#profilestatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Profile<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}The status of the Traffic Manager profile.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -896,7 +896,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#trafficroutingmethod_csharp" style="color: inherit; text-decoration: inherit;">Traffic<wbr>Routing<wbr>Method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#trafficroutingmethod">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Traffic<wbr>Routing<wbr>Method</a></span>
+        <span class="property-type">string | <a href="#trafficroutingmethod">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Traffic<wbr>Routing<wbr>Method</a></span>
     </dt>
     <dd>{{% md %}}The traffic routing method of the Traffic Manager profile.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -905,7 +905,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#trafficviewenrollmentstatus_csharp" style="color: inherit; text-decoration: inherit;">Traffic<wbr>View<wbr>Enrollment<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#trafficviewenrollmentstatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Traffic<wbr>View<wbr>Enrollment<wbr>Status</a></span>
+        <span class="property-type">string | <a href="#trafficviewenrollmentstatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Traffic<wbr>View<wbr>Enrollment<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether Traffic View is 'Enabled' or 'Disabled' for the Traffic Manager profile. Null, indicates 'Disabled'. Enabling this feature will increase the cost of the Traffic Manage profile.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1636,7 +1636,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#customheaders_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointpropertiescustomheaders">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Endpoint<wbr>Properties<wbr>Custom<wbr>Headers<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#endpointpropertiescustomheaders">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Endpoint<wbr>Properties<wbr>Custom<wbr>Headers<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of custom headers.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1654,7 +1654,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpointmonitorstatus_csharp" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Monitor<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#endpointmonitorstatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Endpoint<wbr>Monitor<wbr>Status</a></span>
+        <span class="property-type">string | <a href="#endpointmonitorstatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Endpoint<wbr>Monitor<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}The monitoring status of the endpoint.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1663,7 +1663,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpointstatus_csharp" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#endpointstatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Endpoint<wbr>Status</a></span>
+        <span class="property-type">string | <a href="#endpointstatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Endpoint<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}The status of the endpoint. If the endpoint is Enabled, it is probed for endpoint health and is included in the traffic routing method.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1717,7 +1717,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subnets_csharp" style="color: inherit; text-decoration: inherit;">Subnets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointpropertiessubnets">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Endpoint<wbr>Properties<wbr>Subnets<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#endpointpropertiessubnets">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Endpoint<wbr>Properties<wbr>Subnets<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of subnets, IP addresses, and/or address ranges mapped to this endpoint when using the 'Subnet' traffic routing method. An empty list will match all ranges not covered by other endpoints.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2700,7 +2700,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#customheaders_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointpropertiesresponsecustomheaders">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Endpoint<wbr>Properties<wbr>Response<wbr>Custom<wbr>Headers<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#endpointpropertiesresponsecustomheaders">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Endpoint<wbr>Properties<wbr>Response<wbr>Custom<wbr>Headers<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of custom headers.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2781,7 +2781,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subnets_csharp" style="color: inherit; text-decoration: inherit;">Subnets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointpropertiesresponsesubnets">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Endpoint<wbr>Properties<wbr>Response<wbr>Subnets<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#endpointpropertiesresponsesubnets">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Endpoint<wbr>Properties<wbr>Response<wbr>Subnets<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of subnets, IP addresses, and/or address ranges mapped to this endpoint when using the 'Subnet' traffic routing method. An empty list will match all ranges not covered by other endpoints.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3268,7 +3268,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#customheaders_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#monitorconfigcustomheaders">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Monitor<wbr>Config<wbr>Custom<wbr>Headers<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#monitorconfigcustomheaders">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Monitor<wbr>Config<wbr>Custom<wbr>Headers<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of custom headers.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3277,7 +3277,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expectedstatuscoderanges_csharp" style="color: inherit; text-decoration: inherit;">Expected<wbr>Status<wbr>Code<wbr>Ranges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#monitorconfigexpectedstatuscoderanges">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Monitor<wbr>Config<wbr>Expected<wbr>Status<wbr>Code<wbr>Ranges<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#monitorconfigexpectedstatuscoderanges">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Monitor<wbr>Config<wbr>Expected<wbr>Status<wbr>Code<wbr>Ranges<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of expected status code ranges.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3313,7 +3313,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#profilemonitorstatus_csharp" style="color: inherit; text-decoration: inherit;">Profile<wbr>Monitor<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#profilemonitorstatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Profile<wbr>Monitor<wbr>Status</a></span>
+        <span class="property-type">string | <a href="#profilemonitorstatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Profile<wbr>Monitor<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}The profile-level monitoring status of the Traffic Manager profile.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3322,7 +3322,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protocol_csharp" style="color: inherit; text-decoration: inherit;">Protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#monitorprotocol">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Monitor<wbr>Protocol</a></span>
+        <span class="property-type">string | <a href="#monitorprotocol">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Monitor<wbr>Protocol</a></span>
     </dt>
     <dd>{{% md %}}The protocol (HTTP, HTTPS or TCP) used to probe for endpoint health.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3814,7 +3814,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#customheaders_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#monitorconfigresponsecustomheaders">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Monitor<wbr>Config<wbr>Response<wbr>Custom<wbr>Headers<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#monitorconfigresponsecustomheaders">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Monitor<wbr>Config<wbr>Response<wbr>Custom<wbr>Headers<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of custom headers.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3823,7 +3823,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expectedstatuscoderanges_csharp" style="color: inherit; text-decoration: inherit;">Expected<wbr>Status<wbr>Code<wbr>Ranges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#monitorconfigresponseexpectedstatuscoderanges">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Monitor<wbr>Config<wbr>Response<wbr>Expected<wbr>Status<wbr>Code<wbr>Ranges<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#monitorconfigresponseexpectedstatuscoderanges">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Monitor<wbr>Config<wbr>Response<wbr>Expected<wbr>Status<wbr>Code<wbr>Ranges<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of expected status code ranges.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4608,7 +4608,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:network/latest:Profile azuresdkfornetautoresttrafficmanager6192 /subscriptions/{subscription-id}/resourceGroups/azuresdkfornetautoresttrafficmanager2583/providers/Microsoft.Network/trafficManagerProfiles/azuresdkfornetautoresttrafficmanager6192 
+$ pulumi import azure-nextgen:network:Profile azuresdkfornetautoresttrafficmanager6192 /subscriptions/{subscription-id}/resourceGroups/azuresdkfornetautoresttrafficmanager2583/providers/Microsoft.Network/trafficManagerProfiles/azuresdkfornetautoresttrafficmanager6192 
 ```
 
 

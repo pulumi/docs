@@ -215,7 +215,7 @@ The following output properties are available:
 <a href="#portvif_csharp" style="color: inherit; text-decoration: inherit;">Port<wbr>Vif</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workloadnetworksegmentportvifresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>AVS.<wbr>Outputs.<wbr>Workload<wbr>Network<wbr>Segment<wbr>Port<wbr>Vif<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#workloadnetworksegmentportvifresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>AVS..<wbr>Outputs.<wbr>Workload<wbr>Network<wbr>Segment<wbr>Port<wbr>Vif<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Port Vif which segment is associated with.{{% /md %}}</dd>
     <dt class="property-"
@@ -278,7 +278,7 @@ The following output properties are available:
 <a href="#subnet_csharp" style="color: inherit; text-decoration: inherit;">Subnet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workloadnetworksegmentsubnetresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>AVS.<wbr>Outputs.<wbr>Workload<wbr>Network<wbr>Segment<wbr>Subnet<wbr>Response</a></span>
+        <span class="property-type"><a href="#workloadnetworksegmentsubnetresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>AVS..<wbr>Outputs.<wbr>Workload<wbr>Network<wbr>Segment<wbr>Subnet<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Subnet which to connect segment to.{{% /md %}}</dd>
 </dl>

@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.documentdb.SqlResourceSqlRoleDef
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 An Azure Cosmos DB SQL Role Definition.
+API Version: 2020-06-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var sqlResourceSqlRoleDefinition = new AzureNextGen.DocumentDB.V20200601Preview.SqlResourceSqlRoleDefinition("sqlResourceSqlRoleDefinition", new AzureNextGen.DocumentDB.V20200601Preview.SqlResourceSqlRoleDefinitionArgs
+        var sqlResourceSqlRoleDefinition = new AzureNextGen.DocumentDB..SqlResourceSqlRoleDefinition("sqlResourceSqlRoleDefinition", new AzureNextGen.DocumentDB..SqlResourceSqlRoleDefinitionArgs
         {
             AccountName = "myAccountName",
             AssignableScopes = 
@@ -36,7 +37,7 @@ class MyStack : Stack
             },
             Permissions = 
             {
-                new AzureNextGen.DocumentDB.V20200601Preview.Inputs.PermissionArgs
+                new AzureNextGen.DocumentDB..Inputs.PermissionArgs
                 {
                     DataActions = 
                     {
@@ -65,7 +66,7 @@ class MyStack : Stack
 package main
 
 import (
-	documentdb "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/documentdb/v20200601preview"
+	documentdb "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/documentdb"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -108,13 +109,13 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-sql_resource_sql_role_definition = azure_nextgen.documentdb.v20200601preview.SqlResourceSqlRoleDefinition("sqlResourceSqlRoleDefinition",
+sql_resource_sql_role_definition = azure_nextgen.documentdb.SqlResourceSqlRoleDefinition("sqlResourceSqlRoleDefinition",
     account_name="myAccountName",
     assignable_scopes=[
         "/subscriptions/mySubscriptionId/resourceGroups/myResourceGroupName/providers/Microsoft.DocumentDB/databaseAccounts/myAccountName/dbs/sales",
         "/subscriptions/mySubscriptionId/resourceGroups/myResourceGroupName/providers/Microsoft.DocumentDB/databaseAccounts/myAccountName/dbs/purchases",
     ],
-    permissions=[azure_nextgen.documentdb.v20200601preview.PermissionArgs(
+    permissions=[azure_nextgen.documentdb.PermissionArgs(
         data_actions=[
             "Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers/items/create",
             "Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers/items/read",
@@ -136,7 +137,7 @@ sql_resource_sql_role_definition = azure_nextgen.documentdb.v20200601preview.Sql
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const sqlResourceSqlRoleDefinition = new azure_nextgen.documentdb.v20200601preview.SqlResourceSqlRoleDefinition("sqlResourceSqlRoleDefinition", {
+const sqlResourceSqlRoleDefinition = new azure_nextgen.documentdb.SqlResourceSqlRoleDefinition("sqlResourceSqlRoleDefinition", {
     accountName: "myAccountName",
     assignableScopes: [
         "/subscriptions/mySubscriptionId/resourceGroups/myResourceGroupName/providers/Microsoft.DocumentDB/databaseAccounts/myAccountName/dbs/sales",
@@ -384,7 +385,7 @@ The SqlResourceSqlRoleDefinition resource accepts the following [input]({{< relr
 <a href="#permissions_csharp" style="color: inherit; text-decoration: inherit;">Permissions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#permission">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Permission<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#permission">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB..<wbr>Inputs.<wbr>Permission<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The set of operations allowed through this Role Definition.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -402,7 +403,7 @@ The SqlResourceSqlRoleDefinition resource accepts the following [input]({{< relr
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#roledefinitiontype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB.<wbr>Role<wbr>Definition<wbr>Type</a></span>
+        <span class="property-type"><a href="#roledefinitiontype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB..<wbr>Role<wbr>Definition<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether the Role Definition was built-in or user created.{{% /md %}}</dd>
 </dl>
@@ -967,7 +968,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:documentdb/v20200601preview:SqlResourceSqlRoleDefinition myRoleDefinitionId /subscriptions/mySubscriptionId/resourceGroups/myResourceGroupName/providers/Microsoft.DocumentDB/databaseAccounts/myAccountName/sqlRoleDefinitions/myRoleDefinitionId 
+$ pulumi import azure-nextgen:documentdb:SqlResourceSqlRoleDefinition myRoleDefinitionId /subscriptions/mySubscriptionId/resourceGroups/myResourceGroupName/providers/Microsoft.DocumentDB/databaseAccounts/myAccountName/sqlRoleDefinitions/myRoleDefinitionId 
 ```
 
 

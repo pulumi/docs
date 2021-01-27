@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.relay.HybridConnectionAuthorizat
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Description of a namespace authorization rule.
-Latest API Version: 2017-04-01.
+API Version: 2017-04-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var hybridConnectionAuthorizationRule = new AzureNextGen.Relay.Latest.HybridConnectionAuthorizationRule("hybridConnectionAuthorizationRule", new AzureNextGen.Relay.Latest.HybridConnectionAuthorizationRuleArgs
+        var hybridConnectionAuthorizationRule = new AzureNextGen.Relay..HybridConnectionAuthorizationRule("hybridConnectionAuthorizationRule", new AzureNextGen.Relay..HybridConnectionAuthorizationRuleArgs
         {
             AuthorizationRuleName = "example-RelayAuthRules-01",
             HybridConnectionName = "example-Relay-Hybrid-01",
@@ -57,7 +57,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-hybrid_connection_authorization_rule = azure_nextgen.relay.latest.HybridConnectionAuthorizationRule("hybridConnectionAuthorizationRule",
+hybrid_connection_authorization_rule = azure_nextgen.relay.HybridConnectionAuthorizationRule("hybridConnectionAuthorizationRule",
     authorization_rule_name="example-RelayAuthRules-01",
     hybrid_connection_name="example-Relay-Hybrid-01",
     namespace_name="example-RelayNamespace-01",
@@ -77,7 +77,7 @@ hybrid_connection_authorization_rule = azure_nextgen.relay.latest.HybridConnecti
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const hybridConnectionAuthorizationRule = new azure_nextgen.relay.latest.HybridConnectionAuthorizationRule("hybridConnectionAuthorizationRule", {
+const hybridConnectionAuthorizationRule = new azure_nextgen.relay.HybridConnectionAuthorizationRule("hybridConnectionAuthorizationRule", {
     authorizationRuleName: "example-RelayAuthRules-01",
     hybridConnectionName: "example-Relay-Hybrid-01",
     namespaceName: "example-RelayNamespace-01",
@@ -317,7 +317,7 @@ The HybridConnectionAuthorizationRule resource accepts the following [input]({{<
 <a href="#rights_csharp" style="color: inherit; text-decoration: inherit;">Rights</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accessrights">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Relay.<wbr>Access<wbr>Rights&gt;</a></span>
+        <span class="property-type"><a href="#accessrights">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Relay..<wbr>Access<wbr>Rights&gt;</a></span>
     </dt>
     <dd>{{% md %}}The rights associated with the rule.{{% /md %}}</dd>
 </dl>
@@ -676,7 +676,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:relay/latest:HybridConnectionAuthorizationRule example-RelayAuthRules-01 /subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/resourcegroup/providers/Microsoft.Relay/namespaces/example-RelayNamespace-01/HybridConnections/example-Relay-Hybrid-01/AuthorizationRules/example-RelayAuthRules-01 
+$ pulumi import azure-nextgen:relay:HybridConnectionAuthorizationRule example-RelayAuthRules-01 /subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/resourcegroup/providers/Microsoft.Relay/namespaces/example-RelayNamespace-01/HybridConnections/example-Relay-Hybrid-01/AuthorizationRules/example-RelayAuthRules-01 
 ```
 
 

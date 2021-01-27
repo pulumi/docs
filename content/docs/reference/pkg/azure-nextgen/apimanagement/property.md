@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.apimanagement.Property resource 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Property details.
-Latest API Version: 2019-01-01.
+API Version: 2019-01-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var property = new AzureNextGen.ApiManagement.Latest.Property("property", new AzureNextGen.ApiManagement.Latest.PropertyArgs
+        var property = new AzureNextGen.ApiManagement..Property("property", new AzureNextGen.ApiManagement..PropertyArgs
         {
             DisplayName = "prop3name",
             PropId = "testprop2",
@@ -55,7 +55,7 @@ class MyStack : Stack
 package main
 
 import (
-	apimanagement "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/apimanagement/latest"
+	apimanagement "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/apimanagement"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -90,7 +90,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-property = azure_nextgen.apimanagement.latest.Property("property",
+property = azure_nextgen.apimanagement.Property("property",
     display_name="prop3name",
     prop_id="testprop2",
     resource_group_name="rg1",
@@ -112,7 +112,7 @@ property = azure_nextgen.apimanagement.latest.Property("property",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const property = new azure_nextgen.apimanagement.latest.Property("property", {
+const property = new azure_nextgen.apimanagement.Property("property", {
     displayName: "prop3name",
     propId: "testprop2",
     resourceGroupName: "rg1",
@@ -735,7 +735,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:apimanagement/latest:Property testprop2 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/properties/testprop2 
+$ pulumi import azure-nextgen:apimanagement:Property testprop2 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/properties/testprop2 
 ```
 
 

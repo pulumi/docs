@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.cdn.CustomDomain resource with e
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Friendly domain name mapping to the endpoint hostname that the customer provides for branding purposes, e.g. www.contoso.com.
-Latest API Version: 2020-09-01.
+API Version: 2020-09-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var customDomain = new AzureNextGen.Cdn.Latest.CustomDomain("customDomain", new AzureNextGen.Cdn.Latest.CustomDomainArgs
+        var customDomain = new AzureNextGen.Cdn..CustomDomain("customDomain", new AzureNextGen.Cdn..CustomDomainArgs
         {
             CustomDomainName = "www-someDomain-net",
             EndpointName = "endpoint1",
@@ -49,7 +49,7 @@ class MyStack : Stack
 package main
 
 import (
-	cdn "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/cdn/latest"
+	cdn "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/cdn"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -79,7 +79,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-custom_domain = azure_nextgen.cdn.latest.CustomDomain("customDomain",
+custom_domain = azure_nextgen.cdn.CustomDomain("customDomain",
     custom_domain_name="www-someDomain-net",
     endpoint_name="endpoint1",
     host_name="www.someDomain.net",
@@ -96,7 +96,7 @@ custom_domain = azure_nextgen.cdn.latest.CustomDomain("customDomain",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const customDomain = new azure_nextgen.cdn.latest.CustomDomain("customDomain", {
+const customDomain = new azure_nextgen.cdn.CustomDomain("customDomain", {
     customDomainName: "www-someDomain-net",
     endpointName: "endpoint1",
     hostName: "www.someDomain.net",
@@ -562,7 +562,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#systemdata_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn.<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
+        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn..<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Read only system data{{% /md %}}</dd>
     <dt class="property-"
@@ -1104,7 +1104,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:cdn/latest:CustomDomain www-someDomain-net /subscriptions/subid/resourcegroups/RG/providers/Microsoft.Cdn/profiles/profile1/endpoints/endpoint1/customdomains/www-someDomain-net 
+$ pulumi import azure-nextgen:cdn:CustomDomain www-someDomain-net /subscriptions/subid/resourcegroups/RG/providers/Microsoft.Cdn/profiles/profile1/endpoints/endpoint1/customdomains/www-someDomain-net 
 ```
 
 

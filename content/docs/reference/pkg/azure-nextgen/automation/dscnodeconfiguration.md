@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.automation.DscNodeConfiguration 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Definition of the dsc node configuration.
-Latest API Version: 2019-06-01.
+API Version: 2019-06-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,10 +27,10 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var dscNodeConfiguration = new AzureNextGen.Automation.Latest.DscNodeConfiguration("dscNodeConfiguration", new AzureNextGen.Automation.Latest.DscNodeConfigurationArgs
+        var dscNodeConfiguration = new AzureNextGen.Automation..DscNodeConfiguration("dscNodeConfiguration", new AzureNextGen.Automation..DscNodeConfigurationArgs
         {
             AutomationAccountName = "myAutomationAccount20",
-            Configuration = new AzureNextGen.Automation.Latest.Inputs.DscConfigurationAssociationPropertyArgs
+            Configuration = new AzureNextGen.Automation..Inputs.DscConfigurationAssociationPropertyArgs
             {
                 Name = "configName",
             },
@@ -38,9 +38,9 @@ class MyStack : Stack
             Name = "configName.nodeConfigName",
             NodeConfigurationName = "configName.nodeConfigName",
             ResourceGroupName = "rg",
-            Source = new AzureNextGen.Automation.Latest.Inputs.ContentSourceArgs
+            Source = new AzureNextGen.Automation..Inputs.ContentSourceArgs
             {
-                Hash = new AzureNextGen.Automation.Latest.Inputs.ContentHashArgs
+                Hash = new AzureNextGen.Automation..Inputs.ContentHashArgs
                 {
                     Algorithm = "sha256",
                     Value = "6DE256A57F01BFA29B88696D5E77A383D6E61484C7686E8DB955FA10ACE9FFE5",
@@ -96,7 +96,7 @@ package main
 import (
 	"fmt"
 
-	automation "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/automation/latest"
+	automation "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/automation"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -138,17 +138,17 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-dsc_node_configuration = azure_nextgen.automation.latest.DscNodeConfiguration("dscNodeConfiguration",
+dsc_node_configuration = azure_nextgen.automation.DscNodeConfiguration("dscNodeConfiguration",
     automation_account_name="myAutomationAccount20",
-    configuration=azure_nextgen.automation.latest.DscConfigurationAssociationPropertyArgs(
+    configuration=azure_nextgen.automation.DscConfigurationAssociationPropertyArgs(
         name="configName",
     ),
     increment_node_configuration_build=True,
     name="configName.nodeConfigName",
     node_configuration_name="configName.nodeConfigName",
     resource_group_name="rg",
-    source=azure_nextgen.automation.latest.ContentSourceArgs(
-        hash=azure_nextgen.automation.latest.ContentHashArgs(
+    source=azure_nextgen.automation.ContentSourceArgs(
+        hash=azure_nextgen.automation.ContentHashArgs(
             algorithm="sha256",
             value="6DE256A57F01BFA29B88696D5E77A383D6E61484C7686E8DB955FA10ACE9FFE5",
         ),
@@ -197,7 +197,7 @@ instance of OMI_ConfigurationDocument
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const dscNodeConfiguration = new azure_nextgen.automation.latest.DscNodeConfiguration("dscNodeConfiguration", {
+const dscNodeConfiguration = new azure_nextgen.automation.DscNodeConfiguration("dscNodeConfiguration", {
     automationAccountName: "myAutomationAccount20",
     configuration: {
         name: "configName",
@@ -449,7 +449,7 @@ The DscNodeConfiguration resource accepts the following [input]({{< relref "/doc
 <a href="#configuration_csharp" style="color: inherit; text-decoration: inherit;">Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dscconfigurationassociationproperty">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automation.<wbr>Inputs.<wbr>Dsc<wbr>Configuration<wbr>Association<wbr>Property<wbr>Args</a></span>
+        <span class="property-type"><a href="#dscconfigurationassociationproperty">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automation..<wbr>Inputs.<wbr>Dsc<wbr>Configuration<wbr>Association<wbr>Property<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the configuration of the node.{{% /md %}}</dd>
     <dt class="property-required"
@@ -476,7 +476,7 @@ The DscNodeConfiguration resource accepts the following [input]({{< relref "/doc
 <a href="#source_csharp" style="color: inherit; text-decoration: inherit;">Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentsource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automation.<wbr>Inputs.<wbr>Content<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#contentsource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automation..<wbr>Inputs.<wbr>Content<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the source.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1073,7 +1073,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hash_csharp" style="color: inherit; text-decoration: inherit;">Hash</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contenthash">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automation.<wbr>Inputs.<wbr>Content<wbr>Hash<wbr>Args</a></span>
+        <span class="property-type"><a href="#contenthash">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automation..<wbr>Inputs.<wbr>Content<wbr>Hash<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the hash.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1082,7 +1082,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#contentsourcetype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automation.<wbr>Content<wbr>Source<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#contentsourcetype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automation..<wbr>Content<wbr>Source<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the content source type.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1399,7 +1399,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:automation/latest:DscNodeConfiguration configName.nodeConfigName /subscriptions/subid/resourceGroups/rg/providers/Microsoft.Automation/automationAccounts/myAutomationAccount20/nodeConfigurations/configName.nodeConfigName 
+$ pulumi import azure-nextgen:automation:DscNodeConfiguration configName.nodeConfigName /subscriptions/subid/resourceGroups/rg/providers/Microsoft.Automation/automationAccounts/myAutomationAccount20/nodeConfigurations/configName.nodeConfigName 
 ```
 
 

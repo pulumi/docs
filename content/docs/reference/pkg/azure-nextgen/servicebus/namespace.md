@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.servicebus.Namespace resource wi
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Description of a namespace resource.
-Latest API Version: 2017-04-01.
+API Version: 2017-04-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,12 +27,12 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var @namespace = new AzureNextGen.ServiceBus.Latest.Namespace("namespace", new AzureNextGen.ServiceBus.Latest.NamespaceArgs
+        var @namespace = new AzureNextGen.ServiceBus..Namespace("namespace", new AzureNextGen.ServiceBus..NamespaceArgs
         {
             Location = "South Central US",
             NamespaceName = "sdk-Namespace2924",
             ResourceGroupName = "ArunMonocle",
-            Sku = new AzureNextGen.ServiceBus.Latest.Inputs.SBSkuArgs
+            Sku = new AzureNextGen.ServiceBus..Inputs.SBSkuArgs
             {
                 Name = "Standard",
                 Tier = "Standard",
@@ -57,7 +57,7 @@ class MyStack : Stack
 package main
 
 import (
-	servicebus "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/servicebus/latest"
+	servicebus "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/servicebus"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -93,11 +93,11 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-namespace = azure_nextgen.servicebus.latest.Namespace("namespace",
+namespace = azure_nextgen.servicebus.Namespace("namespace",
     location="South Central US",
     namespace_name="sdk-Namespace2924",
     resource_group_name="ArunMonocle",
-    sku=azure_nextgen.servicebus.latest.SBSkuArgs(
+    sku=azure_nextgen.servicebus.SBSkuArgs(
         name="Standard",
         tier="Standard",
     ),
@@ -116,7 +116,7 @@ namespace = azure_nextgen.servicebus.latest.Namespace("namespace",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const namespace = new azure_nextgen.servicebus.latest.Namespace("namespace", {
+const namespace = new azure_nextgen.servicebus.Namespace("namespace", {
     location: "South Central US",
     namespaceName: "sdk-Namespace2924",
     resourceGroupName: "ArunMonocle",
@@ -350,7 +350,7 @@ The Namespace resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sbsku">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Bus.<wbr>Inputs.<wbr>SBSku<wbr>Args</a></span>
+        <span class="property-type"><a href="#sbsku">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Bus..<wbr>Inputs.<wbr>SBSku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties of Sku{{% /md %}}</dd>
     <dt class="property-optional"
@@ -858,7 +858,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skuname">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Bus.<wbr>Sku<wbr>Name</a></span>
+        <span class="property-type"><a href="#skuname">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Bus..<wbr>Sku<wbr>Name</a></span>
     </dt>
     <dd>{{% md %}}Name of this SKU.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -876,7 +876,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tier_csharp" style="color: inherit; text-decoration: inherit;">Tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skutier">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Bus.<wbr>Sku<wbr>Tier</a></span>
+        <span class="property-type"><a href="#skutier">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Bus..<wbr>Sku<wbr>Tier</a></span>
     </dt>
     <dd>{{% md %}}The billing tier of this particular SKU.{{% /md %}}</dd>
 </dl>
@@ -1212,7 +1212,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:servicebus/latest:Namespace sdk-Namespace-2924 /subscriptions/5f750a97-50d9-4e36-8081-c9ee4c0210d4/resourceGroups/ArunMonocle/providers/Microsoft.ServiceBus/namespaces/sdk-Namespace-2924 
+$ pulumi import azure-nextgen:servicebus:Namespace sdk-Namespace-2924 /subscriptions/5f750a97-50d9-4e36-8081-c9ee4c0210d4/resourceGroups/ArunMonocle/providers/Microsoft.ServiceBus/namespaces/sdk-Namespace-2924 
 ```
 
 

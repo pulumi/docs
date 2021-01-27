@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.management.ManagementGroupSubscr
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The details of subscription under management group.
-Latest API Version: 2020-05-01.
+API Version: 2020-05-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var managementGroupSubscription = new AzureNextGen.Management.Latest.ManagementGroupSubscription("managementGroupSubscription", new AzureNextGen.Management.Latest.ManagementGroupSubscriptionArgs
+        var managementGroupSubscription = new AzureNextGen.Management..ManagementGroupSubscription("managementGroupSubscription", new AzureNextGen.Management..ManagementGroupSubscriptionArgs
         {
             GroupId = "Group",
         });
@@ -45,7 +45,7 @@ class MyStack : Stack
 package main
 
 import (
-	management "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/management/latest"
+	management "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/management"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -71,7 +71,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-management_group_subscription = azure_nextgen.management.latest.ManagementGroupSubscription("managementGroupSubscription", group_id="Group")
+management_group_subscription = azure_nextgen.management.ManagementGroupSubscription("managementGroupSubscription", group_id="Group")
 
 ```
 
@@ -83,7 +83,7 @@ management_group_subscription = azure_nextgen.management.latest.ManagementGroupS
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const managementGroupSubscription = new azure_nextgen.management.latest.ManagementGroupSubscription("managementGroupSubscription", {groupId: "Group"});
+const managementGroupSubscription = new azure_nextgen.management.ManagementGroupSubscription("managementGroupSubscription", {groupId: "Group"});
 
 ```
 
@@ -417,7 +417,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parent_csharp" style="color: inherit; text-decoration: inherit;">Parent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#descendantparentgroupinforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Management.<wbr>Outputs.<wbr>Descendant<wbr>Parent<wbr>Group<wbr>Info<wbr>Response</a></span>
+        <span class="property-type"><a href="#descendantparentgroupinforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Management..<wbr>Outputs.<wbr>Descendant<wbr>Parent<wbr>Group<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The ID of the parent management group.{{% /md %}}</dd>
     <dt class="property-"
@@ -725,7 +725,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:management/latest:ManagementGroupSubscription 728bcbe4-8d56-4510-86c2-4921b8beefbc  /providers/Microsoft.Management/managementGroups/Group/subscriptions/728bcbe4-8d56-4510-86c2-4921b8beefbc 
+$ pulumi import azure-nextgen:management:ManagementGroupSubscription 728bcbe4-8d56-4510-86c2-4921b8beefbc  /providers/Microsoft.Management/managementGroups/Group/subscriptions/728bcbe4-8d56-4510-86c2-4921b8beefbc 
 ```
 
 

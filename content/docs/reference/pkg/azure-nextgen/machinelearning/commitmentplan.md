@@ -11,12 +11,13 @@ meta_desc: "Documentation for the azure-nextgen.machinelearning.CommitmentPlan r
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 An Azure ML commitment plan resource.
+API Version: 2016-05-01-preview.
 ## Import
 
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:machinelearning/v20160501preview:CommitmentPlan myresource1 /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.MachineLearning/commitmentPlans/{commitmentPlanName} 
+$ pulumi import azure-nextgen:machinelearning:CommitmentPlan myresource1 /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.MachineLearning/commitmentPlans/{commitmentPlanName} 
 ```
 
 
@@ -244,7 +245,7 @@ The CommitmentPlan resource accepts the following [input]({{< relref "/docs/intr
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcesku">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning.<wbr>Inputs.<wbr>Resource<wbr>Sku<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcesku">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning..<wbr>Inputs.<wbr>Resource<wbr>Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The commitment plan SKU.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -473,7 +474,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#commitmentplanpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning.<wbr>Outputs.<wbr>Commitment<wbr>Plan<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#commitmentplanpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning..<wbr>Outputs.<wbr>Commitment<wbr>Plan<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The commitment plan properties.{{% /md %}}</dd>
     <dt class="property-"
@@ -662,7 +663,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#includedquantities_csharp" style="color: inherit; text-decoration: inherit;">Included<wbr>Quantities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning.<wbr>Inputs.<wbr>Plan<wbr>Quantity<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning..<wbr>Inputs.<wbr>Plan<wbr>Quantity<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}The included resource quantities this plan gives you.{{% /md %}}</dd>
     <dt class="property-required"

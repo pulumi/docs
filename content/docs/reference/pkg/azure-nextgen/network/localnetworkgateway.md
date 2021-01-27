@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.network.LocalNetworkGateway reso
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 A common class for general resource information.
-Latest API Version: 2020-08-01.
+API Version: 2020-08-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,11 +27,11 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var localNetworkGateway = new AzureNextGen.Network.Latest.LocalNetworkGateway("localNetworkGateway", new AzureNextGen.Network.Latest.LocalNetworkGatewayArgs
+        var localNetworkGateway = new AzureNextGen.Network..LocalNetworkGateway("localNetworkGateway", new AzureNextGen.Network..LocalNetworkGatewayArgs
         {
             Fqdn = "site1.contoso.com",
             GatewayIpAddress = "11.12.13.14",
-            LocalNetworkAddressSpace = new AzureNextGen.Network.Latest.Inputs.AddressSpaceArgs
+            LocalNetworkAddressSpace = new AzureNextGen.Network..Inputs.AddressSpaceArgs
             {
                 AddressPrefixes = 
                 {
@@ -56,7 +56,7 @@ class MyStack : Stack
 package main
 
 import (
-	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network/latest"
+	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -91,10 +91,10 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-local_network_gateway = azure_nextgen.network.latest.LocalNetworkGateway("localNetworkGateway",
+local_network_gateway = azure_nextgen.network.LocalNetworkGateway("localNetworkGateway",
     fqdn="site1.contoso.com",
     gateway_ip_address="11.12.13.14",
-    local_network_address_space=azure_nextgen.network.latest.AddressSpaceArgs(
+    local_network_address_space=azure_nextgen.network.AddressSpaceArgs(
         address_prefixes=["10.1.0.0/16"],
     ),
     local_network_gateway_name="localgw",
@@ -111,7 +111,7 @@ local_network_gateway = azure_nextgen.network.latest.LocalNetworkGateway("localN
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const localNetworkGateway = new azure_nextgen.network.latest.LocalNetworkGateway("localNetworkGateway", {
+const localNetworkGateway = new azure_nextgen.network.LocalNetworkGateway("localNetworkGateway", {
     fqdn: "site1.contoso.com",
     gatewayIpAddress: "11.12.13.14",
     localNetworkAddressSpace: {
@@ -333,7 +333,7 @@ The LocalNetworkGateway resource accepts the following [input]({{< relref "/docs
 <a href="#bgpsettings_csharp" style="color: inherit; text-decoration: inherit;">Bgp<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bgpsettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Bgp<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#bgpsettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Bgp<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Local network gateway's BGP speaker settings.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -369,7 +369,7 @@ The LocalNetworkGateway resource accepts the following [input]({{< relref "/docs
 <a href="#localnetworkaddressspace_csharp" style="color: inherit; text-decoration: inherit;">Local<wbr>Network<wbr>Address<wbr>Space</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#addressspace">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Address<wbr>Space<wbr>Args</a></span>
+        <span class="property-type"><a href="#addressspace">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Address<wbr>Space<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Local network site address space.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1064,7 +1064,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bgppeeringaddresses_csharp" style="color: inherit; text-decoration: inherit;">Bgp<wbr>Peering<wbr>Addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipconfigurationbgppeeringaddress">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>IPConfiguration<wbr>Bgp<wbr>Peering<wbr>Address<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#ipconfigurationbgppeeringaddress">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>IPConfiguration<wbr>Bgp<wbr>Peering<wbr>Address<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}BGP peering address with IP configuration ID for virtual network gateway.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1234,7 +1234,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bgppeeringaddresses_csharp" style="color: inherit; text-decoration: inherit;">Bgp<wbr>Peering<wbr>Addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipconfigurationbgppeeringaddressresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>IPConfiguration<wbr>Bgp<wbr>Peering<wbr>Address<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#ipconfigurationbgppeeringaddressresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>IPConfiguration<wbr>Bgp<wbr>Peering<wbr>Address<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}BGP peering address with IP configuration ID for virtual network gateway.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1648,7 +1648,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:network/latest:LocalNetworkGateway localgw /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/localNetworkGateways/localgw 
+$ pulumi import azure-nextgen:network:LocalNetworkGateway localgw /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/localNetworkGateways/localgw 
 ```
 
 

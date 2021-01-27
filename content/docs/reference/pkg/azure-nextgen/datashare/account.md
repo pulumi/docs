@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.datashare.Account resource with 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 An account data transfer object.
-Latest API Version: 2019-11-01.
+API Version: 2019-11-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,10 +27,10 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var account = new AzureNextGen.DataShare.Latest.Account("account", new AzureNextGen.DataShare.Latest.AccountArgs
+        var account = new AzureNextGen.DataShare..Account("account", new AzureNextGen.DataShare..AccountArgs
         {
             AccountName = "Account1",
-            Identity = new AzureNextGen.DataShare.Latest.Inputs.IdentityArgs
+            Identity = new AzureNextGen.DataShare..Inputs.IdentityArgs
             {
                 Type = "SystemAssigned",
             },
@@ -56,7 +56,7 @@ class MyStack : Stack
 package main
 
 import (
-	datashare "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datashare/latest"
+	datashare "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datashare"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -91,9 +91,9 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-account = azure_nextgen.datashare.latest.Account("account",
+account = azure_nextgen.datashare.Account("account",
     account_name="Account1",
-    identity=azure_nextgen.datashare.latest.IdentityArgs(
+    identity=azure_nextgen.datashare.IdentityArgs(
         type="SystemAssigned",
     ),
     location="West US 2",
@@ -113,7 +113,7 @@ account = azure_nextgen.datashare.latest.Account("account",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const account = new azure_nextgen.datashare.latest.Account("account", {
+const account = new azure_nextgen.datashare.Account("account", {
     accountName: "Account1",
     identity: {
         type: "SystemAssigned",
@@ -328,7 +328,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identity">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Share.<wbr>Inputs.<wbr>Identity<wbr>Args</a></span>
+        <span class="property-type"><a href="#identity">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Share..<wbr>Inputs.<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Identity Info on the Account{{% /md %}}</dd>
     <dt class="property-required"
@@ -818,7 +818,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Share.<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Share..<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Identity Type{{% /md %}}</dd>
 </dl>
@@ -1038,7 +1038,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:datashare/latest:Account Account1 /subscriptions/433a8dfd-e5d5-4e77-ad86-90acdc75eb1a/resourceGroups/SampleResourceGroup/providers/Microsoft.DataShare/accounts/Account1 
+$ pulumi import azure-nextgen:datashare:Account Account1 /subscriptions/433a8dfd-e5d5-4e77-ad86-90acdc75eb1a/resourceGroups/SampleResourceGroup/providers/Microsoft.DataShare/accounts/Account1 
 ```
 
 

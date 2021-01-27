@@ -179,7 +179,7 @@ The following output properties are available:
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#notificationregistrationresponseproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Provider<wbr>Hub.<wbr>Outputs.<wbr>Notification<wbr>Registration<wbr>Response<wbr>Properties</a></span>
+        <span class="property-type"><a href="#notificationregistrationresponseproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Provider<wbr>Hub..<wbr>Outputs.<wbr>Notification<wbr>Registration<wbr>Response<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-"
@@ -463,7 +463,7 @@ The following output properties are available:
 <a href="#notificationendpoints_csharp" style="color: inherit; text-decoration: inherit;">Notification<wbr>Endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#notificationendpointresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Provider<wbr>Hub.<wbr>Inputs.<wbr>Notification<wbr>Endpoint<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#notificationendpointresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Provider<wbr>Hub..<wbr>Inputs.<wbr>Notification<wbr>Endpoint<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"

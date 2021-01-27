@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.datamigration.Project resource w
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 A project resource
-Latest API Version: 2018-04-19.
+API Version: 2018-04-19.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var project = new AzureNextGen.DataMigration.Latest.Project("project", new AzureNextGen.DataMigration.Latest.ProjectArgs
+        var project = new AzureNextGen.DataMigration..Project("project", new AzureNextGen.DataMigration..ProjectArgs
         {
             GroupName = "DmsSdkRg",
             Location = "southcentralus",
@@ -50,7 +50,7 @@ class MyStack : Stack
 package main
 
 import (
-	datamigration "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datamigration/latest"
+	datamigration "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datamigration"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -81,7 +81,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-project = azure_nextgen.datamigration.latest.Project("project",
+project = azure_nextgen.datamigration.Project("project",
     group_name="DmsSdkRg",
     location="southcentralus",
     project_name="DmsSdkProject",
@@ -99,7 +99,7 @@ project = azure_nextgen.datamigration.latest.Project("project",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const project = new azure_nextgen.datamigration.latest.Project("project", {
+const project = new azure_nextgen.datamigration.Project("project", {
     groupName: "DmsSdkRg",
     location: "southcentralus",
     projectName: "DmsSdkProject",
@@ -337,7 +337,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#sourceplatform_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Platform</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#projectsourceplatform">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Project<wbr>Source<wbr>Platform</a></span>
+        <span class="property-type">string | <a href="#projectsourceplatform">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Project<wbr>Source<wbr>Platform</a></span>
     </dt>
     <dd>{{% md %}}Source platform for the project{{% /md %}}</dd>
     <dt class="property-required"
@@ -346,7 +346,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#targetplatform_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Platform</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#projecttargetplatform">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Project<wbr>Target<wbr>Platform</a></span>
+        <span class="property-type">string | <a href="#projecttargetplatform">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Project<wbr>Target<wbr>Platform</a></span>
     </dt>
     <dd>{{% md %}}Target platform for the project{{% /md %}}</dd>
     <dt class="property-optional"
@@ -355,7 +355,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#databasesinfo_csharp" style="color: inherit; text-decoration: inherit;">Databases<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databaseinfo">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Database<wbr>Info<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#databaseinfo">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Database<wbr>Info<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of DatabaseInfo{{% /md %}}</dd>
     <dt class="property-optional"
@@ -364,7 +364,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#sourceconnectioninfo_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Connection<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#misqlconnectioninfo">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Mi<wbr>Sql<wbr>Connection<wbr>Info<wbr>Args</a> | <a href="#mysqlconnectioninfo">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>My<wbr>Sql<wbr>Connection<wbr>Info<wbr>Args</a> | <a href="#postgresqlconnectioninfo">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Postgre<wbr>Sql<wbr>Connection<wbr>Info<wbr>Args</a> | <a href="#sqlconnectioninfo">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Sql<wbr>Connection<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#misqlconnectioninfo">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Mi<wbr>Sql<wbr>Connection<wbr>Info<wbr>Args</a> | <a href="#mysqlconnectioninfo">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>My<wbr>Sql<wbr>Connection<wbr>Info<wbr>Args</a> | <a href="#postgresqlconnectioninfo">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Postgre<wbr>Sql<wbr>Connection<wbr>Info<wbr>Args</a> | <a href="#sqlconnectioninfo">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Sql<wbr>Connection<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information for connecting to source{{% /md %}}</dd>
     <dt class="property-optional"
@@ -382,7 +382,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#targetconnectioninfo_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Connection<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#misqlconnectioninfo">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Mi<wbr>Sql<wbr>Connection<wbr>Info<wbr>Args</a> | <a href="#mysqlconnectioninfo">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>My<wbr>Sql<wbr>Connection<wbr>Info<wbr>Args</a> | <a href="#postgresqlconnectioninfo">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Postgre<wbr>Sql<wbr>Connection<wbr>Info<wbr>Args</a> | <a href="#sqlconnectioninfo">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Sql<wbr>Connection<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#misqlconnectioninfo">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Mi<wbr>Sql<wbr>Connection<wbr>Info<wbr>Args</a> | <a href="#mysqlconnectioninfo">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>My<wbr>Sql<wbr>Connection<wbr>Info<wbr>Args</a> | <a href="#postgresqlconnectioninfo">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Postgre<wbr>Sql<wbr>Connection<wbr>Info<wbr>Args</a> | <a href="#sqlconnectioninfo">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Sql<wbr>Connection<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information for connecting to target{{% /md %}}</dd>
 </dl>
@@ -2208,7 +2208,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authentication_csharp" style="color: inherit; text-decoration: inherit;">Authentication</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#authenticationtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Authentication<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#authenticationtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Authentication<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Authentication type to use for connection{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2235,7 +2235,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#platform_csharp" style="color: inherit; text-decoration: inherit;">Platform</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#sqlsourceplatform">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Sql<wbr>Source<wbr>Platform</a></span>
+        <span class="property-type">string | <a href="#sqlsourceplatform">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Sql<wbr>Source<wbr>Platform</a></span>
     </dt>
     <dd>{{% md %}}Server platform type for connection{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2842,7 +2842,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:datamigration/latest:Project DmsSdkProject /subscriptions/fc04246f-04c5-437e-ac5e-206a19e7193f/resourceGroups/DmsSdkRg/providers/Microsoft.DataMigration/services/DmsSdkService/projects/DmsSdkProject 
+$ pulumi import azure-nextgen:datamigration:Project DmsSdkProject /subscriptions/fc04246f-04c5-437e-ac5e-206a19e7193f/resourceGroups/DmsSdkRg/providers/Microsoft.DataMigration/services/DmsSdkService/projects/DmsSdkProject 
 ```
 
 

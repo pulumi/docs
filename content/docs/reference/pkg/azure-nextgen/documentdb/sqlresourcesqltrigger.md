@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.documentdb.SqlResourceSqlTrigger
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 An Azure Cosmos DB trigger.
-Latest API Version: 2020-09-01.
+API Version: 2020-09-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,13 +27,13 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var sqlResourceSqlTrigger = new AzureNextGen.DocumentDB.Latest.SqlResourceSqlTrigger("sqlResourceSqlTrigger", new AzureNextGen.DocumentDB.Latest.SqlResourceSqlTriggerArgs
+        var sqlResourceSqlTrigger = new AzureNextGen.DocumentDB..SqlResourceSqlTrigger("sqlResourceSqlTrigger", new AzureNextGen.DocumentDB..SqlResourceSqlTriggerArgs
         {
             AccountName = "ddb1",
             ContainerName = "containerName",
             DatabaseName = "databaseName",
             Options = ,
-            Resource = new AzureNextGen.DocumentDB.Latest.Inputs.SqlTriggerResourceArgs
+            Resource = new AzureNextGen.DocumentDB..Inputs.SqlTriggerResourceArgs
             {
                 Body = "body",
                 Id = "triggerName",
@@ -57,7 +57,7 @@ class MyStack : Stack
 package main
 
 import (
-	documentdb "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/documentdb/latest"
+	documentdb "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/documentdb"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -94,12 +94,12 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-sql_resource_sql_trigger = azure_nextgen.documentdb.latest.SqlResourceSqlTrigger("sqlResourceSqlTrigger",
+sql_resource_sql_trigger = azure_nextgen.documentdb.SqlResourceSqlTrigger("sqlResourceSqlTrigger",
     account_name="ddb1",
     container_name="containerName",
     database_name="databaseName",
-    options=azure_nextgen.documentdb.latest.CreateUpdateOptionsArgs(),
-    resource=azure_nextgen.documentdb.latest.SqlTriggerResourceArgs(
+    options=azure_nextgen.documentdb.CreateUpdateOptionsArgs(),
+    resource=azure_nextgen.documentdb.SqlTriggerResourceArgs(
         body="body",
         id="triggerName",
         trigger_operation="triggerOperation",
@@ -118,7 +118,7 @@ sql_resource_sql_trigger = azure_nextgen.documentdb.latest.SqlResourceSqlTrigger
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const sqlResourceSqlTrigger = new azure_nextgen.documentdb.latest.SqlResourceSqlTrigger("sqlResourceSqlTrigger", {
+const sqlResourceSqlTrigger = new azure_nextgen.documentdb.SqlResourceSqlTrigger("sqlResourceSqlTrigger", {
     accountName: "ddb1",
     containerName: "containerName",
     databaseName: "databaseName",
@@ -353,7 +353,7 @@ The SqlResourceSqlTrigger resource accepts the following [input]({{< relref "/do
 <a href="#resource_csharp" style="color: inherit; text-decoration: inherit;">Resource</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqltriggerresource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Sql<wbr>Trigger<wbr>Resource<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqltriggerresource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB..<wbr>Inputs.<wbr>Sql<wbr>Trigger<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The standard JSON format of a trigger{{% /md %}}</dd>
     <dt class="property-required"
@@ -389,7 +389,7 @@ The SqlResourceSqlTrigger resource accepts the following [input]({{< relref "/do
 <a href="#options_csharp" style="color: inherit; text-decoration: inherit;">Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#createupdateoptions">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Create<wbr>Update<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#createupdateoptions">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB..<wbr>Inputs.<wbr>Create<wbr>Update<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A key-value pair of options to be applied for the request. This corresponds to the headers sent with the request.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -887,7 +887,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#autoscalesettings_csharp" style="color: inherit; text-decoration: inherit;">Autoscale<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalesettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Autoscale<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#autoscalesettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB..<wbr>Inputs.<wbr>Autoscale<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the Autoscale settings.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1281,7 +1281,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#triggeroperation_csharp" style="color: inherit; text-decoration: inherit;">Trigger<wbr>Operation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#triggeroperation">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB.<wbr>Trigger<wbr>Operation</a></span>
+        <span class="property-type">string | <a href="#triggeroperation">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB..<wbr>Trigger<wbr>Operation</a></span>
     </dt>
     <dd>{{% md %}}The operation the trigger is associated with{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1290,7 +1290,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#triggertype_csharp" style="color: inherit; text-decoration: inherit;">Trigger<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#triggertype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB.<wbr>Trigger<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#triggertype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB..<wbr>Trigger<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of the Trigger{{% /md %}}</dd>
 </dl>
@@ -1527,7 +1527,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:documentdb/latest:SqlResourceSqlTrigger triggerName /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.DocumentDB/databaseAccounts/ddb1/sqlDatabases/databaseName/sqlContainers/containerName/sqlTriggers/triggerName 
+$ pulumi import azure-nextgen:documentdb:SqlResourceSqlTrigger triggerName /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.DocumentDB/databaseAccounts/ddb1/sqlDatabases/databaseName/sqlContainers/containerName/sqlTriggers/triggerName 
 ```
 
 

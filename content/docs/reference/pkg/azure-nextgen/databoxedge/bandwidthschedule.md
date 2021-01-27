@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.databoxedge.BandwidthSchedule re
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The bandwidth schedule details.
-Latest API Version: 2020-09-01.
+API Version: 2020-09-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var bandwidthSchedule = new AzureNextGen.DataBoxEdge.Latest.BandwidthSchedule("bandwidthSchedule", new AzureNextGen.DataBoxEdge.Latest.BandwidthScheduleArgs
+        var bandwidthSchedule = new AzureNextGen.DataBoxEdge..BandwidthSchedule("bandwidthSchedule", new AzureNextGen.DataBoxEdge..BandwidthScheduleArgs
         {
             Days = 
             {
@@ -55,7 +55,7 @@ class MyStack : Stack
 package main
 
 import (
-	databoxedge "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/databoxedge/latest"
+	databoxedge "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/databoxedge"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -90,7 +90,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-bandwidth_schedule = azure_nextgen.databoxedge.latest.BandwidthSchedule("bandwidthSchedule",
+bandwidth_schedule = azure_nextgen.databoxedge.BandwidthSchedule("bandwidthSchedule",
     days=[
         "Sunday",
         "Monday",
@@ -112,7 +112,7 @@ bandwidth_schedule = azure_nextgen.databoxedge.latest.BandwidthSchedule("bandwid
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const bandwidthSchedule = new azure_nextgen.databoxedge.latest.BandwidthSchedule("bandwidthSchedule", {
+const bandwidthSchedule = new azure_nextgen.databoxedge.BandwidthSchedule("bandwidthSchedule", {
     days: [
         "Sunday",
         "Monday",
@@ -318,7 +318,7 @@ The BandwidthSchedule resource accepts the following [input]({{< relref "/docs/i
 <a href="#days_csharp" style="color: inherit; text-decoration: inherit;">Days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Union&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Day<wbr>Of<wbr>Week&gt;&gt;</span>
+        <span class="property-type">List&lt;Union&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge..<wbr>Day<wbr>Of<wbr>Week&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}The days of the week when this schedule is applicable.{{% /md %}}</dd>
     <dt class="property-required"
@@ -610,7 +610,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#systemdata_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
+        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge..<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Bandwidth object related to ASE resource{{% /md %}}</dd>
     <dt class="property-"
@@ -1059,7 +1059,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:databoxedge/latest:BandwidthSchedule bandwidth-1 /subscriptions/4385cf00-2d3a-425a-832f-f4285b1c9dce/resourceGroups/GroupForEdgeAutomation/providers/Microsoft.DataBoxEdge/dataBoxEdgeDevices/testedgedevice/bandwidthSchedules/bandwidth-1 
+$ pulumi import azure-nextgen:databoxedge:BandwidthSchedule bandwidth-1 /subscriptions/4385cf00-2d3a-425a-832f-f4285b1c9dce/resourceGroups/GroupForEdgeAutomation/providers/Microsoft.DataBoxEdge/dataBoxEdgeDevices/testedgedevice/bandwidthSchedules/bandwidth-1 
 ```
 
 

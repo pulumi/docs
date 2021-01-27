@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.web.StaticSite resource with exa
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Static Site ARM resource.
-Latest API Version: 2020-09-01.
+API Version: 2020-09-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,10 +27,10 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var staticSite = new AzureNextGen.Web.Latest.StaticSite("staticSite", new AzureNextGen.Web.Latest.StaticSiteArgs
+        var staticSite = new AzureNextGen.Web..StaticSite("staticSite", new AzureNextGen.Web..StaticSiteArgs
         {
             Branch = "master",
-            BuildProperties = new AzureNextGen.Web.Latest.Inputs.StaticSiteBuildPropertiesArgs
+            BuildProperties = new AzureNextGen.Web..Inputs.StaticSiteBuildPropertiesArgs
             {
                 ApiLocation = "api",
                 AppArtifactLocation = "build",
@@ -41,7 +41,7 @@ class MyStack : Stack
             RepositoryToken = "repoToken123",
             RepositoryUrl = "https://github.com/username/RepoName",
             ResourceGroupName = "rg",
-            Sku = new AzureNextGen.Web.Latest.Inputs.SkuDescriptionArgs
+            Sku = new AzureNextGen.Web..Inputs.SkuDescriptionArgs
             {
                 Name = "Basic",
                 Tier = "Basic",
@@ -61,7 +61,7 @@ class MyStack : Stack
 package main
 
 import (
-	web "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/web/latest"
+	web "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/web"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -101,9 +101,9 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-static_site = azure_nextgen.web.latest.StaticSite("staticSite",
+static_site = azure_nextgen.web.StaticSite("staticSite",
     branch="master",
-    build_properties=azure_nextgen.web.latest.StaticSiteBuildPropertiesArgs(
+    build_properties=azure_nextgen.web.StaticSiteBuildPropertiesArgs(
         api_location="api",
         app_artifact_location="build",
         app_location="app",
@@ -113,7 +113,7 @@ static_site = azure_nextgen.web.latest.StaticSite("staticSite",
     repository_token="repoToken123",
     repository_url="https://github.com/username/RepoName",
     resource_group_name="rg",
-    sku=azure_nextgen.web.latest.SkuDescriptionArgs(
+    sku=azure_nextgen.web.SkuDescriptionArgs(
         name="Basic",
         tier="Basic",
     ))
@@ -128,7 +128,7 @@ static_site = azure_nextgen.web.latest.StaticSite("staticSite",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const staticSite = new azure_nextgen.web.latest.StaticSite("staticSite", {
+const staticSite = new azure_nextgen.web.StaticSite("staticSite", {
     branch: "master",
     buildProperties: {
         apiLocation: "api",
@@ -375,7 +375,7 @@ The StaticSite resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#buildproperties_csharp" style="color: inherit; text-decoration: inherit;">Build<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#staticsitebuildproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web.<wbr>Inputs.<wbr>Static<wbr>Site<wbr>Build<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#staticsitebuildproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web..<wbr>Inputs.<wbr>Static<wbr>Site<wbr>Build<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Build properties to configure on the repository.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -411,7 +411,7 @@ The StaticSite resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skudescription">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web.<wbr>Inputs.<wbr>Sku<wbr>Description<wbr>Args</a></span>
+        <span class="property-type"><a href="#skudescription">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web..<wbr>Inputs.<wbr>Sku<wbr>Description<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Description of a SKU for a scalable resource.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -757,7 +757,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#systemdata_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web.<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
+        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web..<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The system metadata relating to this resource.{{% /md %}}</dd>
     <dt class="property-"
@@ -1554,7 +1554,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capabilities_csharp" style="color: inherit; text-decoration: inherit;">Capabilities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#capability">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web.<wbr>Inputs.<wbr>Capability<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#capability">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web..<wbr>Inputs.<wbr>Capability<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Capabilities of the SKU, e.g., is traffic manager enabled?{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1608,7 +1608,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#skucapacity_csharp" style="color: inherit; text-decoration: inherit;">Sku<wbr>Capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skucapacity">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web.<wbr>Inputs.<wbr>Sku<wbr>Capacity<wbr>Args</a></span>
+        <span class="property-type"><a href="#skucapacity">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web..<wbr>Inputs.<wbr>Sku<wbr>Capacity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Min, max, and default scale values of the SKU.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1868,7 +1868,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capabilities_csharp" style="color: inherit; text-decoration: inherit;">Capabilities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#capabilityresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web.<wbr>Inputs.<wbr>Capability<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#capabilityresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web..<wbr>Inputs.<wbr>Capability<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Capabilities of the SKU, e.g., is traffic manager enabled?{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1922,7 +1922,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#skucapacity_csharp" style="color: inherit; text-decoration: inherit;">Sku<wbr>Capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skucapacityresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web.<wbr>Inputs.<wbr>Sku<wbr>Capacity<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#skucapacityresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web..<wbr>Inputs.<wbr>Sku<wbr>Capacity<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Min, max, and default scale values of the SKU.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2686,7 +2686,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:web/latest:StaticSite testStaticSite0 /subscriptions/34adfa4f-cedf-4dc0-ba29-b6d1a69ab345/resourceGroups/rg/providers/Microsoft.Web/staticSites/testStaticSite0 
+$ pulumi import azure-nextgen:web:StaticSite testStaticSite0 /subscriptions/34adfa4f-cedf-4dc0-ba29-b6d1a69ab345/resourceGroups/rg/providers/Microsoft.Web/staticSites/testStaticSite0 
 ```
 
 

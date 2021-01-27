@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.streamanalytics.Input resource w
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 An input object, containing all information associated with the named input. All inputs are contained under a streaming job.
-Latest API Version: 2016-03-01.
+API Version: 2016-03-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var input = new AzureNextGen.StreamAnalytics.Latest.Input("input", new AzureNextGen.StreamAnalytics.Latest.InputArgs
+        var input = new AzureNextGen.StreamAnalytics..Input("input", new AzureNextGen.StreamAnalytics..InputArgs
         {
             InputName = "input7225",
             JobName = "sj9597",
@@ -40,7 +40,7 @@ class MyStack : Stack
                     { "pathPattern", "{date}/{time}" },
                     { "storageAccounts", 
                     {
-                        new AzureNextGen.StreamAnalytics.Latest.Inputs.StorageAccountArgs
+                        new AzureNextGen.StreamAnalytics..Inputs.StorageAccountArgs
                         {
                             AccountKey = "someAccountKey==",
                             AccountName = "someAccountName",
@@ -77,7 +77,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-input = azure_nextgen.streamanalytics.latest.Input("input",
+input = azure_nextgen.streamanalytics.Input("input",
     input_name="input7225",
     job_name="sj9597",
     properties={
@@ -85,7 +85,7 @@ input = azure_nextgen.streamanalytics.latest.Input("input",
             "container": "state",
             "dateFormat": "yyyy/MM/dd",
             "pathPattern": "{date}/{time}",
-            "storageAccounts": [azure_nextgen.streamanalytics.latest.StorageAccountArgs(
+            "storageAccounts": [azure_nextgen.streamanalytics.StorageAccountArgs(
                 account_key="someAccountKey==",
                 account_name="someAccountName",
             )],
@@ -111,7 +111,7 @@ input = azure_nextgen.streamanalytics.latest.Input("input",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const input = new azure_nextgen.streamanalytics.latest.Input("input", {
+const input = new azure_nextgen.streamanalytics.Input("input", {
     inputName: "input7225",
     jobName: "sj9597",
     properties: {
@@ -150,7 +150,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var input = new AzureNextGen.StreamAnalytics.Latest.Input("input", new AzureNextGen.StreamAnalytics.Latest.InputArgs
+        var input = new AzureNextGen.StreamAnalytics..Input("input", new AzureNextGen.StreamAnalytics..InputArgs
         {
             InputName = "input7425",
             JobName = "sj197",
@@ -192,7 +192,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-input = azure_nextgen.streamanalytics.latest.Input("input",
+input = azure_nextgen.streamanalytics.Input("input",
     input_name="input7425",
     job_name="sj197",
     properties={
@@ -222,7 +222,7 @@ input = azure_nextgen.streamanalytics.latest.Input("input",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const input = new azure_nextgen.streamanalytics.latest.Input("input", {
+const input = new azure_nextgen.streamanalytics.Input("input", {
     inputName: "input7425",
     jobName: "sj197",
     properties: {
@@ -257,7 +257,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var input = new AzureNextGen.StreamAnalytics.Latest.Input("input", new AzureNextGen.StreamAnalytics.Latest.InputArgs
+        var input = new AzureNextGen.StreamAnalytics..Input("input", new AzureNextGen.StreamAnalytics..InputArgs
         {
             InputName = "input7970",
             JobName = "sj9742",
@@ -298,7 +298,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-input = azure_nextgen.streamanalytics.latest.Input("input",
+input = azure_nextgen.streamanalytics.Input("input",
     input_name="input7970",
     job_name="sj9742",
     properties={
@@ -327,7 +327,7 @@ input = azure_nextgen.streamanalytics.latest.Input("input",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const input = new azure_nextgen.streamanalytics.latest.Input("input", {
+const input = new azure_nextgen.streamanalytics.Input("input", {
     inputName: "input7970",
     jobName: "sj9742",
     properties: {
@@ -361,7 +361,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var input = new AzureNextGen.StreamAnalytics.Latest.Input("input", new AzureNextGen.StreamAnalytics.Latest.InputArgs
+        var input = new AzureNextGen.StreamAnalytics..Input("input", new AzureNextGen.StreamAnalytics..InputArgs
         {
             InputName = "input8899",
             JobName = "sj6695",
@@ -375,7 +375,7 @@ class MyStack : Stack
                     { "sourcePartitionCount", 16 },
                     { "storageAccounts", 
                     {
-                        new AzureNextGen.StreamAnalytics.Latest.Inputs.StorageAccountArgs
+                        new AzureNextGen.StreamAnalytics..Inputs.StorageAccountArgs
                         {
                             AccountKey = "someAccountKey==",
                             AccountName = "someAccountName",
@@ -412,7 +412,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-input = azure_nextgen.streamanalytics.latest.Input("input",
+input = azure_nextgen.streamanalytics.Input("input",
     input_name="input8899",
     job_name="sj6695",
     properties={
@@ -421,7 +421,7 @@ input = azure_nextgen.streamanalytics.latest.Input("input",
             "dateFormat": "yyyy/MM/dd",
             "pathPattern": "{date}/{time}",
             "sourcePartitionCount": 16,
-            "storageAccounts": [azure_nextgen.streamanalytics.latest.StorageAccountArgs(
+            "storageAccounts": [azure_nextgen.streamanalytics.StorageAccountArgs(
                 account_key="someAccountKey==",
                 account_name="someAccountName",
             )],
@@ -447,7 +447,7 @@ input = azure_nextgen.streamanalytics.latest.Input("input",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const input = new azure_nextgen.streamanalytics.latest.Input("input", {
+const input = new azure_nextgen.streamanalytics.Input("input", {
     inputName: "input8899",
     jobName: "sj6695",
     properties: {
@@ -702,7 +702,7 @@ The Input resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#referenceinputproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Reference<wbr>Input<wbr>Properties<wbr>Args</a> | <a href="#streaminputproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Stream<wbr>Input<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#referenceinputproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics..<wbr>Inputs.<wbr>Reference<wbr>Input<wbr>Properties<wbr>Args</a> | <a href="#streaminputproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics..<wbr>Inputs.<wbr>Stream<wbr>Input<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The properties that are associated with an input. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
 </dl>
@@ -1064,7 +1064,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storageaccounts_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Accounts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageaccount">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Storage<wbr>Account<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#storageaccount">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics..<wbr>Inputs.<wbr>Storage<wbr>Account<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of one or more Azure Storage accounts. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1270,7 +1270,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storageaccounts_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Accounts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageaccountresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Storage<wbr>Account<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#storageaccountresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics..<wbr>Inputs.<wbr>Storage<wbr>Account<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of one or more Azure Storage accounts. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1485,7 +1485,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storageaccounts_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Accounts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageaccount">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Storage<wbr>Account<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#storageaccount">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics..<wbr>Inputs.<wbr>Storage<wbr>Account<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of one or more Azure Storage accounts. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1727,7 +1727,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storageaccounts_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Accounts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageaccountresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Storage<wbr>Account<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#storageaccountresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics..<wbr>Inputs.<wbr>Storage<wbr>Account<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of one or more Azure Storage accounts. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1933,7 +1933,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encoding_csharp" style="color: inherit; text-decoration: inherit;">Encoding</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#encoding">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Encoding</a></span>
+        <span class="property-type">string | <a href="#encoding">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics..<wbr>Encoding</a></span>
     </dt>
     <dd>{{% md %}}Specifies the encoding of the incoming data in the case of input and the encoding of outgoing data in the case of output. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2263,7 +2263,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#conditions_csharp" style="color: inherit; text-decoration: inherit;">Conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diagnosticconditionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Diagnostic<wbr>Condition<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#diagnosticconditionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics..<wbr>Inputs.<wbr>Diagnostic<wbr>Condition<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A collection of zero or more conditions applicable to the resource, or to the job overall, that warrant customer attention.{{% /md %}}</dd>
 </dl>
@@ -3217,7 +3217,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encoding_csharp" style="color: inherit; text-decoration: inherit;">Encoding</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#encoding">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Encoding</a></span>
+        <span class="property-type">string | <a href="#encoding">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics..<wbr>Encoding</a></span>
     </dt>
     <dd>{{% md %}}Specifies the encoding of the incoming data in the case of input and the encoding of outgoing data in the case of output. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3226,7 +3226,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#format_csharp" style="color: inherit; text-decoration: inherit;">Format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#jsonoutputserializationformat">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Json<wbr>Output<wbr>Serialization<wbr>Format</a></span>
+        <span class="property-type">string | <a href="#jsonoutputserializationformat">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics..<wbr>Json<wbr>Output<wbr>Serialization<wbr>Format</a></span>
     </dt>
     <dd>{{% md %}}This property only applies to JSON serialization of outputs only. It is not applicable to inputs. This property specifies the format of the JSON the output will be written in. The currently supported values are 'lineSeparated' indicating the output will be formatted by having each JSON object separated by a new line and 'array' indicating the output will be formatted as an array of JSON objects. Default value is 'lineSeparated' if left null.{{% /md %}}</dd>
 </dl>
@@ -3413,7 +3413,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datasource_csharp" style="color: inherit; text-decoration: inherit;">Datasource</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#blobreferenceinputdatasource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Blob<wbr>Reference<wbr>Input<wbr>Data<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#blobreferenceinputdatasource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics..<wbr>Inputs.<wbr>Blob<wbr>Reference<wbr>Input<wbr>Data<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes an input data source that contains reference data. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3422,7 +3422,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#serialization_csharp" style="color: inherit; text-decoration: inherit;">Serialization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#avroserialization">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Avro<wbr>Serialization<wbr>Args</a> | <a href="#csvserialization">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Csv<wbr>Serialization<wbr>Args</a> | <a href="#jsonserialization">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Json<wbr>Serialization<wbr>Args</a></span>
+        <span class="property-type"><a href="#avroserialization">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics..<wbr>Inputs.<wbr>Avro<wbr>Serialization<wbr>Args</a> | <a href="#csvserialization">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics..<wbr>Inputs.<wbr>Csv<wbr>Serialization<wbr>Args</a> | <a href="#jsonserialization">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics..<wbr>Inputs.<wbr>Json<wbr>Serialization<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes how data from an input is serialized or how data is serialized when written to an output. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
 </dl>
@@ -3511,7 +3511,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#diagnostics_csharp" style="color: inherit; text-decoration: inherit;">Diagnostics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diagnosticsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Diagnostics<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#diagnosticsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics..<wbr>Inputs.<wbr>Diagnostics<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes conditions applicable to the Input, Output, or the job overall, that warrant customer attention.{{% /md %}}</dd>
     <dt class="property-required"
@@ -3529,7 +3529,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datasource_csharp" style="color: inherit; text-decoration: inherit;">Datasource</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#blobreferenceinputdatasourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Blob<wbr>Reference<wbr>Input<wbr>Data<wbr>Source<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#blobreferenceinputdatasourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics..<wbr>Inputs.<wbr>Blob<wbr>Reference<wbr>Input<wbr>Data<wbr>Source<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes an input data source that contains reference data. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3538,7 +3538,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#serialization_csharp" style="color: inherit; text-decoration: inherit;">Serialization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#avroserializationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Avro<wbr>Serialization<wbr>Response<wbr>Args</a> | <a href="#csvserializationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Csv<wbr>Serialization<wbr>Response<wbr>Args</a> | <a href="#jsonserializationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Json<wbr>Serialization<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#avroserializationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics..<wbr>Inputs.<wbr>Avro<wbr>Serialization<wbr>Response<wbr>Args</a> | <a href="#csvserializationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics..<wbr>Inputs.<wbr>Csv<wbr>Serialization<wbr>Response<wbr>Args</a> | <a href="#jsonserializationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics..<wbr>Inputs.<wbr>Json<wbr>Serialization<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes how data from an input is serialized or how data is serialized when written to an output. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
 </dl>
@@ -3877,7 +3877,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datasource_csharp" style="color: inherit; text-decoration: inherit;">Datasource</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#blobstreaminputdatasource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Blob<wbr>Stream<wbr>Input<wbr>Data<wbr>Source<wbr>Args</a> | <a href="#eventhubstreaminputdatasource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Event<wbr>Hub<wbr>Stream<wbr>Input<wbr>Data<wbr>Source<wbr>Args</a> | <a href="#iothubstreaminputdatasource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Io<wbr>THub<wbr>Stream<wbr>Input<wbr>Data<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#blobstreaminputdatasource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics..<wbr>Inputs.<wbr>Blob<wbr>Stream<wbr>Input<wbr>Data<wbr>Source<wbr>Args</a> | <a href="#eventhubstreaminputdatasource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics..<wbr>Inputs.<wbr>Event<wbr>Hub<wbr>Stream<wbr>Input<wbr>Data<wbr>Source<wbr>Args</a> | <a href="#iothubstreaminputdatasource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics..<wbr>Inputs.<wbr>Io<wbr>THub<wbr>Stream<wbr>Input<wbr>Data<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes an input data source that contains stream data. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3886,7 +3886,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#serialization_csharp" style="color: inherit; text-decoration: inherit;">Serialization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#avroserialization">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Avro<wbr>Serialization<wbr>Args</a> | <a href="#csvserialization">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Csv<wbr>Serialization<wbr>Args</a> | <a href="#jsonserialization">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Json<wbr>Serialization<wbr>Args</a></span>
+        <span class="property-type"><a href="#avroserialization">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics..<wbr>Inputs.<wbr>Avro<wbr>Serialization<wbr>Args</a> | <a href="#csvserialization">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics..<wbr>Inputs.<wbr>Csv<wbr>Serialization<wbr>Args</a> | <a href="#jsonserialization">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics..<wbr>Inputs.<wbr>Json<wbr>Serialization<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes how data from an input is serialized or how data is serialized when written to an output. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
 </dl>
@@ -3975,7 +3975,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#diagnostics_csharp" style="color: inherit; text-decoration: inherit;">Diagnostics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diagnosticsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Diagnostics<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#diagnosticsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics..<wbr>Inputs.<wbr>Diagnostics<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes conditions applicable to the Input, Output, or the job overall, that warrant customer attention.{{% /md %}}</dd>
     <dt class="property-required"
@@ -3993,7 +3993,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datasource_csharp" style="color: inherit; text-decoration: inherit;">Datasource</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#blobstreaminputdatasourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Blob<wbr>Stream<wbr>Input<wbr>Data<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#eventhubstreaminputdatasourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Event<wbr>Hub<wbr>Stream<wbr>Input<wbr>Data<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#iothubstreaminputdatasourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Io<wbr>THub<wbr>Stream<wbr>Input<wbr>Data<wbr>Source<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#blobstreaminputdatasourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics..<wbr>Inputs.<wbr>Blob<wbr>Stream<wbr>Input<wbr>Data<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#eventhubstreaminputdatasourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics..<wbr>Inputs.<wbr>Event<wbr>Hub<wbr>Stream<wbr>Input<wbr>Data<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#iothubstreaminputdatasourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics..<wbr>Inputs.<wbr>Io<wbr>THub<wbr>Stream<wbr>Input<wbr>Data<wbr>Source<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes an input data source that contains stream data. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4002,7 +4002,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#serialization_csharp" style="color: inherit; text-decoration: inherit;">Serialization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#avroserializationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Avro<wbr>Serialization<wbr>Response<wbr>Args</a> | <a href="#csvserializationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Csv<wbr>Serialization<wbr>Response<wbr>Args</a> | <a href="#jsonserializationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Json<wbr>Serialization<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#avroserializationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics..<wbr>Inputs.<wbr>Avro<wbr>Serialization<wbr>Response<wbr>Args</a> | <a href="#csvserializationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics..<wbr>Inputs.<wbr>Csv<wbr>Serialization<wbr>Response<wbr>Args</a> | <a href="#jsonserializationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics..<wbr>Inputs.<wbr>Json<wbr>Serialization<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes how data from an input is serialized or how data is serialized when written to an output. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
 </dl>
@@ -4139,7 +4139,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:streamanalytics/latest:Input input8899 /subscriptions/56b5e0a9-b645-407d-99b0-c64f86013e3d/resourceGroups/sjrg8161/providers/Microsoft.StreamAnalytics/streamingjobs/sj6695/inputs/input8899 
+$ pulumi import azure-nextgen:streamanalytics:Input input8899 /subscriptions/56b5e0a9-b645-407d-99b0-c64f86013e3d/resourceGroups/sjrg8161/providers/Microsoft.StreamAnalytics/streamingjobs/sj6695/inputs/input8899 
 ```
 
 

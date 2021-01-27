@@ -215,7 +215,7 @@ The following output properties are available:
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageinsightstatusresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Operational<wbr>Insights.<wbr>Outputs.<wbr>Storage<wbr>Insight<wbr>Status<wbr>Response</a></span>
+        <span class="property-type"><a href="#storageinsightstatusresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Operational<wbr>Insights..<wbr>Outputs.<wbr>Storage<wbr>Insight<wbr>Status<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The status of the storage insight{{% /md %}}</dd>
     <dt class="property-"
@@ -224,7 +224,7 @@ The following output properties are available:
 <a href="#storageaccount_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageaccountresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Operational<wbr>Insights.<wbr>Outputs.<wbr>Storage<wbr>Account<wbr>Response</a></span>
+        <span class="property-type"><a href="#storageaccountresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Operational<wbr>Insights..<wbr>Outputs.<wbr>Storage<wbr>Account<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The storage account connection details{{% /md %}}</dd>
     <dt class="property-"

@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.automation.Watcher resource with
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Definition of the watcher type.
-Latest API Version: 2019-06-01.
+API Version: 2019-06-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var watcher = new AzureNextGen.Automation.Latest.Watcher("watcher", new AzureNextGen.Automation.Latest.WatcherArgs
+        var watcher = new AzureNextGen.Automation..Watcher("watcher", new AzureNextGen.Automation..WatcherArgs
         {
             AutomationAccountName = "MyTestAutomationAccount",
             Description = "This is a test watcher.",
@@ -52,7 +52,7 @@ class MyStack : Stack
 package main
 
 import (
-	automation "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/automation/latest"
+	automation "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/automation"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -85,7 +85,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-watcher = azure_nextgen.automation.latest.Watcher("watcher",
+watcher = azure_nextgen.automation.Watcher("watcher",
     automation_account_name="MyTestAutomationAccount",
     description="This is a test watcher.",
     execution_frequency_in_seconds=60,
@@ -105,7 +105,7 @@ watcher = azure_nextgen.automation.latest.Watcher("watcher",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const watcher = new azure_nextgen.automation.latest.Watcher("watcher", {
+const watcher = new azure_nextgen.automation.Watcher("watcher", {
     automationAccountName: "MyTestAutomationAccount",
     description: "This is a test watcher.",
     executionFrequencyInSeconds: 60,
@@ -1014,7 +1014,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:automation/latest:Watcher MyTestWatcher /subscriptions/subId/resourceGroups/rg/providers/Microsoft.Automation/automationAccounts/MyTestAutomationAccount/watchers/MyTestWatcher 
+$ pulumi import azure-nextgen:automation:Watcher MyTestWatcher /subscriptions/subId/resourceGroups/rg/providers/Microsoft.Automation/automationAccounts/MyTestAutomationAccount/watchers/MyTestWatcher 
 ```
 
 

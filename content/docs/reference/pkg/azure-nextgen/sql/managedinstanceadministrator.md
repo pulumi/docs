@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.sql.ManagedInstanceAdministrator
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 An Azure SQL managed instance administrator.
+API Version: 2020-08-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var managedInstanceAdministrator = new AzureNextGen.Sql.V20200801Preview.ManagedInstanceAdministrator("managedInstanceAdministrator", new AzureNextGen.Sql.V20200801Preview.ManagedInstanceAdministratorArgs
+        var managedInstanceAdministrator = new AzureNextGen.Sql..ManagedInstanceAdministrator("managedInstanceAdministrator", new AzureNextGen.Sql..ManagedInstanceAdministratorArgs
         {
             AdministratorName = "ActiveDirectory",
             AdministratorType = "ActiveDirectory",
@@ -50,7 +51,7 @@ class MyStack : Stack
 package main
 
 import (
-	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql/v20200801preview"
+	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -82,7 +83,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-managed_instance_administrator = azure_nextgen.sql.v20200801preview.ManagedInstanceAdministrator("managedInstanceAdministrator",
+managed_instance_administrator = azure_nextgen.sql.ManagedInstanceAdministrator("managedInstanceAdministrator",
     administrator_name="ActiveDirectory",
     administrator_type="ActiveDirectory",
     login="bob@contoso.com",
@@ -101,7 +102,7 @@ managed_instance_administrator = azure_nextgen.sql.v20200801preview.ManagedInsta
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const managedInstanceAdministrator = new azure_nextgen.sql.v20200801preview.ManagedInstanceAdministrator("managedInstanceAdministrator", {
+const managedInstanceAdministrator = new azure_nextgen.sql.ManagedInstanceAdministrator("managedInstanceAdministrator", {
     administratorName: "ActiveDirectory",
     administratorType: "ActiveDirectory",
     login: "bob@contoso.com",
@@ -125,7 +126,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var managedInstanceAdministrator = new AzureNextGen.Sql.V20200801Preview.ManagedInstanceAdministrator("managedInstanceAdministrator", new AzureNextGen.Sql.V20200801Preview.ManagedInstanceAdministratorArgs
+        var managedInstanceAdministrator = new AzureNextGen.Sql..ManagedInstanceAdministrator("managedInstanceAdministrator", new AzureNextGen.Sql..ManagedInstanceAdministratorArgs
         {
             AdministratorName = "ActiveDirectory",
             AdministratorType = "ActiveDirectory",
@@ -149,7 +150,7 @@ class MyStack : Stack
 package main
 
 import (
-	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql/v20200801preview"
+	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -181,7 +182,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-managed_instance_administrator = azure_nextgen.sql.v20200801preview.ManagedInstanceAdministrator("managedInstanceAdministrator",
+managed_instance_administrator = azure_nextgen.sql.ManagedInstanceAdministrator("managedInstanceAdministrator",
     administrator_name="ActiveDirectory",
     administrator_type="ActiveDirectory",
     login="bob@contoso.com",
@@ -200,7 +201,7 @@ managed_instance_administrator = azure_nextgen.sql.v20200801preview.ManagedInsta
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const managedInstanceAdministrator = new azure_nextgen.sql.v20200801preview.ManagedInstanceAdministrator("managedInstanceAdministrator", {
+const managedInstanceAdministrator = new azure_nextgen.sql.ManagedInstanceAdministrator("managedInstanceAdministrator", {
     administratorName: "ActiveDirectory",
     administratorType: "ActiveDirectory",
     login: "bob@contoso.com",
@@ -412,7 +413,7 @@ The ManagedInstanceAdministrator resource accepts the following [input]({{< relr
 <a href="#administratortype_csharp" style="color: inherit; text-decoration: inherit;">Administrator<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#managedinstanceadministratortype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql.<wbr>Managed<wbr>Instance<wbr>Administrator<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#managedinstanceadministratortype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql..<wbr>Managed<wbr>Instance<wbr>Administrator<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of the managed instance administrator.{{% /md %}}</dd>
     <dt class="property-required"
@@ -854,7 +855,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:sql/v20200801preview:ManagedInstanceAdministrator ActiveDirectory /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default-SQL-SouthEastAsia/providers/Microsoft.Sql/managedInstances/managedInstance/administrators/ActiveDirectory 
+$ pulumi import azure-nextgen:sql:ManagedInstanceAdministrator ActiveDirectory /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default-SQL-SouthEastAsia/providers/Microsoft.Sql/managedInstances/managedInstance/administrators/ActiveDirectory 
 ```
 
 

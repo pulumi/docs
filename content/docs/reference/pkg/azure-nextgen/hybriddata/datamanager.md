@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.hybriddata.DataManager resource 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The DataManager resource.
-Latest API Version: 2019-06-01.
+API Version: 2019-06-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var dataManager = new AzureNextGen.HybridData.Latest.DataManager("dataManager", new AzureNextGen.HybridData.Latest.DataManagerArgs
+        var dataManager = new AzureNextGen.HybridData..DataManager("dataManager", new AzureNextGen.HybridData..DataManagerArgs
         {
             DataManagerName = "TestAzureSDKOperations",
             Location = "westus",
@@ -47,7 +47,7 @@ class MyStack : Stack
 package main
 
 import (
-	hybriddata "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/hybriddata/latest"
+	hybriddata "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/hybriddata"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -75,7 +75,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-data_manager = azure_nextgen.hybriddata.latest.DataManager("dataManager",
+data_manager = azure_nextgen.hybriddata.DataManager("dataManager",
     data_manager_name="TestAzureSDKOperations",
     location="westus",
     resource_group_name="ResourceGroupForSDKTest")
@@ -90,7 +90,7 @@ data_manager = azure_nextgen.hybriddata.latest.DataManager("dataManager",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const dataManager = new azure_nextgen.hybriddata.latest.DataManager("dataManager", {
+const dataManager = new azure_nextgen.hybriddata.DataManager("dataManager", {
     dataManagerName: "TestAzureSDKOperations",
     location: "westus",
     resourceGroupName: "ResourceGroupForSDKTest",
@@ -327,7 +327,7 @@ region is specified on update the request will succeed.{{% /md %}}</dd>
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sku">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Data.<wbr>Inputs.<wbr>Sku<wbr>Args</a></span>
+        <span class="property-type"><a href="#sku">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Data..<wbr>Inputs.<wbr>Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The sku type.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -882,7 +882,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:hybriddata/latest:DataManager TestAzureSDKOperations /subscriptions/6e0219f5-327a-4365-904f-05eed4227ad7/resourceGroups/ResourceGroupForSDKTest/providers/Microsoft.HybridData/dataManagers/TestAzureSDKOperations 
+$ pulumi import azure-nextgen:hybriddata:DataManager TestAzureSDKOperations /subscriptions/6e0219f5-327a-4365-904f-05eed4227ad7/resourceGroups/ResourceGroupForSDKTest/providers/Microsoft.HybridData/dataManagers/TestAzureSDKOperations 
 ```
 
 

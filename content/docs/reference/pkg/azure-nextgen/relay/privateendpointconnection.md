@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.relay.PrivateEndpointConnection 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Private endpoint connection resource.
+API Version: 2018-01-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,16 +27,16 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var privateEndpointConnection = new AzureNextGen.Relay.V20180101Preview.PrivateEndpointConnection("privateEndpointConnection", new AzureNextGen.Relay.V20180101Preview.PrivateEndpointConnectionArgs
+        var privateEndpointConnection = new AzureNextGen.Relay..PrivateEndpointConnection("privateEndpointConnection", new AzureNextGen.Relay..PrivateEndpointConnectionArgs
         {
             Location = "South Central US",
             NamespaceName = "example-RelayNamespace-5849",
-            PrivateEndpoint = new AzureNextGen.Relay.V20180101Preview.Inputs.PrivateEndpointArgs
+            PrivateEndpoint = new AzureNextGen.Relay..Inputs.PrivateEndpointArgs
             {
                 Id = "/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/resourcegroup/providers/Microsoft.Network/privateEndpoints/ali-relay-pve-1",
             },
             PrivateEndpointConnectionName = "{privateEndpointConnection name}",
-            PrivateLinkServiceConnectionState = new AzureNextGen.Relay.V20180101Preview.Inputs.PrivateLinkServiceConnectionStateArgs
+            PrivateLinkServiceConnectionState = new AzureNextGen.Relay..Inputs.PrivateLinkServiceConnectionStateArgs
             {
                 Description = "You may pass",
                 Status = "Approved",
@@ -56,7 +57,7 @@ class MyStack : Stack
 package main
 
 import (
-	relay "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/relay/v20180101preview"
+	relay "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/relay"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -92,14 +93,14 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-private_endpoint_connection = azure_nextgen.relay.v20180101preview.PrivateEndpointConnection("privateEndpointConnection",
+private_endpoint_connection = azure_nextgen.relay.PrivateEndpointConnection("privateEndpointConnection",
     location="South Central US",
     namespace_name="example-RelayNamespace-5849",
-    private_endpoint=azure_nextgen.relay.v20180101preview.PrivateEndpointArgs(
+    private_endpoint=azure_nextgen.relay.PrivateEndpointArgs(
         id="/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/resourcegroup/providers/Microsoft.Network/privateEndpoints/ali-relay-pve-1",
     ),
     private_endpoint_connection_name="{privateEndpointConnection name}",
-    private_link_service_connection_state=azure_nextgen.relay.v20180101preview.PrivateLinkServiceConnectionStateArgs(
+    private_link_service_connection_state=azure_nextgen.relay.PrivateLinkServiceConnectionStateArgs(
         description="You may pass",
         status="Approved",
     ),
@@ -115,7 +116,7 @@ private_endpoint_connection = azure_nextgen.relay.v20180101preview.PrivateEndpoi
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const privateEndpointConnection = new azure_nextgen.relay.v20180101preview.PrivateEndpointConnection("privateEndpointConnection", {
+const privateEndpointConnection = new azure_nextgen.relay.PrivateEndpointConnection("privateEndpointConnection", {
     location: "South Central US",
     namespaceName: "example-RelayNamespace-5849",
     privateEndpoint: {
@@ -358,7 +359,7 @@ The PrivateEndpointConnection resource accepts the following [input]({{< relref 
 <a href="#privateendpoint_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpoint">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Relay.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Args</a></span>
+        <span class="property-type"><a href="#privateendpoint">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Relay..<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties of the private endpoint object.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -367,7 +368,7 @@ The PrivateEndpointConnection resource accepts the following [input]({{< relref 
 <a href="#privatelinkserviceconnectionstate_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkserviceconnectionstate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Relay.<wbr>Inputs.<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Args</a></span>
+        <span class="property-type"><a href="#privatelinkserviceconnectionstate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Relay..<wbr>Inputs.<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Approval state of the private link connection.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -981,7 +982,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#privateendpointserviceconnectionstatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Relay.<wbr>Private<wbr>Endpoint<wbr>Service<wbr>Connection<wbr>Status</a></span>
+        <span class="property-type">string | <a href="#privateendpointserviceconnectionstatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Relay..<wbr>Private<wbr>Endpoint<wbr>Service<wbr>Connection<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether the connection has been approved, rejected or removed by the Relay Namespace owner.{{% /md %}}</dd>
 </dl>
@@ -1225,7 +1226,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:relay/v20180101preview:PrivateEndpointConnection {privateEndpointConnection name} /subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/alitest/providers/Microsoft.Relay/namespaces/relay-private-endpoint-test/privateEndpointConnections/{privateEndpointConnection name} 
+$ pulumi import azure-nextgen:relay:PrivateEndpointConnection {privateEndpointConnection name} /subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/alitest/providers/Microsoft.Relay/namespaces/relay-private-endpoint-test/privateEndpointConnections/{privateEndpointConnection name} 
 ```
 
 

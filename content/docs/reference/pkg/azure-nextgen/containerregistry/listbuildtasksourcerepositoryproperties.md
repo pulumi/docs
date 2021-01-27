@@ -222,7 +222,7 @@ The following output properties are available:
 <a href="#sourcecontrolauthproperties_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Control<wbr>Auth<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sourcecontrolauthinforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry.<wbr>Outputs.<wbr>Source<wbr>Control<wbr>Auth<wbr>Info<wbr>Response</a></span>
+        <span class="property-type"><a href="#sourcecontrolauthinforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry..<wbr>Outputs.<wbr>Source<wbr>Control<wbr>Auth<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The authorization properties for accessing the source code repository.{{% /md %}}</dd>
 </dl>

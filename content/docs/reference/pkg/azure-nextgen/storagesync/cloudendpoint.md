@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.storagesync.CloudEndpoint resour
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Cloud Endpoint object.
-Latest API Version: 2020-09-01.
+API Version: 2020-09-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var cloudEndpoint = new AzureNextGen.StorageSync.Latest.CloudEndpoint("cloudEndpoint", new AzureNextGen.StorageSync.Latest.CloudEndpointArgs
+        var cloudEndpoint = new AzureNextGen.StorageSync..CloudEndpoint("cloudEndpoint", new AzureNextGen.StorageSync..CloudEndpointArgs
         {
             AzureFileShareName = "cvcloud-afscv-0719-058-a94a1354-a1fd-4e9a-9a50-919fad8c4ba4",
             CloudEndpointName = "SampleCloudEndpoint_1",
@@ -52,7 +52,7 @@ class MyStack : Stack
 package main
 
 import (
-	storagesync "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/storagesync/latest"
+	storagesync "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/storagesync"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -85,7 +85,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-cloud_endpoint = azure_nextgen.storagesync.latest.CloudEndpoint("cloudEndpoint",
+cloud_endpoint = azure_nextgen.storagesync.CloudEndpoint("cloudEndpoint",
     azure_file_share_name="cvcloud-afscv-0719-058-a94a1354-a1fd-4e9a-9a50-919fad8c4ba4",
     cloud_endpoint_name="SampleCloudEndpoint_1",
     friendly_name="ankushbsubscriptionmgmtmab",
@@ -105,7 +105,7 @@ cloud_endpoint = azure_nextgen.storagesync.latest.CloudEndpoint("cloudEndpoint",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const cloudEndpoint = new azure_nextgen.storagesync.latest.CloudEndpoint("cloudEndpoint", {
+const cloudEndpoint = new azure_nextgen.storagesync.CloudEndpoint("cloudEndpoint", {
     azureFileShareName: "cvcloud-afscv-0719-058-a94a1354-a1fd-4e9a-9a50-919fad8c4ba4",
     cloudEndpointName: "SampleCloudEndpoint_1",
     friendlyName: "ankushbsubscriptionmgmtmab",
@@ -942,7 +942,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:storagesync/latest:CloudEndpoint SampleCloudEndpoint_1 /subscriptions/52b8da2f-61e0-4a1f-8dde-336911f367fb/resourceGroups/SampleResourceGroup_1/providers/Microsoft.StorageSync/storageSyncServices/SampleStorageSyncService_1/syncGroups/SampleSyncGroup_1/cloudEndpoints/SampleCloudEndpoint_1 
+$ pulumi import azure-nextgen:storagesync:CloudEndpoint SampleCloudEndpoint_1 /subscriptions/52b8da2f-61e0-4a1f-8dde-336911f367fb/resourceGroups/SampleResourceGroup_1/providers/Microsoft.StorageSync/storageSyncServices/SampleStorageSyncService_1/syncGroups/SampleSyncGroup_1/cloudEndpoints/SampleCloudEndpoint_1 
 ```
 
 

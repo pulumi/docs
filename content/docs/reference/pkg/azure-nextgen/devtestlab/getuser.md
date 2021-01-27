@@ -287,7 +287,7 @@ The following output properties are available:
 <a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#useridentityresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Outputs.<wbr>User<wbr>Identity<wbr>Response</a></span>
+        <span class="property-type"><a href="#useridentityresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab..<wbr>Outputs.<wbr>User<wbr>Identity<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The identity of the user.{{% /md %}}</dd>
     <dt class="property-"
@@ -305,7 +305,7 @@ The following output properties are available:
 <a href="#secretstore_csharp" style="color: inherit; text-decoration: inherit;">Secret<wbr>Store</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#usersecretstoreresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Outputs.<wbr>User<wbr>Secret<wbr>Store<wbr>Response</a></span>
+        <span class="property-type"><a href="#usersecretstoreresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab..<wbr>Outputs.<wbr>User<wbr>Secret<wbr>Store<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The secret store of the user.{{% /md %}}</dd>
     <dt class="property-"

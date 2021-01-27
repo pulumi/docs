@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.sqlvirtualmachine.AvailabilityGr
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 A SQL Server availability group listener.
+API Version: 2017-03-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,16 +27,16 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var availabilityGroupListener = new AzureNextGen.SqlVirtualMachine.V20170301Preview.AvailabilityGroupListener("availabilityGroupListener", new AzureNextGen.SqlVirtualMachine.V20170301Preview.AvailabilityGroupListenerArgs
+        var availabilityGroupListener = new AzureNextGen.SqlVirtualMachine..AvailabilityGroupListener("availabilityGroupListener", new AzureNextGen.SqlVirtualMachine..AvailabilityGroupListenerArgs
         {
             AvailabilityGroupListenerName = "agl-test",
             AvailabilityGroupName = "ag-test",
             LoadBalancerConfigurations = 
             {
-                new AzureNextGen.SqlVirtualMachine.V20170301Preview.Inputs.LoadBalancerConfigurationArgs
+                new AzureNextGen.SqlVirtualMachine..Inputs.LoadBalancerConfigurationArgs
                 {
                     LoadBalancerResourceId = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg/providers/Microsoft.Network/loadBalancers/lb-test",
-                    PrivateIpAddress = new AzureNextGen.SqlVirtualMachine.V20170301Preview.Inputs.PrivateIPAddressArgs
+                    PrivateIpAddress = new AzureNextGen.SqlVirtualMachine..Inputs.PrivateIPAddressArgs
                     {
                         IpAddress = "10.1.0.112",
                         SubnetResourceId = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg/providers/Microsoft.Network/virtualNetworks/test-vnet/subnets/default",
@@ -66,7 +67,7 @@ class MyStack : Stack
 package main
 
 import (
-	sqlvirtualmachine "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sqlvirtualmachine/v20170301preview"
+	sqlvirtualmachine "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sqlvirtualmachine"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -110,12 +111,12 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-availability_group_listener = azure_nextgen.sqlvirtualmachine.v20170301preview.AvailabilityGroupListener("availabilityGroupListener",
+availability_group_listener = azure_nextgen.sqlvirtualmachine.AvailabilityGroupListener("availabilityGroupListener",
     availability_group_listener_name="agl-test",
     availability_group_name="ag-test",
-    load_balancer_configurations=[azure_nextgen.sqlvirtualmachine.v20170301preview.LoadBalancerConfigurationArgs(
+    load_balancer_configurations=[azure_nextgen.sqlvirtualmachine.LoadBalancerConfigurationArgs(
         load_balancer_resource_id="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg/providers/Microsoft.Network/loadBalancers/lb-test",
-        private_ip_address=azure_nextgen.sqlvirtualmachine.v20170301preview.PrivateIPAddressArgs(
+        private_ip_address=azure_nextgen.sqlvirtualmachine.PrivateIPAddressArgs(
             ip_address="10.1.0.112",
             subnet_resource_id="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg/providers/Microsoft.Network/virtualNetworks/test-vnet/subnets/default",
         ),
@@ -139,7 +140,7 @@ availability_group_listener = azure_nextgen.sqlvirtualmachine.v20170301preview.A
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const availabilityGroupListener = new azure_nextgen.sqlvirtualmachine.v20170301preview.AvailabilityGroupListener("availabilityGroupListener", {
+const availabilityGroupListener = new azure_nextgen.sqlvirtualmachine.AvailabilityGroupListener("availabilityGroupListener", {
     availabilityGroupListenerName: "agl-test",
     availabilityGroupName: "ag-test",
     loadBalancerConfigurations: [{
@@ -397,7 +398,7 @@ The AvailabilityGroupListener resource accepts the following [input]({{< relref 
 <a href="#loadbalancerconfigurations_csharp" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalancerconfiguration">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql<wbr>Virtual<wbr>Machine.<wbr>Inputs.<wbr>Load<wbr>Balancer<wbr>Configuration<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#loadbalancerconfiguration">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql<wbr>Virtual<wbr>Machine..<wbr>Inputs.<wbr>Load<wbr>Balancer<wbr>Configuration<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of load balancer configurations for an availability group listener.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -824,7 +825,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privateipaddress_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Ip<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateipaddress">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql<wbr>Virtual<wbr>Machine.<wbr>Inputs.<wbr>Private<wbr>IPAddress<wbr>Args</a></span>
+        <span class="property-type"><a href="#privateipaddress">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql<wbr>Virtual<wbr>Machine..<wbr>Inputs.<wbr>Private<wbr>IPAddress<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Private IP address.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1030,7 +1031,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privateipaddress_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Ip<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateipaddressresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql<wbr>Virtual<wbr>Machine.<wbr>Inputs.<wbr>Private<wbr>IPAddress<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#privateipaddressresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql<wbr>Virtual<wbr>Machine..<wbr>Inputs.<wbr>Private<wbr>IPAddress<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Private IP address.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1417,7 +1418,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:sqlvirtualmachine/v20170301preview:AvailabilityGroupListener agl-test /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg/providers/Microsoft.SqlVirtualMachine/sqlVirtualMachineGroups/testvmgroup/availabilityGroupListeners/agl-test 
+$ pulumi import azure-nextgen:sqlvirtualmachine:AvailabilityGroupListener agl-test /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg/providers/Microsoft.SqlVirtualMachine/sqlVirtualMachineGroups/testvmgroup/availabilityGroupListeners/agl-test 
 ```
 
 

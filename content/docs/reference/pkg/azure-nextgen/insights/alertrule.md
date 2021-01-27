@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.insights.AlertRule resource with
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The alert rule resource.
-Latest API Version: 2016-03-01.
+API Version: 2016-03-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var alertRule = new AzureNextGen.Insights.Latest.AlertRule("alertRule", new AzureNextGen.Insights.Latest.AlertRuleArgs
+        var alertRule = new AzureNextGen.Insights..AlertRule("alertRule", new AzureNextGen.Insights..AlertRuleArgs
         {
             Actions = {},
             Condition = 
@@ -70,7 +70,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-alert_rule = azure_nextgen.insights.latest.AlertRule("alertRule",
+alert_rule = azure_nextgen.insights.AlertRule("alertRule",
     actions=[],
     condition={
         "dataSource": {
@@ -102,7 +102,7 @@ alert_rule = azure_nextgen.insights.latest.AlertRule("alertRule",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const alertRule = new azure_nextgen.insights.latest.AlertRule("alertRule", {
+const alertRule = new azure_nextgen.insights.AlertRule("alertRule", {
     actions: [],
     condition: {
         dataSource: {
@@ -318,7 +318,7 @@ The AlertRule resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#condition_csharp" style="color: inherit; text-decoration: inherit;">Condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#locationthresholdrulecondition">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Inputs.<wbr>Location<wbr>Threshold<wbr>Rule<wbr>Condition<wbr>Args</a> | <a href="#managementeventrulecondition">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Inputs.<wbr>Management<wbr>Event<wbr>Rule<wbr>Condition<wbr>Args</a> | <a href="#thresholdrulecondition">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Inputs.<wbr>Threshold<wbr>Rule<wbr>Condition<wbr>Args</a></span>
+        <span class="property-type"><a href="#locationthresholdrulecondition">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Inputs.<wbr>Location<wbr>Threshold<wbr>Rule<wbr>Condition<wbr>Args</a> | <a href="#managementeventrulecondition">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Inputs.<wbr>Management<wbr>Event<wbr>Rule<wbr>Condition<wbr>Args</a> | <a href="#thresholdrulecondition">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Inputs.<wbr>Threshold<wbr>Rule<wbr>Condition<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}the condition that results in the alert rule being activated.{{% /md %}}</dd>
     <dt class="property-required"
@@ -372,7 +372,7 @@ The AlertRule resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#actions_csharp" style="color: inherit; text-decoration: inherit;">Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Inputs.<wbr>Rule<wbr>Email<wbr>Action<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Inputs.<wbr>Rule<wbr>Webhook<wbr>Action<wbr>Args&gt;&gt;</span>
+        <span class="property-type">List&lt;Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Inputs.<wbr>Rule<wbr>Email<wbr>Action<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Inputs.<wbr>Rule<wbr>Webhook<wbr>Action<wbr>Args&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}the array of actions that are performed when the alert rule becomes active, and when an alert condition is resolved.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -880,7 +880,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datasource_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulemanagementeventdatasource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Inputs.<wbr>Rule<wbr>Management<wbr>Event<wbr>Data<wbr>Source<wbr>Args</a> | <a href="#rulemetricdatasource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Inputs.<wbr>Rule<wbr>Metric<wbr>Data<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#rulemanagementeventdatasource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Inputs.<wbr>Rule<wbr>Management<wbr>Event<wbr>Data<wbr>Source<wbr>Args</a> | <a href="#rulemetricdatasource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Inputs.<wbr>Rule<wbr>Metric<wbr>Data<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}the resource from which the rule collects its data. For this type dataSource will always be of type RuleMetricDataSource.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1014,7 +1014,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datasource_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulemanagementeventdatasourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Inputs.<wbr>Rule<wbr>Management<wbr>Event<wbr>Data<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#rulemetricdatasourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Inputs.<wbr>Rule<wbr>Metric<wbr>Data<wbr>Source<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#rulemanagementeventdatasourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Inputs.<wbr>Rule<wbr>Management<wbr>Event<wbr>Data<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#rulemetricdatasourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Inputs.<wbr>Rule<wbr>Metric<wbr>Data<wbr>Source<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}the resource from which the rule collects its data. For this type dataSource will always be of type RuleMetricDataSource.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1139,7 +1139,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operator_csharp" style="color: inherit; text-decoration: inherit;">Operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#conditionoperator">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Condition<wbr>Operator</a></span>
+        <span class="property-type"><a href="#conditionoperator">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Condition<wbr>Operator</a></span>
     </dt>
     <dd>{{% md %}}the condition operator.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1407,7 +1407,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#aggregation_csharp" style="color: inherit; text-decoration: inherit;">Aggregation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementeventaggregationcondition">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Inputs.<wbr>Management<wbr>Event<wbr>Aggregation<wbr>Condition<wbr>Args</a></span>
+        <span class="property-type"><a href="#managementeventaggregationcondition">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Inputs.<wbr>Management<wbr>Event<wbr>Aggregation<wbr>Condition<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}How the data that is collected should be combined over time and when the alert is activated. Note that for management event alerts aggregation is optional – if it is not provided then any event will cause the alert to activate.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1416,7 +1416,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datasource_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulemanagementeventdatasource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Inputs.<wbr>Rule<wbr>Management<wbr>Event<wbr>Data<wbr>Source<wbr>Args</a> | <a href="#rulemetricdatasource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Inputs.<wbr>Rule<wbr>Metric<wbr>Data<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#rulemanagementeventdatasource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Inputs.<wbr>Rule<wbr>Management<wbr>Event<wbr>Data<wbr>Source<wbr>Args</a> | <a href="#rulemetricdatasource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Inputs.<wbr>Rule<wbr>Metric<wbr>Data<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}the resource from which the rule collects its data. For this type dataSource will always be of type RuleMetricDataSource.{{% /md %}}</dd>
 </dl>
@@ -1505,7 +1505,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#aggregation_csharp" style="color: inherit; text-decoration: inherit;">Aggregation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementeventaggregationconditionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Inputs.<wbr>Management<wbr>Event<wbr>Aggregation<wbr>Condition<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#managementeventaggregationconditionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Inputs.<wbr>Management<wbr>Event<wbr>Aggregation<wbr>Condition<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}How the data that is collected should be combined over time and when the alert is activated. Note that for management event alerts aggregation is optional – if it is not provided then any event will cause the alert to activate.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1514,7 +1514,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datasource_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulemanagementeventdatasourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Inputs.<wbr>Rule<wbr>Management<wbr>Event<wbr>Data<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#rulemetricdatasourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Inputs.<wbr>Rule<wbr>Metric<wbr>Data<wbr>Source<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#rulemanagementeventdatasourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Inputs.<wbr>Rule<wbr>Management<wbr>Event<wbr>Data<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#rulemetricdatasourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Inputs.<wbr>Rule<wbr>Metric<wbr>Data<wbr>Source<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}the resource from which the rule collects its data. For this type dataSource will always be of type RuleMetricDataSource.{{% /md %}}</dd>
 </dl>
@@ -1923,7 +1923,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#claims_csharp" style="color: inherit; text-decoration: inherit;">Claims</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulemanagementeventclaimsdatasource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Inputs.<wbr>Rule<wbr>Management<wbr>Event<wbr>Claims<wbr>Data<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#rulemanagementeventclaimsdatasource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Inputs.<wbr>Rule<wbr>Management<wbr>Event<wbr>Claims<wbr>Data<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}the claims.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2309,7 +2309,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#claims_csharp" style="color: inherit; text-decoration: inherit;">Claims</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulemanagementeventclaimsdatasourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Inputs.<wbr>Rule<wbr>Management<wbr>Event<wbr>Claims<wbr>Data<wbr>Source<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#rulemanagementeventclaimsdatasourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Inputs.<wbr>Rule<wbr>Management<wbr>Event<wbr>Claims<wbr>Data<wbr>Source<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}the claims.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3087,7 +3087,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operator_csharp" style="color: inherit; text-decoration: inherit;">Operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#conditionoperator">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Condition<wbr>Operator</a></span>
+        <span class="property-type"><a href="#conditionoperator">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Condition<wbr>Operator</a></span>
     </dt>
     <dd>{{% md %}}the operator used to compare the data and the threshold.{{% /md %}}</dd>
     <dt class="property-required"
@@ -3105,7 +3105,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datasource_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulemanagementeventdatasource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Inputs.<wbr>Rule<wbr>Management<wbr>Event<wbr>Data<wbr>Source<wbr>Args</a> | <a href="#rulemetricdatasource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Inputs.<wbr>Rule<wbr>Metric<wbr>Data<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#rulemanagementeventdatasource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Inputs.<wbr>Rule<wbr>Management<wbr>Event<wbr>Data<wbr>Source<wbr>Args</a> | <a href="#rulemetricdatasource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Inputs.<wbr>Rule<wbr>Metric<wbr>Data<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}the resource from which the rule collects its data. For this type dataSource will always be of type RuleMetricDataSource.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3114,7 +3114,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timeaggregation_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Aggregation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timeaggregationoperator">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Time<wbr>Aggregation<wbr>Operator</a></span>
+        <span class="property-type"><a href="#timeaggregationoperator">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Time<wbr>Aggregation<wbr>Operator</a></span>
     </dt>
     <dd>{{% md %}}the time aggregation operator. How the data that are collected should be combined over time. The default value is the PrimaryAggregationType of the Metric.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3311,7 +3311,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datasource_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulemanagementeventdatasourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Inputs.<wbr>Rule<wbr>Management<wbr>Event<wbr>Data<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#rulemetricdatasourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Inputs.<wbr>Rule<wbr>Metric<wbr>Data<wbr>Source<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#rulemanagementeventdatasourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Inputs.<wbr>Rule<wbr>Management<wbr>Event<wbr>Data<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#rulemetricdatasourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Inputs.<wbr>Rule<wbr>Metric<wbr>Data<wbr>Source<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}the resource from which the rule collects its data. For this type dataSource will always be of type RuleMetricDataSource.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3555,7 +3555,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:insights/latest:AlertRule chiricutin /subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/Rac46PostSwapRG/providers/microsoft.insights/alertrules/chiricutin 
+$ pulumi import azure-nextgen:insights:AlertRule chiricutin /subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/Rac46PostSwapRG/providers/microsoft.insights/alertrules/chiricutin 
 ```
 
 

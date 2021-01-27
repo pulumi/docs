@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.security.WorkspaceSetting resour
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Configures where to store the OMS agent data for workspaces under a scope
+API Version: 2017-08-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var workspaceSetting = new AzureNextGen.Security.V20170801Preview.WorkspaceSetting("workspaceSetting", new AzureNextGen.Security.V20170801Preview.WorkspaceSettingArgs
+        var workspaceSetting = new AzureNextGen.Security..WorkspaceSetting("workspaceSetting", new AzureNextGen.Security..WorkspaceSettingArgs
         {
             Scope = "/subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23",
             WorkspaceId = "/subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23/resourceGroups/myRg/providers/Microsoft.OperationalInsights/workspaces/myWorkspace",
@@ -46,7 +47,7 @@ class MyStack : Stack
 package main
 
 import (
-	security "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/security/v20170801preview"
+	security "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/security"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -74,7 +75,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-workspace_setting = azure_nextgen.security.v20170801preview.WorkspaceSetting("workspaceSetting",
+workspace_setting = azure_nextgen.security.WorkspaceSetting("workspaceSetting",
     scope="/subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23",
     workspace_id="/subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23/resourceGroups/myRg/providers/Microsoft.OperationalInsights/workspaces/myWorkspace",
     workspace_setting_name="default")
@@ -89,7 +90,7 @@ workspace_setting = azure_nextgen.security.v20170801preview.WorkspaceSetting("wo
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const workspaceSetting = new azure_nextgen.security.v20170801preview.WorkspaceSetting("workspaceSetting", {
+const workspaceSetting = new azure_nextgen.security.WorkspaceSetting("workspaceSetting", {
     scope: "/subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23",
     workspaceId: "/subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23/resourceGroups/myRg/providers/Microsoft.OperationalInsights/workspaces/myWorkspace",
     workspaceSettingName: "default",
@@ -561,7 +562,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:security/v20170801preview:WorkspaceSetting default /subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23/providers/Microsoft.Security/workspaceSettings/default 
+$ pulumi import azure-nextgen:security:WorkspaceSetting default /subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23/providers/Microsoft.Security/workspaceSettings/default 
 ```
 
 

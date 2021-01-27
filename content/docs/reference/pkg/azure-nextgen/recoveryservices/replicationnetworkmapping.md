@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.recoveryservices.ReplicationNetw
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Network Mapping model. Ideally it should have been possible to inherit this class from prev version in InheritedModels as long as there is no difference in structure or method signature. Since there were no base Models for certain fields and methods viz NetworkMappingProperties and Load with required return type, the class has been introduced in its entirety with references to base models to facilitate extensions in subsequent versions.
-Latest API Version: 2018-07-10.
+API Version: 2018-07-10.
 
 {{% examples %}}
 ## Example Usage
@@ -27,12 +27,12 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var replicationNetworkMapping = new AzureNextGen.RecoveryServices.Latest.ReplicationNetworkMapping("replicationNetworkMapping", new AzureNextGen.RecoveryServices.Latest.ReplicationNetworkMappingArgs
+        var replicationNetworkMapping = new AzureNextGen.RecoveryServices..ReplicationNetworkMapping("replicationNetworkMapping", new AzureNextGen.RecoveryServices..ReplicationNetworkMappingArgs
         {
             FabricName = "b0cef6e9a4437b81803d0b55ada4f700ab66caae59c35d62723a1589c0cd13ac",
             NetworkMappingName = "corpe2amap",
             NetworkName = "e2267b5c-2650-49bd-ab3f-d66aae694c06",
-            Properties = new AzureNextGen.RecoveryServices.Latest.Inputs.CreateNetworkMappingInputPropertiesArgs
+            Properties = new AzureNextGen.RecoveryServices..Inputs.CreateNetworkMappingInputPropertiesArgs
             {
                 FabricSpecificDetails = 
                 {
@@ -62,11 +62,11 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-replication_network_mapping = azure_nextgen.recoveryservices.latest.ReplicationNetworkMapping("replicationNetworkMapping",
+replication_network_mapping = azure_nextgen.recoveryservices.ReplicationNetworkMapping("replicationNetworkMapping",
     fabric_name="b0cef6e9a4437b81803d0b55ada4f700ab66caae59c35d62723a1589c0cd13ac",
     network_mapping_name="corpe2amap",
     network_name="e2267b5c-2650-49bd-ab3f-d66aae694c06",
-    properties=azure_nextgen.recoveryservices.latest.CreateNetworkMappingInputPropertiesArgs(
+    properties=azure_nextgen.recoveryservices.CreateNetworkMappingInputPropertiesArgs(
         fabric_specific_details={
             "instanceType": "VmmToAzure",
         },
@@ -86,7 +86,7 @@ replication_network_mapping = azure_nextgen.recoveryservices.latest.ReplicationN
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const replicationNetworkMapping = new azure_nextgen.recoveryservices.latest.ReplicationNetworkMapping("replicationNetworkMapping", {
+const replicationNetworkMapping = new azure_nextgen.recoveryservices.ReplicationNetworkMapping("replicationNetworkMapping", {
     fabricName: "b0cef6e9a4437b81803d0b55ada4f700ab66caae59c35d62723a1589c0cd13ac",
     networkMappingName: "corpe2amap",
     networkName: "e2267b5c-2650-49bd-ab3f-d66aae694c06",
@@ -339,7 +339,7 @@ The ReplicationNetworkMapping resource accepts the following [input]({{< relref 
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#createnetworkmappinginputproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Create<wbr>Network<wbr>Mapping<wbr>Input<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#createnetworkmappinginputproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Create<wbr>Network<wbr>Mapping<wbr>Input<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Input properties for creating network mapping.{{% /md %}}</dd>
 </dl>
@@ -881,7 +881,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fabricspecificdetails_csharp" style="color: inherit; text-decoration: inherit;">Fabric<wbr>Specific<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azuretoazurecreatenetworkmappinginput">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Azure<wbr>To<wbr>Azure<wbr>Create<wbr>Network<wbr>Mapping<wbr>Input<wbr>Args</a> | <a href="#vmmtoazurecreatenetworkmappinginput">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Vmm<wbr>To<wbr>Azure<wbr>Create<wbr>Network<wbr>Mapping<wbr>Input<wbr>Args</a> | <a href="#vmmtovmmcreatenetworkmappinginput">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Vmm<wbr>To<wbr>Vmm<wbr>Create<wbr>Network<wbr>Mapping<wbr>Input<wbr>Args</a></span>
+        <span class="property-type"><a href="#azuretoazurecreatenetworkmappinginput">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Azure<wbr>To<wbr>Azure<wbr>Create<wbr>Network<wbr>Mapping<wbr>Input<wbr>Args</a> | <a href="#vmmtoazurecreatenetworkmappinginput">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Vmm<wbr>To<wbr>Azure<wbr>Create<wbr>Network<wbr>Mapping<wbr>Input<wbr>Args</a> | <a href="#vmmtovmmcreatenetworkmappinginput">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Vmm<wbr>To<wbr>Vmm<wbr>Create<wbr>Network<wbr>Mapping<wbr>Input<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Fabric specific input properties.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1015,7 +1015,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fabricspecificsettings_csharp" style="color: inherit; text-decoration: inherit;">Fabric<wbr>Specific<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azuretoazurenetworkmappingsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Azure<wbr>To<wbr>Azure<wbr>Network<wbr>Mapping<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#vmmtoazurenetworkmappingsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Vmm<wbr>To<wbr>Azure<wbr>Network<wbr>Mapping<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#vmmtovmmnetworkmappingsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Vmm<wbr>To<wbr>Vmm<wbr>Network<wbr>Mapping<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azuretoazurenetworkmappingsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Azure<wbr>To<wbr>Azure<wbr>Network<wbr>Mapping<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#vmmtoazurenetworkmappingsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Vmm<wbr>To<wbr>Azure<wbr>Network<wbr>Mapping<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#vmmtovmmnetworkmappingsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Vmm<wbr>To<wbr>Vmm<wbr>Network<wbr>Mapping<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The fabric specific settings.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1463,7 +1463,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:recoveryservices/latest:ReplicationNetworkMapping corpe2amap /Subscriptions/9112a37f-0f3e-46ec-9c00-060c6edca071/resourceGroups/srcBvte2a14C27/providers/Microsoft.RecoveryServices/vaults/srce2avaultbvtaC27/replicationFabrics/b0cef6e9a4437b81803d0b55ada4f700ab66caae59c35d62723a1589c0cd13ac/replicationNetworks/e2267b5c-2650-49bd-ab3f-d66aae694c06/replicationNetworkMappings/corpe2amap 
+$ pulumi import azure-nextgen:recoveryservices:ReplicationNetworkMapping corpe2amap /Subscriptions/9112a37f-0f3e-46ec-9c00-060c6edca071/resourceGroups/srcBvte2a14C27/providers/Microsoft.RecoveryServices/vaults/srce2avaultbvtaC27/replicationFabrics/b0cef6e9a4437b81803d0b55ada4f700ab66caae59c35d62723a1589c0cd13ac/replicationNetworks/e2267b5c-2650-49bd-ab3f-d66aae694c06/replicationNetworkMappings/corpe2amap 
 ```
 
 

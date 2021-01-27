@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.compute.DedicatedHost resource w
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Specifies information about the Dedicated host.
-Latest API Version: 2020-06-01.
+API Version: 2020-06-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,14 +27,14 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var dedicatedHost = new AzureNextGen.Compute.Latest.DedicatedHost("dedicatedHost", new AzureNextGen.Compute.Latest.DedicatedHostArgs
+        var dedicatedHost = new AzureNextGen.Compute..DedicatedHost("dedicatedHost", new AzureNextGen.Compute..DedicatedHostArgs
         {
             HostGroupName = "myDedicatedHostGroup",
             HostName = "myDedicatedHost",
             Location = "westus",
             PlatformFaultDomain = 1,
             ResourceGroupName = "myResourceGroup",
-            Sku = new AzureNextGen.Compute.Latest.Inputs.SkuArgs
+            Sku = new AzureNextGen.Compute..Inputs.SkuArgs
             {
                 Name = "DSv3-Type1",
             },
@@ -57,7 +57,7 @@ class MyStack : Stack
 package main
 
 import (
-	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute/latest"
+	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -93,13 +93,13 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-dedicated_host = azure_nextgen.compute.latest.DedicatedHost("dedicatedHost",
+dedicated_host = azure_nextgen.compute.DedicatedHost("dedicatedHost",
     host_group_name="myDedicatedHostGroup",
     host_name="myDedicatedHost",
     location="westus",
     platform_fault_domain=1,
     resource_group_name="myResourceGroup",
-    sku=azure_nextgen.compute.latest.SkuArgs(
+    sku=azure_nextgen.compute.SkuArgs(
         name="DSv3-Type1",
     ),
     tags={
@@ -116,7 +116,7 @@ dedicated_host = azure_nextgen.compute.latest.DedicatedHost("dedicatedHost",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const dedicatedHost = new azure_nextgen.compute.latest.DedicatedHost("dedicatedHost", {
+const dedicatedHost = new azure_nextgen.compute.DedicatedHost("dedicatedHost", {
     hostGroupName: "myDedicatedHostGroup",
     hostName: "myDedicatedHost",
     location: "westus",
@@ -359,7 +359,7 @@ The DedicatedHost resource accepts the following [input]({{< relref "/docs/intro
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sku">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Sku<wbr>Args</a></span>
+        <span class="property-type"><a href="#sku">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Inputs.<wbr>Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}SKU of the dedicated host for Hardware Generation and VM family. Only name is required to be set. List Microsoft.Compute SKUs for a list of possible values.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -377,7 +377,7 @@ The DedicatedHost resource accepts the following [input]({{< relref "/docs/intro
 <a href="#licensetype_csharp" style="color: inherit; text-decoration: inherit;">License<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dedicatedhostlicensetypes">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Dedicated<wbr>Host<wbr>License<wbr>Types</a></span>
+        <span class="property-type"><a href="#dedicatedhostlicensetypes">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Dedicated<wbr>Host<wbr>License<wbr>Types</a></span>
     </dt>
     <dd>{{% md %}}Specifies the software license type that will be applied to the VMs deployed on the dedicated host. <br><br> Possible values are: <br><br> **None** <br><br> **Windows_Server_Hybrid** <br><br> **Windows_Server_Perpetual** <br><br> Default: **None**{{% /md %}}</dd>
     <dt class="property-optional"
@@ -696,7 +696,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#instanceview_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>View</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dedicatedhostinstanceviewresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Outputs.<wbr>Dedicated<wbr>Host<wbr>Instance<wbr>View<wbr>Response</a></span>
+        <span class="property-type"><a href="#dedicatedhostinstanceviewresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Outputs.<wbr>Dedicated<wbr>Host<wbr>Instance<wbr>View<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The dedicated host instance view.{{% /md %}}</dd>
     <dt class="property-"
@@ -741,7 +741,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#virtualmachines_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Machines</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourcereadonlyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Outputs.<wbr>Sub<wbr>Resource<wbr>Read<wbr>Only<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#subresourcereadonlyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Outputs.<wbr>Sub<wbr>Resource<wbr>Read<wbr>Only<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of references to all virtual machines in the Dedicated Host.{{% /md %}}</dd>
 </dl>
@@ -1100,7 +1100,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allocatablevms_csharp" style="color: inherit; text-decoration: inherit;">Allocatable<wbr>VMs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dedicatedhostallocatablevmresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Dedicated<wbr>Host<wbr>Allocatable<wbr>VMResponse<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#dedicatedhostallocatablevmresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Inputs.<wbr>Dedicated<wbr>Host<wbr>Allocatable<wbr>VMResponse<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The unutilized capacity of the dedicated host represented in terms of each VM size that is allowed to be deployed to the dedicated host.{{% /md %}}</dd>
 </dl>
@@ -1171,7 +1171,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#availablecapacity_csharp" style="color: inherit; text-decoration: inherit;">Available<wbr>Capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dedicatedhostavailablecapacityresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Dedicated<wbr>Host<wbr>Available<wbr>Capacity<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#dedicatedhostavailablecapacityresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Inputs.<wbr>Dedicated<wbr>Host<wbr>Available<wbr>Capacity<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Unutilized capacity of the dedicated host.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1180,7 +1180,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#statuses_csharp" style="color: inherit; text-decoration: inherit;">Statuses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceviewstatusresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Instance<wbr>View<wbr>Status<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#instanceviewstatusresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Inputs.<wbr>Instance<wbr>View<wbr>Status<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The resource status information.{{% /md %}}</dd>
 </dl>
@@ -1872,7 +1872,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:compute/latest:DedicatedHost myDedicatedHost /subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/HostGroups/myDedicatedHostGroup/hosts/myDedicatedHost 
+$ pulumi import azure-nextgen:compute:DedicatedHost myDedicatedHost /subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/HostGroups/myDedicatedHostGroup/hosts/myDedicatedHost 
 ```
 
 

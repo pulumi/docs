@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.containerinstance.ContainerGroup
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 A container group.
-Latest API Version: 2020-11-01.
+API Version: 2020-11-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,12 +27,12 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var containerGroup = new AzureNextGen.ContainerInstance.Latest.ContainerGroup("containerGroup", new AzureNextGen.ContainerInstance.Latest.ContainerGroupArgs
+        var containerGroup = new AzureNextGen.ContainerInstance..ContainerGroup("containerGroup", new AzureNextGen.ContainerInstance..ContainerGroupArgs
         {
             ContainerGroupName = "demo1",
             Containers = 
             {
-                new AzureNextGen.ContainerInstance.Latest.Inputs.ContainerArgs
+                new AzureNextGen.ContainerInstance..Inputs.ContainerArgs
                 {
                     Command = {},
                     EnvironmentVariables = {},
@@ -40,17 +40,17 @@ class MyStack : Stack
                     Name = "demo1",
                     Ports = 
                     {
-                        new AzureNextGen.ContainerInstance.Latest.Inputs.ContainerPortArgs
+                        new AzureNextGen.ContainerInstance..Inputs.ContainerPortArgs
                         {
                             Port = 80,
                         },
                     },
-                    Resources = new AzureNextGen.ContainerInstance.Latest.Inputs.ResourceRequirementsArgs
+                    Resources = new AzureNextGen.ContainerInstance..Inputs.ResourceRequirementsArgs
                     {
-                        Requests = new AzureNextGen.ContainerInstance.Latest.Inputs.ResourceRequestsArgs
+                        Requests = new AzureNextGen.ContainerInstance..Inputs.ResourceRequestsArgs
                         {
                             Cpu = 1,
-                            Gpu = new AzureNextGen.ContainerInstance.Latest.Inputs.GpuResourceArgs
+                            Gpu = new AzureNextGen.ContainerInstance..Inputs.GpuResourceArgs
                             {
                                 Count = 1,
                                 Sku = "K80",
@@ -60,19 +60,19 @@ class MyStack : Stack
                     },
                     VolumeMounts = 
                     {
-                        new AzureNextGen.ContainerInstance.Latest.Inputs.VolumeMountArgs
+                        new AzureNextGen.ContainerInstance..Inputs.VolumeMountArgs
                         {
                             MountPath = "/mnt/volume1",
                             Name = "volume1",
                             ReadOnly = false,
                         },
-                        new AzureNextGen.ContainerInstance.Latest.Inputs.VolumeMountArgs
+                        new AzureNextGen.ContainerInstance..Inputs.VolumeMountArgs
                         {
                             MountPath = "/mnt/volume2",
                             Name = "volume2",
                             ReadOnly = false,
                         },
-                        new AzureNextGen.ContainerInstance.Latest.Inputs.VolumeMountArgs
+                        new AzureNextGen.ContainerInstance..Inputs.VolumeMountArgs
                         {
                             MountPath = "/mnt/volume3",
                             Name = "volume3",
@@ -81,9 +81,9 @@ class MyStack : Stack
                     },
                 },
             },
-            Diagnostics = new AzureNextGen.ContainerInstance.Latest.Inputs.ContainerGroupDiagnosticsArgs
+            Diagnostics = new AzureNextGen.ContainerInstance..Inputs.ContainerGroupDiagnosticsArgs
             {
-                LogAnalytics = new AzureNextGen.ContainerInstance.Latest.Inputs.LogAnalyticsArgs
+                LogAnalytics = new AzureNextGen.ContainerInstance..Inputs.LogAnalyticsArgs
                 {
                     LogType = "ContainerInsights",
                     Metadata = 
@@ -94,7 +94,7 @@ class MyStack : Stack
                     WorkspaceKey = "workspaceKey",
                 },
             },
-            DnsConfig = new AzureNextGen.ContainerInstance.Latest.Inputs.DnsConfigurationArgs
+            DnsConfig = new AzureNextGen.ContainerInstance..Inputs.DnsConfigurationArgs
             {
                 NameServers = 
                 {
@@ -103,7 +103,7 @@ class MyStack : Stack
                 Options = "ndots:2",
                 SearchDomains = "cluster.local svc.cluster.local",
             },
-            Identity = new AzureNextGen.ContainerInstance.Latest.Inputs.ContainerGroupIdentityArgs
+            Identity = new AzureNextGen.ContainerInstance..Inputs.ContainerGroupIdentityArgs
             {
                 Type = "SystemAssigned, UserAssigned",
                 UserAssignedIdentities = 
@@ -112,12 +112,12 @@ class MyStack : Stack
                 },
             },
             ImageRegistryCredentials = {},
-            IpAddress = new AzureNextGen.ContainerInstance.Latest.Inputs.IpAddressArgs
+            IpAddress = new AzureNextGen.ContainerInstance..Inputs.IpAddressArgs
             {
                 DnsNameLabel = "dnsnamelabel1",
                 Ports = 
                 {
-                    new AzureNextGen.ContainerInstance.Latest.Inputs.PortArgs
+                    new AzureNextGen.ContainerInstance..Inputs.PortArgs
                     {
                         Port = 80,
                         Protocol = "TCP",
@@ -126,7 +126,7 @@ class MyStack : Stack
                 Type = "Public",
             },
             Location = "west us",
-            NetworkProfile = new AzureNextGen.ContainerInstance.Latest.Inputs.ContainerGroupNetworkProfileArgs
+            NetworkProfile = new AzureNextGen.ContainerInstance..Inputs.ContainerGroupNetworkProfileArgs
             {
                 Id = "test-network-profile-id",
             },
@@ -134,9 +134,9 @@ class MyStack : Stack
             ResourceGroupName = "demo",
             Volumes = 
             {
-                new AzureNextGen.ContainerInstance.Latest.Inputs.VolumeArgs
+                new AzureNextGen.ContainerInstance..Inputs.VolumeArgs
                 {
-                    AzureFile = new AzureNextGen.ContainerInstance.Latest.Inputs.AzureFileVolumeArgs
+                    AzureFile = new AzureNextGen.ContainerInstance..Inputs.AzureFileVolumeArgs
                     {
                         ShareName = "shareName",
                         StorageAccountKey = "accountKey",
@@ -144,12 +144,12 @@ class MyStack : Stack
                     },
                     Name = "volume1",
                 },
-                new AzureNextGen.ContainerInstance.Latest.Inputs.VolumeArgs
+                new AzureNextGen.ContainerInstance..Inputs.VolumeArgs
                 {
                     EmptyDir = ,
                     Name = "volume2",
                 },
-                new AzureNextGen.ContainerInstance.Latest.Inputs.VolumeArgs
+                new AzureNextGen.ContainerInstance..Inputs.VolumeArgs
                 {
                     Name = "volume3",
                     Secret = 
@@ -174,7 +174,7 @@ class MyStack : Stack
 package main
 
 import (
-	containerinstance "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/containerinstance/latest"
+	containerinstance "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/containerinstance"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -301,20 +301,20 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-container_group = azure_nextgen.containerinstance.latest.ContainerGroup("containerGroup",
+container_group = azure_nextgen.containerinstance.ContainerGroup("containerGroup",
     container_group_name="demo1",
-    containers=[azure_nextgen.containerinstance.latest.ContainerArgs(
+    containers=[azure_nextgen.containerinstance.ContainerArgs(
         command=[],
         environment_variables=[],
         image="nginx",
         name="demo1",
-        ports=[azure_nextgen.containerinstance.latest.ContainerPortArgs(
+        ports=[azure_nextgen.containerinstance.ContainerPortArgs(
             port=80,
         )],
-        resources=azure_nextgen.containerinstance.latest.ResourceRequirementsArgs(
-            requests=azure_nextgen.containerinstance.latest.ResourceRequestsArgs(
+        resources=azure_nextgen.containerinstance.ResourceRequirementsArgs(
+            requests=azure_nextgen.containerinstance.ResourceRequestsArgs(
                 cpu=1,
-                gpu=azure_nextgen.containerinstance.latest.GpuResourceArgs(
+                gpu=azure_nextgen.containerinstance.GpuResourceArgs(
                     count=1,
                     sku="K80",
                 ),
@@ -322,25 +322,25 @@ container_group = azure_nextgen.containerinstance.latest.ContainerGroup("contain
             ),
         ),
         volume_mounts=[
-            azure_nextgen.containerinstance.latest.VolumeMountArgs(
+            azure_nextgen.containerinstance.VolumeMountArgs(
                 mount_path="/mnt/volume1",
                 name="volume1",
                 read_only=False,
             ),
-            azure_nextgen.containerinstance.latest.VolumeMountArgs(
+            azure_nextgen.containerinstance.VolumeMountArgs(
                 mount_path="/mnt/volume2",
                 name="volume2",
                 read_only=False,
             ),
-            azure_nextgen.containerinstance.latest.VolumeMountArgs(
+            azure_nextgen.containerinstance.VolumeMountArgs(
                 mount_path="/mnt/volume3",
                 name="volume3",
                 read_only=True,
             ),
         ],
     )],
-    diagnostics=azure_nextgen.containerinstance.latest.ContainerGroupDiagnosticsArgs(
-        log_analytics=azure_nextgen.containerinstance.latest.LogAnalyticsArgs(
+    diagnostics=azure_nextgen.containerinstance.ContainerGroupDiagnosticsArgs(
+        log_analytics=azure_nextgen.containerinstance.LogAnalyticsArgs(
             log_type="ContainerInsights",
             metadata={
                 "test-key": "test-metadata-value",
@@ -349,46 +349,46 @@ container_group = azure_nextgen.containerinstance.latest.ContainerGroup("contain
             workspace_key="workspaceKey",
         ),
     ),
-    dns_config=azure_nextgen.containerinstance.latest.DnsConfigurationArgs(
+    dns_config=azure_nextgen.containerinstance.DnsConfigurationArgs(
         name_servers=["1.1.1.1"],
         options="ndots:2",
         search_domains="cluster.local svc.cluster.local",
     ),
-    identity=azure_nextgen.containerinstance.latest.ContainerGroupIdentityArgs(
+    identity=azure_nextgen.containerinstance.ContainerGroupIdentityArgs(
         type="SystemAssigned, UserAssigned",
         user_assigned_identities={
             "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity-name": {},
         },
     ),
     image_registry_credentials=[],
-    ip_address=azure_nextgen.containerinstance.latest.IpAddressArgs(
+    ip_address=azure_nextgen.containerinstance.IpAddressArgs(
         dns_name_label="dnsnamelabel1",
-        ports=[azure_nextgen.containerinstance.latest.PortArgs(
+        ports=[azure_nextgen.containerinstance.PortArgs(
             port=80,
             protocol="TCP",
         )],
         type="Public",
     ),
     location="west us",
-    network_profile=azure_nextgen.containerinstance.latest.ContainerGroupNetworkProfileArgs(
+    network_profile=azure_nextgen.containerinstance.ContainerGroupNetworkProfileArgs(
         id="test-network-profile-id",
     ),
     os_type="Linux",
     resource_group_name="demo",
     volumes=[
-        azure_nextgen.containerinstance.latest.VolumeArgs(
-            azure_file=azure_nextgen.containerinstance.latest.AzureFileVolumeArgs(
+        azure_nextgen.containerinstance.VolumeArgs(
+            azure_file=azure_nextgen.containerinstance.AzureFileVolumeArgs(
                 share_name="shareName",
                 storage_account_key="accountKey",
                 storage_account_name="accountName",
             ),
             name="volume1",
         ),
-        azure_nextgen.containerinstance.latest.VolumeArgs(
+        azure_nextgen.containerinstance.VolumeArgs(
             empty_dir={},
             name="volume2",
         ),
-        azure_nextgen.containerinstance.latest.VolumeArgs(
+        azure_nextgen.containerinstance.VolumeArgs(
             name="volume3",
             secret={
                 "secretKey1": "SecretValue1InBase64",
@@ -407,7 +407,7 @@ container_group = azure_nextgen.containerinstance.latest.ContainerGroup("contain
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const containerGroup = new azure_nextgen.containerinstance.latest.ContainerGroup("containerGroup", {
+const containerGroup = new azure_nextgen.containerinstance.ContainerGroup("containerGroup", {
     containerGroupName: "demo1",
     containers: [{
         command: [],
@@ -706,7 +706,7 @@ The ContainerGroup resource accepts the following [input]({{< relref "/docs/intr
 <a href="#containers_csharp" style="color: inherit; text-decoration: inherit;">Containers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#container">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Instance.<wbr>Inputs.<wbr>Container<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#container">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Instance..<wbr>Inputs.<wbr>Container<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The containers within the container group.{{% /md %}}</dd>
     <dt class="property-required"
@@ -715,7 +715,7 @@ The ContainerGroup resource accepts the following [input]({{< relref "/docs/intr
 <a href="#ostype_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#operatingsystemtypes">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Instance.<wbr>Operating<wbr>System<wbr>Types</a></span>
+        <span class="property-type">string | <a href="#operatingsystemtypes">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Instance..<wbr>Operating<wbr>System<wbr>Types</a></span>
     </dt>
     <dd>{{% md %}}The operating system type required by the containers in the container group.{{% /md %}}</dd>
     <dt class="property-required"
@@ -733,7 +733,7 @@ The ContainerGroup resource accepts the following [input]({{< relref "/docs/intr
 <a href="#diagnostics_csharp" style="color: inherit; text-decoration: inherit;">Diagnostics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containergroupdiagnostics">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Instance.<wbr>Inputs.<wbr>Container<wbr>Group<wbr>Diagnostics<wbr>Args</a></span>
+        <span class="property-type"><a href="#containergroupdiagnostics">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Instance..<wbr>Inputs.<wbr>Container<wbr>Group<wbr>Diagnostics<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The diagnostic information for a container group.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -742,7 +742,7 @@ The ContainerGroup resource accepts the following [input]({{< relref "/docs/intr
 <a href="#dnsconfig_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dnsconfiguration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Instance.<wbr>Inputs.<wbr>Dns<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#dnsconfiguration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Instance..<wbr>Inputs.<wbr>Dns<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The DNS config information for a container group.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -751,7 +751,7 @@ The ContainerGroup resource accepts the following [input]({{< relref "/docs/intr
 <a href="#encryptionproperties_csharp" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Instance.<wbr>Inputs.<wbr>Encryption<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#encryptionproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Instance..<wbr>Inputs.<wbr>Encryption<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The encryption properties for a container group.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -760,7 +760,7 @@ The ContainerGroup resource accepts the following [input]({{< relref "/docs/intr
 <a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containergroupidentity">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Instance.<wbr>Inputs.<wbr>Container<wbr>Group<wbr>Identity<wbr>Args</a></span>
+        <span class="property-type"><a href="#containergroupidentity">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Instance..<wbr>Inputs.<wbr>Container<wbr>Group<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The identity of the container group, if configured.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -769,7 +769,7 @@ The ContainerGroup resource accepts the following [input]({{< relref "/docs/intr
 <a href="#imageregistrycredentials_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Registry<wbr>Credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imageregistrycredential">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Instance.<wbr>Inputs.<wbr>Image<wbr>Registry<wbr>Credential<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#imageregistrycredential">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Instance..<wbr>Inputs.<wbr>Image<wbr>Registry<wbr>Credential<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The image registry credentials by which the container group is created from.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -778,7 +778,7 @@ The ContainerGroup resource accepts the following [input]({{< relref "/docs/intr
 <a href="#initcontainers_csharp" style="color: inherit; text-decoration: inherit;">Init<wbr>Containers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#initcontainerdefinition">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Instance.<wbr>Inputs.<wbr>Init<wbr>Container<wbr>Definition<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#initcontainerdefinition">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Instance..<wbr>Inputs.<wbr>Init<wbr>Container<wbr>Definition<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The init containers for a container group.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -787,7 +787,7 @@ The ContainerGroup resource accepts the following [input]({{< relref "/docs/intr
 <a href="#ipaddress_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipaddress">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Instance.<wbr>Inputs.<wbr>Ip<wbr>Address<wbr>Args</a></span>
+        <span class="property-type"><a href="#ipaddress">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Instance..<wbr>Inputs.<wbr>Ip<wbr>Address<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The IP address type of the container group.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -805,7 +805,7 @@ The ContainerGroup resource accepts the following [input]({{< relref "/docs/intr
 <a href="#networkprofile_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containergroupnetworkprofile">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Instance.<wbr>Inputs.<wbr>Container<wbr>Group<wbr>Network<wbr>Profile<wbr>Args</a></span>
+        <span class="property-type"><a href="#containergroupnetworkprofile">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Instance..<wbr>Inputs.<wbr>Container<wbr>Group<wbr>Network<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The network profile information for a container group.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -814,7 +814,7 @@ The ContainerGroup resource accepts the following [input]({{< relref "/docs/intr
 <a href="#restartpolicy_csharp" style="color: inherit; text-decoration: inherit;">Restart<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#containergrouprestartpolicy">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Instance.<wbr>Container<wbr>Group<wbr>Restart<wbr>Policy</a></span>
+        <span class="property-type">string | <a href="#containergrouprestartpolicy">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Instance..<wbr>Container<wbr>Group<wbr>Restart<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Restart policy for all containers within the container group. 
 - `Always` Always restart
@@ -827,7 +827,7 @@ The ContainerGroup resource accepts the following [input]({{< relref "/docs/intr
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#containergroupsku">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Instance.<wbr>Container<wbr>Group<wbr>Sku</a></span>
+        <span class="property-type">string | <a href="#containergroupsku">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Instance..<wbr>Container<wbr>Group<wbr>Sku</a></span>
     </dt>
     <dd>{{% md %}}The SKU for a container group.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -845,7 +845,7 @@ The ContainerGroup resource accepts the following [input]({{< relref "/docs/intr
 <a href="#volumes_csharp" style="color: inherit; text-decoration: inherit;">Volumes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volume">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Instance.<wbr>Inputs.<wbr>Volume<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#volume">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Instance..<wbr>Inputs.<wbr>Volume<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of volumes that can be mounted by containers in this container group.{{% /md %}}</dd>
 </dl>
@@ -1365,7 +1365,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#instanceview_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>View</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containergroupresponseinstanceview">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Instance.<wbr>Outputs.<wbr>Container<wbr>Group<wbr>Response<wbr>Instance<wbr>View</a></span>
+        <span class="property-type"><a href="#containergroupresponseinstanceview">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Instance..<wbr>Outputs.<wbr>Container<wbr>Group<wbr>Response<wbr>Instance<wbr>View</a></span>
     </dt>
     <dd>{{% md %}}The instance view of the container group. Only valid in response.{{% /md %}}</dd>
     <dt class="property-"
@@ -1930,7 +1930,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resources_csharp" style="color: inherit; text-decoration: inherit;">Resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcerequirements">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Instance.<wbr>Inputs.<wbr>Resource<wbr>Requirements<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcerequirements">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Instance..<wbr>Inputs.<wbr>Resource<wbr>Requirements<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The resource requirements of the container instance.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1948,7 +1948,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#environmentvariables_csharp" style="color: inherit; text-decoration: inherit;">Environment<wbr>Variables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentvariable">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Instance.<wbr>Inputs.<wbr>Environment<wbr>Variable<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#environmentvariable">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Instance..<wbr>Inputs.<wbr>Environment<wbr>Variable<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The environment variables to set in the container instance.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1957,7 +1957,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#livenessprobe_csharp" style="color: inherit; text-decoration: inherit;">Liveness<wbr>Probe</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerprobe">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Instance.<wbr>Inputs.<wbr>Container<wbr>Probe<wbr>Args</a></span>
+        <span class="property-type"><a href="#containerprobe">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Instance..<wbr>Inputs.<wbr>Container<wbr>Probe<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The liveness probe.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1966,7 +1966,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ports_csharp" style="color: inherit; text-decoration: inherit;">Ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerport">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Instance.<wbr>Inputs.<wbr>Container<wbr>Port<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#containerport">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Instance..<wbr>Inputs.<wbr>Container<wbr>Port<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The exposed ports on the container instance.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1975,7 +1975,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#readinessprobe_csharp" style="color: inherit; text-decoration: inherit;">Readiness<wbr>Probe</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerprobe">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Instance.<wbr>Inputs.<wbr>Container<wbr>Probe<wbr>Args</a></span>
+        <span class="property-type"><a href="#containerprobe">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Instance..<wbr>Inputs.<wbr>Container<wbr>Probe<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The readiness probe.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1984,7 +1984,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#volumemounts_csharp" style="color: inherit; text-decoration: inherit;">Volume<wbr>Mounts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volumemount">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Instance.<wbr>Inputs.<wbr>Volume<wbr>Mount<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#volumemount">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Instance..<wbr>Inputs.<wbr>Volume<wbr>Mount<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The volume mounts available to the container instance.{{% /md %}}</dd>
 </dl>
@@ -2386,7 +2386,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#loganalytics_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Analytics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loganalytics">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Instance.<wbr>Inputs.<wbr>Log<wbr>Analytics<wbr>Args</a></span>
+        <span class="property-type"><a href="#loganalytics">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Instance..<wbr>Inputs.<wbr>Log<wbr>Analytics<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Container group log analytics information.{{% /md %}}</dd>
 </dl>
@@ -2448,7 +2448,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#loganalytics_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Analytics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loganalyticsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Instance.<wbr>Inputs.<wbr>Log<wbr>Analytics<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#loganalyticsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Instance..<wbr>Inputs.<wbr>Log<wbr>Analytics<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Container group log analytics information.{{% /md %}}</dd>
 </dl>
@@ -2510,7 +2510,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidentitytype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Instance.<wbr>Resource<wbr>Identity<wbr>Type</a></span>
+        <span class="property-type"><a href="#resourceidentitytype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Instance..<wbr>Resource<wbr>Identity<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of identity used for the container group. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user assigned identities. The type 'None' will remove any identities from the container group.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2635,7 +2635,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userassignedidentities_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Instance.<wbr>Inputs.<wbr>Container<wbr>Group<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Instance..<wbr>Inputs.<wbr>Container<wbr>Group<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}The list of user identities associated with the container group. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd>
 </dl>
@@ -3076,7 +3076,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#events_csharp" style="color: inherit; text-decoration: inherit;">Events</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Instance.<wbr>Inputs.<wbr>Event<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#eventresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Instance..<wbr>Inputs.<wbr>Event<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The events of this container group.{{% /md %}}</dd>
     <dt class="property-required"
@@ -3267,7 +3267,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#httpheaders_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpheaders">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Instance.<wbr>Inputs.<wbr>Http<wbr>Headers<wbr>Args</a></span>
+        <span class="property-type"><a href="#httpheaders">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Instance..<wbr>Inputs.<wbr>Http<wbr>Headers<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The HTTP headers.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3285,7 +3285,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scheme_csharp" style="color: inherit; text-decoration: inherit;">Scheme</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#scheme">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Instance.<wbr>Scheme</a></span>
+        <span class="property-type">string | <a href="#scheme">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Instance..<wbr>Scheme</a></span>
     </dt>
     <dd>{{% md %}}The scheme.{{% /md %}}</dd>
 </dl>
@@ -3437,7 +3437,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#httpheaders_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpheadersresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Instance.<wbr>Inputs.<wbr>Http<wbr>Headers<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#httpheadersresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Instance..<wbr>Inputs.<wbr>Http<wbr>Headers<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The HTTP headers.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3645,7 +3645,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protocol_csharp" style="color: inherit; text-decoration: inherit;">Protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#containernetworkprotocol">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Instance.<wbr>Container<wbr>Network<wbr>Protocol</a></span>
+        <span class="property-type">string | <a href="#containernetworkprotocol">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Instance..<wbr>Container<wbr>Network<wbr>Protocol</a></span>
     </dt>
     <dd>{{% md %}}The protocol associated with the port.{{% /md %}}</dd>
 </dl>
@@ -3832,7 +3832,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#exec_csharp" style="color: inherit; text-decoration: inherit;">Exec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerexec">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Instance.<wbr>Inputs.<wbr>Container<wbr>Exec<wbr>Args</a></span>
+        <span class="property-type"><a href="#containerexec">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Instance..<wbr>Inputs.<wbr>Container<wbr>Exec<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The execution command to probe{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3850,7 +3850,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#httpget_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Get</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerhttpget">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Instance.<wbr>Inputs.<wbr>Container<wbr>Http<wbr>Get<wbr>Args</a></span>
+        <span class="property-type"><a href="#containerhttpget">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Instance..<wbr>Inputs.<wbr>Container<wbr>Http<wbr>Get<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Http Get settings to probe{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4110,7 +4110,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#exec_csharp" style="color: inherit; text-decoration: inherit;">Exec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerexecresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Instance.<wbr>Inputs.<wbr>Container<wbr>Exec<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#containerexecresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Instance..<wbr>Inputs.<wbr>Container<wbr>Exec<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The execution command to probe{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4128,7 +4128,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#httpget_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Get</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerhttpgetresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Instance.<wbr>Inputs.<wbr>Container<wbr>Http<wbr>Get<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#containerhttpgetresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Instance..<wbr>Inputs.<wbr>Container<wbr>Http<wbr>Get<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Http Get settings to probe{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4388,7 +4388,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#currentstate_csharp" style="color: inherit; text-decoration: inherit;">Current<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerstateresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Instance.<wbr>Inputs.<wbr>Container<wbr>State<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#containerstateresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Instance..<wbr>Inputs.<wbr>Container<wbr>State<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Current container instance state.{{% /md %}}</dd>
     <dt class="property-required"
@@ -4397,7 +4397,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#events_csharp" style="color: inherit; text-decoration: inherit;">Events</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Instance.<wbr>Inputs.<wbr>Event<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#eventresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Instance..<wbr>Inputs.<wbr>Event<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The events of the container instance.{{% /md %}}</dd>
     <dt class="property-required"
@@ -4406,7 +4406,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#previousstate_csharp" style="color: inherit; text-decoration: inherit;">Previous<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerstateresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Instance.<wbr>Inputs.<wbr>Container<wbr>State<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#containerstateresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Instance..<wbr>Inputs.<wbr>Container<wbr>State<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Previous container instance state.{{% /md %}}</dd>
     <dt class="property-required"
@@ -4567,7 +4567,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#instanceview_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>View</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerpropertiesresponseinstanceview">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Instance.<wbr>Inputs.<wbr>Container<wbr>Properties<wbr>Response<wbr>Instance<wbr>View<wbr>Args</a></span>
+        <span class="property-type"><a href="#containerpropertiesresponseinstanceview">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Instance..<wbr>Inputs.<wbr>Container<wbr>Properties<wbr>Response<wbr>Instance<wbr>View<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The instance view of the container instance. Only valid in response.{{% /md %}}</dd>
     <dt class="property-required"
@@ -4585,7 +4585,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resources_csharp" style="color: inherit; text-decoration: inherit;">Resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcerequirementsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Instance.<wbr>Inputs.<wbr>Resource<wbr>Requirements<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcerequirementsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Instance..<wbr>Inputs.<wbr>Resource<wbr>Requirements<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The resource requirements of the container instance.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4603,7 +4603,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#environmentvariables_csharp" style="color: inherit; text-decoration: inherit;">Environment<wbr>Variables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentvariableresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Instance.<wbr>Inputs.<wbr>Environment<wbr>Variable<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#environmentvariableresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Instance..<wbr>Inputs.<wbr>Environment<wbr>Variable<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The environment variables to set in the container instance.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4612,7 +4612,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#livenessprobe_csharp" style="color: inherit; text-decoration: inherit;">Liveness<wbr>Probe</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerproberesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Instance.<wbr>Inputs.<wbr>Container<wbr>Probe<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#containerproberesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Instance..<wbr>Inputs.<wbr>Container<wbr>Probe<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The liveness probe.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4621,7 +4621,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ports_csharp" style="color: inherit; text-decoration: inherit;">Ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerportresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Instance.<wbr>Inputs.<wbr>Container<wbr>Port<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#containerportresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Instance..<wbr>Inputs.<wbr>Container<wbr>Port<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The exposed ports on the container instance.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4630,7 +4630,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#readinessprobe_csharp" style="color: inherit; text-decoration: inherit;">Readiness<wbr>Probe</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerproberesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Instance.<wbr>Inputs.<wbr>Container<wbr>Probe<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#containerproberesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Instance..<wbr>Inputs.<wbr>Container<wbr>Probe<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The readiness probe.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4639,7 +4639,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#volumemounts_csharp" style="color: inherit; text-decoration: inherit;">Volume<wbr>Mounts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volumemountresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Instance.<wbr>Inputs.<wbr>Volume<wbr>Mount<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#volumemountresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Instance..<wbr>Inputs.<wbr>Volume<wbr>Mount<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The volume mounts available to the container instance.{{% /md %}}</dd>
 </dl>
@@ -6473,7 +6473,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#gpusku">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Instance.<wbr>Gpu<wbr>Sku</a></span>
+        <span class="property-type">string | <a href="#gpusku">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Instance..<wbr>Gpu<wbr>Sku</a></span>
     </dt>
     <dd>{{% md %}}The SKU of the GPU resource.{{% /md %}}</dd>
 </dl>
@@ -7188,7 +7188,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#environmentvariables_csharp" style="color: inherit; text-decoration: inherit;">Environment<wbr>Variables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentvariable">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Instance.<wbr>Inputs.<wbr>Environment<wbr>Variable<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#environmentvariable">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Instance..<wbr>Inputs.<wbr>Environment<wbr>Variable<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The environment variables to set in the init container.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -7206,7 +7206,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#volumemounts_csharp" style="color: inherit; text-decoration: inherit;">Volume<wbr>Mounts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volumemount">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Instance.<wbr>Inputs.<wbr>Volume<wbr>Mount<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#volumemount">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Instance..<wbr>Inputs.<wbr>Volume<wbr>Mount<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The volume mounts available to the init container.{{% /md %}}</dd>
 </dl>
@@ -7376,7 +7376,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#instanceview_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>View</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#initcontainerpropertiesdefinitionresponseinstanceview">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Instance.<wbr>Inputs.<wbr>Init<wbr>Container<wbr>Properties<wbr>Definition<wbr>Response<wbr>Instance<wbr>View<wbr>Args</a></span>
+        <span class="property-type"><a href="#initcontainerpropertiesdefinitionresponseinstanceview">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Instance..<wbr>Inputs.<wbr>Init<wbr>Container<wbr>Properties<wbr>Definition<wbr>Response<wbr>Instance<wbr>View<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The instance view of the init container. Only valid in response.{{% /md %}}</dd>
     <dt class="property-required"
@@ -7403,7 +7403,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#environmentvariables_csharp" style="color: inherit; text-decoration: inherit;">Environment<wbr>Variables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentvariableresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Instance.<wbr>Inputs.<wbr>Environment<wbr>Variable<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#environmentvariableresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Instance..<wbr>Inputs.<wbr>Environment<wbr>Variable<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The environment variables to set in the init container.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -7421,7 +7421,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#volumemounts_csharp" style="color: inherit; text-decoration: inherit;">Volume<wbr>Mounts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volumemountresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Instance.<wbr>Inputs.<wbr>Volume<wbr>Mount<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#volumemountresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Instance..<wbr>Inputs.<wbr>Volume<wbr>Mount<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The volume mounts available to the init container.{{% /md %}}</dd>
 </dl>
@@ -7618,7 +7618,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#currentstate_csharp" style="color: inherit; text-decoration: inherit;">Current<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerstateresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Instance.<wbr>Inputs.<wbr>Container<wbr>State<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#containerstateresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Instance..<wbr>Inputs.<wbr>Container<wbr>State<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The current state of the init container.{{% /md %}}</dd>
     <dt class="property-required"
@@ -7627,7 +7627,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#events_csharp" style="color: inherit; text-decoration: inherit;">Events</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Instance.<wbr>Inputs.<wbr>Event<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#eventresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Instance..<wbr>Inputs.<wbr>Event<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The events of the init container.{{% /md %}}</dd>
     <dt class="property-required"
@@ -7636,7 +7636,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#previousstate_csharp" style="color: inherit; text-decoration: inherit;">Previous<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerstateresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Instance.<wbr>Inputs.<wbr>Container<wbr>State<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#containerstateresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Instance..<wbr>Inputs.<wbr>Container<wbr>State<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The previous state of the init container.{{% /md %}}</dd>
     <dt class="property-required"
@@ -7788,7 +7788,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ports_csharp" style="color: inherit; text-decoration: inherit;">Ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#port">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Instance.<wbr>Inputs.<wbr>Port<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#port">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Instance..<wbr>Inputs.<wbr>Port<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of ports exposed on the container group.{{% /md %}}</dd>
     <dt class="property-required"
@@ -7797,7 +7797,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#containergroupipaddresstype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Instance.<wbr>Container<wbr>Group<wbr>Ip<wbr>Address<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#containergroupipaddresstype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Instance..<wbr>Container<wbr>Group<wbr>Ip<wbr>Address<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Specifies if the IP is exposed to the public internet or private VNET.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -7967,7 +7967,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ports_csharp" style="color: inherit; text-decoration: inherit;">Ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#portresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Instance.<wbr>Inputs.<wbr>Port<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#portresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Instance..<wbr>Inputs.<wbr>Port<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of ports exposed on the container group.{{% /md %}}</dd>
     <dt class="property-required"
@@ -8182,7 +8182,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#logtype_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#loganalyticslogtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Instance.<wbr>Log<wbr>Analytics<wbr>Log<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#loganalyticslogtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Instance..<wbr>Log<wbr>Analytics<wbr>Log<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The log type to be used.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -8661,7 +8661,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protocol_csharp" style="color: inherit; text-decoration: inherit;">Protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#containergroupnetworkprotocol">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Instance.<wbr>Container<wbr>Group<wbr>Network<wbr>Protocol</a></span>
+        <span class="property-type">string | <a href="#containergroupnetworkprotocol">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Instance..<wbr>Container<wbr>Group<wbr>Network<wbr>Protocol</a></span>
     </dt>
     <dd>{{% md %}}The protocol associated with the port.{{% /md %}}</dd>
 </dl>
@@ -8911,7 +8911,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#gpu_csharp" style="color: inherit; text-decoration: inherit;">Gpu</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gpuresource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Instance.<wbr>Inputs.<wbr>Gpu<wbr>Resource<wbr>Args</a></span>
+        <span class="property-type"><a href="#gpuresource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Instance..<wbr>Inputs.<wbr>Gpu<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The GPU limit of this container instance.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -9045,7 +9045,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#gpu_csharp" style="color: inherit; text-decoration: inherit;">Gpu</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gpuresourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Instance.<wbr>Inputs.<wbr>Gpu<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#gpuresourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Instance..<wbr>Inputs.<wbr>Gpu<wbr>Resource<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The GPU limit of this container instance.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -9188,7 +9188,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#gpu_csharp" style="color: inherit; text-decoration: inherit;">Gpu</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gpuresource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Instance.<wbr>Inputs.<wbr>Gpu<wbr>Resource<wbr>Args</a></span>
+        <span class="property-type"><a href="#gpuresource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Instance..<wbr>Inputs.<wbr>Gpu<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The GPU request of this container instance.{{% /md %}}</dd>
 </dl>
@@ -9322,7 +9322,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#gpu_csharp" style="color: inherit; text-decoration: inherit;">Gpu</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gpuresourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Instance.<wbr>Inputs.<wbr>Gpu<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#gpuresourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Instance..<wbr>Inputs.<wbr>Gpu<wbr>Resource<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The GPU request of this container instance.{{% /md %}}</dd>
 </dl>
@@ -9438,7 +9438,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#requests_csharp" style="color: inherit; text-decoration: inherit;">Requests</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcerequests">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Instance.<wbr>Inputs.<wbr>Resource<wbr>Requests<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcerequests">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Instance..<wbr>Inputs.<wbr>Resource<wbr>Requests<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The resource requests of this container instance.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -9447,7 +9447,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#limits_csharp" style="color: inherit; text-decoration: inherit;">Limits</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcelimits">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Instance.<wbr>Inputs.<wbr>Resource<wbr>Limits<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcelimits">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Instance..<wbr>Inputs.<wbr>Resource<wbr>Limits<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The resource limits of this container instance.{{% /md %}}</dd>
 </dl>
@@ -9536,7 +9536,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#requests_csharp" style="color: inherit; text-decoration: inherit;">Requests</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcerequestsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Instance.<wbr>Inputs.<wbr>Resource<wbr>Requests<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcerequestsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Instance..<wbr>Inputs.<wbr>Resource<wbr>Requests<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The resource requests of this container instance.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -9545,7 +9545,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#limits_csharp" style="color: inherit; text-decoration: inherit;">Limits</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcelimitsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Instance.<wbr>Inputs.<wbr>Resource<wbr>Limits<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcelimitsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Instance..<wbr>Inputs.<wbr>Resource<wbr>Limits<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The resource limits of this container instance.{{% /md %}}</dd>
 </dl>
@@ -9681,7 +9681,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azurefile_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>File</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefilevolume">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Instance.<wbr>Inputs.<wbr>Azure<wbr>File<wbr>Volume<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurefilevolume">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Instance..<wbr>Inputs.<wbr>Azure<wbr>File<wbr>Volume<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Azure File volume.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -9699,7 +9699,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#gitrepo_csharp" style="color: inherit; text-decoration: inherit;">Git<wbr>Repo</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gitrepovolume">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Instance.<wbr>Inputs.<wbr>Git<wbr>Repo<wbr>Volume<wbr>Args</a></span>
+        <span class="property-type"><a href="#gitrepovolume">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Instance..<wbr>Inputs.<wbr>Git<wbr>Repo<wbr>Volume<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The git repo volume.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -10155,7 +10155,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azurefile_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>File</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefilevolumeresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Instance.<wbr>Inputs.<wbr>Azure<wbr>File<wbr>Volume<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurefilevolumeresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Instance..<wbr>Inputs.<wbr>Azure<wbr>File<wbr>Volume<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Azure File volume.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -10173,7 +10173,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#gitrepo_csharp" style="color: inherit; text-decoration: inherit;">Git<wbr>Repo</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gitrepovolumeresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Instance.<wbr>Inputs.<wbr>Git<wbr>Repo<wbr>Volume<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#gitrepovolumeresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Instance..<wbr>Inputs.<wbr>Git<wbr>Repo<wbr>Volume<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The git repo volume.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -10346,7 +10346,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:containerinstance/latest:ContainerGroup demo1 /subscriptions/subid/resourceGroups/demo/providers/Microsoft.ContainerInstance/containerGroups/demo1 
+$ pulumi import azure-nextgen:containerinstance:ContainerGroup demo1 /subscriptions/subid/resourceGroups/demo/providers/Microsoft.ContainerInstance/containerGroups/demo1 
 ```
 
 

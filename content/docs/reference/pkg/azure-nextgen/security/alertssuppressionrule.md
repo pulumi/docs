@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.security.AlertsSuppressionRule r
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Describes the suppression rule
+API Version: 2019-01-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var alertsSuppressionRule = new AzureNextGen.Security.V20190101Preview.AlertsSuppressionRule("alertsSuppressionRule", new AzureNextGen.Security.V20190101Preview.AlertsSuppressionRuleArgs
+        var alertsSuppressionRule = new AzureNextGen.Security..AlertsSuppressionRule("alertsSuppressionRule", new AzureNextGen.Security..AlertsSuppressionRuleArgs
         {
             AlertType = "IpAnomaly",
             AlertsSuppressionRuleName = "dismissIpAnomalyAlerts",
@@ -34,15 +35,15 @@ class MyStack : Stack
             ExpirationDateUtc = "2019-12-01T19:50:47.083633Z",
             Reason = "FalsePositive",
             State = "Enabled",
-            SuppressionAlertsScope = new AzureNextGen.Security.V20190101Preview.Inputs.SuppressionAlertsScopeArgs
+            SuppressionAlertsScope = new AzureNextGen.Security..Inputs.SuppressionAlertsScopeArgs
             {
                 AllOf = 
                 {
-                    new AzureNextGen.Security.V20190101Preview.Inputs.ScopeElementArgs
+                    new AzureNextGen.Security..Inputs.ScopeElementArgs
                     {
                         Field = "entities.ip.address",
                     },
-                    new AzureNextGen.Security.V20190101Preview.Inputs.ScopeElementArgs
+                    new AzureNextGen.Security..Inputs.ScopeElementArgs
                     {
                         Field = "entities.process.commandline",
                     },
@@ -63,7 +64,7 @@ class MyStack : Stack
 package main
 
 import (
-	security "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/security/v20190101preview"
+	security "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/security"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -104,19 +105,19 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-alerts_suppression_rule = azure_nextgen.security.v20190101preview.AlertsSuppressionRule("alertsSuppressionRule",
+alerts_suppression_rule = azure_nextgen.security.AlertsSuppressionRule("alertsSuppressionRule",
     alert_type="IpAnomaly",
     alerts_suppression_rule_name="dismissIpAnomalyAlerts",
     comment="Test VM",
     expiration_date_utc="2019-12-01T19:50:47.083633Z",
     reason="FalsePositive",
     state="Enabled",
-    suppression_alerts_scope=azure_nextgen.security.v20190101preview.SuppressionAlertsScopeArgs(
+    suppression_alerts_scope=azure_nextgen.security.SuppressionAlertsScopeArgs(
         all_of=[
-            azure_nextgen.security.v20190101preview.ScopeElementArgs(
+            azure_nextgen.security.ScopeElementArgs(
                 field="entities.ip.address",
             ),
-            azure_nextgen.security.v20190101preview.ScopeElementArgs(
+            azure_nextgen.security.ScopeElementArgs(
                 field="entities.process.commandline",
             ),
         ],
@@ -132,7 +133,7 @@ alerts_suppression_rule = azure_nextgen.security.v20190101preview.AlertsSuppress
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const alertsSuppressionRule = new azure_nextgen.security.v20190101preview.AlertsSuppressionRule("alertsSuppressionRule", {
+const alertsSuppressionRule = new azure_nextgen.security.AlertsSuppressionRule("alertsSuppressionRule", {
     alertType: "IpAnomaly",
     alertsSuppressionRuleName: "dismissIpAnomalyAlerts",
     comment: "Test VM",
@@ -371,7 +372,7 @@ The AlertsSuppressionRule resource accepts the following [input]({{< relref "/do
 <a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#rulestate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security.<wbr>Rule<wbr>State</a></span>
+        <span class="property-type">string | <a href="#rulestate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security..<wbr>Rule<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}Possible states of the rule{{% /md %}}</dd>
     <dt class="property-optional"
@@ -398,7 +399,7 @@ The AlertsSuppressionRule resource accepts the following [input]({{< relref "/do
 <a href="#suppressionalertsscope_csharp" style="color: inherit; text-decoration: inherit;">Suppression<wbr>Alerts<wbr>Scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#suppressionalertsscope">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security.<wbr>Inputs.<wbr>Suppression<wbr>Alerts<wbr>Scope<wbr>Args</a></span>
+        <span class="property-type"><a href="#suppressionalertsscope">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security..<wbr>Inputs.<wbr>Suppression<wbr>Alerts<wbr>Scope<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The suppression conditions{{% /md %}}</dd>
 </dl>
@@ -977,7 +978,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allof_csharp" style="color: inherit; text-decoration: inherit;">All<wbr>Of</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scopeelement">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security.<wbr>Inputs.<wbr>Scope<wbr>Element<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#scopeelement">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security..<wbr>Inputs.<wbr>Scope<wbr>Element<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}All the conditions inside need to be true in order to suppress the alert{{% /md %}}</dd>
 </dl>
@@ -1039,7 +1040,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allof_csharp" style="color: inherit; text-decoration: inherit;">All<wbr>Of</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scopeelementresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security.<wbr>Inputs.<wbr>Scope<wbr>Element<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#scopeelementresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security..<wbr>Inputs.<wbr>Scope<wbr>Element<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}All the conditions inside need to be true in order to suppress the alert{{% /md %}}</dd>
 </dl>
@@ -1095,7 +1096,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:security/v20190101preview:AlertsSuppressionRule dismissIpAnomalyAlerts /subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23/providers/Microsoft.Security/alertsSuppressionRules/dismissIpAnomalyAlerts 
+$ pulumi import azure-nextgen:security:AlertsSuppressionRule dismissIpAnomalyAlerts /subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23/providers/Microsoft.Security/alertsSuppressionRules/dismissIpAnomalyAlerts 
 ```
 
 

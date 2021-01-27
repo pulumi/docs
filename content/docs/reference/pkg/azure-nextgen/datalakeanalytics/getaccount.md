@@ -170,7 +170,7 @@ The following output properties are available:
 <a href="#computepolicies_csharp" style="color: inherit; text-decoration: inherit;">Compute<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#computepolicyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Lake<wbr>Analytics.<wbr>Outputs.<wbr>Compute<wbr>Policy<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#computepolicyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Lake<wbr>Analytics..<wbr>Outputs.<wbr>Compute<wbr>Policy<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of compute policies associated with this account.{{% /md %}}</dd>
     <dt class="property-"
@@ -197,7 +197,7 @@ The following output properties are available:
 <a href="#datalakestoreaccounts_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Lake<wbr>Store<wbr>Accounts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datalakestoreaccountinformationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Lake<wbr>Analytics.<wbr>Outputs.<wbr>Data<wbr>Lake<wbr>Store<wbr>Account<wbr>Information<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#datalakestoreaccountinformationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Lake<wbr>Analytics..<wbr>Outputs.<wbr>Data<wbr>Lake<wbr>Store<wbr>Account<wbr>Information<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of Data Lake Store accounts associated with this account.{{% /md %}}</dd>
     <dt class="property-"
@@ -242,7 +242,7 @@ The following output properties are available:
 <a href="#firewallrules_csharp" style="color: inherit; text-decoration: inherit;">Firewall<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Lake<wbr>Analytics.<wbr>Outputs.<wbr>Firewall<wbr>Rule<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#firewallruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Lake<wbr>Analytics..<wbr>Outputs.<wbr>Firewall<wbr>Rule<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of firewall rules associated with this account.{{% /md %}}</dd>
     <dt class="property-"
@@ -260,7 +260,7 @@ The following output properties are available:
 <a href="#hivemetastores_csharp" style="color: inherit; text-decoration: inherit;">Hive<wbr>Metastores</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hivemetastoreresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Lake<wbr>Analytics.<wbr>Outputs.<wbr>Hive<wbr>Metastore<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#hivemetastoreresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Lake<wbr>Analytics..<wbr>Outputs.<wbr>Hive<wbr>Metastore<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of hiveMetastores associated with this account.{{% /md %}}</dd>
     <dt class="property-"
@@ -350,7 +350,7 @@ The following output properties are available:
 <a href="#storageaccounts_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Accounts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageaccountinformationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Lake<wbr>Analytics.<wbr>Outputs.<wbr>Storage<wbr>Account<wbr>Information<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#storageaccountinformationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Lake<wbr>Analytics..<wbr>Outputs.<wbr>Storage<wbr>Account<wbr>Information<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of Azure Blob Storage accounts associated with this account.{{% /md %}}</dd>
     <dt class="property-"
@@ -395,7 +395,7 @@ The following output properties are available:
 <a href="#virtualnetworkrules_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Lake<wbr>Analytics.<wbr>Outputs.<wbr>Virtual<wbr>Network<wbr>Rule<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#virtualnetworkruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Lake<wbr>Analytics..<wbr>Outputs.<wbr>Virtual<wbr>Network<wbr>Rule<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of virtualNetwork rules associated with this account.{{% /md %}}</dd>
     <dt class="property-"

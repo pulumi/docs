@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.importexport.Job resource with e
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Contains the job information.
-Latest API Version: 2020-08-01.
+API Version: 2020-08-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,15 +27,15 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var job = new AzureNextGen.ImportExport.Latest.Job("job", new AzureNextGen.ImportExport.Latest.JobArgs
+        var job = new AzureNextGen.ImportExport..Job("job", new AzureNextGen.ImportExport..JobArgs
         {
             JobName = "myExportJob",
             Location = "West US",
-            Properties = new AzureNextGen.ImportExport.Latest.Inputs.JobDetailsArgs
+            Properties = new AzureNextGen.ImportExport..Inputs.JobDetailsArgs
             {
                 BackupDriveManifest = true,
                 DiagnosticsPath = "waimportexport",
-                Export = new AzureNextGen.ImportExport.Latest.Inputs.ExportArgs
+                Export = new AzureNextGen.ImportExport..Inputs.ExportArgs
                 {
                     BlobPathPrefix = 
                     {
@@ -44,7 +44,7 @@ class MyStack : Stack
                 },
                 JobType = "Export",
                 LogLevel = "Verbose",
-                ReturnAddress = new AzureNextGen.ImportExport.Latest.Inputs.ReturnAddressArgs
+                ReturnAddress = new AzureNextGen.ImportExport..Inputs.ReturnAddressArgs
                 {
                     City = "Redmond",
                     CountryOrRegion = "USA",
@@ -56,7 +56,7 @@ class MyStack : Stack
                     StreetAddress1 = "Street1",
                     StreetAddress2 = "street2",
                 },
-                ReturnShipping = new AzureNextGen.ImportExport.Latest.Inputs.ReturnShippingArgs
+                ReturnShipping = new AzureNextGen.ImportExport..Inputs.ReturnShippingArgs
                 {
                     CarrierAccountNumber = "989ffff",
                     CarrierName = "FedEx",
@@ -79,7 +79,7 @@ class MyStack : Stack
 package main
 
 import (
-	importexport "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/importexport/latest"
+	importexport "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/importexport"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -134,18 +134,18 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-job = azure_nextgen.importexport.latest.Job("job",
+job = azure_nextgen.importexport.Job("job",
     job_name="myExportJob",
     location="West US",
-    properties=azure_nextgen.importexport.latest.JobDetailsArgs(
+    properties=azure_nextgen.importexport.JobDetailsArgs(
         backup_drive_manifest=True,
         diagnostics_path="waimportexport",
-        export=azure_nextgen.importexport.latest.ExportArgs(
+        export=azure_nextgen.importexport.ExportArgs(
             blob_path_prefix=["/"],
         ),
         job_type="Export",
         log_level="Verbose",
-        return_address=azure_nextgen.importexport.latest.ReturnAddressArgs(
+        return_address=azure_nextgen.importexport.ReturnAddressArgs(
             city="Redmond",
             country_or_region="USA",
             email="Test@contoso.com",
@@ -156,7 +156,7 @@ job = azure_nextgen.importexport.latest.Job("job",
             street_address1="Street1",
             street_address2="street2",
         ),
-        return_shipping=azure_nextgen.importexport.latest.ReturnShippingArgs(
+        return_shipping=azure_nextgen.importexport.ReturnShippingArgs(
             carrier_account_number="989ffff",
             carrier_name="FedEx",
         ),
@@ -174,7 +174,7 @@ job = azure_nextgen.importexport.latest.Job("job",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const job = new azure_nextgen.importexport.latest.Job("job", {
+const job = new azure_nextgen.importexport.Job("job", {
     jobName: "myExportJob",
     location: "West US",
     properties: {
@@ -219,17 +219,17 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var job = new AzureNextGen.ImportExport.Latest.Job("job", new AzureNextGen.ImportExport.Latest.JobArgs
+        var job = new AzureNextGen.ImportExport..Job("job", new AzureNextGen.ImportExport..JobArgs
         {
             JobName = "myJob",
             Location = "West US",
-            Properties = new AzureNextGen.ImportExport.Latest.Inputs.JobDetailsArgs
+            Properties = new AzureNextGen.ImportExport..Inputs.JobDetailsArgs
             {
                 BackupDriveManifest = true,
                 DiagnosticsPath = "waimportexport",
                 DriveList = 
                 {
-                    new AzureNextGen.ImportExport.Latest.Inputs.DriveStatusArgs
+                    new AzureNextGen.ImportExport..Inputs.DriveStatusArgs
                     {
                         BitLockerKey = "238810-662376-448998-450120-652806-203390-606320-483076",
                         DriveHeaderHash = "0:1048576:FB6B6ED500D49DA6E0D723C98D42C657F2881CC13357C28DCECA6A524F1292501571A321238540E621AB5BD9C9A32637615919A75593E6CB5C1515DAE341CABF;135266304:143360:C957A189AFC38C4E80731252301EB91427CE55E61448FA3C73C6FDDE70ABBC197947EC8D0249A2C639BB10B95957D5820A4BE8DFBBF76FFFA688AE5CE0D42EC3",
@@ -240,7 +240,7 @@ class MyStack : Stack
                 },
                 JobType = "Import",
                 LogLevel = "Verbose",
-                ReturnAddress = new AzureNextGen.ImportExport.Latest.Inputs.ReturnAddressArgs
+                ReturnAddress = new AzureNextGen.ImportExport..Inputs.ReturnAddressArgs
                 {
                     City = "Redmond",
                     CountryOrRegion = "USA",
@@ -252,7 +252,7 @@ class MyStack : Stack
                     StreetAddress1 = "Street1",
                     StreetAddress2 = "street2",
                 },
-                ReturnShipping = new AzureNextGen.ImportExport.Latest.Inputs.ReturnShippingArgs
+                ReturnShipping = new AzureNextGen.ImportExport..Inputs.ReturnShippingArgs
                 {
                     CarrierAccountNumber = "989ffff",
                     CarrierName = "FedEx",
@@ -275,7 +275,7 @@ class MyStack : Stack
 package main
 
 import (
-	importexport "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/importexport/latest"
+	importexport "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/importexport"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -334,13 +334,13 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-job = azure_nextgen.importexport.latest.Job("job",
+job = azure_nextgen.importexport.Job("job",
     job_name="myJob",
     location="West US",
-    properties=azure_nextgen.importexport.latest.JobDetailsArgs(
+    properties=azure_nextgen.importexport.JobDetailsArgs(
         backup_drive_manifest=True,
         diagnostics_path="waimportexport",
-        drive_list=[azure_nextgen.importexport.latest.DriveStatusArgs(
+        drive_list=[azure_nextgen.importexport.DriveStatusArgs(
             bit_locker_key="238810-662376-448998-450120-652806-203390-606320-483076",
             drive_header_hash="0:1048576:FB6B6ED500D49DA6E0D723C98D42C657F2881CC13357C28DCECA6A524F1292501571A321238540E621AB5BD9C9A32637615919A75593E6CB5C1515DAE341CABF;135266304:143360:C957A189AFC38C4E80731252301EB91427CE55E61448FA3C73C6FDDE70ABBC197947EC8D0249A2C639BB10B95957D5820A4BE8DFBBF76FFFA688AE5CE0D42EC3",
             drive_id="9CA995BB",
@@ -349,7 +349,7 @@ job = azure_nextgen.importexport.latest.Job("job",
         )],
         job_type="Import",
         log_level="Verbose",
-        return_address=azure_nextgen.importexport.latest.ReturnAddressArgs(
+        return_address=azure_nextgen.importexport.ReturnAddressArgs(
             city="Redmond",
             country_or_region="USA",
             email="Test@contoso.com",
@@ -360,7 +360,7 @@ job = azure_nextgen.importexport.latest.Job("job",
             street_address1="Street1",
             street_address2="street2",
         ),
-        return_shipping=azure_nextgen.importexport.latest.ReturnShippingArgs(
+        return_shipping=azure_nextgen.importexport.ReturnShippingArgs(
             carrier_account_number="989ffff",
             carrier_name="FedEx",
         ),
@@ -378,7 +378,7 @@ job = azure_nextgen.importexport.latest.Job("job",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const job = new azure_nextgen.importexport.latest.Job("job", {
+const job = new azure_nextgen.importexport.Job("job", {
     jobName: "myJob",
     location: "West US",
     properties: {
@@ -633,7 +633,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobdetails">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Import<wbr>Export.<wbr>Inputs.<wbr>Job<wbr>Details<wbr>Args</a></span>
+        <span class="property-type"><a href="#jobdetails">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Import<wbr>Export..<wbr>Inputs.<wbr>Job<wbr>Details<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the job properties{{% /md %}}</dd>
     <dt class="property-optional"
@@ -831,6 +831,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Specifies the name of the job.{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="systemdata_csharp">
+<a href="#systemdata_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Import<wbr>Export..<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}SystemData of ImportExport Jobs.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
@@ -844,7 +853,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identitydetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Import<wbr>Export.<wbr>Outputs.<wbr>Identity<wbr>Details<wbr>Response</a></span>
+        <span class="property-type"><a href="#identitydetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Import<wbr>Export..<wbr>Outputs.<wbr>Identity<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the job identity details{{% /md %}}</dd>
 </dl>
@@ -871,6 +880,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the job.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="systemdata_go">
+<a href="#systemdata_go" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#systemdataresponse">System<wbr>Data<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}SystemData of ImportExport Jobs.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="type_go">
@@ -915,6 +933,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Specifies the name of the job.{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="systemdata_nodejs">
+<a href="#systemdata_nodejs" style="color: inherit; text-decoration: inherit;">system<wbr>Data</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#systemdataresponse">System<wbr>Data<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}SystemData of ImportExport Jobs.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
@@ -955,6 +982,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the job.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="system_data_python">
+<a href="#system_data_python" style="color: inherit; text-decoration: inherit;">system_<wbr>data</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#systemdataresponse">System<wbr>Data<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}SystemData of ImportExport Jobs.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="type_python">
@@ -1505,7 +1541,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#drivestate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Import<wbr>Export.<wbr>Drive<wbr>State</a></span>
+        <span class="property-type">string | <a href="#drivestate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Import<wbr>Export..<wbr>Drive<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}The drive's current state. {{% /md %}}</dd>
     <dt class="property-optional"
@@ -2320,6 +2356,44 @@ All [input](#inputs) properties are implicitly available as output properties. A
 </dl>
 {{% /choosable %}}
 
+<h4 id="encryptionkektype">Encryption<wbr>Kek<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular">
+    <dt>Microsoft<wbr>Managed</dt>
+    <dd>MicrosoftManaged</dd>
+    <dt>Customer<wbr>Managed</dt>
+    <dd>CustomerManaged</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular">
+    <dt>Encryption<wbr>Kek<wbr>Type<wbr>Microsoft<wbr>Managed</dt>
+    <dd>MicrosoftManaged</dd>
+    <dt>Encryption<wbr>Kek<wbr>Type<wbr>Customer<wbr>Managed</dt>
+    <dd>CustomerManaged</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular">
+    <dt>Microsoft<wbr>Managed</dt>
+    <dd>MicrosoftManaged</dd>
+    <dt>Customer<wbr>Managed</dt>
+    <dd>CustomerManaged</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular">
+    <dt>MICROSOFT_MANAGED</dt>
+    <dd>MicrosoftManaged</dd>
+    <dt>CUSTOMER_MANAGED</dt>
+    <dd>CustomerManaged</dd>
+</dl>
+{{% /choosable %}}
+
 <h4 id="encryptionkeydetails">Encryption<wbr>Key<wbr>Details</h4>
 
 {{% choosable language csharp %}}
@@ -2331,7 +2405,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kektype_csharp" style="color: inherit; text-decoration: inherit;">Kek<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">string | <a href="#encryptionkektype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Import<wbr>Export..<wbr>Encryption<wbr>Kek<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of kek encryption key{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2364,7 +2438,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kektype_go" style="color: inherit; text-decoration: inherit;">Kek<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">string | <a href="#encryptionkektype">Encryption<wbr>Kek<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of kek encryption key{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2397,7 +2471,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kektype_nodejs" style="color: inherit; text-decoration: inherit;">kek<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">string | <a href="#encryptionkektype">Encryption<wbr>Kek<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of kek encryption key{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2430,7 +2504,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kek_type_python" style="color: inherit; text-decoration: inherit;">kek_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">str | <a href="#encryptionkektype">Encryption<wbr>Kek<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of kek encryption key{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3019,7 +3093,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deliverypackage_csharp" style="color: inherit; text-decoration: inherit;">Delivery<wbr>Package</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deliverypackageinformation">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Import<wbr>Export.<wbr>Inputs.<wbr>Delivery<wbr>Package<wbr>Information<wbr>Args</a></span>
+        <span class="property-type"><a href="#deliverypackageinformation">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Import<wbr>Export..<wbr>Inputs.<wbr>Delivery<wbr>Package<wbr>Information<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Contains information about the package being shipped by the customer to the Microsoft data center. {{% /md %}}</dd>
     <dt class="property-optional"
@@ -3037,7 +3111,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#drivelist_csharp" style="color: inherit; text-decoration: inherit;">Drive<wbr>List</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#drivestatus">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Import<wbr>Export.<wbr>Inputs.<wbr>Drive<wbr>Status<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#drivestatus">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Import<wbr>Export..<wbr>Inputs.<wbr>Drive<wbr>Status<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of up to ten drives that comprise the job. The drive list is a required element for an import job; it is not specified for export jobs.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3046,7 +3120,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryptionkey_csharp" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionkeydetails">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Import<wbr>Export.<wbr>Inputs.<wbr>Encryption<wbr>Key<wbr>Details<wbr>Args</a></span>
+        <span class="property-type"><a href="#encryptionkeydetails">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Import<wbr>Export..<wbr>Inputs.<wbr>Encryption<wbr>Key<wbr>Details<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Contains information about the encryption key.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3055,7 +3129,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#export_csharp" style="color: inherit; text-decoration: inherit;">Export</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#export">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Import<wbr>Export.<wbr>Inputs.<wbr>Export<wbr>Args</a></span>
+        <span class="property-type"><a href="#export">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Import<wbr>Export..<wbr>Inputs.<wbr>Export<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A property containing information about the blobs to be exported for an export job. This property is included for export jobs only.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3109,7 +3183,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#returnaddress_csharp" style="color: inherit; text-decoration: inherit;">Return<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#returnaddress">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Import<wbr>Export.<wbr>Inputs.<wbr>Return<wbr>Address<wbr>Args</a></span>
+        <span class="property-type"><a href="#returnaddress">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Import<wbr>Export..<wbr>Inputs.<wbr>Return<wbr>Address<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the return address information for the job. {{% /md %}}</dd>
     <dt class="property-optional"
@@ -3118,7 +3192,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#returnpackage_csharp" style="color: inherit; text-decoration: inherit;">Return<wbr>Package</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#packageinformation">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Import<wbr>Export.<wbr>Inputs.<wbr>Package<wbr>Information<wbr>Args</a></span>
+        <span class="property-type"><a href="#packageinformation">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Import<wbr>Export..<wbr>Inputs.<wbr>Package<wbr>Information<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Contains information about the package being shipped from the Microsoft data center to the customer to return the drives. The format is the same as the deliveryPackage property above. This property is not included if the drives have not yet been returned. {{% /md %}}</dd>
     <dt class="property-optional"
@@ -3127,7 +3201,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#returnshipping_csharp" style="color: inherit; text-decoration: inherit;">Return<wbr>Shipping</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#returnshipping">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Import<wbr>Export.<wbr>Inputs.<wbr>Return<wbr>Shipping<wbr>Args</a></span>
+        <span class="property-type"><a href="#returnshipping">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Import<wbr>Export..<wbr>Inputs.<wbr>Return<wbr>Shipping<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the return carrier and customer's account with the carrier. {{% /md %}}</dd>
     <dt class="property-optional"
@@ -3136,7 +3210,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#shippinginformation_csharp" style="color: inherit; text-decoration: inherit;">Shipping<wbr>Information</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#shippinginformation">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Import<wbr>Export.<wbr>Inputs.<wbr>Shipping<wbr>Information<wbr>Args</a></span>
+        <span class="property-type"><a href="#shippinginformation">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Import<wbr>Export..<wbr>Inputs.<wbr>Shipping<wbr>Information<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Contains information about the Microsoft datacenter to which the drives should be shipped. {{% /md %}}</dd>
     <dt class="property-optional"
@@ -3693,7 +3767,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deliverypackage_csharp" style="color: inherit; text-decoration: inherit;">Delivery<wbr>Package</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deliverypackageinformationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Import<wbr>Export.<wbr>Inputs.<wbr>Delivery<wbr>Package<wbr>Information<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#deliverypackageinformationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Import<wbr>Export..<wbr>Inputs.<wbr>Delivery<wbr>Package<wbr>Information<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Contains information about the package being shipped by the customer to the Microsoft data center. {{% /md %}}</dd>
     <dt class="property-optional"
@@ -3711,7 +3785,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#drivelist_csharp" style="color: inherit; text-decoration: inherit;">Drive<wbr>List</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#drivestatusresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Import<wbr>Export.<wbr>Inputs.<wbr>Drive<wbr>Status<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#drivestatusresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Import<wbr>Export..<wbr>Inputs.<wbr>Drive<wbr>Status<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of up to ten drives that comprise the job. The drive list is a required element for an import job; it is not specified for export jobs.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3720,7 +3794,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryptionkey_csharp" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionkeydetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Import<wbr>Export.<wbr>Inputs.<wbr>Encryption<wbr>Key<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#encryptionkeydetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Import<wbr>Export..<wbr>Inputs.<wbr>Encryption<wbr>Key<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Contains information about the encryption key.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3729,7 +3803,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#export_csharp" style="color: inherit; text-decoration: inherit;">Export</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#exportresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Import<wbr>Export.<wbr>Inputs.<wbr>Export<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#exportresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Import<wbr>Export..<wbr>Inputs.<wbr>Export<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A property containing information about the blobs to be exported for an export job. This property is included for export jobs only.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3783,7 +3857,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#returnaddress_csharp" style="color: inherit; text-decoration: inherit;">Return<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#returnaddressresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Import<wbr>Export.<wbr>Inputs.<wbr>Return<wbr>Address<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#returnaddressresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Import<wbr>Export..<wbr>Inputs.<wbr>Return<wbr>Address<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the return address information for the job. {{% /md %}}</dd>
     <dt class="property-optional"
@@ -3792,7 +3866,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#returnpackage_csharp" style="color: inherit; text-decoration: inherit;">Return<wbr>Package</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#packageinformationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Import<wbr>Export.<wbr>Inputs.<wbr>Package<wbr>Information<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#packageinformationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Import<wbr>Export..<wbr>Inputs.<wbr>Package<wbr>Information<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Contains information about the package being shipped from the Microsoft data center to the customer to return the drives. The format is the same as the deliveryPackage property above. This property is not included if the drives have not yet been returned. {{% /md %}}</dd>
     <dt class="property-optional"
@@ -3801,7 +3875,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#returnshipping_csharp" style="color: inherit; text-decoration: inherit;">Return<wbr>Shipping</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#returnshippingresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Import<wbr>Export.<wbr>Inputs.<wbr>Return<wbr>Shipping<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#returnshippingresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Import<wbr>Export..<wbr>Inputs.<wbr>Return<wbr>Shipping<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the return carrier and customer's account with the carrier. {{% /md %}}</dd>
     <dt class="property-optional"
@@ -3810,7 +3884,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#shippinginformation_csharp" style="color: inherit; text-decoration: inherit;">Shipping<wbr>Information</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#shippinginformationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Import<wbr>Export.<wbr>Inputs.<wbr>Shipping<wbr>Information<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#shippinginformationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Import<wbr>Export..<wbr>Inputs.<wbr>Shipping<wbr>Information<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Contains information about the Microsoft datacenter to which the drives should be shipped. {{% /md %}}</dd>
     <dt class="property-optional"
@@ -5579,8 +5653,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span id="city_csharp">
 <a href="#city_csharp" style="color: inherit; text-decoration: inherit;">City</a>
 </span>
@@ -5588,8 +5662,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The city name to use when returning the drives.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span id="countryorregion_csharp">
 <a href="#countryorregion_csharp" style="color: inherit; text-decoration: inherit;">Country<wbr>Or<wbr>Region</a>
 </span>
@@ -5597,42 +5671,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The country or region to use when returning the drives. {{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="postalcode_csharp">
-<a href="#postalcode_csharp" style="color: inherit; text-decoration: inherit;">Postal<wbr>Code</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The postal code to use when returning the drives.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="recipientname_csharp">
-<a href="#recipientname_csharp" style="color: inherit; text-decoration: inherit;">Recipient<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the recipient who will receive the hard drives when they are returned. {{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="stateorprovince_csharp">
-<a href="#stateorprovince_csharp" style="color: inherit; text-decoration: inherit;">State<wbr>Or<wbr>Province</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The state or province to use when returning the drives.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="streetaddress1_csharp">
-<a href="#streetaddress1_csharp" style="color: inherit; text-decoration: inherit;">Street<wbr>Address1</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The first line of the street address to use when returning the drives. {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="phone_csharp">
@@ -5642,6 +5680,42 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Phone number of the recipient of the returned drives.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="postalcode_csharp">
+<a href="#postalcode_csharp" style="color: inherit; text-decoration: inherit;">Postal<wbr>Code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The postal code to use when returning the drives.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="recipientname_csharp">
+<a href="#recipientname_csharp" style="color: inherit; text-decoration: inherit;">Recipient<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the recipient who will receive the hard drives when they are returned. {{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="stateorprovince_csharp">
+<a href="#stateorprovince_csharp" style="color: inherit; text-decoration: inherit;">State<wbr>Or<wbr>Province</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The state or province to use when returning the drives.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="streetaddress1_csharp">
+<a href="#streetaddress1_csharp" style="color: inherit; text-decoration: inherit;">Street<wbr>Address1</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The first line of the street address to use when returning the drives. {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="streetaddress2_csharp">
@@ -5657,8 +5731,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span id="city_go">
 <a href="#city_go" style="color: inherit; text-decoration: inherit;">City</a>
 </span>
@@ -5666,8 +5740,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The city name to use when returning the drives.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span id="countryorregion_go">
 <a href="#countryorregion_go" style="color: inherit; text-decoration: inherit;">Country<wbr>Or<wbr>Region</a>
 </span>
@@ -5675,42 +5749,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The country or region to use when returning the drives. {{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="postalcode_go">
-<a href="#postalcode_go" style="color: inherit; text-decoration: inherit;">Postal<wbr>Code</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The postal code to use when returning the drives.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="recipientname_go">
-<a href="#recipientname_go" style="color: inherit; text-decoration: inherit;">Recipient<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the recipient who will receive the hard drives when they are returned. {{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="stateorprovince_go">
-<a href="#stateorprovince_go" style="color: inherit; text-decoration: inherit;">State<wbr>Or<wbr>Province</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The state or province to use when returning the drives.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="streetaddress1_go">
-<a href="#streetaddress1_go" style="color: inherit; text-decoration: inherit;">Street<wbr>Address1</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The first line of the street address to use when returning the drives. {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="phone_go">
@@ -5720,6 +5758,42 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Phone number of the recipient of the returned drives.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="postalcode_go">
+<a href="#postalcode_go" style="color: inherit; text-decoration: inherit;">Postal<wbr>Code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The postal code to use when returning the drives.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="recipientname_go">
+<a href="#recipientname_go" style="color: inherit; text-decoration: inherit;">Recipient<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the recipient who will receive the hard drives when they are returned. {{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="stateorprovince_go">
+<a href="#stateorprovince_go" style="color: inherit; text-decoration: inherit;">State<wbr>Or<wbr>Province</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The state or province to use when returning the drives.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="streetaddress1_go">
+<a href="#streetaddress1_go" style="color: inherit; text-decoration: inherit;">Street<wbr>Address1</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The first line of the street address to use when returning the drives. {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="streetaddress2_go">
@@ -5735,8 +5809,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span id="city_nodejs">
 <a href="#city_nodejs" style="color: inherit; text-decoration: inherit;">city</a>
 </span>
@@ -5744,8 +5818,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The city name to use when returning the drives.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span id="countryorregion_nodejs">
 <a href="#countryorregion_nodejs" style="color: inherit; text-decoration: inherit;">country<wbr>Or<wbr>Region</a>
 </span>
@@ -5753,42 +5827,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The country or region to use when returning the drives. {{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="postalcode_nodejs">
-<a href="#postalcode_nodejs" style="color: inherit; text-decoration: inherit;">postal<wbr>Code</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The postal code to use when returning the drives.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="recipientname_nodejs">
-<a href="#recipientname_nodejs" style="color: inherit; text-decoration: inherit;">recipient<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the recipient who will receive the hard drives when they are returned. {{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="stateorprovince_nodejs">
-<a href="#stateorprovince_nodejs" style="color: inherit; text-decoration: inherit;">state<wbr>Or<wbr>Province</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The state or province to use when returning the drives.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="streetaddress1_nodejs">
-<a href="#streetaddress1_nodejs" style="color: inherit; text-decoration: inherit;">street<wbr>Address1</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The first line of the street address to use when returning the drives. {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="phone_nodejs">
@@ -5798,6 +5836,42 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Phone number of the recipient of the returned drives.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="postalcode_nodejs">
+<a href="#postalcode_nodejs" style="color: inherit; text-decoration: inherit;">postal<wbr>Code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The postal code to use when returning the drives.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="recipientname_nodejs">
+<a href="#recipientname_nodejs" style="color: inherit; text-decoration: inherit;">recipient<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the recipient who will receive the hard drives when they are returned. {{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="stateorprovince_nodejs">
+<a href="#stateorprovince_nodejs" style="color: inherit; text-decoration: inherit;">state<wbr>Or<wbr>Province</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The state or province to use when returning the drives.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="streetaddress1_nodejs">
+<a href="#streetaddress1_nodejs" style="color: inherit; text-decoration: inherit;">street<wbr>Address1</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The first line of the street address to use when returning the drives. {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="streetaddress2_nodejs">
@@ -5813,8 +5887,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span id="city_python">
 <a href="#city_python" style="color: inherit; text-decoration: inherit;">city</a>
 </span>
@@ -5822,8 +5896,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The city name to use when returning the drives.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span id="country_or_region_python">
 <a href="#country_or_region_python" style="color: inherit; text-decoration: inherit;">country_<wbr>or_<wbr>region</a>
 </span>
@@ -5831,42 +5905,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The country or region to use when returning the drives. {{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="postal_code_python">
-<a href="#postal_code_python" style="color: inherit; text-decoration: inherit;">postal_<wbr>code</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The postal code to use when returning the drives.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="recipient_name_python">
-<a href="#recipient_name_python" style="color: inherit; text-decoration: inherit;">recipient_<wbr>name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the recipient who will receive the hard drives when they are returned. {{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="state_or_province_python">
-<a href="#state_or_province_python" style="color: inherit; text-decoration: inherit;">state_<wbr>or_<wbr>province</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The state or province to use when returning the drives.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="street_address1_python">
-<a href="#street_address1_python" style="color: inherit; text-decoration: inherit;">street_<wbr>address1</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The first line of the street address to use when returning the drives. {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="phone_python">
@@ -5876,6 +5914,42 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Phone number of the recipient of the returned drives.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="postal_code_python">
+<a href="#postal_code_python" style="color: inherit; text-decoration: inherit;">postal_<wbr>code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The postal code to use when returning the drives.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="recipient_name_python">
+<a href="#recipient_name_python" style="color: inherit; text-decoration: inherit;">recipient_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the recipient who will receive the hard drives when they are returned. {{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_or_province_python">
+<a href="#state_or_province_python" style="color: inherit; text-decoration: inherit;">state_<wbr>or_<wbr>province</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The state or province to use when returning the drives.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="street_address1_python">
+<a href="#street_address1_python" style="color: inherit; text-decoration: inherit;">street_<wbr>address1</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The first line of the street address to use when returning the drives. {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="street_address2_python">
@@ -5902,8 +5976,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Additional shipping information for customer, specific to datacenter to which customer should send their disks.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span id="city_csharp">
 <a href="#city_csharp" style="color: inherit; text-decoration: inherit;">City</a>
 </span>
@@ -5911,8 +5985,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The city name to use when returning the drives.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span id="countryorregion_csharp">
 <a href="#countryorregion_csharp" style="color: inherit; text-decoration: inherit;">Country<wbr>Or<wbr>Region</a>
 </span>
@@ -5920,42 +5994,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The country or region to use when returning the drives. {{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="postalcode_csharp">
-<a href="#postalcode_csharp" style="color: inherit; text-decoration: inherit;">Postal<wbr>Code</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The postal code to use when returning the drives.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="recipientname_csharp">
-<a href="#recipientname_csharp" style="color: inherit; text-decoration: inherit;">Recipient<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the recipient who will receive the hard drives when they are returned. {{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="stateorprovince_csharp">
-<a href="#stateorprovince_csharp" style="color: inherit; text-decoration: inherit;">State<wbr>Or<wbr>Province</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The state or province to use when returning the drives.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="streetaddress1_csharp">
-<a href="#streetaddress1_csharp" style="color: inherit; text-decoration: inherit;">Street<wbr>Address1</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The first line of the street address to use when returning the drives. {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="phone_csharp">
@@ -5965,6 +6003,42 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Phone number of the recipient of the returned drives.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="postalcode_csharp">
+<a href="#postalcode_csharp" style="color: inherit; text-decoration: inherit;">Postal<wbr>Code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The postal code to use when returning the drives.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="recipientname_csharp">
+<a href="#recipientname_csharp" style="color: inherit; text-decoration: inherit;">Recipient<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the recipient who will receive the hard drives when they are returned. {{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="stateorprovince_csharp">
+<a href="#stateorprovince_csharp" style="color: inherit; text-decoration: inherit;">State<wbr>Or<wbr>Province</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The state or province to use when returning the drives.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="streetaddress1_csharp">
+<a href="#streetaddress1_csharp" style="color: inherit; text-decoration: inherit;">Street<wbr>Address1</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The first line of the street address to use when returning the drives. {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="streetaddress2_csharp">
@@ -5989,8 +6063,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Additional shipping information for customer, specific to datacenter to which customer should send their disks.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span id="city_go">
 <a href="#city_go" style="color: inherit; text-decoration: inherit;">City</a>
 </span>
@@ -5998,8 +6072,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The city name to use when returning the drives.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span id="countryorregion_go">
 <a href="#countryorregion_go" style="color: inherit; text-decoration: inherit;">Country<wbr>Or<wbr>Region</a>
 </span>
@@ -6007,42 +6081,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The country or region to use when returning the drives. {{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="postalcode_go">
-<a href="#postalcode_go" style="color: inherit; text-decoration: inherit;">Postal<wbr>Code</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The postal code to use when returning the drives.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="recipientname_go">
-<a href="#recipientname_go" style="color: inherit; text-decoration: inherit;">Recipient<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the recipient who will receive the hard drives when they are returned. {{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="stateorprovince_go">
-<a href="#stateorprovince_go" style="color: inherit; text-decoration: inherit;">State<wbr>Or<wbr>Province</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The state or province to use when returning the drives.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="streetaddress1_go">
-<a href="#streetaddress1_go" style="color: inherit; text-decoration: inherit;">Street<wbr>Address1</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The first line of the street address to use when returning the drives. {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="phone_go">
@@ -6052,6 +6090,42 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Phone number of the recipient of the returned drives.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="postalcode_go">
+<a href="#postalcode_go" style="color: inherit; text-decoration: inherit;">Postal<wbr>Code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The postal code to use when returning the drives.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="recipientname_go">
+<a href="#recipientname_go" style="color: inherit; text-decoration: inherit;">Recipient<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the recipient who will receive the hard drives when they are returned. {{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="stateorprovince_go">
+<a href="#stateorprovince_go" style="color: inherit; text-decoration: inherit;">State<wbr>Or<wbr>Province</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The state or province to use when returning the drives.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="streetaddress1_go">
+<a href="#streetaddress1_go" style="color: inherit; text-decoration: inherit;">Street<wbr>Address1</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The first line of the street address to use when returning the drives. {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="streetaddress2_go">
@@ -6076,8 +6150,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Additional shipping information for customer, specific to datacenter to which customer should send their disks.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span id="city_nodejs">
 <a href="#city_nodejs" style="color: inherit; text-decoration: inherit;">city</a>
 </span>
@@ -6085,8 +6159,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The city name to use when returning the drives.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span id="countryorregion_nodejs">
 <a href="#countryorregion_nodejs" style="color: inherit; text-decoration: inherit;">country<wbr>Or<wbr>Region</a>
 </span>
@@ -6094,42 +6168,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The country or region to use when returning the drives. {{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="postalcode_nodejs">
-<a href="#postalcode_nodejs" style="color: inherit; text-decoration: inherit;">postal<wbr>Code</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The postal code to use when returning the drives.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="recipientname_nodejs">
-<a href="#recipientname_nodejs" style="color: inherit; text-decoration: inherit;">recipient<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the recipient who will receive the hard drives when they are returned. {{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="stateorprovince_nodejs">
-<a href="#stateorprovince_nodejs" style="color: inherit; text-decoration: inherit;">state<wbr>Or<wbr>Province</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The state or province to use when returning the drives.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="streetaddress1_nodejs">
-<a href="#streetaddress1_nodejs" style="color: inherit; text-decoration: inherit;">street<wbr>Address1</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The first line of the street address to use when returning the drives. {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="phone_nodejs">
@@ -6139,6 +6177,42 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Phone number of the recipient of the returned drives.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="postalcode_nodejs">
+<a href="#postalcode_nodejs" style="color: inherit; text-decoration: inherit;">postal<wbr>Code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The postal code to use when returning the drives.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="recipientname_nodejs">
+<a href="#recipientname_nodejs" style="color: inherit; text-decoration: inherit;">recipient<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the recipient who will receive the hard drives when they are returned. {{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="stateorprovince_nodejs">
+<a href="#stateorprovince_nodejs" style="color: inherit; text-decoration: inherit;">state<wbr>Or<wbr>Province</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The state or province to use when returning the drives.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="streetaddress1_nodejs">
+<a href="#streetaddress1_nodejs" style="color: inherit; text-decoration: inherit;">street<wbr>Address1</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The first line of the street address to use when returning the drives. {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="streetaddress2_nodejs">
@@ -6163,8 +6237,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Additional shipping information for customer, specific to datacenter to which customer should send their disks.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span id="city_python">
 <a href="#city_python" style="color: inherit; text-decoration: inherit;">city</a>
 </span>
@@ -6172,8 +6246,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The city name to use when returning the drives.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span id="country_or_region_python">
 <a href="#country_or_region_python" style="color: inherit; text-decoration: inherit;">country_<wbr>or_<wbr>region</a>
 </span>
@@ -6181,42 +6255,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The country or region to use when returning the drives. {{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="postal_code_python">
-<a href="#postal_code_python" style="color: inherit; text-decoration: inherit;">postal_<wbr>code</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The postal code to use when returning the drives.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="recipient_name_python">
-<a href="#recipient_name_python" style="color: inherit; text-decoration: inherit;">recipient_<wbr>name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the recipient who will receive the hard drives when they are returned. {{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="state_or_province_python">
-<a href="#state_or_province_python" style="color: inherit; text-decoration: inherit;">state_<wbr>or_<wbr>province</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The state or province to use when returning the drives.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="street_address1_python">
-<a href="#street_address1_python" style="color: inherit; text-decoration: inherit;">street_<wbr>address1</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The first line of the street address to use when returning the drives. {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="phone_python">
@@ -6228,6 +6266,42 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Phone number of the recipient of the returned drives.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="postal_code_python">
+<a href="#postal_code_python" style="color: inherit; text-decoration: inherit;">postal_<wbr>code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The postal code to use when returning the drives.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="recipient_name_python">
+<a href="#recipient_name_python" style="color: inherit; text-decoration: inherit;">recipient_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the recipient who will receive the hard drives when they are returned. {{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_or_province_python">
+<a href="#state_or_province_python" style="color: inherit; text-decoration: inherit;">state_<wbr>or_<wbr>province</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The state or province to use when returning the drives.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="street_address1_python">
+<a href="#street_address1_python" style="color: inherit; text-decoration: inherit;">street_<wbr>address1</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The first line of the street address to use when returning the drives. {{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="street_address2_python">
 <a href="#street_address2_python" style="color: inherit; text-decoration: inherit;">street_<wbr>address2</a>
 </span>
@@ -6237,13 +6311,255 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The second line of the street address to use when returning the drives. {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+
+<h4 id="systemdataresponse">System<wbr>Data<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="createdat_csharp">
+<a href="#createdat_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="createdby_csharp">
+<a href="#createdby_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>By</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="createdbytype_csharp">
+<a href="#createdbytype_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>By<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lastmodifiedat_csharp">
+<a href="#lastmodifiedat_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>At</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lastmodifiedby_csharp">
+<a href="#lastmodifiedby_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lastmodifiedbytype_csharp">
+<a href="#lastmodifiedbytype_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="createdat_go">
+<a href="#createdat_go" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="createdby_go">
+<a href="#createdby_go" style="color: inherit; text-decoration: inherit;">Created<wbr>By</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="createdbytype_go">
+<a href="#createdbytype_go" style="color: inherit; text-decoration: inherit;">Created<wbr>By<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lastmodifiedat_go">
+<a href="#lastmodifiedat_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>At</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lastmodifiedby_go">
+<a href="#lastmodifiedby_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lastmodifiedbytype_go">
+<a href="#lastmodifiedbytype_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="createdat_nodejs">
+<a href="#createdat_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>At</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="createdby_nodejs">
+<a href="#createdby_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="createdbytype_nodejs">
+<a href="#createdbytype_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lastmodifiedat_nodejs">
+<a href="#lastmodifiedat_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>At</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lastmodifiedby_nodejs">
+<a href="#lastmodifiedby_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>By</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lastmodifiedbytype_nodejs">
+<a href="#lastmodifiedbytype_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>By<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="created_at_python">
+<a href="#created_at_python" style="color: inherit; text-decoration: inherit;">created_<wbr>at</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="created_by_python">
+<a href="#created_by_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="created_by_type_python">
+<a href="#created_by_type_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="last_modified_at_python">
+<a href="#last_modified_at_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>at</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="last_modified_by_python">
+<a href="#last_modified_by_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>by</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="last_modified_by_type_python">
+<a href="#last_modified_by_type_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>by_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
 ## Import
 
 
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:importexport/latest:Job myJob /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/myResourceGroup/providers/Microsoft.ImportExport/jobs/myJob 
+$ pulumi import azure-nextgen:importexport:Job myJob /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/myResourceGroup/providers/Microsoft.ImportExport/jobs/myJob 
 ```
 
 

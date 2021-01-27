@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.eventgrid.PartnerTopicEventSubsc
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Event Subscription
+API Version: 2020-04-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var partnerTopicEventSubscription = new AzureNextGen.EventGrid.V20200401Preview.PartnerTopicEventSubscription("partnerTopicEventSubscription", new AzureNextGen.EventGrid.V20200401Preview.PartnerTopicEventSubscriptionArgs
+        var partnerTopicEventSubscription = new AzureNextGen.EventGrid..PartnerTopicEventSubscription("partnerTopicEventSubscription", new AzureNextGen.EventGrid..PartnerTopicEventSubscriptionArgs
         {
             Destination = 
             {
@@ -34,7 +35,7 @@ class MyStack : Stack
                 { "endpointUrl", "https://requestb.in/15ksip71" },
             },
             EventSubscriptionName = "exampleEventSubscriptionName1",
-            Filter = new AzureNextGen.EventGrid.V20200401Preview.Inputs.EventSubscriptionFilterArgs
+            Filter = new AzureNextGen.EventGrid..Inputs.EventSubscriptionFilterArgs
             {
                 IsSubjectCaseSensitive = false,
                 SubjectBeginsWith = "ExamplePrefix",
@@ -61,13 +62,13 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-partner_topic_event_subscription = azure_nextgen.eventgrid.v20200401preview.PartnerTopicEventSubscription("partnerTopicEventSubscription",
+partner_topic_event_subscription = azure_nextgen.eventgrid.PartnerTopicEventSubscription("partnerTopicEventSubscription",
     destination={
         "endpointType": "WebHook",
         "endpointUrl": "https://requestb.in/15ksip71",
     },
     event_subscription_name="exampleEventSubscriptionName1",
-    filter=azure_nextgen.eventgrid.v20200401preview.EventSubscriptionFilterArgs(
+    filter=azure_nextgen.eventgrid.EventSubscriptionFilterArgs(
         is_subject_case_sensitive=False,
         subject_begins_with="ExamplePrefix",
         subject_ends_with="ExampleSuffix",
@@ -85,7 +86,7 @@ partner_topic_event_subscription = azure_nextgen.eventgrid.v20200401preview.Part
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const partnerTopicEventSubscription = new azure_nextgen.eventgrid.v20200401preview.PartnerTopicEventSubscription("partnerTopicEventSubscription", {
+const partnerTopicEventSubscription = new azure_nextgen.eventgrid.PartnerTopicEventSubscription("partnerTopicEventSubscription", {
     destination: {
         endpointType: "WebHook",
         endpointUrl: "https://requestb.in/15ksip71",
@@ -320,7 +321,7 @@ The PartnerTopicEventSubscription resource accepts the following [input]({{< rel
 <a href="#deadletterdestination_csharp" style="color: inherit; text-decoration: inherit;">Dead<wbr>Letter<wbr>Destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageblobdeadletterdestination">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Storage<wbr>Blob<wbr>Dead<wbr>Letter<wbr>Destination<wbr>Args</a></span>
+        <span class="property-type"><a href="#storageblobdeadletterdestination">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid..<wbr>Inputs.<wbr>Storage<wbr>Blob<wbr>Dead<wbr>Letter<wbr>Destination<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The dead letter destination of the event subscription. Any event that cannot be delivered to its' destination is sent to the dead letter destination.
 Uses Azure Event Grid's identity to acquire the authentication tokens being used during delivery / dead-lettering.{{% /md %}}</dd>
@@ -330,7 +331,7 @@ Uses Azure Event Grid's identity to acquire the authentication tokens being used
 <a href="#deadletterwithresourceidentity_csharp" style="color: inherit; text-decoration: inherit;">Dead<wbr>Letter<wbr>With<wbr>Resource<wbr>Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deadletterwithresourceidentity">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Dead<wbr>Letter<wbr>With<wbr>Resource<wbr>Identity<wbr>Args</a></span>
+        <span class="property-type"><a href="#deadletterwithresourceidentity">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid..<wbr>Inputs.<wbr>Dead<wbr>Letter<wbr>With<wbr>Resource<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The dead letter destination of the event subscription. Any event that cannot be delivered to its' destination is sent to the dead letter destination.
 Uses the managed identity setup on the parent resource (namely, topic or domain) to acquire the authentication tokens being used during delivery / dead-lettering.{{% /md %}}</dd>
@@ -340,7 +341,7 @@ Uses the managed identity setup on the parent resource (namely, topic or domain)
 <a href="#deliverywithresourceidentity_csharp" style="color: inherit; text-decoration: inherit;">Delivery<wbr>With<wbr>Resource<wbr>Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deliverywithresourceidentity">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Delivery<wbr>With<wbr>Resource<wbr>Identity<wbr>Args</a></span>
+        <span class="property-type"><a href="#deliverywithresourceidentity">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid..<wbr>Inputs.<wbr>Delivery<wbr>With<wbr>Resource<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information about the destination where events have to be delivered for the event subscription.
 Uses the managed identity setup on the parent resource (namely, topic or domain) to acquire the authentication tokens being used during delivery / dead-lettering.{{% /md %}}</dd>
@@ -350,7 +351,7 @@ Uses the managed identity setup on the parent resource (namely, topic or domain)
 <a href="#destination_csharp" style="color: inherit; text-decoration: inherit;">Destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefunctioneventsubscriptiondestination">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Azure<wbr>Function<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Args</a> | <a href="#eventhubeventsubscriptiondestination">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Event<wbr>Hub<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Args</a> | <a href="#hybridconnectioneventsubscriptiondestination">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Hybrid<wbr>Connection<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Args</a> | <a href="#servicebusqueueeventsubscriptiondestination">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Service<wbr>Bus<wbr>Queue<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Args</a> | <a href="#servicebustopiceventsubscriptiondestination">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Service<wbr>Bus<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Args</a> | <a href="#storagequeueeventsubscriptiondestination">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Storage<wbr>Queue<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Args</a> | <a href="#webhookeventsubscriptiondestination">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Web<wbr>Hook<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurefunctioneventsubscriptiondestination">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid..<wbr>Inputs.<wbr>Azure<wbr>Function<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Args</a> | <a href="#eventhubeventsubscriptiondestination">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid..<wbr>Inputs.<wbr>Event<wbr>Hub<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Args</a> | <a href="#hybridconnectioneventsubscriptiondestination">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid..<wbr>Inputs.<wbr>Hybrid<wbr>Connection<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Args</a> | <a href="#servicebusqueueeventsubscriptiondestination">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid..<wbr>Inputs.<wbr>Service<wbr>Bus<wbr>Queue<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Args</a> | <a href="#servicebustopiceventsubscriptiondestination">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid..<wbr>Inputs.<wbr>Service<wbr>Bus<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Args</a> | <a href="#storagequeueeventsubscriptiondestination">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid..<wbr>Inputs.<wbr>Storage<wbr>Queue<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Args</a> | <a href="#webhookeventsubscriptiondestination">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid..<wbr>Inputs.<wbr>Web<wbr>Hook<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information about the destination where events have to be delivered for the event subscription.
 Uses Azure Event Grid's identity to acquire the authentication tokens being used during delivery / dead-lettering.{{% /md %}}</dd>
@@ -360,7 +361,7 @@ Uses Azure Event Grid's identity to acquire the authentication tokens being used
 <a href="#eventdeliveryschema_csharp" style="color: inherit; text-decoration: inherit;">Event<wbr>Delivery<wbr>Schema</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#eventdeliveryschema">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid.<wbr>Event<wbr>Delivery<wbr>Schema</a></span>
+        <span class="property-type">string | <a href="#eventdeliveryschema">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid..<wbr>Event<wbr>Delivery<wbr>Schema</a></span>
     </dt>
     <dd>{{% md %}}The event delivery schema for the event subscription.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -378,7 +379,7 @@ Uses Azure Event Grid's identity to acquire the authentication tokens being used
 <a href="#filter_csharp" style="color: inherit; text-decoration: inherit;">Filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventsubscriptionfilter">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Event<wbr>Subscription<wbr>Filter<wbr>Args</a></span>
+        <span class="property-type"><a href="#eventsubscriptionfilter">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid..<wbr>Inputs.<wbr>Event<wbr>Subscription<wbr>Filter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information about the filter for the event subscription.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -396,7 +397,7 @@ Uses Azure Event Grid's identity to acquire the authentication tokens being used
 <a href="#retrypolicy_csharp" style="color: inherit; text-decoration: inherit;">Retry<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#retrypolicy">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Retry<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#retrypolicy">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid..<wbr>Inputs.<wbr>Retry<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The retry policy for events. This can be used to configure maximum number of delivery attempts and time to live for events.{{% /md %}}</dd>
 </dl>
@@ -1452,7 +1453,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deadletterdestination_csharp" style="color: inherit; text-decoration: inherit;">Dead<wbr>Letter<wbr>Destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageblobdeadletterdestination">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Storage<wbr>Blob<wbr>Dead<wbr>Letter<wbr>Destination<wbr>Args</a></span>
+        <span class="property-type"><a href="#storageblobdeadletterdestination">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid..<wbr>Inputs.<wbr>Storage<wbr>Blob<wbr>Dead<wbr>Letter<wbr>Destination<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information about the destination where events have to be delivered for the event subscription.
 Uses the managed identity setup on the parent resource (namely, topic or domain) to acquire the authentication tokens being used during delivery / dead-lettering.{{% /md %}}</dd>
@@ -1462,7 +1463,7 @@ Uses the managed identity setup on the parent resource (namely, topic or domain)
 <a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventsubscriptionidentity">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Event<wbr>Subscription<wbr>Identity<wbr>Args</a></span>
+        <span class="property-type"><a href="#eventsubscriptionidentity">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid..<wbr>Inputs.<wbr>Event<wbr>Subscription<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The identity to use when dead-lettering events.{{% /md %}}</dd>
 </dl>
@@ -1554,7 +1555,7 @@ Uses the managed identity setup on the parent resource (namely, topic or domain)
 <a href="#deadletterdestination_csharp" style="color: inherit; text-decoration: inherit;">Dead<wbr>Letter<wbr>Destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageblobdeadletterdestinationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Storage<wbr>Blob<wbr>Dead<wbr>Letter<wbr>Destination<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#storageblobdeadletterdestinationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid..<wbr>Inputs.<wbr>Storage<wbr>Blob<wbr>Dead<wbr>Letter<wbr>Destination<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information about the destination where events have to be delivered for the event subscription.
 Uses the managed identity setup on the parent resource (namely, topic or domain) to acquire the authentication tokens being used during delivery / dead-lettering.{{% /md %}}</dd>
@@ -1564,7 +1565,7 @@ Uses the managed identity setup on the parent resource (namely, topic or domain)
 <a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventsubscriptionidentityresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Event<wbr>Subscription<wbr>Identity<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#eventsubscriptionidentityresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid..<wbr>Inputs.<wbr>Event<wbr>Subscription<wbr>Identity<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The identity to use when dead-lettering events.{{% /md %}}</dd>
 </dl>
@@ -1656,7 +1657,7 @@ Uses the managed identity setup on the parent resource (namely, topic or domain)
 <a href="#destination_csharp" style="color: inherit; text-decoration: inherit;">Destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefunctioneventsubscriptiondestination">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Azure<wbr>Function<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Args</a> | <a href="#eventhubeventsubscriptiondestination">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Event<wbr>Hub<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Args</a> | <a href="#hybridconnectioneventsubscriptiondestination">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Hybrid<wbr>Connection<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Args</a> | <a href="#servicebusqueueeventsubscriptiondestination">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Service<wbr>Bus<wbr>Queue<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Args</a> | <a href="#servicebustopiceventsubscriptiondestination">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Service<wbr>Bus<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Args</a> | <a href="#storagequeueeventsubscriptiondestination">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Storage<wbr>Queue<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Args</a> | <a href="#webhookeventsubscriptiondestination">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Web<wbr>Hook<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurefunctioneventsubscriptiondestination">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid..<wbr>Inputs.<wbr>Azure<wbr>Function<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Args</a> | <a href="#eventhubeventsubscriptiondestination">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid..<wbr>Inputs.<wbr>Event<wbr>Hub<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Args</a> | <a href="#hybridconnectioneventsubscriptiondestination">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid..<wbr>Inputs.<wbr>Hybrid<wbr>Connection<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Args</a> | <a href="#servicebusqueueeventsubscriptiondestination">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid..<wbr>Inputs.<wbr>Service<wbr>Bus<wbr>Queue<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Args</a> | <a href="#servicebustopiceventsubscriptiondestination">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid..<wbr>Inputs.<wbr>Service<wbr>Bus<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Args</a> | <a href="#storagequeueeventsubscriptiondestination">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid..<wbr>Inputs.<wbr>Storage<wbr>Queue<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Args</a> | <a href="#webhookeventsubscriptiondestination">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid..<wbr>Inputs.<wbr>Web<wbr>Hook<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information about the destination where events have to be delivered for the event subscription.
 Uses Azure Event Grid's identity to acquire the authentication tokens being used during delivery / dead-lettering.{{% /md %}}</dd>
@@ -1666,7 +1667,7 @@ Uses Azure Event Grid's identity to acquire the authentication tokens being used
 <a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventsubscriptionidentity">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Event<wbr>Subscription<wbr>Identity<wbr>Args</a></span>
+        <span class="property-type"><a href="#eventsubscriptionidentity">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid..<wbr>Inputs.<wbr>Event<wbr>Subscription<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The identity to use when delivering events.{{% /md %}}</dd>
 </dl>
@@ -1758,7 +1759,7 @@ Uses Azure Event Grid's identity to acquire the authentication tokens being used
 <a href="#destination_csharp" style="color: inherit; text-decoration: inherit;">Destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefunctioneventsubscriptiondestinationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Azure<wbr>Function<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Response<wbr>Args</a> | <a href="#eventhubeventsubscriptiondestinationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Event<wbr>Hub<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Response<wbr>Args</a> | <a href="#hybridconnectioneventsubscriptiondestinationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Hybrid<wbr>Connection<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Response<wbr>Args</a> | <a href="#servicebusqueueeventsubscriptiondestinationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Service<wbr>Bus<wbr>Queue<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Response<wbr>Args</a> | <a href="#servicebustopiceventsubscriptiondestinationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Service<wbr>Bus<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Response<wbr>Args</a> | <a href="#storagequeueeventsubscriptiondestinationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Storage<wbr>Queue<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Response<wbr>Args</a> | <a href="#webhookeventsubscriptiondestinationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Web<wbr>Hook<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurefunctioneventsubscriptiondestinationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid..<wbr>Inputs.<wbr>Azure<wbr>Function<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Response<wbr>Args</a> | <a href="#eventhubeventsubscriptiondestinationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid..<wbr>Inputs.<wbr>Event<wbr>Hub<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Response<wbr>Args</a> | <a href="#hybridconnectioneventsubscriptiondestinationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid..<wbr>Inputs.<wbr>Hybrid<wbr>Connection<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Response<wbr>Args</a> | <a href="#servicebusqueueeventsubscriptiondestinationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid..<wbr>Inputs.<wbr>Service<wbr>Bus<wbr>Queue<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Response<wbr>Args</a> | <a href="#servicebustopiceventsubscriptiondestinationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid..<wbr>Inputs.<wbr>Service<wbr>Bus<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Response<wbr>Args</a> | <a href="#storagequeueeventsubscriptiondestinationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid..<wbr>Inputs.<wbr>Storage<wbr>Queue<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Response<wbr>Args</a> | <a href="#webhookeventsubscriptiondestinationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid..<wbr>Inputs.<wbr>Web<wbr>Hook<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information about the destination where events have to be delivered for the event subscription.
 Uses Azure Event Grid's identity to acquire the authentication tokens being used during delivery / dead-lettering.{{% /md %}}</dd>
@@ -1768,7 +1769,7 @@ Uses Azure Event Grid's identity to acquire the authentication tokens being used
 <a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventsubscriptionidentityresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Event<wbr>Subscription<wbr>Identity<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#eventsubscriptionidentityresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid..<wbr>Inputs.<wbr>Event<wbr>Subscription<wbr>Identity<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The identity to use when delivering events.{{% /md %}}</dd>
 </dl>
@@ -2474,7 +2475,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd>
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#eventsubscriptionidentitytype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid.<wbr>Event<wbr>Subscription<wbr>Identity<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#eventsubscriptionidentitytype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid..<wbr>Event<wbr>Subscription<wbr>Identity<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of managed identity used. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user-assigned identities. The type 'None' will remove any identity.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -6266,7 +6267,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd>
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:eventgrid/v20200401preview:PartnerTopicEventSubscription exampleEventSubscriptionName1 /subscriptions/5b4b650e-28b9-4790-b3ab-ddbd88d727c4/resourceGroups/examplerg/providers/Microsoft.EventGrid/partnerTopics/examplePartnerTopic1/eventSubscriptions/exampleEventSubscriptionName1 
+$ pulumi import azure-nextgen:eventgrid:PartnerTopicEventSubscription exampleEventSubscriptionName1 /subscriptions/5b4b650e-28b9-4790-b3ab-ddbd88d727c4/resourceGroups/examplerg/providers/Microsoft.EventGrid/partnerTopics/examplePartnerTopic1/eventSubscriptions/exampleEventSubscriptionName1 
 ```
 
 

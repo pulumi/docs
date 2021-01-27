@@ -11,13 +11,13 @@ meta_desc: "Documentation for the azure-nextgen.domainregistration.Domain resour
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Information about a domain.
-Latest API Version: 2020-09-01.
+API Version: 2020-09-01.
 ## Import
 
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:domainregistration/latest:Domain myresource1 /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DomainRegistration/domains/{domainName} 
+$ pulumi import azure-nextgen:domainregistration:Domain myresource1 /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DomainRegistration/domains/{domainName} 
 ```
 
 
@@ -209,7 +209,7 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#consent_csharp" style="color: inherit; text-decoration: inherit;">Consent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainpurchaseconsent">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Domain<wbr>Registration.<wbr>Inputs.<wbr>Domain<wbr>Purchase<wbr>Consent<wbr>Args</a></span>
+        <span class="property-type"><a href="#domainpurchaseconsent">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Domain<wbr>Registration..<wbr>Inputs.<wbr>Domain<wbr>Purchase<wbr>Consent<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Legal agreement consent.{{% /md %}}</dd>
     <dt class="property-required"
@@ -218,7 +218,7 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#contactadmin_csharp" style="color: inherit; text-decoration: inherit;">Contact<wbr>Admin</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contact">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Domain<wbr>Registration.<wbr>Inputs.<wbr>Contact<wbr>Args</a></span>
+        <span class="property-type"><a href="#contact">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Domain<wbr>Registration..<wbr>Inputs.<wbr>Contact<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Administrative contact.{{% /md %}}</dd>
     <dt class="property-required"
@@ -227,7 +227,7 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#contactbilling_csharp" style="color: inherit; text-decoration: inherit;">Contact<wbr>Billing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contact">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Domain<wbr>Registration.<wbr>Inputs.<wbr>Contact<wbr>Args</a></span>
+        <span class="property-type"><a href="#contact">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Domain<wbr>Registration..<wbr>Inputs.<wbr>Contact<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Billing contact.{{% /md %}}</dd>
     <dt class="property-required"
@@ -236,7 +236,7 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#contactregistrant_csharp" style="color: inherit; text-decoration: inherit;">Contact<wbr>Registrant</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contact">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Domain<wbr>Registration.<wbr>Inputs.<wbr>Contact<wbr>Args</a></span>
+        <span class="property-type"><a href="#contact">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Domain<wbr>Registration..<wbr>Inputs.<wbr>Contact<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Registrant contact.{{% /md %}}</dd>
     <dt class="property-required"
@@ -245,7 +245,7 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#contacttech_csharp" style="color: inherit; text-decoration: inherit;">Contact<wbr>Tech</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contact">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Domain<wbr>Registration.<wbr>Inputs.<wbr>Contact<wbr>Args</a></span>
+        <span class="property-type"><a href="#contact">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Domain<wbr>Registration..<wbr>Inputs.<wbr>Contact<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Technical contact.{{% /md %}}</dd>
     <dt class="property-required"
@@ -299,7 +299,7 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#dnstype_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dnstype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Domain<wbr>Registration.<wbr>Dns<wbr>Type</a></span>
+        <span class="property-type"><a href="#dnstype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Domain<wbr>Registration..<wbr>Dns<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Current DNS type{{% /md %}}</dd>
     <dt class="property-optional"
@@ -344,7 +344,7 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#targetdnstype_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Dns<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dnstype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Domain<wbr>Registration.<wbr>Dns<wbr>Type</a></span>
+        <span class="property-type"><a href="#dnstype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Domain<wbr>Registration..<wbr>Dns<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Target DNS type (would be used for migration){{% /md %}}</dd>
 </dl>
@@ -861,7 +861,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#managedhostnames_csharp" style="color: inherit; text-decoration: inherit;">Managed<wbr>Host<wbr>Names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hostnameresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Domain<wbr>Registration.<wbr>Outputs.<wbr>Host<wbr>Name<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#hostnameresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Domain<wbr>Registration..<wbr>Outputs.<wbr>Host<wbr>Name<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}All hostnames derived from the domain and assigned to Azure resources.{{% /md %}}</dd>
     <dt class="property-"
@@ -916,7 +916,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#systemdata_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Domain<wbr>Registration.<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
+        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Domain<wbr>Registration..<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The system metadata relating to this resource.{{% /md %}}</dd>
     <dt class="property-"
@@ -1844,7 +1844,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#addressmailing_csharp" style="color: inherit; text-decoration: inherit;">Address<wbr>Mailing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#address">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Domain<wbr>Registration.<wbr>Inputs.<wbr>Address<wbr>Args</a></span>
+        <span class="property-type"><a href="#address">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Domain<wbr>Registration..<wbr>Inputs.<wbr>Address<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Mailing address.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2194,7 +2194,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#addressmailing_csharp" style="color: inherit; text-decoration: inherit;">Address<wbr>Mailing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#addressresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Domain<wbr>Registration.<wbr>Inputs.<wbr>Address<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#addressresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Domain<wbr>Registration..<wbr>Inputs.<wbr>Address<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Mailing address.{{% /md %}}</dd>
     <dt class="property-optional"

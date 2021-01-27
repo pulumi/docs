@@ -233,7 +233,7 @@ The following output properties are available:
 <a href="#azurefileparameters_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>File<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volumeproviderparametersazurefileresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Outputs.<wbr>Volume<wbr>Provider<wbr>Parameters<wbr>Azure<wbr>File<wbr>Response</a></span>
+        <span class="property-type"><a href="#volumeproviderparametersazurefileresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh..<wbr>Outputs.<wbr>Volume<wbr>Provider<wbr>Parameters<wbr>Azure<wbr>File<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}This type describes a volume provided by an Azure Files file share.{{% /md %}}</dd>
     <dt class="property-"

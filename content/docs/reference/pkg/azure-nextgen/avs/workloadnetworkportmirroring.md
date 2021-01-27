@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.avs.WorkloadNetworkPortMirroring
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 NSX Port Mirroring
+API Version: 2020-07-17-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var workloadNetworkPortMirroring = new AzureNextGen.AVS.V20200717Preview.WorkloadNetworkPortMirroring("workloadNetworkPortMirroring", new AzureNextGen.AVS.V20200717Preview.WorkloadNetworkPortMirroringArgs
+        var workloadNetworkPortMirroring = new AzureNextGen.AVS..WorkloadNetworkPortMirroring("workloadNetworkPortMirroring", new AzureNextGen.AVS..WorkloadNetworkPortMirroringArgs
         {
             Destination = "vmGroup2",
             Direction = "BIDIRECTIONAL",
@@ -51,7 +52,7 @@ class MyStack : Stack
 package main
 
 import (
-	avs "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/avs/v20200717preview"
+	avs "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/avs"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -84,7 +85,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-workload_network_port_mirroring = azure_nextgen.avs.v20200717preview.WorkloadNetworkPortMirroring("workloadNetworkPortMirroring",
+workload_network_port_mirroring = azure_nextgen.avs.WorkloadNetworkPortMirroring("workloadNetworkPortMirroring",
     destination="vmGroup2",
     direction="BIDIRECTIONAL",
     display_name="portMirroring1",
@@ -104,7 +105,7 @@ workload_network_port_mirroring = azure_nextgen.avs.v20200717preview.WorkloadNet
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const workloadNetworkPortMirroring = new azure_nextgen.avs.v20200717preview.WorkloadNetworkPortMirroring("workloadNetworkPortMirroring", {
+const workloadNetworkPortMirroring = new azure_nextgen.avs.WorkloadNetworkPortMirroring("workloadNetworkPortMirroring", {
     destination: "vmGroup2",
     direction: "BIDIRECTIONAL",
     displayName: "portMirroring1",
@@ -344,7 +345,7 @@ The WorkloadNetworkPortMirroring resource accepts the following [input]({{< relr
 <a href="#direction_csharp" style="color: inherit; text-decoration: inherit;">Direction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#portmirroringdirectionenum">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>AVS.<wbr>Port<wbr>Mirroring<wbr>Direction<wbr>Enum</a></span>
+        <span class="property-type">string | <a href="#portmirroringdirectionenum">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>AVS..<wbr>Port<wbr>Mirroring<wbr>Direction<wbr>Enum</a></span>
     </dt>
     <dd>{{% md %}}Direction of port mirroring profile.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -867,7 +868,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:avs/v20200717preview:WorkloadNetworkPortMirroring portMirroring1 /subscriptions/{subscription-id}/resourceGroups/group1/providers/Microsoft.AVS/privateClouds/cloud1/workloadNetworks/default/portMirroringProfiles/portMirroring1 
+$ pulumi import azure-nextgen:avs:WorkloadNetworkPortMirroring portMirroring1 /subscriptions/{subscription-id}/resourceGroups/group1/providers/Microsoft.AVS/privateClouds/cloud1/workloadNetworks/default/portMirroringProfiles/portMirroring1 
 ```
 
 

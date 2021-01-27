@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.migrate.MoveCollection resource 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Define the move collection.
+API Version: 2019-10-01-preview.
 
 
 
@@ -219,7 +220,7 @@ The MoveCollection resource accepts the following [input]({{< relref "/docs/intr
 <a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identity">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Inputs.<wbr>Identity<wbr>Args</a></span>
+        <span class="property-type"><a href="#identity">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate..<wbr>Inputs.<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines the MSI properties of the Move Collection.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -237,7 +238,7 @@ The MoveCollection resource accepts the following [input]({{< relref "/docs/intr
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#movecollectionproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Inputs.<wbr>Move<wbr>Collection<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#movecollectionproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate..<wbr>Inputs.<wbr>Move<wbr>Collection<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines the move collection properties.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -646,7 +647,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#resourceidentitytype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Resource<wbr>Identity<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#resourceidentitytype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate..<wbr>Resource<wbr>Identity<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of identity used for the resource mover service.{{% /md %}}</dd>
 </dl>
@@ -994,7 +995,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errors_csharp" style="color: inherit; text-decoration: inherit;">Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#movecollectionpropertiesresponseerrors">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Inputs.<wbr>Move<wbr>Collection<wbr>Properties<wbr>Response<wbr>Errors<wbr>Args</a></span>
+        <span class="property-type"><a href="#movecollectionpropertiesresponseerrors">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate..<wbr>Inputs.<wbr>Move<wbr>Collection<wbr>Properties<wbr>Response<wbr>Errors<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines the move collection errors.{{% /md %}}</dd>
     <dt class="property-required"
@@ -1164,7 +1165,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#moveresourceerrorbodyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Inputs.<wbr>Move<wbr>Resource<wbr>Error<wbr>Body<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#moveresourceerrorbodyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate..<wbr>Inputs.<wbr>Move<wbr>Resource<wbr>Error<wbr>Body<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The move resource error body.{{% /md %}}</dd>
 </dl>
@@ -1235,7 +1236,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#details_csharp" style="color: inherit; text-decoration: inherit;">Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#moveresourceerrorbodyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Inputs.<wbr>Move<wbr>Resource<wbr>Error<wbr>Body<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#moveresourceerrorbodyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate..<wbr>Inputs.<wbr>Move<wbr>Resource<wbr>Error<wbr>Body<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of additional details about the error.{{% /md %}}</dd>
     <dt class="property-required"

@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.automation.Module resource with 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Definition of the module type.
-Latest API Version: 2019-06-01.
+API Version: 2019-06-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,12 +27,12 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var module = new AzureNextGen.Automation.Latest.Module("module", new AzureNextGen.Automation.Latest.ModuleArgs
+        var module = new AzureNextGen.Automation..Module("module", new AzureNextGen.Automation..ModuleArgs
         {
             AutomationAccountName = "myAutomationAccount33",
-            ContentLink = new AzureNextGen.Automation.Latest.Inputs.ContentLinkArgs
+            ContentLink = new AzureNextGen.Automation..Inputs.ContentLinkArgs
             {
-                ContentHash = new AzureNextGen.Automation.Latest.Inputs.ContentHashArgs
+                ContentHash = new AzureNextGen.Automation..Inputs.ContentHashArgs
                 {
                     Algorithm = "sha265",
                     Value = "07E108A962B81DD9C9BAA89BB47C0F6EE52B29E83758B07795E408D258B2B87A",
@@ -57,7 +57,7 @@ class MyStack : Stack
 package main
 
 import (
-	automation "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/automation/latest"
+	automation "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/automation"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -93,10 +93,10 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-module = azure_nextgen.automation.latest.Module("module",
+module = azure_nextgen.automation.Module("module",
     automation_account_name="myAutomationAccount33",
-    content_link=azure_nextgen.automation.latest.ContentLinkArgs(
-        content_hash=azure_nextgen.automation.latest.ContentHashArgs(
+    content_link=azure_nextgen.automation.ContentLinkArgs(
+        content_hash=azure_nextgen.automation.ContentHashArgs(
             algorithm="sha265",
             value="07E108A962B81DD9C9BAA89BB47C0F6EE52B29E83758B07795E408D258B2B87A",
         ),
@@ -116,7 +116,7 @@ module = azure_nextgen.automation.latest.Module("module",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const module = new azure_nextgen.automation.latest.Module("module", {
+const module = new azure_nextgen.automation.Module("module", {
     automationAccountName: "myAutomationAccount33",
     contentLink: {
         contentHash: {
@@ -332,7 +332,7 @@ The Module resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#contentlink_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentlink">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automation.<wbr>Inputs.<wbr>Content<wbr>Link<wbr>Args</a></span>
+        <span class="property-type"><a href="#contentlink">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automation..<wbr>Inputs.<wbr>Content<wbr>Link<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the module content link.{{% /md %}}</dd>
     <dt class="property-required"
@@ -651,7 +651,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#error_csharp" style="color: inherit; text-decoration: inherit;">Error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#moduleerrorinforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automation.<wbr>Outputs.<wbr>Module<wbr>Error<wbr>Info<wbr>Response</a></span>
+        <span class="property-type"><a href="#moduleerrorinforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automation..<wbr>Outputs.<wbr>Module<wbr>Error<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the error info of the module.{{% /md %}}</dd>
     <dt class="property-"
@@ -1306,7 +1306,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#contenthash_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Hash</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contenthash">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automation.<wbr>Inputs.<wbr>Content<wbr>Hash<wbr>Args</a></span>
+        <span class="property-type"><a href="#contenthash">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automation..<wbr>Inputs.<wbr>Content<wbr>Hash<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the hash.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1440,7 +1440,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#contenthash_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Hash</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contenthashresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automation.<wbr>Inputs.<wbr>Content<wbr>Hash<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#contenthashresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automation..<wbr>Inputs.<wbr>Content<wbr>Hash<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the hash.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1666,7 +1666,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:automation/latest:Module OmsCompositeResources /subscriptions/subid/resourceGroups/rg/providers/Microsoft.Automation/automationAccounts/myAutomationAccount33/modules/OmsCompositeResources 
+$ pulumi import azure-nextgen:automation:Module OmsCompositeResources /subscriptions/subid/resourceGroups/rg/providers/Microsoft.Automation/automationAccounts/myAutomationAccount33/modules/OmsCompositeResources 
 ```
 
 

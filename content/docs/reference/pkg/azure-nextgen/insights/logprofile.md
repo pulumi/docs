@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.insights.LogProfile resource wit
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The log profile resource.
-Latest API Version: 2016-03-01.
+API Version: 2016-03-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var logProfile = new AzureNextGen.Insights.Latest.LogProfile("logProfile", new AzureNextGen.Insights.Latest.LogProfileArgs
+        var logProfile = new AzureNextGen.Insights..LogProfile("logProfile", new AzureNextGen.Insights..LogProfileArgs
         {
             Categories = 
             {
@@ -41,7 +41,7 @@ class MyStack : Stack
                 "global",
             },
             LogProfileName = "Rac46PostSwapRG",
-            RetentionPolicy = new AzureNextGen.Insights.Latest.Inputs.RetentionPolicyArgs
+            RetentionPolicy = new AzureNextGen.Insights..Inputs.RetentionPolicyArgs
             {
                 Days = 3,
                 Enabled = true,
@@ -64,7 +64,7 @@ class MyStack : Stack
 package main
 
 import (
-	insights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/insights/latest"
+	insights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/insights"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -106,7 +106,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-log_profile = azure_nextgen.insights.latest.LogProfile("logProfile",
+log_profile = azure_nextgen.insights.LogProfile("logProfile",
     categories=[
         "Write",
         "Delete",
@@ -115,7 +115,7 @@ log_profile = azure_nextgen.insights.latest.LogProfile("logProfile",
     location="",
     locations=["global"],
     log_profile_name="Rac46PostSwapRG",
-    retention_policy=azure_nextgen.insights.latest.RetentionPolicyArgs(
+    retention_policy=azure_nextgen.insights.RetentionPolicyArgs(
         days=3,
         enabled=True,
     ),
@@ -133,7 +133,7 @@ log_profile = azure_nextgen.insights.latest.LogProfile("logProfile",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const logProfile = new azure_nextgen.insights.latest.LogProfile("logProfile", {
+const logProfile = new azure_nextgen.insights.LogProfile("logProfile", {
     categories: [
         "Write",
         "Delete",
@@ -380,7 +380,7 @@ The LogProfile resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#retentionpolicy_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#retentionpolicy">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Inputs.<wbr>Retention<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#retentionpolicy">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Inputs.<wbr>Retention<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}the retention policy for the events in the log.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -997,7 +997,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:insights/latest:LogProfile default /subscriptions/df602c9c-7aa0-407d-a6fb-eb20c8bd1192/providers/microsoft.insights/logprofiles/default 
+$ pulumi import azure-nextgen:insights:LogProfile default /subscriptions/df602c9c-7aa0-407d-a6fb-eb20c8bd1192/providers/microsoft.insights/logprofiles/default 
 ```
 
 

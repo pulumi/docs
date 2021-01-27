@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.storagepool.DiskPool resource wi
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Request payload for Create or Update Disk Pool requests.
+API Version: 2020-03-15-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var diskPool = new AzureNextGen.StoragePool.V20200315Preview.DiskPool("diskPool", new AzureNextGen.StoragePool.V20200315Preview.DiskPoolArgs
+        var diskPool = new AzureNextGen.StoragePool..DiskPool("diskPool", new AzureNextGen.StoragePool..DiskPoolArgs
         {
             AvailabilityZones = 
             {
@@ -35,18 +36,18 @@ class MyStack : Stack
             DiskPoolName = "myDiskPool",
             Disks = 
             {
-                new AzureNextGen.StoragePool.V20200315Preview.Inputs.DiskArgs
+                new AzureNextGen.StoragePool..Inputs.DiskArgs
                 {
                     Id = "/subscriptions/11111111-1111-1111-1111-111111111111/resourceGroups/myResourceGroup/providers/Microsoft.Compute/disks/vm-name_DataDisk_0",
                 },
-                new AzureNextGen.StoragePool.V20200315Preview.Inputs.DiskArgs
+                new AzureNextGen.StoragePool..Inputs.DiskArgs
                 {
                     Id = "/subscriptions/11111111-1111-1111-1111-111111111111/resourceGroups/myResourceGroup/providers/Microsoft.Compute/disks/vm-name_DataDisk_1",
                 },
             },
             Location = "westus",
             ResourceGroupName = "myResourceGroup",
-            Sku = new AzureNextGen.StoragePool.V20200315Preview.Inputs.SkuArgs
+            Sku = new AzureNextGen.StoragePool..Inputs.SkuArgs
             {
                 Name = "Standard_ABC",
             },
@@ -70,7 +71,7 @@ class MyStack : Stack
 package main
 
 import (
-	storagepool "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/storagepool/v20200315preview"
+	storagepool "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/storagepool"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -116,20 +117,20 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-disk_pool = azure_nextgen.storagepool.v20200315preview.DiskPool("diskPool",
+disk_pool = azure_nextgen.storagepool.DiskPool("diskPool",
     availability_zones=["1"],
     disk_pool_name="myDiskPool",
     disks=[
-        azure_nextgen.storagepool.v20200315preview.DiskArgs(
+        azure_nextgen.storagepool.DiskArgs(
             id="/subscriptions/11111111-1111-1111-1111-111111111111/resourceGroups/myResourceGroup/providers/Microsoft.Compute/disks/vm-name_DataDisk_0",
         ),
-        azure_nextgen.storagepool.v20200315preview.DiskArgs(
+        azure_nextgen.storagepool.DiskArgs(
             id="/subscriptions/11111111-1111-1111-1111-111111111111/resourceGroups/myResourceGroup/providers/Microsoft.Compute/disks/vm-name_DataDisk_1",
         ),
     ],
     location="westus",
     resource_group_name="myResourceGroup",
-    sku=azure_nextgen.storagepool.v20200315preview.SkuArgs(
+    sku=azure_nextgen.storagepool.SkuArgs(
         name="Standard_ABC",
     ),
     subnet_id="/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/myvnet/subnets/mysubnet",
@@ -147,7 +148,7 @@ disk_pool = azure_nextgen.storagepool.v20200315preview.DiskPool("diskPool",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const diskPool = new azure_nextgen.storagepool.v20200315preview.DiskPool("diskPool", {
+const diskPool = new azure_nextgen.storagepool.DiskPool("diskPool", {
     availabilityZones: ["1"],
     diskPoolName: "myDiskPool",
     disks: [
@@ -407,7 +408,7 @@ The DiskPool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#disks_csharp" style="color: inherit; text-decoration: inherit;">Disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#disk">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Pool.<wbr>Inputs.<wbr>Disk<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#disk">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Pool..<wbr>Inputs.<wbr>Disk<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of Azure managed disks to attach to a DiskPool{{% /md %}}</dd>
     <dt class="property-optional"
@@ -416,7 +417,7 @@ The DiskPool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sku">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Pool.<wbr>Inputs.<wbr>Sku<wbr>Args</a></span>
+        <span class="property-type"><a href="#sku">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Pool..<wbr>Inputs.<wbr>Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Sku description.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -717,7 +718,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#systemdata_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemmetadataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Pool.<wbr>Outputs.<wbr>System<wbr>Metadata<wbr>Response</a></span>
+        <span class="property-type"><a href="#systemmetadataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Pool..<wbr>Outputs.<wbr>System<wbr>Metadata<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Resource metadata required by ARM RPC{{% /md %}}</dd>
     <dt class="property-"
@@ -1093,7 +1094,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tier_csharp" style="color: inherit; text-decoration: inherit;">Tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skutier">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Pool.<wbr>Sku<wbr>Tier</a></span>
+        <span class="property-type"><a href="#skutier">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Pool..<wbr>Sku<wbr>Tier</a></span>
     </dt>
     <dd>{{% md %}}This field is required to be implemented by the Resource Provider if the service has more than one tier, but is not required on a PUT.{{% /md %}}</dd>
 </dl>
@@ -1759,7 +1760,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:storagepool/v20200315preview:DiskPool myDiskPool /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.StoragePool/diskPools/myDiskPool 
+$ pulumi import azure-nextgen:storagepool:DiskPool myDiskPool /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.StoragePool/diskPools/myDiskPool 
 ```
 
 

@@ -215,7 +215,7 @@ The following output properties are available:
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#registrationassignmentpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Managed<wbr>Services.<wbr>Outputs.<wbr>Registration<wbr>Assignment<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#registrationassignmentpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Managed<wbr>Services..<wbr>Outputs.<wbr>Registration<wbr>Assignment<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Properties of a registration assignment.{{% /md %}}</dd>
     <dt class="property-"
@@ -737,7 +737,7 @@ The following output properties are available:
 <a href="#registrationdefinition_csharp" style="color: inherit; text-decoration: inherit;">Registration<wbr>Definition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#registrationassignmentpropertiesresponseregistrationdefinition">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Managed<wbr>Services.<wbr>Inputs.<wbr>Registration<wbr>Assignment<wbr>Properties<wbr>Response<wbr>Registration<wbr>Definition<wbr>Args</a></span>
+        <span class="property-type"><a href="#registrationassignmentpropertiesresponseregistrationdefinition">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Managed<wbr>Services..<wbr>Inputs.<wbr>Registration<wbr>Assignment<wbr>Properties<wbr>Response<wbr>Registration<wbr>Definition<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Registration definition inside registration assignment.{{% /md %}}</dd>
     <dt class="property-required"
@@ -867,7 +867,7 @@ The following output properties are available:
 <a href="#authorizations_csharp" style="color: inherit; text-decoration: inherit;">Authorizations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authorizationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Managed<wbr>Services.<wbr>Inputs.<wbr>Authorization<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#authorizationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Managed<wbr>Services..<wbr>Inputs.<wbr>Authorization<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Authorization tuple containing principal id of the user/security group or service principal and id of the build-in role.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1213,7 +1213,7 @@ The following output properties are available:
 <a href="#plan_csharp" style="color: inherit; text-decoration: inherit;">Plan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#planresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Managed<wbr>Services.<wbr>Inputs.<wbr>Plan<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#planresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Managed<wbr>Services..<wbr>Inputs.<wbr>Plan<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Plan details for the managed services.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1222,7 +1222,7 @@ The following output properties are available:
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#registrationassignmentpropertiesresponseproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Managed<wbr>Services.<wbr>Inputs.<wbr>Registration<wbr>Assignment<wbr>Properties<wbr>Response<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#registrationassignmentpropertiesresponseproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Managed<wbr>Services..<wbr>Inputs.<wbr>Registration<wbr>Assignment<wbr>Properties<wbr>Response<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties of registration definition inside registration assignment.{{% /md %}}</dd>
 </dl>

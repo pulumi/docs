@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.network.HubRouteTable resource w
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 RouteTable resource in a virtual hub.
-Latest API Version: 2020-08-01.
+API Version: 2020-08-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var hubRouteTable = new AzureNextGen.Network.Latest.HubRouteTable("hubRouteTable", new AzureNextGen.Network.Latest.HubRouteTableArgs
+        var hubRouteTable = new AzureNextGen.Network..HubRouteTable("hubRouteTable", new AzureNextGen.Network..HubRouteTableArgs
         {
             Labels = 
             {
@@ -38,7 +38,7 @@ class MyStack : Stack
             RouteTableName = "hubRouteTable1",
             Routes = 
             {
-                new AzureNextGen.Network.Latest.Inputs.HubRouteArgs
+                new AzureNextGen.Network..Inputs.HubRouteArgs
                 {
                     DestinationType = "CIDR",
                     Destinations = 
@@ -68,7 +68,7 @@ class MyStack : Stack
 package main
 
 import (
-	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network/latest"
+	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -113,14 +113,14 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-hub_route_table = azure_nextgen.network.latest.HubRouteTable("hubRouteTable",
+hub_route_table = azure_nextgen.network.HubRouteTable("hubRouteTable",
     labels=[
         "label1",
         "label2",
     ],
     resource_group_name="rg1",
     route_table_name="hubRouteTable1",
-    routes=[azure_nextgen.network.latest.HubRouteArgs(
+    routes=[azure_nextgen.network.HubRouteArgs(
         destination_type="CIDR",
         destinations=[
             "10.0.0.0/8",
@@ -143,7 +143,7 @@ hub_route_table = azure_nextgen.network.latest.HubRouteTable("hubRouteTable",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const hubRouteTable = new azure_nextgen.network.latest.HubRouteTable("hubRouteTable", {
+const hubRouteTable = new azure_nextgen.network.HubRouteTable("hubRouteTable", {
     labels: [
         "label1",
         "label2",
@@ -411,7 +411,7 @@ The HubRouteTable resource accepts the following [input]({{< relref "/docs/intro
 <a href="#routes_csharp" style="color: inherit; text-decoration: inherit;">Routes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hubroute">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Hub<wbr>Route<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#hubroute">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Hub<wbr>Route<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of all routes.{{% /md %}}</dd>
 </dl>
@@ -1298,7 +1298,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:network/latest:HubRouteTable hubRouteTable1 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualHubs/virtualHub1/routeTables/virtualHubRouteTable1a 
+$ pulumi import azure-nextgen:network:HubRouteTable hubRouteTable1 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualHubs/virtualHub1/routeTables/virtualHubRouteTable1a 
 ```
 
 

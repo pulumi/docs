@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.recoveryservices.ProtectionInten
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Base class for backup ProtectionIntent.
-Latest API Version: 2017-07-01.
+API Version: 2017-07-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var protectionIntent = new AzureNextGen.RecoveryServices.Latest.ProtectionIntent("protectionIntent", new AzureNextGen.RecoveryServices.Latest.ProtectionIntentArgs
+        var protectionIntent = new AzureNextGen.RecoveryServices..ProtectionIntent("protectionIntent", new AzureNextGen.RecoveryServices..ProtectionIntentArgs
         {
             FabricName = "Azure",
             IntentObjectName = "vm;iaasvmcontainerv2;chamsrgtest;chamscandel",
@@ -58,7 +58,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-protection_intent = azure_nextgen.recoveryservices.latest.ProtectionIntent("protectionIntent",
+protection_intent = azure_nextgen.recoveryservices.ProtectionIntent("protectionIntent",
     fabric_name="Azure",
     intent_object_name="vm;iaasvmcontainerv2;chamsrgtest;chamscandel",
     properties={
@@ -79,7 +79,7 @@ protection_intent = azure_nextgen.recoveryservices.latest.ProtectionIntent("prot
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const protectionIntent = new azure_nextgen.recoveryservices.latest.ProtectionIntent("protectionIntent", {
+const protectionIntent = new azure_nextgen.recoveryservices.ProtectionIntent("protectionIntent", {
     fabricName: "Azure",
     intentObjectName: "vm;iaasvmcontainerv2;chamsrgtest;chamscandel",
     properties: {
@@ -338,7 +338,7 @@ The ProtectionIntent resource accepts the following [input]({{< relref "/docs/in
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurerecoveryservicevaultprotectionintent">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Azure<wbr>Recovery<wbr>Service<wbr>Vault<wbr>Protection<wbr>Intent<wbr>Args</a> | <a href="#azureresourceprotectionintent">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Azure<wbr>Resource<wbr>Protection<wbr>Intent<wbr>Args</a> | <a href="#azureworkloadautoprotectionintent">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Azure<wbr>Workload<wbr>Auto<wbr>Protection<wbr>Intent<wbr>Args</a> | <a href="#azureworkloadsqlautoprotectionintent">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Azure<wbr>Workload<wbr>SQLAuto<wbr>Protection<wbr>Intent<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurerecoveryservicevaultprotectionintent">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Azure<wbr>Recovery<wbr>Service<wbr>Vault<wbr>Protection<wbr>Intent<wbr>Args</a> | <a href="#azureresourceprotectionintent">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Azure<wbr>Resource<wbr>Protection<wbr>Intent<wbr>Args</a> | <a href="#azureworkloadautoprotectionintent">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Azure<wbr>Workload<wbr>Auto<wbr>Protection<wbr>Intent<wbr>Args</a> | <a href="#azureworkloadsqlautoprotectionintent">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Azure<wbr>Workload<wbr>SQLAuto<wbr>Protection<wbr>Intent<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}ProtectionIntentResource properties{{% /md %}}</dd>
     <dt class="property-optional"
@@ -747,7 +747,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupmanagementtype_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Management<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#backupmanagementtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Backup<wbr>Management<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#backupmanagementtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Backup<wbr>Management<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of backup management for the backed up item.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -774,7 +774,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protectionstate_csharp" style="color: inherit; text-decoration: inherit;">Protection<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#protectionstatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Protection<wbr>Status</a></span>
+        <span class="property-type">string | <a href="#protectionstatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Protection<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}Backup state of this backup item.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1159,7 +1159,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupmanagementtype_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Management<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#backupmanagementtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Backup<wbr>Management<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#backupmanagementtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Backup<wbr>Management<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of backup management for the backed up item.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1195,7 +1195,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protectionstate_csharp" style="color: inherit; text-decoration: inherit;">Protection<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#protectionstatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Protection<wbr>Status</a></span>
+        <span class="property-type">string | <a href="#protectionstatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Protection<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}Backup state of this backup item.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1643,7 +1643,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupmanagementtype_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Management<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#backupmanagementtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Backup<wbr>Management<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#backupmanagementtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Backup<wbr>Management<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of backup management for the backed up item.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1670,7 +1670,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protectionstate_csharp" style="color: inherit; text-decoration: inherit;">Protection<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#protectionstatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Protection<wbr>Status</a></span>
+        <span class="property-type">string | <a href="#protectionstatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Protection<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}Backup state of this backup item.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2055,7 +2055,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupmanagementtype_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Management<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#backupmanagementtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Backup<wbr>Management<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#backupmanagementtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Backup<wbr>Management<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of backup management for the backed up item.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2082,7 +2082,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protectionstate_csharp" style="color: inherit; text-decoration: inherit;">Protection<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#protectionstatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Protection<wbr>Status</a></span>
+        <span class="property-type">string | <a href="#protectionstatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Protection<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}Backup state of this backup item.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2100,7 +2100,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workloaditemtype_csharp" style="color: inherit; text-decoration: inherit;">Workload<wbr>Item<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#workloaditemtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Workload<wbr>Item<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#workloaditemtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Workload<wbr>Item<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Workload item type of the item for which intent is to be set{{% /md %}}</dd>
 </dl>
@@ -2767,7 +2767,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:recoveryservices/latest:ProtectionIntent vm;iaasvmcontainerv2;chamsrgtest;chamscandel /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myRG/providers/Microsoft.RecoveryServices/vaults/myVault/backupFabrics/Azure/backupProtectionIntent/vm;iaasvmcontainerv2;chamsrgtest;chamscandel 
+$ pulumi import azure-nextgen:recoveryservices:ProtectionIntent vm;iaasvmcontainerv2;chamsrgtest;chamscandel /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myRG/providers/Microsoft.RecoveryServices/vaults/myVault/backupFabrics/Azure/backupProtectionIntent/vm;iaasvmcontainerv2;chamsrgtest;chamscandel 
 ```
 
 

@@ -269,7 +269,7 @@ The following output properties are available:
 <a href="#author_csharp" style="color: inherit; text-decoration: inherit;">Author</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clientinforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security<wbr>Insights.<wbr>Outputs.<wbr>Client<wbr>Info<wbr>Response</a></span>
+        <span class="property-type"><a href="#clientinforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security<wbr>Insights..<wbr>Outputs.<wbr>Client<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes the client that created the comment{{% /md %}}</dd>
     <dt class="property-"

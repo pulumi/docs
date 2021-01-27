@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.network.VirtualNetworkLink resou
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Describes a link to virtual network for a Private DNS zone.
-Latest API Version: 2020-06-01.
+API Version: 2020-06-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var virtualNetworkLink = new AzureNextGen.Network.Latest.VirtualNetworkLink("virtualNetworkLink", new AzureNextGen.Network.Latest.VirtualNetworkLinkArgs
+        var virtualNetworkLink = new AzureNextGen.Network..VirtualNetworkLink("virtualNetworkLink", new AzureNextGen.Network..VirtualNetworkLinkArgs
         {
             Location = "Global",
             PrivateZoneName = "privatezone1.com",
@@ -37,7 +37,7 @@ class MyStack : Stack
             {
                 { "key1", "value1" },
             },
-            VirtualNetwork = new AzureNextGen.Network.Latest.Inputs.SubResourceArgs
+            VirtualNetwork = new AzureNextGen.Network..Inputs.SubResourceArgs
             {
                 Id = "/subscriptions/virtualNetworkSubscriptionId/resourceGroups/virtualNetworkResourceGroup/providers/Microsoft.Network/virtualNetworks/virtualNetworkName",
             },
@@ -57,7 +57,7 @@ class MyStack : Stack
 package main
 
 import (
-	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network/latest"
+	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -93,7 +93,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-virtual_network_link = azure_nextgen.network.latest.VirtualNetworkLink("virtualNetworkLink",
+virtual_network_link = azure_nextgen.network.VirtualNetworkLink("virtualNetworkLink",
     location="Global",
     private_zone_name="privatezone1.com",
     registration_enabled=False,
@@ -101,7 +101,7 @@ virtual_network_link = azure_nextgen.network.latest.VirtualNetworkLink("virtualN
     tags={
         "key1": "value1",
     },
-    virtual_network=azure_nextgen.network.latest.SubResourceArgs(
+    virtual_network=azure_nextgen.network.SubResourceArgs(
         id="/subscriptions/virtualNetworkSubscriptionId/resourceGroups/virtualNetworkResourceGroup/providers/Microsoft.Network/virtualNetworks/virtualNetworkName",
     ),
     virtual_network_link_name="virtualNetworkLink1")
@@ -116,7 +116,7 @@ virtual_network_link = azure_nextgen.network.latest.VirtualNetworkLink("virtualN
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const virtualNetworkLink = new azure_nextgen.network.latest.VirtualNetworkLink("virtualNetworkLink", {
+const virtualNetworkLink = new azure_nextgen.network.VirtualNetworkLink("virtualNetworkLink", {
     location: "Global",
     privateZoneName: "privatezone1.com",
     registrationEnabled: false,
@@ -386,7 +386,7 @@ The VirtualNetworkLink resource accepts the following [input]({{< relref "/docs/
 <a href="#virtualnetwork_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The reference of the virtual network.{{% /md %}}</dd>
 </dl>
@@ -976,7 +976,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:network/latest:VirtualNetworkLink virtualNetworkLink1 /subscriptions/subscriptionId/resourceGroups/resourceGroup1/providers/Microsoft.Network/privateDnsZones/privatezone1.com/virtualNetworkLinks/virtualNetworkLink1 
+$ pulumi import azure-nextgen:network:VirtualNetworkLink virtualNetworkLink1 /subscriptions/subscriptionId/resourceGroups/resourceGroup1/providers/Microsoft.Network/privateDnsZones/privatezone1.com/virtualNetworkLinks/virtualNetworkLink1 
 ```
 
 

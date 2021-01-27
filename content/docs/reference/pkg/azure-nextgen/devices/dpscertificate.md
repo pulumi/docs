@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.devices.DpsCertificate resource 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The X509 Certificate.
-Latest API Version: 2020-03-01.
+API Version: 2020-03-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var dpsCertificate = new AzureNextGen.Devices.Latest.DpsCertificate("dpsCertificate", new AzureNextGen.Devices.Latest.DpsCertificateArgs
+        var dpsCertificate = new AzureNextGen.Devices..DpsCertificate("dpsCertificate", new AzureNextGen.Devices..DpsCertificateArgs
         {
             Certificate = "############################################",
             CertificateName = "cert",
@@ -48,7 +48,7 @@ class MyStack : Stack
 package main
 
 import (
-	devices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/devices/latest"
+	devices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/devices"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -77,7 +77,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-dps_certificate = azure_nextgen.devices.latest.DpsCertificate("dpsCertificate",
+dps_certificate = azure_nextgen.devices.DpsCertificate("dpsCertificate",
     certificate="############################################",
     certificate_name="cert",
     provisioning_service_name="myFirstProvisioningService",
@@ -93,7 +93,7 @@ dps_certificate = azure_nextgen.devices.latest.DpsCertificate("dpsCertificate",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const dpsCertificate = new azure_nextgen.devices.latest.DpsCertificate("dpsCertificate", {
+const dpsCertificate = new azure_nextgen.devices.DpsCertificate("dpsCertificate", {
     certificate: "############################################",
     certificateName: "cert",
     provisioningServiceName: "myFirstProvisioningService",
@@ -495,7 +495,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatepropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Devices.<wbr>Outputs.<wbr>Certificate<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#certificatepropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Devices..<wbr>Outputs.<wbr>Certificate<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}properties of a certificate{{% /md %}}</dd>
     <dt class="property-"
@@ -920,7 +920,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:devices/latest:DpsCertificate cert /subscriptions/91d12660-3dec-467a-be2a-213b5544ddc0/resourceGroups/myResourceGroup/providers/Microsoft.Devices/ProvisioningServives/myFirstProvisioningService/certificates/cert 
+$ pulumi import azure-nextgen:devices:DpsCertificate cert /subscriptions/91d12660-3dec-467a-be2a-213b5544ddc0/resourceGroups/myResourceGroup/providers/Microsoft.Devices/ProvisioningServives/myFirstProvisioningService/certificates/cert 
 ```
 
 

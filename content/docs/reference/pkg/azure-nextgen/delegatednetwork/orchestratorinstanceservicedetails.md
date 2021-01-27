@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.delegatednetwork.OrchestratorIns
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Represents an instance of a orchestrator.
+API Version: 2020-08-08-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,15 +27,15 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var orchestratorInstanceServiceDetails = new AzureNextGen.DelegatedNetwork.V20200808Preview.OrchestratorInstanceServiceDetails("orchestratorInstanceServiceDetails", new AzureNextGen.DelegatedNetwork.V20200808Preview.OrchestratorInstanceServiceDetailsArgs
+        var orchestratorInstanceServiceDetails = new AzureNextGen.DelegatedNetwork..OrchestratorInstanceServiceDetails("orchestratorInstanceServiceDetails", new AzureNextGen.DelegatedNetwork..OrchestratorInstanceServiceDetailsArgs
         {
             ApiServerEndpoint = "https://testk8s.cloudapp.net",
             ClusterRootCA = "ddsadsad344mfdsfdl",
-            ControllerDetails = new AzureNextGen.DelegatedNetwork.V20200808Preview.Inputs.ControllerDetailsArgs
+            ControllerDetails = new AzureNextGen.DelegatedNetwork..Inputs.ControllerDetailsArgs
             {
                 Id = "/subscriptions/613192d7-503f-477a-9cfe-4efc3ee2bd60/resourceGroups/TestRG/providers/Microsoft.DelegatedNetwork/controller/testcontroller",
             },
-            Identity = new AzureNextGen.DelegatedNetwork.V20200808Preview.Inputs.OrchestratorIdentityArgs
+            Identity = new AzureNextGen.DelegatedNetwork..Inputs.OrchestratorIdentityArgs
             {
                 Type = "SystemAssigned",
             },
@@ -59,7 +60,7 @@ class MyStack : Stack
 package main
 
 import (
-	delegatednetwork "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/delegatednetwork/v20200808preview"
+	delegatednetwork "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/delegatednetwork"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -98,13 +99,13 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-orchestrator_instance_service_details = azure_nextgen.delegatednetwork.v20200808preview.OrchestratorInstanceServiceDetails("orchestratorInstanceServiceDetails",
+orchestrator_instance_service_details = azure_nextgen.delegatednetwork.OrchestratorInstanceServiceDetails("orchestratorInstanceServiceDetails",
     api_server_endpoint="https://testk8s.cloudapp.net",
     cluster_root_ca="ddsadsad344mfdsfdl",
-    controller_details=azure_nextgen.delegatednetwork.v20200808preview.ControllerDetailsArgs(
+    controller_details=azure_nextgen.delegatednetwork.ControllerDetailsArgs(
         id="/subscriptions/613192d7-503f-477a-9cfe-4efc3ee2bd60/resourceGroups/TestRG/providers/Microsoft.DelegatedNetwork/controller/testcontroller",
     ),
-    identity=azure_nextgen.delegatednetwork.v20200808preview.OrchestratorIdentityArgs(
+    identity=azure_nextgen.delegatednetwork.OrchestratorIdentityArgs(
         type="SystemAssigned",
     ),
     kind="Kubernetes",
@@ -124,7 +125,7 @@ orchestrator_instance_service_details = azure_nextgen.delegatednetwork.v20200808
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const orchestratorInstanceServiceDetails = new azure_nextgen.delegatednetwork.v20200808preview.OrchestratorInstanceServiceDetails("orchestratorInstanceServiceDetails", {
+const orchestratorInstanceServiceDetails = new azure_nextgen.delegatednetwork.OrchestratorInstanceServiceDetails("orchestratorInstanceServiceDetails", {
     apiServerEndpoint: "https://testk8s.cloudapp.net",
     clusterRootCA: "ddsadsad344mfdsfdl",
     controllerDetails: {
@@ -334,7 +335,7 @@ The OrchestratorInstanceServiceDetails resource accepts the following [input]({{
 <a href="#controllerdetails_csharp" style="color: inherit; text-decoration: inherit;">Controller<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#controllerdetails">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Delegated<wbr>Network.<wbr>Inputs.<wbr>Controller<wbr>Details<wbr>Args</a></span>
+        <span class="property-type"><a href="#controllerdetails">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Delegated<wbr>Network..<wbr>Inputs.<wbr>Controller<wbr>Details<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}controller details{{% /md %}}</dd>
     <dt class="property-required"
@@ -343,7 +344,7 @@ The OrchestratorInstanceServiceDetails resource accepts the following [input]({{
 <a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#orchestratorkind">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Delegated<wbr>Network.<wbr>Orchestrator<wbr>Kind</a></span>
+        <span class="property-type">string | <a href="#orchestratorkind">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Delegated<wbr>Network..<wbr>Orchestrator<wbr>Kind</a></span>
     </dt>
     <dd>{{% md %}}The kind of workbook. Choices are user and shared.{{% /md %}}</dd>
     <dt class="property-required"
@@ -388,7 +389,7 @@ The OrchestratorInstanceServiceDetails resource accepts the following [input]({{
 <a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#orchestratoridentity">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Delegated<wbr>Network.<wbr>Inputs.<wbr>Orchestrator<wbr>Identity<wbr>Args</a></span>
+        <span class="property-type"><a href="#orchestratoridentity">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Delegated<wbr>Network..<wbr>Inputs.<wbr>Orchestrator<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The identity of the orchestrator{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1101,7 +1102,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidentitytype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Delegated<wbr>Network.<wbr>Resource<wbr>Identity<wbr>Type</a></span>
+        <span class="property-type"><a href="#resourceidentitytype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Delegated<wbr>Network..<wbr>Resource<wbr>Identity<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of identity used for orchestrator cluster. Type 'SystemAssigned' will use an implicitly created identity orchestrator clusters{{% /md %}}</dd>
 </dl>
@@ -1359,7 +1360,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:delegatednetwork/v20200808preview:OrchestratorInstanceServiceDetails testk8s1 /subscriptions/613192d7-503f-477a-9cfe-4efc3ee2bd60/resourceGroups/TestRG/providers/Microsoft.DelegatedNetwork/orchestrators/testk8s1 
+$ pulumi import azure-nextgen:delegatednetwork:OrchestratorInstanceServiceDetails testk8s1 /subscriptions/613192d7-503f-477a-9cfe-4efc3ee2bd60/resourceGroups/TestRG/providers/Microsoft.DelegatedNetwork/orchestrators/testk8s1 
 ```
 
 

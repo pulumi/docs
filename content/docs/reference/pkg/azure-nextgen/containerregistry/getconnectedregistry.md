@@ -197,7 +197,7 @@ The following output properties are available:
 <a href="#activation_csharp" style="color: inherit; text-decoration: inherit;">Activation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activationpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry.<wbr>Outputs.<wbr>Activation<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#activationpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry..<wbr>Outputs.<wbr>Activation<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The activation properties of the connected registry.{{% /md %}}</dd>
     <dt class="property-"
@@ -251,7 +251,7 @@ The following output properties are available:
 <a href="#parent_csharp" style="color: inherit; text-decoration: inherit;">Parent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#parentpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry.<wbr>Outputs.<wbr>Parent<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#parentpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry..<wbr>Outputs.<wbr>Parent<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The parent of the connected registry.{{% /md %}}</dd>
     <dt class="property-"
@@ -269,7 +269,7 @@ The following output properties are available:
 <a href="#statusdetails_csharp" style="color: inherit; text-decoration: inherit;">Status<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#statusdetailpropertiesresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry.<wbr>Outputs.<wbr>Status<wbr>Detail<wbr>Properties<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#statusdetailpropertiesresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry..<wbr>Outputs.<wbr>Status<wbr>Detail<wbr>Properties<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of current statuses of the connected registry.{{% /md %}}</dd>
     <dt class="property-"
@@ -278,7 +278,7 @@ The following output properties are available:
 <a href="#systemdata_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry.<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
+        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry..<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Metadata pertaining to creation and last modification of the resource.{{% /md %}}</dd>
     <dt class="property-"
@@ -314,7 +314,7 @@ The following output properties are available:
 <a href="#logging_csharp" style="color: inherit; text-decoration: inherit;">Logging</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loggingpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry.<wbr>Outputs.<wbr>Logging<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#loggingpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry..<wbr>Outputs.<wbr>Logging<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The logging properties of the connected registry.{{% /md %}}</dd>
     <dt class="property-"
@@ -323,7 +323,7 @@ The following output properties are available:
 <a href="#loginserver_csharp" style="color: inherit; text-decoration: inherit;">Login<wbr>Server</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loginserverpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry.<wbr>Outputs.<wbr>Login<wbr>Server<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#loginserverpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry..<wbr>Outputs.<wbr>Login<wbr>Server<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The login server properties of the connected registry.{{% /md %}}</dd>
 </dl>
@@ -953,7 +953,7 @@ The following output properties are available:
 <a href="#tls_csharp" style="color: inherit; text-decoration: inherit;">Tls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tlspropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Tls<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#tlspropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry..<wbr>Inputs.<wbr>Tls<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The TLS properties of the connected registry login server.{{% /md %}}</dd>
 </dl>
@@ -1047,7 +1047,7 @@ The following output properties are available:
 <a href="#syncproperties_csharp" style="color: inherit; text-decoration: inherit;">Sync<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#syncpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Sync<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#syncpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry..<wbr>Inputs.<wbr>Sync<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The sync properties of the connected registry with its parent.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1958,7 +1958,7 @@ The following output properties are available:
 <a href="#certificate_csharp" style="color: inherit; text-decoration: inherit;">Certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tlscertificatepropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Tls<wbr>Certificate<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#tlscertificatepropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry..<wbr>Inputs.<wbr>Tls<wbr>Certificate<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The certificate used to configure HTTPS for the login server.{{% /md %}}</dd>
     <dt class="property-required"

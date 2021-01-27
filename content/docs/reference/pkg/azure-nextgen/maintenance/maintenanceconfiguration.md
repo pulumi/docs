@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.maintenance.MaintenanceConfigura
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Maintenance configuration record type
-Latest API Version: 2020-04-01.
+API Version: 2020-04-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var maintenanceConfiguration = new AzureNextGen.Maintenance.Latest.MaintenanceConfiguration("maintenanceConfiguration", new AzureNextGen.Maintenance.Latest.MaintenanceConfigurationArgs
+        var maintenanceConfiguration = new AzureNextGen.Maintenance..MaintenanceConfiguration("maintenanceConfiguration", new AzureNextGen.Maintenance..MaintenanceConfigurationArgs
         {
             Location = "westus2",
             Namespace = "Microsoft.Maintenance",
@@ -48,7 +48,7 @@ class MyStack : Stack
 package main
 
 import (
-	maintenance "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/maintenance/latest"
+	maintenance "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/maintenance"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -77,7 +77,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-maintenance_configuration = azure_nextgen.maintenance.latest.MaintenanceConfiguration("maintenanceConfiguration",
+maintenance_configuration = azure_nextgen.maintenance.MaintenanceConfiguration("maintenanceConfiguration",
     location="westus2",
     namespace="Microsoft.Maintenance",
     resource_group_name="examplerg",
@@ -93,7 +93,7 @@ maintenance_configuration = azure_nextgen.maintenance.latest.MaintenanceConfigur
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const maintenanceConfiguration = new azure_nextgen.maintenance.latest.MaintenanceConfiguration("maintenanceConfiguration", {
+const maintenanceConfiguration = new azure_nextgen.maintenance.MaintenanceConfiguration("maintenanceConfiguration", {
     location: "westus2",
     namespace: "Microsoft.Maintenance",
     resourceGroupName: "examplerg",
@@ -329,7 +329,7 @@ The MaintenanceConfiguration resource accepts the following [input]({{< relref "
 <a href="#maintenancescope_csharp" style="color: inherit; text-decoration: inherit;">Maintenance<wbr>Scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#maintenancescope">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Maintenance.<wbr>Maintenance<wbr>Scope</a></span>
+        <span class="property-type">string | <a href="#maintenancescope">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Maintenance..<wbr>Maintenance<wbr>Scope</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets maintenanceScope of the configuration. It represent the impact area of the maintenance{{% /md %}}</dd>
     <dt class="property-optional"
@@ -768,7 +768,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:maintenance/latest:MaintenanceConfiguration configuration1 /subscriptions/5b4b650e-28b9-4790-b3ab-ddbd88d727c4/resourcegroups/examplerg/providers/Microsoft.Maintenance/maintenanceConfigurations/configuration1 
+$ pulumi import azure-nextgen:maintenance:MaintenanceConfiguration configuration1 /subscriptions/5b4b650e-28b9-4790-b3ab-ddbd88d727c4/resourcegroups/examplerg/providers/Microsoft.Maintenance/maintenanceConfigurations/configuration1 
 ```
 
 

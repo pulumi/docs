@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.sql.InstanceFailoverGroup resour
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 An instance failover group.
+API Version: 2020-08-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,13 +27,13 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var instanceFailoverGroup = new AzureNextGen.Sql.V20200801Preview.InstanceFailoverGroup("instanceFailoverGroup", new AzureNextGen.Sql.V20200801Preview.InstanceFailoverGroupArgs
+        var instanceFailoverGroup = new AzureNextGen.Sql..InstanceFailoverGroup("instanceFailoverGroup", new AzureNextGen.Sql..InstanceFailoverGroupArgs
         {
             FailoverGroupName = "failover-group-test-3",
             LocationName = "Japan East",
             ManagedInstancePairs = 
             {
-                new AzureNextGen.Sql.V20200801Preview.Inputs.ManagedInstancePairInfoArgs
+                new AzureNextGen.Sql..Inputs.ManagedInstancePairInfoArgs
                 {
                     PartnerManagedInstanceId = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default/providers/Microsoft.Sql/managedInstances/failover-group-secondary-mngdInstance",
                     PrimaryManagedInstanceId = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default/providers/Microsoft.Sql/managedInstances/failover-group-primary-mngdInstance",
@@ -40,16 +41,16 @@ class MyStack : Stack
             },
             PartnerRegions = 
             {
-                new AzureNextGen.Sql.V20200801Preview.Inputs.PartnerRegionInfoArgs
+                new AzureNextGen.Sql..Inputs.PartnerRegionInfoArgs
                 {
                     Location = "Japan West",
                 },
             },
-            ReadOnlyEndpoint = new AzureNextGen.Sql.V20200801Preview.Inputs.InstanceFailoverGroupReadOnlyEndpointArgs
+            ReadOnlyEndpoint = new AzureNextGen.Sql..Inputs.InstanceFailoverGroupReadOnlyEndpointArgs
             {
                 FailoverPolicy = "Disabled",
             },
-            ReadWriteEndpoint = new AzureNextGen.Sql.V20200801Preview.Inputs.InstanceFailoverGroupReadWriteEndpointArgs
+            ReadWriteEndpoint = new AzureNextGen.Sql..Inputs.InstanceFailoverGroupReadWriteEndpointArgs
             {
                 FailoverPolicy = "Automatic",
                 FailoverWithDataLossGracePeriodMinutes = 480,
@@ -70,7 +71,7 @@ class MyStack : Stack
 package main
 
 import (
-	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql/v20200801preview"
+	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -116,20 +117,20 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-instance_failover_group = azure_nextgen.sql.v20200801preview.InstanceFailoverGroup("instanceFailoverGroup",
+instance_failover_group = azure_nextgen.sql.InstanceFailoverGroup("instanceFailoverGroup",
     failover_group_name="failover-group-test-3",
     location_name="Japan East",
-    managed_instance_pairs=[azure_nextgen.sql.v20200801preview.ManagedInstancePairInfoArgs(
+    managed_instance_pairs=[azure_nextgen.sql.ManagedInstancePairInfoArgs(
         partner_managed_instance_id="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default/providers/Microsoft.Sql/managedInstances/failover-group-secondary-mngdInstance",
         primary_managed_instance_id="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default/providers/Microsoft.Sql/managedInstances/failover-group-primary-mngdInstance",
     )],
-    partner_regions=[azure_nextgen.sql.v20200801preview.PartnerRegionInfoArgs(
+    partner_regions=[azure_nextgen.sql.PartnerRegionInfoArgs(
         location="Japan West",
     )],
-    read_only_endpoint=azure_nextgen.sql.v20200801preview.InstanceFailoverGroupReadOnlyEndpointArgs(
+    read_only_endpoint=azure_nextgen.sql.InstanceFailoverGroupReadOnlyEndpointArgs(
         failover_policy="Disabled",
     ),
-    read_write_endpoint=azure_nextgen.sql.v20200801preview.InstanceFailoverGroupReadWriteEndpointArgs(
+    read_write_endpoint=azure_nextgen.sql.InstanceFailoverGroupReadWriteEndpointArgs(
         failover_policy="Automatic",
         failover_with_data_loss_grace_period_minutes=480,
     ),
@@ -145,7 +146,7 @@ instance_failover_group = azure_nextgen.sql.v20200801preview.InstanceFailoverGro
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const instanceFailoverGroup = new azure_nextgen.sql.v20200801preview.InstanceFailoverGroup("instanceFailoverGroup", {
+const instanceFailoverGroup = new azure_nextgen.sql.InstanceFailoverGroup("instanceFailoverGroup", {
     failoverGroupName: "failover-group-test-3",
     locationName: "Japan East",
     managedInstancePairs: [{
@@ -376,7 +377,7 @@ The InstanceFailoverGroup resource accepts the following [input]({{< relref "/do
 <a href="#managedinstancepairs_csharp" style="color: inherit; text-decoration: inherit;">Managed<wbr>Instance<wbr>Pairs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedinstancepairinfo">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql.<wbr>Inputs.<wbr>Managed<wbr>Instance<wbr>Pair<wbr>Info<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#managedinstancepairinfo">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql..<wbr>Inputs.<wbr>Managed<wbr>Instance<wbr>Pair<wbr>Info<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of managed instance pairs in the failover group.{{% /md %}}</dd>
     <dt class="property-required"
@@ -385,7 +386,7 @@ The InstanceFailoverGroup resource accepts the following [input]({{< relref "/do
 <a href="#partnerregions_csharp" style="color: inherit; text-decoration: inherit;">Partner<wbr>Regions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#partnerregioninfo">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql.<wbr>Inputs.<wbr>Partner<wbr>Region<wbr>Info<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#partnerregioninfo">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql..<wbr>Inputs.<wbr>Partner<wbr>Region<wbr>Info<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Partner region information for the failover group.{{% /md %}}</dd>
     <dt class="property-required"
@@ -394,7 +395,7 @@ The InstanceFailoverGroup resource accepts the following [input]({{< relref "/do
 <a href="#readwriteendpoint_csharp" style="color: inherit; text-decoration: inherit;">Read<wbr>Write<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefailovergroupreadwriteendpoint">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql.<wbr>Inputs.<wbr>Instance<wbr>Failover<wbr>Group<wbr>Read<wbr>Write<wbr>Endpoint<wbr>Args</a></span>
+        <span class="property-type"><a href="#instancefailovergroupreadwriteendpoint">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql..<wbr>Inputs.<wbr>Instance<wbr>Failover<wbr>Group<wbr>Read<wbr>Write<wbr>Endpoint<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Read-write endpoint of the failover group instance.{{% /md %}}</dd>
     <dt class="property-required"
@@ -412,7 +413,7 @@ The InstanceFailoverGroup resource accepts the following [input]({{< relref "/do
 <a href="#readonlyendpoint_csharp" style="color: inherit; text-decoration: inherit;">Read<wbr>Only<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefailovergroupreadonlyendpoint">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql.<wbr>Inputs.<wbr>Instance<wbr>Failover<wbr>Group<wbr>Read<wbr>Only<wbr>Endpoint<wbr>Args</a></span>
+        <span class="property-type"><a href="#instancefailovergroupreadonlyendpoint">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql..<wbr>Inputs.<wbr>Instance<wbr>Failover<wbr>Group<wbr>Read<wbr>Only<wbr>Endpoint<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Read-only endpoint of the failover group instance.{{% /md %}}</dd>
 </dl>
@@ -857,7 +858,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#failoverpolicy_csharp" style="color: inherit; text-decoration: inherit;">Failover<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#readonlyendpointfailoverpolicy">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql.<wbr>Read<wbr>Only<wbr>Endpoint<wbr>Failover<wbr>Policy</a></span>
+        <span class="property-type">string | <a href="#readonlyendpointfailoverpolicy">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql..<wbr>Read<wbr>Only<wbr>Endpoint<wbr>Failover<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Failover policy of the read-only endpoint for the failover group.{{% /md %}}</dd>
 </dl>
@@ -981,7 +982,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#failoverpolicy_csharp" style="color: inherit; text-decoration: inherit;">Failover<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#readwriteendpointfailoverpolicy">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql.<wbr>Read<wbr>Write<wbr>Endpoint<wbr>Failover<wbr>Policy</a></span>
+        <span class="property-type">string | <a href="#readwriteendpointfailoverpolicy">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql..<wbr>Read<wbr>Write<wbr>Endpoint<wbr>Failover<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Failover policy of the read-write endpoint for the failover group. If failoverPolicy is Automatic then failoverWithDataLossGracePeriodMinutes is required.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1603,7 +1604,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:sql/v20200801preview:InstanceFailoverGroup failover-group-test-3 /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default/providers/Microsoft.Sql/locations/JapanEast/instanceFailoverGroups/failover-group-test-3 
+$ pulumi import azure-nextgen:sql:InstanceFailoverGroup failover-group-test-3 /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default/providers/Microsoft.Sql/locations/JapanEast/instanceFailoverGroups/failover-group-test-3 
 ```
 
 

@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.insights.WorkbookTemplate resour
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 An Application Insights workbook template definition.
+API Version: 2019-10-17-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,12 +27,12 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var workbookTemplate = new AzureNextGen.Insights.V20191017Preview.WorkbookTemplate("workbookTemplate", new AzureNextGen.Insights.V20191017Preview.WorkbookTemplateArgs
+        var workbookTemplate = new AzureNextGen.Insights..WorkbookTemplate("workbookTemplate", new AzureNextGen.Insights..WorkbookTemplateArgs
         {
             Author = "Contoso",
             Galleries = 
             {
-                new AzureNextGen.Insights.V20191017Preview.Inputs.WorkbookTemplateGalleryArgs
+                new AzureNextGen.Insights..Inputs.WorkbookTemplateGalleryArgs
                 {
                     Category = "Failures",
                     Name = "Simple Template",
@@ -60,7 +61,7 @@ class MyStack : Stack
 package main
 
 import (
-	insights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/insights/v20191017preview"
+	insights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/insights"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -100,9 +101,9 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-workbook_template = azure_nextgen.insights.v20191017preview.WorkbookTemplate("workbookTemplate",
+workbook_template = azure_nextgen.insights.WorkbookTemplate("workbookTemplate",
     author="Contoso",
-    galleries=[azure_nextgen.insights.v20191017preview.WorkbookTemplateGalleryArgs(
+    galleries=[azure_nextgen.insights.WorkbookTemplateGalleryArgs(
         category="Failures",
         name="Simple Template",
         order=100,
@@ -125,7 +126,7 @@ workbook_template = azure_nextgen.insights.v20191017preview.WorkbookTemplate("wo
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const workbookTemplate = new azure_nextgen.insights.v20191017preview.WorkbookTemplate("workbookTemplate", {
+const workbookTemplate = new azure_nextgen.insights.WorkbookTemplate("workbookTemplate", {
     author: "Contoso",
     galleries: [{
         category: "Failures",
@@ -334,7 +335,7 @@ The WorkbookTemplate resource accepts the following [input]({{< relref "/docs/in
 <a href="#galleries_csharp" style="color: inherit; text-decoration: inherit;">Galleries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workbooktemplategallery">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Inputs.<wbr>Workbook<wbr>Template<wbr>Gallery<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#workbooktemplategallery">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Inputs.<wbr>Workbook<wbr>Template<wbr>Gallery<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Workbook galleries supported by the template.{{% /md %}}</dd>
     <dt class="property-required"
@@ -388,7 +389,7 @@ The WorkbookTemplate resource accepts the following [input]({{< relref "/docs/in
 <a href="#localized_csharp" style="color: inherit; text-decoration: inherit;">Localized</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Immutable<wbr>Array&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Inputs.<wbr>Workbook<wbr>Template<wbr>Localized<wbr>Gallery<wbr>Args&gt;&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Immutable<wbr>Array&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Inputs.<wbr>Workbook<wbr>Template<wbr>Localized<wbr>Gallery<wbr>Args&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}Key value pair of localized gallery. Each key is the locale code of languages supported by the Azure portal.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1245,7 +1246,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#galleries_csharp" style="color: inherit; text-decoration: inherit;">Galleries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workbooktemplategallery">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Inputs.<wbr>Workbook<wbr>Template<wbr>Gallery<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#workbooktemplategallery">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Inputs.<wbr>Workbook<wbr>Template<wbr>Gallery<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Workbook galleries supported by the template.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1343,7 +1344,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#galleries_csharp" style="color: inherit; text-decoration: inherit;">Galleries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workbooktemplategalleryresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Inputs.<wbr>Workbook<wbr>Template<wbr>Gallery<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#workbooktemplategalleryresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Inputs.<wbr>Workbook<wbr>Template<wbr>Gallery<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Workbook galleries supported by the template.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1435,7 +1436,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:insights/v20191017preview:WorkbookTemplate testtemplate2 /subscriptions/50359d91-7b9d-4823-85af-eb298a61ba95/resourceGroups/testrg/providers/microsoft.insights/workbooktemplates/testtemplate2 
+$ pulumi import azure-nextgen:insights:WorkbookTemplate testtemplate2 /subscriptions/50359d91-7b9d-4823-85af-eb298a61ba95/resourceGroups/testrg/providers/microsoft.insights/workbooktemplates/testtemplate2 
 ```
 
 

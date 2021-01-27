@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.dbformysql.FirewallRule resource
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Represents a server firewall rule.
-Latest API Version: 2017-12-01.
+API Version: 2017-12-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var firewallRule = new AzureNextGen.DBforMySQL.Latest.FirewallRule("firewallRule", new AzureNextGen.DBforMySQL.Latest.FirewallRuleArgs
+        var firewallRule = new AzureNextGen.DBforMySQL..FirewallRule("firewallRule", new AzureNextGen.DBforMySQL..FirewallRuleArgs
         {
             EndIpAddress = "255.255.255.255",
             FirewallRuleName = "rule1",
@@ -49,7 +49,7 @@ class MyStack : Stack
 package main
 
 import (
-	dbformysql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/dbformysql/latest"
+	dbformysql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/dbformysql"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -79,7 +79,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-firewall_rule = azure_nextgen.dbformysql.latest.FirewallRule("firewallRule",
+firewall_rule = azure_nextgen.dbformysql.FirewallRule("firewallRule",
     end_ip_address="255.255.255.255",
     firewall_rule_name="rule1",
     resource_group_name="TestGroup",
@@ -96,7 +96,7 @@ firewall_rule = azure_nextgen.dbformysql.latest.FirewallRule("firewallRule",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const firewallRule = new azure_nextgen.dbformysql.latest.FirewallRule("firewallRule", {
+const firewallRule = new azure_nextgen.dbformysql.FirewallRule("firewallRule", {
     endIpAddress: "255.255.255.255",
     firewallRuleName: "rule1",
     resourceGroupName: "TestGroup",
@@ -642,7 +642,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:dbformysql/latest:FirewallRule rule1 /subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/TestGroup/providers/Microsoft.DBforMySQL/servers/testserver/firewallRules/rule1 
+$ pulumi import azure-nextgen:dbformysql:FirewallRule rule1 /subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/TestGroup/providers/Microsoft.DBforMySQL/servers/testserver/firewallRules/rule1 
 ```
 
 

@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.recoveryservices.ReplicationReco
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Recovery plan details.
-Latest API Version: 2018-07-10.
+API Version: 2018-07-10.
 
 {{% examples %}}
 ## Example Usage
@@ -27,20 +27,20 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var replicationRecoveryPlan = new AzureNextGen.RecoveryServices.Latest.ReplicationRecoveryPlan("replicationRecoveryPlan", new AzureNextGen.RecoveryServices.Latest.ReplicationRecoveryPlanArgs
+        var replicationRecoveryPlan = new AzureNextGen.RecoveryServices..ReplicationRecoveryPlan("replicationRecoveryPlan", new AzureNextGen.RecoveryServices..ReplicationRecoveryPlanArgs
         {
-            Properties = new AzureNextGen.RecoveryServices.Latest.Inputs.CreateRecoveryPlanInputPropertiesArgs
+            Properties = new AzureNextGen.RecoveryServices..Inputs.CreateRecoveryPlanInputPropertiesArgs
             {
                 FailoverDeploymentModel = "ResourceManager",
                 Groups = 
                 {
-                    new AzureNextGen.RecoveryServices.Latest.Inputs.RecoveryPlanGroupArgs
+                    new AzureNextGen.RecoveryServices..Inputs.RecoveryPlanGroupArgs
                     {
                         EndGroupActions = {},
                         GroupType = "Boot",
                         ReplicationProtectedItems = 
                         {
-                            new AzureNextGen.RecoveryServices.Latest.Inputs.RecoveryPlanProtectedItemArgs
+                            new AzureNextGen.RecoveryServices..Inputs.RecoveryPlanProtectedItemArgs
                             {
                                 Id = "/Subscriptions/c183865e-6077-46f2-a3b1-deb0f4f4650a/resourceGroups/resourceGroupPS1/providers/Microsoft.RecoveryServices/vaults/vault1/replicationFabrics/cloud1/replicationProtectionContainers/cloud_6d224fc6-f326-5d35-96de-fbf51efb3179/replicationProtectedItems/f8491e4f-817a-40dd-a90c-af773978c75b",
                                 VirtualMachineId = "f8491e4f-817a-40dd-a90c-af773978c75b",
@@ -70,7 +70,7 @@ class MyStack : Stack
 package main
 
 import (
-	recoveryservices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/recoveryservices/latest"
+	recoveryservices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/recoveryservices"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -116,13 +116,13 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-replication_recovery_plan = azure_nextgen.recoveryservices.latest.ReplicationRecoveryPlan("replicationRecoveryPlan",
-    properties=azure_nextgen.recoveryservices.latest.CreateRecoveryPlanInputPropertiesArgs(
+replication_recovery_plan = azure_nextgen.recoveryservices.ReplicationRecoveryPlan("replicationRecoveryPlan",
+    properties=azure_nextgen.recoveryservices.CreateRecoveryPlanInputPropertiesArgs(
         failover_deployment_model="ResourceManager",
-        groups=[azure_nextgen.recoveryservices.latest.RecoveryPlanGroupArgs(
+        groups=[azure_nextgen.recoveryservices.RecoveryPlanGroupArgs(
             end_group_actions=[],
             group_type="Boot",
-            replication_protected_items=[azure_nextgen.recoveryservices.latest.RecoveryPlanProtectedItemArgs(
+            replication_protected_items=[azure_nextgen.recoveryservices.RecoveryPlanProtectedItemArgs(
                 id="/Subscriptions/c183865e-6077-46f2-a3b1-deb0f4f4650a/resourceGroups/resourceGroupPS1/providers/Microsoft.RecoveryServices/vaults/vault1/replicationFabrics/cloud1/replicationProtectionContainers/cloud_6d224fc6-f326-5d35-96de-fbf51efb3179/replicationProtectedItems/f8491e4f-817a-40dd-a90c-af773978c75b",
                 virtual_machine_id="f8491e4f-817a-40dd-a90c-af773978c75b",
             )],
@@ -145,7 +145,7 @@ replication_recovery_plan = azure_nextgen.recoveryservices.latest.ReplicationRec
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const replicationRecoveryPlan = new azure_nextgen.recoveryservices.latest.ReplicationRecoveryPlan("replicationRecoveryPlan", {
+const replicationRecoveryPlan = new azure_nextgen.recoveryservices.ReplicationRecoveryPlan("replicationRecoveryPlan", {
     properties: {
         failoverDeploymentModel: "ResourceManager",
         groups: [{
@@ -358,7 +358,7 @@ The ReplicationRecoveryPlan resource accepts the following [input]({{< relref "/
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#createrecoveryplaninputproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Create<wbr>Recovery<wbr>Plan<wbr>Input<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#createrecoveryplaninputproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Create<wbr>Recovery<wbr>Plan<wbr>Input<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Recovery plan creation properties.{{% /md %}}</dd>
     <dt class="property-required"
@@ -713,7 +713,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#groups_csharp" style="color: inherit; text-decoration: inherit;">Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recoveryplangroup">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Recovery<wbr>Plan<wbr>Group<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#recoveryplangroup">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Recovery<wbr>Plan<wbr>Group<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The recovery plan groups.{{% /md %}}</dd>
     <dt class="property-required"
@@ -740,7 +740,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#failoverdeploymentmodel_csharp" style="color: inherit; text-decoration: inherit;">Failover<wbr>Deployment<wbr>Model</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#failoverdeploymentmodel">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Failover<wbr>Deployment<wbr>Model</a></span>
+        <span class="property-type">string | <a href="#failoverdeploymentmodel">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Failover<wbr>Deployment<wbr>Model</a></span>
     </dt>
     <dd>{{% md %}}The failover deployment model.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -749,7 +749,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#providerspecificinput_csharp" style="color: inherit; text-decoration: inherit;">Provider<wbr>Specific<wbr>Input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recoveryplana2ainput">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Recovery<wbr>Plan<wbr>A2AInput<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#recoveryplana2ainput">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Recovery<wbr>Plan<wbr>A2AInput<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The provider specific input.{{% /md %}}</dd>
 </dl>
@@ -1342,7 +1342,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#failoverdirections_csharp" style="color: inherit; text-decoration: inherit;">Failover<wbr>Directions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Union&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Possible<wbr>Operations<wbr>Directions&gt;&gt;</span>
+        <span class="property-type">List&lt;Union&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Possible<wbr>Operations<wbr>Directions&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}The list of failover directions.{{% /md %}}</dd>
     <dt class="property-required"
@@ -1351,7 +1351,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#failovertypes_csharp" style="color: inherit; text-decoration: inherit;">Failover<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Union&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Replication<wbr>Protected<wbr>Item<wbr>Operation&gt;&gt;</span>
+        <span class="property-type">List&lt;Union&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Replication<wbr>Protected<wbr>Item<wbr>Operation&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}The list of failover types.{{% /md %}}</dd>
 </dl>
@@ -1476,7 +1476,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#customdetails_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recoveryplanautomationrunbookactiondetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Recovery<wbr>Plan<wbr>Automation<wbr>Runbook<wbr>Action<wbr>Details<wbr>Response<wbr>Args</a> | <a href="#recoveryplanmanualactiondetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Recovery<wbr>Plan<wbr>Manual<wbr>Action<wbr>Details<wbr>Response<wbr>Args</a> | <a href="#recoveryplanscriptactiondetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Recovery<wbr>Plan<wbr>Script<wbr>Action<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#recoveryplanautomationrunbookactiondetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Recovery<wbr>Plan<wbr>Automation<wbr>Runbook<wbr>Action<wbr>Details<wbr>Response<wbr>Args</a> | <a href="#recoveryplanmanualactiondetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Recovery<wbr>Plan<wbr>Manual<wbr>Action<wbr>Details<wbr>Response<wbr>Args</a> | <a href="#recoveryplanscriptactiondetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Recovery<wbr>Plan<wbr>Script<wbr>Action<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The custom details.{{% /md %}}</dd>
     <dt class="property-required"
@@ -1771,7 +1771,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#grouptype_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#recoveryplangrouptype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Recovery<wbr>Plan<wbr>Group<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#recoveryplangrouptype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Recovery<wbr>Plan<wbr>Group<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The group type.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1780,7 +1780,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endgroupactions_csharp" style="color: inherit; text-decoration: inherit;">End<wbr>Group<wbr>Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recoveryplanaction">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Recovery<wbr>Plan<wbr>Action<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#recoveryplanaction">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Recovery<wbr>Plan<wbr>Action<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The end group actions.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1789,7 +1789,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#replicationprotecteditems_csharp" style="color: inherit; text-decoration: inherit;">Replication<wbr>Protected<wbr>Items</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recoveryplanprotecteditem">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Recovery<wbr>Plan<wbr>Protected<wbr>Item<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#recoveryplanprotecteditem">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Recovery<wbr>Plan<wbr>Protected<wbr>Item<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of protected items.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1798,7 +1798,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#startgroupactions_csharp" style="color: inherit; text-decoration: inherit;">Start<wbr>Group<wbr>Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recoveryplanaction">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Recovery<wbr>Plan<wbr>Action<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#recoveryplanaction">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Recovery<wbr>Plan<wbr>Action<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The start group actions.{{% /md %}}</dd>
 </dl>
@@ -1950,7 +1950,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endgroupactions_csharp" style="color: inherit; text-decoration: inherit;">End<wbr>Group<wbr>Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recoveryplanactionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Recovery<wbr>Plan<wbr>Action<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#recoveryplanactionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Recovery<wbr>Plan<wbr>Action<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The end group actions.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1959,7 +1959,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#replicationprotecteditems_csharp" style="color: inherit; text-decoration: inherit;">Replication<wbr>Protected<wbr>Items</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recoveryplanprotecteditemresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Recovery<wbr>Plan<wbr>Protected<wbr>Item<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#recoveryplanprotecteditemresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Recovery<wbr>Plan<wbr>Protected<wbr>Item<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of protected items.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1968,7 +1968,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#startgroupactions_csharp" style="color: inherit; text-decoration: inherit;">Start<wbr>Group<wbr>Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recoveryplanactionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Recovery<wbr>Plan<wbr>Action<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#recoveryplanactionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Recovery<wbr>Plan<wbr>Action<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The start group actions.{{% /md %}}</dd>
 </dl>
@@ -2219,7 +2219,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#providerspecificdetails_csharp" style="color: inherit; text-decoration: inherit;">Provider<wbr>Specific<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recoveryplana2adetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Recovery<wbr>Plan<wbr>A2ADetails<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#recoveryplana2adetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Recovery<wbr>Plan<wbr>A2ADetails<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The provider id and provider specific details.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2237,7 +2237,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#currentscenario_csharp" style="color: inherit; text-decoration: inherit;">Current<wbr>Scenario</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#currentscenariodetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Current<wbr>Scenario<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#currentscenariodetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Current<wbr>Scenario<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The current scenario details.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2282,7 +2282,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#groups_csharp" style="color: inherit; text-decoration: inherit;">Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recoveryplangroupresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Recovery<wbr>Plan<wbr>Group<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#recoveryplangroupresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Recovery<wbr>Plan<wbr>Group<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The recovery plan groups.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3271,7 +3271,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:recoveryservices/latest:ReplicationRecoveryPlan RPtest1 /Subscriptions/c183865e-6077-46f2-a3b1-deb0f4f4650a/resourceGroups/resourceGroupPS1/providers/Microsoft.RecoveryServices/vaults/vault1/replicationRecoveryPlans/RPtest1 
+$ pulumi import azure-nextgen:recoveryservices:ReplicationRecoveryPlan RPtest1 /Subscriptions/c183865e-6077-46f2-a3b1-deb0f4f4650a/resourceGroups/resourceGroupPS1/providers/Microsoft.RecoveryServices/vaults/vault1/replicationRecoveryPlans/RPtest1 
 ```
 
 

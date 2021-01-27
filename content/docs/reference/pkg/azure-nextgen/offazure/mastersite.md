@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.offazure.MasterSite resource wit
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Site REST Resource.
-Latest API Version: 2020-07-07.
+API Version: 2020-07-07.
 
 {{% examples %}}
 ## Example Usage
@@ -27,10 +27,10 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var masterSite = new AzureNextGen.OffAzure.Latest.MasterSite("masterSite", new AzureNextGen.OffAzure.Latest.MasterSiteArgs
+        var masterSite = new AzureNextGen.OffAzure..MasterSite("masterSite", new AzureNextGen.OffAzure..MasterSiteArgs
         {
             Location = "eastus",
-            Properties = new AzureNextGen.OffAzure.Latest.Inputs.MasterSitePropertiesArgs
+            Properties = new AzureNextGen.OffAzure..Inputs.MasterSitePropertiesArgs
             {
                 AllowMultipleSites = false,
                 PublicNetworkAccess = "Enabled",
@@ -57,7 +57,7 @@ class MyStack : Stack
 package main
 
 import (
-	offazure "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/offazure/latest"
+	offazure "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/offazure"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -93,9 +93,9 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-master_site = azure_nextgen.offazure.latest.MasterSite("masterSite",
+master_site = azure_nextgen.offazure.MasterSite("masterSite",
     location="eastus",
-    properties=azure_nextgen.offazure.latest.MasterSitePropertiesArgs(
+    properties=azure_nextgen.offazure.MasterSitePropertiesArgs(
         allow_multiple_sites=False,
         public_network_access="Enabled",
         sites=[
@@ -116,7 +116,7 @@ master_site = azure_nextgen.offazure.latest.MasterSite("masterSite",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const masterSite = new azure_nextgen.offazure.latest.MasterSite("masterSite", {
+const masterSite = new azure_nextgen.offazure.MasterSite("masterSite", {
     location: "eastus",
     properties: {
         allowMultipleSites: false,
@@ -368,7 +368,7 @@ The MasterSite resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mastersiteproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Off<wbr>Azure.<wbr>Inputs.<wbr>Master<wbr>Site<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#mastersiteproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Off<wbr>Azure..<wbr>Inputs.<wbr>Master<wbr>Site<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Nested properties of Master site.{{% /md %}}</dd>
 </dl>
@@ -940,7 +940,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:offazure/latest:MasterSite masterSite1 /subscriptions/4bd2aa0f-2bd2-4d67-91a8-5a4533d58600/resourceGroups/poshukla/providers/Microsoft.OffAzure/MasterSites/masterSite1 
+$ pulumi import azure-nextgen:offazure:MasterSite masterSite1 /subscriptions/4bd2aa0f-2bd2-4d67-91a8-5a4533d58600/resourceGroups/pajindTest/providers/Microsoft.OffAzure/VMwareSites/masterSite1 
 ```
 
 

@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.compute.DiskEncryptionSet resour
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 disk encryption set resource.
-Latest API Version: 2020-09-30.
+API Version: 2020-09-30.
 
 {{% examples %}}
 ## Example Usage
@@ -27,15 +27,15 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var diskEncryptionSet = new AzureNextGen.Compute.Latest.DiskEncryptionSet("diskEncryptionSet", new AzureNextGen.Compute.Latest.DiskEncryptionSetArgs
+        var diskEncryptionSet = new AzureNextGen.Compute..DiskEncryptionSet("diskEncryptionSet", new AzureNextGen.Compute..DiskEncryptionSetArgs
         {
-            ActiveKey = new AzureNextGen.Compute.Latest.Inputs.KeyForDiskEncryptionSetArgs
+            ActiveKey = new AzureNextGen.Compute..Inputs.KeyForDiskEncryptionSetArgs
             {
                 KeyUrl = "https://myvaultdifferentsub.vault-int.azure-int.net/keys/{key}",
             },
             DiskEncryptionSetName = "myDiskEncryptionSet",
             EncryptionType = "EncryptionAtRestWithCustomerKey",
-            Identity = new AzureNextGen.Compute.Latest.Inputs.EncryptionSetIdentityArgs
+            Identity = new AzureNextGen.Compute..Inputs.EncryptionSetIdentityArgs
             {
                 Type = "SystemAssigned",
             },
@@ -56,7 +56,7 @@ class MyStack : Stack
 package main
 
 import (
-	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute/latest"
+	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -91,13 +91,13 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-disk_encryption_set = azure_nextgen.compute.latest.DiskEncryptionSet("diskEncryptionSet",
-    active_key=azure_nextgen.compute.latest.KeyForDiskEncryptionSetArgs(
+disk_encryption_set = azure_nextgen.compute.DiskEncryptionSet("diskEncryptionSet",
+    active_key=azure_nextgen.compute.KeyForDiskEncryptionSetArgs(
         key_url="https://myvaultdifferentsub.vault-int.azure-int.net/keys/{key}",
     ),
     disk_encryption_set_name="myDiskEncryptionSet",
     encryption_type="EncryptionAtRestWithCustomerKey",
-    identity=azure_nextgen.compute.latest.EncryptionSetIdentityArgs(
+    identity=azure_nextgen.compute.EncryptionSetIdentityArgs(
         type="SystemAssigned",
     ),
     location="West US",
@@ -113,7 +113,7 @@ disk_encryption_set = azure_nextgen.compute.latest.DiskEncryptionSet("diskEncryp
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const diskEncryptionSet = new azure_nextgen.compute.latest.DiskEncryptionSet("diskEncryptionSet", {
+const diskEncryptionSet = new azure_nextgen.compute.DiskEncryptionSet("diskEncryptionSet", {
     activeKey: {
         keyUrl: "https://myvaultdifferentsub.vault-int.azure-int.net/keys/{key}",
     },
@@ -140,19 +140,19 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var diskEncryptionSet = new AzureNextGen.Compute.Latest.DiskEncryptionSet("diskEncryptionSet", new AzureNextGen.Compute.Latest.DiskEncryptionSetArgs
+        var diskEncryptionSet = new AzureNextGen.Compute..DiskEncryptionSet("diskEncryptionSet", new AzureNextGen.Compute..DiskEncryptionSetArgs
         {
-            ActiveKey = new AzureNextGen.Compute.Latest.Inputs.KeyForDiskEncryptionSetArgs
+            ActiveKey = new AzureNextGen.Compute..Inputs.KeyForDiskEncryptionSetArgs
             {
                 KeyUrl = "https://myvmvault.vault-int.azure-int.net/keys/{key}",
-                SourceVault = new AzureNextGen.Compute.Latest.Inputs.SourceVaultArgs
+                SourceVault = new AzureNextGen.Compute..Inputs.SourceVaultArgs
                 {
                     Id = "/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.KeyVault/vaults/myVMVault",
                 },
             },
             DiskEncryptionSetName = "myDiskEncryptionSet",
             EncryptionType = "EncryptionAtRestWithCustomerKey",
-            Identity = new AzureNextGen.Compute.Latest.Inputs.EncryptionSetIdentityArgs
+            Identity = new AzureNextGen.Compute..Inputs.EncryptionSetIdentityArgs
             {
                 Type = "SystemAssigned",
             },
@@ -173,7 +173,7 @@ class MyStack : Stack
 package main
 
 import (
-	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute/latest"
+	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -211,16 +211,16 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-disk_encryption_set = azure_nextgen.compute.latest.DiskEncryptionSet("diskEncryptionSet",
-    active_key=azure_nextgen.compute.latest.KeyForDiskEncryptionSetArgs(
+disk_encryption_set = azure_nextgen.compute.DiskEncryptionSet("diskEncryptionSet",
+    active_key=azure_nextgen.compute.KeyForDiskEncryptionSetArgs(
         key_url="https://myvmvault.vault-int.azure-int.net/keys/{key}",
-        source_vault=azure_nextgen.compute.latest.SourceVaultArgs(
+        source_vault=azure_nextgen.compute.SourceVaultArgs(
             id="/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.KeyVault/vaults/myVMVault",
         ),
     ),
     disk_encryption_set_name="myDiskEncryptionSet",
     encryption_type="EncryptionAtRestWithCustomerKey",
-    identity=azure_nextgen.compute.latest.EncryptionSetIdentityArgs(
+    identity=azure_nextgen.compute.EncryptionSetIdentityArgs(
         type="SystemAssigned",
     ),
     location="West US",
@@ -236,7 +236,7 @@ disk_encryption_set = azure_nextgen.compute.latest.DiskEncryptionSet("diskEncryp
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const diskEncryptionSet = new azure_nextgen.compute.latest.DiskEncryptionSet("diskEncryptionSet", {
+const diskEncryptionSet = new azure_nextgen.compute.DiskEncryptionSet("diskEncryptionSet", {
     activeKey: {
         keyUrl: "https://myvmvault.vault-int.azure-int.net/keys/{key}",
         sourceVault: {
@@ -472,7 +472,7 @@ The DiskEncryptionSet resource accepts the following [input]({{< relref "/docs/i
 <a href="#activekey_csharp" style="color: inherit; text-decoration: inherit;">Active<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyfordiskencryptionset">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Key<wbr>For<wbr>Disk<wbr>Encryption<wbr>Set<wbr>Args</a></span>
+        <span class="property-type"><a href="#keyfordiskencryptionset">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Inputs.<wbr>Key<wbr>For<wbr>Disk<wbr>Encryption<wbr>Set<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The key vault key which is currently used by this disk encryption set.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -481,7 +481,7 @@ The DiskEncryptionSet resource accepts the following [input]({{< relref "/docs/i
 <a href="#encryptiontype_csharp" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#diskencryptionsettype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Disk<wbr>Encryption<wbr>Set<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#diskencryptionsettype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Disk<wbr>Encryption<wbr>Set<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of key used to encrypt the data of the disk.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -490,7 +490,7 @@ The DiskEncryptionSet resource accepts the following [input]({{< relref "/docs/i
 <a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionsetidentity">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Encryption<wbr>Set<wbr>Identity<wbr>Args</a></span>
+        <span class="property-type"><a href="#encryptionsetidentity">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Inputs.<wbr>Encryption<wbr>Set<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The managed identity for the disk encryption set. It should be given permission on the key vault before it can be used to encrypt disks.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -746,7 +746,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#previouskeys_csharp" style="color: inherit; text-decoration: inherit;">Previous<wbr>Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyfordiskencryptionsetresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Outputs.<wbr>Key<wbr>For<wbr>Disk<wbr>Encryption<wbr>Set<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#keyfordiskencryptionsetresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Outputs.<wbr>Key<wbr>For<wbr>Disk<wbr>Encryption<wbr>Set<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}A readonly collection of key vault keys previously used by this disk encryption set while a key rotation is in progress. It will be empty if there is no ongoing key rotation.{{% /md %}}</dd>
     <dt class="property-"
@@ -1020,7 +1020,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#diskencryptionsetidentitytype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Disk<wbr>Encryption<wbr>Set<wbr>Identity<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#diskencryptionsetidentitytype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Disk<wbr>Encryption<wbr>Set<wbr>Identity<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of Managed Identity used by the DiskEncryptionSet. Only SystemAssigned is supported for new creations. Disk Encryption Sets can be updated with Identity type None during migration of subscription to a new Azure Active Directory tenant; it will cause the encrypted resources to lose access to the keys.{{% /md %}}</dd>
 </dl>
@@ -1225,7 +1225,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourcevault_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Vault</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sourcevault">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Source<wbr>Vault<wbr>Args</a></span>
+        <span class="property-type"><a href="#sourcevault">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Inputs.<wbr>Source<wbr>Vault<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Resource id of the KeyVault containing the key or secret. This property is optional and cannot be used if the KeyVault subscription is not the same as the Disk Encryption Set subscription.{{% /md %}}</dd>
 </dl>
@@ -1323,7 +1323,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourcevault_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Vault</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sourcevaultresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Source<wbr>Vault<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sourcevaultresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Inputs.<wbr>Source<wbr>Vault<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Resource id of the KeyVault containing the key or secret. This property is optional and cannot be used if the KeyVault subscription is not the same as the Disk Encryption Set subscription.{{% /md %}}</dd>
 </dl>
@@ -1530,7 +1530,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:compute/latest:DiskEncryptionSet myDiskEncryptionSet /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/diskEncryptionSets/{diskEncryptionSetName} 
+$ pulumi import azure-nextgen:compute:DiskEncryptionSet myDiskEncryptionSet /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/diskEncryptionSets/{diskEncryptionSetName} 
 ```
 
 

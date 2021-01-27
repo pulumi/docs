@@ -54,7 +54,7 @@ The following arguments are supported:
 <a href="#configurationfilters_csharp" style="color: inherit; text-decoration: inherit;">Configuration<wbr>Filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configurationfilters">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Edge<wbr>Order.<wbr>Inputs.<wbr>Configuration<wbr>Filters<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#configurationfilters">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Edge<wbr>Order..<wbr>Inputs.<wbr>Configuration<wbr>Filters<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Holds details about product hierarchy information and filterable property.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -63,7 +63,7 @@ The following arguments are supported:
 <a href="#customersubscriptiondetails_csharp" style="color: inherit; text-decoration: inherit;">Customer<wbr>Subscription<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customersubscriptiondetails">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Edge<wbr>Order.<wbr>Inputs.<wbr>Customer<wbr>Subscription<wbr>Details<wbr>Args</a></span>
+        <span class="property-type"><a href="#customersubscriptiondetails">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Edge<wbr>Order..<wbr>Inputs.<wbr>Customer<wbr>Subscription<wbr>Details<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Customer subscription properties. Clients can display available products to unregistered customers by explicitly passing subscription details{{% /md %}}</dd>
     <dt class="property-optional"
@@ -195,7 +195,7 @@ The following output properties are available:
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configurationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Edge<wbr>Order.<wbr>Outputs.<wbr>Configuration<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#configurationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Edge<wbr>Order..<wbr>Outputs.<wbr>Configuration<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of configurations.{{% /md %}}</dd>
     <dt class="property-"
@@ -510,7 +510,7 @@ The following output properties are available:
 <a href="#filterableproperty_csharp" style="color: inherit; text-decoration: inherit;">Filterable<wbr>Property</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#filterableproperty">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Edge<wbr>Order.<wbr>Inputs.<wbr>Filterable<wbr>Property<wbr>Args</a></span>
+        <span class="property-type"><a href="#filterableproperty">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Edge<wbr>Order..<wbr>Inputs.<wbr>Filterable<wbr>Property<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Filters specific to product{{% /md %}}</dd>
     <dt class="property-optional"
@@ -519,7 +519,7 @@ The following output properties are available:
 <a href="#hierarchyinformation_csharp" style="color: inherit; text-decoration: inherit;">Hierarchy<wbr>Information</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hierarchyinformation">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Edge<wbr>Order.<wbr>Inputs.<wbr>Hierarchy<wbr>Information<wbr>Args</a></span>
+        <span class="property-type"><a href="#hierarchyinformation">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Edge<wbr>Order..<wbr>Inputs.<wbr>Hierarchy<wbr>Information<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Product hierarchy information{{% /md %}}</dd>
 </dl>
@@ -613,7 +613,7 @@ The following output properties are available:
 <a href="#availabilityinformation_csharp" style="color: inherit; text-decoration: inherit;">Availability<wbr>Information</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#availabilityinformationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Edge<wbr>Order.<wbr>Inputs.<wbr>Availability<wbr>Information<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#availabilityinformationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Edge<wbr>Order..<wbr>Inputs.<wbr>Availability<wbr>Information<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Availability information of the product system.{{% /md %}}</dd>
     <dt class="property-required"
@@ -622,7 +622,7 @@ The following output properties are available:
 <a href="#costinformation_csharp" style="color: inherit; text-decoration: inherit;">Cost<wbr>Information</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#costinformationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Edge<wbr>Order.<wbr>Inputs.<wbr>Cost<wbr>Information<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#costinformationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Edge<wbr>Order..<wbr>Inputs.<wbr>Cost<wbr>Information<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Cost information for the product system.{{% /md %}}</dd>
     <dt class="property-required"
@@ -631,7 +631,7 @@ The following output properties are available:
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#descriptionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Edge<wbr>Order.<wbr>Inputs.<wbr>Description<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#descriptionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Edge<wbr>Order..<wbr>Inputs.<wbr>Description<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Description related to the product system.{{% /md %}}</dd>
     <dt class="property-required"
@@ -649,7 +649,7 @@ The following output properties are available:
 <a href="#filterableproperties_csharp" style="color: inherit; text-decoration: inherit;">Filterable<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#filterablepropertyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Edge<wbr>Order.<wbr>Inputs.<wbr>Filterable<wbr>Property<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#filterablepropertyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Edge<wbr>Order..<wbr>Inputs.<wbr>Filterable<wbr>Property<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}list of filters supported for a product{{% /md %}}</dd>
     <dt class="property-required"
@@ -658,7 +658,7 @@ The following output properties are available:
 <a href="#hierarchyinformation_csharp" style="color: inherit; text-decoration: inherit;">Hierarchy<wbr>Information</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hierarchyinformationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Edge<wbr>Order.<wbr>Inputs.<wbr>Hierarchy<wbr>Information<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#hierarchyinformationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Edge<wbr>Order..<wbr>Inputs.<wbr>Hierarchy<wbr>Information<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Hierarchy information of the product system.{{% /md %}}</dd>
     <dt class="property-required"
@@ -667,7 +667,7 @@ The following output properties are available:
 <a href="#imageinformation_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Information</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imageinformationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Edge<wbr>Order.<wbr>Inputs.<wbr>Image<wbr>Information<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#imageinformationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Edge<wbr>Order..<wbr>Inputs.<wbr>Image<wbr>Information<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Image information for the product system.{{% /md %}}</dd>
     <dt class="property-required"
@@ -676,7 +676,7 @@ The following output properties are available:
 <a href="#specifications_csharp" style="color: inherit; text-decoration: inherit;">Specifications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#specificationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Edge<wbr>Order.<wbr>Inputs.<wbr>Specification<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#specificationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Edge<wbr>Order..<wbr>Inputs.<wbr>Specification<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifications of the configuration{{% /md %}}</dd>
 </dl>
@@ -932,7 +932,7 @@ The following output properties are available:
 <a href="#meterdetails_csharp" style="color: inherit; text-decoration: inherit;">Meter<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#meterdetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Edge<wbr>Order.<wbr>Inputs.<wbr>Meter<wbr>Details<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#meterdetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Edge<wbr>Order..<wbr>Inputs.<wbr>Meter<wbr>Details<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Details on the various billing aspects for the product system.{{% /md %}}</dd>
     <dt class="property-required"
@@ -1053,7 +1053,7 @@ The following output properties are available:
 <a href="#registeredfeatures_csharp" style="color: inherit; text-decoration: inherit;">Registered<wbr>Features</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customersubscriptionregisteredfeatures">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Edge<wbr>Order.<wbr>Inputs.<wbr>Customer<wbr>Subscription<wbr>Registered<wbr>Features<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#customersubscriptionregisteredfeatures">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Edge<wbr>Order..<wbr>Inputs.<wbr>Customer<wbr>Subscription<wbr>Registered<wbr>Features<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of registered feature flags for subscription{{% /md %}}</dd>
 </dl>
@@ -1304,7 +1304,7 @@ The following output properties are available:
 <a href="#links_csharp" style="color: inherit; text-decoration: inherit;">Links</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Edge<wbr>Order.<wbr>Inputs.<wbr>Link<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#linkresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Edge<wbr>Order..<wbr>Inputs.<wbr>Link<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Links for the product system.{{% /md %}}</dd>
     <dt class="property-required"
@@ -1524,7 +1524,7 @@ The following output properties are available:
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#supportedfiltertypes">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Edge<wbr>Order.<wbr>Supported<wbr>Filter<wbr>Types</a></span>
+        <span class="property-type">string | <a href="#supportedfiltertypes">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Edge<wbr>Order..<wbr>Supported<wbr>Filter<wbr>Types</a></span>
     </dt>
     <dd>{{% md %}}Type of product filter.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2286,7 +2286,7 @@ The following output properties are available:
 <a href="#billingmodel_csharp" style="color: inherit; text-decoration: inherit;">Billing<wbr>Model</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#billingmodelresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Edge<wbr>Order.<wbr>Inputs.<wbr>Billing<wbr>Model<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#billingmodelresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Edge<wbr>Order..<wbr>Inputs.<wbr>Billing<wbr>Model<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Billing model to represent billing cycle, i.e. Monthly, biweekly, daily, hourly etc.{{% /md %}}</dd>
     <dt class="property-required"

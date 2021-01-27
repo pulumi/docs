@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.windowsiot.Service resource with
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The description of the Windows IoT Device Service.
-Latest API Version: 2019-06-01.
+API Version: 2019-06-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var service = new AzureNextGen.WindowsIoT.Latest.Service("service", new AzureNextGen.WindowsIoT.Latest.ServiceArgs
+        var service = new AzureNextGen.WindowsIoT..Service("service", new AzureNextGen.WindowsIoT..ServiceArgs
         {
             AdminDomainName = "d.e.f",
             BillingDomainName = "a.b.c",
@@ -51,7 +51,7 @@ class MyStack : Stack
 package main
 
 import (
-	windowsiot "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/windowsiot/latest"
+	windowsiot "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/windowsiot"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -83,7 +83,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-service = azure_nextgen.windowsiot.latest.Service("service",
+service = azure_nextgen.windowsiot.Service("service",
     admin_domain_name="d.e.f",
     billing_domain_name="a.b.c",
     device_name="service4445",
@@ -102,7 +102,7 @@ service = azure_nextgen.windowsiot.latest.Service("service",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const service = new azure_nextgen.windowsiot.latest.Service("service", {
+const service = new azure_nextgen.windowsiot.Service("service", {
     adminDomainName: "d.e.f",
     billingDomainName: "a.b.c",
     deviceName: "service4445",
@@ -830,7 +830,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:windowsiot/latest:Service myresource1 /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.WindowsIoT/deviceServices/{deviceName} 
+$ pulumi import azure-nextgen:windowsiot:Service myresource1 /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.WindowsIoT/deviceServices/{deviceName} 
 ```
 
 

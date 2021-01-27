@@ -11,13 +11,13 @@ meta_desc: "Documentation for the azure-nextgen.certificateregistration.AppServi
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 SSL certificate purchase order.
-Latest API Version: 2020-09-01.
+API Version: 2020-09-01.
 ## Import
 
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:certificateregistration/latest:AppServiceCertificateOrder myresource1 /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.CertificateRegistration/certificateOrders/{certificateOrderName} 
+$ pulumi import azure-nextgen:certificateregistration:AppServiceCertificateOrder myresource1 /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.CertificateRegistration/certificateOrders/{certificateOrderName} 
 ```
 
 
@@ -227,7 +227,7 @@ The AppServiceCertificateOrder resource accepts the following [input]({{< relref
 <a href="#producttype_csharp" style="color: inherit; text-decoration: inherit;">Product<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificateproducttype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Certificate<wbr>Registration.<wbr>Certificate<wbr>Product<wbr>Type</a></span>
+        <span class="property-type"><a href="#certificateproducttype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Certificate<wbr>Registration..<wbr>Certificate<wbr>Product<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Certificate product type.{{% /md %}}</dd>
     <dt class="property-required"
@@ -254,7 +254,7 @@ The AppServiceCertificateOrder resource accepts the following [input]({{< relref
 <a href="#certificates_csharp" style="color: inherit; text-decoration: inherit;">Certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Certificate<wbr>Registration.<wbr>Inputs.<wbr>App<wbr>Service<wbr>Certificate<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Certificate<wbr>Registration..<wbr>Inputs.<wbr>App<wbr>Service<wbr>Certificate<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}State of the Key Vault secret.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -708,7 +708,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#intermediate_csharp" style="color: inherit; text-decoration: inherit;">Intermediate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatedetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Certificate<wbr>Registration.<wbr>Outputs.<wbr>Certificate<wbr>Details<wbr>Response</a></span>
+        <span class="property-type"><a href="#certificatedetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Certificate<wbr>Registration..<wbr>Outputs.<wbr>Certificate<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Intermediate certificate.{{% /md %}}</dd>
     <dt class="property-"
@@ -762,7 +762,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#root_csharp" style="color: inherit; text-decoration: inherit;">Root</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatedetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Certificate<wbr>Registration.<wbr>Outputs.<wbr>Certificate<wbr>Details<wbr>Response</a></span>
+        <span class="property-type"><a href="#certificatedetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Certificate<wbr>Registration..<wbr>Outputs.<wbr>Certificate<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Root certificate.{{% /md %}}</dd>
     <dt class="property-"
@@ -780,7 +780,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#signedcertificate_csharp" style="color: inherit; text-decoration: inherit;">Signed<wbr>Certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatedetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Certificate<wbr>Registration.<wbr>Outputs.<wbr>Certificate<wbr>Details<wbr>Response</a></span>
+        <span class="property-type"><a href="#certificatedetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Certificate<wbr>Registration..<wbr>Outputs.<wbr>Certificate<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Signed certificate.{{% /md %}}</dd>
     <dt class="property-"
@@ -798,7 +798,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#systemdata_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Certificate<wbr>Registration.<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
+        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Certificate<wbr>Registration..<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The system metadata relating to this resource.{{% /md %}}</dd>
     <dt class="property-"

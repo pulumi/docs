@@ -278,7 +278,7 @@ The following output properties are available:
 <a href="#arecords_csharp" style="color: inherit; text-decoration: inherit;">ARecords</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#arecordresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Outputs.<wbr>ARecord<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#arecordresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Outputs.<wbr>ARecord<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of A records in the record set.{{% /md %}}</dd>
     <dt class="property-"
@@ -287,7 +287,7 @@ The following output properties are available:
 <a href="#aaaarecords_csharp" style="color: inherit; text-decoration: inherit;">Aaaa<wbr>Records</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aaaarecordresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Outputs.<wbr>Aaaa<wbr>Record<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#aaaarecordresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Outputs.<wbr>Aaaa<wbr>Record<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of AAAA records in the record set.{{% /md %}}</dd>
     <dt class="property-"
@@ -296,7 +296,7 @@ The following output properties are available:
 <a href="#cnamerecord_csharp" style="color: inherit; text-decoration: inherit;">Cname<wbr>Record</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cnamerecordresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Outputs.<wbr>Cname<wbr>Record<wbr>Response</a></span>
+        <span class="property-type"><a href="#cnamerecordresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Outputs.<wbr>Cname<wbr>Record<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The CNAME record in the record set.{{% /md %}}</dd>
     <dt class="property-"
@@ -323,7 +323,7 @@ The following output properties are available:
 <a href="#mxrecords_csharp" style="color: inherit; text-decoration: inherit;">Mx<wbr>Records</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mxrecordresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Outputs.<wbr>Mx<wbr>Record<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#mxrecordresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Outputs.<wbr>Mx<wbr>Record<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of MX records in the record set.{{% /md %}}</dd>
     <dt class="property-"
@@ -332,7 +332,7 @@ The following output properties are available:
 <a href="#ptrrecords_csharp" style="color: inherit; text-decoration: inherit;">Ptr<wbr>Records</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ptrrecordresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Outputs.<wbr>Ptr<wbr>Record<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#ptrrecordresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Outputs.<wbr>Ptr<wbr>Record<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of PTR records in the record set.{{% /md %}}</dd>
     <dt class="property-"
@@ -341,7 +341,7 @@ The following output properties are available:
 <a href="#soarecord_csharp" style="color: inherit; text-decoration: inherit;">Soa<wbr>Record</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#soarecordresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Outputs.<wbr>Soa<wbr>Record<wbr>Response</a></span>
+        <span class="property-type"><a href="#soarecordresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Outputs.<wbr>Soa<wbr>Record<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The SOA record in the record set.{{% /md %}}</dd>
     <dt class="property-"
@@ -350,7 +350,7 @@ The following output properties are available:
 <a href="#srvrecords_csharp" style="color: inherit; text-decoration: inherit;">Srv<wbr>Records</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#srvrecordresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Outputs.<wbr>Srv<wbr>Record<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#srvrecordresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Outputs.<wbr>Srv<wbr>Record<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of SRV records in the record set.{{% /md %}}</dd>
     <dt class="property-"
@@ -368,7 +368,7 @@ The following output properties are available:
 <a href="#txtrecords_csharp" style="color: inherit; text-decoration: inherit;">Txt<wbr>Records</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#txtrecordresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Outputs.<wbr>Txt<wbr>Record<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#txtrecordresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Outputs.<wbr>Txt<wbr>Record<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of TXT records in the record set.{{% /md %}}</dd>
 </dl>

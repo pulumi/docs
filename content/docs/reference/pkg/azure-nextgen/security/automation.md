@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.security.Automation resource wit
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The security automation resource.
+API Version: 2019-01-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var automation = new AzureNextGen.Security.V20190101Preview.Automation("automation", new AzureNextGen.Security.V20190101Preview.AutomationArgs
+        var automation = new AzureNextGen.Security..Automation("automation", new AzureNextGen.Security..AutomationArgs
         {
             Actions = 
             {
@@ -45,7 +46,7 @@ class MyStack : Stack
             ResourceGroupName = "exampleResourceGroup",
             Scopes = 
             {
-                new AzureNextGen.Security.V20190101Preview.Inputs.AutomationScopeArgs
+                new AzureNextGen.Security..Inputs.AutomationScopeArgs
                 {
                     Description = "A description that helps to identify this scope - for example: security assessments that relate to the resource group myResourceGroup within the subscription a5caac9c-5c04-49af-b3d0-e204f40345d5",
                     ScopePath = "/subscriptions/a5caac9c-5c04-49af-b3d0-e204f40345d5/resourceGroups/myResourceGroup",
@@ -53,7 +54,7 @@ class MyStack : Stack
             },
             Sources = 
             {
-                new AzureNextGen.Security.V20190101Preview.Inputs.AutomationSourceArgs
+                new AzureNextGen.Security..Inputs.AutomationSourceArgs
                 {
                     EventSource = "Assessments",
                 },
@@ -78,7 +79,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-automation = azure_nextgen.security.v20190101preview.Automation("automation",
+automation = azure_nextgen.security.Automation("automation",
     actions=[{
         "actionType": "LogicApp",
         "logicAppResourceId": "/subscriptions/e54a4a18-5b94-4f90-9471-bd3decad8a2e/resourceGroups/sample/providers/Microsoft.Logic/workflows/MyTest1",
@@ -90,11 +91,11 @@ automation = azure_nextgen.security.v20190101preview.Automation("automation",
     is_enabled=True,
     location="Central US",
     resource_group_name="exampleResourceGroup",
-    scopes=[azure_nextgen.security.v20190101preview.AutomationScopeArgs(
+    scopes=[azure_nextgen.security.AutomationScopeArgs(
         description="A description that helps to identify this scope - for example: security assessments that relate to the resource group myResourceGroup within the subscription a5caac9c-5c04-49af-b3d0-e204f40345d5",
         scope_path="/subscriptions/a5caac9c-5c04-49af-b3d0-e204f40345d5/resourceGroups/myResourceGroup",
     )],
-    sources=[azure_nextgen.security.v20190101preview.AutomationSourceArgs(
+    sources=[azure_nextgen.security.AutomationSourceArgs(
         event_source="Assessments",
     )],
     tags={})
@@ -109,7 +110,7 @@ automation = azure_nextgen.security.v20190101preview.Automation("automation",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const automation = new azure_nextgen.security.v20190101preview.Automation("automation", {
+const automation = new azure_nextgen.security.Automation("automation", {
     actions: [{
         actionType: "LogicApp",
         logicAppResourceId: "/subscriptions/e54a4a18-5b94-4f90-9471-bd3decad8a2e/resourceGroups/sample/providers/Microsoft.Logic/workflows/MyTest1",
@@ -145,7 +146,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var automation = new AzureNextGen.Security.V20190101Preview.Automation("automation", new AzureNextGen.Security.V20190101Preview.AutomationArgs
+        var automation = new AzureNextGen.Security..Automation("automation", new AzureNextGen.Security..AutomationArgs
         {
             Actions = 
             {
@@ -164,7 +165,7 @@ class MyStack : Stack
             ResourceGroupName = "exampleResourceGroup",
             Scopes = 
             {
-                new AzureNextGen.Security.V20190101Preview.Inputs.AutomationScopeArgs
+                new AzureNextGen.Security..Inputs.AutomationScopeArgs
                 {
                     Description = "A description that helps to identify this scope - for example: security assessments that relate to the resource group myResourceGroup within the subscription a5caac9c-5c04-49af-b3d0-e204f40345d5",
                     ScopePath = "/subscriptions/a5caac9c-5c04-49af-b3d0-e204f40345d5/resourceGroups/myResourceGroup",
@@ -172,16 +173,16 @@ class MyStack : Stack
             },
             Sources = 
             {
-                new AzureNextGen.Security.V20190101Preview.Inputs.AutomationSourceArgs
+                new AzureNextGen.Security..Inputs.AutomationSourceArgs
                 {
                     EventSource = "Assessments",
                     RuleSets = 
                     {
-                        new AzureNextGen.Security.V20190101Preview.Inputs.AutomationRuleSetArgs
+                        new AzureNextGen.Security..Inputs.AutomationRuleSetArgs
                         {
                             Rules = 
                             {
-                                new AzureNextGen.Security.V20190101Preview.Inputs.AutomationTriggeringRuleArgs
+                                new AzureNextGen.Security..Inputs.AutomationTriggeringRuleArgs
                                 {
                                     ExpectedValue = "High",
                                     Operator = "Equals",
@@ -213,7 +214,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-automation = azure_nextgen.security.v20190101preview.Automation("automation",
+automation = azure_nextgen.security.Automation("automation",
     actions=[{
         "actionType": "LogicApp",
         "logicAppResourceId": "/subscriptions/e54a4a18-5b94-4f90-9471-bd3decad8a2e/resourceGroups/sample/providers/Microsoft.Logic/workflows/MyTest1",
@@ -225,14 +226,14 @@ automation = azure_nextgen.security.v20190101preview.Automation("automation",
     is_enabled=True,
     location="Central US",
     resource_group_name="exampleResourceGroup",
-    scopes=[azure_nextgen.security.v20190101preview.AutomationScopeArgs(
+    scopes=[azure_nextgen.security.AutomationScopeArgs(
         description="A description that helps to identify this scope - for example: security assessments that relate to the resource group myResourceGroup within the subscription a5caac9c-5c04-49af-b3d0-e204f40345d5",
         scope_path="/subscriptions/a5caac9c-5c04-49af-b3d0-e204f40345d5/resourceGroups/myResourceGroup",
     )],
-    sources=[azure_nextgen.security.v20190101preview.AutomationSourceArgs(
+    sources=[azure_nextgen.security.AutomationSourceArgs(
         event_source="Assessments",
-        rule_sets=[azure_nextgen.security.v20190101preview.AutomationRuleSetArgs(
-            rules=[azure_nextgen.security.v20190101preview.AutomationTriggeringRuleArgs(
+        rule_sets=[azure_nextgen.security.AutomationRuleSetArgs(
+            rules=[azure_nextgen.security.AutomationTriggeringRuleArgs(
                 expected_value="High",
                 operator="Equals",
                 property_j_path="properties.metadata.severity",
@@ -252,7 +253,7 @@ automation = azure_nextgen.security.v20190101preview.Automation("automation",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const automation = new azure_nextgen.security.v20190101preview.Automation("automation", {
+const automation = new azure_nextgen.security.Automation("automation", {
     actions: [{
         actionType: "LogicApp",
         logicAppResourceId: "/subscriptions/e54a4a18-5b94-4f90-9471-bd3decad8a2e/resourceGroups/sample/providers/Microsoft.Logic/workflows/MyTest1",
@@ -296,7 +297,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var automation = new AzureNextGen.Security.V20190101Preview.Automation("automation", new AzureNextGen.Security.V20190101Preview.AutomationArgs
+        var automation = new AzureNextGen.Security..Automation("automation", new AzureNextGen.Security..AutomationArgs
         {
             Actions = 
             {
@@ -315,7 +316,7 @@ class MyStack : Stack
             ResourceGroupName = "exampleResourceGroup",
             Scopes = 
             {
-                new AzureNextGen.Security.V20190101Preview.Inputs.AutomationScopeArgs
+                new AzureNextGen.Security..Inputs.AutomationScopeArgs
                 {
                     Description = "A description that helps to identify this scope - for example: security assessments that relate to the resource group myResourceGroup within the subscription a5caac9c-5c04-49af-b3d0-e204f40345d5",
                     ScopePath = "/subscriptions/a5caac9c-5c04-49af-b3d0-e204f40345d5/resourceGroups/myResourceGroup",
@@ -323,16 +324,16 @@ class MyStack : Stack
             },
             Sources = 
             {
-                new AzureNextGen.Security.V20190101Preview.Inputs.AutomationSourceArgs
+                new AzureNextGen.Security..Inputs.AutomationSourceArgs
                 {
                     EventSource = "Assessments",
                     RuleSets = 
                     {
-                        new AzureNextGen.Security.V20190101Preview.Inputs.AutomationRuleSetArgs
+                        new AzureNextGen.Security..Inputs.AutomationRuleSetArgs
                         {
                             Rules = 
                             {
-                                new AzureNextGen.Security.V20190101Preview.Inputs.AutomationTriggeringRuleArgs
+                                new AzureNextGen.Security..Inputs.AutomationTriggeringRuleArgs
                                 {
                                     ExpectedValue = "customAssessment",
                                     Operator = "Equals",
@@ -364,7 +365,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-automation = azure_nextgen.security.v20190101preview.Automation("automation",
+automation = azure_nextgen.security.Automation("automation",
     actions=[{
         "actionType": "LogicApp",
         "logicAppResourceId": "/subscriptions/e54a4a18-5b94-4f90-9471-bd3decad8a2e/resourceGroups/sample/providers/Microsoft.Logic/workflows/MyTest1",
@@ -376,14 +377,14 @@ automation = azure_nextgen.security.v20190101preview.Automation("automation",
     is_enabled=False,
     location="Central US",
     resource_group_name="exampleResourceGroup",
-    scopes=[azure_nextgen.security.v20190101preview.AutomationScopeArgs(
+    scopes=[azure_nextgen.security.AutomationScopeArgs(
         description="A description that helps to identify this scope - for example: security assessments that relate to the resource group myResourceGroup within the subscription a5caac9c-5c04-49af-b3d0-e204f40345d5",
         scope_path="/subscriptions/a5caac9c-5c04-49af-b3d0-e204f40345d5/resourceGroups/myResourceGroup",
     )],
-    sources=[azure_nextgen.security.v20190101preview.AutomationSourceArgs(
+    sources=[azure_nextgen.security.AutomationSourceArgs(
         event_source="Assessments",
-        rule_sets=[azure_nextgen.security.v20190101preview.AutomationRuleSetArgs(
-            rules=[azure_nextgen.security.v20190101preview.AutomationTriggeringRuleArgs(
+        rule_sets=[azure_nextgen.security.AutomationRuleSetArgs(
+            rules=[azure_nextgen.security.AutomationTriggeringRuleArgs(
                 expected_value="customAssessment",
                 operator="Equals",
                 property_j_path="$.Entity.AssessmentType",
@@ -403,7 +404,7 @@ automation = azure_nextgen.security.v20190101preview.Automation("automation",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const automation = new azure_nextgen.security.v20190101preview.Automation("automation", {
+const automation = new azure_nextgen.security.Automation("automation", {
     actions: [{
         actionType: "LogicApp",
         logicAppResourceId: "/subscriptions/e54a4a18-5b94-4f90-9471-bd3decad8a2e/resourceGroups/sample/providers/Microsoft.Logic/workflows/MyTest1",
@@ -698,7 +699,7 @@ The Automation resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#scopes_csharp" style="color: inherit; text-decoration: inherit;">Scopes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#automationscope">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security.<wbr>Inputs.<wbr>Automation<wbr>Scope<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#automationscope">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security..<wbr>Inputs.<wbr>Automation<wbr>Scope<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A collection of scopes on which the security automations logic is applied. Supported scopes are the subscription itself or a resource group under that subscription. The automation will only apply on defined scopes.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -707,7 +708,7 @@ The Automation resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#sources_csharp" style="color: inherit; text-decoration: inherit;">Sources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#automationsource">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security.<wbr>Inputs.<wbr>Automation<wbr>Source<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#automationsource">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security..<wbr>Inputs.<wbr>Automation<wbr>Source<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A collection of the source event types which evaluate the security automation set of rules.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1749,7 +1750,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rules_csharp" style="color: inherit; text-decoration: inherit;">Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#automationtriggeringrule">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security.<wbr>Inputs.<wbr>Automation<wbr>Triggering<wbr>Rule<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#automationtriggeringrule">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security..<wbr>Inputs.<wbr>Automation<wbr>Triggering<wbr>Rule<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 </dl>
@@ -1811,7 +1812,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rules_csharp" style="color: inherit; text-decoration: inherit;">Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#automationtriggeringruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security.<wbr>Inputs.<wbr>Automation<wbr>Triggering<wbr>Rule<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#automationtriggeringruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security..<wbr>Inputs.<wbr>Automation<wbr>Triggering<wbr>Rule<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 </dl>
@@ -2069,7 +2070,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#eventsource_csharp" style="color: inherit; text-decoration: inherit;">Event<wbr>Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#eventsource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security.<wbr>Event<wbr>Source</a></span>
+        <span class="property-type">string | <a href="#eventsource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security..<wbr>Event<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}A valid event source type.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2078,7 +2079,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rulesets_csharp" style="color: inherit; text-decoration: inherit;">Rule<wbr>Sets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#automationruleset">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security.<wbr>Inputs.<wbr>Automation<wbr>Rule<wbr>Set<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#automationruleset">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security..<wbr>Inputs.<wbr>Automation<wbr>Rule<wbr>Set<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A set of rules which evaluate upon event interception. A logical disjunction is applied between defined rule sets (logical 'or').{{% /md %}}</dd>
 </dl>
@@ -2176,7 +2177,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rulesets_csharp" style="color: inherit; text-decoration: inherit;">Rule<wbr>Sets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#automationrulesetresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security.<wbr>Inputs.<wbr>Automation<wbr>Rule<wbr>Set<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#automationrulesetresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security..<wbr>Inputs.<wbr>Automation<wbr>Rule<wbr>Set<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A set of rules which evaluate upon event interception. A logical disjunction is applied between defined rule sets (logical 'or').{{% /md %}}</dd>
 </dl>
@@ -2274,7 +2275,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operator_csharp" style="color: inherit; text-decoration: inherit;">Operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#operator">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security.<wbr>Operator</a></span>
+        <span class="property-type">string | <a href="#operator">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security..<wbr>Operator</a></span>
     </dt>
     <dd>{{% md %}}A valid comparer operator to use. A case-insensitive comparison will be applied for String PropertyType.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2292,7 +2293,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#propertytype_csharp" style="color: inherit; text-decoration: inherit;">Property<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#propertytype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security.<wbr>Property<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#propertytype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security..<wbr>Property<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The data type of the compared operands (string, integer, floating point number or a boolean [true/false]]{{% /md %}}</dd>
 </dl>
@@ -2841,7 +2842,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:security/v20190101preview:Automation exampleAutomation /subscriptions/a5caac9c-5c04-49af-b3d0-e204f40345d5/resourceGroups/exampleResourceGroup/providers/Microsoft.Security/SecurityAutomations/exampleAutomation 
+$ pulumi import azure-nextgen:security:Automation exampleAutomation /subscriptions/a5caac9c-5c04-49af-b3d0-e204f40345d5/resourceGroups/exampleResourceGroup/providers/Microsoft.Security/SecurityAutomations/exampleAutomation 
 ```
 
 

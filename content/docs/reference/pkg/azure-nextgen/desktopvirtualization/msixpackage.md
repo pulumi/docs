@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.desktopvirtualization.MSIXPackag
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Schema for MSIX Package properties.
+API Version: 2021-01-14-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var msixPackage = new AzureNextGen.DesktopVirtualization.V20201110Preview.MSIXPackage("msixPackage", new AzureNextGen.DesktopVirtualization.V20201110Preview.MSIXPackageArgs
+        var msixPackage = new AzureNextGen.DesktopVirtualization..MSIXPackage("msixPackage", new AzureNextGen.DesktopVirtualization..MSIXPackageArgs
         {
             DisplayName = "displayname",
             HostPoolName = "hostpool1",
@@ -37,7 +38,7 @@ class MyStack : Stack
             MsixPackageFullName = "msixpackagefullname",
             PackageApplications = 
             {
-                new AzureNextGen.DesktopVirtualization.V20201110Preview.Inputs.MsixPackageApplicationsArgs
+                new AzureNextGen.DesktopVirtualization..Inputs.MsixPackageApplicationsArgs
                 {
                     AppId = "ApplicationId",
                     AppUserModelID = "AppUserModelId",
@@ -50,7 +51,7 @@ class MyStack : Stack
             },
             PackageDependencies = 
             {
-                new AzureNextGen.DesktopVirtualization.V20201110Preview.Inputs.MsixPackageDependenciesArgs
+                new AzureNextGen.DesktopVirtualization..Inputs.MsixPackageDependenciesArgs
                 {
                     DependencyName = "MsixTest_Dependency_Name",
                     MinVersion = "version",
@@ -77,7 +78,7 @@ class MyStack : Stack
 package main
 
 import (
-	desktopvirtualization "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/desktopvirtualization/v20201110preview"
+	desktopvirtualization "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/desktopvirtualization"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -132,7 +133,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-msix_package = azure_nextgen.desktopvirtualization.v20201110preview.MSIXPackage("msixPackage",
+msix_package = azure_nextgen.desktopvirtualization.MSIXPackage("msixPackage",
     display_name="displayname",
     host_pool_name="hostpool1",
     image_path="imagepath",
@@ -140,7 +141,7 @@ msix_package = azure_nextgen.desktopvirtualization.v20201110preview.MSIXPackage(
     is_regular_registration=False,
     last_updated="2008-09-22T14:01:54.9571247Z",
     msix_package_full_name="msixpackagefullname",
-    package_applications=[azure_nextgen.desktopvirtualization.v20201110preview.MsixPackageApplicationsArgs(
+    package_applications=[azure_nextgen.desktopvirtualization.MsixPackageApplicationsArgs(
         app_id="ApplicationId",
         app_user_model_id="AppUserModelId",
         description="application-desc",
@@ -149,7 +150,7 @@ msix_package = azure_nextgen.desktopvirtualization.v20201110preview.MSIXPackage(
         raw_icon="VGhpcyBpcyBhIHN0cmluZyB0byBoYXNo",
         raw_png="VGhpcyBpcyBhIHN0cmluZyB0byBoYXNo",
     )],
-    package_dependencies=[azure_nextgen.desktopvirtualization.v20201110preview.MsixPackageDependenciesArgs(
+    package_dependencies=[azure_nextgen.desktopvirtualization.MsixPackageDependenciesArgs(
         dependency_name="MsixTest_Dependency_Name",
         min_version="version",
         publisher="PublishedName",
@@ -170,7 +171,7 @@ msix_package = azure_nextgen.desktopvirtualization.v20201110preview.MSIXPackage(
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const msixPackage = new azure_nextgen.desktopvirtualization.v20201110preview.MSIXPackage("msixPackage", {
+const msixPackage = new azure_nextgen.desktopvirtualization.MSIXPackage("msixPackage", {
     displayName: "displayname",
     hostPoolName: "hostpool1",
     imagePath: "imagepath",
@@ -464,7 +465,7 @@ The MSIXPackage resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#packageapplications_csharp" style="color: inherit; text-decoration: inherit;">Package<wbr>Applications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#msixpackageapplications">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Desktop<wbr>Virtualization.<wbr>Inputs.<wbr>Msix<wbr>Package<wbr>Applications<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#msixpackageapplications">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Desktop<wbr>Virtualization..<wbr>Inputs.<wbr>Msix<wbr>Package<wbr>Applications<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of package applications. {{% /md %}}</dd>
     <dt class="property-optional"
@@ -473,7 +474,7 @@ The MSIXPackage resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#packagedependencies_csharp" style="color: inherit; text-decoration: inherit;">Package<wbr>Dependencies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#msixpackagedependencies">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Desktop<wbr>Virtualization.<wbr>Inputs.<wbr>Msix<wbr>Package<wbr>Dependencies<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#msixpackagedependencies">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Desktop<wbr>Virtualization..<wbr>Inputs.<wbr>Msix<wbr>Package<wbr>Dependencies<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of package dependencies. {{% /md %}}</dd>
     <dt class="property-optional"
@@ -1889,7 +1890,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:desktopvirtualization/v20201110preview:MSIXPackage hostpool1/MsixPackageFullName /subscriptions/daefabc0-95b4-48b3-b645-8a753a63c4fa/resourcegroups/resourcegroup1/providers/Microsoft.DesktopVirtualization/hostpools/hostpool1/msixpackages/msixPackageFullName 
+$ pulumi import azure-nextgen:desktopvirtualization:MSIXPackage hostpool1/MsixPackageFullName /subscriptions/daefabc0-95b4-48b3-b645-8a753a63c4fa/resourcegroups/resourcegroup1/providers/Microsoft.DesktopVirtualization/hostpools/hostpool1/msixpackages/msixPackageFullName 
 ```
 
 

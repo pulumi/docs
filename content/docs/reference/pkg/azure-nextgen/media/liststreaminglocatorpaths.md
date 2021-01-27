@@ -204,7 +204,7 @@ The following output properties are available:
 <a href="#streamingpaths_csharp" style="color: inherit; text-decoration: inherit;">Streaming<wbr>Paths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingpathresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Outputs.<wbr>Streaming<wbr>Path<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#streamingpathresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Outputs.<wbr>Streaming<wbr>Path<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Streaming Paths supported by current Streaming Locator{{% /md %}}</dd>
 </dl>

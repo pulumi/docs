@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.media.MediaGraph resource with e
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The Media Graph.
+API Version: 2020-02-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var mediaGraph = new AzureNextGen.Media.V20200201Preview.MediaGraph("mediaGraph", new AzureNextGen.Media.V20200201Preview.MediaGraphArgs
+        var mediaGraph = new AzureNextGen.Media..MediaGraph("mediaGraph", new AzureNextGen.Media..MediaGraphArgs
         {
             AccountName = "contosomedia",
             Description = "updated description",
@@ -34,7 +35,7 @@ class MyStack : Stack
             ResourceGroupName = "contoso",
             Sinks = 
             {
-                new AzureNextGen.Media.V20200201Preview.Inputs.MediaGraphAssetSinkArgs
+                new AzureNextGen.Media..Inputs.MediaGraphAssetSinkArgs
                 {
                     AssetName = "SampleAsset",
                     Inputs = 
@@ -47,11 +48,11 @@ class MyStack : Stack
             },
             Sources = 
             {
-                new AzureNextGen.Media.V20200201Preview.Inputs.MediaGraphRtspSourceArgs
+                new AzureNextGen.Media..Inputs.MediaGraphRtspSourceArgs
                 {
                     Endpoint = 
                     {
-                        { "credentials", new AzureNextGen.Media.V20200201Preview.Inputs.MediaGraphUsernamePasswordCredentialsArgs
+                        { "credentials", new AzureNextGen.Media..Inputs.MediaGraphUsernamePasswordCredentialsArgs
                         {
                             OdataType = "#Microsoft.Media.MediaGraphUsernamePasswordCredentials",
                             Password = "examplepassword",
@@ -84,20 +85,20 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-media_graph = azure_nextgen.media.v20200201preview.MediaGraph("mediaGraph",
+media_graph = azure_nextgen.media.MediaGraph("mediaGraph",
     account_name="contosomedia",
     description="updated description",
     media_graph_name="SampleMediaGraph",
     resource_group_name="contoso",
-    sinks=[azure_nextgen.media.v20200201preview.MediaGraphAssetSinkArgs(
+    sinks=[azure_nextgen.media.MediaGraphAssetSinkArgs(
         asset_name="SampleAsset",
         inputs=["rtspSource"],
         name="AssetSink",
         odata_type="#Microsoft.Media.MediaGraphAssetSink",
     )],
-    sources=[azure_nextgen.media.v20200201preview.MediaGraphRtspSourceArgs(
+    sources=[azure_nextgen.media.MediaGraphRtspSourceArgs(
         endpoint={
-            "credentials": azure_nextgen.media.v20200201preview.MediaGraphUsernamePasswordCredentialsArgs(
+            "credentials": azure_nextgen.media.MediaGraphUsernamePasswordCredentialsArgs(
                 odata_type="#Microsoft.Media.MediaGraphUsernamePasswordCredentials",
                 password="examplepassword",
                 username="exampleusername",
@@ -120,7 +121,7 @@ media_graph = azure_nextgen.media.v20200201preview.MediaGraph("mediaGraph",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const mediaGraph = new azure_nextgen.media.v20200201preview.MediaGraph("mediaGraph", {
+const mediaGraph = new azure_nextgen.media.MediaGraph("mediaGraph", {
     accountName: "contosomedia",
     description: "updated description",
     mediaGraphName: "SampleMediaGraph",
@@ -161,7 +162,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var mediaGraph = new AzureNextGen.Media.V20200201Preview.MediaGraph("mediaGraph", new AzureNextGen.Media.V20200201Preview.MediaGraphArgs
+        var mediaGraph = new AzureNextGen.Media..MediaGraph("mediaGraph", new AzureNextGen.Media..MediaGraphArgs
         {
             AccountName = "contosomedia",
             Description = "updated description",
@@ -169,7 +170,7 @@ class MyStack : Stack
             ResourceGroupName = "contoso",
             Sinks = 
             {
-                new AzureNextGen.Media.V20200201Preview.Inputs.MediaGraphAssetSinkArgs
+                new AzureNextGen.Media..Inputs.MediaGraphAssetSinkArgs
                 {
                     AssetName = "SampleAsset",
                     Inputs = 
@@ -182,18 +183,18 @@ class MyStack : Stack
             },
             Sources = 
             {
-                new AzureNextGen.Media.V20200201Preview.Inputs.MediaGraphRtspSourceArgs
+                new AzureNextGen.Media..Inputs.MediaGraphRtspSourceArgs
                 {
                     Endpoint = 
                     {
-                        { "credentials", new AzureNextGen.Media.V20200201Preview.Inputs.MediaGraphUsernamePasswordCredentialsArgs
+                        { "credentials", new AzureNextGen.Media..Inputs.MediaGraphUsernamePasswordCredentialsArgs
                         {
                             OdataType = "#Microsoft.Media.MediaGraphUsernamePasswordCredentials",
                             Password = "examplepassword",
                             Username = "exampleusername",
                         } },
                         { "odataType", "#Microsoft.Media.MediaGraphTlsEndpoint" },
-                        { "trustedCertificates", new AzureNextGen.Media.V20200201Preview.Inputs.MediaGraphPemCertificateListArgs
+                        { "trustedCertificates", new AzureNextGen.Media..Inputs.MediaGraphPemCertificateListArgs
                         {
                             Certificates = 
                             {
@@ -222,7 +223,7 @@ nECzd3TuyFKYeGssSni/QQ1e7yZcLapQqz66g5otdriw0IRdOfDxm5M=
                             OdataType = "#Microsoft.Media.MediaGraphPemCertificateList",
                         } },
                         { "url", "rtsps://contoso.com:443/stream1" },
-                        { "validationOptions", new AzureNextGen.Media.V20200201Preview.Inputs.MediaGraphTlsValidationOptionsArgs
+                        { "validationOptions", new AzureNextGen.Media..Inputs.MediaGraphTlsValidationOptionsArgs
                         {
                             IgnoreHostname = true,
                             IgnoreSignature = false,
@@ -252,26 +253,26 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-media_graph = azure_nextgen.media.v20200201preview.MediaGraph("mediaGraph",
+media_graph = azure_nextgen.media.MediaGraph("mediaGraph",
     account_name="contosomedia",
     description="updated description",
     media_graph_name="SampleMediaGraph",
     resource_group_name="contoso",
-    sinks=[azure_nextgen.media.v20200201preview.MediaGraphAssetSinkArgs(
+    sinks=[azure_nextgen.media.MediaGraphAssetSinkArgs(
         asset_name="SampleAsset",
         inputs=["rtspSource"],
         name="AssetSink",
         odata_type="#Microsoft.Media.MediaGraphAssetSink",
     )],
-    sources=[azure_nextgen.media.v20200201preview.MediaGraphRtspSourceArgs(
+    sources=[azure_nextgen.media.MediaGraphRtspSourceArgs(
         endpoint={
-            "credentials": azure_nextgen.media.v20200201preview.MediaGraphUsernamePasswordCredentialsArgs(
+            "credentials": azure_nextgen.media.MediaGraphUsernamePasswordCredentialsArgs(
                 odata_type="#Microsoft.Media.MediaGraphUsernamePasswordCredentials",
                 password="examplepassword",
                 username="exampleusername",
             ),
             "odataType": "#Microsoft.Media.MediaGraphTlsEndpoint",
-            "trustedCertificates": azure_nextgen.media.v20200201preview.MediaGraphPemCertificateListArgs(
+            "trustedCertificates": azure_nextgen.media.MediaGraphPemCertificateListArgs(
                 certificates=["""-----BEGIN CERTIFICATE-----
 MIIDhTCCAm2gAwIBAgIUajvPKmoO+8qaO89/ZGATl7ZYnTswDQYJKoZIhvcNAQEL
 BQAwUTESMBAGA1UECgwJTWljcm9zb2Z0MRQwEgYDVQQLDAtBenVyZSBNZWRpYTEl
@@ -296,7 +297,7 @@ nECzd3TuyFKYeGssSni/QQ1e7yZcLapQqz66g5otdriw0IRdOfDxm5M=
                 odata_type="#Microsoft.Media.MediaGraphPemCertificateList",
             ),
             "url": "rtsps://contoso.com:443/stream1",
-            "validationOptions": azure_nextgen.media.v20200201preview.MediaGraphTlsValidationOptionsArgs(
+            "validationOptions": azure_nextgen.media.MediaGraphTlsValidationOptionsArgs(
                 ignore_hostname=True,
                 ignore_signature=False,
             ),
@@ -316,7 +317,7 @@ nECzd3TuyFKYeGssSni/QQ1e7yZcLapQqz66g5otdriw0IRdOfDxm5M=
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const mediaGraph = new azure_nextgen.media.v20200201preview.MediaGraph("mediaGraph", {
+const mediaGraph = new azure_nextgen.media.MediaGraph("mediaGraph", {
     accountName: "contosomedia",
     description: "updated description",
     mediaGraphName: "SampleMediaGraph",
@@ -591,7 +592,7 @@ The MediaGraph resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#sinks_csharp" style="color: inherit; text-decoration: inherit;">Sinks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mediagraphassetsink">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Media<wbr>Graph<wbr>Asset<wbr>Sink<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#mediagraphassetsink">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Media<wbr>Graph<wbr>Asset<wbr>Sink<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Media Graph sinks.{{% /md %}}</dd>
     <dt class="property-required"
@@ -600,7 +601,7 @@ The MediaGraph resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#sources_csharp" style="color: inherit; text-decoration: inherit;">Sources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mediagraphrtspsource">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Media<wbr>Graph<wbr>Rtsp<wbr>Source<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#mediagraphrtspsource">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Media<wbr>Graph<wbr>Rtsp<wbr>Source<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Media Graph sources.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1340,7 +1341,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#credentials_csharp" style="color: inherit; text-decoration: inherit;">Credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mediagraphusernamepasswordcredentials">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Media<wbr>Graph<wbr>Username<wbr>Password<wbr>Credentials<wbr>Args</a></span>
+        <span class="property-type"><a href="#mediagraphusernamepasswordcredentials">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Media<wbr>Graph<wbr>Username<wbr>Password<wbr>Credentials<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Polymorphic credentials to present to the endpoint.{{% /md %}}</dd>
 </dl>
@@ -1438,7 +1439,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#credentials_csharp" style="color: inherit; text-decoration: inherit;">Credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mediagraphusernamepasswordcredentialsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Media<wbr>Graph<wbr>Username<wbr>Password<wbr>Credentials<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#mediagraphusernamepasswordcredentialsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Media<wbr>Graph<wbr>Username<wbr>Password<wbr>Credentials<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Polymorphic credentials to present to the endpoint.{{% /md %}}</dd>
 </dl>
@@ -1651,7 +1652,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpoint_csharp" style="color: inherit; text-decoration: inherit;">Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mediagraphclearendpoint">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Media<wbr>Graph<wbr>Clear<wbr>Endpoint<wbr>Args</a> | <a href="#mediagraphtlsendpoint">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Media<wbr>Graph<wbr>Tls<wbr>Endpoint<wbr>Args</a></span>
+        <span class="property-type"><a href="#mediagraphclearendpoint">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Media<wbr>Graph<wbr>Clear<wbr>Endpoint<wbr>Args</a> | <a href="#mediagraphtlsendpoint">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Media<wbr>Graph<wbr>Tls<wbr>Endpoint<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}RTSP endpoint of the stream being connected to.{{% /md %}}</dd>
     <dt class="property-required"
@@ -1669,7 +1670,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transport_csharp" style="color: inherit; text-decoration: inherit;">Transport</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#mediagraphrtsptransport">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Media<wbr>Graph<wbr>Rtsp<wbr>Transport</a></span>
+        <span class="property-type">string | <a href="#mediagraphrtsptransport">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Media<wbr>Graph<wbr>Rtsp<wbr>Transport</a></span>
     </dt>
     <dd>{{% md %}}Underlying RTSP transport. This can be used to enable or disable HTTP tunneling.{{% /md %}}</dd>
 </dl>
@@ -1785,7 +1786,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpoint_csharp" style="color: inherit; text-decoration: inherit;">Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mediagraphclearendpointresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Media<wbr>Graph<wbr>Clear<wbr>Endpoint<wbr>Response<wbr>Args</a> | <a href="#mediagraphtlsendpointresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Media<wbr>Graph<wbr>Tls<wbr>Endpoint<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#mediagraphclearendpointresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Media<wbr>Graph<wbr>Clear<wbr>Endpoint<wbr>Response<wbr>Args</a> | <a href="#mediagraphtlsendpointresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Media<wbr>Graph<wbr>Tls<wbr>Endpoint<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}RTSP endpoint of the stream being connected to.{{% /md %}}</dd>
     <dt class="property-required"
@@ -1966,7 +1967,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#credentials_csharp" style="color: inherit; text-decoration: inherit;">Credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mediagraphusernamepasswordcredentials">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Media<wbr>Graph<wbr>Username<wbr>Password<wbr>Credentials<wbr>Args</a></span>
+        <span class="property-type"><a href="#mediagraphusernamepasswordcredentials">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Media<wbr>Graph<wbr>Username<wbr>Password<wbr>Credentials<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Polymorphic credentials to present to the endpoint.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1975,7 +1976,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trustedcertificates_csharp" style="color: inherit; text-decoration: inherit;">Trusted<wbr>Certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mediagraphpemcertificatelist">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Media<wbr>Graph<wbr>Pem<wbr>Certificate<wbr>List<wbr>Args</a></span>
+        <span class="property-type"><a href="#mediagraphpemcertificatelist">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Media<wbr>Graph<wbr>Pem<wbr>Certificate<wbr>List<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}What certificates should be trusted when authenticating a TLS connection. Null designates that Azure Media's source of trust should be used.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1984,7 +1985,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validationoptions_csharp" style="color: inherit; text-decoration: inherit;">Validation<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mediagraphtlsvalidationoptions">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Media<wbr>Graph<wbr>Tls<wbr>Validation<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#mediagraphtlsvalidationoptions">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Media<wbr>Graph<wbr>Tls<wbr>Validation<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Validation options to use when authenticating a TLS connection. By default, strict validation is used.{{% /md %}}</dd>
 </dl>
@@ -2136,7 +2137,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#credentials_csharp" style="color: inherit; text-decoration: inherit;">Credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mediagraphusernamepasswordcredentialsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Media<wbr>Graph<wbr>Username<wbr>Password<wbr>Credentials<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#mediagraphusernamepasswordcredentialsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Media<wbr>Graph<wbr>Username<wbr>Password<wbr>Credentials<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Polymorphic credentials to present to the endpoint.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2145,7 +2146,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trustedcertificates_csharp" style="color: inherit; text-decoration: inherit;">Trusted<wbr>Certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mediagraphpemcertificatelistresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Media<wbr>Graph<wbr>Pem<wbr>Certificate<wbr>List<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#mediagraphpemcertificatelistresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Media<wbr>Graph<wbr>Pem<wbr>Certificate<wbr>List<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}What certificates should be trusted when authenticating a TLS connection. Null designates that Azure Media's source of trust should be used.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2154,7 +2155,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validationoptions_csharp" style="color: inherit; text-decoration: inherit;">Validation<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mediagraphtlsvalidationoptionsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Media<wbr>Graph<wbr>Tls<wbr>Validation<wbr>Options<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#mediagraphtlsvalidationoptionsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Media<wbr>Graph<wbr>Tls<wbr>Validation<wbr>Options<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Validation options to use when authenticating a TLS connection. By default, strict validation is used.{{% /md %}}</dd>
 </dl>
@@ -2683,7 +2684,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:media/v20200201preview:MediaGraph SampleMediaGraph /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Media/mediaServices/{accountName}/mediaGraphs/{mediaGraphName} 
+$ pulumi import azure-nextgen:media:MediaGraph SampleMediaGraph /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Media/mediaServices/{accountName}/mediaGraphs/{mediaGraphName} 
 ```
 
 

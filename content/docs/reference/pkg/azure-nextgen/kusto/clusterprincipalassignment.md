@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.kusto.ClusterPrincipalAssignment
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Class representing a cluster principal assignment.
-Latest API Version: 2020-09-18.
+API Version: 2020-09-18.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var clusterPrincipalAssignment = new AzureNextGen.Kusto.Latest.ClusterPrincipalAssignment("clusterPrincipalAssignment", new AzureNextGen.Kusto.Latest.ClusterPrincipalAssignmentArgs
+        var clusterPrincipalAssignment = new AzureNextGen.Kusto..ClusterPrincipalAssignment("clusterPrincipalAssignment", new AzureNextGen.Kusto..ClusterPrincipalAssignmentArgs
         {
             ClusterName = "kustoclusterrptest4",
             PrincipalAssignmentName = "kustoprincipal1",
@@ -51,7 +51,7 @@ class MyStack : Stack
 package main
 
 import (
-	kusto "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/kusto/latest"
+	kusto "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/kusto"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -83,7 +83,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-cluster_principal_assignment = azure_nextgen.kusto.latest.ClusterPrincipalAssignment("clusterPrincipalAssignment",
+cluster_principal_assignment = azure_nextgen.kusto.ClusterPrincipalAssignment("clusterPrincipalAssignment",
     cluster_name="kustoclusterrptest4",
     principal_assignment_name="kustoprincipal1",
     principal_id="87654321-1234-1234-1234-123456789123",
@@ -102,7 +102,7 @@ cluster_principal_assignment = azure_nextgen.kusto.latest.ClusterPrincipalAssign
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const clusterPrincipalAssignment = new azure_nextgen.kusto.latest.ClusterPrincipalAssignment("clusterPrincipalAssignment", {
+const clusterPrincipalAssignment = new azure_nextgen.kusto.ClusterPrincipalAssignment("clusterPrincipalAssignment", {
     clusterName: "kustoclusterrptest4",
     principalAssignmentName: "kustoprincipal1",
     principalId: "87654321-1234-1234-1234-123456789123",
@@ -332,7 +332,7 @@ The ClusterPrincipalAssignment resource accepts the following [input]({{< relref
 <a href="#principaltype_csharp" style="color: inherit; text-decoration: inherit;">Principal<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#principaltype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Kusto.<wbr>Principal<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#principaltype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Kusto..<wbr>Principal<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Principal type.{{% /md %}}</dd>
     <dt class="property-required"
@@ -350,7 +350,7 @@ The ClusterPrincipalAssignment resource accepts the following [input]({{< relref
 <a href="#role_csharp" style="color: inherit; text-decoration: inherit;">Role</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#clusterprincipalrole">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Kusto.<wbr>Cluster<wbr>Principal<wbr>Role</a></span>
+        <span class="property-type">string | <a href="#clusterprincipalrole">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Kusto..<wbr>Cluster<wbr>Principal<wbr>Role</a></span>
     </dt>
     <dd>{{% md %}}Cluster principal role.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -918,7 +918,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:kusto/latest:ClusterPrincipalAssignment kustoclusterrptest4/kustoprincipal1 /subscriptions/12345678-1234-1234-1234-123456789098/resourceGroups/kustorptest/providers/Microsoft.Kusto/Clusters/kustoclusterrptest4/PrincipalAssignments/kustoprincipal1 
+$ pulumi import azure-nextgen:kusto:ClusterPrincipalAssignment kustoclusterrptest4/kustoprincipal1 /subscriptions/12345678-1234-1234-1234-123456789098/resourceGroups/kustorptest/providers/Microsoft.Kusto/Clusters/kustoclusterrptest4/PrincipalAssignments/kustoprincipal1 
 ```
 
 

@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.network.NetworkExperimentProfile
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Defines an Network Experiment Profile and lists of Experiments
-Latest API Version: 2019-11-01.
+API Version: 2019-11-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var networkExperimentProfile = new AzureNextGen.Network.Latest.NetworkExperimentProfile("networkExperimentProfile", new AzureNextGen.Network.Latest.NetworkExperimentProfileArgs
+        var networkExperimentProfile = new AzureNextGen.Network..NetworkExperimentProfile("networkExperimentProfile", new AzureNextGen.Network..NetworkExperimentProfileArgs
         {
             EnabledState = "Enabled",
             Location = "WestUs",
@@ -48,7 +48,7 @@ class MyStack : Stack
 package main
 
 import (
-	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network/latest"
+	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -77,7 +77,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-network_experiment_profile = azure_nextgen.network.latest.NetworkExperimentProfile("networkExperimentProfile",
+network_experiment_profile = azure_nextgen.network.NetworkExperimentProfile("networkExperimentProfile",
     enabled_state="Enabled",
     location="WestUs",
     profile_name="MyProfile",
@@ -93,7 +93,7 @@ network_experiment_profile = azure_nextgen.network.latest.NetworkExperimentProfi
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const networkExperimentProfile = new azure_nextgen.network.latest.NetworkExperimentProfile("networkExperimentProfile", {
+const networkExperimentProfile = new azure_nextgen.network.NetworkExperimentProfile("networkExperimentProfile", {
     enabledState: "Enabled",
     location: "WestUs",
     profileName: "MyProfile",
@@ -311,7 +311,7 @@ The NetworkExperimentProfile resource accepts the following [input]({{< relref "
 <a href="#enabledstate_csharp" style="color: inherit; text-decoration: inherit;">Enabled<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#state">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>State</a></span>
+        <span class="property-type">string | <a href="#state">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}The state of the Experiment{{% /md %}}</dd>
     <dt class="property-optional"
@@ -752,7 +752,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:network/latest:NetworkExperimentProfile MyProfile /subscriptions/subid/resourceGroups/MyResourceGroup/providers/Microsoft.Network/NetworkExperimentProfiles/MyProfile 
+$ pulumi import azure-nextgen:network:NetworkExperimentProfile MyProfile /subscriptions/subid/resourceGroups/MyResourceGroup/providers/Microsoft.Network/NetworkExperimentProfiles/MyProfile 
 ```
 
 

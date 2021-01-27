@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.recoveryservices.ReplicationMigr
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Migration item.
-Latest API Version: 2018-07-10.
+API Version: 2018-07-10.
 
 {{% examples %}}
 ## Example Usage
@@ -27,19 +27,19 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var replicationMigrationItem = new AzureNextGen.RecoveryServices.Latest.ReplicationMigrationItem("replicationMigrationItem", new AzureNextGen.RecoveryServices.Latest.ReplicationMigrationItemArgs
+        var replicationMigrationItem = new AzureNextGen.RecoveryServices..ReplicationMigrationItem("replicationMigrationItem", new AzureNextGen.RecoveryServices..ReplicationMigrationItemArgs
         {
             FabricName = "vmwarefabric1",
             MigrationItemName = "virtualmachine1",
-            Properties = new AzureNextGen.RecoveryServices.Latest.Inputs.EnableMigrationInputPropertiesArgs
+            Properties = new AzureNextGen.RecoveryServices..Inputs.EnableMigrationInputPropertiesArgs
             {
                 PolicyId = "/Subscriptions/cb53d0c3-bd59-4721-89bc-06916a9147ef/resourceGroups/resourcegroup1/providers/Microsoft.RecoveryServices/vaults/migrationvault/replicationPolicies/vmwarepolicy1",
-                ProviderSpecificDetails = new AzureNextGen.RecoveryServices.Latest.Inputs.VMwareCbtEnableMigrationInputArgs
+                ProviderSpecificDetails = new AzureNextGen.RecoveryServices..Inputs.VMwareCbtEnableMigrationInputArgs
                 {
                     DataMoverRunAsAccountId = "/Subscriptions/cb53d0c3-bd59-4721-89bc-06916a9147ef/resourceGroups/resourcegroup1/providers/Microsoft.OffAzure/VMwareSites/vmwaresite1/runasaccounts/dataMoverRunAsAccount1",
                     DisksToInclude = 
                     {
-                        new AzureNextGen.RecoveryServices.Latest.Inputs.VMwareCbtDiskInputArgs
+                        new AzureNextGen.RecoveryServices..Inputs.VMwareCbtDiskInputArgs
                         {
                             DiskId = "disk1",
                             IsOSDisk = "true",
@@ -72,7 +72,7 @@ class MyStack : Stack
 package main
 
 import (
-	recoveryservices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/recoveryservices/latest"
+	recoveryservices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/recoveryservices"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -121,14 +121,14 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-replication_migration_item = azure_nextgen.recoveryservices.latest.ReplicationMigrationItem("replicationMigrationItem",
+replication_migration_item = azure_nextgen.recoveryservices.ReplicationMigrationItem("replicationMigrationItem",
     fabric_name="vmwarefabric1",
     migration_item_name="virtualmachine1",
-    properties=azure_nextgen.recoveryservices.latest.EnableMigrationInputPropertiesArgs(
+    properties=azure_nextgen.recoveryservices.EnableMigrationInputPropertiesArgs(
         policy_id="/Subscriptions/cb53d0c3-bd59-4721-89bc-06916a9147ef/resourceGroups/resourcegroup1/providers/Microsoft.RecoveryServices/vaults/migrationvault/replicationPolicies/vmwarepolicy1",
-        provider_specific_details=azure_nextgen.recoveryservices.latest.VMwareCbtEnableMigrationInputArgs(
+        provider_specific_details=azure_nextgen.recoveryservices.VMwareCbtEnableMigrationInputArgs(
             data_mover_run_as_account_id="/Subscriptions/cb53d0c3-bd59-4721-89bc-06916a9147ef/resourceGroups/resourcegroup1/providers/Microsoft.OffAzure/VMwareSites/vmwaresite1/runasaccounts/dataMoverRunAsAccount1",
-            disks_to_include=[azure_nextgen.recoveryservices.latest.VMwareCbtDiskInputArgs(
+            disks_to_include=[azure_nextgen.recoveryservices.VMwareCbtDiskInputArgs(
                 disk_id="disk1",
                 is_os_disk="true",
                 log_storage_account_id="/Subscriptions/cb53d0c3-bd59-4721-89bc-06916a9147ef/resourceGroups/resourcegroup1/providers/Microsoft.Storage/storageAccounts/logStorageAccount1",
@@ -155,7 +155,7 @@ replication_migration_item = azure_nextgen.recoveryservices.latest.ReplicationMi
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const replicationMigrationItem = new azure_nextgen.recoveryservices.latest.ReplicationMigrationItem("replicationMigrationItem", {
+const replicationMigrationItem = new azure_nextgen.recoveryservices.ReplicationMigrationItem("replicationMigrationItem", {
     fabricName: "vmwarefabric1",
     migrationItemName: "virtualmachine1",
     properties: {
@@ -391,7 +391,7 @@ The ReplicationMigrationItem resource accepts the following [input]({{< relref "
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#enablemigrationinputproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Enable<wbr>Migration<wbr>Input<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#enablemigrationinputproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Enable<wbr>Migration<wbr>Input<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Enable migration input properties.{{% /md %}}</dd>
     <dt class="property-required"
@@ -989,7 +989,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#providerspecificdetails_csharp" style="color: inherit; text-decoration: inherit;">Provider<wbr>Specific<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vmwarecbtenablemigrationinput">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>VMware<wbr>Cbt<wbr>Enable<wbr>Migration<wbr>Input<wbr>Args</a></span>
+        <span class="property-type"><a href="#vmwarecbtenablemigrationinput">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>VMware<wbr>Cbt<wbr>Enable<wbr>Migration<wbr>Input<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The provider specific details.{{% /md %}}</dd>
 </dl>
@@ -1168,7 +1168,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#innerhealtherrors_csharp" style="color: inherit; text-decoration: inherit;">Inner<wbr>Health<wbr>Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#innerhealtherrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Inner<wbr>Health<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#innerhealtherrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Inner<wbr>Health<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The inner health errors. HealthError having a list of HealthError as child errors is problematic. InnerHealthError is used because this will prevent an infinite loop of structures when Hydra tries to auto-generate the contract. We are exposing the related health errors as inner health errors and all API consumers can utilize this in the same fashion as Exception -&gt; InnerException.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2157,7 +2157,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#currentjob_csharp" style="color: inherit; text-decoration: inherit;">Current<wbr>Job</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#currentjobdetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Current<wbr>Job<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#currentjobdetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Current<wbr>Job<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The current job details.{{% /md %}}</dd>
     <dt class="property-required"
@@ -2175,7 +2175,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#healtherrors_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healtherrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Health<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#healtherrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Health<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of health errors.{{% /md %}}</dd>
     <dt class="property-required"
@@ -2256,7 +2256,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#providerspecificdetails_csharp" style="color: inherit; text-decoration: inherit;">Provider<wbr>Specific<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vmwarecbtmigrationdetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>VMware<wbr>Cbt<wbr>Migration<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#vmwarecbtmigrationdetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>VMware<wbr>Cbt<wbr>Migration<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The migration provider custom settings.{{% /md %}}</dd>
 </dl>
@@ -2678,7 +2678,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disktype_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#diskaccounttype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Disk<wbr>Account<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#diskaccounttype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Disk<wbr>Account<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The disk type.{{% /md %}}</dd>
 </dl>
@@ -2857,7 +2857,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#diskstoinclude_csharp" style="color: inherit; text-decoration: inherit;">Disks<wbr>To<wbr>Include</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vmwarecbtdiskinput">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>VMware<wbr>Cbt<wbr>Disk<wbr>Input<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#vmwarecbtdiskinput">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>VMware<wbr>Cbt<wbr>Disk<wbr>Input<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The disks to include list.{{% /md %}}</dd>
     <dt class="property-required"
@@ -2902,7 +2902,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#licensetype_csharp" style="color: inherit; text-decoration: inherit;">License<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#licensetype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>License<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#licensetype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>License<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}License type.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3378,7 +3378,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protecteddisks_csharp" style="color: inherit; text-decoration: inherit;">Protected<wbr>Disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vmwarecbtprotecteddiskdetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>VMware<wbr>Cbt<wbr>Protected<wbr>Disk<wbr>Details<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#vmwarecbtprotecteddiskdetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>VMware<wbr>Cbt<wbr>Protected<wbr>Disk<wbr>Details<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of protected disks.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3441,7 +3441,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vmnics_csharp" style="color: inherit; text-decoration: inherit;">Vm<wbr>Nics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vmwarecbtnicdetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>VMware<wbr>Cbt<wbr>Nic<wbr>Details<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#vmwarecbtnicdetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>VMware<wbr>Cbt<wbr>Nic<wbr>Details<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The network details.{{% /md %}}</dd>
 </dl>
@@ -4638,7 +4638,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:recoveryservices/latest:ReplicationMigrationItem virtualmachine1 /Subscriptions/cb53d0c3-bd59-4721-89bc-06916a9147ef/resourceGroups/resourcegroup1/providers/Microsoft.RecoveryServices/vaults/migrationvault/replicationFabrics/vmwarefabric1/replicationProtectionContainers/vmwareContainer1/replicationMigrationItems/virtualmachine1 
+$ pulumi import azure-nextgen:recoveryservices:ReplicationMigrationItem virtualmachine1 /Subscriptions/cb53d0c3-bd59-4721-89bc-06916a9147ef/resourceGroups/resourcegroup1/providers/Microsoft.RecoveryServices/vaults/migrationvault/replicationFabrics/vmwarefabric1/replicationProtectionContainers/vmwareContainer1/replicationMigrationItems/virtualmachine1 
 ```
 
 

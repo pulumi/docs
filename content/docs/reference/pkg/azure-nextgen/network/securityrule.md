@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.network.SecurityRule resource wi
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Network security rule.
-Latest API Version: 2020-08-01.
+API Version: 2020-08-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var securityRule = new AzureNextGen.Network.Latest.SecurityRule("securityRule", new AzureNextGen.Network.Latest.SecurityRuleArgs
+        var securityRule = new AzureNextGen.Network..SecurityRule("securityRule", new AzureNextGen.Network..SecurityRuleArgs
         {
             Access = "Deny",
             DestinationAddressPrefix = "11.0.0.0/8",
@@ -55,7 +55,7 @@ class MyStack : Stack
 package main
 
 import (
-	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network/latest"
+	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -91,7 +91,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-security_rule = azure_nextgen.network.latest.SecurityRule("securityRule",
+security_rule = azure_nextgen.network.SecurityRule("securityRule",
     access="Deny",
     destination_address_prefix="11.0.0.0/8",
     destination_port_range="8080",
@@ -114,7 +114,7 @@ security_rule = azure_nextgen.network.latest.SecurityRule("securityRule",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const securityRule = new azure_nextgen.network.latest.SecurityRule("securityRule", {
+const securityRule = new azure_nextgen.network.SecurityRule("securityRule", {
     access: "Deny",
     destinationAddressPrefix: "11.0.0.0/8",
     destinationPortRange: "8080",
@@ -321,7 +321,7 @@ The SecurityRule resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#access_csharp" style="color: inherit; text-decoration: inherit;">Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#securityruleaccess">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Security<wbr>Rule<wbr>Access</a></span>
+        <span class="property-type">string | <a href="#securityruleaccess">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Security<wbr>Rule<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}The network traffic is allowed or denied.{{% /md %}}</dd>
     <dt class="property-required"
@@ -330,7 +330,7 @@ The SecurityRule resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#direction_csharp" style="color: inherit; text-decoration: inherit;">Direction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#securityruledirection">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Security<wbr>Rule<wbr>Direction</a></span>
+        <span class="property-type">string | <a href="#securityruledirection">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Security<wbr>Rule<wbr>Direction</a></span>
     </dt>
     <dd>{{% md %}}The direction of the rule. The direction specifies if rule will be evaluated on incoming or outgoing traffic.{{% /md %}}</dd>
     <dt class="property-required"
@@ -348,7 +348,7 @@ The SecurityRule resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#protocol_csharp" style="color: inherit; text-decoration: inherit;">Protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#securityruleprotocol">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Security<wbr>Rule<wbr>Protocol</a></span>
+        <span class="property-type">string | <a href="#securityruleprotocol">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Security<wbr>Rule<wbr>Protocol</a></span>
     </dt>
     <dd>{{% md %}}Network protocol this rule applies to.{{% /md %}}</dd>
     <dt class="property-required"
@@ -402,7 +402,7 @@ The SecurityRule resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#destinationapplicationsecuritygroups_csharp" style="color: inherit; text-decoration: inherit;">Destination<wbr>Application<wbr>Security<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationsecuritygroup">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Application<wbr>Security<wbr>Group<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#applicationsecuritygroup">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Application<wbr>Security<wbr>Group<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The application security group specified as destination.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -474,7 +474,7 @@ The SecurityRule resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#sourceapplicationsecuritygroups_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Application<wbr>Security<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationsecuritygroup">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Application<wbr>Security<wbr>Group<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#applicationsecuritygroup">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Application<wbr>Security<wbr>Group<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The application security group specified as source.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1840,7 +1840,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:network/latest:SecurityRule rule1 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/networkSecurityGroups/testnsg/securityRules/rule1 
+$ pulumi import azure-nextgen:network:SecurityRule rule1 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/networkSecurityGroups/testnsg/securityRules/rule1 
 ```
 
 

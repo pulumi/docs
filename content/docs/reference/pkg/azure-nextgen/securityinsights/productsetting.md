@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.securityinsights.ProductSetting 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The Setting.
+API Version: 2019-01-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var productSetting = new AzureNextGen.SecurityInsights.V20190101Preview.ProductSetting("productSetting", new AzureNextGen.SecurityInsights.V20190101Preview.ProductSettingArgs
+        var productSetting = new AzureNextGen.SecurityInsights..ProductSetting("productSetting", new AzureNextGen.SecurityInsights..ProductSettingArgs
         {
             Etag = "\"0300bf09-0000-0000-0000-5c37296e0000\"",
             Kind = "EyesOn",
@@ -49,7 +50,7 @@ class MyStack : Stack
 package main
 
 import (
-	securityinsights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/securityinsights/v20190101preview"
+	securityinsights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/securityinsights"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -80,7 +81,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-product_setting = azure_nextgen.securityinsights.v20190101preview.ProductSetting("productSetting",
+product_setting = azure_nextgen.securityinsights.ProductSetting("productSetting",
     etag="\"0300bf09-0000-0000-0000-5c37296e0000\"",
     kind="EyesOn",
     operational_insights_resource_provider="Microsoft.OperationalInsights",
@@ -98,7 +99,7 @@ product_setting = azure_nextgen.securityinsights.v20190101preview.ProductSetting
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const productSetting = new azure_nextgen.securityinsights.v20190101preview.ProductSetting("productSetting", {
+const productSetting = new azure_nextgen.securityinsights.ProductSetting("productSetting", {
     etag: "\"0300bf09-0000-0000-0000-5c37296e0000\"",
     kind: "EyesOn",
     operationalInsightsResourceProvider: "Microsoft.OperationalInsights",
@@ -300,7 +301,7 @@ The ProductSetting resource accepts the following [input]({{< relref "/docs/intr
 <a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#settingkind">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security<wbr>Insights.<wbr>Setting<wbr>Kind</a></span>
+        <span class="property-type">string | <a href="#settingkind">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security<wbr>Insights..<wbr>Setting<wbr>Kind</a></span>
     </dt>
     <dd>{{% md %}}The kind of the setting{{% /md %}}</dd>
     <dt class="property-required"
@@ -731,7 +732,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:securityinsights/v20190101preview:ProductSetting EyesOn /subscriptions/bd794837-4d29-4647-9105-6339bfdb4e6a/resourceGroups/mms-eus/providers/Microsoft.OperationalInsights/workspaces/avdvirInt/providers/Microsoft.SecurityInsights/settings/EyesOn 
+$ pulumi import azure-nextgen:securityinsights:ProductSetting EyesOn /subscriptions/bd794837-4d29-4647-9105-6339bfdb4e6a/resourceGroups/mms-eus/providers/Microsoft.OperationalInsights/workspaces/avdvirInt/providers/Microsoft.SecurityInsights/settings/EyesOn 
 ```
 
 

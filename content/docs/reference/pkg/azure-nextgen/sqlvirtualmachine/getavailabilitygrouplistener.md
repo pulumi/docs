@@ -251,7 +251,7 @@ The following output properties are available:
 <a href="#loadbalancerconfigurations_csharp" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalancerconfigurationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql<wbr>Virtual<wbr>Machine.<wbr>Outputs.<wbr>Load<wbr>Balancer<wbr>Configuration<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#loadbalancerconfigurationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql<wbr>Virtual<wbr>Machine..<wbr>Outputs.<wbr>Load<wbr>Balancer<wbr>Configuration<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of load balancer configurations for an availability group listener.{{% /md %}}</dd>
     <dt class="property-"
@@ -531,7 +531,7 @@ The following output properties are available:
 <a href="#privateipaddress_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Ip<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateipaddressresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql<wbr>Virtual<wbr>Machine.<wbr>Inputs.<wbr>Private<wbr>IPAddress<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#privateipaddressresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql<wbr>Virtual<wbr>Machine..<wbr>Inputs.<wbr>Private<wbr>IPAddress<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Private IP address.{{% /md %}}</dd>
     <dt class="property-optional"

@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.iotspaces.IoTSpace resource with
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The description of the IoTSpaces service.
+API Version: 2017-10-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,12 +27,12 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var ioTSpace = new AzureNextGen.IoTSpaces.V20171001Preview.IoTSpace("ioTSpace", new AzureNextGen.IoTSpaces.V20171001Preview.IoTSpaceArgs
+        var ioTSpace = new AzureNextGen.IoTSpaces..IoTSpace("ioTSpace", new AzureNextGen.IoTSpaces..IoTSpaceArgs
         {
             Location = "string",
-            Properties = new AzureNextGen.IoTSpaces.V20171001Preview.Inputs.IoTSpacesPropertiesArgs
+            Properties = new AzureNextGen.IoTSpaces..Inputs.IoTSpacesPropertiesArgs
             {
-                StorageContainer = new AzureNextGen.IoTSpaces.V20171001Preview.Inputs.StorageContainerPropertiesArgs
+                StorageContainer = new AzureNextGen.IoTSpaces..Inputs.StorageContainerPropertiesArgs
                 {
                     ConnectionString = "string",
                     ContainerName = "string",
@@ -41,7 +42,7 @@ class MyStack : Stack
             },
             ResourceGroupName = "resRg",
             ResourceName = "myIoTSpacesService",
-            Sku = new AzureNextGen.IoTSpaces.V20171001Preview.Inputs.IoTSpacesSkuInfoArgs
+            Sku = new AzureNextGen.IoTSpaces..Inputs.IoTSpacesSkuInfoArgs
             {
                 Name = "F1",
             },
@@ -60,7 +61,7 @@ class MyStack : Stack
 package main
 
 import (
-	iotspaces "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/iotspaces/v20171001preview"
+	iotspaces "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/iotspaces"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -99,10 +100,10 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-io_t_space = azure_nextgen.iotspaces.v20171001preview.IoTSpace("ioTSpace",
+io_t_space = azure_nextgen.iotspaces.IoTSpace("ioTSpace",
     location="string",
-    properties=azure_nextgen.iotspaces.v20171001preview.IoTSpacesPropertiesArgs(
-        storage_container=azure_nextgen.iotspaces.v20171001preview.StorageContainerPropertiesArgs(
+    properties=azure_nextgen.iotspaces.IoTSpacesPropertiesArgs(
+        storage_container=azure_nextgen.iotspaces.StorageContainerPropertiesArgs(
             connection_string="string",
             container_name="string",
             resource_group="string",
@@ -111,7 +112,7 @@ io_t_space = azure_nextgen.iotspaces.v20171001preview.IoTSpace("ioTSpace",
     ),
     resource_group_name="resRg",
     resource_name="myIoTSpacesService",
-    sku=azure_nextgen.iotspaces.v20171001preview.IoTSpacesSkuInfoArgs(
+    sku=azure_nextgen.iotspaces.IoTSpacesSkuInfoArgs(
         name="F1",
     ))
 
@@ -125,7 +126,7 @@ io_t_space = azure_nextgen.iotspaces.v20171001preview.IoTSpace("ioTSpace",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const ioTSpace = new azure_nextgen.iotspaces.v20171001preview.IoTSpace("ioTSpace", {
+const ioTSpace = new azure_nextgen.iotspaces.IoTSpace("ioTSpace", {
     location: "string",
     properties: {
         storageContainer: {
@@ -362,7 +363,7 @@ The IoTSpace resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iotspacesskuinfo">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Io<wbr>TSpaces.<wbr>Inputs.<wbr>Io<wbr>TSpaces<wbr>Sku<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#iotspacesskuinfo">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Io<wbr>TSpaces..<wbr>Inputs.<wbr>Io<wbr>TSpaces<wbr>Sku<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A valid instance SKU.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -371,7 +372,7 @@ The IoTSpace resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iotspacesproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Io<wbr>TSpaces.<wbr>Inputs.<wbr>Io<wbr>TSpaces<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#iotspacesproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Io<wbr>TSpaces..<wbr>Inputs.<wbr>Io<wbr>TSpaces<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The common properties of a IoTSpaces service.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -726,7 +727,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storagecontainer_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Container</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storagecontainerproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Io<wbr>TSpaces.<wbr>Inputs.<wbr>Storage<wbr>Container<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#storagecontainerproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Io<wbr>TSpaces..<wbr>Inputs.<wbr>Storage<wbr>Container<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The properties of the designated storage container.{{% /md %}}</dd>
 </dl>
@@ -815,7 +816,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storagecontainer_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Container</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storagecontainerpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Io<wbr>TSpaces.<wbr>Inputs.<wbr>Storage<wbr>Container<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#storagecontainerpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Io<wbr>TSpaces..<wbr>Inputs.<wbr>Storage<wbr>Container<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The properties of the designated storage container.{{% /md %}}</dd>
 </dl>
@@ -1012,7 +1013,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#iotspacessku">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Io<wbr>TSpaces.<wbr>Io<wbr>TSpaces<wbr>Sku</a></span>
+        <span class="property-type">string | <a href="#iotspacessku">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Io<wbr>TSpaces..<wbr>Io<wbr>TSpaces<wbr>Sku</a></span>
     </dt>
     <dd>{{% md %}}The name of the SKU.{{% /md %}}</dd>
 </dl>
@@ -1470,7 +1471,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:iotspaces/v20171001preview:IoTSpace myIoTSpacesService /subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/resRg/providers/Microsoft.IoTSpaces/IoTSpacesService/myIoTSpacesService 
+$ pulumi import azure-nextgen:iotspaces:IoTSpace myIoTSpacesService /subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/resRg/providers/Microsoft.IoTSpaces/IoTSpacesService/myIoTSpacesService 
 ```
 
 

@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.kusto.DatabasePrincipalAssignmen
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Class representing a database principal assignment.
-Latest API Version: 2020-09-18.
+API Version: 2020-09-18.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var databasePrincipalAssignment = new AzureNextGen.Kusto.Latest.DatabasePrincipalAssignment("databasePrincipalAssignment", new AzureNextGen.Kusto.Latest.DatabasePrincipalAssignmentArgs
+        var databasePrincipalAssignment = new AzureNextGen.Kusto..DatabasePrincipalAssignment("databasePrincipalAssignment", new AzureNextGen.Kusto..DatabasePrincipalAssignmentArgs
         {
             ClusterName = "kustoclusterrptest4",
             DatabaseName = "Kustodatabase8",
@@ -52,7 +52,7 @@ class MyStack : Stack
 package main
 
 import (
-	kusto "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/kusto/latest"
+	kusto "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/kusto"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -85,7 +85,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-database_principal_assignment = azure_nextgen.kusto.latest.DatabasePrincipalAssignment("databasePrincipalAssignment",
+database_principal_assignment = azure_nextgen.kusto.DatabasePrincipalAssignment("databasePrincipalAssignment",
     cluster_name="kustoclusterrptest4",
     database_name="Kustodatabase8",
     principal_assignment_name="kustoprincipal1",
@@ -105,7 +105,7 @@ database_principal_assignment = azure_nextgen.kusto.latest.DatabasePrincipalAssi
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const databasePrincipalAssignment = new azure_nextgen.kusto.latest.DatabasePrincipalAssignment("databasePrincipalAssignment", {
+const databasePrincipalAssignment = new azure_nextgen.kusto.DatabasePrincipalAssignment("databasePrincipalAssignment", {
     clusterName: "kustoclusterrptest4",
     databaseName: "Kustodatabase8",
     principalAssignmentName: "kustoprincipal1",
@@ -345,7 +345,7 @@ The DatabasePrincipalAssignment resource accepts the following [input]({{< relre
 <a href="#principaltype_csharp" style="color: inherit; text-decoration: inherit;">Principal<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#principaltype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Kusto.<wbr>Principal<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#principaltype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Kusto..<wbr>Principal<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Principal type.{{% /md %}}</dd>
     <dt class="property-required"
@@ -363,7 +363,7 @@ The DatabasePrincipalAssignment resource accepts the following [input]({{< relre
 <a href="#role_csharp" style="color: inherit; text-decoration: inherit;">Role</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#databaseprincipalrole">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Kusto.<wbr>Database<wbr>Principal<wbr>Role</a></span>
+        <span class="property-type">string | <a href="#databaseprincipalrole">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Kusto..<wbr>Database<wbr>Principal<wbr>Role</a></span>
     </dt>
     <dd>{{% md %}}Database principal role.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -990,7 +990,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:kusto/latest:DatabasePrincipalAssignment kustoclusterrptest4/Kustodatabase8/kustoprincipal1 /subscriptions/12345678-1234-1234-1234-123456789098/resourceGroups/kustorptest/providers/Microsoft.Kusto/Clusters/kustoclusterrptest4/Databases/Kustodatabase8/PrincipalAssignments/kustoprincipal1 
+$ pulumi import azure-nextgen:kusto:DatabasePrincipalAssignment kustoclusterrptest4/Kustodatabase8/kustoprincipal1 /subscriptions/12345678-1234-1234-1234-123456789098/resourceGroups/kustorptest/providers/Microsoft.Kusto/Clusters/kustoclusterrptest4/Databases/Kustodatabase8/PrincipalAssignments/kustoprincipal1 
 ```
 
 

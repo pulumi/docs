@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.apimanagement.Diagnostic resourc
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Diagnostic details.
-Latest API Version: 2019-12-01.
+API Version: 2019-12-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,14 +27,14 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var diagnostic = new AzureNextGen.ApiManagement.Latest.Diagnostic("diagnostic", new AzureNextGen.ApiManagement.Latest.DiagnosticArgs
+        var diagnostic = new AzureNextGen.ApiManagement..Diagnostic("diagnostic", new AzureNextGen.ApiManagement..DiagnosticArgs
         {
             AlwaysLog = "allErrors",
-            Backend = new AzureNextGen.ApiManagement.Latest.Inputs.PipelineDiagnosticSettingsArgs
+            Backend = new AzureNextGen.ApiManagement..Inputs.PipelineDiagnosticSettingsArgs
             {
-                Request = new AzureNextGen.ApiManagement.Latest.Inputs.HttpMessageDiagnosticArgs
+                Request = new AzureNextGen.ApiManagement..Inputs.HttpMessageDiagnosticArgs
                 {
-                    Body = new AzureNextGen.ApiManagement.Latest.Inputs.BodyDiagnosticSettingsArgs
+                    Body = new AzureNextGen.ApiManagement..Inputs.BodyDiagnosticSettingsArgs
                     {
                         Bytes = 512,
                     },
@@ -43,9 +43,9 @@ class MyStack : Stack
                         "Content-type",
                     },
                 },
-                Response = new AzureNextGen.ApiManagement.Latest.Inputs.HttpMessageDiagnosticArgs
+                Response = new AzureNextGen.ApiManagement..Inputs.HttpMessageDiagnosticArgs
                 {
-                    Body = new AzureNextGen.ApiManagement.Latest.Inputs.BodyDiagnosticSettingsArgs
+                    Body = new AzureNextGen.ApiManagement..Inputs.BodyDiagnosticSettingsArgs
                     {
                         Bytes = 512,
                     },
@@ -56,11 +56,11 @@ class MyStack : Stack
                 },
             },
             DiagnosticId = "applicationinsights",
-            Frontend = new AzureNextGen.ApiManagement.Latest.Inputs.PipelineDiagnosticSettingsArgs
+            Frontend = new AzureNextGen.ApiManagement..Inputs.PipelineDiagnosticSettingsArgs
             {
-                Request = new AzureNextGen.ApiManagement.Latest.Inputs.HttpMessageDiagnosticArgs
+                Request = new AzureNextGen.ApiManagement..Inputs.HttpMessageDiagnosticArgs
                 {
-                    Body = new AzureNextGen.ApiManagement.Latest.Inputs.BodyDiagnosticSettingsArgs
+                    Body = new AzureNextGen.ApiManagement..Inputs.BodyDiagnosticSettingsArgs
                     {
                         Bytes = 512,
                     },
@@ -69,9 +69,9 @@ class MyStack : Stack
                         "Content-type",
                     },
                 },
-                Response = new AzureNextGen.ApiManagement.Latest.Inputs.HttpMessageDiagnosticArgs
+                Response = new AzureNextGen.ApiManagement..Inputs.HttpMessageDiagnosticArgs
                 {
-                    Body = new AzureNextGen.ApiManagement.Latest.Inputs.BodyDiagnosticSettingsArgs
+                    Body = new AzureNextGen.ApiManagement..Inputs.BodyDiagnosticSettingsArgs
                     {
                         Bytes = 512,
                     },
@@ -83,7 +83,7 @@ class MyStack : Stack
             },
             LoggerId = "/loggers/azuremonitor",
             ResourceGroupName = "rg1",
-            Sampling = new AzureNextGen.ApiManagement.Latest.Inputs.SamplingSettingsArgs
+            Sampling = new AzureNextGen.ApiManagement..Inputs.SamplingSettingsArgs
             {
                 Percentage = 50,
                 SamplingType = "fixed",
@@ -104,7 +104,7 @@ class MyStack : Stack
 package main
 
 import (
-	apimanagement "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/apimanagement/latest"
+	apimanagement "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/apimanagement"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -174,32 +174,32 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-diagnostic = azure_nextgen.apimanagement.latest.Diagnostic("diagnostic",
+diagnostic = azure_nextgen.apimanagement.Diagnostic("diagnostic",
     always_log="allErrors",
-    backend=azure_nextgen.apimanagement.latest.PipelineDiagnosticSettingsArgs(
-        request=azure_nextgen.apimanagement.latest.HttpMessageDiagnosticArgs(
-            body=azure_nextgen.apimanagement.latest.BodyDiagnosticSettingsArgs(
+    backend=azure_nextgen.apimanagement.PipelineDiagnosticSettingsArgs(
+        request=azure_nextgen.apimanagement.HttpMessageDiagnosticArgs(
+            body=azure_nextgen.apimanagement.BodyDiagnosticSettingsArgs(
                 bytes=512,
             ),
             headers=["Content-type"],
         ),
-        response=azure_nextgen.apimanagement.latest.HttpMessageDiagnosticArgs(
-            body=azure_nextgen.apimanagement.latest.BodyDiagnosticSettingsArgs(
+        response=azure_nextgen.apimanagement.HttpMessageDiagnosticArgs(
+            body=azure_nextgen.apimanagement.BodyDiagnosticSettingsArgs(
                 bytes=512,
             ),
             headers=["Content-type"],
         ),
     ),
     diagnostic_id="applicationinsights",
-    frontend=azure_nextgen.apimanagement.latest.PipelineDiagnosticSettingsArgs(
-        request=azure_nextgen.apimanagement.latest.HttpMessageDiagnosticArgs(
-            body=azure_nextgen.apimanagement.latest.BodyDiagnosticSettingsArgs(
+    frontend=azure_nextgen.apimanagement.PipelineDiagnosticSettingsArgs(
+        request=azure_nextgen.apimanagement.HttpMessageDiagnosticArgs(
+            body=azure_nextgen.apimanagement.BodyDiagnosticSettingsArgs(
                 bytes=512,
             ),
             headers=["Content-type"],
         ),
-        response=azure_nextgen.apimanagement.latest.HttpMessageDiagnosticArgs(
-            body=azure_nextgen.apimanagement.latest.BodyDiagnosticSettingsArgs(
+        response=azure_nextgen.apimanagement.HttpMessageDiagnosticArgs(
+            body=azure_nextgen.apimanagement.BodyDiagnosticSettingsArgs(
                 bytes=512,
             ),
             headers=["Content-type"],
@@ -207,7 +207,7 @@ diagnostic = azure_nextgen.apimanagement.latest.Diagnostic("diagnostic",
     ),
     logger_id="/loggers/azuremonitor",
     resource_group_name="rg1",
-    sampling=azure_nextgen.apimanagement.latest.SamplingSettingsArgs(
+    sampling=azure_nextgen.apimanagement.SamplingSettingsArgs(
         percentage=50,
         sampling_type="fixed",
     ),
@@ -223,7 +223,7 @@ diagnostic = azure_nextgen.apimanagement.latest.Diagnostic("diagnostic",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const diagnostic = new azure_nextgen.apimanagement.latest.Diagnostic("diagnostic", {
+const diagnostic = new azure_nextgen.apimanagement.Diagnostic("diagnostic", {
     alwaysLog: "allErrors",
     backend: {
         request: {
@@ -492,7 +492,7 @@ The Diagnostic resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#alwayslog_csharp" style="color: inherit; text-decoration: inherit;">Always<wbr>Log</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#alwayslog">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management.<wbr>Always<wbr>Log</a></span>
+        <span class="property-type">string | <a href="#alwayslog">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management..<wbr>Always<wbr>Log</a></span>
     </dt>
     <dd>{{% md %}}Specifies for what type of messages sampling settings should not apply.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -501,7 +501,7 @@ The Diagnostic resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#backend_csharp" style="color: inherit; text-decoration: inherit;">Backend</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinediagnosticsettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Pipeline<wbr>Diagnostic<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#pipelinediagnosticsettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management..<wbr>Inputs.<wbr>Pipeline<wbr>Diagnostic<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Diagnostic settings for incoming/outgoing HTTP messages to the Backend{{% /md %}}</dd>
     <dt class="property-optional"
@@ -510,7 +510,7 @@ The Diagnostic resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#frontend_csharp" style="color: inherit; text-decoration: inherit;">Frontend</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinediagnosticsettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Pipeline<wbr>Diagnostic<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#pipelinediagnosticsettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management..<wbr>Inputs.<wbr>Pipeline<wbr>Diagnostic<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Diagnostic settings for incoming/outgoing HTTP messages to the Gateway.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -519,7 +519,7 @@ The Diagnostic resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#httpcorrelationprotocol_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Correlation<wbr>Protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#httpcorrelationprotocol">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management.<wbr>Http<wbr>Correlation<wbr>Protocol</a></span>
+        <span class="property-type">string | <a href="#httpcorrelationprotocol">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management..<wbr>Http<wbr>Correlation<wbr>Protocol</a></span>
     </dt>
     <dd>{{% md %}}Sets correlation protocol to use for Application Insights diagnostics.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -537,7 +537,7 @@ The Diagnostic resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#sampling_csharp" style="color: inherit; text-decoration: inherit;">Sampling</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#samplingsettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Sampling<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#samplingsettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management..<wbr>Inputs.<wbr>Sampling<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Sampling settings for Diagnostic.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -546,7 +546,7 @@ The Diagnostic resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#verbosity_csharp" style="color: inherit; text-decoration: inherit;">Verbosity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#verbosity">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management.<wbr>Verbosity</a></span>
+        <span class="property-type">string | <a href="#verbosity">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management..<wbr>Verbosity</a></span>
     </dt>
     <dd>{{% md %}}The verbosity level applied to traces emitted by trace policies.{{% /md %}}</dd>
 </dl>
@@ -1227,7 +1227,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#body_csharp" style="color: inherit; text-decoration: inherit;">Body</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bodydiagnosticsettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Body<wbr>Diagnostic<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#bodydiagnosticsettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management..<wbr>Inputs.<wbr>Body<wbr>Diagnostic<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Body logging settings.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1325,7 +1325,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#body_csharp" style="color: inherit; text-decoration: inherit;">Body</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bodydiagnosticsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Body<wbr>Diagnostic<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#bodydiagnosticsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management..<wbr>Inputs.<wbr>Body<wbr>Diagnostic<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Body logging settings.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1423,7 +1423,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#request_csharp" style="color: inherit; text-decoration: inherit;">Request</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpmessagediagnostic">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Http<wbr>Message<wbr>Diagnostic<wbr>Args</a></span>
+        <span class="property-type"><a href="#httpmessagediagnostic">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management..<wbr>Inputs.<wbr>Http<wbr>Message<wbr>Diagnostic<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Diagnostic settings for request.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1432,7 +1432,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#response_csharp" style="color: inherit; text-decoration: inherit;">Response</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpmessagediagnostic">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Http<wbr>Message<wbr>Diagnostic<wbr>Args</a></span>
+        <span class="property-type"><a href="#httpmessagediagnostic">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management..<wbr>Inputs.<wbr>Http<wbr>Message<wbr>Diagnostic<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Diagnostic settings for response.{{% /md %}}</dd>
 </dl>
@@ -1521,7 +1521,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#request_csharp" style="color: inherit; text-decoration: inherit;">Request</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpmessagediagnosticresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Http<wbr>Message<wbr>Diagnostic<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#httpmessagediagnosticresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management..<wbr>Inputs.<wbr>Http<wbr>Message<wbr>Diagnostic<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Diagnostic settings for request.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1530,7 +1530,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#response_csharp" style="color: inherit; text-decoration: inherit;">Response</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpmessagediagnosticresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Http<wbr>Message<wbr>Diagnostic<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#httpmessagediagnosticresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management..<wbr>Inputs.<wbr>Http<wbr>Message<wbr>Diagnostic<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Diagnostic settings for response.{{% /md %}}</dd>
 </dl>
@@ -1628,7 +1628,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#samplingtype_csharp" style="color: inherit; text-decoration: inherit;">Sampling<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#samplingtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management.<wbr>Sampling<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#samplingtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management..<wbr>Sampling<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Sampling type.{{% /md %}}</dd>
 </dl>
@@ -1885,7 +1885,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:apimanagement/latest:Diagnostic applicationinsights /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/diagnostics/applicationinsights 
+$ pulumi import azure-nextgen:apimanagement:Diagnostic applicationinsights /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/diagnostics/applicationinsights 
 ```
 
 

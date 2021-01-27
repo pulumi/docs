@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.relay.WCFRelayAuthorizationRule 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Description of a namespace authorization rule.
-Latest API Version: 2017-04-01.
+API Version: 2017-04-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var wcfRelayAuthorizationRule = new AzureNextGen.Relay.Latest.WCFRelayAuthorizationRule("wcfRelayAuthorizationRule", new AzureNextGen.Relay.Latest.WCFRelayAuthorizationRuleArgs
+        var wcfRelayAuthorizationRule = new AzureNextGen.Relay..WCFRelayAuthorizationRule("wcfRelayAuthorizationRule", new AzureNextGen.Relay..WCFRelayAuthorizationRuleArgs
         {
             AuthorizationRuleName = "example-RelayAuthRules-01",
             NamespaceName = "example-RelayNamespace-01",
@@ -57,7 +57,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-wcf_relay_authorization_rule = azure_nextgen.relay.latest.WCFRelayAuthorizationRule("wcfRelayAuthorizationRule",
+wcf_relay_authorization_rule = azure_nextgen.relay.WCFRelayAuthorizationRule("wcfRelayAuthorizationRule",
     authorization_rule_name="example-RelayAuthRules-01",
     namespace_name="example-RelayNamespace-01",
     relay_name="example-Relay-wcf-01",
@@ -77,7 +77,7 @@ wcf_relay_authorization_rule = azure_nextgen.relay.latest.WCFRelayAuthorizationR
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const wcfRelayAuthorizationRule = new azure_nextgen.relay.latest.WCFRelayAuthorizationRule("wcfRelayAuthorizationRule", {
+const wcfRelayAuthorizationRule = new azure_nextgen.relay.WCFRelayAuthorizationRule("wcfRelayAuthorizationRule", {
     authorizationRuleName: "example-RelayAuthRules-01",
     namespaceName: "example-RelayNamespace-01",
     relayName: "example-Relay-wcf-01",
@@ -317,7 +317,7 @@ The WCFRelayAuthorizationRule resource accepts the following [input]({{< relref 
 <a href="#rights_csharp" style="color: inherit; text-decoration: inherit;">Rights</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accessrights">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Relay.<wbr>Access<wbr>Rights&gt;</a></span>
+        <span class="property-type"><a href="#accessrights">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Relay..<wbr>Access<wbr>Rights&gt;</a></span>
     </dt>
     <dd>{{% md %}}The rights associated with the rule.{{% /md %}}</dd>
 </dl>
@@ -676,7 +676,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:relay/latest:WCFRelayAuthorizationRule example-RelayAuthRules-01 /subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/resourcegroup/providers/Microsoft.Relay/namespaces/example-RelayNamespace-01/WcfRelays/example-Relay-Wcf-01/AuthorizationRules/example-RelayAuthRules-01 
+$ pulumi import azure-nextgen:relay:WCFRelayAuthorizationRule example-RelayAuthRules-01 /subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/resourcegroup/providers/Microsoft.Relay/namespaces/example-RelayNamespace-01/WcfRelays/example-Relay-Wcf-01/AuthorizationRules/example-RelayAuthRules-01 
 ```
 
 

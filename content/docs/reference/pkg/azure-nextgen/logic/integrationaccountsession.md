@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.logic.IntegrationAccountSession 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The integration account session.
-Latest API Version: 2019-05-01.
+API Version: 2019-05-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var integrationAccountSession = new AzureNextGen.Logic.Latest.IntegrationAccountSession("integrationAccountSession", new AzureNextGen.Logic.Latest.IntegrationAccountSessionArgs
+        var integrationAccountSession = new AzureNextGen.Logic..IntegrationAccountSession("integrationAccountSession", new AzureNextGen.Logic..IntegrationAccountSessionArgs
         {
             Content = 
             {
@@ -52,7 +52,7 @@ class MyStack : Stack
 package main
 
 import (
-	logic "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/logic/latest"
+	logic "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/logic"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -84,7 +84,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-integration_account_session = azure_nextgen.logic.latest.IntegrationAccountSession("integrationAccountSession",
+integration_account_session = azure_nextgen.logic.IntegrationAccountSession("integrationAccountSession",
     content={
         "controlNumber": "1234",
         "controlNumberChangedTime": "2017-02-21T22:30:11.9923759Z",
@@ -103,7 +103,7 @@ integration_account_session = azure_nextgen.logic.latest.IntegrationAccountSessi
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const integrationAccountSession = new azure_nextgen.logic.latest.IntegrationAccountSession("integrationAccountSession", {
+const integrationAccountSession = new azure_nextgen.logic.IntegrationAccountSession("integrationAccountSession", {
     content: {
         controlNumber: "1234",
         controlNumberChangedTime: "2017-02-21T22:30:11.9923759Z",
@@ -759,7 +759,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:logic/latest:IntegrationAccountSession testsession123-ICN /subscriptions/34adfa4f-cedf-4dc0-ba29-b6d1a69ab345/resourceGroups/testrg123/providers/Microsoft.Logic/integrationAccounts/testia123/sessions/testsession123-ICN 
+$ pulumi import azure-nextgen:logic:IntegrationAccountSession testsession123-ICN /subscriptions/34adfa4f-cedf-4dc0-ba29-b6d1a69ab345/resourceGroups/testrg123/providers/Microsoft.Logic/integrationAccounts/testia123/sessions/testsession123-ICN 
 ```
 
 

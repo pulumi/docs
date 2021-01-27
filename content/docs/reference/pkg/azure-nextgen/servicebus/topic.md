@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.servicebus.Topic resource with e
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Description of topic resource.
-Latest API Version: 2017-04-01.
+API Version: 2017-04-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var topic = new AzureNextGen.ServiceBus.Latest.Topic("topic", new AzureNextGen.ServiceBus.Latest.TopicArgs
+        var topic = new AzureNextGen.ServiceBus..Topic("topic", new AzureNextGen.ServiceBus..TopicArgs
         {
             EnableExpress = true,
             NamespaceName = "sdk-Namespace-1617",
@@ -48,7 +48,7 @@ class MyStack : Stack
 package main
 
 import (
-	servicebus "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/servicebus/latest"
+	servicebus "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/servicebus"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -77,7 +77,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-topic = azure_nextgen.servicebus.latest.Topic("topic",
+topic = azure_nextgen.servicebus.Topic("topic",
     enable_express=True,
     namespace_name="sdk-Namespace-1617",
     resource_group_name="ArunMonocle",
@@ -93,7 +93,7 @@ topic = azure_nextgen.servicebus.latest.Topic("topic",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const topic = new azure_nextgen.servicebus.latest.Topic("topic", {
+const topic = new azure_nextgen.servicebus.Topic("topic", {
     enableExpress: true,
     namespaceName: "sdk-Namespace-1617",
     resourceGroupName: "ArunMonocle",
@@ -392,7 +392,7 @@ The Topic resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#entitystatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Bus.<wbr>Entity<wbr>Status</a></span>
+        <span class="property-type"><a href="#entitystatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Bus..<wbr>Entity<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}Enumerates the possible values for the status of a messaging entity.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -801,7 +801,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#countdetails_csharp" style="color: inherit; text-decoration: inherit;">Count<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#messagecountdetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Bus.<wbr>Outputs.<wbr>Message<wbr>Count<wbr>Details<wbr>Response</a></span>
+        <span class="property-type"><a href="#messagecountdetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Bus..<wbr>Outputs.<wbr>Message<wbr>Count<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Message count details{{% /md %}}</dd>
     <dt class="property-"
@@ -1446,7 +1446,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:servicebus/latest:Topic sdk-Topics-5488 /subscriptions/5f750a97-50d9-4e36-8081-c9ee4c0210d4/resourceGroups/ArunMonocle/providers/Microsoft.ServiceBus/namespaces/sdk-Namespace-1617/topics/sdk-Topics-5488 
+$ pulumi import azure-nextgen:servicebus:Topic sdk-Topics-5488 /subscriptions/5f750a97-50d9-4e36-8081-c9ee4c0210d4/resourceGroups/ArunMonocle/providers/Microsoft.ServiceBus/namespaces/sdk-Namespace-1617/topics/sdk-Topics-5488 
 ```
 
 

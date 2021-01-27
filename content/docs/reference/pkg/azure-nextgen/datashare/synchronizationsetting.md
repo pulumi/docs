@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.datashare.SynchronizationSetting
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 A Synchronization Setting data transfer object.
-Latest API Version: 2019-11-01.
+API Version: 2019-11-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var synchronizationSetting = new AzureNextGen.DataShare.Latest.SynchronizationSetting("synchronizationSetting", new AzureNextGen.DataShare.Latest.SynchronizationSettingArgs
+        var synchronizationSetting = new AzureNextGen.DataShare..SynchronizationSetting("synchronizationSetting", new AzureNextGen.DataShare..SynchronizationSettingArgs
         {
             AccountName = "Account1",
             Kind = "ScheduleBased",
@@ -49,7 +49,7 @@ class MyStack : Stack
 package main
 
 import (
-	datashare "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datashare/latest"
+	datashare "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datashare"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -79,7 +79,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-synchronization_setting = azure_nextgen.datashare.latest.SynchronizationSetting("synchronizationSetting",
+synchronization_setting = azure_nextgen.datashare.SynchronizationSetting("synchronizationSetting",
     account_name="Account1",
     kind="ScheduleBased",
     resource_group_name="SampleResourceGroup",
@@ -96,7 +96,7 @@ synchronization_setting = azure_nextgen.datashare.latest.SynchronizationSetting(
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const synchronizationSetting = new azure_nextgen.datashare.latest.SynchronizationSetting("synchronizationSetting", {
+const synchronizationSetting = new azure_nextgen.datashare.SynchronizationSetting("synchronizationSetting", {
     accountName: "Account1",
     kind: "ScheduleBased",
     resourceGroupName: "SampleResourceGroup",
@@ -306,7 +306,7 @@ The SynchronizationSetting resource accepts the following [input]({{< relref "/d
 <a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#kind">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Share.<wbr>Kind</a></span>
+        <span class="property-type">string | <a href="#kind">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Share..<wbr>Kind</a></span>
     </dt>
     <dd>{{% md %}}Kind of synchronization{{% /md %}}</dd>
     <dt class="property-required"
@@ -676,7 +676,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:datashare/latest:SynchronizationSetting SyncrhonizationSetting1 /subscriptions/433a8dfd-e5d5-4e77-ad86-90acdc75eb1a/resourceGroups/SampleResourceGroup/providers/Microsoft.DataShare/accounts/Account1/shares/Share1/syncrhonizationSettings/SyncrhonizationSetting1 
+$ pulumi import azure-nextgen:datashare:SynchronizationSetting SyncrhonizationSetting1 /subscriptions/433a8dfd-e5d5-4e77-ad86-90acdc75eb1a/resourceGroups/SampleResourceGroup/providers/Microsoft.DataShare/accounts/Account1/shares/Share1/syncrhonizationSettings/SyncrhonizationSetting1 
 ```
 
 

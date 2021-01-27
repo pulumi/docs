@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.deploymentmanager.Rollout resour
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Defines the PUT rollout request body.
+API Version: 2019-11-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,11 +27,11 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var rollout = new AzureNextGen.DeploymentManager.V20191101Preview.Rollout("rollout", new AzureNextGen.DeploymentManager.V20191101Preview.RolloutArgs
+        var rollout = new AzureNextGen.DeploymentManager..Rollout("rollout", new AzureNextGen.DeploymentManager..RolloutArgs
         {
             ArtifactSourceId = "/subscriptions/caac1590-e859-444f-a9e0-62091c0f5929/resourceGroups/myResourceGroup/Microsoft.DeploymentManager/artifactSources/myArtifactSource",
             BuildVersion = "1.0.0.1",
-            Identity = new AzureNextGen.DeploymentManager.V20191101Preview.Inputs.IdentityArgs
+            Identity = new AzureNextGen.DeploymentManager..Inputs.IdentityArgs
             {
                 IdentityIds = 
                 {
@@ -43,30 +44,30 @@ class MyStack : Stack
             RolloutName = "myRollout",
             StepGroups = 
             {
-                new AzureNextGen.DeploymentManager.V20191101Preview.Inputs.StepGroupArgs
+                new AzureNextGen.DeploymentManager..Inputs.StepGroupArgs
                 {
                     DeploymentTargetId = "Microsoft.DeploymentManager/serviceTopologies/myTopology/services/myService/serviceUnits/myServiceUnit1'",
                     Name = "FirstRegion",
                     PostDeploymentSteps = 
                     {
-                        new AzureNextGen.DeploymentManager.V20191101Preview.Inputs.PrePostStepArgs
+                        new AzureNextGen.DeploymentManager..Inputs.PrePostStepArgs
                         {
                             StepId = "Microsoft.DeploymentManager/steps/postDeployStep1",
                         },
                     },
                     PreDeploymentSteps = 
                     {
-                        new AzureNextGen.DeploymentManager.V20191101Preview.Inputs.PrePostStepArgs
+                        new AzureNextGen.DeploymentManager..Inputs.PrePostStepArgs
                         {
                             StepId = "Microsoft.DeploymentManager/steps/preDeployStep1",
                         },
-                        new AzureNextGen.DeploymentManager.V20191101Preview.Inputs.PrePostStepArgs
+                        new AzureNextGen.DeploymentManager..Inputs.PrePostStepArgs
                         {
                             StepId = "Microsoft.DeploymentManager/steps/preDeployStep2",
                         },
                     },
                 },
-                new AzureNextGen.DeploymentManager.V20191101Preview.Inputs.StepGroupArgs
+                new AzureNextGen.DeploymentManager..Inputs.StepGroupArgs
                 {
                     DependsOnStepGroups = 
                     {
@@ -76,18 +77,18 @@ class MyStack : Stack
                     Name = "SecondRegion",
                     PostDeploymentSteps = 
                     {
-                        new AzureNextGen.DeploymentManager.V20191101Preview.Inputs.PrePostStepArgs
+                        new AzureNextGen.DeploymentManager..Inputs.PrePostStepArgs
                         {
                             StepId = "Microsoft.DeploymentManager/steps/postDeployStep5",
                         },
                     },
                     PreDeploymentSteps = 
                     {
-                        new AzureNextGen.DeploymentManager.V20191101Preview.Inputs.PrePostStepArgs
+                        new AzureNextGen.DeploymentManager..Inputs.PrePostStepArgs
                         {
                             StepId = "Microsoft.DeploymentManager/steps/preDeployStep3",
                         },
-                        new AzureNextGen.DeploymentManager.V20191101Preview.Inputs.PrePostStepArgs
+                        new AzureNextGen.DeploymentManager..Inputs.PrePostStepArgs
                         {
                             StepId = "Microsoft.DeploymentManager/steps/preDeployStep4",
                         },
@@ -111,7 +112,7 @@ class MyStack : Stack
 package main
 
 import (
-	deploymentmanager "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/deploymentmanager/v20191101preview"
+	deploymentmanager "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/deploymentmanager"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -188,10 +189,10 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-rollout = azure_nextgen.deploymentmanager.v20191101preview.Rollout("rollout",
+rollout = azure_nextgen.deploymentmanager.Rollout("rollout",
     artifact_source_id="/subscriptions/caac1590-e859-444f-a9e0-62091c0f5929/resourceGroups/myResourceGroup/Microsoft.DeploymentManager/artifactSources/myArtifactSource",
     build_version="1.0.0.1",
-    identity=azure_nextgen.deploymentmanager.v20191101preview.IdentityArgs(
+    identity=azure_nextgen.deploymentmanager.IdentityArgs(
         identity_ids=["/subscriptions/caac1590-e859-444f-a9e0-62091c0f5929/resourceGroups/myResourceGroup/providers/Microsoft.ManagedIdentity/userassignedidentities/myuseridentity"],
         type="userAssigned",
     ),
@@ -199,33 +200,33 @@ rollout = azure_nextgen.deploymentmanager.v20191101preview.Rollout("rollout",
     resource_group_name="myResourceGroup",
     rollout_name="myRollout",
     step_groups=[
-        azure_nextgen.deploymentmanager.v20191101preview.StepGroupArgs(
+        azure_nextgen.deploymentmanager.StepGroupArgs(
             deployment_target_id="Microsoft.DeploymentManager/serviceTopologies/myTopology/services/myService/serviceUnits/myServiceUnit1'",
             name="FirstRegion",
-            post_deployment_steps=[azure_nextgen.deploymentmanager.v20191101preview.PrePostStepArgs(
+            post_deployment_steps=[azure_nextgen.deploymentmanager.PrePostStepArgs(
                 step_id="Microsoft.DeploymentManager/steps/postDeployStep1",
             )],
             pre_deployment_steps=[
-                azure_nextgen.deploymentmanager.v20191101preview.PrePostStepArgs(
+                azure_nextgen.deploymentmanager.PrePostStepArgs(
                     step_id="Microsoft.DeploymentManager/steps/preDeployStep1",
                 ),
-                azure_nextgen.deploymentmanager.v20191101preview.PrePostStepArgs(
+                azure_nextgen.deploymentmanager.PrePostStepArgs(
                     step_id="Microsoft.DeploymentManager/steps/preDeployStep2",
                 ),
             ],
         ),
-        azure_nextgen.deploymentmanager.v20191101preview.StepGroupArgs(
+        azure_nextgen.deploymentmanager.StepGroupArgs(
             depends_on_step_groups=["FirstRegion"],
             deployment_target_id="Microsoft.DeploymentManager/serviceTopologies/myTopology/services/myService/serviceUnits/myServiceUnit2'",
             name="SecondRegion",
-            post_deployment_steps=[azure_nextgen.deploymentmanager.v20191101preview.PrePostStepArgs(
+            post_deployment_steps=[azure_nextgen.deploymentmanager.PrePostStepArgs(
                 step_id="Microsoft.DeploymentManager/steps/postDeployStep5",
             )],
             pre_deployment_steps=[
-                azure_nextgen.deploymentmanager.v20191101preview.PrePostStepArgs(
+                azure_nextgen.deploymentmanager.PrePostStepArgs(
                     step_id="Microsoft.DeploymentManager/steps/preDeployStep3",
                 ),
-                azure_nextgen.deploymentmanager.v20191101preview.PrePostStepArgs(
+                azure_nextgen.deploymentmanager.PrePostStepArgs(
                     step_id="Microsoft.DeploymentManager/steps/preDeployStep4",
                 ),
             ],
@@ -244,7 +245,7 @@ rollout = azure_nextgen.deploymentmanager.v20191101preview.Rollout("rollout",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const rollout = new azure_nextgen.deploymentmanager.v20191101preview.Rollout("rollout", {
+const rollout = new azure_nextgen.deploymentmanager.Rollout("rollout", {
     artifactSourceId: "/subscriptions/caac1590-e859-444f-a9e0-62091c0f5929/resourceGroups/myResourceGroup/Microsoft.DeploymentManager/artifactSources/myArtifactSource",
     buildVersion: "1.0.0.1",
     identity: {
@@ -493,7 +494,7 @@ The Rollout resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identity">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Deployment<wbr>Manager.<wbr>Inputs.<wbr>Identity<wbr>Args</a></span>
+        <span class="property-type"><a href="#identity">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Deployment<wbr>Manager..<wbr>Inputs.<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Identity for the resource.{{% /md %}}</dd>
     <dt class="property-required"
@@ -529,7 +530,7 @@ The Rollout resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#stepgroups_csharp" style="color: inherit; text-decoration: inherit;">Step<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#stepgroup">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Deployment<wbr>Manager.<wbr>Inputs.<wbr>Step<wbr>Group<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#stepgroup">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Deployment<wbr>Manager..<wbr>Inputs.<wbr>Step<wbr>Group<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of step groups that define the orchestration.{{% /md %}}</dd>
     <dt class="property-required"
@@ -1330,7 +1331,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#postdeploymentsteps_csharp" style="color: inherit; text-decoration: inherit;">Post<wbr>Deployment<wbr>Steps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#prepoststep">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Deployment<wbr>Manager.<wbr>Inputs.<wbr>Pre<wbr>Post<wbr>Step<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#prepoststep">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Deployment<wbr>Manager..<wbr>Inputs.<wbr>Pre<wbr>Post<wbr>Step<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of steps to be run after deploying the target.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1339,7 +1340,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#predeploymentsteps_csharp" style="color: inherit; text-decoration: inherit;">Pre<wbr>Deployment<wbr>Steps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#prepoststep">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Deployment<wbr>Manager.<wbr>Inputs.<wbr>Pre<wbr>Post<wbr>Step<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#prepoststep">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Deployment<wbr>Manager..<wbr>Inputs.<wbr>Pre<wbr>Post<wbr>Step<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of steps to be run before deploying the target.{{% /md %}}</dd>
 </dl>
@@ -1536,7 +1537,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#postdeploymentsteps_csharp" style="color: inherit; text-decoration: inherit;">Post<wbr>Deployment<wbr>Steps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#prepoststepresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Deployment<wbr>Manager.<wbr>Inputs.<wbr>Pre<wbr>Post<wbr>Step<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#prepoststepresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Deployment<wbr>Manager..<wbr>Inputs.<wbr>Pre<wbr>Post<wbr>Step<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of steps to be run after deploying the target.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1545,7 +1546,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#predeploymentsteps_csharp" style="color: inherit; text-decoration: inherit;">Pre<wbr>Deployment<wbr>Steps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#prepoststepresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Deployment<wbr>Manager.<wbr>Inputs.<wbr>Pre<wbr>Post<wbr>Step<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#prepoststepresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Deployment<wbr>Manager..<wbr>Inputs.<wbr>Pre<wbr>Post<wbr>Step<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of steps to be run before deploying the target.{{% /md %}}</dd>
 </dl>
@@ -1709,7 +1710,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:deploymentmanager/v20191101preview:Rollout myRollout /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DeploymentManager/rollouts/{rolloutName} 
+$ pulumi import azure-nextgen:deploymentmanager:Rollout myRollout /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DeploymentManager/rollouts/{rolloutName} 
 ```
 
 

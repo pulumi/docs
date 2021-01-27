@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.insights.PrivateLinkScopedResour
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 A private link scoped resource
+API Version: 2019-10-17-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var privateLinkScopedResource = new AzureNextGen.Insights.V20191017Preview.PrivateLinkScopedResource("privateLinkScopedResource", new AzureNextGen.Insights.V20191017Preview.PrivateLinkScopedResourceArgs
+        var privateLinkScopedResource = new AzureNextGen.Insights..PrivateLinkScopedResource("privateLinkScopedResource", new AzureNextGen.Insights..PrivateLinkScopedResourceArgs
         {
             LinkedResourceId = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/MyResourceGroup/providers/Microsoft.Insights/components/my-component",
             Name = "scoped-resource-name",
@@ -47,7 +48,7 @@ class MyStack : Stack
 package main
 
 import (
-	insights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/insights/v20191017preview"
+	insights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/insights"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -76,7 +77,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-private_link_scoped_resource = azure_nextgen.insights.v20191017preview.PrivateLinkScopedResource("privateLinkScopedResource",
+private_link_scoped_resource = azure_nextgen.insights.PrivateLinkScopedResource("privateLinkScopedResource",
     linked_resource_id="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/MyResourceGroup/providers/Microsoft.Insights/components/my-component",
     name="scoped-resource-name",
     resource_group_name="MyResourceGroup",
@@ -92,7 +93,7 @@ private_link_scoped_resource = azure_nextgen.insights.v20191017preview.PrivateLi
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const privateLinkScopedResource = new azure_nextgen.insights.v20191017preview.PrivateLinkScopedResource("privateLinkScopedResource", {
+const privateLinkScopedResource = new azure_nextgen.insights.PrivateLinkScopedResource("privateLinkScopedResource", {
     linkedResourceId: "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/MyResourceGroup/providers/Microsoft.Insights/components/my-component",
     name: "scoped-resource-name",
     resourceGroupName: "MyResourceGroup",
@@ -601,7 +602,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:insights/v20191017preview:PrivateLinkScopedResource scoped-resource-name /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/MyResourceGroup/providers/Microsoft.Insights/privateLinkScopes/MyPrivateLinkScope/scopedResources/scoped-resource-name 
+$ pulumi import azure-nextgen:insights:PrivateLinkScopedResource scoped-resource-name /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/MyResourceGroup/providers/Microsoft.Insights/privateLinkScopes/MyPrivateLinkScope/scopedResources/scoped-resource-name 
 ```
 
 

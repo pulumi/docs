@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.recoveryservices.ProtectionConta
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Base class for container with backup items. Containers with specific workloads are derived from this class.
-Latest API Version: 2020-12-01.
+API Version: 2020-12-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var protectionContainer = new AzureNextGen.RecoveryServices.Latest.ProtectionContainer("protectionContainer", new AzureNextGen.RecoveryServices.Latest.ProtectionContainerArgs
+        var protectionContainer = new AzureNextGen.RecoveryServices..ProtectionContainer("protectionContainer", new AzureNextGen.RecoveryServices..ProtectionContainerArgs
         {
             ContainerName = "VMAppContainer;Compute;testRG;testSQL",
             FabricName = "Azure",
@@ -59,7 +59,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-protection_container = azure_nextgen.recoveryservices.latest.ProtectionContainer("protectionContainer",
+protection_container = azure_nextgen.recoveryservices.ProtectionContainer("protectionContainer",
     container_name="VMAppContainer;Compute;testRG;testSQL",
     fabric_name="Azure",
     properties={
@@ -81,7 +81,7 @@ protection_container = azure_nextgen.recoveryservices.latest.ProtectionContainer
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const protectionContainer = new azure_nextgen.recoveryservices.latest.ProtectionContainer("protectionContainer", {
+const protectionContainer = new azure_nextgen.recoveryservices.ProtectionContainer("protectionContainer", {
     containerName: "VMAppContainer;Compute;testRG;testSQL",
     fabricName: "Azure",
     properties: {
@@ -341,7 +341,7 @@ The ProtectionContainer resource accepts the following [input]({{< relref "/docs
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurebackupservercontainer">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Azure<wbr>Backup<wbr>Server<wbr>Container<wbr>Args</a> | <a href="#azureiaasclassiccomputevmcontainer">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Azure<wbr>Iaa<wbr>SClassic<wbr>Compute<wbr>VMContainer<wbr>Args</a> | <a href="#azureiaascomputevmcontainer">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Azure<wbr>Iaa<wbr>SCompute<wbr>VMContainer<wbr>Args</a> | <a href="#azuresqlagworkloadcontainerprotectioncontainer">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Azure<wbr>SQLAGWorkload<wbr>Container<wbr>Protection<wbr>Container<wbr>Args</a> | <a href="#azuresqlcontainer">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Azure<wbr>Sql<wbr>Container<wbr>Args</a> | <a href="#azurestoragecontainer">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Azure<wbr>Storage<wbr>Container<wbr>Args</a> | <a href="#azurevmappcontainerprotectioncontainer">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Azure<wbr>VMApp<wbr>Container<wbr>Protection<wbr>Container<wbr>Args</a> | <a href="#azureworkloadcontainer">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Azure<wbr>Workload<wbr>Container<wbr>Args</a> | <a href="#dpmcontainer">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Dpm<wbr>Container<wbr>Args</a> | <a href="#genericcontainer">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Generic<wbr>Container<wbr>Args</a> | <a href="#iaasvmcontainer">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Iaa<wbr>SVMContainer<wbr>Args</a> | <a href="#mabcontainer">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Mab<wbr>Container<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurebackupservercontainer">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Azure<wbr>Backup<wbr>Server<wbr>Container<wbr>Args</a> | <a href="#azureiaasclassiccomputevmcontainer">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Azure<wbr>Iaa<wbr>SClassic<wbr>Compute<wbr>VMContainer<wbr>Args</a> | <a href="#azureiaascomputevmcontainer">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Azure<wbr>Iaa<wbr>SCompute<wbr>VMContainer<wbr>Args</a> | <a href="#azuresqlagworkloadcontainerprotectioncontainer">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Azure<wbr>SQLAGWorkload<wbr>Container<wbr>Protection<wbr>Container<wbr>Args</a> | <a href="#azuresqlcontainer">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Azure<wbr>Sql<wbr>Container<wbr>Args</a> | <a href="#azurestoragecontainer">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Azure<wbr>Storage<wbr>Container<wbr>Args</a> | <a href="#azurevmappcontainerprotectioncontainer">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Azure<wbr>VMApp<wbr>Container<wbr>Protection<wbr>Container<wbr>Args</a> | <a href="#azureworkloadcontainer">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Azure<wbr>Workload<wbr>Container<wbr>Args</a> | <a href="#dpmcontainer">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Dpm<wbr>Container<wbr>Args</a> | <a href="#genericcontainer">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Generic<wbr>Container<wbr>Args</a> | <a href="#iaasvmcontainer">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Iaa<wbr>SVMContainer<wbr>Args</a> | <a href="#mabcontainer">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Mab<wbr>Container<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}ProtectionContainerResource properties{{% /md %}}</dd>
     <dt class="property-optional"
@@ -750,7 +750,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupmanagementtype_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Management<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#backupmanagementtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Backup<wbr>Management<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#backupmanagementtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Backup<wbr>Management<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of backup management for the container.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -795,7 +795,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extendedinfo_csharp" style="color: inherit; text-decoration: inherit;">Extended<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dpmcontainerextendedinfo">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>DPMContainer<wbr>Extended<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#dpmcontainerextendedinfo">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>DPMContainer<wbr>Extended<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Extended Info of the container.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1253,7 +1253,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extendedinfo_csharp" style="color: inherit; text-decoration: inherit;">Extended<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dpmcontainerextendedinforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>DPMContainer<wbr>Extended<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#dpmcontainerextendedinforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>DPMContainer<wbr>Extended<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Extended Info of the container.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1666,7 +1666,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupmanagementtype_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Management<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#backupmanagementtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Backup<wbr>Management<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#backupmanagementtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Backup<wbr>Management<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of backup management for the container.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2222,7 +2222,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupmanagementtype_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Management<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#backupmanagementtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Backup<wbr>Management<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#backupmanagementtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Backup<wbr>Management<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of backup management for the container.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2778,7 +2778,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupmanagementtype_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Management<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#backupmanagementtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Backup<wbr>Management<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#backupmanagementtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Backup<wbr>Management<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of backup management for the container.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2787,7 +2787,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extendedinfo_csharp" style="color: inherit; text-decoration: inherit;">Extended<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureworkloadcontainerextendedinfo">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Azure<wbr>Workload<wbr>Container<wbr>Extended<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#azureworkloadcontainerextendedinfo">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Azure<wbr>Workload<wbr>Container<wbr>Extended<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Additional details of a workload container.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2823,7 +2823,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operationtype_csharp" style="color: inherit; text-decoration: inherit;">Operation<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#operationtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Operation<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#operationtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Operation<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Re-Do Operation{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2850,7 +2850,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workloadtype_csharp" style="color: inherit; text-decoration: inherit;">Workload<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#workloadtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Workload<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#workloadtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Workload<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Workload type for which registration was sent.{{% /md %}}</dd>
 </dl>
@@ -3137,7 +3137,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extendedinfo_csharp" style="color: inherit; text-decoration: inherit;">Extended<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureworkloadcontainerextendedinforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Azure<wbr>Workload<wbr>Container<wbr>Extended<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azureworkloadcontainerextendedinforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Azure<wbr>Workload<wbr>Container<wbr>Extended<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Additional details of a workload container.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3478,7 +3478,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupmanagementtype_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Management<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#backupmanagementtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Backup<wbr>Management<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#backupmanagementtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Backup<wbr>Management<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of backup management for the container.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3818,7 +3818,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupmanagementtype_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Management<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#backupmanagementtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Backup<wbr>Management<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#backupmanagementtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Backup<wbr>Management<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of backup management for the container.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4446,7 +4446,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupmanagementtype_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Management<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#backupmanagementtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Backup<wbr>Management<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#backupmanagementtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Backup<wbr>Management<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of backup management for the container.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4455,7 +4455,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extendedinfo_csharp" style="color: inherit; text-decoration: inherit;">Extended<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureworkloadcontainerextendedinfo">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Azure<wbr>Workload<wbr>Container<wbr>Extended<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#azureworkloadcontainerextendedinfo">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Azure<wbr>Workload<wbr>Container<wbr>Extended<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Additional details of a workload container.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4491,7 +4491,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operationtype_csharp" style="color: inherit; text-decoration: inherit;">Operation<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#operationtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Operation<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#operationtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Operation<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Re-Do Operation{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4518,7 +4518,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workloadtype_csharp" style="color: inherit; text-decoration: inherit;">Workload<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#workloadtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Workload<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#workloadtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Workload<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Workload type for which registration was sent.{{% /md %}}</dd>
 </dl>
@@ -4805,7 +4805,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extendedinfo_csharp" style="color: inherit; text-decoration: inherit;">Extended<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureworkloadcontainerextendedinforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Azure<wbr>Workload<wbr>Container<wbr>Extended<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azureworkloadcontainerextendedinforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Azure<wbr>Workload<wbr>Container<wbr>Extended<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Additional details of a workload container.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -5146,7 +5146,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupmanagementtype_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Management<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#backupmanagementtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Backup<wbr>Management<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#backupmanagementtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Backup<wbr>Management<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of backup management for the container.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -5155,7 +5155,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extendedinfo_csharp" style="color: inherit; text-decoration: inherit;">Extended<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureworkloadcontainerextendedinfo">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Azure<wbr>Workload<wbr>Container<wbr>Extended<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#azureworkloadcontainerextendedinfo">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Azure<wbr>Workload<wbr>Container<wbr>Extended<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Additional details of a workload container.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -5191,7 +5191,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operationtype_csharp" style="color: inherit; text-decoration: inherit;">Operation<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#operationtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Operation<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#operationtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Operation<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Re-Do Operation{{% /md %}}</dd>
     <dt class="property-optional"
@@ -5218,7 +5218,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workloadtype_csharp" style="color: inherit; text-decoration: inherit;">Workload<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#workloadtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Workload<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#workloadtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Workload<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Workload type for which registration was sent.{{% /md %}}</dd>
 </dl>
@@ -5505,7 +5505,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inquiryinfo_csharp" style="color: inherit; text-decoration: inherit;">Inquiry<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inquiryinfo">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Inquiry<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#inquiryinfo">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Inquiry<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inquiry Status for the container.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -5514,7 +5514,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nodeslist_csharp" style="color: inherit; text-decoration: inherit;">Nodes<wbr>List</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributednodesinfo">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Distributed<wbr>Nodes<wbr>Info<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#distributednodesinfo">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Distributed<wbr>Nodes<wbr>Info<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of the nodes in case of distributed container.{{% /md %}}</dd>
 </dl>
@@ -5639,7 +5639,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inquiryinfo_csharp" style="color: inherit; text-decoration: inherit;">Inquiry<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inquiryinforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Inquiry<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#inquiryinforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Inquiry<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inquiry Status for the container.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -5648,7 +5648,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nodeslist_csharp" style="color: inherit; text-decoration: inherit;">Nodes<wbr>List</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributednodesinforesponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Distributed<wbr>Nodes<wbr>Info<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#distributednodesinforesponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Distributed<wbr>Nodes<wbr>Info<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of the nodes in case of distributed container.{{% /md %}}</dd>
 </dl>
@@ -5773,7 +5773,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extendedinfo_csharp" style="color: inherit; text-decoration: inherit;">Extended<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureworkloadcontainerextendedinforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Azure<wbr>Workload<wbr>Container<wbr>Extended<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azureworkloadcontainerextendedinforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Azure<wbr>Workload<wbr>Container<wbr>Extended<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Additional details of a workload container.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -6916,7 +6916,7 @@ Failed | Succeeded{{% /md %}}</dd>
 <a href="#errordetail_csharp" style="color: inherit; text-decoration: inherit;">Error<wbr>Detail</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#errordetailresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Error<wbr>Detail<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#errordetailresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Error<wbr>Detail<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Error Details if the Status is non-success.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -7054,7 +7054,7 @@ Failed | Succeeded{{% /md %}}</dd>
 <a href="#backupmanagementtype_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Management<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#backupmanagementtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Backup<wbr>Management<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#backupmanagementtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Backup<wbr>Management<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of backup management for the container.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -7099,7 +7099,7 @@ Failed | Succeeded{{% /md %}}</dd>
 <a href="#extendedinfo_csharp" style="color: inherit; text-decoration: inherit;">Extended<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dpmcontainerextendedinfo">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>DPMContainer<wbr>Extended<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#dpmcontainerextendedinfo">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>DPMContainer<wbr>Extended<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Extended Info of the container.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -7557,7 +7557,7 @@ Failed | Succeeded{{% /md %}}</dd>
 <a href="#extendedinfo_csharp" style="color: inherit; text-decoration: inherit;">Extended<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dpmcontainerextendedinforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>DPMContainer<wbr>Extended<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#dpmcontainerextendedinforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>DPMContainer<wbr>Extended<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Extended Info of the container.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -8104,7 +8104,7 @@ Failed | Succeeded{{% /md %}}</dd>
 <a href="#backupmanagementtype_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Management<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#backupmanagementtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Backup<wbr>Management<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#backupmanagementtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Backup<wbr>Management<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of backup management for the container.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -8113,7 +8113,7 @@ Failed | Succeeded{{% /md %}}</dd>
 <a href="#extendedinformation_csharp" style="color: inherit; text-decoration: inherit;">Extended<wbr>Information</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#genericcontainerextendedinfo">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Generic<wbr>Container<wbr>Extended<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#genericcontainerextendedinfo">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Generic<wbr>Container<wbr>Extended<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Extended information (not returned in List container API calls){{% /md %}}</dd>
     <dt class="property-optional"
@@ -8346,7 +8346,7 @@ Failed | Succeeded{{% /md %}}</dd>
 <a href="#containeridentityinfo_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Identity<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containeridentityinfo">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Container<wbr>Identity<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#containeridentityinfo">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Container<wbr>Identity<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Container identity information{{% /md %}}</dd>
     <dt class="property-optional"
@@ -8480,7 +8480,7 @@ Failed | Succeeded{{% /md %}}</dd>
 <a href="#containeridentityinfo_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Identity<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containeridentityinforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Container<wbr>Identity<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#containeridentityinforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Container<wbr>Identity<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Container identity information{{% /md %}}</dd>
     <dt class="property-optional"
@@ -8623,7 +8623,7 @@ Failed | Succeeded{{% /md %}}</dd>
 <a href="#extendedinformation_csharp" style="color: inherit; text-decoration: inherit;">Extended<wbr>Information</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#genericcontainerextendedinforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Generic<wbr>Container<wbr>Extended<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#genericcontainerextendedinforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Generic<wbr>Container<wbr>Extended<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Extended information (not returned in List container API calls){{% /md %}}</dd>
     <dt class="property-optional"
@@ -8856,7 +8856,7 @@ Failed | Succeeded{{% /md %}}</dd>
 <a href="#backupmanagementtype_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Management<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#backupmanagementtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Backup<wbr>Management<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#backupmanagementtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Backup<wbr>Management<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of backup management for the container.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -9412,7 +9412,7 @@ Failed | Succeeded{{% /md %}}</dd>
 <a href="#inquirydetails_csharp" style="color: inherit; text-decoration: inherit;">Inquiry<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workloadinquirydetails">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Workload<wbr>Inquiry<wbr>Details<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#workloadinquirydetails">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Workload<wbr>Inquiry<wbr>Details<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Inquiry Details which will have workload specific details.
 For e.g. - For SQL and oracle this will contain different details.{{% /md %}}</dd>
@@ -9518,7 +9518,7 @@ InProgress | Failed | Succeeded{{% /md %}}</dd>
 <a href="#errordetail_csharp" style="color: inherit; text-decoration: inherit;">Error<wbr>Detail</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#errordetailresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Error<wbr>Detail<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#errordetailresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Error<wbr>Detail<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Error Details if the Status is non-success.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -9527,7 +9527,7 @@ InProgress | Failed | Succeeded{{% /md %}}</dd>
 <a href="#inquirydetails_csharp" style="color: inherit; text-decoration: inherit;">Inquiry<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workloadinquirydetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Workload<wbr>Inquiry<wbr>Details<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#workloadinquirydetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Workload<wbr>Inquiry<wbr>Details<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Inquiry Details which will have workload specific details.
 For e.g. - For SQL and oracle this will contain different details.{{% /md %}}</dd>
@@ -9731,7 +9731,7 @@ InProgress | Failed | Succeeded{{% /md %}}</dd>
 <a href="#errordetail_csharp" style="color: inherit; text-decoration: inherit;">Error<wbr>Detail</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#errordetailresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Error<wbr>Detail<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#errordetailresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Error<wbr>Detail<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Error Detail in case the status is non-success.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -10205,7 +10205,7 @@ InProgress | Failed | Succeeded{{% /md %}}</dd>
 <a href="#backupmanagementtype_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Management<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#backupmanagementtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Backup<wbr>Management<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#backupmanagementtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Backup<wbr>Management<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of backup management for the container.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -10241,7 +10241,7 @@ InProgress | Failed | Succeeded{{% /md %}}</dd>
 <a href="#extendedinfo_csharp" style="color: inherit; text-decoration: inherit;">Extended<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mabcontainerextendedinfo">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Mab<wbr>Container<wbr>Extended<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#mabcontainerextendedinfo">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Mab<wbr>Container<wbr>Extended<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Additional information for this container{{% /md %}}</dd>
     <dt class="property-optional"
@@ -10268,7 +10268,7 @@ InProgress | Failed | Succeeded{{% /md %}}</dd>
 <a href="#mabcontainerhealthdetails_csharp" style="color: inherit; text-decoration: inherit;">Mab<wbr>Container<wbr>Health<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mabcontainerhealthdetails">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>MABContainer<wbr>Health<wbr>Details<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#mabcontainerhealthdetails">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>MABContainer<wbr>Health<wbr>Details<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Health details on this mab container.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -10618,7 +10618,7 @@ InProgress | Failed | Succeeded{{% /md %}}</dd>
 <a href="#backupitemtype_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Item<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#backupitemtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Backup<wbr>Item<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#backupitemtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Backup<wbr>Item<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of backup items associated with this container.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -11075,7 +11075,7 @@ InProgress | Failed | Succeeded{{% /md %}}</dd>
 <a href="#extendedinfo_csharp" style="color: inherit; text-decoration: inherit;">Extended<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mabcontainerextendedinforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Mab<wbr>Container<wbr>Extended<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#mabcontainerextendedinforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Mab<wbr>Container<wbr>Extended<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Additional information for this container{{% /md %}}</dd>
     <dt class="property-optional"
@@ -11102,7 +11102,7 @@ InProgress | Failed | Succeeded{{% /md %}}</dd>
 <a href="#mabcontainerhealthdetails_csharp" style="color: inherit; text-decoration: inherit;">Mab<wbr>Container<wbr>Health<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mabcontainerhealthdetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>MABContainer<wbr>Health<wbr>Details<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#mabcontainerhealthdetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>MABContainer<wbr>Health<wbr>Details<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Health details on this mab container.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -11498,7 +11498,7 @@ InProgress | Failed | Succeeded{{% /md %}}</dd>
 <a href="#inquiryvalidation_csharp" style="color: inherit; text-decoration: inherit;">Inquiry<wbr>Validation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inquiryvalidation">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Inquiry<wbr>Validation<wbr>Args</a></span>
+        <span class="property-type"><a href="#inquiryvalidation">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Inquiry<wbr>Validation<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inquiry validation such as permissions and other backup validations.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -11632,7 +11632,7 @@ InProgress | Failed | Succeeded{{% /md %}}</dd>
 <a href="#inquiryvalidation_csharp" style="color: inherit; text-decoration: inherit;">Inquiry<wbr>Validation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inquiryvalidationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Inquiry<wbr>Validation<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#inquiryvalidationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Inquiry<wbr>Validation<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inquiry validation such as permissions and other backup validations.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -11902,7 +11902,7 @@ InProgress | Failed | Succeeded{{% /md %}}</dd>
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:recoveryservices/latest:ProtectionContainer VMAppContainer;Compute;testRG;testSQL /Subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/testRg/providers/Microsoft.RecoveryServices/vaults/testVault/backupFabrics/Azure/protectionContainers/VMAppContainer;Compute;testRG;testSQL 
+$ pulumi import azure-nextgen:recoveryservices:ProtectionContainer VMAppContainer;Compute;testRG;testSQL /Subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/testRg/providers/Microsoft.RecoveryServices/vaults/testVault/backupFabrics/Azure/protectionContainers/VMAppContainer;Compute;testRG;testSQL 
 ```
 
 

@@ -161,7 +161,7 @@ The following output properties are available:
 <a href="#endpoints_csharp" style="color: inherit; text-decoration: inherit;">Endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>AVS.<wbr>Outputs.<wbr>Endpoints<wbr>Response</a></span>
+        <span class="property-type"><a href="#endpointsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>AVS..<wbr>Outputs.<wbr>Endpoints<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The endpoints{{% /md %}}</dd>
     <dt class="property-"
@@ -188,7 +188,7 @@ The following output properties are available:
 <a href="#managementcluster_csharp" style="color: inherit; text-decoration: inherit;">Management<wbr>Cluster</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementclusterresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>AVS.<wbr>Outputs.<wbr>Management<wbr>Cluster<wbr>Response</a></span>
+        <span class="property-type"><a href="#managementclusterresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>AVS..<wbr>Outputs.<wbr>Management<wbr>Cluster<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The default cluster used for management{{% /md %}}</dd>
     <dt class="property-"
@@ -251,7 +251,7 @@ The following output properties are available:
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skuresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>AVS.<wbr>Outputs.<wbr>Sku<wbr>Response</a></span>
+        <span class="property-type"><a href="#skuresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>AVS..<wbr>Outputs.<wbr>Sku<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The private cloud SKU{{% /md %}}</dd>
     <dt class="property-"
@@ -287,7 +287,7 @@ The following output properties are available:
 <a href="#circuit_csharp" style="color: inherit; text-decoration: inherit;">Circuit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#circuitresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>AVS.<wbr>Outputs.<wbr>Circuit<wbr>Response</a></span>
+        <span class="property-type"><a href="#circuitresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>AVS..<wbr>Outputs.<wbr>Circuit<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}An ExpressRoute Circuit{{% /md %}}</dd>
     <dt class="property-"
@@ -296,7 +296,7 @@ The following output properties are available:
 <a href="#identitysources_csharp" style="color: inherit; text-decoration: inherit;">Identity<wbr>Sources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identitysourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>AVS.<wbr>Outputs.<wbr>Identity<wbr>Source<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#identitysourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>AVS..<wbr>Outputs.<wbr>Identity<wbr>Source<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}vCenter Single Sign On Identity Sources{{% /md %}}</dd>
     <dt class="property-"

@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.hanaonazure.ProviderInstance res
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 A provider instance associated with a SAP monitor.
+API Version: 2020-02-07-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var providerInstance = new AzureNextGen.HanaOnAzure.V20200207Preview.ProviderInstance("providerInstance", new AzureNextGen.HanaOnAzure.V20200207Preview.ProviderInstanceArgs
+        var providerInstance = new AzureNextGen.HanaOnAzure..ProviderInstance("providerInstance", new AzureNextGen.HanaOnAzure..ProviderInstanceArgs
         {
             Metadata = "{\"key\":\"value\"}",
             Properties = "{\"hostname\":\"10.0.0.6\",\"dbName\":\"SYSTEMDB\",\"sqlPort\":30013,\"dbUsername\":\"SYSTEM\",\"dbPassword\":\"PASSWORD\"}",
@@ -49,7 +50,7 @@ class MyStack : Stack
 package main
 
 import (
-	hanaonazure "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/hanaonazure/v20200207preview"
+	hanaonazure "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/hanaonazure"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -80,7 +81,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-provider_instance = azure_nextgen.hanaonazure.v20200207preview.ProviderInstance("providerInstance",
+provider_instance = azure_nextgen.hanaonazure.ProviderInstance("providerInstance",
     metadata="{\"key\":\"value\"}",
     properties="{\"hostname\":\"10.0.0.6\",\"dbName\":\"SYSTEMDB\",\"sqlPort\":30013,\"dbUsername\":\"SYSTEM\",\"dbPassword\":\"PASSWORD\"}",
     provider_instance_name="myProviderInstance",
@@ -98,7 +99,7 @@ provider_instance = azure_nextgen.hanaonazure.v20200207preview.ProviderInstance(
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const providerInstance = new azure_nextgen.hanaonazure.v20200207preview.ProviderInstance("providerInstance", {
+const providerInstance = new azure_nextgen.hanaonazure.ProviderInstance("providerInstance", {
     metadata: "{\"key\":\"value\"}",
     properties: "{\"hostname\":\"10.0.0.6\",\"dbName\":\"SYSTEMDB\",\"sqlPort\":30013,\"dbUsername\":\"SYSTEM\",\"dbPassword\":\"PASSWORD\"}",
     providerInstanceName: "myProviderInstance",
@@ -681,7 +682,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:hanaonazure/v20200207preview:ProviderInstance myProviderInstance /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.HanaOnAzure/sapMonitors/mySapMonitor/providerInstances/myProviderInstance 
+$ pulumi import azure-nextgen:hanaonazure:ProviderInstance myProviderInstance /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.HanaOnAzure/sapMonitors/mySapMonitor/providerInstances/myProviderInstance 
 ```
 
 

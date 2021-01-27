@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.machinelearningservices.MachineL
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Machine Learning service object wrapped into ARM resource envelope.
+API Version: 2020-09-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,14 +27,14 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var machineLearningService = new AzureNextGen.MachineLearningServices.V20200901Preview.MachineLearningService("machineLearningService", new AzureNextGen.MachineLearningServices.V20200901Preview.MachineLearningServiceArgs
+        var machineLearningService = new AzureNextGen.MachineLearningServices..MachineLearningService("machineLearningService", new AzureNextGen.MachineLearningServices..MachineLearningServiceArgs
         {
             ComputeType = "ACI",
-            EnvironmentImageRequest = new AzureNextGen.MachineLearningServices.V20200901Preview.Inputs.CreateServiceRequestEnvironmentImageRequestArgs
+            EnvironmentImageRequest = new AzureNextGen.MachineLearningServices..Inputs.CreateServiceRequestEnvironmentImageRequestArgs
             {
                 Assets = 
                 {
-                    new AzureNextGen.MachineLearningServices.V20200901Preview.Inputs.ImageAssetArgs
+                    new AzureNextGen.MachineLearningServices..Inputs.ImageAssetArgs
                     {
                         MimeType = "application/x-python",
                         Unpack = false,
@@ -41,9 +42,9 @@ class MyStack : Stack
                     },
                 },
                 DriverProgram = "score.py",
-                Environment = new AzureNextGen.MachineLearningServices.V20200901Preview.Inputs.EnvironmentImageRequestEnvironmentArgs
+                Environment = new AzureNextGen.MachineLearningServices..Inputs.EnvironmentImageRequestEnvironmentArgs
                 {
-                    Docker = new AzureNextGen.MachineLearningServices.V20200901Preview.Inputs.ModelEnvironmentDefinitionDockerArgs
+                    Docker = new AzureNextGen.MachineLearningServices..Inputs.ModelEnvironmentDefinitionDockerArgs
                     {
                         BaseImage = "mcr.microsoft.com/azureml/base:openmpi3.1.2-ubuntu16.04",
                         BaseImageRegistry = ,
@@ -53,7 +54,7 @@ class MyStack : Stack
                         { "EXAMPLE_ENV_VAR", "EXAMPLE_VALUE" },
                     },
                     Name = "AzureML-Scikit-learn-0.20.3",
-                    Python = new AzureNextGen.MachineLearningServices.V20200901Preview.Inputs.ModelEnvironmentDefinitionPythonArgs
+                    Python = new AzureNextGen.MachineLearningServices..Inputs.ModelEnvironmentDefinitionPythonArgs
                     {
                         CondaDependencies = 
                         {
@@ -85,7 +86,7 @@ class MyStack : Stack
                         InterpreterPath = "python",
                         UserManagedDependencies = false,
                     },
-                    Spark = new AzureNextGen.MachineLearningServices.V20200901Preview.Inputs.ModelEnvironmentDefinitionSparkArgs
+                    Spark = new AzureNextGen.MachineLearningServices..Inputs.ModelEnvironmentDefinitionSparkArgs
                     {
                         Packages = {},
                         PrecachePackages = true,
@@ -95,7 +96,7 @@ class MyStack : Stack
                 },
                 Models = 
                 {
-                    new AzureNextGen.MachineLearningServices.V20200901Preview.Inputs.ModelArgs
+                    new AzureNextGen.MachineLearningServices..Inputs.ModelArgs
                     {
                         MimeType = "application/x-python",
                         Name = "sklearn_regression_model.pkl",
@@ -122,7 +123,7 @@ class MyStack : Stack
 package main
 
 import (
-	machinelearningservices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/machinelearningservices/v20200901preview"
+	machinelearningservices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/machinelearningservices"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -211,25 +212,25 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-machine_learning_service = azure_nextgen.machinelearningservices.v20200901preview.MachineLearningService("machineLearningService",
+machine_learning_service = azure_nextgen.machinelearningservices.MachineLearningService("machineLearningService",
     compute_type="ACI",
-    environment_image_request=azure_nextgen.machinelearningservices.v20200901preview.CreateServiceRequestEnvironmentImageRequestArgs(
-        assets=[azure_nextgen.machinelearningservices.v20200901preview.ImageAssetArgs(
+    environment_image_request=azure_nextgen.machinelearningservices.CreateServiceRequestEnvironmentImageRequestArgs(
+        assets=[azure_nextgen.machinelearningservices.ImageAssetArgs(
             mime_type="application/x-python",
             unpack=False,
             url="aml://storage/azureml/score.py",
         )],
         driver_program="score.py",
-        environment=azure_nextgen.machinelearningservices.v20200901preview.EnvironmentImageRequestEnvironmentArgs(
-            docker=azure_nextgen.machinelearningservices.v20200901preview.ModelEnvironmentDefinitionDockerArgs(
+        environment=azure_nextgen.machinelearningservices.EnvironmentImageRequestEnvironmentArgs(
+            docker=azure_nextgen.machinelearningservices.ModelEnvironmentDefinitionDockerArgs(
                 base_image="mcr.microsoft.com/azureml/base:openmpi3.1.2-ubuntu16.04",
-                base_image_registry=azure_nextgen.machinelearningservices.v20200901preview.ModelDockerSectionBaseImageRegistryArgs(),
+                base_image_registry=azure_nextgen.machinelearningservices.ModelDockerSectionBaseImageRegistryArgs(),
             ),
             environment_variables={
                 "EXAMPLE_ENV_VAR": "EXAMPLE_VALUE",
             },
             name="AzureML-Scikit-learn-0.20.3",
-            python=azure_nextgen.machinelearningservices.v20200901preview.ModelEnvironmentDefinitionPythonArgs(
+            python=azure_nextgen.machinelearningservices.ModelEnvironmentDefinitionPythonArgs(
                 conda_dependencies={
                     "channels": ["conda-forge"],
                     "dependencies": [
@@ -253,14 +254,14 @@ machine_learning_service = azure_nextgen.machinelearningservices.v20200901previe
                 interpreter_path="python",
                 user_managed_dependencies=False,
             ),
-            spark=azure_nextgen.machinelearningservices.v20200901preview.ModelEnvironmentDefinitionSparkArgs(
+            spark=azure_nextgen.machinelearningservices.ModelEnvironmentDefinitionSparkArgs(
                 packages=[],
                 precache_packages=True,
                 repositories=[],
             ),
             version="3",
         ),
-        models=[azure_nextgen.machinelearningservices.v20200901preview.ModelArgs(
+        models=[azure_nextgen.machinelearningservices.ModelArgs(
             mime_type="application/x-python",
             name="sklearn_regression_model.pkl",
             url="aml://storage/azureml/sklearn_regression_model.pkl",
@@ -281,7 +282,7 @@ machine_learning_service = azure_nextgen.machinelearningservices.v20200901previe
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const machineLearningService = new azure_nextgen.machinelearningservices.v20200901preview.MachineLearningService("machineLearningService", {
+const machineLearningService = new azure_nextgen.machinelearningservices.MachineLearningService("machineLearningService", {
     computeType: "ACI",
     environmentImageRequest: {
         assets: [{
@@ -535,7 +536,7 @@ The MachineLearningService resource accepts the following [input]({{< relref "/d
 <a href="#computetype_csharp" style="color: inherit; text-decoration: inherit;">Compute<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#computeenvironmenttype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Compute<wbr>Environment<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#computeenvironmenttype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services..<wbr>Compute<wbr>Environment<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The compute environment type for the service.{{% /md %}}</dd>
     <dt class="property-required"
@@ -580,7 +581,7 @@ The MachineLearningService resource accepts the following [input]({{< relref "/d
 <a href="#environmentimagerequest_csharp" style="color: inherit; text-decoration: inherit;">Environment<wbr>Image<wbr>Request</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#createservicerequestenvironmentimagerequest">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Create<wbr>Service<wbr>Request<wbr>Environment<wbr>Image<wbr>Request<wbr>Args</a></span>
+        <span class="property-type"><a href="#createservicerequestenvironmentimagerequest">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services..<wbr>Inputs.<wbr>Create<wbr>Service<wbr>Request<wbr>Environment<wbr>Image<wbr>Request<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Environment, models and assets needed for inferencing.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -589,7 +590,7 @@ The MachineLearningService resource accepts the following [input]({{< relref "/d
 <a href="#keys_csharp" style="color: inherit; text-decoration: inherit;">Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#createservicerequestkeys">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Create<wbr>Service<wbr>Request<wbr>Keys<wbr>Args</a></span>
+        <span class="property-type"><a href="#createservicerequestkeys">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services..<wbr>Inputs.<wbr>Create<wbr>Service<wbr>Request<wbr>Keys<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The authentication keys.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -953,7 +954,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identityresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Outputs.<wbr>Identity<wbr>Response</a></span>
+        <span class="property-type"><a href="#identityresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services..<wbr>Outputs.<wbr>Identity<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The identity of the resource.{{% /md %}}</dd>
     <dt class="property-"
@@ -962,7 +963,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skuresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Outputs.<wbr>Sku<wbr>Response</a></span>
+        <span class="property-type"><a href="#skuresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services..<wbr>Outputs.<wbr>Sku<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The sku of the workspace.{{% /md %}}</dd>
     <dt class="property-"
@@ -1178,7 +1179,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#error_csharp" style="color: inherit; text-decoration: inherit;">Error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceresponsebaseresponseerror">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Service<wbr>Response<wbr>Base<wbr>Response<wbr>Error<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceresponsebaseresponseerror">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services..<wbr>Inputs.<wbr>Service<wbr>Response<wbr>Base<wbr>Response<wbr>Error<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The error details.{{% /md %}}</dd>
     <dt class="property-required"
@@ -1250,7 +1251,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#containerresourcerequirements_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Resource<wbr>Requirements</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerresourcerequirementsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Container<wbr>Resource<wbr>Requirements<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#containerresourcerequirementsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services..<wbr>Inputs.<wbr>Container<wbr>Resource<wbr>Requirements<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The container resource requirements.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1259,7 +1260,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datacollection_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Collection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aciserviceresponseresponsedatacollection">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>ACIService<wbr>Response<wbr>Response<wbr>Data<wbr>Collection<wbr>Args</a></span>
+        <span class="property-type"><a href="#aciserviceresponseresponsedatacollection">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services..<wbr>Inputs.<wbr>ACIService<wbr>Response<wbr>Response<wbr>Data<wbr>Collection<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Details of the data collection options specified.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1286,7 +1287,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryptionproperties_csharp" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aciserviceresponseresponseencryptionproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>ACIService<wbr>Response<wbr>Response<wbr>Encryption<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#aciserviceresponseresponseencryptionproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services..<wbr>Inputs.<wbr>ACIService<wbr>Response<wbr>Response<wbr>Encryption<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The encryption properties.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1295,7 +1296,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#environmentimagerequest_csharp" style="color: inherit; text-decoration: inherit;">Environment<wbr>Image<wbr>Request</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aciserviceresponseresponseenvironmentimagerequest">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>ACIService<wbr>Response<wbr>Response<wbr>Environment<wbr>Image<wbr>Request<wbr>Args</a></span>
+        <span class="property-type"><a href="#aciserviceresponseresponseenvironmentimagerequest">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services..<wbr>Inputs.<wbr>ACIService<wbr>Response<wbr>Response<wbr>Environment<wbr>Image<wbr>Request<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Environment, models and assets used for inferencing.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1322,7 +1323,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#models_csharp" style="color: inherit; text-decoration: inherit;">Models</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#modelresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Model<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#modelresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services..<wbr>Inputs.<wbr>Model<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of models.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1385,7 +1386,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vnetconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Vnet<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aciserviceresponseresponsevnetconfiguration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>ACIService<wbr>Response<wbr>Response<wbr>Vnet<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#aciserviceresponseresponsevnetconfiguration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services..<wbr>Inputs.<wbr>ACIService<wbr>Response<wbr>Response<wbr>Vnet<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The virtual network configuration.{{% /md %}}</dd>
 </dl>
@@ -2300,7 +2301,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#assets_csharp" style="color: inherit; text-decoration: inherit;">Assets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imageassetresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Image<wbr>Asset<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#imageassetresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services..<wbr>Inputs.<wbr>Image<wbr>Asset<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of assets.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2318,7 +2319,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#environment_csharp" style="color: inherit; text-decoration: inherit;">Environment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentimageresponseresponseenvironment">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Environment<wbr>Image<wbr>Response<wbr>Response<wbr>Environment<wbr>Args</a></span>
+        <span class="property-type"><a href="#environmentimageresponseresponseenvironment">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services..<wbr>Inputs.<wbr>Environment<wbr>Image<wbr>Response<wbr>Response<wbr>Environment<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The details of the AZURE ML environment.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2327,7 +2328,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#environmentreference_csharp" style="color: inherit; text-decoration: inherit;">Environment<wbr>Reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentimageresponseresponseenvironmentreference">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Environment<wbr>Image<wbr>Response<wbr>Response<wbr>Environment<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#environmentimageresponseresponseenvironmentreference">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services..<wbr>Inputs.<wbr>Environment<wbr>Image<wbr>Response<wbr>Response<wbr>Environment<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The unique identifying details of the AZURE ML environment.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2345,7 +2346,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#models_csharp" style="color: inherit; text-decoration: inherit;">Models</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#modelresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Model<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#modelresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services..<wbr>Inputs.<wbr>Model<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of models.{{% /md %}}</dd>
 </dl>
@@ -2649,7 +2650,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#details_csharp" style="color: inherit; text-decoration: inherit;">Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#errordetailresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Error<wbr>Detail<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#errordetailresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services..<wbr>Inputs.<wbr>Error<wbr>Detail<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}An array of error detail objects.{{% /md %}}</dd>
     <dt class="property-required"
@@ -2774,7 +2775,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deploymentstatus_csharp" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aksserviceresponseresponsedeploymentstatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>AKSService<wbr>Response<wbr>Response<wbr>Deployment<wbr>Status<wbr>Args</a></span>
+        <span class="property-type"><a href="#aksserviceresponseresponsedeploymentstatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services..<wbr>Inputs.<wbr>AKSService<wbr>Response<wbr>Response<wbr>Deployment<wbr>Status<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The deployment status.{{% /md %}}</dd>
     <dt class="property-required"
@@ -2783,7 +2784,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#error_csharp" style="color: inherit; text-decoration: inherit;">Error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceresponsebaseresponseerror">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Service<wbr>Response<wbr>Base<wbr>Response<wbr>Error<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceresponsebaseresponseerror">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services..<wbr>Inputs.<wbr>Service<wbr>Response<wbr>Base<wbr>Response<wbr>Error<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The error details.{{% /md %}}</dd>
     <dt class="property-required"
@@ -2855,7 +2856,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#autoscaler_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Scaler</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aksserviceresponseresponseautoscaler">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>AKSService<wbr>Response<wbr>Response<wbr>Auto<wbr>Scaler<wbr>Args</a></span>
+        <span class="property-type"><a href="#aksserviceresponseresponseautoscaler">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services..<wbr>Inputs.<wbr>AKSService<wbr>Response<wbr>Response<wbr>Auto<wbr>Scaler<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The auto scaler properties.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2873,7 +2874,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#containerresourcerequirements_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Resource<wbr>Requirements</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerresourcerequirementsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Container<wbr>Resource<wbr>Requirements<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#containerresourcerequirementsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services..<wbr>Inputs.<wbr>Container<wbr>Resource<wbr>Requirements<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The container resource requirements.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2882,7 +2883,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datacollection_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Collection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aksserviceresponseresponsedatacollection">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>AKSService<wbr>Response<wbr>Response<wbr>Data<wbr>Collection<wbr>Args</a></span>
+        <span class="property-type"><a href="#aksserviceresponseresponsedatacollection">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services..<wbr>Inputs.<wbr>AKSService<wbr>Response<wbr>Response<wbr>Data<wbr>Collection<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Details of the data collection options specified.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2909,7 +2910,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#environmentimagerequest_csharp" style="color: inherit; text-decoration: inherit;">Environment<wbr>Image<wbr>Request</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aksserviceresponseresponseenvironmentimagerequest">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>AKSService<wbr>Response<wbr>Response<wbr>Environment<wbr>Image<wbr>Request<wbr>Args</a></span>
+        <span class="property-type"><a href="#aksserviceresponseresponseenvironmentimagerequest">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services..<wbr>Inputs.<wbr>AKSService<wbr>Response<wbr>Response<wbr>Environment<wbr>Image<wbr>Request<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Environment, models and assets used for inferencing.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2936,7 +2937,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#livenessproberequirements_csharp" style="color: inherit; text-decoration: inherit;">Liveness<wbr>Probe<wbr>Requirements</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aksserviceresponseresponselivenessproberequirements">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>AKSService<wbr>Response<wbr>Response<wbr>Liveness<wbr>Probe<wbr>Requirements<wbr>Args</a></span>
+        <span class="property-type"><a href="#aksserviceresponseresponselivenessproberequirements">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services..<wbr>Inputs.<wbr>AKSService<wbr>Response<wbr>Response<wbr>Liveness<wbr>Probe<wbr>Requirements<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The liveness probe requirements.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2963,7 +2964,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#models_csharp" style="color: inherit; text-decoration: inherit;">Models</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#modelresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Model<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#modelresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services..<wbr>Inputs.<wbr>Model<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of models.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4130,7 +4131,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#error_csharp" style="color: inherit; text-decoration: inherit;">Error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aksreplicastatusresponseerror">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>AKSReplica<wbr>Status<wbr>Response<wbr>Error<wbr>Args</a></span>
+        <span class="property-type"><a href="#aksreplicastatusresponseerror">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services..<wbr>Inputs.<wbr>AKSReplica<wbr>Status<wbr>Response<wbr>Error<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The error details.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4282,7 +4283,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#assets_csharp" style="color: inherit; text-decoration: inherit;">Assets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imageassetresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Image<wbr>Asset<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#imageassetresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services..<wbr>Inputs.<wbr>Image<wbr>Asset<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of assets.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4300,7 +4301,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#environment_csharp" style="color: inherit; text-decoration: inherit;">Environment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentimageresponseresponseenvironment">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Environment<wbr>Image<wbr>Response<wbr>Response<wbr>Environment<wbr>Args</a></span>
+        <span class="property-type"><a href="#environmentimageresponseresponseenvironment">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services..<wbr>Inputs.<wbr>Environment<wbr>Image<wbr>Response<wbr>Response<wbr>Environment<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The details of the AZURE ML environment.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4309,7 +4310,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#environmentreference_csharp" style="color: inherit; text-decoration: inherit;">Environment<wbr>Reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentimageresponseresponseenvironmentreference">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Environment<wbr>Image<wbr>Response<wbr>Response<wbr>Environment<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#environmentimageresponseresponseenvironmentreference">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services..<wbr>Inputs.<wbr>Environment<wbr>Image<wbr>Response<wbr>Response<wbr>Environment<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The unique identifying details of the AZURE ML environment.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4327,7 +4328,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#models_csharp" style="color: inherit; text-decoration: inherit;">Models</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#modelresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Model<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#modelresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services..<wbr>Inputs.<wbr>Model<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of models.{{% /md %}}</dd>
 </dl>
@@ -4730,7 +4731,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#error_csharp" style="color: inherit; text-decoration: inherit;">Error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceresponsebaseresponseerror">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Service<wbr>Response<wbr>Base<wbr>Response<wbr>Error<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceresponsebaseresponseerror">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services..<wbr>Inputs.<wbr>Service<wbr>Response<wbr>Base<wbr>Response<wbr>Error<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The error details.{{% /md %}}</dd>
     <dt class="property-required"
@@ -5458,7 +5459,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#assets_csharp" style="color: inherit; text-decoration: inherit;">Assets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imageasset">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Image<wbr>Asset<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#imageasset">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services..<wbr>Inputs.<wbr>Image<wbr>Asset<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of assets.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -5476,7 +5477,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#environment_csharp" style="color: inherit; text-decoration: inherit;">Environment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentimagerequestenvironment">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Environment<wbr>Image<wbr>Request<wbr>Environment<wbr>Args</a></span>
+        <span class="property-type"><a href="#environmentimagerequestenvironment">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services..<wbr>Inputs.<wbr>Environment<wbr>Image<wbr>Request<wbr>Environment<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The details of the AZURE ML environment.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -5485,7 +5486,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#environmentreference_csharp" style="color: inherit; text-decoration: inherit;">Environment<wbr>Reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentimagerequestenvironmentreference">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Environment<wbr>Image<wbr>Request<wbr>Environment<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#environmentimagerequestenvironmentreference">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services..<wbr>Inputs.<wbr>Environment<wbr>Image<wbr>Request<wbr>Environment<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The unique identifying details of the AZURE ML environment.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -5503,7 +5504,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#models_csharp" style="color: inherit; text-decoration: inherit;">Models</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#model">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Model<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#model">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services..<wbr>Inputs.<wbr>Model<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of models.{{% /md %}}</dd>
 </dl>
@@ -5994,7 +5995,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#docker_csharp" style="color: inherit; text-decoration: inherit;">Docker</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#modelenvironmentdefinitiondocker">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Model<wbr>Environment<wbr>Definition<wbr>Docker<wbr>Args</a></span>
+        <span class="property-type"><a href="#modelenvironmentdefinitiondocker">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services..<wbr>Inputs.<wbr>Model<wbr>Environment<wbr>Definition<wbr>Docker<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The definition of a Docker container.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -6030,7 +6031,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#python_csharp" style="color: inherit; text-decoration: inherit;">Python</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#modelenvironmentdefinitionpython">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Model<wbr>Environment<wbr>Definition<wbr>Python<wbr>Args</a></span>
+        <span class="property-type"><a href="#modelenvironmentdefinitionpython">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services..<wbr>Inputs.<wbr>Model<wbr>Environment<wbr>Definition<wbr>Python<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings for a Python environment.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -6039,7 +6040,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#r_csharp" style="color: inherit; text-decoration: inherit;">R</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#modelenvironmentdefinitionr">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Model<wbr>Environment<wbr>Definition<wbr>RArgs</a></span>
+        <span class="property-type"><a href="#modelenvironmentdefinitionr">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services..<wbr>Inputs.<wbr>Model<wbr>Environment<wbr>Definition<wbr>RArgs</a></span>
     </dt>
     <dd>{{% md %}}Settings for a R environment.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -6048,7 +6049,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#spark_csharp" style="color: inherit; text-decoration: inherit;">Spark</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#modelenvironmentdefinitionspark">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Model<wbr>Environment<wbr>Definition<wbr>Spark<wbr>Args</a></span>
+        <span class="property-type"><a href="#modelenvironmentdefinitionspark">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services..<wbr>Inputs.<wbr>Model<wbr>Environment<wbr>Definition<wbr>Spark<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration for a Spark environment.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -6406,7 +6407,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#docker_csharp" style="color: inherit; text-decoration: inherit;">Docker</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#modelenvironmentdefinitionresponseresponsedocker">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Model<wbr>Environment<wbr>Definition<wbr>Response<wbr>Response<wbr>Docker<wbr>Args</a></span>
+        <span class="property-type"><a href="#modelenvironmentdefinitionresponseresponsedocker">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services..<wbr>Inputs.<wbr>Model<wbr>Environment<wbr>Definition<wbr>Response<wbr>Response<wbr>Docker<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The definition of a Docker container.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -6442,7 +6443,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#python_csharp" style="color: inherit; text-decoration: inherit;">Python</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#modelenvironmentdefinitionresponseresponsepython">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Model<wbr>Environment<wbr>Definition<wbr>Response<wbr>Response<wbr>Python<wbr>Args</a></span>
+        <span class="property-type"><a href="#modelenvironmentdefinitionresponseresponsepython">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services..<wbr>Inputs.<wbr>Model<wbr>Environment<wbr>Definition<wbr>Response<wbr>Response<wbr>Python<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings for a Python environment.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -6451,7 +6452,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#r_csharp" style="color: inherit; text-decoration: inherit;">R</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#modelenvironmentdefinitionresponseresponser">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Model<wbr>Environment<wbr>Definition<wbr>Response<wbr>Response<wbr>RArgs</a></span>
+        <span class="property-type"><a href="#modelenvironmentdefinitionresponseresponser">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services..<wbr>Inputs.<wbr>Model<wbr>Environment<wbr>Definition<wbr>Response<wbr>Response<wbr>RArgs</a></span>
     </dt>
     <dd>{{% md %}}Settings for a R environment.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -6460,7 +6461,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#spark_csharp" style="color: inherit; text-decoration: inherit;">Spark</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#modelenvironmentdefinitionresponseresponsespark">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Model<wbr>Environment<wbr>Definition<wbr>Response<wbr>Response<wbr>Spark<wbr>Args</a></span>
+        <span class="property-type"><a href="#modelenvironmentdefinitionresponseresponsespark">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services..<wbr>Inputs.<wbr>Model<wbr>Environment<wbr>Definition<wbr>Response<wbr>Response<wbr>Spark<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration for a Spark environment.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -6928,8 +6929,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The tenant ID of resource.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
@@ -6943,9 +6944,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userassignedidentities_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>User<wbr>Assigned<wbr>Identity<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services..<wbr>Inputs.<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities<wbr>Args&gt;</span>
     </dt>
-    <dd>{{% md %}}The user assigned identities associated with the resource.{{% /md %}}</dd>
+    <dd>{{% md %}}The list of user identities associated with resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -6970,8 +6971,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The tenant ID of resource.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
@@ -6985,9 +6986,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userassignedidentities_go" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]User<wbr>Assigned<wbr>Identity<wbr>Response</span>
+        <span class="property-type">map[string]Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities</span>
     </dt>
-    <dd>{{% md %}}The user assigned identities associated with the resource.{{% /md %}}</dd>
+    <dd>{{% md %}}The list of user identities associated with resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -7012,8 +7013,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The tenant ID of resource.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
@@ -7027,9 +7028,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userassignedidentities_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Assigned<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: User<wbr>Assigned<wbr>Identity<wbr>Response}</span>
+        <span class="property-type">{[key: string]: Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities}</span>
     </dt>
-    <dd>{{% md %}}The user assigned identities associated with the resource.{{% /md %}}</dd>
+    <dd>{{% md %}}The list of user identities associated with resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -7054,8 +7055,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The tenant ID of resource.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
@@ -7069,9 +7070,107 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#user_assigned_identities_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned_<wbr>identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, User<wbr>Assigned<wbr>Identity<wbr>Response<wbr>Args]</span>
+        <span class="property-type">Mapping[str, Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities<wbr>Args]</span>
     </dt>
-    <dd>{{% md %}}The user assigned identities associated with the resource.{{% /md %}}</dd>
+    <dd>{{% md %}}The list of user identities associated with resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="identityresponseuserassignedidentities">Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="clientid_csharp">
+<a href="#clientid_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The client id of user assigned identity.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="principalid_csharp">
+<a href="#principalid_csharp" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The principal id of user assigned identity.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="clientid_go">
+<a href="#clientid_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The client id of user assigned identity.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="principalid_go">
+<a href="#principalid_go" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The principal id of user assigned identity.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="clientid_nodejs">
+<a href="#clientid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The client id of user assigned identity.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="principalid_nodejs">
+<a href="#principalid_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The principal id of user assigned identity.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="client_id_python">
+<a href="#client_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The client id of user assigned identity.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="principal_id_python">
+<a href="#principal_id_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The principal id of user assigned identity.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -7462,7 +7561,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datasets_csharp" style="color: inherit; text-decoration: inherit;">Datasets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetreference">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Dataset<wbr>Reference<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#datasetreference">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services..<wbr>Inputs.<wbr>Dataset<wbr>Reference<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of datasets associated with the model.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -7561,7 +7660,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resourcerequirements_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Requirements</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerresourcerequirements">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Container<wbr>Resource<wbr>Requirements<wbr>Args</a></span>
+        <span class="property-type"><a href="#containerresourcerequirements">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services..<wbr>Inputs.<wbr>Container<wbr>Resource<wbr>Requirements<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Resource requirements for the model{{% /md %}}</dd>
     <dt class="property-optional"
@@ -8422,7 +8521,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#baseimageregistry_csharp" style="color: inherit; text-decoration: inherit;">Base<wbr>Image<wbr>Registry</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#modeldockersectionbaseimageregistry">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Model<wbr>Docker<wbr>Section<wbr>Base<wbr>Image<wbr>Registry<wbr>Args</a></span>
+        <span class="property-type"><a href="#modeldockersectionbaseimageregistry">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services..<wbr>Inputs.<wbr>Model<wbr>Docker<wbr>Section<wbr>Base<wbr>Image<wbr>Registry<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Image registry that contains the base image.{{% /md %}}</dd>
 </dl>
@@ -8717,7 +8816,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cranpackages_csharp" style="color: inherit; text-decoration: inherit;">Cran<wbr>Packages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rcranpackage">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>RCran<wbr>Package<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#rcranpackage">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services..<wbr>Inputs.<wbr>RCran<wbr>Package<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The CRAN packages to use.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -8735,7 +8834,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#githubpackages_csharp" style="color: inherit; text-decoration: inherit;">Git<wbr>Hub<wbr>Packages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rgithubpackage">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>RGit<wbr>Hub<wbr>Package<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#rgithubpackage">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services..<wbr>Inputs.<wbr>RGit<wbr>Hub<wbr>Package<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The packages directly from GitHub.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -9044,7 +9143,7 @@ The path specified gets used to call the user script.{{% /md %}}</dd>
 <a href="#baseimageregistry_csharp" style="color: inherit; text-decoration: inherit;">Base<wbr>Image<wbr>Registry</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#modeldockersectionresponseresponsebaseimageregistry">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Model<wbr>Docker<wbr>Section<wbr>Response<wbr>Response<wbr>Base<wbr>Image<wbr>Registry<wbr>Args</a></span>
+        <span class="property-type"><a href="#modeldockersectionresponseresponsebaseimageregistry">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services..<wbr>Inputs.<wbr>Model<wbr>Docker<wbr>Section<wbr>Response<wbr>Response<wbr>Base<wbr>Image<wbr>Registry<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Image registry that contains the base image.{{% /md %}}</dd>
 </dl>
@@ -9339,7 +9438,7 @@ The path specified gets used to call the user script.{{% /md %}}</dd>
 <a href="#cranpackages_csharp" style="color: inherit; text-decoration: inherit;">Cran<wbr>Packages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rcranpackageresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>RCran<wbr>Package<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#rcranpackageresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services..<wbr>Inputs.<wbr>RCran<wbr>Package<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The CRAN packages to use.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -9357,7 +9456,7 @@ The path specified gets used to call the user script.{{% /md %}}</dd>
 <a href="#githubpackages_csharp" style="color: inherit; text-decoration: inherit;">Git<wbr>Hub<wbr>Packages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rgithubpackageresponseresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>RGit<wbr>Hub<wbr>Package<wbr>Response<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#rgithubpackageresponseresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services..<wbr>Inputs.<wbr>RGit<wbr>Hub<wbr>Package<wbr>Response<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The packages directly from GitHub.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -9648,7 +9747,7 @@ The path specified gets used to call the user script.{{% /md %}}</dd>
 <a href="#packages_csharp" style="color: inherit; text-decoration: inherit;">Packages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sparkmavenpackageresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Spark<wbr>Maven<wbr>Package<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#sparkmavenpackageresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services..<wbr>Inputs.<wbr>Spark<wbr>Maven<wbr>Package<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The Spark packages to use.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -9782,7 +9881,7 @@ The path specified gets used to call the user script.{{% /md %}}</dd>
 <a href="#packages_csharp" style="color: inherit; text-decoration: inherit;">Packages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sparkmavenpackage">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Spark<wbr>Maven<wbr>Package<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#sparkmavenpackage">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services..<wbr>Inputs.<wbr>Spark<wbr>Maven<wbr>Package<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The Spark packages to use.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -9952,7 +10051,7 @@ The path specified gets used to call the user script.{{% /md %}}</dd>
 <a href="#datasets_csharp" style="color: inherit; text-decoration: inherit;">Datasets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetreferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Dataset<wbr>Reference<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#datasetreferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services..<wbr>Inputs.<wbr>Dataset<wbr>Reference<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of datasets associated with the model.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -10051,7 +10150,7 @@ The path specified gets used to call the user script.{{% /md %}}</dd>
 <a href="#resourcerequirements_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Requirements</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerresourcerequirementsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Container<wbr>Resource<wbr>Requirements<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#containerresourcerequirementsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services..<wbr>Inputs.<wbr>Container<wbr>Resource<wbr>Requirements<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Resource requirements for the model{{% /md %}}</dd>
     <dt class="property-optional"
@@ -11063,7 +11162,7 @@ The path specified gets used to call the user script.{{% /md %}}</dd>
 <a href="#details_csharp" style="color: inherit; text-decoration: inherit;">Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#errordetailresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Error<wbr>Detail<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#errordetailresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services..<wbr>Inputs.<wbr>Error<wbr>Detail<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}An array of error detail objects.{{% /md %}}</dd>
     <dt class="property-required"
@@ -11542,147 +11641,13 @@ The path specified gets used to call the user script.{{% /md %}}</dd>
     <dd>{{% md %}}{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
-
-<h4 id="userassignedidentityresponse">User<wbr>Assigned<wbr>Identity<wbr>Response</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="clientid_csharp">
-<a href="#clientid_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The clientId(aka appId) of the user assigned identity.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="principalid_csharp">
-<a href="#principalid_csharp" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The principal ID of the user assigned identity.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="tenantid_csharp">
-<a href="#tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The tenant ID of the user assigned identity.{{% /md %}}</dd>
-</dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="clientid_go">
-<a href="#clientid_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The clientId(aka appId) of the user assigned identity.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="principalid_go">
-<a href="#principalid_go" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The principal ID of the user assigned identity.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="tenantid_go">
-<a href="#tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The tenant ID of the user assigned identity.{{% /md %}}</dd>
-</dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="clientid_nodejs">
-<a href="#clientid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The clientId(aka appId) of the user assigned identity.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="principalid_nodejs">
-<a href="#principalid_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The principal ID of the user assigned identity.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="tenantid_nodejs">
-<a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The tenant ID of the user assigned identity.{{% /md %}}</dd>
-</dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="client_id_python">
-<a href="#client_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The clientId(aka appId) of the user assigned identity.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="principal_id_python">
-<a href="#principal_id_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The principal ID of the user assigned identity.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="tenant_id_python">
-<a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The tenant ID of the user assigned identity.{{% /md %}}</dd>
-</dl>
-{{% /choosable %}}
 ## Import
 
 
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:machinelearningservices/v20200901preview:MachineLearningService service456 subscriptions/34adfa4f-cedf-4dc0-ba29-b6d1a69ab345/resourceGroups/testrg123/providers/Microsoft.MachineLearningServices/workspaces/workspaces123/services/service456 
+$ pulumi import azure-nextgen:machinelearningservices:MachineLearningService service456 subscriptions/34adfa4f-cedf-4dc0-ba29-b6d1a69ab345/resourceGroups/testrg123/providers/Microsoft.MachineLearningServices/workspaces/workspaces123/services/service456 
 ```
 
 

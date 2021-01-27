@@ -195,7 +195,7 @@ The following output properties are available:
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#failoversetresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stor<wbr>Simple.<wbr>Outputs.<wbr>Failover<wbr>Set<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#failoversetresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stor<wbr>Simple..<wbr>Outputs.<wbr>Failover<wbr>Set<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of failover sets.{{% /md %}}</dd>
 </dl>
@@ -371,7 +371,7 @@ The following output properties are available:
 <a href="#eligibilityresult_csharp" style="color: inherit; text-decoration: inherit;">Eligibility<wbr>Result</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#failoverseteligibilityresultresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stor<wbr>Simple.<wbr>Inputs.<wbr>Failover<wbr>Set<wbr>Eligibility<wbr>Result<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#failoverseteligibilityresultresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stor<wbr>Simple..<wbr>Inputs.<wbr>Failover<wbr>Set<wbr>Eligibility<wbr>Result<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The eligibility result of the failover set, for failover.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -380,7 +380,7 @@ The following output properties are available:
 <a href="#volumecontainers_csharp" style="color: inherit; text-decoration: inherit;">Volume<wbr>Containers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volumecontainerfailovermetadataresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stor<wbr>Simple.<wbr>Inputs.<wbr>Volume<wbr>Container<wbr>Failover<wbr>Metadata<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#volumecontainerfailovermetadataresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stor<wbr>Simple..<wbr>Inputs.<wbr>Volume<wbr>Container<wbr>Failover<wbr>Metadata<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of meta data of volume containers, which are part of the failover set.{{% /md %}}</dd>
 </dl>
@@ -483,7 +483,7 @@ The following output properties are available:
 <a href="#volumes_csharp" style="color: inherit; text-decoration: inherit;">Volumes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volumefailovermetadataresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stor<wbr>Simple.<wbr>Inputs.<wbr>Volume<wbr>Failover<wbr>Metadata<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#volumefailovermetadataresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stor<wbr>Simple..<wbr>Inputs.<wbr>Volume<wbr>Failover<wbr>Metadata<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of metadata of volumes inside the volume container, which contains valid cloud snapshots.{{% /md %}}</dd>
 </dl>

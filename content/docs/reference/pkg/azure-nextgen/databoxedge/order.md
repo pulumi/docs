@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.databoxedge.Order resource with 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The order details.
-Latest API Version: 2020-09-01.
+API Version: 2020-09-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,9 +27,9 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var order = new AzureNextGen.DataBoxEdge.Latest.Order("order", new AzureNextGen.DataBoxEdge.Latest.OrderArgs
+        var order = new AzureNextGen.DataBoxEdge..Order("order", new AzureNextGen.DataBoxEdge..OrderArgs
         {
-            ContactInformation = new AzureNextGen.DataBoxEdge.Latest.Inputs.ContactDetailsArgs
+            ContactInformation = new AzureNextGen.DataBoxEdge..Inputs.ContactDetailsArgs
             {
                 CompanyName = "Microsoft",
                 ContactPerson = "John Mcclane",
@@ -41,7 +41,7 @@ class MyStack : Stack
             },
             DeviceName = "testedgedevice",
             ResourceGroupName = "GroupForEdgeAutomation",
-            ShippingAddress = new AzureNextGen.DataBoxEdge.Latest.Inputs.AddressArgs
+            ShippingAddress = new AzureNextGen.DataBoxEdge..Inputs.AddressArgs
             {
                 AddressLine1 = "Microsoft Corporation",
                 AddressLine2 = "One Microsoft Way",
@@ -66,7 +66,7 @@ class MyStack : Stack
 package main
 
 import (
-	databoxedge "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/databoxedge/latest"
+	databoxedge "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/databoxedge"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -110,8 +110,8 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-order = azure_nextgen.databoxedge.latest.Order("order",
-    contact_information=azure_nextgen.databoxedge.latest.ContactDetailsArgs(
+order = azure_nextgen.databoxedge.Order("order",
+    contact_information=azure_nextgen.databoxedge.ContactDetailsArgs(
         company_name="Microsoft",
         contact_person="John Mcclane",
         email_list=["john@microsoft.com"],
@@ -119,7 +119,7 @@ order = azure_nextgen.databoxedge.latest.Order("order",
     ),
     device_name="testedgedevice",
     resource_group_name="GroupForEdgeAutomation",
-    shipping_address=azure_nextgen.databoxedge.latest.AddressArgs(
+    shipping_address=azure_nextgen.databoxedge.AddressArgs(
         address_line1="Microsoft Corporation",
         address_line2="One Microsoft Way",
         address_line3="Redmond",
@@ -139,7 +139,7 @@ order = azure_nextgen.databoxedge.latest.Order("order",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const order = new azure_nextgen.databoxedge.latest.Order("order", {
+const order = new azure_nextgen.databoxedge.Order("order", {
     contactInformation: {
         companyName: "Microsoft",
         contactPerson: "John Mcclane",
@@ -352,7 +352,7 @@ The Order resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#contactinformation_csharp" style="color: inherit; text-decoration: inherit;">Contact<wbr>Information</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contactdetails">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Inputs.<wbr>Contact<wbr>Details<wbr>Args</a></span>
+        <span class="property-type"><a href="#contactdetails">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge..<wbr>Inputs.<wbr>Contact<wbr>Details<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The contact details.{{% /md %}}</dd>
     <dt class="property-required"
@@ -379,7 +379,7 @@ The Order resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#currentstatus_csharp" style="color: inherit; text-decoration: inherit;">Current<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#orderstatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Inputs.<wbr>Order<wbr>Status<wbr>Args</a></span>
+        <span class="property-type"><a href="#orderstatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge..<wbr>Inputs.<wbr>Order<wbr>Status<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Current status of the order.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -388,7 +388,7 @@ The Order resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#shipmenttype_csharp" style="color: inherit; text-decoration: inherit;">Shipment<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#shipmenttype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Shipment<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#shipmenttype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge..<wbr>Shipment<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}ShipmentType of the order{{% /md %}}</dd>
     <dt class="property-optional"
@@ -397,7 +397,7 @@ The Order resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#shippingaddress_csharp" style="color: inherit; text-decoration: inherit;">Shipping<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#address">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Inputs.<wbr>Address<wbr>Args</a></span>
+        <span class="property-type"><a href="#address">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge..<wbr>Inputs.<wbr>Address<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The shipping address.{{% /md %}}</dd>
 </dl>
@@ -599,7 +599,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deliverytrackinginfo_csharp" style="color: inherit; text-decoration: inherit;">Delivery<wbr>Tracking<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trackinginforesponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Outputs.<wbr>Tracking<wbr>Info<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#trackinginforesponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge..<wbr>Outputs.<wbr>Tracking<wbr>Info<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Tracking information for the package delivered to the customer whether it has an original or a replacement device.{{% /md %}}</dd>
     <dt class="property-"
@@ -626,7 +626,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#orderhistory_csharp" style="color: inherit; text-decoration: inherit;">Order<wbr>History</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#orderstatusresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Outputs.<wbr>Order<wbr>Status<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#orderstatusresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge..<wbr>Outputs.<wbr>Order<wbr>Status<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of status changes in the order.{{% /md %}}</dd>
     <dt class="property-"
@@ -635,7 +635,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#returntrackinginfo_csharp" style="color: inherit; text-decoration: inherit;">Return<wbr>Tracking<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trackinginforesponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Outputs.<wbr>Tracking<wbr>Info<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#trackinginforesponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge..<wbr>Outputs.<wbr>Tracking<wbr>Info<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Tracking information for the package returned from the customer whether it has an original or a replacement device.{{% /md %}}</dd>
     <dt class="property-"
@@ -1941,7 +1941,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#orderstate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Order<wbr>State</a></span>
+        <span class="property-type">string | <a href="#orderstate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge..<wbr>Order<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}Status of the order as per the allowed status types.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2058,7 +2058,7 @@ by the already existing properties{{% /md %}}</dd>
 <a href="#trackinginformation_csharp" style="color: inherit; text-decoration: inherit;">Tracking<wbr>Information</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trackinginforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Inputs.<wbr>Tracking<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#trackinginforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge..<wbr>Inputs.<wbr>Tracking<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Tracking information related to the state in the ordering flow{{% /md %}}</dd>
     <dt class="property-required"
@@ -2459,7 +2459,7 @@ by the already existing properties{{% /md %}}</dd>
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:databoxedge/latest:Order default /subscriptions/4385cf00-2d3a-425a-832f-f4285b1c9dce/resourceGroups/GroupForEdgeAutomation/providers/Microsoft.DataBoxEdge/dataBoxEdgeDevices/testedgedevice/orders/default 
+$ pulumi import azure-nextgen:databoxedge:Order default /subscriptions/4385cf00-2d3a-425a-832f-f4285b1c9dce/resourceGroups/GroupForEdgeAutomation/providers/Microsoft.DataBoxEdge/dataBoxEdgeDevices/testedgedevice/orders/default 
 ```
 
 

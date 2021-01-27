@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.batchai.Cluster resource with ex
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Information about a Cluster.
-Latest API Version: 2018-05-01.
+API Version: 2018-05-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,20 +27,20 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var cluster = new AzureNextGen.BatchAI.Latest.Cluster("cluster", new AzureNextGen.BatchAI.Latest.ClusterArgs
+        var cluster = new AzureNextGen.BatchAI..Cluster("cluster", new AzureNextGen.BatchAI..ClusterArgs
         {
             ClusterName = "demo_cluster",
-            NodeSetup = new AzureNextGen.BatchAI.Latest.Inputs.NodeSetupArgs
+            NodeSetup = new AzureNextGen.BatchAI..Inputs.NodeSetupArgs
             {
-                MountVolumes = new AzureNextGen.BatchAI.Latest.Inputs.MountVolumesArgs
+                MountVolumes = new AzureNextGen.BatchAI..Inputs.MountVolumesArgs
                 {
                     AzureFileShares = 
                     {
-                        new AzureNextGen.BatchAI.Latest.Inputs.AzureFileShareReferenceArgs
+                        new AzureNextGen.BatchAI..Inputs.AzureFileShareReferenceArgs
                         {
                             AccountName = "storage_account_name",
                             AzureFileUrl = "https://storage_account_name.file.core.windows.net/azure_file_share_name",
-                            Credentials = new AzureNextGen.BatchAI.Latest.Inputs.AzureStorageCredentialsInfoArgs
+                            Credentials = new AzureNextGen.BatchAI..Inputs.AzureStorageCredentialsInfoArgs
                             {
                                 AccountKey = "00000000000000000000000000000000000000000000000000000000000000000000000000000000000000==",
                             },
@@ -51,9 +51,9 @@ class MyStack : Stack
                     },
                     FileServers = 
                     {
-                        new AzureNextGen.BatchAI.Latest.Inputs.FileServerReferenceArgs
+                        new AzureNextGen.BatchAI..Inputs.FileServerReferenceArgs
                         {
-                            FileServer = new AzureNextGen.BatchAI.Latest.Inputs.ResourceIdArgs
+                            FileServer = new AzureNextGen.BatchAI..Inputs.ResourceIdArgs
                             {
                                 Id = "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/demo_resource_group/providers/Microsoft.BatchAI/workspaces/demo_workspaces/fileservers/fileservercedd134b",
                             },
@@ -64,15 +64,15 @@ class MyStack : Stack
                 },
             },
             ResourceGroupName = "demo_resource_group",
-            ScaleSettings = new AzureNextGen.BatchAI.Latest.Inputs.ScaleSettingsArgs
+            ScaleSettings = new AzureNextGen.BatchAI..Inputs.ScaleSettingsArgs
             {
-                Manual = new AzureNextGen.BatchAI.Latest.Inputs.ManualScaleSettingsArgs
+                Manual = new AzureNextGen.BatchAI..Inputs.ManualScaleSettingsArgs
                 {
                     NodeDeallocationOption = "requeue",
                     TargetNodeCount = 1,
                 },
             },
-            UserAccountSettings = new AzureNextGen.BatchAI.Latest.Inputs.UserAccountSettingsArgs
+            UserAccountSettings = new AzureNextGen.BatchAI..Inputs.UserAccountSettingsArgs
             {
                 AdminUserName = "admin_user_name",
                 AdminUserPassword = "admin_user_password",
@@ -96,7 +96,7 @@ class MyStack : Stack
 package main
 
 import (
-	batchai "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/batchai/latest"
+	batchai "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/batchai"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -162,22 +162,22 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-cluster = azure_nextgen.batchai.latest.Cluster("cluster",
+cluster = azure_nextgen.batchai.Cluster("cluster",
     cluster_name="demo_cluster",
-    node_setup=azure_nextgen.batchai.latest.NodeSetupArgs(
-        mount_volumes=azure_nextgen.batchai.latest.MountVolumesArgs(
-            azure_file_shares=[azure_nextgen.batchai.latest.AzureFileShareReferenceArgs(
+    node_setup=azure_nextgen.batchai.NodeSetupArgs(
+        mount_volumes=azure_nextgen.batchai.MountVolumesArgs(
+            azure_file_shares=[azure_nextgen.batchai.AzureFileShareReferenceArgs(
                 account_name="storage_account_name",
                 azure_file_url="https://storage_account_name.file.core.windows.net/azure_file_share_name",
-                credentials=azure_nextgen.batchai.latest.AzureStorageCredentialsInfoArgs(
+                credentials=azure_nextgen.batchai.AzureStorageCredentialsInfoArgs(
                     account_key="00000000000000000000000000000000000000000000000000000000000000000000000000000000000000==",
                 ),
                 directory_mode="0777",
                 file_mode="0777",
                 relative_mount_path="azfiles",
             )],
-            file_servers=[azure_nextgen.batchai.latest.FileServerReferenceArgs(
-                file_server=azure_nextgen.batchai.latest.ResourceIdArgs(
+            file_servers=[azure_nextgen.batchai.FileServerReferenceArgs(
+                file_server=azure_nextgen.batchai.ResourceIdArgs(
                     id="/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/demo_resource_group/providers/Microsoft.BatchAI/workspaces/demo_workspaces/fileservers/fileservercedd134b",
                 ),
                 mount_options="rw",
@@ -186,13 +186,13 @@ cluster = azure_nextgen.batchai.latest.Cluster("cluster",
         ),
     ),
     resource_group_name="demo_resource_group",
-    scale_settings=azure_nextgen.batchai.latest.ScaleSettingsArgs(
-        manual=azure_nextgen.batchai.latest.ManualScaleSettingsArgs(
+    scale_settings=azure_nextgen.batchai.ScaleSettingsArgs(
+        manual=azure_nextgen.batchai.ManualScaleSettingsArgs(
             node_deallocation_option="requeue",
             target_node_count=1,
         ),
     ),
-    user_account_settings=azure_nextgen.batchai.latest.UserAccountSettingsArgs(
+    user_account_settings=azure_nextgen.batchai.UserAccountSettingsArgs(
         admin_user_name="admin_user_name",
         admin_user_password="admin_user_password",
         admin_user_ssh_public_key="ssh-rsa AAAAB3NzaC1yc...",
@@ -211,7 +211,7 @@ cluster = azure_nextgen.batchai.latest.Cluster("cluster",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const cluster = new azure_nextgen.batchai.latest.Cluster("cluster", {
+const cluster = new azure_nextgen.batchai.Cluster("cluster", {
     clusterName: "demo_cluster",
     nodeSetup: {
         mountVolumes: {
@@ -462,7 +462,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#useraccountsettings_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Account<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#useraccountsettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI.<wbr>Inputs.<wbr>User<wbr>Account<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#useraccountsettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI..<wbr>Inputs.<wbr>User<wbr>Account<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings for an administrator user account that will be created on each compute node in the cluster.{{% /md %}}</dd>
     <dt class="property-required"
@@ -489,7 +489,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#nodesetup_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Setup</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodesetup">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI.<wbr>Inputs.<wbr>Node<wbr>Setup<wbr>Args</a></span>
+        <span class="property-type"><a href="#nodesetup">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI..<wbr>Inputs.<wbr>Node<wbr>Setup<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Setup to be performed on each compute node in the cluster.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -498,7 +498,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#scalesettings_csharp" style="color: inherit; text-decoration: inherit;">Scale<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI.<wbr>Inputs.<wbr>Scale<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#scalesettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI..<wbr>Inputs.<wbr>Scale<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Scale settings for the cluster. Batch AI service supports manual and auto scale clusters.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -507,7 +507,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#subnet_csharp" style="color: inherit; text-decoration: inherit;">Subnet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceid">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI.<wbr>Inputs.<wbr>Resource<wbr>Id<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourceid">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI..<wbr>Inputs.<wbr>Resource<wbr>Id<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Existing virtual network subnet to put the cluster nodes in. Note, if a File Server mount configured in node setup, the File Server's subnet will be used automatically.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -516,7 +516,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#virtualmachineconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Machine<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineconfiguration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI.<wbr>Inputs.<wbr>Virtual<wbr>Machine<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualmachineconfiguration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI..<wbr>Inputs.<wbr>Virtual<wbr>Machine<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}OS image configuration for cluster nodes. All nodes in a cluster have the same OS image.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -525,7 +525,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#vmpriority_csharp" style="color: inherit; text-decoration: inherit;">Vm<wbr>Priority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vmpriority">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI.<wbr>Vm<wbr>Priority</a></span>
+        <span class="property-type"><a href="#vmpriority">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI..<wbr>Vm<wbr>Priority</a></span>
     </dt>
     <dd>{{% md %}}VM priority. Allowed values are: dedicated (default) and lowpriority.{{% /md %}}</dd>
 </dl>
@@ -871,7 +871,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errors_csharp" style="color: inherit; text-decoration: inherit;">Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#batchaierrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI.<wbr>Outputs.<wbr>Batch<wbr>AIError<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#batchaierrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI..<wbr>Outputs.<wbr>Batch<wbr>AIError<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Collection of errors encountered by various compute nodes during node setup.{{% /md %}}</dd>
     <dt class="property-"
@@ -898,7 +898,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nodestatecounts_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>State<wbr>Counts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodestatecountsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI.<wbr>Outputs.<wbr>Node<wbr>State<wbr>Counts<wbr>Response</a></span>
+        <span class="property-type"><a href="#nodestatecountsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI..<wbr>Outputs.<wbr>Node<wbr>State<wbr>Counts<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Counts of various node states on the cluster.{{% /md %}}</dd>
     <dt class="property-"
@@ -1267,7 +1267,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#component_csharp" style="color: inherit; text-decoration: inherit;">Component</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceid">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI.<wbr>Inputs.<wbr>Resource<wbr>Id<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourceid">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI..<wbr>Inputs.<wbr>Resource<wbr>Id<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Azure Application Insights component resource ID.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1285,7 +1285,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#instrumentationkeysecretreference_csharp" style="color: inherit; text-decoration: inherit;">Instrumentation<wbr>Key<wbr>Secret<wbr>Reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultsecretreference">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI.<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#keyvaultsecretreference">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI..<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}KeyVault Store and Secret which contains Azure Application Insights instrumentation key. One of instrumentationKey or instrumentationKeySecretReference must be specified.{{% /md %}}</dd>
 </dl>
@@ -1401,7 +1401,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#component_csharp" style="color: inherit; text-decoration: inherit;">Component</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI.<wbr>Inputs.<wbr>Resource<wbr>Id<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourceidresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI..<wbr>Inputs.<wbr>Resource<wbr>Id<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Azure Application Insights component resource ID.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1419,7 +1419,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#instrumentationkeysecretreference_csharp" style="color: inherit; text-decoration: inherit;">Instrumentation<wbr>Key<wbr>Secret<wbr>Reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI.<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#keyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI..<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}KeyVault Store and Secret which contains Azure Application Insights instrumentation key. One of instrumentationKey or instrumentationKeySecretReference must be specified.{{% /md %}}</dd>
 </dl>
@@ -1821,7 +1821,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#credentials_csharp" style="color: inherit; text-decoration: inherit;">Credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurestoragecredentialsinfo">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI.<wbr>Inputs.<wbr>Azure<wbr>Storage<wbr>Credentials<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurestoragecredentialsinfo">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI..<wbr>Inputs.<wbr>Azure<wbr>Storage<wbr>Credentials<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information about the Azure storage credentials.{{% /md %}}</dd>
     <dt class="property-required"
@@ -2027,7 +2027,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#credentials_csharp" style="color: inherit; text-decoration: inherit;">Credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurestoragecredentialsinforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI.<wbr>Inputs.<wbr>Azure<wbr>Storage<wbr>Credentials<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurestoragecredentialsinforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI..<wbr>Inputs.<wbr>Azure<wbr>Storage<wbr>Credentials<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information about the Azure storage credentials.{{% /md %}}</dd>
     <dt class="property-required"
@@ -2233,7 +2233,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#credentials_csharp" style="color: inherit; text-decoration: inherit;">Credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurestoragecredentialsinfo">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI.<wbr>Inputs.<wbr>Azure<wbr>Storage<wbr>Credentials<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurestoragecredentialsinfo">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI..<wbr>Inputs.<wbr>Azure<wbr>Storage<wbr>Credentials<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information about the Azure storage credentials.{{% /md %}}</dd>
     <dt class="property-required"
@@ -2475,7 +2475,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#credentials_csharp" style="color: inherit; text-decoration: inherit;">Credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurestoragecredentialsinforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI.<wbr>Inputs.<wbr>Azure<wbr>Storage<wbr>Credentials<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurestoragecredentialsinforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI..<wbr>Inputs.<wbr>Azure<wbr>Storage<wbr>Credentials<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information about the Azure storage credentials.{{% /md %}}</dd>
     <dt class="property-required"
@@ -2708,7 +2708,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accountkeysecretreference_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Key<wbr>Secret<wbr>Reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultsecretreference">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI.<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#keyvaultsecretreference">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI..<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information about KeyVault secret storing the storage account key. One of accountKey or accountKeySecretReference must be specified.{{% /md %}}</dd>
 </dl>
@@ -2806,7 +2806,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accountkeysecretreference_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Key<wbr>Secret<wbr>Reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI.<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#keyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI..<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information about KeyVault secret storing the storage account key. One of accountKey or accountKeySecretReference must be specified.{{% /md %}}</dd>
 </dl>
@@ -2904,7 +2904,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#details_csharp" style="color: inherit; text-decoration: inherit;">Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#namevaluepairresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI.<wbr>Inputs.<wbr>Name<wbr>Value<wbr>Pair<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#namevaluepairresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI..<wbr>Inputs.<wbr>Name<wbr>Value<wbr>Pair<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of additional details about the error.{{% /md %}}</dd>
     <dt class="property-required"
@@ -3289,7 +3289,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#valuesecretreference_csharp" style="color: inherit; text-decoration: inherit;">Value<wbr>Secret<wbr>Reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultsecretreference">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI.<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#keyvaultsecretreference">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI..<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}KeyVault store and secret which contains the value for the environment variable. One of value or valueSecretReference must be provided.{{% /md %}}</dd>
 </dl>
@@ -3423,7 +3423,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#valuesecretreference_csharp" style="color: inherit; text-decoration: inherit;">Value<wbr>Secret<wbr>Reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI.<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#keyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI..<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}KeyVault store and secret which contains the value for the environment variable. One of value or valueSecretReference must be provided.{{% /md %}}</dd>
 </dl>
@@ -3539,7 +3539,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fileserver_csharp" style="color: inherit; text-decoration: inherit;">File<wbr>Server</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceid">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI.<wbr>Inputs.<wbr>Resource<wbr>Id<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourceid">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI..<wbr>Inputs.<wbr>Resource<wbr>Id<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Resource ID of the existing File Server to be mounted.{{% /md %}}</dd>
     <dt class="property-required"
@@ -3709,7 +3709,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fileserver_csharp" style="color: inherit; text-decoration: inherit;">File<wbr>Server</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI.<wbr>Inputs.<wbr>Resource<wbr>Id<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourceidresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI..<wbr>Inputs.<wbr>Resource<wbr>Id<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Resource ID of the existing File Server to be mounted.{{% /md %}}</dd>
     <dt class="property-required"
@@ -4300,7 +4300,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourcevault_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Vault</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceid">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI.<wbr>Inputs.<wbr>Resource<wbr>Id<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourceid">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI..<wbr>Inputs.<wbr>Resource<wbr>Id<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Fully qualified resource identifier of the Key Vault.{{% /md %}}</dd>
 </dl>
@@ -4398,7 +4398,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourcevault_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Vault</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI.<wbr>Inputs.<wbr>Resource<wbr>Id<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourceidresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI..<wbr>Inputs.<wbr>Resource<wbr>Id<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Fully qualified resource identifier of the Key Vault.{{% /md %}}</dd>
 </dl>
@@ -4496,7 +4496,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nodedeallocationoption_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Deallocation<wbr>Option</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#deallocationoption">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI.<wbr>Deallocation<wbr>Option</a></span>
+        <span class="property-type">string | <a href="#deallocationoption">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI..<wbr>Deallocation<wbr>Option</a></span>
     </dt>
     <dd>{{% md %}}An action to be performed when the cluster size is decreasing. The default value is requeue.{{% /md %}}</dd>
 </dl>
@@ -4683,7 +4683,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azureblobfilesystems_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Blob<wbr>File<wbr>Systems</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureblobfilesystemreference">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>File<wbr>System<wbr>Reference<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#azureblobfilesystemreference">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI..<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>File<wbr>System<wbr>Reference<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A collection of Azure Blob Containers that are to be mounted to the cluster nodes.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4692,7 +4692,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azurefileshares_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>File<wbr>Shares</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefilesharereference">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI.<wbr>Inputs.<wbr>Azure<wbr>File<wbr>Share<wbr>Reference<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#azurefilesharereference">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI..<wbr>Inputs.<wbr>Azure<wbr>File<wbr>Share<wbr>Reference<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A collection of Azure File Shares that are to be mounted to the cluster nodes.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4701,7 +4701,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fileservers_csharp" style="color: inherit; text-decoration: inherit;">File<wbr>Servers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fileserverreference">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI.<wbr>Inputs.<wbr>File<wbr>Server<wbr>Reference<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#fileserverreference">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI..<wbr>Inputs.<wbr>File<wbr>Server<wbr>Reference<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A collection of Batch AI File Servers that are to be mounted to the cluster nodes.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4710,7 +4710,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#unmanagedfilesystems_csharp" style="color: inherit; text-decoration: inherit;">Unmanaged<wbr>File<wbr>Systems</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#unmanagedfilesystemreference">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI.<wbr>Inputs.<wbr>Unmanaged<wbr>File<wbr>System<wbr>Reference<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#unmanagedfilesystemreference">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI..<wbr>Inputs.<wbr>Unmanaged<wbr>File<wbr>System<wbr>Reference<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A collection of unmanaged file systems that are to be mounted to the cluster nodes.{{% /md %}}</dd>
 </dl>
@@ -4853,7 +4853,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azureblobfilesystems_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Blob<wbr>File<wbr>Systems</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureblobfilesystemreferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>File<wbr>System<wbr>Reference<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#azureblobfilesystemreferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI..<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>File<wbr>System<wbr>Reference<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A collection of Azure Blob Containers that are to be mounted to the cluster nodes.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4862,7 +4862,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azurefileshares_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>File<wbr>Shares</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefilesharereferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI.<wbr>Inputs.<wbr>Azure<wbr>File<wbr>Share<wbr>Reference<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#azurefilesharereferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI..<wbr>Inputs.<wbr>Azure<wbr>File<wbr>Share<wbr>Reference<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A collection of Azure File Shares that are to be mounted to the cluster nodes.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4871,7 +4871,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fileservers_csharp" style="color: inherit; text-decoration: inherit;">File<wbr>Servers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fileserverreferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI.<wbr>Inputs.<wbr>File<wbr>Server<wbr>Reference<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#fileserverreferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI..<wbr>Inputs.<wbr>File<wbr>Server<wbr>Reference<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A collection of Batch AI File Servers that are to be mounted to the cluster nodes.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4880,7 +4880,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#unmanagedfilesystems_csharp" style="color: inherit; text-decoration: inherit;">Unmanaged<wbr>File<wbr>Systems</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#unmanagedfilesystemreferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI.<wbr>Inputs.<wbr>Unmanaged<wbr>File<wbr>System<wbr>Reference<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#unmanagedfilesystemreferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI..<wbr>Inputs.<wbr>Unmanaged<wbr>File<wbr>System<wbr>Reference<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A collection of unmanaged file systems that are to be mounted to the cluster nodes.{{% /md %}}</dd>
 </dl>
@@ -5121,7 +5121,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mountvolumes_csharp" style="color: inherit; text-decoration: inherit;">Mount<wbr>Volumes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mountvolumes">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI.<wbr>Inputs.<wbr>Mount<wbr>Volumes<wbr>Args</a></span>
+        <span class="property-type"><a href="#mountvolumes">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI..<wbr>Inputs.<wbr>Mount<wbr>Volumes<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Mount volumes to be available to setup task and all jobs executing on the cluster. The volumes will be mounted at location specified by $AZ_BATCHAI_MOUNT_ROOT environment variable.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -5130,7 +5130,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#performancecounterssettings_csharp" style="color: inherit; text-decoration: inherit;">Performance<wbr>Counters<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#performancecounterssettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI.<wbr>Inputs.<wbr>Performance<wbr>Counters<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#performancecounterssettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI..<wbr>Inputs.<wbr>Performance<wbr>Counters<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings for performance counters collecting and uploading.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -5139,7 +5139,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#setuptask_csharp" style="color: inherit; text-decoration: inherit;">Setup<wbr>Task</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#setuptask">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI.<wbr>Inputs.<wbr>Setup<wbr>Task<wbr>Args</a></span>
+        <span class="property-type"><a href="#setuptask">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI..<wbr>Inputs.<wbr>Setup<wbr>Task<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Setup task to run on cluster nodes when nodes got created or rebooted. The setup task code needs to be idempotent. Generally the setup task is used to download static data that is required for all jobs that run on the cluster VMs and/or to download/install software.{{% /md %}}</dd>
 </dl>
@@ -5255,7 +5255,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mountvolumes_csharp" style="color: inherit; text-decoration: inherit;">Mount<wbr>Volumes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mountvolumesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI.<wbr>Inputs.<wbr>Mount<wbr>Volumes<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#mountvolumesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI..<wbr>Inputs.<wbr>Mount<wbr>Volumes<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Mount volumes to be available to setup task and all jobs executing on the cluster. The volumes will be mounted at location specified by $AZ_BATCHAI_MOUNT_ROOT environment variable.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -5264,7 +5264,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#performancecounterssettings_csharp" style="color: inherit; text-decoration: inherit;">Performance<wbr>Counters<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#performancecounterssettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI.<wbr>Inputs.<wbr>Performance<wbr>Counters<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#performancecounterssettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI..<wbr>Inputs.<wbr>Performance<wbr>Counters<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings for performance counters collecting and uploading.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -5273,7 +5273,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#setuptask_csharp" style="color: inherit; text-decoration: inherit;">Setup<wbr>Task</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#setuptaskresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI.<wbr>Inputs.<wbr>Setup<wbr>Task<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#setuptaskresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI..<wbr>Inputs.<wbr>Setup<wbr>Task<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Setup task to run on cluster nodes when nodes got created or rebooted. The setup task code needs to be idempotent. Generally the setup task is used to download static data that is required for all jobs that run on the cluster VMs and/or to download/install software.{{% /md %}}</dd>
 </dl>
@@ -5595,7 +5595,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#appinsightsreference_csharp" style="color: inherit; text-decoration: inherit;">App<wbr>Insights<wbr>Reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appinsightsreference">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI.<wbr>Inputs.<wbr>App<wbr>Insights<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#appinsightsreference">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI..<wbr>Inputs.<wbr>App<wbr>Insights<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Azure Application Insights information for performance counters reporting. If provided, Batch AI will upload node performance counters to the corresponding Azure Application Insights account.{{% /md %}}</dd>
 </dl>
@@ -5657,7 +5657,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#appinsightsreference_csharp" style="color: inherit; text-decoration: inherit;">App<wbr>Insights<wbr>Reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appinsightsreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI.<wbr>Inputs.<wbr>App<wbr>Insights<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#appinsightsreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI..<wbr>Inputs.<wbr>App<wbr>Insights<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Azure Application Insights information for performance counters reporting. If provided, Batch AI will upload node performance counters to the corresponding Azure Application Insights account.{{% /md %}}</dd>
 </dl>
@@ -5843,7 +5843,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#autoscale_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Scale</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalesettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI.<wbr>Inputs.<wbr>Auto<wbr>Scale<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#autoscalesettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI..<wbr>Inputs.<wbr>Auto<wbr>Scale<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Auto-scale settings for the cluster.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -5852,7 +5852,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#manual_csharp" style="color: inherit; text-decoration: inherit;">Manual</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#manualscalesettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI.<wbr>Inputs.<wbr>Manual<wbr>Scale<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#manualscalesettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI..<wbr>Inputs.<wbr>Manual<wbr>Scale<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Manual scale settings for the cluster.{{% /md %}}</dd>
 </dl>
@@ -5941,7 +5941,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#autoscale_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Scale</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI.<wbr>Inputs.<wbr>Auto<wbr>Scale<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#autoscalesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI..<wbr>Inputs.<wbr>Auto<wbr>Scale<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Auto-scale settings for the cluster.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -5950,7 +5950,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#manual_csharp" style="color: inherit; text-decoration: inherit;">Manual</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#manualscalesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI.<wbr>Inputs.<wbr>Manual<wbr>Scale<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#manualscalesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI..<wbr>Inputs.<wbr>Manual<wbr>Scale<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Manual scale settings for the cluster.{{% /md %}}</dd>
 </dl>
@@ -6057,7 +6057,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#environmentvariables_csharp" style="color: inherit; text-decoration: inherit;">Environment<wbr>Variables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentvariable">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI.<wbr>Inputs.<wbr>Environment<wbr>Variable<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#environmentvariable">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI..<wbr>Inputs.<wbr>Environment<wbr>Variable<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A collection of user defined environment variables to be set for setup task.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -6066,7 +6066,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secrets_csharp" style="color: inherit; text-decoration: inherit;">Secrets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentvariablewithsecretvalue">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI.<wbr>Inputs.<wbr>Environment<wbr>Variable<wbr>With<wbr>Secret<wbr>Value<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#environmentvariablewithsecretvalue">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI..<wbr>Inputs.<wbr>Environment<wbr>Variable<wbr>With<wbr>Secret<wbr>Value<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A collection of user defined environment variables with secret values to be set for the setup task. Server will never report values of these variables back.{{% /md %}}</dd>
 </dl>
@@ -6236,7 +6236,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#environmentvariables_csharp" style="color: inherit; text-decoration: inherit;">Environment<wbr>Variables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentvariableresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI.<wbr>Inputs.<wbr>Environment<wbr>Variable<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#environmentvariableresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI..<wbr>Inputs.<wbr>Environment<wbr>Variable<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A collection of user defined environment variables to be set for setup task.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -6245,7 +6245,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secrets_csharp" style="color: inherit; text-decoration: inherit;">Secrets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentvariablewithsecretvalueresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI.<wbr>Inputs.<wbr>Environment<wbr>Variable<wbr>With<wbr>Secret<wbr>Value<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#environmentvariablewithsecretvalueresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI..<wbr>Inputs.<wbr>Environment<wbr>Variable<wbr>With<wbr>Secret<wbr>Value<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A collection of user defined environment variables with secret values to be set for the setup task. Server will never report values of these variables back.{{% /md %}}</dd>
 </dl>
@@ -6879,7 +6879,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#imagereference_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imagereference">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI.<wbr>Inputs.<wbr>Image<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#imagereference">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI..<wbr>Inputs.<wbr>Image<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}OS image reference for cluster nodes.{{% /md %}}</dd>
 </dl>
@@ -6941,7 +6941,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#imagereference_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imagereferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI.<wbr>Inputs.<wbr>Image<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#imagereferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI..<wbr>Inputs.<wbr>Image<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}OS image reference for cluster nodes.{{% /md %}}</dd>
 </dl>
@@ -7035,7 +7035,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:batchai/latest:Cluster demo_cluster /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/demo_resource_group/providers/Microsoft.BatchAI/workspaces/demo_workspace/clusters/demo_cluster 
+$ pulumi import azure-nextgen:batchai:Cluster demo_cluster /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/demo_resource_group/providers/Microsoft.BatchAI/workspaces/demo_workspace/clusters/demo_cluster 
 ```
 
 

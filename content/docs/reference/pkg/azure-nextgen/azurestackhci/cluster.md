@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.azurestackhci.Cluster resource w
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Cluster details.
-Latest API Version: 2020-10-01.
+API Version: 2020-10-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var cluster = new AzureNextGen.AzureStackHCI.Latest.Cluster("cluster", new AzureNextGen.AzureStackHCI.Latest.ClusterArgs
+        var cluster = new AzureNextGen.AzureStackHCI..Cluster("cluster", new AzureNextGen.AzureStackHCI..ClusterArgs
         {
             AadClientId = "24a6e53d-04e5-44d2-b7cc-1b732a847dfc",
             AadTenantId = "7e589cc1-a8b6-4dff-91bd-5ec0fa18db94",
@@ -49,7 +49,7 @@ class MyStack : Stack
 package main
 
 import (
-	azurestackhci "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/azurestackhci/latest"
+	azurestackhci "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/azurestackhci"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -79,7 +79,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-cluster = azure_nextgen.azurestackhci.latest.Cluster("cluster",
+cluster = azure_nextgen.azurestackhci.Cluster("cluster",
     aad_client_id="24a6e53d-04e5-44d2-b7cc-1b732a847dfc",
     aad_tenant_id="7e589cc1-a8b6-4dff-91bd-5ec0fa18db94",
     cluster_name="myCluster",
@@ -96,7 +96,7 @@ cluster = azure_nextgen.azurestackhci.latest.Cluster("cluster",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const cluster = new azure_nextgen.azurestackhci.latest.Cluster("cluster", {
+const cluster = new azure_nextgen.azurestackhci.Cluster("cluster", {
     aadClientId: "24a6e53d-04e5-44d2-b7cc-1b732a847dfc",
     aadTenantId: "7e589cc1-a8b6-4dff-91bd-5ec0fa18db94",
     clusterName: "myCluster",
@@ -643,7 +643,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#reportedproperties_csharp" style="color: inherit; text-decoration: inherit;">Reported<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterreportedpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Azure<wbr>Stack<wbr>HCI.<wbr>Outputs.<wbr>Cluster<wbr>Reported<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#clusterreportedpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Azure<wbr>Stack<wbr>HCI..<wbr>Outputs.<wbr>Cluster<wbr>Reported<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Properties reported by cluster agent.{{% /md %}}</dd>
 </dl>
@@ -1398,7 +1398,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nodes_csharp" style="color: inherit; text-decoration: inherit;">Nodes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternoderesponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Azure<wbr>Stack<wbr>HCI.<wbr>Inputs.<wbr>Cluster<wbr>Node<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#clusternoderesponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Azure<wbr>Stack<wbr>HCI..<wbr>Inputs.<wbr>Cluster<wbr>Node<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of nodes reported by the cluster.{{% /md %}}</dd>
 </dl>
@@ -1562,7 +1562,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:azurestackhci/latest:Cluster myCluster /subscriptions/fd3c3665-1729-4b7b-9a38-238e83b0f98b/resourceGroups/test-rg/providers/Microsoft.AzureStackHCI/clusters/myCluster 
+$ pulumi import azure-nextgen:azurestackhci:Cluster myCluster /subscriptions/fd3c3665-1729-4b7b-9a38-238e83b0f98b/resourceGroups/test-rg/providers/Microsoft.AzureStackHCI/clusters/myCluster 
 ```
 
 

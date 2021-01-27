@@ -251,7 +251,7 @@ The following output properties are available:
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skuresourceresponseproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Provider<wbr>Hub.<wbr>Outputs.<wbr>Sku<wbr>Resource<wbr>Response<wbr>Properties</a></span>
+        <span class="property-type"><a href="#skuresourceresponseproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Provider<wbr>Hub..<wbr>Outputs.<wbr>Sku<wbr>Resource<wbr>Response<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-"
@@ -683,7 +683,7 @@ The following output properties are available:
 <a href="#zonedetails_csharp" style="color: inherit; text-decoration: inherit;">Zone<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skuzonedetailresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Provider<wbr>Hub.<wbr>Inputs.<wbr>Sku<wbr>Zone<wbr>Detail<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#skuzonedetailresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Provider<wbr>Hub..<wbr>Inputs.<wbr>Sku<wbr>Zone<wbr>Detail<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -867,7 +867,7 @@ The following output properties are available:
 <a href="#skusettings_csharp" style="color: inherit; text-decoration: inherit;">Sku<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skusettingresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Provider<wbr>Hub.<wbr>Inputs.<wbr>Sku<wbr>Setting<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#skusettingresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Provider<wbr>Hub..<wbr>Inputs.<wbr>Sku<wbr>Setting<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 </dl>
@@ -943,7 +943,7 @@ The following output properties are available:
 <a href="#capabilities_csharp" style="color: inherit; text-decoration: inherit;">Capabilities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skucapabilityresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Provider<wbr>Hub.<wbr>Inputs.<wbr>Sku<wbr>Capability<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#skucapabilityresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Provider<wbr>Hub..<wbr>Inputs.<wbr>Sku<wbr>Capability<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -952,7 +952,7 @@ The following output properties are available:
 <a href="#capacity_csharp" style="color: inherit; text-decoration: inherit;">Capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skusettingresponsecapacity">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Provider<wbr>Hub.<wbr>Inputs.<wbr>Sku<wbr>Setting<wbr>Response<wbr>Capacity<wbr>Args</a></span>
+        <span class="property-type"><a href="#skusettingresponsecapacity">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Provider<wbr>Hub..<wbr>Inputs.<wbr>Sku<wbr>Setting<wbr>Response<wbr>Capacity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -961,7 +961,7 @@ The following output properties are available:
 <a href="#costs_csharp" style="color: inherit; text-decoration: inherit;">Costs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skucostresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Provider<wbr>Hub.<wbr>Inputs.<wbr>Sku<wbr>Cost<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#skucostresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Provider<wbr>Hub..<wbr>Inputs.<wbr>Sku<wbr>Cost<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -988,7 +988,7 @@ The following output properties are available:
 <a href="#locationinfo_csharp" style="color: inherit; text-decoration: inherit;">Location<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skulocationinforesponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Provider<wbr>Hub.<wbr>Inputs.<wbr>Sku<wbr>Location<wbr>Info<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#skulocationinforesponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Provider<wbr>Hub..<wbr>Inputs.<wbr>Sku<wbr>Location<wbr>Info<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1572,7 +1572,7 @@ The following output properties are available:
 <a href="#capabilities_csharp" style="color: inherit; text-decoration: inherit;">Capabilities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skucapabilityresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Provider<wbr>Hub.<wbr>Inputs.<wbr>Sku<wbr>Capability<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#skucapabilityresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Provider<wbr>Hub..<wbr>Inputs.<wbr>Sku<wbr>Capability<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"

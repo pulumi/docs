@@ -161,7 +161,7 @@ The following output properties are available:
 <a href="#criteria_csharp" style="color: inherit; text-decoration: inherit;">Criteria</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healthalertcriteriaresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Alerts<wbr>Management.<wbr>Outputs.<wbr>Health<wbr>Alert<wbr>Criteria<wbr>Response</a></span>
+        <span class="property-type"><a href="#healthalertcriteriaresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Alerts<wbr>Management..<wbr>Outputs.<wbr>Health<wbr>Alert<wbr>Criteria<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}defines the specific alert criteria information.{{% /md %}}</dd>
     <dt class="property-"
@@ -233,7 +233,7 @@ The following output properties are available:
 <a href="#actions_csharp" style="color: inherit; text-decoration: inherit;">Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healthalertactionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Alerts<wbr>Management.<wbr>Outputs.<wbr>Health<wbr>Alert<wbr>Action<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#healthalertactionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Alerts<wbr>Management..<wbr>Outputs.<wbr>Health<wbr>Alert<wbr>Action<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}the array of actions that are performed when the alert rule becomes active, and when an alert condition is resolved.{{% /md %}}</dd>
     <dt class="property-"
@@ -697,7 +697,7 @@ The following output properties are available:
 <a href="#allof_csharp" style="color: inherit; text-decoration: inherit;">All<wbr>Of</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vmguesthealthalertcriterionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Alerts<wbr>Management.<wbr>Inputs.<wbr>Vm<wbr>Guest<wbr>Health<wbr>Alert<wbr>Criterion<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#vmguesthealthalertcriterionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Alerts<wbr>Management..<wbr>Inputs.<wbr>Vm<wbr>Guest<wbr>Health<wbr>Alert<wbr>Criterion<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of metric criteria for this 'all of' operation. {{% /md %}}</dd>
 </dl>
@@ -867,7 +867,7 @@ The following output properties are available:
 <a href="#healthstates_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>States</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healthstateresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Alerts<wbr>Management.<wbr>Inputs.<wbr>Health<wbr>State<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#healthstateresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Alerts<wbr>Management..<wbr>Inputs.<wbr>Health<wbr>State<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Health states to alert on{{% /md %}}</dd>
     <dt class="property-optional"

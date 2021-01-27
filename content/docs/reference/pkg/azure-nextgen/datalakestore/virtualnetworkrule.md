@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.datalakestore.VirtualNetworkRule
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Data Lake Store virtual network rule information.
-Latest API Version: 2016-11-01.
+API Version: 2016-11-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var virtualNetworkRule = new AzureNextGen.DataLakeStore.Latest.VirtualNetworkRule("virtualNetworkRule", new AzureNextGen.DataLakeStore.Latest.VirtualNetworkRuleArgs
+        var virtualNetworkRule = new AzureNextGen.DataLakeStore..VirtualNetworkRule("virtualNetworkRule", new AzureNextGen.DataLakeStore..VirtualNetworkRuleArgs
         {
             AccountName = "contosoadla",
             ResourceGroupName = "contosorg",
@@ -48,7 +48,7 @@ class MyStack : Stack
 package main
 
 import (
-	datalakestore "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datalakestore/latest"
+	datalakestore "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datalakestore"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -77,7 +77,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-virtual_network_rule = azure_nextgen.datalakestore.latest.VirtualNetworkRule("virtualNetworkRule",
+virtual_network_rule = azure_nextgen.datalakestore.VirtualNetworkRule("virtualNetworkRule",
     account_name="contosoadla",
     resource_group_name="contosorg",
     subnet_id="test_subnetId",
@@ -93,7 +93,7 @@ virtual_network_rule = azure_nextgen.datalakestore.latest.VirtualNetworkRule("vi
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const virtualNetworkRule = new azure_nextgen.datalakestore.latest.VirtualNetworkRule("virtualNetworkRule", {
+const virtualNetworkRule = new azure_nextgen.datalakestore.VirtualNetworkRule("virtualNetworkRule", {
     accountName: "contosoadla",
     resourceGroupName: "contosorg",
     subnetId: "test_subnetId",
@@ -602,7 +602,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:datalakestore/latest:VirtualNetworkRule test_virtual_network_rules_name 34adfa4f-cedf-4dc0-ba29-b6d1a69ab345 
+$ pulumi import azure-nextgen:datalakestore:VirtualNetworkRule test_virtual_network_rules_name 34adfa4f-cedf-4dc0-ba29-b6d1a69ab345 
 ```
 
 

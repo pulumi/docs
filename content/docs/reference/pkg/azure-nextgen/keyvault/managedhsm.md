@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.keyvault.ManagedHsm resource wit
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Resource information with extended details.
+API Version: 2020-04-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,11 +27,11 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var managedHsm = new AzureNextGen.KeyVault.V20200401Preview.ManagedHsm("managedHsm", new AzureNextGen.KeyVault.V20200401Preview.ManagedHsmArgs
+        var managedHsm = new AzureNextGen.KeyVault..ManagedHsm("managedHsm", new AzureNextGen.KeyVault..ManagedHsmArgs
         {
             Location = "westus",
             Name = "hsm1",
-            Properties = new AzureNextGen.KeyVault.V20200401Preview.Inputs.ManagedHsmPropertiesArgs
+            Properties = new AzureNextGen.KeyVault..Inputs.ManagedHsmPropertiesArgs
             {
                 EnablePurgeProtection = true,
                 EnableSoftDelete = true,
@@ -42,7 +43,7 @@ class MyStack : Stack
                 TenantId = "00000000-0000-0000-0000-000000000000",
             },
             ResourceGroupName = "hsm-group",
-            Sku = new AzureNextGen.KeyVault.V20200401Preview.Inputs.ManagedHsmSkuArgs
+            Sku = new AzureNextGen.KeyVault..Inputs.ManagedHsmSkuArgs
             {
                 Family = "B",
                 Name = "Standard_B1",
@@ -67,7 +68,7 @@ class MyStack : Stack
 package main
 
 import (
-	keyvault "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/keyvault/v20200401preview"
+	keyvault "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/keyvault"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -112,10 +113,10 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-managed_hsm = azure_nextgen.keyvault.v20200401preview.ManagedHsm("managedHsm",
+managed_hsm = azure_nextgen.keyvault.ManagedHsm("managedHsm",
     location="westus",
     name="hsm1",
-    properties=azure_nextgen.keyvault.v20200401preview.ManagedHsmPropertiesArgs(
+    properties=azure_nextgen.keyvault.ManagedHsmPropertiesArgs(
         enable_purge_protection=True,
         enable_soft_delete=True,
         initial_admin_object_ids=["00000000-0000-0000-0000-000000000000"],
@@ -123,7 +124,7 @@ managed_hsm = azure_nextgen.keyvault.v20200401preview.ManagedHsm("managedHsm",
         tenant_id="00000000-0000-0000-0000-000000000000",
     ),
     resource_group_name="hsm-group",
-    sku=azure_nextgen.keyvault.v20200401preview.ManagedHsmSkuArgs(
+    sku=azure_nextgen.keyvault.ManagedHsmSkuArgs(
         family="B",
         name="Standard_B1",
     ),
@@ -142,7 +143,7 @@ managed_hsm = azure_nextgen.keyvault.v20200401preview.ManagedHsm("managedHsm",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const managedHsm = new azure_nextgen.keyvault.v20200401preview.ManagedHsm("managedHsm", {
+const managedHsm = new azure_nextgen.keyvault.ManagedHsm("managedHsm", {
     location: "westus",
     name: "hsm1",
     properties: {
@@ -383,7 +384,7 @@ The ManagedHsm resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedhsmproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Key<wbr>Vault.<wbr>Inputs.<wbr>Managed<wbr>Hsm<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#managedhsmproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Key<wbr>Vault..<wbr>Inputs.<wbr>Managed<wbr>Hsm<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties of the managed HSM{{% /md %}}</dd>
     <dt class="property-optional"
@@ -392,7 +393,7 @@ The ManagedHsm resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedhsmsku">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Key<wbr>Vault.<wbr>Inputs.<wbr>Managed<wbr>Hsm<wbr>Sku<wbr>Args</a></span>
+        <span class="property-type"><a href="#managedhsmsku">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Key<wbr>Vault..<wbr>Inputs.<wbr>Managed<wbr>Hsm<wbr>Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}SKU details{{% /md %}}</dd>
     <dt class="property-optional"
@@ -705,36 +706,36 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language csharp %}}
 <dl class="tabular">
     <dt>Recover</dt>
-    <dd>recover{{% md %}}Recover the managed HSM pool from a soft-deleted resource.{{% /md %}}</dd>
+    <dd>recover</dd>
     <dt>@Default</dt>
-    <dd>default{{% md %}}Create a new managed HSM pool. This is the default option.{{% /md %}}</dd>
+    <dd>default</dd>
 </dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
 <dl class="tabular">
     <dt>Create<wbr>Mode<wbr>Recover</dt>
-    <dd>recover{{% md %}}Recover the managed HSM pool from a soft-deleted resource.{{% /md %}}</dd>
+    <dd>recover</dd>
     <dt>Create<wbr>Mode<wbr>Default</dt>
-    <dd>default{{% md %}}Create a new managed HSM pool. This is the default option.{{% /md %}}</dd>
+    <dd>default</dd>
 </dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
 <dl class="tabular">
     <dt>Recover</dt>
-    <dd>recover{{% md %}}Recover the managed HSM pool from a soft-deleted resource.{{% /md %}}</dd>
+    <dd>recover</dd>
     <dt>Default</dt>
-    <dd>default{{% md %}}Create a new managed HSM pool. This is the default option.{{% /md %}}</dd>
+    <dd>default</dd>
 </dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <dl class="tabular">
     <dt>RECOVER</dt>
-    <dd>recover{{% md %}}Recover the managed HSM pool from a soft-deleted resource.{{% /md %}}</dd>
+    <dd>recover</dd>
     <dt>DEFAULT</dt>
-    <dd>default{{% md %}}Create a new managed HSM pool. This is the default option.{{% /md %}}</dd>
+    <dd>default</dd>
 </dl>
 {{% /choosable %}}
 
@@ -749,7 +750,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#createmode_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#createmode">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Key<wbr>Vault.<wbr>Create<wbr>Mode</a></span>
+        <span class="property-type"><a href="#createmode">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Key<wbr>Vault..<wbr>Create<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}The create mode to indicate whether the resource is being created or is being recovered from a deleted resource.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1341,7 +1342,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#family_csharp" style="color: inherit; text-decoration: inherit;">Family</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#managedhsmskufamily">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Key<wbr>Vault.<wbr>Managed<wbr>Hsm<wbr>Sku<wbr>Family</a></span>
+        <span class="property-type">string | <a href="#managedhsmskufamily">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Key<wbr>Vault..<wbr>Managed<wbr>Hsm<wbr>Sku<wbr>Family</a></span>
     </dt>
     <dd>{{% md %}}SKU Family of the managed HSM Pool{{% /md %}}</dd>
     <dt class="property-required"
@@ -1350,7 +1351,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedhsmskuname">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Key<wbr>Vault.<wbr>Managed<wbr>Hsm<wbr>Sku<wbr>Name</a></span>
+        <span class="property-type"><a href="#managedhsmskuname">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Key<wbr>Vault..<wbr>Managed<wbr>Hsm<wbr>Sku<wbr>Name</a></span>
     </dt>
     <dd>{{% md %}}SKU of the managed HSM Pool{{% /md %}}</dd>
 </dl>
@@ -1599,7 +1600,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:keyvault/v20200401preview:ManagedHsm hsm1 /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/hsm-group/providers/Microsoft.KeyVault/managedHSMs/hsm1 
+$ pulumi import azure-nextgen:keyvault:ManagedHsm hsm1 /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/hsm-group/providers/Microsoft.KeyVault/managedHSMs/hsm1 
 ```
 
 

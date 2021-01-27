@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.storsimple.ManagerExtendedInfo r
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The extended info of the manager.
-Latest API Version: 2017-06-01.
+API Version: 2017-06-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var managerExtendedInfo = new AzureNextGen.StorSimple.Latest.ManagerExtendedInfo("managerExtendedInfo", new AzureNextGen.StorSimple.Latest.ManagerExtendedInfoArgs
+        var managerExtendedInfo = new AzureNextGen.StorSimple..ManagerExtendedInfo("managerExtendedInfo", new AzureNextGen.StorSimple..ManagerExtendedInfoArgs
         {
             Algorithm = "None",
             IntegrityKey = "BIl+RHqO8PZ6DRvuXTTK7g==",
@@ -48,7 +48,7 @@ class MyStack : Stack
 package main
 
 import (
-	storsimple "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/storsimple/latest"
+	storsimple "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/storsimple"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -77,7 +77,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-manager_extended_info = azure_nextgen.storsimple.latest.ManagerExtendedInfo("managerExtendedInfo",
+manager_extended_info = azure_nextgen.storsimple.ManagerExtendedInfo("managerExtendedInfo",
     algorithm="None",
     integrity_key="BIl+RHqO8PZ6DRvuXTTK7g==",
     manager_name="ManagerForSDKTest2",
@@ -93,7 +93,7 @@ manager_extended_info = azure_nextgen.storsimple.latest.ManagerExtendedInfo("man
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const managerExtendedInfo = new azure_nextgen.storsimple.latest.ManagerExtendedInfo("managerExtendedInfo", {
+const managerExtendedInfo = new azure_nextgen.storsimple.ManagerExtendedInfo("managerExtendedInfo", {
     algorithm: "None",
     integrityKey: "BIl+RHqO8PZ6DRvuXTTK7g==",
     managerName: "ManagerForSDKTest2",
@@ -356,7 +356,7 @@ The ManagerExtendedInfo resource accepts the following [input]({{< relref "/docs
 <a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kind">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stor<wbr>Simple.<wbr>Kind</a></span>
+        <span class="property-type"><a href="#kind">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stor<wbr>Simple..<wbr>Kind</a></span>
     </dt>
     <dd>{{% md %}}The Kind of the object. Currently only Series8000 is supported{{% /md %}}</dd>
     <dt class="property-optional"
@@ -852,7 +852,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:storsimple/latest:ManagerExtendedInfo vaultExtendedInfo /subscriptions/4385cf00-2d3a-425a-832f-f4285b1c9dce/resourceGroups/ResourceGroupForSDKTest/providers/Microsoft.StorSimple/Managers/ManagerForSDKTest2extendedInformation/vaultExtendedInfo 
+$ pulumi import azure-nextgen:storsimple:ManagerExtendedInfo vaultExtendedInfo /subscriptions/4385cf00-2d3a-425a-832f-f4285b1c9dce/resourceGroups/ResourceGroupForSDKTest/providers/Microsoft.StorSimple/Managers/ManagerForSDKTest2extendedInformation/vaultExtendedInfo 
 ```
 
 

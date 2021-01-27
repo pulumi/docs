@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.sql.WorkloadClassifier resource 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Workload classifier operations for a data warehouse
+API Version: 2020-08-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var workloadClassifier = new AzureNextGen.Sql.V20200801Preview.WorkloadClassifier("workloadClassifier", new AzureNextGen.Sql.V20200801Preview.WorkloadClassifierArgs
+        var workloadClassifier = new AzureNextGen.Sql..WorkloadClassifier("workloadClassifier", new AzureNextGen.Sql..WorkloadClassifierArgs
         {
             Context = "test_context",
             DatabaseName = "testdb",
@@ -54,7 +55,7 @@ class MyStack : Stack
 package main
 
 import (
-	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql/v20200801preview"
+	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -90,7 +91,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-workload_classifier = azure_nextgen.sql.v20200801preview.WorkloadClassifier("workloadClassifier",
+workload_classifier = azure_nextgen.sql.WorkloadClassifier("workloadClassifier",
     context="test_context",
     database_name="testdb",
     end_time="14:00",
@@ -113,7 +114,7 @@ workload_classifier = azure_nextgen.sql.v20200801preview.WorkloadClassifier("wor
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const workloadClassifier = new azure_nextgen.sql.v20200801preview.WorkloadClassifier("workloadClassifier", {
+const workloadClassifier = new azure_nextgen.sql.WorkloadClassifier("workloadClassifier", {
     context: "test_context",
     databaseName: "testdb",
     endTime: "14:00",
@@ -141,7 +142,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var workloadClassifier = new AzureNextGen.Sql.V20200801Preview.WorkloadClassifier("workloadClassifier", new AzureNextGen.Sql.V20200801Preview.WorkloadClassifierArgs
+        var workloadClassifier = new AzureNextGen.Sql..WorkloadClassifier("workloadClassifier", new AzureNextGen.Sql..WorkloadClassifierArgs
         {
             DatabaseName = "testdb",
             MemberName = "dbo",
@@ -164,7 +165,7 @@ class MyStack : Stack
 package main
 
 import (
-	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql/v20200801preview"
+	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -195,7 +196,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-workload_classifier = azure_nextgen.sql.v20200801preview.WorkloadClassifier("workloadClassifier",
+workload_classifier = azure_nextgen.sql.WorkloadClassifier("workloadClassifier",
     database_name="testdb",
     member_name="dbo",
     resource_group_name="Default-SQL-SouthEastAsia",
@@ -213,7 +214,7 @@ workload_classifier = azure_nextgen.sql.v20200801preview.WorkloadClassifier("wor
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const workloadClassifier = new azure_nextgen.sql.v20200801preview.WorkloadClassifier("workloadClassifier", {
+const workloadClassifier = new azure_nextgen.sql.WorkloadClassifier("workloadClassifier", {
     databaseName: "testdb",
     memberName: "dbo",
     resourceGroupName: "Default-SQL-SouthEastAsia",
@@ -976,7 +977,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:sql/v20200801preview:WorkloadClassifier wlm_workloadclassifier /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default-SQL-SouthEastAsia/providers/Microsoft.Sql/servers/testsvr/databases/testdb/workloadGroups/wlm_workloadgroup/workloadClassifiers/wlm_workloadclassifier 
+$ pulumi import azure-nextgen:sql:WorkloadClassifier wlm_workloadclassifier /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default-SQL-SouthEastAsia/providers/Microsoft.Sql/servers/testsvr/databases/testdb/workloadGroups/wlm_workloadgroup/workloadClassifiers/wlm_workloadclassifier 
 ```
 
 

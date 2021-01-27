@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.healthcareapis.PrivateEndpointCo
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The Private Endpoint Connection resource.
-Latest API Version: 2021-01-11.
+API Version: 2021-01-11.
 
 {{% examples %}}
 ## Example Usage
@@ -27,10 +27,10 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var privateEndpointConnection = new AzureNextGen.HealthcareApis.Latest.PrivateEndpointConnection("privateEndpointConnection", new AzureNextGen.HealthcareApis.Latest.PrivateEndpointConnectionArgs
+        var privateEndpointConnection = new AzureNextGen.HealthcareApis..PrivateEndpointConnection("privateEndpointConnection", new AzureNextGen.HealthcareApis..PrivateEndpointConnectionArgs
         {
             PrivateEndpointConnectionName = "myConnection",
-            PrivateLinkServiceConnectionState = new AzureNextGen.HealthcareApis.Latest.Inputs.PrivateLinkServiceConnectionStateArgs
+            PrivateLinkServiceConnectionState = new AzureNextGen.HealthcareApis..Inputs.PrivateLinkServiceConnectionStateArgs
             {
                 Description = "Auto-Approved",
                 Status = "Approved",
@@ -52,7 +52,7 @@ class MyStack : Stack
 package main
 
 import (
-	healthcareapis "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/healthcareapis/latest"
+	healthcareapis "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/healthcareapis"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -84,9 +84,9 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-private_endpoint_connection = azure_nextgen.healthcareapis.latest.PrivateEndpointConnection("privateEndpointConnection",
+private_endpoint_connection = azure_nextgen.healthcareapis.PrivateEndpointConnection("privateEndpointConnection",
     private_endpoint_connection_name="myConnection",
-    private_link_service_connection_state=azure_nextgen.healthcareapis.latest.PrivateLinkServiceConnectionStateArgs(
+    private_link_service_connection_state=azure_nextgen.healthcareapis.PrivateLinkServiceConnectionStateArgs(
         description="Auto-Approved",
         status="Approved",
     ),
@@ -103,7 +103,7 @@ private_endpoint_connection = azure_nextgen.healthcareapis.latest.PrivateEndpoin
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const privateEndpointConnection = new azure_nextgen.healthcareapis.latest.PrivateEndpointConnection("privateEndpointConnection", {
+const privateEndpointConnection = new azure_nextgen.healthcareapis.PrivateEndpointConnection("privateEndpointConnection", {
     privateEndpointConnectionName: "myConnection",
     privateLinkServiceConnectionState: {
         description: "Auto-Approved",
@@ -315,7 +315,7 @@ The PrivateEndpointConnection resource accepts the following [input]({{< relref 
 <a href="#privatelinkserviceconnectionstate_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkserviceconnectionstate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Healthcare<wbr>Apis.<wbr>Inputs.<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Args</a></span>
+        <span class="property-type"><a href="#privatelinkserviceconnectionstate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Healthcare<wbr>Apis..<wbr>Inputs.<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A collection of information about the state of the connection between service consumer and provider.{{% /md %}}</dd>
     <dt class="property-required"
@@ -508,7 +508,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#systemdata_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Healthcare<wbr>Apis.<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
+        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Healthcare<wbr>Apis..<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}System metadata for this resource.{{% /md %}}</dd>
     <dt class="property-"
@@ -526,7 +526,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privateendpoint_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Healthcare<wbr>Apis.<wbr>Outputs.<wbr>Private<wbr>Endpoint<wbr>Response</a></span>
+        <span class="property-type"><a href="#privateendpointresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Healthcare<wbr>Apis..<wbr>Outputs.<wbr>Private<wbr>Endpoint<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The resource of private end point.{{% /md %}}</dd>
 </dl>
@@ -859,7 +859,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#privateendpointserviceconnectionstatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Healthcare<wbr>Apis.<wbr>Private<wbr>Endpoint<wbr>Service<wbr>Connection<wbr>Status</a></span>
+        <span class="property-type">string | <a href="#privateendpointserviceconnectionstatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Healthcare<wbr>Apis..<wbr>Private<wbr>Endpoint<wbr>Service<wbr>Connection<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether the connection has been Approved/Rejected/Removed by the owner of the service.{{% /md %}}</dd>
 </dl>
@@ -1345,7 +1345,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:healthcareapis/latest:PrivateEndpointConnection myConnection /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.HealthcareApis/services/service1/privateEndpointConnections/myConnection 
+$ pulumi import azure-nextgen:healthcareapis:PrivateEndpointConnection myConnection /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.HealthcareApis/services/service1/privateEndpointConnections/myConnection 
 ```
 
 

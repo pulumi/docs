@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.maps.Account resource with examp
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 An Azure resource which represents access to a suite of Maps REST APIs.
-Latest API Version: 2018-05-01.
+API Version: 2018-05-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,12 +27,12 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var account = new AzureNextGen.Maps.Latest.Account("account", new AzureNextGen.Maps.Latest.AccountArgs
+        var account = new AzureNextGen.Maps..Account("account", new AzureNextGen.Maps..AccountArgs
         {
             AccountName = "myMapsAccount",
             Location = "global",
             ResourceGroupName = "myResourceGroup",
-            Sku = new AzureNextGen.Maps.Latest.Inputs.SkuArgs
+            Sku = new AzureNextGen.Maps..Inputs.SkuArgs
             {
                 Name = "S0",
             },
@@ -55,7 +55,7 @@ class MyStack : Stack
 package main
 
 import (
-	maps "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/maps/latest"
+	maps "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/maps"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -89,11 +89,11 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-account = azure_nextgen.maps.latest.Account("account",
+account = azure_nextgen.maps.Account("account",
     account_name="myMapsAccount",
     location="global",
     resource_group_name="myResourceGroup",
-    sku=azure_nextgen.maps.latest.SkuArgs(
+    sku=azure_nextgen.maps.SkuArgs(
         name="S0",
     ),
     tags={
@@ -110,7 +110,7 @@ account = azure_nextgen.maps.latest.Account("account",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const account = new azure_nextgen.maps.latest.Account("account", {
+const account = new azure_nextgen.maps.Account("account", {
     accountName: "myMapsAccount",
     location: "global",
     resourceGroupName: "myResourceGroup",
@@ -342,7 +342,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sku">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Maps.<wbr>Inputs.<wbr>Sku<wbr>Args</a></span>
+        <span class="property-type"><a href="#sku">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Maps..<wbr>Inputs.<wbr>Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The SKU of this account.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -544,7 +544,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mapsaccountpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Maps.<wbr>Outputs.<wbr>Maps<wbr>Account<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#mapsaccountpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Maps..<wbr>Outputs.<wbr>Maps<wbr>Account<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The map account properties.{{% /md %}}</dd>
     <dt class="property-"
@@ -922,7 +922,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:maps/latest:Account myMapsAccount /subscriptions/21a9967a-e8a9-4656-a70b-96ff1c4d05a0/resourceGroups/myResourceGroup/providers/Microsoft.Maps/accounts/myMapsAccount 
+$ pulumi import azure-nextgen:maps:Account myMapsAccount /subscriptions/21a9967a-e8a9-4656-a70b-96ff1c4d05a0/resourceGroups/myResourceGroup/providers/Microsoft.Maps/accounts/myMapsAccount 
 ```
 
 

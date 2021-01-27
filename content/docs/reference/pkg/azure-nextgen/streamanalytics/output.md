@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.streamanalytics.Output resource 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 An output object, containing all information associated with the named output. All outputs are contained under a streaming job.
-Latest API Version: 2016-03-01.
+API Version: 2016-03-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var output = new AzureNextGen.StreamAnalytics.Latest.Output("output", new AzureNextGen.StreamAnalytics.Latest.OutputArgs
+        var output = new AzureNextGen.StreamAnalytics..Output("output", new AzureNextGen.StreamAnalytics..OutputArgs
         {
             Datasource = 
             {
@@ -61,7 +61,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-output = azure_nextgen.streamanalytics.latest.Output("output",
+output = azure_nextgen.streamanalytics.Output("output",
     datasource={
         "accountId": "someAccountId",
         "accountKey": "accountKey==",
@@ -85,7 +85,7 @@ output = azure_nextgen.streamanalytics.latest.Output("output",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const output = new azure_nextgen.streamanalytics.latest.Output("output", {
+const output = new azure_nextgen.streamanalytics.Output("output", {
     datasource: {
         accountId: "someAccountId",
         accountKey: "accountKey==",
@@ -114,7 +114,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var output = new AzureNextGen.StreamAnalytics.Latest.Output("output", new AzureNextGen.StreamAnalytics.Latest.OutputArgs
+        var output = new AzureNextGen.StreamAnalytics..Output("output", new AzureNextGen.StreamAnalytics..OutputArgs
         {
             Datasource = 
             {
@@ -149,7 +149,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-output = azure_nextgen.streamanalytics.latest.Output("output",
+output = azure_nextgen.streamanalytics.Output("output",
     datasource={
         "dataset": "someDataset",
         "groupId": "ac40305e-3e8d-43ac-8161-c33799f43e95",
@@ -174,7 +174,7 @@ output = azure_nextgen.streamanalytics.latest.Output("output",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const output = new azure_nextgen.streamanalytics.latest.Output("output", {
+const output = new azure_nextgen.streamanalytics.Output("output", {
     datasource: {
         dataset: "someDataset",
         groupId: "ac40305e-3e8d-43ac-8161-c33799f43e95",
@@ -204,7 +204,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var output = new AzureNextGen.StreamAnalytics.Latest.Output("output", new AzureNextGen.StreamAnalytics.Latest.OutputArgs
+        var output = new AzureNextGen.StreamAnalytics..Output("output", new AzureNextGen.StreamAnalytics..OutputArgs
         {
             Datasource = 
             {
@@ -245,7 +245,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-output = azure_nextgen.streamanalytics.latest.Output("output",
+output = azure_nextgen.streamanalytics.Output("output",
     datasource={
         "propertyColumns": [
             "column1",
@@ -274,7 +274,7 @@ output = azure_nextgen.streamanalytics.latest.Output("output",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const output = new azure_nextgen.streamanalytics.latest.Output("output", {
+const output = new azure_nextgen.streamanalytics.Output("output", {
     datasource: {
         propertyColumns: [
             "column1",
@@ -308,7 +308,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var output = new AzureNextGen.StreamAnalytics.Latest.Output("output", new AzureNextGen.StreamAnalytics.Latest.OutputArgs
+        var output = new AzureNextGen.StreamAnalytics..Output("output", new AzureNextGen.StreamAnalytics..OutputArgs
         {
             Datasource = 
             {
@@ -351,7 +351,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-output = azure_nextgen.streamanalytics.latest.Output("output",
+output = azure_nextgen.streamanalytics.Output("output",
     datasource={
         "propertyColumns": [
             "column1",
@@ -382,7 +382,7 @@ output = azure_nextgen.streamanalytics.latest.Output("output",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const output = new azure_nextgen.streamanalytics.latest.Output("output", {
+const output = new azure_nextgen.streamanalytics.Output("output", {
     datasource: {
         propertyColumns: [
             "column1",
@@ -418,7 +418,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var output = new AzureNextGen.StreamAnalytics.Latest.Output("output", new AzureNextGen.StreamAnalytics.Latest.OutputArgs
+        var output = new AzureNextGen.StreamAnalytics..Output("output", new AzureNextGen.StreamAnalytics..OutputArgs
         {
             Datasource = 
             {
@@ -427,7 +427,7 @@ class MyStack : Stack
                 { "pathPattern", "{date}/{time}" },
                 { "storageAccounts", 
                 {
-                    new AzureNextGen.StreamAnalytics.Latest.Inputs.StorageAccountArgs
+                    new AzureNextGen.StreamAnalytics..Inputs.StorageAccountArgs
                     {
                         AccountKey = "accountKey==",
                         AccountName = "someAccountName",
@@ -464,12 +464,12 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-output = azure_nextgen.streamanalytics.latest.Output("output",
+output = azure_nextgen.streamanalytics.Output("output",
     datasource={
         "container": "state",
         "dateFormat": "yyyy/MM/dd",
         "pathPattern": "{date}/{time}",
-        "storageAccounts": [azure_nextgen.streamanalytics.latest.StorageAccountArgs(
+        "storageAccounts": [azure_nextgen.streamanalytics.StorageAccountArgs(
             account_key="accountKey==",
             account_name="someAccountName",
         )],
@@ -495,7 +495,7 @@ output = azure_nextgen.streamanalytics.latest.Output("output",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const output = new azure_nextgen.streamanalytics.latest.Output("output", {
+const output = new azure_nextgen.streamanalytics.Output("output", {
     datasource: {
         container: "state",
         dateFormat: "yyyy/MM/dd",
@@ -531,7 +531,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var output = new AzureNextGen.StreamAnalytics.Latest.Output("output", new AzureNextGen.StreamAnalytics.Latest.OutputArgs
+        var output = new AzureNextGen.StreamAnalytics..Output("output", new AzureNextGen.StreamAnalytics..OutputArgs
         {
             Datasource = 
             {
@@ -573,7 +573,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-output = azure_nextgen.streamanalytics.latest.Output("output",
+output = azure_nextgen.streamanalytics.Output("output",
     datasource={
         "accountName": "someaccount",
         "dateFormat": "yyyy/MM/dd",
@@ -604,7 +604,7 @@ output = azure_nextgen.streamanalytics.latest.Output("output",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const output = new azure_nextgen.streamanalytics.latest.Output("output", {
+const output = new azure_nextgen.streamanalytics.Output("output", {
     datasource: {
         accountName: "someaccount",
         dateFormat: "yyyy/MM/dd",
@@ -640,7 +640,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var output = new AzureNextGen.StreamAnalytics.Latest.Output("output", new AzureNextGen.StreamAnalytics.Latest.OutputArgs
+        var output = new AzureNextGen.StreamAnalytics..Output("output", new AzureNextGen.StreamAnalytics..OutputArgs
         {
             Datasource = 
             {
@@ -673,7 +673,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-output = azure_nextgen.streamanalytics.latest.Output("output",
+output = azure_nextgen.streamanalytics.Output("output",
     datasource={
         "database": "someDatabase",
         "password": "somePassword",
@@ -696,7 +696,7 @@ output = azure_nextgen.streamanalytics.latest.Output("output",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const output = new azure_nextgen.streamanalytics.latest.Output("output", {
+const output = new azure_nextgen.streamanalytics.Output("output", {
     datasource: {
         database: "someDatabase",
         password: "somePassword",
@@ -724,7 +724,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var output = new AzureNextGen.StreamAnalytics.Latest.Output("output", new AzureNextGen.StreamAnalytics.Latest.OutputArgs
+        var output = new AzureNextGen.StreamAnalytics..Output("output", new AzureNextGen.StreamAnalytics..OutputArgs
         {
             Datasource = 
             {
@@ -763,7 +763,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-output = azure_nextgen.streamanalytics.latest.Output("output",
+output = azure_nextgen.streamanalytics.Output("output",
     datasource={
         "accountKey": "accountKey==",
         "accountName": "someAccountName",
@@ -791,7 +791,7 @@ output = azure_nextgen.streamanalytics.latest.Output("output",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const output = new azure_nextgen.streamanalytics.latest.Output("output", {
+const output = new azure_nextgen.streamanalytics.Output("output", {
     datasource: {
         accountKey: "accountKey==",
         accountName: "someAccountName",
@@ -824,7 +824,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var output = new AzureNextGen.StreamAnalytics.Latest.Output("output", new AzureNextGen.StreamAnalytics.Latest.OutputArgs
+        var output = new AzureNextGen.StreamAnalytics..Output("output", new AzureNextGen.StreamAnalytics..OutputArgs
         {
             Datasource = 
             {
@@ -863,7 +863,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-output = azure_nextgen.streamanalytics.latest.Output("output",
+output = azure_nextgen.streamanalytics.Output("output",
     datasource={
         "eventHubName": "sdkeventhub",
         "partitionKey": "partitionKey",
@@ -891,7 +891,7 @@ output = azure_nextgen.streamanalytics.latest.Output("output",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const output = new azure_nextgen.streamanalytics.latest.Output("output", {
+const output = new azure_nextgen.streamanalytics.Output("output", {
     datasource: {
         eventHubName: "sdkeventhub",
         partitionKey: "partitionKey",
@@ -1130,7 +1130,7 @@ The Output resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#datasource_csharp" style="color: inherit; text-decoration: inherit;">Datasource</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azuredatalakestoreoutputdatasource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Output<wbr>Data<wbr>Source<wbr>Args</a> | <a href="#azuresqldatabaseoutputdatasource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Azure<wbr>Sql<wbr>Database<wbr>Output<wbr>Data<wbr>Source<wbr>Args</a> | <a href="#azuretableoutputdatasource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Azure<wbr>Table<wbr>Output<wbr>Data<wbr>Source<wbr>Args</a> | <a href="#bloboutputdatasource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Blob<wbr>Output<wbr>Data<wbr>Source<wbr>Args</a> | <a href="#documentdboutputdatasource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Document<wbr>Db<wbr>Output<wbr>Data<wbr>Source<wbr>Args</a> | <a href="#eventhuboutputdatasource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Event<wbr>Hub<wbr>Output<wbr>Data<wbr>Source<wbr>Args</a> | <a href="#powerbioutputdatasource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Power<wbr>BIOutput<wbr>Data<wbr>Source<wbr>Args</a> | <a href="#servicebusqueueoutputdatasource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Service<wbr>Bus<wbr>Queue<wbr>Output<wbr>Data<wbr>Source<wbr>Args</a> | <a href="#servicebustopicoutputdatasource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Service<wbr>Bus<wbr>Topic<wbr>Output<wbr>Data<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#azuredatalakestoreoutputdatasource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics..<wbr>Inputs.<wbr>Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Output<wbr>Data<wbr>Source<wbr>Args</a> | <a href="#azuresqldatabaseoutputdatasource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics..<wbr>Inputs.<wbr>Azure<wbr>Sql<wbr>Database<wbr>Output<wbr>Data<wbr>Source<wbr>Args</a> | <a href="#azuretableoutputdatasource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics..<wbr>Inputs.<wbr>Azure<wbr>Table<wbr>Output<wbr>Data<wbr>Source<wbr>Args</a> | <a href="#bloboutputdatasource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics..<wbr>Inputs.<wbr>Blob<wbr>Output<wbr>Data<wbr>Source<wbr>Args</a> | <a href="#documentdboutputdatasource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics..<wbr>Inputs.<wbr>Document<wbr>Db<wbr>Output<wbr>Data<wbr>Source<wbr>Args</a> | <a href="#eventhuboutputdatasource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics..<wbr>Inputs.<wbr>Event<wbr>Hub<wbr>Output<wbr>Data<wbr>Source<wbr>Args</a> | <a href="#powerbioutputdatasource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics..<wbr>Inputs.<wbr>Power<wbr>BIOutput<wbr>Data<wbr>Source<wbr>Args</a> | <a href="#servicebusqueueoutputdatasource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics..<wbr>Inputs.<wbr>Service<wbr>Bus<wbr>Queue<wbr>Output<wbr>Data<wbr>Source<wbr>Args</a> | <a href="#servicebustopicoutputdatasource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics..<wbr>Inputs.<wbr>Service<wbr>Bus<wbr>Topic<wbr>Output<wbr>Data<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the data source that output will be written to. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1148,7 +1148,7 @@ The Output resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#serialization_csharp" style="color: inherit; text-decoration: inherit;">Serialization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#avroserialization">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Avro<wbr>Serialization<wbr>Args</a> | <a href="#csvserialization">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Csv<wbr>Serialization<wbr>Args</a> | <a href="#jsonserialization">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Json<wbr>Serialization<wbr>Args</a></span>
+        <span class="property-type"><a href="#avroserialization">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics..<wbr>Inputs.<wbr>Avro<wbr>Serialization<wbr>Args</a> | <a href="#csvserialization">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics..<wbr>Inputs.<wbr>Csv<wbr>Serialization<wbr>Args</a> | <a href="#jsonserialization">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics..<wbr>Inputs.<wbr>Json<wbr>Serialization<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes how data from an input is serialized or how data is serialized when written to an output. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
 </dl>
@@ -1350,7 +1350,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#diagnostics_csharp" style="color: inherit; text-decoration: inherit;">Diagnostics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diagnosticsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Outputs.<wbr>Diagnostics<wbr>Response</a></span>
+        <span class="property-type"><a href="#diagnosticsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics..<wbr>Outputs.<wbr>Diagnostics<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes conditions applicable to the Input, Output, or the job overall, that warrant customer attention.{{% /md %}}</dd>
     <dt class="property-"
@@ -3205,7 +3205,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storageaccounts_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Accounts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageaccount">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Storage<wbr>Account<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#storageaccount">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics..<wbr>Inputs.<wbr>Storage<wbr>Account<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of one or more Azure Storage accounts. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3411,7 +3411,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storageaccounts_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Accounts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageaccountresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Storage<wbr>Account<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#storageaccountresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics..<wbr>Inputs.<wbr>Storage<wbr>Account<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of one or more Azure Storage accounts. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3590,7 +3590,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encoding_csharp" style="color: inherit; text-decoration: inherit;">Encoding</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#encoding">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Encoding</a></span>
+        <span class="property-type">string | <a href="#encoding">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics..<wbr>Encoding</a></span>
     </dt>
     <dd>{{% md %}}Specifies the encoding of the incoming data in the case of input and the encoding of outgoing data in the case of output. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3920,7 +3920,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#conditions_csharp" style="color: inherit; text-decoration: inherit;">Conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diagnosticconditionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Diagnostic<wbr>Condition<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#diagnosticconditionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics..<wbr>Inputs.<wbr>Diagnostic<wbr>Condition<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A collection of zero or more conditions applicable to the resource, or to the job overall, that warrant customer attention.{{% /md %}}</dd>
 </dl>
@@ -4946,7 +4946,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encoding_csharp" style="color: inherit; text-decoration: inherit;">Encoding</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#encoding">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Encoding</a></span>
+        <span class="property-type">string | <a href="#encoding">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics..<wbr>Encoding</a></span>
     </dt>
     <dd>{{% md %}}Specifies the encoding of the incoming data in the case of input and the encoding of outgoing data in the case of output. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4955,7 +4955,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#format_csharp" style="color: inherit; text-decoration: inherit;">Format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#jsonoutputserializationformat">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Json<wbr>Output<wbr>Serialization<wbr>Format</a></span>
+        <span class="property-type">string | <a href="#jsonoutputserializationformat">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics..<wbr>Json<wbr>Output<wbr>Serialization<wbr>Format</a></span>
     </dt>
     <dd>{{% md %}}This property only applies to JSON serialization of outputs only. It is not applicable to inputs. This property specifies the format of the JSON the output will be written in. The currently supported values are 'lineSeparated' indicating the output will be formatted by having each JSON object separated by a new line and 'array' indicating the output will be formatted as an array of JSON objects. Default value is 'lineSeparated' if left null.{{% /md %}}</dd>
 </dl>
@@ -6712,7 +6712,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:streamanalytics/latest:Output output5195 /subscriptions/56b5e0a9-b645-407d-99b0-c64f86013e3d/resourceGroups/sjrg6912/providers/Microsoft.StreamAnalytics/streamingjobs/sj3310/outputs/output5195 
+$ pulumi import azure-nextgen:streamanalytics:Output output5195 /subscriptions/56b5e0a9-b645-407d-99b0-c64f86013e3d/resourceGroups/sjrg6912/providers/Microsoft.StreamAnalytics/streamingjobs/sj3310/outputs/output5195 
 ```
 
 

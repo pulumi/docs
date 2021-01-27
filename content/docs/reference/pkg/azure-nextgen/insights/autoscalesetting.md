@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.insights.AutoscaleSetting resour
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The autoscale setting resource.
-Latest API Version: 2015-04-01.
+API Version: 2015-04-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,16 +27,16 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var autoscaleSetting = new AzureNextGen.Insights.Latest.AutoscaleSetting("autoscaleSetting", new AzureNextGen.Insights.Latest.AutoscaleSettingArgs
+        var autoscaleSetting = new AzureNextGen.Insights..AutoscaleSetting("autoscaleSetting", new AzureNextGen.Insights..AutoscaleSettingArgs
         {
             AutoscaleSettingName = "MySetting",
             Enabled = true,
             Location = "West US",
             Notifications = 
             {
-                new AzureNextGen.Insights.Latest.Inputs.AutoscaleNotificationArgs
+                new AzureNextGen.Insights..Inputs.AutoscaleNotificationArgs
                 {
-                    Email = new AzureNextGen.Insights.Latest.Inputs.EmailNotificationArgs
+                    Email = new AzureNextGen.Insights..Inputs.EmailNotificationArgs
                     {
                         CustomEmails = 
                         {
@@ -49,7 +49,7 @@ class MyStack : Stack
                     Operation = "Scale",
                     Webhooks = 
                     {
-                        new AzureNextGen.Insights.Latest.Inputs.WebhookNotificationArgs
+                        new AzureNextGen.Insights..Inputs.WebhookNotificationArgs
                         {
                             Properties = ,
                             ServiceUri = "http://myservice.com",
@@ -59,15 +59,15 @@ class MyStack : Stack
             },
             Profiles = 
             {
-                new AzureNextGen.Insights.Latest.Inputs.AutoscaleProfileArgs
+                new AzureNextGen.Insights..Inputs.AutoscaleProfileArgs
                 {
-                    Capacity = new AzureNextGen.Insights.Latest.Inputs.ScaleCapacityArgs
+                    Capacity = new AzureNextGen.Insights..Inputs.ScaleCapacityArgs
                     {
                         Default = "1",
                         Maximum = "10",
                         Minimum = "1",
                     },
-                    FixedDate = new AzureNextGen.Insights.Latest.Inputs.TimeWindowArgs
+                    FixedDate = new AzureNextGen.Insights..Inputs.TimeWindowArgs
                     {
                         End = "2015-03-05T14:30:00Z",
                         Start = "2015-03-05T14:00:00Z",
@@ -76,9 +76,9 @@ class MyStack : Stack
                     Name = "adios",
                     Rules = 
                     {
-                        new AzureNextGen.Insights.Latest.Inputs.ScaleRuleArgs
+                        new AzureNextGen.Insights..Inputs.ScaleRuleArgs
                         {
-                            MetricTrigger = new AzureNextGen.Insights.Latest.Inputs.MetricTriggerArgs
+                            MetricTrigger = new AzureNextGen.Insights..Inputs.MetricTriggerArgs
                             {
                                 MetricName = "Percentage CPU",
                                 MetricResourceUri = "/subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/TestingMetricsScaleSet/providers/Microsoft.Compute/virtualMachineScaleSets/testingsc",
@@ -89,7 +89,7 @@ class MyStack : Stack
                                 TimeGrain = "PT1M",
                                 TimeWindow = "PT5M",
                             },
-                            ScaleAction = new AzureNextGen.Insights.Latest.Inputs.ScaleActionArgs
+                            ScaleAction = new AzureNextGen.Insights..Inputs.ScaleActionArgs
                             {
                                 Cooldown = "PT5M",
                                 Direction = "Increase",
@@ -97,9 +97,9 @@ class MyStack : Stack
                                 Value = "1",
                             },
                         },
-                        new AzureNextGen.Insights.Latest.Inputs.ScaleRuleArgs
+                        new AzureNextGen.Insights..Inputs.ScaleRuleArgs
                         {
-                            MetricTrigger = new AzureNextGen.Insights.Latest.Inputs.MetricTriggerArgs
+                            MetricTrigger = new AzureNextGen.Insights..Inputs.MetricTriggerArgs
                             {
                                 MetricName = "Percentage CPU",
                                 MetricResourceUri = "/subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/TestingMetricsScaleSet/providers/Microsoft.Compute/virtualMachineScaleSets/testingsc",
@@ -110,7 +110,7 @@ class MyStack : Stack
                                 TimeGrain = "PT2M",
                                 TimeWindow = "PT5M",
                             },
-                            ScaleAction = new AzureNextGen.Insights.Latest.Inputs.ScaleActionArgs
+                            ScaleAction = new AzureNextGen.Insights..Inputs.ScaleActionArgs
                             {
                                 Cooldown = "PT6M",
                                 Direction = "Decrease",
@@ -120,19 +120,19 @@ class MyStack : Stack
                         },
                     },
                 },
-                new AzureNextGen.Insights.Latest.Inputs.AutoscaleProfileArgs
+                new AzureNextGen.Insights..Inputs.AutoscaleProfileArgs
                 {
-                    Capacity = new AzureNextGen.Insights.Latest.Inputs.ScaleCapacityArgs
+                    Capacity = new AzureNextGen.Insights..Inputs.ScaleCapacityArgs
                     {
                         Default = "1",
                         Maximum = "10",
                         Minimum = "1",
                     },
                     Name = "saludos",
-                    Recurrence = new AzureNextGen.Insights.Latest.Inputs.RecurrenceArgs
+                    Recurrence = new AzureNextGen.Insights..Inputs.RecurrenceArgs
                     {
                         Frequency = "Week",
-                        Schedule = new AzureNextGen.Insights.Latest.Inputs.RecurrentScheduleArgs
+                        Schedule = new AzureNextGen.Insights..Inputs.RecurrentScheduleArgs
                         {
                             Days = 
                             {
@@ -151,9 +151,9 @@ class MyStack : Stack
                     },
                     Rules = 
                     {
-                        new AzureNextGen.Insights.Latest.Inputs.ScaleRuleArgs
+                        new AzureNextGen.Insights..Inputs.ScaleRuleArgs
                         {
-                            MetricTrigger = new AzureNextGen.Insights.Latest.Inputs.MetricTriggerArgs
+                            MetricTrigger = new AzureNextGen.Insights..Inputs.MetricTriggerArgs
                             {
                                 MetricName = "Percentage CPU",
                                 MetricResourceUri = "/subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/TestingMetricsScaleSet/providers/Microsoft.Compute/virtualMachineScaleSets/testingsc",
@@ -164,7 +164,7 @@ class MyStack : Stack
                                 TimeGrain = "PT1M",
                                 TimeWindow = "PT5M",
                             },
-                            ScaleAction = new AzureNextGen.Insights.Latest.Inputs.ScaleActionArgs
+                            ScaleAction = new AzureNextGen.Insights..Inputs.ScaleActionArgs
                             {
                                 Cooldown = "PT5M",
                                 Direction = "Increase",
@@ -172,9 +172,9 @@ class MyStack : Stack
                                 Value = "1",
                             },
                         },
-                        new AzureNextGen.Insights.Latest.Inputs.ScaleRuleArgs
+                        new AzureNextGen.Insights..Inputs.ScaleRuleArgs
                         {
-                            MetricTrigger = new AzureNextGen.Insights.Latest.Inputs.MetricTriggerArgs
+                            MetricTrigger = new AzureNextGen.Insights..Inputs.MetricTriggerArgs
                             {
                                 MetricName = "Percentage CPU",
                                 MetricResourceUri = "/subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/TestingMetricsScaleSet/providers/Microsoft.Compute/virtualMachineScaleSets/testingsc",
@@ -185,7 +185,7 @@ class MyStack : Stack
                                 TimeGrain = "PT2M",
                                 TimeWindow = "PT5M",
                             },
-                            ScaleAction = new AzureNextGen.Insights.Latest.Inputs.ScaleActionArgs
+                            ScaleAction = new AzureNextGen.Insights..Inputs.ScaleActionArgs
                             {
                                 Cooldown = "PT6M",
                                 Direction = "Decrease",
@@ -218,12 +218,12 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-autoscale_setting = azure_nextgen.insights.latest.AutoscaleSetting("autoscaleSetting",
+autoscale_setting = azure_nextgen.insights.AutoscaleSetting("autoscaleSetting",
     autoscale_setting_name="MySetting",
     enabled=True,
     location="West US",
-    notifications=[azure_nextgen.insights.latest.AutoscaleNotificationArgs(
-        email=azure_nextgen.insights.latest.EmailNotificationArgs(
+    notifications=[azure_nextgen.insights.AutoscaleNotificationArgs(
+        email=azure_nextgen.insights.EmailNotificationArgs(
             custom_emails=[
                 "gu@ms.com",
                 "ge@ns.net",
@@ -232,27 +232,27 @@ autoscale_setting = azure_nextgen.insights.latest.AutoscaleSetting("autoscaleSet
             send_to_subscription_co_administrators=True,
         ),
         operation="Scale",
-        webhooks=[azure_nextgen.insights.latest.WebhookNotificationArgs(
+        webhooks=[azure_nextgen.insights.WebhookNotificationArgs(
             properties={},
             service_uri="http://myservice.com",
         )],
     )],
     profiles=[
-        azure_nextgen.insights.latest.AutoscaleProfileArgs(
-            capacity=azure_nextgen.insights.latest.ScaleCapacityArgs(
+        azure_nextgen.insights.AutoscaleProfileArgs(
+            capacity=azure_nextgen.insights.ScaleCapacityArgs(
                 default="1",
                 maximum="10",
                 minimum="1",
             ),
-            fixed_date=azure_nextgen.insights.latest.TimeWindowArgs(
+            fixed_date=azure_nextgen.insights.TimeWindowArgs(
                 end="2015-03-05T14:30:00Z",
                 start="2015-03-05T14:00:00Z",
                 time_zone="UTC",
             ),
             name="adios",
             rules=[
-                azure_nextgen.insights.latest.ScaleRuleArgs(
-                    metric_trigger=azure_nextgen.insights.latest.MetricTriggerArgs(
+                azure_nextgen.insights.ScaleRuleArgs(
+                    metric_trigger=azure_nextgen.insights.MetricTriggerArgs(
                         metric_name="Percentage CPU",
                         metric_resource_uri="/subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/TestingMetricsScaleSet/providers/Microsoft.Compute/virtualMachineScaleSets/testingsc",
                         operator="GreaterThan",
@@ -262,15 +262,15 @@ autoscale_setting = azure_nextgen.insights.latest.AutoscaleSetting("autoscaleSet
                         time_grain="PT1M",
                         time_window="PT5M",
                     ),
-                    scale_action=azure_nextgen.insights.latest.ScaleActionArgs(
+                    scale_action=azure_nextgen.insights.ScaleActionArgs(
                         cooldown="PT5M",
                         direction="Increase",
                         type="ChangeCount",
                         value="1",
                     ),
                 ),
-                azure_nextgen.insights.latest.ScaleRuleArgs(
-                    metric_trigger=azure_nextgen.insights.latest.MetricTriggerArgs(
+                azure_nextgen.insights.ScaleRuleArgs(
+                    metric_trigger=azure_nextgen.insights.MetricTriggerArgs(
                         metric_name="Percentage CPU",
                         metric_resource_uri="/subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/TestingMetricsScaleSet/providers/Microsoft.Compute/virtualMachineScaleSets/testingsc",
                         operator="GreaterThan",
@@ -280,7 +280,7 @@ autoscale_setting = azure_nextgen.insights.latest.AutoscaleSetting("autoscaleSet
                         time_grain="PT2M",
                         time_window="PT5M",
                     ),
-                    scale_action=azure_nextgen.insights.latest.ScaleActionArgs(
+                    scale_action=azure_nextgen.insights.ScaleActionArgs(
                         cooldown="PT6M",
                         direction="Decrease",
                         type="ChangeCount",
@@ -289,16 +289,16 @@ autoscale_setting = azure_nextgen.insights.latest.AutoscaleSetting("autoscaleSet
                 ),
             ],
         ),
-        azure_nextgen.insights.latest.AutoscaleProfileArgs(
-            capacity=azure_nextgen.insights.latest.ScaleCapacityArgs(
+        azure_nextgen.insights.AutoscaleProfileArgs(
+            capacity=azure_nextgen.insights.ScaleCapacityArgs(
                 default="1",
                 maximum="10",
                 minimum="1",
             ),
             name="saludos",
-            recurrence=azure_nextgen.insights.latest.RecurrenceArgs(
+            recurrence=azure_nextgen.insights.RecurrenceArgs(
                 frequency="Week",
-                schedule=azure_nextgen.insights.latest.RecurrentScheduleArgs(
+                schedule=azure_nextgen.insights.RecurrentScheduleArgs(
                     days=["1"],
                     hours=[5],
                     minutes=[15],
@@ -306,8 +306,8 @@ autoscale_setting = azure_nextgen.insights.latest.AutoscaleSetting("autoscaleSet
                 ),
             ),
             rules=[
-                azure_nextgen.insights.latest.ScaleRuleArgs(
-                    metric_trigger=azure_nextgen.insights.latest.MetricTriggerArgs(
+                azure_nextgen.insights.ScaleRuleArgs(
+                    metric_trigger=azure_nextgen.insights.MetricTriggerArgs(
                         metric_name="Percentage CPU",
                         metric_resource_uri="/subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/TestingMetricsScaleSet/providers/Microsoft.Compute/virtualMachineScaleSets/testingsc",
                         operator="GreaterThan",
@@ -317,15 +317,15 @@ autoscale_setting = azure_nextgen.insights.latest.AutoscaleSetting("autoscaleSet
                         time_grain="PT1M",
                         time_window="PT5M",
                     ),
-                    scale_action=azure_nextgen.insights.latest.ScaleActionArgs(
+                    scale_action=azure_nextgen.insights.ScaleActionArgs(
                         cooldown="PT5M",
                         direction="Increase",
                         type="ChangeCount",
                         value="1",
                     ),
                 ),
-                azure_nextgen.insights.latest.ScaleRuleArgs(
-                    metric_trigger=azure_nextgen.insights.latest.MetricTriggerArgs(
+                azure_nextgen.insights.ScaleRuleArgs(
+                    metric_trigger=azure_nextgen.insights.MetricTriggerArgs(
                         metric_name="Percentage CPU",
                         metric_resource_uri="/subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/TestingMetricsScaleSet/providers/Microsoft.Compute/virtualMachineScaleSets/testingsc",
                         operator="GreaterThan",
@@ -335,7 +335,7 @@ autoscale_setting = azure_nextgen.insights.latest.AutoscaleSetting("autoscaleSet
                         time_grain="PT2M",
                         time_window="PT5M",
                     ),
-                    scale_action=azure_nextgen.insights.latest.ScaleActionArgs(
+                    scale_action=azure_nextgen.insights.ScaleActionArgs(
                         cooldown="PT6M",
                         direction="Decrease",
                         type="ChangeCount",
@@ -359,7 +359,7 @@ autoscale_setting = azure_nextgen.insights.latest.AutoscaleSetting("autoscaleSet
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const autoscaleSetting = new azure_nextgen.insights.latest.AutoscaleSetting("autoscaleSetting", {
+const autoscaleSetting = new azure_nextgen.insights.AutoscaleSetting("autoscaleSetting", {
     autoscaleSettingName: "MySetting",
     enabled: true,
     location: "West US",
@@ -702,7 +702,7 @@ The AutoscaleSetting resource accepts the following [input]({{< relref "/docs/in
 <a href="#profiles_csharp" style="color: inherit; text-decoration: inherit;">Profiles</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscaleprofile">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Inputs.<wbr>Autoscale<wbr>Profile<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#autoscaleprofile">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Inputs.<wbr>Autoscale<wbr>Profile<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}the collection of automatic scaling profiles that specify different scaling parameters for different time periods. A maximum of 20 profiles can be specified.{{% /md %}}</dd>
     <dt class="property-required"
@@ -738,7 +738,7 @@ The AutoscaleSetting resource accepts the following [input]({{< relref "/docs/in
 <a href="#notifications_csharp" style="color: inherit; text-decoration: inherit;">Notifications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalenotification">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Inputs.<wbr>Autoscale<wbr>Notification<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#autoscalenotification">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Inputs.<wbr>Autoscale<wbr>Notification<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}the collection of notifications.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1147,7 +1147,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operation_csharp" style="color: inherit; text-decoration: inherit;">Operation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#operationtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Operation<wbr>Type</a></span>
+        <span class="property-type"><a href="#operationtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Operation<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}the operation associated with the notification and its value must be "scale"{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1156,7 +1156,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#email_csharp" style="color: inherit; text-decoration: inherit;">Email</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#emailnotification">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Inputs.<wbr>Email<wbr>Notification<wbr>Args</a></span>
+        <span class="property-type"><a href="#emailnotification">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Inputs.<wbr>Email<wbr>Notification<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}the email notification.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1165,7 +1165,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#webhooks_csharp" style="color: inherit; text-decoration: inherit;">Webhooks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webhooknotification">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Inputs.<wbr>Webhook<wbr>Notification<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#webhooknotification">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Inputs.<wbr>Webhook<wbr>Notification<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}the collection of webhook notifications.{{% /md %}}</dd>
 </dl>
@@ -1290,7 +1290,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#email_csharp" style="color: inherit; text-decoration: inherit;">Email</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#emailnotificationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Inputs.<wbr>Email<wbr>Notification<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#emailnotificationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Inputs.<wbr>Email<wbr>Notification<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}the email notification.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1299,7 +1299,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#webhooks_csharp" style="color: inherit; text-decoration: inherit;">Webhooks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webhooknotificationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Inputs.<wbr>Webhook<wbr>Notification<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#webhooknotificationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Inputs.<wbr>Webhook<wbr>Notification<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}the collection of webhook notifications.{{% /md %}}</dd>
 </dl>
@@ -1415,7 +1415,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capacity_csharp" style="color: inherit; text-decoration: inherit;">Capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalecapacity">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Inputs.<wbr>Scale<wbr>Capacity<wbr>Args</a></span>
+        <span class="property-type"><a href="#scalecapacity">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Inputs.<wbr>Scale<wbr>Capacity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}the number of instances that can be used during this profile.{{% /md %}}</dd>
     <dt class="property-required"
@@ -1433,7 +1433,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rules_csharp" style="color: inherit; text-decoration: inherit;">Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalerule">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Inputs.<wbr>Scale<wbr>Rule<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#scalerule">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Inputs.<wbr>Scale<wbr>Rule<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}the collection of rules that provide the triggers and parameters for the scaling action. A maximum of 10 rules can be specified.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1442,7 +1442,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fixeddate_csharp" style="color: inherit; text-decoration: inherit;">Fixed<wbr>Date</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timewindow">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Inputs.<wbr>Time<wbr>Window<wbr>Args</a></span>
+        <span class="property-type"><a href="#timewindow">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Inputs.<wbr>Time<wbr>Window<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}the specific date-time for the profile. This element is not used if the Recurrence element is used.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1451,7 +1451,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recurrence_csharp" style="color: inherit; text-decoration: inherit;">Recurrence</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recurrence">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Inputs.<wbr>Recurrence<wbr>Args</a></span>
+        <span class="property-type"><a href="#recurrence">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Inputs.<wbr>Recurrence<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}the repeating times at which this profile begins. This element is not used if the FixedDate element is used.{{% /md %}}</dd>
 </dl>
@@ -1621,7 +1621,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capacity_csharp" style="color: inherit; text-decoration: inherit;">Capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalecapacityresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Inputs.<wbr>Scale<wbr>Capacity<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#scalecapacityresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Inputs.<wbr>Scale<wbr>Capacity<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}the number of instances that can be used during this profile.{{% /md %}}</dd>
     <dt class="property-required"
@@ -1639,7 +1639,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rules_csharp" style="color: inherit; text-decoration: inherit;">Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scaleruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Inputs.<wbr>Scale<wbr>Rule<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#scaleruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Inputs.<wbr>Scale<wbr>Rule<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}the collection of rules that provide the triggers and parameters for the scaling action. A maximum of 10 rules can be specified.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1648,7 +1648,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fixeddate_csharp" style="color: inherit; text-decoration: inherit;">Fixed<wbr>Date</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timewindowresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Inputs.<wbr>Time<wbr>Window<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#timewindowresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Inputs.<wbr>Time<wbr>Window<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}the specific date-time for the profile. This element is not used if the Recurrence element is used.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1657,7 +1657,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recurrence_csharp" style="color: inherit; text-decoration: inherit;">Recurrence</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recurrenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Inputs.<wbr>Recurrence<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#recurrenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Inputs.<wbr>Recurrence<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}the repeating times at which this profile begins. This element is not used if the FixedDate element is used.{{% /md %}}</dd>
 </dl>
@@ -2237,7 +2237,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operator_csharp" style="color: inherit; text-decoration: inherit;">Operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#comparisonoperationtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Comparison<wbr>Operation<wbr>Type</a></span>
+        <span class="property-type"><a href="#comparisonoperationtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Comparison<wbr>Operation<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}the operator that is used to compare the metric data and the threshold.{{% /md %}}</dd>
     <dt class="property-required"
@@ -2246,7 +2246,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#statistic_csharp" style="color: inherit; text-decoration: inherit;">Statistic</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricstatistictype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Metric<wbr>Statistic<wbr>Type</a></span>
+        <span class="property-type"><a href="#metricstatistictype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Metric<wbr>Statistic<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}the metric statistic type. How the metrics from multiple instances are combined.{{% /md %}}</dd>
     <dt class="property-required"
@@ -2264,7 +2264,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timeaggregation_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Aggregation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timeaggregationtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Time<wbr>Aggregation<wbr>Type</a></span>
+        <span class="property-type"><a href="#timeaggregationtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Time<wbr>Aggregation<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}time aggregation type. How the data that is collected should be combined over time. The default value is Average.{{% /md %}}</dd>
     <dt class="property-required"
@@ -2291,7 +2291,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dimensions_csharp" style="color: inherit; text-decoration: inherit;">Dimensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalerulemetricdimension">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Inputs.<wbr>Scale<wbr>Rule<wbr>Metric<wbr>Dimension<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#scalerulemetricdimension">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Inputs.<wbr>Scale<wbr>Rule<wbr>Metric<wbr>Dimension<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of dimension conditions. For example: [{"DimensionName":"AppName","Operator":"Equals","Values":["App1"]},{"DimensionName":"Deployment","Operator":"Equals","Values":["default"]}].{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2677,7 +2677,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dimensions_csharp" style="color: inherit; text-decoration: inherit;">Dimensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalerulemetricdimensionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Inputs.<wbr>Scale<wbr>Rule<wbr>Metric<wbr>Dimension<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#scalerulemetricdimensionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Inputs.<wbr>Scale<wbr>Rule<wbr>Metric<wbr>Dimension<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of dimension conditions. For example: [{"DimensionName":"AppName","Operator":"Equals","Values":["App1"]},{"DimensionName":"Deployment","Operator":"Equals","Values":["default"]}].{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3021,7 +3021,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#frequency_csharp" style="color: inherit; text-decoration: inherit;">Frequency</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recurrencefrequency">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Recurrence<wbr>Frequency</a></span>
+        <span class="property-type"><a href="#recurrencefrequency">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Recurrence<wbr>Frequency</a></span>
     </dt>
     <dd>{{% md %}}the recurrence frequency. How often the schedule profile should take effect. This value must be Week, meaning each week will have the same set of profiles. For example, to set a daily schedule, set **schedule** to every day of the week. The frequency property specifies that the schedule is repeated weekly.{{% /md %}}</dd>
     <dt class="property-required"
@@ -3030,7 +3030,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schedule_csharp" style="color: inherit; text-decoration: inherit;">Schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recurrentschedule">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Inputs.<wbr>Recurrent<wbr>Schedule<wbr>Args</a></span>
+        <span class="property-type"><a href="#recurrentschedule">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Inputs.<wbr>Recurrent<wbr>Schedule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}the scheduling constraints for when the profile begins.{{% /md %}}</dd>
 </dl>
@@ -3214,7 +3214,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schedule_csharp" style="color: inherit; text-decoration: inherit;">Schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recurrentscheduleresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Inputs.<wbr>Recurrent<wbr>Schedule<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#recurrentscheduleresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Inputs.<wbr>Recurrent<wbr>Schedule<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}the scheduling constraints for when the profile begins.{{% /md %}}</dd>
 </dl>
@@ -3652,7 +3652,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#direction_csharp" style="color: inherit; text-decoration: inherit;">Direction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scaledirection">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Scale<wbr>Direction</a></span>
+        <span class="property-type"><a href="#scaledirection">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Scale<wbr>Direction</a></span>
     </dt>
     <dd>{{% md %}}the scale direction. Whether the scaling action increases or decreases the number of instances.{{% /md %}}</dd>
     <dt class="property-required"
@@ -3661,7 +3661,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scaletype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Scale<wbr>Type</a></span>
+        <span class="property-type"><a href="#scaletype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Scale<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}the type of action that should occur when the scale rule fires.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4297,7 +4297,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metrictrigger_csharp" style="color: inherit; text-decoration: inherit;">Metric<wbr>Trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metrictrigger">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Inputs.<wbr>Metric<wbr>Trigger<wbr>Args</a></span>
+        <span class="property-type"><a href="#metrictrigger">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Inputs.<wbr>Metric<wbr>Trigger<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}the trigger that results in a scaling action.{{% /md %}}</dd>
     <dt class="property-required"
@@ -4306,7 +4306,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scaleaction_csharp" style="color: inherit; text-decoration: inherit;">Scale<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scaleaction">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Inputs.<wbr>Scale<wbr>Action<wbr>Args</a></span>
+        <span class="property-type"><a href="#scaleaction">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Inputs.<wbr>Scale<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}the parameters for the scaling action.{{% /md %}}</dd>
 </dl>
@@ -4404,7 +4404,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operator_csharp" style="color: inherit; text-decoration: inherit;">Operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#scalerulemetricdimensionoperationtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Scale<wbr>Rule<wbr>Metric<wbr>Dimension<wbr>Operation<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#scalerulemetricdimensionoperationtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Scale<wbr>Rule<wbr>Metric<wbr>Dimension<wbr>Operation<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}the dimension operator. Only 'Equals' and 'NotEquals' are supported. 'Equals' being equal to any of the values. 'NotEquals' being not equal to all of the values{{% /md %}}</dd>
     <dt class="property-required"
@@ -4701,7 +4701,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metrictrigger_csharp" style="color: inherit; text-decoration: inherit;">Metric<wbr>Trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metrictriggerresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Inputs.<wbr>Metric<wbr>Trigger<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#metrictriggerresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Inputs.<wbr>Metric<wbr>Trigger<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}the trigger that results in a scaling action.{{% /md %}}</dd>
     <dt class="property-required"
@@ -4710,7 +4710,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scaleaction_csharp" style="color: inherit; text-decoration: inherit;">Scale<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scaleactionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Inputs.<wbr>Scale<wbr>Action<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#scaleactionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Inputs.<wbr>Scale<wbr>Action<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}the parameters for the scaling action.{{% /md %}}</dd>
 </dl>
@@ -5373,7 +5373,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:insights/latest:AutoscaleSetting MySetting /subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/TestingMetricsScaleSet/providers/microsoft.insights/autoscalesettings/MySetting 
+$ pulumi import azure-nextgen:insights:AutoscaleSetting MySetting /subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/TestingMetricsScaleSet/providers/microsoft.insights/autoscalesettings/MySetting 
 ```
 
 

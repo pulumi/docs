@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.servicefabric.Application resour
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The application resource.
-Latest API Version: 2020-03-01.
+API Version: 2020-03-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,14 +27,14 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var application = new AzureNextGen.ServiceFabric.Latest.Application("application", new AzureNextGen.ServiceFabric.Latest.ApplicationArgs
+        var application = new AzureNextGen.ServiceFabric..Application("application", new AzureNextGen.ServiceFabric..ApplicationArgs
         {
             ApplicationName = "myApp",
             ClusterName = "myCluster",
             MaximumNodes = 3,
             Metrics = 
             {
-                new AzureNextGen.ServiceFabric.Latest.Inputs.ApplicationMetricDescriptionArgs
+                new AzureNextGen.ServiceFabric..Inputs.ApplicationMetricDescriptionArgs
                 {
                     MaximumCapacity = 3,
                     Name = "metric1",
@@ -51,12 +51,12 @@ class MyStack : Stack
             ResourceGroupName = "resRg",
             TypeName = "myAppType",
             TypeVersion = "1.0",
-            UpgradePolicy = new AzureNextGen.ServiceFabric.Latest.Inputs.ApplicationUpgradePolicyArgs
+            UpgradePolicy = new AzureNextGen.ServiceFabric..Inputs.ApplicationUpgradePolicyArgs
             {
-                ApplicationHealthPolicy = new AzureNextGen.ServiceFabric.Latest.Inputs.ArmApplicationHealthPolicyArgs
+                ApplicationHealthPolicy = new AzureNextGen.ServiceFabric..Inputs.ArmApplicationHealthPolicyArgs
                 {
                     ConsiderWarningAsError = true,
-                    DefaultServiceTypeHealthPolicy = new AzureNextGen.ServiceFabric.Latest.Inputs.ArmServiceTypeHealthPolicyArgs
+                    DefaultServiceTypeHealthPolicy = new AzureNextGen.ServiceFabric..Inputs.ArmServiceTypeHealthPolicyArgs
                     {
                         MaxPercentUnhealthyPartitionsPerService = 0,
                         MaxPercentUnhealthyReplicasPerPartition = 0,
@@ -65,7 +65,7 @@ class MyStack : Stack
                     MaxPercentUnhealthyDeployedApplications = 0,
                 },
                 ForceRestart = false,
-                RollingUpgradeMonitoringPolicy = new AzureNextGen.ServiceFabric.Latest.Inputs.ArmRollingUpgradeMonitoringPolicyArgs
+                RollingUpgradeMonitoringPolicy = new AzureNextGen.ServiceFabric..Inputs.ArmRollingUpgradeMonitoringPolicyArgs
                 {
                     FailureAction = "Rollback",
                     HealthCheckRetryTimeout = "00:10:00",
@@ -92,7 +92,7 @@ class MyStack : Stack
 package main
 
 import (
-	servicefabric "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/servicefabric/latest"
+	servicefabric "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/servicefabric"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -158,11 +158,11 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-application = azure_nextgen.servicefabric.latest.Application("application",
+application = azure_nextgen.servicefabric.Application("application",
     application_name="myApp",
     cluster_name="myCluster",
     maximum_nodes=3,
-    metrics=[azure_nextgen.servicefabric.latest.ApplicationMetricDescriptionArgs(
+    metrics=[azure_nextgen.servicefabric.ApplicationMetricDescriptionArgs(
         maximum_capacity=3,
         name="metric1",
         reservation_capacity=1,
@@ -176,10 +176,10 @@ application = azure_nextgen.servicefabric.latest.Application("application",
     resource_group_name="resRg",
     type_name="myAppType",
     type_version="1.0",
-    upgrade_policy=azure_nextgen.servicefabric.latest.ApplicationUpgradePolicyArgs(
-        application_health_policy=azure_nextgen.servicefabric.latest.ArmApplicationHealthPolicyArgs(
+    upgrade_policy=azure_nextgen.servicefabric.ApplicationUpgradePolicyArgs(
+        application_health_policy=azure_nextgen.servicefabric.ArmApplicationHealthPolicyArgs(
             consider_warning_as_error=True,
-            default_service_type_health_policy=azure_nextgen.servicefabric.latest.ArmServiceTypeHealthPolicyArgs(
+            default_service_type_health_policy=azure_nextgen.servicefabric.ArmServiceTypeHealthPolicyArgs(
                 max_percent_unhealthy_partitions_per_service=0,
                 max_percent_unhealthy_replicas_per_partition=0,
                 max_percent_unhealthy_services=0,
@@ -187,7 +187,7 @@ application = azure_nextgen.servicefabric.latest.Application("application",
             max_percent_unhealthy_deployed_applications=0,
         ),
         force_restart=False,
-        rolling_upgrade_monitoring_policy=azure_nextgen.servicefabric.latest.ArmRollingUpgradeMonitoringPolicyArgs(
+        rolling_upgrade_monitoring_policy=azure_nextgen.servicefabric.ArmRollingUpgradeMonitoringPolicyArgs(
             failure_action="Rollback",
             health_check_retry_timeout="00:10:00",
             health_check_stable_duration="00:05:00",
@@ -209,7 +209,7 @@ application = azure_nextgen.servicefabric.latest.Application("application",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const application = new azure_nextgen.servicefabric.latest.Application("application", {
+const application = new azure_nextgen.servicefabric.Application("application", {
     applicationName: "myApp",
     clusterName: "myCluster",
     maximumNodes: 3,
@@ -265,7 +265,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var application = new AzureNextGen.ServiceFabric.Latest.Application("application", new AzureNextGen.ServiceFabric.Latest.ApplicationArgs
+        var application = new AzureNextGen.ServiceFabric..Application("application", new AzureNextGen.ServiceFabric..ApplicationArgs
         {
             ApplicationName = "myApp",
             ClusterName = "myCluster",
@@ -288,7 +288,7 @@ class MyStack : Stack
 package main
 
 import (
-	servicefabric "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/servicefabric/latest"
+	servicefabric "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/servicefabric"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -319,7 +319,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-application = azure_nextgen.servicefabric.latest.Application("application",
+application = azure_nextgen.servicefabric.Application("application",
     application_name="myApp",
     cluster_name="myCluster",
     remove_application_capacity=False,
@@ -337,7 +337,7 @@ application = azure_nextgen.servicefabric.latest.Application("application",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const application = new azure_nextgen.servicefabric.latest.Application("application", {
+const application = new azure_nextgen.servicefabric.Application("application", {
     applicationName: "myApp",
     clusterName: "myCluster",
     removeApplicationCapacity: false,
@@ -566,7 +566,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedidentity">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric.<wbr>Inputs.<wbr>Managed<wbr>Identity<wbr>Args</a></span>
+        <span class="property-type"><a href="#managedidentity">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric..<wbr>Inputs.<wbr>Managed<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the managed identities for an Azure resource.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -584,7 +584,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#managedidentities_csharp" style="color: inherit; text-decoration: inherit;">Managed<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationuserassignedidentity">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric.<wbr>Inputs.<wbr>Application<wbr>User<wbr>Assigned<wbr>Identity<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#applicationuserassignedidentity">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric..<wbr>Inputs.<wbr>Application<wbr>User<wbr>Assigned<wbr>Identity<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of user assigned identities for the application, each mapped to a friendly name.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -602,7 +602,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#metrics_csharp" style="color: inherit; text-decoration: inherit;">Metrics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationmetricdescription">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric.<wbr>Inputs.<wbr>Application<wbr>Metric<wbr>Description<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#applicationmetricdescription">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric..<wbr>Inputs.<wbr>Application<wbr>Metric<wbr>Description<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of application capacity metric description.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -665,7 +665,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#upgradepolicy_csharp" style="color: inherit; text-decoration: inherit;">Upgrade<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationupgradepolicy">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric.<wbr>Inputs.<wbr>Application<wbr>Upgrade<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationupgradepolicy">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric..<wbr>Inputs.<wbr>Application<wbr>Upgrade<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the policy for a monitored application upgrade.{{% /md %}}</dd>
 </dl>
@@ -1770,7 +1770,7 @@ When creating a new application with application capacity defined, the product o
 <a href="#applicationhealthpolicy_csharp" style="color: inherit; text-decoration: inherit;">Application<wbr>Health<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#armapplicationhealthpolicy">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric.<wbr>Inputs.<wbr>Arm<wbr>Application<wbr>Health<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#armapplicationhealthpolicy">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric..<wbr>Inputs.<wbr>Arm<wbr>Application<wbr>Health<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines a health policy used to evaluate the health of an application or one of its children entities.
 {{% /md %}}</dd>
@@ -1789,7 +1789,7 @@ When creating a new application with application capacity defined, the product o
 <a href="#rollingupgrademonitoringpolicy_csharp" style="color: inherit; text-decoration: inherit;">Rolling<wbr>Upgrade<wbr>Monitoring<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#armrollingupgrademonitoringpolicy">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric.<wbr>Inputs.<wbr>Arm<wbr>Rolling<wbr>Upgrade<wbr>Monitoring<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#armrollingupgrademonitoringpolicy">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric..<wbr>Inputs.<wbr>Arm<wbr>Rolling<wbr>Upgrade<wbr>Monitoring<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The policy used for monitoring the application upgrade{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1798,7 +1798,7 @@ When creating a new application with application capacity defined, the product o
 <a href="#upgrademode_csharp" style="color: inherit; text-decoration: inherit;">Upgrade<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#rollingupgrademode">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric.<wbr>Rolling<wbr>Upgrade<wbr>Mode</a></span>
+        <span class="property-type">string | <a href="#rollingupgrademode">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric..<wbr>Rolling<wbr>Upgrade<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}The mode used to monitor health during a rolling upgrade. The values are UnmonitoredAuto, UnmonitoredManual, and Monitored.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1980,7 +1980,7 @@ When creating a new application with application capacity defined, the product o
 <a href="#applicationhealthpolicy_csharp" style="color: inherit; text-decoration: inherit;">Application<wbr>Health<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#armapplicationhealthpolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric.<wbr>Inputs.<wbr>Arm<wbr>Application<wbr>Health<wbr>Policy<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#armapplicationhealthpolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric..<wbr>Inputs.<wbr>Arm<wbr>Application<wbr>Health<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines a health policy used to evaluate the health of an application or one of its children entities.
 {{% /md %}}</dd>
@@ -1999,7 +1999,7 @@ When creating a new application with application capacity defined, the product o
 <a href="#rollingupgrademonitoringpolicy_csharp" style="color: inherit; text-decoration: inherit;">Rolling<wbr>Upgrade<wbr>Monitoring<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#armrollingupgrademonitoringpolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric.<wbr>Inputs.<wbr>Arm<wbr>Rolling<wbr>Upgrade<wbr>Monitoring<wbr>Policy<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#armrollingupgrademonitoringpolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric..<wbr>Inputs.<wbr>Arm<wbr>Rolling<wbr>Upgrade<wbr>Monitoring<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The policy used for monitoring the application upgrade{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2395,7 +2395,7 @@ When creating a new application with application capacity defined, the product o
 <a href="#defaultservicetypehealthpolicy_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Service<wbr>Type<wbr>Health<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#armservicetypehealthpolicy">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric.<wbr>Inputs.<wbr>Arm<wbr>Service<wbr>Type<wbr>Health<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#armservicetypehealthpolicy">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric..<wbr>Inputs.<wbr>Arm<wbr>Service<wbr>Type<wbr>Health<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The health policy used by default to evaluate the health of a service type.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2417,7 +2417,7 @@ The computation rounds up to tolerate one failure on small numbers of nodes. Def
 <a href="#servicetypehealthpolicymap_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Type<wbr>Health<wbr>Policy<wbr>Map</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric.<wbr>Inputs.<wbr>Arm<wbr>Service<wbr>Type<wbr>Health<wbr>Policy<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric..<wbr>Inputs.<wbr>Arm<wbr>Service<wbr>Type<wbr>Health<wbr>Policy<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}The map with service type health policy per service type name. The map is empty by default.{{% /md %}}</dd>
 </dl>
@@ -2581,7 +2581,7 @@ The computation rounds up to tolerate one failure on small numbers of nodes. Def
 <a href="#defaultservicetypehealthpolicy_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Service<wbr>Type<wbr>Health<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#armservicetypehealthpolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric.<wbr>Inputs.<wbr>Arm<wbr>Service<wbr>Type<wbr>Health<wbr>Policy<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#armservicetypehealthpolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric..<wbr>Inputs.<wbr>Arm<wbr>Service<wbr>Type<wbr>Health<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The health policy used by default to evaluate the health of a service type.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2603,7 +2603,7 @@ The computation rounds up to tolerate one failure on small numbers of nodes. Def
 <a href="#servicetypehealthpolicymap_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Type<wbr>Health<wbr>Policy<wbr>Map</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric.<wbr>Inputs.<wbr>Arm<wbr>Service<wbr>Type<wbr>Health<wbr>Policy<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric..<wbr>Inputs.<wbr>Arm<wbr>Service<wbr>Type<wbr>Health<wbr>Policy<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}The map with service type health policy per service type name. The map is empty by default.{{% /md %}}</dd>
 </dl>
@@ -2758,7 +2758,7 @@ The computation rounds up to tolerate one failure on small numbers of nodes. Def
 <a href="#failureaction_csharp" style="color: inherit; text-decoration: inherit;">Failure<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#armupgradefailureaction">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric.<wbr>Arm<wbr>Upgrade<wbr>Failure<wbr>Action</a></span>
+        <span class="property-type">string | <a href="#armupgradefailureaction">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric..<wbr>Arm<wbr>Upgrade<wbr>Failure<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}The activation Mode of the service package{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3572,7 +3572,7 @@ The computation rounds up to tolerate one failure on small numbers of nodes. Def
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedidentitytype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric.<wbr>Managed<wbr>Identity<wbr>Type</a></span>
+        <span class="property-type"><a href="#managedidentitytype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric..<wbr>Managed<wbr>Identity<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of managed identity for the resource.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3705,7 +3705,7 @@ The computation rounds up to tolerate one failure on small numbers of nodes. Def
 <a href="#userassignedidentities_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric.<wbr>Inputs.<wbr>User<wbr>Assigned<wbr>Identity<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric..<wbr>Inputs.<wbr>User<wbr>Assigned<wbr>Identity<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}The list of user identities associated with the resource. The user identity dictionary key references will be ARM resource ids in the form:
 '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
@@ -4056,7 +4056,7 @@ The computation rounds up to tolerate one failure on small numbers of nodes. Def
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:servicefabric/latest:Application myCluster /subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/resRg/providers/Microsoft.ServiceFabric/clusters/myCluster/applications/myApp 
+$ pulumi import azure-nextgen:servicefabric:Application myCluster /subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/resRg/providers/Microsoft.ServiceFabric/clusters/myCluster/applications/myApp 
 ```
 
 

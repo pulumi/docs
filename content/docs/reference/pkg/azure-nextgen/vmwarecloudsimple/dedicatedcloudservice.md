@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.vmwarecloudsimple.DedicatedCloud
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Dedicated cloud service model
-Latest API Version: 2019-04-01.
+API Version: 2019-04-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var dedicatedCloudService = new AzureNextGen.VMwareCloudSimple.Latest.DedicatedCloudService("dedicatedCloudService", new AzureNextGen.VMwareCloudSimple.Latest.DedicatedCloudServiceArgs
+        var dedicatedCloudService = new AzureNextGen.VMwareCloudSimple..DedicatedCloudService("dedicatedCloudService", new AzureNextGen.VMwareCloudSimple..DedicatedCloudServiceArgs
         {
             DedicatedCloudServiceName = "myService",
             GatewaySubnet = "10.0.0.0",
@@ -48,7 +48,7 @@ class MyStack : Stack
 package main
 
 import (
-	vmwarecloudsimple "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/vmwarecloudsimple/latest"
+	vmwarecloudsimple "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/vmwarecloudsimple"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -77,7 +77,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-dedicated_cloud_service = azure_nextgen.vmwarecloudsimple.latest.DedicatedCloudService("dedicatedCloudService",
+dedicated_cloud_service = azure_nextgen.vmwarecloudsimple.DedicatedCloudService("dedicatedCloudService",
     dedicated_cloud_service_name="myService",
     gateway_subnet="10.0.0.0",
     location="westus",
@@ -93,7 +93,7 @@ dedicated_cloud_service = azure_nextgen.vmwarecloudsimple.latest.DedicatedCloudS
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const dedicatedCloudService = new azure_nextgen.vmwarecloudsimple.latest.DedicatedCloudService("dedicatedCloudService", {
+const dedicatedCloudService = new azure_nextgen.vmwarecloudsimple.DedicatedCloudService("dedicatedCloudService", {
     dedicatedCloudServiceName: "myService",
     gatewaySubnet: "10.0.0.0",
     location: "westus",
@@ -746,7 +746,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:vmwarecloudsimple/latest:DedicatedCloudService myService /subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.VMwareCloudSimple/dedicatedCloudServices/myService 
+$ pulumi import azure-nextgen:vmwarecloudsimple:DedicatedCloudService myService /subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.VMwareCloudSimple/dedicatedCloudServices/myService 
 ```
 
 

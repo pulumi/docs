@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.recoveryservices.PrivateEndpoint
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Private Endpoint Connection Response Properties
-Latest API Version: 2020-12-01.
+API Version: 2020-12-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,16 +27,16 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var privateEndpointConnection = new AzureNextGen.RecoveryServices.Latest.PrivateEndpointConnection("privateEndpointConnection", new AzureNextGen.RecoveryServices.Latest.PrivateEndpointConnectionArgs
+        var privateEndpointConnection = new AzureNextGen.RecoveryServices..PrivateEndpointConnection("privateEndpointConnection", new AzureNextGen.RecoveryServices..PrivateEndpointConnectionArgs
         {
             PrivateEndpointConnectionName = "gaallatestpe2.5704c932-249a-490b-a142-1396838cd3b",
-            Properties = new AzureNextGen.RecoveryServices.Latest.Inputs.PrivateEndpointConnectionArgs
+            Properties = new AzureNextGen.RecoveryServices..Inputs.PrivateEndpointConnectionArgs
             {
-                PrivateEndpoint = new AzureNextGen.RecoveryServices.Latest.Inputs.PrivateEndpointArgs
+                PrivateEndpoint = new AzureNextGen.RecoveryServices..Inputs.PrivateEndpointArgs
                 {
                     Id = "/subscriptions/04cf684a-d41f-4550-9f70-7708a3a2283b/resourceGroups/gaallaRG/providers/Microsoft.Network/privateEndpoints/gaallatestpe3",
                 },
-                PrivateLinkServiceConnectionState = new AzureNextGen.RecoveryServices.Latest.Inputs.PrivateLinkServiceConnectionStateArgs
+                PrivateLinkServiceConnectionState = new AzureNextGen.RecoveryServices..Inputs.PrivateLinkServiceConnectionStateArgs
                 {
                     Description = "Approved by johndoe@company.com",
                     Status = "Approved",
@@ -60,7 +60,7 @@ class MyStack : Stack
 package main
 
 import (
-	recoveryservices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/recoveryservices/latest"
+	recoveryservices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/recoveryservices"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -98,13 +98,13 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-private_endpoint_connection = azure_nextgen.recoveryservices.latest.PrivateEndpointConnection("privateEndpointConnection",
+private_endpoint_connection = azure_nextgen.recoveryservices.PrivateEndpointConnection("privateEndpointConnection",
     private_endpoint_connection_name="gaallatestpe2.5704c932-249a-490b-a142-1396838cd3b",
-    properties=azure_nextgen.recoveryservices.latest.PrivateEndpointConnectionArgs(
-        private_endpoint=azure_nextgen.recoveryservices.latest.PrivateEndpointArgs(
+    properties=azure_nextgen.recoveryservices.PrivateEndpointConnectionArgs(
+        private_endpoint=azure_nextgen.recoveryservices.PrivateEndpointArgs(
             id="/subscriptions/04cf684a-d41f-4550-9f70-7708a3a2283b/resourceGroups/gaallaRG/providers/Microsoft.Network/privateEndpoints/gaallatestpe3",
         ),
-        private_link_service_connection_state=azure_nextgen.recoveryservices.latest.PrivateLinkServiceConnectionStateArgs(
+        private_link_service_connection_state=azure_nextgen.recoveryservices.PrivateLinkServiceConnectionStateArgs(
             description="Approved by johndoe@company.com",
             status="Approved",
         ),
@@ -123,7 +123,7 @@ private_endpoint_connection = azure_nextgen.recoveryservices.latest.PrivateEndpo
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const privateEndpointConnection = new azure_nextgen.recoveryservices.latest.PrivateEndpointConnection("privateEndpointConnection", {
+const privateEndpointConnection = new azure_nextgen.recoveryservices.PrivateEndpointConnection("privateEndpointConnection", {
     privateEndpointConnectionName: "gaallatestpe2.5704c932-249a-490b-a142-1396838cd3b",
     properties: {
         privateEndpoint: {
@@ -377,7 +377,7 @@ The PrivateEndpointConnection resource accepts the following [input]({{< relref 
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointconnection">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Args</a></span>
+        <span class="property-type"><a href="#privateendpointconnection">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}PrivateEndpointConnectionResource properties{{% /md %}}</dd>
     <dt class="property-optional"
@@ -821,7 +821,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privateendpoint_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpoint">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Args</a></span>
+        <span class="property-type"><a href="#privateendpoint">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets private endpoint associated with the private endpoint connection{{% /md %}}</dd>
     <dt class="property-optional"
@@ -830,7 +830,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privatelinkserviceconnectionstate_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkserviceconnectionstate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Args</a></span>
+        <span class="property-type"><a href="#privatelinkserviceconnectionstate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets private link service connection state{{% /md %}}</dd>
     <dt class="property-optional"
@@ -839,7 +839,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#provisioningstate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Provisioning<wbr>State</a></span>
+        <span class="property-type">string | <a href="#provisioningstate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Provisioning<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets provisioning state of the private endpoint connection{{% /md %}}</dd>
 </dl>
@@ -955,7 +955,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privateendpoint_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#privateendpointresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Private Endpoint network resource that is linked to the Private Endpoint connection.{{% /md %}}</dd>
     <dt class="property-required"
@@ -964,7 +964,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privatelinkserviceconnectionstate_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets private link service connection state.{{% /md %}}</dd>
     <dt class="property-required"
@@ -1223,7 +1223,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#privateendpointconnectionstatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Status</a></span>
+        <span class="property-type">string | <a href="#privateendpointconnectionstatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the status{{% /md %}}</dd>
 </dl>
@@ -1521,7 +1521,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:recoveryservices/latest:PrivateEndpointConnection gaallatestpe1.3592346090307038890.backup.5704c932-249a-490b-a142-1396838cd3b /subscriptions/04cf684a-d41f-4550-9f70-7708a3a2283b/resourceGroups/gaallaRG/providers/Microsoft.RecoveryServicesBVTD2/vaults/gaallavaultbvtd2msi/privateEndpointConnections/gaallatestpe3.3592346090307038890.backup.5704c932-249a-490b-a142-1396838cd3b 
+$ pulumi import azure-nextgen:recoveryservices:PrivateEndpointConnection gaallatestpe1.3592346090307038890.backup.5704c932-249a-490b-a142-1396838cd3b /subscriptions/04cf684a-d41f-4550-9f70-7708a3a2283b/resourceGroups/gaallaRG/providers/Microsoft.RecoveryServicesBVTD2/vaults/gaallavaultbvtd2msi/privateEndpointConnections/gaallatestpe3.3592346090307038890.backup.5704c932-249a-490b-a142-1396838cd3b 
 ```
 
 

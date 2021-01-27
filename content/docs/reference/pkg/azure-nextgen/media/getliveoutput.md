@@ -323,7 +323,7 @@ The following output properties are available:
 <a href="#hls_csharp" style="color: inherit; text-decoration: inherit;">Hls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hlsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Outputs.<wbr>Hls<wbr>Response</a></span>
+        <span class="property-type"><a href="#hlsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Outputs.<wbr>Hls<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}HTTP Live Streaming (HLS) packing setting for the live output.{{% /md %}}</dd>
     <dt class="property-"

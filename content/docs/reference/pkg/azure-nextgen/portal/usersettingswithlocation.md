@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.portal.UserSettingsWithLocation 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Response to get user settings
-Latest API Version: 2018-10-01.
+API Version: 2018-10-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,21 +27,21 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var userSettingsWithLocation = new AzureNextGen.Portal.Latest.UserSettingsWithLocation("userSettingsWithLocation", new AzureNextGen.Portal.Latest.UserSettingsWithLocationArgs
+        var userSettingsWithLocation = new AzureNextGen.Portal..UserSettingsWithLocation("userSettingsWithLocation", new AzureNextGen.Portal..UserSettingsWithLocationArgs
         {
             Location = "eastus",
-            Properties = new AzureNextGen.Portal.Latest.Inputs.UserPropertiesArgs
+            Properties = new AzureNextGen.Portal..Inputs.UserPropertiesArgs
             {
                 PreferredLocation = "eastus",
                 PreferredOsType = "Linux",
                 PreferredShellType = "bash",
-                StorageProfile = new AzureNextGen.Portal.Latest.Inputs.StorageProfileArgs
+                StorageProfile = new AzureNextGen.Portal..Inputs.StorageProfileArgs
                 {
                     DiskSizeInGB = 5,
                     FileShareName = "string",
                     StorageAccountResourceId = "string",
                 },
-                TerminalSettings = new AzureNextGen.Portal.Latest.Inputs.TerminalSettingsArgs
+                TerminalSettings = new AzureNextGen.Portal..Inputs.TerminalSettingsArgs
                 {
                     FontSize = "Medium",
                     FontStyle = "Monospace",
@@ -63,7 +63,7 @@ class MyStack : Stack
 package main
 
 import (
-	portal "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/portal/latest"
+	portal "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/portal"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -104,18 +104,18 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-user_settings_with_location = azure_nextgen.portal.latest.UserSettingsWithLocation("userSettingsWithLocation",
+user_settings_with_location = azure_nextgen.portal.UserSettingsWithLocation("userSettingsWithLocation",
     location="eastus",
-    properties=azure_nextgen.portal.latest.UserPropertiesArgs(
+    properties=azure_nextgen.portal.UserPropertiesArgs(
         preferred_location="eastus",
         preferred_os_type="Linux",
         preferred_shell_type="bash",
-        storage_profile=azure_nextgen.portal.latest.StorageProfileArgs(
+        storage_profile=azure_nextgen.portal.StorageProfileArgs(
             disk_size_in_gb=5,
             file_share_name="string",
             storage_account_resource_id="string",
         ),
-        terminal_settings=azure_nextgen.portal.latest.TerminalSettingsArgs(
+        terminal_settings=azure_nextgen.portal.TerminalSettingsArgs(
             font_size="Medium",
             font_style="Monospace",
         ),
@@ -132,7 +132,7 @@ user_settings_with_location = azure_nextgen.portal.latest.UserSettingsWithLocati
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const userSettingsWithLocation = new azure_nextgen.portal.latest.UserSettingsWithLocation("userSettingsWithLocation", {
+const userSettingsWithLocation = new azure_nextgen.portal.UserSettingsWithLocation("userSettingsWithLocation", {
     location: "eastus",
     properties: {
         preferredLocation: "eastus",
@@ -353,7 +353,7 @@ The UserSettingsWithLocation resource accepts the following [input]({{< relref "
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Portal.<wbr>Inputs.<wbr>User<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#userproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Portal..<wbr>Inputs.<wbr>User<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The cloud shell user settings properties.{{% /md %}}</dd>
     <dt class="property-required"
@@ -1007,7 +1007,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fontsize_csharp" style="color: inherit; text-decoration: inherit;">Font<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#fontsize">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Portal.<wbr>Font<wbr>Size</a></span>
+        <span class="property-type">string | <a href="#fontsize">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Portal..<wbr>Font<wbr>Size</a></span>
     </dt>
     <dd>{{% md %}}Size of terminal font.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1016,7 +1016,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fontstyle_csharp" style="color: inherit; text-decoration: inherit;">Font<wbr>Style</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#fontstyle">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Portal.<wbr>Font<wbr>Style</a></span>
+        <span class="property-type">string | <a href="#fontstyle">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Portal..<wbr>Font<wbr>Style</a></span>
     </dt>
     <dd>{{% md %}}Style of terminal font.{{% /md %}}</dd>
 </dl>
@@ -1212,7 +1212,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#preferredostype_csharp" style="color: inherit; text-decoration: inherit;">Preferred<wbr>Os<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#ostype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Portal.<wbr>Os<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#ostype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Portal..<wbr>Os<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The operating system type of the cloud shell. Deprecated, use preferredShellType.{{% /md %}}</dd>
     <dt class="property-required"
@@ -1221,7 +1221,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#preferredshelltype_csharp" style="color: inherit; text-decoration: inherit;">Preferred<wbr>Shell<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#shelltype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Portal.<wbr>Shell<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#shelltype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Portal..<wbr>Shell<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The shell type of the cloud shell.{{% /md %}}</dd>
     <dt class="property-required"
@@ -1230,7 +1230,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storageprofile_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageprofile">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Portal.<wbr>Inputs.<wbr>Storage<wbr>Profile<wbr>Args</a></span>
+        <span class="property-type"><a href="#storageprofile">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Portal..<wbr>Inputs.<wbr>Storage<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The storage profile of the user settings.{{% /md %}}</dd>
     <dt class="property-required"
@@ -1239,7 +1239,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#terminalsettings_csharp" style="color: inherit; text-decoration: inherit;">Terminal<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#terminalsettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Portal.<wbr>Inputs.<wbr>Terminal<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#terminalsettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Portal..<wbr>Inputs.<wbr>Terminal<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings for terminal appearance.{{% /md %}}</dd>
 </dl>
@@ -1436,7 +1436,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storageprofile_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageprofileresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Portal.<wbr>Inputs.<wbr>Storage<wbr>Profile<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#storageprofileresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Portal..<wbr>Inputs.<wbr>Storage<wbr>Profile<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The storage profile of the user settings.{{% /md %}}</dd>
     <dt class="property-required"
@@ -1445,7 +1445,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#terminalsettings_csharp" style="color: inherit; text-decoration: inherit;">Terminal<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#terminalsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Portal.<wbr>Inputs.<wbr>Terminal<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#terminalsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Portal..<wbr>Inputs.<wbr>Terminal<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings for terminal appearance.{{% /md %}}</dd>
 </dl>
@@ -1609,7 +1609,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:portal/latest:UserSettingsWithLocation myresource1 /providers/Microsoft.Portal/locations/{location}/userSettings/{userSettingsName} 
+$ pulumi import azure-nextgen:portal:UserSettingsWithLocation myresource1 /providers/Microsoft.Portal/locations/{location}/userSettings/{userSettingsName} 
 ```
 
 

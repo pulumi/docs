@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.batch.Certificate resource with 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Contains information about a certificate.
-Latest API Version: 2021-01-01.
+API Version: 2021-01-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var certificate = new AzureNextGen.Batch.Latest.Certificate("certificate", new AzureNextGen.Batch.Latest.CertificateArgs
+        var certificate = new AzureNextGen.Batch..Certificate("certificate", new AzureNextGen.Batch..CertificateArgs
         {
             AccountName = "sampleacct",
             CertificateName = "sha1-0a0e4f50d51beadeac1d35afc5116098e7902e6e",
@@ -52,7 +52,7 @@ class MyStack : Stack
 package main
 
 import (
-	batch "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/batch/latest"
+	batch "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/batch"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -85,7 +85,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-certificate = azure_nextgen.batch.latest.Certificate("certificate",
+certificate = azure_nextgen.batch.Certificate("certificate",
     account_name="sampleacct",
     certificate_name="sha1-0a0e4f50d51beadeac1d35afc5116098e7902e6e",
     data="MIIJsgIBAzCCCW4GCSqGSIb3DQE...",
@@ -105,7 +105,7 @@ certificate = azure_nextgen.batch.latest.Certificate("certificate",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const certificate = new azure_nextgen.batch.latest.Certificate("certificate", {
+const certificate = new azure_nextgen.batch.Certificate("certificate", {
     accountName: "sampleacct",
     certificateName: "sha1-0a0e4f50d51beadeac1d35afc5116098e7902e6e",
     data: "MIIJsgIBAzCCCW4GCSqGSIb3DQE...",
@@ -130,7 +130,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var certificate = new AzureNextGen.Batch.Latest.Certificate("certificate", new AzureNextGen.Batch.Latest.CertificateArgs
+        var certificate = new AzureNextGen.Batch..Certificate("certificate", new AzureNextGen.Batch..CertificateArgs
         {
             AccountName = "sampleacct",
             CertificateName = "sha1-0a0e4f50d51beadeac1d35afc5116098e7902e6e",
@@ -152,7 +152,7 @@ class MyStack : Stack
 package main
 
 import (
-	batch "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/batch/latest"
+	batch "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/batch"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -182,7 +182,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-certificate = azure_nextgen.batch.latest.Certificate("certificate",
+certificate = azure_nextgen.batch.Certificate("certificate",
     account_name="sampleacct",
     certificate_name="sha1-0a0e4f50d51beadeac1d35afc5116098e7902e6e",
     data="MIICrjCCAZagAwI...",
@@ -199,7 +199,7 @@ certificate = azure_nextgen.batch.latest.Certificate("certificate",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const certificate = new azure_nextgen.batch.latest.Certificate("certificate", {
+const certificate = new azure_nextgen.batch.Certificate("certificate", {
     accountName: "sampleacct",
     certificateName: "sha1-0a0e4f50d51beadeac1d35afc5116098e7902e6e",
     data: "MIICrjCCAZagAwI...",
@@ -221,7 +221,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var certificate = new AzureNextGen.Batch.Latest.Certificate("certificate", new AzureNextGen.Batch.Latest.CertificateArgs
+        var certificate = new AzureNextGen.Batch..Certificate("certificate", new AzureNextGen.Batch..CertificateArgs
         {
             AccountName = "sampleacct",
             CertificateName = "sha1-0a0e4f50d51beadeac1d35afc5116098e7902e6e",
@@ -243,7 +243,7 @@ class MyStack : Stack
 package main
 
 import (
-	batch "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/batch/latest"
+	batch "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/batch"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -273,7 +273,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-certificate = azure_nextgen.batch.latest.Certificate("certificate",
+certificate = azure_nextgen.batch.Certificate("certificate",
     account_name="sampleacct",
     certificate_name="sha1-0a0e4f50d51beadeac1d35afc5116098e7902e6e",
     data="MIIJsgIBAzCCCW4GCSqGSIb3DQE...",
@@ -290,7 +290,7 @@ certificate = azure_nextgen.batch.latest.Certificate("certificate",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const certificate = new azure_nextgen.batch.latest.Certificate("certificate", {
+const certificate = new azure_nextgen.batch.Certificate("certificate", {
     accountName: "sampleacct",
     certificateName: "sha1-0a0e4f50d51beadeac1d35afc5116098e7902e6e",
     data: "MIIJsgIBAzCCCW4GCSqGSIb3DQE...",
@@ -527,7 +527,7 @@ The Certificate resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#format_csharp" style="color: inherit; text-decoration: inherit;">Format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificateformat">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch.<wbr>Certificate<wbr>Format</a></span>
+        <span class="property-type"><a href="#certificateformat">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch..<wbr>Certificate<wbr>Format</a></span>
     </dt>
     <dd>{{% md %}}The format of the certificate - either Pfx or Cer. If omitted, the default is Pfx.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -810,7 +810,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deletecertificateerror_csharp" style="color: inherit; text-decoration: inherit;">Delete<wbr>Certificate<wbr>Error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deletecertificateerrorresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch.<wbr>Outputs.<wbr>Delete<wbr>Certificate<wbr>Error<wbr>Response</a></span>
+        <span class="property-type"><a href="#deletecertificateerrorresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch..<wbr>Outputs.<wbr>Delete<wbr>Certificate<wbr>Error<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}This is only returned when the certificate provisioningState is 'Failed'.{{% /md %}}</dd>
     <dt class="property-"
@@ -1262,7 +1262,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#details_csharp" style="color: inherit; text-decoration: inherit;">Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deletecertificateerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch.<wbr>Inputs.<wbr>Delete<wbr>Certificate<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#deletecertificateerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch..<wbr>Inputs.<wbr>Delete<wbr>Certificate<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of additional details about the error.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1408,7 +1408,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:batch/latest:Certificate sha1-0a0e4f50d51beadeac1d35afc5116098e7902e6e /subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.Batch/batchAccounts/samplecct/certificates/sha1-0a0e4f50d51beadeac1d35afc5116098e7902e6e 
+$ pulumi import azure-nextgen:batch:Certificate sha1-0a0e4f50d51beadeac1d35afc5116098e7902e6e /subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.Batch/batchAccounts/samplecct/certificates/sha1-0a0e4f50d51beadeac1d35afc5116098e7902e6e 
 ```
 
 

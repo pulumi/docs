@@ -188,7 +188,7 @@ The following output properties are available:
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iotspacespropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Io<wbr>TSpaces.<wbr>Outputs.<wbr>Io<wbr>TSpaces<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#iotspacespropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Io<wbr>TSpaces..<wbr>Outputs.<wbr>Io<wbr>TSpaces<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The common properties of a IoTSpaces service.{{% /md %}}</dd>
     <dt class="property-"
@@ -197,7 +197,7 @@ The following output properties are available:
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iotspacesskuinforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Io<wbr>TSpaces.<wbr>Outputs.<wbr>Io<wbr>TSpaces<wbr>Sku<wbr>Info<wbr>Response</a></span>
+        <span class="property-type"><a href="#iotspacesskuinforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Io<wbr>TSpaces..<wbr>Outputs.<wbr>Io<wbr>TSpaces<wbr>Sku<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}A valid instance SKU.{{% /md %}}</dd>
     <dt class="property-"
@@ -477,7 +477,7 @@ The following output properties are available:
 <a href="#storagecontainer_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Container</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storagecontainerpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Io<wbr>TSpaces.<wbr>Inputs.<wbr>Storage<wbr>Container<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#storagecontainerpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Io<wbr>TSpaces..<wbr>Inputs.<wbr>Storage<wbr>Container<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The properties of the designated storage container.{{% /md %}}</dd>
 </dl>

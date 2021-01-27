@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.network.VirtualNetworkPeering re
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Peerings in a virtual network resource.
-Latest API Version: 2020-08-01.
+API Version: 2020-08-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,12 +27,12 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var virtualNetworkPeering = new AzureNextGen.Network.Latest.VirtualNetworkPeering("virtualNetworkPeering", new AzureNextGen.Network.Latest.VirtualNetworkPeeringArgs
+        var virtualNetworkPeering = new AzureNextGen.Network..VirtualNetworkPeering("virtualNetworkPeering", new AzureNextGen.Network..VirtualNetworkPeeringArgs
         {
             AllowForwardedTraffic = true,
             AllowGatewayTransit = false,
             AllowVirtualNetworkAccess = true,
-            RemoteVirtualNetwork = new AzureNextGen.Network.Latest.Inputs.SubResourceArgs
+            RemoteVirtualNetwork = new AzureNextGen.Network..Inputs.SubResourceArgs
             {
                 Id = "/subscriptions/subid/resourceGroups/peerTest/providers/Microsoft.Network/virtualNetworks/vnet2",
             },
@@ -55,7 +55,7 @@ class MyStack : Stack
 package main
 
 import (
-	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network/latest"
+	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -90,11 +90,11 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-virtual_network_peering = azure_nextgen.network.latest.VirtualNetworkPeering("virtualNetworkPeering",
+virtual_network_peering = azure_nextgen.network.VirtualNetworkPeering("virtualNetworkPeering",
     allow_forwarded_traffic=True,
     allow_gateway_transit=False,
     allow_virtual_network_access=True,
-    remote_virtual_network=azure_nextgen.network.latest.SubResourceArgs(
+    remote_virtual_network=azure_nextgen.network.SubResourceArgs(
         id="/subscriptions/subid/resourceGroups/peerTest/providers/Microsoft.Network/virtualNetworks/vnet2",
     ),
     resource_group_name="peerTest",
@@ -112,7 +112,7 @@ virtual_network_peering = azure_nextgen.network.latest.VirtualNetworkPeering("vi
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const virtualNetworkPeering = new azure_nextgen.network.latest.VirtualNetworkPeering("virtualNetworkPeering", {
+const virtualNetworkPeering = new azure_nextgen.network.VirtualNetworkPeering("virtualNetworkPeering", {
     allowForwardedTraffic: true,
     allowGatewayTransit: false,
     allowVirtualNetworkAccess: true,
@@ -390,7 +390,7 @@ The VirtualNetworkPeering resource accepts the following [input]({{< relref "/do
 <a href="#peeringstate_csharp" style="color: inherit; text-decoration: inherit;">Peering<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#virtualnetworkpeeringstate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Virtual<wbr>Network<wbr>Peering<wbr>State</a></span>
+        <span class="property-type">string | <a href="#virtualnetworkpeeringstate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Virtual<wbr>Network<wbr>Peering<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}The status of the virtual network peering.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -399,7 +399,7 @@ The VirtualNetworkPeering resource accepts the following [input]({{< relref "/do
 <a href="#remoteaddressspace_csharp" style="color: inherit; text-decoration: inherit;">Remote<wbr>Address<wbr>Space</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#addressspace">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Address<wbr>Space<wbr>Args</a></span>
+        <span class="property-type"><a href="#addressspace">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Address<wbr>Space<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The reference to the remote virtual network address space.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -408,7 +408,7 @@ The VirtualNetworkPeering resource accepts the following [input]({{< relref "/do
 <a href="#remotebgpcommunities_csharp" style="color: inherit; text-decoration: inherit;">Remote<wbr>Bgp<wbr>Communities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkbgpcommunities">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Virtual<wbr>Network<wbr>Bgp<wbr>Communities<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnetworkbgpcommunities">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Virtual<wbr>Network<wbr>Bgp<wbr>Communities<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The reference to the remote virtual network's Bgp Communities.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -417,7 +417,7 @@ The VirtualNetworkPeering resource accepts the following [input]({{< relref "/do
 <a href="#remotevirtualnetwork_csharp" style="color: inherit; text-decoration: inherit;">Remote<wbr>Virtual<wbr>Network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The reference to the remote virtual network. The remote virtual network can be in the same or different region (preview). See here to register for the preview and learn more (https://docs.microsoft.com/en-us/azure/virtual-network/virtual-network-create-peering).{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1409,7 +1409,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:network/latest:VirtualNetworkPeering peer /subscriptions/subid/resourceGroups/peerTest/providers/Microsoft.Network/virtualNetworks/vnet1/virtualNetworkPeerings/peer 
+$ pulumi import azure-nextgen:network:VirtualNetworkPeering peer /subscriptions/subid/resourceGroups/peerTest/providers/Microsoft.Network/virtualNetworks/vnet1/virtualNetworkPeerings/peer 
 ```
 
 

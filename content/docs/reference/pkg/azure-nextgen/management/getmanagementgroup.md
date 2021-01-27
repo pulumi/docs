@@ -260,7 +260,7 @@ The following output properties are available:
 <a href="#children_csharp" style="color: inherit; text-decoration: inherit;">Children</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementgroupchildinforesponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Management.<wbr>Outputs.<wbr>Management<wbr>Group<wbr>Child<wbr>Info<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#managementgroupchildinforesponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Management..<wbr>Outputs.<wbr>Management<wbr>Group<wbr>Child<wbr>Info<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of children.{{% /md %}}</dd>
     <dt class="property-"
@@ -269,7 +269,7 @@ The following output properties are available:
 <a href="#details_csharp" style="color: inherit; text-decoration: inherit;">Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementgroupdetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Management.<wbr>Outputs.<wbr>Management<wbr>Group<wbr>Details<wbr>Response</a></span>
+        <span class="property-type"><a href="#managementgroupdetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Management..<wbr>Outputs.<wbr>Management<wbr>Group<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The details of a management group.{{% /md %}}</dd>
     <dt class="property-"
@@ -287,7 +287,7 @@ The following output properties are available:
 <a href="#path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementgrouppathelementresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Management.<wbr>Outputs.<wbr>Management<wbr>Group<wbr>Path<wbr>Element<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#managementgrouppathelementresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Management..<wbr>Outputs.<wbr>Management<wbr>Group<wbr>Path<wbr>Element<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The path from the root to the current group.{{% /md %}}</dd>
     <dt class="property-"
@@ -558,7 +558,7 @@ The following output properties are available:
 <a href="#children_csharp" style="color: inherit; text-decoration: inherit;">Children</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementgroupchildinforesponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Management.<wbr>Inputs.<wbr>Management<wbr>Group<wbr>Child<wbr>Info<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#managementgroupchildinforesponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Management..<wbr>Inputs.<wbr>Management<wbr>Group<wbr>Child<wbr>Info<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of children.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -769,7 +769,7 @@ The following output properties are available:
 <a href="#parent_csharp" style="color: inherit; text-decoration: inherit;">Parent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#parentgroupinforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Management.<wbr>Inputs.<wbr>Parent<wbr>Group<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#parentgroupinforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Management..<wbr>Inputs.<wbr>Parent<wbr>Group<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}(Optional) The ID of the parent management group.{{% /md %}}</dd>
     <dt class="property-optional"

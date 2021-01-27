@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.avs.GlobalReachConnection resour
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 A global reach connection resource
+API Version: 2020-07-17-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var globalReachConnection = new AzureNextGen.AVS.V20200717Preview.GlobalReachConnection("globalReachConnection", new AzureNextGen.AVS.V20200717Preview.GlobalReachConnectionArgs
+        var globalReachConnection = new AzureNextGen.AVS..GlobalReachConnection("globalReachConnection", new AzureNextGen.AVS..GlobalReachConnectionArgs
         {
             AuthorizationKey = "01010101-0101-0101-0101-010101010101",
             GlobalReachConnectionName = "connection1",
@@ -48,7 +49,7 @@ class MyStack : Stack
 package main
 
 import (
-	avs "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/avs/v20200717preview"
+	avs "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/avs"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -78,7 +79,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-global_reach_connection = azure_nextgen.avs.v20200717preview.GlobalReachConnection("globalReachConnection",
+global_reach_connection = azure_nextgen.avs.GlobalReachConnection("globalReachConnection",
     authorization_key="01010101-0101-0101-0101-010101010101",
     global_reach_connection_name="connection1",
     peer_express_route_circuit="/subscriptions/12341234-1234-1234-1234-123412341234/resourceGroups/mygroup/providers/Microsoft.Network/expressRouteCircuits/mypeer",
@@ -95,7 +96,7 @@ global_reach_connection = azure_nextgen.avs.v20200717preview.GlobalReachConnecti
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const globalReachConnection = new azure_nextgen.avs.v20200717preview.GlobalReachConnection("globalReachConnection", {
+const globalReachConnection = new azure_nextgen.avs.GlobalReachConnection("globalReachConnection", {
     authorizationKey: "01010101-0101-0101-0101-010101010101",
     globalReachConnectionName: "connection1",
     peerExpressRouteCircuit: "/subscriptions/12341234-1234-1234-1234-123412341234/resourceGroups/mygroup/providers/Microsoft.Network/expressRouteCircuits/mypeer",
@@ -749,7 +750,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:avs/v20200717preview:GlobalReachConnection connection1 /subscriptions/{subscription-id}/resourceGroups/group1/providers/Microsoft.AVS/privateClouds/cloud1/globalReachConnections/connection1 
+$ pulumi import azure-nextgen:avs:GlobalReachConnection connection1 /subscriptions/{subscription-id}/resourceGroups/group1/providers/Microsoft.AVS/privateClouds/cloud1/globalReachConnections/connection1 
 ```
 
 

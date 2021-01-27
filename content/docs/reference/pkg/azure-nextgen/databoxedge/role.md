@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.databoxedge.Role resource with e
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Compute role.
-Latest API Version: 2020-09-01.
+API Version: 2020-09-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var role = new AzureNextGen.DataBoxEdge.Latest.Role("role", new AzureNextGen.DataBoxEdge.Latest.RoleArgs
+        var role = new AzureNextGen.DataBoxEdge..Role("role", new AzureNextGen.DataBoxEdge..RoleArgs
         {
             DeviceName = "testedgedevice",
             Kind = "IOT",
@@ -48,7 +48,7 @@ class MyStack : Stack
 package main
 
 import (
-	databoxedge "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/databoxedge/latest"
+	databoxedge "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/databoxedge"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -77,7 +77,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-role = azure_nextgen.databoxedge.latest.Role("role",
+role = azure_nextgen.databoxedge.Role("role",
     device_name="testedgedevice",
     kind="IOT",
     name="IoTRole1",
@@ -93,7 +93,7 @@ role = azure_nextgen.databoxedge.latest.Role("role",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const role = new azure_nextgen.databoxedge.latest.Role("role", {
+const role = new azure_nextgen.databoxedge.Role("role", {
     deviceName: "testedgedevice",
     kind: "IOT",
     name: "IoTRole1",
@@ -302,7 +302,7 @@ The Role resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#roletypes">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Role<wbr>Types</a></span>
+        <span class="property-type">string | <a href="#roletypes">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge..<wbr>Role<wbr>Types</a></span>
     </dt>
     <dd>{{% md %}}Role type.{{% /md %}}</dd>
     <dt class="property-required"
@@ -477,7 +477,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#systemdata_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
+        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge..<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Role configured on ASE resource{{% /md %}}</dd>
     <dt class="property-"
@@ -926,7 +926,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:databoxedge/latest:Role IoTRole1 /subscriptions/4385cf00-2d3a-425a-832f-f4285b1c9dce/resourceGroups/GroupForEdgeAutomation/providers/Microsoft.DataBoxEdge/dataBoxEdgeDevices/testedgedevice/roles/IoTRole1 
+$ pulumi import azure-nextgen:databoxedge:Role IoTRole1 /subscriptions/4385cf00-2d3a-425a-832f-f4285b1c9dce/resourceGroups/GroupForEdgeAutomation/providers/Microsoft.DataBoxEdge/dataBoxEdgeDevices/testedgedevice/roles/IoTRole1 
 ```
 
 

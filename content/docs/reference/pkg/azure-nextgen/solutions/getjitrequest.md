@@ -170,7 +170,7 @@ The following output properties are available:
 <a href="#createdby_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>By</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationclientdetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Solutions.<wbr>Outputs.<wbr>Application<wbr>Client<wbr>Details<wbr>Response</a></span>
+        <span class="property-type"><a href="#applicationclientdetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Solutions..<wbr>Outputs.<wbr>Application<wbr>Client<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The client entity that created the JIT request.{{% /md %}}</dd>
     <dt class="property-"
@@ -188,7 +188,7 @@ The following output properties are available:
 <a href="#jitauthorizationpolicies_csharp" style="color: inherit; text-decoration: inherit;">Jit<wbr>Authorization<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jitauthorizationpoliciesresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Solutions.<wbr>Outputs.<wbr>Jit<wbr>Authorization<wbr>Policies<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#jitauthorizationpoliciesresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Solutions..<wbr>Outputs.<wbr>Jit<wbr>Authorization<wbr>Policies<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The JIT authorization policies.{{% /md %}}</dd>
     <dt class="property-"
@@ -206,7 +206,7 @@ The following output properties are available:
 <a href="#jitschedulingpolicy_csharp" style="color: inherit; text-decoration: inherit;">Jit<wbr>Scheduling<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jitschedulingpolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Solutions.<wbr>Outputs.<wbr>Jit<wbr>Scheduling<wbr>Policy<wbr>Response</a></span>
+        <span class="property-type"><a href="#jitschedulingpolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Solutions..<wbr>Outputs.<wbr>Jit<wbr>Scheduling<wbr>Policy<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The JIT request properties.{{% /md %}}</dd>
     <dt class="property-"
@@ -251,7 +251,7 @@ The following output properties are available:
 <a href="#updatedby_csharp" style="color: inherit; text-decoration: inherit;">Updated<wbr>By</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationclientdetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Solutions.<wbr>Outputs.<wbr>Application<wbr>Client<wbr>Details<wbr>Response</a></span>
+        <span class="property-type"><a href="#applicationclientdetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Solutions..<wbr>Outputs.<wbr>Application<wbr>Client<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The client entity that last updated the JIT request.{{% /md %}}</dd>
     <dt class="property-"

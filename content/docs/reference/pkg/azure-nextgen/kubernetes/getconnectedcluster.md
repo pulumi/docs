@@ -161,7 +161,7 @@ The following output properties are available:
 <a href="#aadprofile_csharp" style="color: inherit; text-decoration: inherit;">Aad<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectedclusteraadprofileresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Kubernetes.<wbr>Outputs.<wbr>Connected<wbr>Cluster<wbr>AADProfile<wbr>Response</a></span>
+        <span class="property-type"><a href="#connectedclusteraadprofileresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Kubernetes..<wbr>Outputs.<wbr>Connected<wbr>Cluster<wbr>AADProfile<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}AAD profile of the connected cluster.{{% /md %}}</dd>
     <dt class="property-"
@@ -197,7 +197,7 @@ The following output properties are available:
 <a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectedclusteridentityresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Kubernetes.<wbr>Outputs.<wbr>Connected<wbr>Cluster<wbr>Identity<wbr>Response</a></span>
+        <span class="property-type"><a href="#connectedclusteridentityresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Kubernetes..<wbr>Outputs.<wbr>Connected<wbr>Cluster<wbr>Identity<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The identity of the connected cluster.{{% /md %}}</dd>
     <dt class="property-"

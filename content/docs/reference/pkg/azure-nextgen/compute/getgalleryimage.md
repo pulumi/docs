@@ -206,7 +206,7 @@ The following output properties are available:
 <a href="#identifier_csharp" style="color: inherit; text-decoration: inherit;">Identifier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#galleryimageidentifierresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Outputs.<wbr>Gallery<wbr>Image<wbr>Identifier<wbr>Response</a></span>
+        <span class="property-type"><a href="#galleryimageidentifierresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Outputs.<wbr>Gallery<wbr>Image<wbr>Identifier<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}This is the gallery image definition identifier.{{% /md %}}</dd>
     <dt class="property-"
@@ -278,7 +278,7 @@ The following output properties are available:
 <a href="#disallowed_csharp" style="color: inherit; text-decoration: inherit;">Disallowed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#disallowedresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Outputs.<wbr>Disallowed<wbr>Response</a></span>
+        <span class="property-type"><a href="#disallowedresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Outputs.<wbr>Disallowed<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes the disallowed disk types.{{% /md %}}</dd>
     <dt class="property-"
@@ -305,7 +305,7 @@ The following output properties are available:
 <a href="#features_csharp" style="color: inherit; text-decoration: inherit;">Features</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#galleryimagefeatureresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Outputs.<wbr>Gallery<wbr>Image<wbr>Feature<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#galleryimagefeatureresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Outputs.<wbr>Gallery<wbr>Image<wbr>Feature<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of gallery image features.{{% /md %}}</dd>
     <dt class="property-"
@@ -332,7 +332,7 @@ The following output properties are available:
 <a href="#purchaseplan_csharp" style="color: inherit; text-decoration: inherit;">Purchase<wbr>Plan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imagepurchaseplanresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Outputs.<wbr>Image<wbr>Purchase<wbr>Plan<wbr>Response</a></span>
+        <span class="property-type"><a href="#imagepurchaseplanresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Outputs.<wbr>Image<wbr>Purchase<wbr>Plan<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes the gallery image definition purchase plan. This is used by marketplace images.{{% /md %}}</dd>
     <dt class="property-"
@@ -341,7 +341,7 @@ The following output properties are available:
 <a href="#recommended_csharp" style="color: inherit; text-decoration: inherit;">Recommended</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recommendedmachineconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Outputs.<wbr>Recommended<wbr>Machine<wbr>Configuration<wbr>Response</a></span>
+        <span class="property-type"><a href="#recommendedmachineconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Outputs.<wbr>Recommended<wbr>Machine<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The properties describe the recommended machine configuration for this Image Definition. These properties are updatable.{{% /md %}}</dd>
     <dt class="property-"
@@ -1366,7 +1366,7 @@ The following output properties are available:
 <a href="#memory_csharp" style="color: inherit; text-decoration: inherit;">Memory</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcerangeresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Resource<wbr>Range<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcerangeresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Inputs.<wbr>Resource<wbr>Range<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the resource range.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1375,7 +1375,7 @@ The following output properties are available:
 <a href="#vcpus_csharp" style="color: inherit; text-decoration: inherit;">VCPUs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcerangeresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Resource<wbr>Range<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcerangeresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Inputs.<wbr>Resource<wbr>Range<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the resource range.{{% /md %}}</dd>
 </dl>

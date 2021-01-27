@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.compute.Snapshot resource with e
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Snapshot resource.
-Latest API Version: 2020-09-30.
+API Version: 2020-09-30.
 
 {{% examples %}}
 ## Example Usage
@@ -27,9 +27,9 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var snapshot = new AzureNextGen.Compute.Latest.Snapshot("snapshot", new AzureNextGen.Compute.Latest.SnapshotArgs
+        var snapshot = new AzureNextGen.Compute..Snapshot("snapshot", new AzureNextGen.Compute..SnapshotArgs
         {
-            CreationData = new AzureNextGen.Compute.Latest.Inputs.CreationDataArgs
+            CreationData = new AzureNextGen.Compute..Inputs.CreationDataArgs
             {
                 CreateOption = "Import",
                 SourceUri = "https://mystorageaccount.blob.core.windows.net/osimages/osimage.vhd",
@@ -53,7 +53,7 @@ class MyStack : Stack
 package main
 
 import (
-	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute/latest"
+	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -86,8 +86,8 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-snapshot = azure_nextgen.compute.latest.Snapshot("snapshot",
-    creation_data=azure_nextgen.compute.latest.CreationDataArgs(
+snapshot = azure_nextgen.compute.Snapshot("snapshot",
+    creation_data=azure_nextgen.compute.CreationDataArgs(
         create_option="Import",
         source_uri="https://mystorageaccount.blob.core.windows.net/osimages/osimage.vhd",
         storage_account_id="subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Storage/storageAccounts/myStorageAccount",
@@ -106,7 +106,7 @@ snapshot = azure_nextgen.compute.latest.Snapshot("snapshot",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const snapshot = new azure_nextgen.compute.latest.Snapshot("snapshot", {
+const snapshot = new azure_nextgen.compute.Snapshot("snapshot", {
     creationData: {
         createOption: "Import",
         sourceUri: "https://mystorageaccount.blob.core.windows.net/osimages/osimage.vhd",
@@ -131,9 +131,9 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var snapshot = new AzureNextGen.Compute.Latest.Snapshot("snapshot", new AzureNextGen.Compute.Latest.SnapshotArgs
+        var snapshot = new AzureNextGen.Compute..Snapshot("snapshot", new AzureNextGen.Compute..SnapshotArgs
         {
-            CreationData = new AzureNextGen.Compute.Latest.Inputs.CreationDataArgs
+            CreationData = new AzureNextGen.Compute..Inputs.CreationDataArgs
             {
                 CreateOption = "Import",
                 SourceUri = "https://mystorageaccount.blob.core.windows.net/osimages/osimage.vhd",
@@ -156,7 +156,7 @@ class MyStack : Stack
 package main
 
 import (
-	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute/latest"
+	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -188,8 +188,8 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-snapshot = azure_nextgen.compute.latest.Snapshot("snapshot",
-    creation_data=azure_nextgen.compute.latest.CreationDataArgs(
+snapshot = azure_nextgen.compute.Snapshot("snapshot",
+    creation_data=azure_nextgen.compute.CreationDataArgs(
         create_option="Import",
         source_uri="https://mystorageaccount.blob.core.windows.net/osimages/osimage.vhd",
     ),
@@ -207,7 +207,7 @@ snapshot = azure_nextgen.compute.latest.Snapshot("snapshot",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const snapshot = new azure_nextgen.compute.latest.Snapshot("snapshot", {
+const snapshot = new azure_nextgen.compute.Snapshot("snapshot", {
     creationData: {
         createOption: "Import",
         sourceUri: "https://mystorageaccount.blob.core.windows.net/osimages/osimage.vhd",
@@ -231,9 +231,9 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var snapshot = new AzureNextGen.Compute.Latest.Snapshot("snapshot", new AzureNextGen.Compute.Latest.SnapshotArgs
+        var snapshot = new AzureNextGen.Compute..Snapshot("snapshot", new AzureNextGen.Compute..SnapshotArgs
         {
-            CreationData = new AzureNextGen.Compute.Latest.Inputs.CreationDataArgs
+            CreationData = new AzureNextGen.Compute..Inputs.CreationDataArgs
             {
                 CreateOption = "Copy",
                 SourceResourceId = "subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/snapshots/mySnapshot1",
@@ -256,7 +256,7 @@ class MyStack : Stack
 package main
 
 import (
-	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute/latest"
+	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -288,8 +288,8 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-snapshot = azure_nextgen.compute.latest.Snapshot("snapshot",
-    creation_data=azure_nextgen.compute.latest.CreationDataArgs(
+snapshot = azure_nextgen.compute.Snapshot("snapshot",
+    creation_data=azure_nextgen.compute.CreationDataArgs(
         create_option="Copy",
         source_resource_id="subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/snapshots/mySnapshot1",
     ),
@@ -307,7 +307,7 @@ snapshot = azure_nextgen.compute.latest.Snapshot("snapshot",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const snapshot = new azure_nextgen.compute.latest.Snapshot("snapshot", {
+const snapshot = new azure_nextgen.compute.Snapshot("snapshot", {
     creationData: {
         createOption: "Copy",
         sourceResourceId: "subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/snapshots/mySnapshot1",
@@ -510,7 +510,7 @@ The Snapshot resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#creationdata_csharp" style="color: inherit; text-decoration: inherit;">Creation<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#creationdata">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Creation<wbr>Data<wbr>Args</a></span>
+        <span class="property-type"><a href="#creationdata">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Inputs.<wbr>Creation<wbr>Data<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Disk source information. CreationData information cannot be changed after the disk has been created.{{% /md %}}</dd>
     <dt class="property-required"
@@ -564,7 +564,7 @@ The Snapshot resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#encryption_csharp" style="color: inherit; text-decoration: inherit;">Encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryption">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Encryption<wbr>Args</a></span>
+        <span class="property-type"><a href="#encryption">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Inputs.<wbr>Encryption<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Encryption property can be used to encrypt data at rest with customer managed keys or platform managed keys.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -573,7 +573,7 @@ The Snapshot resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#encryptionsettingscollection_csharp" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Settings<wbr>Collection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionsettingscollection">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Encryption<wbr>Settings<wbr>Collection<wbr>Args</a></span>
+        <span class="property-type"><a href="#encryptionsettingscollection">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Inputs.<wbr>Encryption<wbr>Settings<wbr>Collection<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Encryption settings collection used be Azure Disk Encryption, can contain multiple encryption settings per disk or snapshot.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -582,7 +582,7 @@ The Snapshot resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#extendedlocation_csharp" style="color: inherit; text-decoration: inherit;">Extended<wbr>Location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#extendedlocation">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Extended<wbr>Location<wbr>Args</a></span>
+        <span class="property-type"><a href="#extendedlocation">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Inputs.<wbr>Extended<wbr>Location<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The extended location where the snapshot will be created. Extended location cannot be changed.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -591,7 +591,7 @@ The Snapshot resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#hypervgeneration_csharp" style="color: inherit; text-decoration: inherit;">Hyper<wbr>VGeneration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#hypervgeneration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Hyper<wbr>VGeneration</a></span>
+        <span class="property-type">string | <a href="#hypervgeneration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Hyper<wbr>VGeneration</a></span>
     </dt>
     <dd>{{% md %}}The hypervisor generation of the Virtual Machine. Applicable to OS disks only.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -609,7 +609,7 @@ The Snapshot resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#networkaccesspolicy_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Access<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#networkaccesspolicy">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Network<wbr>Access<wbr>Policy</a></span>
+        <span class="property-type">string | <a href="#networkaccesspolicy">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Network<wbr>Access<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Policy for accessing the disk via network.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -618,7 +618,7 @@ The Snapshot resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#ostype_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#operatingsystemtypes">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Operating<wbr>System<wbr>Types</a></span>
+        <span class="property-type"><a href="#operatingsystemtypes">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Operating<wbr>System<wbr>Types</a></span>
     </dt>
     <dd>{{% md %}}The Operating System type.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -627,7 +627,7 @@ The Snapshot resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#purchaseplan_csharp" style="color: inherit; text-decoration: inherit;">Purchase<wbr>Plan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#purchaseplan">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Purchase<wbr>Plan<wbr>Args</a></span>
+        <span class="property-type"><a href="#purchaseplan">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Inputs.<wbr>Purchase<wbr>Plan<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Purchase plan information for the image from which the source disk for the snapshot was originally created.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -636,7 +636,7 @@ The Snapshot resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#snapshotsku">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Snapshot<wbr>Sku<wbr>Args</a></span>
+        <span class="property-type"><a href="#snapshotsku">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Inputs.<wbr>Snapshot<wbr>Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The snapshots sku name. Can be Standard_LRS, Premium_LRS, or Standard_ZRS. This is an optional parameter for incremental snapshot and the default behavior is the SKU will be set to the same sku as the previous snapshot{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1477,7 +1477,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#createoption_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Option</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#diskcreateoption">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Disk<wbr>Create<wbr>Option</a></span>
+        <span class="property-type">string | <a href="#diskcreateoption">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Disk<wbr>Create<wbr>Option</a></span>
     </dt>
     <dd>{{% md %}}This enumerates the possible sources of a disk's creation.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1486,7 +1486,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#galleryimagereference_csharp" style="color: inherit; text-decoration: inherit;">Gallery<wbr>Image<wbr>Reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imagediskreference">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Image<wbr>Disk<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#imagediskreference">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Inputs.<wbr>Image<wbr>Disk<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required if creating from a Gallery Image. The id of the ImageDiskReference will be the ARM id of the shared galley image version from which to create a disk.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1495,7 +1495,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#imagereference_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imagediskreference">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Image<wbr>Disk<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#imagediskreference">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Inputs.<wbr>Image<wbr>Disk<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Disk source information.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1809,7 +1809,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#galleryimagereference_csharp" style="color: inherit; text-decoration: inherit;">Gallery<wbr>Image<wbr>Reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imagediskreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Image<wbr>Disk<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#imagediskreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Inputs.<wbr>Image<wbr>Disk<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required if creating from a Gallery Image. The id of the ImageDiskReference will be the ARM id of the shared galley image version from which to create a disk.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1818,7 +1818,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#imagereference_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imagediskreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Image<wbr>Disk<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#imagediskreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Inputs.<wbr>Image<wbr>Disk<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Disk source information.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2228,7 +2228,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#encryptiontype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Encryption<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#encryptiontype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Encryption<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of key used to encrypt the data of the disk.{{% /md %}}</dd>
 </dl>
@@ -2424,7 +2424,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryptionsettings_csharp" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionsettingselement">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Encryption<wbr>Settings<wbr>Element<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#encryptionsettingselement">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Inputs.<wbr>Encryption<wbr>Settings<wbr>Element<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A collection of encryption settings, one for each disk volume.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2558,7 +2558,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryptionsettings_csharp" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionsettingselementresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Encryption<wbr>Settings<wbr>Element<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#encryptionsettingselementresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Inputs.<wbr>Encryption<wbr>Settings<wbr>Element<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A collection of encryption settings, one for each disk volume.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2683,7 +2683,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#diskencryptionkey_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Encryption<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultandsecretreference">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>And<wbr>Secret<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#keyvaultandsecretreference">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>And<wbr>Secret<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Key Vault Secret Url and vault id of the disk encryption key{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2692,7 +2692,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keyencryptionkey_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Encryption<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultandkeyreference">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>And<wbr>Key<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#keyvaultandkeyreference">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>And<wbr>Key<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Key Vault Key Url and vault id of the key encryption key. KeyEncryptionKey is optional and when provided is used to unwrap the disk encryption key.{{% /md %}}</dd>
 </dl>
@@ -2781,7 +2781,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#diskencryptionkey_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Encryption<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultandsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>And<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#keyvaultandsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>And<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Key Vault Secret Url and vault id of the disk encryption key{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2790,7 +2790,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keyencryptionkey_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Encryption<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultandkeyreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>And<wbr>Key<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#keyvaultandkeyreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>And<wbr>Key<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Key Vault Key Url and vault id of the key encryption key. KeyEncryptionKey is optional and when provided is used to unwrap the disk encryption key.{{% /md %}}</dd>
 </dl>
@@ -2934,7 +2934,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#extendedlocationtypes">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Extended<wbr>Location<wbr>Types</a></span>
+        <span class="property-type">string | <a href="#extendedlocationtypes">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Extended<wbr>Location<wbr>Types</a></span>
     </dt>
     <dd>{{% md %}}The type of the extended location.{{% /md %}}</dd>
 </dl>
@@ -3394,7 +3394,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourcevault_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Vault</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sourcevault">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Source<wbr>Vault<wbr>Args</a></span>
+        <span class="property-type"><a href="#sourcevault">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Inputs.<wbr>Source<wbr>Vault<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Resource id of the KeyVault containing the key or secret{{% /md %}}</dd>
 </dl>
@@ -3492,7 +3492,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourcevault_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Vault</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sourcevaultresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Source<wbr>Vault<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sourcevaultresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Inputs.<wbr>Source<wbr>Vault<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Resource id of the KeyVault containing the key or secret{{% /md %}}</dd>
 </dl>
@@ -3590,7 +3590,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourcevault_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Vault</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sourcevault">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Source<wbr>Vault<wbr>Args</a></span>
+        <span class="property-type"><a href="#sourcevault">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Inputs.<wbr>Source<wbr>Vault<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Resource id of the KeyVault containing the key or secret{{% /md %}}</dd>
 </dl>
@@ -3688,7 +3688,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourcevault_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Vault</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sourcevaultresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Source<wbr>Vault<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sourcevaultresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Inputs.<wbr>Source<wbr>Vault<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Resource id of the KeyVault containing the key or secret{{% /md %}}</dd>
 </dl>
@@ -4201,7 +4201,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#snapshotstorageaccounttypes">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Snapshot<wbr>Storage<wbr>Account<wbr>Types</a></span>
+        <span class="property-type">string | <a href="#snapshotstorageaccounttypes">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Snapshot<wbr>Storage<wbr>Account<wbr>Types</a></span>
     </dt>
     <dd>{{% md %}}The sku name.{{% /md %}}</dd>
 </dl>
@@ -4525,7 +4525,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:compute/latest:Snapshot mySnapshot2 /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/snapshots/{snapshotName} 
+$ pulumi import azure-nextgen:compute:Snapshot mySnapshot2 /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/snapshots/{snapshotName} 
 ```
 
 

@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.storagepool.IscsiTarget resource
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Payload for iSCSI Target Create or Update requests.
+API Version: 2020-03-15-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var iscsiTarget = new AzureNextGen.StoragePool.V20200315Preview.IscsiTarget("iscsiTarget", new AzureNextGen.StoragePool.V20200315Preview.IscsiTargetArgs
+        var iscsiTarget = new AzureNextGen.StoragePool..IscsiTarget("iscsiTarget", new AzureNextGen.StoragePool..IscsiTargetArgs
         {
             DiskPoolName = "myDiskPool",
             IscsiTargetName = "myIscsiTarget",
@@ -34,11 +35,11 @@ class MyStack : Stack
             TargetIqn = "iqn.2005-03.org.iscsi:server1",
             Tpgs = 
             {
-                new AzureNextGen.StoragePool.V20200315Preview.Inputs.TargetPortalGroupArgs
+                new AzureNextGen.StoragePool..Inputs.TargetPortalGroupArgs
                 {
                     Acls = 
                     {
-                        new AzureNextGen.StoragePool.V20200315Preview.Inputs.AclArgs
+                        new AzureNextGen.StoragePool..Inputs.AclArgs
                         {
                             InitiatorIqn = "iqn.2005-03.org.iscsi:client",
                             MappedLuns = 
@@ -49,14 +50,14 @@ class MyStack : Stack
                             Username = "some_username",
                         },
                     },
-                    Attributes = new AzureNextGen.StoragePool.V20200315Preview.Inputs.AttributesArgs
+                    Attributes = new AzureNextGen.StoragePool..Inputs.AttributesArgs
                     {
                         Authentication = true,
                         ProdModeWriteProtect = false,
                     },
                     Luns = 
                     {
-                        new AzureNextGen.StoragePool.V20200315Preview.Inputs.IscsiLunArgs
+                        new AzureNextGen.StoragePool..Inputs.IscsiLunArgs
                         {
                             ManagedDiskAzureResourceId = "/subscriptions/11111111-1111-1111-1111-111111111111/resourceGroups/myResourceGroup/providers/Microsoft.Compute/disks/vm-name_DataDisk_1",
                             Name = "lun0",
@@ -79,7 +80,7 @@ class MyStack : Stack
 package main
 
 import (
-	storagepool "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/storagepool/v20200315preview"
+	storagepool "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/storagepool"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -132,23 +133,23 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-iscsi_target = azure_nextgen.storagepool.v20200315preview.IscsiTarget("iscsiTarget",
+iscsi_target = azure_nextgen.storagepool.IscsiTarget("iscsiTarget",
     disk_pool_name="myDiskPool",
     iscsi_target_name="myIscsiTarget",
     resource_group_name="myResourceGroup",
     target_iqn="iqn.2005-03.org.iscsi:server1",
-    tpgs=[azure_nextgen.storagepool.v20200315preview.TargetPortalGroupArgs(
-        acls=[azure_nextgen.storagepool.v20200315preview.AclArgs(
+    tpgs=[azure_nextgen.storagepool.TargetPortalGroupArgs(
+        acls=[azure_nextgen.storagepool.AclArgs(
             initiator_iqn="iqn.2005-03.org.iscsi:client",
             mapped_luns=["lun0"],
             password="<password>",
             username="some_username",
         )],
-        attributes=azure_nextgen.storagepool.v20200315preview.AttributesArgs(
+        attributes=azure_nextgen.storagepool.AttributesArgs(
             authentication=True,
             prod_mode_write_protect=False,
         ),
-        luns=[azure_nextgen.storagepool.v20200315preview.IscsiLunArgs(
+        luns=[azure_nextgen.storagepool.IscsiLunArgs(
             managed_disk_azure_resource_id="/subscriptions/11111111-1111-1111-1111-111111111111/resourceGroups/myResourceGroup/providers/Microsoft.Compute/disks/vm-name_DataDisk_1",
             name="lun0",
         )],
@@ -164,7 +165,7 @@ iscsi_target = azure_nextgen.storagepool.v20200315preview.IscsiTarget("iscsiTarg
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const iscsiTarget = new azure_nextgen.storagepool.v20200315preview.IscsiTarget("iscsiTarget", {
+const iscsiTarget = new azure_nextgen.storagepool.IscsiTarget("iscsiTarget", {
     diskPoolName: "myDiskPool",
     iscsiTargetName: "myIscsiTarget",
     resourceGroupName: "myResourceGroup",
@@ -416,7 +417,7 @@ The IscsiTarget resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#tpgs_csharp" style="color: inherit; text-decoration: inherit;">Tpgs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#targetportalgroup">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Pool.<wbr>Inputs.<wbr>Target<wbr>Portal<wbr>Group<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#targetportalgroup">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Pool..<wbr>Inputs.<wbr>Target<wbr>Portal<wbr>Group<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}list of iSCSI target portal groups{{% /md %}}</dd>
 </dl>
@@ -1539,7 +1540,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#acls_csharp" style="color: inherit; text-decoration: inherit;">Acls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#acl">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Pool.<wbr>Inputs.<wbr>Acl<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#acl">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Pool..<wbr>Inputs.<wbr>Acl<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Access Control List (ACL) for an iSCSI target lun{{% /md %}}</dd>
     <dt class="property-required"
@@ -1548,7 +1549,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#attributes_csharp" style="color: inherit; text-decoration: inherit;">Attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#attributes">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Pool.<wbr>Inputs.<wbr>Attributes<wbr>Args</a></span>
+        <span class="property-type"><a href="#attributes">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Pool..<wbr>Inputs.<wbr>Attributes<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Attributes of an iSCSI target{{% /md %}}</dd>
     <dt class="property-required"
@@ -1557,7 +1558,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#luns_csharp" style="color: inherit; text-decoration: inherit;">Luns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iscsilun">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Pool.<wbr>Inputs.<wbr>Iscsi<wbr>Lun<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#iscsilun">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Pool..<wbr>Inputs.<wbr>Iscsi<wbr>Lun<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Lun list to be exposed through the iSCSI target. Required{{% /md %}}</dd>
 </dl>
@@ -1673,7 +1674,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#acls_csharp" style="color: inherit; text-decoration: inherit;">Acls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aclresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Pool.<wbr>Inputs.<wbr>Acl<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#aclresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Pool..<wbr>Inputs.<wbr>Acl<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Access Control List (ACL) for an iSCSI target lun{{% /md %}}</dd>
     <dt class="property-required"
@@ -1682,7 +1683,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#attributes_csharp" style="color: inherit; text-decoration: inherit;">Attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#attributesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Pool.<wbr>Inputs.<wbr>Attributes<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#attributesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Pool..<wbr>Inputs.<wbr>Attributes<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Attributes of an iSCSI target{{% /md %}}</dd>
     <dt class="property-required"
@@ -1700,7 +1701,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#luns_csharp" style="color: inherit; text-decoration: inherit;">Luns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iscsilunresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Pool.<wbr>Inputs.<wbr>Iscsi<wbr>Lun<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#iscsilunresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Pool..<wbr>Inputs.<wbr>Iscsi<wbr>Lun<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Lun list to be exposed through the iSCSI target. Required{{% /md %}}</dd>
     <dt class="property-required"
@@ -1909,7 +1910,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:storagepool/v20200315preview:IscsiTarget myIscsiTarget /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.StoragePool/diskPools/myDiskPool/iscsiTargets/myIscsiTarget 
+$ pulumi import azure-nextgen:storagepool:IscsiTarget myIscsiTarget /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.StoragePool/diskPools/myDiskPool/iscsiTargets/myIscsiTarget 
 ```
 
 

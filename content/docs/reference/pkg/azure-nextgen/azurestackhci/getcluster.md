@@ -287,7 +287,7 @@ The following output properties are available:
 <a href="#reportedproperties_csharp" style="color: inherit; text-decoration: inherit;">Reported<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterreportedpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Azure<wbr>Stack<wbr>HCI.<wbr>Outputs.<wbr>Cluster<wbr>Reported<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#clusterreportedpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Azure<wbr>Stack<wbr>HCI..<wbr>Outputs.<wbr>Cluster<wbr>Reported<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Properties reported by cluster agent.{{% /md %}}</dd>
     <dt class="property-"
@@ -1165,7 +1165,7 @@ The following output properties are available:
 <a href="#nodes_csharp" style="color: inherit; text-decoration: inherit;">Nodes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternoderesponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Azure<wbr>Stack<wbr>HCI.<wbr>Inputs.<wbr>Cluster<wbr>Node<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#clusternoderesponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Azure<wbr>Stack<wbr>HCI..<wbr>Inputs.<wbr>Cluster<wbr>Node<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of nodes reported by the cluster.{{% /md %}}</dd>
 </dl>

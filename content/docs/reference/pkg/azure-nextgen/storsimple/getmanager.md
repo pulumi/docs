@@ -197,7 +197,7 @@ The following output properties are available:
 <a href="#cisintrinsicsettings_csharp" style="color: inherit; text-decoration: inherit;">Cis<wbr>Intrinsic<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managerintrinsicsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stor<wbr>Simple.<wbr>Outputs.<wbr>Manager<wbr>Intrinsic<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#managerintrinsicsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stor<wbr>Simple..<wbr>Outputs.<wbr>Manager<wbr>Intrinsic<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Represents the type of StorSimple Manager.{{% /md %}}</dd>
     <dt class="property-"
@@ -224,7 +224,7 @@ The following output properties are available:
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managerskuresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stor<wbr>Simple.<wbr>Outputs.<wbr>Manager<wbr>Sku<wbr>Response</a></span>
+        <span class="property-type"><a href="#managerskuresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stor<wbr>Simple..<wbr>Outputs.<wbr>Manager<wbr>Sku<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the Sku.{{% /md %}}</dd>
     <dt class="property-"

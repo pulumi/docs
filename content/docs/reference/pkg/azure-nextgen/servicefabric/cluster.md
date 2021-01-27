@@ -12,7 +12,7 @@ meta_desc: "Documentation for the azure-nextgen.servicefabric.Cluster resource w
 
 The cluster resource
 
-Latest API Version: 2020-03-01.
+API Version: 2020-03-01.
 
 {{% examples %}}
 ## Example Usage
@@ -28,7 +28,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var cluster = new AzureNextGen.ServiceFabric.Latest.Cluster("cluster", new AzureNextGen.ServiceFabric.Latest.ClusterArgs
+        var cluster = new AzureNextGen.ServiceFabric..Cluster("cluster", new AzureNextGen.ServiceFabric..ClusterArgs
         {
             AddOnFeatures = 
             {
@@ -37,21 +37,21 @@ class MyStack : Stack
                 "BackupRestoreService",
                 "ResourceMonitorService",
             },
-            ApplicationTypeVersionsCleanupPolicy = new AzureNextGen.ServiceFabric.Latest.Inputs.ApplicationTypeVersionsCleanupPolicyArgs
+            ApplicationTypeVersionsCleanupPolicy = new AzureNextGen.ServiceFabric..Inputs.ApplicationTypeVersionsCleanupPolicyArgs
             {
                 MaxUnusedVersionsToKeep = 2,
             },
-            AzureActiveDirectory = new AzureNextGen.ServiceFabric.Latest.Inputs.AzureActiveDirectoryArgs
+            AzureActiveDirectory = new AzureNextGen.ServiceFabric..Inputs.AzureActiveDirectoryArgs
             {
                 ClientApplication = "d151ad89-4bce-4ae8-b3d1-1dc79679fa75",
                 ClusterApplication = "5886372e-7bf4-4878-a497-8098aba608ae",
                 TenantId = "6abcc6a0-8666-43f1-87b8-172cf86a9f9c",
             },
-            CertificateCommonNames = new AzureNextGen.ServiceFabric.Latest.Inputs.ServerCertificateCommonNamesArgs
+            CertificateCommonNames = new AzureNextGen.ServiceFabric..Inputs.ServerCertificateCommonNamesArgs
             {
                 CommonNames = 
                 {
-                    new AzureNextGen.ServiceFabric.Latest.Inputs.ServerCertificateCommonNameArgs
+                    new AzureNextGen.ServiceFabric..Inputs.ServerCertificateCommonNameArgs
                     {
                         CertificateCommonName = "abc.com",
                         CertificateIssuerThumbprint = "12599211F8F14C90AFA9532AD79A6F2CA1C00622",
@@ -61,7 +61,7 @@ class MyStack : Stack
             },
             ClientCertificateCommonNames = 
             {
-                new AzureNextGen.ServiceFabric.Latest.Inputs.ClientCertificateCommonNameArgs
+                new AzureNextGen.ServiceFabric..Inputs.ClientCertificateCommonNameArgs
                 {
                     CertificateCommonName = "abc.com",
                     CertificateIssuerThumbprint = "5F3660C715EBBDA31DB1FFDCF508302348DE8E7A",
@@ -70,7 +70,7 @@ class MyStack : Stack
             },
             ClientCertificateThumbprints = 
             {
-                new AzureNextGen.ServiceFabric.Latest.Inputs.ClientCertificateThumbprintArgs
+                new AzureNextGen.ServiceFabric..Inputs.ClientCertificateThumbprintArgs
                 {
                     CertificateThumbprint = "5F3660C715EBBDA31DB1FFDCF508302348DE8E7A",
                     IsAdmin = true,
@@ -78,7 +78,7 @@ class MyStack : Stack
             },
             ClusterCodeVersion = "7.0.470.9590",
             ClusterName = "myCluster",
-            DiagnosticsStorageAccountConfig = new AzureNextGen.ServiceFabric.Latest.Inputs.DiagnosticsStorageAccountConfigArgs
+            DiagnosticsStorageAccountConfig = new AzureNextGen.ServiceFabric..Inputs.DiagnosticsStorageAccountConfigArgs
             {
                 BlobEndpoint = "https://diag.blob.core.windows.net/",
                 ProtectedAccountKeyName = "StorageAccountKey1",
@@ -89,12 +89,12 @@ class MyStack : Stack
             EventStoreServiceEnabled = true,
             FabricSettings = 
             {
-                new AzureNextGen.ServiceFabric.Latest.Inputs.SettingsSectionDescriptionArgs
+                new AzureNextGen.ServiceFabric..Inputs.SettingsSectionDescriptionArgs
                 {
                     Name = "UpgradeService",
                     Parameters = 
                     {
-                        new AzureNextGen.ServiceFabric.Latest.Inputs.SettingsParameterDescriptionArgs
+                        new AzureNextGen.ServiceFabric..Inputs.SettingsParameterDescriptionArgs
                         {
                             Name = "AppPollIntervalInSeconds",
                             Value = "60",
@@ -106,16 +106,16 @@ class MyStack : Stack
             ManagementEndpoint = "https://myCluster.eastus.cloudapp.azure.com:19080",
             NodeTypes = 
             {
-                new AzureNextGen.ServiceFabric.Latest.Inputs.NodeTypeDescriptionArgs
+                new AzureNextGen.ServiceFabric..Inputs.NodeTypeDescriptionArgs
                 {
-                    ApplicationPorts = new AzureNextGen.ServiceFabric.Latest.Inputs.EndpointRangeDescriptionArgs
+                    ApplicationPorts = new AzureNextGen.ServiceFabric..Inputs.EndpointRangeDescriptionArgs
                     {
                         EndPort = 30000,
                         StartPort = 20000,
                     },
                     ClientConnectionEndpointPort = 19000,
                     DurabilityLevel = "Bronze",
-                    EphemeralPorts = new AzureNextGen.ServiceFabric.Latest.Inputs.EndpointRangeDescriptionArgs
+                    EphemeralPorts = new AzureNextGen.ServiceFabric..Inputs.EndpointRangeDescriptionArgs
                     {
                         EndPort = 64000,
                         StartPort = 49000,
@@ -128,11 +128,11 @@ class MyStack : Stack
             },
             ReliabilityLevel = "Silver",
             ResourceGroupName = "resRg",
-            ReverseProxyCertificateCommonNames = new AzureNextGen.ServiceFabric.Latest.Inputs.ServerCertificateCommonNamesArgs
+            ReverseProxyCertificateCommonNames = new AzureNextGen.ServiceFabric..Inputs.ServerCertificateCommonNamesArgs
             {
                 CommonNames = 
                 {
-                    new AzureNextGen.ServiceFabric.Latest.Inputs.ServerCertificateCommonNameArgs
+                    new AzureNextGen.ServiceFabric..Inputs.ServerCertificateCommonNameArgs
                     {
                         CertificateCommonName = "abc.com",
                         CertificateIssuerThumbprint = "12599211F8F14C90AFA9532AD79A6F2CA1C00622",
@@ -141,21 +141,21 @@ class MyStack : Stack
                 X509StoreName = "My",
             },
             Tags = ,
-            UpgradeDescription = new AzureNextGen.ServiceFabric.Latest.Inputs.ClusterUpgradePolicyArgs
+            UpgradeDescription = new AzureNextGen.ServiceFabric..Inputs.ClusterUpgradePolicyArgs
             {
-                DeltaHealthPolicy = new AzureNextGen.ServiceFabric.Latest.Inputs.ClusterUpgradeDeltaHealthPolicyArgs
+                DeltaHealthPolicy = new AzureNextGen.ServiceFabric..Inputs.ClusterUpgradeDeltaHealthPolicyArgs
                 {
                     ApplicationDeltaHealthPolicies = 
                     {
-                        { "fabric:/myApp1", new AzureNextGen.ServiceFabric.Latest.Inputs.ApplicationDeltaHealthPolicyArgs
+                        { "fabric:/myApp1", new AzureNextGen.ServiceFabric..Inputs.ApplicationDeltaHealthPolicyArgs
                         {
-                            DefaultServiceTypeDeltaHealthPolicy = new AzureNextGen.ServiceFabric.Latest.Inputs.ServiceTypeDeltaHealthPolicyArgs
+                            DefaultServiceTypeDeltaHealthPolicy = new AzureNextGen.ServiceFabric..Inputs.ServiceTypeDeltaHealthPolicyArgs
                             {
                                 MaxPercentDeltaUnhealthyServices = 0,
                             },
                             ServiceTypeDeltaHealthPolicies = 
                             {
-                                { "myServiceType1", new AzureNextGen.ServiceFabric.Latest.Inputs.ServiceTypeDeltaHealthPolicyArgs
+                                { "myServiceType1", new AzureNextGen.ServiceFabric..Inputs.ServiceTypeDeltaHealthPolicyArgs
                                 {
                                     MaxPercentDeltaUnhealthyServices = 0,
                                 } },
@@ -170,19 +170,19 @@ class MyStack : Stack
                 HealthCheckRetryTimeout = "00:05:00",
                 HealthCheckStableDuration = "00:00:30",
                 HealthCheckWaitDuration = "00:00:30",
-                HealthPolicy = new AzureNextGen.ServiceFabric.Latest.Inputs.ClusterHealthPolicyArgs
+                HealthPolicy = new AzureNextGen.ServiceFabric..Inputs.ClusterHealthPolicyArgs
                 {
                     ApplicationHealthPolicies = 
                     {
-                        { "fabric:/myApp1", new AzureNextGen.ServiceFabric.Latest.Inputs.ApplicationHealthPolicyArgs
+                        { "fabric:/myApp1", new AzureNextGen.ServiceFabric..Inputs.ApplicationHealthPolicyArgs
                         {
-                            DefaultServiceTypeHealthPolicy = new AzureNextGen.ServiceFabric.Latest.Inputs.ServiceTypeHealthPolicyArgs
+                            DefaultServiceTypeHealthPolicy = new AzureNextGen.ServiceFabric..Inputs.ServiceTypeHealthPolicyArgs
                             {
                                 MaxPercentUnhealthyServices = 0,
                             },
                             ServiceTypeHealthPolicies = 
                             {
-                                { "myServiceType1", new AzureNextGen.ServiceFabric.Latest.Inputs.ServiceTypeHealthPolicyArgs
+                                { "myServiceType1", new AzureNextGen.ServiceFabric..Inputs.ServiceTypeHealthPolicyArgs
                                 {
                                     MaxPercentUnhealthyServices = 100,
                                 } },
@@ -217,40 +217,40 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-cluster = azure_nextgen.servicefabric.latest.Cluster("cluster",
+cluster = azure_nextgen.servicefabric.Cluster("cluster",
     add_on_features=[
         "RepairManager",
         "DnsService",
         "BackupRestoreService",
         "ResourceMonitorService",
     ],
-    application_type_versions_cleanup_policy=azure_nextgen.servicefabric.latest.ApplicationTypeVersionsCleanupPolicyArgs(
+    application_type_versions_cleanup_policy=azure_nextgen.servicefabric.ApplicationTypeVersionsCleanupPolicyArgs(
         max_unused_versions_to_keep=2,
     ),
-    azure_active_directory=azure_nextgen.servicefabric.latest.AzureActiveDirectoryArgs(
+    azure_active_directory=azure_nextgen.servicefabric.AzureActiveDirectoryArgs(
         client_application="d151ad89-4bce-4ae8-b3d1-1dc79679fa75",
         cluster_application="5886372e-7bf4-4878-a497-8098aba608ae",
         tenant_id="6abcc6a0-8666-43f1-87b8-172cf86a9f9c",
     ),
-    certificate_common_names=azure_nextgen.servicefabric.latest.ServerCertificateCommonNamesArgs(
-        common_names=[azure_nextgen.servicefabric.latest.ServerCertificateCommonNameArgs(
+    certificate_common_names=azure_nextgen.servicefabric.ServerCertificateCommonNamesArgs(
+        common_names=[azure_nextgen.servicefabric.ServerCertificateCommonNameArgs(
             certificate_common_name="abc.com",
             certificate_issuer_thumbprint="12599211F8F14C90AFA9532AD79A6F2CA1C00622",
         )],
         x509_store_name="My",
     ),
-    client_certificate_common_names=[azure_nextgen.servicefabric.latest.ClientCertificateCommonNameArgs(
+    client_certificate_common_names=[azure_nextgen.servicefabric.ClientCertificateCommonNameArgs(
         certificate_common_name="abc.com",
         certificate_issuer_thumbprint="5F3660C715EBBDA31DB1FFDCF508302348DE8E7A",
         is_admin=True,
     )],
-    client_certificate_thumbprints=[azure_nextgen.servicefabric.latest.ClientCertificateThumbprintArgs(
+    client_certificate_thumbprints=[azure_nextgen.servicefabric.ClientCertificateThumbprintArgs(
         certificate_thumbprint="5F3660C715EBBDA31DB1FFDCF508302348DE8E7A",
         is_admin=True,
     )],
     cluster_code_version="7.0.470.9590",
     cluster_name="myCluster",
-    diagnostics_storage_account_config=azure_nextgen.servicefabric.latest.DiagnosticsStorageAccountConfigArgs(
+    diagnostics_storage_account_config=azure_nextgen.servicefabric.DiagnosticsStorageAccountConfigArgs(
         blob_endpoint="https://diag.blob.core.windows.net/",
         protected_account_key_name="StorageAccountKey1",
         queue_endpoint="https://diag.queue.core.windows.net/",
@@ -258,23 +258,23 @@ cluster = azure_nextgen.servicefabric.latest.Cluster("cluster",
         table_endpoint="https://diag.table.core.windows.net/",
     ),
     event_store_service_enabled=True,
-    fabric_settings=[azure_nextgen.servicefabric.latest.SettingsSectionDescriptionArgs(
+    fabric_settings=[azure_nextgen.servicefabric.SettingsSectionDescriptionArgs(
         name="UpgradeService",
-        parameters=[azure_nextgen.servicefabric.latest.SettingsParameterDescriptionArgs(
+        parameters=[azure_nextgen.servicefabric.SettingsParameterDescriptionArgs(
             name="AppPollIntervalInSeconds",
             value="60",
         )],
     )],
     location="eastus",
     management_endpoint="https://myCluster.eastus.cloudapp.azure.com:19080",
-    node_types=[azure_nextgen.servicefabric.latest.NodeTypeDescriptionArgs(
-        application_ports=azure_nextgen.servicefabric.latest.EndpointRangeDescriptionArgs(
+    node_types=[azure_nextgen.servicefabric.NodeTypeDescriptionArgs(
+        application_ports=azure_nextgen.servicefabric.EndpointRangeDescriptionArgs(
             end_port=30000,
             start_port=20000,
         ),
         client_connection_endpoint_port=19000,
         durability_level="Bronze",
-        ephemeral_ports=azure_nextgen.servicefabric.latest.EndpointRangeDescriptionArgs(
+        ephemeral_ports=azure_nextgen.servicefabric.EndpointRangeDescriptionArgs(
             end_port=64000,
             start_port=49000,
         ),
@@ -285,23 +285,23 @@ cluster = azure_nextgen.servicefabric.latest.Cluster("cluster",
     )],
     reliability_level="Silver",
     resource_group_name="resRg",
-    reverse_proxy_certificate_common_names=azure_nextgen.servicefabric.latest.ServerCertificateCommonNamesArgs(
-        common_names=[azure_nextgen.servicefabric.latest.ServerCertificateCommonNameArgs(
+    reverse_proxy_certificate_common_names=azure_nextgen.servicefabric.ServerCertificateCommonNamesArgs(
+        common_names=[azure_nextgen.servicefabric.ServerCertificateCommonNameArgs(
             certificate_common_name="abc.com",
             certificate_issuer_thumbprint="12599211F8F14C90AFA9532AD79A6F2CA1C00622",
         )],
         x509_store_name="My",
     ),
     tags={},
-    upgrade_description=azure_nextgen.servicefabric.latest.ClusterUpgradePolicyArgs(
-        delta_health_policy=azure_nextgen.servicefabric.latest.ClusterUpgradeDeltaHealthPolicyArgs(
+    upgrade_description=azure_nextgen.servicefabric.ClusterUpgradePolicyArgs(
+        delta_health_policy=azure_nextgen.servicefabric.ClusterUpgradeDeltaHealthPolicyArgs(
             application_delta_health_policies={
-                "fabric:/myApp1": azure_nextgen.servicefabric.latest.ApplicationDeltaHealthPolicyArgs(
-                    default_service_type_delta_health_policy=azure_nextgen.servicefabric.latest.ServiceTypeDeltaHealthPolicyArgs(
+                "fabric:/myApp1": azure_nextgen.servicefabric.ApplicationDeltaHealthPolicyArgs(
+                    default_service_type_delta_health_policy=azure_nextgen.servicefabric.ServiceTypeDeltaHealthPolicyArgs(
                         max_percent_delta_unhealthy_services=0,
                     ),
                     service_type_delta_health_policies={
-                        "myServiceType1": azure_nextgen.servicefabric.latest.ServiceTypeDeltaHealthPolicyArgs(
+                        "myServiceType1": azure_nextgen.servicefabric.ServiceTypeDeltaHealthPolicyArgs(
                             max_percent_delta_unhealthy_services=0,
                         ),
                     },
@@ -315,14 +315,14 @@ cluster = azure_nextgen.servicefabric.latest.Cluster("cluster",
         health_check_retry_timeout="00:05:00",
         health_check_stable_duration="00:00:30",
         health_check_wait_duration="00:00:30",
-        health_policy=azure_nextgen.servicefabric.latest.ClusterHealthPolicyArgs(
+        health_policy=azure_nextgen.servicefabric.ClusterHealthPolicyArgs(
             application_health_policies={
-                "fabric:/myApp1": azure_nextgen.servicefabric.latest.ApplicationHealthPolicyArgs(
-                    default_service_type_health_policy=azure_nextgen.servicefabric.latest.ServiceTypeHealthPolicyArgs(
+                "fabric:/myApp1": azure_nextgen.servicefabric.ApplicationHealthPolicyArgs(
+                    default_service_type_health_policy=azure_nextgen.servicefabric.ServiceTypeHealthPolicyArgs(
                         max_percent_unhealthy_services=0,
                     ),
                     service_type_health_policies={
-                        "myServiceType1": azure_nextgen.servicefabric.latest.ServiceTypeHealthPolicyArgs(
+                        "myServiceType1": azure_nextgen.servicefabric.ServiceTypeHealthPolicyArgs(
                             max_percent_unhealthy_services=100,
                         ),
                     },
@@ -348,7 +348,7 @@ cluster = azure_nextgen.servicefabric.latest.Cluster("cluster",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const cluster = new azure_nextgen.servicefabric.latest.Cluster("cluster", {
+const cluster = new azure_nextgen.servicefabric.Cluster("cluster", {
     addOnFeatures: [
         "RepairManager",
         "DnsService",
@@ -484,10 +484,10 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var cluster = new AzureNextGen.ServiceFabric.Latest.Cluster("cluster", new AzureNextGen.ServiceFabric.Latest.ClusterArgs
+        var cluster = new AzureNextGen.ServiceFabric..Cluster("cluster", new AzureNextGen.ServiceFabric..ClusterArgs
         {
             ClusterName = "myCluster",
-            DiagnosticsStorageAccountConfig = new AzureNextGen.ServiceFabric.Latest.Inputs.DiagnosticsStorageAccountConfigArgs
+            DiagnosticsStorageAccountConfig = new AzureNextGen.ServiceFabric..Inputs.DiagnosticsStorageAccountConfigArgs
             {
                 BlobEndpoint = "https://diag.blob.core.windows.net/",
                 ProtectedAccountKeyName = "StorageAccountKey1",
@@ -497,12 +497,12 @@ class MyStack : Stack
             },
             FabricSettings = 
             {
-                new AzureNextGen.ServiceFabric.Latest.Inputs.SettingsSectionDescriptionArgs
+                new AzureNextGen.ServiceFabric..Inputs.SettingsSectionDescriptionArgs
                 {
                     Name = "UpgradeService",
                     Parameters = 
                     {
-                        new AzureNextGen.ServiceFabric.Latest.Inputs.SettingsParameterDescriptionArgs
+                        new AzureNextGen.ServiceFabric..Inputs.SettingsParameterDescriptionArgs
                         {
                             Name = "AppPollIntervalInSeconds",
                             Value = "60",
@@ -514,16 +514,16 @@ class MyStack : Stack
             ManagementEndpoint = "http://myCluster.eastus.cloudapp.azure.com:19080",
             NodeTypes = 
             {
-                new AzureNextGen.ServiceFabric.Latest.Inputs.NodeTypeDescriptionArgs
+                new AzureNextGen.ServiceFabric..Inputs.NodeTypeDescriptionArgs
                 {
-                    ApplicationPorts = new AzureNextGen.ServiceFabric.Latest.Inputs.EndpointRangeDescriptionArgs
+                    ApplicationPorts = new AzureNextGen.ServiceFabric..Inputs.EndpointRangeDescriptionArgs
                     {
                         EndPort = 30000,
                         StartPort = 20000,
                     },
                     ClientConnectionEndpointPort = 19000,
                     DurabilityLevel = "Bronze",
-                    EphemeralPorts = new AzureNextGen.ServiceFabric.Latest.Inputs.EndpointRangeDescriptionArgs
+                    EphemeralPorts = new AzureNextGen.ServiceFabric..Inputs.EndpointRangeDescriptionArgs
                     {
                         EndPort = 64000,
                         StartPort = 49000,
@@ -553,7 +553,7 @@ class MyStack : Stack
 package main
 
 import (
-	servicefabric "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/servicefabric/latest"
+	servicefabric "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/servicefabric"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -621,32 +621,32 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-cluster = azure_nextgen.servicefabric.latest.Cluster("cluster",
+cluster = azure_nextgen.servicefabric.Cluster("cluster",
     cluster_name="myCluster",
-    diagnostics_storage_account_config=azure_nextgen.servicefabric.latest.DiagnosticsStorageAccountConfigArgs(
+    diagnostics_storage_account_config=azure_nextgen.servicefabric.DiagnosticsStorageAccountConfigArgs(
         blob_endpoint="https://diag.blob.core.windows.net/",
         protected_account_key_name="StorageAccountKey1",
         queue_endpoint="https://diag.queue.core.windows.net/",
         storage_account_name="diag",
         table_endpoint="https://diag.table.core.windows.net/",
     ),
-    fabric_settings=[azure_nextgen.servicefabric.latest.SettingsSectionDescriptionArgs(
+    fabric_settings=[azure_nextgen.servicefabric.SettingsSectionDescriptionArgs(
         name="UpgradeService",
-        parameters=[azure_nextgen.servicefabric.latest.SettingsParameterDescriptionArgs(
+        parameters=[azure_nextgen.servicefabric.SettingsParameterDescriptionArgs(
             name="AppPollIntervalInSeconds",
             value="60",
         )],
     )],
     location="eastus",
     management_endpoint="http://myCluster.eastus.cloudapp.azure.com:19080",
-    node_types=[azure_nextgen.servicefabric.latest.NodeTypeDescriptionArgs(
-        application_ports=azure_nextgen.servicefabric.latest.EndpointRangeDescriptionArgs(
+    node_types=[azure_nextgen.servicefabric.NodeTypeDescriptionArgs(
+        application_ports=azure_nextgen.servicefabric.EndpointRangeDescriptionArgs(
             end_port=30000,
             start_port=20000,
         ),
         client_connection_endpoint_port=19000,
         durability_level="Bronze",
-        ephemeral_ports=azure_nextgen.servicefabric.latest.EndpointRangeDescriptionArgs(
+        ephemeral_ports=azure_nextgen.servicefabric.EndpointRangeDescriptionArgs(
             end_port=64000,
             start_port=49000,
         ),
@@ -670,7 +670,7 @@ cluster = azure_nextgen.servicefabric.latest.Cluster("cluster",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const cluster = new azure_nextgen.servicefabric.latest.Cluster("cluster", {
+const cluster = new azure_nextgen.servicefabric.Cluster("cluster", {
     clusterName: "myCluster",
     diagnosticsStorageAccountConfig: {
         blobEndpoint: "https://diag.blob.core.windows.net/",
@@ -930,7 +930,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#nodetypes_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodetypedescription">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric.<wbr>Inputs.<wbr>Node<wbr>Type<wbr>Description<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#nodetypedescription">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric..<wbr>Inputs.<wbr>Node<wbr>Type<wbr>Description<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of node types in the cluster.{{% /md %}}</dd>
     <dt class="property-required"
@@ -957,7 +957,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#applicationtypeversionscleanuppolicy_csharp" style="color: inherit; text-decoration: inherit;">Application<wbr>Type<wbr>Versions<wbr>Cleanup<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationtypeversionscleanuppolicy">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric.<wbr>Inputs.<wbr>Application<wbr>Type<wbr>Versions<wbr>Cleanup<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationtypeversionscleanuppolicy">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric..<wbr>Inputs.<wbr>Application<wbr>Type<wbr>Versions<wbr>Cleanup<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The policy used to clean up unused versions.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -966,7 +966,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#azureactivedirectory_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Active<wbr>Directory</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureactivedirectory">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric.<wbr>Inputs.<wbr>Azure<wbr>Active<wbr>Directory<wbr>Args</a></span>
+        <span class="property-type"><a href="#azureactivedirectory">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric..<wbr>Inputs.<wbr>Azure<wbr>Active<wbr>Directory<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The AAD authentication settings of the cluster.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -975,7 +975,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#certificate_csharp" style="color: inherit; text-decoration: inherit;">Certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatedescription">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric.<wbr>Inputs.<wbr>Certificate<wbr>Description<wbr>Args</a></span>
+        <span class="property-type"><a href="#certificatedescription">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric..<wbr>Inputs.<wbr>Certificate<wbr>Description<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The certificate to use for securing the cluster. The certificate provided will be used for node to node security within the cluster, SSL certificate for cluster management endpoint and default admin client.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -984,7 +984,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#certificatecommonnames_csharp" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Common<wbr>Names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servercertificatecommonnames">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric.<wbr>Inputs.<wbr>Server<wbr>Certificate<wbr>Common<wbr>Names<wbr>Args</a></span>
+        <span class="property-type"><a href="#servercertificatecommonnames">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric..<wbr>Inputs.<wbr>Server<wbr>Certificate<wbr>Common<wbr>Names<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes a list of server certificates referenced by common name that are used to secure the cluster.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -993,7 +993,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#clientcertificatecommonnames_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Certificate<wbr>Common<wbr>Names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clientcertificatecommonname">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric.<wbr>Inputs.<wbr>Client<wbr>Certificate<wbr>Common<wbr>Name<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#clientcertificatecommonname">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric..<wbr>Inputs.<wbr>Client<wbr>Certificate<wbr>Common<wbr>Name<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of client certificates referenced by common name that are allowed to manage the cluster.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1002,7 +1002,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#clientcertificatethumbprints_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Certificate<wbr>Thumbprints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clientcertificatethumbprint">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric.<wbr>Inputs.<wbr>Client<wbr>Certificate<wbr>Thumbprint<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#clientcertificatethumbprint">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric..<wbr>Inputs.<wbr>Client<wbr>Certificate<wbr>Thumbprint<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of client certificates referenced by thumbprint that are allowed to manage the cluster.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1020,7 +1020,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#diagnosticsstorageaccountconfig_csharp" style="color: inherit; text-decoration: inherit;">Diagnostics<wbr>Storage<wbr>Account<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diagnosticsstorageaccountconfig">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric.<wbr>Inputs.<wbr>Diagnostics<wbr>Storage<wbr>Account<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#diagnosticsstorageaccountconfig">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric..<wbr>Inputs.<wbr>Diagnostics<wbr>Storage<wbr>Account<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The storage account information for storing Service Fabric diagnostic logs.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1038,7 +1038,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#fabricsettings_csharp" style="color: inherit; text-decoration: inherit;">Fabric<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#settingssectiondescription">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric.<wbr>Inputs.<wbr>Settings<wbr>Section<wbr>Description<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#settingssectiondescription">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric..<wbr>Inputs.<wbr>Settings<wbr>Section<wbr>Description<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of custom fabric settings to configure the cluster.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1063,7 +1063,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#reverseproxycertificate_csharp" style="color: inherit; text-decoration: inherit;">Reverse<wbr>Proxy<wbr>Certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatedescription">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric.<wbr>Inputs.<wbr>Certificate<wbr>Description<wbr>Args</a></span>
+        <span class="property-type"><a href="#certificatedescription">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric..<wbr>Inputs.<wbr>Certificate<wbr>Description<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The server certificate used by reverse proxy.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1072,7 +1072,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#reverseproxycertificatecommonnames_csharp" style="color: inherit; text-decoration: inherit;">Reverse<wbr>Proxy<wbr>Certificate<wbr>Common<wbr>Names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servercertificatecommonnames">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric.<wbr>Inputs.<wbr>Server<wbr>Certificate<wbr>Common<wbr>Names<wbr>Args</a></span>
+        <span class="property-type"><a href="#servercertificatecommonnames">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric..<wbr>Inputs.<wbr>Server<wbr>Certificate<wbr>Common<wbr>Names<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes a list of server certificates referenced by common name that are used to secure the cluster.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1090,7 +1090,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#upgradedescription_csharp" style="color: inherit; text-decoration: inherit;">Upgrade<wbr>Description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterupgradepolicy">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric.<wbr>Inputs.<wbr>Cluster<wbr>Upgrade<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusterupgradepolicy">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric..<wbr>Inputs.<wbr>Cluster<wbr>Upgrade<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The policy to use when upgrading the cluster.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1806,7 +1806,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#availableclusterversions_csharp" style="color: inherit; text-decoration: inherit;">Available<wbr>Cluster<wbr>Versions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterversiondetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric.<wbr>Outputs.<wbr>Cluster<wbr>Version<wbr>Details<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#clusterversiondetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric..<wbr>Outputs.<wbr>Cluster<wbr>Version<wbr>Details<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The Service Fabric runtime versions available for this cluster.{{% /md %}}</dd>
     <dt class="property-"
@@ -2214,7 +2214,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#defaultservicetypedeltahealthpolicy_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Service<wbr>Type<wbr>Delta<wbr>Health<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetypedeltahealthpolicy">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric.<wbr>Inputs.<wbr>Service<wbr>Type<wbr>Delta<wbr>Health<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicetypedeltahealthpolicy">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric..<wbr>Inputs.<wbr>Service<wbr>Type<wbr>Delta<wbr>Health<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The delta health policy used by default to evaluate the health of a service type when upgrading the cluster.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2223,7 +2223,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#servicetypedeltahealthpolicies_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Type<wbr>Delta<wbr>Health<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric.<wbr>Inputs.<wbr>Service<wbr>Type<wbr>Delta<wbr>Health<wbr>Policy<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric..<wbr>Inputs.<wbr>Service<wbr>Type<wbr>Delta<wbr>Health<wbr>Policy<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}The map with service type delta health policy per service type name. The map is empty by default.{{% /md %}}</dd>
 </dl>
@@ -2312,7 +2312,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#defaultservicetypedeltahealthpolicy_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Service<wbr>Type<wbr>Delta<wbr>Health<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetypedeltahealthpolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric.<wbr>Inputs.<wbr>Service<wbr>Type<wbr>Delta<wbr>Health<wbr>Policy<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicetypedeltahealthpolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric..<wbr>Inputs.<wbr>Service<wbr>Type<wbr>Delta<wbr>Health<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The delta health policy used by default to evaluate the health of a service type when upgrading the cluster.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2321,7 +2321,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#servicetypedeltahealthpolicies_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Type<wbr>Delta<wbr>Health<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric.<wbr>Inputs.<wbr>Service<wbr>Type<wbr>Delta<wbr>Health<wbr>Policy<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric..<wbr>Inputs.<wbr>Service<wbr>Type<wbr>Delta<wbr>Health<wbr>Policy<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}The map with service type delta health policy per service type name. The map is empty by default.{{% /md %}}</dd>
 </dl>
@@ -2410,7 +2410,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#defaultservicetypehealthpolicy_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Service<wbr>Type<wbr>Health<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetypehealthpolicy">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric.<wbr>Inputs.<wbr>Service<wbr>Type<wbr>Health<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicetypehealthpolicy">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric..<wbr>Inputs.<wbr>Service<wbr>Type<wbr>Health<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The health policy used by default to evaluate the health of a service type.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2419,7 +2419,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#servicetypehealthpolicies_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Type<wbr>Health<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric.<wbr>Inputs.<wbr>Service<wbr>Type<wbr>Health<wbr>Policy<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric..<wbr>Inputs.<wbr>Service<wbr>Type<wbr>Health<wbr>Policy<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}The map with service type health policy per service type name. The map is empty by default.{{% /md %}}</dd>
 </dl>
@@ -2508,7 +2508,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#defaultservicetypehealthpolicy_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Service<wbr>Type<wbr>Health<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetypehealthpolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric.<wbr>Inputs.<wbr>Service<wbr>Type<wbr>Health<wbr>Policy<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicetypehealthpolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric..<wbr>Inputs.<wbr>Service<wbr>Type<wbr>Health<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The health policy used by default to evaluate the health of a service type.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2517,7 +2517,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#servicetypehealthpolicies_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Type<wbr>Health<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric.<wbr>Inputs.<wbr>Service<wbr>Type<wbr>Health<wbr>Policy<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric..<wbr>Inputs.<wbr>Service<wbr>Type<wbr>Health<wbr>Policy<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}The map with service type health policy per service type name. The map is empty by default.{{% /md %}}</dd>
 </dl>
@@ -3730,7 +3730,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#applicationhealthpolicies_csharp" style="color: inherit; text-decoration: inherit;">Application<wbr>Health<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric.<wbr>Inputs.<wbr>Application<wbr>Health<wbr>Policy<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric..<wbr>Inputs.<wbr>Application<wbr>Health<wbr>Policy<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}Defines the application health policy map used to evaluate the health of an application or one of its children entities.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3920,7 +3920,7 @@ In large clusters, some nodes will always be down or out for repairs, so this pe
 <a href="#applicationhealthpolicies_csharp" style="color: inherit; text-decoration: inherit;">Application<wbr>Health<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric.<wbr>Inputs.<wbr>Application<wbr>Health<wbr>Policy<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric..<wbr>Inputs.<wbr>Application<wbr>Health<wbr>Policy<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}Defines the application health policy map used to evaluate the health of an application or one of its children entities.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4146,7 +4146,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#applicationdeltahealthpolicies_csharp" style="color: inherit; text-decoration: inherit;">Application<wbr>Delta<wbr>Health<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric.<wbr>Inputs.<wbr>Application<wbr>Delta<wbr>Health<wbr>Policy<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric..<wbr>Inputs.<wbr>Application<wbr>Delta<wbr>Health<wbr>Policy<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}Defines the application delta health policy map used to evaluate the health of an application or one of its child entities when upgrading the cluster.{{% /md %}}</dd>
 </dl>
@@ -4352,7 +4352,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#applicationdeltahealthpolicies_csharp" style="color: inherit; text-decoration: inherit;">Application<wbr>Delta<wbr>Health<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric.<wbr>Inputs.<wbr>Application<wbr>Delta<wbr>Health<wbr>Policy<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric..<wbr>Inputs.<wbr>Application<wbr>Delta<wbr>Health<wbr>Policy<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}Defines the application delta health policy map used to evaluate the health of an application or one of its child entities when upgrading the cluster.{{% /md %}}</dd>
 </dl>
@@ -4549,7 +4549,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#healthpolicy_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterhealthpolicy">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric.<wbr>Inputs.<wbr>Cluster<wbr>Health<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusterhealthpolicy">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric..<wbr>Inputs.<wbr>Cluster<wbr>Health<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The cluster health policy used when upgrading the cluster.{{% /md %}}</dd>
     <dt class="property-required"
@@ -4585,7 +4585,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#deltahealthpolicy_csharp" style="color: inherit; text-decoration: inherit;">Delta<wbr>Health<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterupgradedeltahealthpolicy">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric.<wbr>Inputs.<wbr>Cluster<wbr>Upgrade<wbr>Delta<wbr>Health<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusterupgradedeltahealthpolicy">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric..<wbr>Inputs.<wbr>Cluster<wbr>Upgrade<wbr>Delta<wbr>Health<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The cluster delta health policy used when upgrading the cluster.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4899,7 +4899,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#healthpolicy_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterhealthpolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric.<wbr>Inputs.<wbr>Cluster<wbr>Health<wbr>Policy<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusterhealthpolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric..<wbr>Inputs.<wbr>Cluster<wbr>Health<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The cluster health policy used when upgrading the cluster.{{% /md %}}</dd>
     <dt class="property-required"
@@ -4935,7 +4935,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#deltahealthpolicy_csharp" style="color: inherit; text-decoration: inherit;">Delta<wbr>Health<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterupgradedeltahealthpolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric.<wbr>Inputs.<wbr>Cluster<wbr>Upgrade<wbr>Delta<wbr>Health<wbr>Policy<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusterupgradedeltahealthpolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric..<wbr>Inputs.<wbr>Cluster<wbr>Upgrade<wbr>Delta<wbr>Health<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The cluster delta health policy used when upgrading the cluster.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -6081,7 +6081,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#applicationports_csharp" style="color: inherit; text-decoration: inherit;">Application<wbr>Ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointrangedescription">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric.<wbr>Inputs.<wbr>Endpoint<wbr>Range<wbr>Description<wbr>Args</a></span>
+        <span class="property-type"><a href="#endpointrangedescription">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric..<wbr>Inputs.<wbr>Endpoint<wbr>Range<wbr>Description<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The range of ports from which cluster assigned port to Service Fabric applications.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -6113,7 +6113,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#ephemeralports_csharp" style="color: inherit; text-decoration: inherit;">Ephemeral<wbr>Ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointrangedescription">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric.<wbr>Inputs.<wbr>Endpoint<wbr>Range<wbr>Description<wbr>Args</a></span>
+        <span class="property-type"><a href="#endpointrangedescription">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric..<wbr>Inputs.<wbr>Endpoint<wbr>Range<wbr>Description<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The range of ephemeral ports that nodes in this node type should be configured with.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -6523,7 +6523,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#applicationports_csharp" style="color: inherit; text-decoration: inherit;">Application<wbr>Ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointrangedescriptionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric.<wbr>Inputs.<wbr>Endpoint<wbr>Range<wbr>Description<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#endpointrangedescriptionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric..<wbr>Inputs.<wbr>Endpoint<wbr>Range<wbr>Description<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The range of ports from which cluster assigned port to Service Fabric applications.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -6555,7 +6555,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#ephemeralports_csharp" style="color: inherit; text-decoration: inherit;">Ephemeral<wbr>Ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointrangedescriptionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric.<wbr>Inputs.<wbr>Endpoint<wbr>Range<wbr>Description<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#endpointrangedescriptionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric..<wbr>Inputs.<wbr>Endpoint<wbr>Range<wbr>Description<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The range of ephemeral ports that nodes in this node type should be configured with.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -7116,7 +7116,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#commonnames_csharp" style="color: inherit; text-decoration: inherit;">Common<wbr>Names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servercertificatecommonname">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric.<wbr>Inputs.<wbr>Server<wbr>Certificate<wbr>Common<wbr>Name<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#servercertificatecommonname">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric..<wbr>Inputs.<wbr>Server<wbr>Certificate<wbr>Common<wbr>Name<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of server certificates referenced by common name that are used to secure the cluster.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -7214,7 +7214,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#commonnames_csharp" style="color: inherit; text-decoration: inherit;">Common<wbr>Names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servercertificatecommonnameresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric.<wbr>Inputs.<wbr>Server<wbr>Certificate<wbr>Common<wbr>Name<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#servercertificatecommonnameresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric..<wbr>Inputs.<wbr>Server<wbr>Certificate<wbr>Common<wbr>Name<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of server certificates referenced by common name that are used to secure the cluster.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -7797,7 +7797,7 @@ The check is performed after every upgrade domain upgrade completion to make sur
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#settingsparameterdescription">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric.<wbr>Inputs.<wbr>Settings<wbr>Parameter<wbr>Description<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#settingsparameterdescription">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric..<wbr>Inputs.<wbr>Settings<wbr>Parameter<wbr>Description<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The collection of parameters in the section.{{% /md %}}</dd>
 </dl>
@@ -7895,7 +7895,7 @@ The check is performed after every upgrade domain upgrade completion to make sur
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#settingsparameterdescriptionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric.<wbr>Inputs.<wbr>Settings<wbr>Parameter<wbr>Description<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#settingsparameterdescriptionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric..<wbr>Inputs.<wbr>Settings<wbr>Parameter<wbr>Description<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The collection of parameters in the section.{{% /md %}}</dd>
 </dl>
@@ -7978,7 +7978,7 @@ The check is performed after every upgrade domain upgrade completion to make sur
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:servicefabric/latest:Cluster myCluster /subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/resRg/providers/Microsoft.ServiceFabric/clusters/myCluster 
+$ pulumi import azure-nextgen:servicefabric:Cluster myCluster /subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/resRg/providers/Microsoft.ServiceFabric/clusters/myCluster 
 ```
 
 

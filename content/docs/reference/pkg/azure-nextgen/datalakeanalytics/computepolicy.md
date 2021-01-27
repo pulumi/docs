@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.datalakeanalytics.ComputePolicy 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Data Lake Analytics compute policy information.
-Latest API Version: 2016-11-01.
+API Version: 2016-11-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var computePolicy = new AzureNextGen.DataLakeAnalytics.Latest.ComputePolicy("computePolicy", new AzureNextGen.DataLakeAnalytics.Latest.ComputePolicyArgs
+        var computePolicy = new AzureNextGen.DataLakeAnalytics..ComputePolicy("computePolicy", new AzureNextGen.DataLakeAnalytics..ComputePolicyArgs
         {
             AccountName = "contosoadla",
             ComputePolicyName = "test_policy",
@@ -51,7 +51,7 @@ class MyStack : Stack
 package main
 
 import (
-	datalakeanalytics "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datalakeanalytics/latest"
+	datalakeanalytics "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datalakeanalytics"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -83,7 +83,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-compute_policy = azure_nextgen.datalakeanalytics.latest.ComputePolicy("computePolicy",
+compute_policy = azure_nextgen.datalakeanalytics.ComputePolicy("computePolicy",
     account_name="contosoadla",
     compute_policy_name="test_policy",
     max_degree_of_parallelism_per_job=10,
@@ -102,7 +102,7 @@ compute_policy = azure_nextgen.datalakeanalytics.latest.ComputePolicy("computePo
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const computePolicy = new azure_nextgen.datalakeanalytics.latest.ComputePolicy("computePolicy", {
+const computePolicy = new azure_nextgen.datalakeanalytics.ComputePolicy("computePolicy", {
     accountName: "contosoadla",
     computePolicyName: "test_policy",
     maxDegreeOfParallelismPerJob: 10,
@@ -332,7 +332,7 @@ The ComputePolicy resource accepts the following [input]({{< relref "/docs/intro
 <a href="#objecttype_csharp" style="color: inherit; text-decoration: inherit;">Object<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#aadobjecttype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Lake<wbr>Analytics.<wbr>AADObject<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#aadobjecttype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Lake<wbr>Analytics..<wbr>AADObject<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of AAD object the object identifier refers to.{{% /md %}}</dd>
     <dt class="property-required"
@@ -772,7 +772,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:datalakeanalytics/latest:ComputePolicy test_policy /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DataLakeAnalytics/accounts/{accountName}/computePolicies/{computePolicyName} 
+$ pulumi import azure-nextgen:datalakeanalytics:ComputePolicy test_policy /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DataLakeAnalytics/accounts/{accountName}/computePolicies/{computePolicyName} 
 ```
 
 

@@ -242,7 +242,7 @@ The following output properties are available:
 <a href="#events_csharp" style="color: inherit; text-decoration: inherit;">Events</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#peeringserviceprefixeventresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Peering.<wbr>Outputs.<wbr>Peering<wbr>Service<wbr>Prefix<wbr>Event<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#peeringserviceprefixeventresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Peering..<wbr>Outputs.<wbr>Peering<wbr>Service<wbr>Prefix<wbr>Event<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of events for peering service prefix{{% /md %}}</dd>
     <dt class="property-"

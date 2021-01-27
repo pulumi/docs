@@ -287,7 +287,7 @@ The following output properties are available:
 <a href="#correlationscheme_csharp" style="color: inherit; text-decoration: inherit;">Correlation<wbr>Scheme</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecorrelationdescriptionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric.<wbr>Outputs.<wbr>Service<wbr>Correlation<wbr>Description<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#servicecorrelationdescriptionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric..<wbr>Outputs.<wbr>Service<wbr>Correlation<wbr>Description<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list that describes the correlation of the service with other services.{{% /md %}}</dd>
     <dt class="property-"
@@ -314,7 +314,7 @@ The following output properties are available:
 <a href="#partitiondescription_csharp" style="color: inherit; text-decoration: inherit;">Partition<wbr>Description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#namedpartitionschemedescriptionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric.<wbr>Outputs.<wbr>Named<wbr>Partition<wbr>Scheme<wbr>Description<wbr>Response</a> | <a href="#singletonpartitionschemedescriptionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric.<wbr>Outputs.<wbr>Singleton<wbr>Partition<wbr>Scheme<wbr>Description<wbr>Response</a> | <a href="#uniformint64rangepartitionschemedescriptionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric.<wbr>Outputs.<wbr>Uniform<wbr>Int64Range<wbr>Partition<wbr>Scheme<wbr>Description<wbr>Response</a></span>
+        <span class="property-type"><a href="#namedpartitionschemedescriptionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric..<wbr>Outputs.<wbr>Named<wbr>Partition<wbr>Scheme<wbr>Description<wbr>Response</a> | <a href="#singletonpartitionschemedescriptionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric..<wbr>Outputs.<wbr>Singleton<wbr>Partition<wbr>Scheme<wbr>Description<wbr>Response</a> | <a href="#uniformint64rangepartitionschemedescriptionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric..<wbr>Outputs.<wbr>Uniform<wbr>Int64Range<wbr>Partition<wbr>Scheme<wbr>Description<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes how the service is partitioned.{{% /md %}}</dd>
     <dt class="property-"
@@ -341,7 +341,7 @@ The following output properties are available:
 <a href="#serviceloadmetrics_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Load<wbr>Metrics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceloadmetricdescriptionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric.<wbr>Outputs.<wbr>Service<wbr>Load<wbr>Metric<wbr>Description<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#serviceloadmetricdescriptionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric..<wbr>Outputs.<wbr>Service<wbr>Load<wbr>Metric<wbr>Description<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The service load metrics is given as an array of ServiceLoadMetricDescription objects.{{% /md %}}</dd>
     <dt class="property-"
@@ -359,7 +359,7 @@ The following output properties are available:
 <a href="#serviceplacementpolicies_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Placement<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceplacementpolicydescriptionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric.<wbr>Outputs.<wbr>Service<wbr>Placement<wbr>Policy<wbr>Description<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#serviceplacementpolicydescriptionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric..<wbr>Outputs.<wbr>Service<wbr>Placement<wbr>Policy<wbr>Description<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list that describes the correlation of the service with other services.{{% /md %}}</dd>
     <dt class="property-"

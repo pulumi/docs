@@ -296,7 +296,7 @@ The following output properties are available:
 <a href="#latestoperationresult_csharp" style="color: inherit; text-decoration: inherit;">Latest<wbr>Operation<wbr>Result</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#latestoperationresultresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Lab<wbr>Services.<wbr>Outputs.<wbr>Latest<wbr>Operation<wbr>Result<wbr>Response</a></span>
+        <span class="property-type"><a href="#latestoperationresultresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Lab<wbr>Services..<wbr>Outputs.<wbr>Latest<wbr>Operation<wbr>Result<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The details of the latest operation. ex: status, error{{% /md %}}</dd>
     <dt class="property-"
@@ -323,7 +323,7 @@ The following output properties are available:
 <a href="#resourcesettings_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Lab<wbr>Services.<wbr>Outputs.<wbr>Resource<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#resourcesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Lab<wbr>Services..<wbr>Outputs.<wbr>Resource<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The resource specific settings{{% /md %}}</dd>
     <dt class="property-"
@@ -1111,7 +1111,7 @@ The following output properties are available:
 <a href="#vmstatedetails_csharp" style="color: inherit; text-decoration: inherit;">Vm<wbr>State<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vmstatedetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Lab<wbr>Services.<wbr>Inputs.<wbr>Vm<wbr>State<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#vmstatedetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Lab<wbr>Services..<wbr>Inputs.<wbr>Vm<wbr>State<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The state details for the reference virtual machine.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1295,7 +1295,7 @@ The following output properties are available:
 <a href="#referencevm_csharp" style="color: inherit; text-decoration: inherit;">Reference<wbr>Vm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#referencevmresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Lab<wbr>Services.<wbr>Inputs.<wbr>Reference<wbr>Vm<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#referencevmresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Lab<wbr>Services..<wbr>Inputs.<wbr>Reference<wbr>Vm<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Details specific to Reference Vm{{% /md %}}</dd>
     <dt class="property-optional"

@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.apimanagement.ApiIssueComment re
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Issue Comment Contract details.
-Latest API Version: 2019-12-01.
+API Version: 2019-12-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var apiIssueComment = new AzureNextGen.ApiManagement.Latest.ApiIssueComment("apiIssueComment", new AzureNextGen.ApiManagement.Latest.ApiIssueCommentArgs
+        var apiIssueComment = new AzureNextGen.ApiManagement..ApiIssueComment("apiIssueComment", new AzureNextGen.ApiManagement..ApiIssueCommentArgs
         {
             ApiId = "57d1f7558aa04f15146d9d8a",
             CommentId = "599e29ab193c3c0bd0b3e2fb",
@@ -52,7 +52,7 @@ class MyStack : Stack
 package main
 
 import (
-	apimanagement "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/apimanagement/latest"
+	apimanagement "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/apimanagement"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -85,7 +85,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-api_issue_comment = azure_nextgen.apimanagement.latest.ApiIssueComment("apiIssueComment",
+api_issue_comment = azure_nextgen.apimanagement.ApiIssueComment("apiIssueComment",
     api_id="57d1f7558aa04f15146d9d8a",
     comment_id="599e29ab193c3c0bd0b3e2fb",
     created_date="2018-02-01T22:21:20.467Z",
@@ -105,7 +105,7 @@ api_issue_comment = azure_nextgen.apimanagement.latest.ApiIssueComment("apiIssue
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const apiIssueComment = new azure_nextgen.apimanagement.latest.ApiIssueComment("apiIssueComment", {
+const apiIssueComment = new azure_nextgen.apimanagement.ApiIssueComment("apiIssueComment", {
     apiId: "57d1f7558aa04f15146d9d8a",
     commentId: "599e29ab193c3c0bd0b3e2fb",
     createdDate: "2018-02-01T22:21:20.467Z",
@@ -762,7 +762,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:apimanagement/latest:ApiIssueComment 599e29ab193c3c0bd0b3e2fb /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/apis/57d1f7558aa04f15146d9d8a/issues/57d2ef278aa04f0ad01d6cdc/comments/599e29ab193c3c0bd0b3e2fb 
+$ pulumi import azure-nextgen:apimanagement:ApiIssueComment 599e29ab193c3c0bd0b3e2fb /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/apis/57d1f7558aa04f15146d9d8a/issues/57d2ef278aa04f0ad01d6cdc/comments/599e29ab193c3c0bd0b3e2fb 
 ```
 
 

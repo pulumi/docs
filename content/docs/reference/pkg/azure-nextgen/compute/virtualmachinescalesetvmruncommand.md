@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.compute.VirtualMachineScaleSetVM
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Describes a Virtual Machine run command.
-Latest API Version: 2020-06-01.
+API Version: 2020-06-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,19 +27,19 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var virtualMachineScaleSetVMRunCommand = new AzureNextGen.Compute.Latest.VirtualMachineScaleSetVMRunCommand("virtualMachineScaleSetVMRunCommand", new AzureNextGen.Compute.Latest.VirtualMachineScaleSetVMRunCommandArgs
+        var virtualMachineScaleSetVMRunCommand = new AzureNextGen.Compute..VirtualMachineScaleSetVMRunCommand("virtualMachineScaleSetVMRunCommand", new AzureNextGen.Compute..VirtualMachineScaleSetVMRunCommandArgs
         {
             AsyncExecution = false,
             InstanceId = "0",
             Location = "West US",
             Parameters = 
             {
-                new AzureNextGen.Compute.Latest.Inputs.RunCommandInputParameterArgs
+                new AzureNextGen.Compute..Inputs.RunCommandInputParameterArgs
                 {
                     Name = "param1",
                     Value = "value1",
                 },
-                new AzureNextGen.Compute.Latest.Inputs.RunCommandInputParameterArgs
+                new AzureNextGen.Compute..Inputs.RunCommandInputParameterArgs
                 {
                     Name = "param2",
                     Value = "value2",
@@ -49,7 +49,7 @@ class MyStack : Stack
             RunAsPassword = "<runAsPassword>",
             RunAsUser = "user1",
             RunCommandName = "myRunCommand",
-            Source = new AzureNextGen.Compute.Latest.Inputs.VirtualMachineRunCommandScriptSourceArgs
+            Source = new AzureNextGen.Compute..Inputs.VirtualMachineRunCommandScriptSourceArgs
             {
                 Script = "Write-Host Hello World!",
             },
@@ -70,7 +70,7 @@ class MyStack : Stack
 package main
 
 import (
-	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute/latest"
+	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -117,16 +117,16 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-virtual_machine_scale_set_vm_run_command = azure_nextgen.compute.latest.VirtualMachineScaleSetVMRunCommand("virtualMachineScaleSetVMRunCommand",
+virtual_machine_scale_set_vm_run_command = azure_nextgen.compute.VirtualMachineScaleSetVMRunCommand("virtualMachineScaleSetVMRunCommand",
     async_execution=False,
     instance_id="0",
     location="West US",
     parameters=[
-        azure_nextgen.compute.latest.RunCommandInputParameterArgs(
+        azure_nextgen.compute.RunCommandInputParameterArgs(
             name="param1",
             value="value1",
         ),
-        azure_nextgen.compute.latest.RunCommandInputParameterArgs(
+        azure_nextgen.compute.RunCommandInputParameterArgs(
             name="param2",
             value="value2",
         ),
@@ -135,7 +135,7 @@ virtual_machine_scale_set_vm_run_command = azure_nextgen.compute.latest.VirtualM
     run_as_password="<runAsPassword>",
     run_as_user="user1",
     run_command_name="myRunCommand",
-    source=azure_nextgen.compute.latest.VirtualMachineRunCommandScriptSourceArgs(
+    source=azure_nextgen.compute.VirtualMachineRunCommandScriptSourceArgs(
         script="Write-Host Hello World!",
     ),
     timeout_in_seconds=3600,
@@ -151,7 +151,7 @@ virtual_machine_scale_set_vm_run_command = azure_nextgen.compute.latest.VirtualM
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const virtualMachineScaleSetVMRunCommand = new azure_nextgen.compute.latest.VirtualMachineScaleSetVMRunCommand("virtualMachineScaleSetVMRunCommand", {
+const virtualMachineScaleSetVMRunCommand = new azure_nextgen.compute.VirtualMachineScaleSetVMRunCommand("virtualMachineScaleSetVMRunCommand", {
     asyncExecution: false,
     instanceId: "0",
     location: "West US",
@@ -441,7 +441,7 @@ The VirtualMachineScaleSetVMRunCommand resource accepts the following [input]({{
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#runcommandinputparameter">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Run<wbr>Command<wbr>Input<wbr>Parameter<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#runcommandinputparameter">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Inputs.<wbr>Run<wbr>Command<wbr>Input<wbr>Parameter<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The parameters used by the script.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -450,7 +450,7 @@ The VirtualMachineScaleSetVMRunCommand resource accepts the following [input]({{
 <a href="#protectedparameters_csharp" style="color: inherit; text-decoration: inherit;">Protected<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#runcommandinputparameter">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Run<wbr>Command<wbr>Input<wbr>Parameter<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#runcommandinputparameter">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Inputs.<wbr>Run<wbr>Command<wbr>Input<wbr>Parameter<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The parameters used by the script.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -477,7 +477,7 @@ The VirtualMachineScaleSetVMRunCommand resource accepts the following [input]({{
 <a href="#source_csharp" style="color: inherit; text-decoration: inherit;">Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineruncommandscriptsource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Virtual<wbr>Machine<wbr>Run<wbr>Command<wbr>Script<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualmachineruncommandscriptsource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Inputs.<wbr>Virtual<wbr>Machine<wbr>Run<wbr>Command<wbr>Script<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The source of the run command script.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -949,7 +949,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#instanceview_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>View</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineruncommandinstanceviewresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Outputs.<wbr>Virtual<wbr>Machine<wbr>Run<wbr>Command<wbr>Instance<wbr>View<wbr>Response</a></span>
+        <span class="property-type"><a href="#virtualmachineruncommandinstanceviewresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Outputs.<wbr>Virtual<wbr>Machine<wbr>Run<wbr>Command<wbr>Instance<wbr>View<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The virtual machine run command instance view.{{% /md %}}</dd>
     <dt class="property-"
@@ -1621,7 +1621,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#statuses_csharp" style="color: inherit; text-decoration: inherit;">Statuses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceviewstatusresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Instance<wbr>View<wbr>Status<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#instanceviewstatusresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Inputs.<wbr>Instance<wbr>View<wbr>Status<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The resource status information.{{% /md %}}</dd>
 </dl>
@@ -2134,7 +2134,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:compute/latest:VirtualMachineScaleSetVMRunCommand myRunCommand /subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/virtualMachineScaleSets/myvmScaleSet/virtualMachines/0/runCommands/myRunCommand 
+$ pulumi import azure-nextgen:compute:VirtualMachineScaleSetVMRunCommand myRunCommand /subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/virtualMachineScaleSets/myvmScaleSet/virtualMachines/0/runCommands/myRunCommand 
 ```
 
 

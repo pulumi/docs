@@ -350,7 +350,7 @@ The following output properties are available:
 <a href="#owners_csharp" style="color: inherit; text-decoration: inherit;">Owners</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementlockownerresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Authorization.<wbr>Outputs.<wbr>Management<wbr>Lock<wbr>Owner<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#managementlockownerresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Authorization..<wbr>Outputs.<wbr>Management<wbr>Lock<wbr>Owner<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The owners of the lock.{{% /md %}}</dd>
 </dl>

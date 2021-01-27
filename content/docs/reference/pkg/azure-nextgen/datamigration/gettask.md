@@ -287,7 +287,7 @@ The following output properties are available:
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connecttosourcepostgresqlsynctaskpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Outputs.<wbr>Connect<wbr>To<wbr>Source<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Properties<wbr>Response</a> | <a href="#connecttosourcesqlserversynctaskpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Outputs.<wbr>Connect<wbr>To<wbr>Source<wbr>Sql<wbr>Server<wbr>Sync<wbr>Task<wbr>Properties<wbr>Response</a> | <a href="#connecttosourcesqlservertaskpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Outputs.<wbr>Connect<wbr>To<wbr>Source<wbr>Sql<wbr>Server<wbr>Task<wbr>Properties<wbr>Response</a> | <a href="#connecttotargetazuredbformysqltaskpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Outputs.<wbr>Connect<wbr>To<wbr>Target<wbr>Azure<wbr>Db<wbr>For<wbr>My<wbr>Sql<wbr>Task<wbr>Properties<wbr>Response</a> | <a href="#connecttotargetazuredbforpostgresqlsynctaskpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Outputs.<wbr>Connect<wbr>To<wbr>Target<wbr>Azure<wbr>Db<wbr>For<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Properties<wbr>Response</a> | <a href="#connecttotargetsqldbtaskpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Outputs.<wbr>Connect<wbr>To<wbr>Target<wbr>Sql<wbr>Db<wbr>Task<wbr>Properties<wbr>Response</a> | <a href="#connecttotargetsqlmisynctaskpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Outputs.<wbr>Connect<wbr>To<wbr>Target<wbr>Sql<wbr>MISync<wbr>Task<wbr>Properties<wbr>Response</a> | <a href="#connecttotargetsqlmitaskpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Outputs.<wbr>Connect<wbr>To<wbr>Target<wbr>Sql<wbr>MITask<wbr>Properties<wbr>Response</a> | <a href="#connecttotargetsqlsqldbsynctaskpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Outputs.<wbr>Connect<wbr>To<wbr>Target<wbr>Sql<wbr>Sql<wbr>Db<wbr>Sync<wbr>Task<wbr>Properties<wbr>Response</a> | <a href="#gettdecertificatessqltaskpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Outputs.<wbr>Get<wbr>Tde<wbr>Certificates<wbr>Sql<wbr>Task<wbr>Properties<wbr>Response</a> | <a href="#getusertablessqlsynctaskpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Outputs.<wbr>Get<wbr>User<wbr>Tables<wbr>Sql<wbr>Sync<wbr>Task<wbr>Properties<wbr>Response</a> | <a href="#getusertablessqltaskpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Outputs.<wbr>Get<wbr>User<wbr>Tables<wbr>Sql<wbr>Task<wbr>Properties<wbr>Response</a> | <a href="#migratemysqlazuredbformysqlsynctaskpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Outputs.<wbr>Migrate<wbr>My<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>My<wbr>Sql<wbr>Sync<wbr>Task<wbr>Properties<wbr>Response</a> | <a href="#migratepostgresqlazuredbforpostgresqlsynctaskpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Outputs.<wbr>Migrate<wbr>Postgre<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Properties<wbr>Response</a> | <a href="#migratesqlserversqldbsynctaskpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Outputs.<wbr>Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Sync<wbr>Task<wbr>Properties<wbr>Response</a> | <a href="#migratesqlserversqldbtaskpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Outputs.<wbr>Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Task<wbr>Properties<wbr>Response</a> | <a href="#migratesqlserversqlmisynctaskpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Outputs.<wbr>Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MISync<wbr>Task<wbr>Properties<wbr>Response</a> | <a href="#migratesqlserversqlmitaskpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Outputs.<wbr>Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MITask<wbr>Properties<wbr>Response</a> | <a href="#validatemigrationinputsqlserversqldbsynctaskpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Outputs.<wbr>Validate<wbr>Migration<wbr>Input<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Sync<wbr>Task<wbr>Properties<wbr>Response</a> | <a href="#validatemigrationinputsqlserversqlmisynctaskpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Outputs.<wbr>Validate<wbr>Migration<wbr>Input<wbr>Sql<wbr>Server<wbr>Sql<wbr>MISync<wbr>Task<wbr>Properties<wbr>Response</a> | <a href="#validatemigrationinputsqlserversqlmitaskpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Outputs.<wbr>Validate<wbr>Migration<wbr>Input<wbr>Sql<wbr>Server<wbr>Sql<wbr>MITask<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#connecttosourcepostgresqlsynctaskpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Outputs.<wbr>Connect<wbr>To<wbr>Source<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Properties<wbr>Response</a> | <a href="#connecttosourcesqlserversynctaskpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Outputs.<wbr>Connect<wbr>To<wbr>Source<wbr>Sql<wbr>Server<wbr>Sync<wbr>Task<wbr>Properties<wbr>Response</a> | <a href="#connecttosourcesqlservertaskpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Outputs.<wbr>Connect<wbr>To<wbr>Source<wbr>Sql<wbr>Server<wbr>Task<wbr>Properties<wbr>Response</a> | <a href="#connecttotargetazuredbformysqltaskpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Outputs.<wbr>Connect<wbr>To<wbr>Target<wbr>Azure<wbr>Db<wbr>For<wbr>My<wbr>Sql<wbr>Task<wbr>Properties<wbr>Response</a> | <a href="#connecttotargetazuredbforpostgresqlsynctaskpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Outputs.<wbr>Connect<wbr>To<wbr>Target<wbr>Azure<wbr>Db<wbr>For<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Properties<wbr>Response</a> | <a href="#connecttotargetsqldbtaskpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Outputs.<wbr>Connect<wbr>To<wbr>Target<wbr>Sql<wbr>Db<wbr>Task<wbr>Properties<wbr>Response</a> | <a href="#connecttotargetsqlmisynctaskpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Outputs.<wbr>Connect<wbr>To<wbr>Target<wbr>Sql<wbr>MISync<wbr>Task<wbr>Properties<wbr>Response</a> | <a href="#connecttotargetsqlmitaskpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Outputs.<wbr>Connect<wbr>To<wbr>Target<wbr>Sql<wbr>MITask<wbr>Properties<wbr>Response</a> | <a href="#connecttotargetsqlsqldbsynctaskpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Outputs.<wbr>Connect<wbr>To<wbr>Target<wbr>Sql<wbr>Sql<wbr>Db<wbr>Sync<wbr>Task<wbr>Properties<wbr>Response</a> | <a href="#gettdecertificatessqltaskpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Outputs.<wbr>Get<wbr>Tde<wbr>Certificates<wbr>Sql<wbr>Task<wbr>Properties<wbr>Response</a> | <a href="#getusertablessqlsynctaskpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Outputs.<wbr>Get<wbr>User<wbr>Tables<wbr>Sql<wbr>Sync<wbr>Task<wbr>Properties<wbr>Response</a> | <a href="#getusertablessqltaskpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Outputs.<wbr>Get<wbr>User<wbr>Tables<wbr>Sql<wbr>Task<wbr>Properties<wbr>Response</a> | <a href="#migratemysqlazuredbformysqlsynctaskpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Outputs.<wbr>Migrate<wbr>My<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>My<wbr>Sql<wbr>Sync<wbr>Task<wbr>Properties<wbr>Response</a> | <a href="#migratepostgresqlazuredbforpostgresqlsynctaskpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Outputs.<wbr>Migrate<wbr>Postgre<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Properties<wbr>Response</a> | <a href="#migratesqlserversqldbsynctaskpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Outputs.<wbr>Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Sync<wbr>Task<wbr>Properties<wbr>Response</a> | <a href="#migratesqlserversqldbtaskpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Outputs.<wbr>Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Task<wbr>Properties<wbr>Response</a> | <a href="#migratesqlserversqlmisynctaskpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Outputs.<wbr>Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MISync<wbr>Task<wbr>Properties<wbr>Response</a> | <a href="#migratesqlserversqlmitaskpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Outputs.<wbr>Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MITask<wbr>Properties<wbr>Response</a> | <a href="#validatemigrationinputsqlserversqldbsynctaskpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Outputs.<wbr>Validate<wbr>Migration<wbr>Input<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Sync<wbr>Task<wbr>Properties<wbr>Response</a> | <a href="#validatemigrationinputsqlserversqlmisynctaskpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Outputs.<wbr>Validate<wbr>Migration<wbr>Input<wbr>Sql<wbr>Server<wbr>Sql<wbr>MISync<wbr>Task<wbr>Properties<wbr>Response</a> | <a href="#validatemigrationinputsqlserversqlmitaskpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Outputs.<wbr>Validate<wbr>Migration<wbr>Input<wbr>Sql<wbr>Server<wbr>Sql<wbr>MITask<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Custom task properties{{% /md %}}</dd>
     <dt class="property-"
@@ -845,7 +845,7 @@ The following output properties are available:
 <a href="#listofbackupfiles_csharp" style="color: inherit; text-decoration: inherit;">List<wbr>Of<wbr>Backup<wbr>Files</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backupfileinforesponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Backup<wbr>File<wbr>Info<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#backupfileinforesponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Backup<wbr>File<wbr>Info<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of files in the backup set{{% /md %}}</dd>
 </dl>
@@ -1222,7 +1222,7 @@ The following output properties are available:
 <a href="#sourceconnectioninfo_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Connection<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#postgresqlconnectioninforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Postgre<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#postgresqlconnectioninforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Postgre<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Connection information for source PostgreSQL server{{% /md %}}</dd>
 </dl>
@@ -1325,7 +1325,7 @@ The following output properties are available:
 <a href="#validationerrors_csharp" style="color: inherit; text-decoration: inherit;">Validation<wbr>Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportableexceptionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Reportable<wbr>Exception<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#reportableexceptionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Reportable<wbr>Exception<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Validation errors associated with the task{{% /md %}}</dd>
 </dl>
@@ -1500,7 +1500,7 @@ The following output properties are available:
 <a href="#commands_csharp" style="color: inherit; text-decoration: inherit;">Commands</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args&gt;&gt;</span>
+        <span class="property-type">List&lt;Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}Array of command properties.{{% /md %}}</dd>
     <dt class="property-required"
@@ -1509,7 +1509,7 @@ The following output properties are available:
 <a href="#errors_csharp" style="color: inherit; text-decoration: inherit;">Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#odataerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>OData<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#odataerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>OData<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Array of errors. This is ignored if submitted.{{% /md %}}</dd>
     <dt class="property-required"
@@ -1518,7 +1518,7 @@ The following output properties are available:
 <a href="#output_csharp" style="color: inherit; text-decoration: inherit;">Output</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connecttosourcepostgresqlsynctaskoutputresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Connect<wbr>To<wbr>Source<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Output<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#connecttosourcepostgresqlsynctaskoutputresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Connect<wbr>To<wbr>Source<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Output<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Task output. This is ignored if submitted.{{% /md %}}</dd>
     <dt class="property-required"
@@ -1536,7 +1536,7 @@ The following output properties are available:
 <a href="#input_csharp" style="color: inherit; text-decoration: inherit;">Input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connecttosourcepostgresqlsynctaskinputresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Connect<wbr>To<wbr>Source<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Input<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#connecttosourcepostgresqlsynctaskinputresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Connect<wbr>To<wbr>Source<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Input<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd>
 </dl>
@@ -1711,7 +1711,7 @@ The following output properties are available:
 <a href="#commands_csharp" style="color: inherit; text-decoration: inherit;">Commands</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args&gt;&gt;</span>
+        <span class="property-type">List&lt;Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}Array of command properties.{{% /md %}}</dd>
     <dt class="property-required"
@@ -1720,7 +1720,7 @@ The following output properties are available:
 <a href="#errors_csharp" style="color: inherit; text-decoration: inherit;">Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#odataerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>OData<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#odataerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>OData<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Array of errors. This is ignored if submitted.{{% /md %}}</dd>
     <dt class="property-required"
@@ -1747,7 +1747,7 @@ The following output properties are available:
 <a href="#input_csharp" style="color: inherit; text-decoration: inherit;">Input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connecttosourcesqlservertaskinputresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Connect<wbr>To<wbr>Source<wbr>Sql<wbr>Server<wbr>Task<wbr>Input<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#connecttosourcesqlservertaskinputresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Connect<wbr>To<wbr>Source<wbr>Sql<wbr>Server<wbr>Task<wbr>Input<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd>
 </dl>
@@ -1922,7 +1922,7 @@ The following output properties are available:
 <a href="#sourceconnectioninfo_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Connection<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlconnectioninforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Connection information for Source SQL Server{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2142,7 +2142,7 @@ The following output properties are available:
 <a href="#migrationeligibility_csharp" style="color: inherit; text-decoration: inherit;">Migration<wbr>Eligibility</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migrationeligibilityinforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migration<wbr>Eligibility<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#migrationeligibilityinforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Migration<wbr>Eligibility<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information about eligibility of agent job for migration.{{% /md %}}</dd>
     <dt class="property-required"
@@ -2389,7 +2389,7 @@ The following output properties are available:
 <a href="#databasefiles_csharp" style="color: inherit; text-decoration: inherit;">Database<wbr>Files</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databasefileinforesponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Database<wbr>File<wbr>Info<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#databasefileinforesponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Database<wbr>File<wbr>Info<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of database files{{% /md %}}</dd>
     <dt class="property-required"
@@ -2663,7 +2663,7 @@ The following output properties are available:
 <a href="#migrationeligibility_csharp" style="color: inherit; text-decoration: inherit;">Migration<wbr>Eligibility</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migrationeligibilityinforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migration<wbr>Eligibility<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#migrationeligibilityinforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Migration<wbr>Eligibility<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information about eligibility of login for migration.{{% /md %}}</dd>
     <dt class="property-required"
@@ -2928,7 +2928,7 @@ The following output properties are available:
 <a href="#validationerrors_csharp" style="color: inherit; text-decoration: inherit;">Validation<wbr>Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportableexceptionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Reportable<wbr>Exception<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#reportableexceptionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Reportable<wbr>Exception<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Validation errors{{% /md %}}</dd>
 </dl>
@@ -3157,7 +3157,7 @@ The following output properties are available:
 <a href="#commands_csharp" style="color: inherit; text-decoration: inherit;">Commands</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args&gt;&gt;</span>
+        <span class="property-type">List&lt;Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}Array of command properties.{{% /md %}}</dd>
     <dt class="property-required"
@@ -3166,7 +3166,7 @@ The following output properties are available:
 <a href="#errors_csharp" style="color: inherit; text-decoration: inherit;">Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#odataerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>OData<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#odataerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>OData<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Array of errors. This is ignored if submitted.{{% /md %}}</dd>
     <dt class="property-required"
@@ -3193,7 +3193,7 @@ The following output properties are available:
 <a href="#input_csharp" style="color: inherit; text-decoration: inherit;">Input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connecttosourcesqlservertaskinputresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Connect<wbr>To<wbr>Source<wbr>Sql<wbr>Server<wbr>Task<wbr>Input<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#connecttosourcesqlservertaskinputresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Connect<wbr>To<wbr>Source<wbr>Sql<wbr>Server<wbr>Task<wbr>Input<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd>
 </dl>
@@ -3368,7 +3368,7 @@ The following output properties are available:
 <a href="#sourceconnectioninfo_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Connection<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mysqlconnectioninforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>My<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#mysqlconnectioninforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>My<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Connection information for source MySQL server{{% /md %}}</dd>
     <dt class="property-required"
@@ -3377,7 +3377,7 @@ The following output properties are available:
 <a href="#targetconnectioninfo_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Connection<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mysqlconnectioninforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>My<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#mysqlconnectioninforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>My<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Connection information for target Azure Database for MySQL server{{% /md %}}</dd>
 </dl>
@@ -3507,7 +3507,7 @@ The following output properties are available:
 <a href="#validationerrors_csharp" style="color: inherit; text-decoration: inherit;">Validation<wbr>Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportableexceptionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Reportable<wbr>Exception<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#reportableexceptionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Reportable<wbr>Exception<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Validation errors associated with the task{{% /md %}}</dd>
 </dl>
@@ -3682,7 +3682,7 @@ The following output properties are available:
 <a href="#commands_csharp" style="color: inherit; text-decoration: inherit;">Commands</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args&gt;&gt;</span>
+        <span class="property-type">List&lt;Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}Array of command properties.{{% /md %}}</dd>
     <dt class="property-required"
@@ -3691,7 +3691,7 @@ The following output properties are available:
 <a href="#errors_csharp" style="color: inherit; text-decoration: inherit;">Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#odataerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>OData<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#odataerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>OData<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Array of errors. This is ignored if submitted.{{% /md %}}</dd>
     <dt class="property-required"
@@ -3700,7 +3700,7 @@ The following output properties are available:
 <a href="#output_csharp" style="color: inherit; text-decoration: inherit;">Output</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connecttotargetazuredbformysqltaskoutputresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Connect<wbr>To<wbr>Target<wbr>Azure<wbr>Db<wbr>For<wbr>My<wbr>Sql<wbr>Task<wbr>Output<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#connecttotargetazuredbformysqltaskoutputresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Connect<wbr>To<wbr>Target<wbr>Azure<wbr>Db<wbr>For<wbr>My<wbr>Sql<wbr>Task<wbr>Output<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Task output. This is ignored if submitted.{{% /md %}}</dd>
     <dt class="property-required"
@@ -3718,7 +3718,7 @@ The following output properties are available:
 <a href="#input_csharp" style="color: inherit; text-decoration: inherit;">Input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connecttotargetazuredbformysqltaskinputresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Connect<wbr>To<wbr>Target<wbr>Azure<wbr>Db<wbr>For<wbr>My<wbr>Sql<wbr>Task<wbr>Input<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#connecttotargetazuredbformysqltaskinputresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Connect<wbr>To<wbr>Target<wbr>Azure<wbr>Db<wbr>For<wbr>My<wbr>Sql<wbr>Task<wbr>Input<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd>
 </dl>
@@ -3893,7 +3893,7 @@ The following output properties are available:
 <a href="#sourceconnectioninfo_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Connection<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#postgresqlconnectioninforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Postgre<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#postgresqlconnectioninforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Postgre<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Connection information for source PostgreSQL server{{% /md %}}</dd>
     <dt class="property-required"
@@ -3902,7 +3902,7 @@ The following output properties are available:
 <a href="#targetconnectioninfo_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Connection<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#postgresqlconnectioninforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Postgre<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#postgresqlconnectioninforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Postgre<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Connection information for target Azure Database for PostgreSQL server{{% /md %}}</dd>
 </dl>
@@ -4032,7 +4032,7 @@ The following output properties are available:
 <a href="#validationerrors_csharp" style="color: inherit; text-decoration: inherit;">Validation<wbr>Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportableexceptionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Reportable<wbr>Exception<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#reportableexceptionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Reportable<wbr>Exception<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Validation errors associated with the task{{% /md %}}</dd>
 </dl>
@@ -4207,7 +4207,7 @@ The following output properties are available:
 <a href="#commands_csharp" style="color: inherit; text-decoration: inherit;">Commands</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args&gt;&gt;</span>
+        <span class="property-type">List&lt;Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}Array of command properties.{{% /md %}}</dd>
     <dt class="property-required"
@@ -4216,7 +4216,7 @@ The following output properties are available:
 <a href="#errors_csharp" style="color: inherit; text-decoration: inherit;">Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#odataerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>OData<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#odataerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>OData<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Array of errors. This is ignored if submitted.{{% /md %}}</dd>
     <dt class="property-required"
@@ -4225,7 +4225,7 @@ The following output properties are available:
 <a href="#output_csharp" style="color: inherit; text-decoration: inherit;">Output</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connecttotargetazuredbforpostgresqlsynctaskoutputresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Connect<wbr>To<wbr>Target<wbr>Azure<wbr>Db<wbr>For<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Output<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#connecttotargetazuredbforpostgresqlsynctaskoutputresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Connect<wbr>To<wbr>Target<wbr>Azure<wbr>Db<wbr>For<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Output<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Task output. This is ignored if submitted.{{% /md %}}</dd>
     <dt class="property-required"
@@ -4243,7 +4243,7 @@ The following output properties are available:
 <a href="#input_csharp" style="color: inherit; text-decoration: inherit;">Input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connecttotargetazuredbforpostgresqlsynctaskinputresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Connect<wbr>To<wbr>Target<wbr>Azure<wbr>Db<wbr>For<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Input<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#connecttotargetazuredbforpostgresqlsynctaskinputresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Connect<wbr>To<wbr>Target<wbr>Azure<wbr>Db<wbr>For<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Input<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd>
 </dl>
@@ -4418,7 +4418,7 @@ The following output properties are available:
 <a href="#targetconnectioninfo_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Connection<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlconnectioninforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Connection information for target SQL DB{{% /md %}}</dd>
 </dl>
@@ -4660,7 +4660,7 @@ The following output properties are available:
 <a href="#commands_csharp" style="color: inherit; text-decoration: inherit;">Commands</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args&gt;&gt;</span>
+        <span class="property-type">List&lt;Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}Array of command properties.{{% /md %}}</dd>
     <dt class="property-required"
@@ -4669,7 +4669,7 @@ The following output properties are available:
 <a href="#errors_csharp" style="color: inherit; text-decoration: inherit;">Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#odataerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>OData<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#odataerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>OData<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Array of errors. This is ignored if submitted.{{% /md %}}</dd>
     <dt class="property-required"
@@ -4678,7 +4678,7 @@ The following output properties are available:
 <a href="#output_csharp" style="color: inherit; text-decoration: inherit;">Output</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connecttotargetsqldbtaskoutputresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Connect<wbr>To<wbr>Target<wbr>Sql<wbr>Db<wbr>Task<wbr>Output<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#connecttotargetsqldbtaskoutputresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Connect<wbr>To<wbr>Target<wbr>Sql<wbr>Db<wbr>Task<wbr>Output<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Task output. This is ignored if submitted.{{% /md %}}</dd>
     <dt class="property-required"
@@ -4696,7 +4696,7 @@ The following output properties are available:
 <a href="#input_csharp" style="color: inherit; text-decoration: inherit;">Input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connecttotargetsqldbtaskinputresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Connect<wbr>To<wbr>Target<wbr>Sql<wbr>Db<wbr>Task<wbr>Input<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#connecttotargetsqldbtaskinputresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Connect<wbr>To<wbr>Target<wbr>Sql<wbr>Db<wbr>Task<wbr>Input<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd>
 </dl>
@@ -4871,7 +4871,7 @@ The following output properties are available:
 <a href="#azureapp_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>App</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureactivedirectoryappresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Azure<wbr>Active<wbr>Directory<wbr>App<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azureactivedirectoryappresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Azure<wbr>Active<wbr>Directory<wbr>App<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Azure Active Directory Application the DMS instance will use to connect to the target instance of Azure SQL Database Managed Instance and the Azure Storage Account{{% /md %}}</dd>
     <dt class="property-required"
@@ -4880,7 +4880,7 @@ The following output properties are available:
 <a href="#targetconnectioninfo_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Connection<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#misqlconnectioninforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Mi<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#misqlconnectioninforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Mi<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Connection information for Azure SQL Database Managed Instance{{% /md %}}</dd>
 </dl>
@@ -4992,7 +4992,7 @@ The following output properties are available:
 <a href="#validationerrors_csharp" style="color: inherit; text-decoration: inherit;">Validation<wbr>Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportableexceptionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Reportable<wbr>Exception<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#reportableexceptionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Reportable<wbr>Exception<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Validation errors{{% /md %}}</dd>
 </dl>
@@ -5113,7 +5113,7 @@ The following output properties are available:
 <a href="#commands_csharp" style="color: inherit; text-decoration: inherit;">Commands</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args&gt;&gt;</span>
+        <span class="property-type">List&lt;Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}Array of command properties.{{% /md %}}</dd>
     <dt class="property-required"
@@ -5122,7 +5122,7 @@ The following output properties are available:
 <a href="#errors_csharp" style="color: inherit; text-decoration: inherit;">Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#odataerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>OData<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#odataerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>OData<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Array of errors. This is ignored if submitted.{{% /md %}}</dd>
     <dt class="property-required"
@@ -5131,7 +5131,7 @@ The following output properties are available:
 <a href="#output_csharp" style="color: inherit; text-decoration: inherit;">Output</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connecttotargetsqlmisynctaskoutputresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Connect<wbr>To<wbr>Target<wbr>Sql<wbr>MISync<wbr>Task<wbr>Output<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#connecttotargetsqlmisynctaskoutputresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Connect<wbr>To<wbr>Target<wbr>Sql<wbr>MISync<wbr>Task<wbr>Output<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Task output. This is ignored if submitted.{{% /md %}}</dd>
     <dt class="property-required"
@@ -5149,7 +5149,7 @@ The following output properties are available:
 <a href="#input_csharp" style="color: inherit; text-decoration: inherit;">Input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connecttotargetsqlmisynctaskinputresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Connect<wbr>To<wbr>Target<wbr>Sql<wbr>MISync<wbr>Task<wbr>Input<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#connecttotargetsqlmisynctaskinputresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Connect<wbr>To<wbr>Target<wbr>Sql<wbr>MISync<wbr>Task<wbr>Input<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd>
 </dl>
@@ -5324,7 +5324,7 @@ The following output properties are available:
 <a href="#targetconnectioninfo_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Connection<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlconnectioninforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Connection information for target SQL Server{{% /md %}}</dd>
 </dl>
@@ -5436,7 +5436,7 @@ The following output properties are available:
 <a href="#validationerrors_csharp" style="color: inherit; text-decoration: inherit;">Validation<wbr>Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportableexceptionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Reportable<wbr>Exception<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#reportableexceptionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Reportable<wbr>Exception<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Validation errors{{% /md %}}</dd>
 </dl>
@@ -5638,7 +5638,7 @@ The following output properties are available:
 <a href="#commands_csharp" style="color: inherit; text-decoration: inherit;">Commands</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args&gt;&gt;</span>
+        <span class="property-type">List&lt;Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}Array of command properties.{{% /md %}}</dd>
     <dt class="property-required"
@@ -5647,7 +5647,7 @@ The following output properties are available:
 <a href="#errors_csharp" style="color: inherit; text-decoration: inherit;">Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#odataerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>OData<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#odataerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>OData<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Array of errors. This is ignored if submitted.{{% /md %}}</dd>
     <dt class="property-required"
@@ -5656,7 +5656,7 @@ The following output properties are available:
 <a href="#output_csharp" style="color: inherit; text-decoration: inherit;">Output</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connecttotargetsqlmitaskoutputresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Connect<wbr>To<wbr>Target<wbr>Sql<wbr>MITask<wbr>Output<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#connecttotargetsqlmitaskoutputresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Connect<wbr>To<wbr>Target<wbr>Sql<wbr>MITask<wbr>Output<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Task output. This is ignored if submitted.{{% /md %}}</dd>
     <dt class="property-required"
@@ -5674,7 +5674,7 @@ The following output properties are available:
 <a href="#input_csharp" style="color: inherit; text-decoration: inherit;">Input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connecttotargetsqlmitaskinputresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Connect<wbr>To<wbr>Target<wbr>Sql<wbr>MITask<wbr>Input<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#connecttotargetsqlmitaskinputresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Connect<wbr>To<wbr>Target<wbr>Sql<wbr>MITask<wbr>Input<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd>
 </dl>
@@ -5849,7 +5849,7 @@ The following output properties are available:
 <a href="#sourceconnectioninfo_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Connection<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlconnectioninforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Connection information for source SQL Server{{% /md %}}</dd>
     <dt class="property-required"
@@ -5858,7 +5858,7 @@ The following output properties are available:
 <a href="#targetconnectioninfo_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Connection<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlconnectioninforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Connection information for target SQL DB{{% /md %}}</dd>
 </dl>
@@ -5952,7 +5952,7 @@ The following output properties are available:
 <a href="#commands_csharp" style="color: inherit; text-decoration: inherit;">Commands</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args&gt;&gt;</span>
+        <span class="property-type">List&lt;Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}Array of command properties.{{% /md %}}</dd>
     <dt class="property-required"
@@ -5961,7 +5961,7 @@ The following output properties are available:
 <a href="#errors_csharp" style="color: inherit; text-decoration: inherit;">Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#odataerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>OData<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#odataerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>OData<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Array of errors. This is ignored if submitted.{{% /md %}}</dd>
     <dt class="property-required"
@@ -5970,7 +5970,7 @@ The following output properties are available:
 <a href="#output_csharp" style="color: inherit; text-decoration: inherit;">Output</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connecttotargetsqldbtaskoutputresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Connect<wbr>To<wbr>Target<wbr>Sql<wbr>Db<wbr>Task<wbr>Output<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#connecttotargetsqldbtaskoutputresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Connect<wbr>To<wbr>Target<wbr>Sql<wbr>Db<wbr>Task<wbr>Output<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Task output. This is ignored if submitted.{{% /md %}}</dd>
     <dt class="property-required"
@@ -5988,7 +5988,7 @@ The following output properties are available:
 <a href="#input_csharp" style="color: inherit; text-decoration: inherit;">Input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connecttotargetsqlsqldbsynctaskinputresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Connect<wbr>To<wbr>Target<wbr>Sql<wbr>Sql<wbr>Db<wbr>Sync<wbr>Task<wbr>Input<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#connecttotargetsqlsqldbsynctaskinputresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Connect<wbr>To<wbr>Target<wbr>Sql<wbr>Sql<wbr>Db<wbr>Sync<wbr>Task<wbr>Input<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd>
 </dl>
@@ -6172,7 +6172,7 @@ The following output properties are available:
 <a href="#validationerrors_csharp" style="color: inherit; text-decoration: inherit;">Validation<wbr>Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#validationerrorresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Validation<wbr>Error<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#validationerrorresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Validation<wbr>Error<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List of errors that happened while performing data integrity validation{{% /md %}}</dd>
 </dl>
@@ -7762,7 +7762,7 @@ The following output properties are available:
 <a href="#waitstats_csharp" style="color: inherit; text-decoration: inherit;">Wait<wbr>Stats</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Wait<wbr>Statistics<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Wait<wbr>Statistics<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}Dictionary of sql query execution wait types and the respective statistics{{% /md %}}</dd>
 </dl>
@@ -8103,7 +8103,7 @@ The following output properties are available:
 <a href="#backupfileshare_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>File<wbr>Share</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fileshareresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>File<wbr>Share<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#fileshareresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>File<wbr>Share<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Backup file share information for file share to be used for temporarily storing files.{{% /md %}}</dd>
     <dt class="property-required"
@@ -8112,7 +8112,7 @@ The following output properties are available:
 <a href="#connectioninfo_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlconnectioninforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Connection information for SQL Server{{% /md %}}</dd>
     <dt class="property-required"
@@ -8121,7 +8121,7 @@ The following output properties are available:
 <a href="#selectedcertificates_csharp" style="color: inherit; text-decoration: inherit;">Selected<wbr>Certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#selectedcertificateinputresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Selected<wbr>Certificate<wbr>Input<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#selectedcertificateinputresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Selected<wbr>Certificate<wbr>Input<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List containing certificate names and corresponding password to use for encrypting the exported certificate.{{% /md %}}</dd>
 </dl>
@@ -8251,7 +8251,7 @@ The following output properties are available:
 <a href="#validationerrors_csharp" style="color: inherit; text-decoration: inherit;">Validation<wbr>Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportableexceptionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Reportable<wbr>Exception<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#reportableexceptionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Reportable<wbr>Exception<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Validation errors{{% /md %}}</dd>
 </dl>
@@ -8345,7 +8345,7 @@ The following output properties are available:
 <a href="#commands_csharp" style="color: inherit; text-decoration: inherit;">Commands</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args&gt;&gt;</span>
+        <span class="property-type">List&lt;Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}Array of command properties.{{% /md %}}</dd>
     <dt class="property-required"
@@ -8354,7 +8354,7 @@ The following output properties are available:
 <a href="#errors_csharp" style="color: inherit; text-decoration: inherit;">Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#odataerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>OData<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#odataerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>OData<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Array of errors. This is ignored if submitted.{{% /md %}}</dd>
     <dt class="property-required"
@@ -8363,7 +8363,7 @@ The following output properties are available:
 <a href="#output_csharp" style="color: inherit; text-decoration: inherit;">Output</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gettdecertificatessqltaskoutputresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Get<wbr>Tde<wbr>Certificates<wbr>Sql<wbr>Task<wbr>Output<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#gettdecertificatessqltaskoutputresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Get<wbr>Tde<wbr>Certificates<wbr>Sql<wbr>Task<wbr>Output<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Task output. This is ignored if submitted.{{% /md %}}</dd>
     <dt class="property-required"
@@ -8381,7 +8381,7 @@ The following output properties are available:
 <a href="#input_csharp" style="color: inherit; text-decoration: inherit;">Input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gettdecertificatessqltaskinputresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Get<wbr>Tde<wbr>Certificates<wbr>Sql<wbr>Task<wbr>Input<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#gettdecertificatessqltaskinputresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Get<wbr>Tde<wbr>Certificates<wbr>Sql<wbr>Task<wbr>Input<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd>
 </dl>
@@ -8574,7 +8574,7 @@ The following output properties are available:
 <a href="#sourceconnectioninfo_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Connection<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlconnectioninforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Connection information for SQL Server{{% /md %}}</dd>
     <dt class="property-required"
@@ -8583,7 +8583,7 @@ The following output properties are available:
 <a href="#targetconnectioninfo_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Connection<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlconnectioninforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Connection information for SQL DB{{% /md %}}</dd>
 </dl>
@@ -8731,7 +8731,7 @@ The following output properties are available:
 <a href="#databasestosourcetables_csharp" style="color: inherit; text-decoration: inherit;">Databases<wbr>To<wbr>Source<wbr>Tables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Immutable<wbr>Array&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Database<wbr>Table<wbr>Response<wbr>Args&gt;&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Immutable<wbr>Array&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Database<wbr>Table<wbr>Response<wbr>Args&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}Mapping from database name to list of source tables{{% /md %}}</dd>
     <dt class="property-required"
@@ -8740,7 +8740,7 @@ The following output properties are available:
 <a href="#databasestotargettables_csharp" style="color: inherit; text-decoration: inherit;">Databases<wbr>To<wbr>Target<wbr>Tables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Immutable<wbr>Array&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Database<wbr>Table<wbr>Response<wbr>Args&gt;&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Immutable<wbr>Array&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Database<wbr>Table<wbr>Response<wbr>Args&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}Mapping from database name to list of target tables{{% /md %}}</dd>
     <dt class="property-required"
@@ -8758,7 +8758,7 @@ The following output properties are available:
 <a href="#validationerrors_csharp" style="color: inherit; text-decoration: inherit;">Validation<wbr>Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportableexceptionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Reportable<wbr>Exception<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#reportableexceptionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Reportable<wbr>Exception<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Validation errors{{% /md %}}</dd>
 </dl>
@@ -8906,7 +8906,7 @@ The following output properties are available:
 <a href="#commands_csharp" style="color: inherit; text-decoration: inherit;">Commands</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args&gt;&gt;</span>
+        <span class="property-type">List&lt;Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}Array of command properties.{{% /md %}}</dd>
     <dt class="property-required"
@@ -8915,7 +8915,7 @@ The following output properties are available:
 <a href="#errors_csharp" style="color: inherit; text-decoration: inherit;">Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#odataerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>OData<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#odataerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>OData<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Array of errors. This is ignored if submitted.{{% /md %}}</dd>
     <dt class="property-required"
@@ -8924,7 +8924,7 @@ The following output properties are available:
 <a href="#output_csharp" style="color: inherit; text-decoration: inherit;">Output</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getusertablessqlsynctaskoutputresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Get<wbr>User<wbr>Tables<wbr>Sql<wbr>Sync<wbr>Task<wbr>Output<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getusertablessqlsynctaskoutputresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Get<wbr>User<wbr>Tables<wbr>Sql<wbr>Sync<wbr>Task<wbr>Output<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Task output. This is ignored if submitted.{{% /md %}}</dd>
     <dt class="property-required"
@@ -8942,7 +8942,7 @@ The following output properties are available:
 <a href="#input_csharp" style="color: inherit; text-decoration: inherit;">Input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getusertablessqlsynctaskinputresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Get<wbr>User<wbr>Tables<wbr>Sql<wbr>Sync<wbr>Task<wbr>Input<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#getusertablessqlsynctaskinputresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Get<wbr>User<wbr>Tables<wbr>Sql<wbr>Sync<wbr>Task<wbr>Input<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd>
 </dl>
@@ -9117,7 +9117,7 @@ The following output properties are available:
 <a href="#connectioninfo_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlconnectioninforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Connection information for SQL Server{{% /md %}}</dd>
     <dt class="property-required"
@@ -9220,7 +9220,7 @@ The following output properties are available:
 <a href="#databasestotables_csharp" style="color: inherit; text-decoration: inherit;">Databases<wbr>To<wbr>Tables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Immutable<wbr>Array&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Database<wbr>Table<wbr>Response<wbr>Args&gt;&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Immutable<wbr>Array&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Database<wbr>Table<wbr>Response<wbr>Args&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}Mapping from database name to list of tables{{% /md %}}</dd>
     <dt class="property-required"
@@ -9238,7 +9238,7 @@ The following output properties are available:
 <a href="#validationerrors_csharp" style="color: inherit; text-decoration: inherit;">Validation<wbr>Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportableexceptionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Reportable<wbr>Exception<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#reportableexceptionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Reportable<wbr>Exception<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Validation errors{{% /md %}}</dd>
 </dl>
@@ -9359,7 +9359,7 @@ The following output properties are available:
 <a href="#commands_csharp" style="color: inherit; text-decoration: inherit;">Commands</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args&gt;&gt;</span>
+        <span class="property-type">List&lt;Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}Array of command properties.{{% /md %}}</dd>
     <dt class="property-required"
@@ -9368,7 +9368,7 @@ The following output properties are available:
 <a href="#errors_csharp" style="color: inherit; text-decoration: inherit;">Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#odataerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>OData<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#odataerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>OData<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Array of errors. This is ignored if submitted.{{% /md %}}</dd>
     <dt class="property-required"
@@ -9377,7 +9377,7 @@ The following output properties are available:
 <a href="#output_csharp" style="color: inherit; text-decoration: inherit;">Output</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getusertablessqltaskoutputresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Get<wbr>User<wbr>Tables<wbr>Sql<wbr>Task<wbr>Output<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getusertablessqltaskoutputresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Get<wbr>User<wbr>Tables<wbr>Sql<wbr>Task<wbr>Output<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Task output. This is ignored if submitted.{{% /md %}}</dd>
     <dt class="property-required"
@@ -9395,7 +9395,7 @@ The following output properties are available:
 <a href="#input_csharp" style="color: inherit; text-decoration: inherit;">Input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getusertablessqltaskinputresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Get<wbr>User<wbr>Tables<wbr>Sql<wbr>Task<wbr>Input<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#getusertablessqltaskinputresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Get<wbr>User<wbr>Tables<wbr>Sql<wbr>Task<wbr>Input<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd>
 </dl>
@@ -9776,7 +9776,7 @@ The following output properties are available:
 <a href="#errors_csharp" style="color: inherit; text-decoration: inherit;">Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportableexceptionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Reportable<wbr>Exception<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#reportableexceptionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Reportable<wbr>Exception<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of errors that happened during the command execution{{% /md %}}</dd>
 </dl>
@@ -9843,7 +9843,7 @@ The following output properties are available:
 <a href="#errors_csharp" style="color: inherit; text-decoration: inherit;">Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#odataerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>OData<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#odataerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>OData<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Array of errors. This is ignored if submitted.{{% /md %}}</dd>
     <dt class="property-required"
@@ -9852,7 +9852,7 @@ The following output properties are available:
 <a href="#output_csharp" style="color: inherit; text-decoration: inherit;">Output</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migratemisynccompletecommandoutputresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Output<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#migratemisynccompletecommandoutputresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Output<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Command output. This is ignored if submitted.{{% /md %}}</dd>
     <dt class="property-required"
@@ -9870,7 +9870,7 @@ The following output properties are available:
 <a href="#input_csharp" style="color: inherit; text-decoration: inherit;">Input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migratemisynccompletecommandinputresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Input<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#migratemisynccompletecommandinputresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Input<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Command input{{% /md %}}</dd>
 </dl>
@@ -10229,7 +10229,7 @@ The following output properties are available:
 <a href="#selecteddatabases_csharp" style="color: inherit; text-decoration: inherit;">Selected<wbr>Databases</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migratemysqlazuredbformysqlsyncdatabaseinputresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>My<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>My<wbr>Sql<wbr>Sync<wbr>Database<wbr>Input<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#migratemysqlazuredbformysqlsyncdatabaseinputresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Migrate<wbr>My<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>My<wbr>Sql<wbr>Sync<wbr>Database<wbr>Input<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Databases to migrate{{% /md %}}</dd>
     <dt class="property-required"
@@ -10238,7 +10238,7 @@ The following output properties are available:
 <a href="#sourceconnectioninfo_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Connection<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mysqlconnectioninforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>My<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#mysqlconnectioninforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>My<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Connection information for source MySQL{{% /md %}}</dd>
     <dt class="property-required"
@@ -10247,7 +10247,7 @@ The following output properties are available:
 <a href="#targetconnectioninfo_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Connection<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mysqlconnectioninforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>My<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#mysqlconnectioninforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>My<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Connection information for target Azure Database for MySQL{{% /md %}}</dd>
 </dl>
@@ -10386,7 +10386,7 @@ The following output properties are available:
 <a href="#events_csharp" style="color: inherit; text-decoration: inherit;">Events</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#syncmigrationdatabaseerroreventresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Sync<wbr>Migration<wbr>Database<wbr>Error<wbr>Event<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#syncmigrationdatabaseerroreventresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Sync<wbr>Migration<wbr>Database<wbr>Error<wbr>Event<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of error events.{{% /md %}}</dd>
 </dl>
@@ -11114,7 +11114,7 @@ The following output properties are available:
 <a href="#error_csharp" style="color: inherit; text-decoration: inherit;">Error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportableexceptionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Reportable<wbr>Exception<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#reportableexceptionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Reportable<wbr>Exception<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Migration error{{% /md %}}</dd>
     <dt class="property-required"
@@ -12035,7 +12035,7 @@ The following output properties are available:
 <a href="#commands_csharp" style="color: inherit; text-decoration: inherit;">Commands</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args&gt;&gt;</span>
+        <span class="property-type">List&lt;Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}Array of command properties.{{% /md %}}</dd>
     <dt class="property-required"
@@ -12044,7 +12044,7 @@ The following output properties are available:
 <a href="#errors_csharp" style="color: inherit; text-decoration: inherit;">Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#odataerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>OData<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#odataerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>OData<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Array of errors. This is ignored if submitted.{{% /md %}}</dd>
     <dt class="property-required"
@@ -12071,7 +12071,7 @@ The following output properties are available:
 <a href="#input_csharp" style="color: inherit; text-decoration: inherit;">Input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migratemysqlazuredbformysqlsynctaskinputresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>My<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>My<wbr>Sql<wbr>Sync<wbr>Task<wbr>Input<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#migratemysqlazuredbformysqlsynctaskinputresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Migrate<wbr>My<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>My<wbr>Sql<wbr>Sync<wbr>Task<wbr>Input<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd>
 </dl>
@@ -12457,7 +12457,7 @@ The following output properties are available:
 <a href="#selecteddatabases_csharp" style="color: inherit; text-decoration: inherit;">Selected<wbr>Databases</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migratepostgresqlazuredbforpostgresqlsyncdatabaseinputresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>Postgre<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Database<wbr>Input<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#migratepostgresqlazuredbforpostgresqlsyncdatabaseinputresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Migrate<wbr>Postgre<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Database<wbr>Input<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Databases to migrate{{% /md %}}</dd>
     <dt class="property-required"
@@ -12466,7 +12466,7 @@ The following output properties are available:
 <a href="#sourceconnectioninfo_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Connection<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#postgresqlconnectioninforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Postgre<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#postgresqlconnectioninforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Postgre<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Connection information for source PostgreSQL{{% /md %}}</dd>
     <dt class="property-required"
@@ -12475,7 +12475,7 @@ The following output properties are available:
 <a href="#targetconnectioninfo_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Connection<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#postgresqlconnectioninforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Postgre<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#postgresqlconnectioninforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Postgre<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Connection information for target Azure Database for PostgreSQL{{% /md %}}</dd>
 </dl>
@@ -12614,7 +12614,7 @@ The following output properties are available:
 <a href="#events_csharp" style="color: inherit; text-decoration: inherit;">Events</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#syncmigrationdatabaseerroreventresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Sync<wbr>Migration<wbr>Database<wbr>Error<wbr>Event<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#syncmigrationdatabaseerroreventresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Sync<wbr>Migration<wbr>Database<wbr>Error<wbr>Event<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of error events.{{% /md %}}</dd>
 </dl>
@@ -13342,7 +13342,7 @@ The following output properties are available:
 <a href="#error_csharp" style="color: inherit; text-decoration: inherit;">Error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportableexceptionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Reportable<wbr>Exception<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#reportableexceptionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Reportable<wbr>Exception<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Migration error{{% /md %}}</dd>
     <dt class="property-required"
@@ -14263,7 +14263,7 @@ The following output properties are available:
 <a href="#commands_csharp" style="color: inherit; text-decoration: inherit;">Commands</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args&gt;&gt;</span>
+        <span class="property-type">List&lt;Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}Array of command properties.{{% /md %}}</dd>
     <dt class="property-required"
@@ -14272,7 +14272,7 @@ The following output properties are available:
 <a href="#errors_csharp" style="color: inherit; text-decoration: inherit;">Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#odataerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>OData<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#odataerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>OData<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Array of errors. This is ignored if submitted.{{% /md %}}</dd>
     <dt class="property-required"
@@ -14299,7 +14299,7 @@ The following output properties are available:
 <a href="#input_csharp" style="color: inherit; text-decoration: inherit;">Input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migratepostgresqlazuredbforpostgresqlsynctaskinputresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>Postgre<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Input<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#migratepostgresqlazuredbforpostgresqlsynctaskinputresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Migrate<wbr>Postgre<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Input<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd>
 </dl>
@@ -14968,7 +14968,7 @@ The following output properties are available:
 <a href="#selecteddatabases_csharp" style="color: inherit; text-decoration: inherit;">Selected<wbr>Databases</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migratesqlserversqldbsyncdatabaseinputresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Sync<wbr>Database<wbr>Input<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#migratesqlserversqldbsyncdatabaseinputresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Sync<wbr>Database<wbr>Input<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Databases to migrate{{% /md %}}</dd>
     <dt class="property-required"
@@ -14977,7 +14977,7 @@ The following output properties are available:
 <a href="#sourceconnectioninfo_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Connection<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlconnectioninforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information for connecting to source{{% /md %}}</dd>
     <dt class="property-required"
@@ -14986,7 +14986,7 @@ The following output properties are available:
 <a href="#targetconnectioninfo_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Connection<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlconnectioninforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information for connecting to target{{% /md %}}</dd>
     <dt class="property-optional"
@@ -14995,7 +14995,7 @@ The following output properties are available:
 <a href="#validationoptions_csharp" style="color: inherit; text-decoration: inherit;">Validation<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migrationvalidationoptionsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migration<wbr>Validation<wbr>Options<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#migrationvalidationoptionsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Migration<wbr>Validation<wbr>Options<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Validation options{{% /md %}}</dd>
 </dl>
@@ -15161,7 +15161,7 @@ The following output properties are available:
 <a href="#events_csharp" style="color: inherit; text-decoration: inherit;">Events</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#syncmigrationdatabaseerroreventresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Sync<wbr>Migration<wbr>Database<wbr>Error<wbr>Event<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#syncmigrationdatabaseerroreventresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Sync<wbr>Migration<wbr>Database<wbr>Error<wbr>Event<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of error events.{{% /md %}}</dd>
 </dl>
@@ -15889,7 +15889,7 @@ The following output properties are available:
 <a href="#error_csharp" style="color: inherit; text-decoration: inherit;">Error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportableexceptionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Reportable<wbr>Exception<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#reportableexceptionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Reportable<wbr>Exception<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Migration error{{% /md %}}</dd>
     <dt class="property-required"
@@ -16846,7 +16846,7 @@ The following output properties are available:
 <a href="#commands_csharp" style="color: inherit; text-decoration: inherit;">Commands</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args&gt;&gt;</span>
+        <span class="property-type">List&lt;Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}Array of command properties.{{% /md %}}</dd>
     <dt class="property-required"
@@ -16855,7 +16855,7 @@ The following output properties are available:
 <a href="#errors_csharp" style="color: inherit; text-decoration: inherit;">Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#odataerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>OData<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#odataerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>OData<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Array of errors. This is ignored if submitted.{{% /md %}}</dd>
     <dt class="property-required"
@@ -16882,7 +16882,7 @@ The following output properties are available:
 <a href="#input_csharp" style="color: inherit; text-decoration: inherit;">Input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migratesqlserversqldbsynctaskinputresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Sync<wbr>Task<wbr>Input<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#migratesqlserversqldbsynctaskinputresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Sync<wbr>Task<wbr>Input<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd>
 </dl>
@@ -17057,7 +17057,7 @@ The following output properties are available:
 <a href="#selecteddatabases_csharp" style="color: inherit; text-decoration: inherit;">Selected<wbr>Databases</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migratesqlserversqldbdatabaseinputresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Database<wbr>Input<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#migratesqlserversqldbdatabaseinputresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Database<wbr>Input<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Databases to migrate{{% /md %}}</dd>
     <dt class="property-required"
@@ -17066,7 +17066,7 @@ The following output properties are available:
 <a href="#sourceconnectioninfo_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Connection<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlconnectioninforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information for connecting to source{{% /md %}}</dd>
     <dt class="property-required"
@@ -17075,7 +17075,7 @@ The following output properties are available:
 <a href="#targetconnectioninfo_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Connection<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlconnectioninforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information for connecting to target{{% /md %}}</dd>
     <dt class="property-optional"
@@ -17084,7 +17084,7 @@ The following output properties are available:
 <a href="#validationoptions_csharp" style="color: inherit; text-decoration: inherit;">Validation<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migrationvalidationoptionsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migration<wbr>Validation<wbr>Options<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#migrationvalidationoptionsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Migration<wbr>Validation<wbr>Options<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Options for enabling various post migration validations. Available options, 
  1.) Data Integrity Check: Performs a checksum based comparison on source and target tables after the migration to ensure the correctness of the data. 
@@ -17276,7 +17276,7 @@ The following output properties are available:
 <a href="#exceptionsandwarnings_csharp" style="color: inherit; text-decoration: inherit;">Exceptions<wbr>And<wbr>Warnings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportableexceptionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Reportable<wbr>Exception<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#reportableexceptionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Reportable<wbr>Exception<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Migration exceptions and warnings.{{% /md %}}</dd>
     <dt class="property-required"
@@ -17321,7 +17321,7 @@ The following output properties are available:
 <a href="#objectsummary_csharp" style="color: inherit; text-decoration: inherit;">Object<wbr>Summary</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Data<wbr>Item<wbr>Migration<wbr>Summary<wbr>Result<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Data<wbr>Item<wbr>Migration<wbr>Summary<wbr>Result<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}Summary of object results in the migration{{% /md %}}</dd>
     <dt class="property-required"
@@ -17811,7 +17811,7 @@ The following output properties are available:
 <a href="#dataintegrityvalidationresult_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Integrity<wbr>Validation<wbr>Result</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dataintegrityvalidationresultresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Data<wbr>Integrity<wbr>Validation<wbr>Result<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#dataintegrityvalidationresultresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Data<wbr>Integrity<wbr>Validation<wbr>Result<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Provides data integrity validation result between the source and target tables that are migrated.{{% /md %}}</dd>
     <dt class="property-required"
@@ -17847,7 +17847,7 @@ The following output properties are available:
 <a href="#queryanalysisvalidationresult_csharp" style="color: inherit; text-decoration: inherit;">Query<wbr>Analysis<wbr>Validation<wbr>Result</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#queryanalysisvalidationresultresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Query<wbr>Analysis<wbr>Validation<wbr>Result<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#queryanalysisvalidationresultresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Query<wbr>Analysis<wbr>Validation<wbr>Result<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Results of some of the query execution result between source and target database{{% /md %}}</dd>
     <dt class="property-required"
@@ -17856,7 +17856,7 @@ The following output properties are available:
 <a href="#schemavalidationresult_csharp" style="color: inherit; text-decoration: inherit;">Schema<wbr>Validation<wbr>Result</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#schemacomparisonvalidationresultresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Schema<wbr>Comparison<wbr>Validation<wbr>Result<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#schemacomparisonvalidationresultresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Schema<wbr>Comparison<wbr>Validation<wbr>Result<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Provides schema comparison result between source and target database{{% /md %}}</dd>
     <dt class="property-required"
@@ -18202,7 +18202,7 @@ The following output properties are available:
 <a href="#error_csharp" style="color: inherit; text-decoration: inherit;">Error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportableexceptionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Reportable<wbr>Exception<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#reportableexceptionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Reportable<wbr>Exception<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Migration error{{% /md %}}</dd>
     <dt class="property-required"
@@ -18305,7 +18305,7 @@ The following output properties are available:
 <a href="#databasesummary_csharp" style="color: inherit; text-decoration: inherit;">Database<wbr>Summary</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Database<wbr>Summary<wbr>Result<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Database<wbr>Summary<wbr>Result<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}Summary of database results in the migration{{% /md %}}</dd>
     <dt class="property-required"
@@ -18341,7 +18341,7 @@ The following output properties are available:
 <a href="#exceptionsandwarnings_csharp" style="color: inherit; text-decoration: inherit;">Exceptions<wbr>And<wbr>Warnings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportableexceptionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Reportable<wbr>Exception<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#reportableexceptionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Reportable<wbr>Exception<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Migration exceptions and warnings.{{% /md %}}</dd>
     <dt class="property-required"
@@ -18368,7 +18368,7 @@ The following output properties are available:
 <a href="#migrationreport_csharp" style="color: inherit; text-decoration: inherit;">Migration<wbr>Report</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migrationreportresultresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migration<wbr>Report<wbr>Result<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#migrationreportresultresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Migration<wbr>Report<wbr>Result<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Migration Report Result, provides unique url for downloading your migration report.{{% /md %}}</dd>
     <dt class="property-required"
@@ -19294,7 +19294,7 @@ The following output properties are available:
 <a href="#summaryresults_csharp" style="color: inherit; text-decoration: inherit;">Summary<wbr>Results</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migration<wbr>Validation<wbr>Database<wbr>Summary<wbr>Result<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Migration<wbr>Validation<wbr>Database<wbr>Summary<wbr>Result<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}Validation summary results for each database{{% /md %}}</dd>
 </dl>
@@ -19442,7 +19442,7 @@ The following output properties are available:
 <a href="#commands_csharp" style="color: inherit; text-decoration: inherit;">Commands</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args&gt;&gt;</span>
+        <span class="property-type">List&lt;Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}Array of command properties.{{% /md %}}</dd>
     <dt class="property-required"
@@ -19451,7 +19451,7 @@ The following output properties are available:
 <a href="#errors_csharp" style="color: inherit; text-decoration: inherit;">Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#odataerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>OData<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#odataerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>OData<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Array of errors. This is ignored if submitted.{{% /md %}}</dd>
     <dt class="property-required"
@@ -19478,7 +19478,7 @@ The following output properties are available:
 <a href="#input_csharp" style="color: inherit; text-decoration: inherit;">Input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migratesqlserversqldbtaskinputresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Task<wbr>Input<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#migratesqlserversqldbtaskinputresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Task<wbr>Input<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd>
 </dl>
@@ -19680,7 +19680,7 @@ The following output properties are available:
 <a href="#backupfileshare_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>File<wbr>Share</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fileshareresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>File<wbr>Share<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#fileshareresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>File<wbr>Share<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Backup file share information for backing up this database.{{% /md %}}</dd>
 </dl>
@@ -19828,7 +19828,7 @@ The following output properties are available:
 <a href="#azureapp_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>App</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureactivedirectoryappresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Azure<wbr>Active<wbr>Directory<wbr>App<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azureactivedirectoryappresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Azure<wbr>Active<wbr>Directory<wbr>App<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Azure Active Directory Application the DMS instance will use to connect to the target instance of Azure SQL Database Managed Instance and the Azure Storage Account{{% /md %}}</dd>
     <dt class="property-required"
@@ -19837,7 +19837,7 @@ The following output properties are available:
 <a href="#selecteddatabases_csharp" style="color: inherit; text-decoration: inherit;">Selected<wbr>Databases</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migratesqlserversqlmidatabaseinputresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MIDatabase<wbr>Input<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#migratesqlserversqlmidatabaseinputresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MIDatabase<wbr>Input<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Databases to migrate{{% /md %}}</dd>
     <dt class="property-required"
@@ -19846,7 +19846,7 @@ The following output properties are available:
 <a href="#sourceconnectioninfo_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Connection<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlconnectioninforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Connection information for source SQL Server{{% /md %}}</dd>
     <dt class="property-required"
@@ -19864,7 +19864,7 @@ The following output properties are available:
 <a href="#targetconnectioninfo_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Connection<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#misqlconnectioninforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Mi<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#misqlconnectioninforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Mi<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Connection information for Azure SQL Database Managed Instance{{% /md %}}</dd>
     <dt class="property-optional"
@@ -19873,7 +19873,7 @@ The following output properties are available:
 <a href="#backupfileshare_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>File<wbr>Share</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fileshareresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>File<wbr>Share<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#fileshareresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>File<wbr>Share<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Backup file share information for all selected databases.{{% /md %}}</dd>
 </dl>
@@ -20075,7 +20075,7 @@ The following output properties are available:
 <a href="#activebackupsets_csharp" style="color: inherit; text-decoration: inherit;">Active<wbr>Backup<wbr>Sets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backupsetinforesponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Backup<wbr>Set<wbr>Info<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#backupsetinforesponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Backup<wbr>Set<wbr>Info<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Backup sets that are currently active (Either being uploaded or getting restored){{% /md %}}</dd>
     <dt class="property-required"
@@ -20111,7 +20111,7 @@ The following output properties are available:
 <a href="#exceptionsandwarnings_csharp" style="color: inherit; text-decoration: inherit;">Exceptions<wbr>And<wbr>Warnings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportableexceptionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Reportable<wbr>Exception<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#reportableexceptionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Reportable<wbr>Exception<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Migration exceptions and warnings{{% /md %}}</dd>
     <dt class="property-required"
@@ -20120,7 +20120,7 @@ The following output properties are available:
 <a href="#fullbackupsetinfo_csharp" style="color: inherit; text-decoration: inherit;">Full<wbr>Backup<wbr>Set<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backupsetinforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Backup<wbr>Set<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#backupsetinforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Backup<wbr>Set<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Details of full backup set{{% /md %}}</dd>
     <dt class="property-required"
@@ -20147,7 +20147,7 @@ The following output properties are available:
 <a href="#lastrestoredbackupsetinfo_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Restored<wbr>Backup<wbr>Set<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backupsetinforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Backup<wbr>Set<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#backupsetinforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Backup<wbr>Set<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Last applied backup set information{{% /md %}}</dd>
     <dt class="property-required"
@@ -20538,7 +20538,7 @@ The following output properties are available:
 <a href="#error_csharp" style="color: inherit; text-decoration: inherit;">Error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportableexceptionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Reportable<wbr>Exception<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#reportableexceptionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Reportable<wbr>Exception<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Migration error{{% /md %}}</dd>
     <dt class="property-required"
@@ -21104,7 +21104,7 @@ The following output properties are available:
 <a href="#commands_csharp" style="color: inherit; text-decoration: inherit;">Commands</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args&gt;&gt;</span>
+        <span class="property-type">List&lt;Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}Array of command properties.{{% /md %}}</dd>
     <dt class="property-required"
@@ -21113,7 +21113,7 @@ The following output properties are available:
 <a href="#errors_csharp" style="color: inherit; text-decoration: inherit;">Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#odataerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>OData<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#odataerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>OData<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Array of errors. This is ignored if submitted.{{% /md %}}</dd>
     <dt class="property-required"
@@ -21140,7 +21140,7 @@ The following output properties are available:
 <a href="#input_csharp" style="color: inherit; text-decoration: inherit;">Input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migratesqlserversqlmisynctaskinputresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MISync<wbr>Task<wbr>Input<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#migratesqlserversqlmisynctaskinputresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MISync<wbr>Task<wbr>Input<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd>
 </dl>
@@ -21315,7 +21315,7 @@ The following output properties are available:
 <a href="#backupblobshare_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Blob<wbr>Share</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#blobshareresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Blob<wbr>Share<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#blobshareresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Blob<wbr>Share<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}SAS URI of Azure Storage Account Container to be used for storing backup files.{{% /md %}}</dd>
     <dt class="property-required"
@@ -21324,7 +21324,7 @@ The following output properties are available:
 <a href="#selecteddatabases_csharp" style="color: inherit; text-decoration: inherit;">Selected<wbr>Databases</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migratesqlserversqlmidatabaseinputresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MIDatabase<wbr>Input<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#migratesqlserversqlmidatabaseinputresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MIDatabase<wbr>Input<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Databases to migrate{{% /md %}}</dd>
     <dt class="property-required"
@@ -21333,7 +21333,7 @@ The following output properties are available:
 <a href="#sourceconnectioninfo_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Connection<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlconnectioninforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information for connecting to source{{% /md %}}</dd>
     <dt class="property-required"
@@ -21342,7 +21342,7 @@ The following output properties are available:
 <a href="#targetconnectioninfo_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Connection<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlconnectioninforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information for connecting to target{{% /md %}}</dd>
     <dt class="property-optional"
@@ -21351,7 +21351,7 @@ The following output properties are available:
 <a href="#backupfileshare_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>File<wbr>Share</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fileshareresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>File<wbr>Share<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#fileshareresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>File<wbr>Share<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Backup file share information for all selected databases.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -21643,7 +21643,7 @@ The following output properties are available:
 <a href="#exceptionsandwarnings_csharp" style="color: inherit; text-decoration: inherit;">Exceptions<wbr>And<wbr>Warnings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportableexceptionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Reportable<wbr>Exception<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#reportableexceptionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Reportable<wbr>Exception<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Migration errors and warnings per job{{% /md %}}</dd>
     <dt class="property-required"
@@ -21971,7 +21971,7 @@ The following output properties are available:
 <a href="#exceptionsandwarnings_csharp" style="color: inherit; text-decoration: inherit;">Exceptions<wbr>And<wbr>Warnings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportableexceptionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Reportable<wbr>Exception<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#reportableexceptionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Reportable<wbr>Exception<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Migration exceptions and warnings{{% /md %}}</dd>
     <dt class="property-required"
@@ -22308,7 +22308,7 @@ The following output properties are available:
 <a href="#error_csharp" style="color: inherit; text-decoration: inherit;">Error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportableexceptionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Reportable<wbr>Exception<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#reportableexceptionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Reportable<wbr>Exception<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Migration error{{% /md %}}</dd>
     <dt class="property-required"
@@ -22420,7 +22420,7 @@ The following output properties are available:
 <a href="#exceptionsandwarnings_csharp" style="color: inherit; text-decoration: inherit;">Exceptions<wbr>And<wbr>Warnings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportableexceptionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Reportable<wbr>Exception<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#reportableexceptionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Reportable<wbr>Exception<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Login migration errors and warnings per login{{% /md %}}</dd>
     <dt class="property-required"
@@ -22757,7 +22757,7 @@ The following output properties are available:
 <a href="#exceptionsandwarnings_csharp" style="color: inherit; text-decoration: inherit;">Exceptions<wbr>And<wbr>Warnings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportableexceptionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Reportable<wbr>Exception<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#reportableexceptionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Reportable<wbr>Exception<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Migration exceptions and warnings.{{% /md %}}</dd>
     <dt class="property-required"
@@ -22793,7 +22793,7 @@ The following output properties are available:
 <a href="#orphanedusersinfo_csharp" style="color: inherit; text-decoration: inherit;">Orphaned<wbr>Users<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#orphaneduserinforesponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Orphaned<wbr>User<wbr>Info<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#orphaneduserinforesponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Orphaned<wbr>User<wbr>Info<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of orphaned users.{{% /md %}}</dd>
     <dt class="property-required"
@@ -22802,7 +22802,7 @@ The following output properties are available:
 <a href="#serverroleresults_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>Role<wbr>Results</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Start<wbr>Migration<wbr>Scenario<wbr>Server<wbr>Role<wbr>Result<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Start<wbr>Migration<wbr>Scenario<wbr>Server<wbr>Role<wbr>Result<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}Map of server role migration results.{{% /md %}}</dd>
     <dt class="property-required"
@@ -23337,7 +23337,7 @@ The following output properties are available:
 <a href="#commands_csharp" style="color: inherit; text-decoration: inherit;">Commands</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args&gt;&gt;</span>
+        <span class="property-type">List&lt;Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}Array of command properties.{{% /md %}}</dd>
     <dt class="property-required"
@@ -23346,7 +23346,7 @@ The following output properties are available:
 <a href="#errors_csharp" style="color: inherit; text-decoration: inherit;">Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#odataerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>OData<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#odataerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>OData<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Array of errors. This is ignored if submitted.{{% /md %}}</dd>
     <dt class="property-required"
@@ -23373,7 +23373,7 @@ The following output properties are available:
 <a href="#input_csharp" style="color: inherit; text-decoration: inherit;">Input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migratesqlserversqlmitaskinputresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MITask<wbr>Input<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#migratesqlserversqlmitaskinputresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MITask<wbr>Input<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd>
 </dl>
@@ -23651,7 +23651,7 @@ The following output properties are available:
 <a href="#errors_csharp" style="color: inherit; text-decoration: inherit;">Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportableexceptionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Reportable<wbr>Exception<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#reportableexceptionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Reportable<wbr>Exception<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of errors that happened during the command execution{{% /md %}}</dd>
     <dt class="property-required"
@@ -23754,7 +23754,7 @@ The following output properties are available:
 <a href="#errors_csharp" style="color: inherit; text-decoration: inherit;">Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#odataerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>OData<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#odataerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>OData<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Array of errors. This is ignored if submitted.{{% /md %}}</dd>
     <dt class="property-required"
@@ -23763,7 +23763,7 @@ The following output properties are available:
 <a href="#output_csharp" style="color: inherit; text-decoration: inherit;">Output</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migratesynccompletecommandoutputresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Output<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#migratesynccompletecommandoutputresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Output<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Command output. This is ignored if submitted.{{% /md %}}</dd>
     <dt class="property-required"
@@ -23781,7 +23781,7 @@ The following output properties are available:
 <a href="#input_csharp" style="color: inherit; text-decoration: inherit;">Input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migratesynccompletecommandinputresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Input<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#migratesynccompletecommandinputresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Input<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Command input{{% /md %}}</dd>
 </dl>
@@ -24741,7 +24741,7 @@ The following output properties are available:
 <a href="#details_csharp" style="color: inherit; text-decoration: inherit;">Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#odataerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>OData<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#odataerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>OData<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Inner errors that caused this error{{% /md %}}</dd>
     <dt class="property-required"
@@ -25185,7 +25185,7 @@ The following output properties are available:
 <a href="#queryresults_csharp" style="color: inherit; text-decoration: inherit;">Query<wbr>Results</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#queryexecutionresultresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Query<wbr>Execution<wbr>Result<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#queryexecutionresultresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Query<wbr>Execution<wbr>Result<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List of queries executed and it's execution results in source and target{{% /md %}}</dd>
     <dt class="property-required"
@@ -25194,7 +25194,7 @@ The following output properties are available:
 <a href="#validationerrors_csharp" style="color: inherit; text-decoration: inherit;">Validation<wbr>Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#validationerrorresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Validation<wbr>Error<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#validationerrorresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Validation<wbr>Error<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Errors that are part of the execution{{% /md %}}</dd>
 </dl>
@@ -25297,7 +25297,7 @@ The following output properties are available:
 <a href="#sourceresult_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Result</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#executionstatisticsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Execution<wbr>Statistics<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#executionstatisticsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Execution<wbr>Statistics<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Query analysis result from the source{{% /md %}}</dd>
     <dt class="property-required"
@@ -25315,7 +25315,7 @@ The following output properties are available:
 <a href="#targetresult_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Result</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#executionstatisticsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Execution<wbr>Statistics<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#executionstatisticsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Execution<wbr>Statistics<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Query analysis result from the target{{% /md %}}</dd>
 </dl>
@@ -25710,7 +25710,7 @@ The following output properties are available:
 <a href="#schemadifferences_csharp" style="color: inherit; text-decoration: inherit;">Schema<wbr>Differences</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#schemacomparisonvalidationresulttyperesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Schema<wbr>Comparison<wbr>Validation<wbr>Result<wbr>Type<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#schemacomparisonvalidationresulttyperesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Schema<wbr>Comparison<wbr>Validation<wbr>Result<wbr>Type<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List of schema differences between the source and target databases{{% /md %}}</dd>
     <dt class="property-required"
@@ -25719,7 +25719,7 @@ The following output properties are available:
 <a href="#validationerrors_csharp" style="color: inherit; text-decoration: inherit;">Validation<wbr>Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#validationerrorresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Validation<wbr>Error<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#validationerrorresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Validation<wbr>Error<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List of errors that happened while performing schema compare validation{{% /md %}}</dd>
     <dt class="property-optional"
@@ -26446,7 +26446,7 @@ The following output properties are available:
 <a href="#exceptionsandwarnings_csharp" style="color: inherit; text-decoration: inherit;">Exceptions<wbr>And<wbr>Warnings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportableexceptionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Reportable<wbr>Exception<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#reportableexceptionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Reportable<wbr>Exception<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Migration exceptions and warnings.{{% /md %}}</dd>
     <dt class="property-required"
@@ -26724,7 +26724,7 @@ The following output properties are available:
 <a href="#commands_csharp" style="color: inherit; text-decoration: inherit;">Commands</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args&gt;&gt;</span>
+        <span class="property-type">List&lt;Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}Array of command properties.{{% /md %}}</dd>
     <dt class="property-required"
@@ -26733,7 +26733,7 @@ The following output properties are available:
 <a href="#errors_csharp" style="color: inherit; text-decoration: inherit;">Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#odataerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>OData<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#odataerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>OData<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Array of errors. This is ignored if submitted.{{% /md %}}</dd>
     <dt class="property-required"
@@ -26742,7 +26742,7 @@ The following output properties are available:
 <a href="#output_csharp" style="color: inherit; text-decoration: inherit;">Output</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#validatesyncmigrationinputsqlservertaskoutputresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Validate<wbr>Sync<wbr>Migration<wbr>Input<wbr>Sql<wbr>Server<wbr>Task<wbr>Output<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#validatesyncmigrationinputsqlservertaskoutputresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Validate<wbr>Sync<wbr>Migration<wbr>Input<wbr>Sql<wbr>Server<wbr>Task<wbr>Output<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Task output. This is ignored if submitted.{{% /md %}}</dd>
     <dt class="property-required"
@@ -26760,7 +26760,7 @@ The following output properties are available:
 <a href="#input_csharp" style="color: inherit; text-decoration: inherit;">Input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#validatesyncmigrationinputsqlservertaskinputresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Validate<wbr>Sync<wbr>Migration<wbr>Input<wbr>Sql<wbr>Server<wbr>Task<wbr>Input<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#validatesyncmigrationinputsqlservertaskinputresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Validate<wbr>Sync<wbr>Migration<wbr>Input<wbr>Sql<wbr>Server<wbr>Task<wbr>Input<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd>
 </dl>
@@ -26935,7 +26935,7 @@ The following output properties are available:
 <a href="#azureapp_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>App</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureactivedirectoryappresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Azure<wbr>Active<wbr>Directory<wbr>App<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azureactivedirectoryappresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Azure<wbr>Active<wbr>Directory<wbr>App<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Azure Active Directory Application the DMS instance will use to connect to the target instance of Azure SQL Database Managed Instance and the Azure Storage Account{{% /md %}}</dd>
     <dt class="property-required"
@@ -26944,7 +26944,7 @@ The following output properties are available:
 <a href="#selecteddatabases_csharp" style="color: inherit; text-decoration: inherit;">Selected<wbr>Databases</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migratesqlserversqlmidatabaseinputresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MIDatabase<wbr>Input<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#migratesqlserversqlmidatabaseinputresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MIDatabase<wbr>Input<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Databases to migrate{{% /md %}}</dd>
     <dt class="property-required"
@@ -26953,7 +26953,7 @@ The following output properties are available:
 <a href="#sourceconnectioninfo_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Connection<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlconnectioninforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Connection information for source SQL Server{{% /md %}}</dd>
     <dt class="property-required"
@@ -26971,7 +26971,7 @@ The following output properties are available:
 <a href="#targetconnectioninfo_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Connection<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#misqlconnectioninforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Mi<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#misqlconnectioninforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Mi<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Connection information for Azure SQL Database Managed Instance{{% /md %}}</dd>
     <dt class="property-optional"
@@ -26980,7 +26980,7 @@ The following output properties are available:
 <a href="#backupfileshare_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>File<wbr>Share</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fileshareresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>File<wbr>Share<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#fileshareresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>File<wbr>Share<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Backup file share information for all selected databases.{{% /md %}}</dd>
 </dl>
@@ -27200,7 +27200,7 @@ The following output properties are available:
 <a href="#validationerrors_csharp" style="color: inherit; text-decoration: inherit;">Validation<wbr>Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportableexceptionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Reportable<wbr>Exception<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#reportableexceptionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Reportable<wbr>Exception<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Errors associated with a selected database object{{% /md %}}</dd>
 </dl>
@@ -27321,7 +27321,7 @@ The following output properties are available:
 <a href="#commands_csharp" style="color: inherit; text-decoration: inherit;">Commands</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args&gt;&gt;</span>
+        <span class="property-type">List&lt;Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}Array of command properties.{{% /md %}}</dd>
     <dt class="property-required"
@@ -27330,7 +27330,7 @@ The following output properties are available:
 <a href="#errors_csharp" style="color: inherit; text-decoration: inherit;">Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#odataerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>OData<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#odataerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>OData<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Array of errors. This is ignored if submitted.{{% /md %}}</dd>
     <dt class="property-required"
@@ -27339,7 +27339,7 @@ The following output properties are available:
 <a href="#output_csharp" style="color: inherit; text-decoration: inherit;">Output</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#validatemigrationinputsqlserversqlmisynctaskoutputresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Validate<wbr>Migration<wbr>Input<wbr>Sql<wbr>Server<wbr>Sql<wbr>MISync<wbr>Task<wbr>Output<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#validatemigrationinputsqlserversqlmisynctaskoutputresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Validate<wbr>Migration<wbr>Input<wbr>Sql<wbr>Server<wbr>Sql<wbr>MISync<wbr>Task<wbr>Output<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Task output. This is ignored if submitted.{{% /md %}}</dd>
     <dt class="property-required"
@@ -27357,7 +27357,7 @@ The following output properties are available:
 <a href="#input_csharp" style="color: inherit; text-decoration: inherit;">Input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#validatemigrationinputsqlserversqlmisynctaskinputresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Validate<wbr>Migration<wbr>Input<wbr>Sql<wbr>Server<wbr>Sql<wbr>MISync<wbr>Task<wbr>Input<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#validatemigrationinputsqlserversqlmisynctaskinputresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Validate<wbr>Migration<wbr>Input<wbr>Sql<wbr>Server<wbr>Sql<wbr>MISync<wbr>Task<wbr>Input<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd>
 </dl>
@@ -27532,7 +27532,7 @@ The following output properties are available:
 <a href="#backupblobshare_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Blob<wbr>Share</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#blobshareresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Blob<wbr>Share<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#blobshareresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Blob<wbr>Share<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}SAS URI of Azure Storage Account Container to be used for storing backup files.{{% /md %}}</dd>
     <dt class="property-required"
@@ -27541,7 +27541,7 @@ The following output properties are available:
 <a href="#selecteddatabases_csharp" style="color: inherit; text-decoration: inherit;">Selected<wbr>Databases</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migratesqlserversqlmidatabaseinputresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MIDatabase<wbr>Input<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#migratesqlserversqlmidatabaseinputresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MIDatabase<wbr>Input<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Databases to migrate{{% /md %}}</dd>
     <dt class="property-required"
@@ -27550,7 +27550,7 @@ The following output properties are available:
 <a href="#sourceconnectioninfo_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Connection<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlconnectioninforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information for connecting to source{{% /md %}}</dd>
     <dt class="property-required"
@@ -27559,7 +27559,7 @@ The following output properties are available:
 <a href="#targetconnectioninfo_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Connection<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlconnectioninforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information for connecting to target{{% /md %}}</dd>
     <dt class="property-optional"
@@ -27568,7 +27568,7 @@ The following output properties are available:
 <a href="#backupfileshare_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>File<wbr>Share</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fileshareresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>File<wbr>Share<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#fileshareresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>File<wbr>Share<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Backup file share information for all selected databases.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -27815,7 +27815,7 @@ The following output properties are available:
 <a href="#backupfoldererrors_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Folder<wbr>Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportableexceptionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Reportable<wbr>Exception<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#reportableexceptionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Reportable<wbr>Exception<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Errors associated with the BackupFolder path{{% /md %}}</dd>
     <dt class="property-required"
@@ -27824,7 +27824,7 @@ The following output properties are available:
 <a href="#backupsharecredentialserrors_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Share<wbr>Credentials<wbr>Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportableexceptionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Reportable<wbr>Exception<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#reportableexceptionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Reportable<wbr>Exception<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Errors associated with backup share user name and password credentials{{% /md %}}</dd>
     <dt class="property-required"
@@ -27833,7 +27833,7 @@ The following output properties are available:
 <a href="#backupstorageaccounterrors_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Storage<wbr>Account<wbr>Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportableexceptionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Reportable<wbr>Exception<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#reportableexceptionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Reportable<wbr>Exception<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Errors associated with the storage account provided.{{% /md %}}</dd>
     <dt class="property-required"
@@ -27842,7 +27842,7 @@ The following output properties are available:
 <a href="#existingbackuperrors_csharp" style="color: inherit; text-decoration: inherit;">Existing<wbr>Backup<wbr>Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportableexceptionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Reportable<wbr>Exception<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#reportableexceptionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Reportable<wbr>Exception<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Errors associated with existing backup files.{{% /md %}}</dd>
     <dt class="property-required"
@@ -27869,7 +27869,7 @@ The following output properties are available:
 <a href="#restoredatabasenameerrors_csharp" style="color: inherit; text-decoration: inherit;">Restore<wbr>Database<wbr>Name<wbr>Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportableexceptionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Reportable<wbr>Exception<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#reportableexceptionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Reportable<wbr>Exception<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Errors associated with the RestoreDatabaseName{{% /md %}}</dd>
     <dt class="property-optional"
@@ -27878,7 +27878,7 @@ The following output properties are available:
 <a href="#databasebackupinfo_csharp" style="color: inherit; text-decoration: inherit;">Database<wbr>Backup<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databasebackupinforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Database<wbr>Backup<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#databasebackupinforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Database<wbr>Backup<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information about backup files when existing backup mode is used.{{% /md %}}</dd>
 </dl>
@@ -28134,7 +28134,7 @@ The following output properties are available:
 <a href="#commands_csharp" style="color: inherit; text-decoration: inherit;">Commands</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args&gt;&gt;</span>
+        <span class="property-type">List&lt;Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}Array of command properties.{{% /md %}}</dd>
     <dt class="property-required"
@@ -28143,7 +28143,7 @@ The following output properties are available:
 <a href="#errors_csharp" style="color: inherit; text-decoration: inherit;">Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#odataerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>OData<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#odataerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>OData<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Array of errors. This is ignored if submitted.{{% /md %}}</dd>
     <dt class="property-required"
@@ -28152,7 +28152,7 @@ The following output properties are available:
 <a href="#output_csharp" style="color: inherit; text-decoration: inherit;">Output</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#validatemigrationinputsqlserversqlmitaskoutputresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Validate<wbr>Migration<wbr>Input<wbr>Sql<wbr>Server<wbr>Sql<wbr>MITask<wbr>Output<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#validatemigrationinputsqlserversqlmitaskoutputresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Validate<wbr>Migration<wbr>Input<wbr>Sql<wbr>Server<wbr>Sql<wbr>MITask<wbr>Output<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Task output. This is ignored if submitted.{{% /md %}}</dd>
     <dt class="property-required"
@@ -28170,7 +28170,7 @@ The following output properties are available:
 <a href="#input_csharp" style="color: inherit; text-decoration: inherit;">Input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#validatemigrationinputsqlserversqlmitaskinputresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Validate<wbr>Migration<wbr>Input<wbr>Sql<wbr>Server<wbr>Sql<wbr>MITask<wbr>Input<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#validatemigrationinputsqlserversqlmitaskinputresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Validate<wbr>Migration<wbr>Input<wbr>Sql<wbr>Server<wbr>Sql<wbr>MITask<wbr>Input<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd>
 </dl>
@@ -28345,7 +28345,7 @@ The following output properties are available:
 <a href="#selecteddatabases_csharp" style="color: inherit; text-decoration: inherit;">Selected<wbr>Databases</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migratesqlserversqldbsyncdatabaseinputresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Sync<wbr>Database<wbr>Input<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#migratesqlserversqldbsyncdatabaseinputresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Sync<wbr>Database<wbr>Input<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Databases to migrate{{% /md %}}</dd>
     <dt class="property-required"
@@ -28354,7 +28354,7 @@ The following output properties are available:
 <a href="#sourceconnectioninfo_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Connection<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlconnectioninforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information for connecting to source SQL server{{% /md %}}</dd>
     <dt class="property-required"
@@ -28363,7 +28363,7 @@ The following output properties are available:
 <a href="#targetconnectioninfo_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Connection<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlconnectioninforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information for connecting to target{{% /md %}}</dd>
 </dl>
@@ -28502,7 +28502,7 @@ The following output properties are available:
 <a href="#validationerrors_csharp" style="color: inherit; text-decoration: inherit;">Validation<wbr>Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportableexceptionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Reportable<wbr>Exception<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#reportableexceptionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Reportable<wbr>Exception<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Errors associated with a selected database object{{% /md %}}</dd>
 </dl>

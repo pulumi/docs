@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.consumption.Budget resource with
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 A budget resource.
-Latest API Version: 2019-10-01.
+API Version: 2019-10-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,19 +27,19 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var budget = new AzureNextGen.Consumption.Latest.Budget("budget", new AzureNextGen.Consumption.Latest.BudgetArgs
+        var budget = new AzureNextGen.Consumption..Budget("budget", new AzureNextGen.Consumption..BudgetArgs
         {
             Amount = 100.65,
             BudgetName = "TestBudget",
             Category = "Cost",
             ETag = "\"1d34d016a593709\"",
-            Filter = new AzureNextGen.Consumption.Latest.Inputs.BudgetFilterArgs
+            Filter = new AzureNextGen.Consumption..Inputs.BudgetFilterArgs
             {
                 And = 
                 {
-                    new AzureNextGen.Consumption.Latest.Inputs.BudgetFilterPropertiesArgs
+                    new AzureNextGen.Consumption..Inputs.BudgetFilterPropertiesArgs
                     {
-                        Dimensions = new AzureNextGen.Consumption.Latest.Inputs.BudgetComparisonExpressionArgs
+                        Dimensions = new AzureNextGen.Consumption..Inputs.BudgetComparisonExpressionArgs
                         {
                             Name = "ResourceId",
                             Operator = "In",
@@ -50,9 +50,9 @@ class MyStack : Stack
                             },
                         },
                     },
-                    new AzureNextGen.Consumption.Latest.Inputs.BudgetFilterPropertiesArgs
+                    new AzureNextGen.Consumption..Inputs.BudgetFilterPropertiesArgs
                     {
-                        Tags = new AzureNextGen.Consumption.Latest.Inputs.BudgetComparisonExpressionArgs
+                        Tags = new AzureNextGen.Consumption..Inputs.BudgetComparisonExpressionArgs
                         {
                             Name = "category",
                             Operator = "In",
@@ -63,9 +63,9 @@ class MyStack : Stack
                             },
                         },
                     },
-                    new AzureNextGen.Consumption.Latest.Inputs.BudgetFilterPropertiesArgs
+                    new AzureNextGen.Consumption..Inputs.BudgetFilterPropertiesArgs
                     {
-                        Tags = new AzureNextGen.Consumption.Latest.Inputs.BudgetComparisonExpressionArgs
+                        Tags = new AzureNextGen.Consumption..Inputs.BudgetComparisonExpressionArgs
                         {
                             Name = "department",
                             Operator = "In",
@@ -80,7 +80,7 @@ class MyStack : Stack
             },
             Notifications = 
             {
-                { "Actual_GreaterThan_80_Percent", new AzureNextGen.Consumption.Latest.Inputs.NotificationArgs
+                { "Actual_GreaterThan_80_Percent", new AzureNextGen.Consumption..Inputs.NotificationArgs
                 {
                     ContactEmails = 
                     {
@@ -103,7 +103,7 @@ class MyStack : Stack
             },
             Scope = "subscriptions/00000000-0000-0000-0000-000000000000",
             TimeGrain = "Monthly",
-            TimePeriod = new AzureNextGen.Consumption.Latest.Inputs.BudgetTimePeriodArgs
+            TimePeriod = new AzureNextGen.Consumption..Inputs.BudgetTimePeriodArgs
             {
                 EndDate = "2018-10-31T00:00:00Z",
                 StartDate = "2017-10-01T00:00:00Z",
@@ -127,15 +127,15 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-budget = azure_nextgen.consumption.latest.Budget("budget",
+budget = azure_nextgen.consumption.Budget("budget",
     amount=100.65,
     budget_name="TestBudget",
     category="Cost",
     e_tag="\"1d34d016a593709\"",
-    filter=azure_nextgen.consumption.latest.BudgetFilterArgs(
+    filter=azure_nextgen.consumption.BudgetFilterArgs(
         and_=[
-            azure_nextgen.consumption.latest.BudgetFilterPropertiesArgs(
-                dimensions=azure_nextgen.consumption.latest.BudgetComparisonExpressionArgs(
+            azure_nextgen.consumption.BudgetFilterPropertiesArgs(
+                dimensions=azure_nextgen.consumption.BudgetComparisonExpressionArgs(
                     name="ResourceId",
                     operator="In",
                     values=[
@@ -144,8 +144,8 @@ budget = azure_nextgen.consumption.latest.Budget("budget",
                     ],
                 ),
             ),
-            azure_nextgen.consumption.latest.BudgetFilterPropertiesArgs(
-                tags=azure_nextgen.consumption.latest.BudgetComparisonExpressionArgs(
+            azure_nextgen.consumption.BudgetFilterPropertiesArgs(
+                tags=azure_nextgen.consumption.BudgetComparisonExpressionArgs(
                     name="category",
                     operator="In",
                     values=[
@@ -154,8 +154,8 @@ budget = azure_nextgen.consumption.latest.Budget("budget",
                     ],
                 ),
             ),
-            azure_nextgen.consumption.latest.BudgetFilterPropertiesArgs(
-                tags=azure_nextgen.consumption.latest.BudgetComparisonExpressionArgs(
+            azure_nextgen.consumption.BudgetFilterPropertiesArgs(
+                tags=azure_nextgen.consumption.BudgetComparisonExpressionArgs(
                     name="department",
                     operator="In",
                     values=[
@@ -167,7 +167,7 @@ budget = azure_nextgen.consumption.latest.Budget("budget",
         ],
     ),
     notifications={
-        "Actual_GreaterThan_80_Percent": azure_nextgen.consumption.latest.NotificationArgs(
+        "Actual_GreaterThan_80_Percent": azure_nextgen.consumption.NotificationArgs(
             contact_emails=[
                 "johndoe@contoso.com",
                 "janesmith@contoso.com",
@@ -184,7 +184,7 @@ budget = azure_nextgen.consumption.latest.Budget("budget",
     },
     scope="subscriptions/00000000-0000-0000-0000-000000000000",
     time_grain="Monthly",
-    time_period=azure_nextgen.consumption.latest.BudgetTimePeriodArgs(
+    time_period=azure_nextgen.consumption.BudgetTimePeriodArgs(
         end_date="2018-10-31T00:00:00Z",
         start_date="2017-10-01T00:00:00Z",
     ))
@@ -199,7 +199,7 @@ budget = azure_nextgen.consumption.latest.Budget("budget",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const budget = new azure_nextgen.consumption.latest.Budget("budget", {
+const budget = new azure_nextgen.consumption.Budget("budget", {
     amount: 100.65,
     budgetName: "TestBudget",
     category: "Cost",
@@ -473,7 +473,7 @@ The Budget resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#category_csharp" style="color: inherit; text-decoration: inherit;">Category</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#categorytype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Consumption.<wbr>Category<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#categorytype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Consumption..<wbr>Category<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The category of the budget, whether the budget tracks cost or usage.{{% /md %}}</dd>
     <dt class="property-required"
@@ -491,7 +491,7 @@ The Budget resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#timegrain_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Grain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#timegraintype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Consumption.<wbr>Time<wbr>Grain<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#timegraintype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Consumption..<wbr>Time<wbr>Grain<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The time covered by a budget. Tracking of the amount will be reset based on the time grain. BillingMonth, BillingQuarter, and BillingAnnual are only supported by WD customers{{% /md %}}</dd>
     <dt class="property-required"
@@ -500,7 +500,7 @@ The Budget resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#timeperiod_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgettimeperiod">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Consumption.<wbr>Inputs.<wbr>Budget<wbr>Time<wbr>Period<wbr>Args</a></span>
+        <span class="property-type"><a href="#budgettimeperiod">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Consumption..<wbr>Inputs.<wbr>Budget<wbr>Time<wbr>Period<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Has start and end date of the budget. The start date must be first of the month and should be less than the end date. Budget start date must be on or after June 1, 2017. Future start date should not be more than twelve months. Past start date should  be selected within the timegrain period. There are no restrictions on the end date.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -518,7 +518,7 @@ The Budget resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#filter_csharp" style="color: inherit; text-decoration: inherit;">Filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetfilter">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Consumption.<wbr>Inputs.<wbr>Budget<wbr>Filter<wbr>Args</a></span>
+        <span class="property-type"><a href="#budgetfilter">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Consumption..<wbr>Inputs.<wbr>Budget<wbr>Filter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}May be used to filter budgets by user-specified dimensions and/or tags.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -527,7 +527,7 @@ The Budget resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#notifications_csharp" style="color: inherit; text-decoration: inherit;">Notifications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Consumption.<wbr>Inputs.<wbr>Notification<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Consumption..<wbr>Inputs.<wbr>Notification<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}Dictionary of notifications associated with the budget. Budget can have up to five notifications.{{% /md %}}</dd>
 </dl>
@@ -810,7 +810,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#currentspend_csharp" style="color: inherit; text-decoration: inherit;">Current<wbr>Spend</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#currentspendresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Consumption.<wbr>Outputs.<wbr>Current<wbr>Spend<wbr>Response</a></span>
+        <span class="property-type"><a href="#currentspendresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Consumption..<wbr>Outputs.<wbr>Current<wbr>Spend<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The current amount of cost which is being tracked for a budget.{{% /md %}}</dd>
     <dt class="property-"
@@ -999,7 +999,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operator_csharp" style="color: inherit; text-decoration: inherit;">Operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#budgetoperatortype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Consumption.<wbr>Budget<wbr>Operator<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#budgetoperatortype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Consumption..<wbr>Budget<wbr>Operator<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The operator to use for comparison.{{% /md %}}</dd>
     <dt class="property-required"
@@ -1258,7 +1258,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#and_csharp" style="color: inherit; text-decoration: inherit;">And</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetfilterproperties">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Consumption.<wbr>Inputs.<wbr>Budget<wbr>Filter<wbr>Properties<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#budgetfilterproperties">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Consumption..<wbr>Inputs.<wbr>Budget<wbr>Filter<wbr>Properties<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The logical "AND" expression. Must have at least 2 items.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1267,7 +1267,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dimensions_csharp" style="color: inherit; text-decoration: inherit;">Dimensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetcomparisonexpression">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Consumption.<wbr>Inputs.<wbr>Budget<wbr>Comparison<wbr>Expression<wbr>Args</a></span>
+        <span class="property-type"><a href="#budgetcomparisonexpression">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Consumption..<wbr>Inputs.<wbr>Budget<wbr>Comparison<wbr>Expression<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Has comparison expression for a dimension{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1276,7 +1276,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#not_csharp" style="color: inherit; text-decoration: inherit;">Not</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetfilterproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Consumption.<wbr>Inputs.<wbr>Budget<wbr>Filter<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#budgetfilterproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Consumption..<wbr>Inputs.<wbr>Budget<wbr>Filter<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The logical "NOT" expression.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1285,7 +1285,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetcomparisonexpression">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Consumption.<wbr>Inputs.<wbr>Budget<wbr>Comparison<wbr>Expression<wbr>Args</a></span>
+        <span class="property-type"><a href="#budgetcomparisonexpression">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Consumption..<wbr>Inputs.<wbr>Budget<wbr>Comparison<wbr>Expression<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Has comparison expression for a tag{{% /md %}}</dd>
 </dl>
@@ -1428,7 +1428,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dimensions_csharp" style="color: inherit; text-decoration: inherit;">Dimensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetcomparisonexpression">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Consumption.<wbr>Inputs.<wbr>Budget<wbr>Comparison<wbr>Expression<wbr>Args</a></span>
+        <span class="property-type"><a href="#budgetcomparisonexpression">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Consumption..<wbr>Inputs.<wbr>Budget<wbr>Comparison<wbr>Expression<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Has comparison expression for a dimension{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1437,7 +1437,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetcomparisonexpression">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Consumption.<wbr>Inputs.<wbr>Budget<wbr>Comparison<wbr>Expression<wbr>Args</a></span>
+        <span class="property-type"><a href="#budgetcomparisonexpression">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Consumption..<wbr>Inputs.<wbr>Budget<wbr>Comparison<wbr>Expression<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Has comparison expression for a tag{{% /md %}}</dd>
 </dl>
@@ -1526,7 +1526,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dimensions_csharp" style="color: inherit; text-decoration: inherit;">Dimensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetcomparisonexpressionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Consumption.<wbr>Inputs.<wbr>Budget<wbr>Comparison<wbr>Expression<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#budgetcomparisonexpressionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Consumption..<wbr>Inputs.<wbr>Budget<wbr>Comparison<wbr>Expression<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Has comparison expression for a dimension{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1535,7 +1535,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetcomparisonexpressionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Consumption.<wbr>Inputs.<wbr>Budget<wbr>Comparison<wbr>Expression<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#budgetcomparisonexpressionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Consumption..<wbr>Inputs.<wbr>Budget<wbr>Comparison<wbr>Expression<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Has comparison expression for a tag{{% /md %}}</dd>
 </dl>
@@ -1624,7 +1624,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#and_csharp" style="color: inherit; text-decoration: inherit;">And</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetfilterpropertiesresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Consumption.<wbr>Inputs.<wbr>Budget<wbr>Filter<wbr>Properties<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#budgetfilterpropertiesresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Consumption..<wbr>Inputs.<wbr>Budget<wbr>Filter<wbr>Properties<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The logical "AND" expression. Must have at least 2 items.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1633,7 +1633,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dimensions_csharp" style="color: inherit; text-decoration: inherit;">Dimensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetcomparisonexpressionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Consumption.<wbr>Inputs.<wbr>Budget<wbr>Comparison<wbr>Expression<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#budgetcomparisonexpressionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Consumption..<wbr>Inputs.<wbr>Budget<wbr>Comparison<wbr>Expression<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Has comparison expression for a dimension{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1642,7 +1642,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#not_csharp" style="color: inherit; text-decoration: inherit;">Not</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetfilterpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Consumption.<wbr>Inputs.<wbr>Budget<wbr>Filter<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#budgetfilterpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Consumption..<wbr>Inputs.<wbr>Budget<wbr>Filter<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The logical "NOT" expression.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1651,7 +1651,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetcomparisonexpressionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Consumption.<wbr>Inputs.<wbr>Budget<wbr>Comparison<wbr>Expression<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#budgetcomparisonexpressionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Consumption..<wbr>Inputs.<wbr>Budget<wbr>Comparison<wbr>Expression<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Has comparison expression for a tag{{% /md %}}</dd>
 </dl>
@@ -2174,7 +2174,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operator_csharp" style="color: inherit; text-decoration: inherit;">Operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#operatortype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Consumption.<wbr>Operator<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#operatortype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Consumption..<wbr>Operator<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The comparison operator.{{% /md %}}</dd>
     <dt class="property-required"
@@ -2726,7 +2726,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:consumption/latest:Budget TestBudget subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Consumption/budgets/TestBudget 
+$ pulumi import azure-nextgen:consumption:Budget TestBudget subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Consumption/budgets/TestBudget 
 ```
 
 

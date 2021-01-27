@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.management.ManagementGroup resou
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The management group details.
-Latest API Version: 2020-05-01.
+API Version: 2020-05-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,11 +27,11 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var managementGroup = new AzureNextGen.Management.Latest.ManagementGroup("managementGroup", new AzureNextGen.Management.Latest.ManagementGroupArgs
+        var managementGroup = new AzureNextGen.Management..ManagementGroup("managementGroup", new AzureNextGen.Management..ManagementGroupArgs
         {
-            Details = new AzureNextGen.Management.Latest.Inputs.CreateManagementGroupDetailsArgs
+            Details = new AzureNextGen.Management..Inputs.CreateManagementGroupDetailsArgs
             {
-                Parent = new AzureNextGen.Management.Latest.Inputs.CreateParentGroupInfoArgs
+                Parent = new AzureNextGen.Management..Inputs.CreateParentGroupInfoArgs
                 {
                     Id = "/providers/Microsoft.Management/managementGroups/RootGroup",
                 },
@@ -53,7 +53,7 @@ class MyStack : Stack
 package main
 
 import (
-	management "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/management/latest"
+	management "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/management"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -85,9 +85,9 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-management_group = azure_nextgen.management.latest.ManagementGroup("managementGroup",
-    details=azure_nextgen.management.latest.CreateManagementGroupDetailsArgs(
-        parent=azure_nextgen.management.latest.CreateParentGroupInfoArgs(
+management_group = azure_nextgen.management.ManagementGroup("managementGroup",
+    details=azure_nextgen.management.CreateManagementGroupDetailsArgs(
+        parent=azure_nextgen.management.CreateParentGroupInfoArgs(
             id="/providers/Microsoft.Management/managementGroups/RootGroup",
         ),
     ),
@@ -104,7 +104,7 @@ management_group = azure_nextgen.management.latest.ManagementGroup("managementGr
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const managementGroup = new azure_nextgen.management.latest.ManagementGroup("managementGroup", {
+const managementGroup = new azure_nextgen.management.ManagementGroup("managementGroup", {
     details: {
         parent: {
             id: "/providers/Microsoft.Management/managementGroups/RootGroup",
@@ -316,7 +316,7 @@ The ManagementGroup resource accepts the following [input]({{< relref "/docs/int
 <a href="#details_csharp" style="color: inherit; text-decoration: inherit;">Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#createmanagementgroupdetails">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Management.<wbr>Inputs.<wbr>Create<wbr>Management<wbr>Group<wbr>Details<wbr>Args</a></span>
+        <span class="property-type"><a href="#createmanagementgroupdetails">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Management..<wbr>Inputs.<wbr>Create<wbr>Management<wbr>Group<wbr>Details<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The details of a management group used during creation.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -500,7 +500,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#children_csharp" style="color: inherit; text-decoration: inherit;">Children</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementgroupchildinforesponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Management.<wbr>Outputs.<wbr>Management<wbr>Group<wbr>Child<wbr>Info<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#managementgroupchildinforesponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Management..<wbr>Outputs.<wbr>Management<wbr>Group<wbr>Child<wbr>Info<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of children.{{% /md %}}</dd>
     <dt class="property-"
@@ -509,7 +509,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementgrouppathelementresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Management.<wbr>Outputs.<wbr>Management<wbr>Group<wbr>Path<wbr>Element<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#managementgrouppathelementresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Management..<wbr>Outputs.<wbr>Management<wbr>Group<wbr>Path<wbr>Element<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The path from the root to the current group.{{% /md %}}</dd>
     <dt class="property-"
@@ -698,7 +698,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parent_csharp" style="color: inherit; text-decoration: inherit;">Parent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#createparentgroupinfo">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Management.<wbr>Inputs.<wbr>Create<wbr>Parent<wbr>Group<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#createparentgroupinfo">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Management..<wbr>Inputs.<wbr>Create<wbr>Parent<wbr>Group<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}(Optional) The ID of the parent management group used during creation.{{% /md %}}</dd>
 </dl>
@@ -822,7 +822,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#children_csharp" style="color: inherit; text-decoration: inherit;">Children</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementgroupchildinforesponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Management.<wbr>Inputs.<wbr>Management<wbr>Group<wbr>Child<wbr>Info<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#managementgroupchildinforesponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Management..<wbr>Inputs.<wbr>Management<wbr>Group<wbr>Child<wbr>Info<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of children.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1028,7 +1028,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parent_csharp" style="color: inherit; text-decoration: inherit;">Parent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#parentgroupinforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Management.<wbr>Inputs.<wbr>Parent<wbr>Group<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#parentgroupinforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Management..<wbr>Inputs.<wbr>Parent<wbr>Group<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}(Optional) The ID of the parent management group.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1424,7 +1424,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:management/latest:ManagementGroup ChildGroup /providers/Microsoft.Management/managementGroups/ChildGroup 
+$ pulumi import azure-nextgen:management:ManagementGroup ChildGroup /providers/Microsoft.Management/managementGroups/ChildGroup 
 ```
 
 

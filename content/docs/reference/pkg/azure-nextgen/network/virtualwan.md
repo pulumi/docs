@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.network.VirtualWan resource with
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 VirtualWAN Resource.
-Latest API Version: 2020-08-01.
+API Version: 2020-08-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var virtualWan = new AzureNextGen.Network.Latest.VirtualWan("virtualWan", new AzureNextGen.Network.Latest.VirtualWanArgs
+        var virtualWan = new AzureNextGen.Network..VirtualWan("virtualWan", new AzureNextGen.Network..VirtualWanArgs
         {
             DisableVpnEncryption = false,
             Location = "West US",
@@ -53,7 +53,7 @@ class MyStack : Stack
 package main
 
 import (
-	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network/latest"
+	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -86,7 +86,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-virtual_wan = azure_nextgen.network.latest.VirtualWan("virtualWan",
+virtual_wan = azure_nextgen.network.VirtualWan("virtualWan",
     disable_vpn_encryption=False,
     location="West US",
     resource_group_name="rg1",
@@ -106,7 +106,7 @@ virtual_wan = azure_nextgen.network.latest.VirtualWan("virtualWan",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const virtualWan = new azure_nextgen.network.latest.VirtualWan("virtualWan", {
+const virtualWan = new azure_nextgen.network.VirtualWan("virtualWan", {
     disableVpnEncryption: false,
     location: "West US",
     resourceGroupName: "rg1",
@@ -710,7 +710,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#virtualhubs_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Hubs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Outputs.<wbr>Sub<wbr>Resource<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#subresourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Outputs.<wbr>Sub<wbr>Resource<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of VirtualHubs in the VirtualWAN.{{% /md %}}</dd>
     <dt class="property-"
@@ -719,7 +719,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vpnsites_csharp" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Sites</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Outputs.<wbr>Sub<wbr>Resource<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#subresourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Outputs.<wbr>Sub<wbr>Resource<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of VpnSites in the VirtualWAN.{{% /md %}}</dd>
 </dl>
@@ -1009,7 +1009,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:network/latest:VirtualWan wan1 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualWANs/wan1 
+$ pulumi import azure-nextgen:network:VirtualWan wan1 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualWANs/wan1 
 ```
 
 

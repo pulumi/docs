@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.apimanagement.TagByApi resource 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Tag Contract details.
-Latest API Version: 2019-12-01.
+API Version: 2019-12-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var tagByApi = new AzureNextGen.ApiManagement.Latest.TagByApi("tagByApi", new AzureNextGen.ApiManagement.Latest.TagByApiArgs
+        var tagByApi = new AzureNextGen.ApiManagement..TagByApi("tagByApi", new AzureNextGen.ApiManagement..TagByApiArgs
         {
             ApiId = "5931a75ae4bbd512a88c680b",
             ResourceGroupName = "rg1",
@@ -48,7 +48,7 @@ class MyStack : Stack
 package main
 
 import (
-	apimanagement "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/apimanagement/latest"
+	apimanagement "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/apimanagement"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -77,7 +77,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-tag_by_api = azure_nextgen.apimanagement.latest.TagByApi("tagByApi",
+tag_by_api = azure_nextgen.apimanagement.TagByApi("tagByApi",
     api_id="5931a75ae4bbd512a88c680b",
     resource_group_name="rg1",
     service_name="apimService1",
@@ -93,7 +93,7 @@ tag_by_api = azure_nextgen.apimanagement.latest.TagByApi("tagByApi",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const tagByApi = new azure_nextgen.apimanagement.latest.TagByApi("tagByApi", {
+const tagByApi = new azure_nextgen.apimanagement.TagByApi("tagByApi", {
     apiId: "5931a75ae4bbd512a88c680b",
     resourceGroupName: "rg1",
     serviceName: "apimService1",
@@ -638,7 +638,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:apimanagement/latest:TagByApi tagId1 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/tags/tagId1 
+$ pulumi import azure-nextgen:apimanagement:TagByApi tagId1 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/tags/tagId1 
 ```
 
 

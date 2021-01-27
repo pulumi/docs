@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.blueprint.PublishedBlueprint res
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Represents a published blueprint.
+API Version: 2018-11-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var publishedBlueprint = new AzureNextGen.Blueprint.V20181101Preview.PublishedBlueprint("publishedBlueprint", new AzureNextGen.Blueprint.V20181101Preview.PublishedBlueprintArgs
+        var publishedBlueprint = new AzureNextGen.Blueprint..PublishedBlueprint("publishedBlueprint", new AzureNextGen.Blueprint..PublishedBlueprintArgs
         {
             BlueprintName = "simpleBlueprint",
             ResourceScope = "providers/Microsoft.Management/managementGroups/ContosoOnlineGroup",
@@ -46,7 +47,7 @@ class MyStack : Stack
 package main
 
 import (
-	blueprint "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/blueprint/v20181101preview"
+	blueprint "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/blueprint"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -74,7 +75,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-published_blueprint = azure_nextgen.blueprint.v20181101preview.PublishedBlueprint("publishedBlueprint",
+published_blueprint = azure_nextgen.blueprint.PublishedBlueprint("publishedBlueprint",
     blueprint_name="simpleBlueprint",
     resource_scope="providers/Microsoft.Management/managementGroups/ContosoOnlineGroup",
     version_id="v2")
@@ -89,7 +90,7 @@ published_blueprint = azure_nextgen.blueprint.v20181101preview.PublishedBlueprin
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const publishedBlueprint = new azure_nextgen.blueprint.v20181101preview.PublishedBlueprint("publishedBlueprint", {
+const publishedBlueprint = new azure_nextgen.blueprint.PublishedBlueprint("publishedBlueprint", {
     blueprintName: "simpleBlueprint",
     resourceScope: "providers/Microsoft.Management/managementGroups/ContosoOnlineGroup",
     versionId: "v2",
@@ -109,7 +110,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var publishedBlueprint = new AzureNextGen.Blueprint.V20181101Preview.PublishedBlueprint("publishedBlueprint", new AzureNextGen.Blueprint.V20181101Preview.PublishedBlueprintArgs
+        var publishedBlueprint = new AzureNextGen.Blueprint..PublishedBlueprint("publishedBlueprint", new AzureNextGen.Blueprint..PublishedBlueprintArgs
         {
             BlueprintName = "simpleBlueprint",
             ResourceScope = "subscriptions/00000000-0000-0000-0000-000000000000",
@@ -129,7 +130,7 @@ class MyStack : Stack
 package main
 
 import (
-	blueprint "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/blueprint/v20181101preview"
+	blueprint "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/blueprint"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -157,7 +158,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-published_blueprint = azure_nextgen.blueprint.v20181101preview.PublishedBlueprint("publishedBlueprint",
+published_blueprint = azure_nextgen.blueprint.PublishedBlueprint("publishedBlueprint",
     blueprint_name="simpleBlueprint",
     resource_scope="subscriptions/00000000-0000-0000-0000-000000000000",
     version_id="v2")
@@ -172,7 +173,7 @@ published_blueprint = azure_nextgen.blueprint.v20181101preview.PublishedBlueprin
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const publishedBlueprint = new azure_nextgen.blueprint.v20181101preview.PublishedBlueprint("publishedBlueprint", {
+const publishedBlueprint = new azure_nextgen.blueprint.PublishedBlueprint("publishedBlueprint", {
     blueprintName: "simpleBlueprint",
     resourceScope: "subscriptions/00000000-0000-0000-0000-000000000000",
     versionId: "v2",
@@ -425,7 +426,7 @@ The PublishedBlueprint resource accepts the following [input]({{< relref "/docs/
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Blueprint.<wbr>Inputs.<wbr>Parameter<wbr>Definition<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Blueprint..<wbr>Inputs.<wbr>Parameter<wbr>Definition<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters required by this blueprint definition.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -434,7 +435,7 @@ The PublishedBlueprint resource accepts the following [input]({{< relref "/docs/
 <a href="#resourcegroups_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Blueprint.<wbr>Inputs.<wbr>Resource<wbr>Group<wbr>Definition<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Blueprint..<wbr>Inputs.<wbr>Resource<wbr>Group<wbr>Definition<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}Resource group placeholders defined by this blueprint definition.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -443,7 +444,7 @@ The PublishedBlueprint resource accepts the following [input]({{< relref "/docs/
 <a href="#targetscope_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#blueprinttargetscope">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Blueprint.<wbr>Blueprint<wbr>Target<wbr>Scope</a></span>
+        <span class="property-type">string | <a href="#blueprinttargetscope">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Blueprint..<wbr>Blueprint<wbr>Target<wbr>Scope</a></span>
     </dt>
     <dd>{{% md %}}The scope where this blueprint definition can be assigned.{{% /md %}}</dd>
 </dl>
@@ -744,7 +745,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#blueprintstatusresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Blueprint.<wbr>Outputs.<wbr>Blueprint<wbr>Status<wbr>Response</a></span>
+        <span class="property-type"><a href="#blueprintstatusresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Blueprint..<wbr>Outputs.<wbr>Blueprint<wbr>Status<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Status of the blueprint. This field is readonly.{{% /md %}}</dd>
     <dt class="property-"
@@ -1042,7 +1043,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#templateparametertype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Blueprint.<wbr>Template<wbr>Parameter<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#templateparametertype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Blueprint..<wbr>Template<wbr>Parameter<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Allowed data types for Resource Manager template parameters.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2154,7 +2155,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:blueprint/v20181101preview:PublishedBlueprint v2 /subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Blueprint/blueprints/simpleBlueprint 
+$ pulumi import azure-nextgen:blueprint:PublishedBlueprint v2 /subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Blueprint/blueprints/simpleBlueprint 
 ```
 
 

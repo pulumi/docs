@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.storage.BlobContainerImmutabilit
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The ImmutabilityPolicy property of a blob container, including Id, resource name, resource type, Etag.
-Latest API Version: 2019-06-01.
+API Version: 2019-06-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var blobContainerImmutabilityPolicy = new AzureNextGen.Storage.Latest.BlobContainerImmutabilityPolicy("blobContainerImmutabilityPolicy", new AzureNextGen.Storage.Latest.BlobContainerImmutabilityPolicyArgs
+        var blobContainerImmutabilityPolicy = new AzureNextGen.Storage..BlobContainerImmutabilityPolicy("blobContainerImmutabilityPolicy", new AzureNextGen.Storage..BlobContainerImmutabilityPolicyArgs
         {
             AccountName = "sto7069",
             AllowProtectedAppendWrites = true,
@@ -50,7 +50,7 @@ class MyStack : Stack
 package main
 
 import (
-	storage "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/storage/latest"
+	storage "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/storage"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -81,7 +81,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-blob_container_immutability_policy = azure_nextgen.storage.latest.BlobContainerImmutabilityPolicy("blobContainerImmutabilityPolicy",
+blob_container_immutability_policy = azure_nextgen.storage.BlobContainerImmutabilityPolicy("blobContainerImmutabilityPolicy",
     account_name="sto7069",
     allow_protected_append_writes=True,
     container_name="container6397",
@@ -99,7 +99,7 @@ blob_container_immutability_policy = azure_nextgen.storage.latest.BlobContainerI
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const blobContainerImmutabilityPolicy = new azure_nextgen.storage.latest.BlobContainerImmutabilityPolicy("blobContainerImmutabilityPolicy", {
+const blobContainerImmutabilityPolicy = new azure_nextgen.storage.BlobContainerImmutabilityPolicy("blobContainerImmutabilityPolicy", {
     accountName: "sto7069",
     allowProtectedAppendWrites: true,
     containerName: "container6397",
@@ -754,7 +754,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:storage/latest:BlobContainerImmutabilityPolicy default /subscriptions/{subscription-id}/resourceGroups/res1782/providers/Microsoft.Storage/storageAccounts/sto7069/blobServices/default/containers/container6397/immutabilityPolicies/default 
+$ pulumi import azure-nextgen:storage:BlobContainerImmutabilityPolicy default /subscriptions/{subscription-id}/resourceGroups/res1782/providers/Microsoft.Storage/storageAccounts/sto7069/blobServices/default/containers/container6397/immutabilityPolicies/default 
 ```
 
 

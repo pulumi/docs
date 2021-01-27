@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.compute.GalleryImage resource wi
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Specifies information about the gallery image definition that you want to create or update.
-Latest API Version: 2020-09-30.
+API Version: 2020-09-30.
 
 {{% examples %}}
 ## Example Usage
@@ -27,12 +27,12 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var galleryImage = new AzureNextGen.Compute.Latest.GalleryImage("galleryImage", new AzureNextGen.Compute.Latest.GalleryImageArgs
+        var galleryImage = new AzureNextGen.Compute..GalleryImage("galleryImage", new AzureNextGen.Compute..GalleryImageArgs
         {
             GalleryImageName = "myGalleryImageName",
             GalleryName = "myGalleryName",
             HyperVGeneration = "V1",
-            Identifier = new AzureNextGen.Compute.Latest.Inputs.GalleryImageIdentifierArgs
+            Identifier = new AzureNextGen.Compute..Inputs.GalleryImageIdentifierArgs
             {
                 Offer = "myOfferName",
                 Publisher = "myPublisherName",
@@ -57,7 +57,7 @@ class MyStack : Stack
 package main
 
 import (
-	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute/latest"
+	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -94,11 +94,11 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-gallery_image = azure_nextgen.compute.latest.GalleryImage("galleryImage",
+gallery_image = azure_nextgen.compute.GalleryImage("galleryImage",
     gallery_image_name="myGalleryImageName",
     gallery_name="myGalleryName",
     hyper_v_generation="V1",
-    identifier=azure_nextgen.compute.latest.GalleryImageIdentifierArgs(
+    identifier=azure_nextgen.compute.GalleryImageIdentifierArgs(
         offer="myOfferName",
         publisher="myPublisherName",
         sku="mySkuName",
@@ -118,7 +118,7 @@ gallery_image = azure_nextgen.compute.latest.GalleryImage("galleryImage",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const galleryImage = new azure_nextgen.compute.latest.GalleryImage("galleryImage", {
+const galleryImage = new azure_nextgen.compute.GalleryImage("galleryImage", {
     galleryImageName: "myGalleryImageName",
     galleryName: "myGalleryName",
     hyperVGeneration: "V1",
@@ -344,7 +344,7 @@ The GalleryImage resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#identifier_csharp" style="color: inherit; text-decoration: inherit;">Identifier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#galleryimageidentifier">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Gallery<wbr>Image<wbr>Identifier<wbr>Args</a></span>
+        <span class="property-type"><a href="#galleryimageidentifier">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Inputs.<wbr>Gallery<wbr>Image<wbr>Identifier<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This is the gallery image definition identifier.{{% /md %}}</dd>
     <dt class="property-required"
@@ -362,7 +362,7 @@ The GalleryImage resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#osstate_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#operatingsystemstatetypes">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Operating<wbr>System<wbr>State<wbr>Types</a></span>
+        <span class="property-type"><a href="#operatingsystemstatetypes">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Operating<wbr>System<wbr>State<wbr>Types</a></span>
     </dt>
     <dd>{{% md %}}This property allows the user to specify whether the virtual machines created under this image are 'Generalized' or 'Specialized'.{{% /md %}}</dd>
     <dt class="property-required"
@@ -371,7 +371,7 @@ The GalleryImage resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#ostype_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#operatingsystemtypes">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Operating<wbr>System<wbr>Types</a></span>
+        <span class="property-type"><a href="#operatingsystemtypes">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Operating<wbr>System<wbr>Types</a></span>
     </dt>
     <dd>{{% md %}}This property allows you to specify the type of the OS that is included in the disk when creating a VM from a managed image. <br><br> Possible values are: <br><br> **Windows** <br><br> **Linux**{{% /md %}}</dd>
     <dt class="property-required"
@@ -398,7 +398,7 @@ The GalleryImage resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#disallowed_csharp" style="color: inherit; text-decoration: inherit;">Disallowed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#disallowed">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Disallowed<wbr>Args</a></span>
+        <span class="property-type"><a href="#disallowed">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Inputs.<wbr>Disallowed<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the disallowed disk types.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -425,7 +425,7 @@ The GalleryImage resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#features_csharp" style="color: inherit; text-decoration: inherit;">Features</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#galleryimagefeature">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Gallery<wbr>Image<wbr>Feature<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#galleryimagefeature">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Inputs.<wbr>Gallery<wbr>Image<wbr>Feature<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of gallery image features.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -434,7 +434,7 @@ The GalleryImage resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#hypervgeneration_csharp" style="color: inherit; text-decoration: inherit;">Hyper<wbr>VGeneration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#hypervgeneration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Hyper<wbr>VGeneration</a></span>
+        <span class="property-type">string | <a href="#hypervgeneration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Hyper<wbr>VGeneration</a></span>
     </dt>
     <dd>{{% md %}}The hypervisor generation of the Virtual Machine. Applicable to OS disks only.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -452,7 +452,7 @@ The GalleryImage resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#purchaseplan_csharp" style="color: inherit; text-decoration: inherit;">Purchase<wbr>Plan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imagepurchaseplan">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Image<wbr>Purchase<wbr>Plan<wbr>Args</a></span>
+        <span class="property-type"><a href="#imagepurchaseplan">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Inputs.<wbr>Image<wbr>Purchase<wbr>Plan<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the gallery image definition purchase plan. This is used by marketplace images.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -461,7 +461,7 @@ The GalleryImage resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#recommended_csharp" style="color: inherit; text-decoration: inherit;">Recommended</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recommendedmachineconfiguration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Recommended<wbr>Machine<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#recommendedmachineconfiguration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Inputs.<wbr>Recommended<wbr>Machine<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The properties describe the recommended machine configuration for this Image Definition. These properties are updatable.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2155,7 +2155,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#memory_csharp" style="color: inherit; text-decoration: inherit;">Memory</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcerange">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Resource<wbr>Range<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcerange">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Inputs.<wbr>Resource<wbr>Range<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the resource range.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2164,7 +2164,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vcpus_csharp" style="color: inherit; text-decoration: inherit;">VCPUs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcerange">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Resource<wbr>Range<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcerange">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Inputs.<wbr>Resource<wbr>Range<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the resource range.{{% /md %}}</dd>
 </dl>
@@ -2253,7 +2253,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#memory_csharp" style="color: inherit; text-decoration: inherit;">Memory</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcerangeresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Resource<wbr>Range<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcerangeresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Inputs.<wbr>Resource<wbr>Range<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the resource range.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2262,7 +2262,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vcpus_csharp" style="color: inherit; text-decoration: inherit;">VCPUs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcerangeresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Resource<wbr>Range<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcerangeresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Inputs.<wbr>Resource<wbr>Range<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the resource range.{{% /md %}}</dd>
 </dl>
@@ -2541,7 +2541,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:compute/latest:GalleryImage myGalleryImageName /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/galleries/{galleryName}/images/{galleryImageName} 
+$ pulumi import azure-nextgen:compute:GalleryImage myGalleryImageName /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/galleries/{galleryName}/images/{galleryImageName} 
 ```
 
 

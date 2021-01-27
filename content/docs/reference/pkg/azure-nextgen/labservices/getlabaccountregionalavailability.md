@@ -159,7 +159,7 @@ The following output properties are available:
 <a href="#regionalavailability_csharp" style="color: inherit; text-decoration: inherit;">Regional<wbr>Availability</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionalavailabilityresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Lab<wbr>Services.<wbr>Outputs.<wbr>Regional<wbr>Availability<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#regionalavailabilityresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Lab<wbr>Services..<wbr>Outputs.<wbr>Regional<wbr>Availability<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Availability information for different size categories per region{{% /md %}}</dd>
 </dl>
@@ -241,7 +241,7 @@ The following output properties are available:
 <a href="#sizeavailabilities_csharp" style="color: inherit; text-decoration: inherit;">Size<wbr>Availabilities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sizeavailabilityresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Lab<wbr>Services.<wbr>Inputs.<wbr>Size<wbr>Availability<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#sizeavailabilityresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Lab<wbr>Services..<wbr>Inputs.<wbr>Size<wbr>Availability<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of all the size information for the region{{% /md %}}</dd>
 </dl>

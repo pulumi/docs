@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.devices.IotDpsResourcePrivateEnd
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The private endpoint connection of a provisioning service
-Latest API Version: 2020-03-01.
+API Version: 2020-03-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,12 +27,12 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var iotDpsResourcePrivateEndpointConnection = new AzureNextGen.Devices.Latest.IotDpsResourcePrivateEndpointConnection("iotDpsResourcePrivateEndpointConnection", new AzureNextGen.Devices.Latest.IotDpsResourcePrivateEndpointConnectionArgs
+        var iotDpsResourcePrivateEndpointConnection = new AzureNextGen.Devices..IotDpsResourcePrivateEndpointConnection("iotDpsResourcePrivateEndpointConnection", new AzureNextGen.Devices..IotDpsResourcePrivateEndpointConnectionArgs
         {
             PrivateEndpointConnectionName = "myPrivateEndpointConnection",
-            Properties = new AzureNextGen.Devices.Latest.Inputs.PrivateEndpointConnectionPropertiesArgs
+            Properties = new AzureNextGen.Devices..Inputs.PrivateEndpointConnectionPropertiesArgs
             {
-                PrivateLinkServiceConnectionState = new AzureNextGen.Devices.Latest.Inputs.PrivateLinkServiceConnectionStateArgs
+                PrivateLinkServiceConnectionState = new AzureNextGen.Devices..Inputs.PrivateLinkServiceConnectionStateArgs
                 {
                     Description = "Approved by johndoe@contoso.com",
                     Status = "Approved",
@@ -55,7 +55,7 @@ class MyStack : Stack
 package main
 
 import (
-	devices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/devices/latest"
+	devices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/devices"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -89,10 +89,10 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-iot_dps_resource_private_endpoint_connection = azure_nextgen.devices.latest.IotDpsResourcePrivateEndpointConnection("iotDpsResourcePrivateEndpointConnection",
+iot_dps_resource_private_endpoint_connection = azure_nextgen.devices.IotDpsResourcePrivateEndpointConnection("iotDpsResourcePrivateEndpointConnection",
     private_endpoint_connection_name="myPrivateEndpointConnection",
-    properties=azure_nextgen.devices.latest.PrivateEndpointConnectionPropertiesArgs(
-        private_link_service_connection_state=azure_nextgen.devices.latest.PrivateLinkServiceConnectionStateArgs(
+    properties=azure_nextgen.devices.PrivateEndpointConnectionPropertiesArgs(
+        private_link_service_connection_state=azure_nextgen.devices.PrivateLinkServiceConnectionStateArgs(
             description="Approved by johndoe@contoso.com",
             status="Approved",
         ),
@@ -110,7 +110,7 @@ iot_dps_resource_private_endpoint_connection = azure_nextgen.devices.latest.IotD
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const iotDpsResourcePrivateEndpointConnection = new azure_nextgen.devices.latest.IotDpsResourcePrivateEndpointConnection("iotDpsResourcePrivateEndpointConnection", {
+const iotDpsResourcePrivateEndpointConnection = new azure_nextgen.devices.IotDpsResourcePrivateEndpointConnection("iotDpsResourcePrivateEndpointConnection", {
     privateEndpointConnectionName: "myPrivateEndpointConnection",
     properties: {
         privateLinkServiceConnectionState: {
@@ -324,7 +324,7 @@ The IotDpsResourcePrivateEndpointConnection resource accepts the following [inpu
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointconnectionproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Devices.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#privateendpointconnectionproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Devices..<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The properties of a private endpoint connection{{% /md %}}</dd>
     <dt class="property-required"
@@ -634,7 +634,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privatelinkserviceconnectionstate_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkserviceconnectionstate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Devices.<wbr>Inputs.<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Args</a></span>
+        <span class="property-type"><a href="#privatelinkserviceconnectionstate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Devices..<wbr>Inputs.<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The current state of a private endpoint connection{{% /md %}}</dd>
 </dl>
@@ -696,7 +696,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privatelinkserviceconnectionstate_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Devices.<wbr>Inputs.<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Devices..<wbr>Inputs.<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The current state of a private endpoint connection{{% /md %}}</dd>
     <dt class="property-optional"
@@ -705,7 +705,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privateendpoint_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Devices.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#privateendpointresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Devices..<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The private endpoint property of a private endpoint connection{{% /md %}}</dd>
 </dl>
@@ -865,7 +865,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#privatelinkserviceconnectionstatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Devices.<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>Status</a></span>
+        <span class="property-type">string | <a href="#privatelinkserviceconnectionstatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Devices..<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}The status of a private endpoint connection{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1172,7 +1172,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:devices/latest:IotDpsResourcePrivateEndpointConnection myPrivateEndpointConnection /subscriptions/91d12660-3dec-467a-be2a-213b5544ddc0/resourceGroups/myResourceGroup/providers/Microsoft.Devices/ProvisioningServices/myFirstProvisioningService/PrivateEndpointConnections/myPrivateEndpointConnection 
+$ pulumi import azure-nextgen:devices:IotDpsResourcePrivateEndpointConnection myPrivateEndpointConnection /subscriptions/91d12660-3dec-467a-be2a-213b5544ddc0/resourceGroups/myResourceGroup/providers/Microsoft.Devices/ProvisioningServices/myFirstProvisioningService/PrivateEndpointConnections/myPrivateEndpointConnection 
 ```
 
 

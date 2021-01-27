@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.datalakeanalytics.FirewallRule r
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Data Lake Analytics firewall rule information.
-Latest API Version: 2016-11-01.
+API Version: 2016-11-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var firewallRule = new AzureNextGen.DataLakeAnalytics.Latest.FirewallRule("firewallRule", new AzureNextGen.DataLakeAnalytics.Latest.FirewallRuleArgs
+        var firewallRule = new AzureNextGen.DataLakeAnalytics..FirewallRule("firewallRule", new AzureNextGen.DataLakeAnalytics..FirewallRuleArgs
         {
             AccountName = "contosoadla",
             EndIpAddress = "2.2.2.2",
@@ -49,7 +49,7 @@ class MyStack : Stack
 package main
 
 import (
-	datalakeanalytics "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datalakeanalytics/latest"
+	datalakeanalytics "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datalakeanalytics"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -79,7 +79,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-firewall_rule = azure_nextgen.datalakeanalytics.latest.FirewallRule("firewallRule",
+firewall_rule = azure_nextgen.datalakeanalytics.FirewallRule("firewallRule",
     account_name="contosoadla",
     end_ip_address="2.2.2.2",
     firewall_rule_name="test_rule",
@@ -96,7 +96,7 @@ firewall_rule = azure_nextgen.datalakeanalytics.latest.FirewallRule("firewallRul
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const firewallRule = new azure_nextgen.datalakeanalytics.latest.FirewallRule("firewallRule", {
+const firewallRule = new azure_nextgen.datalakeanalytics.FirewallRule("firewallRule", {
     accountName: "contosoadla",
     endIpAddress: "2.2.2.2",
     firewallRuleName: "test_rule",
@@ -642,7 +642,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:datalakeanalytics/latest:FirewallRule test_rule 34adfa4f-cedf-4dc0-ba29-b6d1a69ab345 
+$ pulumi import azure-nextgen:datalakeanalytics:FirewallRule test_rule 34adfa4f-cedf-4dc0-ba29-b6d1a69ab345 
 ```
 
 

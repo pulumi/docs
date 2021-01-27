@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.portal.ConsoleWithLocation resou
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Cloud shell console
-Latest API Version: 2018-10-01.
+API Version: 2018-10-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var consoleWithLocation = new AzureNextGen.Portal.Latest.ConsoleWithLocation("consoleWithLocation", new AzureNextGen.Portal.Latest.ConsoleWithLocationArgs
+        var consoleWithLocation = new AzureNextGen.Portal..ConsoleWithLocation("consoleWithLocation", new AzureNextGen.Portal..ConsoleWithLocationArgs
         {
             ConsoleName = "default",
             Location = "eastus",
@@ -46,7 +46,7 @@ class MyStack : Stack
 package main
 
 import (
-	portal "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/portal/latest"
+	portal "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/portal"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -73,7 +73,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-console_with_location = azure_nextgen.portal.latest.ConsoleWithLocation("consoleWithLocation",
+console_with_location = azure_nextgen.portal.ConsoleWithLocation("consoleWithLocation",
     console_name="default",
     location="eastus")
 
@@ -87,7 +87,7 @@ console_with_location = azure_nextgen.portal.latest.ConsoleWithLocation("console
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const consoleWithLocation = new azure_nextgen.portal.latest.ConsoleWithLocation("consoleWithLocation", {
+const consoleWithLocation = new azure_nextgen.portal.ConsoleWithLocation("consoleWithLocation", {
     consoleName: "default",
     location: "eastus",
 });
@@ -397,7 +397,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#consolepropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Portal.<wbr>Outputs.<wbr>Console<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#consolepropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Portal..<wbr>Outputs.<wbr>Console<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Cloud shell console properties.{{% /md %}}</dd>
 </dl>
@@ -624,7 +624,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:portal/latest:ConsoleWithLocation myresource1 /providers/Microsoft.Portal/locations/{location}/consoles/{consoleName} 
+$ pulumi import azure-nextgen:portal:ConsoleWithLocation myresource1 /providers/Microsoft.Portal/locations/{location}/consoles/{consoleName} 
 ```
 
 

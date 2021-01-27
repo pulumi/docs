@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.web.WebAppPrivateEndpointConnect
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Private Endpoint Connection ARM resource.
-Latest API Version: 2020-09-01.
+API Version: 2020-09-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,11 +27,11 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var webAppPrivateEndpointConnection = new AzureNextGen.Web.Latest.WebAppPrivateEndpointConnection("webAppPrivateEndpointConnection", new AzureNextGen.Web.Latest.WebAppPrivateEndpointConnectionArgs
+        var webAppPrivateEndpointConnection = new AzureNextGen.Web..WebAppPrivateEndpointConnection("webAppPrivateEndpointConnection", new AzureNextGen.Web..WebAppPrivateEndpointConnectionArgs
         {
             Name = "testSite",
             PrivateEndpointConnectionName = "connection",
-            PrivateLinkServiceConnectionState = new AzureNextGen.Web.Latest.Inputs.PrivateLinkConnectionStateArgs
+            PrivateLinkServiceConnectionState = new AzureNextGen.Web..Inputs.PrivateLinkConnectionStateArgs
             {
                 ActionsRequired = "",
                 Description = "Approved by admin.",
@@ -53,7 +53,7 @@ class MyStack : Stack
 package main
 
 import (
-	web "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/web/latest"
+	web "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/web"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -86,10 +86,10 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-web_app_private_endpoint_connection = azure_nextgen.web.latest.WebAppPrivateEndpointConnection("webAppPrivateEndpointConnection",
+web_app_private_endpoint_connection = azure_nextgen.web.WebAppPrivateEndpointConnection("webAppPrivateEndpointConnection",
     name="testSite",
     private_endpoint_connection_name="connection",
-    private_link_service_connection_state=azure_nextgen.web.latest.PrivateLinkConnectionStateArgs(
+    private_link_service_connection_state=azure_nextgen.web.PrivateLinkConnectionStateArgs(
         actions_required="",
         description="Approved by admin.",
         status="Approved",
@@ -106,7 +106,7 @@ web_app_private_endpoint_connection = azure_nextgen.web.latest.WebAppPrivateEndp
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const webAppPrivateEndpointConnection = new azure_nextgen.web.latest.WebAppPrivateEndpointConnection("webAppPrivateEndpointConnection", {
+const webAppPrivateEndpointConnection = new azure_nextgen.web.WebAppPrivateEndpointConnection("webAppPrivateEndpointConnection", {
     name: "testSite",
     privateEndpointConnectionName: "connection",
     privateLinkServiceConnectionState: {
@@ -346,7 +346,7 @@ The WebAppPrivateEndpointConnection resource accepts the following [input]({{< r
 <a href="#privatelinkserviceconnectionstate_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkconnectionstate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web.<wbr>Inputs.<wbr>Private<wbr>Link<wbr>Connection<wbr>State<wbr>Args</a></span>
+        <span class="property-type"><a href="#privatelinkconnectionstate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web..<wbr>Inputs.<wbr>Private<wbr>Link<wbr>Connection<wbr>State<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The state of a private link connection{{% /md %}}</dd>
 </dl>
@@ -539,7 +539,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#systemdata_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web.<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
+        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web..<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The system metadata relating to this resource.{{% /md %}}</dd>
     <dt class="property-"
@@ -557,7 +557,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privateendpoint_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#armidwrapperresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web.<wbr>Outputs.<wbr>Arm<wbr>Id<wbr>Wrapper<wbr>Response</a></span>
+        <span class="property-type"><a href="#armidwrapperresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web..<wbr>Outputs.<wbr>Arm<wbr>Id<wbr>Wrapper<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}PrivateEndpoint of a remote private endpoint connection{{% /md %}}</dd>
 </dl>
@@ -1303,7 +1303,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:web/latest:WebAppPrivateEndpointConnection myresource1 /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/privateEndpointConnections/{privateEndpointConnectionName} 
+$ pulumi import azure-nextgen:web:WebAppPrivateEndpointConnection myresource1 /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/privateEndpointConnections/{privateEndpointConnectionName} 
 ```
 
 

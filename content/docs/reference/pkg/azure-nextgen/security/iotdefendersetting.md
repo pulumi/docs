@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.security.IotDefenderSetting reso
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 IoT Defender settings
+API Version: 2020-08-06-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var iotDefenderSetting = new AzureNextGen.Security.V20200806Preview.IotDefenderSetting("iotDefenderSetting", new AzureNextGen.Security.V20200806Preview.IotDefenderSettingArgs
+        var iotDefenderSetting = new AzureNextGen.Security..IotDefenderSetting("iotDefenderSetting", new AzureNextGen.Security..IotDefenderSettingArgs
         {
             DeviceQuota = 2000,
             SentinelWorkspaceResourceIds = 
@@ -48,7 +49,7 @@ class MyStack : Stack
 package main
 
 import (
-	security "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/security/v20200806preview"
+	security "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/security"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -77,7 +78,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-iot_defender_setting = azure_nextgen.security.v20200806preview.IotDefenderSetting("iotDefenderSetting",
+iot_defender_setting = azure_nextgen.security.IotDefenderSetting("iotDefenderSetting",
     device_quota=2000,
     sentinel_workspace_resource_ids=["/subscriptions/c4930e90-cd72-4aa5-93e9-2d081d129569/resourceGroups/myRg/providers/Microsoft.OperationalInsights/workspaces/myWorkspace1"])
 
@@ -91,7 +92,7 @@ iot_defender_setting = azure_nextgen.security.v20200806preview.IotDefenderSettin
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const iotDefenderSetting = new azure_nextgen.security.v20200806preview.IotDefenderSetting("iotDefenderSetting", {
+const iotDefenderSetting = new azure_nextgen.security.IotDefenderSetting("iotDefenderSetting", {
     deviceQuota: 2000,
     sentinelWorkspaceResourceIds: ["/subscriptions/c4930e90-cd72-4aa5-93e9-2d081d129569/resourceGroups/myRg/providers/Microsoft.OperationalInsights/workspaces/myWorkspace1"],
 });
@@ -526,7 +527,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:security/v20200806preview:IotDefenderSetting default /subscriptions/{subscriptionId}/providers/Microsoft.Security/iotDefenderSettings/default 
+$ pulumi import azure-nextgen:security:IotDefenderSetting default /subscriptions/{subscriptionId}/providers/Microsoft.Security/iotDefenderSettings/default 
 ```
 
 

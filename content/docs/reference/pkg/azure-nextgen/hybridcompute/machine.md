@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.hybridcompute.Machine resource w
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Describes a hybrid machine.
-Latest API Version: 2020-08-02.
+API Version: 2020-08-02.
 
 {{% examples %}}
 ## Example Usage
@@ -27,15 +27,15 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var machine = new AzureNextGen.HybridCompute.Latest.Machine("machine", new AzureNextGen.HybridCompute.Latest.MachineArgs
+        var machine = new AzureNextGen.HybridCompute..Machine("machine", new AzureNextGen.HybridCompute..MachineArgs
         {
             ClientPublicKey = "string",
-            Identity = new AzureNextGen.HybridCompute.Latest.Inputs.MachineIdentityArgs
+            Identity = new AzureNextGen.HybridCompute..Inputs.MachineIdentityArgs
             {
                 Type = "SystemAssigned",
             },
             Location = "eastus2euap",
-            LocationData = new AzureNextGen.HybridCompute.Latest.Inputs.LocationDataArgs
+            LocationData = new AzureNextGen.HybridCompute..Inputs.LocationDataArgs
             {
                 Name = "Redmond",
             },
@@ -57,7 +57,7 @@ class MyStack : Stack
 package main
 
 import (
-	hybridcompute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/hybridcompute/latest"
+	hybridcompute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/hybridcompute"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -93,13 +93,13 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-machine = azure_nextgen.hybridcompute.latest.Machine("machine",
+machine = azure_nextgen.hybridcompute.Machine("machine",
     client_public_key="string",
-    identity=azure_nextgen.hybridcompute.latest.MachineIdentityArgs(
+    identity=azure_nextgen.hybridcompute.MachineIdentityArgs(
         type="SystemAssigned",
     ),
     location="eastus2euap",
-    location_data=azure_nextgen.hybridcompute.latest.LocationDataArgs(
+    location_data=azure_nextgen.hybridcompute.LocationDataArgs(
         name="Redmond",
     ),
     name="myMachine",
@@ -116,7 +116,7 @@ machine = azure_nextgen.hybridcompute.latest.Machine("machine",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const machine = new azure_nextgen.hybridcompute.latest.Machine("machine", {
+const machine = new azure_nextgen.hybridcompute.Machine("machine", {
     clientPublicKey: "string",
     identity: {
         type: "SystemAssigned",
@@ -359,7 +359,7 @@ The Machine resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#machineidentity">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Compute.<wbr>Inputs.<wbr>Machine<wbr>Identity<wbr>Args</a></span>
+        <span class="property-type"><a href="#machineidentity">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Compute..<wbr>Inputs.<wbr>Machine<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -368,7 +368,7 @@ The Machine resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#locationdata_csharp" style="color: inherit; text-decoration: inherit;">Location<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#locationdata">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Compute.<wbr>Inputs.<wbr>Location<wbr>Data<wbr>Args</a></span>
+        <span class="property-type"><a href="#locationdata">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Compute..<wbr>Inputs.<wbr>Location<wbr>Data<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Metadata pertaining to the geographic location of the resource.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -687,7 +687,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errordetails_csharp" style="color: inherit; text-decoration: inherit;">Error<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#errordetailresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Compute.<wbr>Outputs.<wbr>Error<wbr>Detail<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#errordetailresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Compute..<wbr>Outputs.<wbr>Error<wbr>Detail<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Details about the error state.{{% /md %}}</dd>
     <dt class="property-"
@@ -696,7 +696,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extensions_csharp" style="color: inherit; text-decoration: inherit;">Extensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#machineextensioninstanceviewresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Compute.<wbr>Outputs.<wbr>Machine<wbr>Extension<wbr>Instance<wbr>View<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#machineextensioninstanceviewresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Compute..<wbr>Outputs.<wbr>Machine<wbr>Extension<wbr>Instance<wbr>View<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Machine Extensions information{{% /md %}}</dd>
     <dt class="property-"
@@ -795,7 +795,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#osprofile_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#machinepropertiesresponseosprofile">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Compute.<wbr>Outputs.<wbr>Machine<wbr>Properties<wbr>Response<wbr>Os<wbr>Profile</a></span>
+        <span class="property-type"><a href="#machinepropertiesresponseosprofile">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Compute..<wbr>Outputs.<wbr>Machine<wbr>Properties<wbr>Response<wbr>Os<wbr>Profile</a></span>
     </dt>
     <dd>{{% md %}}Specifies the operating system settings for the hybrid machine.{{% /md %}}</dd>
 </dl>
@@ -1344,7 +1344,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#details_csharp" style="color: inherit; text-decoration: inherit;">Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#errordetailresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Compute.<wbr>Inputs.<wbr>Error<wbr>Detail<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#errordetailresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Compute..<wbr>Inputs.<wbr>Error<wbr>Detail<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Additional error details.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1863,7 +1863,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#machineextensioninstanceviewresponsestatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Compute.<wbr>Inputs.<wbr>Machine<wbr>Extension<wbr>Instance<wbr>View<wbr>Response<wbr>Status<wbr>Args</a></span>
+        <span class="property-type"><a href="#machineextensioninstanceviewresponsestatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Compute..<wbr>Inputs.<wbr>Machine<wbr>Extension<wbr>Instance<wbr>View<wbr>Response<wbr>Status<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Instance view status.{{% /md %}}</dd>
 </dl>
@@ -2464,7 +2464,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:hybridcompute/latest:Machine myMachine /subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.HybridCompute/machines/myMachine 
+$ pulumi import azure-nextgen:hybridcompute:Machine myMachine /subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.HybridCompute/machines/myMachine 
 ```
 
 

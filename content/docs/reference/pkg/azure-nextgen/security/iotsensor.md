@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.security.IotSensor resource with
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 IoT sensor model
+API Version: 2020-08-06-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var iotSensor = new AzureNextGen.Security.V20200806Preview.IotSensor("iotSensor", new AzureNextGen.Security.V20200806Preview.IotSensorArgs
+        var iotSensor = new AzureNextGen.Security..IotSensor("iotSensor", new AzureNextGen.Security..IotSensorArgs
         {
             IotSensorName = "mySensor",
             Scope = "subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23/resourceGroups/myRg/providers/Microsoft.Devices/IotHubs/myHub",
@@ -47,7 +48,7 @@ class MyStack : Stack
 package main
 
 import (
-	security "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/security/v20200806preview"
+	security "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/security"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -76,7 +77,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-iot_sensor = azure_nextgen.security.v20200806preview.IotSensor("iotSensor",
+iot_sensor = azure_nextgen.security.IotSensor("iotSensor",
     iot_sensor_name="mySensor",
     scope="subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23/resourceGroups/myRg/providers/Microsoft.Devices/IotHubs/myHub",
     ti_automatic_updates=True,
@@ -92,7 +93,7 @@ iot_sensor = azure_nextgen.security.v20200806preview.IotSensor("iotSensor",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const iotSensor = new azure_nextgen.security.v20200806preview.IotSensor("iotSensor", {
+const iotSensor = new azure_nextgen.security.IotSensor("iotSensor", {
     iotSensorName: "mySensor",
     scope: "subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23/resourceGroups/myRg/providers/Microsoft.Devices/IotHubs/myHub",
     tiAutomaticUpdates: true,
@@ -889,7 +890,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:security/v20200806preview:IotSensor mySensor /subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23/resourceGroups/myRg/providers/Microsoft.Devices/IotHubs/myHub/providers/Microsoft.Security/iotSensors/mySensor 
+$ pulumi import azure-nextgen:security:IotSensor mySensor /subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23/resourceGroups/myRg/providers/Microsoft.Devices/IotHubs/myHub/providers/Microsoft.Security/iotSensors/mySensor 
 ```
 
 

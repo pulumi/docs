@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.storsimple.Manager resource with
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The StorSimple Manager.
-Latest API Version: 2017-06-01.
+API Version: 2017-06-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,16 +27,16 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var manager = new AzureNextGen.StorSimple.Latest.Manager("manager", new AzureNextGen.StorSimple.Latest.ManagerArgs
+        var manager = new AzureNextGen.StorSimple..Manager("manager", new AzureNextGen.StorSimple..ManagerArgs
         {
-            CisIntrinsicSettings = new AzureNextGen.StorSimple.Latest.Inputs.ManagerIntrinsicSettingsArgs
+            CisIntrinsicSettings = new AzureNextGen.StorSimple..Inputs.ManagerIntrinsicSettingsArgs
             {
                 Type = "GardaV1",
             },
             Location = "westus",
             ManagerName = "ManagerForSDKTest2",
             ResourceGroupName = "ResourceGroupForSDKTest",
-            Sku = new AzureNextGen.StorSimple.Latest.Inputs.ManagerSkuArgs
+            Sku = new AzureNextGen.StorSimple..Inputs.ManagerSkuArgs
             {
                 Name = "Standard",
             },
@@ -55,7 +55,7 @@ class MyStack : Stack
 package main
 
 import (
-	storsimple "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/storsimple/latest"
+	storsimple "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/storsimple"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -89,14 +89,14 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-manager = azure_nextgen.storsimple.latest.Manager("manager",
-    cis_intrinsic_settings=azure_nextgen.storsimple.latest.ManagerIntrinsicSettingsArgs(
+manager = azure_nextgen.storsimple.Manager("manager",
+    cis_intrinsic_settings=azure_nextgen.storsimple.ManagerIntrinsicSettingsArgs(
         type="GardaV1",
     ),
     location="westus",
     manager_name="ManagerForSDKTest2",
     resource_group_name="ResourceGroupForSDKTest",
-    sku=azure_nextgen.storsimple.latest.ManagerSkuArgs(
+    sku=azure_nextgen.storsimple.ManagerSkuArgs(
         name="Standard",
     ))
 
@@ -110,7 +110,7 @@ manager = azure_nextgen.storsimple.latest.Manager("manager",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const manager = new azure_nextgen.storsimple.latest.Manager("manager", {
+const manager = new azure_nextgen.storsimple.Manager("manager", {
     cisIntrinsicSettings: {
         type: "GardaV1",
     },
@@ -342,7 +342,7 @@ The Manager resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#cisintrinsicsettings_csharp" style="color: inherit; text-decoration: inherit;">Cis<wbr>Intrinsic<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managerintrinsicsettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stor<wbr>Simple.<wbr>Inputs.<wbr>Manager<wbr>Intrinsic<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#managerintrinsicsettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stor<wbr>Simple..<wbr>Inputs.<wbr>Manager<wbr>Intrinsic<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Represents the type of StorSimple Manager.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -369,7 +369,7 @@ The Manager resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managersku">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stor<wbr>Simple.<wbr>Inputs.<wbr>Manager<wbr>Sku<wbr>Args</a></span>
+        <span class="property-type"><a href="#managersku">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stor<wbr>Simple..<wbr>Inputs.<wbr>Manager<wbr>Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the Sku.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -778,7 +778,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managertype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stor<wbr>Simple.<wbr>Manager<wbr>Type</a></span>
+        <span class="property-type"><a href="#managertype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stor<wbr>Simple..<wbr>Manager<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of StorSimple Manager.{{% /md %}}</dd>
 </dl>
@@ -902,7 +902,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managerskutype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stor<wbr>Simple.<wbr>Manager<wbr>Sku<wbr>Type</a></span>
+        <span class="property-type"><a href="#managerskutype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stor<wbr>Simple..<wbr>Manager<wbr>Sku<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Refers to the sku name which should be "Standard"{{% /md %}}</dd>
 </dl>
@@ -1088,7 +1088,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:storsimple/latest:Manager ManagerForSDKTest2 /subscriptions/4385cf00-2d3a-425a-832f-f4285b1c9dce/resourceGroups/ResourceGroupForSDKTest/providers/Microsoft.StorSimple/Managers/ManagerForSDKTest2 
+$ pulumi import azure-nextgen:storsimple:Manager ManagerForSDKTest2 /subscriptions/4385cf00-2d3a-425a-832f-f4285b1c9dce/resourceGroups/ResourceGroupForSDKTest/providers/Microsoft.StorSimple/Managers/ManagerForSDKTest2 
 ```
 
 

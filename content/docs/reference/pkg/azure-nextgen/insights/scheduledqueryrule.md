@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.insights.ScheduledQueryRule reso
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The Log Search Rule resource.
-Latest API Version: 2018-04-16.
+API Version: 2018-04-16.
 
 {{% examples %}}
 ## Example Usage
@@ -27,11 +27,11 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var scheduledQueryRule = new AzureNextGen.Insights.Latest.ScheduledQueryRule("scheduledQueryRule", new AzureNextGen.Insights.Latest.ScheduledQueryRuleArgs
+        var scheduledQueryRule = new AzureNextGen.Insights..ScheduledQueryRule("scheduledQueryRule", new AzureNextGen.Insights..ScheduledQueryRuleArgs
         {
             Action = 
             {
-                { "aznsAction", new AzureNextGen.Insights.Latest.Inputs.AzNsActionGroupArgs
+                { "aznsAction", new AzureNextGen.Insights..Inputs.AzNsActionGroupArgs
                 {
                     ActionGroup = {},
                     CustomWebhookPayload = "{}",
@@ -39,9 +39,9 @@ class MyStack : Stack
                 } },
                 { "odataType", "Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.AlertingAction" },
                 { "severity", "1" },
-                { "trigger", new AzureNextGen.Insights.Latest.Inputs.TriggerConditionArgs
+                { "trigger", new AzureNextGen.Insights..Inputs.TriggerConditionArgs
                 {
-                    MetricTrigger = new AzureNextGen.Insights.Latest.Inputs.LogMetricTriggerArgs
+                    MetricTrigger = new AzureNextGen.Insights..Inputs.LogMetricTriggerArgs
                     {
                         MetricColumn = "Computer",
                         MetricTriggerType = "Consecutive",
@@ -57,12 +57,12 @@ class MyStack : Stack
             Location = "eastus",
             ResourceGroupName = "Rac46PostSwapRG",
             RuleName = "logalertfoo",
-            Schedule = new AzureNextGen.Insights.Latest.Inputs.ScheduleArgs
+            Schedule = new AzureNextGen.Insights..Inputs.ScheduleArgs
             {
                 FrequencyInMinutes = 15,
                 TimeWindowInMinutes = 15,
             },
-            Source = new AzureNextGen.Insights.Latest.Inputs.SourceArgs
+            Source = new AzureNextGen.Insights..Inputs.SourceArgs
             {
                 DataSourceId = "/subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/Rac46PostSwapRG/providers/Microsoft.OperationalInsights/workspaces/sampleWorkspace",
                 Query = "Heartbeat | summarize AggregatedValue = count() by bin(TimeGenerated, 5m)",
@@ -88,17 +88,17 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-scheduled_query_rule = azure_nextgen.insights.latest.ScheduledQueryRule("scheduledQueryRule",
+scheduled_query_rule = azure_nextgen.insights.ScheduledQueryRule("scheduledQueryRule",
     action={
-        "aznsAction": azure_nextgen.insights.latest.AzNsActionGroupArgs(
+        "aznsAction": azure_nextgen.insights.AzNsActionGroupArgs(
             action_group=[],
             custom_webhook_payload="{}",
             email_subject="Email Header",
         ),
         "odataType": "Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.AlertingAction",
         "severity": "1",
-        "trigger": azure_nextgen.insights.latest.TriggerConditionArgs(
-            metric_trigger=azure_nextgen.insights.latest.LogMetricTriggerArgs(
+        "trigger": azure_nextgen.insights.TriggerConditionArgs(
+            metric_trigger=azure_nextgen.insights.LogMetricTriggerArgs(
                 metric_column="Computer",
                 metric_trigger_type="Consecutive",
                 threshold=5,
@@ -113,11 +113,11 @@ scheduled_query_rule = azure_nextgen.insights.latest.ScheduledQueryRule("schedul
     location="eastus",
     resource_group_name="Rac46PostSwapRG",
     rule_name="logalertfoo",
-    schedule=azure_nextgen.insights.latest.ScheduleArgs(
+    schedule=azure_nextgen.insights.ScheduleArgs(
         frequency_in_minutes=15,
         time_window_in_minutes=15,
     ),
-    source=azure_nextgen.insights.latest.SourceArgs(
+    source=azure_nextgen.insights.SourceArgs(
         data_source_id="/subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/Rac46PostSwapRG/providers/Microsoft.OperationalInsights/workspaces/sampleWorkspace",
         query="Heartbeat | summarize AggregatedValue = count() by bin(TimeGenerated, 5m)",
         query_type="ResultCount",
@@ -134,7 +134,7 @@ scheduled_query_rule = azure_nextgen.insights.latest.ScheduledQueryRule("schedul
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const scheduledQueryRule = new azure_nextgen.insights.latest.ScheduledQueryRule("scheduledQueryRule", {
+const scheduledQueryRule = new azure_nextgen.insights.ScheduledQueryRule("scheduledQueryRule", {
     action: {
         aznsAction: {
             actionGroup: [],
@@ -185,11 +185,11 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var scheduledQueryRule = new AzureNextGen.Insights.Latest.ScheduledQueryRule("scheduledQueryRule", new AzureNextGen.Insights.Latest.ScheduledQueryRuleArgs
+        var scheduledQueryRule = new AzureNextGen.Insights..ScheduledQueryRule("scheduledQueryRule", new AzureNextGen.Insights..ScheduledQueryRuleArgs
         {
             Action = 
             {
-                { "aznsAction", new AzureNextGen.Insights.Latest.Inputs.AzNsActionGroupArgs
+                { "aznsAction", new AzureNextGen.Insights..Inputs.AzNsActionGroupArgs
                 {
                     ActionGroup = 
                     {
@@ -199,7 +199,7 @@ class MyStack : Stack
                 } },
                 { "odataType", "Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.AlertingAction" },
                 { "severity", "3" },
-                { "trigger", new AzureNextGen.Insights.Latest.Inputs.TriggerConditionArgs
+                { "trigger", new AzureNextGen.Insights..Inputs.TriggerConditionArgs
                 {
                     Threshold = 5000,
                     ThresholdOperator = "GreaterThan",
@@ -210,12 +210,12 @@ class MyStack : Stack
             Location = "eastus",
             ResourceGroupName = "Rac46PostSwapRG",
             RuleName = "SampleCrossResourceAlert",
-            Schedule = new AzureNextGen.Insights.Latest.Inputs.ScheduleArgs
+            Schedule = new AzureNextGen.Insights..Inputs.ScheduleArgs
             {
                 FrequencyInMinutes = 60,
                 TimeWindowInMinutes = 60,
             },
-            Source = new AzureNextGen.Insights.Latest.Inputs.SourceArgs
+            Source = new AzureNextGen.Insights..Inputs.SourceArgs
             {
                 AuthorizedResources = 
                 {
@@ -246,15 +246,15 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-scheduled_query_rule = azure_nextgen.insights.latest.ScheduledQueryRule("scheduledQueryRule",
+scheduled_query_rule = azure_nextgen.insights.ScheduledQueryRule("scheduledQueryRule",
     action={
-        "aznsAction": azure_nextgen.insights.latest.AzNsActionGroupArgs(
+        "aznsAction": azure_nextgen.insights.AzNsActionGroupArgs(
             action_group=["/subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/Rac46PostSwapRG/providers/microsoft.insights/actiongroups/test-ag"],
             email_subject="Cross Resource Mail!!",
         ),
         "odataType": "Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.AlertingAction",
         "severity": "3",
-        "trigger": azure_nextgen.insights.latest.TriggerConditionArgs(
+        "trigger": azure_nextgen.insights.TriggerConditionArgs(
             threshold=5000,
             threshold_operator="GreaterThan",
         ),
@@ -264,11 +264,11 @@ scheduled_query_rule = azure_nextgen.insights.latest.ScheduledQueryRule("schedul
     location="eastus",
     resource_group_name="Rac46PostSwapRG",
     rule_name="SampleCrossResourceAlert",
-    schedule=azure_nextgen.insights.latest.ScheduleArgs(
+    schedule=azure_nextgen.insights.ScheduleArgs(
         frequency_in_minutes=60,
         time_window_in_minutes=60,
     ),
-    source=azure_nextgen.insights.latest.SourceArgs(
+    source=azure_nextgen.insights.SourceArgs(
         authorized_resources=[
             "/subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/Rac46PostSwapRG/providers/Microsoft.OperationalInsights/workspaces/sampleWorkspace",
             "/subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/Rac46PostSwapRG/providers/microsoft.insights/components/sampleAI",
@@ -289,7 +289,7 @@ scheduled_query_rule = azure_nextgen.insights.latest.ScheduledQueryRule("schedul
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const scheduledQueryRule = new azure_nextgen.insights.latest.ScheduledQueryRule("scheduledQueryRule", {
+const scheduledQueryRule = new azure_nextgen.insights.ScheduledQueryRule("scheduledQueryRule", {
     action: {
         aznsAction: {
             actionGroup: ["/subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/Rac46PostSwapRG/providers/microsoft.insights/actiongroups/test-ag"],
@@ -337,13 +337,13 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var scheduledQueryRule = new AzureNextGen.Insights.Latest.ScheduledQueryRule("scheduledQueryRule", new AzureNextGen.Insights.Latest.ScheduledQueryRuleArgs
+        var scheduledQueryRule = new AzureNextGen.Insights..ScheduledQueryRule("scheduledQueryRule", new AzureNextGen.Insights..ScheduledQueryRuleArgs
         {
             Action = 
             {
                 { "criteria", 
                 {
-                    new AzureNextGen.Insights.Latest.Inputs.CriteriaArgs
+                    new AzureNextGen.Insights..Inputs.CriteriaArgs
                     {
                         Dimensions = {},
                         MetricName = "Average_% Idle Time",
@@ -356,7 +356,7 @@ class MyStack : Stack
             Location = "West Europe",
             ResourceGroupName = "alertsweu",
             RuleName = "logtometricfoo",
-            Source = new AzureNextGen.Insights.Latest.Inputs.SourceArgs
+            Source = new AzureNextGen.Insights..Inputs.SourceArgs
             {
                 DataSourceId = "/subscriptions/af52d502-a447-4bc6-8cb7-4780fbb00490/resourceGroups/alertsweu/providers/Microsoft.OperationalInsights/workspaces/alertsweu",
             },
@@ -380,9 +380,9 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-scheduled_query_rule = azure_nextgen.insights.latest.ScheduledQueryRule("scheduledQueryRule",
+scheduled_query_rule = azure_nextgen.insights.ScheduledQueryRule("scheduledQueryRule",
     action={
-        "criteria": [azure_nextgen.insights.latest.CriteriaArgs(
+        "criteria": [azure_nextgen.insights.CriteriaArgs(
             dimensions=[],
             metric_name="Average_% Idle Time",
         )],
@@ -393,7 +393,7 @@ scheduled_query_rule = azure_nextgen.insights.latest.ScheduledQueryRule("schedul
     location="West Europe",
     resource_group_name="alertsweu",
     rule_name="logtometricfoo",
-    source=azure_nextgen.insights.latest.SourceArgs(
+    source=azure_nextgen.insights.SourceArgs(
         data_source_id="/subscriptions/af52d502-a447-4bc6-8cb7-4780fbb00490/resourceGroups/alertsweu/providers/Microsoft.OperationalInsights/workspaces/alertsweu",
     ),
     tags={})
@@ -408,7 +408,7 @@ scheduled_query_rule = azure_nextgen.insights.latest.ScheduledQueryRule("schedul
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const scheduledQueryRule = new azure_nextgen.insights.latest.ScheduledQueryRule("scheduledQueryRule", {
+const scheduledQueryRule = new azure_nextgen.insights.ScheduledQueryRule("scheduledQueryRule", {
     action: {
         criteria: [{
             dimensions: [],
@@ -443,7 +443,7 @@ const scheduledQueryRule = new azure_nextgen.insights.latest.ScheduledQueryRule(
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ScheduledQueryRule</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">action</span><span class="p">:</span> <span class="nx">Optional[Union[AlertingActionArgs, LogToMetricActionArgs]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[Union[str, Enabled]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rule_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">schedule</span><span class="p">:</span> <span class="nx">Optional[ScheduleArgs]</span> = None<span class="p">, </span><span class="nx">source</span><span class="p">:</span> <span class="nx">Optional[SourceArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ScheduledQueryRule</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">action</span><span class="p">:</span> <span class="nx">Optional[Union[AlertingActionArgs, LogToMetricActionArgs]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[Union[str, Enabled]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rule_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">schedule</span><span class="p">:</span> <span class="nx">Optional[ScheduleArgs]</span> = None<span class="p">, </span><span class="nx">source</span><span class="p">:</span> <span class="nx">Optional[SourceArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -620,7 +620,7 @@ The ScheduledQueryRule resource accepts the following [input]({{< relref "/docs/
 <a href="#action_csharp" style="color: inherit; text-decoration: inherit;">Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertingaction">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Inputs.<wbr>Alerting<wbr>Action<wbr>Args</a> | <a href="#logtometricaction">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Inputs.<wbr>Log<wbr>To<wbr>Metric<wbr>Action<wbr>Args</a></span>
+        <span class="property-type"><a href="#alertingaction">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Inputs.<wbr>Alerting<wbr>Action<wbr>Args</a> | <a href="#logtometricaction">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Inputs.<wbr>Log<wbr>To<wbr>Metric<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Action needs to be taken on rule execution.{{% /md %}}</dd>
     <dt class="property-required"
@@ -656,7 +656,7 @@ The ScheduledQueryRule resource accepts the following [input]({{< relref "/docs/
 <a href="#source_csharp" style="color: inherit; text-decoration: inherit;">Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#source">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Inputs.<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#source">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Inputs.<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Data Source against which rule will Query Data{{% /md %}}</dd>
     <dt class="property-optional"
@@ -670,11 +670,20 @@ The ScheduledQueryRule resource accepts the following [input]({{< relref "/docs/
     <dd>{{% md %}}The description of the Log Search rule.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="displayname_csharp">
+<a href="#displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The display name of the alert rule{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="enabled_csharp">
 <a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#enabled">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Enabled</a></span>
+        <span class="property-type">string | <a href="#enabled">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Enabled</a></span>
     </dt>
     <dd>{{% md %}}The flag which indicates whether the Log Search rule is enabled. Value should be true or false{{% /md %}}</dd>
     <dt class="property-optional"
@@ -683,7 +692,7 @@ The ScheduledQueryRule resource accepts the following [input]({{< relref "/docs/
 <a href="#schedule_csharp" style="color: inherit; text-decoration: inherit;">Schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#schedule">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Inputs.<wbr>Schedule<wbr>Args</a></span>
+        <span class="property-type"><a href="#schedule">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Inputs.<wbr>Schedule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Schedule (Frequency, Time Window) for rule. Required for action type - AlertingAction{{% /md %}}</dd>
     <dt class="property-optional"
@@ -755,6 +764,15 @@ The ScheduledQueryRule resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the Log Search rule.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="displayname_go">
+<a href="#displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The display name of the alert rule{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="enabled_go">
@@ -844,6 +862,15 @@ The ScheduledQueryRule resource accepts the following [input]({{< relref "/docs/
     <dd>{{% md %}}The description of the Log Search rule.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="displayname_nodejs">
+<a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The display name of the alert rule{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="enabled_nodejs">
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
@@ -931,6 +958,15 @@ The ScheduledQueryRule resource accepts the following [input]({{< relref "/docs/
     <dd>{{% md %}}The description of the Log Search rule.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="display_name_python">
+<a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The display name of the alert rule{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="enabled_python">
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
@@ -971,6 +1007,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
+        <span id="etag_csharp">
+<a href="#etag_csharp" style="color: inherit; text-decoration: inherit;">Etag</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The etag field is *not* required. If it is provided in the response body, it must also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields. {{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
 </span>
@@ -978,6 +1023,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="kind_csharp">
+<a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="lastupdatedtime_csharp">
@@ -1022,6 +1076,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
+        <span id="etag_go">
+<a href="#etag_go" style="color: inherit; text-decoration: inherit;">Etag</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The etag field is *not* required. If it is provided in the response body, it must also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields. {{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
 </span>
@@ -1029,6 +1092,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="kind_go">
+<a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="lastupdatedtime_go">
@@ -1073,6 +1145,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
+        <span id="etag_nodejs">
+<a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The etag field is *not* required. If it is provided in the response body, it must also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields. {{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
@@ -1080,6 +1161,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="kind_nodejs">
+<a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="lastupdatedtime_nodejs">
@@ -1124,6 +1214,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
+        <span id="etag_python">
+<a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The etag field is *not* required. If it is provided in the response body, it must also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields. {{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
@@ -1131,6 +1230,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="kind_python">
+<a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="last_updated_time_python">
@@ -1253,7 +1361,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#severity_csharp" style="color: inherit; text-decoration: inherit;">Severity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#alertseverity">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Alert<wbr>Severity</a></span>
+        <span class="property-type">string | <a href="#alertseverity">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Alert<wbr>Severity</a></span>
     </dt>
     <dd>{{% md %}}Severity of the alert{{% /md %}}</dd>
     <dt class="property-required"
@@ -1262,7 +1370,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trigger_csharp" style="color: inherit; text-decoration: inherit;">Trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggercondition">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Inputs.<wbr>Trigger<wbr>Condition<wbr>Args</a></span>
+        <span class="property-type"><a href="#triggercondition">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Inputs.<wbr>Trigger<wbr>Condition<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The trigger condition that results in the alert rule being.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1271,7 +1379,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#aznsaction_csharp" style="color: inherit; text-decoration: inherit;">Azns<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aznsactiongroup">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Inputs.<wbr>Az<wbr>Ns<wbr>Action<wbr>Group<wbr>Args</a></span>
+        <span class="property-type"><a href="#aznsactiongroup">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Inputs.<wbr>Az<wbr>Ns<wbr>Action<wbr>Group<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Azure action group reference.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1432,7 +1540,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trigger_csharp" style="color: inherit; text-decoration: inherit;">Trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerconditionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Inputs.<wbr>Trigger<wbr>Condition<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#triggerconditionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Inputs.<wbr>Trigger<wbr>Condition<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The trigger condition that results in the alert rule being.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1441,7 +1549,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#aznsaction_csharp" style="color: inherit; text-decoration: inherit;">Azns<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aznsactiongroupresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Inputs.<wbr>Az<wbr>Ns<wbr>Action<wbr>Group<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#aznsactiongroupresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Inputs.<wbr>Az<wbr>Ns<wbr>Action<wbr>Group<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Azure action group reference.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1854,6 +1962,10 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language csharp %}}
 <dl class="tabular">
+    <dt>Greater<wbr>Than<wbr>Or<wbr>Equal</dt>
+    <dd>GreaterThanOrEqual</dd>
+    <dt>Less<wbr>Than<wbr>Or<wbr>Equal</dt>
+    <dd>LessThanOrEqual</dd>
     <dt>Greater<wbr>Than</dt>
     <dd>GreaterThan</dd>
     <dt>Less<wbr>Than</dt>
@@ -1865,6 +1977,10 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language go %}}
 <dl class="tabular">
+    <dt>Conditional<wbr>Operator<wbr>Greater<wbr>Than<wbr>Or<wbr>Equal</dt>
+    <dd>GreaterThanOrEqual</dd>
+    <dt>Conditional<wbr>Operator<wbr>Less<wbr>Than<wbr>Or<wbr>Equal</dt>
+    <dd>LessThanOrEqual</dd>
     <dt>Conditional<wbr>Operator<wbr>Greater<wbr>Than</dt>
     <dd>GreaterThan</dd>
     <dt>Conditional<wbr>Operator<wbr>Less<wbr>Than</dt>
@@ -1876,6 +1992,10 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language nodejs %}}
 <dl class="tabular">
+    <dt>Greater<wbr>Than<wbr>Or<wbr>Equal</dt>
+    <dd>GreaterThanOrEqual</dd>
+    <dt>Less<wbr>Than<wbr>Or<wbr>Equal</dt>
+    <dd>LessThanOrEqual</dd>
     <dt>Greater<wbr>Than</dt>
     <dd>GreaterThan</dd>
     <dt>Less<wbr>Than</dt>
@@ -1887,6 +2007,10 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language python %}}
 <dl class="tabular">
+    <dt>GREATER_THAN_OR_EQUAL</dt>
+    <dd>GreaterThanOrEqual</dd>
+    <dt>LESS_THAN_OR_EQUAL</dt>
+    <dd>LessThanOrEqual</dd>
     <dt>GREATER_THAN</dt>
     <dd>GreaterThan</dd>
     <dt>LESS_THAN</dt>
@@ -1916,7 +2040,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dimensions_csharp" style="color: inherit; text-decoration: inherit;">Dimensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dimension">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Inputs.<wbr>Dimension<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#dimension">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Inputs.<wbr>Dimension<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of Dimensions for creating metric{{% /md %}}</dd>
 </dl>
@@ -2014,7 +2138,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dimensions_csharp" style="color: inherit; text-decoration: inherit;">Dimensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dimensionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Inputs.<wbr>Dimension<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#dimensionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Inputs.<wbr>Dimension<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of Dimensions for creating metric{{% /md %}}</dd>
 </dl>
@@ -2112,7 +2236,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operator_csharp" style="color: inherit; text-decoration: inherit;">Operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#operator">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Operator</a></span>
+        <span class="property-type">string | <a href="#operator">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Operator</a></span>
     </dt>
     <dd>{{% md %}}Operator for dimension values{{% /md %}}</dd>
     <dt class="property-required"
@@ -2418,7 +2542,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metrictriggertype_csharp" style="color: inherit; text-decoration: inherit;">Metric<wbr>Trigger<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#metrictriggertype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Metric<wbr>Trigger<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#metrictriggertype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Metric<wbr>Trigger<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Metric Trigger Type - 'Consecutive' or 'Total'{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2436,7 +2560,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#thresholdoperator_csharp" style="color: inherit; text-decoration: inherit;">Threshold<wbr>Operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#conditionaloperator">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Conditional<wbr>Operator</a></span>
+        <span class="property-type">string | <a href="#conditionaloperator">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Conditional<wbr>Operator</a></span>
     </dt>
     <dd>{{% md %}}Evaluation operation for Metric -'GreaterThan' or 'LessThan' or 'Equal'.{{% /md %}}</dd>
 </dl>
@@ -2749,7 +2873,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#criteria_csharp" style="color: inherit; text-decoration: inherit;">Criteria</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#criteria">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Inputs.<wbr>Criteria<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#criteria">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Inputs.<wbr>Criteria<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Criteria of Metric{{% /md %}}</dd>
 </dl>
@@ -2811,7 +2935,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#criteria_csharp" style="color: inherit; text-decoration: inherit;">Criteria</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#criteriaresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Inputs.<wbr>Criteria<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#criteriaresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Inputs.<wbr>Criteria<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Criteria of Metric{{% /md %}}</dd>
 </dl>
@@ -3194,7 +3318,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#querytype_csharp" style="color: inherit; text-decoration: inherit;">Query<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#querytype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Query<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#querytype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Query<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Set value to 'ResultCount' .{{% /md %}}</dd>
 </dl>
@@ -3516,7 +3640,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#thresholdoperator_csharp" style="color: inherit; text-decoration: inherit;">Threshold<wbr>Operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#conditionaloperator">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Conditional<wbr>Operator</a></span>
+        <span class="property-type">string | <a href="#conditionaloperator">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Conditional<wbr>Operator</a></span>
     </dt>
     <dd>{{% md %}}Evaluation operation for rule - 'GreaterThan' or 'LessThan.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3525,7 +3649,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metrictrigger_csharp" style="color: inherit; text-decoration: inherit;">Metric<wbr>Trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#logmetrictrigger">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Inputs.<wbr>Log<wbr>Metric<wbr>Trigger<wbr>Args</a></span>
+        <span class="property-type"><a href="#logmetrictrigger">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Inputs.<wbr>Log<wbr>Metric<wbr>Trigger<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Trigger condition for metric query rule{{% /md %}}</dd>
 </dl>
@@ -3659,7 +3783,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metrictrigger_csharp" style="color: inherit; text-decoration: inherit;">Metric<wbr>Trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#logmetrictriggerresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Inputs.<wbr>Log<wbr>Metric<wbr>Trigger<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#logmetrictriggerresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Inputs.<wbr>Log<wbr>Metric<wbr>Trigger<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Trigger condition for metric query rule{{% /md %}}</dd>
 </dl>
@@ -3769,7 +3893,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:insights/latest:ScheduledQueryRule logtometricfoo /subscriptions/af52d502-a447-4bc6-8cb7-4780fbb00490/resourceGroups/alertsweu/providers/microsoft.insights/scheduledqueryrules/logtometricfoo 
+$ pulumi import azure-nextgen:insights:ScheduledQueryRule logtometricfoo /subscriptions/af52d502-a447-4bc6-8cb7-4780fbb00490/resourceGroups/alertsweu/providers/microsoft.insights/scheduledqueryrules/logtometricfoo 
 ```
 
 

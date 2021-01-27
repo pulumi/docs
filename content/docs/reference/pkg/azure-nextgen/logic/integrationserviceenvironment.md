@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.logic.IntegrationServiceEnvironm
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The integration service environment.
-Latest API Version: 2019-05-01.
+API Version: 2019-05-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,45 +27,45 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var integrationServiceEnvironment = new AzureNextGen.Logic.Latest.IntegrationServiceEnvironment("integrationServiceEnvironment", new AzureNextGen.Logic.Latest.IntegrationServiceEnvironmentArgs
+        var integrationServiceEnvironment = new AzureNextGen.Logic..IntegrationServiceEnvironment("integrationServiceEnvironment", new AzureNextGen.Logic..IntegrationServiceEnvironmentArgs
         {
             IntegrationServiceEnvironmentName = "testIntegrationServiceEnvironment",
             Location = "brazilsouth",
-            Properties = new AzureNextGen.Logic.Latest.Inputs.IntegrationServiceEnvironmentPropertiesArgs
+            Properties = new AzureNextGen.Logic..Inputs.IntegrationServiceEnvironmentPropertiesArgs
             {
-                EncryptionConfiguration = new AzureNextGen.Logic.Latest.Inputs.IntegrationServiceEnvironmenEncryptionConfigurationArgs
+                EncryptionConfiguration = new AzureNextGen.Logic..Inputs.IntegrationServiceEnvironmenEncryptionConfigurationArgs
                 {
-                    EncryptionKeyReference = new AzureNextGen.Logic.Latest.Inputs.IntegrationServiceEnvironmenEncryptionKeyReferenceArgs
+                    EncryptionKeyReference = new AzureNextGen.Logic..Inputs.IntegrationServiceEnvironmenEncryptionKeyReferenceArgs
                     {
                         KeyName = "testKeyName",
-                        KeyVault = new AzureNextGen.Logic.Latest.Inputs.ResourceReferenceArgs
+                        KeyVault = new AzureNextGen.Logic..Inputs.ResourceReferenceArgs
                         {
                             Id = "/subscriptions/f34b22a3-2202-4fb1-b040-1332bd928c84/resourceGroups/testResourceGroup/providers/Microsoft.KeyVault/vaults/testKeyVault",
                         },
                         KeyVersion = "13b261d30b984753869902d7f47f4d55",
                     },
                 },
-                NetworkConfiguration = new AzureNextGen.Logic.Latest.Inputs.NetworkConfigurationArgs
+                NetworkConfiguration = new AzureNextGen.Logic..Inputs.NetworkConfigurationArgs
                 {
-                    AccessEndpoint = new AzureNextGen.Logic.Latest.Inputs.IntegrationServiceEnvironmentAccessEndpointArgs
+                    AccessEndpoint = new AzureNextGen.Logic..Inputs.IntegrationServiceEnvironmentAccessEndpointArgs
                     {
                         Type = "Internal",
                     },
                     Subnets = 
                     {
-                        new AzureNextGen.Logic.Latest.Inputs.ResourceReferenceArgs
+                        new AzureNextGen.Logic..Inputs.ResourceReferenceArgs
                         {
                             Id = "/subscriptions/f34b22a3-2202-4fb1-b040-1332bd928c84/resourceGroups/testResourceGroup/providers/Microsoft.Network/virtualNetworks/testVNET/subnets/s1",
                         },
-                        new AzureNextGen.Logic.Latest.Inputs.ResourceReferenceArgs
+                        new AzureNextGen.Logic..Inputs.ResourceReferenceArgs
                         {
                             Id = "/subscriptions/f34b22a3-2202-4fb1-b040-1332bd928c84/resourceGroups/testResourceGroup/providers/Microsoft.Network/virtualNetworks/testVNET/subnets/s2",
                         },
-                        new AzureNextGen.Logic.Latest.Inputs.ResourceReferenceArgs
+                        new AzureNextGen.Logic..Inputs.ResourceReferenceArgs
                         {
                             Id = "/subscriptions/f34b22a3-2202-4fb1-b040-1332bd928c84/resourceGroups/testResourceGroup/providers/Microsoft.Network/virtualNetworks/testVNET/subnets/s3",
                         },
-                        new AzureNextGen.Logic.Latest.Inputs.ResourceReferenceArgs
+                        new AzureNextGen.Logic..Inputs.ResourceReferenceArgs
                         {
                             Id = "/subscriptions/f34b22a3-2202-4fb1-b040-1332bd928c84/resourceGroups/testResourceGroup/providers/Microsoft.Network/virtualNetworks/testVNET/subnets/s4",
                         },
@@ -73,7 +73,7 @@ class MyStack : Stack
                 },
             },
             ResourceGroup = "testResourceGroup",
-            Sku = new AzureNextGen.Logic.Latest.Inputs.IntegrationServiceEnvironmentSkuArgs
+            Sku = new AzureNextGen.Logic..Inputs.IntegrationServiceEnvironmentSkuArgs
             {
                 Capacity = 2,
                 Name = "Premium",
@@ -93,7 +93,7 @@ class MyStack : Stack
 package main
 
 import (
-	logic "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/logic/latest"
+	logic "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/logic"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -155,41 +155,41 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-integration_service_environment = azure_nextgen.logic.latest.IntegrationServiceEnvironment("integrationServiceEnvironment",
+integration_service_environment = azure_nextgen.logic.IntegrationServiceEnvironment("integrationServiceEnvironment",
     integration_service_environment_name="testIntegrationServiceEnvironment",
     location="brazilsouth",
-    properties=azure_nextgen.logic.latest.IntegrationServiceEnvironmentPropertiesArgs(
-        encryption_configuration=azure_nextgen.logic.latest.IntegrationServiceEnvironmenEncryptionConfigurationArgs(
-            encryption_key_reference=azure_nextgen.logic.latest.IntegrationServiceEnvironmenEncryptionKeyReferenceArgs(
+    properties=azure_nextgen.logic.IntegrationServiceEnvironmentPropertiesArgs(
+        encryption_configuration=azure_nextgen.logic.IntegrationServiceEnvironmenEncryptionConfigurationArgs(
+            encryption_key_reference=azure_nextgen.logic.IntegrationServiceEnvironmenEncryptionKeyReferenceArgs(
                 key_name="testKeyName",
-                key_vault=azure_nextgen.logic.latest.ResourceReferenceArgs(
+                key_vault=azure_nextgen.logic.ResourceReferenceArgs(
                     id="/subscriptions/f34b22a3-2202-4fb1-b040-1332bd928c84/resourceGroups/testResourceGroup/providers/Microsoft.KeyVault/vaults/testKeyVault",
                 ),
                 key_version="13b261d30b984753869902d7f47f4d55",
             ),
         ),
-        network_configuration=azure_nextgen.logic.latest.NetworkConfigurationArgs(
-            access_endpoint=azure_nextgen.logic.latest.IntegrationServiceEnvironmentAccessEndpointArgs(
+        network_configuration=azure_nextgen.logic.NetworkConfigurationArgs(
+            access_endpoint=azure_nextgen.logic.IntegrationServiceEnvironmentAccessEndpointArgs(
                 type="Internal",
             ),
             subnets=[
-                azure_nextgen.logic.latest.ResourceReferenceArgs(
+                azure_nextgen.logic.ResourceReferenceArgs(
                     id="/subscriptions/f34b22a3-2202-4fb1-b040-1332bd928c84/resourceGroups/testResourceGroup/providers/Microsoft.Network/virtualNetworks/testVNET/subnets/s1",
                 ),
-                azure_nextgen.logic.latest.ResourceReferenceArgs(
+                azure_nextgen.logic.ResourceReferenceArgs(
                     id="/subscriptions/f34b22a3-2202-4fb1-b040-1332bd928c84/resourceGroups/testResourceGroup/providers/Microsoft.Network/virtualNetworks/testVNET/subnets/s2",
                 ),
-                azure_nextgen.logic.latest.ResourceReferenceArgs(
+                azure_nextgen.logic.ResourceReferenceArgs(
                     id="/subscriptions/f34b22a3-2202-4fb1-b040-1332bd928c84/resourceGroups/testResourceGroup/providers/Microsoft.Network/virtualNetworks/testVNET/subnets/s3",
                 ),
-                azure_nextgen.logic.latest.ResourceReferenceArgs(
+                azure_nextgen.logic.ResourceReferenceArgs(
                     id="/subscriptions/f34b22a3-2202-4fb1-b040-1332bd928c84/resourceGroups/testResourceGroup/providers/Microsoft.Network/virtualNetworks/testVNET/subnets/s4",
                 ),
             ],
         ),
     ),
     resource_group="testResourceGroup",
-    sku=azure_nextgen.logic.latest.IntegrationServiceEnvironmentSkuArgs(
+    sku=azure_nextgen.logic.IntegrationServiceEnvironmentSkuArgs(
         capacity=2,
         name="Premium",
     ))
@@ -204,7 +204,7 @@ integration_service_environment = azure_nextgen.logic.latest.IntegrationServiceE
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const integrationServiceEnvironment = new azure_nextgen.logic.latest.IntegrationServiceEnvironment("integrationServiceEnvironment", {
+const integrationServiceEnvironment = new azure_nextgen.logic.IntegrationServiceEnvironment("integrationServiceEnvironment", {
     integrationServiceEnvironmentName: "testIntegrationServiceEnvironment",
     location: "brazilsouth",
     properties: {
@@ -464,7 +464,7 @@ The IntegrationServiceEnvironment resource accepts the following [input]({{< rel
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationserviceenvironmentproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>Integration<wbr>Service<wbr>Environment<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationserviceenvironmentproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>Integration<wbr>Service<wbr>Environment<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The integration service environment properties.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -473,7 +473,7 @@ The IntegrationServiceEnvironment resource accepts the following [input]({{< rel
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationserviceenvironmentsku">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>Integration<wbr>Service<wbr>Environment<wbr>Sku<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationserviceenvironmentsku">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>Integration<wbr>Service<wbr>Environment<wbr>Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The sku.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -828,7 +828,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accessendpointipaddresses_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Endpoint<wbr>Ip<wbr>Addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipaddress">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>Ip<wbr>Address<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#ipaddress">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>Ip<wbr>Address<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The access endpoint ip address.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -837,7 +837,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#outgoingipaddresses_csharp" style="color: inherit; text-decoration: inherit;">Outgoing<wbr>Ip<wbr>Addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipaddress">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>Ip<wbr>Address<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#ipaddress">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>Ip<wbr>Address<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The outgoing ip address.{{% /md %}}</dd>
 </dl>
@@ -926,7 +926,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#connector_csharp" style="color: inherit; text-decoration: inherit;">Connector</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flowendpoints">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>Flow<wbr>Endpoints<wbr>Args</a></span>
+        <span class="property-type"><a href="#flowendpoints">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>Flow<wbr>Endpoints<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The connector endpoints.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -935,7 +935,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workflow_csharp" style="color: inherit; text-decoration: inherit;">Workflow</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flowendpoints">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>Flow<wbr>Endpoints<wbr>Args</a></span>
+        <span class="property-type"><a href="#flowendpoints">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>Flow<wbr>Endpoints<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The workflow endpoints.{{% /md %}}</dd>
 </dl>
@@ -1024,7 +1024,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#connector_csharp" style="color: inherit; text-decoration: inherit;">Connector</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flowendpointsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>Flow<wbr>Endpoints<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#flowendpointsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>Flow<wbr>Endpoints<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The connector endpoints.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1033,7 +1033,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workflow_csharp" style="color: inherit; text-decoration: inherit;">Workflow</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flowendpointsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>Flow<wbr>Endpoints<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#flowendpointsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>Flow<wbr>Endpoints<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The workflow endpoints.{{% /md %}}</dd>
 </dl>
@@ -1122,7 +1122,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accessendpointipaddresses_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Endpoint<wbr>Ip<wbr>Addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipaddressresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>Ip<wbr>Address<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#ipaddressresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>Ip<wbr>Address<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The access endpoint ip address.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1131,7 +1131,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#outgoingipaddresses_csharp" style="color: inherit; text-decoration: inherit;">Outgoing<wbr>Ip<wbr>Addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipaddressresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>Ip<wbr>Address<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#ipaddressresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>Ip<wbr>Address<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The outgoing ip address.{{% /md %}}</dd>
 </dl>
@@ -1220,7 +1220,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryptionkeyreference_csharp" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Key<wbr>Reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationserviceenvironmenencryptionkeyreference">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>Integration<wbr>Service<wbr>Environmen<wbr>Encryption<wbr>Key<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationserviceenvironmenencryptionkeyreference">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>Integration<wbr>Service<wbr>Environmen<wbr>Encryption<wbr>Key<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The encryption key reference.{{% /md %}}</dd>
 </dl>
@@ -1282,7 +1282,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryptionkeyreference_csharp" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Key<wbr>Reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationserviceenvironmenencryptionkeyreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>Integration<wbr>Service<wbr>Environmen<wbr>Encryption<wbr>Key<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationserviceenvironmenencryptionkeyreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>Integration<wbr>Service<wbr>Environmen<wbr>Encryption<wbr>Key<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The encryption key reference.{{% /md %}}</dd>
 </dl>
@@ -1353,7 +1353,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keyvault_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcereference">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>Resource<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcereference">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>Resource<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The key vault reference.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1487,7 +1487,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keyvault_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcereferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>Resource<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcereferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>Resource<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The key vault reference.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1612,7 +1612,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#integrationserviceenvironmentaccessendpointtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Integration<wbr>Service<wbr>Environment<wbr>Access<wbr>Endpoint<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#integrationserviceenvironmentaccessendpointtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Integration<wbr>Service<wbr>Environment<wbr>Access<wbr>Endpoint<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The access endpoint type.{{% /md %}}</dd>
 </dl>
@@ -1782,7 +1782,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryptionconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationserviceenvironmenencryptionconfiguration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>Integration<wbr>Service<wbr>Environmen<wbr>Encryption<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationserviceenvironmenencryptionconfiguration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>Integration<wbr>Service<wbr>Environmen<wbr>Encryption<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The encryption configuration.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1791,7 +1791,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpointsconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Endpoints<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flowendpointsconfiguration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>Flow<wbr>Endpoints<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#flowendpointsconfiguration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>Flow<wbr>Endpoints<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The endpoints configuration.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1809,7 +1809,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#networkconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkconfiguration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>Network<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#networkconfiguration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>Network<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The network configuration.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1818,7 +1818,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#workflowprovisioningstate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Workflow<wbr>Provisioning<wbr>State</a></span>
+        <span class="property-type">string | <a href="#workflowprovisioningstate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Workflow<wbr>Provisioning<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}The provisioning state.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1827,7 +1827,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#workflowstate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Workflow<wbr>State</a></span>
+        <span class="property-type">string | <a href="#workflowstate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Workflow<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}The integration service environment state.{{% /md %}}</dd>
 </dl>
@@ -2024,7 +2024,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryptionconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationserviceenvironmenencryptionconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>Integration<wbr>Service<wbr>Environmen<wbr>Encryption<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationserviceenvironmenencryptionconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>Integration<wbr>Service<wbr>Environmen<wbr>Encryption<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The encryption configuration.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2033,7 +2033,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpointsconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Endpoints<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flowendpointsconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>Flow<wbr>Endpoints<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#flowendpointsconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>Flow<wbr>Endpoints<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The endpoints configuration.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2051,7 +2051,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#networkconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>Network<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#networkconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>Network<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The network configuration.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2275,7 +2275,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#integrationserviceenvironmentskuname">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Integration<wbr>Service<wbr>Environment<wbr>Sku<wbr>Name</a></span>
+        <span class="property-type">string | <a href="#integrationserviceenvironmentskuname">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Integration<wbr>Service<wbr>Environment<wbr>Sku<wbr>Name</a></span>
     </dt>
     <dd>{{% md %}}The sku name.{{% /md %}}</dd>
 </dl>
@@ -2632,7 +2632,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accessendpoint_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationserviceenvironmentaccessendpoint">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>Integration<wbr>Service<wbr>Environment<wbr>Access<wbr>Endpoint<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationserviceenvironmentaccessendpoint">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>Integration<wbr>Service<wbr>Environment<wbr>Access<wbr>Endpoint<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The access endpoint.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2641,7 +2641,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subnets_csharp" style="color: inherit; text-decoration: inherit;">Subnets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcereference">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>Resource<wbr>Reference<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#resourcereference">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>Resource<wbr>Reference<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The subnets.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2766,7 +2766,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accessendpoint_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationserviceenvironmentaccessendpointresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>Integration<wbr>Service<wbr>Environment<wbr>Access<wbr>Endpoint<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationserviceenvironmentaccessendpointresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>Integration<wbr>Service<wbr>Environment<wbr>Access<wbr>Endpoint<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The access endpoint.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2775,7 +2775,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subnets_csharp" style="color: inherit; text-decoration: inherit;">Subnets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcereferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>Resource<wbr>Reference<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#resourcereferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>Resource<wbr>Reference<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The subnets.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3358,7 +3358,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:logic/latest:IntegrationServiceEnvironment testIntegrationServiceEnvironment /subscriptions/f34b22a3-2202-4fb1-b040-1332bd928c84/resourceGroups/testResourceGroup/providers/Microsoft.Logic/integrationServiceEnvironments/testIntegrationServiceEnvironment 
+$ pulumi import azure-nextgen:logic:IntegrationServiceEnvironment testIntegrationServiceEnvironment /subscriptions/f34b22a3-2202-4fb1-b040-1332bd928c84/resourceGroups/testResourceGroup/providers/Microsoft.Logic/integrationServiceEnvironments/testIntegrationServiceEnvironment 
 ```
 
 

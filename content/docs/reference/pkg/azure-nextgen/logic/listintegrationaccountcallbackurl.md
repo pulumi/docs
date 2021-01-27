@@ -72,7 +72,7 @@ The following arguments are supported:
 <a href="#keytype_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#keytype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Key<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#keytype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Key<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The key type.{{% /md %}}</dd>
     <dt class="property-optional"

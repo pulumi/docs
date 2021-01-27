@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.compute.SshPublicKey resource wi
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Specifies information about the SSH public key.
-Latest API Version: 2020-06-01.
+API Version: 2020-06-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var sshPublicKey = new AzureNextGen.Compute.Latest.SshPublicKey("sshPublicKey", new AzureNextGen.Compute.Latest.SshPublicKeyArgs
+        var sshPublicKey = new AzureNextGen.Compute..SshPublicKey("sshPublicKey", new AzureNextGen.Compute..SshPublicKeyArgs
         {
             Location = "westus",
             PublicKey = "{ssh-rsa public key}",
@@ -48,7 +48,7 @@ class MyStack : Stack
 package main
 
 import (
-	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute/latest"
+	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -77,7 +77,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-ssh_public_key = azure_nextgen.compute.latest.SshPublicKey("sshPublicKey",
+ssh_public_key = azure_nextgen.compute.SshPublicKey("sshPublicKey",
     location="westus",
     public_key="{ssh-rsa public key}",
     resource_group_name="myResourceGroup",
@@ -93,7 +93,7 @@ ssh_public_key = azure_nextgen.compute.latest.SshPublicKey("sshPublicKey",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const sshPublicKey = new azure_nextgen.compute.latest.SshPublicKey("sshPublicKey", {
+const sshPublicKey = new azure_nextgen.compute.SshPublicKey("sshPublicKey", {
     location: "westus",
     publicKey: "{ssh-rsa public key}",
     resourceGroupName: "myResourceGroup",
@@ -638,7 +638,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:compute/latest:SshPublicKey mySshPublicKeyName /subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/sshPublicKeys/mySshPublicKeyName 
+$ pulumi import azure-nextgen:compute:SshPublicKey mySshPublicKeyName /subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/sshPublicKeys/mySshPublicKeyName 
 ```
 
 

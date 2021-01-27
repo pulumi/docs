@@ -72,7 +72,7 @@ The following arguments are supported:
 <a href="#importmethod_csharp" style="color: inherit; text-decoration: inherit;">Import<wbr>Method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#wsdlimportmethod">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web.<wbr>Wsdl<wbr>Import<wbr>Method</a></span>
+        <span class="property-type">string | <a href="#wsdlimportmethod">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web..<wbr>Wsdl<wbr>Import<wbr>Method</a></span>
     </dt>
     <dd>{{% md %}}The WSDL import method{{% /md %}}</dd>
     <dt class="property-optional"
@@ -81,7 +81,7 @@ The following arguments are supported:
 <a href="#service_csharp" style="color: inherit; text-decoration: inherit;">Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#wsdlservice">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web.<wbr>Inputs.<wbr>Wsdl<wbr>Service<wbr>Args</a></span>
+        <span class="property-type"><a href="#wsdlservice">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web..<wbr>Inputs.<wbr>Wsdl<wbr>Service<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The service with name and endpoint names{{% /md %}}</dd>
     <dt class="property-optional"
@@ -303,7 +303,7 @@ The following output properties are available:
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#wsdlserviceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web.<wbr>Outputs.<wbr>Wsdl<wbr>Service<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#wsdlserviceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web..<wbr>Outputs.<wbr>Wsdl<wbr>Service<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Collection of WSDL interfaces{{% /md %}}</dd>
 </dl>

@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.cdn.Policy resource with example
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Defines web application firewall policy for Azure CDN.
-Latest API Version: 2020-09-01.
+API Version: 2020-09-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,19 +27,19 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var policy = new AzureNextGen.Cdn.Latest.Policy("policy", new AzureNextGen.Cdn.Latest.PolicyArgs
+        var policy = new AzureNextGen.Cdn..Policy("policy", new AzureNextGen.Cdn..PolicyArgs
         {
-            CustomRules = new AzureNextGen.Cdn.Latest.Inputs.CustomRuleListArgs
+            CustomRules = new AzureNextGen.Cdn..Inputs.CustomRuleListArgs
             {
                 Rules = 
                 {
-                    new AzureNextGen.Cdn.Latest.Inputs.CustomRuleArgs
+                    new AzureNextGen.Cdn..Inputs.CustomRuleArgs
                     {
                         Action = "Block",
                         EnabledState = "Enabled",
                         MatchConditions = 
                         {
-                            new AzureNextGen.Cdn.Latest.Inputs.MatchConditionArgs
+                            new AzureNextGen.Cdn..Inputs.MatchConditionArgs
                             {
                                 MatchValue = 
                                 {
@@ -50,7 +50,7 @@ class MyStack : Stack
                                 Operator = "GeoMatch",
                                 Transforms = {},
                             },
-                            new AzureNextGen.Cdn.Latest.Inputs.MatchConditionArgs
+                            new AzureNextGen.Cdn..Inputs.MatchConditionArgs
                             {
                                 MatchValue = 
                                 {
@@ -62,7 +62,7 @@ class MyStack : Stack
                                 Selector = "UserAgent",
                                 Transforms = {},
                             },
-                            new AzureNextGen.Cdn.Latest.Inputs.MatchConditionArgs
+                            new AzureNextGen.Cdn..Inputs.MatchConditionArgs
                             {
                                 MatchValue = 
                                 {
@@ -86,26 +86,26 @@ class MyStack : Stack
                 },
             },
             Location = "WestUs",
-            ManagedRules = new AzureNextGen.Cdn.Latest.Inputs.ManagedRuleSetListArgs
+            ManagedRules = new AzureNextGen.Cdn..Inputs.ManagedRuleSetListArgs
             {
                 ManagedRuleSets = 
                 {
-                    new AzureNextGen.Cdn.Latest.Inputs.ManagedRuleSetArgs
+                    new AzureNextGen.Cdn..Inputs.ManagedRuleSetArgs
                     {
                         RuleGroupOverrides = 
                         {
-                            new AzureNextGen.Cdn.Latest.Inputs.ManagedRuleGroupOverrideArgs
+                            new AzureNextGen.Cdn..Inputs.ManagedRuleGroupOverrideArgs
                             {
                                 RuleGroupName = "Group1",
                                 Rules = 
                                 {
-                                    new AzureNextGen.Cdn.Latest.Inputs.ManagedRuleOverrideArgs
+                                    new AzureNextGen.Cdn..Inputs.ManagedRuleOverrideArgs
                                     {
                                         Action = "Redirect",
                                         EnabledState = "Enabled",
                                         RuleId = "GROUP1-0001",
                                     },
-                                    new AzureNextGen.Cdn.Latest.Inputs.ManagedRuleOverrideArgs
+                                    new AzureNextGen.Cdn..Inputs.ManagedRuleOverrideArgs
                                     {
                                         EnabledState = "Disabled",
                                         RuleId = "GROUP1-0002",
@@ -119,23 +119,23 @@ class MyStack : Stack
                 },
             },
             PolicyName = "MicrosoftCdnWafPolicy",
-            PolicySettings = new AzureNextGen.Cdn.Latest.Inputs.PolicySettingsArgs
+            PolicySettings = new AzureNextGen.Cdn..Inputs.PolicySettingsArgs
             {
                 DefaultCustomBlockResponseBody = "PGh0bWw+CjxoZWFkZXI+PHRpdGxlPkhlbGxvPC90aXRsZT48L2hlYWRlcj4KPGJvZHk+CkhlbGxvIHdvcmxkCjwvYm9keT4KPC9odG1sPg==",
                 DefaultCustomBlockResponseStatusCode = 200,
                 DefaultRedirectUrl = "http://www.bing.com",
             },
-            RateLimitRules = new AzureNextGen.Cdn.Latest.Inputs.RateLimitRuleListArgs
+            RateLimitRules = new AzureNextGen.Cdn..Inputs.RateLimitRuleListArgs
             {
                 Rules = 
                 {
-                    new AzureNextGen.Cdn.Latest.Inputs.RateLimitRuleArgs
+                    new AzureNextGen.Cdn..Inputs.RateLimitRuleArgs
                     {
                         Action = "Block",
                         EnabledState = "Enabled",
                         MatchConditions = 
                         {
-                            new AzureNextGen.Cdn.Latest.Inputs.MatchConditionArgs
+                            new AzureNextGen.Cdn..Inputs.MatchConditionArgs
                             {
                                 MatchValue = 
                                 {
@@ -156,7 +156,7 @@ class MyStack : Stack
                 },
             },
             ResourceGroupName = "rg1",
-            Sku = new AzureNextGen.Cdn.Latest.Inputs.SkuArgs
+            Sku = new AzureNextGen.Cdn..Inputs.SkuArgs
             {
                 Name = "Standard_Microsoft",
             },
@@ -175,7 +175,7 @@ class MyStack : Stack
 package main
 
 import (
-	cdn "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/cdn/latest"
+	cdn "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/cdn"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -304,20 +304,20 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-policy = azure_nextgen.cdn.latest.Policy("policy",
-    custom_rules=azure_nextgen.cdn.latest.CustomRuleListArgs(
-        rules=[azure_nextgen.cdn.latest.CustomRuleArgs(
+policy = azure_nextgen.cdn.Policy("policy",
+    custom_rules=azure_nextgen.cdn.CustomRuleListArgs(
+        rules=[azure_nextgen.cdn.CustomRuleArgs(
             action="Block",
             enabled_state="Enabled",
             match_conditions=[
-                azure_nextgen.cdn.latest.MatchConditionArgs(
+                azure_nextgen.cdn.MatchConditionArgs(
                     match_value=["CH"],
                     match_variable="RemoteAddr",
                     negate_condition=False,
                     operator="GeoMatch",
                     transforms=[],
                 ),
-                azure_nextgen.cdn.latest.MatchConditionArgs(
+                azure_nextgen.cdn.MatchConditionArgs(
                     match_value=["windows"],
                     match_variable="RequestHeader",
                     negate_condition=False,
@@ -325,7 +325,7 @@ policy = azure_nextgen.cdn.latest.Policy("policy",
                     selector="UserAgent",
                     transforms=[],
                 ),
-                azure_nextgen.cdn.latest.MatchConditionArgs(
+                azure_nextgen.cdn.MatchConditionArgs(
                     match_value=[
                         "<?php",
                         "?>",
@@ -345,17 +345,17 @@ policy = azure_nextgen.cdn.latest.Policy("policy",
         )],
     ),
     location="WestUs",
-    managed_rules=azure_nextgen.cdn.latest.ManagedRuleSetListArgs(
-        managed_rule_sets=[azure_nextgen.cdn.latest.ManagedRuleSetArgs(
-            rule_group_overrides=[azure_nextgen.cdn.latest.ManagedRuleGroupOverrideArgs(
+    managed_rules=azure_nextgen.cdn.ManagedRuleSetListArgs(
+        managed_rule_sets=[azure_nextgen.cdn.ManagedRuleSetArgs(
+            rule_group_overrides=[azure_nextgen.cdn.ManagedRuleGroupOverrideArgs(
                 rule_group_name="Group1",
                 rules=[
-                    azure_nextgen.cdn.latest.ManagedRuleOverrideArgs(
+                    azure_nextgen.cdn.ManagedRuleOverrideArgs(
                         action="Redirect",
                         enabled_state="Enabled",
                         rule_id="GROUP1-0001",
                     ),
-                    azure_nextgen.cdn.latest.ManagedRuleOverrideArgs(
+                    azure_nextgen.cdn.ManagedRuleOverrideArgs(
                         enabled_state="Disabled",
                         rule_id="GROUP1-0002",
                     ),
@@ -366,16 +366,16 @@ policy = azure_nextgen.cdn.latest.Policy("policy",
         )],
     ),
     policy_name="MicrosoftCdnWafPolicy",
-    policy_settings=azure_nextgen.cdn.latest.PolicySettingsArgs(
+    policy_settings=azure_nextgen.cdn.PolicySettingsArgs(
         default_custom_block_response_body="PGh0bWw+CjxoZWFkZXI+PHRpdGxlPkhlbGxvPC90aXRsZT48L2hlYWRlcj4KPGJvZHk+CkhlbGxvIHdvcmxkCjwvYm9keT4KPC9odG1sPg==",
         default_custom_block_response_status_code=200,
         default_redirect_url="http://www.bing.com",
     ),
-    rate_limit_rules=azure_nextgen.cdn.latest.RateLimitRuleListArgs(
-        rules=[azure_nextgen.cdn.latest.RateLimitRuleArgs(
+    rate_limit_rules=azure_nextgen.cdn.RateLimitRuleListArgs(
+        rules=[azure_nextgen.cdn.RateLimitRuleArgs(
             action="Block",
             enabled_state="Enabled",
-            match_conditions=[azure_nextgen.cdn.latest.MatchConditionArgs(
+            match_conditions=[azure_nextgen.cdn.MatchConditionArgs(
                 match_value=[
                     "192.168.1.0/24",
                     "10.0.0.0/24",
@@ -392,7 +392,7 @@ policy = azure_nextgen.cdn.latest.Policy("policy",
         )],
     ),
     resource_group_name="rg1",
-    sku=azure_nextgen.cdn.latest.SkuArgs(
+    sku=azure_nextgen.cdn.SkuArgs(
         name="Standard_Microsoft",
     ))
 
@@ -406,7 +406,7 @@ policy = azure_nextgen.cdn.latest.Policy("policy",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const policy = new azure_nextgen.cdn.latest.Policy("policy", {
+const policy = new azure_nextgen.cdn.Policy("policy", {
     customRules: {
         rules: [{
             action: "Block",
@@ -719,7 +719,7 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sku">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn.<wbr>Inputs.<wbr>Sku<wbr>Args</a></span>
+        <span class="property-type"><a href="#sku">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn..<wbr>Inputs.<wbr>Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The pricing tier (defines a CDN provider, feature list and rate) of the CdnWebApplicationFirewallPolicy.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -728,7 +728,7 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#customrules_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customrulelist">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn.<wbr>Inputs.<wbr>Custom<wbr>Rule<wbr>List<wbr>Args</a></span>
+        <span class="property-type"><a href="#customrulelist">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn..<wbr>Inputs.<wbr>Custom<wbr>Rule<wbr>List<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes custom rules inside the policy.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -746,7 +746,7 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#managedrules_csharp" style="color: inherit; text-decoration: inherit;">Managed<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedrulesetlist">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn.<wbr>Inputs.<wbr>Managed<wbr>Rule<wbr>Set<wbr>List<wbr>Args</a></span>
+        <span class="property-type"><a href="#managedrulesetlist">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn..<wbr>Inputs.<wbr>Managed<wbr>Rule<wbr>Set<wbr>List<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes managed rules inside the policy.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -755,7 +755,7 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#policysettings_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policysettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn.<wbr>Inputs.<wbr>Policy<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#policysettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn..<wbr>Inputs.<wbr>Policy<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes  policySettings for policy{{% /md %}}</dd>
     <dt class="property-optional"
@@ -764,7 +764,7 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#ratelimitrules_csharp" style="color: inherit; text-decoration: inherit;">Rate<wbr>Limit<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ratelimitrulelist">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn.<wbr>Inputs.<wbr>Rate<wbr>Limit<wbr>Rule<wbr>List<wbr>Args</a></span>
+        <span class="property-type"><a href="#ratelimitrulelist">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn..<wbr>Inputs.<wbr>Rate<wbr>Limit<wbr>Rule<wbr>List<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes rate limit rules inside the policy.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1083,7 +1083,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpointlinks_csharp" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Links</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cdnendpointresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn.<wbr>Outputs.<wbr>Cdn<wbr>Endpoint<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#cdnendpointresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn..<wbr>Outputs.<wbr>Cdn<wbr>Endpoint<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Describes Azure CDN endpoints associated with this Web Application Firewall policy.{{% /md %}}</dd>
     <dt class="property-"
@@ -1128,7 +1128,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#systemdata_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn.<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
+        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn..<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Read only system data{{% /md %}}</dd>
     <dt class="property-"
@@ -1487,7 +1487,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#action_csharp" style="color: inherit; text-decoration: inherit;">Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#actiontype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn.<wbr>Action<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#actiontype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn..<wbr>Action<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Describes what action to be applied when rule matches{{% /md %}}</dd>
     <dt class="property-required"
@@ -1496,7 +1496,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#matchconditions_csharp" style="color: inherit; text-decoration: inherit;">Match<wbr>Conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#matchcondition">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn.<wbr>Inputs.<wbr>Match<wbr>Condition<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#matchcondition">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn..<wbr>Inputs.<wbr>Match<wbr>Condition<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of match conditions.{{% /md %}}</dd>
     <dt class="property-required"
@@ -1523,7 +1523,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enabledstate_csharp" style="color: inherit; text-decoration: inherit;">Enabled<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#customruleenabledstate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn.<wbr>Custom<wbr>Rule<wbr>Enabled<wbr>State</a></span>
+        <span class="property-type">string | <a href="#customruleenabledstate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn..<wbr>Custom<wbr>Rule<wbr>Enabled<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}Describes if the custom rule is in enabled or disabled state. Defaults to Enabled if not specified.{{% /md %}}</dd>
 </dl>
@@ -1731,7 +1731,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rules_csharp" style="color: inherit; text-decoration: inherit;">Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customrule">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn.<wbr>Inputs.<wbr>Custom<wbr>Rule<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#customrule">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn..<wbr>Inputs.<wbr>Custom<wbr>Rule<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of rules{{% /md %}}</dd>
 </dl>
@@ -1793,7 +1793,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rules_csharp" style="color: inherit; text-decoration: inherit;">Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn.<wbr>Inputs.<wbr>Custom<wbr>Rule<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#customruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn..<wbr>Inputs.<wbr>Custom<wbr>Rule<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of rules{{% /md %}}</dd>
 </dl>
@@ -1864,7 +1864,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#matchconditions_csharp" style="color: inherit; text-decoration: inherit;">Match<wbr>Conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#matchconditionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn.<wbr>Inputs.<wbr>Match<wbr>Condition<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#matchconditionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn..<wbr>Inputs.<wbr>Match<wbr>Condition<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of match conditions.{{% /md %}}</dd>
     <dt class="property-required"
@@ -2108,7 +2108,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rules_csharp" style="color: inherit; text-decoration: inherit;">Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedruleoverride">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn.<wbr>Inputs.<wbr>Managed<wbr>Rule<wbr>Override<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#managedruleoverride">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn..<wbr>Inputs.<wbr>Managed<wbr>Rule<wbr>Override<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of rules that will be disabled. If none specified, all rules in the group will be disabled.{{% /md %}}</dd>
 </dl>
@@ -2206,7 +2206,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rules_csharp" style="color: inherit; text-decoration: inherit;">Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedruleoverrideresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn.<wbr>Inputs.<wbr>Managed<wbr>Rule<wbr>Override<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#managedruleoverrideresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn..<wbr>Inputs.<wbr>Managed<wbr>Rule<wbr>Override<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of rules that will be disabled. If none specified, all rules in the group will be disabled.{{% /md %}}</dd>
 </dl>
@@ -2304,7 +2304,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#action_csharp" style="color: inherit; text-decoration: inherit;">Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#actiontype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn.<wbr>Action<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#actiontype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn..<wbr>Action<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Describes the override action to be applied when rule matches.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2313,7 +2313,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enabledstate_csharp" style="color: inherit; text-decoration: inherit;">Enabled<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#managedruleenabledstate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn.<wbr>Managed<wbr>Rule<wbr>Enabled<wbr>State</a></span>
+        <span class="property-type">string | <a href="#managedruleenabledstate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn..<wbr>Managed<wbr>Rule<wbr>Enabled<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}Describes if the managed rule is in enabled or disabled state. Defaults to Disabled if not specified.{{% /md %}}</dd>
 </dl>
@@ -2590,7 +2590,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rulegroupoverrides_csharp" style="color: inherit; text-decoration: inherit;">Rule<wbr>Group<wbr>Overrides</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedrulegroupoverride">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn.<wbr>Inputs.<wbr>Managed<wbr>Rule<wbr>Group<wbr>Override<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#managedrulegroupoverride">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn..<wbr>Inputs.<wbr>Managed<wbr>Rule<wbr>Group<wbr>Override<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Defines the rule overrides to apply to the rule set.{{% /md %}}</dd>
 </dl>
@@ -2733,7 +2733,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#managedrulesets_csharp" style="color: inherit; text-decoration: inherit;">Managed<wbr>Rule<wbr>Sets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedruleset">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn.<wbr>Inputs.<wbr>Managed<wbr>Rule<wbr>Set<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#managedruleset">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn..<wbr>Inputs.<wbr>Managed<wbr>Rule<wbr>Set<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of rule sets.{{% /md %}}</dd>
 </dl>
@@ -2795,7 +2795,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#managedrulesets_csharp" style="color: inherit; text-decoration: inherit;">Managed<wbr>Rule<wbr>Sets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedrulesetresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn.<wbr>Inputs.<wbr>Managed<wbr>Rule<wbr>Set<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#managedrulesetresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn..<wbr>Inputs.<wbr>Managed<wbr>Rule<wbr>Set<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of rule sets.{{% /md %}}</dd>
 </dl>
@@ -2884,7 +2884,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rulegroupoverrides_csharp" style="color: inherit; text-decoration: inherit;">Rule<wbr>Group<wbr>Overrides</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedrulegroupoverrideresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn.<wbr>Inputs.<wbr>Managed<wbr>Rule<wbr>Group<wbr>Override<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#managedrulegroupoverrideresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn..<wbr>Inputs.<wbr>Managed<wbr>Rule<wbr>Group<wbr>Override<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Defines the rule overrides to apply to the rule set.{{% /md %}}</dd>
 </dl>
@@ -3036,7 +3036,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#matchvariable_csharp" style="color: inherit; text-decoration: inherit;">Match<wbr>Variable</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#matchvariable">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn.<wbr>Match<wbr>Variable</a></span>
+        <span class="property-type">string | <a href="#matchvariable">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn..<wbr>Match<wbr>Variable</a></span>
     </dt>
     <dd>{{% md %}}Match variable to compare against.{{% /md %}}</dd>
     <dt class="property-required"
@@ -3045,7 +3045,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operator_csharp" style="color: inherit; text-decoration: inherit;">Operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#operator">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn.<wbr>Operator</a></span>
+        <span class="property-type">string | <a href="#operator">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn..<wbr>Operator</a></span>
     </dt>
     <dd>{{% md %}}Describes operator to be matched{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3072,7 +3072,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transforms_csharp" style="color: inherit; text-decoration: inherit;">Transforms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Union&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn.<wbr>Transform<wbr>Type&gt;&gt;</span>
+        <span class="property-type">List&lt;Union&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn..<wbr>Transform<wbr>Type&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}List of transforms.{{% /md %}}</dd>
 </dl>
@@ -3866,7 +3866,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enabledstate_csharp" style="color: inherit; text-decoration: inherit;">Enabled<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#policyenabledstate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn.<wbr>Policy<wbr>Enabled<wbr>State</a></span>
+        <span class="property-type">string | <a href="#policyenabledstate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn..<wbr>Policy<wbr>Enabled<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}describes if the policy is in enabled state or disabled state{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3875,7 +3875,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mode_csharp" style="color: inherit; text-decoration: inherit;">Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#policymode">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn.<wbr>Policy<wbr>Mode</a></span>
+        <span class="property-type">string | <a href="#policymode">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn..<wbr>Policy<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}Describes if it is in detection mode or prevention mode at policy level.{{% /md %}}</dd>
 </dl>
@@ -4251,7 +4251,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#action_csharp" style="color: inherit; text-decoration: inherit;">Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#actiontype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn.<wbr>Action<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#actiontype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn..<wbr>Action<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Describes what action to be applied when rule matches{{% /md %}}</dd>
     <dt class="property-required"
@@ -4260,7 +4260,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#matchconditions_csharp" style="color: inherit; text-decoration: inherit;">Match<wbr>Conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#matchcondition">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn.<wbr>Inputs.<wbr>Match<wbr>Condition<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#matchcondition">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn..<wbr>Inputs.<wbr>Match<wbr>Condition<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of match conditions.{{% /md %}}</dd>
     <dt class="property-required"
@@ -4305,7 +4305,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enabledstate_csharp" style="color: inherit; text-decoration: inherit;">Enabled<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#customruleenabledstate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn.<wbr>Custom<wbr>Rule<wbr>Enabled<wbr>State</a></span>
+        <span class="property-type">string | <a href="#customruleenabledstate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn..<wbr>Custom<wbr>Rule<wbr>Enabled<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}Describes if the custom rule is in enabled or disabled state. Defaults to Enabled if not specified.{{% /md %}}</dd>
 </dl>
@@ -4529,7 +4529,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rules_csharp" style="color: inherit; text-decoration: inherit;">Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ratelimitrule">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn.<wbr>Inputs.<wbr>Rate<wbr>Limit<wbr>Rule<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#ratelimitrule">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn..<wbr>Inputs.<wbr>Rate<wbr>Limit<wbr>Rule<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of rules{{% /md %}}</dd>
 </dl>
@@ -4591,7 +4591,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rules_csharp" style="color: inherit; text-decoration: inherit;">Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ratelimitruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn.<wbr>Inputs.<wbr>Rate<wbr>Limit<wbr>Rule<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#ratelimitruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn..<wbr>Inputs.<wbr>Rate<wbr>Limit<wbr>Rule<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of rules{{% /md %}}</dd>
 </dl>
@@ -4662,7 +4662,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#matchconditions_csharp" style="color: inherit; text-decoration: inherit;">Match<wbr>Conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#matchconditionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn.<wbr>Inputs.<wbr>Match<wbr>Condition<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#matchconditionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn..<wbr>Inputs.<wbr>Match<wbr>Condition<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of match conditions.{{% /md %}}</dd>
     <dt class="property-required"
@@ -4931,7 +4931,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#skuname">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn.<wbr>Sku<wbr>Name</a></span>
+        <span class="property-type">string | <a href="#skuname">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn..<wbr>Sku<wbr>Name</a></span>
     </dt>
     <dd>{{% md %}}Name of the pricing tier.{{% /md %}}</dd>
 </dl>
@@ -5495,7 +5495,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:cdn/latest:Policy MicrosoftCdnWafPolicy /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Cdn/CdnWebApplicationFirewallPolicies/MicrosoftCdnWafPolicy 
+$ pulumi import azure-nextgen:cdn:Policy MicrosoftCdnWafPolicy /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Cdn/CdnWebApplicationFirewallPolicies/MicrosoftCdnWafPolicy 
 ```
 
 

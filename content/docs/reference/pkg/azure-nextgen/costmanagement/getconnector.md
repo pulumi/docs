@@ -161,7 +161,7 @@ The following output properties are available:
 <a href="#collection_csharp" style="color: inherit; text-decoration: inherit;">Collection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectorcollectioninforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cost<wbr>Management.<wbr>Outputs.<wbr>Connector<wbr>Collection<wbr>Info<wbr>Response</a></span>
+        <span class="property-type"><a href="#connectorcollectioninforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cost<wbr>Management..<wbr>Outputs.<wbr>Connector<wbr>Collection<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Collection information{{% /md %}}</dd>
     <dt class="property-"
@@ -904,7 +904,7 @@ The following output properties are available:
 <a href="#error_csharp" style="color: inherit; text-decoration: inherit;">Error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectorcollectionerrorinforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Connector<wbr>Collection<wbr>Error<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#connectorcollectionerrorinforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cost<wbr>Management..<wbr>Inputs.<wbr>Connector<wbr>Collection<wbr>Error<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Error information of last collection{{% /md %}}</dd>
 </dl>

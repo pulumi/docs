@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.network.PublicIPPrefix resource 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Public IP prefix resource.
-Latest API Version: 2020-08-01.
+API Version: 2020-08-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,14 +27,14 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var publicIPPrefix = new AzureNextGen.Network.Latest.PublicIPPrefix("publicIPPrefix", new AzureNextGen.Network.Latest.PublicIPPrefixArgs
+        var publicIPPrefix = new AzureNextGen.Network..PublicIPPrefix("publicIPPrefix", new AzureNextGen.Network..PublicIPPrefixArgs
         {
             Location = "westus",
             PrefixLength = 30,
             PublicIPAddressVersion = "IPv4",
             PublicIpPrefixName = "test-ipprefix",
             ResourceGroupName = "rg1",
-            Sku = new AzureNextGen.Network.Latest.Inputs.PublicIPPrefixSkuArgs
+            Sku = new AzureNextGen.Network..Inputs.PublicIPPrefixSkuArgs
             {
                 Name = "Standard",
                 Tier = "Regional",
@@ -54,7 +54,7 @@ class MyStack : Stack
 package main
 
 import (
-	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network/latest"
+	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -88,13 +88,13 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-public_ip_prefix = azure_nextgen.network.latest.PublicIPPrefix("publicIPPrefix",
+public_ip_prefix = azure_nextgen.network.PublicIPPrefix("publicIPPrefix",
     location="westus",
     prefix_length=30,
     public_ip_address_version="IPv4",
     public_ip_prefix_name="test-ipprefix",
     resource_group_name="rg1",
-    sku=azure_nextgen.network.latest.PublicIPPrefixSkuArgs(
+    sku=azure_nextgen.network.PublicIPPrefixSkuArgs(
         name="Standard",
         tier="Regional",
     ))
@@ -109,7 +109,7 @@ public_ip_prefix = azure_nextgen.network.latest.PublicIPPrefix("publicIPPrefix",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const publicIPPrefix = new azure_nextgen.network.latest.PublicIPPrefix("publicIPPrefix", {
+const publicIPPrefix = new azure_nextgen.network.PublicIPPrefix("publicIPPrefix", {
     location: "westus",
     prefixLength: 30,
     publicIPAddressVersion: "IPv4",
@@ -135,13 +135,13 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var publicIPPrefix = new AzureNextGen.Network.Latest.PublicIPPrefix("publicIPPrefix", new AzureNextGen.Network.Latest.PublicIPPrefixArgs
+        var publicIPPrefix = new AzureNextGen.Network..PublicIPPrefix("publicIPPrefix", new AzureNextGen.Network..PublicIPPrefixArgs
         {
             Location = "westus",
             PrefixLength = 30,
             PublicIpPrefixName = "test-ipprefix",
             ResourceGroupName = "rg1",
-            Sku = new AzureNextGen.Network.Latest.Inputs.PublicIPPrefixSkuArgs
+            Sku = new AzureNextGen.Network..Inputs.PublicIPPrefixSkuArgs
             {
                 Name = "Standard",
             },
@@ -160,7 +160,7 @@ class MyStack : Stack
 package main
 
 import (
-	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network/latest"
+	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -192,12 +192,12 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-public_ip_prefix = azure_nextgen.network.latest.PublicIPPrefix("publicIPPrefix",
+public_ip_prefix = azure_nextgen.network.PublicIPPrefix("publicIPPrefix",
     location="westus",
     prefix_length=30,
     public_ip_prefix_name="test-ipprefix",
     resource_group_name="rg1",
-    sku=azure_nextgen.network.latest.PublicIPPrefixSkuArgs(
+    sku=azure_nextgen.network.PublicIPPrefixSkuArgs(
         name="Standard",
     ))
 
@@ -211,7 +211,7 @@ public_ip_prefix = azure_nextgen.network.latest.PublicIPPrefix("publicIPPrefix",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const publicIPPrefix = new azure_nextgen.network.latest.PublicIPPrefix("publicIPPrefix", {
+const publicIPPrefix = new azure_nextgen.network.PublicIPPrefix("publicIPPrefix", {
     location: "westus",
     prefixLength: 30,
     publicIpPrefixName: "test-ipprefix",
@@ -432,7 +432,7 @@ The PublicIPPrefix resource accepts the following [input]({{< relref "/docs/intr
 <a href="#customipprefix_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>IPPrefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The customIpPrefix that this prefix is associated with.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -441,7 +441,7 @@ The PublicIPPrefix resource accepts the following [input]({{< relref "/docs/intr
 <a href="#extendedlocation_csharp" style="color: inherit; text-decoration: inherit;">Extended<wbr>Location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#extendedlocation">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Extended<wbr>Location<wbr>Args</a></span>
+        <span class="property-type"><a href="#extendedlocation">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Extended<wbr>Location<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The extended location of the public ip address.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -459,7 +459,7 @@ The PublicIPPrefix resource accepts the following [input]({{< relref "/docs/intr
 <a href="#iptags_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iptag">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Ip<wbr>Tag<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#iptag">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Ip<wbr>Tag<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of tags associated with the public IP prefix.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -486,7 +486,7 @@ The PublicIPPrefix resource accepts the following [input]({{< relref "/docs/intr
 <a href="#publicipaddressversion_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>IPAddress<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#ipversion">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>IPVersion</a></span>
+        <span class="property-type">string | <a href="#ipversion">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>IPVersion</a></span>
     </dt>
     <dd>{{% md %}}The public IP address version.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -495,7 +495,7 @@ The PublicIPPrefix resource accepts the following [input]({{< relref "/docs/intr
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#publicipprefixsku">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Public<wbr>IPPrefix<wbr>Sku<wbr>Args</a></span>
+        <span class="property-type"><a href="#publicipprefixsku">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Public<wbr>IPPrefix<wbr>Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The public IP prefix SKU.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -904,7 +904,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#loadbalancerfrontendipconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer<wbr>Frontend<wbr>Ip<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Outputs.<wbr>Sub<wbr>Resource<wbr>Response</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Outputs.<wbr>Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The reference to load balancer frontend IP configuration associated with the public IP prefix.{{% /md %}}</dd>
     <dt class="property-"
@@ -931,7 +931,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publicipaddresses_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>IPAddresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#referencedpublicipaddressresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Outputs.<wbr>Referenced<wbr>Public<wbr>Ip<wbr>Address<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#referencedpublicipaddressresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Outputs.<wbr>Referenced<wbr>Public<wbr>Ip<wbr>Address<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of all referenced PublicIPAddresses.{{% /md %}}</dd>
     <dt class="property-"
@@ -1246,7 +1246,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#extendedlocationtypes">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Extended<wbr>Location<wbr>Types</a></span>
+        <span class="property-type">string | <a href="#extendedlocationtypes">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Extended<wbr>Location<wbr>Types</a></span>
     </dt>
     <dd>{{% md %}}The type of the extended location.{{% /md %}}</dd>
 </dl>
@@ -1697,7 +1697,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#publicipprefixskuname">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Public<wbr>IPPrefix<wbr>Sku<wbr>Name</a></span>
+        <span class="property-type">string | <a href="#publicipprefixskuname">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Public<wbr>IPPrefix<wbr>Sku<wbr>Name</a></span>
     </dt>
     <dd>{{% md %}}Name of a public IP prefix SKU.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1706,7 +1706,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tier_csharp" style="color: inherit; text-decoration: inherit;">Tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#publicipprefixskutier">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Public<wbr>IPPrefix<wbr>Sku<wbr>Tier</a></span>
+        <span class="property-type">string | <a href="#publicipprefixskutier">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Public<wbr>IPPrefix<wbr>Sku<wbr>Tier</a></span>
     </dt>
     <dd>{{% md %}}Tier of a public IP prefix SKU.{{% /md %}}</dd>
 </dl>
@@ -2141,7 +2141,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:network/latest:PublicIPPrefix test-ipprefix /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/publicIPPrefixes/test-ipprefix 
+$ pulumi import azure-nextgen:network:PublicIPPrefix test-ipprefix /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/publicIPPrefixes/test-ipprefix 
 ```
 
 

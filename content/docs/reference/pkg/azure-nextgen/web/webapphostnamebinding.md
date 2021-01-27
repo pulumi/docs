@@ -11,13 +11,13 @@ meta_desc: "Documentation for the azure-nextgen.web.WebAppHostNameBinding resour
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 A hostname binding object.
-Latest API Version: 2020-09-01.
+API Version: 2020-09-01.
 ## Import
 
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:web/latest:WebAppHostNameBinding myresource1 /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/hostNameBindings/{hostName} 
+$ pulumi import azure-nextgen:web:WebAppHostNameBinding myresource1 /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/hostNameBindings/{hostName} 
 ```
 
 
@@ -245,7 +245,7 @@ The WebAppHostNameBinding resource accepts the following [input]({{< relref "/do
 <a href="#azureresourcetype_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Resource<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureresourcetype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web.<wbr>Azure<wbr>Resource<wbr>Type</a></span>
+        <span class="property-type"><a href="#azureresourcetype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web..<wbr>Azure<wbr>Resource<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Azure resource type.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -254,7 +254,7 @@ The WebAppHostNameBinding resource accepts the following [input]({{< relref "/do
 <a href="#customhostnamednsrecordtype_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Host<wbr>Name<wbr>Dns<wbr>Record<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customhostnamednsrecordtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web.<wbr>Custom<wbr>Host<wbr>Name<wbr>Dns<wbr>Record<wbr>Type</a></span>
+        <span class="property-type"><a href="#customhostnamednsrecordtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web..<wbr>Custom<wbr>Host<wbr>Name<wbr>Dns<wbr>Record<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Custom DNS record type.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -272,7 +272,7 @@ The WebAppHostNameBinding resource accepts the following [input]({{< relref "/do
 <a href="#hostnametype_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Name<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hostnametype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web.<wbr>Host<wbr>Name<wbr>Type</a></span>
+        <span class="property-type"><a href="#hostnametype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web..<wbr>Host<wbr>Name<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Hostname type.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -299,7 +299,7 @@ The WebAppHostNameBinding resource accepts the following [input]({{< relref "/do
 <a href="#sslstate_csharp" style="color: inherit; text-decoration: inherit;">Ssl<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sslstate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web.<wbr>Ssl<wbr>State</a></span>
+        <span class="property-type"><a href="#sslstate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web..<wbr>Ssl<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}SSL type{{% /md %}}</dd>
     <dt class="property-optional"
@@ -681,7 +681,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#systemdata_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web.<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
+        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web..<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The system metadata relating to this resource.{{% /md %}}</dd>
     <dt class="property-"

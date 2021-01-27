@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.dbforpostgresql.Configuration re
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Represents a Configuration.
-Latest API Version: 2017-12-01.
+API Version: 2017-12-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var configuration = new AzureNextGen.DBforPostgreSQL.Latest.Configuration("configuration", new AzureNextGen.DBforPostgreSQL.Latest.ConfigurationArgs
+        var configuration = new AzureNextGen.DBforPostgreSQL..Configuration("configuration", new AzureNextGen.DBforPostgreSQL..ConfigurationArgs
         {
             ConfigurationName = "array_nulls",
             ResourceGroupName = "TestGroup",
@@ -49,7 +49,7 @@ class MyStack : Stack
 package main
 
 import (
-	dbforpostgresql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/dbforpostgresql/latest"
+	dbforpostgresql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/dbforpostgresql"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -79,7 +79,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-configuration = azure_nextgen.dbforpostgresql.latest.Configuration("configuration",
+configuration = azure_nextgen.dbforpostgresql.Configuration("configuration",
     configuration_name="array_nulls",
     resource_group_name="TestGroup",
     server_name="testserver",
@@ -96,7 +96,7 @@ configuration = azure_nextgen.dbforpostgresql.latest.Configuration("configuratio
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const configuration = new azure_nextgen.dbforpostgresql.latest.Configuration("configuration", {
+const configuration = new azure_nextgen.dbforpostgresql.Configuration("configuration", {
     configurationName: "array_nulls",
     resourceGroupName: "TestGroup",
     serverName: "testserver",
@@ -786,7 +786,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:dbforpostgresql/latest:Configuration array_nulls /subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/TestGroup/providers/Microsoft.DBforPostgreSQL/servers/testserver/configurations/array_nulls 
+$ pulumi import azure-nextgen:dbforpostgresql:Configuration array_nulls /subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/TestGroup/providers/Microsoft.DBforPostgreSQL/servers/testserver/configurations/array_nulls 
 ```
 
 

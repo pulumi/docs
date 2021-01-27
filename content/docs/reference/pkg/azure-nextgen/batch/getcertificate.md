@@ -197,7 +197,7 @@ The following output properties are available:
 <a href="#deletecertificateerror_csharp" style="color: inherit; text-decoration: inherit;">Delete<wbr>Certificate<wbr>Error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deletecertificateerrorresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch.<wbr>Outputs.<wbr>Delete<wbr>Certificate<wbr>Error<wbr>Response</a></span>
+        <span class="property-type"><a href="#deletecertificateerrorresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch..<wbr>Outputs.<wbr>Delete<wbr>Certificate<wbr>Error<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}This is only returned when the certificate provisioningState is 'Failed'.{{% /md %}}</dd>
     <dt class="property-"
@@ -720,7 +720,7 @@ The following output properties are available:
 <a href="#details_csharp" style="color: inherit; text-decoration: inherit;">Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deletecertificateerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch.<wbr>Inputs.<wbr>Delete<wbr>Certificate<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#deletecertificateerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch..<wbr>Inputs.<wbr>Delete<wbr>Certificate<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of additional details about the error.{{% /md %}}</dd>
     <dt class="property-optional"

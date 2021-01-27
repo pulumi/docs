@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.migrate.Project resource with ex
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Azure Migrate Project.
-Latest API Version: 2019-10-01.
+API Version: 2019-10-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,12 +27,12 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var project = new AzureNextGen.Migrate.Latest.Project("project", new AzureNextGen.Migrate.Latest.ProjectArgs
+        var project = new AzureNextGen.Migrate..Project("project", new AzureNextGen.Migrate..ProjectArgs
         {
             ETag = "",
             Location = "West Europe",
             ProjectName = "abGoyalProject2",
-            Properties = new AzureNextGen.Migrate.Latest.Inputs.ProjectPropertiesArgs
+            Properties = new AzureNextGen.Migrate..Inputs.ProjectPropertiesArgs
             {
                 AssessmentSolutionId = "/subscriptions/6393a73f-8d55-47ef-b6dd-179b3e0c7910/resourcegroups/abgoyal-westeurope/providers/microsoft.migrate/migrateprojects/abgoyalweselfhost/Solutions/Servers-Assessment-ServerAssessment",
                 ProjectStatus = "Active",
@@ -54,7 +54,7 @@ class MyStack : Stack
 package main
 
 import (
-	migrate "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/migrate/latest"
+	migrate "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/migrate"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -88,11 +88,11 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-project = azure_nextgen.migrate.latest.Project("project",
+project = azure_nextgen.migrate.Project("project",
     e_tag="",
     location="West Europe",
     project_name="abGoyalProject2",
-    properties=azure_nextgen.migrate.latest.ProjectPropertiesArgs(
+    properties=azure_nextgen.migrate.ProjectPropertiesArgs(
         assessment_solution_id="/subscriptions/6393a73f-8d55-47ef-b6dd-179b3e0c7910/resourcegroups/abgoyal-westeurope/providers/microsoft.migrate/migrateprojects/abgoyalweselfhost/Solutions/Servers-Assessment-ServerAssessment",
         project_status="Active",
     ),
@@ -109,7 +109,7 @@ project = azure_nextgen.migrate.latest.Project("project",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const project = new azure_nextgen.migrate.latest.Project("project", {
+const project = new azure_nextgen.migrate.Project("project", {
     eTag: "",
     location: "West Europe",
     projectName: "abGoyalProject2",
@@ -350,7 +350,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Inputs.<wbr>Project<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#projectproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate..<wbr>Inputs.<wbr>Project<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties of the project.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -732,7 +732,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#projectstatus_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#projectstatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Project<wbr>Status</a></span>
+        <span class="property-type">string | <a href="#projectstatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate..<wbr>Project<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}Assessment project status.{{% /md %}}</dd>
 </dl>
@@ -1365,7 +1365,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:migrate/latest:Project abGoyalProject2 /subscriptions/6393a73f-8d55-47ef-b6dd-179b3e0c7910/resourceGroups/abgoyal-westeurope/providers/Microsoft.Migrate/assessmentprojects/abGoyalProject2 
+$ pulumi import azure-nextgen:migrate:Project abGoyalProject2 /subscriptions/6393a73f-8d55-47ef-b6dd-179b3e0c7910/resourceGroups/abgoyal-westeurope/providers/Microsoft.Migrate/assessmentprojects/abGoyalProject2 
 ```
 
 

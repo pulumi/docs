@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.peering.PeeringService resource 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Peering Service
-Latest API Version: 2020-10-01.
+API Version: 2020-10-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var peeringService = new AzureNextGen.Peering.Latest.PeeringService("peeringService", new AzureNextGen.Peering.Latest.PeeringServiceArgs
+        var peeringService = new AzureNextGen.Peering..PeeringService("peeringService", new AzureNextGen.Peering..PeeringServiceArgs
         {
             Location = "eastus",
             PeeringServiceLocation = "state1",
@@ -49,7 +49,7 @@ class MyStack : Stack
 package main
 
 import (
-	peering "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/peering/latest"
+	peering "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/peering"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -79,7 +79,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-peering_service = azure_nextgen.peering.latest.PeeringService("peeringService",
+peering_service = azure_nextgen.peering.PeeringService("peeringService",
     location="eastus",
     peering_service_location="state1",
     peering_service_name="peeringServiceName",
@@ -96,7 +96,7 @@ peering_service = azure_nextgen.peering.latest.PeeringService("peeringService",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const peeringService = new azure_nextgen.peering.latest.PeeringService("peeringService", {
+const peeringService = new azure_nextgen.peering.PeeringService("peeringService", {
     location: "eastus",
     peeringServiceLocation: "state1",
     peeringServiceName: "peeringServiceName",
@@ -342,7 +342,7 @@ The PeeringService resource accepts the following [input]({{< relref "/docs/intr
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#peeringservicesku">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Peering.<wbr>Inputs.<wbr>Peering<wbr>Service<wbr>Sku<wbr>Args</a></span>
+        <span class="property-type"><a href="#peeringservicesku">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Peering..<wbr>Inputs.<wbr>Peering<wbr>Service<wbr>Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The SKU that defines the type of the peering service.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -878,7 +878,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:peering/latest:PeeringService peeringServiceName /subscriptions/subId/resourceGroups/rgName/providers/Microsoft.Peering/peeringServices/peeringServiceName 
+$ pulumi import azure-nextgen:peering:PeeringService peeringServiceName /subscriptions/subId/resourceGroups/rgName/providers/Microsoft.Peering/peeringServices/peeringServiceName 
 ```
 
 

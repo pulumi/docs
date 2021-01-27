@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.customerinsights.Prediction reso
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The prediction resource format.
-Latest API Version: 2017-04-26.
+API Version: 2017-04-26.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var prediction = new AzureNextGen.CustomerInsights.Latest.Prediction("prediction", new AzureNextGen.CustomerInsights.Latest.PredictionArgs
+        var prediction = new AzureNextGen.CustomerInsights..Prediction("prediction", new AzureNextGen.CustomerInsights..PredictionArgs
         {
             AutoAnalyze = true,
             Description = 
@@ -43,7 +43,7 @@ class MyStack : Stack
             InvolvedInteractionTypes = {},
             InvolvedKpiTypes = {},
             InvolvedRelationships = {},
-            Mappings = new AzureNextGen.CustomerInsights.Latest.Inputs.PredictionMappingsArgs
+            Mappings = new AzureNextGen.CustomerInsights..Inputs.PredictionMappingsArgs
             {
                 Grade = "sdktest_Grade",
                 Reason = "sdktest_Reason",
@@ -71,7 +71,7 @@ class MyStack : Stack
 package main
 
 import (
-	customerinsights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/customerinsights/latest"
+	customerinsights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/customerinsights"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -120,7 +120,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-prediction = azure_nextgen.customerinsights.latest.Prediction("prediction",
+prediction = azure_nextgen.customerinsights.Prediction("prediction",
     auto_analyze=True,
     description={
         "en-us": "sdktest",
@@ -133,7 +133,7 @@ prediction = azure_nextgen.customerinsights.latest.Prediction("prediction",
     involved_interaction_types=[],
     involved_kpi_types=[],
     involved_relationships=[],
-    mappings=azure_nextgen.customerinsights.latest.PredictionMappingsArgs(
+    mappings=azure_nextgen.customerinsights.PredictionMappingsArgs(
         grade="sdktest_Grade",
         reason="sdktest_Reason",
         score="sdktest_Score",
@@ -156,7 +156,7 @@ prediction = azure_nextgen.customerinsights.latest.Prediction("prediction",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const prediction = new azure_nextgen.customerinsights.latest.Prediction("prediction", {
+const prediction = new azure_nextgen.customerinsights.Prediction("prediction", {
     autoAnalyze: true,
     description: {
         "en-us": "sdktest",
@@ -394,7 +394,7 @@ The Prediction resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#mappings_csharp" style="color: inherit; text-decoration: inherit;">Mappings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#predictionmappings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights.<wbr>Inputs.<wbr>Prediction<wbr>Mappings<wbr>Args</a></span>
+        <span class="property-type"><a href="#predictionmappings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights..<wbr>Inputs.<wbr>Prediction<wbr>Mappings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Definition of the link mapping of prediction.{{% /md %}}</dd>
     <dt class="property-required"
@@ -484,7 +484,7 @@ The Prediction resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#grades_csharp" style="color: inherit; text-decoration: inherit;">Grades</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#predictiongrades">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights.<wbr>Inputs.<wbr>Prediction<wbr>Grades<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#predictiongrades">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights..<wbr>Inputs.<wbr>Prediction<wbr>Grades<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The prediction grades.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1010,7 +1010,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#systemgeneratedentities_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Generated<wbr>Entities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#predictionresponsesystemgeneratedentities">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights.<wbr>Outputs.<wbr>Prediction<wbr>Response<wbr>System<wbr>Generated<wbr>Entities</a></span>
+        <span class="property-type"><a href="#predictionresponsesystemgeneratedentities">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights..<wbr>Outputs.<wbr>Prediction<wbr>Response<wbr>System<wbr>Generated<wbr>Entities</a></span>
     </dt>
     <dd>{{% md %}}System generated entities.{{% /md %}}</dd>
     <dt class="property-"
@@ -1899,7 +1899,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:customerinsights/latest:Prediction sdkTestHub/sdktest /subscriptions/c909e979-ef71-4def-a970-bc7c154db8c5/resourceGroups/TestHubRG/providers/Microsoft.CustomerInsights/hubs/azSdkTestHub/predictions/sdktest 
+$ pulumi import azure-nextgen:customerinsights:Prediction sdkTestHub/sdktest /subscriptions/c909e979-ef71-4def-a970-bc7c154db8c5/resourceGroups/TestHubRG/providers/Microsoft.CustomerInsights/hubs/azSdkTestHub/predictions/sdktest 
 ```
 
 

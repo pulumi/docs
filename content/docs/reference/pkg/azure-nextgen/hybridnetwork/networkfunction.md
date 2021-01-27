@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.hybridnetwork.NetworkFunction re
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Network function resource response.
+API Version: 2020-01-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,9 +27,9 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var networkFunction = new AzureNextGen.HybridNetwork.V20200101Preview.NetworkFunction("networkFunction", new AzureNextGen.HybridNetwork.V20200101Preview.NetworkFunctionArgs
+        var networkFunction = new AzureNextGen.HybridNetwork..NetworkFunction("networkFunction", new AzureNextGen.HybridNetwork..NetworkFunctionArgs
         {
-            Device = new AzureNextGen.HybridNetwork.V20200101Preview.Inputs.SubResourceArgs
+            Device = new AzureNextGen.HybridNetwork..Inputs.SubResourceArgs
             {
                 Id = "/subscriptions/subid/resourcegroups/rg/providers/Microsoft.HybridNetwork/devices/testDevice",
             },
@@ -37,15 +38,15 @@ class MyStack : Stack
             NetworkFunctionName = "testNf",
             NetworkFunctionUserConfigurations = 
             {
-                new AzureNextGen.HybridNetwork.V20200101Preview.Inputs.NetworkFunctionUserConfigurationArgs
+                new AzureNextGen.HybridNetwork..Inputs.NetworkFunctionUserConfigurationArgs
                 {
                     NetworkInterfaces = 
                     {
-                        new AzureNextGen.HybridNetwork.V20200101Preview.Inputs.NetworkInterfaceArgs
+                        new AzureNextGen.HybridNetwork..Inputs.NetworkInterfaceArgs
                         {
                             IpConfigurations = 
                             {
-                                new AzureNextGen.HybridNetwork.V20200101Preview.Inputs.NetworkInterfaceIPConfigurationArgs
+                                new AzureNextGen.HybridNetwork..Inputs.NetworkInterfaceIPConfigurationArgs
                                 {
                                     Gateway = "",
                                     IpAddress = "",
@@ -58,11 +59,11 @@ class MyStack : Stack
                             NetworkInterfaceName = "nic1",
                             VmSwitchType = "Management",
                         },
-                        new AzureNextGen.HybridNetwork.V20200101Preview.Inputs.NetworkInterfaceArgs
+                        new AzureNextGen.HybridNetwork..Inputs.NetworkInterfaceArgs
                         {
                             IpConfigurations = 
                             {
-                                new AzureNextGen.HybridNetwork.V20200101Preview.Inputs.NetworkInterfaceIPConfigurationArgs
+                                new AzureNextGen.HybridNetwork..Inputs.NetworkInterfaceIPConfigurationArgs
                                 {
                                     Gateway = "",
                                     IpAddress = "",
@@ -98,7 +99,7 @@ class MyStack : Stack
 package main
 
 import (
-	hybridnetwork "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/hybridnetwork/v20200101preview"
+	hybridnetwork "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/hybridnetwork"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -168,17 +169,17 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-network_function = azure_nextgen.hybridnetwork.v20200101preview.NetworkFunction("networkFunction",
-    device=azure_nextgen.hybridnetwork.v20200101preview.SubResourceArgs(
+network_function = azure_nextgen.hybridnetwork.NetworkFunction("networkFunction",
+    device=azure_nextgen.hybridnetwork.SubResourceArgs(
         id="/subscriptions/subid/resourcegroups/rg/providers/Microsoft.HybridNetwork/devices/testDevice",
     ),
     location="eastus",
     managed_application_parameters={},
     network_function_name="testNf",
-    network_function_user_configurations=[azure_nextgen.hybridnetwork.v20200101preview.NetworkFunctionUserConfigurationArgs(
+    network_function_user_configurations=[azure_nextgen.hybridnetwork.NetworkFunctionUserConfigurationArgs(
         network_interfaces=[
-            azure_nextgen.hybridnetwork.v20200101preview.NetworkInterfaceArgs(
-                ip_configurations=[azure_nextgen.hybridnetwork.v20200101preview.NetworkInterfaceIPConfigurationArgs(
+            azure_nextgen.hybridnetwork.NetworkInterfaceArgs(
+                ip_configurations=[azure_nextgen.hybridnetwork.NetworkInterfaceIPConfigurationArgs(
                     gateway="",
                     ip_address="",
                     ip_allocation_method="Dynamic",
@@ -189,8 +190,8 @@ network_function = azure_nextgen.hybridnetwork.v20200101preview.NetworkFunction(
                 network_interface_name="nic1",
                 vm_switch_type="Management",
             ),
-            azure_nextgen.hybridnetwork.v20200101preview.NetworkInterfaceArgs(
-                ip_configurations=[azure_nextgen.hybridnetwork.v20200101preview.NetworkInterfaceIPConfigurationArgs(
+            azure_nextgen.hybridnetwork.NetworkInterfaceArgs(
+                ip_configurations=[azure_nextgen.hybridnetwork.NetworkInterfaceIPConfigurationArgs(
                     gateway="",
                     ip_address="",
                     ip_allocation_method="Dynamic",
@@ -219,7 +220,7 @@ network_function = azure_nextgen.hybridnetwork.v20200101preview.NetworkFunction(
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const networkFunction = new azure_nextgen.hybridnetwork.v20200101preview.NetworkFunction("networkFunction", {
+const networkFunction = new azure_nextgen.hybridnetwork.NetworkFunction("networkFunction", {
     device: {
         id: "/subscriptions/subid/resourcegroups/rg/providers/Microsoft.HybridNetwork/devices/testDevice",
     },
@@ -481,7 +482,7 @@ The NetworkFunction resource accepts the following [input]({{< relref "/docs/int
 <a href="#device_csharp" style="color: inherit; text-decoration: inherit;">Device</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Network..<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The reference to the device resource.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -508,7 +509,7 @@ The NetworkFunction resource accepts the following [input]({{< relref "/docs/int
 <a href="#networkfunctionuserconfigurations_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Function<wbr>User<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkfunctionuserconfiguration">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Network.<wbr>Inputs.<wbr>Network<wbr>Function<wbr>User<wbr>Configuration<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#networkfunctionuserconfiguration">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Network..<wbr>Inputs.<wbr>Network<wbr>Function<wbr>User<wbr>Configuration<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The network function configurations from the user.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -854,7 +855,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#managedapplication_csharp" style="color: inherit; text-decoration: inherit;">Managed<wbr>Application</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Network.<wbr>Outputs.<wbr>Sub<wbr>Resource<wbr>Response</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Network..<wbr>Outputs.<wbr>Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The resource URI of the managed application.{{% /md %}}</dd>
     <dt class="property-"
@@ -1253,7 +1254,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#networkinterfaces_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Interfaces</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkinterface">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Network.<wbr>Inputs.<wbr>Network<wbr>Interface<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#networkinterface">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Network..<wbr>Inputs.<wbr>Network<wbr>Interface<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The network interface configuration.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1262,7 +1263,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#osprofile_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkfunctionuserconfigurationosprofile">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Network.<wbr>Inputs.<wbr>Network<wbr>Function<wbr>User<wbr>Configuration<wbr>Os<wbr>Profile<wbr>Args</a></span>
+        <span class="property-type"><a href="#networkfunctionuserconfigurationosprofile">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Network..<wbr>Inputs.<wbr>Network<wbr>Function<wbr>User<wbr>Configuration<wbr>Os<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the operating system settings for the role instance.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1485,7 +1486,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#networkinterfaces_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Interfaces</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkinterfaceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Network.<wbr>Inputs.<wbr>Network<wbr>Interface<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#networkinterfaceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Network..<wbr>Inputs.<wbr>Network<wbr>Interface<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The network interface configuration.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1494,7 +1495,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#osprofile_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkfunctionuserconfigurationresponseosprofile">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Network.<wbr>Inputs.<wbr>Network<wbr>Function<wbr>User<wbr>Configuration<wbr>Response<wbr>Os<wbr>Profile<wbr>Args</a></span>
+        <span class="property-type"><a href="#networkfunctionuserconfigurationresponseosprofile">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Network..<wbr>Inputs.<wbr>Network<wbr>Function<wbr>User<wbr>Configuration<wbr>Response<wbr>Os<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the operating system settings for the role instance.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1717,7 +1718,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipconfigurations_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkinterfaceipconfiguration">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Network.<wbr>Inputs.<wbr>Network<wbr>Interface<wbr>IPConfiguration<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#networkinterfaceipconfiguration">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Network..<wbr>Inputs.<wbr>Network<wbr>Interface<wbr>IPConfiguration<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of IP configurations of the network interface.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1744,7 +1745,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vmswitchtype_csharp" style="color: inherit; text-decoration: inherit;">Vm<wbr>Switch<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#vmswitchtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Network.<wbr>VMSwitch<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#vmswitchtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Network..<wbr>VMSwitch<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of the VM switch.{{% /md %}}</dd>
 </dl>
@@ -1914,7 +1915,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipallocationmethod_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Allocation<wbr>Method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#ipallocationmethod">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Network.<wbr>IPAllocation<wbr>Method</a></span>
+        <span class="property-type">string | <a href="#ipallocationmethod">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Network..<wbr>IPAllocation<wbr>Method</a></span>
     </dt>
     <dd>{{% md %}}IP address allocation method.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1923,7 +1924,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipversion_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#ipversion">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Network.<wbr>IPVersion</a></span>
+        <span class="property-type">string | <a href="#ipversion">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Network..<wbr>IPVersion</a></span>
     </dt>
     <dd>{{% md %}}IP address version.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2371,7 +2372,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipconfigurations_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkinterfaceipconfigurationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Network.<wbr>Inputs.<wbr>Network<wbr>Interface<wbr>IPConfiguration<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#networkinterfaceipconfigurationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Network..<wbr>Inputs.<wbr>Network<wbr>Interface<wbr>IPConfiguration<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of IP configurations of the network interface.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2713,7 +2714,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:hybridnetwork/v20200101preview:NetworkFunction testNf /subscriptions/subid/resourcegroups/rg/providers/Microsoft.HybridNetwork/networkFunctions/testNf 
+$ pulumi import azure-nextgen:hybridnetwork:NetworkFunction testNf /subscriptions/subid/resourcegroups/rg/providers/Microsoft.HybridNetwork/networkFunctions/testNf 
 ```
 
 

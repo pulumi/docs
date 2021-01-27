@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.network.ServiceEndpointPolicyDef
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Service Endpoint policy definitions.
-Latest API Version: 2020-08-01.
+API Version: 2020-08-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var serviceEndpointPolicyDefinition = new AzureNextGen.Network.Latest.ServiceEndpointPolicyDefinition("serviceEndpointPolicyDefinition", new AzureNextGen.Network.Latest.ServiceEndpointPolicyDefinitionArgs
+        var serviceEndpointPolicyDefinition = new AzureNextGen.Network..ServiceEndpointPolicyDefinition("serviceEndpointPolicyDefinition", new AzureNextGen.Network..ServiceEndpointPolicyDefinitionArgs
         {
             Description = "Storage Service EndpointPolicy Definition",
             ResourceGroupName = "rg1",
@@ -55,7 +55,7 @@ class MyStack : Stack
 package main
 
 import (
-	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network/latest"
+	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -90,7 +90,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-service_endpoint_policy_definition = azure_nextgen.network.latest.ServiceEndpointPolicyDefinition("serviceEndpointPolicyDefinition",
+service_endpoint_policy_definition = azure_nextgen.network.ServiceEndpointPolicyDefinition("serviceEndpointPolicyDefinition",
     description="Storage Service EndpointPolicy Definition",
     resource_group_name="rg1",
     service="Microsoft.Storage",
@@ -112,7 +112,7 @@ service_endpoint_policy_definition = azure_nextgen.network.latest.ServiceEndpoin
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const serviceEndpointPolicyDefinition = new azure_nextgen.network.latest.ServiceEndpointPolicyDefinition("serviceEndpointPolicyDefinition", {
+const serviceEndpointPolicyDefinition = new azure_nextgen.network.ServiceEndpointPolicyDefinition("serviceEndpointPolicyDefinition", {
     description: "Storage Service EndpointPolicy Definition",
     resourceGroupName: "rg1",
     service: "Microsoft.Storage",
@@ -771,7 +771,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:network/latest:ServiceEndpointPolicyDefinition rule1 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/networkSecurityGroups/testnsg/securityRules/rule1 
+$ pulumi import azure-nextgen:network:ServiceEndpointPolicyDefinition testDefinition /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/serviceEndpointPolicies/testPolicy/serviceEndpointPolicyDefinitions/testDefinition 
 ```
 
 

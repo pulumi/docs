@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.digitaltwins.PrivateEndpointConn
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The private endpoint connection of a Digital Twin.
-Latest API Version: 2020-12-01.
+API Version: 2020-12-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,12 +27,12 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var privateEndpointConnection = new AzureNextGen.DigitalTwins.Latest.PrivateEndpointConnection("privateEndpointConnection", new AzureNextGen.DigitalTwins.Latest.PrivateEndpointConnectionArgs
+        var privateEndpointConnection = new AzureNextGen.DigitalTwins..PrivateEndpointConnection("privateEndpointConnection", new AzureNextGen.DigitalTwins..PrivateEndpointConnectionArgs
         {
             PrivateEndpointConnectionName = "myPrivateConnection",
-            Properties = new AzureNextGen.DigitalTwins.Latest.Inputs.PrivateEndpointConnectionPropertiesArgs
+            Properties = new AzureNextGen.DigitalTwins..Inputs.PrivateEndpointConnectionPropertiesArgs
             {
-                PrivateLinkServiceConnectionState = new AzureNextGen.DigitalTwins.Latest.Inputs.ConnectionPropertiesPrivateLinkServiceConnectionStateArgs
+                PrivateLinkServiceConnectionState = new AzureNextGen.DigitalTwins..Inputs.ConnectionPropertiesPrivateLinkServiceConnectionStateArgs
                 {
                     Description = "Approved by johndoe@company.com.",
                     Status = "Approved",
@@ -55,7 +55,7 @@ class MyStack : Stack
 package main
 
 import (
-	digitaltwins "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/digitaltwins/latest"
+	digitaltwins "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/digitaltwins"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -89,10 +89,10 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-private_endpoint_connection = azure_nextgen.digitaltwins.latest.PrivateEndpointConnection("privateEndpointConnection",
+private_endpoint_connection = azure_nextgen.digitaltwins.PrivateEndpointConnection("privateEndpointConnection",
     private_endpoint_connection_name="myPrivateConnection",
-    properties=azure_nextgen.digitaltwins.latest.PrivateEndpointConnectionPropertiesArgs(
-        private_link_service_connection_state=azure_nextgen.digitaltwins.latest.ConnectionPropertiesPrivateLinkServiceConnectionStateArgs(
+    properties=azure_nextgen.digitaltwins.PrivateEndpointConnectionPropertiesArgs(
+        private_link_service_connection_state=azure_nextgen.digitaltwins.ConnectionPropertiesPrivateLinkServiceConnectionStateArgs(
             description="Approved by johndoe@company.com.",
             status="Approved",
         ),
@@ -110,7 +110,7 @@ private_endpoint_connection = azure_nextgen.digitaltwins.latest.PrivateEndpointC
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const privateEndpointConnection = new azure_nextgen.digitaltwins.latest.PrivateEndpointConnection("privateEndpointConnection", {
+const privateEndpointConnection = new azure_nextgen.digitaltwins.PrivateEndpointConnection("privateEndpointConnection", {
     privateEndpointConnectionName: "myPrivateConnection",
     properties: {
         privateLinkServiceConnectionState: {
@@ -324,7 +324,7 @@ The PrivateEndpointConnection resource accepts the following [input]({{< relref 
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointconnectionproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Digital<wbr>Twins.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#privateendpointconnectionproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Digital<wbr>Twins..<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-required"
@@ -643,7 +643,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#privatelinkserviceconnectionstatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Digital<wbr>Twins.<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>Status</a></span>
+        <span class="property-type">string | <a href="#privatelinkserviceconnectionstatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Digital<wbr>Twins..<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}The status of a private endpoint connection.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -973,7 +973,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privatelinkserviceconnectionstate_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionpropertiesprivatelinkserviceconnectionstate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Digital<wbr>Twins.<wbr>Inputs.<wbr>Connection<wbr>Properties<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Args</a></span>
+        <span class="property-type"><a href="#connectionpropertiesprivatelinkserviceconnectionstate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Digital<wbr>Twins..<wbr>Inputs.<wbr>Connection<wbr>Properties<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 </dl>
@@ -1080,7 +1080,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privateendpoint_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionpropertiesresponseprivateendpoint">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Digital<wbr>Twins.<wbr>Inputs.<wbr>Connection<wbr>Properties<wbr>Response<wbr>Private<wbr>Endpoint<wbr>Args</a></span>
+        <span class="property-type"><a href="#connectionpropertiesresponseprivateendpoint">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Digital<wbr>Twins..<wbr>Inputs.<wbr>Connection<wbr>Properties<wbr>Response<wbr>Private<wbr>Endpoint<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1089,7 +1089,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privatelinkserviceconnectionstate_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionpropertiesresponseprivatelinkserviceconnectionstate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Digital<wbr>Twins.<wbr>Inputs.<wbr>Connection<wbr>Properties<wbr>Response<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Args</a></span>
+        <span class="property-type"><a href="#connectionpropertiesresponseprivatelinkserviceconnectionstate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Digital<wbr>Twins..<wbr>Inputs.<wbr>Connection<wbr>Properties<wbr>Response<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 </dl>
@@ -1280,7 +1280,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:digitaltwins/latest:PrivateEndpointConnection myPrivateConnection /subscriptions/50016170-c839-41ba-a724-51e9df440b9e/resourcegroups/resRg/providers/Microsoft.DigitalTwins/digitalTwinsInstances/myDigitalTwinsService/privateEndpointConnections/myPrivateConnection 
+$ pulumi import azure-nextgen:digitaltwins:PrivateEndpointConnection myPrivateConnection /subscriptions/50016170-c839-41ba-a724-51e9df440b9e/resourcegroups/resRg/providers/Microsoft.DigitalTwins/digitalTwinsInstances/myDigitalTwinsService/privateEndpointConnections/myPrivateConnection 
 ```
 
 

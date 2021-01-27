@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.customerinsights.Link resource w
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The link resource format.
-Latest API Version: 2017-04-26.
+API Version: 2017-04-26.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var link = new AzureNextGen.CustomerInsights.Latest.Link("link", new AzureNextGen.CustomerInsights.Latest.LinkArgs
+        var link = new AzureNextGen.CustomerInsights..Link("link", new AzureNextGen.CustomerInsights..LinkArgs
         {
             Description = 
             {
@@ -41,7 +41,7 @@ class MyStack : Stack
             LinkName = "linkTest4806",
             Mappings = 
             {
-                new AzureNextGen.CustomerInsights.Latest.Inputs.TypePropertiesMappingArgs
+                new AzureNextGen.CustomerInsights..Inputs.TypePropertiesMappingArgs
                 {
                     LinkType = "UpdateAlways",
                     SourcePropertyName = "testInteraction1949",
@@ -50,7 +50,7 @@ class MyStack : Stack
             },
             ParticipantPropertyReferences = 
             {
-                new AzureNextGen.CustomerInsights.Latest.Inputs.ParticipantPropertyReferenceArgs
+                new AzureNextGen.CustomerInsights..Inputs.ParticipantPropertyReferenceArgs
                 {
                     SourcePropertyName = "testInteraction1949",
                     TargetPropertyName = "ProfileId",
@@ -76,7 +76,7 @@ class MyStack : Stack
 package main
 
 import (
-	customerinsights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/customerinsights/latest"
+	customerinsights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/customerinsights"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -127,7 +127,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-link = azure_nextgen.customerinsights.latest.Link("link",
+link = azure_nextgen.customerinsights.Link("link",
     description={
         "en-us": "Link Description",
     },
@@ -136,12 +136,12 @@ link = azure_nextgen.customerinsights.latest.Link("link",
     },
     hub_name="sdkTestHub",
     link_name="linkTest4806",
-    mappings=[azure_nextgen.customerinsights.latest.TypePropertiesMappingArgs(
+    mappings=[azure_nextgen.customerinsights.TypePropertiesMappingArgs(
         link_type="UpdateAlways",
         source_property_name="testInteraction1949",
         target_property_name="testProfile1446",
     )],
-    participant_property_references=[azure_nextgen.customerinsights.latest.ParticipantPropertyReferenceArgs(
+    participant_property_references=[azure_nextgen.customerinsights.ParticipantPropertyReferenceArgs(
         source_property_name="testInteraction1949",
         target_property_name="ProfileId",
     )],
@@ -161,7 +161,7 @@ link = azure_nextgen.customerinsights.latest.Link("link",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const link = new azure_nextgen.customerinsights.latest.Link("link", {
+const link = new azure_nextgen.customerinsights.Link("link", {
     description: {
         "en-us": "Link Description",
     },
@@ -397,7 +397,7 @@ The Link resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#participantpropertyreferences_csharp" style="color: inherit; text-decoration: inherit;">Participant<wbr>Property<wbr>References</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#participantpropertyreference">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights.<wbr>Inputs.<wbr>Participant<wbr>Property<wbr>Reference<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#participantpropertyreference">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights..<wbr>Inputs.<wbr>Participant<wbr>Property<wbr>Reference<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The properties that represent the participating profile.{{% /md %}}</dd>
     <dt class="property-required"
@@ -415,7 +415,7 @@ The Link resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#sourceentitytype_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Entity<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#entitytype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights.<wbr>Entity<wbr>Type</a></span>
+        <span class="property-type"><a href="#entitytype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights..<wbr>Entity<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of source entity.{{% /md %}}</dd>
     <dt class="property-required"
@@ -433,7 +433,7 @@ The Link resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#targetentitytype_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Entity<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#entitytype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights.<wbr>Entity<wbr>Type</a></span>
+        <span class="property-type"><a href="#entitytype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights..<wbr>Entity<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of target entity.{{% /md %}}</dd>
     <dt class="property-required"
@@ -469,7 +469,7 @@ The Link resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#mappings_csharp" style="color: inherit; text-decoration: inherit;">Mappings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#typepropertiesmapping">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights.<wbr>Inputs.<wbr>Type<wbr>Properties<wbr>Mapping<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#typepropertiesmapping">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights..<wbr>Inputs.<wbr>Type<wbr>Properties<wbr>Mapping<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The set of properties mappings between the source and target Types.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -478,7 +478,7 @@ The Link resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#operationtype_csharp" style="color: inherit; text-decoration: inherit;">Operation<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceoperationtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights.<wbr>Instance<wbr>Operation<wbr>Type</a></span>
+        <span class="property-type"><a href="#instanceoperationtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights..<wbr>Instance<wbr>Operation<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Determines whether this link is supposed to create or delete instances if Link is NOT Reference Only.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1438,7 +1438,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linktype_csharp" style="color: inherit; text-decoration: inherit;">Link<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linktypes">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights.<wbr>Link<wbr>Types</a></span>
+        <span class="property-type"><a href="#linktypes">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights..<wbr>Link<wbr>Types</a></span>
     </dt>
     <dd>{{% md %}}Link type.{{% /md %}}</dd>
 </dl>
@@ -1682,7 +1682,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:customerinsights/latest:Link azSdkTestHub/linkTest4806 /subscriptions/c909e979-ef71-4def-a970-bc7c154db8c5/resourceGroups/TestHubRG/providers/Microsoft.CustomerInsights/hubs/azSdkTestHub/links/linkTest4806 
+$ pulumi import azure-nextgen:customerinsights:Link azSdkTestHub/linkTest4806 /subscriptions/c909e979-ef71-4def-a970-bc7c154db8c5/resourceGroups/TestHubRG/providers/Microsoft.CustomerInsights/hubs/azSdkTestHub/links/linkTest4806 
 ```
 
 

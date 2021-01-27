@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.apimanagement.ApiDiagnosticLogge
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Logger details.
-Latest API Version: 2018-01-01.
+API Version: 2018-01-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var apiDiagnosticLogger = new AzureNextGen.ApiManagement.Latest.ApiDiagnosticLogger("apiDiagnosticLogger", new AzureNextGen.ApiManagement.Latest.ApiDiagnosticLoggerArgs
+        var apiDiagnosticLogger = new AzureNextGen.ApiManagement..ApiDiagnosticLogger("apiDiagnosticLogger", new AzureNextGen.ApiManagement..ApiDiagnosticLoggerArgs
         {
             ApiId = "57d1f7558aa04f15146d9d8a",
             DiagnosticId = "default",
@@ -49,7 +49,7 @@ class MyStack : Stack
 package main
 
 import (
-	apimanagement "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/apimanagement/latest"
+	apimanagement "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/apimanagement"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -79,7 +79,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-api_diagnostic_logger = azure_nextgen.apimanagement.latest.ApiDiagnosticLogger("apiDiagnosticLogger",
+api_diagnostic_logger = azure_nextgen.apimanagement.ApiDiagnosticLogger("apiDiagnosticLogger",
     api_id="57d1f7558aa04f15146d9d8a",
     diagnostic_id="default",
     loggerid="applicationinsights",
@@ -96,7 +96,7 @@ api_diagnostic_logger = azure_nextgen.apimanagement.latest.ApiDiagnosticLogger("
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const apiDiagnosticLogger = new azure_nextgen.apimanagement.latest.ApiDiagnosticLogger("apiDiagnosticLogger", {
+const apiDiagnosticLogger = new azure_nextgen.apimanagement.ApiDiagnosticLogger("apiDiagnosticLogger", {
     apiId: "57d1f7558aa04f15146d9d8a",
     diagnosticId: "default",
     loggerid: "applicationinsights",
@@ -790,7 +790,7 @@ Instrumentation key for applicationInsights logger.{{% /md %}}</dd>
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:apimanagement/latest:ApiDiagnosticLogger applicationinsights /subscriptions/subid/resourcegroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/apis/57d1f7558aa04f15146d9d8a/diagnostics/default/loggers/applicationinsights 
+$ pulumi import azure-nextgen:apimanagement:ApiDiagnosticLogger applicationinsights /subscriptions/subid/resourcegroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/apis/57d1f7558aa04f15146d9d8a/diagnostics/default/loggers/applicationinsights 
 ```
 
 

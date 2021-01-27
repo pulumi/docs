@@ -11,13 +11,13 @@ meta_desc: "Documentation for the azure-nextgen.devtestlab.Disk resource with ex
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 A Disk.
-Latest API Version: 2018-09-15.
+API Version: 2018-09-15.
 ## Import
 
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:devtestlab/latest:Disk myresource1 /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DevTestLab/labs/{labName}/users/{userName}/disks/{name} 
+$ pulumi import azure-nextgen:devtestlab:Disk myresource1 /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DevTestLab/labs/{labName}/users/{userName}/disks/{name} 
 ```
 
 
@@ -263,7 +263,7 @@ The Disk resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#disktype_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#storagetype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Storage<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#storagetype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab..<wbr>Storage<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The storage type for the disk (i.e. Standard, Premium).{{% /md %}}</dd>
     <dt class="property-optional"

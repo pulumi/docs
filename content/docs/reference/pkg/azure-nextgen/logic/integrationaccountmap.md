@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.logic.IntegrationAccountMap reso
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The integration account map.
-Latest API Version: 2019-05-01.
+API Version: 2019-05-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var integrationAccountMap = new AzureNextGen.Logic.Latest.IntegrationAccountMap("integrationAccountMap", new AzureNextGen.Logic.Latest.IntegrationAccountMapArgs
+        var integrationAccountMap = new AzureNextGen.Logic..IntegrationAccountMap("integrationAccountMap", new AzureNextGen.Logic..IntegrationAccountMapArgs
         {
             Content = @"<?xml version=""1.0"" encoding=""UTF-16""?>
 <xsl:stylesheet xmlns:xsl=""http://www.w3.org/1999/XSL/Transform"" xmlns:msxsl=""urn:schemas-microsoft-com:xslt"" xmlns:var=""http://schemas.microsoft.com/BizTalk/2003/var"" exclude-result-prefixes=""msxsl var s0 userCSharp"" version=""1.0"" xmlns:ns0=""http://BizTalk_Server_Project4.StringFunctoidsDestinationSchema"" xmlns:s0=""http://BizTalk_Server_Project4.StringFunctoidsSourceSchema"" xmlns:userCSharp=""http://schemas.microsoft.com/BizTalk/2003/userCSharp"">
@@ -105,7 +105,7 @@ package main
 import (
 	"fmt"
 
-	logic "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/logic/latest"
+	logic "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/logic"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -138,7 +138,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-integration_account_map = azure_nextgen.logic.latest.IntegrationAccountMap("integrationAccountMap",
+integration_account_map = azure_nextgen.logic.IntegrationAccountMap("integrationAccountMap",
     content="""<?xml version="1.0" encoding="UTF-16"?>
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:var="http://schemas.microsoft.com/BizTalk/2003/var" exclude-result-prefixes="msxsl var s0 userCSharp" version="1.0" xmlns:ns0="http://BizTalk_Server_Project4.StringFunctoidsDestinationSchema" xmlns:s0="http://BizTalk_Server_Project4.StringFunctoidsSourceSchema" xmlns:userCSharp="http://schemas.microsoft.com/BizTalk/2003/userCSharp">
   <xsl:import href="http://btsfunctoids.blob.core.windows.net/functoids/functoids.xslt" />
@@ -209,7 +209,7 @@ integration_account_map = azure_nextgen.logic.latest.IntegrationAccountMap("inte
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const integrationAccountMap = new azure_nextgen.logic.latest.IntegrationAccountMap("integrationAccountMap", {
+const integrationAccountMap = new azure_nextgen.logic.IntegrationAccountMap("integrationAccountMap", {
     content: `<?xml version="1.0" encoding="UTF-16"?>
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:var="http://schemas.microsoft.com/BizTalk/2003/var" exclude-result-prefixes="msxsl var s0 userCSharp" version="1.0" xmlns:ns0="http://BizTalk_Server_Project4.StringFunctoidsDestinationSchema" xmlns:s0="http://BizTalk_Server_Project4.StringFunctoidsSourceSchema" xmlns:userCSharp="http://schemas.microsoft.com/BizTalk/2003/userCSharp">
   <xsl:import href="http://btsfunctoids.blob.core.windows.net/functoids/functoids.xslt" />
@@ -482,7 +482,7 @@ The IntegrationAccountMap resource accepts the following [input]({{< relref "/do
 <a href="#maptype_csharp" style="color: inherit; text-decoration: inherit;">Map<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#maptype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Map<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#maptype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Map<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The map type.{{% /md %}}</dd>
     <dt class="property-required"
@@ -536,7 +536,7 @@ The IntegrationAccountMap resource accepts the following [input]({{< relref "/do
 <a href="#parametersschema_csharp" style="color: inherit; text-decoration: inherit;">Parameters<wbr>Schema</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationaccountmappropertiesparametersschema">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>Integration<wbr>Account<wbr>Map<wbr>Properties<wbr>Parameters<wbr>Schema<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationaccountmappropertiesparametersschema">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>Integration<wbr>Account<wbr>Map<wbr>Properties<wbr>Parameters<wbr>Schema<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The parameters schema of integration account map.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -864,7 +864,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#contentlink_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentlinkresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Outputs.<wbr>Content<wbr>Link<wbr>Response</a></span>
+        <span class="property-type"><a href="#contentlinkresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Outputs.<wbr>Content<wbr>Link<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The content link.{{% /md %}}</dd>
     <dt class="property-"
@@ -1205,7 +1205,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#contenthash_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Hash</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contenthashresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>Content<wbr>Hash<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#contenthashresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>Content<wbr>Hash<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The content hash.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1591,7 +1591,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:logic/latest:IntegrationAccountMap IntegrationAccountMap291 /subscriptions/34adfa4f-cedf-4dc0-ba29-b6d1a69ab345/resourceGroups/<resourceGroup>/providers/Microsoft.Logic/integrationAccounts/<IntegrationAccount>/maps/testMap 
+$ pulumi import azure-nextgen:logic:IntegrationAccountMap IntegrationAccountMap291 /subscriptions/34adfa4f-cedf-4dc0-ba29-b6d1a69ab345/resourceGroups/<resourceGroup>/providers/Microsoft.Logic/integrationAccounts/<IntegrationAccount>/maps/testMap 
 ```
 
 

@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.datashare.DataSetMapping resourc
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 A data set mapping data transfer object.
-Latest API Version: 2019-11-01.
+API Version: 2019-11-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var dataSetMapping = new AzureNextGen.DataShare.Latest.DataSetMapping("dataSetMapping", new AzureNextGen.DataShare.Latest.DataSetMappingArgs
+        var dataSetMapping = new AzureNextGen.DataShare..DataSetMapping("dataSetMapping", new AzureNextGen.DataShare..DataSetMappingArgs
         {
             AccountName = "Account1",
             DataSetMappingName = "DatasetMapping1",
@@ -49,7 +49,7 @@ class MyStack : Stack
 package main
 
 import (
-	datashare "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datashare/latest"
+	datashare "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datashare"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -79,7 +79,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-data_set_mapping = azure_nextgen.datashare.latest.DataSetMapping("dataSetMapping",
+data_set_mapping = azure_nextgen.datashare.DataSetMapping("dataSetMapping",
     account_name="Account1",
     data_set_mapping_name="DatasetMapping1",
     kind="Blob",
@@ -96,7 +96,7 @@ data_set_mapping = azure_nextgen.datashare.latest.DataSetMapping("dataSetMapping
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const dataSetMapping = new azure_nextgen.datashare.latest.DataSetMapping("dataSetMapping", {
+const dataSetMapping = new azure_nextgen.datashare.DataSetMapping("dataSetMapping", {
     accountName: "Account1",
     dataSetMappingName: "DatasetMapping1",
     kind: "Blob",
@@ -118,7 +118,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var dataSetMapping = new AzureNextGen.DataShare.Latest.DataSetMapping("dataSetMapping", new AzureNextGen.DataShare.Latest.DataSetMappingArgs
+        var dataSetMapping = new AzureNextGen.DataShare..DataSetMapping("dataSetMapping", new AzureNextGen.DataShare..DataSetMappingArgs
         {
             AccountName = "Account1",
             DataSetMappingName = "DatasetMapping1",
@@ -140,7 +140,7 @@ class MyStack : Stack
 package main
 
 import (
-	datashare "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datashare/latest"
+	datashare "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datashare"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -170,7 +170,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-data_set_mapping = azure_nextgen.datashare.latest.DataSetMapping("dataSetMapping",
+data_set_mapping = azure_nextgen.datashare.DataSetMapping("dataSetMapping",
     account_name="Account1",
     data_set_mapping_name="DatasetMapping1",
     kind="SqlDBTable",
@@ -187,7 +187,7 @@ data_set_mapping = azure_nextgen.datashare.latest.DataSetMapping("dataSetMapping
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const dataSetMapping = new azure_nextgen.datashare.latest.DataSetMapping("dataSetMapping", {
+const dataSetMapping = new azure_nextgen.datashare.DataSetMapping("dataSetMapping", {
     accountName: "Account1",
     dataSetMappingName: "DatasetMapping1",
     kind: "SqlDBTable",
@@ -209,7 +209,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var dataSetMapping = new AzureNextGen.DataShare.Latest.DataSetMapping("dataSetMapping", new AzureNextGen.DataShare.Latest.DataSetMappingArgs
+        var dataSetMapping = new AzureNextGen.DataShare..DataSetMapping("dataSetMapping", new AzureNextGen.DataShare..DataSetMappingArgs
         {
             AccountName = "Account1",
             DataSetMappingName = "DatasetMapping1",
@@ -231,7 +231,7 @@ class MyStack : Stack
 package main
 
 import (
-	datashare "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datashare/latest"
+	datashare "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datashare"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -261,7 +261,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-data_set_mapping = azure_nextgen.datashare.latest.DataSetMapping("dataSetMapping",
+data_set_mapping = azure_nextgen.datashare.DataSetMapping("dataSetMapping",
     account_name="Account1",
     data_set_mapping_name="DatasetMapping1",
     kind="AdlsGen2File",
@@ -278,7 +278,7 @@ data_set_mapping = azure_nextgen.datashare.latest.DataSetMapping("dataSetMapping
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const dataSetMapping = new azure_nextgen.datashare.latest.DataSetMapping("dataSetMapping", {
+const dataSetMapping = new azure_nextgen.datashare.DataSetMapping("dataSetMapping", {
     accountName: "Account1",
     dataSetMappingName: "DatasetMapping1",
     kind: "AdlsGen2File",
@@ -300,7 +300,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var dataSetMapping = new AzureNextGen.DataShare.Latest.DataSetMapping("dataSetMapping", new AzureNextGen.DataShare.Latest.DataSetMappingArgs
+        var dataSetMapping = new AzureNextGen.DataShare..DataSetMapping("dataSetMapping", new AzureNextGen.DataShare..DataSetMappingArgs
         {
             AccountName = "Account1",
             DataSetMappingName = "DatasetMapping1",
@@ -322,7 +322,7 @@ class MyStack : Stack
 package main
 
 import (
-	datashare "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datashare/latest"
+	datashare "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datashare"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -352,7 +352,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-data_set_mapping = azure_nextgen.datashare.latest.DataSetMapping("dataSetMapping",
+data_set_mapping = azure_nextgen.datashare.DataSetMapping("dataSetMapping",
     account_name="Account1",
     data_set_mapping_name="DatasetMapping1",
     kind="SqlDWTable",
@@ -369,7 +369,7 @@ data_set_mapping = azure_nextgen.datashare.latest.DataSetMapping("dataSetMapping
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const dataSetMapping = new azure_nextgen.datashare.latest.DataSetMapping("dataSetMapping", {
+const dataSetMapping = new azure_nextgen.datashare.DataSetMapping("dataSetMapping", {
     accountName: "Account1",
     dataSetMappingName: "DatasetMapping1",
     kind: "SqlDWTable",
@@ -588,7 +588,7 @@ The DataSetMapping resource accepts the following [input]({{< relref "/docs/intr
 <a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#kind">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Share.<wbr>Kind</a></span>
+        <span class="property-type">string | <a href="#kind">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Share..<wbr>Kind</a></span>
     </dt>
     <dd>{{% md %}}Kind of data set mapping.{{% /md %}}</dd>
     <dt class="property-required"
@@ -949,7 +949,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:datashare/latest:DataSetMapping DatasetMapping1 /subscriptions/433a8dfd-e5d5-4e77-ad86-90acdc75eb1a/resourceGroups/SampleResourceGroup/providers/Microsoft.DataShare/accounts/Account1/shareSubscriptions/ShareSubscription1/dataSetMappings/DatasetMapping1 
+$ pulumi import azure-nextgen:datashare:DataSetMapping DatasetMapping1 /subscriptions/433a8dfd-e5d5-4e77-ad86-90acdc75eb1a/resourceGroups/SampleResourceGroup/providers/Microsoft.DataShare/accounts/Account1/shareSubscriptions/ShareSubscription1/dataSetMappings/DatasetMapping1 
 ```
 
 

@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.keyvault.Key resource with examp
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The key resource.
-Latest API Version: 2019-09-01.
+API Version: 2019-09-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,10 +27,10 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var key = new AzureNextGen.KeyVault.Latest.Key("key", new AzureNextGen.KeyVault.Latest.KeyArgs
+        var key = new AzureNextGen.KeyVault..Key("key", new AzureNextGen.KeyVault..KeyArgs
         {
             KeyName = "sample-key-name",
-            Properties = new AzureNextGen.KeyVault.Latest.Inputs.KeyPropertiesArgs
+            Properties = new AzureNextGen.KeyVault..Inputs.KeyPropertiesArgs
             {
                 Kty = "RSA",
             },
@@ -51,7 +51,7 @@ class MyStack : Stack
 package main
 
 import (
-	keyvault "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/keyvault/latest"
+	keyvault "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/keyvault"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -82,9 +82,9 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-key = azure_nextgen.keyvault.latest.Key("key",
+key = azure_nextgen.keyvault.Key("key",
     key_name="sample-key-name",
-    properties=azure_nextgen.keyvault.latest.KeyPropertiesArgs(
+    properties=azure_nextgen.keyvault.KeyPropertiesArgs(
         kty="RSA",
     ),
     resource_group_name="sample-group",
@@ -100,7 +100,7 @@ key = azure_nextgen.keyvault.latest.Key("key",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const key = new azure_nextgen.keyvault.latest.Key("key", {
+const key = new azure_nextgen.keyvault.Key("key", {
     keyName: "sample-key-name",
     properties: {
         kty: "RSA",
@@ -311,7 +311,7 @@ The Key resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Key<wbr>Vault.<wbr>Inputs.<wbr>Key<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#keyproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Key<wbr>Vault..<wbr>Inputs.<wbr>Key<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The properties of the key to be created.{{% /md %}}</dd>
     <dt class="property-required"
@@ -567,7 +567,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#attributes_csharp" style="color: inherit; text-decoration: inherit;">Attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyattributesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Key<wbr>Vault.<wbr>Outputs.<wbr>Key<wbr>Attributes<wbr>Response</a></span>
+        <span class="property-type"><a href="#keyattributesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Key<wbr>Vault..<wbr>Outputs.<wbr>Key<wbr>Attributes<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The attributes of the key.{{% /md %}}</dd>
     <dt class="property-"
@@ -1507,7 +1507,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#attributes_csharp" style="color: inherit; text-decoration: inherit;">Attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyattributes">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Key<wbr>Vault.<wbr>Inputs.<wbr>Key<wbr>Attributes<wbr>Args</a></span>
+        <span class="property-type"><a href="#keyattributes">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Key<wbr>Vault..<wbr>Inputs.<wbr>Key<wbr>Attributes<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The attributes of the key.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1516,7 +1516,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#curvename_csharp" style="color: inherit; text-decoration: inherit;">Curve<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#jsonwebkeycurvename">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Key<wbr>Vault.<wbr>Json<wbr>Web<wbr>Key<wbr>Curve<wbr>Name</a></span>
+        <span class="property-type">string | <a href="#jsonwebkeycurvename">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Key<wbr>Vault..<wbr>Json<wbr>Web<wbr>Key<wbr>Curve<wbr>Name</a></span>
     </dt>
     <dd>{{% md %}}The elliptic curve name. For valid values, see JsonWebKeyCurveName.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1525,7 +1525,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keyops_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Ops</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Union&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Key<wbr>Vault.<wbr>Json<wbr>Web<wbr>Key<wbr>Operation&gt;&gt;</span>
+        <span class="property-type">List&lt;Union&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Key<wbr>Vault..<wbr>Json<wbr>Web<wbr>Key<wbr>Operation&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1543,7 +1543,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kty_csharp" style="color: inherit; text-decoration: inherit;">Kty</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#jsonwebkeytype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Key<wbr>Vault.<wbr>Json<wbr>Web<wbr>Key<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#jsonwebkeytype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Key<wbr>Vault..<wbr>Json<wbr>Web<wbr>Key<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of the key. For valid values, see JsonWebKeyType.{{% /md %}}</dd>
 </dl>
@@ -1707,7 +1707,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:keyvault/latest:Key sample-key-name /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/sample-group/providers/Microsoft.KeyVault/vaults/sample-vault-name/keys/sample-key-name 
+$ pulumi import azure-nextgen:keyvault:Key sample-key-name /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/sample-group/providers/Microsoft.KeyVault/vaults/sample-vault-name/keys/sample-key-name 
 ```
 
 

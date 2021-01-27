@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.network.FrontDoor resource with 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Front Door represents a collection of backend endpoints to route traffic to along with rules that specify how traffic is sent there.
-Latest API Version: 2020-05-01.
+API Version: 2020-05-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,15 +27,15 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var frontDoor = new AzureNextGen.Network.Latest.FrontDoor("frontDoor", new AzureNextGen.Network.Latest.FrontDoorArgs
+        var frontDoor = new AzureNextGen.Network..FrontDoor("frontDoor", new AzureNextGen.Network..FrontDoorArgs
         {
             BackendPools = 
             {
-                new AzureNextGen.Network.Latest.Inputs.BackendPoolArgs
+                new AzureNextGen.Network..Inputs.BackendPoolArgs
                 {
                     Backends = 
                     {
-                        new AzureNextGen.Network.Latest.Inputs.BackendArgs
+                        new AzureNextGen.Network..Inputs.BackendArgs
                         {
                             Address = "w3.contoso.com",
                             HttpPort = 80,
@@ -43,7 +43,7 @@ class MyStack : Stack
                             Priority = 2,
                             Weight = 1,
                         },
-                        new AzureNextGen.Network.Latest.Inputs.BackendArgs
+                        new AzureNextGen.Network..Inputs.BackendArgs
                         {
                             Address = "contoso.com.website-us-west-2.othercloud.net",
                             HttpPort = 80,
@@ -54,7 +54,7 @@ class MyStack : Stack
                             PrivateLinkResourceId = "/subscriptions/subid/resourcegroups/rg1/providers/Microsoft.Network/privateLinkServices/pls1",
                             Weight = 2,
                         },
-                        new AzureNextGen.Network.Latest.Inputs.BackendArgs
+                        new AzureNextGen.Network..Inputs.BackendArgs
                         {
                             Address = "10.0.1.5",
                             HttpPort = 80,
@@ -65,18 +65,18 @@ class MyStack : Stack
                             Weight = 1,
                         },
                     },
-                    HealthProbeSettings = new AzureNextGen.Network.Latest.Inputs.SubResourceArgs
+                    HealthProbeSettings = new AzureNextGen.Network..Inputs.SubResourceArgs
                     {
                         Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/frontDoors/frontDoor1/healthProbeSettings/healthProbeSettings1",
                     },
-                    LoadBalancingSettings = new AzureNextGen.Network.Latest.Inputs.SubResourceArgs
+                    LoadBalancingSettings = new AzureNextGen.Network..Inputs.SubResourceArgs
                     {
                         Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/frontDoors/frontDoor1/loadBalancingSettings/loadBalancingSettings1",
                     },
                     Name = "backendPool1",
                 },
             },
-            BackendPoolsSettings = new AzureNextGen.Network.Latest.Inputs.BackendPoolsSettingsArgs
+            BackendPoolsSettings = new AzureNextGen.Network..Inputs.BackendPoolsSettingsArgs
             {
                 EnforceCertificateNameCheck = "Enabled",
                 SendRecvTimeoutSeconds = 60,
@@ -85,18 +85,18 @@ class MyStack : Stack
             FrontDoorName = "frontDoor1",
             FrontendEndpoints = 
             {
-                new AzureNextGen.Network.Latest.Inputs.FrontendEndpointArgs
+                new AzureNextGen.Network..Inputs.FrontendEndpointArgs
                 {
                     HostName = "www.contoso.com",
                     Name = "frontendEndpoint1",
                     SessionAffinityEnabledState = "Enabled",
                     SessionAffinityTtlSeconds = 60,
-                    WebApplicationFirewallPolicyLink = new AzureNextGen.Network.Latest.Inputs.FrontendEndpointUpdateParametersWebApplicationFirewallPolicyLinkArgs
+                    WebApplicationFirewallPolicyLink = new AzureNextGen.Network..Inputs.FrontendEndpointUpdateParametersWebApplicationFirewallPolicyLinkArgs
                     {
                         Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/frontDoorWebApplicationFirewallPolicies/policy1",
                     },
                 },
-                new AzureNextGen.Network.Latest.Inputs.FrontendEndpointArgs
+                new AzureNextGen.Network..Inputs.FrontendEndpointArgs
                 {
                     HostName = "frontDoor1.azurefd.net",
                     Name = "default",
@@ -104,7 +104,7 @@ class MyStack : Stack
             },
             HealthProbeSettings = 
             {
-                new AzureNextGen.Network.Latest.Inputs.HealthProbeSettingsModelArgs
+                new AzureNextGen.Network..Inputs.HealthProbeSettingsModelArgs
                 {
                     EnabledState = "Enabled",
                     HealthProbeMethod = "HEAD",
@@ -116,7 +116,7 @@ class MyStack : Stack
             },
             LoadBalancingSettings = 
             {
-                new AzureNextGen.Network.Latest.Inputs.LoadBalancingSettingsModelArgs
+                new AzureNextGen.Network..Inputs.LoadBalancingSettingsModelArgs
                 {
                     Name = "loadBalancingSettings1",
                     SampleSize = 4,
@@ -127,7 +127,7 @@ class MyStack : Stack
             ResourceGroupName = "rg1",
             RoutingRules = 
             {
-                new AzureNextGen.Network.Latest.Inputs.RoutingRuleArgs
+                new AzureNextGen.Network..Inputs.RoutingRuleArgs
                 {
                     AcceptedProtocols = 
                     {
@@ -136,11 +136,11 @@ class MyStack : Stack
                     EnabledState = "Enabled",
                     FrontendEndpoints = 
                     {
-                        new AzureNextGen.Network.Latest.Inputs.SubResourceArgs
+                        new AzureNextGen.Network..Inputs.SubResourceArgs
                         {
                             Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/frontDoors/frontDoor1/frontendEndpoints/frontendEndpoint1",
                         },
-                        new AzureNextGen.Network.Latest.Inputs.SubResourceArgs
+                        new AzureNextGen.Network..Inputs.SubResourceArgs
                         {
                             Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/frontDoors/frontDoor1/frontendEndpoints/default",
                         },
@@ -152,17 +152,17 @@ class MyStack : Stack
                     },
                     RouteConfiguration = 
                     {
-                        { "backendPool", new AzureNextGen.Network.Latest.Inputs.SubResourceArgs
+                        { "backendPool", new AzureNextGen.Network..Inputs.SubResourceArgs
                         {
                             Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/frontDoors/frontDoor1/backendPools/backendPool1",
                         } },
                         { "odataType", "#Microsoft.Azure.FrontDoor.Models.FrontdoorForwardingConfiguration" },
                     },
-                    RulesEngine = new AzureNextGen.Network.Latest.Inputs.SubResourceArgs
+                    RulesEngine = new AzureNextGen.Network..Inputs.SubResourceArgs
                     {
                         Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/frontDoors/frontDoor1/rulesEngines/rulesEngine1",
                     },
-                    WebApplicationFirewallPolicyLink = new AzureNextGen.Network.Latest.Inputs.RoutingRuleUpdateParametersWebApplicationFirewallPolicyLinkArgs
+                    WebApplicationFirewallPolicyLink = new AzureNextGen.Network..Inputs.RoutingRuleUpdateParametersWebApplicationFirewallPolicyLinkArgs
                     {
                         Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/frontDoorWebApplicationFirewallPolicies/policy1",
                     },
@@ -192,17 +192,17 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-front_door = azure_nextgen.network.latest.FrontDoor("frontDoor",
-    backend_pools=[azure_nextgen.network.latest.BackendPoolArgs(
+front_door = azure_nextgen.network.FrontDoor("frontDoor",
+    backend_pools=[azure_nextgen.network.BackendPoolArgs(
         backends=[
-            azure_nextgen.network.latest.BackendArgs(
+            azure_nextgen.network.BackendArgs(
                 address="w3.contoso.com",
                 http_port=80,
                 https_port=443,
                 priority=2,
                 weight=1,
             ),
-            azure_nextgen.network.latest.BackendArgs(
+            azure_nextgen.network.BackendArgs(
                 address="contoso.com.website-us-west-2.othercloud.net",
                 http_port=80,
                 https_port=443,
@@ -212,7 +212,7 @@ front_door = azure_nextgen.network.latest.FrontDoor("frontDoor",
                 private_link_resource_id="/subscriptions/subid/resourcegroups/rg1/providers/Microsoft.Network/privateLinkServices/pls1",
                 weight=2,
             ),
-            azure_nextgen.network.latest.BackendArgs(
+            azure_nextgen.network.BackendArgs(
                 address="10.0.1.5",
                 http_port=80,
                 https_port=443,
@@ -222,36 +222,36 @@ front_door = azure_nextgen.network.latest.FrontDoor("frontDoor",
                 weight=1,
             ),
         ],
-        health_probe_settings=azure_nextgen.network.latest.SubResourceArgs(
+        health_probe_settings=azure_nextgen.network.SubResourceArgs(
             id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/frontDoors/frontDoor1/healthProbeSettings/healthProbeSettings1",
         ),
-        load_balancing_settings=azure_nextgen.network.latest.SubResourceArgs(
+        load_balancing_settings=azure_nextgen.network.SubResourceArgs(
             id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/frontDoors/frontDoor1/loadBalancingSettings/loadBalancingSettings1",
         ),
         name="backendPool1",
     )],
-    backend_pools_settings=azure_nextgen.network.latest.BackendPoolsSettingsArgs(
+    backend_pools_settings=azure_nextgen.network.BackendPoolsSettingsArgs(
         enforce_certificate_name_check="Enabled",
         send_recv_timeout_seconds=60,
     ),
     enabled_state="Enabled",
     front_door_name="frontDoor1",
     frontend_endpoints=[
-        azure_nextgen.network.latest.FrontendEndpointArgs(
+        azure_nextgen.network.FrontendEndpointArgs(
             host_name="www.contoso.com",
             name="frontendEndpoint1",
             session_affinity_enabled_state="Enabled",
             session_affinity_ttl_seconds=60,
-            web_application_firewall_policy_link=azure_nextgen.network.latest.FrontendEndpointUpdateParametersWebApplicationFirewallPolicyLinkArgs(
+            web_application_firewall_policy_link=azure_nextgen.network.FrontendEndpointUpdateParametersWebApplicationFirewallPolicyLinkArgs(
                 id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/frontDoorWebApplicationFirewallPolicies/policy1",
             ),
         ),
-        azure_nextgen.network.latest.FrontendEndpointArgs(
+        azure_nextgen.network.FrontendEndpointArgs(
             host_name="frontDoor1.azurefd.net",
             name="default",
         ),
     ],
-    health_probe_settings=[azure_nextgen.network.latest.HealthProbeSettingsModelArgs(
+    health_probe_settings=[azure_nextgen.network.HealthProbeSettingsModelArgs(
         enabled_state="Enabled",
         health_probe_method="HEAD",
         interval_in_seconds=120,
@@ -259,36 +259,36 @@ front_door = azure_nextgen.network.latest.FrontDoor("frontDoor",
         path="/",
         protocol="Http",
     )],
-    load_balancing_settings=[azure_nextgen.network.latest.LoadBalancingSettingsModelArgs(
+    load_balancing_settings=[azure_nextgen.network.LoadBalancingSettingsModelArgs(
         name="loadBalancingSettings1",
         sample_size=4,
         successful_samples_required=2,
     )],
     location="westus",
     resource_group_name="rg1",
-    routing_rules=[azure_nextgen.network.latest.RoutingRuleArgs(
+    routing_rules=[azure_nextgen.network.RoutingRuleArgs(
         accepted_protocols=["Http"],
         enabled_state="Enabled",
         frontend_endpoints=[
-            azure_nextgen.network.latest.SubResourceArgs(
+            azure_nextgen.network.SubResourceArgs(
                 id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/frontDoors/frontDoor1/frontendEndpoints/frontendEndpoint1",
             ),
-            azure_nextgen.network.latest.SubResourceArgs(
+            azure_nextgen.network.SubResourceArgs(
                 id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/frontDoors/frontDoor1/frontendEndpoints/default",
             ),
         ],
         name="routingRule1",
         patterns_to_match=["/*"],
         route_configuration={
-            "backendPool": azure_nextgen.network.latest.SubResourceArgs(
+            "backendPool": azure_nextgen.network.SubResourceArgs(
                 id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/frontDoors/frontDoor1/backendPools/backendPool1",
             ),
             "odataType": "#Microsoft.Azure.FrontDoor.Models.FrontdoorForwardingConfiguration",
         },
-        rules_engine=azure_nextgen.network.latest.SubResourceArgs(
+        rules_engine=azure_nextgen.network.SubResourceArgs(
             id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/frontDoors/frontDoor1/rulesEngines/rulesEngine1",
         ),
-        web_application_firewall_policy_link=azure_nextgen.network.latest.RoutingRuleUpdateParametersWebApplicationFirewallPolicyLinkArgs(
+        web_application_firewall_policy_link=azure_nextgen.network.RoutingRuleUpdateParametersWebApplicationFirewallPolicyLinkArgs(
             id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/frontDoorWebApplicationFirewallPolicies/policy1",
         ),
     )],
@@ -307,7 +307,7 @@ front_door = azure_nextgen.network.latest.FrontDoor("frontDoor",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const frontDoor = new azure_nextgen.network.latest.FrontDoor("frontDoor", {
+const frontDoor = new azure_nextgen.network.FrontDoor("frontDoor", {
     backendPools: [{
         backends: [
             {
@@ -624,7 +624,7 @@ The FrontDoor resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#backendpools_csharp" style="color: inherit; text-decoration: inherit;">Backend<wbr>Pools</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendpool">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Backend<wbr>Pool<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#backendpool">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Backend<wbr>Pool<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Backend pools available to routing rules.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -633,7 +633,7 @@ The FrontDoor resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#backendpoolssettings_csharp" style="color: inherit; text-decoration: inherit;">Backend<wbr>Pools<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendpoolssettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Backend<wbr>Pools<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#backendpoolssettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Backend<wbr>Pools<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings for all backendPools{{% /md %}}</dd>
     <dt class="property-optional"
@@ -642,7 +642,7 @@ The FrontDoor resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#enabledstate_csharp" style="color: inherit; text-decoration: inherit;">Enabled<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#frontdoorenabledstate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Front<wbr>Door<wbr>Enabled<wbr>State</a></span>
+        <span class="property-type">string | <a href="#frontdoorenabledstate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Front<wbr>Door<wbr>Enabled<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}Operational status of the Front Door load balancer. Permitted values are 'Enabled' or 'Disabled'{{% /md %}}</dd>
     <dt class="property-optional"
@@ -660,7 +660,7 @@ The FrontDoor resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#frontendendpoints_csharp" style="color: inherit; text-decoration: inherit;">Frontend<wbr>Endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#frontendendpoint">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Frontend<wbr>Endpoint<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#frontendendpoint">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Frontend<wbr>Endpoint<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Frontend endpoints available to routing rules.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -669,7 +669,7 @@ The FrontDoor resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#healthprobesettings_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>Probe<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healthprobesettingsmodel">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Health<wbr>Probe<wbr>Settings<wbr>Model<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#healthprobesettingsmodel">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Health<wbr>Probe<wbr>Settings<wbr>Model<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Health probe settings associated with this Front Door instance.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -678,7 +678,7 @@ The FrontDoor resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#loadbalancingsettings_csharp" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancing<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalancingsettingsmodel">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Load<wbr>Balancing<wbr>Settings<wbr>Model<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#loadbalancingsettingsmodel">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Load<wbr>Balancing<wbr>Settings<wbr>Model<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Load balancing settings associated with this Front Door instance.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -696,7 +696,7 @@ The FrontDoor resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#routingrules_csharp" style="color: inherit; text-decoration: inherit;">Routing<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routingrule">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Routing<wbr>Rule<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#routingrule">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Routing<wbr>Rule<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Routing rules associated with this Front Door.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1123,7 +1123,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rulesengines_csharp" style="color: inherit; text-decoration: inherit;">Rules<wbr>Engines</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulesengineresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Outputs.<wbr>Rules<wbr>Engine<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#rulesengineresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Outputs.<wbr>Rules<wbr>Engine<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Rules Engine Configurations available to routing rules.{{% /md %}}</dd>
     <dt class="property-"
@@ -1411,7 +1411,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enabledstate_csharp" style="color: inherit; text-decoration: inherit;">Enabled<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#backendenabledstate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Backend<wbr>Enabled<wbr>State</a></span>
+        <span class="property-type">string | <a href="#backendenabledstate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Backend<wbr>Enabled<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}Whether to enable use of this backend. Permitted values are 'Enabled' or 'Disabled'{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1853,7 +1853,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backends_csharp" style="color: inherit; text-decoration: inherit;">Backends</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backend">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Backend<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#backend">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Backend<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The set of backends for this pool{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1862,7 +1862,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#healthprobesettings_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>Probe<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}L7 health probe settings for a backend pool{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1880,7 +1880,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#loadbalancingsettings_csharp" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancing<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Load balancing settings for a backend pool{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2077,7 +2077,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backends_csharp" style="color: inherit; text-decoration: inherit;">Backends</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Backend<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#backendresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Backend<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The set of backends for this pool{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2086,7 +2086,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#healthprobesettings_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>Probe<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}L7 health probe settings for a backend pool{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2104,7 +2104,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#loadbalancingsettings_csharp" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancing<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Load balancing settings for a backend pool{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2337,7 +2337,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enforcecertificatenamecheck_csharp" style="color: inherit; text-decoration: inherit;">Enforce<wbr>Certificate<wbr>Name<wbr>Check</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#enforcecertificatenamecheckenabledstate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Enforce<wbr>Certificate<wbr>Name<wbr>Check<wbr>Enabled<wbr>State</a></span>
+        <span class="property-type">string | <a href="#enforcecertificatenamecheckenabledstate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Enforce<wbr>Certificate<wbr>Name<wbr>Check<wbr>Enabled<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}Whether to enforce certificate name check on HTTPS requests to all backend pools. No effect on non-HTTPS requests.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3000,7 +3000,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dynamiccompression_csharp" style="color: inherit; text-decoration: inherit;">Dynamic<wbr>Compression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#dynamiccompressionenabled">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Dynamic<wbr>Compression<wbr>Enabled</a></span>
+        <span class="property-type">string | <a href="#dynamiccompressionenabled">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Dynamic<wbr>Compression<wbr>Enabled</a></span>
     </dt>
     <dd>{{% md %}}Whether to use dynamic compression for cached content{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3009,7 +3009,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#queryparameterstripdirective_csharp" style="color: inherit; text-decoration: inherit;">Query<wbr>Parameter<wbr>Strip<wbr>Directive</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#frontdoorquery">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Front<wbr>Door<wbr>Query</a></span>
+        <span class="property-type">string | <a href="#frontdoorquery">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Front<wbr>Door<wbr>Query</a></span>
     </dt>
     <dd>{{% md %}}Treatment of URL query terms when forming the cache key.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3385,7 +3385,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vault_csharp" style="color: inherit; text-decoration: inherit;">Vault</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultcertificatesourceparametersresponsevault">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>Certificate<wbr>Source<wbr>Parameters<wbr>Response<wbr>Vault<wbr>Args</a></span>
+        <span class="property-type"><a href="#keyvaultcertificatesourceparametersresponsevault">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>Certificate<wbr>Source<wbr>Parameters<wbr>Response<wbr>Vault<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Key Vault containing the SSL certificate{{% /md %}}</dd>
 </dl>
@@ -3685,7 +3685,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backendpool_csharp" style="color: inherit; text-decoration: inherit;">Backend<wbr>Pool</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A reference to the BackendPool which this rule routes to.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3694,7 +3694,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cacheconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Cache<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cacheconfiguration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Cache<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#cacheconfiguration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Cache<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The caching configuration associated with this rule.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3712,7 +3712,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#forwardingprotocol_csharp" style="color: inherit; text-decoration: inherit;">Forwarding<wbr>Protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#frontdoorforwardingprotocol">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Front<wbr>Door<wbr>Forwarding<wbr>Protocol</a></span>
+        <span class="property-type">string | <a href="#frontdoorforwardingprotocol">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Front<wbr>Door<wbr>Forwarding<wbr>Protocol</a></span>
     </dt>
     <dd>{{% md %}}Protocol this rule will use when forwarding traffic to backends.{{% /md %}}</dd>
 </dl>
@@ -3855,7 +3855,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backendpool_csharp" style="color: inherit; text-decoration: inherit;">Backend<wbr>Pool</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A reference to the BackendPool which this rule routes to.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3864,7 +3864,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cacheconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Cache<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cacheconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Cache<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#cacheconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Cache<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The caching configuration associated with this rule.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4366,7 +4366,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sessionaffinityenabledstate_csharp" style="color: inherit; text-decoration: inherit;">Session<wbr>Affinity<wbr>Enabled<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#sessionaffinityenabledstate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Session<wbr>Affinity<wbr>Enabled<wbr>State</a></span>
+        <span class="property-type">string | <a href="#sessionaffinityenabledstate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Session<wbr>Affinity<wbr>Enabled<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}Whether to allow session affinity on this host. Valid options are 'Enabled' or 'Disabled'{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4384,7 +4384,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#webapplicationfirewallpolicylink_csharp" style="color: inherit; text-decoration: inherit;">Web<wbr>Application<wbr>Firewall<wbr>Policy<wbr>Link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#frontendendpointupdateparameterswebapplicationfirewallpolicylink">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Frontend<wbr>Endpoint<wbr>Update<wbr>Parameters<wbr>Web<wbr>Application<wbr>Firewall<wbr>Policy<wbr>Link<wbr>Args</a></span>
+        <span class="property-type"><a href="#frontendendpointupdateparameterswebapplicationfirewallpolicylink">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Frontend<wbr>Endpoint<wbr>Update<wbr>Parameters<wbr>Web<wbr>Application<wbr>Firewall<wbr>Policy<wbr>Link<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines the Web Application Firewall policy for each host (if applicable){{% /md %}}</dd>
 </dl>
@@ -4581,7 +4581,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#customhttpsconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Https<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customhttpsconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Custom<wbr>Https<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#customhttpsconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Custom<wbr>Https<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration specifying how to enable HTTPS{{% /md %}}</dd>
     <dt class="property-required"
@@ -4671,7 +4671,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#webapplicationfirewallpolicylink_csharp" style="color: inherit; text-decoration: inherit;">Web<wbr>Application<wbr>Firewall<wbr>Policy<wbr>Link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#frontendendpointupdateparametersresponsewebapplicationfirewallpolicylink">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Frontend<wbr>Endpoint<wbr>Update<wbr>Parameters<wbr>Response<wbr>Web<wbr>Application<wbr>Firewall<wbr>Policy<wbr>Link<wbr>Args</a></span>
+        <span class="property-type"><a href="#frontendendpointupdateparametersresponsewebapplicationfirewallpolicylink">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Frontend<wbr>Endpoint<wbr>Update<wbr>Parameters<wbr>Response<wbr>Web<wbr>Application<wbr>Firewall<wbr>Policy<wbr>Link<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines the Web Application Firewall policy for each host (if applicable){{% /md %}}</dd>
 </dl>
@@ -5299,7 +5299,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enabledstate_csharp" style="color: inherit; text-decoration: inherit;">Enabled<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#healthprobeenabled">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Health<wbr>Probe<wbr>Enabled</a></span>
+        <span class="property-type">string | <a href="#healthprobeenabled">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Health<wbr>Probe<wbr>Enabled</a></span>
     </dt>
     <dd>{{% md %}}Whether to enable health probes to be made against backends defined under backendPools. Health probes can only be disabled if there is a single enabled backend in single enabled backend pool.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -5308,7 +5308,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#healthprobemethod_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>Probe<wbr>Method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#frontdoorhealthprobemethod">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Front<wbr>Door<wbr>Health<wbr>Probe<wbr>Method</a></span>
+        <span class="property-type">string | <a href="#frontdoorhealthprobemethod">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Front<wbr>Door<wbr>Health<wbr>Probe<wbr>Method</a></span>
     </dt>
     <dd>{{% md %}}Configures which HTTP method to use to probe the backends defined under backendPools.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -5353,7 +5353,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protocol_csharp" style="color: inherit; text-decoration: inherit;">Protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#frontdoorprotocol">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Front<wbr>Door<wbr>Protocol</a></span>
+        <span class="property-type">string | <a href="#frontdoorprotocol">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Front<wbr>Door<wbr>Protocol</a></span>
     </dt>
     <dd>{{% md %}}Protocol scheme to use for this probe{{% /md %}}</dd>
 </dl>
@@ -6509,7 +6509,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#redirectprotocol_csharp" style="color: inherit; text-decoration: inherit;">Redirect<wbr>Protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#frontdoorredirectprotocol">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Front<wbr>Door<wbr>Redirect<wbr>Protocol</a></span>
+        <span class="property-type">string | <a href="#frontdoorredirectprotocol">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Front<wbr>Door<wbr>Redirect<wbr>Protocol</a></span>
     </dt>
     <dd>{{% md %}}The protocol of the destination to where the traffic is redirected{{% /md %}}</dd>
     <dt class="property-optional"
@@ -6518,7 +6518,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#redirecttype_csharp" style="color: inherit; text-decoration: inherit;">Redirect<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#frontdoorredirecttype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Front<wbr>Door<wbr>Redirect<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#frontdoorredirecttype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Front<wbr>Door<wbr>Redirect<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The redirect type the rule will use when redirecting traffic.{{% /md %}}</dd>
 </dl>
@@ -6957,7 +6957,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#acceptedprotocols_csharp" style="color: inherit; text-decoration: inherit;">Accepted<wbr>Protocols</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Union&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Front<wbr>Door<wbr>Protocol&gt;&gt;</span>
+        <span class="property-type">List&lt;Union&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Front<wbr>Door<wbr>Protocol&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}Protocol schemes to match for this rule{{% /md %}}</dd>
     <dt class="property-optional"
@@ -6966,7 +6966,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enabledstate_csharp" style="color: inherit; text-decoration: inherit;">Enabled<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#routingruleenabledstate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Routing<wbr>Rule<wbr>Enabled<wbr>State</a></span>
+        <span class="property-type">string | <a href="#routingruleenabledstate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Routing<wbr>Rule<wbr>Enabled<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}Whether to enable use of this rule. Permitted values are 'Enabled' or 'Disabled'{{% /md %}}</dd>
     <dt class="property-optional"
@@ -6975,7 +6975,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#frontendendpoints_csharp" style="color: inherit; text-decoration: inherit;">Frontend<wbr>Endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#subresource">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Frontend endpoints associated with this rule{{% /md %}}</dd>
     <dt class="property-optional"
@@ -7011,7 +7011,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#routeconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Route<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#forwardingconfiguration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Forwarding<wbr>Configuration<wbr>Args</a> | <a href="#redirectconfiguration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Redirect<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#forwardingconfiguration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Forwarding<wbr>Configuration<wbr>Args</a> | <a href="#redirectconfiguration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Redirect<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A reference to the routing configuration.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -7020,7 +7020,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rulesengine_csharp" style="color: inherit; text-decoration: inherit;">Rules<wbr>Engine</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A reference to a specific Rules Engine Configuration to apply to this route.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -7029,7 +7029,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#webapplicationfirewallpolicylink_csharp" style="color: inherit; text-decoration: inherit;">Web<wbr>Application<wbr>Firewall<wbr>Policy<wbr>Link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routingruleupdateparameterswebapplicationfirewallpolicylink">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Routing<wbr>Rule<wbr>Update<wbr>Parameters<wbr>Web<wbr>Application<wbr>Firewall<wbr>Policy<wbr>Link<wbr>Args</a></span>
+        <span class="property-type"><a href="#routingruleupdateparameterswebapplicationfirewallpolicylink">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Routing<wbr>Rule<wbr>Update<wbr>Parameters<wbr>Web<wbr>Application<wbr>Firewall<wbr>Policy<wbr>Link<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines the Web Application Firewall policy for each routing rule (if applicable){{% /md %}}</dd>
 </dl>
@@ -7381,7 +7381,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#frontendendpoints_csharp" style="color: inherit; text-decoration: inherit;">Frontend<wbr>Endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#subresourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Frontend endpoints associated with this rule{{% /md %}}</dd>
     <dt class="property-optional"
@@ -7417,7 +7417,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#routeconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Route<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#forwardingconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Forwarding<wbr>Configuration<wbr>Response<wbr>Args</a> | <a href="#redirectconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Redirect<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#forwardingconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Forwarding<wbr>Configuration<wbr>Response<wbr>Args</a> | <a href="#redirectconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Redirect<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A reference to the routing configuration.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -7426,7 +7426,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rulesengine_csharp" style="color: inherit; text-decoration: inherit;">Rules<wbr>Engine</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A reference to a specific Rules Engine Configuration to apply to this route.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -7435,7 +7435,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#webapplicationfirewallpolicylink_csharp" style="color: inherit; text-decoration: inherit;">Web<wbr>Application<wbr>Firewall<wbr>Policy<wbr>Link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routingruleupdateparametersresponsewebapplicationfirewallpolicylink">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Routing<wbr>Rule<wbr>Update<wbr>Parameters<wbr>Response<wbr>Web<wbr>Application<wbr>Firewall<wbr>Policy<wbr>Link<wbr>Args</a></span>
+        <span class="property-type"><a href="#routingruleupdateparametersresponsewebapplicationfirewallpolicylink">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Routing<wbr>Rule<wbr>Update<wbr>Parameters<wbr>Response<wbr>Web<wbr>Application<wbr>Firewall<wbr>Policy<wbr>Link<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines the Web Application Firewall policy for each routing rule (if applicable){{% /md %}}</dd>
 </dl>
@@ -7891,7 +7891,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#requestheaderactions_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Header<wbr>Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#headeractionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Header<wbr>Action<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#headeractionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Header<wbr>Action<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of header actions to apply from the request from AFD to the origin.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -7900,7 +7900,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#responseheaderactions_csharp" style="color: inherit; text-decoration: inherit;">Response<wbr>Header<wbr>Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#headeractionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Header<wbr>Action<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#headeractionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Header<wbr>Action<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of header actions to apply from the response from AFD to the client.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -7909,7 +7909,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#routeconfigurationoverride_csharp" style="color: inherit; text-decoration: inherit;">Route<wbr>Configuration<wbr>Override</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#forwardingconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Forwarding<wbr>Configuration<wbr>Response<wbr>Args</a> | <a href="#redirectconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Redirect<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#forwardingconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Forwarding<wbr>Configuration<wbr>Response<wbr>Args</a> | <a href="#redirectconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Redirect<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Override the route configuration.{{% /md %}}</dd>
 </dl>
@@ -8303,7 +8303,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rules_csharp" style="color: inherit; text-decoration: inherit;">Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulesengineruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Rules<wbr>Engine<wbr>Rule<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#rulesengineruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Rules<wbr>Engine<wbr>Rule<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of rules that define a particular Rules Engine Configuration.{{% /md %}}</dd>
 </dl>
@@ -8473,7 +8473,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#action_csharp" style="color: inherit; text-decoration: inherit;">Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulesengineactionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Rules<wbr>Engine<wbr>Action<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#rulesengineactionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Rules<wbr>Engine<wbr>Action<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Actions to perform on the request and response if all of the match conditions are met.{{% /md %}}</dd>
     <dt class="property-required"
@@ -8500,7 +8500,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#matchconditions_csharp" style="color: inherit; text-decoration: inherit;">Match<wbr>Conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulesenginematchconditionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Rules<wbr>Engine<wbr>Match<wbr>Condition<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#rulesenginematchconditionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Rules<wbr>Engine<wbr>Match<wbr>Condition<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of match conditions that must meet in order for the actions of this rule to run. Having no match conditions means the actions will always run.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -8835,7 +8835,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:network/latest:FrontDoor frontDoor1 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/frontDoors/frontDoor1 
+$ pulumi import azure-nextgen:network:FrontDoor frontDoor1 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/frontDoors/frontDoor1 
 ```
 
 

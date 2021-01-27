@@ -161,7 +161,7 @@ The following output properties are available:
 <a href="#addressdetails_csharp" style="color: inherit; text-decoration: inherit;">Address<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#addressdetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Edge<wbr>Order.<wbr>Outputs.<wbr>Address<wbr>Details<wbr>Response</a></span>
+        <span class="property-type"><a href="#addressdetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Edge<wbr>Order..<wbr>Outputs.<wbr>Address<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Represents shipping and return address for order{{% /md %}}</dd>
     <dt class="property-"
@@ -206,7 +206,7 @@ The following output properties are available:
 <a href="#orderdetails_csharp" style="color: inherit; text-decoration: inherit;">Order<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#orderdetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Edge<wbr>Order.<wbr>Outputs.<wbr>Order<wbr>Details<wbr>Response</a></span>
+        <span class="property-type"><a href="#orderdetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Edge<wbr>Order..<wbr>Outputs.<wbr>Order<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Represents order details.{{% /md %}}</dd>
     <dt class="property-"
@@ -224,7 +224,7 @@ The following output properties are available:
 <a href="#systemdata_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Edge<wbr>Order.<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
+        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Edge<wbr>Order..<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Represents resource creation and update time{{% /md %}}</dd>
     <dt class="property-"
@@ -661,7 +661,7 @@ The following output properties are available:
 <a href="#returnaddress_csharp" style="color: inherit; text-decoration: inherit;">Return<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#addresspropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Edge<wbr>Order.<wbr>Inputs.<wbr>Address<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#addresspropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Edge<wbr>Order..<wbr>Inputs.<wbr>Address<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Return shipping address{{% /md %}}</dd>
     <dt class="property-required"
@@ -670,7 +670,7 @@ The following output properties are available:
 <a href="#shippingaddress_csharp" style="color: inherit; text-decoration: inherit;">Shipping<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#addresspropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Edge<wbr>Order.<wbr>Inputs.<wbr>Address<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#addresspropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Edge<wbr>Order..<wbr>Inputs.<wbr>Address<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Customer address and contact details. It should be address resource{{% /md %}}</dd>
 </dl>
@@ -764,7 +764,7 @@ The following output properties are available:
 <a href="#contactdetails_csharp" style="color: inherit; text-decoration: inherit;">Contact<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contactdetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Edge<wbr>Order.<wbr>Inputs.<wbr>Contact<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#contactdetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Edge<wbr>Order..<wbr>Inputs.<wbr>Contact<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Contact details for the address{{% /md %}}</dd>
     <dt class="property-optional"
@@ -773,7 +773,7 @@ The following output properties are available:
 <a href="#shippingaddress_csharp" style="color: inherit; text-decoration: inherit;">Shipping<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#shippingaddressresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Edge<wbr>Order.<wbr>Inputs.<wbr>Shipping<wbr>Address<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#shippingaddressresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Edge<wbr>Order..<wbr>Inputs.<wbr>Shipping<wbr>Address<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Shipping details for the address{{% /md %}}</dd>
 </dl>
@@ -867,7 +867,7 @@ The following output properties are available:
 <a href="#additionalinfo_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalerrorinforesponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Edge<wbr>Order.<wbr>Inputs.<wbr>Additional<wbr>Error<wbr>Info<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#additionalerrorinforesponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Edge<wbr>Order..<wbr>Inputs.<wbr>Additional<wbr>Error<wbr>Info<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-required"
@@ -876,7 +876,7 @@ The following output properties are available:
 <a href="#details_csharp" style="color: inherit; text-decoration: inherit;">Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clouderrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Edge<wbr>Order.<wbr>Inputs.<wbr>Cloud<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#clouderrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Edge<wbr>Order..<wbr>Inputs.<wbr>Cloud<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1652,7 +1652,7 @@ The following output properties are available:
 <a href="#currentstatus_csharp" style="color: inherit; text-decoration: inherit;">Current<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#orderstatusdetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Edge<wbr>Order.<wbr>Inputs.<wbr>Order<wbr>Status<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#orderstatusdetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Edge<wbr>Order..<wbr>Inputs.<wbr>Order<wbr>Status<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Current Order Status{{% /md %}}</dd>
     <dt class="property-required"
@@ -1670,7 +1670,7 @@ The following output properties are available:
 <a href="#error_csharp" style="color: inherit; text-decoration: inherit;">Error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clouderrorresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Edge<wbr>Order.<wbr>Inputs.<wbr>Cloud<wbr>Error<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#clouderrorresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Edge<wbr>Order..<wbr>Inputs.<wbr>Cloud<wbr>Error<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Top level error for the job.{{% /md %}}</dd>
     <dt class="property-required"
@@ -1679,7 +1679,7 @@ The following output properties are available:
 <a href="#forwardshippingdetails_csharp" style="color: inherit; text-decoration: inherit;">Forward<wbr>Shipping<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#shippingdetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Edge<wbr>Order.<wbr>Inputs.<wbr>Shipping<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#shippingdetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Edge<wbr>Order..<wbr>Inputs.<wbr>Shipping<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Forward Package Shipping details{{% /md %}}</dd>
     <dt class="property-required"
@@ -1697,7 +1697,7 @@ The following output properties are available:
 <a href="#orderstatushistory_csharp" style="color: inherit; text-decoration: inherit;">Order<wbr>Status<wbr>History</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#orderstatusdetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Edge<wbr>Order.<wbr>Inputs.<wbr>Order<wbr>Status<wbr>Details<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#orderstatusdetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Edge<wbr>Order..<wbr>Inputs.<wbr>Order<wbr>Status<wbr>Details<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Order history{{% /md %}}</dd>
     <dt class="property-required"
@@ -1715,7 +1715,7 @@ The following output properties are available:
 <a href="#productdetails_csharp" style="color: inherit; text-decoration: inherit;">Product<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#productdetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Edge<wbr>Order.<wbr>Inputs.<wbr>Product<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#productdetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Edge<wbr>Order..<wbr>Inputs.<wbr>Product<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Unique identifier for configuration.{{% /md %}}</dd>
     <dt class="property-required"
@@ -1742,7 +1742,7 @@ The following output properties are available:
 <a href="#reverseshippingdetails_csharp" style="color: inherit; text-decoration: inherit;">Reverse<wbr>Shipping<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#shippingdetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Edge<wbr>Order.<wbr>Inputs.<wbr>Shipping<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#shippingdetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Edge<wbr>Order..<wbr>Inputs.<wbr>Shipping<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Reverse Package Shipping details{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1760,7 +1760,7 @@ The following output properties are available:
 <a href="#preferences_csharp" style="color: inherit; text-decoration: inherit;">Preferences</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preferencesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Edge<wbr>Order.<wbr>Inputs.<wbr>Preferences<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#preferencesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Edge<wbr>Order..<wbr>Inputs.<wbr>Preferences<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Customer notification Preferences{{% /md %}}</dd>
 </dl>
@@ -2308,7 +2308,7 @@ The following output properties are available:
 <a href="#notificationpreferences_csharp" style="color: inherit; text-decoration: inherit;">Notification<wbr>Preferences</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#notificationpreferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Edge<wbr>Order.<wbr>Inputs.<wbr>Notification<wbr>Preference<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#notificationpreferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Edge<wbr>Order..<wbr>Inputs.<wbr>Notification<wbr>Preference<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Notification preferences.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2317,7 +2317,7 @@ The following output properties are available:
 <a href="#transportpreferences_csharp" style="color: inherit; text-decoration: inherit;">Transport<wbr>Preferences</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transportpreferencesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Edge<wbr>Order.<wbr>Inputs.<wbr>Transport<wbr>Preferences<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#transportpreferencesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Edge<wbr>Order..<wbr>Inputs.<wbr>Transport<wbr>Preferences<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Preferences related to the shipment logistics of the order.{{% /md %}}</dd>
 </dl>
@@ -2411,7 +2411,7 @@ The following output properties are available:
 <a href="#devicedetails_csharp" style="color: inherit; text-decoration: inherit;">Device<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#devicedetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Edge<wbr>Order.<wbr>Inputs.<wbr>Device<wbr>Details<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#devicedetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Edge<wbr>Order..<wbr>Inputs.<wbr>Device<wbr>Details<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}list of device details{{% /md %}}</dd>
     <dt class="property-required"
@@ -2420,7 +2420,7 @@ The following output properties are available:
 <a href="#hierarchyinformation_csharp" style="color: inherit; text-decoration: inherit;">Hierarchy<wbr>Information</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hierarchyinformationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Edge<wbr>Order.<wbr>Inputs.<wbr>Hierarchy<wbr>Information<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#hierarchyinformationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Edge<wbr>Order..<wbr>Inputs.<wbr>Hierarchy<wbr>Information<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}} Hierarchy of the product which uniquely identifies the product{{% /md %}}</dd>
     <dt class="property-optional"

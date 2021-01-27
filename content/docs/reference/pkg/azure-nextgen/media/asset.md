@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.media.Asset resource with exampl
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 An Asset.
-Latest API Version: 2020-05-01.
+API Version: 2020-05-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var asset = new AzureNextGen.Media.Latest.Asset("asset", new AzureNextGen.Media.Latest.AssetArgs
+        var asset = new AzureNextGen.Media..Asset("asset", new AzureNextGen.Media..AssetArgs
         {
             AccountName = "contosomedia",
             AssetName = "ClimbingMountLogan",
@@ -49,7 +49,7 @@ class MyStack : Stack
 package main
 
 import (
-	media "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/media/latest"
+	media "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/media"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -79,7 +79,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-asset = azure_nextgen.media.latest.Asset("asset",
+asset = azure_nextgen.media.Asset("asset",
     account_name="contosomedia",
     asset_name="ClimbingMountLogan",
     description="A documentary showing the ascent of Mount Logan",
@@ -96,7 +96,7 @@ asset = azure_nextgen.media.latest.Asset("asset",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const asset = new azure_nextgen.media.latest.Asset("asset", {
+const asset = new azure_nextgen.media.Asset("asset", {
     accountName: "contosomedia",
     assetName: "ClimbingMountLogan",
     description: "A documentary showing the ascent of Mount Logan",
@@ -858,7 +858,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:media/latest:Asset ClimbingMountLogan /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/contoso/providers/Microsoft.Media/mediaservices/contosomedia/assets/ClimbingMountLogan 
+$ pulumi import azure-nextgen:media:Asset ClimbingMountLogan /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/contoso/providers/Microsoft.Media/mediaservices/contosomedia/assets/ClimbingMountLogan 
 ```
 
 

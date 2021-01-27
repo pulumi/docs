@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.servicebus.Subscription resource
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Description of subscription resource.
-Latest API Version: 2017-04-01.
+API Version: 2017-04-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var subscription = new AzureNextGen.ServiceBus.Latest.Subscription("subscription", new AzureNextGen.ServiceBus.Latest.SubscriptionArgs
+        var subscription = new AzureNextGen.ServiceBus..Subscription("subscription", new AzureNextGen.ServiceBus..SubscriptionArgs
         {
             EnableBatchedOperations = true,
             NamespaceName = "sdk-Namespace-1349",
@@ -49,7 +49,7 @@ class MyStack : Stack
 package main
 
 import (
-	servicebus "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/servicebus/latest"
+	servicebus "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/servicebus"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -79,7 +79,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-subscription = azure_nextgen.servicebus.latest.Subscription("subscription",
+subscription = azure_nextgen.servicebus.Subscription("subscription",
     enable_batched_operations=True,
     namespace_name="sdk-Namespace-1349",
     resource_group_name="ResourceGroup",
@@ -96,7 +96,7 @@ subscription = azure_nextgen.servicebus.latest.Subscription("subscription",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const subscription = new azure_nextgen.servicebus.latest.Subscription("subscription", {
+const subscription = new azure_nextgen.servicebus.Subscription("subscription", {
     enableBatchedOperations: true,
     namespaceName: "sdk-Namespace-1349",
     resourceGroupName: "ResourceGroup",
@@ -432,7 +432,7 @@ The Subscription resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#entitystatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Bus.<wbr>Entity<wbr>Status</a></span>
+        <span class="property-type"><a href="#entitystatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Bus..<wbr>Entity<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}Enumerates the possible values for the status of a messaging entity.{{% /md %}}</dd>
 </dl>
@@ -913,7 +913,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#countdetails_csharp" style="color: inherit; text-decoration: inherit;">Count<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#messagecountdetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Bus.<wbr>Outputs.<wbr>Message<wbr>Count<wbr>Details<wbr>Response</a></span>
+        <span class="property-type"><a href="#messagecountdetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Bus..<wbr>Outputs.<wbr>Message<wbr>Count<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Message count details{{% /md %}}</dd>
     <dt class="property-"
@@ -1522,7 +1522,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:servicebus/latest:Subscription sdk-Subscriptions-2178 /subscriptions/Subscriptionid/resourceGroups/ResourceGroup/providers/Microsoft.ServiceBus/namespaces/sdk-Namespace-1349/topics/sdk-Topics-8740/subscriptions/sdk-Subscriptions-2178 
+$ pulumi import azure-nextgen:servicebus:Subscription sdk-Subscriptions-2178 /subscriptions/Subscriptionid/resourceGroups/ResourceGroup/providers/Microsoft.ServiceBus/namespaces/sdk-Namespace-1349/topics/sdk-Topics-8740/subscriptions/sdk-Subscriptions-2178 
 ```
 
 

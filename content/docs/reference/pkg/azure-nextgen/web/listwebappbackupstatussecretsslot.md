@@ -108,7 +108,7 @@ The following arguments are supported:
 <a href="#backupschedule_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backupschedule">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web.<wbr>Inputs.<wbr>Backup<wbr>Schedule<wbr>Args</a></span>
+        <span class="property-type"><a href="#backupschedule">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web..<wbr>Inputs.<wbr>Backup<wbr>Schedule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Schedule for the backup if it is executed periodically.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -117,7 +117,7 @@ The following arguments are supported:
 <a href="#databases_csharp" style="color: inherit; text-decoration: inherit;">Databases</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databasebackupsetting">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web.<wbr>Inputs.<wbr>Database<wbr>Backup<wbr>Setting<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#databasebackupsetting">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web..<wbr>Inputs.<wbr>Database<wbr>Backup<wbr>Setting<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Databases included in the backup.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -483,7 +483,7 @@ The following output properties are available:
 <a href="#databases_csharp" style="color: inherit; text-decoration: inherit;">Databases</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databasebackupsettingresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web.<wbr>Outputs.<wbr>Database<wbr>Backup<wbr>Setting<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#databasebackupsettingresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web..<wbr>Outputs.<wbr>Database<wbr>Backup<wbr>Setting<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of databases included in the backup.{{% /md %}}</dd>
     <dt class="property-"
@@ -573,7 +573,7 @@ The following output properties are available:
 <a href="#systemdata_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web.<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
+        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web..<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The system metadata relating to this resource.{{% /md %}}</dd>
     <dt class="property-"
@@ -1141,7 +1141,7 @@ The following output properties are available:
 <a href="#frequencyunit_csharp" style="color: inherit; text-decoration: inherit;">Frequency<wbr>Unit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#frequencyunit">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web.<wbr>Frequency<wbr>Unit</a></span>
+        <span class="property-type"><a href="#frequencyunit">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web..<wbr>Frequency<wbr>Unit</a></span>
     </dt>
     <dd>{{% md %}}The unit of time for how often the backup should be executed (e.g. for weekly backup, this should be set to Day and FrequencyInterval should be set to 7){{% /md %}}</dd>
     <dt class="property-required"
@@ -1343,7 +1343,7 @@ The following output properties are available:
 <a href="#databasetype_csharp" style="color: inherit; text-decoration: inherit;">Database<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#databasetype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web.<wbr>Database<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#databasetype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web..<wbr>Database<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Database type (e.g. SqlAzure / MySql).{{% /md %}}</dd>
     <dt class="property-optional"

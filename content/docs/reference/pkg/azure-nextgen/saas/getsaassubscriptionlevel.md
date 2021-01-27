@@ -179,7 +179,7 @@ The following output properties are available:
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#saasresourceresponseproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Saa<wbr>S.<wbr>Outputs.<wbr>Saas<wbr>Resource<wbr>Response<wbr>Properties</a></span>
+        <span class="property-type"><a href="#saasresourceresponseproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Saa<wbr>S..<wbr>Outputs.<wbr>Saas<wbr>Resource<wbr>Response<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}saas properties{{% /md %}}</dd>
     <dt class="property-"
@@ -652,7 +652,7 @@ The following output properties are available:
 <a href="#term_csharp" style="color: inherit; text-decoration: inherit;">Term</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#saaspropertiesresponseterm">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Saa<wbr>S.<wbr>Inputs.<wbr>Saas<wbr>Properties<wbr>Response<wbr>Term<wbr>Args</a></span>
+        <span class="property-type"><a href="#saaspropertiesresponseterm">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Saa<wbr>S..<wbr>Inputs.<wbr>Saas<wbr>Properties<wbr>Response<wbr>Term<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The current Term object.{{% /md %}}</dd>
     <dt class="property-optional"

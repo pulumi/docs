@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.datalakeanalytics.Account resour
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 A Data Lake Analytics account object, containing all information associated with the named Data Lake Analytics account.
-Latest API Version: 2016-11-01.
+API Version: 2016-11-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,12 +27,12 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var account = new AzureNextGen.DataLakeAnalytics.Latest.Account("account", new AzureNextGen.DataLakeAnalytics.Latest.AccountArgs
+        var account = new AzureNextGen.DataLakeAnalytics..Account("account", new AzureNextGen.DataLakeAnalytics..AccountArgs
         {
             AccountName = "contosoadla",
             ComputePolicies = 
             {
-                new AzureNextGen.DataLakeAnalytics.Latest.Inputs.CreateComputePolicyWithAccountParametersArgs
+                new AzureNextGen.DataLakeAnalytics..Inputs.CreateComputePolicyWithAccountParametersArgs
                 {
                     MaxDegreeOfParallelismPerJob = 1,
                     MinPriorityPerJob = 1,
@@ -43,7 +43,7 @@ class MyStack : Stack
             },
             DataLakeStoreAccounts = 
             {
-                new AzureNextGen.DataLakeAnalytics.Latest.Inputs.AddDataLakeStoreWithAccountParametersArgs
+                new AzureNextGen.DataLakeAnalytics..Inputs.AddDataLakeStoreWithAccountParametersArgs
                 {
                     Name = "test_adls",
                     Suffix = "test_suffix",
@@ -53,7 +53,7 @@ class MyStack : Stack
             FirewallAllowAzureIps = "Enabled",
             FirewallRules = 
             {
-                new AzureNextGen.DataLakeAnalytics.Latest.Inputs.CreateFirewallRuleWithAccountParametersArgs
+                new AzureNextGen.DataLakeAnalytics..Inputs.CreateFirewallRuleWithAccountParametersArgs
                 {
                     EndIpAddress = "2.2.2.2",
                     Name = "test_rule",
@@ -71,7 +71,7 @@ class MyStack : Stack
             ResourceGroupName = "contosorg",
             StorageAccounts = 
             {
-                new AzureNextGen.DataLakeAnalytics.Latest.Inputs.AddStorageAccountWithAccountParametersArgs
+                new AzureNextGen.DataLakeAnalytics..Inputs.AddStorageAccountWithAccountParametersArgs
                 {
                     AccessKey = "34adfa4f-cedf-4dc0-ba29-b6d1a69ab346",
                     Name = "test_storage",
@@ -97,7 +97,7 @@ class MyStack : Stack
 package main
 
 import (
-	datalakeanalytics "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datalakeanalytics/latest"
+	datalakeanalytics "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datalakeanalytics"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -166,22 +166,22 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-account = azure_nextgen.datalakeanalytics.latest.Account("account",
+account = azure_nextgen.datalakeanalytics.Account("account",
     account_name="contosoadla",
-    compute_policies=[azure_nextgen.datalakeanalytics.latest.CreateComputePolicyWithAccountParametersArgs(
+    compute_policies=[azure_nextgen.datalakeanalytics.CreateComputePolicyWithAccountParametersArgs(
         max_degree_of_parallelism_per_job=1,
         min_priority_per_job=1,
         name="test_policy",
         object_id="34adfa4f-cedf-4dc0-ba29-b6d1a69ab345",
         object_type="User",
     )],
-    data_lake_store_accounts=[azure_nextgen.datalakeanalytics.latest.AddDataLakeStoreWithAccountParametersArgs(
+    data_lake_store_accounts=[azure_nextgen.datalakeanalytics.AddDataLakeStoreWithAccountParametersArgs(
         name="test_adls",
         suffix="test_suffix",
     )],
     default_data_lake_store_account="test_adls",
     firewall_allow_azure_ips="Enabled",
-    firewall_rules=[azure_nextgen.datalakeanalytics.latest.CreateFirewallRuleWithAccountParametersArgs(
+    firewall_rules=[azure_nextgen.datalakeanalytics.CreateFirewallRuleWithAccountParametersArgs(
         end_ip_address="2.2.2.2",
         name="test_rule",
         start_ip_address="1.1.1.1",
@@ -195,7 +195,7 @@ account = azure_nextgen.datalakeanalytics.latest.Account("account",
     new_tier="Consumption",
     query_store_retention=30,
     resource_group_name="contosorg",
-    storage_accounts=[azure_nextgen.datalakeanalytics.latest.AddStorageAccountWithAccountParametersArgs(
+    storage_accounts=[azure_nextgen.datalakeanalytics.AddStorageAccountWithAccountParametersArgs(
         access_key="34adfa4f-cedf-4dc0-ba29-b6d1a69ab346",
         name="test_storage",
         suffix="test_suffix",
@@ -214,7 +214,7 @@ account = azure_nextgen.datalakeanalytics.latest.Account("account",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const account = new azure_nextgen.datalakeanalytics.latest.Account("account", {
+const account = new azure_nextgen.datalakeanalytics.Account("account", {
     accountName: "contosoadla",
     computePolicies: [{
         maxDegreeOfParallelismPerJob: 1,
@@ -455,7 +455,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#datalakestoreaccounts_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Lake<wbr>Store<wbr>Accounts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#adddatalakestorewithaccountparameters">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Lake<wbr>Analytics.<wbr>Inputs.<wbr>Add<wbr>Data<wbr>Lake<wbr>Store<wbr>With<wbr>Account<wbr>Parameters<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#adddatalakestorewithaccountparameters">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Lake<wbr>Analytics..<wbr>Inputs.<wbr>Add<wbr>Data<wbr>Lake<wbr>Store<wbr>With<wbr>Account<wbr>Parameters<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of Data Lake Store accounts associated with this account.{{% /md %}}</dd>
     <dt class="property-required"
@@ -491,7 +491,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#computepolicies_csharp" style="color: inherit; text-decoration: inherit;">Compute<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#createcomputepolicywithaccountparameters">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Lake<wbr>Analytics.<wbr>Inputs.<wbr>Create<wbr>Compute<wbr>Policy<wbr>With<wbr>Account<wbr>Parameters<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#createcomputepolicywithaccountparameters">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Lake<wbr>Analytics..<wbr>Inputs.<wbr>Create<wbr>Compute<wbr>Policy<wbr>With<wbr>Account<wbr>Parameters<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of compute policies associated with this account.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -500,7 +500,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#firewallallowazureips_csharp" style="color: inherit; text-decoration: inherit;">Firewall<wbr>Allow<wbr>Azure<wbr>Ips</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallallowazureipsstate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Lake<wbr>Analytics.<wbr>Firewall<wbr>Allow<wbr>Azure<wbr>Ips<wbr>State</a></span>
+        <span class="property-type"><a href="#firewallallowazureipsstate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Lake<wbr>Analytics..<wbr>Firewall<wbr>Allow<wbr>Azure<wbr>Ips<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}The current state of allowing or disallowing IPs originating within Azure through the firewall. If the firewall is disabled, this is not enforced.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -509,7 +509,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#firewallrules_csharp" style="color: inherit; text-decoration: inherit;">Firewall<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#createfirewallrulewithaccountparameters">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Lake<wbr>Analytics.<wbr>Inputs.<wbr>Create<wbr>Firewall<wbr>Rule<wbr>With<wbr>Account<wbr>Parameters<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#createfirewallrulewithaccountparameters">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Lake<wbr>Analytics..<wbr>Inputs.<wbr>Create<wbr>Firewall<wbr>Rule<wbr>With<wbr>Account<wbr>Parameters<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of firewall rules associated with this account.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -518,7 +518,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#firewallstate_csharp" style="color: inherit; text-decoration: inherit;">Firewall<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallstate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Lake<wbr>Analytics.<wbr>Firewall<wbr>State</a></span>
+        <span class="property-type"><a href="#firewallstate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Lake<wbr>Analytics..<wbr>Firewall<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}The current state of the IP address firewall for this account.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -563,7 +563,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#newtier_csharp" style="color: inherit; text-decoration: inherit;">New<wbr>Tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tiertype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Lake<wbr>Analytics.<wbr>Tier<wbr>Type</a></span>
+        <span class="property-type"><a href="#tiertype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Lake<wbr>Analytics..<wbr>Tier<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The commitment tier for the next month.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -581,7 +581,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#storageaccounts_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Accounts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#addstorageaccountwithaccountparameters">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Lake<wbr>Analytics.<wbr>Inputs.<wbr>Add<wbr>Storage<wbr>Account<wbr>With<wbr>Account<wbr>Parameters<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#addstorageaccountwithaccountparameters">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Lake<wbr>Analytics..<wbr>Inputs.<wbr>Add<wbr>Storage<wbr>Account<wbr>With<wbr>Account<wbr>Parameters<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of Azure Blob Storage accounts associated with this account.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1134,7 +1134,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hivemetastores_csharp" style="color: inherit; text-decoration: inherit;">Hive<wbr>Metastores</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hivemetastoreresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Lake<wbr>Analytics.<wbr>Outputs.<wbr>Hive<wbr>Metastore<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#hivemetastoreresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Lake<wbr>Analytics..<wbr>Outputs.<wbr>Hive<wbr>Metastore<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of hiveMetastores associated with this account.{{% /md %}}</dd>
     <dt class="property-"
@@ -1215,7 +1215,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#virtualnetworkrules_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Lake<wbr>Analytics.<wbr>Outputs.<wbr>Virtual<wbr>Network<wbr>Rule<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#virtualnetworkruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Lake<wbr>Analytics..<wbr>Outputs.<wbr>Virtual<wbr>Network<wbr>Rule<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of virtualNetwork rules associated with this account.{{% /md %}}</dd>
 </dl>
@@ -2239,7 +2239,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#objecttype_csharp" style="color: inherit; text-decoration: inherit;">Object<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#aadobjecttype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Lake<wbr>Analytics.<wbr>AADObject<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#aadobjecttype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Lake<wbr>Analytics..<wbr>AADObject<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of AAD object the object identifier refers to.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3827,7 +3827,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:datalakeanalytics/latest:Account test_account /subscriptions/34adfa4f-cedf-4dc0-ba29-b6d1a69ab345/resourceGroups/rgaba12041/providers/Microsoft.DataLakeAnalytics/accounts/testaba15818 
+$ pulumi import azure-nextgen:datalakeanalytics:Account test_account /subscriptions/34adfa4f-cedf-4dc0-ba29-b6d1a69ab345/resourceGroups/rgaba12041/providers/Microsoft.DataLakeAnalytics/accounts/testaba15818 
 ```
 
 

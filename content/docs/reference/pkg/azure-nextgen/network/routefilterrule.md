@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.network.RouteFilterRule resource
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Route Filter Rule Resource.
-Latest API Version: 2020-08-01.
+API Version: 2020-08-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var routeFilterRule = new AzureNextGen.Network.Latest.RouteFilterRule("routeFilterRule", new AzureNextGen.Network.Latest.RouteFilterRuleArgs
+        var routeFilterRule = new AzureNextGen.Network..RouteFilterRule("routeFilterRule", new AzureNextGen.Network..RouteFilterRuleArgs
         {
             Access = "Allow",
             Communities = 
@@ -54,7 +54,7 @@ class MyStack : Stack
 package main
 
 import (
-	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network/latest"
+	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -88,7 +88,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-route_filter_rule = azure_nextgen.network.latest.RouteFilterRule("routeFilterRule",
+route_filter_rule = azure_nextgen.network.RouteFilterRule("routeFilterRule",
     access="Allow",
     communities=[
         "12076:5030",
@@ -109,7 +109,7 @@ route_filter_rule = azure_nextgen.network.latest.RouteFilterRule("routeFilterRul
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const routeFilterRule = new azure_nextgen.network.latest.RouteFilterRule("routeFilterRule", {
+const routeFilterRule = new azure_nextgen.network.RouteFilterRule("routeFilterRule", {
     access: "Allow",
     communities: [
         "12076:5030",
@@ -314,7 +314,7 @@ The RouteFilterRule resource accepts the following [input]({{< relref "/docs/int
 <a href="#access_csharp" style="color: inherit; text-decoration: inherit;">Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#access">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Access</a></span>
+        <span class="property-type">string | <a href="#access">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}The access type of the rule.{{% /md %}}</dd>
     <dt class="property-required"
@@ -350,7 +350,7 @@ The RouteFilterRule resource accepts the following [input]({{< relref "/docs/int
 <a href="#routefilterruletype_csharp" style="color: inherit; text-decoration: inherit;">Route<wbr>Filter<wbr>Rule<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#routefilterruletype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Route<wbr>Filter<wbr>Rule<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#routefilterruletype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Route<wbr>Filter<wbr>Rule<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The rule type of the rule.{{% /md %}}</dd>
     <dt class="property-required"
@@ -875,7 +875,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:network/latest:RouteFilterRule ruleName /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/routeFilters/filterName/routeFilterRules/ruleName 
+$ pulumi import azure-nextgen:network:RouteFilterRule ruleName /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/routeFilters/filterName/routeFilterRules/ruleName 
 ```
 
 

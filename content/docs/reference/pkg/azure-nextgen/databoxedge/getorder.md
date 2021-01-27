@@ -161,7 +161,7 @@ The following output properties are available:
 <a href="#contactinformation_csharp" style="color: inherit; text-decoration: inherit;">Contact<wbr>Information</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contactdetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Outputs.<wbr>Contact<wbr>Details<wbr>Response</a></span>
+        <span class="property-type"><a href="#contactdetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge..<wbr>Outputs.<wbr>Contact<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The contact details.{{% /md %}}</dd>
     <dt class="property-"
@@ -170,7 +170,7 @@ The following output properties are available:
 <a href="#deliverytrackinginfo_csharp" style="color: inherit; text-decoration: inherit;">Delivery<wbr>Tracking<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trackinginforesponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Outputs.<wbr>Tracking<wbr>Info<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#trackinginforesponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge..<wbr>Outputs.<wbr>Tracking<wbr>Info<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Tracking information for the package delivered to the customer whether it has an original or a replacement device.{{% /md %}}</dd>
     <dt class="property-"
@@ -197,7 +197,7 @@ The following output properties are available:
 <a href="#orderhistory_csharp" style="color: inherit; text-decoration: inherit;">Order<wbr>History</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#orderstatusresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Outputs.<wbr>Order<wbr>Status<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#orderstatusresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge..<wbr>Outputs.<wbr>Order<wbr>Status<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of status changes in the order.{{% /md %}}</dd>
     <dt class="property-"
@@ -206,7 +206,7 @@ The following output properties are available:
 <a href="#returntrackinginfo_csharp" style="color: inherit; text-decoration: inherit;">Return<wbr>Tracking<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trackinginforesponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Outputs.<wbr>Tracking<wbr>Info<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#trackinginforesponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge..<wbr>Outputs.<wbr>Tracking<wbr>Info<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Tracking information for the package returned from the customer whether it has an original or a replacement device.{{% /md %}}</dd>
     <dt class="property-"
@@ -233,7 +233,7 @@ The following output properties are available:
 <a href="#currentstatus_csharp" style="color: inherit; text-decoration: inherit;">Current<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#orderstatusresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Outputs.<wbr>Order<wbr>Status<wbr>Response</a></span>
+        <span class="property-type"><a href="#orderstatusresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge..<wbr>Outputs.<wbr>Order<wbr>Status<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Current status of the order.{{% /md %}}</dd>
     <dt class="property-"
@@ -251,7 +251,7 @@ The following output properties are available:
 <a href="#shippingaddress_csharp" style="color: inherit; text-decoration: inherit;">Shipping<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#addressresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Outputs.<wbr>Address<wbr>Response</a></span>
+        <span class="property-type"><a href="#addressresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge..<wbr>Outputs.<wbr>Address<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The shipping address.{{% /md %}}</dd>
 </dl>
@@ -1071,7 +1071,7 @@ by the already existing properties{{% /md %}}</dd>
 <a href="#trackinginformation_csharp" style="color: inherit; text-decoration: inherit;">Tracking<wbr>Information</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trackinginforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Inputs.<wbr>Tracking<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#trackinginforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge..<wbr>Inputs.<wbr>Tracking<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Tracking information related to the state in the ordering flow{{% /md %}}</dd>
     <dt class="property-required"

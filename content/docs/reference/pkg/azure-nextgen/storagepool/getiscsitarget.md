@@ -242,7 +242,7 @@ The following output properties are available:
 <a href="#tpgs_csharp" style="color: inherit; text-decoration: inherit;">Tpgs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#targetportalgroupresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Pool.<wbr>Outputs.<wbr>Target<wbr>Portal<wbr>Group<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#targetportalgroupresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Pool..<wbr>Outputs.<wbr>Target<wbr>Portal<wbr>Group<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}list of iSCSI target portal groups{{% /md %}}</dd>
     <dt class="property-"
@@ -867,7 +867,7 @@ The following output properties are available:
 <a href="#acls_csharp" style="color: inherit; text-decoration: inherit;">Acls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aclresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Pool.<wbr>Inputs.<wbr>Acl<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#aclresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Pool..<wbr>Inputs.<wbr>Acl<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Access Control List (ACL) for an iSCSI target lun{{% /md %}}</dd>
     <dt class="property-required"
@@ -876,7 +876,7 @@ The following output properties are available:
 <a href="#attributes_csharp" style="color: inherit; text-decoration: inherit;">Attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#attributesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Pool.<wbr>Inputs.<wbr>Attributes<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#attributesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Pool..<wbr>Inputs.<wbr>Attributes<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Attributes of an iSCSI target{{% /md %}}</dd>
     <dt class="property-required"
@@ -894,7 +894,7 @@ The following output properties are available:
 <a href="#luns_csharp" style="color: inherit; text-decoration: inherit;">Luns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iscsilunresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Pool.<wbr>Inputs.<wbr>Iscsi<wbr>Lun<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#iscsilunresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Pool..<wbr>Inputs.<wbr>Iscsi<wbr>Lun<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Lun list to be exposed through the iSCSI target. Required{{% /md %}}</dd>
     <dt class="property-required"

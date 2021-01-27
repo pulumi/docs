@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.customerinsights.Hub resource wi
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Hub resource.
-Latest API Version: 2017-04-26.
+API Version: 2017-04-26.
 
 {{% examples %}}
 ## Example Usage
@@ -27,9 +27,9 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var hub = new AzureNextGen.CustomerInsights.Latest.Hub("hub", new AzureNextGen.CustomerInsights.Latest.HubArgs
+        var hub = new AzureNextGen.CustomerInsights..Hub("hub", new AzureNextGen.CustomerInsights..HubArgs
         {
-            HubBillingInfo = new AzureNextGen.CustomerInsights.Latest.Inputs.HubBillingInfoFormatArgs
+            HubBillingInfo = new AzureNextGen.CustomerInsights..Inputs.HubBillingInfoFormatArgs
             {
                 MaxUnits = 5,
                 MinUnits = 1,
@@ -53,7 +53,7 @@ class MyStack : Stack
 package main
 
 import (
-	customerinsights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/customerinsights/latest"
+	customerinsights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/customerinsights"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -86,8 +86,8 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-hub = azure_nextgen.customerinsights.latest.Hub("hub",
-    hub_billing_info=azure_nextgen.customerinsights.latest.HubBillingInfoFormatArgs(
+hub = azure_nextgen.customerinsights.Hub("hub",
+    hub_billing_info=azure_nextgen.customerinsights.HubBillingInfoFormatArgs(
         max_units=5,
         min_units=1,
         sku_name="B0",
@@ -106,7 +106,7 @@ hub = azure_nextgen.customerinsights.latest.Hub("hub",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const hub = new azure_nextgen.customerinsights.latest.Hub("hub", {
+const hub = new azure_nextgen.customerinsights.Hub("hub", {
     hubBillingInfo: {
         maxUnits: 5,
         minUnits: 1,
@@ -328,7 +328,7 @@ The Hub resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#hubbillinginfo_csharp" style="color: inherit; text-decoration: inherit;">Hub<wbr>Billing<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hubbillinginfoformat">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights.<wbr>Inputs.<wbr>Hub<wbr>Billing<wbr>Info<wbr>Format<wbr>Args</a></span>
+        <span class="property-type"><a href="#hubbillinginfoformat">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights..<wbr>Inputs.<wbr>Hub<wbr>Billing<wbr>Info<wbr>Format<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Billing settings of the hub.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1071,7 +1071,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:customerinsights/latest:Hub testHub2839 /subscriptions/subid/resourceGroups/TestHubRG/providers/Microsoft.CustomerInsights/hubs/testHub2839 
+$ pulumi import azure-nextgen:customerinsights:Hub testHub2839 /subscriptions/subid/resourceGroups/TestHubRG/providers/Microsoft.CustomerInsights/hubs/testHub2839 
 ```
 
 

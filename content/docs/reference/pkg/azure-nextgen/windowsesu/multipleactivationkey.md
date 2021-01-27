@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.windowsesu.MultipleActivationKey
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 MAK key details.
+API Version: 2019-09-16-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var multipleActivationKey = new AzureNextGen.WindowsESU.V20190916Preview.MultipleActivationKey("multipleActivationKey", new AzureNextGen.WindowsESU.V20190916Preview.MultipleActivationKeyArgs
+        var multipleActivationKey = new AzureNextGen.WindowsESU..MultipleActivationKey("multipleActivationKey", new AzureNextGen.WindowsESU..MultipleActivationKeyArgs
         {
             AgreementNumber = "1a2b45ag",
             InstalledServerNumber = 100,
@@ -51,7 +52,7 @@ class MyStack : Stack
 package main
 
 import (
-	windowsesu "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/windowsesu/v20190916preview"
+	windowsesu "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/windowsesu"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -84,7 +85,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-multiple_activation_key = azure_nextgen.windowsesu.v20190916preview.MultipleActivationKey("multipleActivationKey",
+multiple_activation_key = azure_nextgen.windowsesu.MultipleActivationKey("multipleActivationKey",
     agreement_number="1a2b45ag",
     installed_server_number=100,
     is_eligible=True,
@@ -104,7 +105,7 @@ multiple_activation_key = azure_nextgen.windowsesu.v20190916preview.MultipleActi
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const multipleActivationKey = new azure_nextgen.windowsesu.v20190916preview.MultipleActivationKey("multipleActivationKey", {
+const multipleActivationKey = new azure_nextgen.windowsesu.MultipleActivationKey("multipleActivationKey", {
     agreementNumber: "1a2b45ag",
     installedServerNumber: 100,
     isEligible: true,
@@ -362,7 +363,7 @@ The MultipleActivationKey resource accepts the following [input]({{< relref "/do
 <a href="#ostype_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#ostype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Windows<wbr>ESU.<wbr>Os<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#ostype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Windows<wbr>ESU..<wbr>Os<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of OS for which the key is requested.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -371,7 +372,7 @@ The MultipleActivationKey resource accepts the following [input]({{< relref "/do
 <a href="#supporttype_csharp" style="color: inherit; text-decoration: inherit;">Support<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#supporttype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Windows<wbr>ESU.<wbr>Support<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#supporttype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Windows<wbr>ESU..<wbr>Support<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of support{{% /md %}}</dd>
     <dt class="property-optional"
@@ -993,7 +994,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:windowsesu/v20190916preview:MultipleActivationKey server08-key-2019 /subscriptions/fd3c3665-1729-4b7b-9a38-238e83b0f98b/resourceGroups/testgr1/providers/Microsoft.WindowsESU/multipleActivationKeys/server08-key-2019 
+$ pulumi import azure-nextgen:windowsesu:MultipleActivationKey server08-key-2019 /subscriptions/fd3c3665-1729-4b7b-9a38-238e83b0f98b/resourceGroups/testgr1/providers/Microsoft.WindowsESU/multipleActivationKeys/server08-key-2019 
 ```
 
 

@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.datalakestore.TrustedIdProvider 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Data Lake Store trusted identity provider information.
-Latest API Version: 2016-11-01.
+API Version: 2016-11-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var trustedIdProvider = new AzureNextGen.DataLakeStore.Latest.TrustedIdProvider("trustedIdProvider", new AzureNextGen.DataLakeStore.Latest.TrustedIdProviderArgs
+        var trustedIdProvider = new AzureNextGen.DataLakeStore..TrustedIdProvider("trustedIdProvider", new AzureNextGen.DataLakeStore..TrustedIdProviderArgs
         {
             AccountName = "contosoadla",
             IdProvider = "https://sts.windows.net/ea9ec534-a3e3-4e45-ad36-3afc5bb291c1",
@@ -48,7 +48,7 @@ class MyStack : Stack
 package main
 
 import (
-	datalakestore "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datalakestore/latest"
+	datalakestore "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datalakestore"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -77,7 +77,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-trusted_id_provider = azure_nextgen.datalakestore.latest.TrustedIdProvider("trustedIdProvider",
+trusted_id_provider = azure_nextgen.datalakestore.TrustedIdProvider("trustedIdProvider",
     account_name="contosoadla",
     id_provider="https://sts.windows.net/ea9ec534-a3e3-4e45-ad36-3afc5bb291c1",
     resource_group_name="contosorg",
@@ -93,7 +93,7 @@ trusted_id_provider = azure_nextgen.datalakestore.latest.TrustedIdProvider("trus
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const trustedIdProvider = new azure_nextgen.datalakestore.latest.TrustedIdProvider("trustedIdProvider", {
+const trustedIdProvider = new azure_nextgen.datalakestore.TrustedIdProvider("trustedIdProvider", {
     accountName: "contosoadla",
     idProvider: "https://sts.windows.net/ea9ec534-a3e3-4e45-ad36-3afc5bb291c1",
     resourceGroupName: "contosorg",
@@ -602,7 +602,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:datalakestore/latest:TrustedIdProvider test_trusted_id_provider_name 34adfa4f-cedf-4dc0-ba29-b6d1a69ab345 
+$ pulumi import azure-nextgen:datalakestore:TrustedIdProvider test_trusted_id_provider_name 34adfa4f-cedf-4dc0-ba29-b6d1a69ab345 
 ```
 
 

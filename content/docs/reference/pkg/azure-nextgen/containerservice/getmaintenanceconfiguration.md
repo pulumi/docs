@@ -215,7 +215,7 @@ The following output properties are available:
 <a href="#systemdata_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
+        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service..<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The system meta data relating to this resource.{{% /md %}}</dd>
     <dt class="property-"
@@ -233,7 +233,7 @@ The following output properties are available:
 <a href="#notallowedtime_csharp" style="color: inherit; text-decoration: inherit;">Not<wbr>Allowed<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timespanresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Outputs.<wbr>Time<wbr>Span<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#timespanresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service..<wbr>Outputs.<wbr>Time<wbr>Span<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Time slots on which upgrade is not allowed.{{% /md %}}</dd>
     <dt class="property-"
@@ -242,7 +242,7 @@ The following output properties are available:
 <a href="#timeinweek_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>In<wbr>Week</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timeinweekresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Outputs.<wbr>Time<wbr>In<wbr>Week<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#timeinweekresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service..<wbr>Outputs.<wbr>Time<wbr>In<wbr>Week<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Weekday time slots allowed to upgrade.{{% /md %}}</dd>
 </dl>

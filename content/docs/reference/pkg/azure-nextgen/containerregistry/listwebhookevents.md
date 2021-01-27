@@ -204,7 +204,7 @@ The following output properties are available:
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry.<wbr>Outputs.<wbr>Event<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#eventresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry..<wbr>Outputs.<wbr>Event<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of events. Since this list may be incomplete, the nextLink field should be used to request the next list of events.{{% /md %}}</dd>
 </dl>
@@ -380,7 +380,7 @@ The following output properties are available:
 <a href="#actor_csharp" style="color: inherit; text-decoration: inherit;">Actor</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actorresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Actor<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#actorresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry..<wbr>Inputs.<wbr>Actor<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The agent that initiated the event. For most situations, this could be from the authorization context of the request.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -398,7 +398,7 @@ The following output properties are available:
 <a href="#request_csharp" style="color: inherit; text-decoration: inherit;">Request</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#requestresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Request<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#requestresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry..<wbr>Inputs.<wbr>Request<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The request that generated the event.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -407,7 +407,7 @@ The following output properties are available:
 <a href="#source_csharp" style="color: inherit; text-decoration: inherit;">Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Source<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry..<wbr>Inputs.<wbr>Source<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The registry node that generated the event. Put differently, while the actor initiates the event, the source generates it.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -416,7 +416,7 @@ The following output properties are available:
 <a href="#target_csharp" style="color: inherit; text-decoration: inherit;">Target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#targetresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Target<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#targetresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry..<wbr>Inputs.<wbr>Target<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The target of the event.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -654,7 +654,7 @@ The following output properties are available:
 <a href="#content_csharp" style="color: inherit; text-decoration: inherit;">Content</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventcontentresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Event<wbr>Content<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#eventcontentresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry..<wbr>Inputs.<wbr>Event<wbr>Content<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The content of the event request message.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -865,7 +865,7 @@ The following output properties are available:
 <a href="#eventrequestmessage_csharp" style="color: inherit; text-decoration: inherit;">Event<wbr>Request<wbr>Message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventrequestmessageresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Event<wbr>Request<wbr>Message<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#eventrequestmessageresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry..<wbr>Inputs.<wbr>Event<wbr>Request<wbr>Message<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The event request message sent to the service URI.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -874,7 +874,7 @@ The following output properties are available:
 <a href="#eventresponsemessage_csharp" style="color: inherit; text-decoration: inherit;">Event<wbr>Response<wbr>Message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventresponsemessageresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Event<wbr>Response<wbr>Message<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#eventresponsemessageresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry..<wbr>Inputs.<wbr>Event<wbr>Response<wbr>Message<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The event response message received from the service URI.{{% /md %}}</dd>
     <dt class="property-optional"

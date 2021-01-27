@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.azuredata.SqlServerInstance reso
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 A SqlServerInstance.
+API Version: 2020-09-08-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var sqlServerInstance = new AzureNextGen.AzureData.V20200908Preview.SqlServerInstance("sqlServerInstance", new AzureNextGen.AzureData.V20200908Preview.SqlServerInstanceArgs
+        var sqlServerInstance = new AzureNextGen.AzureData..SqlServerInstance("sqlServerInstance", new AzureNextGen.AzureData..SqlServerInstanceArgs
         {
             ContainerResourceId = "Arc Machine Name",
             Edition = "Developer",
@@ -55,7 +56,7 @@ class MyStack : Stack
 package main
 
 import (
-	azuredata "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/azuredata/v20200908preview"
+	azuredata "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/azuredata"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -91,7 +92,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-sql_server_instance = azure_nextgen.azuredata.v20200908preview.SqlServerInstance("sqlServerInstance",
+sql_server_instance = azure_nextgen.azuredata.SqlServerInstance("sqlServerInstance",
     container_resource_id="Arc Machine Name",
     edition="Developer",
     location="northeurope",
@@ -114,7 +115,7 @@ sql_server_instance = azure_nextgen.azuredata.v20200908preview.SqlServerInstance
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const sqlServerInstance = new azure_nextgen.azuredata.v20200908preview.SqlServerInstance("sqlServerInstance", {
+const sqlServerInstance = new azure_nextgen.azuredata.SqlServerInstance("sqlServerInstance", {
     containerResourceId: "Arc Machine Name",
     edition: "Developer",
     location: "northeurope",
@@ -703,7 +704,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#systemdata_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Azure<wbr>Data.<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
+        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Azure<wbr>Data..<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Read only system data{{% /md %}}</dd>
     <dt class="property-"
@@ -1164,7 +1165,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:azuredata/v20200908preview:SqlServerInstance testsqlServerInstance /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg/providers/Microsoft.AzureData/SqlServerInstances/testsqlServerInstance 
+$ pulumi import azure-nextgen:azuredata:SqlServerInstance testsqlServerInstance /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg/providers/Microsoft.AzureData/SqlServerInstances/testsqlServerInstance 
 ```
 
 

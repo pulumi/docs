@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.synapse.SqlPool resource with ex
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 A SQL Analytics pool
-Latest API Version: 2020-12-01.
+API Version: 2020-12-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var sqlPool = new AzureNextGen.Synapse.Latest.SqlPool("sqlPool", new AzureNextGen.Synapse.Latest.SqlPoolArgs
+        var sqlPool = new AzureNextGen.Synapse..SqlPool("sqlPool", new AzureNextGen.Synapse..SqlPoolArgs
         {
             Collation = "",
             CreateMode = "",
@@ -35,7 +35,7 @@ class MyStack : Stack
             MaxSizeBytes = 0,
             RecoverableDatabaseId = "",
             ResourceGroupName = "ExampleResourceGroup",
-            Sku = new AzureNextGen.Synapse.Latest.Inputs.SkuArgs
+            Sku = new AzureNextGen.Synapse..Inputs.SkuArgs
             {
                 Name = "",
                 Tier = "",
@@ -60,7 +60,7 @@ class MyStack : Stack
 package main
 
 import (
-	synapse "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/synapse/latest"
+	synapse "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/synapse"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -100,14 +100,14 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-sql_pool = azure_nextgen.synapse.latest.SqlPool("sqlPool",
+sql_pool = azure_nextgen.synapse.SqlPool("sqlPool",
     collation="",
     create_mode="",
     location="Southeast Asia",
     max_size_bytes=0,
     recoverable_database_id="",
     resource_group_name="ExampleResourceGroup",
-    sku=azure_nextgen.synapse.latest.SkuArgs(
+    sku=azure_nextgen.synapse.SkuArgs(
         name="",
         tier="",
     ),
@@ -127,7 +127,7 @@ sql_pool = azure_nextgen.synapse.latest.SqlPool("sqlPool",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const sqlPool = new azure_nextgen.synapse.latest.SqlPool("sqlPool", {
+const sqlPool = new azure_nextgen.synapse.SqlPool("sqlPool", {
     collation: "",
     createMode: "",
     location: "Southeast Asia",
@@ -437,7 +437,7 @@ The SqlPool resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sku">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Synapse.<wbr>Inputs.<wbr>Sku<wbr>Args</a></span>
+        <span class="property-type"><a href="#sku">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Synapse..<wbr>Inputs.<wbr>Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}SQL pool SKU{{% /md %}}</dd>
     <dt class="property-optional"
@@ -464,7 +464,7 @@ The SqlPool resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#storageaccounttype_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#storageaccounttype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Synapse.<wbr>Storage<wbr>Account<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#storageaccounttype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Synapse..<wbr>Storage<wbr>Account<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The storage account type used to store backups for this sql pool.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1397,7 +1397,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:synapse/latest:SqlPool ExampleSqlPool /subscriptions/01234567-89ab-4def-0123-456789abcdef/resourceGroups/ExampleResourceGroup/providers/Microsoft.Synapse/workspaces/ExampleWorkspaces/sqlPools/ExampleSqlPool 
+$ pulumi import azure-nextgen:synapse:SqlPool ExampleSqlPool /subscriptions/01234567-89ab-4def-0123-456789abcdef/resourceGroups/ExampleResourceGroup/providers/Microsoft.Synapse/workspaces/ExampleWorkspaces/sqlPools/ExampleSqlPool 
 ```
 
 

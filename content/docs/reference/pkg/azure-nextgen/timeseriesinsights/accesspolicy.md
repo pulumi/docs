@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.timeseriesinsights.AccessPolicy 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 An access policy is used to grant users and applications access to the environment. Roles are assigned to service principals in Azure Active Directory. These roles define the actions the principal can perform through the Time Series Insights data plane APIs.
-Latest API Version: 2020-05-15.
+API Version: 2020-05-15.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var accessPolicy = new AzureNextGen.TimeSeriesInsights.Latest.AccessPolicy("accessPolicy", new AzureNextGen.TimeSeriesInsights.Latest.AccessPolicyArgs
+        var accessPolicy = new AzureNextGen.TimeSeriesInsights..AccessPolicy("accessPolicy", new AzureNextGen.TimeSeriesInsights..AccessPolicyArgs
         {
             AccessPolicyName = "ap1",
             Description = "some description",
@@ -53,7 +53,7 @@ class MyStack : Stack
 package main
 
 import (
-	timeseriesinsights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/timeseriesinsights/latest"
+	timeseriesinsights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/timeseriesinsights"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -86,7 +86,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-access_policy = azure_nextgen.timeseriesinsights.latest.AccessPolicy("accessPolicy",
+access_policy = azure_nextgen.timeseriesinsights.AccessPolicy("accessPolicy",
     access_policy_name="ap1",
     description="some description",
     environment_name="env1",
@@ -104,7 +104,7 @@ access_policy = azure_nextgen.timeseriesinsights.latest.AccessPolicy("accessPoli
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const accessPolicy = new azure_nextgen.timeseriesinsights.latest.AccessPolicy("accessPolicy", {
+const accessPolicy = new azure_nextgen.timeseriesinsights.AccessPolicy("accessPolicy", {
     accessPolicyName: "ap1",
     description: "some description",
     environmentName: "env1",
@@ -351,7 +351,7 @@ The AccessPolicy resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#roles_csharp" style="color: inherit; text-decoration: inherit;">Roles</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Union&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Time<wbr>Series<wbr>Insights.<wbr>Access<wbr>Policy<wbr>Role&gt;&gt;</span>
+        <span class="property-type">List&lt;Union&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Time<wbr>Series<wbr>Insights..<wbr>Access<wbr>Policy<wbr>Role&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}The list of roles the principal is assigned on the environment.{{% /md %}}</dd>
 </dl>
@@ -729,7 +729,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:timeseriesinsights/latest:AccessPolicy ap1 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.TimeSeriesInsights/Environments/env1/accessPolicies/ap1 
+$ pulumi import azure-nextgen:timeseriesinsights:AccessPolicy ap1 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.TimeSeriesInsights/Environments/env1/accessPolicies/ap1 
 ```
 
 

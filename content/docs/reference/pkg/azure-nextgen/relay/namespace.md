@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.relay.Namespace resource with ex
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Description of a namespace resource.
-Latest API Version: 2017-04-01.
+API Version: 2017-04-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,12 +27,12 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var @namespace = new AzureNextGen.Relay.Latest.Namespace("namespace", new AzureNextGen.Relay.Latest.NamespaceArgs
+        var @namespace = new AzureNextGen.Relay..Namespace("namespace", new AzureNextGen.Relay..NamespaceArgs
         {
             Location = "West US",
             NamespaceName = "example-RelayNamespace-01",
             ResourceGroupName = "resourcegroup",
-            Sku = new AzureNextGen.Relay.Latest.Inputs.SkuArgs
+            Sku = new AzureNextGen.Relay..Inputs.SkuArgs
             {
                 Name = "Standard",
                 Tier = "Standard",
@@ -57,7 +57,7 @@ class MyStack : Stack
 package main
 
 import (
-	relay "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/relay/latest"
+	relay "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/relay"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -93,11 +93,11 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-namespace = azure_nextgen.relay.latest.Namespace("namespace",
+namespace = azure_nextgen.relay.Namespace("namespace",
     location="West US",
     namespace_name="example-RelayNamespace-01",
     resource_group_name="resourcegroup",
-    sku=azure_nextgen.relay.latest.SkuArgs(
+    sku=azure_nextgen.relay.SkuArgs(
         name="Standard",
         tier="Standard",
     ),
@@ -116,7 +116,7 @@ namespace = azure_nextgen.relay.latest.Namespace("namespace",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const namespace = new azure_nextgen.relay.latest.Namespace("namespace", {
+const namespace = new azure_nextgen.relay.Namespace("namespace", {
     location: "West US",
     namespaceName: "example-RelayNamespace-01",
     resourceGroupName: "resourcegroup",
@@ -350,7 +350,7 @@ The Namespace resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sku">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Relay.<wbr>Inputs.<wbr>Sku<wbr>Args</a></span>
+        <span class="property-type"><a href="#sku">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Relay..<wbr>Inputs.<wbr>Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}SKU of the namespace.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -858,7 +858,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skuname">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Relay.<wbr>Sku<wbr>Name</a></span>
+        <span class="property-type"><a href="#skuname">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Relay..<wbr>Sku<wbr>Name</a></span>
     </dt>
     <dd>{{% md %}}Name of this SKU.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -867,7 +867,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tier_csharp" style="color: inherit; text-decoration: inherit;">Tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skutier">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Relay.<wbr>Sku<wbr>Tier</a></span>
+        <span class="property-type"><a href="#skutier">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Relay..<wbr>Sku<wbr>Tier</a></span>
     </dt>
     <dd>{{% md %}}The tier of this SKU.{{% /md %}}</dd>
 </dl>
@@ -1108,7 +1108,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:relay/latest:Namespace example-RelayNamespace-01 /subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/resourcegroup/providers/Microsoft.Relay/namespaces/example-RelayNamespace-01 
+$ pulumi import azure-nextgen:relay:Namespace example-RelayNamespace-01 /subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/resourcegroup/providers/Microsoft.Relay/namespaces/example-RelayNamespace-01 
 ```
 
 

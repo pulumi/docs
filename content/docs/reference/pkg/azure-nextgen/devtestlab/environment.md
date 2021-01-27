@@ -11,13 +11,13 @@ meta_desc: "Documentation for the azure-nextgen.devtestlab.Environment resource 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 An environment, which is essentially an ARM template deployment.
-Latest API Version: 2018-09-15.
+API Version: 2018-09-15.
 ## Import
 
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:devtestlab/latest:Environment myresource1 /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DevTestLab/labs/{labName}/users/{userName}/environments/{name} 
+$ pulumi import azure-nextgen:devtestlab:Environment myresource1 /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DevTestLab/labs/{labName}/users/{userName}/environments/{name} 
 ```
 
 
@@ -254,7 +254,7 @@ The Environment resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#deploymentproperties_csharp" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentdeploymentproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Environment<wbr>Deployment<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#environmentdeploymentproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab..<wbr>Inputs.<wbr>Environment<wbr>Deployment<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The deployment properties of the environment.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -985,7 +985,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#armtemplateparameterproperties">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Arm<wbr>Template<wbr>Parameter<wbr>Properties<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#armtemplateparameterproperties">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab..<wbr>Inputs.<wbr>Arm<wbr>Template<wbr>Parameter<wbr>Properties<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The parameters of the Azure Resource Manager template.{{% /md %}}</dd>
 </dl>
@@ -1083,7 +1083,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#armtemplateparameterpropertiesresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Arm<wbr>Template<wbr>Parameter<wbr>Properties<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#armtemplateparameterpropertiesresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab..<wbr>Inputs.<wbr>Arm<wbr>Template<wbr>Parameter<wbr>Properties<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The parameters of the Azure Resource Manager template.{{% /md %}}</dd>
 </dl>

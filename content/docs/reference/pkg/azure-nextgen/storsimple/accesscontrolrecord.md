@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.storsimple.AccessControlRecord r
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The access control record.
-Latest API Version: 2017-06-01.
+API Version: 2017-06-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var accessControlRecord = new AzureNextGen.StorSimple.Latest.AccessControlRecord("accessControlRecord", new AzureNextGen.StorSimple.Latest.AccessControlRecordArgs
+        var accessControlRecord = new AzureNextGen.StorSimple..AccessControlRecord("accessControlRecord", new AzureNextGen.StorSimple..AccessControlRecordArgs
         {
             AccessControlRecordName = "ACRForTest",
             InitiatorName = "iqn.2017-06.com.contoso:ForTest",
@@ -48,7 +48,7 @@ class MyStack : Stack
 package main
 
 import (
-	storsimple "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/storsimple/latest"
+	storsimple "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/storsimple"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -77,7 +77,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-access_control_record = azure_nextgen.storsimple.latest.AccessControlRecord("accessControlRecord",
+access_control_record = azure_nextgen.storsimple.AccessControlRecord("accessControlRecord",
     access_control_record_name="ACRForTest",
     initiator_name="iqn.2017-06.com.contoso:ForTest",
     manager_name="ManagerForSDKTest1",
@@ -93,7 +93,7 @@ access_control_record = azure_nextgen.storsimple.latest.AccessControlRecord("acc
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const accessControlRecord = new azure_nextgen.storsimple.latest.AccessControlRecord("accessControlRecord", {
+const accessControlRecord = new azure_nextgen.storsimple.AccessControlRecord("accessControlRecord", {
     accessControlRecordName: "ACRForTest",
     initiatorName: "iqn.2017-06.com.contoso:ForTest",
     managerName: "ManagerForSDKTest1",
@@ -329,7 +329,7 @@ The AccessControlRecord resource accepts the following [input]({{< relref "/docs
 <a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kind">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stor<wbr>Simple.<wbr>Kind</a></span>
+        <span class="property-type"><a href="#kind">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stor<wbr>Simple..<wbr>Kind</a></span>
     </dt>
     <dd>{{% md %}}The Kind of the object. Currently only Series8000 is supported{{% /md %}}</dd>
 </dl>
@@ -708,7 +708,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:storsimple/latest:AccessControlRecord ACRForTest /subscriptions/4385cf00-2d3a-425a-832f-f4285b1c9dce/resourceGroups/ResourceGroupForSDKTest/providers/Microsoft.StorSimple/managers/ManagerForSDKTest1/accessControlRecords/ACRForTest 
+$ pulumi import azure-nextgen:storsimple:AccessControlRecord ACRForTest /subscriptions/4385cf00-2d3a-425a-832f-f4285b1c9dce/resourceGroups/ResourceGroupForSDKTest/providers/Microsoft.StorSimple/managers/ManagerForSDKTest1/accessControlRecords/ACRForTest 
 ```
 
 

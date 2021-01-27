@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.managednetwork.ScopeAssignment r
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The Managed Network resource
+API Version: 2019-06-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var scopeAssignment = new AzureNextGen.ManagedNetwork.V20190601Preview.ScopeAssignment("scopeAssignment", new AzureNextGen.ManagedNetwork.V20190601Preview.ScopeAssignmentArgs
+        var scopeAssignment = new AzureNextGen.ManagedNetwork..ScopeAssignment("scopeAssignment", new AzureNextGen.ManagedNetwork..ScopeAssignmentArgs
         {
             AssignedManagedNetwork = "/subscriptions/subscriptionA/resourceGroups/myResourceGroup/providers/Microsoft.ManagedNetwork/managedNetworks/myManagedNetwork",
             Scope = "subscriptions/subscriptionC",
@@ -46,7 +47,7 @@ class MyStack : Stack
 package main
 
 import (
-	managednetwork "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/managednetwork/v20190601preview"
+	managednetwork "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/managednetwork"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -74,7 +75,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-scope_assignment = azure_nextgen.managednetwork.v20190601preview.ScopeAssignment("scopeAssignment",
+scope_assignment = azure_nextgen.managednetwork.ScopeAssignment("scopeAssignment",
     assigned_managed_network="/subscriptions/subscriptionA/resourceGroups/myResourceGroup/providers/Microsoft.ManagedNetwork/managedNetworks/myManagedNetwork",
     scope="subscriptions/subscriptionC",
     scope_assignment_name="subscriptionCAssignment")
@@ -89,7 +90,7 @@ scope_assignment = azure_nextgen.managednetwork.v20190601preview.ScopeAssignment
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const scopeAssignment = new azure_nextgen.managednetwork.v20190601preview.ScopeAssignment("scopeAssignment", {
+const scopeAssignment = new azure_nextgen.managednetwork.ScopeAssignment("scopeAssignment", {
     assignedManagedNetwork: "/subscriptions/subscriptionA/resourceGroups/myResourceGroup/providers/Microsoft.ManagedNetwork/managedNetworks/myManagedNetwork",
     scope: "subscriptions/subscriptionC",
     scopeAssignmentName: "subscriptionCAssignment",
@@ -669,7 +670,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:managednetwork/v20190601preview:ScopeAssignment subscriptionCAssignment /subscriptions/subscriptionC/providers/Microsoft.ManagedNetwork/scopeAssignments/subscriptionCAssignment 
+$ pulumi import azure-nextgen:managednetwork:ScopeAssignment subscriptionCAssignment /subscriptions/subscriptionC/providers/Microsoft.ManagedNetwork/scopeAssignments/subscriptionCAssignment 
 ```
 
 

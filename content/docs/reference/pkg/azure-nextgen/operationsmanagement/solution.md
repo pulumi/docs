@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.operationsmanagement.Solution re
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The container for solution.
+API Version: 2015-11-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,17 +27,17 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var solution = new AzureNextGen.OperationsManagement.V20151101Preview.Solution("solution", new AzureNextGen.OperationsManagement.V20151101Preview.SolutionArgs
+        var solution = new AzureNextGen.OperationsManagement..Solution("solution", new AzureNextGen.OperationsManagement..SolutionArgs
         {
             Location = "East US",
-            Plan = new AzureNextGen.OperationsManagement.V20151101Preview.Inputs.SolutionPlanArgs
+            Plan = new AzureNextGen.OperationsManagement..Inputs.SolutionPlanArgs
             {
                 Name = "name1",
                 Product = "product1",
                 PromotionCode = "promocode1",
                 Publisher = "publisher1",
             },
-            Properties = new AzureNextGen.OperationsManagement.V20151101Preview.Inputs.SolutionPropertiesArgs
+            Properties = new AzureNextGen.OperationsManagement..Inputs.SolutionPropertiesArgs
             {
                 ContainedResources = 
                 {
@@ -67,7 +68,7 @@ class MyStack : Stack
 package main
 
 import (
-	operationsmanagement "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/operationsmanagement/v20151101preview"
+	operationsmanagement "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/operationsmanagement"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -112,15 +113,15 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-solution = azure_nextgen.operationsmanagement.v20151101preview.Solution("solution",
+solution = azure_nextgen.operationsmanagement.Solution("solution",
     location="East US",
-    plan=azure_nextgen.operationsmanagement.v20151101preview.SolutionPlanArgs(
+    plan=azure_nextgen.operationsmanagement.SolutionPlanArgs(
         name="name1",
         product="product1",
         promotion_code="promocode1",
         publisher="publisher1",
     ),
-    properties=azure_nextgen.operationsmanagement.v20151101preview.SolutionPropertiesArgs(
+    properties=azure_nextgen.operationsmanagement.SolutionPropertiesArgs(
         contained_resources=[
             "/subscriptions/sub2/resourceGroups/rg2/providers/provider1/resources/resource1",
             "/subscriptions/sub2/resourceGroups/rg2/providers/provider2/resources/resource2",
@@ -144,7 +145,7 @@ solution = azure_nextgen.operationsmanagement.v20151101preview.Solution("solutio
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const solution = new azure_nextgen.operationsmanagement.v20151101preview.Solution("solution", {
+const solution = new azure_nextgen.operationsmanagement.Solution("solution", {
     location: "East US",
     plan: {
         name: "name1",
@@ -387,7 +388,7 @@ The Solution resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#plan_csharp" style="color: inherit; text-decoration: inherit;">Plan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#solutionplan">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Operations<wbr>Management.<wbr>Inputs.<wbr>Solution<wbr>Plan<wbr>Args</a></span>
+        <span class="property-type"><a href="#solutionplan">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Operations<wbr>Management..<wbr>Inputs.<wbr>Solution<wbr>Plan<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Plan for solution object supported by the OperationsManagement resource provider.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -396,7 +397,7 @@ The Solution resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#solutionproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Operations<wbr>Management.<wbr>Inputs.<wbr>Solution<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#solutionproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Operations<wbr>Management..<wbr>Inputs.<wbr>Solution<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties for solution object supported by the OperationsManagement resource provider.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1389,7 +1390,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:operationsmanagement/v20151101preview:Solution solution1 subscriptions/subid/resourcegroups/rg1/providers/Microsoft.OperationsManagement/solutions/solution1 
+$ pulumi import azure-nextgen:operationsmanagement:Solution solution1 subscriptions/subid/resourcegroups/rg1/providers/Microsoft.OperationsManagement/solutions/solution1 
 ```
 
 

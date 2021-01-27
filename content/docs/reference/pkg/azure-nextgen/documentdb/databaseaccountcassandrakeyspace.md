@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.documentdb.DatabaseAccountCassan
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 An Azure Cosmos DB Cassandra keyspace.
-Latest API Version: 2016-03-31.
+API Version: 2016-03-31.
 
 {{% examples %}}
 ## Example Usage
@@ -27,12 +27,12 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var databaseAccountCassandraKeyspace = new AzureNextGen.DocumentDB.Latest.DatabaseAccountCassandraKeyspace("databaseAccountCassandraKeyspace", new AzureNextGen.DocumentDB.Latest.DatabaseAccountCassandraKeyspaceArgs
+        var databaseAccountCassandraKeyspace = new AzureNextGen.DocumentDB..DatabaseAccountCassandraKeyspace("databaseAccountCassandraKeyspace", new AzureNextGen.DocumentDB..DatabaseAccountCassandraKeyspaceArgs
         {
             AccountName = "ddb1",
             KeyspaceName = "keyspaceName",
             Options = ,
-            Resource = new AzureNextGen.DocumentDB.Latest.Inputs.CassandraKeyspaceResourceArgs
+            Resource = new AzureNextGen.DocumentDB..Inputs.CassandraKeyspaceResourceArgs
             {
                 Id = "keyspaceName",
             },
@@ -52,7 +52,7 @@ class MyStack : Stack
 package main
 
 import (
-	documentdb "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/documentdb/latest"
+	documentdb "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/documentdb"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -84,11 +84,11 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-database_account_cassandra_keyspace = azure_nextgen.documentdb.latest.DatabaseAccountCassandraKeyspace("databaseAccountCassandraKeyspace",
+database_account_cassandra_keyspace = azure_nextgen.documentdb.DatabaseAccountCassandraKeyspace("databaseAccountCassandraKeyspace",
     account_name="ddb1",
     keyspace_name="keyspaceName",
     options={},
-    resource=azure_nextgen.documentdb.latest.CassandraKeyspaceResourceArgs(
+    resource=azure_nextgen.documentdb.CassandraKeyspaceResourceArgs(
         id="keyspaceName",
     ),
     resource_group_name="rg1")
@@ -103,7 +103,7 @@ database_account_cassandra_keyspace = azure_nextgen.documentdb.latest.DatabaseAc
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const databaseAccountCassandraKeyspace = new azure_nextgen.documentdb.latest.DatabaseAccountCassandraKeyspace("databaseAccountCassandraKeyspace", {
+const databaseAccountCassandraKeyspace = new azure_nextgen.documentdb.DatabaseAccountCassandraKeyspace("databaseAccountCassandraKeyspace", {
     accountName: "ddb1",
     keyspaceName: "keyspaceName",
     options: {},
@@ -333,7 +333,7 @@ The DatabaseAccountCassandraKeyspace resource accepts the following [input]({{< 
 <a href="#resource_csharp" style="color: inherit; text-decoration: inherit;">Resource</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cassandrakeyspaceresource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Cassandra<wbr>Keyspace<wbr>Resource<wbr>Args</a></span>
+        <span class="property-type"><a href="#cassandrakeyspaceresource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB..<wbr>Inputs.<wbr>Cassandra<wbr>Keyspace<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The standard JSON format of a Cassandra keyspace{{% /md %}}</dd>
     <dt class="property-required"
@@ -789,7 +789,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:documentdb/latest:DatabaseAccountCassandraKeyspace keyspaceName keyspaceName 
+$ pulumi import azure-nextgen:documentdb:DatabaseAccountCassandraKeyspace keyspaceName keyspaceName 
 ```
 
 

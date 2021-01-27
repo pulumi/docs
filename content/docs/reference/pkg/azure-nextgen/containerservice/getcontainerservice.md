@@ -161,7 +161,7 @@ The following output properties are available:
 <a href="#agentpoolprofiles_csharp" style="color: inherit; text-decoration: inherit;">Agent<wbr>Pool<wbr>Profiles</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerserviceagentpoolprofileresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Outputs.<wbr>Container<wbr>Service<wbr>Agent<wbr>Pool<wbr>Profile<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#containerserviceagentpoolprofileresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service..<wbr>Outputs.<wbr>Container<wbr>Service<wbr>Agent<wbr>Pool<wbr>Profile<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Properties of the agent pool.{{% /md %}}</dd>
     <dt class="property-"
@@ -179,7 +179,7 @@ The following output properties are available:
 <a href="#linuxprofile_csharp" style="color: inherit; text-decoration: inherit;">Linux<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerservicelinuxprofileresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Outputs.<wbr>Container<wbr>Service<wbr>Linux<wbr>Profile<wbr>Response</a></span>
+        <span class="property-type"><a href="#containerservicelinuxprofileresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service..<wbr>Outputs.<wbr>Container<wbr>Service<wbr>Linux<wbr>Profile<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Properties of Linux VMs.{{% /md %}}</dd>
     <dt class="property-"
@@ -197,7 +197,7 @@ The following output properties are available:
 <a href="#masterprofile_csharp" style="color: inherit; text-decoration: inherit;">Master<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerservicemasterprofileresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Outputs.<wbr>Container<wbr>Service<wbr>Master<wbr>Profile<wbr>Response</a></span>
+        <span class="property-type"><a href="#containerservicemasterprofileresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service..<wbr>Outputs.<wbr>Container<wbr>Service<wbr>Master<wbr>Profile<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Properties of master agents.{{% /md %}}</dd>
     <dt class="property-"
@@ -233,7 +233,7 @@ The following output properties are available:
 <a href="#customprofile_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerservicecustomprofileresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Outputs.<wbr>Container<wbr>Service<wbr>Custom<wbr>Profile<wbr>Response</a></span>
+        <span class="property-type"><a href="#containerservicecustomprofileresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service..<wbr>Outputs.<wbr>Container<wbr>Service<wbr>Custom<wbr>Profile<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Properties for custom clusters.{{% /md %}}</dd>
     <dt class="property-"
@@ -242,7 +242,7 @@ The following output properties are available:
 <a href="#diagnosticsprofile_csharp" style="color: inherit; text-decoration: inherit;">Diagnostics<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerservicediagnosticsprofileresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Outputs.<wbr>Container<wbr>Service<wbr>Diagnostics<wbr>Profile<wbr>Response</a></span>
+        <span class="property-type"><a href="#containerservicediagnosticsprofileresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service..<wbr>Outputs.<wbr>Container<wbr>Service<wbr>Diagnostics<wbr>Profile<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Properties of the diagnostic agent.{{% /md %}}</dd>
     <dt class="property-"
@@ -251,7 +251,7 @@ The following output properties are available:
 <a href="#orchestratorprofile_csharp" style="color: inherit; text-decoration: inherit;">Orchestrator<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerserviceorchestratorprofileresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Outputs.<wbr>Container<wbr>Service<wbr>Orchestrator<wbr>Profile<wbr>Response</a></span>
+        <span class="property-type"><a href="#containerserviceorchestratorprofileresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service..<wbr>Outputs.<wbr>Container<wbr>Service<wbr>Orchestrator<wbr>Profile<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Properties of the orchestrator.{{% /md %}}</dd>
     <dt class="property-"
@@ -260,7 +260,7 @@ The following output properties are available:
 <a href="#serviceprincipalprofile_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Principal<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerserviceserviceprincipalprofileresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Outputs.<wbr>Container<wbr>Service<wbr>Service<wbr>Principal<wbr>Profile<wbr>Response</a></span>
+        <span class="property-type"><a href="#containerserviceserviceprincipalprofileresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service..<wbr>Outputs.<wbr>Container<wbr>Service<wbr>Service<wbr>Principal<wbr>Profile<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Properties for cluster service principals.{{% /md %}}</dd>
     <dt class="property-"
@@ -278,7 +278,7 @@ The following output properties are available:
 <a href="#windowsprofile_csharp" style="color: inherit; text-decoration: inherit;">Windows<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerservicewindowsprofileresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Outputs.<wbr>Container<wbr>Service<wbr>Windows<wbr>Profile<wbr>Response</a></span>
+        <span class="property-type"><a href="#containerservicewindowsprofileresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service..<wbr>Outputs.<wbr>Container<wbr>Service<wbr>Windows<wbr>Profile<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Properties of Windows VMs.{{% /md %}}</dd>
 </dl>
@@ -980,7 +980,7 @@ The following output properties are available:
 <a href="#vmdiagnostics_csharp" style="color: inherit; text-decoration: inherit;">Vm<wbr>Diagnostics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerservicevmdiagnosticsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Container<wbr>Service<wbr>VMDiagnostics<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#containerservicevmdiagnosticsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service..<wbr>Inputs.<wbr>Container<wbr>Service<wbr>VMDiagnostics<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Profile for the container service VM diagnostic agent.{{% /md %}}</dd>
 </dl>
@@ -1056,7 +1056,7 @@ The following output properties are available:
 <a href="#ssh_csharp" style="color: inherit; text-decoration: inherit;">Ssh</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerservicesshconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Container<wbr>Service<wbr>Ssh<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#containerservicesshconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service..<wbr>Inputs.<wbr>Container<wbr>Service<wbr>Ssh<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}SSH configuration for Linux-based VMs running on Azure.{{% /md %}}</dd>
 </dl>
@@ -1459,7 +1459,7 @@ The following output properties are available:
 <a href="#publickeys_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerservicesshpublickeyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Container<wbr>Service<wbr>Ssh<wbr>Public<wbr>Key<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#containerservicesshpublickeyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service..<wbr>Inputs.<wbr>Container<wbr>Service<wbr>Ssh<wbr>Public<wbr>Key<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of SSH public keys used to authenticate with Linux-based VMs. Only expect one key specified.{{% /md %}}</dd>
 </dl>

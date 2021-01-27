@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.storage.TableServiceProperties r
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The properties of a storage account’s Table service.
-Latest API Version: 2019-06-01.
+API Version: 2019-06-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,14 +27,14 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var tableServiceProperties = new AzureNextGen.Storage.Latest.TableServiceProperties("tableServiceProperties", new AzureNextGen.Storage.Latest.TableServicePropertiesArgs
+        var tableServiceProperties = new AzureNextGen.Storage..TableServiceProperties("tableServiceProperties", new AzureNextGen.Storage..TableServicePropertiesArgs
         {
             AccountName = "sto8607",
-            Cors = new AzureNextGen.Storage.Latest.Inputs.CorsRulesArgs
+            Cors = new AzureNextGen.Storage..Inputs.CorsRulesArgs
             {
                 CorsRules = 
                 {
-                    new AzureNextGen.Storage.Latest.Inputs.CorsRuleArgs
+                    new AzureNextGen.Storage..Inputs.CorsRuleArgs
                     {
                         AllowedHeaders = 
                         {
@@ -62,7 +62,7 @@ class MyStack : Stack
                         },
                         MaxAgeInSeconds = 100,
                     },
-                    new AzureNextGen.Storage.Latest.Inputs.CorsRuleArgs
+                    new AzureNextGen.Storage..Inputs.CorsRuleArgs
                     {
                         AllowedHeaders = 
                         {
@@ -82,7 +82,7 @@ class MyStack : Stack
                         },
                         MaxAgeInSeconds = 2,
                     },
-                    new AzureNextGen.Storage.Latest.Inputs.CorsRuleArgs
+                    new AzureNextGen.Storage..Inputs.CorsRuleArgs
                     {
                         AllowedHeaders = 
                         {
@@ -125,7 +125,7 @@ class MyStack : Stack
 package main
 
 import (
-	storage "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/storage/latest"
+	storage "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/storage"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -214,11 +214,11 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-table_service_properties = azure_nextgen.storage.latest.TableServiceProperties("tableServiceProperties",
+table_service_properties = azure_nextgen.storage.TableServiceProperties("tableServiceProperties",
     account_name="sto8607",
-    cors=azure_nextgen.storage.latest.CorsRulesArgs(
+    cors=azure_nextgen.storage.CorsRulesArgs(
         cors_rules=[
-            azure_nextgen.storage.latest.CorsRuleArgs(
+            azure_nextgen.storage.CorsRuleArgs(
                 allowed_headers=[
                     "x-ms-meta-abc",
                     "x-ms-meta-data*",
@@ -239,14 +239,14 @@ table_service_properties = azure_nextgen.storage.latest.TableServiceProperties("
                 exposed_headers=["x-ms-meta-*"],
                 max_age_in_seconds=100,
             ),
-            azure_nextgen.storage.latest.CorsRuleArgs(
+            azure_nextgen.storage.CorsRuleArgs(
                 allowed_headers=["*"],
                 allowed_methods=["GET"],
                 allowed_origins=["*"],
                 exposed_headers=["*"],
                 max_age_in_seconds=2,
             ),
-            azure_nextgen.storage.latest.CorsRuleArgs(
+            azure_nextgen.storage.CorsRuleArgs(
                 allowed_headers=["x-ms-meta-12345675754564*"],
                 allowed_methods=[
                     "GET",
@@ -278,7 +278,7 @@ table_service_properties = azure_nextgen.storage.latest.TableServiceProperties("
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const tableServiceProperties = new azure_nextgen.storage.latest.TableServiceProperties("tableServiceProperties", {
+const tableServiceProperties = new azure_nextgen.storage.TableServiceProperties("tableServiceProperties", {
     accountName: "sto8607",
     cors: {
         corsRules: [
@@ -553,7 +553,7 @@ The TableServiceProperties resource accepts the following [input]({{< relref "/d
 <a href="#cors_csharp" style="color: inherit; text-decoration: inherit;">Cors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#corsrules">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Inputs.<wbr>Cors<wbr>Rules<wbr>Args</a></span>
+        <span class="property-type"><a href="#corsrules">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage..<wbr>Inputs.<wbr>Cors<wbr>Rules<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies CORS rules for the Table service. You can include up to five CorsRule elements in the request. If no CorsRule elements are included in the request body, all CORS rules will be deleted, and CORS will be disabled for the Table service.{{% /md %}}</dd>
 </dl>
@@ -1257,7 +1257,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#corsrules_csharp" style="color: inherit; text-decoration: inherit;">Cors<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#corsrule">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Inputs.<wbr>Cors<wbr>Rule<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#corsrule">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage..<wbr>Inputs.<wbr>Cors<wbr>Rule<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The List of CORS rules. You can include up to five CorsRule elements in the request. {{% /md %}}</dd>
 </dl>
@@ -1319,7 +1319,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#corsrules_csharp" style="color: inherit; text-decoration: inherit;">Cors<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#corsruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Inputs.<wbr>Cors<wbr>Rule<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#corsruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage..<wbr>Inputs.<wbr>Cors<wbr>Rule<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The List of CORS rules. You can include up to five CorsRule elements in the request. {{% /md %}}</dd>
 </dl>
@@ -1375,7 +1375,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:storage/latest:TableServiceProperties default /subscriptions/{subscription-id}/resourceGroups/res4410/providers/Microsoft.Storage/storageAccounts/sto8607/tableServices/default 
+$ pulumi import azure-nextgen:storage:TableServiceProperties default /subscriptions/{subscription-id}/resourceGroups/res4410/providers/Microsoft.Storage/storageAccounts/sto8607/tableServices/default 
 ```
 
 

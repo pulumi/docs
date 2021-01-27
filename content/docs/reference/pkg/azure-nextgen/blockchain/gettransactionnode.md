@@ -260,7 +260,7 @@ The following output properties are available:
 <a href="#firewallrules_csharp" style="color: inherit; text-decoration: inherit;">Firewall<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Blockchain.<wbr>Outputs.<wbr>Firewall<wbr>Rule<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#firewallruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Blockchain..<wbr>Outputs.<wbr>Firewall<wbr>Rule<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the firewall rules.{{% /md %}}</dd>
     <dt class="property-"

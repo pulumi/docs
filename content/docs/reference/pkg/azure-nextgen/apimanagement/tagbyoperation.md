@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.apimanagement.TagByOperation res
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Tag Contract details.
-Latest API Version: 2019-12-01.
+API Version: 2019-12-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var tagByOperation = new AzureNextGen.ApiManagement.Latest.TagByOperation("tagByOperation", new AzureNextGen.ApiManagement.Latest.TagByOperationArgs
+        var tagByOperation = new AzureNextGen.ApiManagement..TagByOperation("tagByOperation", new AzureNextGen.ApiManagement..TagByOperationArgs
         {
             ApiId = "5931a75ae4bbd512a88c680b",
             OperationId = "5931a75ae4bbd512a88c680a",
@@ -49,7 +49,7 @@ class MyStack : Stack
 package main
 
 import (
-	apimanagement "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/apimanagement/latest"
+	apimanagement "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/apimanagement"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -79,7 +79,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-tag_by_operation = azure_nextgen.apimanagement.latest.TagByOperation("tagByOperation",
+tag_by_operation = azure_nextgen.apimanagement.TagByOperation("tagByOperation",
     api_id="5931a75ae4bbd512a88c680b",
     operation_id="5931a75ae4bbd512a88c680a",
     resource_group_name="rg1",
@@ -96,7 +96,7 @@ tag_by_operation = azure_nextgen.apimanagement.latest.TagByOperation("tagByOpera
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const tagByOperation = new azure_nextgen.apimanagement.latest.TagByOperation("tagByOperation", {
+const tagByOperation = new azure_nextgen.apimanagement.TagByOperation("tagByOperation", {
     apiId: "5931a75ae4bbd512a88c680b",
     operationId: "5931a75ae4bbd512a88c680a",
     resourceGroupName: "rg1",
@@ -678,7 +678,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:apimanagement/latest:TagByOperation tagId1 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/tags/tagId1 
+$ pulumi import azure-nextgen:apimanagement:TagByOperation tagId1 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/tags/tagId1 
 ```
 
 

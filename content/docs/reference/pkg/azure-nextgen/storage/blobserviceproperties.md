@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.storage.BlobServiceProperties re
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The properties of a storage account’s Blob service.
-Latest API Version: 2019-06-01.
+API Version: 2019-06-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,19 +27,19 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var blobServiceProperties = new AzureNextGen.Storage.Latest.BlobServiceProperties("blobServiceProperties", new AzureNextGen.Storage.Latest.BlobServicePropertiesArgs
+        var blobServiceProperties = new AzureNextGen.Storage..BlobServiceProperties("blobServiceProperties", new AzureNextGen.Storage..BlobServicePropertiesArgs
         {
             AccountName = "sto8607",
             BlobServicesName = "default",
-            ChangeFeed = new AzureNextGen.Storage.Latest.Inputs.ChangeFeedArgs
+            ChangeFeed = new AzureNextGen.Storage..Inputs.ChangeFeedArgs
             {
                 Enabled = true,
             },
-            Cors = new AzureNextGen.Storage.Latest.Inputs.CorsRulesArgs
+            Cors = new AzureNextGen.Storage..Inputs.CorsRulesArgs
             {
                 CorsRules = 
                 {
-                    new AzureNextGen.Storage.Latest.Inputs.CorsRuleArgs
+                    new AzureNextGen.Storage..Inputs.CorsRuleArgs
                     {
                         AllowedHeaders = 
                         {
@@ -67,7 +67,7 @@ class MyStack : Stack
                         },
                         MaxAgeInSeconds = 100,
                     },
-                    new AzureNextGen.Storage.Latest.Inputs.CorsRuleArgs
+                    new AzureNextGen.Storage..Inputs.CorsRuleArgs
                     {
                         AllowedHeaders = 
                         {
@@ -87,7 +87,7 @@ class MyStack : Stack
                         },
                         MaxAgeInSeconds = 2,
                     },
-                    new AzureNextGen.Storage.Latest.Inputs.CorsRuleArgs
+                    new AzureNextGen.Storage..Inputs.CorsRuleArgs
                     {
                         AllowedHeaders = 
                         {
@@ -114,7 +114,7 @@ class MyStack : Stack
                 },
             },
             DefaultServiceVersion = "2017-07-29",
-            DeleteRetentionPolicy = new AzureNextGen.Storage.Latest.Inputs.DeleteRetentionPolicyArgs
+            DeleteRetentionPolicy = new AzureNextGen.Storage..Inputs.DeleteRetentionPolicyArgs
             {
                 Days = 300,
                 Enabled = true,
@@ -136,7 +136,7 @@ class MyStack : Stack
 package main
 
 import (
-	storage "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/storage/latest"
+	storage "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/storage"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -234,15 +234,15 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-blob_service_properties = azure_nextgen.storage.latest.BlobServiceProperties("blobServiceProperties",
+blob_service_properties = azure_nextgen.storage.BlobServiceProperties("blobServiceProperties",
     account_name="sto8607",
     blob_services_name="default",
-    change_feed=azure_nextgen.storage.latest.ChangeFeedArgs(
+    change_feed=azure_nextgen.storage.ChangeFeedArgs(
         enabled=True,
     ),
-    cors=azure_nextgen.storage.latest.CorsRulesArgs(
+    cors=azure_nextgen.storage.CorsRulesArgs(
         cors_rules=[
-            azure_nextgen.storage.latest.CorsRuleArgs(
+            azure_nextgen.storage.CorsRuleArgs(
                 allowed_headers=[
                     "x-ms-meta-abc",
                     "x-ms-meta-data*",
@@ -263,14 +263,14 @@ blob_service_properties = azure_nextgen.storage.latest.BlobServiceProperties("bl
                 exposed_headers=["x-ms-meta-*"],
                 max_age_in_seconds=100,
             ),
-            azure_nextgen.storage.latest.CorsRuleArgs(
+            azure_nextgen.storage.CorsRuleArgs(
                 allowed_headers=["*"],
                 allowed_methods=["GET"],
                 allowed_origins=["*"],
                 exposed_headers=["*"],
                 max_age_in_seconds=2,
             ),
-            azure_nextgen.storage.latest.CorsRuleArgs(
+            azure_nextgen.storage.CorsRuleArgs(
                 allowed_headers=["x-ms-meta-12345675754564*"],
                 allowed_methods=[
                     "GET",
@@ -290,7 +290,7 @@ blob_service_properties = azure_nextgen.storage.latest.BlobServiceProperties("bl
         ],
     ),
     default_service_version="2017-07-29",
-    delete_retention_policy=azure_nextgen.storage.latest.DeleteRetentionPolicyArgs(
+    delete_retention_policy=azure_nextgen.storage.DeleteRetentionPolicyArgs(
         days=300,
         enabled=True,
     ),
@@ -307,7 +307,7 @@ blob_service_properties = azure_nextgen.storage.latest.BlobServiceProperties("bl
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const blobServiceProperties = new azure_nextgen.storage.latest.BlobServiceProperties("blobServiceProperties", {
+const blobServiceProperties = new azure_nextgen.storage.BlobServiceProperties("blobServiceProperties", {
     accountName: "sto8607",
     blobServicesName: "default",
     changeFeed: {
@@ -600,7 +600,7 @@ The BlobServiceProperties resource accepts the following [input]({{< relref "/do
 <a href="#changefeed_csharp" style="color: inherit; text-decoration: inherit;">Change<wbr>Feed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#changefeed">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Inputs.<wbr>Change<wbr>Feed<wbr>Args</a></span>
+        <span class="property-type"><a href="#changefeed">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage..<wbr>Inputs.<wbr>Change<wbr>Feed<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The blob service properties for change feed events.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -609,7 +609,7 @@ The BlobServiceProperties resource accepts the following [input]({{< relref "/do
 <a href="#containerdeleteretentionpolicy_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Delete<wbr>Retention<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deleteretentionpolicy">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Inputs.<wbr>Delete<wbr>Retention<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#deleteretentionpolicy">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage..<wbr>Inputs.<wbr>Delete<wbr>Retention<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The blob service properties for container soft delete.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -618,7 +618,7 @@ The BlobServiceProperties resource accepts the following [input]({{< relref "/do
 <a href="#cors_csharp" style="color: inherit; text-decoration: inherit;">Cors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#corsrules">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Inputs.<wbr>Cors<wbr>Rules<wbr>Args</a></span>
+        <span class="property-type"><a href="#corsrules">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage..<wbr>Inputs.<wbr>Cors<wbr>Rules<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies CORS rules for the Blob service. You can include up to five CorsRule elements in the request. If no CorsRule elements are included in the request body, all CORS rules will be deleted, and CORS will be disabled for the Blob service.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -636,7 +636,7 @@ The BlobServiceProperties resource accepts the following [input]({{< relref "/do
 <a href="#deleteretentionpolicy_csharp" style="color: inherit; text-decoration: inherit;">Delete<wbr>Retention<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deleteretentionpolicy">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Inputs.<wbr>Delete<wbr>Retention<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#deleteretentionpolicy">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage..<wbr>Inputs.<wbr>Delete<wbr>Retention<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The blob service properties for blob soft delete.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -654,7 +654,7 @@ The BlobServiceProperties resource accepts the following [input]({{< relref "/do
 <a href="#restorepolicy_csharp" style="color: inherit; text-decoration: inherit;">Restore<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#restorepolicyproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Inputs.<wbr>Restore<wbr>Policy<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#restorepolicyproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage..<wbr>Inputs.<wbr>Restore<wbr>Policy<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The blob service properties for blob restore policy.{{% /md %}}</dd>
 </dl>
@@ -1009,7 +1009,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skuresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Outputs.<wbr>Sku<wbr>Response</a></span>
+        <span class="property-type"><a href="#skuresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage..<wbr>Outputs.<wbr>Sku<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Sku name and tier.{{% /md %}}</dd>
     <dt class="property-"
@@ -1707,7 +1707,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#corsrules_csharp" style="color: inherit; text-decoration: inherit;">Cors<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#corsrule">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Inputs.<wbr>Cors<wbr>Rule<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#corsrule">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage..<wbr>Inputs.<wbr>Cors<wbr>Rule<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The List of CORS rules. You can include up to five CorsRule elements in the request. {{% /md %}}</dd>
 </dl>
@@ -1769,7 +1769,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#corsrules_csharp" style="color: inherit; text-decoration: inherit;">Cors<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#corsruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Inputs.<wbr>Cors<wbr>Rule<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#corsruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage..<wbr>Inputs.<wbr>Cors<wbr>Rule<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The List of CORS rules. You can include up to five CorsRule elements in the request. {{% /md %}}</dd>
 </dl>
@@ -2387,7 +2387,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:storage/latest:BlobServiceProperties default /subscriptions/{subscription-id}/resourceGroups/res4410/providers/Microsoft.Storage/storageAccounts/sto8607/blobServices/default 
+$ pulumi import azure-nextgen:storage:BlobServiceProperties default /subscriptions/{subscription-id}/resourceGroups/res4410/providers/Microsoft.Storage/storageAccounts/sto8607/blobServices/default 
 ```
 
 

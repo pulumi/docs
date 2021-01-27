@@ -179,7 +179,7 @@ The following output properties are available:
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migrateprojectpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Outputs.<wbr>Migrate<wbr>Project<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#migrateprojectpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate..<wbr>Outputs.<wbr>Migrate<wbr>Project<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the nested properties.{{% /md %}}</dd>
     <dt class="property-"
@@ -215,7 +215,7 @@ The following output properties are available:
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migrateprojectresponsetags">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Outputs.<wbr>Migrate<wbr>Project<wbr>Response<wbr>Tags</a></span>
+        <span class="property-type"><a href="#migrateprojectresponsetags">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate..<wbr>Outputs.<wbr>Migrate<wbr>Project<wbr>Response<wbr>Tags</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the tags.{{% /md %}}</dd>
 </dl>
@@ -607,7 +607,7 @@ The following output properties are available:
 <a href="#summary_csharp" style="color: inherit; text-decoration: inherit;">Summary</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Inputs.<wbr>Database<wbr>Project<wbr>Summary<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Inputs.<wbr>Servers<wbr>Project<wbr>Summary<wbr>Response<wbr>Args&gt;&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate..<wbr>Inputs.<wbr>Database<wbr>Project<wbr>Summary<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate..<wbr>Inputs.<wbr>Servers<wbr>Project<wbr>Summary<wbr>Response<wbr>Args&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}Gets the summary of the migrate project.{{% /md %}}</dd>
     <dt class="property-optional"

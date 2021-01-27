@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.customerinsights.Connector resou
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The connector resource format.
-Latest API Version: 2017-04-26.
+API Version: 2017-04-26.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var connector = new AzureNextGen.CustomerInsights.Latest.Connector("connector", new AzureNextGen.CustomerInsights.Latest.ConnectorArgs
+        var connector = new AzureNextGen.CustomerInsights..Connector("connector", new AzureNextGen.CustomerInsights..ConnectorArgs
         {
             ConnectorName = "testConnector",
             ConnectorProperties = 
@@ -58,7 +58,7 @@ class MyStack : Stack
 package main
 
 import (
-	customerinsights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/customerinsights/latest"
+	customerinsights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/customerinsights"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -95,7 +95,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-connector = azure_nextgen.customerinsights.latest.Connector("connector",
+connector = azure_nextgen.customerinsights.Connector("connector",
     connector_name="testConnector",
     connector_properties={
         "connectionKeyVaultUrl": {
@@ -119,7 +119,7 @@ connector = azure_nextgen.customerinsights.latest.Connector("connector",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const connector = new azure_nextgen.customerinsights.latest.Connector("connector", {
+const connector = new azure_nextgen.customerinsights.Connector("connector", {
     connectorName: "testConnector",
     connectorProperties: {
         connectionKeyVaultUrl: {
@@ -345,7 +345,7 @@ The Connector resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#connectortype_csharp" style="color: inherit; text-decoration: inherit;">Connector<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#connectortypes">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights.<wbr>Connector<wbr>Types</a></span>
+        <span class="property-type">string | <a href="#connectortypes">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights..<wbr>Connector<wbr>Types</a></span>
     </dt>
     <dd>{{% md %}}Type of connector.{{% /md %}}</dd>
     <dt class="property-required"
@@ -1034,7 +1034,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:customerinsights/latest:Connector sdkTestHub/testConnector /subscriptions/c909e979-ef71-4def-a970-bc7c154db8c5/resourceGroups/TestHubRG/providers/Microsoft.CustomerInsights/hubs/sdkTestHub/connectors/testConnector 
+$ pulumi import azure-nextgen:customerinsights:Connector sdkTestHub/testConnector /subscriptions/c909e979-ef71-4def-a970-bc7c154db8c5/resourceGroups/TestHubRG/providers/Microsoft.CustomerInsights/hubs/sdkTestHub/connectors/testConnector 
 ```
 
 

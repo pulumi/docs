@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.datacatalog.ADCCatalog resource 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Azure Data Catalog.
-Latest API Version: 2016-03-30.
+API Version: 2016-03-30.
 
 {{% examples %}}
 ## Example Usage
@@ -27,11 +27,11 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var adcCatalog = new AzureNextGen.DataCatalog.Latest.ADCCatalog("adcCatalog", new AzureNextGen.DataCatalog.Latest.ADCCatalogArgs
+        var adcCatalog = new AzureNextGen.DataCatalog..ADCCatalog("adcCatalog", new AzureNextGen.DataCatalog..ADCCatalogArgs
         {
             Admins = 
             {
-                new AzureNextGen.DataCatalog.Latest.Inputs.PrincipalsArgs
+                new AzureNextGen.DataCatalog..Inputs.PrincipalsArgs
                 {
                     ObjectId = "99999999-9999-9999-999999999999",
                     Upn = "myupn@microsoft.com",
@@ -50,7 +50,7 @@ class MyStack : Stack
             Units = 1,
             Users = 
             {
-                new AzureNextGen.DataCatalog.Latest.Inputs.PrincipalsArgs
+                new AzureNextGen.DataCatalog..Inputs.PrincipalsArgs
                 {
                     ObjectId = "99999999-9999-9999-999999999999",
                     Upn = "myupn@microsoft.com",
@@ -71,7 +71,7 @@ class MyStack : Stack
 package main
 
 import (
-	datacatalog "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datacatalog/latest"
+	datacatalog "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datacatalog"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -118,8 +118,8 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-adc_catalog = azure_nextgen.datacatalog.latest.ADCCatalog("adcCatalog",
-    admins=[azure_nextgen.datacatalog.latest.PrincipalsArgs(
+adc_catalog = azure_nextgen.datacatalog.ADCCatalog("adcCatalog",
+    admins=[azure_nextgen.datacatalog.PrincipalsArgs(
         object_id="99999999-9999-9999-999999999999",
         upn="myupn@microsoft.com",
     )],
@@ -133,7 +133,7 @@ adc_catalog = azure_nextgen.datacatalog.latest.ADCCatalog("adcCatalog",
         "mykey2": "myvalue2",
     },
     units=1,
-    users=[azure_nextgen.datacatalog.latest.PrincipalsArgs(
+    users=[azure_nextgen.datacatalog.PrincipalsArgs(
         object_id="99999999-9999-9999-999999999999",
         upn="myupn@microsoft.com",
     )])
@@ -148,7 +148,7 @@ adc_catalog = azure_nextgen.datacatalog.latest.ADCCatalog("adcCatalog",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const adcCatalog = new azure_nextgen.datacatalog.latest.ADCCatalog("adcCatalog", {
+const adcCatalog = new azure_nextgen.datacatalog.ADCCatalog("adcCatalog", {
     admins: [{
         objectId: "99999999-9999-9999-999999999999",
         upn: "myupn@microsoft.com",
@@ -380,7 +380,7 @@ The ADCCatalog resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#admins_csharp" style="color: inherit; text-decoration: inherit;">Admins</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#principals">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Catalog.<wbr>Inputs.<wbr>Principals<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#principals">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Catalog..<wbr>Inputs.<wbr>Principals<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Azure data catalog admin list.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -416,7 +416,7 @@ The ADCCatalog resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#skutype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Catalog.<wbr>Sku<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#skutype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Catalog..<wbr>Sku<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Azure data catalog SKU.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -452,7 +452,7 @@ The ADCCatalog resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#users_csharp" style="color: inherit; text-decoration: inherit;">Users</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#principals">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Catalog.<wbr>Inputs.<wbr>Principals<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#principals">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Catalog..<wbr>Inputs.<wbr>Principals<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Azure data catalog user list.{{% /md %}}</dd>
 </dl>
@@ -1161,7 +1161,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:datacatalog/latest:ADCCatalog exampleCatalog /subscriptions/12345678-1234-1234-12345678abc/resourceGroups/exampleResourceGroup/providers/Microsoft.DataCatalog/catalogs/exampleCatalog 
+$ pulumi import azure-nextgen:datacatalog:ADCCatalog exampleCatalog /subscriptions/12345678-1234-1234-12345678abc/resourceGroups/exampleResourceGroup/providers/Microsoft.DataCatalog/catalogs/exampleCatalog 
 ```
 
 

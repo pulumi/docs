@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.operationalinsights.DataSource r
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Datasources under OMS Workspace.
-Latest API Version: 2020-08-01.
+API Version: 2020-08-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var dataSource = new AzureNextGen.OperationalInsights.Latest.DataSource("dataSource", new AzureNextGen.OperationalInsights.Latest.DataSourceArgs
+        var dataSource = new AzureNextGen.OperationalInsights..DataSource("dataSource", new AzureNextGen.OperationalInsights..DataSourceArgs
         {
             DataSourceName = "AzTestDS774",
             Kind = "AzureActivityLog",
@@ -52,7 +52,7 @@ class MyStack : Stack
 package main
 
 import (
-	operationalinsights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/operationalinsights/latest"
+	operationalinsights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/operationalinsights"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -84,7 +84,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-data_source = azure_nextgen.operationalinsights.latest.DataSource("dataSource",
+data_source = azure_nextgen.operationalinsights.DataSource("dataSource",
     data_source_name="AzTestDS774",
     kind="AzureActivityLog",
     properties={
@@ -103,7 +103,7 @@ data_source = azure_nextgen.operationalinsights.latest.DataSource("dataSource",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const dataSource = new azure_nextgen.operationalinsights.latest.DataSource("dataSource", {
+const dataSource = new azure_nextgen.operationalinsights.DataSource("dataSource", {
     dataSourceName: "AzTestDS774",
     kind: "AzureActivityLog",
     properties: {
@@ -315,7 +315,7 @@ The DataSource resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#datasourcekind">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Operational<wbr>Insights.<wbr>Data<wbr>Source<wbr>Kind</a></span>
+        <span class="property-type">string | <a href="#datasourcekind">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Operational<wbr>Insights..<wbr>Data<wbr>Source<wbr>Kind</a></span>
     </dt>
     <dd>{{% md %}}The kind of the DataSource.{{% /md %}}</dd>
     <dt class="property-required"
@@ -1013,7 +1013,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:operationalinsights/latest:DataSource AzTestDS774 /subscriptions/00000000-0000-0000-0000-000000000005/resourceGroups/OIAutoRest5123/providers/Microsoft.OperationalInsights/workspaces/AzTest9724/datasources/AzTestDS774 
+$ pulumi import azure-nextgen:operationalinsights:DataSource AzTestDS774 /subscriptions/00000000-0000-0000-0000-000000000005/resourceGroups/OIAutoRest5123/providers/Microsoft.OperationalInsights/workspaces/AzTest9724/datasources/AzTestDS774 
 ```
 
 

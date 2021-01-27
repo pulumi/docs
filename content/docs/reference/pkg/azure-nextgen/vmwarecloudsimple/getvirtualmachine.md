@@ -170,7 +170,7 @@ The following output properties are available:
 <a href="#controllers_csharp" style="color: inherit; text-decoration: inherit;">Controllers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualdiskcontrollerresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>VMware<wbr>Cloud<wbr>Simple.<wbr>Outputs.<wbr>Virtual<wbr>Disk<wbr>Controller<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#virtualdiskcontrollerresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>VMware<wbr>Cloud<wbr>Simple..<wbr>Outputs.<wbr>Virtual<wbr>Disk<wbr>Controller<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of Virtual Disks' Controllers{{% /md %}}</dd>
     <dt class="property-"
@@ -314,7 +314,7 @@ The following output properties are available:
 <a href="#customization_csharp" style="color: inherit; text-decoration: inherit;">Customization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestoscustomizationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>VMware<wbr>Cloud<wbr>Simple.<wbr>Outputs.<wbr>Guest<wbr>OSCustomization<wbr>Response</a></span>
+        <span class="property-type"><a href="#guestoscustomizationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>VMware<wbr>Cloud<wbr>Simple..<wbr>Outputs.<wbr>Guest<wbr>OSCustomization<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Virtual machine properties{{% /md %}}</dd>
     <dt class="property-"
@@ -323,7 +323,7 @@ The following output properties are available:
 <a href="#disks_csharp" style="color: inherit; text-decoration: inherit;">Disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualdiskresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>VMware<wbr>Cloud<wbr>Simple.<wbr>Outputs.<wbr>Virtual<wbr>Disk<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#virtualdiskresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>VMware<wbr>Cloud<wbr>Simple..<wbr>Outputs.<wbr>Virtual<wbr>Disk<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of Virtual Disks{{% /md %}}</dd>
     <dt class="property-"
@@ -341,7 +341,7 @@ The following output properties are available:
 <a href="#nics_csharp" style="color: inherit; text-decoration: inherit;">Nics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnicresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>VMware<wbr>Cloud<wbr>Simple.<wbr>Outputs.<wbr>Virtual<wbr>Nic<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#virtualnicresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>VMware<wbr>Cloud<wbr>Simple..<wbr>Outputs.<wbr>Virtual<wbr>Nic<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of Virtual NICs{{% /md %}}</dd>
     <dt class="property-"
@@ -359,7 +359,7 @@ The following output properties are available:
 <a href="#resourcepool_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Pool</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcepoolresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>VMware<wbr>Cloud<wbr>Simple.<wbr>Outputs.<wbr>Resource<wbr>Pool<wbr>Response</a></span>
+        <span class="property-type"><a href="#resourcepoolresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>VMware<wbr>Cloud<wbr>Simple..<wbr>Outputs.<wbr>Resource<wbr>Pool<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Virtual Machines Resource Pool{{% /md %}}</dd>
     <dt class="property-"
@@ -2544,7 +2544,7 @@ The following output properties are available:
 <a href="#network_csharp" style="color: inherit; text-decoration: inherit;">Network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>VMware<wbr>Cloud<wbr>Simple.<wbr>Inputs.<wbr>Virtual<wbr>Network<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnetworkresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>VMware<wbr>Cloud<wbr>Simple..<wbr>Inputs.<wbr>Virtual<wbr>Network<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Virtual Network{{% /md %}}</dd>
     <dt class="property-required"
@@ -2571,7 +2571,7 @@ The following output properties are available:
 <a href="#customization_csharp" style="color: inherit; text-decoration: inherit;">Customization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestosniccustomizationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>VMware<wbr>Cloud<wbr>Simple.<wbr>Inputs.<wbr>Guest<wbr>OSNICCustomization<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#guestosniccustomizationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>VMware<wbr>Cloud<wbr>Simple..<wbr>Inputs.<wbr>Guest<wbr>OSNICCustomization<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}guest OS customization for nic{{% /md %}}</dd>
     <dt class="property-optional"

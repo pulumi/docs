@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.relay.NamespaceAuthorizationRule
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Description of a namespace authorization rule.
-Latest API Version: 2017-04-01.
+API Version: 2017-04-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var namespaceAuthorizationRule = new AzureNextGen.Relay.Latest.NamespaceAuthorizationRule("namespaceAuthorizationRule", new AzureNextGen.Relay.Latest.NamespaceAuthorizationRuleArgs
+        var namespaceAuthorizationRule = new AzureNextGen.Relay..NamespaceAuthorizationRule("namespaceAuthorizationRule", new AzureNextGen.Relay..NamespaceAuthorizationRuleArgs
         {
             AuthorizationRuleName = "example-RelayAuthRules-01",
             NamespaceName = "example-RelayNamespace-01",
@@ -56,7 +56,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-namespace_authorization_rule = azure_nextgen.relay.latest.NamespaceAuthorizationRule("namespaceAuthorizationRule",
+namespace_authorization_rule = azure_nextgen.relay.NamespaceAuthorizationRule("namespaceAuthorizationRule",
     authorization_rule_name="example-RelayAuthRules-01",
     namespace_name="example-RelayNamespace-01",
     resource_group_name="resourcegroup",
@@ -75,7 +75,7 @@ namespace_authorization_rule = azure_nextgen.relay.latest.NamespaceAuthorization
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const namespaceAuthorizationRule = new azure_nextgen.relay.latest.NamespaceAuthorizationRule("namespaceAuthorizationRule", {
+const namespaceAuthorizationRule = new azure_nextgen.relay.NamespaceAuthorizationRule("namespaceAuthorizationRule", {
     authorizationRuleName: "example-RelayAuthRules-01",
     namespaceName: "example-RelayNamespace-01",
     resourceGroupName: "resourcegroup",
@@ -305,7 +305,7 @@ The NamespaceAuthorizationRule resource accepts the following [input]({{< relref
 <a href="#rights_csharp" style="color: inherit; text-decoration: inherit;">Rights</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accessrights">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Relay.<wbr>Access<wbr>Rights&gt;</a></span>
+        <span class="property-type"><a href="#accessrights">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Relay..<wbr>Access<wbr>Rights&gt;</a></span>
     </dt>
     <dd>{{% md %}}The rights associated with the rule.{{% /md %}}</dd>
 </dl>
@@ -637,7 +637,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:relay/latest:NamespaceAuthorizationRule example-RelayAuthRules-01 /subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/resourcegroup/providers/Microsoft.Relay/namespaces/example-RelayNamespace-01/AuthorizationRules/example-RelayAuthRules-01 
+$ pulumi import azure-nextgen:relay:NamespaceAuthorizationRule example-RelayAuthRules-01 /subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/resourcegroup/providers/Microsoft.Relay/namespaces/example-RelayNamespace-01/AuthorizationRules/example-RelayAuthRules-01 
 ```
 
 

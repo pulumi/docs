@@ -359,7 +359,7 @@ The following output properties are available:
 <a href="#latestoperationresult_csharp" style="color: inherit; text-decoration: inherit;">Latest<wbr>Operation<wbr>Result</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#latestoperationresultresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Lab<wbr>Services.<wbr>Outputs.<wbr>Latest<wbr>Operation<wbr>Result<wbr>Response</a></span>
+        <span class="property-type"><a href="#latestoperationresultresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Lab<wbr>Services..<wbr>Outputs.<wbr>Latest<wbr>Operation<wbr>Result<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The details of the latest operation. ex: status, error{{% /md %}}</dd>
     <dt class="property-"
@@ -377,7 +377,7 @@ The following output properties are available:
 <a href="#networkinterface_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Interface</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkinterfaceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Lab<wbr>Services.<wbr>Outputs.<wbr>Network<wbr>Interface<wbr>Response</a></span>
+        <span class="property-type"><a href="#networkinterfaceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Lab<wbr>Services..<wbr>Outputs.<wbr>Network<wbr>Interface<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Network details of the environment{{% /md %}}</dd>
     <dt class="property-"
@@ -431,7 +431,7 @@ The following output properties are available:
 <a href="#resourcesets_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Sets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcesetresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Lab<wbr>Services.<wbr>Outputs.<wbr>Resource<wbr>Set<wbr>Response</a></span>
+        <span class="property-type"><a href="#resourcesetresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Lab<wbr>Services..<wbr>Outputs.<wbr>Resource<wbr>Set<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The set of a VM and the setting id it was created for{{% /md %}}</dd>
     <dt class="property-"

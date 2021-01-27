@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.managednetwork.ManagedNetworkPee
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The Managed Network Peering Policy resource
+API Version: 2019-06-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,19 +27,19 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var managedNetworkPeeringPolicy = new AzureNextGen.ManagedNetwork.V20190601Preview.ManagedNetworkPeeringPolicy("managedNetworkPeeringPolicy", new AzureNextGen.ManagedNetwork.V20190601Preview.ManagedNetworkPeeringPolicyArgs
+        var managedNetworkPeeringPolicy = new AzureNextGen.ManagedNetwork..ManagedNetworkPeeringPolicy("managedNetworkPeeringPolicy", new AzureNextGen.ManagedNetwork..ManagedNetworkPeeringPolicyArgs
         {
             ManagedNetworkName = "myManagedNetwork",
             ManagedNetworkPeeringPolicyName = "myHubAndSpoke",
-            Properties = new AzureNextGen.ManagedNetwork.V20190601Preview.Inputs.ManagedNetworkPeeringPolicyPropertiesArgs
+            Properties = new AzureNextGen.ManagedNetwork..Inputs.ManagedNetworkPeeringPolicyPropertiesArgs
             {
-                Hub = new AzureNextGen.ManagedNetwork.V20190601Preview.Inputs.ResourceIdArgs
+                Hub = new AzureNextGen.ManagedNetwork..Inputs.ResourceIdArgs
                 {
                     Id = "/subscriptionB/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/myHubVnet",
                 },
                 Spokes = 
                 {
-                    new AzureNextGen.ManagedNetwork.V20190601Preview.Inputs.ResourceIdArgs
+                    new AzureNextGen.ManagedNetwork..Inputs.ResourceIdArgs
                     {
                         Id = "/subscriptionB/resourceGroups/myResourceGroup/providers/Microsoft.ManagedNetwork/managedNetworks/myManagedNetwork/managedNetworkGroups/myManagedNetworkGroup1",
                     },
@@ -61,7 +62,7 @@ class MyStack : Stack
 package main
 
 import (
-	managednetwork "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/managednetwork/v20190601preview"
+	managednetwork "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/managednetwork"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -100,14 +101,14 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-managed_network_peering_policy = azure_nextgen.managednetwork.v20190601preview.ManagedNetworkPeeringPolicy("managedNetworkPeeringPolicy",
+managed_network_peering_policy = azure_nextgen.managednetwork.ManagedNetworkPeeringPolicy("managedNetworkPeeringPolicy",
     managed_network_name="myManagedNetwork",
     managed_network_peering_policy_name="myHubAndSpoke",
-    properties=azure_nextgen.managednetwork.v20190601preview.ManagedNetworkPeeringPolicyPropertiesArgs(
-        hub=azure_nextgen.managednetwork.v20190601preview.ResourceIdArgs(
+    properties=azure_nextgen.managednetwork.ManagedNetworkPeeringPolicyPropertiesArgs(
+        hub=azure_nextgen.managednetwork.ResourceIdArgs(
             id="/subscriptionB/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/myHubVnet",
         ),
-        spokes=[azure_nextgen.managednetwork.v20190601preview.ResourceIdArgs(
+        spokes=[azure_nextgen.managednetwork.ResourceIdArgs(
             id="/subscriptionB/resourceGroups/myResourceGroup/providers/Microsoft.ManagedNetwork/managedNetworks/myManagedNetwork/managedNetworkGroups/myManagedNetworkGroup1",
         )],
         type="HubAndSpokeTopology",
@@ -124,7 +125,7 @@ managed_network_peering_policy = azure_nextgen.managednetwork.v20190601preview.M
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const managedNetworkPeeringPolicy = new azure_nextgen.managednetwork.v20190601preview.ManagedNetworkPeeringPolicy("managedNetworkPeeringPolicy", {
+const managedNetworkPeeringPolicy = new azure_nextgen.managednetwork.ManagedNetworkPeeringPolicy("managedNetworkPeeringPolicy", {
     managedNetworkName: "myManagedNetwork",
     managedNetworkPeeringPolicyName: "myHubAndSpoke",
     properties: {
@@ -368,7 +369,7 @@ The ManagedNetworkPeeringPolicy resource accepts the following [input]({{< relre
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managednetworkpeeringpolicyproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Managed<wbr>Network.<wbr>Inputs.<wbr>Managed<wbr>Network<wbr>Peering<wbr>Policy<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#managednetworkpeeringpolicyproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Managed<wbr>Network..<wbr>Inputs.<wbr>Managed<wbr>Network<wbr>Peering<wbr>Policy<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the properties of a Managed Network Policy{{% /md %}}</dd>
 </dl>
@@ -687,7 +688,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Managed<wbr>Network.<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Managed<wbr>Network..<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the connectivity type of a network structure policy{{% /md %}}</dd>
     <dt class="property-optional"
@@ -696,7 +697,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hub_csharp" style="color: inherit; text-decoration: inherit;">Hub</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceid">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Managed<wbr>Network.<wbr>Inputs.<wbr>Resource<wbr>Id<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourceid">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Managed<wbr>Network..<wbr>Inputs.<wbr>Resource<wbr>Id<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the hub virtual network ID{{% /md %}}</dd>
     <dt class="property-optional"
@@ -705,7 +706,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mesh_csharp" style="color: inherit; text-decoration: inherit;">Mesh</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceid">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Managed<wbr>Network.<wbr>Inputs.<wbr>Resource<wbr>Id<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#resourceid">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Managed<wbr>Network..<wbr>Inputs.<wbr>Resource<wbr>Id<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the mesh group IDs{{% /md %}}</dd>
     <dt class="property-optional"
@@ -714,7 +715,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#spokes_csharp" style="color: inherit; text-decoration: inherit;">Spokes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceid">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Managed<wbr>Network.<wbr>Inputs.<wbr>Resource<wbr>Id<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#resourceid">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Managed<wbr>Network..<wbr>Inputs.<wbr>Resource<wbr>Id<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the spokes group IDs{{% /md %}}</dd>
 </dl>
@@ -884,7 +885,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hub_csharp" style="color: inherit; text-decoration: inherit;">Hub</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Managed<wbr>Network.<wbr>Inputs.<wbr>Resource<wbr>Id<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourceidresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Managed<wbr>Network..<wbr>Inputs.<wbr>Resource<wbr>Id<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the hub virtual network ID{{% /md %}}</dd>
     <dt class="property-optional"
@@ -893,7 +894,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mesh_csharp" style="color: inherit; text-decoration: inherit;">Mesh</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Managed<wbr>Network.<wbr>Inputs.<wbr>Resource<wbr>Id<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#resourceidresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Managed<wbr>Network..<wbr>Inputs.<wbr>Resource<wbr>Id<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the mesh group IDs{{% /md %}}</dd>
     <dt class="property-optional"
@@ -902,7 +903,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#spokes_csharp" style="color: inherit; text-decoration: inherit;">Spokes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Managed<wbr>Network.<wbr>Inputs.<wbr>Resource<wbr>Id<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#resourceidresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Managed<wbr>Network..<wbr>Inputs.<wbr>Resource<wbr>Id<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the spokes group IDs{{% /md %}}</dd>
 </dl>
@@ -1255,7 +1256,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:managednetwork/v20190601preview:ManagedNetworkPeeringPolicy myHubAndSpoke /subscriptionB/resourceGroups/myResourceGroup/providers/Microsoft.ManagedNetwork/managedNetworks/myManagedNetwork/managedNetworkPeeringPolicies/myHubAndSpoke 
+$ pulumi import azure-nextgen:managednetwork:ManagedNetworkPeeringPolicy myHubAndSpoke /subscriptionA/resourceGroups/myResourceGroup/providers/Microsoft.ManagedNetwork/managedNetworks/myManagedNetwork/managedNetworkPeeringPolicies/myHubAndSpoke 
 ```
 
 

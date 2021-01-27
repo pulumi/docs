@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.resources.DeploymentAtScope reso
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Deployment information.
-Latest API Version: 2020-08-01.
+API Version: 2020-08-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,15 +27,15 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var deploymentAtScope = new AzureNextGen.Resources.Latest.DeploymentAtScope("deploymentAtScope", new AzureNextGen.Resources.Latest.DeploymentAtScopeArgs
+        var deploymentAtScope = new AzureNextGen.Resources..DeploymentAtScope("deploymentAtScope", new AzureNextGen.Resources..DeploymentAtScopeArgs
         {
             DeploymentName = "my-deployment",
             Location = "eastus",
-            Properties = new AzureNextGen.Resources.Latest.Inputs.DeploymentPropertiesArgs
+            Properties = new AzureNextGen.Resources..Inputs.DeploymentPropertiesArgs
             {
                 Mode = "Incremental",
                 Parameters = ,
-                TemplateLink = new AzureNextGen.Resources.Latest.Inputs.TemplateLinkArgs
+                TemplateLink = new AzureNextGen.Resources..Inputs.TemplateLinkArgs
                 {
                     Uri = "https://example.com/exampleTemplate.json",
                 },
@@ -61,7 +61,7 @@ class MyStack : Stack
 package main
 
 import (
-	resources "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/resources/latest"
+	resources "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/resources"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -100,13 +100,13 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-deployment_at_scope = azure_nextgen.resources.latest.DeploymentAtScope("deploymentAtScope",
+deployment_at_scope = azure_nextgen.resources.DeploymentAtScope("deploymentAtScope",
     deployment_name="my-deployment",
     location="eastus",
-    properties=azure_nextgen.resources.latest.DeploymentPropertiesArgs(
+    properties=azure_nextgen.resources.DeploymentPropertiesArgs(
         mode="Incremental",
         parameters={},
-        template_link=azure_nextgen.resources.latest.TemplateLinkArgs(
+        template_link=azure_nextgen.resources.TemplateLinkArgs(
             uri="https://example.com/exampleTemplate.json",
         ),
     ),
@@ -126,7 +126,7 @@ deployment_at_scope = azure_nextgen.resources.latest.DeploymentAtScope("deployme
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const deploymentAtScope = new azure_nextgen.resources.latest.DeploymentAtScope("deploymentAtScope", {
+const deploymentAtScope = new azure_nextgen.resources.DeploymentAtScope("deploymentAtScope", {
     deploymentName: "my-deployment",
     location: "eastus",
     properties: {
@@ -345,7 +345,7 @@ The DeploymentAtScope resource accepts the following [input]({{< relref "/docs/i
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Resources.<wbr>Inputs.<wbr>Deployment<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#deploymentproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Resources..<wbr>Inputs.<wbr>Deployment<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The deployment properties.{{% /md %}}</dd>
     <dt class="property-required"
@@ -789,7 +789,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metadata_csharp" style="color: inherit; text-decoration: inherit;">Metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aliaspathmetadataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Resources.<wbr>Inputs.<wbr>Alias<wbr>Path<wbr>Metadata<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#aliaspathmetadataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Resources..<wbr>Inputs.<wbr>Alias<wbr>Path<wbr>Metadata<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The metadata of the alias path. If missing, fall back to the default metadata of the alias.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -816,7 +816,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pattern_csharp" style="color: inherit; text-decoration: inherit;">Pattern</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aliaspatternresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Resources.<wbr>Inputs.<wbr>Alias<wbr>Pattern<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#aliaspatternresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Resources..<wbr>Inputs.<wbr>Alias<wbr>Pattern<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The pattern for an alias path.{{% /md %}}</dd>
 </dl>
@@ -1093,7 +1093,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#defaultmetadata_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aliaspathmetadataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Resources.<wbr>Inputs.<wbr>Alias<wbr>Path<wbr>Metadata<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#aliaspathmetadataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Resources..<wbr>Inputs.<wbr>Alias<wbr>Path<wbr>Metadata<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The default alias path metadata. Applies to the default path and to any alias path that doesn't have metadata{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1111,7 +1111,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#defaultpattern_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Pattern</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aliaspatternresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Resources.<wbr>Inputs.<wbr>Alias<wbr>Pattern<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#aliaspatternresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Resources..<wbr>Inputs.<wbr>Alias<wbr>Pattern<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The default pattern for an alias.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1129,7 +1129,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#paths_csharp" style="color: inherit; text-decoration: inherit;">Paths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aliaspathresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Resources.<wbr>Inputs.<wbr>Alias<wbr>Path<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#aliaspathresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Resources..<wbr>Inputs.<wbr>Alias<wbr>Path<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The paths for an alias.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1691,7 +1691,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dependson_csharp" style="color: inherit; text-decoration: inherit;">Depends<wbr>On</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#basicdependencyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Resources.<wbr>Inputs.<wbr>Basic<wbr>Dependency<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#basicdependencyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Resources..<wbr>Inputs.<wbr>Basic<wbr>Dependency<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of dependencies.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1899,7 +1899,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mode_csharp" style="color: inherit; text-decoration: inherit;">Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentmode">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Resources.<wbr>Deployment<wbr>Mode</a></span>
+        <span class="property-type"><a href="#deploymentmode">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Resources..<wbr>Deployment<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}The mode that is used to deploy resources. This value can be either Incremental or Complete. In Incremental mode, resources are deployed without deleting existing resources that are not included in the template. In Complete mode, resources are deployed and existing resources in the resource group that are not included in the template are deleted. Be careful when using Complete mode as you may unintentionally delete resources.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1908,7 +1908,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#debugsetting_csharp" style="color: inherit; text-decoration: inherit;">Debug<wbr>Setting</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#debugsetting">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Resources.<wbr>Inputs.<wbr>Debug<wbr>Setting<wbr>Args</a></span>
+        <span class="property-type"><a href="#debugsetting">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Resources..<wbr>Inputs.<wbr>Debug<wbr>Setting<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The debug setting of the deployment.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1917,7 +1917,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#onerrordeployment_csharp" style="color: inherit; text-decoration: inherit;">On<wbr>Error<wbr>Deployment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#onerrordeployment">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Resources.<wbr>Inputs.<wbr>On<wbr>Error<wbr>Deployment<wbr>Args</a></span>
+        <span class="property-type"><a href="#onerrordeployment">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Resources..<wbr>Inputs.<wbr>On<wbr>Error<wbr>Deployment<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The deployment on error behavior.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1935,7 +1935,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameterslink_csharp" style="color: inherit; text-decoration: inherit;">Parameters<wbr>Link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#parameterslink">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Resources.<wbr>Inputs.<wbr>Parameters<wbr>Link<wbr>Args</a></span>
+        <span class="property-type"><a href="#parameterslink">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Resources..<wbr>Inputs.<wbr>Parameters<wbr>Link<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The URI of parameters file. You use this element to link to an existing parameters file. Use either the parametersLink property or the parameters property, but not both.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1953,7 +1953,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#templatelink_csharp" style="color: inherit; text-decoration: inherit;">Template<wbr>Link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#templatelink">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Resources.<wbr>Inputs.<wbr>Template<wbr>Link<wbr>Args</a></span>
+        <span class="property-type"><a href="#templatelink">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Resources..<wbr>Inputs.<wbr>Template<wbr>Link<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The URI of the template. Use either the templateLink property or the template property, but not both.{{% /md %}}</dd>
 </dl>
@@ -2186,7 +2186,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#debugsetting_csharp" style="color: inherit; text-decoration: inherit;">Debug<wbr>Setting</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#debugsettingresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Resources.<wbr>Inputs.<wbr>Debug<wbr>Setting<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#debugsettingresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Resources..<wbr>Inputs.<wbr>Debug<wbr>Setting<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The debug setting of the deployment.{{% /md %}}</dd>
     <dt class="property-required"
@@ -2195,7 +2195,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dependencies_csharp" style="color: inherit; text-decoration: inherit;">Dependencies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dependencyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Resources.<wbr>Inputs.<wbr>Dependency<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#dependencyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Resources..<wbr>Inputs.<wbr>Dependency<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of deployment dependencies.{{% /md %}}</dd>
     <dt class="property-required"
@@ -2213,7 +2213,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#error_csharp" style="color: inherit; text-decoration: inherit;">Error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#errorresponseresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Resources.<wbr>Inputs.<wbr>Error<wbr>Response<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#errorresponseresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Resources..<wbr>Inputs.<wbr>Error<wbr>Response<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The deployment error.{{% /md %}}</dd>
     <dt class="property-required"
@@ -2231,7 +2231,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#onerrordeployment_csharp" style="color: inherit; text-decoration: inherit;">On<wbr>Error<wbr>Deployment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#onerrordeploymentextendedresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Resources.<wbr>Inputs.<wbr>On<wbr>Error<wbr>Deployment<wbr>Extended<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#onerrordeploymentextendedresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Resources..<wbr>Inputs.<wbr>On<wbr>Error<wbr>Deployment<wbr>Extended<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The deployment on error behavior.{{% /md %}}</dd>
     <dt class="property-required"
@@ -2240,7 +2240,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#outputresources_csharp" style="color: inherit; text-decoration: inherit;">Output<wbr>Resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcereferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Resources.<wbr>Inputs.<wbr>Resource<wbr>Reference<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#resourcereferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Resources..<wbr>Inputs.<wbr>Resource<wbr>Reference<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Array of provisioned resources.{{% /md %}}</dd>
     <dt class="property-required"
@@ -2267,7 +2267,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameterslink_csharp" style="color: inherit; text-decoration: inherit;">Parameters<wbr>Link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#parameterslinkresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Resources.<wbr>Inputs.<wbr>Parameters<wbr>Link<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#parameterslinkresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Resources..<wbr>Inputs.<wbr>Parameters<wbr>Link<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The URI referencing the parameters. {{% /md %}}</dd>
     <dt class="property-required"
@@ -2276,7 +2276,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#providers_csharp" style="color: inherit; text-decoration: inherit;">Providers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#providerresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Resources.<wbr>Inputs.<wbr>Provider<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#providerresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Resources..<wbr>Inputs.<wbr>Provider<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of resource providers needed for the deployment.{{% /md %}}</dd>
     <dt class="property-required"
@@ -2303,7 +2303,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#templatelink_csharp" style="color: inherit; text-decoration: inherit;">Template<wbr>Link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#templatelinkresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Resources.<wbr>Inputs.<wbr>Template<wbr>Link<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#templatelinkresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Resources..<wbr>Inputs.<wbr>Template<wbr>Link<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The URI referencing the template.{{% /md %}}</dd>
     <dt class="property-required"
@@ -2321,7 +2321,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validatedresources_csharp" style="color: inherit; text-decoration: inherit;">Validated<wbr>Resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcereferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Resources.<wbr>Inputs.<wbr>Resource<wbr>Reference<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#resourcereferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Resources..<wbr>Inputs.<wbr>Resource<wbr>Reference<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Array of validated resources.{{% /md %}}</dd>
 </dl>
@@ -2913,7 +2913,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#additionalinfo_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#erroradditionalinforesponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Resources.<wbr>Inputs.<wbr>Error<wbr>Additional<wbr>Info<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#erroradditionalinforesponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Resources..<wbr>Inputs.<wbr>Error<wbr>Additional<wbr>Info<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The error additional info.{{% /md %}}</dd>
     <dt class="property-required"
@@ -2931,7 +2931,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#details_csharp" style="color: inherit; text-decoration: inherit;">Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#errorresponseresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Resources.<wbr>Inputs.<wbr>Error<wbr>Response<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#errorresponseresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Resources..<wbr>Inputs.<wbr>Error<wbr>Response<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The error details.{{% /md %}}</dd>
     <dt class="property-required"
@@ -3128,7 +3128,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#onerrordeploymenttype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Resources.<wbr>On<wbr>Error<wbr>Deployment<wbr>Type</a></span>
+        <span class="property-type"><a href="#onerrordeploymenttype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Resources..<wbr>On<wbr>Error<wbr>Deployment<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The deployment on error behavior type. Possible values are LastSuccessful and SpecificDeployment.{{% /md %}}</dd>
 </dl>
@@ -3719,7 +3719,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#apiprofiles_csharp" style="color: inherit; text-decoration: inherit;">Api<wbr>Profiles</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apiprofileresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Resources.<wbr>Inputs.<wbr>Api<wbr>Profile<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#apiprofileresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Resources..<wbr>Inputs.<wbr>Api<wbr>Profile<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The API profiles for the resource provider.{{% /md %}}</dd>
     <dt class="property-required"
@@ -3737,7 +3737,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#aliases_csharp" style="color: inherit; text-decoration: inherit;">Aliases</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aliasresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Resources.<wbr>Inputs.<wbr>Alias<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#aliasresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Resources..<wbr>Inputs.<wbr>Alias<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The aliases that are supported by this resource type.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3764,7 +3764,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#locationmappings_csharp" style="color: inherit; text-decoration: inherit;">Location<wbr>Mappings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#providerextendedlocationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Resources.<wbr>Inputs.<wbr>Provider<wbr>Extended<wbr>Location<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#providerextendedlocationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Resources..<wbr>Inputs.<wbr>Provider<wbr>Extended<wbr>Location<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The location mappings that are supported by this resource type.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4096,7 +4096,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resourcetypes_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#providerresourcetyperesponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Resources.<wbr>Inputs.<wbr>Provider<wbr>Resource<wbr>Type<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#providerresourcetyperesponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Resources..<wbr>Inputs.<wbr>Provider<wbr>Resource<wbr>Type<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The collection of provider resource types.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4671,7 +4671,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:resources/latest:DeploymentAtScope my-deployment /providers/Microsoft.Management/managementGroups/my-management-group-id/providers/Microsoft.Resources/deployments/my-deployment 
+$ pulumi import azure-nextgen:resources:DeploymentAtScope my-deployment /providers/Microsoft.Management/managementGroups/my-management-group-id/providers/Microsoft.Resources/deployments/my-deployment 
 ```
 
 

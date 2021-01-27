@@ -206,7 +206,7 @@ The following output properties are available:
 <a href="#managedinstancepairs_csharp" style="color: inherit; text-decoration: inherit;">Managed<wbr>Instance<wbr>Pairs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedinstancepairinforesponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql.<wbr>Outputs.<wbr>Managed<wbr>Instance<wbr>Pair<wbr>Info<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#managedinstancepairinforesponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql..<wbr>Outputs.<wbr>Managed<wbr>Instance<wbr>Pair<wbr>Info<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of managed instance pairs in the failover group.{{% /md %}}</dd>
     <dt class="property-"
@@ -224,7 +224,7 @@ The following output properties are available:
 <a href="#partnerregions_csharp" style="color: inherit; text-decoration: inherit;">Partner<wbr>Regions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#partnerregioninforesponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql.<wbr>Outputs.<wbr>Partner<wbr>Region<wbr>Info<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#partnerregioninforesponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql..<wbr>Outputs.<wbr>Partner<wbr>Region<wbr>Info<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Partner region information for the failover group.{{% /md %}}</dd>
     <dt class="property-"
@@ -233,7 +233,7 @@ The following output properties are available:
 <a href="#readwriteendpoint_csharp" style="color: inherit; text-decoration: inherit;">Read<wbr>Write<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefailovergroupreadwriteendpointresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql.<wbr>Outputs.<wbr>Instance<wbr>Failover<wbr>Group<wbr>Read<wbr>Write<wbr>Endpoint<wbr>Response</a></span>
+        <span class="property-type"><a href="#instancefailovergroupreadwriteendpointresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql..<wbr>Outputs.<wbr>Instance<wbr>Failover<wbr>Group<wbr>Read<wbr>Write<wbr>Endpoint<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Read-write endpoint of the failover group instance.{{% /md %}}</dd>
     <dt class="property-"
@@ -269,7 +269,7 @@ The following output properties are available:
 <a href="#readonlyendpoint_csharp" style="color: inherit; text-decoration: inherit;">Read<wbr>Only<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefailovergroupreadonlyendpointresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql.<wbr>Outputs.<wbr>Instance<wbr>Failover<wbr>Group<wbr>Read<wbr>Only<wbr>Endpoint<wbr>Response</a></span>
+        <span class="property-type"><a href="#instancefailovergroupreadonlyendpointresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql..<wbr>Outputs.<wbr>Instance<wbr>Failover<wbr>Group<wbr>Read<wbr>Only<wbr>Endpoint<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Read-only endpoint of the failover group instance.{{% /md %}}</dd>
 </dl>

@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.dbformariadb.PrivateEndpointConn
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 A private endpoint connection
-Latest API Version: 2018-06-01.
+API Version: 2018-06-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,10 +27,10 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var privateEndpointConnection = new AzureNextGen.DBforMariaDB.Latest.PrivateEndpointConnection("privateEndpointConnection", new AzureNextGen.DBforMariaDB.Latest.PrivateEndpointConnectionArgs
+        var privateEndpointConnection = new AzureNextGen.DBforMariaDB..PrivateEndpointConnection("privateEndpointConnection", new AzureNextGen.DBforMariaDB..PrivateEndpointConnectionArgs
         {
             PrivateEndpointConnectionName = "private-endpoint-connection-name",
-            PrivateLinkServiceConnectionState = new AzureNextGen.DBforMariaDB.Latest.Inputs.PrivateLinkServiceConnectionStatePropertyArgs
+            PrivateLinkServiceConnectionState = new AzureNextGen.DBforMariaDB..Inputs.PrivateLinkServiceConnectionStatePropertyArgs
             {
                 Description = "Approved by johndoe@contoso.com",
                 Status = "Approved",
@@ -52,7 +52,7 @@ class MyStack : Stack
 package main
 
 import (
-	dbformariadb "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/dbformariadb/latest"
+	dbformariadb "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/dbformariadb"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -84,9 +84,9 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-private_endpoint_connection = azure_nextgen.dbformariadb.latest.PrivateEndpointConnection("privateEndpointConnection",
+private_endpoint_connection = azure_nextgen.dbformariadb.PrivateEndpointConnection("privateEndpointConnection",
     private_endpoint_connection_name="private-endpoint-connection-name",
-    private_link_service_connection_state=azure_nextgen.dbformariadb.latest.PrivateLinkServiceConnectionStatePropertyArgs(
+    private_link_service_connection_state=azure_nextgen.dbformariadb.PrivateLinkServiceConnectionStatePropertyArgs(
         description="Approved by johndoe@contoso.com",
         status="Approved",
     ),
@@ -103,7 +103,7 @@ private_endpoint_connection = azure_nextgen.dbformariadb.latest.PrivateEndpointC
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const privateEndpointConnection = new azure_nextgen.dbformariadb.latest.PrivateEndpointConnection("privateEndpointConnection", {
+const privateEndpointConnection = new azure_nextgen.dbformariadb.PrivateEndpointConnection("privateEndpointConnection", {
     privateEndpointConnectionName: "private-endpoint-connection-name",
     privateLinkServiceConnectionState: {
         description: "Approved by johndoe@contoso.com",
@@ -333,7 +333,7 @@ The PrivateEndpointConnection resource accepts the following [input]({{< relref 
 <a href="#privateendpoint_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointproperty">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>DBfor<wbr>Maria<wbr>DB.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Property<wbr>Args</a></span>
+        <span class="property-type"><a href="#privateendpointproperty">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>DBfor<wbr>Maria<wbr>DB..<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Property<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Private endpoint which the connection belongs to.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -342,7 +342,7 @@ The PrivateEndpointConnection resource accepts the following [input]({{< relref 
 <a href="#privatelinkserviceconnectionstate_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkserviceconnectionstateproperty">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>DBfor<wbr>Maria<wbr>DB.<wbr>Inputs.<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Property<wbr>Args</a></span>
+        <span class="property-type"><a href="#privatelinkserviceconnectionstateproperty">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>DBfor<wbr>Maria<wbr>DB..<wbr>Inputs.<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Property<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Connection state of the private endpoint connection.{{% /md %}}</dd>
 </dl>
@@ -1047,7 +1047,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:dbformariadb/latest:PrivateEndpointConnection private-endpoint-connection-name /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default/providers/Microsoft.DBforMariaDB/servers/test-svr/privateEndpointConnections/private-endpoint-connection-name 
+$ pulumi import azure-nextgen:dbformariadb:PrivateEndpointConnection private-endpoint-connection-name /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default/providers/Microsoft.DBforMariaDB/servers/test-svr/privateEndpointConnections/private-endpoint-connection-name 
 ```
 
 

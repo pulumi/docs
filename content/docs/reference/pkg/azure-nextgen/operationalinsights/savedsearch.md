@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.operationalinsights.SavedSearch 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Value object for saved search results.
-Latest API Version: 2020-08-01.
+API Version: 2020-08-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var savedSearch = new AzureNextGen.OperationalInsights.Latest.SavedSearch("savedSearch", new AzureNextGen.OperationalInsights.Latest.SavedSearchArgs
+        var savedSearch = new AzureNextGen.OperationalInsights..SavedSearch("savedSearch", new AzureNextGen.OperationalInsights..SavedSearchArgs
         {
             Category = "Saved Search Test Category",
             DisplayName = "Create or Update Saved Search Test",
@@ -38,7 +38,7 @@ class MyStack : Stack
             SavedSearchId = "00000000-0000-0000-0000-00000000000",
             Tags = 
             {
-                new AzureNextGen.OperationalInsights.Latest.Inputs.TagArgs
+                new AzureNextGen.OperationalInsights..Inputs.TagArgs
                 {
                     Name = "Group",
                     Value = "Computer",
@@ -61,7 +61,7 @@ class MyStack : Stack
 package main
 
 import (
-	operationalinsights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/operationalinsights/latest"
+	operationalinsights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/operationalinsights"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -101,7 +101,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-saved_search = azure_nextgen.operationalinsights.latest.SavedSearch("savedSearch",
+saved_search = azure_nextgen.operationalinsights.SavedSearch("savedSearch",
     category="Saved Search Test Category",
     display_name="Create or Update Saved Search Test",
     function_alias="heartbeat_func",
@@ -109,7 +109,7 @@ saved_search = azure_nextgen.operationalinsights.latest.SavedSearch("savedSearch
     query="Heartbeat | summarize Count() by Computer | take a",
     resource_group_name="TestRG",
     saved_search_id="00000000-0000-0000-0000-00000000000",
-    tags=[azure_nextgen.operationalinsights.latest.TagArgs(
+    tags=[azure_nextgen.operationalinsights.TagArgs(
         name="Group",
         value="Computer",
     )],
@@ -126,7 +126,7 @@ saved_search = azure_nextgen.operationalinsights.latest.SavedSearch("savedSearch
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const savedSearch = new azure_nextgen.operationalinsights.latest.SavedSearch("savedSearch", {
+const savedSearch = new azure_nextgen.operationalinsights.SavedSearch("savedSearch", {
     category: "Saved Search Test Category",
     displayName: "Create or Update Saved Search Test",
     functionAlias: "heartbeat_func",
@@ -416,7 +416,7 @@ The SavedSearch resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tag">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Operational<wbr>Insights.<wbr>Inputs.<wbr>Tag<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#tag">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Operational<wbr>Insights..<wbr>Inputs.<wbr>Tag<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The tags attached to the saved search.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1096,7 +1096,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:operationalinsights/latest:SavedSearch myresource1 subscriptions/00000000-0000-0000-0000-000000000005/resourceGroups/mms-eus/providers/Microsoft.OperationalInsights/workspaces/AtlantisDemo/savedSearches/test-new-saved-search-id-2015 
+$ pulumi import azure-nextgen:operationalinsights:SavedSearch myresource1 subscriptions/00000000-0000-0000-0000-000000000005/resourceGroups/mms-eus/providers/Microsoft.OperationalInsights/workspaces/AtlantisDemo/savedSearches/test-new-saved-search-id-2015 
 ```
 
 

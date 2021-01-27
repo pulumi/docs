@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.recoveryservices.ReplicationReco
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Provider details.
-Latest API Version: 2018-07-10.
+API Version: 2018-07-10.
 
 {{% examples %}}
 ## Example Usage
@@ -27,12 +27,12 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var replicationRecoveryServicesProvider = new AzureNextGen.RecoveryServices.Latest.ReplicationRecoveryServicesProvider("replicationRecoveryServicesProvider", new AzureNextGen.RecoveryServices.Latest.ReplicationRecoveryServicesProviderArgs
+        var replicationRecoveryServicesProvider = new AzureNextGen.RecoveryServices..ReplicationRecoveryServicesProvider("replicationRecoveryServicesProvider", new AzureNextGen.RecoveryServices..ReplicationRecoveryServicesProviderArgs
         {
             FabricName = "vmwarefabric1",
-            Properties = new AzureNextGen.RecoveryServices.Latest.Inputs.AddRecoveryServicesProviderInputPropertiesArgs
+            Properties = new AzureNextGen.RecoveryServices..Inputs.AddRecoveryServicesProviderInputPropertiesArgs
             {
-                AuthenticationIdentityInput = new AzureNextGen.RecoveryServices.Latest.Inputs.IdentityProviderInputArgs
+                AuthenticationIdentityInput = new AzureNextGen.RecoveryServices..Inputs.IdentityProviderInputArgs
                 {
                     AadAuthority = "https://login.microsoftonline.com",
                     ApplicationId = "f66fce08-c0c6-47a1-beeb-0ede5ea94f90",
@@ -41,7 +41,7 @@ class MyStack : Stack
                     TenantId = "72f988bf-86f1-41af-91ab-2d7cd011db47",
                 },
                 MachineName = "vmwareprovider1",
-                ResourceAccessIdentityInput = new AzureNextGen.RecoveryServices.Latest.Inputs.IdentityProviderInputArgs
+                ResourceAccessIdentityInput = new AzureNextGen.RecoveryServices..Inputs.IdentityProviderInputArgs
                 {
                     AadAuthority = "https://login.microsoftonline.com",
                     ApplicationId = "f66fce08-c0c6-47a1-beeb-0ede5ea94f90",
@@ -68,7 +68,7 @@ class MyStack : Stack
 package main
 
 import (
-	recoveryservices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/recoveryservices/latest"
+	recoveryservices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/recoveryservices"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -114,10 +114,10 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-replication_recovery_services_provider = azure_nextgen.recoveryservices.latest.ReplicationRecoveryServicesProvider("replicationRecoveryServicesProvider",
+replication_recovery_services_provider = azure_nextgen.recoveryservices.ReplicationRecoveryServicesProvider("replicationRecoveryServicesProvider",
     fabric_name="vmwarefabric1",
-    properties=azure_nextgen.recoveryservices.latest.AddRecoveryServicesProviderInputPropertiesArgs(
-        authentication_identity_input=azure_nextgen.recoveryservices.latest.IdentityProviderInputArgs(
+    properties=azure_nextgen.recoveryservices.AddRecoveryServicesProviderInputPropertiesArgs(
+        authentication_identity_input=azure_nextgen.recoveryservices.IdentityProviderInputArgs(
             aad_authority="https://login.microsoftonline.com",
             application_id="f66fce08-c0c6-47a1-beeb-0ede5ea94f90",
             audience="https://microsoft.onmicrosoft.com/cf19e349-644c-4c6a-bcae-9c8f35357874",
@@ -125,7 +125,7 @@ replication_recovery_services_provider = azure_nextgen.recoveryservices.latest.R
             tenant_id="72f988bf-86f1-41af-91ab-2d7cd011db47",
         ),
         machine_name="vmwareprovider1",
-        resource_access_identity_input=azure_nextgen.recoveryservices.latest.IdentityProviderInputArgs(
+        resource_access_identity_input=azure_nextgen.recoveryservices.IdentityProviderInputArgs(
             aad_authority="https://login.microsoftonline.com",
             application_id="f66fce08-c0c6-47a1-beeb-0ede5ea94f90",
             audience="https://microsoft.onmicrosoft.com/cf19e349-644c-4c6a-bcae-9c8f35357874",
@@ -147,7 +147,7 @@ replication_recovery_services_provider = azure_nextgen.recoveryservices.latest.R
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const replicationRecoveryServicesProvider = new azure_nextgen.recoveryservices.latest.ReplicationRecoveryServicesProvider("replicationRecoveryServicesProvider", {
+const replicationRecoveryServicesProvider = new azure_nextgen.recoveryservices.ReplicationRecoveryServicesProvider("replicationRecoveryServicesProvider", {
     fabricName: "vmwarefabric1",
     properties: {
         authenticationIdentityInput: {
@@ -373,7 +373,7 @@ The ReplicationRecoveryServicesProvider resource accepts the following [input]({
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#addrecoveryservicesproviderinputproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Add<wbr>Recovery<wbr>Services<wbr>Provider<wbr>Input<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#addrecoveryservicesproviderinputproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Add<wbr>Recovery<wbr>Services<wbr>Provider<wbr>Input<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The properties of an add provider request.{{% /md %}}</dd>
     <dt class="property-required"
@@ -755,7 +755,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authenticationidentityinput_csharp" style="color: inherit; text-decoration: inherit;">Authentication<wbr>Identity<wbr>Input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identityproviderinput">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Identity<wbr>Provider<wbr>Input<wbr>Args</a></span>
+        <span class="property-type"><a href="#identityproviderinput">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Identity<wbr>Provider<wbr>Input<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The identity provider input for DRA authentication.{{% /md %}}</dd>
     <dt class="property-required"
@@ -773,7 +773,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resourceaccessidentityinput_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Access<wbr>Identity<wbr>Input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identityproviderinput">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Identity<wbr>Provider<wbr>Input<wbr>Args</a></span>
+        <span class="property-type"><a href="#identityproviderinput">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Identity<wbr>Provider<wbr>Input<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The identity provider input for resource access.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -782,7 +782,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dataplaneauthenticationidentityinput_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Plane<wbr>Authentication<wbr>Identity<wbr>Input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identityproviderinput">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Identity<wbr>Provider<wbr>Input<wbr>Args</a></span>
+        <span class="property-type"><a href="#identityproviderinput">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Identity<wbr>Provider<wbr>Input<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The identity provider input for data plane authentication.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1051,7 +1051,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#innerhealtherrors_csharp" style="color: inherit; text-decoration: inherit;">Inner<wbr>Health<wbr>Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#innerhealtherrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Inner<wbr>Health<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#innerhealtherrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Inner<wbr>Health<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The inner health errors. HealthError having a list of HealthError as child errors is problematic. InnerHealthError is used because this will prevent an infinite loop of structures when Hydra tries to auto-generate the contract. We are exposing the related health errors as inner health errors and all API consumers can utilize this in the same fashion as Exception -&gt; InnerException.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2406,7 +2406,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authenticationidentitydetails_csharp" style="color: inherit; text-decoration: inherit;">Authentication<wbr>Identity<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identityproviderdetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Identity<wbr>Provider<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#identityproviderdetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Identity<wbr>Provider<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The authentication identity details.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2460,7 +2460,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#healtherrordetails_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>Error<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healtherrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Health<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#healtherrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Health<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The recovery services provider health error details.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2496,7 +2496,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#providerversiondetails_csharp" style="color: inherit; text-decoration: inherit;">Provider<wbr>Version<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#versiondetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Version<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#versiondetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Version<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The provider version details.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2523,7 +2523,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resourceaccessidentitydetails_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Access<wbr>Identity<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identityproviderdetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Identity<wbr>Provider<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#identityproviderdetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Identity<wbr>Provider<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The resource access identity details.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3127,7 +3127,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:recoveryservices/latest:ReplicationRecoveryServicesProvider vmwareprovider1 /Subscriptions/cb53d0c3-bd59-4721-89bc-06916a9147ef/resourceGroups/resourcegroup1/providers/Microsoft.RecoveryServices/vaults/migrationvault/replicationFabrics/vmwarefabric1/replicationRecoveryServicesProviders/vmwareprovider1 
+$ pulumi import azure-nextgen:recoveryservices:ReplicationRecoveryServicesProvider vmwareprovider1 /Subscriptions/cb53d0c3-bd59-4721-89bc-06916a9147ef/resourceGroups/resourcegroup1/providers/Microsoft.RecoveryServices/vaults/migrationvault/replicationFabrics/vmwarefabric1/replicationRecoveryServicesProviders/vmwareprovider1 
 ```
 
 

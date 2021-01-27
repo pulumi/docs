@@ -278,7 +278,7 @@ The following output properties are available:
 <a href="#firewallrules_csharp" style="color: inherit; text-decoration: inherit;">Firewall<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Blockchain.<wbr>Outputs.<wbr>Firewall<wbr>Rule<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#firewallruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Blockchain..<wbr>Outputs.<wbr>Firewall<wbr>Rule<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets firewall rules{{% /md %}}</dd>
     <dt class="property-"
@@ -314,7 +314,7 @@ The following output properties are available:
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skuresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Blockchain.<wbr>Outputs.<wbr>Sku<wbr>Response</a></span>
+        <span class="property-type"><a href="#skuresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Blockchain..<wbr>Outputs.<wbr>Sku<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the blockchain member Sku.{{% /md %}}</dd>
     <dt class="property-"
@@ -332,7 +332,7 @@ The following output properties are available:
 <a href="#validatornodessku_csharp" style="color: inherit; text-decoration: inherit;">Validator<wbr>Nodes<wbr>Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#blockchainmembernodesskuresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Blockchain.<wbr>Outputs.<wbr>Blockchain<wbr>Member<wbr>Nodes<wbr>Sku<wbr>Response</a></span>
+        <span class="property-type"><a href="#blockchainmembernodesskuresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Blockchain..<wbr>Outputs.<wbr>Blockchain<wbr>Member<wbr>Nodes<wbr>Sku<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the blockchain validator nodes Sku.{{% /md %}}</dd>
 </dl>

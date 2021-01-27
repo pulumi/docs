@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.insights.DataCollectionRuleAssoc
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Definition of generic ARM proxy resource.
+API Version: 2019-11-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var dataCollectionRuleAssociation = new AzureNextGen.Insights.V20191101Preview.DataCollectionRuleAssociation("dataCollectionRuleAssociation", new AzureNextGen.Insights.V20191101Preview.DataCollectionRuleAssociationArgs
+        var dataCollectionRuleAssociation = new AzureNextGen.Insights..DataCollectionRuleAssociation("dataCollectionRuleAssociation", new AzureNextGen.Insights..DataCollectionRuleAssociationArgs
         {
             AssociationName = "myAssociation",
             DataCollectionRuleId = "/subscriptions/703362b3-f278-4e4b-9179-c76eaf41ffc2/resourceGroups/myResourceGroup/providers/Microsoft.Insights/dataCollectionRules/myCollectionRule",
@@ -46,7 +47,7 @@ class MyStack : Stack
 package main
 
 import (
-	insights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/insights/v20191101preview"
+	insights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/insights"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -74,7 +75,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-data_collection_rule_association = azure_nextgen.insights.v20191101preview.DataCollectionRuleAssociation("dataCollectionRuleAssociation",
+data_collection_rule_association = azure_nextgen.insights.DataCollectionRuleAssociation("dataCollectionRuleAssociation",
     association_name="myAssociation",
     data_collection_rule_id="/subscriptions/703362b3-f278-4e4b-9179-c76eaf41ffc2/resourceGroups/myResourceGroup/providers/Microsoft.Insights/dataCollectionRules/myCollectionRule",
     resource_uri="subscriptions/703362b3-f278-4e4b-9179-c76eaf41ffc2/resourceGroups/myResourceGroup/providers/Microsoft.Compute/virtualMachines/myVm")
@@ -89,7 +90,7 @@ data_collection_rule_association = azure_nextgen.insights.v20191101preview.DataC
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const dataCollectionRuleAssociation = new azure_nextgen.insights.v20191101preview.DataCollectionRuleAssociation("dataCollectionRuleAssociation", {
+const dataCollectionRuleAssociation = new azure_nextgen.insights.DataCollectionRuleAssociation("dataCollectionRuleAssociation", {
     associationName: "myAssociation",
     dataCollectionRuleId: "/subscriptions/703362b3-f278-4e4b-9179-c76eaf41ffc2/resourceGroups/myResourceGroup/providers/Microsoft.Insights/dataCollectionRules/myCollectionRule",
     resourceUri: "subscriptions/703362b3-f278-4e4b-9179-c76eaf41ffc2/resourceGroups/myResourceGroup/providers/Microsoft.Compute/virtualMachines/myVm",
@@ -669,7 +670,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:insights/v20191101preview:DataCollectionRuleAssociation myAssociation /subscriptions/703362b3-f278-4e4b-9179-c76eaf41ffc2/resourceGroups/myResourceGroup/providers/Microsoft.Compute/virtualMachines/myVm/providers/Microsoft.Insights/dataCollectionRuleAssociations/myAssociation 
+$ pulumi import azure-nextgen:insights:DataCollectionRuleAssociation myAssociation /subscriptions/703362b3-f278-4e4b-9179-c76eaf41ffc2/resourceGroups/myResourceGroup/providers/Microsoft.Compute/virtualMachines/myVm/providers/Microsoft.Insights/dataCollectionRuleAssociations/myAssociation 
 ```
 
 

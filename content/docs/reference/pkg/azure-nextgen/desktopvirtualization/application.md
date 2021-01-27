@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.desktopvirtualization.Applicatio
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Schema for Application properties.
+API Version: 2021-01-14-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var application = new AzureNextGen.DesktopVirtualization.V20201110Preview.Application("application", new AzureNextGen.DesktopVirtualization.V20201110Preview.ApplicationArgs
+        var application = new AzureNextGen.DesktopVirtualization..Application("application", new AzureNextGen.DesktopVirtualization..ApplicationArgs
         {
             ApplicationGroupName = "applicationGroup1",
             ApplicationName = "application1",
@@ -54,7 +55,7 @@ class MyStack : Stack
 package main
 
 import (
-	desktopvirtualization "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/desktopvirtualization/v20201110preview"
+	desktopvirtualization "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/desktopvirtualization"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -90,7 +91,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-application = azure_nextgen.desktopvirtualization.v20201110preview.Application("application",
+application = azure_nextgen.desktopvirtualization.Application("application",
     application_group_name="applicationGroup1",
     application_name="application1",
     command_line_arguments="arguments",
@@ -113,7 +114,7 @@ application = azure_nextgen.desktopvirtualization.v20201110preview.Application("
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const application = new azure_nextgen.desktopvirtualization.v20201110preview.Application("application", {
+const application = new azure_nextgen.desktopvirtualization.Application("application", {
     applicationGroupName: "applicationGroup1",
     applicationName: "application1",
     commandLineArguments: "arguments",
@@ -338,7 +339,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#commandlinesetting_csharp" style="color: inherit; text-decoration: inherit;">Command<wbr>Line<wbr>Setting</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#commandlinesetting">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Desktop<wbr>Virtualization.<wbr>Command<wbr>Line<wbr>Setting</a></span>
+        <span class="property-type">string | <a href="#commandlinesetting">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Desktop<wbr>Virtualization..<wbr>Command<wbr>Line<wbr>Setting</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether this published application can be launched with command line arguments provided by the client, command line arguments specified at publish time, or no command line arguments at all.{{% /md %}}</dd>
     <dt class="property-required"
@@ -356,7 +357,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#applicationtype_csharp" style="color: inherit; text-decoration: inherit;">Application<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#remoteapplicationtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Desktop<wbr>Virtualization.<wbr>Remote<wbr>Application<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#remoteapplicationtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Desktop<wbr>Virtualization..<wbr>Remote<wbr>Application<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Resource Type of Application.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1149,7 +1150,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:desktopvirtualization/v20201110preview:Application applicationGroup1/application1 /subscriptions/daefabc0-95b4-48b3-b645-8a753a63c4fa/resourceGroups/resourceGroup1/providers/Microsoft.DesktopVirtualization/applicationGroups/applicationGroup1/applications/application1 
+$ pulumi import azure-nextgen:desktopvirtualization:Application applicationGroup1/application1 /subscriptions/daefabc0-95b4-48b3-b645-8a753a63c4fa/resourceGroups/resourceGroup1/providers/Microsoft.DesktopVirtualization/applicationGroups/applicationGroup1/applications/application1 
 ```
 
 

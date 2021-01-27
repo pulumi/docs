@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.cache.Redis resource with exampl
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 A single Redis item in List or Get Operation.
-Latest API Version: 2020-06-01.
+API Version: 2020-06-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var redis = new AzureNextGen.Cache.Latest.Redis("redis", new AzureNextGen.Cache.Latest.RedisArgs
+        var redis = new AzureNextGen.Cache..Redis("redis", new AzureNextGen.Cache..RedisArgs
         {
             EnableNonSslPort = true,
             Location = "West US",
@@ -40,10 +40,9 @@ class MyStack : Stack
             ReplicasPerMaster = 2,
             ResourceGroupName = "rg1",
             ShardCount = 2,
-            Sku = new AzureNextGen.Cache.Latest.Inputs.SkuArgs
+            Sku = new AzureNextGen.Cache..Inputs.SkuArgs
             {
                 Capacity = 1,
-                Family = "P",
                 Name = "Premium",
             },
             StaticIP = "192.168.0.5",
@@ -67,7 +66,7 @@ class MyStack : Stack
 package main
 
 import (
-	cache "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/cache/latest"
+	cache "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/cache"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -86,7 +85,6 @@ func main() {
 			ShardCount:        pulumi.Int(2),
 			Sku: &cache.SkuArgs{
 				Capacity: pulumi.Int(1),
-				Family:   pulumi.String("P"),
 				Name:     pulumi.String("Premium"),
 			},
 			StaticIP: pulumi.String("192.168.0.5"),
@@ -112,7 +110,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-redis = azure_nextgen.cache.latest.Redis("redis",
+redis = azure_nextgen.cache.Redis("redis",
     enable_non_ssl_port=True,
     location="West US",
     minimum_tls_version="1.2",
@@ -123,9 +121,8 @@ redis = azure_nextgen.cache.latest.Redis("redis",
     replicas_per_master=2,
     resource_group_name="rg1",
     shard_count=2,
-    sku=azure_nextgen.cache.latest.SkuArgs(
+    sku=azure_nextgen.cache.SkuArgs(
         capacity=1,
-        family="P",
         name="Premium",
     ),
     static_ip="192.168.0.5",
@@ -142,7 +139,7 @@ redis = azure_nextgen.cache.latest.Redis("redis",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const redis = new azure_nextgen.cache.latest.Redis("redis", {
+const redis = new azure_nextgen.cache.Redis("redis", {
     enableNonSslPort: true,
     location: "West US",
     minimumTlsVersion: "1.2",
@@ -155,7 +152,6 @@ const redis = new azure_nextgen.cache.latest.Redis("redis", {
     shardCount: 2,
     sku: {
         capacity: 1,
-        family: "P",
         name: "Premium",
     },
     staticIP: "192.168.0.5",
@@ -383,7 +379,7 @@ The Redis resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sku">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cache.<wbr>Inputs.<wbr>Sku<wbr>Args</a></span>
+        <span class="property-type"><a href="#sku">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cache..<wbr>Inputs.<wbr>Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The SKU of the Redis cache to deploy.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -401,7 +397,7 @@ The Redis resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#minimumtlsversion_csharp" style="color: inherit; text-decoration: inherit;">Minimum<wbr>Tls<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#tlsversion">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cache.<wbr>Tls<wbr>Version</a></span>
+        <span class="property-type">string | <a href="#tlsversion">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cache..<wbr>Tls<wbr>Version</a></span>
     </dt>
     <dd>{{% md %}}Optional: requires clients to use a specified TLS version (or higher) to connect (e,g, '1.0', '1.1', '1.2'){{% /md %}}</dd>
     <dt class="property-optional"
@@ -410,7 +406,7 @@ The Redis resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#publicnetworkaccess_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Network<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#publicnetworkaccess">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cache.<wbr>Public<wbr>Network<wbr>Access</a></span>
+        <span class="property-type">string | <a href="#publicnetworkaccess">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cache..<wbr>Public<wbr>Network<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}Whether or not public endpoint access is allowed for this cache.  Value is optional but if passed in, must be 'Enabled' or 'Disabled'. If 'Disabled', private endpoints are the exclusive access method. Default value is 'Enabled'{{% /md %}}</dd>
     <dt class="property-optional"
@@ -927,7 +923,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accesskeys_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#redisaccesskeysresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cache.<wbr>Outputs.<wbr>Redis<wbr>Access<wbr>Keys<wbr>Response</a></span>
+        <span class="property-type"><a href="#redisaccesskeysresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cache..<wbr>Outputs.<wbr>Redis<wbr>Access<wbr>Keys<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The keys of the Redis cache - not set if this object is not the response to Create or Update redis cache{{% /md %}}</dd>
     <dt class="property-"
@@ -954,7 +950,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#instances_csharp" style="color: inherit; text-decoration: inherit;">Instances</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#redisinstancedetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cache.<wbr>Outputs.<wbr>Redis<wbr>Instance<wbr>Details<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#redisinstancedetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cache..<wbr>Outputs.<wbr>Redis<wbr>Instance<wbr>Details<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of the Redis instances associated with the cache{{% /md %}}</dd>
     <dt class="property-"
@@ -963,7 +959,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linkedservers_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Servers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#redislinkedserverresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cache.<wbr>Outputs.<wbr>Redis<wbr>Linked<wbr>Server<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#redislinkedserverresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cache..<wbr>Outputs.<wbr>Redis<wbr>Linked<wbr>Server<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of the linked servers associated with the cache{{% /md %}}</dd>
     <dt class="property-"
@@ -981,7 +977,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privateendpointconnections_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint<wbr>Connections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointconnectionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cache.<wbr>Outputs.<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#privateendpointconnectionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cache..<wbr>Outputs.<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of private endpoint connection associated with the specified redis cache{{% /md %}}</dd>
     <dt class="property-"
@@ -1377,7 +1373,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privatelinkserviceconnectionstate_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cache.<wbr>Inputs.<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cache..<wbr>Inputs.<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A collection of information about the state of the connection between service consumer and provider.{{% /md %}}</dd>
     <dt class="property-required"
@@ -1404,7 +1400,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privateendpoint_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cache.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#privateendpointresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cache..<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The resource of private end point.{{% /md %}}</dd>
 </dl>
@@ -2197,55 +2193,28 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#skuname">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cache..<wbr>Sku<wbr>Name</a></span>
+    </dt>
+    <dd>{{% md %}}The type of RedisEnterprise cluster to deploy. Possible values: (Enterprise_E10, EnterpriseFlash_F300 etc.){{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="capacity_csharp">
 <a href="#capacity_csharp" style="color: inherit; text-decoration: inherit;">Capacity</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The size of the Redis cache to deploy. Valid values: for C (Basic/Standard) family (0, 1, 2, 3, 4, 5, 6), for P (Premium) family (1, 2, 3, 4).{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="family_csharp">
-<a href="#family_csharp" style="color: inherit; text-decoration: inherit;">Family</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#skufamily">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cache.<wbr>Sku<wbr>Family</a></span>
-    </dt>
-    <dd>{{% md %}}The SKU family to use. Valid values: (C, P). (C = Basic/Standard, P = Premium).{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="name_csharp">
-<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#skuname">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cache.<wbr>Sku<wbr>Name</a></span>
-    </dt>
-    <dd>{{% md %}}The type of Redis cache to deploy. Valid values: (Basic, Standard, Premium){{% /md %}}</dd>
+    <dd>{{% md %}}The size of the RedisEnterprise cluster. Defaults to 2 or 3 depending on SKU. Valid values are (2, 4, 6, ...) for Enterprise SKUs and (3, 9, 15, ...) for Flash SKUs.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
-        <span id="capacity_go">
-<a href="#capacity_go" style="color: inherit; text-decoration: inherit;">Capacity</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The size of the Redis cache to deploy. Valid values: for C (Basic/Standard) family (0, 1, 2, 3, 4, 5, 6), for P (Premium) family (1, 2, 3, 4).{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="family_go">
-<a href="#family_go" style="color: inherit; text-decoration: inherit;">Family</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#skufamily">Sku<wbr>Family</a></span>
-    </dt>
-    <dd>{{% md %}}The SKU family to use. Valid values: (C, P). (C = Basic/Standard, P = Premium).{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="name_go">
@@ -2254,31 +2223,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#skuname">Sku<wbr>Name</a></span>
     </dt>
-    <dd>{{% md %}}The type of Redis cache to deploy. Valid values: (Basic, Standard, Premium){{% /md %}}</dd>
+    <dd>{{% md %}}The type of RedisEnterprise cluster to deploy. Possible values: (Enterprise_E10, EnterpriseFlash_F300 etc.){{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="capacity_go">
+<a href="#capacity_go" style="color: inherit; text-decoration: inherit;">Capacity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The size of the RedisEnterprise cluster. Defaults to 2 or 3 depending on SKU. Valid values are (2, 4, 6, ...) for Enterprise SKUs and (3, 9, 15, ...) for Flash SKUs.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
-        <span id="capacity_nodejs">
-<a href="#capacity_nodejs" style="color: inherit; text-decoration: inherit;">capacity</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}The size of the Redis cache to deploy. Valid values: for C (Basic/Standard) family (0, 1, 2, 3, 4, 5, 6), for P (Premium) family (1, 2, 3, 4).{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="family_nodejs">
-<a href="#family_nodejs" style="color: inherit; text-decoration: inherit;">family</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#skufamily">Sku<wbr>Family</a></span>
-    </dt>
-    <dd>{{% md %}}The SKU family to use. Valid values: (C, P). (C = Basic/Standard, P = Premium).{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="name_nodejs">
@@ -2287,7 +2247,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#skuname">Sku<wbr>Name</a></span>
     </dt>
-    <dd>{{% md %}}The type of Redis cache to deploy. Valid values: (Basic, Standard, Premium){{% /md %}}</dd>
+    <dd>{{% md %}}The type of RedisEnterprise cluster to deploy. Possible values: (Enterprise_E10, EnterpriseFlash_F300 etc.){{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="capacity_nodejs">
+<a href="#capacity_nodejs" style="color: inherit; text-decoration: inherit;">capacity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The size of the RedisEnterprise cluster. Defaults to 2 or 3 depending on SKU. Valid values are (2, 4, 6, ...) for Enterprise SKUs and (3, 9, 15, ...) for Flash SKUs.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -2296,69 +2265,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="capacity_python">
-<a href="#capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The size of the Redis cache to deploy. Valid values: for C (Basic/Standard) family (0, 1, 2, 3, 4, 5, 6), for P (Premium) family (1, 2, 3, 4).{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="family_python">
-<a href="#family_python" style="color: inherit; text-decoration: inherit;">family</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#skufamily">Sku<wbr>Family</a></span>
-    </dt>
-    <dd>{{% md %}}The SKU family to use. Valid values: (C, P). (C = Basic/Standard, P = Premium).{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#skuname">Sku<wbr>Name</a></span>
     </dt>
-    <dd>{{% md %}}The type of Redis cache to deploy. Valid values: (Basic, Standard, Premium){{% /md %}}</dd>
-</dl>
-{{% /choosable %}}
-
-<h4 id="skufamily">Sku<wbr>Family</h4>
-
-{{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>C</dt>
-    <dd>C</dd>
-    <dt>P</dt>
-    <dd>P</dd>
-</dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="tabular">
-    <dt>Sku<wbr>Family<wbr>C</dt>
-    <dd>C</dd>
-    <dt>Sku<wbr>Family<wbr>P</dt>
-    <dd>P</dd>
-</dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>C</dt>
-    <dd>C</dd>
-    <dt>P</dt>
-    <dd>P</dd>
-</dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="tabular">
-    <dt>C</dt>
-    <dd>C</dd>
-    <dt>P</dt>
-    <dd>P</dd>
+    <dd>{{% md %}}The type of RedisEnterprise cluster to deploy. Possible values: (Enterprise_E10, EnterpriseFlash_F300 etc.){{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="capacity_python">
+<a href="#capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The size of the RedisEnterprise cluster. Defaults to 2 or 3 depending on SKU. Valid values are (2, 4, 6, ...) for Enterprise SKUs and (3, 9, 15, ...) for Flash SKUs.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -2366,45 +2288,77 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language csharp %}}
 <dl class="tabular">
-    <dt>Basic</dt>
-    <dd>Basic</dd>
-    <dt>Standard</dt>
-    <dd>Standard</dd>
-    <dt>Premium</dt>
-    <dd>Premium</dd>
+    <dt>Enterprise_E10</dt>
+    <dd>Enterprise_E10</dd>
+    <dt>Enterprise_E20</dt>
+    <dd>Enterprise_E20</dd>
+    <dt>Enterprise_E50</dt>
+    <dd>Enterprise_E50</dd>
+    <dt>Enterprise_E100</dt>
+    <dd>Enterprise_E100</dd>
+    <dt>Enterprise<wbr>Flash_F300</dt>
+    <dd>EnterpriseFlash_F300</dd>
+    <dt>Enterprise<wbr>Flash_F700</dt>
+    <dd>EnterpriseFlash_F700</dd>
+    <dt>Enterprise<wbr>Flash_F1500</dt>
+    <dd>EnterpriseFlash_F1500</dd>
 </dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
 <dl class="tabular">
-    <dt>Sku<wbr>Name<wbr>Basic</dt>
-    <dd>Basic</dd>
-    <dt>Sku<wbr>Name<wbr>Standard</dt>
-    <dd>Standard</dd>
-    <dt>Sku<wbr>Name<wbr>Premium</dt>
-    <dd>Premium</dd>
+    <dt>Sku<wbr>Name_Enterprise_E10</dt>
+    <dd>Enterprise_E10</dd>
+    <dt>Sku<wbr>Name_Enterprise_E20</dt>
+    <dd>Enterprise_E20</dd>
+    <dt>Sku<wbr>Name_Enterprise_E50</dt>
+    <dd>Enterprise_E50</dd>
+    <dt>Sku<wbr>Name_Enterprise_E100</dt>
+    <dd>Enterprise_E100</dd>
+    <dt>Sku<wbr>Name_Enterprise<wbr>Flash_F300</dt>
+    <dd>EnterpriseFlash_F300</dd>
+    <dt>Sku<wbr>Name_Enterprise<wbr>Flash_F700</dt>
+    <dd>EnterpriseFlash_F700</dd>
+    <dt>Sku<wbr>Name_Enterprise<wbr>Flash_F1500</dt>
+    <dd>EnterpriseFlash_F1500</dd>
 </dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
 <dl class="tabular">
-    <dt>Basic</dt>
-    <dd>Basic</dd>
-    <dt>Standard</dt>
-    <dd>Standard</dd>
-    <dt>Premium</dt>
-    <dd>Premium</dd>
+    <dt>Enterprise_E10</dt>
+    <dd>Enterprise_E10</dd>
+    <dt>Enterprise_E20</dt>
+    <dd>Enterprise_E20</dd>
+    <dt>Enterprise_E50</dt>
+    <dd>Enterprise_E50</dd>
+    <dt>Enterprise_E100</dt>
+    <dd>Enterprise_E100</dd>
+    <dt>Enterprise<wbr>Flash_F300</dt>
+    <dd>EnterpriseFlash_F300</dd>
+    <dt>Enterprise<wbr>Flash_F700</dt>
+    <dd>EnterpriseFlash_F700</dd>
+    <dt>Enterprise<wbr>Flash_F1500</dt>
+    <dd>EnterpriseFlash_F1500</dd>
 </dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <dl class="tabular">
-    <dt>BASIC</dt>
-    <dd>Basic</dd>
-    <dt>STANDARD</dt>
-    <dd>Standard</dd>
-    <dt>PREMIUM</dt>
-    <dd>Premium</dd>
+    <dt>ENTERPRISE_E10</dt>
+    <dd>Enterprise_E10</dd>
+    <dt>ENTERPRISE_E20</dt>
+    <dd>Enterprise_E20</dd>
+    <dt>ENTERPRISE_E50</dt>
+    <dd>Enterprise_E50</dd>
+    <dt>ENTERPRISE_E100</dt>
+    <dd>Enterprise_E100</dd>
+    <dt>ENTERPRISE_FLASH_F300</dt>
+    <dd>EnterpriseFlash_F300</dd>
+    <dt>ENTERPRISE_FLASH_F700</dt>
+    <dd>EnterpriseFlash_F700</dd>
+    <dt>ENTERPRISE_FLASH_F1500</dt>
+    <dd>EnterpriseFlash_F1500</dd>
 </dl>
 {{% /choosable %}}
 
@@ -2415,31 +2369,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="capacity_csharp">
-<a href="#capacity_csharp" style="color: inherit; text-decoration: inherit;">Capacity</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The size of the Redis cache to deploy. Valid values: for C (Basic/Standard) family (0, 1, 2, 3, 4, 5, 6), for P (Premium) family (1, 2, 3, 4).{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="family_csharp">
-<a href="#family_csharp" style="color: inherit; text-decoration: inherit;">Family</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The SKU family to use. Valid values: (C, P). (C = Basic/Standard, P = Premium).{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of Redis cache to deploy. Valid values: (Basic, Standard, Premium){{% /md %}}</dd>
+    <dd>{{% md %}}The type of RedisEnterprise cluster to deploy. Possible values: (Enterprise_E10, EnterpriseFlash_F300 etc.){{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="capacity_csharp">
+<a href="#capacity_csharp" style="color: inherit; text-decoration: inherit;">Capacity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The size of the RedisEnterprise cluster. Defaults to 2 or 3 depending on SKU. Valid values are (2, 4, 6, ...) for Enterprise SKUs and (3, 9, 15, ...) for Flash SKUs.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -2448,31 +2393,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="capacity_go">
-<a href="#capacity_go" style="color: inherit; text-decoration: inherit;">Capacity</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The size of the Redis cache to deploy. Valid values: for C (Basic/Standard) family (0, 1, 2, 3, 4, 5, 6), for P (Premium) family (1, 2, 3, 4).{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="family_go">
-<a href="#family_go" style="color: inherit; text-decoration: inherit;">Family</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The SKU family to use. Valid values: (C, P). (C = Basic/Standard, P = Premium).{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of Redis cache to deploy. Valid values: (Basic, Standard, Premium){{% /md %}}</dd>
+    <dd>{{% md %}}The type of RedisEnterprise cluster to deploy. Possible values: (Enterprise_E10, EnterpriseFlash_F300 etc.){{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="capacity_go">
+<a href="#capacity_go" style="color: inherit; text-decoration: inherit;">Capacity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The size of the RedisEnterprise cluster. Defaults to 2 or 3 depending on SKU. Valid values are (2, 4, 6, ...) for Enterprise SKUs and (3, 9, 15, ...) for Flash SKUs.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -2481,31 +2417,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="capacity_nodejs">
-<a href="#capacity_nodejs" style="color: inherit; text-decoration: inherit;">capacity</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}The size of the Redis cache to deploy. Valid values: for C (Basic/Standard) family (0, 1, 2, 3, 4, 5, 6), for P (Premium) family (1, 2, 3, 4).{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="family_nodejs">
-<a href="#family_nodejs" style="color: inherit; text-decoration: inherit;">family</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The SKU family to use. Valid values: (C, P). (C = Basic/Standard, P = Premium).{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of Redis cache to deploy. Valid values: (Basic, Standard, Premium){{% /md %}}</dd>
+    <dd>{{% md %}}The type of RedisEnterprise cluster to deploy. Possible values: (Enterprise_E10, EnterpriseFlash_F300 etc.){{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="capacity_nodejs">
+<a href="#capacity_nodejs" style="color: inherit; text-decoration: inherit;">capacity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The size of the RedisEnterprise cluster. Defaults to 2 or 3 depending on SKU. Valid values are (2, 4, 6, ...) for Enterprise SKUs and (3, 9, 15, ...) for Flash SKUs.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -2514,31 +2441,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="capacity_python">
-<a href="#capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The size of the Redis cache to deploy. Valid values: for C (Basic/Standard) family (0, 1, 2, 3, 4, 5, 6), for P (Premium) family (1, 2, 3, 4).{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="family_python">
-<a href="#family_python" style="color: inherit; text-decoration: inherit;">family</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The SKU family to use. Valid values: (C, P). (C = Basic/Standard, P = Premium).{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of Redis cache to deploy. Valid values: (Basic, Standard, Premium){{% /md %}}</dd>
+    <dd>{{% md %}}The type of RedisEnterprise cluster to deploy. Possible values: (Enterprise_E10, EnterpriseFlash_F300 etc.){{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="capacity_python">
+<a href="#capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The size of the RedisEnterprise cluster. Defaults to 2 or 3 depending on SKU. Valid values are (2, 4, 6, ...) for Enterprise SKUs and (3, 9, 15, ...) for Flash SKUs.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -2593,7 +2511,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:cache/latest:Redis cache1 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Cache/Redis/cache1 
+$ pulumi import azure-nextgen:cache:Redis cache1 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Cache/Redis/cache1 
 ```
 
 

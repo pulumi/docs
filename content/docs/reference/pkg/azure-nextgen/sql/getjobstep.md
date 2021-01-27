@@ -269,7 +269,7 @@ The following output properties are available:
 <a href="#action_csharp" style="color: inherit; text-decoration: inherit;">Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobstepactionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql.<wbr>Outputs.<wbr>Job<wbr>Step<wbr>Action<wbr>Response</a></span>
+        <span class="property-type"><a href="#jobstepactionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql..<wbr>Outputs.<wbr>Job<wbr>Step<wbr>Action<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The action payload of the job step.{{% /md %}}</dd>
     <dt class="property-"
@@ -323,7 +323,7 @@ The following output properties are available:
 <a href="#executionoptions_csharp" style="color: inherit; text-decoration: inherit;">Execution<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobstepexecutionoptionsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql.<wbr>Outputs.<wbr>Job<wbr>Step<wbr>Execution<wbr>Options<wbr>Response</a></span>
+        <span class="property-type"><a href="#jobstepexecutionoptionsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql..<wbr>Outputs.<wbr>Job<wbr>Step<wbr>Execution<wbr>Options<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Execution options for the job step.{{% /md %}}</dd>
     <dt class="property-"
@@ -332,7 +332,7 @@ The following output properties are available:
 <a href="#output_csharp" style="color: inherit; text-decoration: inherit;">Output</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobstepoutputresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql.<wbr>Outputs.<wbr>Job<wbr>Step<wbr>Output<wbr>Response</a></span>
+        <span class="property-type"><a href="#jobstepoutputresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql..<wbr>Outputs.<wbr>Job<wbr>Step<wbr>Output<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Output destination properties of the job step.{{% /md %}}</dd>
     <dt class="property-"

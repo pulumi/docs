@@ -260,7 +260,7 @@ The following output properties are available:
 <a href="#wsfcdomainprofile_csharp" style="color: inherit; text-decoration: inherit;">Wsfc<wbr>Domain<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#wsfcdomainprofileresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql<wbr>Virtual<wbr>Machine.<wbr>Outputs.<wbr>Wsfc<wbr>Domain<wbr>Profile<wbr>Response</a></span>
+        <span class="property-type"><a href="#wsfcdomainprofileresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql<wbr>Virtual<wbr>Machine..<wbr>Outputs.<wbr>Wsfc<wbr>Domain<wbr>Profile<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Cluster Active Directory domain profile.{{% /md %}}</dd>
 </dl>

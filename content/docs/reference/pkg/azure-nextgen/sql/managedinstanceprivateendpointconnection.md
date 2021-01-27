@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.sql.ManagedInstancePrivateEndpoi
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 A private endpoint connection
+API Version: 2020-08-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,11 +27,11 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var managedInstancePrivateEndpointConnection = new AzureNextGen.Sql.V20200801Preview.ManagedInstancePrivateEndpointConnection("managedInstancePrivateEndpointConnection", new AzureNextGen.Sql.V20200801Preview.ManagedInstancePrivateEndpointConnectionArgs
+        var managedInstancePrivateEndpointConnection = new AzureNextGen.Sql..ManagedInstancePrivateEndpointConnection("managedInstancePrivateEndpointConnection", new AzureNextGen.Sql..ManagedInstancePrivateEndpointConnectionArgs
         {
             ManagedInstanceName = "test-cl",
             PrivateEndpointConnectionName = "private-endpoint-connection-name",
-            PrivateLinkServiceConnectionState = new AzureNextGen.Sql.V20200801Preview.Inputs.ManagedInstancePrivateLinkServiceConnectionStatePropertyArgs
+            PrivateLinkServiceConnectionState = new AzureNextGen.Sql..Inputs.ManagedInstancePrivateLinkServiceConnectionStatePropertyArgs
             {
                 Description = "Approved by johndoe@contoso.com",
                 Status = "Approved",
@@ -51,7 +52,7 @@ class MyStack : Stack
 package main
 
 import (
-	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql/v20200801preview"
+	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -83,10 +84,10 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-managed_instance_private_endpoint_connection = azure_nextgen.sql.v20200801preview.ManagedInstancePrivateEndpointConnection("managedInstancePrivateEndpointConnection",
+managed_instance_private_endpoint_connection = azure_nextgen.sql.ManagedInstancePrivateEndpointConnection("managedInstancePrivateEndpointConnection",
     managed_instance_name="test-cl",
     private_endpoint_connection_name="private-endpoint-connection-name",
-    private_link_service_connection_state=azure_nextgen.sql.v20200801preview.ManagedInstancePrivateLinkServiceConnectionStatePropertyArgs(
+    private_link_service_connection_state=azure_nextgen.sql.ManagedInstancePrivateLinkServiceConnectionStatePropertyArgs(
         description="Approved by johndoe@contoso.com",
         status="Approved",
     ),
@@ -102,7 +103,7 @@ managed_instance_private_endpoint_connection = azure_nextgen.sql.v20200801previe
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const managedInstancePrivateEndpointConnection = new azure_nextgen.sql.v20200801preview.ManagedInstancePrivateEndpointConnection("managedInstancePrivateEndpointConnection", {
+const managedInstancePrivateEndpointConnection = new azure_nextgen.sql.ManagedInstancePrivateEndpointConnection("managedInstancePrivateEndpointConnection", {
     managedInstanceName: "test-cl",
     privateEndpointConnectionName: "private-endpoint-connection-name",
     privateLinkServiceConnectionState: {
@@ -332,7 +333,7 @@ The ManagedInstancePrivateEndpointConnection resource accepts the following [inp
 <a href="#privateendpoint_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedinstanceprivateendpointproperty">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql.<wbr>Inputs.<wbr>Managed<wbr>Instance<wbr>Private<wbr>Endpoint<wbr>Property<wbr>Args</a></span>
+        <span class="property-type"><a href="#managedinstanceprivateendpointproperty">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql..<wbr>Inputs.<wbr>Managed<wbr>Instance<wbr>Private<wbr>Endpoint<wbr>Property<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Private endpoint which the connection belongs to.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -341,7 +342,7 @@ The ManagedInstancePrivateEndpointConnection resource accepts the following [inp
 <a href="#privatelinkserviceconnectionstate_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedinstanceprivatelinkserviceconnectionstateproperty">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql.<wbr>Inputs.<wbr>Managed<wbr>Instance<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Property<wbr>Args</a></span>
+        <span class="property-type"><a href="#managedinstanceprivatelinkserviceconnectionstateproperty">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql..<wbr>Inputs.<wbr>Managed<wbr>Instance<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Property<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Connection State of the Private Endpoint Connection.{{% /md %}}</dd>
 </dl>
@@ -1046,7 +1047,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:sql/v20200801preview:ManagedInstancePrivateEndpointConnection private-endpoint-connection-name /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default/providers/Microsoft.Sql/managedInstances/test-cl/privateEndpointConnections/private-endpoint-connection-name 
+$ pulumi import azure-nextgen:sql:ManagedInstancePrivateEndpointConnection private-endpoint-connection-name /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default/providers/Microsoft.Sql/managedInstances/test-cl/privateEndpointConnections/private-endpoint-connection-name 
 ```
 
 

@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.datafactory.DataFlow resource wi
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Data flow resource type.
-Latest API Version: 2018-06-01.
+API Version: 2018-06-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,11 +27,11 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var dataFlow = new AzureNextGen.DataFactory.Latest.DataFlow("dataFlow", new AzureNextGen.DataFactory.Latest.DataFlowArgs
+        var dataFlow = new AzureNextGen.DataFactory..DataFlow("dataFlow", new AzureNextGen.DataFactory..DataFlowArgs
         {
             DataFlowName = "exampleDataFlow",
             FactoryName = "exampleFactoryName",
-            Properties = new AzureNextGen.DataFactory.Latest.Inputs.MappingDataFlowArgs
+            Properties = new AzureNextGen.DataFactory..Inputs.MappingDataFlowArgs
             {
                 Description = "Sample demo data flow to convert currencies showing usage of union, derive and conditional split transformation.",
                 Script = @"source(output(PreviousConversionRate as double,Country as string,DateTime1 as string,CurrentConversionRate as double),allowSchemaDrift: false,validateSchema: false) ~> USDCurrency
@@ -43,18 +43,18 @@ ConditionalSplit1@USD sink(saveMode:'overwrite' ) ~> USDSink
 ConditionalSplit1@CAD sink(saveMode:'overwrite' ) ~> CADSink",
                 Sinks = 
                 {
-                    new AzureNextGen.DataFactory.Latest.Inputs.DataFlowSinkArgs
+                    new AzureNextGen.DataFactory..Inputs.DataFlowSinkArgs
                     {
-                        Dataset = new AzureNextGen.DataFactory.Latest.Inputs.DatasetReferenceArgs
+                        Dataset = new AzureNextGen.DataFactory..Inputs.DatasetReferenceArgs
                         {
                             ReferenceName = "USDOutput",
                             Type = "DatasetReference",
                         },
                         Name = "USDSink",
                     },
-                    new AzureNextGen.DataFactory.Latest.Inputs.DataFlowSinkArgs
+                    new AzureNextGen.DataFactory..Inputs.DataFlowSinkArgs
                     {
-                        Dataset = new AzureNextGen.DataFactory.Latest.Inputs.DatasetReferenceArgs
+                        Dataset = new AzureNextGen.DataFactory..Inputs.DatasetReferenceArgs
                         {
                             ReferenceName = "CADOutput",
                             Type = "DatasetReference",
@@ -64,18 +64,18 @@ ConditionalSplit1@CAD sink(saveMode:'overwrite' ) ~> CADSink",
                 },
                 Sources = 
                 {
-                    new AzureNextGen.DataFactory.Latest.Inputs.DataFlowSourceArgs
+                    new AzureNextGen.DataFactory..Inputs.DataFlowSourceArgs
                     {
-                        Dataset = new AzureNextGen.DataFactory.Latest.Inputs.DatasetReferenceArgs
+                        Dataset = new AzureNextGen.DataFactory..Inputs.DatasetReferenceArgs
                         {
                             ReferenceName = "CurrencyDatasetUSD",
                             Type = "DatasetReference",
                         },
                         Name = "USDCurrency",
                     },
-                    new AzureNextGen.DataFactory.Latest.Inputs.DataFlowSourceArgs
+                    new AzureNextGen.DataFactory..Inputs.DataFlowSourceArgs
                     {
-                        Dataset = new AzureNextGen.DataFactory.Latest.Inputs.DatasetReferenceArgs
+                        Dataset = new AzureNextGen.DataFactory..Inputs.DatasetReferenceArgs
                         {
                             ReferenceName = "CurrencyDatasetCAD",
                             Type = "DatasetReference",
@@ -101,7 +101,7 @@ ConditionalSplit1@CAD sink(saveMode:'overwrite' ) ~> CADSink",
 package main
 
 import (
-	datafactory "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datafactory/latest"
+	datafactory "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datafactory"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -166,10 +166,10 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-data_flow = azure_nextgen.datafactory.latest.DataFlow("dataFlow",
+data_flow = azure_nextgen.datafactory.DataFlow("dataFlow",
     data_flow_name="exampleDataFlow",
     factory_name="exampleFactoryName",
-    properties=azure_nextgen.datafactory.latest.MappingDataFlowArgs(
+    properties=azure_nextgen.datafactory.MappingDataFlowArgs(
         description="Sample demo data flow to convert currencies showing usage of union, derive and conditional split transformation.",
         script="""source(output(PreviousConversionRate as double,Country as string,DateTime1 as string,CurrentConversionRate as double),allowSchemaDrift: false,validateSchema: false) ~> USDCurrency
 source(output(PreviousConversionRate as double,Country as string,DateTime1 as string,CurrentConversionRate as double),allowSchemaDrift: true,validateSchema: false) ~> CADSource
@@ -179,15 +179,15 @@ NewCurrencyColumn split(Country == 'USD',Country == 'CAD',disjoint: false) ~> Co
 ConditionalSplit1@USD sink(saveMode:'overwrite' ) ~> USDSink
 ConditionalSplit1@CAD sink(saveMode:'overwrite' ) ~> CADSink""",
         sinks=[
-            azure_nextgen.datafactory.latest.DataFlowSinkArgs(
-                dataset=azure_nextgen.datafactory.latest.DatasetReferenceArgs(
+            azure_nextgen.datafactory.DataFlowSinkArgs(
+                dataset=azure_nextgen.datafactory.DatasetReferenceArgs(
                     reference_name="USDOutput",
                     type="DatasetReference",
                 ),
                 name="USDSink",
             ),
-            azure_nextgen.datafactory.latest.DataFlowSinkArgs(
-                dataset=azure_nextgen.datafactory.latest.DatasetReferenceArgs(
+            azure_nextgen.datafactory.DataFlowSinkArgs(
+                dataset=azure_nextgen.datafactory.DatasetReferenceArgs(
                     reference_name="CADOutput",
                     type="DatasetReference",
                 ),
@@ -195,15 +195,15 @@ ConditionalSplit1@CAD sink(saveMode:'overwrite' ) ~> CADSink""",
             ),
         ],
         sources=[
-            azure_nextgen.datafactory.latest.DataFlowSourceArgs(
-                dataset=azure_nextgen.datafactory.latest.DatasetReferenceArgs(
+            azure_nextgen.datafactory.DataFlowSourceArgs(
+                dataset=azure_nextgen.datafactory.DatasetReferenceArgs(
                     reference_name="CurrencyDatasetUSD",
                     type="DatasetReference",
                 ),
                 name="USDCurrency",
             ),
-            azure_nextgen.datafactory.latest.DataFlowSourceArgs(
-                dataset=azure_nextgen.datafactory.latest.DatasetReferenceArgs(
+            azure_nextgen.datafactory.DataFlowSourceArgs(
+                dataset=azure_nextgen.datafactory.DatasetReferenceArgs(
                     reference_name="CurrencyDatasetCAD",
                     type="DatasetReference",
                 ),
@@ -224,7 +224,7 @@ ConditionalSplit1@CAD sink(saveMode:'overwrite' ) ~> CADSink""",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const dataFlow = new azure_nextgen.datafactory.latest.DataFlow("dataFlow", {
+const dataFlow = new azure_nextgen.datafactory.DataFlow("dataFlow", {
     dataFlowName: "exampleDataFlow",
     factoryName: "exampleFactoryName",
     properties: {
@@ -287,11 +287,11 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var dataFlow = new AzureNextGen.DataFactory.Latest.DataFlow("dataFlow", new AzureNextGen.DataFactory.Latest.DataFlowArgs
+        var dataFlow = new AzureNextGen.DataFactory..DataFlow("dataFlow", new AzureNextGen.DataFactory..DataFlowArgs
         {
             DataFlowName = "exampleDataFlow",
             FactoryName = "exampleFactoryName",
-            Properties = new AzureNextGen.DataFactory.Latest.Inputs.MappingDataFlowArgs
+            Properties = new AzureNextGen.DataFactory..Inputs.MappingDataFlowArgs
             {
                 Description = "Sample demo data flow to convert currencies showing usage of union, derive and conditional split transformation.",
                 Script = @"source(output(PreviousConversionRate as double,Country as string,DateTime1 as string,CurrentConversionRate as double),allowSchemaDrift: false,validateSchema: false) ~> USDCurrency
@@ -303,18 +303,18 @@ ConditionalSplit1@USD sink(saveMode:'overwrite' ) ~> USDSink
 ConditionalSplit1@CAD sink(saveMode:'overwrite' ) ~> CADSink",
                 Sinks = 
                 {
-                    new AzureNextGen.DataFactory.Latest.Inputs.DataFlowSinkArgs
+                    new AzureNextGen.DataFactory..Inputs.DataFlowSinkArgs
                     {
-                        Dataset = new AzureNextGen.DataFactory.Latest.Inputs.DatasetReferenceArgs
+                        Dataset = new AzureNextGen.DataFactory..Inputs.DatasetReferenceArgs
                         {
                             ReferenceName = "USDOutput",
                             Type = "DatasetReference",
                         },
                         Name = "USDSink",
                     },
-                    new AzureNextGen.DataFactory.Latest.Inputs.DataFlowSinkArgs
+                    new AzureNextGen.DataFactory..Inputs.DataFlowSinkArgs
                     {
-                        Dataset = new AzureNextGen.DataFactory.Latest.Inputs.DatasetReferenceArgs
+                        Dataset = new AzureNextGen.DataFactory..Inputs.DatasetReferenceArgs
                         {
                             ReferenceName = "CADOutput",
                             Type = "DatasetReference",
@@ -324,18 +324,18 @@ ConditionalSplit1@CAD sink(saveMode:'overwrite' ) ~> CADSink",
                 },
                 Sources = 
                 {
-                    new AzureNextGen.DataFactory.Latest.Inputs.DataFlowSourceArgs
+                    new AzureNextGen.DataFactory..Inputs.DataFlowSourceArgs
                     {
-                        Dataset = new AzureNextGen.DataFactory.Latest.Inputs.DatasetReferenceArgs
+                        Dataset = new AzureNextGen.DataFactory..Inputs.DatasetReferenceArgs
                         {
                             ReferenceName = "CurrencyDatasetUSD",
                             Type = "DatasetReference",
                         },
                         Name = "USDCurrency",
                     },
-                    new AzureNextGen.DataFactory.Latest.Inputs.DataFlowSourceArgs
+                    new AzureNextGen.DataFactory..Inputs.DataFlowSourceArgs
                     {
-                        Dataset = new AzureNextGen.DataFactory.Latest.Inputs.DatasetReferenceArgs
+                        Dataset = new AzureNextGen.DataFactory..Inputs.DatasetReferenceArgs
                         {
                             ReferenceName = "CurrencyDatasetCAD",
                             Type = "DatasetReference",
@@ -361,7 +361,7 @@ ConditionalSplit1@CAD sink(saveMode:'overwrite' ) ~> CADSink",
 package main
 
 import (
-	datafactory "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datafactory/latest"
+	datafactory "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datafactory"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -426,10 +426,10 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-data_flow = azure_nextgen.datafactory.latest.DataFlow("dataFlow",
+data_flow = azure_nextgen.datafactory.DataFlow("dataFlow",
     data_flow_name="exampleDataFlow",
     factory_name="exampleFactoryName",
-    properties=azure_nextgen.datafactory.latest.MappingDataFlowArgs(
+    properties=azure_nextgen.datafactory.MappingDataFlowArgs(
         description="Sample demo data flow to convert currencies showing usage of union, derive and conditional split transformation.",
         script="""source(output(PreviousConversionRate as double,Country as string,DateTime1 as string,CurrentConversionRate as double),allowSchemaDrift: false,validateSchema: false) ~> USDCurrency
 source(output(PreviousConversionRate as double,Country as string,DateTime1 as string,CurrentConversionRate as double),allowSchemaDrift: true,validateSchema: false) ~> CADSource
@@ -439,15 +439,15 @@ NewCurrencyColumn split(Country == 'USD',Country == 'CAD',disjoint: false) ~> Co
 ConditionalSplit1@USD sink(saveMode:'overwrite' ) ~> USDSink
 ConditionalSplit1@CAD sink(saveMode:'overwrite' ) ~> CADSink""",
         sinks=[
-            azure_nextgen.datafactory.latest.DataFlowSinkArgs(
-                dataset=azure_nextgen.datafactory.latest.DatasetReferenceArgs(
+            azure_nextgen.datafactory.DataFlowSinkArgs(
+                dataset=azure_nextgen.datafactory.DatasetReferenceArgs(
                     reference_name="USDOutput",
                     type="DatasetReference",
                 ),
                 name="USDSink",
             ),
-            azure_nextgen.datafactory.latest.DataFlowSinkArgs(
-                dataset=azure_nextgen.datafactory.latest.DatasetReferenceArgs(
+            azure_nextgen.datafactory.DataFlowSinkArgs(
+                dataset=azure_nextgen.datafactory.DatasetReferenceArgs(
                     reference_name="CADOutput",
                     type="DatasetReference",
                 ),
@@ -455,15 +455,15 @@ ConditionalSplit1@CAD sink(saveMode:'overwrite' ) ~> CADSink""",
             ),
         ],
         sources=[
-            azure_nextgen.datafactory.latest.DataFlowSourceArgs(
-                dataset=azure_nextgen.datafactory.latest.DatasetReferenceArgs(
+            azure_nextgen.datafactory.DataFlowSourceArgs(
+                dataset=azure_nextgen.datafactory.DatasetReferenceArgs(
                     reference_name="CurrencyDatasetUSD",
                     type="DatasetReference",
                 ),
                 name="USDCurrency",
             ),
-            azure_nextgen.datafactory.latest.DataFlowSourceArgs(
-                dataset=azure_nextgen.datafactory.latest.DatasetReferenceArgs(
+            azure_nextgen.datafactory.DataFlowSourceArgs(
+                dataset=azure_nextgen.datafactory.DatasetReferenceArgs(
                     reference_name="CurrencyDatasetCAD",
                     type="DatasetReference",
                 ),
@@ -484,7 +484,7 @@ ConditionalSplit1@CAD sink(saveMode:'overwrite' ) ~> CADSink""",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const dataFlow = new azure_nextgen.datafactory.latest.DataFlow("dataFlow", {
+const dataFlow = new azure_nextgen.datafactory.DataFlow("dataFlow", {
     dataFlowName: "exampleDataFlow",
     factoryName: "exampleFactoryName",
     properties: {
@@ -744,7 +744,7 @@ The DataFlow resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mappingdataflow">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Mapping<wbr>Data<wbr>Flow<wbr>Args</a></span>
+        <span class="property-type"><a href="#mappingdataflow">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Mapping<wbr>Data<wbr>Flow<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Data flow properties.{{% /md %}}</dd>
     <dt class="property-required"
@@ -1214,7 +1214,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dataset_csharp" style="color: inherit; text-decoration: inherit;">Dataset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetreference">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#datasetreference">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Dataset<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Dataset reference.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1232,7 +1232,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linkedservice_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereference">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#linkedservicereference">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1241,7 +1241,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schemalinkedservice_csharp" style="color: inherit; text-decoration: inherit;">Schema<wbr>Linked<wbr>Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereference">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#linkedservicereference">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Schema linked service reference.{{% /md %}}</dd>
 </dl>
@@ -1420,7 +1420,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dataset_csharp" style="color: inherit; text-decoration: inherit;">Dataset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#datasetreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Dataset<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Dataset reference.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1438,7 +1438,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linkedservice_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1447,7 +1447,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schemalinkedservice_csharp" style="color: inherit; text-decoration: inherit;">Schema<wbr>Linked<wbr>Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Schema linked service reference.{{% /md %}}</dd>
 </dl>
@@ -1626,7 +1626,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dataset_csharp" style="color: inherit; text-decoration: inherit;">Dataset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetreference">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#datasetreference">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Dataset<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Dataset reference.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1644,7 +1644,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linkedservice_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereference">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#linkedservicereference">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1653,7 +1653,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schemalinkedservice_csharp" style="color: inherit; text-decoration: inherit;">Schema<wbr>Linked<wbr>Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereference">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#linkedservicereference">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Schema linked service reference.{{% /md %}}</dd>
 </dl>
@@ -1832,7 +1832,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dataset_csharp" style="color: inherit; text-decoration: inherit;">Dataset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#datasetreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Dataset<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Dataset reference.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1850,7 +1850,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linkedservice_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1859,7 +1859,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schemalinkedservice_csharp" style="color: inherit; text-decoration: inherit;">Schema<wbr>Linked<wbr>Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Schema linked service reference.{{% /md %}}</dd>
 </dl>
@@ -2583,7 +2583,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#folder_csharp" style="color: inherit; text-decoration: inherit;">Folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dataflowfolder">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Data<wbr>Flow<wbr>Folder<wbr>Args</a></span>
+        <span class="property-type"><a href="#dataflowfolder">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Data<wbr>Flow<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this data flow is in. If not specified, Data flow will appear at the root level.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2601,7 +2601,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sinks_csharp" style="color: inherit; text-decoration: inherit;">Sinks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dataflowsink">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Data<wbr>Flow<wbr>Sink<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#dataflowsink">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Data<wbr>Flow<wbr>Sink<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of sinks in data flow.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2610,7 +2610,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sources_csharp" style="color: inherit; text-decoration: inherit;">Sources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dataflowsource">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Data<wbr>Flow<wbr>Source<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#dataflowsource">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Data<wbr>Flow<wbr>Source<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of sources in data flow.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2619,7 +2619,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transformations_csharp" style="color: inherit; text-decoration: inherit;">Transformations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transformation">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Transformation<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#transformation">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Transformation<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of transformations in data flow.{{% /md %}}</dd>
 </dl>
@@ -2861,7 +2861,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#folder_csharp" style="color: inherit; text-decoration: inherit;">Folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dataflowresponsefolder">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Data<wbr>Flow<wbr>Response<wbr>Folder<wbr>Args</a></span>
+        <span class="property-type"><a href="#dataflowresponsefolder">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Data<wbr>Flow<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this data flow is in. If not specified, Data flow will appear at the root level.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2879,7 +2879,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sinks_csharp" style="color: inherit; text-decoration: inherit;">Sinks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dataflowsinkresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Data<wbr>Flow<wbr>Sink<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#dataflowsinkresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Data<wbr>Flow<wbr>Sink<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of sinks in data flow.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2888,7 +2888,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sources_csharp" style="color: inherit; text-decoration: inherit;">Sources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dataflowsourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Data<wbr>Flow<wbr>Source<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#dataflowsourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Data<wbr>Flow<wbr>Source<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of sources in data flow.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2897,7 +2897,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transformations_csharp" style="color: inherit; text-decoration: inherit;">Transformations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transformationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Transformation<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#transformationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Transformation<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of transformations in data flow.{{% /md %}}</dd>
 </dl>
@@ -3311,7 +3311,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:datafactory/latest:DataFlow exampleDataFlow /subscriptions/12345678-1234-1234-1234-12345678abc/resourceGroups/exampleResourceGroup/providers/Microsoft.DataFactory/factories/exampleFactoryName/datasets/exampleDataset 
+$ pulumi import azure-nextgen:datafactory:DataFlow exampleDataFlow /subscriptions/12345678-1234-1234-1234-12345678abc/resourceGroups/exampleResourceGroup/providers/Microsoft.DataFactory/factories/exampleFactoryName/datasets/exampleDataset 
 ```
 
 

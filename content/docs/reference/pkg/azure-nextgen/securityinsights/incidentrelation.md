@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.securityinsights.IncidentRelatio
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Represents a relation between two resources
+API Version: 2019-01-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var incidentRelation = new AzureNextGen.SecurityInsights.V20190101Preview.IncidentRelation("incidentRelation", new AzureNextGen.SecurityInsights.V20190101Preview.IncidentRelationArgs
+        var incidentRelation = new AzureNextGen.SecurityInsights..IncidentRelation("incidentRelation", new AzureNextGen.SecurityInsights..IncidentRelationArgs
         {
             IncidentId = "afbd324f-6c48-459c-8710-8d1e1cd03812",
             OperationalInsightsResourceProvider = "Microsoft.OperationalInsights",
@@ -49,7 +50,7 @@ class MyStack : Stack
 package main
 
 import (
-	securityinsights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/securityinsights/v20190101preview"
+	securityinsights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/securityinsights"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -80,7 +81,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-incident_relation = azure_nextgen.securityinsights.v20190101preview.IncidentRelation("incidentRelation",
+incident_relation = azure_nextgen.securityinsights.IncidentRelation("incidentRelation",
     incident_id="afbd324f-6c48-459c-8710-8d1e1cd03812",
     operational_insights_resource_provider="Microsoft.OperationalInsights",
     related_resource_id="/subscriptions/d0cfe6b2-9ac0-4464-9919-dccaee2e48c0/resourceGroups/myRg/providers/Microsoft.OperationalIinsights/workspaces/myWorkspace/providers/Microsoft.SecurityInsights/bookmarks/2216d0e1-91e3-4902-89fd-d2df8c535096",
@@ -98,7 +99,7 @@ incident_relation = azure_nextgen.securityinsights.v20190101preview.IncidentRela
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const incidentRelation = new azure_nextgen.securityinsights.v20190101preview.IncidentRelation("incidentRelation", {
+const incidentRelation = new azure_nextgen.securityinsights.IncidentRelation("incidentRelation", {
     incidentId: "afbd324f-6c48-459c-8710-8d1e1cd03812",
     operationalInsightsResourceProvider: "Microsoft.OperationalInsights",
     relatedResourceId: "/subscriptions/d0cfe6b2-9ac0-4464-9919-dccaee2e48c0/resourceGroups/myRg/providers/Microsoft.OperationalIinsights/workspaces/myWorkspace/providers/Microsoft.SecurityInsights/bookmarks/2216d0e1-91e3-4902-89fd-d2df8c535096",
@@ -825,7 +826,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:securityinsights/v20190101preview:IncidentRelation 4bb36b7b-26ff-4d1c-9cbe-0d8ab3da0014 /subscriptions/d0cfe6b2-9ac0-4464-9919-dccaee2e48c0/resourceGroups/myRg/providers/Microsoft.OperationalIinsights/workspaces/myWorkspace/providers/Microsoft.SecurityInsights/incidents/afbd324f-6c48-459c-8710-8d1e1cd03812/relations/4bb36b7b-26ff-4d1c-9cbe-0d8ab3da0014 
+$ pulumi import azure-nextgen:securityinsights:IncidentRelation 4bb36b7b-26ff-4d1c-9cbe-0d8ab3da0014 /subscriptions/d0cfe6b2-9ac0-4464-9919-dccaee2e48c0/resourceGroups/myRg/providers/Microsoft.OperationalIinsights/workspaces/myWorkspace/providers/Microsoft.SecurityInsights/incidents/afbd324f-6c48-459c-8710-8d1e1cd03812/relations/4bb36b7b-26ff-4d1c-9cbe-0d8ab3da0014 
 ```
 
 

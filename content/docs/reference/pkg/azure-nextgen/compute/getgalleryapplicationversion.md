@@ -305,7 +305,7 @@ The following output properties are available:
 <a href="#publishingprofile_csharp" style="color: inherit; text-decoration: inherit;">Publishing<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#galleryapplicationversionpublishingprofileresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Outputs.<wbr>Gallery<wbr>Application<wbr>Version<wbr>Publishing<wbr>Profile<wbr>Response</a></span>
+        <span class="property-type"><a href="#galleryapplicationversionpublishingprofileresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Outputs.<wbr>Gallery<wbr>Application<wbr>Version<wbr>Publishing<wbr>Profile<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The publishing profile of a gallery image version.{{% /md %}}</dd>
     <dt class="property-"
@@ -314,7 +314,7 @@ The following output properties are available:
 <a href="#replicationstatus_csharp" style="color: inherit; text-decoration: inherit;">Replication<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#replicationstatusresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Outputs.<wbr>Replication<wbr>Status<wbr>Response</a></span>
+        <span class="property-type"><a href="#replicationstatusresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Outputs.<wbr>Replication<wbr>Status<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}This is the replication status of the gallery image version.{{% /md %}}</dd>
     <dt class="property-"
@@ -697,7 +697,7 @@ The following output properties are available:
 <a href="#datadiskimages_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Disk<wbr>Images</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datadiskimageencryptionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Data<wbr>Disk<wbr>Image<wbr>Encryption<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#datadiskimageencryptionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Inputs.<wbr>Data<wbr>Disk<wbr>Image<wbr>Encryption<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of encryption specifications for data disk images.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -706,7 +706,7 @@ The following output properties are available:
 <a href="#osdiskimage_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Disk<wbr>Image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#osdiskimageencryptionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>OSDisk<wbr>Image<wbr>Encryption<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#osdiskimageencryptionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Inputs.<wbr>OSDisk<wbr>Image<wbr>Encryption<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Contains encryption settings for an OS disk image.{{% /md %}}</dd>
 </dl>
@@ -809,7 +809,7 @@ The following output properties are available:
 <a href="#source_csharp" style="color: inherit; text-decoration: inherit;">Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userartifactsourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>User<wbr>Artifact<wbr>Source<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#userartifactsourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Inputs.<wbr>User<wbr>Artifact<wbr>Source<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The source image from which the Image Version is going to be created.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -845,7 +845,7 @@ The following output properties are available:
 <a href="#manageactions_csharp" style="color: inherit; text-decoration: inherit;">Manage<wbr>Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userartifactmanageresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>User<wbr>Artifact<wbr>Manage<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#userartifactmanageresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Inputs.<wbr>User<wbr>Artifact<wbr>Manage<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -872,7 +872,7 @@ The following output properties are available:
 <a href="#targetregions_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Regions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#targetregionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Target<wbr>Region<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#targetregionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Inputs.<wbr>Target<wbr>Region<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The target regions where the Image Version is going to be replicated to. This property is updatable.{{% /md %}}</dd>
 </dl>
@@ -1406,7 +1406,7 @@ The following output properties are available:
 <a href="#summary_csharp" style="color: inherit; text-decoration: inherit;">Summary</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionalreplicationstatusresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Regional<wbr>Replication<wbr>Status<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#regionalreplicationstatusresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Inputs.<wbr>Regional<wbr>Replication<wbr>Status<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}This is a summary of replication status for each region.{{% /md %}}</dd>
 </dl>
@@ -1509,7 +1509,7 @@ The following output properties are available:
 <a href="#encryption_csharp" style="color: inherit; text-decoration: inherit;">Encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionimagesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Encryption<wbr>Images<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#encryptionimagesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Inputs.<wbr>Encryption<wbr>Images<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Allows users to provide customer managed keys for encrypting the OS and data disks in the gallery artifact.{{% /md %}}</dd>
     <dt class="property-optional"

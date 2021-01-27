@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.eventhub.NamespaceVirtualNetwork
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Single item in a List or Get VirtualNetworkRules operation
+API Version: 2018-01-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var namespaceVirtualNetworkRule = new AzureNextGen.EventHub.V20180101Preview.NamespaceVirtualNetworkRule("namespaceVirtualNetworkRule", new AzureNextGen.EventHub.V20180101Preview.NamespaceVirtualNetworkRuleArgs
+        var namespaceVirtualNetworkRule = new AzureNextGen.EventHub..NamespaceVirtualNetworkRule("namespaceVirtualNetworkRule", new AzureNextGen.EventHub..NamespaceVirtualNetworkRuleArgs
         {
             NamespaceName = "sdk-Namespace-6019",
             ResourceGroupName = "ResourceGroup",
@@ -47,7 +48,7 @@ class MyStack : Stack
 package main
 
 import (
-	eventhub "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/eventhub/v20180101preview"
+	eventhub "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/eventhub"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -76,7 +77,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-namespace_virtual_network_rule = azure_nextgen.eventhub.v20180101preview.NamespaceVirtualNetworkRule("namespaceVirtualNetworkRule",
+namespace_virtual_network_rule = azure_nextgen.eventhub.NamespaceVirtualNetworkRule("namespaceVirtualNetworkRule",
     namespace_name="sdk-Namespace-6019",
     resource_group_name="ResourceGroup",
     virtual_network_rule_name="sdk-VirtualNetworkRules-9191",
@@ -92,7 +93,7 @@ namespace_virtual_network_rule = azure_nextgen.eventhub.v20180101preview.Namespa
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const namespaceVirtualNetworkRule = new azure_nextgen.eventhub.v20180101preview.NamespaceVirtualNetworkRule("namespaceVirtualNetworkRule", {
+const namespaceVirtualNetworkRule = new azure_nextgen.eventhub.NamespaceVirtualNetworkRule("namespaceVirtualNetworkRule", {
     namespaceName: "sdk-Namespace-6019",
     resourceGroupName: "ResourceGroup",
     virtualNetworkRuleName: "sdk-VirtualNetworkRules-9191",
@@ -601,7 +602,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:eventhub/v20180101preview:NamespaceVirtualNetworkRule sdk-VirtualNetworkRules-9191 /subscriptions/Subscription/resourceGroups/ResourceGroup/providers/Microsoft.EventHub/namespaces/sdk-Namespace-6019/virtualnetworkrules/sdk-VirtualNetworkRules-9191 
+$ pulumi import azure-nextgen:eventhub:NamespaceVirtualNetworkRule sdk-VirtualNetworkRules-9191 /subscriptions/Subscription/resourceGroups/ResourceGroup/providers/Microsoft.EventHub/namespaces/sdk-Namespace-6019/virtualnetworkrules/sdk-VirtualNetworkRules-9191 
 ```
 
 

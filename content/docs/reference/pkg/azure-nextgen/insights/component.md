@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.insights.Component resource with
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 An Application Insights component definition.
-Latest API Version: 2015-05-01.
+API Version: 2015-05-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var component = new AzureNextGen.Insights.Latest.Component("component", new AzureNextGen.Insights.Latest.ComponentArgs
+        var component = new AzureNextGen.Insights..Component("component", new AzureNextGen.Insights..ComponentArgs
         {
             ApplicationType = "web",
             FlowType = "Bluefield",
@@ -51,7 +51,7 @@ class MyStack : Stack
 package main
 
 import (
-	insights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/insights/latest"
+	insights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/insights"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -83,7 +83,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-component = azure_nextgen.insights.latest.Component("component",
+component = azure_nextgen.insights.Component("component",
     application_type="web",
     flow_type="Bluefield",
     kind="web",
@@ -102,7 +102,7 @@ component = azure_nextgen.insights.latest.Component("component",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const component = new azure_nextgen.insights.latest.Component("component", {
+const component = new azure_nextgen.insights.Component("component", {
     applicationType: "web",
     flowType: "Bluefield",
     kind: "web",
@@ -126,7 +126,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var component = new AzureNextGen.Insights.Latest.Component("component", new AzureNextGen.Insights.Latest.ComponentArgs
+        var component = new AzureNextGen.Insights..Component("component", new AzureNextGen.Insights..ComponentArgs
         {
             Kind = "web",
             Location = "South Central US",
@@ -152,7 +152,7 @@ class MyStack : Stack
 package main
 
 import (
-	insights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/insights/latest"
+	insights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/insights"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -185,7 +185,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-component = azure_nextgen.insights.latest.Component("component",
+component = azure_nextgen.insights.Component("component",
     kind="web",
     location="South Central US",
     resource_group_name="my-resource-group",
@@ -205,7 +205,7 @@ component = azure_nextgen.insights.latest.Component("component",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const component = new azure_nextgen.insights.latest.Component("component", {
+const component = new azure_nextgen.insights.Component("component", {
     kind: "web",
     location: "South Central US",
     resourceGroupName: "my-resource-group",
@@ -409,7 +409,7 @@ The Component resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#applicationtype_csharp" style="color: inherit; text-decoration: inherit;">Application<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#applicationtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Application<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#applicationtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Application<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of application being monitored.{{% /md %}}</dd>
     <dt class="property-required"
@@ -463,7 +463,7 @@ The Component resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#flowtype_csharp" style="color: inherit; text-decoration: inherit;">Flow<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#flowtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Flow<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#flowtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Flow<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Used by the Application Insights system to determine what kind of flow this component was created by. This is to be set to 'Bluefield' when creating/updating a component via the REST API.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -490,7 +490,7 @@ The Component resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#ingestionmode_csharp" style="color: inherit; text-decoration: inherit;">Ingestion<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#ingestionmode">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Ingestion<wbr>Mode</a></span>
+        <span class="property-type">string | <a href="#ingestionmode">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Ingestion<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}Indicates the flow of the ingestion.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -499,7 +499,7 @@ The Component resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#requestsource_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#requestsource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Request<wbr>Source</a></span>
+        <span class="property-type">string | <a href="#requestsource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Request<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}Describes what tool created this Application Insights component. Customers using this API should set this to the default 'rest'.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1016,7 +1016,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privatelinkscopedresources_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Scoped<wbr>Resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkscopedresourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Outputs.<wbr>Private<wbr>Link<wbr>Scoped<wbr>Resource<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#privatelinkscopedresourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Outputs.<wbr>Private<wbr>Link<wbr>Scoped<wbr>Resource<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of linked private link scope resources.{{% /md %}}</dd>
     <dt class="property-"
@@ -1648,7 +1648,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:insights/latest:Component my-component /subscriptions/subid/resourceGroups/my-resource-group/providers/Microsoft.Insights/components/my-component 
+$ pulumi import azure-nextgen:insights:Component my-component /subscriptions/subid/resourceGroups/my-resource-group/providers/Microsoft.Insights/components/my-component 
 ```
 
 

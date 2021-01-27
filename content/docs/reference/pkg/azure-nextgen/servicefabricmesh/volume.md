@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.servicefabricmesh.Volume resourc
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 This type describes a volume resource.
+API Version: 2018-09-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,9 +27,9 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var volume = new AzureNextGen.ServiceFabricMesh.V20180901Preview.Volume("volume", new AzureNextGen.ServiceFabricMesh.V20180901Preview.VolumeArgs
+        var volume = new AzureNextGen.ServiceFabricMesh..Volume("volume", new AzureNextGen.ServiceFabricMesh..VolumeArgs
         {
-            AzureFileParameters = new AzureNextGen.ServiceFabricMesh.V20180901Preview.Inputs.VolumeProviderParametersAzureFileArgs
+            AzureFileParameters = new AzureNextGen.ServiceFabricMesh..Inputs.VolumeProviderParametersAzureFileArgs
             {
                 AccountKey = "provide-account-key-here",
                 AccountName = "sbzdemoaccount",
@@ -55,7 +56,7 @@ class MyStack : Stack
 package main
 
 import (
-	servicefabricmesh "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/servicefabricmesh/v20180901preview"
+	servicefabricmesh "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/servicefabricmesh"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -91,8 +92,8 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-volume = azure_nextgen.servicefabricmesh.v20180901preview.Volume("volume",
-    azure_file_parameters=azure_nextgen.servicefabricmesh.v20180901preview.VolumeProviderParametersAzureFileArgs(
+volume = azure_nextgen.servicefabricmesh.Volume("volume",
+    azure_file_parameters=azure_nextgen.servicefabricmesh.VolumeProviderParametersAzureFileArgs(
         account_key="provide-account-key-here",
         account_name="sbzdemoaccount",
         share_name="sharel",
@@ -114,7 +115,7 @@ volume = azure_nextgen.servicefabricmesh.v20180901preview.Volume("volume",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const volume = new azure_nextgen.servicefabricmesh.v20180901preview.Volume("volume", {
+const volume = new azure_nextgen.servicefabricmesh.Volume("volume", {
     azureFileParameters: {
         accountKey: "provide-account-key-here",
         accountName: "sbzdemoaccount",
@@ -330,7 +331,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#provider_csharp" style="color: inherit; text-decoration: inherit;">Provider</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#volumeprovider">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Volume<wbr>Provider</a></span>
+        <span class="property-type">string | <a href="#volumeprovider">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh..<wbr>Volume<wbr>Provider</a></span>
     </dt>
     <dd>{{% md %}}Provider of the volume.{{% /md %}}</dd>
     <dt class="property-required"
@@ -357,7 +358,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#azurefileparameters_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>File<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volumeproviderparametersazurefile">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Volume<wbr>Provider<wbr>Parameters<wbr>Azure<wbr>File<wbr>Args</a></span>
+        <span class="property-type"><a href="#volumeproviderparametersazurefile">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh..<wbr>Inputs.<wbr>Volume<wbr>Provider<wbr>Parameters<wbr>Azure<wbr>File<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This type describes a volume provided by an Azure Files file share.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1148,7 +1149,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:servicefabricmesh/v20180901preview:Volume sampleVolume /subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/sbz_demo/providers/Microsoft.ServiceFabricMesh/volumes/sampleVolume 
+$ pulumi import azure-nextgen:servicefabricmesh:Volume sampleVolume /subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/sbz_demo/providers/Microsoft.ServiceFabricMesh/volumes/sampleVolume 
 ```
 
 

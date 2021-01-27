@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.relay.WCFRelay resource with exa
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Description of the WCF relay resource.
-Latest API Version: 2017-04-01.
+API Version: 2017-04-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var wcfRelay = new AzureNextGen.Relay.Latest.WCFRelay("wcfRelay", new AzureNextGen.Relay.Latest.WCFRelayArgs
+        var wcfRelay = new AzureNextGen.Relay..WCFRelay("wcfRelay", new AzureNextGen.Relay..WCFRelayArgs
         {
             NamespaceName = "example-RelayNamespace-9953",
             RelayName = "example-Relay-Wcf-1194",
@@ -50,7 +50,7 @@ class MyStack : Stack
 package main
 
 import (
-	relay "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/relay/latest"
+	relay "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/relay"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -81,7 +81,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-wcf_relay = azure_nextgen.relay.latest.WCFRelay("wcfRelay",
+wcf_relay = azure_nextgen.relay.WCFRelay("wcfRelay",
     namespace_name="example-RelayNamespace-9953",
     relay_name="example-Relay-Wcf-1194",
     relay_type="NetTcp",
@@ -99,7 +99,7 @@ wcf_relay = azure_nextgen.relay.latest.WCFRelay("wcfRelay",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const wcfRelay = new azure_nextgen.relay.latest.WCFRelay("wcfRelay", {
+const wcfRelay = new azure_nextgen.relay.WCFRelay("wcfRelay", {
     namespaceName: "example-RelayNamespace-9953",
     relayName: "example-Relay-Wcf-1194",
     relayType: "NetTcp",
@@ -328,7 +328,7 @@ The WCFRelay resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#relaytype_csharp" style="color: inherit; text-decoration: inherit;">Relay<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#relaytype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Relay.<wbr>Relaytype</a></span>
+        <span class="property-type"><a href="#relaytype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Relay..<wbr>Relaytype</a></span>
     </dt>
     <dd>{{% md %}}WCF relay type.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -904,7 +904,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:relay/latest:WCFRelay example-Relay-Wcf-1194 /subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/resourcegroup/providers/Microsoft.Relay/namespaces/example-RelayNamespace-9953/WcfRelays/example-Relay-Wcf-1194 
+$ pulumi import azure-nextgen:relay:WCFRelay example-Relay-Wcf-1194 /subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/resourcegroup/providers/Microsoft.Relay/namespaces/example-RelayNamespace-9953/WcfRelays/example-Relay-Wcf-1194 
 ```
 
 

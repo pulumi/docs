@@ -11,13 +11,13 @@ meta_desc: "Documentation for the azure-nextgen.labservices.Lab resource with ex
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Represents a lab.
-Latest API Version: 2018-10-15.
+API Version: 2018-10-15.
 ## Import
 
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:labservices/latest:Lab myresource1 /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.LabServices/labaccounts/{labAccountName}/labs/{labName} 
+$ pulumi import azure-nextgen:labservices:Lab myresource1 /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.LabServices/labaccounts/{labAccountName}/labs/{labName} 
 ```
 
 
@@ -290,7 +290,7 @@ The Lab resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#useraccessmode_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Access<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#labuseraccessmode">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Lab<wbr>Services.<wbr>Lab<wbr>User<wbr>Access<wbr>Mode</a></span>
+        <span class="property-type">string | <a href="#labuseraccessmode">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Lab<wbr>Services..<wbr>Lab<wbr>User<wbr>Access<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}Lab user access mode (open to all vs. restricted to those listed on the lab).{{% /md %}}</dd>
 </dl>
@@ -645,7 +645,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#latestoperationresult_csharp" style="color: inherit; text-decoration: inherit;">Latest<wbr>Operation<wbr>Result</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#latestoperationresultresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Lab<wbr>Services.<wbr>Outputs.<wbr>Latest<wbr>Operation<wbr>Result<wbr>Response</a></span>
+        <span class="property-type"><a href="#latestoperationresultresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Lab<wbr>Services..<wbr>Outputs.<wbr>Latest<wbr>Operation<wbr>Result<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The details of the latest operation. ex: status, error{{% /md %}}</dd>
     <dt class="property-"

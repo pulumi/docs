@@ -188,7 +188,7 @@ The following output properties are available:
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configurationprofilepreferencepropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automanage.<wbr>Outputs.<wbr>Configuration<wbr>Profile<wbr>Preference<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#configurationprofilepreferencepropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automanage..<wbr>Outputs.<wbr>Configuration<wbr>Profile<wbr>Preference<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Properties of the configuration profile preference.{{% /md %}}</dd>
     <dt class="property-"
@@ -661,7 +661,7 @@ The following output properties are available:
 <a href="#antimalware_csharp" style="color: inherit; text-decoration: inherit;">Anti<wbr>Malware</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configurationprofilepreferenceantimalwareresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automanage.<wbr>Inputs.<wbr>Configuration<wbr>Profile<wbr>Preference<wbr>Anti<wbr>Malware<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#configurationprofilepreferenceantimalwareresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automanage..<wbr>Inputs.<wbr>Configuration<wbr>Profile<wbr>Preference<wbr>Anti<wbr>Malware<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The custom preferences for Azure Antimalware.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -670,7 +670,7 @@ The following output properties are available:
 <a href="#vmbackup_csharp" style="color: inherit; text-decoration: inherit;">Vm<wbr>Backup</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configurationprofilepreferencevmbackupresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automanage.<wbr>Inputs.<wbr>Configuration<wbr>Profile<wbr>Preference<wbr>Vm<wbr>Backup<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#configurationprofilepreferencevmbackupresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automanage..<wbr>Inputs.<wbr>Configuration<wbr>Profile<wbr>Preference<wbr>Vm<wbr>Backup<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The custom preferences for Azure VM Backup.{{% /md %}}</dd>
 </dl>

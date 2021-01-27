@@ -195,7 +195,7 @@ The following output properties are available:
 <a href="#keys_csharp" style="color: inherit; text-decoration: inherit;">Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apikeyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Blockchain.<wbr>Outputs.<wbr>Api<wbr>Key<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#apikeyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Blockchain..<wbr>Outputs.<wbr>Api<wbr>Key<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the collection of API key.{{% /md %}}</dd>
 </dl>

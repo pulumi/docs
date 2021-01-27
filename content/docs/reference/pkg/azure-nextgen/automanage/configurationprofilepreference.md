@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.automanage.ConfigurationProfileP
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Definition of the configuration profile preference.
+API Version: 2020-06-30-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,17 +27,17 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var configurationProfilePreference = new AzureNextGen.Automanage.V20200630Preview.ConfigurationProfilePreference("configurationProfilePreference", new AzureNextGen.Automanage.V20200630Preview.ConfigurationProfilePreferenceArgs
+        var configurationProfilePreference = new AzureNextGen.Automanage..ConfigurationProfilePreference("configurationProfilePreference", new AzureNextGen.Automanage..ConfigurationProfilePreferenceArgs
         {
             ConfigurationProfilePreferenceName = "defaultProfilePreference",
             Location = "East US",
-            Properties = new AzureNextGen.Automanage.V20200630Preview.Inputs.ConfigurationProfilePreferencePropertiesArgs
+            Properties = new AzureNextGen.Automanage..Inputs.ConfigurationProfilePreferencePropertiesArgs
             {
-                AntiMalware = new AzureNextGen.Automanage.V20200630Preview.Inputs.ConfigurationProfilePreferenceAntiMalwareArgs
+                AntiMalware = new AzureNextGen.Automanage..Inputs.ConfigurationProfilePreferenceAntiMalwareArgs
                 {
                     EnableRealTimeProtection = "True",
                 },
-                VmBackup = new AzureNextGen.Automanage.V20200630Preview.Inputs.ConfigurationProfilePreferenceVmBackupArgs
+                VmBackup = new AzureNextGen.Automanage..Inputs.ConfigurationProfilePreferenceVmBackupArgs
                 {
                     TimeZone = "Pacific Standard Time",
                 },
@@ -61,7 +62,7 @@ class MyStack : Stack
 package main
 
 import (
-	automanage "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/automanage/v20200630preview"
+	automanage "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/automanage"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -100,14 +101,14 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-configuration_profile_preference = azure_nextgen.automanage.v20200630preview.ConfigurationProfilePreference("configurationProfilePreference",
+configuration_profile_preference = azure_nextgen.automanage.ConfigurationProfilePreference("configurationProfilePreference",
     configuration_profile_preference_name="defaultProfilePreference",
     location="East US",
-    properties=azure_nextgen.automanage.v20200630preview.ConfigurationProfilePreferencePropertiesArgs(
-        anti_malware=azure_nextgen.automanage.v20200630preview.ConfigurationProfilePreferenceAntiMalwareArgs(
+    properties=azure_nextgen.automanage.ConfigurationProfilePreferencePropertiesArgs(
+        anti_malware=azure_nextgen.automanage.ConfigurationProfilePreferenceAntiMalwareArgs(
             enable_real_time_protection="True",
         ),
-        vm_backup=azure_nextgen.automanage.v20200630preview.ConfigurationProfilePreferenceVmBackupArgs(
+        vm_backup=azure_nextgen.automanage.ConfigurationProfilePreferenceVmBackupArgs(
             time_zone="Pacific Standard Time",
         ),
     ),
@@ -126,7 +127,7 @@ configuration_profile_preference = azure_nextgen.automanage.v20200630preview.Con
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const configurationProfilePreference = new azure_nextgen.automanage.v20200630preview.ConfigurationProfilePreference("configurationProfilePreference", {
+const configurationProfilePreference = new azure_nextgen.automanage.ConfigurationProfilePreference("configurationProfilePreference", {
     configurationProfilePreferenceName: "defaultProfilePreference",
     location: "East US",
     properties: {
@@ -363,7 +364,7 @@ The ConfigurationProfilePreference resource accepts the following [input]({{< re
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configurationprofilepreferenceproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automanage.<wbr>Inputs.<wbr>Configuration<wbr>Profile<wbr>Preference<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#configurationprofilepreferenceproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automanage..<wbr>Inputs.<wbr>Configuration<wbr>Profile<wbr>Preference<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties of the configuration profile preference.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -691,7 +692,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enablerealtimeprotection_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Real<wbr>Time<wbr>Protection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#enablerealtimeprotection">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automanage.<wbr>Enable<wbr>Real<wbr>Time<wbr>Protection</a></span>
+        <span class="property-type">string | <a href="#enablerealtimeprotection">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automanage..<wbr>Enable<wbr>Real<wbr>Time<wbr>Protection</a></span>
     </dt>
     <dd>{{% md %}}Enables or disables Real Time Protection{{% /md %}}</dd>
     <dt class="property-optional"
@@ -709,7 +710,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#runscheduledscan_csharp" style="color: inherit; text-decoration: inherit;">Run<wbr>Scheduled<wbr>Scan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#runscheduledscan">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automanage.<wbr>Run<wbr>Scheduled<wbr>Scan</a></span>
+        <span class="property-type">string | <a href="#runscheduledscan">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automanage..<wbr>Run<wbr>Scheduled<wbr>Scan</a></span>
     </dt>
     <dd>{{% md %}}Enables or disables a periodic scan for antimalware{{% /md %}}</dd>
     <dt class="property-optional"
@@ -736,7 +737,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scantype_csharp" style="color: inherit; text-decoration: inherit;">Scan<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#scantype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automanage.<wbr>Scan<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#scantype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automanage..<wbr>Scan<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of scheduled scan{{% /md %}}</dd>
 </dl>
@@ -1175,7 +1176,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#antimalware_csharp" style="color: inherit; text-decoration: inherit;">Anti<wbr>Malware</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configurationprofilepreferenceantimalware">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automanage.<wbr>Inputs.<wbr>Configuration<wbr>Profile<wbr>Preference<wbr>Anti<wbr>Malware<wbr>Args</a></span>
+        <span class="property-type"><a href="#configurationprofilepreferenceantimalware">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automanage..<wbr>Inputs.<wbr>Configuration<wbr>Profile<wbr>Preference<wbr>Anti<wbr>Malware<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The custom preferences for Azure Antimalware.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1184,7 +1185,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vmbackup_csharp" style="color: inherit; text-decoration: inherit;">Vm<wbr>Backup</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configurationprofilepreferencevmbackup">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automanage.<wbr>Inputs.<wbr>Configuration<wbr>Profile<wbr>Preference<wbr>Vm<wbr>Backup<wbr>Args</a></span>
+        <span class="property-type"><a href="#configurationprofilepreferencevmbackup">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automanage..<wbr>Inputs.<wbr>Configuration<wbr>Profile<wbr>Preference<wbr>Vm<wbr>Backup<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The custom preferences for Azure VM Backup.{{% /md %}}</dd>
 </dl>
@@ -1273,7 +1274,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#antimalware_csharp" style="color: inherit; text-decoration: inherit;">Anti<wbr>Malware</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configurationprofilepreferenceantimalwareresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automanage.<wbr>Inputs.<wbr>Configuration<wbr>Profile<wbr>Preference<wbr>Anti<wbr>Malware<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#configurationprofilepreferenceantimalwareresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automanage..<wbr>Inputs.<wbr>Configuration<wbr>Profile<wbr>Preference<wbr>Anti<wbr>Malware<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The custom preferences for Azure Antimalware.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1282,7 +1283,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vmbackup_csharp" style="color: inherit; text-decoration: inherit;">Vm<wbr>Backup</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configurationprofilepreferencevmbackupresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automanage.<wbr>Inputs.<wbr>Configuration<wbr>Profile<wbr>Preference<wbr>Vm<wbr>Backup<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#configurationprofilepreferencevmbackupresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automanage..<wbr>Inputs.<wbr>Configuration<wbr>Profile<wbr>Preference<wbr>Vm<wbr>Backup<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The custom preferences for Azure VM Backup.{{% /md %}}</dd>
 </dl>
@@ -1819,7 +1820,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:automanage/v20200630preview:ConfigurationProfilePreference defaultProfilePreference /subscriptions/subscriptionId/resourceGroups/myResourceGroupName/providers/Microsoft.Automanage/configurationProfilePreferences/defaultProfilePreference 
+$ pulumi import azure-nextgen:automanage:ConfigurationProfilePreference defaultProfilePreference /subscriptions/subscriptionId/resourceGroups/myResourceGroupName/providers/Microsoft.Automanage/configurationProfilePreferences/defaultProfilePreference 
 ```
 
 

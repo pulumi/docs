@@ -152,7 +152,7 @@ The following output properties are available:
 <a href="#authenticationdetails_csharp" style="color: inherit; text-decoration: inherit;">Authentication<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#awassumeroleauthenticationdetailspropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security.<wbr>Outputs.<wbr>Aw<wbr>Assume<wbr>Role<wbr>Authentication<wbr>Details<wbr>Properties<wbr>Response</a> | <a href="#awscredsauthenticationdetailspropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security.<wbr>Outputs.<wbr>Aws<wbr>Creds<wbr>Authentication<wbr>Details<wbr>Properties<wbr>Response</a> | <a href="#gcpcredentialsdetailspropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security.<wbr>Outputs.<wbr>Gcp<wbr>Credentials<wbr>Details<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#awassumeroleauthenticationdetailspropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security..<wbr>Outputs.<wbr>Aw<wbr>Assume<wbr>Role<wbr>Authentication<wbr>Details<wbr>Properties<wbr>Response</a> | <a href="#awscredsauthenticationdetailspropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security..<wbr>Outputs.<wbr>Aws<wbr>Creds<wbr>Authentication<wbr>Details<wbr>Properties<wbr>Response</a> | <a href="#gcpcredentialsdetailspropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security..<wbr>Outputs.<wbr>Gcp<wbr>Credentials<wbr>Details<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Settings for authentication management, these settings are relevant only for the cloud connector.{{% /md %}}</dd>
     <dt class="property-"
@@ -161,7 +161,7 @@ The following output properties are available:
 <a href="#hybridcomputesettings_csharp" style="color: inherit; text-decoration: inherit;">Hybrid<wbr>Compute<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hybridcomputesettingspropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security.<wbr>Outputs.<wbr>Hybrid<wbr>Compute<wbr>Settings<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#hybridcomputesettingspropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security..<wbr>Outputs.<wbr>Hybrid<wbr>Compute<wbr>Settings<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Settings for hybrid compute management. These settings are relevant only for Arc autoProvision (Hybrid Compute).{{% /md %}}</dd>
 </dl>
@@ -1281,7 +1281,7 @@ The following output properties are available:
 <a href="#proxyserver_csharp" style="color: inherit; text-decoration: inherit;">Proxy<wbr>Server</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#proxyserverpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security.<wbr>Inputs.<wbr>Proxy<wbr>Server<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#proxyserverpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security..<wbr>Inputs.<wbr>Proxy<wbr>Server<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}For a non-Azure machine that is not connected directly to the internet, specify a proxy server that the non-Azure machine can use.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1308,7 +1308,7 @@ The following output properties are available:
 <a href="#serviceprincipal_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Principal</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceprincipalpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security.<wbr>Inputs.<wbr>Service<wbr>Principal<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceprincipalpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security..<wbr>Inputs.<wbr>Service<wbr>Principal<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An object to access resources that are secured by an Azure AD tenant.{{% /md %}}</dd>
 </dl>

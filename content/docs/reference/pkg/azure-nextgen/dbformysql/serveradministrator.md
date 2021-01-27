@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.dbformysql.ServerAdministrator r
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Represents a and external administrator to be created.
-Latest API Version: 2017-12-01.
+API Version: 2017-12-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var serverAdministrator = new AzureNextGen.DBforMySQL.Latest.ServerAdministrator("serverAdministrator", new AzureNextGen.DBforMySQL.Latest.ServerAdministratorArgs
+        var serverAdministrator = new AzureNextGen.DBforMySQL..ServerAdministrator("serverAdministrator", new AzureNextGen.DBforMySQL..ServerAdministratorArgs
         {
             AdministratorType = "ActiveDirectory",
             Login = "bob@contoso.com",
@@ -50,7 +50,7 @@ class MyStack : Stack
 package main
 
 import (
-	dbformysql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/dbformysql/latest"
+	dbformysql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/dbformysql"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -81,7 +81,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-server_administrator = azure_nextgen.dbformysql.latest.ServerAdministrator("serverAdministrator",
+server_administrator = azure_nextgen.dbformysql.ServerAdministrator("serverAdministrator",
     administrator_type="ActiveDirectory",
     login="bob@contoso.com",
     resource_group_name="testrg",
@@ -99,7 +99,7 @@ server_administrator = azure_nextgen.dbformysql.latest.ServerAdministrator("serv
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const serverAdministrator = new azure_nextgen.dbformysql.latest.ServerAdministrator("serverAdministrator", {
+const serverAdministrator = new azure_nextgen.dbformysql.ServerAdministrator("serverAdministrator", {
     administratorType: "ActiveDirectory",
     login: "bob@contoso.com",
     resourceGroupName: "testrg",
@@ -301,7 +301,7 @@ The ServerAdministrator resource accepts the following [input]({{< relref "/docs
 <a href="#administratortype_csharp" style="color: inherit; text-decoration: inherit;">Administrator<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#administratortype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>DBfor<wbr>My<wbr>SQL.<wbr>Administrator<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#administratortype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>DBfor<wbr>My<wbr>SQL..<wbr>Administrator<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of administrator.{{% /md %}}</dd>
     <dt class="property-required"
@@ -716,7 +716,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:dbformysql/latest:ServerAdministrator activeDirectory /subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/testrg/providers/Microsoft.DBforMySQL/servers/mysqltestsvc4/administrators/activeDirectory 
+$ pulumi import azure-nextgen:dbformysql:ServerAdministrator activeDirectory /subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/testrg/providers/Microsoft.DBforMySQL/servers/mysqltestsvc4/administrators/activeDirectory 
 ```
 
 

@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.apimanagement.GroupUser resource
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 User details.
-Latest API Version: 2019-12-01.
+API Version: 2019-12-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var groupUser = new AzureNextGen.ApiManagement.Latest.GroupUser("groupUser", new AzureNextGen.ApiManagement.Latest.GroupUserArgs
+        var groupUser = new AzureNextGen.ApiManagement..GroupUser("groupUser", new AzureNextGen.ApiManagement..GroupUserArgs
         {
             GroupId = "tempgroup",
             ResourceGroupName = "rg1",
@@ -48,7 +48,7 @@ class MyStack : Stack
 package main
 
 import (
-	apimanagement "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/apimanagement/latest"
+	apimanagement "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/apimanagement"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -77,7 +77,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-group_user = azure_nextgen.apimanagement.latest.GroupUser("groupUser",
+group_user = azure_nextgen.apimanagement.GroupUser("groupUser",
     group_id="tempgroup",
     resource_group_name="rg1",
     service_name="apimService1",
@@ -93,7 +93,7 @@ group_user = azure_nextgen.apimanagement.latest.GroupUser("groupUser",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const groupUser = new azure_nextgen.apimanagement.latest.GroupUser("groupUser", {
+const groupUser = new azure_nextgen.apimanagement.GroupUser("groupUser", {
     groupId: "tempgroup",
     resourceGroupName: "rg1",
     serviceName: "apimService1",
@@ -468,7 +468,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#groups_csharp" style="color: inherit; text-decoration: inherit;">Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupcontractpropertiesresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management.<wbr>Outputs.<wbr>Group<wbr>Contract<wbr>Properties<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#groupcontractpropertiesresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management..<wbr>Outputs.<wbr>Group<wbr>Contract<wbr>Properties<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Collection of groups user is part of.{{% /md %}}</dd>
     <dt class="property-"
@@ -522,7 +522,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#identities_csharp" style="color: inherit; text-decoration: inherit;">Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#useridentitycontractresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management.<wbr>Outputs.<wbr>User<wbr>Identity<wbr>Contract<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#useridentitycontractresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management..<wbr>Outputs.<wbr>User<wbr>Identity<wbr>Contract<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Collection of user identities.{{% /md %}}</dd>
     <dt class="property-"
@@ -1202,7 +1202,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:apimanagement/latest:GroupUser 59307d350af58404d8a26300 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/users/59307d350af58404d8a26300 
+$ pulumi import azure-nextgen:apimanagement:GroupUser 59307d350af58404d8a26300 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/users/59307d350af58404d8a26300 
 ```
 
 

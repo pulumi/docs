@@ -170,7 +170,7 @@ The following output properties are available:
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobcollectionpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Scheduler.<wbr>Outputs.<wbr>Job<wbr>Collection<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#jobcollectionpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Scheduler..<wbr>Outputs.<wbr>Job<wbr>Collection<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the job collection properties.{{% /md %}}</dd>
     <dt class="property-"
@@ -414,7 +414,7 @@ The following output properties are available:
 <a href="#quota_csharp" style="color: inherit; text-decoration: inherit;">Quota</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobcollectionquotaresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Scheduler.<wbr>Inputs.<wbr>Job<wbr>Collection<wbr>Quota<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#jobcollectionquotaresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Scheduler..<wbr>Inputs.<wbr>Job<wbr>Collection<wbr>Quota<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the job collection quota.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -423,7 +423,7 @@ The following output properties are available:
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skuresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Scheduler.<wbr>Inputs.<wbr>Sku<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#skuresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Scheduler..<wbr>Inputs.<wbr>Sku<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the SKU.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -571,7 +571,7 @@ The following output properties are available:
 <a href="#maxrecurrence_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Recurrence</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobmaxrecurrenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Scheduler.<wbr>Inputs.<wbr>Job<wbr>Max<wbr>Recurrence<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#jobmaxrecurrenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Scheduler..<wbr>Inputs.<wbr>Job<wbr>Max<wbr>Recurrence<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or set the maximum recurrence.{{% /md %}}</dd>
 </dl>

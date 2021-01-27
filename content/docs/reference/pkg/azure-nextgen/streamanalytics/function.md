@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.streamanalytics.Function resourc
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 A function object, containing all information associated with the named function. All functions are contained under a streaming job.
-Latest API Version: 2016-03-01.
+API Version: 2016-03-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,11 +27,11 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var function = new AzureNextGen.StreamAnalytics.Latest.Function("function", new AzureNextGen.StreamAnalytics.Latest.FunctionArgs
+        var function = new AzureNextGen.StreamAnalytics..Function("function", new AzureNextGen.StreamAnalytics..FunctionArgs
         {
             FunctionName = "function8197",
             JobName = "sj8653",
-            Properties = new AzureNextGen.StreamAnalytics.Latest.Inputs.ScalarFunctionPropertiesArgs
+            Properties = new AzureNextGen.StreamAnalytics..Inputs.ScalarFunctionPropertiesArgs
             {
                 Binding = 
                 {
@@ -40,12 +40,12 @@ class MyStack : Stack
                 },
                 Inputs = 
                 {
-                    new AzureNextGen.StreamAnalytics.Latest.Inputs.FunctionInputArgs
+                    new AzureNextGen.StreamAnalytics..Inputs.FunctionInputArgs
                     {
                         DataType = "Any",
                     },
                 },
-                Output = new AzureNextGen.StreamAnalytics.Latest.Inputs.FunctionOutputArgs
+                Output = new AzureNextGen.StreamAnalytics..Inputs.FunctionOutputArgs
                 {
                     DataType = "Any",
                 },
@@ -71,18 +71,18 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-function = azure_nextgen.streamanalytics.latest.Function("function",
+function = azure_nextgen.streamanalytics.Function("function",
     function_name="function8197",
     job_name="sj8653",
-    properties=azure_nextgen.streamanalytics.latest.ScalarFunctionPropertiesArgs(
+    properties=azure_nextgen.streamanalytics.ScalarFunctionPropertiesArgs(
         binding={
             "script": "function (x, y) { return x + y; }",
             "type": "Microsoft.StreamAnalytics/JavascriptUdf",
         },
-        inputs=[azure_nextgen.streamanalytics.latest.FunctionInputArgs(
+        inputs=[azure_nextgen.streamanalytics.FunctionInputArgs(
             data_type="Any",
         )],
-        output=azure_nextgen.streamanalytics.latest.FunctionOutputArgs(
+        output=azure_nextgen.streamanalytics.FunctionOutputArgs(
             data_type="Any",
         ),
         type="Scalar",
@@ -99,7 +99,7 @@ function = azure_nextgen.streamanalytics.latest.Function("function",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const _function = new azure_nextgen.streamanalytics.latest.Function("function", {
+const _function = new azure_nextgen.streamanalytics.Function("function", {
     functionName: "function8197",
     jobName: "sj8653",
     properties: {
@@ -132,22 +132,22 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var function = new AzureNextGen.StreamAnalytics.Latest.Function("function", new AzureNextGen.StreamAnalytics.Latest.FunctionArgs
+        var function = new AzureNextGen.StreamAnalytics..Function("function", new AzureNextGen.StreamAnalytics..FunctionArgs
         {
             FunctionName = "function588",
             JobName = "sj9093",
-            Properties = new AzureNextGen.StreamAnalytics.Latest.Inputs.ScalarFunctionPropertiesArgs
+            Properties = new AzureNextGen.StreamAnalytics..Inputs.ScalarFunctionPropertiesArgs
             {
                 Binding = 
                 {
                     { "apiKey", "someApiKey==" },
                     { "batchSize", 1000 },
                     { "endpoint", "someAzureMLEndpointURL" },
-                    { "inputs", new AzureNextGen.StreamAnalytics.Latest.Inputs.AzureMachineLearningWebServiceInputsArgs
+                    { "inputs", new AzureNextGen.StreamAnalytics..Inputs.AzureMachineLearningWebServiceInputsArgs
                     {
                         ColumnNames = 
                         {
-                            new AzureNextGen.StreamAnalytics.Latest.Inputs.AzureMachineLearningWebServiceInputColumnArgs
+                            new AzureNextGen.StreamAnalytics..Inputs.AzureMachineLearningWebServiceInputColumnArgs
                             {
                                 DataType = "string",
                                 MapTo = 0,
@@ -158,7 +158,7 @@ class MyStack : Stack
                     } },
                     { "outputs", 
                     {
-                        new AzureNextGen.StreamAnalytics.Latest.Inputs.AzureMachineLearningWebServiceOutputColumnArgs
+                        new AzureNextGen.StreamAnalytics..Inputs.AzureMachineLearningWebServiceOutputColumnArgs
                         {
                             DataType = "string",
                             Name = "Sentiment",
@@ -168,12 +168,12 @@ class MyStack : Stack
                 },
                 Inputs = 
                 {
-                    new AzureNextGen.StreamAnalytics.Latest.Inputs.FunctionInputArgs
+                    new AzureNextGen.StreamAnalytics..Inputs.FunctionInputArgs
                     {
                         DataType = "nvarchar(max)",
                     },
                 },
-                Output = new AzureNextGen.StreamAnalytics.Latest.Inputs.FunctionOutputArgs
+                Output = new AzureNextGen.StreamAnalytics..Inputs.FunctionOutputArgs
                 {
                     DataType = "nvarchar(max)",
                 },
@@ -199,32 +199,32 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-function = azure_nextgen.streamanalytics.latest.Function("function",
+function = azure_nextgen.streamanalytics.Function("function",
     function_name="function588",
     job_name="sj9093",
-    properties=azure_nextgen.streamanalytics.latest.ScalarFunctionPropertiesArgs(
+    properties=azure_nextgen.streamanalytics.ScalarFunctionPropertiesArgs(
         binding={
             "apiKey": "someApiKey==",
             "batchSize": 1000,
             "endpoint": "someAzureMLEndpointURL",
-            "inputs": azure_nextgen.streamanalytics.latest.AzureMachineLearningWebServiceInputsArgs(
-                column_names=[azure_nextgen.streamanalytics.latest.AzureMachineLearningWebServiceInputColumnArgs(
+            "inputs": azure_nextgen.streamanalytics.AzureMachineLearningWebServiceInputsArgs(
+                column_names=[azure_nextgen.streamanalytics.AzureMachineLearningWebServiceInputColumnArgs(
                     data_type="string",
                     map_to=0,
                     name="tweet",
                 )],
                 name="input1",
             ),
-            "outputs": [azure_nextgen.streamanalytics.latest.AzureMachineLearningWebServiceOutputColumnArgs(
+            "outputs": [azure_nextgen.streamanalytics.AzureMachineLearningWebServiceOutputColumnArgs(
                 data_type="string",
                 name="Sentiment",
             )],
             "type": "Microsoft.MachineLearning/WebService",
         },
-        inputs=[azure_nextgen.streamanalytics.latest.FunctionInputArgs(
+        inputs=[azure_nextgen.streamanalytics.FunctionInputArgs(
             data_type="nvarchar(max)",
         )],
-        output=azure_nextgen.streamanalytics.latest.FunctionOutputArgs(
+        output=azure_nextgen.streamanalytics.FunctionOutputArgs(
             data_type="nvarchar(max)",
         ),
         type="Scalar",
@@ -241,7 +241,7 @@ function = azure_nextgen.streamanalytics.latest.Function("function",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const _function = new azure_nextgen.streamanalytics.latest.Function("function", {
+const _function = new azure_nextgen.streamanalytics.Function("function", {
     functionName: "function588",
     jobName: "sj9093",
     properties: {
@@ -503,7 +503,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalarfunctionproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Scalar<wbr>Function<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#scalarfunctionproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics..<wbr>Inputs.<wbr>Scalar<wbr>Function<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The properties that are associated with a function.{{% /md %}}</dd>
 </dl>
@@ -813,7 +813,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inputs_csharp" style="color: inherit; text-decoration: inherit;">Inputs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azuremachinelearningwebserviceinputs">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Inputs<wbr>Args</a></span>
+        <span class="property-type"><a href="#azuremachinelearningwebserviceinputs">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics..<wbr>Inputs.<wbr>Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Inputs<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The inputs for the Azure Machine Learning web service endpoint.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -822,7 +822,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#outputs_csharp" style="color: inherit; text-decoration: inherit;">Outputs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azuremachinelearningwebserviceoutputcolumn">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Output<wbr>Column<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#azuremachinelearningwebserviceoutputcolumn">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics..<wbr>Inputs.<wbr>Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Output<wbr>Column<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of outputs from the Azure Machine Learning web service endpoint execution.{{% /md %}}</dd>
 </dl>
@@ -1019,7 +1019,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inputs_csharp" style="color: inherit; text-decoration: inherit;">Inputs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azuremachinelearningwebserviceinputsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Inputs<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azuremachinelearningwebserviceinputsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics..<wbr>Inputs.<wbr>Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Inputs<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The inputs for the Azure Machine Learning web service endpoint.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1028,7 +1028,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#outputs_csharp" style="color: inherit; text-decoration: inherit;">Outputs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azuremachinelearningwebserviceoutputcolumnresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Output<wbr>Column<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#azuremachinelearningwebserviceoutputcolumnresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics..<wbr>Inputs.<wbr>Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Output<wbr>Column<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of outputs from the Azure Machine Learning web service endpoint execution.{{% /md %}}</dd>
 </dl>
@@ -1466,7 +1466,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#columnnames_csharp" style="color: inherit; text-decoration: inherit;">Column<wbr>Names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azuremachinelearningwebserviceinputcolumn">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Input<wbr>Column<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#azuremachinelearningwebserviceinputcolumn">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics..<wbr>Inputs.<wbr>Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Input<wbr>Column<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of input columns for the Azure Machine Learning web service endpoint.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1564,7 +1564,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#columnnames_csharp" style="color: inherit; text-decoration: inherit;">Column<wbr>Names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azuremachinelearningwebserviceinputcolumnresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Input<wbr>Column<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#azuremachinelearningwebserviceinputcolumnresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics..<wbr>Inputs.<wbr>Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Input<wbr>Column<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of input columns for the Azure Machine Learning web service endpoint.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2302,7 +2302,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#binding_csharp" style="color: inherit; text-decoration: inherit;">Binding</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azuremachinelearningwebservicefunctionbinding">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Function<wbr>Binding<wbr>Args</a> | <a href="#javascriptfunctionbinding">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Java<wbr>Script<wbr>Function<wbr>Binding<wbr>Args</a></span>
+        <span class="property-type"><a href="#azuremachinelearningwebservicefunctionbinding">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics..<wbr>Inputs.<wbr>Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Function<wbr>Binding<wbr>Args</a> | <a href="#javascriptfunctionbinding">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics..<wbr>Inputs.<wbr>Java<wbr>Script<wbr>Function<wbr>Binding<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The physical binding of the function. For example, in the Azure Machine Learning web service’s case, this describes the endpoint.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2311,7 +2311,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inputs_csharp" style="color: inherit; text-decoration: inherit;">Inputs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functioninput">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Function<wbr>Input<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#functioninput">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics..<wbr>Inputs.<wbr>Function<wbr>Input<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of inputs describing the parameters of the function.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2320,7 +2320,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#output_csharp" style="color: inherit; text-decoration: inherit;">Output</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionoutput">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Function<wbr>Output<wbr>Args</a></span>
+        <span class="property-type"><a href="#functionoutput">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics..<wbr>Inputs.<wbr>Function<wbr>Output<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The output of the function.{{% /md %}}</dd>
 </dl>
@@ -2445,7 +2445,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#binding_csharp" style="color: inherit; text-decoration: inherit;">Binding</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azuremachinelearningwebservicefunctionbindingresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Function<wbr>Binding<wbr>Response<wbr>Args</a> | <a href="#javascriptfunctionbindingresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Java<wbr>Script<wbr>Function<wbr>Binding<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azuremachinelearningwebservicefunctionbindingresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics..<wbr>Inputs.<wbr>Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Function<wbr>Binding<wbr>Response<wbr>Args</a> | <a href="#javascriptfunctionbindingresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics..<wbr>Inputs.<wbr>Java<wbr>Script<wbr>Function<wbr>Binding<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The physical binding of the function. For example, in the Azure Machine Learning web service’s case, this describes the endpoint.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2454,7 +2454,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inputs_csharp" style="color: inherit; text-decoration: inherit;">Inputs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functioninputresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Function<wbr>Input<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#functioninputresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics..<wbr>Inputs.<wbr>Function<wbr>Input<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of inputs describing the parameters of the function.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2463,7 +2463,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#output_csharp" style="color: inherit; text-decoration: inherit;">Output</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionoutputresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Function<wbr>Output<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#functionoutputresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics..<wbr>Inputs.<wbr>Function<wbr>Output<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The output of the function.{{% /md %}}</dd>
 </dl>
@@ -2600,7 +2600,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:streamanalytics/latest:Function function588 /subscriptions/56b5e0a9-b645-407d-99b0-c64f86013e3d/resourceGroups/sjrg7/providers/Microsoft.StreamAnalytics/streamingjobs/sj9093/functions/function588 
+$ pulumi import azure-nextgen:streamanalytics:Function function588 /subscriptions/56b5e0a9-b645-407d-99b0-c64f86013e3d/resourceGroups/sjrg7/providers/Microsoft.StreamAnalytics/streamingjobs/sj9093/functions/function588 
 ```
 
 

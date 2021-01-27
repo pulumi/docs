@@ -197,7 +197,7 @@ The following output properties are available:
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceskuresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Power<wbr>BIDedicated.<wbr>Outputs.<wbr>Resource<wbr>Sku<wbr>Response</a></span>
+        <span class="property-type"><a href="#resourceskuresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Power<wbr>BIDedicated..<wbr>Outputs.<wbr>Resource<wbr>Sku<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The SKU of the PowerBI Dedicated resource.{{% /md %}}</dd>
     <dt class="property-"
@@ -224,7 +224,7 @@ The following output properties are available:
 <a href="#administration_csharp" style="color: inherit; text-decoration: inherit;">Administration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dedicatedcapacityadministratorsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Power<wbr>BIDedicated.<wbr>Outputs.<wbr>Dedicated<wbr>Capacity<wbr>Administrators<wbr>Response</a></span>
+        <span class="property-type"><a href="#dedicatedcapacityadministratorsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Power<wbr>BIDedicated..<wbr>Outputs.<wbr>Dedicated<wbr>Capacity<wbr>Administrators<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}A collection of Dedicated capacity administrators{{% /md %}}</dd>
     <dt class="property-"

@@ -341,7 +341,7 @@ The following output properties are available:
 <a href="#deploymentproperties_csharp" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentdeploymentpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Outputs.<wbr>Environment<wbr>Deployment<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#environmentdeploymentpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab..<wbr>Outputs.<wbr>Environment<wbr>Deployment<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The deployment properties of the environment.{{% /md %}}</dd>
     <dt class="property-"
@@ -814,7 +814,7 @@ The following output properties are available:
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#armtemplateparameterpropertiesresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Arm<wbr>Template<wbr>Parameter<wbr>Properties<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#armtemplateparameterpropertiesresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab..<wbr>Inputs.<wbr>Arm<wbr>Template<wbr>Parameter<wbr>Properties<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The parameters of the Azure Resource Manager template.{{% /md %}}</dd>
 </dl>

@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.storsimple.ChapSetting resource 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Challenge-Handshake Authentication Protocol (CHAP) setting
-Latest API Version: 2016-10-01.
+API Version: 2016-10-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,12 +27,12 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var chapSetting = new AzureNextGen.StorSimple.Latest.ChapSetting("chapSetting", new AzureNextGen.StorSimple.Latest.ChapSettingArgs
+        var chapSetting = new AzureNextGen.StorSimple..ChapSetting("chapSetting", new AzureNextGen.StorSimple..ChapSettingArgs
         {
             ChapUserName = "ChapSettingForSDK",
             DeviceName = "HSDK-WSJQERQW3F",
             ManagerName = "hAzureSDKOperations",
-            Password = new AzureNextGen.StorSimple.Latest.Inputs.AsymmetricEncryptedSecretArgs
+            Password = new AzureNextGen.StorSimple..Inputs.AsymmetricEncryptedSecretArgs
             {
                 EncryptionAlgorithm = "RSAES_PKCS1_v_1_5",
                 Value = "<value>",
@@ -53,7 +53,7 @@ class MyStack : Stack
 package main
 
 import (
-	storsimple "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/storsimple/latest"
+	storsimple "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/storsimple"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -86,11 +86,11 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-chap_setting = azure_nextgen.storsimple.latest.ChapSetting("chapSetting",
+chap_setting = azure_nextgen.storsimple.ChapSetting("chapSetting",
     chap_user_name="ChapSettingForSDK",
     device_name="HSDK-WSJQERQW3F",
     manager_name="hAzureSDKOperations",
-    password=azure_nextgen.storsimple.latest.AsymmetricEncryptedSecretArgs(
+    password=azure_nextgen.storsimple.AsymmetricEncryptedSecretArgs(
         encryption_algorithm="RSAES_PKCS1_v_1_5",
         value="<value>",
     ),
@@ -106,7 +106,7 @@ chap_setting = azure_nextgen.storsimple.latest.ChapSetting("chapSetting",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const chapSetting = new azure_nextgen.storsimple.latest.ChapSetting("chapSetting", {
+const chapSetting = new azure_nextgen.storsimple.ChapSetting("chapSetting", {
     chapUserName: "ChapSettingForSDK",
     deviceName: "HSDK-WSJQERQW3F",
     managerName: "hAzureSDKOperations",
@@ -337,7 +337,7 @@ The ChapSetting resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#asymmetricencryptedsecret">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stor<wbr>Simple.<wbr>Inputs.<wbr>Asymmetric<wbr>Encrypted<wbr>Secret<wbr>Args</a></span>
+        <span class="property-type"><a href="#asymmetricencryptedsecret">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stor<wbr>Simple..<wbr>Inputs.<wbr>Asymmetric<wbr>Encrypted<wbr>Secret<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The chap password.{{% /md %}}</dd>
     <dt class="property-required"
@@ -665,7 +665,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryptionalgorithm_csharp" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionalgorithm">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stor<wbr>Simple.<wbr>Encryption<wbr>Algorithm</a></span>
+        <span class="property-type"><a href="#encryptionalgorithm">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stor<wbr>Simple..<wbr>Encryption<wbr>Algorithm</a></span>
     </dt>
     <dd>{{% md %}}The algorithm used to encrypt "Value".{{% /md %}}</dd>
     <dt class="property-required"
@@ -973,7 +973,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:storsimple/latest:ChapSetting ChapSettingForSDK /subscriptions/9eb689cd-7243-43b4-b6f6-5c65cb296641/resourceGroups/ResourceGroupForSDKTest/providers/Microsoft.StorSimple/managers/hAzureSDKOperations/devices/HSDK-WSJQERQW3F/chapSettings/ChapSettingForSDK 
+$ pulumi import azure-nextgen:storsimple:ChapSetting ChapSettingForSDK /subscriptions/9eb689cd-7243-43b4-b6f6-5c65cb296641/resourceGroups/ResourceGroupForSDKTest/providers/Microsoft.StorSimple/managers/hAzureSDKOperations/devices/HSDK-WSJQERQW3F/chapSettings/ChapSettingForSDK 
 ```
 
 

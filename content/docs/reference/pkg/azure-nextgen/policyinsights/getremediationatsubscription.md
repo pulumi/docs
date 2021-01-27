@@ -134,7 +134,7 @@ The following output properties are available:
 <a href="#deploymentstatus_csharp" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#remediationdeploymentsummaryresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Policy<wbr>Insights.<wbr>Outputs.<wbr>Remediation<wbr>Deployment<wbr>Summary<wbr>Response</a></span>
+        <span class="property-type"><a href="#remediationdeploymentsummaryresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Policy<wbr>Insights..<wbr>Outputs.<wbr>Remediation<wbr>Deployment<wbr>Summary<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The deployment status summary for all deployments created by the remediation.{{% /md %}}</dd>
     <dt class="property-"
@@ -188,7 +188,7 @@ The following output properties are available:
 <a href="#filters_csharp" style="color: inherit; text-decoration: inherit;">Filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#remediationfiltersresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Policy<wbr>Insights.<wbr>Outputs.<wbr>Remediation<wbr>Filters<wbr>Response</a></span>
+        <span class="property-type"><a href="#remediationfiltersresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Policy<wbr>Insights..<wbr>Outputs.<wbr>Remediation<wbr>Filters<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The filters that will be applied to determine which resources to remediate.{{% /md %}}</dd>
     <dt class="property-"

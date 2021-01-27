@@ -215,7 +215,7 @@ The following output properties are available:
 <a href="#mountsettings_csharp" style="color: inherit; text-decoration: inherit;">Mount<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mountsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI.<wbr>Outputs.<wbr>Mount<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#mountsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI..<wbr>Outputs.<wbr>Mount<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}File Server mount settings.{{% /md %}}</dd>
     <dt class="property-"
@@ -260,7 +260,7 @@ The following output properties are available:
 <a href="#datadisks_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datadisksresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI.<wbr>Outputs.<wbr>Data<wbr>Disks<wbr>Response</a></span>
+        <span class="property-type"><a href="#datadisksresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI..<wbr>Outputs.<wbr>Data<wbr>Disks<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Information about disks attached to File Server VM.{{% /md %}}</dd>
     <dt class="property-"
@@ -269,7 +269,7 @@ The following output properties are available:
 <a href="#sshconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Ssh<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sshconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI.<wbr>Outputs.<wbr>Ssh<wbr>Configuration<wbr>Response</a></span>
+        <span class="property-type"><a href="#sshconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI..<wbr>Outputs.<wbr>Ssh<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}SSH configuration for accessing the File Server node.{{% /md %}}</dd>
     <dt class="property-"
@@ -278,7 +278,7 @@ The following output properties are available:
 <a href="#subnet_csharp" style="color: inherit; text-decoration: inherit;">Subnet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI.<wbr>Outputs.<wbr>Resource<wbr>Id<wbr>Response</a></span>
+        <span class="property-type"><a href="#resourceidresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI..<wbr>Outputs.<wbr>Resource<wbr>Id<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}File Server virtual network subnet resource ID.{{% /md %}}</dd>
     <dt class="property-"
@@ -1011,7 +1011,7 @@ The following output properties are available:
 <a href="#useraccountsettings_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Account<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#useraccountsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI.<wbr>Inputs.<wbr>User<wbr>Account<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#useraccountsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI..<wbr>Inputs.<wbr>User<wbr>Account<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings for administrator user account to be created on a node. The account can be used to establish SSH connection to the node.{{% /md %}}</dd>
     <dt class="property-optional"

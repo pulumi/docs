@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.autonomousdevelopmentplatform.Ac
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 An ADP account.
+API Version: 2020-07-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var account = new AzureNextGen.AutonomousDevelopmentPlatform.V20200701Preview.Account("account", new AzureNextGen.AutonomousDevelopmentPlatform.V20200701Preview.AccountArgs
+        var account = new AzureNextGen.AutonomousDevelopmentPlatform..Account("account", new AzureNextGen.AutonomousDevelopmentPlatform..AccountArgs
         {
             AccountName = "sampleacct",
             Location = "Global",
@@ -46,7 +47,7 @@ class MyStack : Stack
 package main
 
 import (
-	autonomousdevelopmentplatform "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/autonomousdevelopmentplatform/v20200701preview"
+	autonomousdevelopmentplatform "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/autonomousdevelopmentplatform"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -74,7 +75,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-account = azure_nextgen.autonomousdevelopmentplatform.v20200701preview.Account("account",
+account = azure_nextgen.autonomousdevelopmentplatform.Account("account",
     account_name="sampleacct",
     location="Global",
     resource_group_name="adpClient")
@@ -89,7 +90,7 @@ account = azure_nextgen.autonomousdevelopmentplatform.v20200701preview.Account("
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const account = new azure_nextgen.autonomousdevelopmentplatform.v20200701preview.Account("account", {
+const account = new azure_nextgen.autonomousdevelopmentplatform.Account("account", {
     accountName: "sampleacct",
     location: "Global",
     resourceGroupName: "adpClient",
@@ -499,7 +500,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#systemdata_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Autonomous<wbr>Development<wbr>Platform.<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
+        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Autonomous<wbr>Development<wbr>Platform..<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The system meta data relating to this resource.{{% /md %}}</dd>
     <dt class="property-"
@@ -951,7 +952,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:autonomousdevelopmentplatform/v20200701preview:Account adp1 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.AutonomousDevelopmentPlatform/accounts/adp1 
+$ pulumi import azure-nextgen:autonomousdevelopmentplatform:Account adp1 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.AutonomousDevelopmentPlatform/accounts/adp1 
 ```
 
 

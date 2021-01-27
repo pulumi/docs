@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.cache.LinkedServer resource with
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Response to put/get linked server (with properties) for Redis cache.
-Latest API Version: 2020-06-01.
+API Version: 2020-06-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var linkedServer = new AzureNextGen.Cache.Latest.LinkedServer("linkedServer", new AzureNextGen.Cache.Latest.LinkedServerArgs
+        var linkedServer = new AzureNextGen.Cache..LinkedServer("linkedServer", new AzureNextGen.Cache..LinkedServerArgs
         {
             LinkedRedisCacheId = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Cache/Redis/cache2",
             LinkedRedisCacheLocation = "West US",
@@ -50,7 +50,7 @@ class MyStack : Stack
 package main
 
 import (
-	cache "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/cache/latest"
+	cache "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/cache"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -81,7 +81,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-linked_server = azure_nextgen.cache.latest.LinkedServer("linkedServer",
+linked_server = azure_nextgen.cache.LinkedServer("linkedServer",
     linked_redis_cache_id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Cache/Redis/cache2",
     linked_redis_cache_location="West US",
     linked_server_name="cache2",
@@ -99,7 +99,7 @@ linked_server = azure_nextgen.cache.latest.LinkedServer("linkedServer",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const linkedServer = new azure_nextgen.cache.latest.LinkedServer("linkedServer", {
+const linkedServer = new azure_nextgen.cache.LinkedServer("linkedServer", {
     linkedRedisCacheId: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Cache/Redis/cache2",
     linkedRedisCacheLocation: "West US",
     linkedServerName: "cache2",
@@ -346,7 +346,7 @@ The LinkedServer resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#serverrole_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>Role</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#replicationrole">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cache.<wbr>Replication<wbr>Role</a></span>
+        <span class="property-type"><a href="#replicationrole">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cache..<wbr>Replication<wbr>Role</a></span>
     </dt>
     <dd>{{% md %}}Role of the linked server.{{% /md %}}</dd>
 </dl>
@@ -724,7 +724,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:cache/latest:LinkedServer cache2 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Cache/Redis/cache1/linkedServers/cache2 
+$ pulumi import azure-nextgen:cache:LinkedServer cache2 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Cache/Redis/cache1/linkedServers/cache2 
 ```
 
 

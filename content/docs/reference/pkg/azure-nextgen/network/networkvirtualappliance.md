@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.network.NetworkVirtualAppliance 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 NetworkVirtualAppliance Resource.
-Latest API Version: 2020-08-01.
+API Version: 2020-08-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var networkVirtualAppliance = new AzureNextGen.Network.Latest.NetworkVirtualAppliance("networkVirtualAppliance", new AzureNextGen.Network.Latest.NetworkVirtualApplianceArgs
+        var networkVirtualAppliance = new AzureNextGen.Network..NetworkVirtualAppliance("networkVirtualAppliance", new AzureNextGen.Network..NetworkVirtualApplianceArgs
         {
             BootStrapConfigurationBlobs = 
             {
@@ -37,7 +37,7 @@ class MyStack : Stack
             {
                 "https://csrncvhdstorage1.blob.core.windows.net/csrncvhdstoragecont/csrcloudinitconfig",
             },
-            Identity = new AzureNextGen.Network.Latest.Inputs.ManagedServiceIdentityArgs
+            Identity = new AzureNextGen.Network..Inputs.ManagedServiceIdentityArgs
             {
                 Type = "UserAssigned",
                 UserAssignedIdentities = 
@@ -47,7 +47,7 @@ class MyStack : Stack
             },
             Location = "West US",
             NetworkVirtualApplianceName = "nva",
-            NvaSku = new AzureNextGen.Network.Latest.Inputs.VirtualApplianceSkuPropertiesArgs
+            NvaSku = new AzureNextGen.Network..Inputs.VirtualApplianceSkuPropertiesArgs
             {
                 BundledScaleUnit = "1",
                 MarketPlaceVersion = "12.1",
@@ -59,7 +59,7 @@ class MyStack : Stack
                 { "key1", "value1" },
             },
             VirtualApplianceAsn = 10000,
-            VirtualHub = new AzureNextGen.Network.Latest.Inputs.SubResourceArgs
+            VirtualHub = new AzureNextGen.Network..Inputs.SubResourceArgs
             {
                 Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualHubs/hub1",
             },
@@ -78,7 +78,7 @@ class MyStack : Stack
 package main
 
 import (
-	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network/latest"
+	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -130,10 +130,10 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-network_virtual_appliance = azure_nextgen.network.latest.NetworkVirtualAppliance("networkVirtualAppliance",
+network_virtual_appliance = azure_nextgen.network.NetworkVirtualAppliance("networkVirtualAppliance",
     boot_strap_configuration_blobs=["https://csrncvhdstorage1.blob.core.windows.net/csrncvhdstoragecont/csrbootstrapconfig"],
     cloud_init_configuration_blobs=["https://csrncvhdstorage1.blob.core.windows.net/csrncvhdstoragecont/csrcloudinitconfig"],
-    identity=azure_nextgen.network.latest.ManagedServiceIdentityArgs(
+    identity=azure_nextgen.network.ManagedServiceIdentityArgs(
         type="UserAssigned",
         user_assigned_identities={
             "/subscriptions/subid/resourcegroups/rg1/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity1": {},
@@ -141,7 +141,7 @@ network_virtual_appliance = azure_nextgen.network.latest.NetworkVirtualAppliance
     ),
     location="West US",
     network_virtual_appliance_name="nva",
-    nva_sku=azure_nextgen.network.latest.VirtualApplianceSkuPropertiesArgs(
+    nva_sku=azure_nextgen.network.VirtualApplianceSkuPropertiesArgs(
         bundled_scale_unit="1",
         market_place_version="12.1",
         vendor="Cisco SDWAN",
@@ -151,7 +151,7 @@ network_virtual_appliance = azure_nextgen.network.latest.NetworkVirtualAppliance
         "key1": "value1",
     },
     virtual_appliance_asn=10000,
-    virtual_hub=azure_nextgen.network.latest.SubResourceArgs(
+    virtual_hub=azure_nextgen.network.SubResourceArgs(
         id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualHubs/hub1",
     ))
 
@@ -165,7 +165,7 @@ network_virtual_appliance = azure_nextgen.network.latest.NetworkVirtualAppliance
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const networkVirtualAppliance = new azure_nextgen.network.latest.NetworkVirtualAppliance("networkVirtualAppliance", {
+const networkVirtualAppliance = new azure_nextgen.network.NetworkVirtualAppliance("networkVirtualAppliance", {
     bootStrapConfigurationBlobs: ["https://csrncvhdstorage1.blob.core.windows.net/csrncvhdstoragecont/csrbootstrapconfig"],
     cloudInitConfigurationBlobs: ["https://csrncvhdstorage1.blob.core.windows.net/csrncvhdstoragecont/csrcloudinitconfig"],
     identity: {
@@ -438,7 +438,7 @@ The NetworkVirtualAppliance resource accepts the following [input]({{< relref "/
 <a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedserviceidentity">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Managed<wbr>Service<wbr>Identity<wbr>Args</a></span>
+        <span class="property-type"><a href="#managedserviceidentity">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Managed<wbr>Service<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The service principal that has read access to cloud-init and config blob.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -456,7 +456,7 @@ The NetworkVirtualAppliance resource accepts the following [input]({{< relref "/
 <a href="#nvasku_csharp" style="color: inherit; text-decoration: inherit;">Nva<wbr>Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualapplianceskuproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Virtual<wbr>Appliance<wbr>Sku<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualapplianceskuproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Virtual<wbr>Appliance<wbr>Sku<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Network Virtual Appliance SKU.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -483,7 +483,7 @@ The NetworkVirtualAppliance resource accepts the following [input]({{< relref "/
 <a href="#virtualhub_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Hub</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Virtual Hub where Network Virtual Appliance is being deployed.{{% /md %}}</dd>
 </dl>
@@ -874,7 +874,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inboundsecurityrules_csharp" style="color: inherit; text-decoration: inherit;">Inbound<wbr>Security<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Outputs.<wbr>Sub<wbr>Resource<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#subresourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Outputs.<wbr>Sub<wbr>Resource<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of references to InboundSecurityRules.{{% /md %}}</dd>
     <dt class="property-"
@@ -910,7 +910,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#virtualappliancenics_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Appliance<wbr>Nics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualappliancenicpropertiesresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Outputs.<wbr>Virtual<wbr>Appliance<wbr>Nic<wbr>Properties<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#virtualappliancenicpropertiesresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Outputs.<wbr>Virtual<wbr>Appliance<wbr>Nic<wbr>Properties<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of Virtual Appliance Network Interfaces.{{% /md %}}</dd>
     <dt class="property-"
@@ -919,7 +919,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#virtualappliancesites_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Appliance<wbr>Sites</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Outputs.<wbr>Sub<wbr>Resource<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#subresourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Outputs.<wbr>Sub<wbr>Resource<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of references to VirtualApplianceSite.{{% /md %}}</dd>
 </dl>
@@ -1207,7 +1207,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidentitytype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Resource<wbr>Identity<wbr>Type</a></span>
+        <span class="property-type"><a href="#resourceidentitytype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Resource<wbr>Identity<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of identity used for the resource. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user assigned identities. The type 'None' will remove any identities from the virtual machine.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1332,7 +1332,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userassignedidentities_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Managed<wbr>Service<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Managed<wbr>Service<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}The list of user identities associated with resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd>
 </dl>
@@ -2147,7 +2147,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:network/latest:NetworkVirtualAppliance nva /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/networkVirtualAppliances/nva 
+$ pulumi import azure-nextgen:network:NetworkVirtualAppliance nva /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/networkVirtualAppliances/nva 
 ```
 
 

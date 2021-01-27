@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.deploymentmanager.ArtifactSource
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The resource that defines the source location where the artifacts are located.
+API Version: 2019-11-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,10 +27,10 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var artifactSource = new AzureNextGen.DeploymentManager.V20191101Preview.ArtifactSource("artifactSource", new AzureNextGen.DeploymentManager.V20191101Preview.ArtifactSourceArgs
+        var artifactSource = new AzureNextGen.DeploymentManager..ArtifactSource("artifactSource", new AzureNextGen.DeploymentManager..ArtifactSourceArgs
         {
             ArtifactSourceName = "myArtifactSource",
-            Authentication = new AzureNextGen.DeploymentManager.V20191101Preview.Inputs.SasAuthenticationArgs
+            Authentication = new AzureNextGen.DeploymentManager..Inputs.SasAuthenticationArgs
             {
                 SasUri = "https://mystorageaccount.blob.core.windows.net/myartifactsource?st=2018-07-07T14%3A10%3A00Z&se=2019-12-31T15%3A10%3A00Z&sp=rl&sv=2017-04-17&sr=c&sig=Yh2SoJ1NhhLRwCLln7de%2Fkabcdefghijklmno5sWEIk%3D",
                 Type = "Sas",
@@ -55,7 +56,7 @@ package main
 import (
 	"fmt"
 
-	deploymentmanager "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/deploymentmanager/v20191101preview"
+	deploymentmanager "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/deploymentmanager"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -89,9 +90,9 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-artifact_source = azure_nextgen.deploymentmanager.v20191101preview.ArtifactSource("artifactSource",
+artifact_source = azure_nextgen.deploymentmanager.ArtifactSource("artifactSource",
     artifact_source_name="myArtifactSource",
-    authentication=azure_nextgen.deploymentmanager.v20191101preview.SasAuthenticationArgs(
+    authentication=azure_nextgen.deploymentmanager.SasAuthenticationArgs(
         sas_uri="https://mystorageaccount.blob.core.windows.net/myartifactsource?st=2018-07-07T14%3A10%3A00Z&se=2019-12-31T15%3A10%3A00Z&sp=rl&sv=2017-04-17&sr=c&sig=Yh2SoJ1NhhLRwCLln7de%2Fkabcdefghijklmno5sWEIk%3D",
         type="Sas",
     ),
@@ -110,7 +111,7 @@ artifact_source = azure_nextgen.deploymentmanager.v20191101preview.ArtifactSourc
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const artifactSource = new azure_nextgen.deploymentmanager.v20191101preview.ArtifactSource("artifactSource", {
+const artifactSource = new azure_nextgen.deploymentmanager.ArtifactSource("artifactSource", {
     artifactSourceName: "myArtifactSource",
     authentication: {
         sasUri: `https://mystorageaccount.blob.core.windows.net/myartifactsource?st=2018-07-07T14%3A10%3A00Z&se=2019-12-31T15%3A10%3A00Z&sp=rl&sv=2017-04-17&sr=c&sig=Yh2SoJ1NhhLRwCLln7de%2Fkabcdefghijklmno5sWEIk%3D`,
@@ -136,11 +137,11 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var artifactSource = new AzureNextGen.DeploymentManager.V20191101Preview.ArtifactSource("artifactSource", new AzureNextGen.DeploymentManager.V20191101Preview.ArtifactSourceArgs
+        var artifactSource = new AzureNextGen.DeploymentManager..ArtifactSource("artifactSource", new AzureNextGen.DeploymentManager..ArtifactSourceArgs
         {
             ArtifactRoot = "1.0.0.0",
             ArtifactSourceName = "myArtifactSource",
-            Authentication = new AzureNextGen.DeploymentManager.V20191101Preview.Inputs.SasAuthenticationArgs
+            Authentication = new AzureNextGen.DeploymentManager..Inputs.SasAuthenticationArgs
             {
                 SasUri = "https://mystorageaccount.blob.core.windows.net/myartifactsource?st=2018-07-07T14%3A10%3A00Z&se=2019-12-31T15%3A10%3A00Z&sp=rl&sv=2017-04-17&sr=c&sig=Yh2SoJ1NhhLRwCLln7de%2Fkabcdefghijklmno5sWEIk%3D",
                 Type = "Sas",
@@ -166,7 +167,7 @@ package main
 import (
 	"fmt"
 
-	deploymentmanager "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/deploymentmanager/v20191101preview"
+	deploymentmanager "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/deploymentmanager"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -201,10 +202,10 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-artifact_source = azure_nextgen.deploymentmanager.v20191101preview.ArtifactSource("artifactSource",
+artifact_source = azure_nextgen.deploymentmanager.ArtifactSource("artifactSource",
     artifact_root="1.0.0.0",
     artifact_source_name="myArtifactSource",
-    authentication=azure_nextgen.deploymentmanager.v20191101preview.SasAuthenticationArgs(
+    authentication=azure_nextgen.deploymentmanager.SasAuthenticationArgs(
         sas_uri="https://mystorageaccount.blob.core.windows.net/myartifactsource?st=2018-07-07T14%3A10%3A00Z&se=2019-12-31T15%3A10%3A00Z&sp=rl&sv=2017-04-17&sr=c&sig=Yh2SoJ1NhhLRwCLln7de%2Fkabcdefghijklmno5sWEIk%3D",
         type="Sas",
     ),
@@ -223,7 +224,7 @@ artifact_source = azure_nextgen.deploymentmanager.v20191101preview.ArtifactSourc
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const artifactSource = new azure_nextgen.deploymentmanager.v20191101preview.ArtifactSource("artifactSource", {
+const artifactSource = new azure_nextgen.deploymentmanager.ArtifactSource("artifactSource", {
     artifactRoot: "1.0.0.0",
     artifactSourceName: "myArtifactSource",
     authentication: {
@@ -438,7 +439,7 @@ The ArtifactSource resource accepts the following [input]({{< relref "/docs/intr
 <a href="#authentication_csharp" style="color: inherit; text-decoration: inherit;">Authentication</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sasauthentication">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Deployment<wbr>Manager.<wbr>Inputs.<wbr>Sas<wbr>Authentication<wbr>Args</a></span>
+        <span class="property-type"><a href="#sasauthentication">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Deployment<wbr>Manager..<wbr>Inputs.<wbr>Sas<wbr>Authentication<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The authentication method to use to access the artifact source.{{% /md %}}</dd>
     <dt class="property-required"
@@ -974,7 +975,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:deploymentmanager/v20191101preview:ArtifactSource myArtifactSource /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DeploymentManager/artifactSources/{artifactSourceName} 
+$ pulumi import azure-nextgen:deploymentmanager:ArtifactSource myArtifactSource /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DeploymentManager/artifactSources/{artifactSourceName} 
 ```
 
 

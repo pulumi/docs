@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.dbformysql.Server resource with 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Represents a server.
-Latest API Version: 2017-12-01.
+API Version: 2017-12-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var server = new AzureNextGen.DBforMySQL.Latest.Server("server", new AzureNextGen.DBforMySQL.Latest.ServerArgs
+        var server = new AzureNextGen.DBforMySQL..Server("server", new AzureNextGen.DBforMySQL..ServerArgs
         {
             Location = "brazilsouth",
             Properties = 
@@ -38,7 +38,7 @@ class MyStack : Stack
             },
             ResourceGroupName = "TargetResourceGroup",
             ServerName = "targetserver",
-            Sku = new AzureNextGen.DBforMySQL.Latest.Inputs.SkuArgs
+            Sku = new AzureNextGen.DBforMySQL..Inputs.SkuArgs
             {
                 Capacity = 2,
                 Family = "Gen5",
@@ -68,7 +68,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-server = azure_nextgen.dbformysql.latest.Server("server",
+server = azure_nextgen.dbformysql.Server("server",
     location="brazilsouth",
     properties={
         "createMode": "PointInTimeRestore",
@@ -77,7 +77,7 @@ server = azure_nextgen.dbformysql.latest.Server("server",
     },
     resource_group_name="TargetResourceGroup",
     server_name="targetserver",
-    sku=azure_nextgen.dbformysql.latest.SkuArgs(
+    sku=azure_nextgen.dbformysql.SkuArgs(
         capacity=2,
         family="Gen5",
         name="GP_Gen5_2",
@@ -97,7 +97,7 @@ server = azure_nextgen.dbformysql.latest.Server("server",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const server = new azure_nextgen.dbformysql.latest.Server("server", {
+const server = new azure_nextgen.dbformysql.Server("server", {
     location: "brazilsouth",
     properties: {
         createMode: "PointInTimeRestore",
@@ -131,7 +131,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var server = new AzureNextGen.DBforMySQL.Latest.Server("server", new AzureNextGen.DBforMySQL.Latest.ServerArgs
+        var server = new AzureNextGen.DBforMySQL..Server("server", new AzureNextGen.DBforMySQL..ServerArgs
         {
             Location = "westus",
             Properties = 
@@ -140,7 +140,7 @@ class MyStack : Stack
                 { "administratorLoginPassword", "<administratorLoginPassword>" },
                 { "createMode", "Default" },
                 { "sslEnforcement", "Enabled" },
-                { "storageProfile", new AzureNextGen.DBforMySQL.Latest.Inputs.StorageProfileArgs
+                { "storageProfile", new AzureNextGen.DBforMySQL..Inputs.StorageProfileArgs
                 {
                     BackupRetentionDays = 7,
                     GeoRedundantBackup = "Enabled",
@@ -149,7 +149,7 @@ class MyStack : Stack
             },
             ResourceGroupName = "testrg",
             ServerName = "mysqltestsvc4",
-            Sku = new AzureNextGen.DBforMySQL.Latest.Inputs.SkuArgs
+            Sku = new AzureNextGen.DBforMySQL..Inputs.SkuArgs
             {
                 Capacity = 2,
                 Family = "Gen5",
@@ -179,14 +179,14 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-server = azure_nextgen.dbformysql.latest.Server("server",
+server = azure_nextgen.dbformysql.Server("server",
     location="westus",
     properties={
         "administratorLogin": "cloudsa",
         "administratorLoginPassword": "<administratorLoginPassword>",
         "createMode": "Default",
         "sslEnforcement": "Enabled",
-        "storageProfile": azure_nextgen.dbformysql.latest.StorageProfileArgs(
+        "storageProfile": azure_nextgen.dbformysql.StorageProfileArgs(
             backup_retention_days=7,
             geo_redundant_backup="Enabled",
             storage_mb=128000,
@@ -194,7 +194,7 @@ server = azure_nextgen.dbformysql.latest.Server("server",
     },
     resource_group_name="testrg",
     server_name="mysqltestsvc4",
-    sku=azure_nextgen.dbformysql.latest.SkuArgs(
+    sku=azure_nextgen.dbformysql.SkuArgs(
         capacity=2,
         family="Gen5",
         name="GP_Gen5_2",
@@ -214,7 +214,7 @@ server = azure_nextgen.dbformysql.latest.Server("server",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const server = new azure_nextgen.dbformysql.latest.Server("server", {
+const server = new azure_nextgen.dbformysql.Server("server", {
     location: "westus",
     properties: {
         administratorLogin: "cloudsa",
@@ -254,7 +254,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var server = new AzureNextGen.DBforMySQL.Latest.Server("server", new AzureNextGen.DBforMySQL.Latest.ServerArgs
+        var server = new AzureNextGen.DBforMySQL..Server("server", new AzureNextGen.DBforMySQL..ServerArgs
         {
             Location = "westus",
             Properties = 
@@ -283,7 +283,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-server = azure_nextgen.dbformysql.latest.Server("server",
+server = azure_nextgen.dbformysql.Server("server",
     location="westus",
     properties={
         "createMode": "Replica",
@@ -302,7 +302,7 @@ server = azure_nextgen.dbformysql.latest.Server("server",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const server = new azure_nextgen.dbformysql.latest.Server("server", {
+const server = new azure_nextgen.dbformysql.Server("server", {
     location: "westus",
     properties: {
         createMode: "Replica",
@@ -326,7 +326,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var server = new AzureNextGen.DBforMySQL.Latest.Server("server", new AzureNextGen.DBforMySQL.Latest.ServerArgs
+        var server = new AzureNextGen.DBforMySQL..Server("server", new AzureNextGen.DBforMySQL..ServerArgs
         {
             Location = "westus",
             Properties = 
@@ -336,7 +336,7 @@ class MyStack : Stack
             },
             ResourceGroupName = "TargetResourceGroup",
             ServerName = "targetserver",
-            Sku = new AzureNextGen.DBforMySQL.Latest.Inputs.SkuArgs
+            Sku = new AzureNextGen.DBforMySQL..Inputs.SkuArgs
             {
                 Capacity = 2,
                 Family = "Gen5",
@@ -366,7 +366,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-server = azure_nextgen.dbformysql.latest.Server("server",
+server = azure_nextgen.dbformysql.Server("server",
     location="westus",
     properties={
         "createMode": "GeoRestore",
@@ -374,7 +374,7 @@ server = azure_nextgen.dbformysql.latest.Server("server",
     },
     resource_group_name="TargetResourceGroup",
     server_name="targetserver",
-    sku=azure_nextgen.dbformysql.latest.SkuArgs(
+    sku=azure_nextgen.dbformysql.SkuArgs(
         capacity=2,
         family="Gen5",
         name="GP_Gen5_2",
@@ -394,7 +394,7 @@ server = azure_nextgen.dbformysql.latest.Server("server",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const server = new azure_nextgen.dbformysql.latest.Server("server", {
+const server = new azure_nextgen.dbformysql.Server("server", {
     location: "westus",
     properties: {
         createMode: "GeoRestore",
@@ -615,7 +615,7 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serverpropertiesfordefaultcreate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>DBfor<wbr>My<wbr>SQL.<wbr>Inputs.<wbr>Server<wbr>Properties<wbr>For<wbr>Default<wbr>Create<wbr>Args</a> | <a href="#serverpropertiesforgeorestore">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>DBfor<wbr>My<wbr>SQL.<wbr>Inputs.<wbr>Server<wbr>Properties<wbr>For<wbr>Geo<wbr>Restore<wbr>Args</a> | <a href="#serverpropertiesforreplica">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>DBfor<wbr>My<wbr>SQL.<wbr>Inputs.<wbr>Server<wbr>Properties<wbr>For<wbr>Replica<wbr>Args</a> | <a href="#serverpropertiesforrestore">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>DBfor<wbr>My<wbr>SQL.<wbr>Inputs.<wbr>Server<wbr>Properties<wbr>For<wbr>Restore<wbr>Args</a></span>
+        <span class="property-type"><a href="#serverpropertiesfordefaultcreate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>DBfor<wbr>My<wbr>SQL..<wbr>Inputs.<wbr>Server<wbr>Properties<wbr>For<wbr>Default<wbr>Create<wbr>Args</a> | <a href="#serverpropertiesforgeorestore">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>DBfor<wbr>My<wbr>SQL..<wbr>Inputs.<wbr>Server<wbr>Properties<wbr>For<wbr>Geo<wbr>Restore<wbr>Args</a> | <a href="#serverpropertiesforreplica">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>DBfor<wbr>My<wbr>SQL..<wbr>Inputs.<wbr>Server<wbr>Properties<wbr>For<wbr>Replica<wbr>Args</a> | <a href="#serverpropertiesforrestore">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>DBfor<wbr>My<wbr>SQL..<wbr>Inputs.<wbr>Server<wbr>Properties<wbr>For<wbr>Restore<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties of the server.{{% /md %}}</dd>
     <dt class="property-required"
@@ -642,7 +642,7 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidentity">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>DBfor<wbr>My<wbr>SQL.<wbr>Inputs.<wbr>Resource<wbr>Identity<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourceidentity">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>DBfor<wbr>My<wbr>SQL..<wbr>Inputs.<wbr>Resource<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Azure Active Directory identity of the server.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -651,7 +651,7 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sku">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>DBfor<wbr>My<wbr>SQL.<wbr>Inputs.<wbr>Sku<wbr>Args</a></span>
+        <span class="property-type"><a href="#sku">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>DBfor<wbr>My<wbr>SQL..<wbr>Inputs.<wbr>Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The SKU (pricing tier) of the server.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -916,7 +916,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privateendpointconnections_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint<wbr>Connections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serverprivateendpointconnectionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>DBfor<wbr>My<wbr>SQL.<wbr>Outputs.<wbr>Server<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#serverprivateendpointconnectionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>DBfor<wbr>My<wbr>SQL..<wbr>Outputs.<wbr>Server<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of private endpoint connections on a server{{% /md %}}</dd>
     <dt class="property-"
@@ -1024,7 +1024,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storageprofile_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageprofileresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>DBfor<wbr>My<wbr>SQL.<wbr>Outputs.<wbr>Storage<wbr>Profile<wbr>Response</a></span>
+        <span class="property-type"><a href="#storageprofileresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>DBfor<wbr>My<wbr>SQL..<wbr>Outputs.<wbr>Storage<wbr>Profile<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Storage profile of a server.{{% /md %}}</dd>
     <dt class="property-"
@@ -1833,7 +1833,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#identitytype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>DBfor<wbr>My<wbr>SQL.<wbr>Identity<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#identitytype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>DBfor<wbr>My<wbr>SQL..<wbr>Identity<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The identity type. Set this to 'SystemAssigned' in order to automatically create and assign an Azure Active Directory principal for the resource.{{% /md %}}</dd>
 </dl>
@@ -2038,7 +2038,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privateendpoint_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointpropertyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>DBfor<wbr>My<wbr>SQL.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Property<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#privateendpointpropertyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>DBfor<wbr>My<wbr>SQL..<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Property<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Private endpoint which the connection belongs to.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2047,7 +2047,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privatelinkserviceconnectionstate_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serverprivatelinkserviceconnectionstatepropertyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>DBfor<wbr>My<wbr>SQL.<wbr>Inputs.<wbr>Server<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Property<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#serverprivatelinkserviceconnectionstatepropertyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>DBfor<wbr>My<wbr>SQL..<wbr>Inputs.<wbr>Server<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Property<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Connection state of the private endpoint connection.{{% /md %}}</dd>
 </dl>
@@ -2172,7 +2172,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serverprivateendpointconnectionpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>DBfor<wbr>My<wbr>SQL.<wbr>Inputs.<wbr>Server<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#serverprivateendpointconnectionpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>DBfor<wbr>My<wbr>SQL..<wbr>Inputs.<wbr>Server<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Private endpoint connection properties{{% /md %}}</dd>
 </dl>
@@ -2413,7 +2413,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#infrastructureencryption_csharp" style="color: inherit; text-decoration: inherit;">Infrastructure<wbr>Encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#infrastructureencryption">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>DBfor<wbr>My<wbr>SQL.<wbr>Infrastructure<wbr>Encryption</a></span>
+        <span class="property-type">string | <a href="#infrastructureencryption">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>DBfor<wbr>My<wbr>SQL..<wbr>Infrastructure<wbr>Encryption</a></span>
     </dt>
     <dd>{{% md %}}Status showing whether the server enabled infrastructure encryption.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2422,7 +2422,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#minimaltlsversion_csharp" style="color: inherit; text-decoration: inherit;">Minimal<wbr>Tls<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#minimaltlsversionenum">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>DBfor<wbr>My<wbr>SQL.<wbr>Minimal<wbr>Tls<wbr>Version<wbr>Enum</a></span>
+        <span class="property-type">string | <a href="#minimaltlsversionenum">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>DBfor<wbr>My<wbr>SQL..<wbr>Minimal<wbr>Tls<wbr>Version<wbr>Enum</a></span>
     </dt>
     <dd>{{% md %}}Enforce a minimal Tls version for the server.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2431,7 +2431,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publicnetworkaccess_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Network<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#publicnetworkaccessenum">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>DBfor<wbr>My<wbr>SQL.<wbr>Public<wbr>Network<wbr>Access<wbr>Enum</a></span>
+        <span class="property-type">string | <a href="#publicnetworkaccessenum">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>DBfor<wbr>My<wbr>SQL..<wbr>Public<wbr>Network<wbr>Access<wbr>Enum</a></span>
     </dt>
     <dd>{{% md %}}Whether or not public network access is allowed for this server. Value is optional but if passed in, must be 'Enabled' or 'Disabled'{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2440,7 +2440,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sslenforcement_csharp" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Enforcement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sslenforcementenum">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>DBfor<wbr>My<wbr>SQL.<wbr>Ssl<wbr>Enforcement<wbr>Enum</a></span>
+        <span class="property-type"><a href="#sslenforcementenum">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>DBfor<wbr>My<wbr>SQL..<wbr>Ssl<wbr>Enforcement<wbr>Enum</a></span>
     </dt>
     <dd>{{% md %}}Enable ssl enforcement or not when connect to server.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2449,7 +2449,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storageprofile_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageprofile">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>DBfor<wbr>My<wbr>SQL.<wbr>Inputs.<wbr>Storage<wbr>Profile<wbr>Args</a></span>
+        <span class="property-type"><a href="#storageprofile">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>DBfor<wbr>My<wbr>SQL..<wbr>Inputs.<wbr>Storage<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Storage profile of a server.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2458,7 +2458,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#serverversion">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>DBfor<wbr>My<wbr>SQL.<wbr>Server<wbr>Version</a></span>
+        <span class="property-type">string | <a href="#serverversion">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>DBfor<wbr>My<wbr>SQL..<wbr>Server<wbr>Version</a></span>
     </dt>
     <dd>{{% md %}}Server version.{{% /md %}}</dd>
 </dl>
@@ -2718,7 +2718,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#infrastructureencryption_csharp" style="color: inherit; text-decoration: inherit;">Infrastructure<wbr>Encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#infrastructureencryption">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>DBfor<wbr>My<wbr>SQL.<wbr>Infrastructure<wbr>Encryption</a></span>
+        <span class="property-type">string | <a href="#infrastructureencryption">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>DBfor<wbr>My<wbr>SQL..<wbr>Infrastructure<wbr>Encryption</a></span>
     </dt>
     <dd>{{% md %}}Status showing whether the server enabled infrastructure encryption.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2727,7 +2727,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#minimaltlsversion_csharp" style="color: inherit; text-decoration: inherit;">Minimal<wbr>Tls<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#minimaltlsversionenum">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>DBfor<wbr>My<wbr>SQL.<wbr>Minimal<wbr>Tls<wbr>Version<wbr>Enum</a></span>
+        <span class="property-type">string | <a href="#minimaltlsversionenum">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>DBfor<wbr>My<wbr>SQL..<wbr>Minimal<wbr>Tls<wbr>Version<wbr>Enum</a></span>
     </dt>
     <dd>{{% md %}}Enforce a minimal Tls version for the server.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2736,7 +2736,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publicnetworkaccess_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Network<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#publicnetworkaccessenum">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>DBfor<wbr>My<wbr>SQL.<wbr>Public<wbr>Network<wbr>Access<wbr>Enum</a></span>
+        <span class="property-type">string | <a href="#publicnetworkaccessenum">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>DBfor<wbr>My<wbr>SQL..<wbr>Public<wbr>Network<wbr>Access<wbr>Enum</a></span>
     </dt>
     <dd>{{% md %}}Whether or not public network access is allowed for this server. Value is optional but if passed in, must be 'Enabled' or 'Disabled'{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2745,7 +2745,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sslenforcement_csharp" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Enforcement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sslenforcementenum">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>DBfor<wbr>My<wbr>SQL.<wbr>Ssl<wbr>Enforcement<wbr>Enum</a></span>
+        <span class="property-type"><a href="#sslenforcementenum">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>DBfor<wbr>My<wbr>SQL..<wbr>Ssl<wbr>Enforcement<wbr>Enum</a></span>
     </dt>
     <dd>{{% md %}}Enable ssl enforcement or not when connect to server.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2754,7 +2754,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storageprofile_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageprofile">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>DBfor<wbr>My<wbr>SQL.<wbr>Inputs.<wbr>Storage<wbr>Profile<wbr>Args</a></span>
+        <span class="property-type"><a href="#storageprofile">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>DBfor<wbr>My<wbr>SQL..<wbr>Inputs.<wbr>Storage<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Storage profile of a server.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2763,7 +2763,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#serverversion">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>DBfor<wbr>My<wbr>SQL.<wbr>Server<wbr>Version</a></span>
+        <span class="property-type">string | <a href="#serverversion">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>DBfor<wbr>My<wbr>SQL..<wbr>Server<wbr>Version</a></span>
     </dt>
     <dd>{{% md %}}Server version.{{% /md %}}</dd>
 </dl>
@@ -2996,7 +2996,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#infrastructureencryption_csharp" style="color: inherit; text-decoration: inherit;">Infrastructure<wbr>Encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#infrastructureencryption">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>DBfor<wbr>My<wbr>SQL.<wbr>Infrastructure<wbr>Encryption</a></span>
+        <span class="property-type">string | <a href="#infrastructureencryption">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>DBfor<wbr>My<wbr>SQL..<wbr>Infrastructure<wbr>Encryption</a></span>
     </dt>
     <dd>{{% md %}}Status showing whether the server enabled infrastructure encryption.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3005,7 +3005,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#minimaltlsversion_csharp" style="color: inherit; text-decoration: inherit;">Minimal<wbr>Tls<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#minimaltlsversionenum">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>DBfor<wbr>My<wbr>SQL.<wbr>Minimal<wbr>Tls<wbr>Version<wbr>Enum</a></span>
+        <span class="property-type">string | <a href="#minimaltlsversionenum">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>DBfor<wbr>My<wbr>SQL..<wbr>Minimal<wbr>Tls<wbr>Version<wbr>Enum</a></span>
     </dt>
     <dd>{{% md %}}Enforce a minimal Tls version for the server.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3014,7 +3014,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publicnetworkaccess_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Network<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#publicnetworkaccessenum">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>DBfor<wbr>My<wbr>SQL.<wbr>Public<wbr>Network<wbr>Access<wbr>Enum</a></span>
+        <span class="property-type">string | <a href="#publicnetworkaccessenum">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>DBfor<wbr>My<wbr>SQL..<wbr>Public<wbr>Network<wbr>Access<wbr>Enum</a></span>
     </dt>
     <dd>{{% md %}}Whether or not public network access is allowed for this server. Value is optional but if passed in, must be 'Enabled' or 'Disabled'{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3023,7 +3023,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sslenforcement_csharp" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Enforcement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sslenforcementenum">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>DBfor<wbr>My<wbr>SQL.<wbr>Ssl<wbr>Enforcement<wbr>Enum</a></span>
+        <span class="property-type"><a href="#sslenforcementenum">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>DBfor<wbr>My<wbr>SQL..<wbr>Ssl<wbr>Enforcement<wbr>Enum</a></span>
     </dt>
     <dd>{{% md %}}Enable ssl enforcement or not when connect to server.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3032,7 +3032,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storageprofile_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageprofile">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>DBfor<wbr>My<wbr>SQL.<wbr>Inputs.<wbr>Storage<wbr>Profile<wbr>Args</a></span>
+        <span class="property-type"><a href="#storageprofile">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>DBfor<wbr>My<wbr>SQL..<wbr>Inputs.<wbr>Storage<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Storage profile of a server.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3041,7 +3041,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#serverversion">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>DBfor<wbr>My<wbr>SQL.<wbr>Server<wbr>Version</a></span>
+        <span class="property-type">string | <a href="#serverversion">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>DBfor<wbr>My<wbr>SQL..<wbr>Server<wbr>Version</a></span>
     </dt>
     <dd>{{% md %}}Server version.{{% /md %}}</dd>
 </dl>
@@ -3283,7 +3283,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#infrastructureencryption_csharp" style="color: inherit; text-decoration: inherit;">Infrastructure<wbr>Encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#infrastructureencryption">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>DBfor<wbr>My<wbr>SQL.<wbr>Infrastructure<wbr>Encryption</a></span>
+        <span class="property-type">string | <a href="#infrastructureencryption">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>DBfor<wbr>My<wbr>SQL..<wbr>Infrastructure<wbr>Encryption</a></span>
     </dt>
     <dd>{{% md %}}Status showing whether the server enabled infrastructure encryption.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3292,7 +3292,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#minimaltlsversion_csharp" style="color: inherit; text-decoration: inherit;">Minimal<wbr>Tls<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#minimaltlsversionenum">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>DBfor<wbr>My<wbr>SQL.<wbr>Minimal<wbr>Tls<wbr>Version<wbr>Enum</a></span>
+        <span class="property-type">string | <a href="#minimaltlsversionenum">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>DBfor<wbr>My<wbr>SQL..<wbr>Minimal<wbr>Tls<wbr>Version<wbr>Enum</a></span>
     </dt>
     <dd>{{% md %}}Enforce a minimal Tls version for the server.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3301,7 +3301,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publicnetworkaccess_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Network<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#publicnetworkaccessenum">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>DBfor<wbr>My<wbr>SQL.<wbr>Public<wbr>Network<wbr>Access<wbr>Enum</a></span>
+        <span class="property-type">string | <a href="#publicnetworkaccessenum">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>DBfor<wbr>My<wbr>SQL..<wbr>Public<wbr>Network<wbr>Access<wbr>Enum</a></span>
     </dt>
     <dd>{{% md %}}Whether or not public network access is allowed for this server. Value is optional but if passed in, must be 'Enabled' or 'Disabled'{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3310,7 +3310,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sslenforcement_csharp" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Enforcement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sslenforcementenum">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>DBfor<wbr>My<wbr>SQL.<wbr>Ssl<wbr>Enforcement<wbr>Enum</a></span>
+        <span class="property-type"><a href="#sslenforcementenum">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>DBfor<wbr>My<wbr>SQL..<wbr>Ssl<wbr>Enforcement<wbr>Enum</a></span>
     </dt>
     <dd>{{% md %}}Enable ssl enforcement or not when connect to server.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3319,7 +3319,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storageprofile_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageprofile">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>DBfor<wbr>My<wbr>SQL.<wbr>Inputs.<wbr>Storage<wbr>Profile<wbr>Args</a></span>
+        <span class="property-type"><a href="#storageprofile">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>DBfor<wbr>My<wbr>SQL..<wbr>Inputs.<wbr>Storage<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Storage profile of a server.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3328,7 +3328,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#serverversion">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>DBfor<wbr>My<wbr>SQL.<wbr>Server<wbr>Version</a></span>
+        <span class="property-type">string | <a href="#serverversion">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>DBfor<wbr>My<wbr>SQL..<wbr>Server<wbr>Version</a></span>
     </dt>
     <dd>{{% md %}}Server version.{{% /md %}}</dd>
 </dl>
@@ -3661,7 +3661,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tier_csharp" style="color: inherit; text-decoration: inherit;">Tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#skutier">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>DBfor<wbr>My<wbr>SQL.<wbr>Sku<wbr>Tier</a></span>
+        <span class="property-type">string | <a href="#skutier">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>DBfor<wbr>My<wbr>SQL..<wbr>Sku<wbr>Tier</a></span>
     </dt>
     <dd>{{% md %}}The tier of the particular SKU, e.g. Basic.{{% /md %}}</dd>
 </dl>
@@ -4168,7 +4168,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#georedundantbackup_csharp" style="color: inherit; text-decoration: inherit;">Geo<wbr>Redundant<wbr>Backup</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#georedundantbackup">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>DBfor<wbr>My<wbr>SQL.<wbr>Geo<wbr>Redundant<wbr>Backup</a></span>
+        <span class="property-type">string | <a href="#georedundantbackup">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>DBfor<wbr>My<wbr>SQL..<wbr>Geo<wbr>Redundant<wbr>Backup</a></span>
     </dt>
     <dd>{{% md %}}Enable Geo-redundant or not for server backup.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4177,7 +4177,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storageautogrow_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Autogrow</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#storageautogrow">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>DBfor<wbr>My<wbr>SQL.<wbr>Storage<wbr>Autogrow</a></span>
+        <span class="property-type">string | <a href="#storageautogrow">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>DBfor<wbr>My<wbr>SQL..<wbr>Storage<wbr>Autogrow</a></span>
     </dt>
     <dd>{{% md %}}Enable Storage Auto Grow.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4493,7 +4493,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:dbformysql/latest:Server targetserver /subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/testrg/providers/Microsoft.DBforMySQL/servers/targetserver 
+$ pulumi import azure-nextgen:dbformysql:Server targetserver /subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/testrg/providers/Microsoft.DBforMySQL/servers/targetserver 
 ```
 
 

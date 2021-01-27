@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.apimanagement.ApiRelease resourc
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 ApiRelease details.
-Latest API Version: 2019-12-01.
+API Version: 2019-12-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var apiRelease = new AzureNextGen.ApiManagement.Latest.ApiRelease("apiRelease", new AzureNextGen.ApiManagement.Latest.ApiReleaseArgs
+        var apiRelease = new AzureNextGen.ApiManagement..ApiRelease("apiRelease", new AzureNextGen.ApiManagement..ApiReleaseArgs
         {
             ApiId = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/apis/a1",
             Notes = "yahooagain",
@@ -49,7 +49,7 @@ class MyStack : Stack
 package main
 
 import (
-	apimanagement "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/apimanagement/latest"
+	apimanagement "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/apimanagement"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -79,7 +79,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-api_release = azure_nextgen.apimanagement.latest.ApiRelease("apiRelease",
+api_release = azure_nextgen.apimanagement.ApiRelease("apiRelease",
     api_id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/apis/a1",
     notes="yahooagain",
     release_id="testrev",
@@ -96,7 +96,7 @@ api_release = azure_nextgen.apimanagement.latest.ApiRelease("apiRelease",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const apiRelease = new azure_nextgen.apimanagement.latest.ApiRelease("apiRelease", {
+const apiRelease = new azure_nextgen.apimanagement.ApiRelease("apiRelease", {
     apiId: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/apis/a1",
     notes: "yahooagain",
     releaseId: "testrev",
@@ -714,7 +714,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:apimanagement/latest:ApiRelease testrev /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/apis/a1/releases/testrev 
+$ pulumi import azure-nextgen:apimanagement:ApiRelease testrev /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/apis/a1/releases/testrev 
 ```
 
 

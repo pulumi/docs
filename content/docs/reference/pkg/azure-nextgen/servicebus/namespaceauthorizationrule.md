@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.servicebus.NamespaceAuthorizatio
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Description of a namespace authorization rule.
-Latest API Version: 2017-04-01.
+API Version: 2017-04-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var namespaceAuthorizationRule = new AzureNextGen.ServiceBus.Latest.NamespaceAuthorizationRule("namespaceAuthorizationRule", new AzureNextGen.ServiceBus.Latest.NamespaceAuthorizationRuleArgs
+        var namespaceAuthorizationRule = new AzureNextGen.ServiceBus..NamespaceAuthorizationRule("namespaceAuthorizationRule", new AzureNextGen.ServiceBus..NamespaceAuthorizationRuleArgs
         {
             AuthorizationRuleName = "sdk-AuthRules-1788",
             NamespaceName = "sdk-Namespace-6914",
@@ -56,7 +56,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-namespace_authorization_rule = azure_nextgen.servicebus.latest.NamespaceAuthorizationRule("namespaceAuthorizationRule",
+namespace_authorization_rule = azure_nextgen.servicebus.NamespaceAuthorizationRule("namespaceAuthorizationRule",
     authorization_rule_name="sdk-AuthRules-1788",
     namespace_name="sdk-Namespace-6914",
     resource_group_name="ArunMonocle",
@@ -75,7 +75,7 @@ namespace_authorization_rule = azure_nextgen.servicebus.latest.NamespaceAuthoriz
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const namespaceAuthorizationRule = new azure_nextgen.servicebus.latest.NamespaceAuthorizationRule("namespaceAuthorizationRule", {
+const namespaceAuthorizationRule = new azure_nextgen.servicebus.NamespaceAuthorizationRule("namespaceAuthorizationRule", {
     authorizationRuleName: "sdk-AuthRules-1788",
     namespaceName: "sdk-Namespace-6914",
     resourceGroupName: "ArunMonocle",
@@ -305,7 +305,7 @@ The NamespaceAuthorizationRule resource accepts the following [input]({{< relref
 <a href="#rights_csharp" style="color: inherit; text-decoration: inherit;">Rights</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accessrights">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Bus.<wbr>Access<wbr>Rights&gt;</a></span>
+        <span class="property-type"><a href="#accessrights">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Bus..<wbr>Access<wbr>Rights&gt;</a></span>
     </dt>
     <dd>{{% md %}}The rights associated with the rule.{{% /md %}}</dd>
 </dl>
@@ -637,7 +637,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:servicebus/latest:NamespaceAuthorizationRule sdk-AuthRules-1788 /subscriptions/5f750a97-50d9-4e36-8081-c9ee4c0210d4/resourceGroups/ArunMonocle/providers/Microsoft.ServiceBus/namespaces/sdk-Namespace-6914/AuthorizationRules/sdk-AuthRules-1788 
+$ pulumi import azure-nextgen:servicebus:NamespaceAuthorizationRule sdk-AuthRules-1788 /subscriptions/5f750a97-50d9-4e36-8081-c9ee4c0210d4/resourceGroups/ArunMonocle/providers/Microsoft.ServiceBus/namespaces/sdk-Namespace-6914/AuthorizationRules/sdk-AuthRules-1788 
 ```
 
 

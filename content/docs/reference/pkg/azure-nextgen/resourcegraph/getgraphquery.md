@@ -206,7 +206,7 @@ The following output properties are available:
 <a href="#systemdata_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Resource<wbr>Graph.<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
+        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Resource<wbr>Graph..<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Metadata pertaining to creation and last modification of the resource.{{% /md %}}</dd>
     <dt class="property-"
@@ -239,7 +239,7 @@ The following output properties are available:
     <dt class="property-"
             title="">
         <span id="etag_csharp">
-<a href="#etag_csharp" style="color: inherit; text-decoration: inherit;">ETag</a>
+<a href="#etag_csharp" style="color: inherit; text-decoration: inherit;">Etag</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -344,7 +344,7 @@ The following output properties are available:
     <dt class="property-"
             title="">
         <span id="etag_go">
-<a href="#etag_go" style="color: inherit; text-decoration: inherit;">ETag</a>
+<a href="#etag_go" style="color: inherit; text-decoration: inherit;">Etag</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -449,7 +449,7 @@ The following output properties are available:
     <dt class="property-"
             title="">
         <span id="etag_nodejs">
-<a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">e<wbr>Tag</a>
+<a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -553,8 +553,8 @@ The following output properties are available:
     <dd>{{% md %}}The description of a graph query.{{% /md %}}</dd>
     <dt class="property-"
             title="">
-        <span id="e_tag_python">
-<a href="#e_tag_python" style="color: inherit; text-decoration: inherit;">e_<wbr>tag</a>
+        <span id="etag_python">
+<a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>

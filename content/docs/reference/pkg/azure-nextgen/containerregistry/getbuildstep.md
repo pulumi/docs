@@ -251,7 +251,7 @@ The following output properties are available:
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dockerbuildstepresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry.<wbr>Outputs.<wbr>Docker<wbr>Build<wbr>Step<wbr>Response</a></span>
+        <span class="property-type"><a href="#dockerbuildstepresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry..<wbr>Outputs.<wbr>Docker<wbr>Build<wbr>Step<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The properties of a build step.{{% /md %}}</dd>
     <dt class="property-"
@@ -397,6 +397,145 @@ The following output properties are available:
 
 ## Supporting Types
 
+
+<h4 id="argumentresponse">Argument<wbr>Response</h4>
+
+
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the argument.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="value_csharp">
+<a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The value of the argument.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="issecret_csharp">
+<a href="#issecret_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Secret</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Flag to indicate whether the argument represents a secret and want to be removed from build logs.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the argument.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="value_go">
+<a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The value of the argument.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="issecret_go">
+<a href="#issecret_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Secret</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Flag to indicate whether the argument represents a secret and want to be removed from build logs.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the argument.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="value_nodejs">
+<a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The value of the argument.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="issecret_nodejs">
+<a href="#issecret_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Secret</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Flag to indicate whether the argument represents a secret and want to be removed from build logs.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the argument.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="value_python">
+<a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The value of the argument.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="is_secret_python">
+<a href="#is_secret_python" style="color: inherit; text-decoration: inherit;">is_<wbr>secret</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Flag to indicate whether the argument represents a secret and want to be removed from build logs.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
 
 <h4 id="baseimagedependencyresponse">Base<wbr>Image<wbr>Dependency<wbr>Response</h4>
 
@@ -609,181 +748,6 @@ The following output properties are available:
 </dl>
 {{% /choosable %}}
 
-<h4 id="buildargumentresponse">Build<wbr>Argument<wbr>Response</h4>
-
-
-
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="name_csharp">
-<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the argument.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="type_csharp">
-<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The type of the argument.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="value_csharp">
-<a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The value of the argument.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="issecret_csharp">
-<a href="#issecret_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Secret</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Flag to indicate whether the argument represents a secret and want to be removed from build logs.{{% /md %}}</dd>
-</dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="name_go">
-<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the argument.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="type_go">
-<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The type of the argument.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="value_go">
-<a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The value of the argument.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="issecret_go">
-<a href="#issecret_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Secret</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Flag to indicate whether the argument represents a secret and want to be removed from build logs.{{% /md %}}</dd>
-</dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="name_nodejs">
-<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the argument.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="type_nodejs">
-<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The type of the argument.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="value_nodejs">
-<a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The value of the argument.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="issecret_nodejs">
-<a href="#issecret_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Secret</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
-    </dt>
-    <dd>{{% md %}}Flag to indicate whether the argument represents a secret and want to be removed from build logs.{{% /md %}}</dd>
-</dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="name_python">
-<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the argument.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="type_python">
-<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The type of the argument.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="value_python">
-<a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The value of the argument.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="is_secret_python">
-<a href="#is_secret_python" style="color: inherit; text-decoration: inherit;">is_<wbr>secret</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Flag to indicate whether the argument represents a secret and want to be removed from build logs.{{% /md %}}</dd>
-</dl>
-{{% /choosable %}}
-
 <h4 id="dockerbuildstepresponse">Docker<wbr>Build<wbr>Step<wbr>Response</h4>
 
 
@@ -800,45 +764,36 @@ The following output properties are available:
 <a href="#baseimagedependencies_csharp" style="color: inherit; text-decoration: inherit;">Base<wbr>Image<wbr>Dependencies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#baseimagedependencyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Base<wbr>Image<wbr>Dependency<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#baseimagedependencyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry..<wbr>Inputs.<wbr>Base<wbr>Image<wbr>Dependency<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of base image dependencies for a step.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="provisioningstate_csharp">
-<a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
+        <span id="dockerfilepath_csharp">
+<a href="#dockerfilepath_csharp" style="color: inherit; text-decoration: inherit;">Docker<wbr>File<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provisioning state of the build step.{{% /md %}}</dd>
+    <dd>{{% md %}}The Docker file path relative to the source context.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="baseimagetrigger_csharp">
-<a href="#baseimagetrigger_csharp" style="color: inherit; text-decoration: inherit;">Base<wbr>Image<wbr>Trigger</a>
+        <span id="arguments_csharp">
+<a href="#arguments_csharp" style="color: inherit; text-decoration: inherit;">Arguments</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#argumentresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry..<wbr>Inputs.<wbr>Argument<wbr>Response<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The collection of override arguments to be used when executing this build step.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="contextaccesstoken_csharp">
+<a href="#contextaccesstoken_csharp" style="color: inherit; text-decoration: inherit;">Context<wbr>Access<wbr>Token</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the auto trigger for base image dependency updates.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="branch_csharp">
-<a href="#branch_csharp" style="color: inherit; text-decoration: inherit;">Branch</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The repository branch name.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="buildarguments_csharp">
-<a href="#buildarguments_csharp" style="color: inherit; text-decoration: inherit;">Build<wbr>Arguments</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#buildargumentresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Build<wbr>Argument<wbr>Response<wbr>Args&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}The custom arguments for building this build step.{{% /md %}}</dd>
+    <dd>{{% md %}}The token (git PAT or SAS token of storage account blob) associated with the context for a step.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="contextpath_csharp">
@@ -847,16 +802,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The relative context path for a docker build in the source.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="dockerfilepath_csharp">
-<a href="#dockerfilepath_csharp" style="color: inherit; text-decoration: inherit;">Docker<wbr>File<wbr>Path</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Docker file path relative to the source control root.{{% /md %}}</dd>
+    <dd>{{% md %}}The URL(absolute or relative) of the source context for the task step.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="imagenames_csharp">
@@ -884,6 +830,15 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The value of this property indicates whether the image cache is enabled or not.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="target_csharp">
+<a href="#target_csharp" style="color: inherit; text-decoration: inherit;">Target</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the target build stage for the docker build.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -901,40 +856,31 @@ The following output properties are available:
     <dd>{{% md %}}List of base image dependencies for a step.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="provisioningstate_go">
-<a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
+        <span id="dockerfilepath_go">
+<a href="#dockerfilepath_go" style="color: inherit; text-decoration: inherit;">Docker<wbr>File<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provisioning state of the build step.{{% /md %}}</dd>
+    <dd>{{% md %}}The Docker file path relative to the source context.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="baseimagetrigger_go">
-<a href="#baseimagetrigger_go" style="color: inherit; text-decoration: inherit;">Base<wbr>Image<wbr>Trigger</a>
+        <span id="arguments_go">
+<a href="#arguments_go" style="color: inherit; text-decoration: inherit;">Arguments</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#argumentresponse">[]Argument<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The collection of override arguments to be used when executing this build step.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="contextaccesstoken_go">
+<a href="#contextaccesstoken_go" style="color: inherit; text-decoration: inherit;">Context<wbr>Access<wbr>Token</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the auto trigger for base image dependency updates.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="branch_go">
-<a href="#branch_go" style="color: inherit; text-decoration: inherit;">Branch</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The repository branch name.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="buildarguments_go">
-<a href="#buildarguments_go" style="color: inherit; text-decoration: inherit;">Build<wbr>Arguments</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#buildargumentresponse">[]Build<wbr>Argument<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}The custom arguments for building this build step.{{% /md %}}</dd>
+    <dd>{{% md %}}The token (git PAT or SAS token of storage account blob) associated with the context for a step.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="contextpath_go">
@@ -943,16 +889,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The relative context path for a docker build in the source.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="dockerfilepath_go">
-<a href="#dockerfilepath_go" style="color: inherit; text-decoration: inherit;">Docker<wbr>File<wbr>Path</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Docker file path relative to the source control root.{{% /md %}}</dd>
+    <dd>{{% md %}}The URL(absolute or relative) of the source context for the task step.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="imagenames_go">
@@ -980,6 +917,15 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The value of this property indicates whether the image cache is enabled or not.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="target_go">
+<a href="#target_go" style="color: inherit; text-decoration: inherit;">Target</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the target build stage for the docker build.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -997,40 +943,31 @@ The following output properties are available:
     <dd>{{% md %}}List of base image dependencies for a step.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="provisioningstate_nodejs">
-<a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
+        <span id="dockerfilepath_nodejs">
+<a href="#dockerfilepath_nodejs" style="color: inherit; text-decoration: inherit;">docker<wbr>File<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provisioning state of the build step.{{% /md %}}</dd>
+    <dd>{{% md %}}The Docker file path relative to the source context.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="baseimagetrigger_nodejs">
-<a href="#baseimagetrigger_nodejs" style="color: inherit; text-decoration: inherit;">base<wbr>Image<wbr>Trigger</a>
+        <span id="arguments_nodejs">
+<a href="#arguments_nodejs" style="color: inherit; text-decoration: inherit;">arguments</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#argumentresponse">Argument<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}The collection of override arguments to be used when executing this build step.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="contextaccesstoken_nodejs">
+<a href="#contextaccesstoken_nodejs" style="color: inherit; text-decoration: inherit;">context<wbr>Access<wbr>Token</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the auto trigger for base image dependency updates.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="branch_nodejs">
-<a href="#branch_nodejs" style="color: inherit; text-decoration: inherit;">branch</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The repository branch name.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="buildarguments_nodejs">
-<a href="#buildarguments_nodejs" style="color: inherit; text-decoration: inherit;">build<wbr>Arguments</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#buildargumentresponse">Build<wbr>Argument<wbr>Response[]</a></span>
-    </dt>
-    <dd>{{% md %}}The custom arguments for building this build step.{{% /md %}}</dd>
+    <dd>{{% md %}}The token (git PAT or SAS token of storage account blob) associated with the context for a step.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="contextpath_nodejs">
@@ -1039,16 +976,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The relative context path for a docker build in the source.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="dockerfilepath_nodejs">
-<a href="#dockerfilepath_nodejs" style="color: inherit; text-decoration: inherit;">docker<wbr>File<wbr>Path</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Docker file path relative to the source control root.{{% /md %}}</dd>
+    <dd>{{% md %}}The URL(absolute or relative) of the source context for the task step.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="imagenames_nodejs">
@@ -1076,6 +1004,15 @@ The following output properties are available:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}The value of this property indicates whether the image cache is enabled or not.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="target_nodejs">
+<a href="#target_nodejs" style="color: inherit; text-decoration: inherit;">target</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the target build stage for the docker build.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -1093,40 +1030,31 @@ The following output properties are available:
     <dd>{{% md %}}List of base image dependencies for a step.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="provisioning_state_python">
-<a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
+        <span id="docker_file_path_python">
+<a href="#docker_file_path_python" style="color: inherit; text-decoration: inherit;">docker_<wbr>file_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provisioning state of the build step.{{% /md %}}</dd>
+    <dd>{{% md %}}The Docker file path relative to the source context.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="base_image_trigger_python">
-<a href="#base_image_trigger_python" style="color: inherit; text-decoration: inherit;">base_<wbr>image_<wbr>trigger</a>
+        <span id="arguments_python">
+<a href="#arguments_python" style="color: inherit; text-decoration: inherit;">arguments</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#argumentresponse">Sequence[Argument<wbr>Response<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}The collection of override arguments to be used when executing this build step.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="context_access_token_python">
+<a href="#context_access_token_python" style="color: inherit; text-decoration: inherit;">context_<wbr>access_<wbr>token</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of the auto trigger for base image dependency updates.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="branch_python">
-<a href="#branch_python" style="color: inherit; text-decoration: inherit;">branch</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The repository branch name.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="build_arguments_python">
-<a href="#build_arguments_python" style="color: inherit; text-decoration: inherit;">build_<wbr>arguments</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#buildargumentresponse">Sequence[Build<wbr>Argument<wbr>Response<wbr>Args]</a></span>
-    </dt>
-    <dd>{{% md %}}The custom arguments for building this build step.{{% /md %}}</dd>
+    <dd>{{% md %}}The token (git PAT or SAS token of storage account blob) associated with the context for a step.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="context_path_python">
@@ -1135,16 +1063,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The relative context path for a docker build in the source.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="docker_file_path_python">
-<a href="#docker_file_path_python" style="color: inherit; text-decoration: inherit;">docker_<wbr>file_<wbr>path</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The Docker file path relative to the source control root.{{% /md %}}</dd>
+    <dd>{{% md %}}The URL(absolute or relative) of the source context for the task step.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="image_names_python">
@@ -1172,6 +1091,15 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The value of this property indicates whether the image cache is enabled or not.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="target_python">
+<a href="#target_python" style="color: inherit; text-decoration: inherit;">target</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the target build stage for the docker build.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 

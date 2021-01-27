@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.documentdb.DatabaseAccountSqlDat
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 An Azure Cosmos DB SQL database.
-Latest API Version: 2016-03-31.
+API Version: 2016-03-31.
 
 {{% examples %}}
 ## Example Usage
@@ -27,12 +27,12 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var databaseAccountSqlDatabase = new AzureNextGen.DocumentDB.Latest.DatabaseAccountSqlDatabase("databaseAccountSqlDatabase", new AzureNextGen.DocumentDB.Latest.DatabaseAccountSqlDatabaseArgs
+        var databaseAccountSqlDatabase = new AzureNextGen.DocumentDB..DatabaseAccountSqlDatabase("databaseAccountSqlDatabase", new AzureNextGen.DocumentDB..DatabaseAccountSqlDatabaseArgs
         {
             AccountName = "ddb1",
             DatabaseName = "databaseName",
             Options = ,
-            Resource = new AzureNextGen.DocumentDB.Latest.Inputs.SqlDatabaseResourceArgs
+            Resource = new AzureNextGen.DocumentDB..Inputs.SqlDatabaseResourceArgs
             {
                 Id = "databaseName",
             },
@@ -52,7 +52,7 @@ class MyStack : Stack
 package main
 
 import (
-	documentdb "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/documentdb/latest"
+	documentdb "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/documentdb"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -84,11 +84,11 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-database_account_sql_database = azure_nextgen.documentdb.latest.DatabaseAccountSqlDatabase("databaseAccountSqlDatabase",
+database_account_sql_database = azure_nextgen.documentdb.DatabaseAccountSqlDatabase("databaseAccountSqlDatabase",
     account_name="ddb1",
     database_name="databaseName",
     options={},
-    resource=azure_nextgen.documentdb.latest.SqlDatabaseResourceArgs(
+    resource=azure_nextgen.documentdb.SqlDatabaseResourceArgs(
         id="databaseName",
     ),
     resource_group_name="rg1")
@@ -103,7 +103,7 @@ database_account_sql_database = azure_nextgen.documentdb.latest.DatabaseAccountS
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const databaseAccountSqlDatabase = new azure_nextgen.documentdb.latest.DatabaseAccountSqlDatabase("databaseAccountSqlDatabase", {
+const databaseAccountSqlDatabase = new azure_nextgen.documentdb.DatabaseAccountSqlDatabase("databaseAccountSqlDatabase", {
     accountName: "ddb1",
     databaseName: "databaseName",
     options: {},
@@ -333,7 +333,7 @@ The DatabaseAccountSqlDatabase resource accepts the following [input]({{< relref
 <a href="#resource_csharp" style="color: inherit; text-decoration: inherit;">Resource</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqldatabaseresource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Sql<wbr>Database<wbr>Resource<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqldatabaseresource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB..<wbr>Inputs.<wbr>Sql<wbr>Database<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The standard JSON format of a SQL database{{% /md %}}</dd>
     <dt class="property-required"
@@ -969,7 +969,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:documentdb/latest:DatabaseAccountSqlDatabase databaseName databaseName 
+$ pulumi import azure-nextgen:documentdb:DatabaseAccountSqlDatabase databaseName databaseName 
 ```
 
 

@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.customerinsights.View resource w
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The view resource format.
-Latest API Version: 2017-04-26.
+API Version: 2017-04-26.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var view = new AzureNextGen.CustomerInsights.Latest.View("view", new AzureNextGen.CustomerInsights.Latest.ViewArgs
+        var view = new AzureNextGen.CustomerInsights..View("view", new AzureNextGen.CustomerInsights..ViewArgs
         {
             Definition = "{\\\"isProfileType\\\":false,\\\"profileTypes\\\":[],\\\"widgets\\\":[],\\\"style\\\":[]}",
             DisplayName = 
@@ -53,7 +53,7 @@ class MyStack : Stack
 package main
 
 import (
-	customerinsights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/customerinsights/latest"
+	customerinsights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/customerinsights"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -86,7 +86,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-view = azure_nextgen.customerinsights.latest.View("view",
+view = azure_nextgen.customerinsights.View("view",
     definition="{\\\"isProfileType\\\":false,\\\"profileTypes\\\":[],\\\"widgets\\\":[],\\\"style\\\":[]}",
     display_name={
         "en": "some name",
@@ -106,7 +106,7 @@ view = azure_nextgen.customerinsights.latest.View("view",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const view = new azure_nextgen.customerinsights.latest.View("view", {
+const view = new azure_nextgen.customerinsights.View("view", {
     definition: "{\\\"isProfileType\\\":false,\\\"profileTypes\\\":[],\\\"widgets\\\":[],\\\"style\\\":[]}",
     displayName: {
         en: "some name",
@@ -799,7 +799,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:customerinsights/latest:View sdkTestHub/testView /subscriptions/c909e979-ef71-4def-a970-bc7c154db8c5/resourceGroups/TestHubRG/providers/Microsoft.CustomerInsights/hubs/sdkTestHub/views/testView 
+$ pulumi import azure-nextgen:customerinsights:View sdkTestHub/testView /subscriptions/c909e979-ef71-4def-a970-bc7c154db8c5/resourceGroups/TestHubRG/providers/Microsoft.CustomerInsights/hubs/sdkTestHub/views/testView 
 ```
 
 

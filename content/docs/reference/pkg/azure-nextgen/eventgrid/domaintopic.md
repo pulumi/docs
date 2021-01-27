@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.eventgrid.DomainTopic resource w
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Domain Topic.
-Latest API Version: 2020-06-01.
+API Version: 2020-06-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var domainTopic = new AzureNextGen.EventGrid.Latest.DomainTopic("domainTopic", new AzureNextGen.EventGrid.Latest.DomainTopicArgs
+        var domainTopic = new AzureNextGen.EventGrid..DomainTopic("domainTopic", new AzureNextGen.EventGrid..DomainTopicArgs
         {
             DomainName = "exampledomain1",
             DomainTopicName = "exampledomaintopic1",
@@ -47,7 +47,7 @@ class MyStack : Stack
 package main
 
 import (
-	eventgrid "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/eventgrid/latest"
+	eventgrid "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/eventgrid"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -75,7 +75,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-domain_topic = azure_nextgen.eventgrid.latest.DomainTopic("domainTopic",
+domain_topic = azure_nextgen.eventgrid.DomainTopic("domainTopic",
     domain_name="exampledomain1",
     domain_topic_name="exampledomaintopic1",
     resource_group_name="examplerg")
@@ -90,7 +90,7 @@ domain_topic = azure_nextgen.eventgrid.latest.DomainTopic("domainTopic",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const domainTopic = new azure_nextgen.eventgrid.latest.DomainTopic("domainTopic", {
+const domainTopic = new azure_nextgen.eventgrid.DomainTopic("domainTopic", {
     domainName: "exampledomain1",
     domainTopicName: "exampledomaintopic1",
     resourceGroupName: "examplerg",
@@ -598,7 +598,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:eventgrid/latest:DomainTopic exampledomaintopic1 /subscriptions/5b4b650e-28b9-4790-b3ab-ddbd88d727c4/resourceGroups/examplerg/providers/Microsoft.EventGrid/domains/exampledomain1/topics/exampledomaintopic1 
+$ pulumi import azure-nextgen:eventgrid:DomainTopic exampledomaintopic1 /subscriptions/5b4b650e-28b9-4790-b3ab-ddbd88d727c4/resourceGroups/examplerg/providers/Microsoft.EventGrid/domains/exampledomain1/topics/exampledomaintopic1 
 ```
 
 

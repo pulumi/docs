@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.media.StreamingLocator resource 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 A Streaming Locator resource
-Latest API Version: 2020-05-01.
+API Version: 2020-05-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var streamingLocator = new AzureNextGen.Media.Latest.StreamingLocator("streamingLocator", new AzureNextGen.Media.Latest.StreamingLocatorArgs
+        var streamingLocator = new AzureNextGen.Media..StreamingLocator("streamingLocator", new AzureNextGen.Media..StreamingLocatorArgs
         {
             AccountName = "contosomedia",
             AssetName = "ClimbingMountRainier",
@@ -49,7 +49,7 @@ class MyStack : Stack
 package main
 
 import (
-	media "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/media/latest"
+	media "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/media"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -79,7 +79,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-streaming_locator = azure_nextgen.media.latest.StreamingLocator("streamingLocator",
+streaming_locator = azure_nextgen.media.StreamingLocator("streamingLocator",
     account_name="contosomedia",
     asset_name="ClimbingMountRainier",
     resource_group_name="contoso",
@@ -96,7 +96,7 @@ streaming_locator = azure_nextgen.media.latest.StreamingLocator("streamingLocato
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const streamingLocator = new azure_nextgen.media.latest.StreamingLocator("streamingLocator", {
+const streamingLocator = new azure_nextgen.media.StreamingLocator("streamingLocator", {
     accountName: "contosomedia",
     assetName: "ClimbingMountRainier",
     resourceGroupName: "contoso",
@@ -118,7 +118,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var streamingLocator = new AzureNextGen.Media.Latest.StreamingLocator("streamingLocator", new AzureNextGen.Media.Latest.StreamingLocatorArgs
+        var streamingLocator = new AzureNextGen.Media..StreamingLocator("streamingLocator", new AzureNextGen.Media..StreamingLocatorArgs
         {
             AccountName = "contosomedia",
             AssetName = "ClimbingMountRainier",
@@ -142,7 +142,7 @@ class MyStack : Stack
 package main
 
 import (
-	media "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/media/latest"
+	media "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/media"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -174,7 +174,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-streaming_locator = azure_nextgen.media.latest.StreamingLocator("streamingLocator",
+streaming_locator = azure_nextgen.media.StreamingLocator("streamingLocator",
     account_name="contosomedia",
     asset_name="ClimbingMountRainier",
     end_time="2028-12-31T23:59:59.9999999Z",
@@ -193,7 +193,7 @@ streaming_locator = azure_nextgen.media.latest.StreamingLocator("streamingLocato
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const streamingLocator = new azure_nextgen.media.latest.StreamingLocator("streamingLocator", {
+const streamingLocator = new azure_nextgen.media.StreamingLocator("streamingLocator", {
     accountName: "contosomedia",
     assetName: "ClimbingMountRainier",
     endTime: "2028-12-31T23:59:59.9999999Z",
@@ -217,25 +217,25 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var streamingLocator = new AzureNextGen.Media.Latest.StreamingLocator("streamingLocator", new AzureNextGen.Media.Latest.StreamingLocatorArgs
+        var streamingLocator = new AzureNextGen.Media..StreamingLocator("streamingLocator", new AzureNextGen.Media..StreamingLocatorArgs
         {
             AccountName = "contosomedia",
             AssetName = "ClimbingMountRainier",
             ContentKeys = 
             {
-                new AzureNextGen.Media.Latest.Inputs.StreamingLocatorContentKeyArgs
+                new AzureNextGen.Media..Inputs.StreamingLocatorContentKeyArgs
                 {
                     Id = "60000000-0000-0000-0000-000000000001",
                     LabelReferenceInStreamingPolicy = "aesDefaultKey",
                     Value = "1UqLohAfWsEGkULYxHjYZg==",
                 },
-                new AzureNextGen.Media.Latest.Inputs.StreamingLocatorContentKeyArgs
+                new AzureNextGen.Media..Inputs.StreamingLocatorContentKeyArgs
                 {
                     Id = "60000000-0000-0000-0000-000000000004",
                     LabelReferenceInStreamingPolicy = "cencDefaultKey",
                     Value = "4UqLohAfWsEGkULYxHjYZg==",
                 },
-                new AzureNextGen.Media.Latest.Inputs.StreamingLocatorContentKeyArgs
+                new AzureNextGen.Media..Inputs.StreamingLocatorContentKeyArgs
                 {
                     Id = "60000000-0000-0000-0000-000000000007",
                     LabelReferenceInStreamingPolicy = "cbcsDefaultKey",
@@ -261,7 +261,7 @@ class MyStack : Stack
 package main
 
 import (
-	media "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/media/latest"
+	media "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/media"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -309,21 +309,21 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-streaming_locator = azure_nextgen.media.latest.StreamingLocator("streamingLocator",
+streaming_locator = azure_nextgen.media.StreamingLocator("streamingLocator",
     account_name="contosomedia",
     asset_name="ClimbingMountRainier",
     content_keys=[
-        azure_nextgen.media.latest.StreamingLocatorContentKeyArgs(
+        azure_nextgen.media.StreamingLocatorContentKeyArgs(
             id="60000000-0000-0000-0000-000000000001",
             label_reference_in_streaming_policy="aesDefaultKey",
             value="1UqLohAfWsEGkULYxHjYZg==",
         ),
-        azure_nextgen.media.latest.StreamingLocatorContentKeyArgs(
+        azure_nextgen.media.StreamingLocatorContentKeyArgs(
             id="60000000-0000-0000-0000-000000000004",
             label_reference_in_streaming_policy="cencDefaultKey",
             value="4UqLohAfWsEGkULYxHjYZg==",
         ),
-        azure_nextgen.media.latest.StreamingLocatorContentKeyArgs(
+        azure_nextgen.media.StreamingLocatorContentKeyArgs(
             id="60000000-0000-0000-0000-000000000007",
             label_reference_in_streaming_policy="cbcsDefaultKey",
             value="7UqLohAfWsEGkULYxHjYZg==",
@@ -344,7 +344,7 @@ streaming_locator = azure_nextgen.media.latest.StreamingLocator("streamingLocato
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const streamingLocator = new azure_nextgen.media.latest.StreamingLocator("streamingLocator", {
+const streamingLocator = new azure_nextgen.media.StreamingLocator("streamingLocator", {
     accountName: "contosomedia",
     assetName: "ClimbingMountRainier",
     contentKeys: [
@@ -617,7 +617,7 @@ The StreamingLocator resource accepts the following [input]({{< relref "/docs/in
 <a href="#contentkeys_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streaminglocatorcontentkey">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Streaming<wbr>Locator<wbr>Content<wbr>Key<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#streaminglocatorcontentkey">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Streaming<wbr>Locator<wbr>Content<wbr>Key<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The ContentKeys used by this Streaming Locator.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1358,7 +1358,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tracks_csharp" style="color: inherit; text-decoration: inherit;">Tracks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trackselectionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Track<wbr>Selection<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#trackselectionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Track<wbr>Selection<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Tracks which use this Content Key{{% /md %}}</dd>
     <dt class="property-required"
@@ -1716,7 +1716,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trackselections_csharp" style="color: inherit; text-decoration: inherit;">Track<wbr>Selections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trackpropertyconditionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Track<wbr>Property<wbr>Condition<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#trackpropertyconditionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Track<wbr>Property<wbr>Condition<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}TrackSelections is a track property condition list which can specify track(s){{% /md %}}</dd>
 </dl>
@@ -1772,7 +1772,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:media/latest:StreamingLocator UserCreatedSecureStreamingLocatorWithUserDefinedContentKeys /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/contoso/providers/Microsoft.Media/mediaservices/contosomedia/streamingLocators/UserCreatedSecureStreamingLocatorWithUserDefinedContentKeys 
+$ pulumi import azure-nextgen:media:StreamingLocator UserCreatedSecureStreamingLocatorWithUserDefinedContentKeys /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/contoso/providers/Microsoft.Media/mediaservices/contosomedia/streamingLocators/UserCreatedSecureStreamingLocatorWithUserDefinedContentKeys 
 ```
 
 

@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.apimanagement.NotificationRecipi
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Recipient User details.
-Latest API Version: 2019-12-01.
+API Version: 2019-12-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var notificationRecipientUser = new AzureNextGen.ApiManagement.Latest.NotificationRecipientUser("notificationRecipientUser", new AzureNextGen.ApiManagement.Latest.NotificationRecipientUserArgs
+        var notificationRecipientUser = new AzureNextGen.ApiManagement..NotificationRecipientUser("notificationRecipientUser", new AzureNextGen.ApiManagement..NotificationRecipientUserArgs
         {
             NotificationName = "RequestPublisherNotificationMessage",
             ResourceGroupName = "rg1",
@@ -48,7 +48,7 @@ class MyStack : Stack
 package main
 
 import (
-	apimanagement "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/apimanagement/latest"
+	apimanagement "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/apimanagement"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -77,7 +77,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-notification_recipient_user = azure_nextgen.apimanagement.latest.NotificationRecipientUser("notificationRecipientUser",
+notification_recipient_user = azure_nextgen.apimanagement.NotificationRecipientUser("notificationRecipientUser",
     notification_name="RequestPublisherNotificationMessage",
     resource_group_name="rg1",
     service_name="apimService1",
@@ -93,7 +93,7 @@ notification_recipient_user = azure_nextgen.apimanagement.latest.NotificationRec
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const notificationRecipientUser = new azure_nextgen.apimanagement.latest.NotificationRecipientUser("notificationRecipientUser", {
+const notificationRecipientUser = new azure_nextgen.apimanagement.NotificationRecipientUser("notificationRecipientUser", {
     notificationName: "RequestPublisherNotificationMessage",
     resourceGroupName: "rg1",
     serviceName: "apimService1",
@@ -602,7 +602,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:apimanagement/latest:NotificationRecipientUser 576823d0a40f7e74ec07d642 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/notifications/RequestPublisherNotificationMessage/recipientUsers/576823d0a40f7e74ec07d642 
+$ pulumi import azure-nextgen:apimanagement:NotificationRecipientUser 576823d0a40f7e74ec07d642 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/notifications/RequestPublisherNotificationMessage/recipientUsers/576823d0a40f7e74ec07d642 
 ```
 
 

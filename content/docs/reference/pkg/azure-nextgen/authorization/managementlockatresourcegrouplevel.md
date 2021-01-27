@@ -11,13 +11,13 @@ meta_desc: "Documentation for the azure-nextgen.authorization.ManagementLockAtRe
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The lock information.
-Latest API Version: 2016-09-01.
+API Version: 2016-09-01.
 ## Import
 
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:authorization/latest:ManagementLockAtResourceGroupLevel myresource1 /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Authorization/locks/{lockName} 
+$ pulumi import azure-nextgen:authorization:ManagementLockAtResourceGroupLevel myresource1 /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Authorization/locks/{lockName} 
 ```
 
 
@@ -209,7 +209,7 @@ The ManagementLockAtResourceGroupLevel resource accepts the following [input]({{
 <a href="#level_csharp" style="color: inherit; text-decoration: inherit;">Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#locklevel">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Authorization.<wbr>Lock<wbr>Level</a></span>
+        <span class="property-type">string | <a href="#locklevel">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Authorization..<wbr>Lock<wbr>Level</a></span>
     </dt>
     <dd>{{% md %}}The level of the lock. Possible values are: NotSpecified, CanNotDelete, ReadOnly. CanNotDelete means authorized users are able to read and modify the resources, but not delete. ReadOnly means authorized users can only read from a resource, but they can't modify or delete it.{{% /md %}}</dd>
     <dt class="property-required"
@@ -245,7 +245,7 @@ The ManagementLockAtResourceGroupLevel resource accepts the following [input]({{
 <a href="#owners_csharp" style="color: inherit; text-decoration: inherit;">Owners</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementlockowner">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Authorization.<wbr>Inputs.<wbr>Management<wbr>Lock<wbr>Owner<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#managementlockowner">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Authorization..<wbr>Inputs.<wbr>Management<wbr>Lock<wbr>Owner<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The owners of the lock.{{% /md %}}</dd>
 </dl>

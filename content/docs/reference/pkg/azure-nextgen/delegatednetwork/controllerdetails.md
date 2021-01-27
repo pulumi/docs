@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.delegatednetwork.ControllerDetai
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Represents an instance of a DNC controller.
+API Version: 2020-08-08-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var controllerDetails = new AzureNextGen.DelegatedNetwork.V20200808Preview.ControllerDetails("controllerDetails", new AzureNextGen.DelegatedNetwork.V20200808Preview.ControllerDetailsArgs
+        var controllerDetails = new AzureNextGen.DelegatedNetwork..ControllerDetails("controllerDetails", new AzureNextGen.DelegatedNetwork..ControllerDetailsArgs
         {
             Location = "West US",
             ResourceGroupName = "TestRG",
@@ -46,7 +47,7 @@ class MyStack : Stack
 package main
 
 import (
-	delegatednetwork "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/delegatednetwork/v20200808preview"
+	delegatednetwork "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/delegatednetwork"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -74,7 +75,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-controller_details = azure_nextgen.delegatednetwork.v20200808preview.ControllerDetails("controllerDetails",
+controller_details = azure_nextgen.delegatednetwork.ControllerDetails("controllerDetails",
     location="West US",
     resource_group_name="TestRG",
     resource_name="testcontroller")
@@ -89,7 +90,7 @@ controller_details = azure_nextgen.delegatednetwork.v20200808preview.ControllerD
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const controllerDetails = new azure_nextgen.delegatednetwork.v20200808preview.ControllerDetails("controllerDetails", {
+const controllerDetails = new azure_nextgen.delegatednetwork.ControllerDetails("controllerDetails", {
     location: "West US",
     resourceGroupName: "TestRG",
     resourceName: "testcontroller",
@@ -777,7 +778,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:delegatednetwork/v20200808preview:ControllerDetails testcontroller /subscriptions/613192d7-503f-477a-9cfe-4efc3ee2bd60/resourceGroups/TestRG/providers/Microsoft.DelegatedNetwork/controller/testcontroller 
+$ pulumi import azure-nextgen:delegatednetwork:ControllerDetails testcontroller /subscriptions/613192d7-503f-477a-9cfe-4efc3ee2bd60/resourceGroups/TestRG/providers/Microsoft.DelegatedNetwork/controller/testcontroller 
 ```
 
 

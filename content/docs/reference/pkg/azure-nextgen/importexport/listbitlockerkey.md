@@ -159,7 +159,7 @@ The following output properties are available:
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#drivebitlockerkeyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Import<wbr>Export.<wbr>Outputs.<wbr>Drive<wbr>Bit<wbr>Locker<wbr>Key<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#drivebitlockerkeyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Import<wbr>Export..<wbr>Outputs.<wbr>Drive<wbr>Bit<wbr>Locker<wbr>Key<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}drive status{{% /md %}}</dd>
 </dl>

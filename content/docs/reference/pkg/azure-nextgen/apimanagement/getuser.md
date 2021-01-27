@@ -197,7 +197,7 @@ The following output properties are available:
 <a href="#groups_csharp" style="color: inherit; text-decoration: inherit;">Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupcontractpropertiesresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management.<wbr>Outputs.<wbr>Group<wbr>Contract<wbr>Properties<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#groupcontractpropertiesresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management..<wbr>Outputs.<wbr>Group<wbr>Contract<wbr>Properties<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Collection of groups user is part of.{{% /md %}}</dd>
     <dt class="property-"
@@ -251,7 +251,7 @@ The following output properties are available:
 <a href="#identities_csharp" style="color: inherit; text-decoration: inherit;">Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#useridentitycontractresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management.<wbr>Outputs.<wbr>User<wbr>Identity<wbr>Contract<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#useridentitycontractresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management..<wbr>Outputs.<wbr>User<wbr>Identity<wbr>Contract<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Collection of user identities.{{% /md %}}</dd>
     <dt class="property-"

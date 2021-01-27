@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.appplatform.Service resource wit
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Service resource
-Latest API Version: 2020-07-01.
+API Version: 2020-07-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,13 +27,13 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var service = new AzureNextGen.AppPlatform.Latest.Service("service", new AzureNextGen.AppPlatform.Latest.ServiceArgs
+        var service = new AzureNextGen.AppPlatform..Service("service", new AzureNextGen.AppPlatform..ServiceArgs
         {
             Location = "eastus",
             Properties = ,
             ResourceGroupName = "myResourceGroup",
             ServiceName = "myservice",
-            Sku = new AzureNextGen.AppPlatform.Latest.Inputs.SkuArgs
+            Sku = new AzureNextGen.AppPlatform..Inputs.SkuArgs
             {
                 Name = "S0",
                 Tier = "Standard",
@@ -57,7 +57,7 @@ class MyStack : Stack
 package main
 
 import (
-	appplatform "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/appplatform/latest"
+	appplatform "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/appplatform"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -93,12 +93,12 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-service = azure_nextgen.appplatform.latest.Service("service",
+service = azure_nextgen.appplatform.Service("service",
     location="eastus",
-    properties=azure_nextgen.appplatform.latest.ClusterResourcePropertiesArgs(),
+    properties=azure_nextgen.appplatform.ClusterResourcePropertiesArgs(),
     resource_group_name="myResourceGroup",
     service_name="myservice",
-    sku=azure_nextgen.appplatform.latest.SkuArgs(
+    sku=azure_nextgen.appplatform.SkuArgs(
         name="S0",
         tier="Standard",
     ),
@@ -116,7 +116,7 @@ service = azure_nextgen.appplatform.latest.Service("service",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const service = new azure_nextgen.appplatform.latest.Service("service", {
+const service = new azure_nextgen.appplatform.Service("service", {
     location: "eastus",
     properties: {},
     resourceGroupName: "myResourceGroup",
@@ -144,12 +144,12 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var service = new AzureNextGen.AppPlatform.Latest.Service("service", new AzureNextGen.AppPlatform.Latest.ServiceArgs
+        var service = new AzureNextGen.AppPlatform..Service("service", new AzureNextGen.AppPlatform..ServiceArgs
         {
             Location = "eastus",
-            Properties = new AzureNextGen.AppPlatform.Latest.Inputs.ClusterResourcePropertiesArgs
+            Properties = new AzureNextGen.AppPlatform..Inputs.ClusterResourcePropertiesArgs
             {
-                NetworkProfile = new AzureNextGen.AppPlatform.Latest.Inputs.NetworkProfileArgs
+                NetworkProfile = new AzureNextGen.AppPlatform..Inputs.NetworkProfileArgs
                 {
                     AppNetworkResourceGroup = "my-app-network-rg",
                     AppSubnetId = "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/myVirtualNetwork/subnets/apps",
@@ -160,7 +160,7 @@ class MyStack : Stack
             },
             ResourceGroupName = "myResourceGroup",
             ServiceName = "myservice",
-            Sku = new AzureNextGen.AppPlatform.Latest.Inputs.SkuArgs
+            Sku = new AzureNextGen.AppPlatform..Inputs.SkuArgs
             {
                 Name = "S0",
                 Tier = "Standard",
@@ -184,7 +184,7 @@ class MyStack : Stack
 package main
 
 import (
-	appplatform "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/appplatform/latest"
+	appplatform "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/appplatform"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -228,10 +228,10 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-service = azure_nextgen.appplatform.latest.Service("service",
+service = azure_nextgen.appplatform.Service("service",
     location="eastus",
-    properties=azure_nextgen.appplatform.latest.ClusterResourcePropertiesArgs(
-        network_profile=azure_nextgen.appplatform.latest.NetworkProfileArgs(
+    properties=azure_nextgen.appplatform.ClusterResourcePropertiesArgs(
+        network_profile=azure_nextgen.appplatform.NetworkProfileArgs(
             app_network_resource_group="my-app-network-rg",
             app_subnet_id="/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/myVirtualNetwork/subnets/apps",
             service_cidr="10.8.0.0/16,10.244.0.0/16,10.245.0.1/16",
@@ -241,7 +241,7 @@ service = azure_nextgen.appplatform.latest.Service("service",
     ),
     resource_group_name="myResourceGroup",
     service_name="myservice",
-    sku=azure_nextgen.appplatform.latest.SkuArgs(
+    sku=azure_nextgen.appplatform.SkuArgs(
         name="S0",
         tier="Standard",
     ),
@@ -259,7 +259,7 @@ service = azure_nextgen.appplatform.latest.Service("service",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const service = new azure_nextgen.appplatform.latest.Service("service", {
+const service = new azure_nextgen.appplatform.Service("service", {
     location: "eastus",
     properties: {
         networkProfile: {
@@ -501,7 +501,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterresourceproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>App<wbr>Platform.<wbr>Inputs.<wbr>Cluster<wbr>Resource<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusterresourceproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>App<wbr>Platform..<wbr>Inputs.<wbr>Cluster<wbr>Resource<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties of the Service resource{{% /md %}}</dd>
     <dt class="property-optional"
@@ -510,7 +510,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sku">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>App<wbr>Platform.<wbr>Inputs.<wbr>Sku<wbr>Args</a></span>
+        <span class="property-type"><a href="#sku">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>App<wbr>Platform..<wbr>Inputs.<wbr>Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Sku of the Service resource{{% /md %}}</dd>
     <dt class="property-optional"
@@ -865,7 +865,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#networkprofile_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkprofile">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>App<wbr>Platform.<wbr>Inputs.<wbr>Network<wbr>Profile<wbr>Args</a></span>
+        <span class="property-type"><a href="#networkprofile">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>App<wbr>Platform..<wbr>Inputs.<wbr>Network<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Network profile of the Service{{% /md %}}</dd>
 </dl>
@@ -954,7 +954,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#networkprofile_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkprofileresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>App<wbr>Platform.<wbr>Inputs.<wbr>Network<wbr>Profile<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#networkprofileresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>App<wbr>Platform..<wbr>Inputs.<wbr>Network<wbr>Profile<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Network profile of the Service{{% /md %}}</dd>
 </dl>
@@ -1303,7 +1303,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#outboundips_csharp" style="color: inherit; text-decoration: inherit;">Outbound<wbr>IPs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkprofileresponseoutboundips">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>App<wbr>Platform.<wbr>Inputs.<wbr>Network<wbr>Profile<wbr>Response<wbr>Outbound<wbr>IPs<wbr>Args</a></span>
+        <span class="property-type"><a href="#networkprofileresponseoutboundips">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>App<wbr>Platform..<wbr>Inputs.<wbr>Network<wbr>Profile<wbr>Response<wbr>Outbound<wbr>IPs<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Desired outbound IP resources for Azure Spring Cloud instance.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1869,7 +1869,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:appplatform/latest:Service myservice /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.AppPlatform/Spring/myservice 
+$ pulumi import azure-nextgen:appplatform:Service myservice /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.AppPlatform/Spring/myservice 
 ```
 
 

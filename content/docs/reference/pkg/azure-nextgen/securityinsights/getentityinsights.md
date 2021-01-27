@@ -375,7 +375,7 @@ The following output properties are available:
 <a href="#metadata_csharp" style="color: inherit; text-decoration: inherit;">Meta<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getinsightsresultsmetadataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security<wbr>Insights.<wbr>Outputs.<wbr>Get<wbr>Insights<wbr>Results<wbr>Metadata<wbr>Response</a></span>
+        <span class="property-type"><a href="#getinsightsresultsmetadataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security<wbr>Insights..<wbr>Outputs.<wbr>Get<wbr>Insights<wbr>Results<wbr>Metadata<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The metadata from the get insights operation results.{{% /md %}}</dd>
     <dt class="property-"
@@ -384,7 +384,7 @@ The following output properties are available:
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#entityinsightitemresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security<wbr>Insights.<wbr>Outputs.<wbr>Entity<wbr>Insight<wbr>Item<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#entityinsightitemresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security<wbr>Insights..<wbr>Outputs.<wbr>Entity<wbr>Insight<wbr>Item<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The insights result values.{{% /md %}}</dd>
 </dl>
@@ -484,7 +484,7 @@ The following output properties are available:
 <a href="#chartqueryresults_csharp" style="color: inherit; text-decoration: inherit;">Chart<wbr>Query<wbr>Results</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#insightstableresultresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security<wbr>Insights.<wbr>Inputs.<wbr>Insights<wbr>Table<wbr>Result<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#insightstableresultresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security<wbr>Insights..<wbr>Inputs.<wbr>Insights<wbr>Table<wbr>Result<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Query results for table insights query.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -502,7 +502,7 @@ The following output properties are available:
 <a href="#querytimeinterval_csharp" style="color: inherit; text-decoration: inherit;">Query<wbr>Time<wbr>Interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#entityinsightitemresponsequerytimeinterval">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security<wbr>Insights.<wbr>Inputs.<wbr>Entity<wbr>Insight<wbr>Item<wbr>Response<wbr>Query<wbr>Time<wbr>Interval<wbr>Args</a></span>
+        <span class="property-type"><a href="#entityinsightitemresponsequerytimeinterval">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security<wbr>Insights..<wbr>Inputs.<wbr>Entity<wbr>Insight<wbr>Item<wbr>Response<wbr>Query<wbr>Time<wbr>Interval<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Time interval that the query actually executed on.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -511,7 +511,7 @@ The following output properties are available:
 <a href="#tablequeryresults_csharp" style="color: inherit; text-decoration: inherit;">Table<wbr>Query<wbr>Results</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#insightstableresultresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security<wbr>Insights.<wbr>Inputs.<wbr>Insights<wbr>Table<wbr>Result<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#insightstableresultresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security<wbr>Insights..<wbr>Inputs.<wbr>Insights<wbr>Table<wbr>Result<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Query results for table insights query.{{% /md %}}</dd>
 </dl>
@@ -910,7 +910,7 @@ The following output properties are available:
 <a href="#errors_csharp" style="color: inherit; text-decoration: inherit;">Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getinsightserrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security<wbr>Insights.<wbr>Inputs.<wbr>Get<wbr>Insights<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getinsightserrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security<wbr>Insights..<wbr>Inputs.<wbr>Get<wbr>Insights<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}information about the failed queries{{% /md %}}</dd>
 </dl>
@@ -1004,7 +1004,7 @@ The following output properties are available:
 <a href="#columns_csharp" style="color: inherit; text-decoration: inherit;">Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#insightstableresultresponsecolumns">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security<wbr>Insights.<wbr>Inputs.<wbr>Insights<wbr>Table<wbr>Result<wbr>Response<wbr>Columns<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#insightstableresultresponsecolumns">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security<wbr>Insights..<wbr>Inputs.<wbr>Insights<wbr>Table<wbr>Result<wbr>Response<wbr>Columns<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Columns Metadata of the table{{% /md %}}</dd>
     <dt class="property-optional"

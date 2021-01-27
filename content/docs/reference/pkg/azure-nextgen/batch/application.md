@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.batch.Application resource with 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Contains information about an application in a Batch account.
-Latest API Version: 2021-01-01.
+API Version: 2021-01-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var application = new AzureNextGen.Batch.Latest.Application("application", new AzureNextGen.Batch.Latest.ApplicationArgs
+        var application = new AzureNextGen.Batch..Application("application", new AzureNextGen.Batch..ApplicationArgs
         {
             AccountName = "sampleacct",
             AllowUpdates = false,
@@ -49,7 +49,7 @@ class MyStack : Stack
 package main
 
 import (
-	batch "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/batch/latest"
+	batch "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/batch"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -79,7 +79,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-application = azure_nextgen.batch.latest.Application("application",
+application = azure_nextgen.batch.Application("application",
     account_name="sampleacct",
     allow_updates=False,
     application_name="app1",
@@ -96,7 +96,7 @@ application = azure_nextgen.batch.latest.Application("application",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const application = new azure_nextgen.batch.latest.Application("application", {
+const application = new azure_nextgen.batch.Application("application", {
     accountName: "sampleacct",
     allowUpdates: false,
     applicationName: "app1",
@@ -714,7 +714,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:batch/latest:Application app1 /subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.Batch/batchAccounts/sampleacct/applications/app1 
+$ pulumi import azure-nextgen:batch:Application app1 /subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.Batch/batchAccounts/sampleacct/applications/app1 
 ```
 
 

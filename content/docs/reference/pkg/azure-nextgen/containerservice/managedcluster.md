@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.containerservice.ManagedCluster 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Managed cluster.
-Latest API Version: 2020-12-01.
+API Version: 2020-12-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,12 +27,12 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var managedCluster = new AzureNextGen.ContainerService.Latest.ManagedCluster("managedCluster", new AzureNextGen.ContainerService.Latest.ManagedClusterArgs
+        var managedCluster = new AzureNextGen.ContainerService..ManagedCluster("managedCluster", new AzureNextGen.ContainerService..ManagedClusterArgs
         {
             AddonProfiles = ,
             AgentPoolProfiles = 
             {
-                new AzureNextGen.ContainerService.Latest.Inputs.ManagedClusterAgentPoolProfileArgs
+                new AzureNextGen.ContainerService..Inputs.ManagedClusterAgentPoolProfileArgs
                 {
                     Count = 3,
                     EnableEncryptionAtHost = true,
@@ -44,7 +44,7 @@ class MyStack : Stack
                     VmSize = "Standard_DS2_v2",
                 },
             },
-            AutoScalerProfile = new AzureNextGen.ContainerService.Latest.Inputs.ManagedClusterPropertiesAutoScalerProfileArgs
+            AutoScalerProfile = new AzureNextGen.ContainerService..Inputs.ManagedClusterPropertiesAutoScalerProfileArgs
             {
                 ScaleDownDelayAfterAdd = "15m",
                 ScanInterval = "20s",
@@ -54,14 +54,14 @@ class MyStack : Stack
             EnablePodSecurityPolicy = true,
             EnableRBAC = true,
             KubernetesVersion = "",
-            LinuxProfile = new AzureNextGen.ContainerService.Latest.Inputs.ContainerServiceLinuxProfileArgs
+            LinuxProfile = new AzureNextGen.ContainerService..Inputs.ContainerServiceLinuxProfileArgs
             {
                 AdminUsername = "azureuser",
-                Ssh = new AzureNextGen.ContainerService.Latest.Inputs.ContainerServiceSshConfigurationArgs
+                Ssh = new AzureNextGen.ContainerService..Inputs.ContainerServiceSshConfigurationArgs
                 {
                     PublicKeys = 
                     {
-                        new AzureNextGen.ContainerService.Latest.Inputs.ContainerServiceSshPublicKeyArgs
+                        new AzureNextGen.ContainerService..Inputs.ContainerServiceSshPublicKeyArgs
                         {
                             KeyData = "keydata",
                         },
@@ -69,11 +69,11 @@ class MyStack : Stack
                 },
             },
             Location = "location1",
-            NetworkProfile = new AzureNextGen.ContainerService.Latest.Inputs.ContainerServiceNetworkProfileArgs
+            NetworkProfile = new AzureNextGen.ContainerService..Inputs.ContainerServiceNetworkProfileArgs
             {
-                LoadBalancerProfile = new AzureNextGen.ContainerService.Latest.Inputs.ManagedClusterLoadBalancerProfileArgs
+                LoadBalancerProfile = new AzureNextGen.ContainerService..Inputs.ManagedClusterLoadBalancerProfileArgs
                 {
-                    ManagedOutboundIPs = new AzureNextGen.ContainerService.Latest.Inputs.ManagedClusterLoadBalancerProfileManagedOutboundIPsArgs
+                    ManagedOutboundIPs = new AzureNextGen.ContainerService..Inputs.ManagedClusterLoadBalancerProfileManagedOutboundIPsArgs
                     {
                         Count = 2,
                     },
@@ -83,12 +83,12 @@ class MyStack : Stack
             },
             ResourceGroupName = "rg1",
             ResourceName = "clustername1",
-            ServicePrincipalProfile = new AzureNextGen.ContainerService.Latest.Inputs.ManagedClusterServicePrincipalProfileArgs
+            ServicePrincipalProfile = new AzureNextGen.ContainerService..Inputs.ManagedClusterServicePrincipalProfileArgs
             {
                 ClientId = "clientid",
                 Secret = "secret",
             },
-            Sku = new AzureNextGen.ContainerService.Latest.Inputs.ManagedClusterSKUArgs
+            Sku = new AzureNextGen.ContainerService..Inputs.ManagedClusterSKUArgs
             {
                 Name = "Basic",
                 Tier = "Free",
@@ -98,7 +98,7 @@ class MyStack : Stack
                 { "archv2", "" },
                 { "tier", "production" },
             },
-            WindowsProfile = new AzureNextGen.ContainerService.Latest.Inputs.ManagedClusterWindowsProfileArgs
+            WindowsProfile = new AzureNextGen.ContainerService..Inputs.ManagedClusterWindowsProfileArgs
             {
                 AdminPassword = "replacePassword1234$",
                 AdminUsername = "azureuser",
@@ -120,7 +120,7 @@ package main
 import (
 	"fmt"
 
-	containerservice "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/containerservice/latest"
+	containerservice "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/containerservice"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -205,9 +205,9 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-managed_cluster = azure_nextgen.containerservice.latest.ManagedCluster("managedCluster",
+managed_cluster = azure_nextgen.containerservice.ManagedCluster("managedCluster",
     addon_profiles={},
-    agent_pool_profiles=[azure_nextgen.containerservice.latest.ManagedClusterAgentPoolProfileArgs(
+    agent_pool_profiles=[azure_nextgen.containerservice.ManagedClusterAgentPoolProfileArgs(
         count=3,
         enable_encryption_at_host=True,
         enable_node_public_ip=True,
@@ -217,7 +217,7 @@ managed_cluster = azure_nextgen.containerservice.latest.ManagedCluster("managedC
         type="VirtualMachineScaleSets",
         vm_size="Standard_DS2_v2",
     )],
-    auto_scaler_profile=azure_nextgen.containerservice.latest.ManagedClusterPropertiesAutoScalerProfileArgs(
+    auto_scaler_profile=azure_nextgen.containerservice.ManagedClusterPropertiesAutoScalerProfileArgs(
         scale_down_delay_after_add="15m",
         scan_interval="20s",
     ),
@@ -226,18 +226,18 @@ managed_cluster = azure_nextgen.containerservice.latest.ManagedCluster("managedC
     enable_pod_security_policy=True,
     enable_rbac=True,
     kubernetes_version="",
-    linux_profile=azure_nextgen.containerservice.latest.ContainerServiceLinuxProfileArgs(
+    linux_profile=azure_nextgen.containerservice.ContainerServiceLinuxProfileArgs(
         admin_username="azureuser",
-        ssh=azure_nextgen.containerservice.latest.ContainerServiceSshConfigurationArgs(
-            public_keys=[azure_nextgen.containerservice.latest.ContainerServiceSshPublicKeyArgs(
+        ssh=azure_nextgen.containerservice.ContainerServiceSshConfigurationArgs(
+            public_keys=[azure_nextgen.containerservice.ContainerServiceSshPublicKeyArgs(
                 key_data="keydata",
             )],
         ),
     ),
     location="location1",
-    network_profile=azure_nextgen.containerservice.latest.ContainerServiceNetworkProfileArgs(
-        load_balancer_profile=azure_nextgen.containerservice.latest.ManagedClusterLoadBalancerProfileArgs(
-            managed_outbound_ips=azure_nextgen.containerservice.latest.ManagedClusterLoadBalancerProfileManagedOutboundIPsArgs(
+    network_profile=azure_nextgen.containerservice.ContainerServiceNetworkProfileArgs(
+        load_balancer_profile=azure_nextgen.containerservice.ManagedClusterLoadBalancerProfileArgs(
+            managed_outbound_ips=azure_nextgen.containerservice.ManagedClusterLoadBalancerProfileManagedOutboundIPsArgs(
                 count=2,
             ),
         ),
@@ -246,11 +246,11 @@ managed_cluster = azure_nextgen.containerservice.latest.ManagedCluster("managedC
     ),
     resource_group_name="rg1",
     resource_name="clustername1",
-    service_principal_profile=azure_nextgen.containerservice.latest.ManagedClusterServicePrincipalProfileArgs(
+    service_principal_profile=azure_nextgen.containerservice.ManagedClusterServicePrincipalProfileArgs(
         client_id="clientid",
         secret="secret",
     ),
-    sku=azure_nextgen.containerservice.latest.ManagedClusterSKUArgs(
+    sku=azure_nextgen.containerservice.ManagedClusterSKUArgs(
         name="Basic",
         tier="Free",
     ),
@@ -258,7 +258,7 @@ managed_cluster = azure_nextgen.containerservice.latest.ManagedCluster("managedC
         "archv2": "",
         "tier": "production",
     },
-    windows_profile=azure_nextgen.containerservice.latest.ManagedClusterWindowsProfileArgs(
+    windows_profile=azure_nextgen.containerservice.ManagedClusterWindowsProfileArgs(
         admin_password="replacePassword1234$",
         admin_username="azureuser",
     ))
@@ -273,7 +273,7 @@ managed_cluster = azure_nextgen.containerservice.latest.ManagedCluster("managedC
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const managedCluster = new azure_nextgen.containerservice.latest.ManagedCluster("managedCluster", {
+const managedCluster = new azure_nextgen.containerservice.ManagedCluster("managedCluster", {
     addonProfiles: {},
     agentPoolProfiles: [{
         count: 3,
@@ -346,12 +346,12 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var managedCluster = new AzureNextGen.ContainerService.Latest.ManagedCluster("managedCluster", new AzureNextGen.ContainerService.Latest.ManagedClusterArgs
+        var managedCluster = new AzureNextGen.ContainerService..ManagedCluster("managedCluster", new AzureNextGen.ContainerService..ManagedClusterArgs
         {
             AddonProfiles = ,
             AgentPoolProfiles = 
             {
-                new AzureNextGen.ContainerService.Latest.Inputs.ManagedClusterAgentPoolProfileArgs
+                new AzureNextGen.ContainerService..Inputs.ManagedClusterAgentPoolProfileArgs
                 {
                     Count = 3,
                     EnableNodePublicIP = true,
@@ -363,7 +363,7 @@ class MyStack : Stack
                     VmSize = "Standard_DS2_v2",
                 },
             },
-            AutoScalerProfile = new AzureNextGen.ContainerService.Latest.Inputs.ManagedClusterPropertiesAutoScalerProfileArgs
+            AutoScalerProfile = new AzureNextGen.ContainerService..Inputs.ManagedClusterPropertiesAutoScalerProfileArgs
             {
                 ScaleDownDelayAfterAdd = "15m",
                 ScanInterval = "20s",
@@ -373,14 +373,14 @@ class MyStack : Stack
             EnablePodSecurityPolicy = true,
             EnableRBAC = true,
             KubernetesVersion = "",
-            LinuxProfile = new AzureNextGen.ContainerService.Latest.Inputs.ContainerServiceLinuxProfileArgs
+            LinuxProfile = new AzureNextGen.ContainerService..Inputs.ContainerServiceLinuxProfileArgs
             {
                 AdminUsername = "azureuser",
-                Ssh = new AzureNextGen.ContainerService.Latest.Inputs.ContainerServiceSshConfigurationArgs
+                Ssh = new AzureNextGen.ContainerService..Inputs.ContainerServiceSshConfigurationArgs
                 {
                     PublicKeys = 
                     {
-                        new AzureNextGen.ContainerService.Latest.Inputs.ContainerServiceSshPublicKeyArgs
+                        new AzureNextGen.ContainerService..Inputs.ContainerServiceSshPublicKeyArgs
                         {
                             KeyData = "keydata",
                         },
@@ -388,11 +388,11 @@ class MyStack : Stack
                 },
             },
             Location = "location1",
-            NetworkProfile = new AzureNextGen.ContainerService.Latest.Inputs.ContainerServiceNetworkProfileArgs
+            NetworkProfile = new AzureNextGen.ContainerService..Inputs.ContainerServiceNetworkProfileArgs
             {
-                LoadBalancerProfile = new AzureNextGen.ContainerService.Latest.Inputs.ManagedClusterLoadBalancerProfileArgs
+                LoadBalancerProfile = new AzureNextGen.ContainerService..Inputs.ManagedClusterLoadBalancerProfileArgs
                 {
-                    ManagedOutboundIPs = new AzureNextGen.ContainerService.Latest.Inputs.ManagedClusterLoadBalancerProfileManagedOutboundIPsArgs
+                    ManagedOutboundIPs = new AzureNextGen.ContainerService..Inputs.ManagedClusterLoadBalancerProfileManagedOutboundIPsArgs
                     {
                         Count = 2,
                     },
@@ -402,12 +402,12 @@ class MyStack : Stack
             },
             ResourceGroupName = "rg1",
             ResourceName = "clustername1",
-            ServicePrincipalProfile = new AzureNextGen.ContainerService.Latest.Inputs.ManagedClusterServicePrincipalProfileArgs
+            ServicePrincipalProfile = new AzureNextGen.ContainerService..Inputs.ManagedClusterServicePrincipalProfileArgs
             {
                 ClientId = "clientid",
                 Secret = "secret",
             },
-            Sku = new AzureNextGen.ContainerService.Latest.Inputs.ManagedClusterSKUArgs
+            Sku = new AzureNextGen.ContainerService..Inputs.ManagedClusterSKUArgs
             {
                 Name = "Basic",
                 Tier = "Free",
@@ -417,7 +417,7 @@ class MyStack : Stack
                 { "archv2", "" },
                 { "tier", "production" },
             },
-            WindowsProfile = new AzureNextGen.ContainerService.Latest.Inputs.ManagedClusterWindowsProfileArgs
+            WindowsProfile = new AzureNextGen.ContainerService..Inputs.ManagedClusterWindowsProfileArgs
             {
                 AdminPassword = "replacePassword1234$",
                 AdminUsername = "azureuser",
@@ -439,7 +439,7 @@ package main
 import (
 	"fmt"
 
-	containerservice "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/containerservice/latest"
+	containerservice "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/containerservice"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -524,9 +524,9 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-managed_cluster = azure_nextgen.containerservice.latest.ManagedCluster("managedCluster",
+managed_cluster = azure_nextgen.containerservice.ManagedCluster("managedCluster",
     addon_profiles={},
-    agent_pool_profiles=[azure_nextgen.containerservice.latest.ManagedClusterAgentPoolProfileArgs(
+    agent_pool_profiles=[azure_nextgen.containerservice.ManagedClusterAgentPoolProfileArgs(
         count=3,
         enable_node_public_ip=True,
         mode="System",
@@ -536,7 +536,7 @@ managed_cluster = azure_nextgen.containerservice.latest.ManagedCluster("managedC
         type="VirtualMachineScaleSets",
         vm_size="Standard_DS2_v2",
     )],
-    auto_scaler_profile=azure_nextgen.containerservice.latest.ManagedClusterPropertiesAutoScalerProfileArgs(
+    auto_scaler_profile=azure_nextgen.containerservice.ManagedClusterPropertiesAutoScalerProfileArgs(
         scale_down_delay_after_add="15m",
         scan_interval="20s",
     ),
@@ -545,18 +545,18 @@ managed_cluster = azure_nextgen.containerservice.latest.ManagedCluster("managedC
     enable_pod_security_policy=True,
     enable_rbac=True,
     kubernetes_version="",
-    linux_profile=azure_nextgen.containerservice.latest.ContainerServiceLinuxProfileArgs(
+    linux_profile=azure_nextgen.containerservice.ContainerServiceLinuxProfileArgs(
         admin_username="azureuser",
-        ssh=azure_nextgen.containerservice.latest.ContainerServiceSshConfigurationArgs(
-            public_keys=[azure_nextgen.containerservice.latest.ContainerServiceSshPublicKeyArgs(
+        ssh=azure_nextgen.containerservice.ContainerServiceSshConfigurationArgs(
+            public_keys=[azure_nextgen.containerservice.ContainerServiceSshPublicKeyArgs(
                 key_data="keydata",
             )],
         ),
     ),
     location="location1",
-    network_profile=azure_nextgen.containerservice.latest.ContainerServiceNetworkProfileArgs(
-        load_balancer_profile=azure_nextgen.containerservice.latest.ManagedClusterLoadBalancerProfileArgs(
-            managed_outbound_ips=azure_nextgen.containerservice.latest.ManagedClusterLoadBalancerProfileManagedOutboundIPsArgs(
+    network_profile=azure_nextgen.containerservice.ContainerServiceNetworkProfileArgs(
+        load_balancer_profile=azure_nextgen.containerservice.ManagedClusterLoadBalancerProfileArgs(
+            managed_outbound_ips=azure_nextgen.containerservice.ManagedClusterLoadBalancerProfileManagedOutboundIPsArgs(
                 count=2,
             ),
         ),
@@ -565,11 +565,11 @@ managed_cluster = azure_nextgen.containerservice.latest.ManagedCluster("managedC
     ),
     resource_group_name="rg1",
     resource_name="clustername1",
-    service_principal_profile=azure_nextgen.containerservice.latest.ManagedClusterServicePrincipalProfileArgs(
+    service_principal_profile=azure_nextgen.containerservice.ManagedClusterServicePrincipalProfileArgs(
         client_id="clientid",
         secret="secret",
     ),
-    sku=azure_nextgen.containerservice.latest.ManagedClusterSKUArgs(
+    sku=azure_nextgen.containerservice.ManagedClusterSKUArgs(
         name="Basic",
         tier="Free",
     ),
@@ -577,7 +577,7 @@ managed_cluster = azure_nextgen.containerservice.latest.ManagedCluster("managedC
         "archv2": "",
         "tier": "production",
     },
-    windows_profile=azure_nextgen.containerservice.latest.ManagedClusterWindowsProfileArgs(
+    windows_profile=azure_nextgen.containerservice.ManagedClusterWindowsProfileArgs(
         admin_password="replacePassword1234$",
         admin_username="azureuser",
     ))
@@ -592,7 +592,7 @@ managed_cluster = azure_nextgen.containerservice.latest.ManagedCluster("managedC
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const managedCluster = new azure_nextgen.containerservice.latest.ManagedCluster("managedCluster", {
+const managedCluster = new azure_nextgen.containerservice.ManagedCluster("managedCluster", {
     addonProfiles: {},
     agentPoolProfiles: [{
         count: 3,
@@ -665,9 +665,9 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var managedCluster = new AzureNextGen.ContainerService.Latest.ManagedCluster("managedCluster", new AzureNextGen.ContainerService.Latest.ManagedClusterArgs
+        var managedCluster = new AzureNextGen.ContainerService..ManagedCluster("managedCluster", new AzureNextGen.ContainerService..ManagedClusterArgs
         {
-            AadProfile = new AzureNextGen.ContainerService.Latest.Inputs.ManagedClusterAADProfileArgs
+            AadProfile = new AzureNextGen.ContainerService..Inputs.ManagedClusterAADProfileArgs
             {
                 EnableAzureRBAC = true,
                 Managed = true,
@@ -675,7 +675,7 @@ class MyStack : Stack
             AddonProfiles = ,
             AgentPoolProfiles = 
             {
-                new AzureNextGen.ContainerService.Latest.Inputs.ManagedClusterAgentPoolProfileArgs
+                new AzureNextGen.ContainerService..Inputs.ManagedClusterAgentPoolProfileArgs
                 {
                     AvailabilityZones = 
                     {
@@ -692,7 +692,7 @@ class MyStack : Stack
                     VmSize = "Standard_DS1_v2",
                 },
             },
-            AutoScalerProfile = new AzureNextGen.ContainerService.Latest.Inputs.ManagedClusterPropertiesAutoScalerProfileArgs
+            AutoScalerProfile = new AzureNextGen.ContainerService..Inputs.ManagedClusterPropertiesAutoScalerProfileArgs
             {
                 ScaleDownDelayAfterAdd = "15m",
                 ScanInterval = "20s",
@@ -702,14 +702,14 @@ class MyStack : Stack
             EnablePodSecurityPolicy = true,
             EnableRBAC = true,
             KubernetesVersion = "",
-            LinuxProfile = new AzureNextGen.ContainerService.Latest.Inputs.ContainerServiceLinuxProfileArgs
+            LinuxProfile = new AzureNextGen.ContainerService..Inputs.ContainerServiceLinuxProfileArgs
             {
                 AdminUsername = "azureuser",
-                Ssh = new AzureNextGen.ContainerService.Latest.Inputs.ContainerServiceSshConfigurationArgs
+                Ssh = new AzureNextGen.ContainerService..Inputs.ContainerServiceSshConfigurationArgs
                 {
                     PublicKeys = 
                     {
-                        new AzureNextGen.ContainerService.Latest.Inputs.ContainerServiceSshPublicKeyArgs
+                        new AzureNextGen.ContainerService..Inputs.ContainerServiceSshPublicKeyArgs
                         {
                             KeyData = "keydata",
                         },
@@ -717,11 +717,11 @@ class MyStack : Stack
                 },
             },
             Location = "location1",
-            NetworkProfile = new AzureNextGen.ContainerService.Latest.Inputs.ContainerServiceNetworkProfileArgs
+            NetworkProfile = new AzureNextGen.ContainerService..Inputs.ContainerServiceNetworkProfileArgs
             {
-                LoadBalancerProfile = new AzureNextGen.ContainerService.Latest.Inputs.ManagedClusterLoadBalancerProfileArgs
+                LoadBalancerProfile = new AzureNextGen.ContainerService..Inputs.ManagedClusterLoadBalancerProfileArgs
                 {
-                    ManagedOutboundIPs = new AzureNextGen.ContainerService.Latest.Inputs.ManagedClusterLoadBalancerProfileManagedOutboundIPsArgs
+                    ManagedOutboundIPs = new AzureNextGen.ContainerService..Inputs.ManagedClusterLoadBalancerProfileManagedOutboundIPsArgs
                     {
                         Count = 2,
                     },
@@ -731,12 +731,12 @@ class MyStack : Stack
             },
             ResourceGroupName = "rg1",
             ResourceName = "clustername1",
-            ServicePrincipalProfile = new AzureNextGen.ContainerService.Latest.Inputs.ManagedClusterServicePrincipalProfileArgs
+            ServicePrincipalProfile = new AzureNextGen.ContainerService..Inputs.ManagedClusterServicePrincipalProfileArgs
             {
                 ClientId = "clientid",
                 Secret = "secret",
             },
-            Sku = new AzureNextGen.ContainerService.Latest.Inputs.ManagedClusterSKUArgs
+            Sku = new AzureNextGen.ContainerService..Inputs.ManagedClusterSKUArgs
             {
                 Name = "Basic",
                 Tier = "Free",
@@ -746,7 +746,7 @@ class MyStack : Stack
                 { "archv2", "" },
                 { "tier", "production" },
             },
-            WindowsProfile = new AzureNextGen.ContainerService.Latest.Inputs.ManagedClusterWindowsProfileArgs
+            WindowsProfile = new AzureNextGen.ContainerService..Inputs.ManagedClusterWindowsProfileArgs
             {
                 AdminPassword = "replacePassword1234$",
                 AdminUsername = "azureuser",
@@ -768,7 +768,7 @@ package main
 import (
 	"fmt"
 
-	containerservice "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/containerservice/latest"
+	containerservice "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/containerservice"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -861,13 +861,13 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-managed_cluster = azure_nextgen.containerservice.latest.ManagedCluster("managedCluster",
-    aad_profile=azure_nextgen.containerservice.latest.ManagedClusterAADProfileArgs(
+managed_cluster = azure_nextgen.containerservice.ManagedCluster("managedCluster",
+    aad_profile=azure_nextgen.containerservice.ManagedClusterAADProfileArgs(
         enable_azure_rbac=True,
         managed=True,
     ),
     addon_profiles={},
-    agent_pool_profiles=[azure_nextgen.containerservice.latest.ManagedClusterAgentPoolProfileArgs(
+    agent_pool_profiles=[azure_nextgen.containerservice.ManagedClusterAgentPoolProfileArgs(
         availability_zones=[
             "1",
             "2",
@@ -881,7 +881,7 @@ managed_cluster = azure_nextgen.containerservice.latest.ManagedCluster("managedC
         type="VirtualMachineScaleSets",
         vm_size="Standard_DS1_v2",
     )],
-    auto_scaler_profile=azure_nextgen.containerservice.latest.ManagedClusterPropertiesAutoScalerProfileArgs(
+    auto_scaler_profile=azure_nextgen.containerservice.ManagedClusterPropertiesAutoScalerProfileArgs(
         scale_down_delay_after_add="15m",
         scan_interval="20s",
     ),
@@ -890,18 +890,18 @@ managed_cluster = azure_nextgen.containerservice.latest.ManagedCluster("managedC
     enable_pod_security_policy=True,
     enable_rbac=True,
     kubernetes_version="",
-    linux_profile=azure_nextgen.containerservice.latest.ContainerServiceLinuxProfileArgs(
+    linux_profile=azure_nextgen.containerservice.ContainerServiceLinuxProfileArgs(
         admin_username="azureuser",
-        ssh=azure_nextgen.containerservice.latest.ContainerServiceSshConfigurationArgs(
-            public_keys=[azure_nextgen.containerservice.latest.ContainerServiceSshPublicKeyArgs(
+        ssh=azure_nextgen.containerservice.ContainerServiceSshConfigurationArgs(
+            public_keys=[azure_nextgen.containerservice.ContainerServiceSshPublicKeyArgs(
                 key_data="keydata",
             )],
         ),
     ),
     location="location1",
-    network_profile=azure_nextgen.containerservice.latest.ContainerServiceNetworkProfileArgs(
-        load_balancer_profile=azure_nextgen.containerservice.latest.ManagedClusterLoadBalancerProfileArgs(
-            managed_outbound_ips=azure_nextgen.containerservice.latest.ManagedClusterLoadBalancerProfileManagedOutboundIPsArgs(
+    network_profile=azure_nextgen.containerservice.ContainerServiceNetworkProfileArgs(
+        load_balancer_profile=azure_nextgen.containerservice.ManagedClusterLoadBalancerProfileArgs(
+            managed_outbound_ips=azure_nextgen.containerservice.ManagedClusterLoadBalancerProfileManagedOutboundIPsArgs(
                 count=2,
             ),
         ),
@@ -910,11 +910,11 @@ managed_cluster = azure_nextgen.containerservice.latest.ManagedCluster("managedC
     ),
     resource_group_name="rg1",
     resource_name="clustername1",
-    service_principal_profile=azure_nextgen.containerservice.latest.ManagedClusterServicePrincipalProfileArgs(
+    service_principal_profile=azure_nextgen.containerservice.ManagedClusterServicePrincipalProfileArgs(
         client_id="clientid",
         secret="secret",
     ),
-    sku=azure_nextgen.containerservice.latest.ManagedClusterSKUArgs(
+    sku=azure_nextgen.containerservice.ManagedClusterSKUArgs(
         name="Basic",
         tier="Free",
     ),
@@ -922,7 +922,7 @@ managed_cluster = azure_nextgen.containerservice.latest.ManagedCluster("managedC
         "archv2": "",
         "tier": "production",
     },
-    windows_profile=azure_nextgen.containerservice.latest.ManagedClusterWindowsProfileArgs(
+    windows_profile=azure_nextgen.containerservice.ManagedClusterWindowsProfileArgs(
         admin_password="replacePassword1234$",
         admin_username="azureuser",
     ))
@@ -937,7 +937,7 @@ managed_cluster = azure_nextgen.containerservice.latest.ManagedCluster("managedC
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const managedCluster = new azure_nextgen.containerservice.latest.ManagedCluster("managedCluster", {
+const managedCluster = new azure_nextgen.containerservice.ManagedCluster("managedCluster", {
     aadProfile: {
         enableAzureRBAC: true,
         managed: true,
@@ -1018,12 +1018,12 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var managedCluster = new AzureNextGen.ContainerService.Latest.ManagedCluster("managedCluster", new AzureNextGen.ContainerService.Latest.ManagedClusterArgs
+        var managedCluster = new AzureNextGen.ContainerService..ManagedCluster("managedCluster", new AzureNextGen.ContainerService..ManagedClusterArgs
         {
             AddonProfiles = ,
             AgentPoolProfiles = 
             {
-                new AzureNextGen.ContainerService.Latest.Inputs.ManagedClusterAgentPoolProfileArgs
+                new AzureNextGen.ContainerService..Inputs.ManagedClusterAgentPoolProfileArgs
                 {
                     AvailabilityZones = 
                     {
@@ -1040,7 +1040,7 @@ class MyStack : Stack
                     VmSize = "Standard_DS1_v2",
                 },
             },
-            AutoScalerProfile = new AzureNextGen.ContainerService.Latest.Inputs.ManagedClusterPropertiesAutoScalerProfileArgs
+            AutoScalerProfile = new AzureNextGen.ContainerService..Inputs.ManagedClusterPropertiesAutoScalerProfileArgs
             {
                 BalanceSimilarNodeGroups = "true",
                 Expander = "priority",
@@ -1054,7 +1054,7 @@ class MyStack : Stack
             DnsPrefix = "dnsprefix1",
             EnablePodSecurityPolicy = true,
             EnableRBAC = true,
-            Identity = new AzureNextGen.ContainerService.Latest.Inputs.ManagedClusterIdentityArgs
+            Identity = new AzureNextGen.ContainerService..Inputs.ManagedClusterIdentityArgs
             {
                 Type = "UserAssigned",
                 UserAssignedIdentities = 
@@ -1063,14 +1063,14 @@ class MyStack : Stack
                 },
             },
             KubernetesVersion = "",
-            LinuxProfile = new AzureNextGen.ContainerService.Latest.Inputs.ContainerServiceLinuxProfileArgs
+            LinuxProfile = new AzureNextGen.ContainerService..Inputs.ContainerServiceLinuxProfileArgs
             {
                 AdminUsername = "azureuser",
-                Ssh = new AzureNextGen.ContainerService.Latest.Inputs.ContainerServiceSshConfigurationArgs
+                Ssh = new AzureNextGen.ContainerService..Inputs.ContainerServiceSshConfigurationArgs
                 {
                     PublicKeys = 
                     {
-                        new AzureNextGen.ContainerService.Latest.Inputs.ContainerServiceSshPublicKeyArgs
+                        new AzureNextGen.ContainerService..Inputs.ContainerServiceSshPublicKeyArgs
                         {
                             KeyData = "keydata",
                         },
@@ -1078,11 +1078,11 @@ class MyStack : Stack
                 },
             },
             Location = "location1",
-            NetworkProfile = new AzureNextGen.ContainerService.Latest.Inputs.ContainerServiceNetworkProfileArgs
+            NetworkProfile = new AzureNextGen.ContainerService..Inputs.ContainerServiceNetworkProfileArgs
             {
-                LoadBalancerProfile = new AzureNextGen.ContainerService.Latest.Inputs.ManagedClusterLoadBalancerProfileArgs
+                LoadBalancerProfile = new AzureNextGen.ContainerService..Inputs.ManagedClusterLoadBalancerProfileArgs
                 {
-                    ManagedOutboundIPs = new AzureNextGen.ContainerService.Latest.Inputs.ManagedClusterLoadBalancerProfileManagedOutboundIPsArgs
+                    ManagedOutboundIPs = new AzureNextGen.ContainerService..Inputs.ManagedClusterLoadBalancerProfileManagedOutboundIPsArgs
                     {
                         Count = 2,
                     },
@@ -1092,12 +1092,12 @@ class MyStack : Stack
             },
             ResourceGroupName = "rg1",
             ResourceName = "clustername1",
-            ServicePrincipalProfile = new AzureNextGen.ContainerService.Latest.Inputs.ManagedClusterServicePrincipalProfileArgs
+            ServicePrincipalProfile = new AzureNextGen.ContainerService..Inputs.ManagedClusterServicePrincipalProfileArgs
             {
                 ClientId = "clientid",
                 Secret = "secret",
             },
-            Sku = new AzureNextGen.ContainerService.Latest.Inputs.ManagedClusterSKUArgs
+            Sku = new AzureNextGen.ContainerService..Inputs.ManagedClusterSKUArgs
             {
                 Name = "Basic",
                 Tier = "Free",
@@ -1107,7 +1107,7 @@ class MyStack : Stack
                 { "archv2", "" },
                 { "tier", "production" },
             },
-            WindowsProfile = new AzureNextGen.ContainerService.Latest.Inputs.ManagedClusterWindowsProfileArgs
+            WindowsProfile = new AzureNextGen.ContainerService..Inputs.ManagedClusterWindowsProfileArgs
             {
                 AdminPassword = "replacePassword1234$",
                 AdminUsername = "azureuser",
@@ -1129,7 +1129,7 @@ package main
 import (
 	"fmt"
 
-	containerservice "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/containerservice/latest"
+	containerservice "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/containerservice"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -1229,9 +1229,9 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-managed_cluster = azure_nextgen.containerservice.latest.ManagedCluster("managedCluster",
+managed_cluster = azure_nextgen.containerservice.ManagedCluster("managedCluster",
     addon_profiles={},
-    agent_pool_profiles=[azure_nextgen.containerservice.latest.ManagedClusterAgentPoolProfileArgs(
+    agent_pool_profiles=[azure_nextgen.containerservice.ManagedClusterAgentPoolProfileArgs(
         availability_zones=[
             "1",
             "2",
@@ -1245,7 +1245,7 @@ managed_cluster = azure_nextgen.containerservice.latest.ManagedCluster("managedC
         type="VirtualMachineScaleSets",
         vm_size="Standard_DS1_v2",
     )],
-    auto_scaler_profile=azure_nextgen.containerservice.latest.ManagedClusterPropertiesAutoScalerProfileArgs(
+    auto_scaler_profile=azure_nextgen.containerservice.ManagedClusterPropertiesAutoScalerProfileArgs(
         balance_similar_node_groups="true",
         expander="priority",
         max_node_provision_time="15m",
@@ -1258,25 +1258,25 @@ managed_cluster = azure_nextgen.containerservice.latest.ManagedCluster("managedC
     dns_prefix="dnsprefix1",
     enable_pod_security_policy=True,
     enable_rbac=True,
-    identity=azure_nextgen.containerservice.latest.ManagedClusterIdentityArgs(
+    identity=azure_nextgen.containerservice.ManagedClusterIdentityArgs(
         type="UserAssigned",
         user_assigned_identities={
             "/subscriptions/subid1/resourceGroups/rgName1/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity1": {},
         },
     ),
     kubernetes_version="",
-    linux_profile=azure_nextgen.containerservice.latest.ContainerServiceLinuxProfileArgs(
+    linux_profile=azure_nextgen.containerservice.ContainerServiceLinuxProfileArgs(
         admin_username="azureuser",
-        ssh=azure_nextgen.containerservice.latest.ContainerServiceSshConfigurationArgs(
-            public_keys=[azure_nextgen.containerservice.latest.ContainerServiceSshPublicKeyArgs(
+        ssh=azure_nextgen.containerservice.ContainerServiceSshConfigurationArgs(
+            public_keys=[azure_nextgen.containerservice.ContainerServiceSshPublicKeyArgs(
                 key_data="keydata",
             )],
         ),
     ),
     location="location1",
-    network_profile=azure_nextgen.containerservice.latest.ContainerServiceNetworkProfileArgs(
-        load_balancer_profile=azure_nextgen.containerservice.latest.ManagedClusterLoadBalancerProfileArgs(
-            managed_outbound_ips=azure_nextgen.containerservice.latest.ManagedClusterLoadBalancerProfileManagedOutboundIPsArgs(
+    network_profile=azure_nextgen.containerservice.ContainerServiceNetworkProfileArgs(
+        load_balancer_profile=azure_nextgen.containerservice.ManagedClusterLoadBalancerProfileArgs(
+            managed_outbound_ips=azure_nextgen.containerservice.ManagedClusterLoadBalancerProfileManagedOutboundIPsArgs(
                 count=2,
             ),
         ),
@@ -1285,11 +1285,11 @@ managed_cluster = azure_nextgen.containerservice.latest.ManagedCluster("managedC
     ),
     resource_group_name="rg1",
     resource_name="clustername1",
-    service_principal_profile=azure_nextgen.containerservice.latest.ManagedClusterServicePrincipalProfileArgs(
+    service_principal_profile=azure_nextgen.containerservice.ManagedClusterServicePrincipalProfileArgs(
         client_id="clientid",
         secret="secret",
     ),
-    sku=azure_nextgen.containerservice.latest.ManagedClusterSKUArgs(
+    sku=azure_nextgen.containerservice.ManagedClusterSKUArgs(
         name="Basic",
         tier="Free",
     ),
@@ -1297,7 +1297,7 @@ managed_cluster = azure_nextgen.containerservice.latest.ManagedCluster("managedC
         "archv2": "",
         "tier": "production",
     },
-    windows_profile=azure_nextgen.containerservice.latest.ManagedClusterWindowsProfileArgs(
+    windows_profile=azure_nextgen.containerservice.ManagedClusterWindowsProfileArgs(
         admin_password="replacePassword1234$",
         admin_username="azureuser",
     ))
@@ -1312,7 +1312,7 @@ managed_cluster = azure_nextgen.containerservice.latest.ManagedCluster("managedC
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const managedCluster = new azure_nextgen.containerservice.latest.ManagedCluster("managedCluster", {
+const managedCluster = new azure_nextgen.containerservice.ManagedCluster("managedCluster", {
     addonProfiles: {},
     agentPoolProfiles: [{
         availabilityZones: [
@@ -1400,12 +1400,12 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var managedCluster = new AzureNextGen.ContainerService.Latest.ManagedCluster("managedCluster", new AzureNextGen.ContainerService.Latest.ManagedClusterArgs
+        var managedCluster = new AzureNextGen.ContainerService..ManagedCluster("managedCluster", new AzureNextGen.ContainerService..ManagedClusterArgs
         {
             AddonProfiles = ,
             AgentPoolProfiles = 
             {
-                new AzureNextGen.ContainerService.Latest.Inputs.ManagedClusterAgentPoolProfileArgs
+                new AzureNextGen.ContainerService..Inputs.ManagedClusterAgentPoolProfileArgs
                 {
                     AvailabilityZones = 
                     {
@@ -1422,7 +1422,7 @@ class MyStack : Stack
                     VmSize = "Standard_DS1_v2",
                 },
             },
-            AutoScalerProfile = new AzureNextGen.ContainerService.Latest.Inputs.ManagedClusterPropertiesAutoScalerProfileArgs
+            AutoScalerProfile = new AzureNextGen.ContainerService..Inputs.ManagedClusterPropertiesAutoScalerProfileArgs
             {
                 ScaleDownDelayAfterAdd = "15m",
                 ScanInterval = "20s",
@@ -1431,7 +1431,7 @@ class MyStack : Stack
             DnsPrefix = "dnsprefix1",
             EnablePodSecurityPolicy = true,
             EnableRBAC = true,
-            Identity = new AzureNextGen.ContainerService.Latest.Inputs.ManagedClusterIdentityArgs
+            Identity = new AzureNextGen.ContainerService..Inputs.ManagedClusterIdentityArgs
             {
                 Type = "UserAssigned",
                 UserAssignedIdentities = 
@@ -1440,14 +1440,14 @@ class MyStack : Stack
                 },
             },
             KubernetesVersion = "",
-            LinuxProfile = new AzureNextGen.ContainerService.Latest.Inputs.ContainerServiceLinuxProfileArgs
+            LinuxProfile = new AzureNextGen.ContainerService..Inputs.ContainerServiceLinuxProfileArgs
             {
                 AdminUsername = "azureuser",
-                Ssh = new AzureNextGen.ContainerService.Latest.Inputs.ContainerServiceSshConfigurationArgs
+                Ssh = new AzureNextGen.ContainerService..Inputs.ContainerServiceSshConfigurationArgs
                 {
                     PublicKeys = 
                     {
-                        new AzureNextGen.ContainerService.Latest.Inputs.ContainerServiceSshPublicKeyArgs
+                        new AzureNextGen.ContainerService..Inputs.ContainerServiceSshPublicKeyArgs
                         {
                             KeyData = "keydata",
                         },
@@ -1455,11 +1455,11 @@ class MyStack : Stack
                 },
             },
             Location = "location1",
-            NetworkProfile = new AzureNextGen.ContainerService.Latest.Inputs.ContainerServiceNetworkProfileArgs
+            NetworkProfile = new AzureNextGen.ContainerService..Inputs.ContainerServiceNetworkProfileArgs
             {
-                LoadBalancerProfile = new AzureNextGen.ContainerService.Latest.Inputs.ManagedClusterLoadBalancerProfileArgs
+                LoadBalancerProfile = new AzureNextGen.ContainerService..Inputs.ManagedClusterLoadBalancerProfileArgs
                 {
-                    ManagedOutboundIPs = new AzureNextGen.ContainerService.Latest.Inputs.ManagedClusterLoadBalancerProfileManagedOutboundIPsArgs
+                    ManagedOutboundIPs = new AzureNextGen.ContainerService..Inputs.ManagedClusterLoadBalancerProfileManagedOutboundIPsArgs
                     {
                         Count = 2,
                     },
@@ -1469,12 +1469,12 @@ class MyStack : Stack
             },
             ResourceGroupName = "rg1",
             ResourceName = "clustername1",
-            ServicePrincipalProfile = new AzureNextGen.ContainerService.Latest.Inputs.ManagedClusterServicePrincipalProfileArgs
+            ServicePrincipalProfile = new AzureNextGen.ContainerService..Inputs.ManagedClusterServicePrincipalProfileArgs
             {
                 ClientId = "clientid",
                 Secret = "secret",
             },
-            Sku = new AzureNextGen.ContainerService.Latest.Inputs.ManagedClusterSKUArgs
+            Sku = new AzureNextGen.ContainerService..Inputs.ManagedClusterSKUArgs
             {
                 Name = "Basic",
                 Tier = "Free",
@@ -1484,7 +1484,7 @@ class MyStack : Stack
                 { "archv2", "" },
                 { "tier", "production" },
             },
-            WindowsProfile = new AzureNextGen.ContainerService.Latest.Inputs.ManagedClusterWindowsProfileArgs
+            WindowsProfile = new AzureNextGen.ContainerService..Inputs.ManagedClusterWindowsProfileArgs
             {
                 AdminPassword = "replacePassword1234$",
                 AdminUsername = "azureuser",
@@ -1507,7 +1507,7 @@ package main
 import (
 	"fmt"
 
-	containerservice "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/containerservice/latest"
+	containerservice "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/containerservice"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -1603,9 +1603,9 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-managed_cluster = azure_nextgen.containerservice.latest.ManagedCluster("managedCluster",
+managed_cluster = azure_nextgen.containerservice.ManagedCluster("managedCluster",
     addon_profiles={},
-    agent_pool_profiles=[azure_nextgen.containerservice.latest.ManagedClusterAgentPoolProfileArgs(
+    agent_pool_profiles=[azure_nextgen.containerservice.ManagedClusterAgentPoolProfileArgs(
         availability_zones=[
             "1",
             "2",
@@ -1619,7 +1619,7 @@ managed_cluster = azure_nextgen.containerservice.latest.ManagedCluster("managedC
         type="VirtualMachineScaleSets",
         vm_size="Standard_DS1_v2",
     )],
-    auto_scaler_profile=azure_nextgen.containerservice.latest.ManagedClusterPropertiesAutoScalerProfileArgs(
+    auto_scaler_profile=azure_nextgen.containerservice.ManagedClusterPropertiesAutoScalerProfileArgs(
         scale_down_delay_after_add="15m",
         scan_interval="20s",
     ),
@@ -1627,25 +1627,25 @@ managed_cluster = azure_nextgen.containerservice.latest.ManagedCluster("managedC
     dns_prefix="dnsprefix1",
     enable_pod_security_policy=True,
     enable_rbac=True,
-    identity=azure_nextgen.containerservice.latest.ManagedClusterIdentityArgs(
+    identity=azure_nextgen.containerservice.ManagedClusterIdentityArgs(
         type="UserAssigned",
         user_assigned_identities={
             "/subscriptions/subid1/resourceGroups/rgName1/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity1": {},
         },
     ),
     kubernetes_version="",
-    linux_profile=azure_nextgen.containerservice.latest.ContainerServiceLinuxProfileArgs(
+    linux_profile=azure_nextgen.containerservice.ContainerServiceLinuxProfileArgs(
         admin_username="azureuser",
-        ssh=azure_nextgen.containerservice.latest.ContainerServiceSshConfigurationArgs(
-            public_keys=[azure_nextgen.containerservice.latest.ContainerServiceSshPublicKeyArgs(
+        ssh=azure_nextgen.containerservice.ContainerServiceSshConfigurationArgs(
+            public_keys=[azure_nextgen.containerservice.ContainerServiceSshPublicKeyArgs(
                 key_data="keydata",
             )],
         ),
     ),
     location="location1",
-    network_profile=azure_nextgen.containerservice.latest.ContainerServiceNetworkProfileArgs(
-        load_balancer_profile=azure_nextgen.containerservice.latest.ManagedClusterLoadBalancerProfileArgs(
-            managed_outbound_ips=azure_nextgen.containerservice.latest.ManagedClusterLoadBalancerProfileManagedOutboundIPsArgs(
+    network_profile=azure_nextgen.containerservice.ContainerServiceNetworkProfileArgs(
+        load_balancer_profile=azure_nextgen.containerservice.ManagedClusterLoadBalancerProfileArgs(
+            managed_outbound_ips=azure_nextgen.containerservice.ManagedClusterLoadBalancerProfileManagedOutboundIPsArgs(
                 count=2,
             ),
         ),
@@ -1654,11 +1654,11 @@ managed_cluster = azure_nextgen.containerservice.latest.ManagedCluster("managedC
     ),
     resource_group_name="rg1",
     resource_name="clustername1",
-    service_principal_profile=azure_nextgen.containerservice.latest.ManagedClusterServicePrincipalProfileArgs(
+    service_principal_profile=azure_nextgen.containerservice.ManagedClusterServicePrincipalProfileArgs(
         client_id="clientid",
         secret="secret",
     ),
-    sku=azure_nextgen.containerservice.latest.ManagedClusterSKUArgs(
+    sku=azure_nextgen.containerservice.ManagedClusterSKUArgs(
         name="Basic",
         tier="Free",
     ),
@@ -1666,7 +1666,7 @@ managed_cluster = azure_nextgen.containerservice.latest.ManagedCluster("managedC
         "archv2": "",
         "tier": "production",
     },
-    windows_profile=azure_nextgen.containerservice.latest.ManagedClusterWindowsProfileArgs(
+    windows_profile=azure_nextgen.containerservice.ManagedClusterWindowsProfileArgs(
         admin_password="replacePassword1234$",
         admin_username="azureuser",
         license_type="Windows_Server",
@@ -1682,7 +1682,7 @@ managed_cluster = azure_nextgen.containerservice.latest.ManagedCluster("managedC
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const managedCluster = new azure_nextgen.containerservice.latest.ManagedCluster("managedCluster", {
+const managedCluster = new azure_nextgen.containerservice.ManagedCluster("managedCluster", {
     addonProfiles: {},
     agentPoolProfiles: [{
         availabilityZones: [
@@ -1972,7 +1972,7 @@ The ManagedCluster resource accepts the following [input]({{< relref "/docs/intr
 <a href="#aadprofile_csharp" style="color: inherit; text-decoration: inherit;">Aad<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedclusteraadprofile">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Managed<wbr>Cluster<wbr>AADProfile<wbr>Args</a></span>
+        <span class="property-type"><a href="#managedclusteraadprofile">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service..<wbr>Inputs.<wbr>Managed<wbr>Cluster<wbr>AADProfile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Profile of Azure Active Directory configuration.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1981,7 +1981,7 @@ The ManagedCluster resource accepts the following [input]({{< relref "/docs/intr
 <a href="#addonprofiles_csharp" style="color: inherit; text-decoration: inherit;">Addon<wbr>Profiles</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Managed<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service..<wbr>Inputs.<wbr>Managed<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}Profile of managed cluster add-on.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1990,7 +1990,7 @@ The ManagedCluster resource accepts the following [input]({{< relref "/docs/intr
 <a href="#agentpoolprofiles_csharp" style="color: inherit; text-decoration: inherit;">Agent<wbr>Pool<wbr>Profiles</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedclusteragentpoolprofile">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Managed<wbr>Cluster<wbr>Agent<wbr>Pool<wbr>Profile<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#managedclusteragentpoolprofile">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service..<wbr>Inputs.<wbr>Managed<wbr>Cluster<wbr>Agent<wbr>Pool<wbr>Profile<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Properties of the agent pool.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1999,7 +1999,7 @@ The ManagedCluster resource accepts the following [input]({{< relref "/docs/intr
 <a href="#apiserveraccessprofile_csharp" style="color: inherit; text-decoration: inherit;">Api<wbr>Server<wbr>Access<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedclusterapiserveraccessprofile">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Managed<wbr>Cluster<wbr>APIServer<wbr>Access<wbr>Profile<wbr>Args</a></span>
+        <span class="property-type"><a href="#managedclusterapiserveraccessprofile">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service..<wbr>Inputs.<wbr>Managed<wbr>Cluster<wbr>APIServer<wbr>Access<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Access profile for managed cluster API server.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2008,7 +2008,7 @@ The ManagedCluster resource accepts the following [input]({{< relref "/docs/intr
 <a href="#autoscalerprofile_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Scaler<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedclusterpropertiesautoscalerprofile">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Managed<wbr>Cluster<wbr>Properties<wbr>Auto<wbr>Scaler<wbr>Profile<wbr>Args</a></span>
+        <span class="property-type"><a href="#managedclusterpropertiesautoscalerprofile">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service..<wbr>Inputs.<wbr>Managed<wbr>Cluster<wbr>Properties<wbr>Auto<wbr>Scaler<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Parameters to be applied to the cluster-autoscaler when enabled{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2017,7 +2017,7 @@ The ManagedCluster resource accepts the following [input]({{< relref "/docs/intr
 <a href="#autoupgradeprofile_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Upgrade<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedclusterautoupgradeprofile">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Managed<wbr>Cluster<wbr>Auto<wbr>Upgrade<wbr>Profile<wbr>Args</a></span>
+        <span class="property-type"><a href="#managedclusterautoupgradeprofile">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service..<wbr>Inputs.<wbr>Managed<wbr>Cluster<wbr>Auto<wbr>Upgrade<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Profile of auto upgrade configuration.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2062,7 +2062,7 @@ The ManagedCluster resource accepts the following [input]({{< relref "/docs/intr
 <a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedclusteridentity">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Managed<wbr>Cluster<wbr>Identity<wbr>Args</a></span>
+        <span class="property-type"><a href="#managedclusteridentity">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service..<wbr>Inputs.<wbr>Managed<wbr>Cluster<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The identity of the managed cluster, if configured.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2071,7 +2071,7 @@ The ManagedCluster resource accepts the following [input]({{< relref "/docs/intr
 <a href="#identityprofile_csharp" style="color: inherit; text-decoration: inherit;">Identity<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Managed<wbr>Cluster<wbr>Properties<wbr>Identity<wbr>Profile<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service..<wbr>Inputs.<wbr>Managed<wbr>Cluster<wbr>Properties<wbr>Identity<wbr>Profile<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}Identities associated with the cluster.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2089,7 +2089,7 @@ The ManagedCluster resource accepts the following [input]({{< relref "/docs/intr
 <a href="#linuxprofile_csharp" style="color: inherit; text-decoration: inherit;">Linux<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerservicelinuxprofile">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Container<wbr>Service<wbr>Linux<wbr>Profile<wbr>Args</a></span>
+        <span class="property-type"><a href="#containerservicelinuxprofile">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service..<wbr>Inputs.<wbr>Container<wbr>Service<wbr>Linux<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Profile for Linux VMs in the container service cluster.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2098,7 +2098,7 @@ The ManagedCluster resource accepts the following [input]({{< relref "/docs/intr
 <a href="#networkprofile_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerservicenetworkprofile">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Container<wbr>Service<wbr>Network<wbr>Profile<wbr>Args</a></span>
+        <span class="property-type"><a href="#containerservicenetworkprofile">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service..<wbr>Inputs.<wbr>Container<wbr>Service<wbr>Network<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Profile of network configuration.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2116,7 +2116,7 @@ The ManagedCluster resource accepts the following [input]({{< relref "/docs/intr
 <a href="#podidentityprofile_csharp" style="color: inherit; text-decoration: inherit;">Pod<wbr>Identity<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedclusterpodidentityprofile">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Managed<wbr>Cluster<wbr>Pod<wbr>Identity<wbr>Profile<wbr>Args</a></span>
+        <span class="property-type"><a href="#managedclusterpodidentityprofile">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service..<wbr>Inputs.<wbr>Managed<wbr>Cluster<wbr>Pod<wbr>Identity<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Profile of managed cluster pod identity.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2125,7 +2125,7 @@ The ManagedCluster resource accepts the following [input]({{< relref "/docs/intr
 <a href="#serviceprincipalprofile_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Principal<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedclusterserviceprincipalprofile">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Managed<wbr>Cluster<wbr>Service<wbr>Principal<wbr>Profile<wbr>Args</a></span>
+        <span class="property-type"><a href="#managedclusterserviceprincipalprofile">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service..<wbr>Inputs.<wbr>Managed<wbr>Cluster<wbr>Service<wbr>Principal<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information about a service principal identity for the cluster to use for manipulating Azure APIs.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2134,7 +2134,7 @@ The ManagedCluster resource accepts the following [input]({{< relref "/docs/intr
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedclustersku">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Managed<wbr>Cluster<wbr>SKUArgs</a></span>
+        <span class="property-type"><a href="#managedclustersku">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service..<wbr>Inputs.<wbr>Managed<wbr>Cluster<wbr>SKUArgs</a></span>
     </dt>
     <dd>{{% md %}}The managed cluster SKU.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2152,7 +2152,7 @@ The ManagedCluster resource accepts the following [input]({{< relref "/docs/intr
 <a href="#windowsprofile_csharp" style="color: inherit; text-decoration: inherit;">Windows<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedclusterwindowsprofile">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Managed<wbr>Cluster<wbr>Windows<wbr>Profile<wbr>Args</a></span>
+        <span class="property-type"><a href="#managedclusterwindowsprofile">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service..<wbr>Inputs.<wbr>Managed<wbr>Cluster<wbr>Windows<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Profile for Windows VMs in the container service cluster.{{% /md %}}</dd>
 </dl>
@@ -2876,7 +2876,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#powerstate_csharp" style="color: inherit; text-decoration: inherit;">Power<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#powerstateresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Outputs.<wbr>Power<wbr>State<wbr>Response</a></span>
+        <span class="property-type"><a href="#powerstateresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service..<wbr>Outputs.<wbr>Power<wbr>State<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Represents the Power State of the cluster{{% /md %}}</dd>
     <dt class="property-"
@@ -3373,7 +3373,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#details_csharp" style="color: inherit; text-decoration: inherit;">Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clouderrorbodyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Cloud<wbr>Error<wbr>Body<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#clouderrorbodyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service..<wbr>Inputs.<wbr>Cloud<wbr>Error<wbr>Body<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of additional details about the error.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3534,7 +3534,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#error_csharp" style="color: inherit; text-decoration: inherit;">Error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clouderrorbodyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Cloud<wbr>Error<wbr>Body<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#clouderrorbodyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service..<wbr>Inputs.<wbr>Cloud<wbr>Error<wbr>Body<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Details about the error.{{% /md %}}</dd>
 </dl>
@@ -3605,7 +3605,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ssh_csharp" style="color: inherit; text-decoration: inherit;">Ssh</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerservicesshconfiguration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Container<wbr>Service<wbr>Ssh<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#containerservicesshconfiguration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service..<wbr>Inputs.<wbr>Container<wbr>Service<wbr>Ssh<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}SSH configuration for Linux-based VMs running on Azure.{{% /md %}}</dd>
 </dl>
@@ -3703,7 +3703,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ssh_csharp" style="color: inherit; text-decoration: inherit;">Ssh</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerservicesshconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Container<wbr>Service<wbr>Ssh<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#containerservicesshconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service..<wbr>Inputs.<wbr>Container<wbr>Service<wbr>Ssh<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}SSH configuration for Linux-based VMs running on Azure.{{% /md %}}</dd>
 </dl>
@@ -3810,7 +3810,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#loadbalancerprofile_csharp" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedclusterloadbalancerprofile">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Managed<wbr>Cluster<wbr>Load<wbr>Balancer<wbr>Profile<wbr>Args</a></span>
+        <span class="property-type"><a href="#managedclusterloadbalancerprofile">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service..<wbr>Inputs.<wbr>Managed<wbr>Cluster<wbr>Load<wbr>Balancer<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Profile of the cluster load balancer.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3819,7 +3819,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#loadbalancersku_csharp" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer<wbr>Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#loadbalancersku">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Load<wbr>Balancer<wbr>Sku</a></span>
+        <span class="property-type">string | <a href="#loadbalancersku">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service..<wbr>Load<wbr>Balancer<wbr>Sku</a></span>
     </dt>
     <dd>{{% md %}}The load balancer sku for the managed cluster.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3828,7 +3828,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#networkmode_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#networkmode">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Network<wbr>Mode</a></span>
+        <span class="property-type">string | <a href="#networkmode">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service..<wbr>Network<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}Network mode used for building Kubernetes network.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3837,7 +3837,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#networkplugin_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Plugin</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#networkplugin">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Network<wbr>Plugin</a></span>
+        <span class="property-type">string | <a href="#networkplugin">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service..<wbr>Network<wbr>Plugin</a></span>
     </dt>
     <dd>{{% md %}}Network plugin used for building Kubernetes network.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3846,7 +3846,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#networkpolicy_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#networkpolicy">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Network<wbr>Policy</a></span>
+        <span class="property-type">string | <a href="#networkpolicy">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service..<wbr>Network<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Network policy used for building Kubernetes network.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3855,7 +3855,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#outboundtype_csharp" style="color: inherit; text-decoration: inherit;">Outbound<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#outboundtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Outbound<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#outboundtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service..<wbr>Outbound<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The outbound (egress) routing method.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4196,7 +4196,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#loadbalancerprofile_csharp" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedclusterloadbalancerprofileresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Managed<wbr>Cluster<wbr>Load<wbr>Balancer<wbr>Profile<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#managedclusterloadbalancerprofileresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service..<wbr>Inputs.<wbr>Managed<wbr>Cluster<wbr>Load<wbr>Balancer<wbr>Profile<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Profile of the cluster load balancer.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4564,7 +4564,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publickeys_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerservicesshpublickey">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Container<wbr>Service<wbr>Ssh<wbr>Public<wbr>Key<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#containerservicesshpublickey">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service..<wbr>Inputs.<wbr>Container<wbr>Service<wbr>Ssh<wbr>Public<wbr>Key<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of SSH public keys used to authenticate with Linux-based VMs. Only expect one key specified.{{% /md %}}</dd>
 </dl>
@@ -4626,7 +4626,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publickeys_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerservicesshpublickeyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Container<wbr>Service<wbr>Ssh<wbr>Public<wbr>Key<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#containerservicesshpublickeyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service..<wbr>Inputs.<wbr>Container<wbr>Service<wbr>Ssh<wbr>Public<wbr>Key<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of SSH public keys used to authenticate with Linux-based VMs. Only expect one key specified.{{% /md %}}</dd>
 </dl>
@@ -7201,7 +7201,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sysctls_csharp" style="color: inherit; text-decoration: inherit;">Sysctls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sysctlconfig">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Sysctl<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#sysctlconfig">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service..<wbr>Inputs.<wbr>Sysctl<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Sysctl settings for Linux agent nodes.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -7371,7 +7371,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sysctls_csharp" style="color: inherit; text-decoration: inherit;">Sysctls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sysctlconfigresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Sysctl<wbr>Config<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sysctlconfigresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service..<wbr>Inputs.<wbr>Sysctl<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Sysctl settings for Linux agent nodes.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -8501,7 +8501,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedclusteraddonprofileresponseidentity">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Managed<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Response<wbr>Identity<wbr>Args</a></span>
+        <span class="property-type"><a href="#managedclusteraddonprofileresponseidentity">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service..<wbr>Inputs.<wbr>Managed<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Response<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information of user assigned identity used by this add-on.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -8814,7 +8814,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kubeletconfig_csharp" style="color: inherit; text-decoration: inherit;">Kubelet<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubeletconfig">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Kubelet<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#kubeletconfig">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service..<wbr>Inputs.<wbr>Kubelet<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}KubeletConfig specifies the configuration of kubelet on agent nodes.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -8823,7 +8823,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kubeletdisktype_csharp" style="color: inherit; text-decoration: inherit;">Kubelet<wbr>Disk<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#kubeletdisktype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Kubelet<wbr>Disk<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#kubeletdisktype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service..<wbr>Kubelet<wbr>Disk<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}KubeletDiskType determines the placement of emptyDir volumes, container runtime data root, and Kubelet ephemeral storage. Currently allows one value, OS, resulting in Kubelet using the OS disk for data.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -8832,7 +8832,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linuxosconfig_csharp" style="color: inherit; text-decoration: inherit;">Linux<wbr>OSConfig</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linuxosconfig">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Linux<wbr>OSConfig<wbr>Args</a></span>
+        <span class="property-type"><a href="#linuxosconfig">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service..<wbr>Inputs.<wbr>Linux<wbr>OSConfig<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}LinuxOSConfig specifies the OS configuration of linux agent nodes.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -8868,7 +8868,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mode_csharp" style="color: inherit; text-decoration: inherit;">Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#agentpoolmode">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Agent<wbr>Pool<wbr>Mode</a></span>
+        <span class="property-type">string | <a href="#agentpoolmode">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service..<wbr>Agent<wbr>Pool<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}AgentPoolMode represents mode of an agent pool{{% /md %}}</dd>
     <dt class="property-optional"
@@ -8913,7 +8913,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#osdisktype_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Disk<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#osdisktype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>OSDisk<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#osdisktype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service..<wbr>OSDisk<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}OS disk type to be used for machines in a given agent pool. Allowed values are 'Ephemeral' and 'Managed'. Defaults to 'Managed'. May not be changed after creation.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -8922,7 +8922,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ostype_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#ostype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>OSType</a></span>
+        <span class="property-type">string | <a href="#ostype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service..<wbr>OSType</a></span>
     </dt>
     <dd>{{% md %}}OsType to be used to specify os type. Choose from Linux and Windows. Default to Linux.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -8949,7 +8949,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scalesetevictionpolicy_csharp" style="color: inherit; text-decoration: inherit;">Scale<wbr>Set<wbr>Eviction<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#scalesetevictionpolicy">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Scale<wbr>Set<wbr>Eviction<wbr>Policy</a></span>
+        <span class="property-type">string | <a href="#scalesetevictionpolicy">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service..<wbr>Scale<wbr>Set<wbr>Eviction<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}ScaleSetEvictionPolicy to be used to specify eviction policy for Spot virtual machine scale set. Default to Delete.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -8958,7 +8958,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scalesetpriority_csharp" style="color: inherit; text-decoration: inherit;">Scale<wbr>Set<wbr>Priority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#scalesetpriority">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Scale<wbr>Set<wbr>Priority</a></span>
+        <span class="property-type">string | <a href="#scalesetpriority">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service..<wbr>Scale<wbr>Set<wbr>Priority</a></span>
     </dt>
     <dd>{{% md %}}ScaleSetPriority to be used to specify virtual machine scale set priority. Default to regular.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -8985,7 +8985,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#agentpooltype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Agent<wbr>Pool<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#agentpooltype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service..<wbr>Agent<wbr>Pool<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}AgentPoolType represents types of an agent pool{{% /md %}}</dd>
     <dt class="property-optional"
@@ -8994,7 +8994,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#upgradesettings_csharp" style="color: inherit; text-decoration: inherit;">Upgrade<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#agentpoolupgradesettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Agent<wbr>Pool<wbr>Upgrade<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#agentpoolupgradesettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service..<wbr>Inputs.<wbr>Agent<wbr>Pool<wbr>Upgrade<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings for upgrading the agentpool{{% /md %}}</dd>
     <dt class="property-optional"
@@ -9003,7 +9003,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vmsize_csharp" style="color: inherit; text-decoration: inherit;">Vm<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#containerservicevmsizetypes">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Container<wbr>Service<wbr>VMSize<wbr>Types</a></span>
+        <span class="property-type">string | <a href="#containerservicevmsizetypes">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service..<wbr>Container<wbr>Service<wbr>VMSize<wbr>Types</a></span>
     </dt>
     <dd>{{% md %}}Size of agent VMs.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -9848,7 +9848,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#powerstate_csharp" style="color: inherit; text-decoration: inherit;">Power<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#powerstateresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Power<wbr>State<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#powerstateresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service..<wbr>Inputs.<wbr>Power<wbr>State<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes whether the Agent Pool is Running or Stopped{{% /md %}}</dd>
     <dt class="property-required"
@@ -9911,7 +9911,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kubeletconfig_csharp" style="color: inherit; text-decoration: inherit;">Kubelet<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubeletconfigresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Kubelet<wbr>Config<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#kubeletconfigresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service..<wbr>Inputs.<wbr>Kubelet<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}KubeletConfig specifies the configuration of kubelet on agent nodes.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -9929,7 +9929,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linuxosconfig_csharp" style="color: inherit; text-decoration: inherit;">Linux<wbr>OSConfig</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linuxosconfigresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Linux<wbr>OSConfig<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#linuxosconfigresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service..<wbr>Inputs.<wbr>Linux<wbr>OSConfig<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}LinuxOSConfig specifies the OS configuration of linux agent nodes.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -10091,7 +10091,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#upgradesettings_csharp" style="color: inherit; text-decoration: inherit;">Upgrade<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#agentpoolupgradesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Agent<wbr>Pool<wbr>Upgrade<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#agentpoolupgradesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service..<wbr>Inputs.<wbr>Agent<wbr>Pool<wbr>Upgrade<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings for upgrading the agentpool{{% /md %}}</dd>
     <dt class="property-optional"
@@ -11008,7 +11008,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#upgradechannel_csharp" style="color: inherit; text-decoration: inherit;">Upgrade<wbr>Channel</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#upgradechannel">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Upgrade<wbr>Channel</a></span>
+        <span class="property-type">string | <a href="#upgradechannel">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service..<wbr>Upgrade<wbr>Channel</a></span>
     </dt>
     <dd>{{% md %}}upgrade channel for auto upgrade.{{% /md %}}</dd>
 </dl>
@@ -11132,7 +11132,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidentitytype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Resource<wbr>Identity<wbr>Type</a></span>
+        <span class="property-type"><a href="#resourceidentitytype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service..<wbr>Resource<wbr>Identity<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of identity used for the managed cluster. Type 'SystemAssigned' will use an implicitly created identity in master components and an auto-created user assigned identity in MC_ resource group in agent nodes. Type 'None' will not use MSI for the managed cluster, service principal will be used instead.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -11257,7 +11257,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userassignedidentities_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Managed<wbr>Cluster<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service..<wbr>Inputs.<wbr>Managed<wbr>Cluster<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}The user identity associated with the managed cluster. This identity will be used in control plane and only one user assigned identity is allowed. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd>
 </dl>
@@ -11507,7 +11507,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#effectiveoutboundips_csharp" style="color: inherit; text-decoration: inherit;">Effective<wbr>Outbound<wbr>IPs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcereference">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Resource<wbr>Reference<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#resourcereference">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service..<wbr>Inputs.<wbr>Resource<wbr>Reference<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The effective outbound IP resources of the cluster load balancer.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -11525,7 +11525,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#managedoutboundips_csharp" style="color: inherit; text-decoration: inherit;">Managed<wbr>Outbound<wbr>IPs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedclusterloadbalancerprofilemanagedoutboundips">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Managed<wbr>Cluster<wbr>Load<wbr>Balancer<wbr>Profile<wbr>Managed<wbr>Outbound<wbr>IPs<wbr>Args</a></span>
+        <span class="property-type"><a href="#managedclusterloadbalancerprofilemanagedoutboundips">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service..<wbr>Inputs.<wbr>Managed<wbr>Cluster<wbr>Load<wbr>Balancer<wbr>Profile<wbr>Managed<wbr>Outbound<wbr>IPs<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Desired managed outbound IPs for the cluster load balancer.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -11534,7 +11534,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#outboundipprefixes_csharp" style="color: inherit; text-decoration: inherit;">Outbound<wbr>IPPrefixes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedclusterloadbalancerprofileoutboundipprefixes">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Managed<wbr>Cluster<wbr>Load<wbr>Balancer<wbr>Profile<wbr>Outbound<wbr>IPPrefixes<wbr>Args</a></span>
+        <span class="property-type"><a href="#managedclusterloadbalancerprofileoutboundipprefixes">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service..<wbr>Inputs.<wbr>Managed<wbr>Cluster<wbr>Load<wbr>Balancer<wbr>Profile<wbr>Outbound<wbr>IPPrefixes<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Desired outbound IP Prefix resources for the cluster load balancer.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -11543,7 +11543,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#outboundips_csharp" style="color: inherit; text-decoration: inherit;">Outbound<wbr>IPs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedclusterloadbalancerprofileoutboundips">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Managed<wbr>Cluster<wbr>Load<wbr>Balancer<wbr>Profile<wbr>Outbound<wbr>IPs<wbr>Args</a></span>
+        <span class="property-type"><a href="#managedclusterloadbalancerprofileoutboundips">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service..<wbr>Inputs.<wbr>Managed<wbr>Cluster<wbr>Load<wbr>Balancer<wbr>Profile<wbr>Outbound<wbr>IPs<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Desired outbound IP resources for the cluster load balancer.{{% /md %}}</dd>
 </dl>
@@ -11802,7 +11802,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publicipprefixes_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>IPPrefixes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcereference">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Resource<wbr>Reference<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#resourcereference">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service..<wbr>Inputs.<wbr>Resource<wbr>Reference<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of public IP prefix resources.{{% /md %}}</dd>
 </dl>
@@ -11864,7 +11864,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publicips_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>IPs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcereference">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Resource<wbr>Reference<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#resourcereference">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service..<wbr>Inputs.<wbr>Resource<wbr>Reference<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of public IP resources.{{% /md %}}</dd>
 </dl>
@@ -11935,7 +11935,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#effectiveoutboundips_csharp" style="color: inherit; text-decoration: inherit;">Effective<wbr>Outbound<wbr>IPs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcereferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Resource<wbr>Reference<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#resourcereferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service..<wbr>Inputs.<wbr>Resource<wbr>Reference<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The effective outbound IP resources of the cluster load balancer.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -11953,7 +11953,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#managedoutboundips_csharp" style="color: inherit; text-decoration: inherit;">Managed<wbr>Outbound<wbr>IPs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedclusterloadbalancerprofileresponsemanagedoutboundips">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Managed<wbr>Cluster<wbr>Load<wbr>Balancer<wbr>Profile<wbr>Response<wbr>Managed<wbr>Outbound<wbr>IPs<wbr>Args</a></span>
+        <span class="property-type"><a href="#managedclusterloadbalancerprofileresponsemanagedoutboundips">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service..<wbr>Inputs.<wbr>Managed<wbr>Cluster<wbr>Load<wbr>Balancer<wbr>Profile<wbr>Response<wbr>Managed<wbr>Outbound<wbr>IPs<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Desired managed outbound IPs for the cluster load balancer.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -11962,7 +11962,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#outboundipprefixes_csharp" style="color: inherit; text-decoration: inherit;">Outbound<wbr>IPPrefixes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedclusterloadbalancerprofileresponseoutboundipprefixes">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Managed<wbr>Cluster<wbr>Load<wbr>Balancer<wbr>Profile<wbr>Response<wbr>Outbound<wbr>IPPrefixes<wbr>Args</a></span>
+        <span class="property-type"><a href="#managedclusterloadbalancerprofileresponseoutboundipprefixes">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service..<wbr>Inputs.<wbr>Managed<wbr>Cluster<wbr>Load<wbr>Balancer<wbr>Profile<wbr>Response<wbr>Outbound<wbr>IPPrefixes<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Desired outbound IP Prefix resources for the cluster load balancer.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -11971,7 +11971,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#outboundips_csharp" style="color: inherit; text-decoration: inherit;">Outbound<wbr>IPs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedclusterloadbalancerprofileresponseoutboundips">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Managed<wbr>Cluster<wbr>Load<wbr>Balancer<wbr>Profile<wbr>Response<wbr>Outbound<wbr>IPs<wbr>Args</a></span>
+        <span class="property-type"><a href="#managedclusterloadbalancerprofileresponseoutboundips">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service..<wbr>Inputs.<wbr>Managed<wbr>Cluster<wbr>Load<wbr>Balancer<wbr>Profile<wbr>Response<wbr>Outbound<wbr>IPs<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Desired outbound IP resources for the cluster load balancer.{{% /md %}}</dd>
 </dl>
@@ -12230,7 +12230,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publicipprefixes_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>IPPrefixes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcereferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Resource<wbr>Reference<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#resourcereferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service..<wbr>Inputs.<wbr>Resource<wbr>Reference<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of public IP prefix resources.{{% /md %}}</dd>
 </dl>
@@ -12292,7 +12292,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publicips_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>IPs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcereferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Resource<wbr>Reference<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#resourcereferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service..<wbr>Inputs.<wbr>Resource<wbr>Reference<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of public IP resources.{{% /md %}}</dd>
 </dl>
@@ -12354,7 +12354,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userassignedidentity">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>User<wbr>Assigned<wbr>Identity<wbr>Args</a></span>
+        <span class="property-type"><a href="#userassignedidentity">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service..<wbr>Inputs.<wbr>User<wbr>Assigned<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information of the user assigned identity.{{% /md %}}</dd>
     <dt class="property-required"
@@ -12765,7 +12765,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userassignedidentities_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedclusterpodidentity">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Managed<wbr>Cluster<wbr>Pod<wbr>Identity<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#managedclusterpodidentity">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service..<wbr>Inputs.<wbr>Managed<wbr>Cluster<wbr>Pod<wbr>Identity<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}User assigned pod identity settings.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -12774,7 +12774,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userassignedidentityexceptions_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identity<wbr>Exceptions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedclusterpodidentityexception">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Managed<wbr>Cluster<wbr>Pod<wbr>Identity<wbr>Exception<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#managedclusterpodidentityexception">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service..<wbr>Inputs.<wbr>Managed<wbr>Cluster<wbr>Pod<wbr>Identity<wbr>Exception<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}User assigned pod identity exception settings.{{% /md %}}</dd>
 </dl>
@@ -12899,7 +12899,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userassignedidentities_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedclusterpodidentityresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Managed<wbr>Cluster<wbr>Pod<wbr>Identity<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#managedclusterpodidentityresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service..<wbr>Inputs.<wbr>Managed<wbr>Cluster<wbr>Pod<wbr>Identity<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}User assigned pod identity settings.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -12908,7 +12908,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userassignedidentityexceptions_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identity<wbr>Exceptions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedclusterpodidentityexceptionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Managed<wbr>Cluster<wbr>Pod<wbr>Identity<wbr>Exception<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#managedclusterpodidentityexceptionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service..<wbr>Inputs.<wbr>Managed<wbr>Cluster<wbr>Pod<wbr>Identity<wbr>Exception<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}User assigned pod identity exception settings.{{% /md %}}</dd>
 </dl>
@@ -13024,7 +13024,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userassignedidentityresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>User<wbr>Assigned<wbr>Identity<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#userassignedidentityresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service..<wbr>Inputs.<wbr>User<wbr>Assigned<wbr>Identity<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information of the user assigned identity.{{% /md %}}</dd>
     <dt class="property-required"
@@ -13051,7 +13051,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provisioninginfo_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedclusterpodidentityresponseprovisioninginfo">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Managed<wbr>Cluster<wbr>Pod<wbr>Identity<wbr>Response<wbr>Provisioning<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#managedclusterpodidentityresponseprovisioninginfo">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service..<wbr>Inputs.<wbr>Managed<wbr>Cluster<wbr>Pod<wbr>Identity<wbr>Response<wbr>Provisioning<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-required"
@@ -13230,7 +13230,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#error_csharp" style="color: inherit; text-decoration: inherit;">Error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clouderrorresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Cloud<wbr>Error<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#clouderrorresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service..<wbr>Inputs.<wbr>Cloud<wbr>Error<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Pod identity assignment error (if any).{{% /md %}}</dd>
 </dl>
@@ -13301,7 +13301,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expander_csharp" style="color: inherit; text-decoration: inherit;">Expander</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#expander">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Expander</a></span>
+        <span class="property-type">string | <a href="#expander">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service..<wbr>Expander</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -14836,7 +14836,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#managedclusterskuname">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Managed<wbr>Cluster<wbr>SKUName</a></span>
+        <span class="property-type">string | <a href="#managedclusterskuname">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service..<wbr>Managed<wbr>Cluster<wbr>SKUName</a></span>
     </dt>
     <dd>{{% md %}}Name of a managed cluster SKU.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -14845,7 +14845,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tier_csharp" style="color: inherit; text-decoration: inherit;">Tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#managedclusterskutier">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Managed<wbr>Cluster<wbr>SKUTier</a></span>
+        <span class="property-type">string | <a href="#managedclusterskutier">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service..<wbr>Managed<wbr>Cluster<wbr>SKUTier</a></span>
     </dt>
     <dd>{{% md %}}Tier of a managed cluster SKU.{{% /md %}}</dd>
 </dl>
@@ -15314,7 +15314,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#licensetype_csharp" style="color: inherit; text-decoration: inherit;">License<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#licensetype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>License<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#licensetype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service..<wbr>License<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The licenseType to use for Windows VMs. Windows_Server is used to enable Azure Hybrid User Benefits for Windows VMs.{{% /md %}}</dd>
 </dl>
@@ -18484,7 +18484,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:containerservice/latest:ManagedCluster clustername1 /subscriptions/subid1/resourcegroups/rg1/providers/Microsoft.ContainerService/managedClusters/clustername1 
+$ pulumi import azure-nextgen:containerservice:ManagedCluster clustername1 /subscriptions/subid1/resourcegroups/rg1/providers/Microsoft.ContainerService/managedClusters/clustername1 
 ```
 
 

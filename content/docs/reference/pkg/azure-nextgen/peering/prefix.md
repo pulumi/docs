@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.peering.Prefix resource with exa
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The peering service prefix class.
-Latest API Version: 2020-10-01.
+API Version: 2020-10-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var prefix = new AzureNextGen.Peering.Latest.Prefix("prefix", new AzureNextGen.Peering.Latest.PrefixArgs
+        var prefix = new AzureNextGen.Peering..Prefix("prefix", new AzureNextGen.Peering..PrefixArgs
         {
             PeeringServiceName = "peeringServiceName",
             PeeringServicePrefixKey = "00000000-0000-0000-0000-000000000000",
@@ -49,7 +49,7 @@ class MyStack : Stack
 package main
 
 import (
-	peering "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/peering/latest"
+	peering "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/peering"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -79,7 +79,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-prefix = azure_nextgen.peering.latest.Prefix("prefix",
+prefix = azure_nextgen.peering.Prefix("prefix",
     peering_service_name="peeringServiceName",
     peering_service_prefix_key="00000000-0000-0000-0000-000000000000",
     prefix="192.168.1.0/24",
@@ -96,7 +96,7 @@ prefix = azure_nextgen.peering.latest.Prefix("prefix",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const prefix = new azure_nextgen.peering.latest.Prefix("prefix", {
+const prefix = new azure_nextgen.peering.Prefix("prefix", {
     peeringServiceName: "peeringServiceName",
     peeringServicePrefixKey: "00000000-0000-0000-0000-000000000000",
     prefix: "192.168.1.0/24",
@@ -517,7 +517,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#events_csharp" style="color: inherit; text-decoration: inherit;">Events</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#peeringserviceprefixeventresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Peering.<wbr>Outputs.<wbr>Peering<wbr>Service<wbr>Prefix<wbr>Event<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#peeringserviceprefixeventresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Peering..<wbr>Outputs.<wbr>Peering<wbr>Service<wbr>Prefix<wbr>Event<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of events for peering service prefix{{% /md %}}</dd>
     <dt class="property-"
@@ -1032,7 +1032,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:peering/latest:Prefix peeringServicePrefixName /subscriptions/subId/resourceGroups/rgName/providers/Microsoft.Peering/peeringServices/peeringServiceName/prefixes/peeringServicePrefixName 
+$ pulumi import azure-nextgen:peering:Prefix peeringServicePrefixName /subscriptions/subId/resourceGroups/rgName/providers/Microsoft.Peering/peeringServices/peeringServiceName/prefixes/peeringServicePrefixName 
 ```
 
 

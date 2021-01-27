@@ -168,7 +168,7 @@ The following output properties are available:
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datadoghostresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Datadog.<wbr>Outputs.<wbr>Datadog<wbr>Host<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#datadoghostresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Datadog..<wbr>Outputs.<wbr>Datadog<wbr>Host<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Results of a list operation.{{% /md %}}</dd>
 </dl>
@@ -277,7 +277,7 @@ The following output properties are available:
 <a href="#installmethod_csharp" style="color: inherit; text-decoration: inherit;">Install<wbr>Method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datadoginstallmethodresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Datadog.<wbr>Inputs.<wbr>Datadog<wbr>Install<wbr>Method<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#datadoginstallmethodresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Datadog..<wbr>Inputs.<wbr>Datadog<wbr>Install<wbr>Method<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -286,7 +286,7 @@ The following output properties are available:
 <a href="#logsagent_csharp" style="color: inherit; text-decoration: inherit;">Logs<wbr>Agent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datadoglogsagentresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Datadog.<wbr>Inputs.<wbr>Datadog<wbr>Logs<wbr>Agent<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#datadoglogsagentresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Datadog..<wbr>Inputs.<wbr>Datadog<wbr>Logs<wbr>Agent<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 </dl>
@@ -425,7 +425,7 @@ The following output properties are available:
 <a href="#meta_csharp" style="color: inherit; text-decoration: inherit;">Meta</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datadoghostmetadataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Datadog.<wbr>Inputs.<wbr>Datadog<wbr>Host<wbr>Metadata<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#datadoghostmetadataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Datadog..<wbr>Inputs.<wbr>Datadog<wbr>Host<wbr>Metadata<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"

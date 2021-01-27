@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.storagecache.Cache resource with
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 A Cache instance. Follows Azure Resource Manager standards: https://github.com/Azure/azure-resource-manager-rpc/blob/master/v1.0/resource-api-reference.md
-Latest API Version: 2020-10-01.
+API Version: 2020-10-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,16 +27,16 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var cache = new AzureNextGen.StorageCache.Latest.Cache("cache", new AzureNextGen.StorageCache.Latest.CacheArgs
+        var cache = new AzureNextGen.StorageCache..Cache("cache", new AzureNextGen.StorageCache..CacheArgs
         {
             CacheName = "sc1",
             CacheSizeGB = 3072,
-            DirectoryServicesSettings = new AzureNextGen.StorageCache.Latest.Inputs.CacheDirectorySettingsArgs
+            DirectoryServicesSettings = new AzureNextGen.StorageCache..Inputs.CacheDirectorySettingsArgs
             {
-                ActiveDirectory = new AzureNextGen.StorageCache.Latest.Inputs.CacheActiveDirectorySettingsArgs
+                ActiveDirectory = new AzureNextGen.StorageCache..Inputs.CacheActiveDirectorySettingsArgs
                 {
                     CacheNetBiosName = "contosoSmb",
-                    Credentials = new AzureNextGen.StorageCache.Latest.Inputs.CacheActiveDirectorySettingsCredentialsArgs
+                    Credentials = new AzureNextGen.StorageCache..Inputs.CacheActiveDirectorySettingsCredentialsArgs
                     {
                         Password = "<password>",
                         Username = "consotoAdmin",
@@ -46,9 +46,9 @@ class MyStack : Stack
                     PrimaryDnsIpAddress = "192.0.2.10",
                     SecondaryDnsIpAddress = "192.0.2.11",
                 },
-                UsernameDownload = new AzureNextGen.StorageCache.Latest.Inputs.CacheUsernameDownloadSettingsArgs
+                UsernameDownload = new AzureNextGen.StorageCache..Inputs.CacheUsernameDownloadSettingsArgs
                 {
-                    Credentials = new AzureNextGen.StorageCache.Latest.Inputs.CacheUsernameDownloadSettingsCredentialsArgs
+                    Credentials = new AzureNextGen.StorageCache..Inputs.CacheUsernameDownloadSettingsCredentialsArgs
                     {
                         BindDn = "cn=ldapadmin,dc=contosoad,dc=contoso,dc=local",
                         BindPassword = "<bindPassword>",
@@ -59,12 +59,12 @@ class MyStack : Stack
                     UsernameSource = "LDAP",
                 },
             },
-            EncryptionSettings = new AzureNextGen.StorageCache.Latest.Inputs.CacheEncryptionSettingsArgs
+            EncryptionSettings = new AzureNextGen.StorageCache..Inputs.CacheEncryptionSettingsArgs
             {
-                KeyEncryptionKey = new AzureNextGen.StorageCache.Latest.Inputs.KeyVaultKeyReferenceArgs
+                KeyEncryptionKey = new AzureNextGen.StorageCache..Inputs.KeyVaultKeyReferenceArgs
                 {
                     KeyUrl = "https://keyvault-cmk.vault.azure.net/keys/key2047/test",
-                    SourceVault = new AzureNextGen.StorageCache.Latest.Inputs.KeyVaultKeyReferenceSourceVaultArgs
+                    SourceVault = new AzureNextGen.StorageCache..Inputs.KeyVaultKeyReferenceSourceVaultArgs
                     {
                         Id = "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/scgroup/providers/Microsoft.KeyVault/vaults/keyvault-cmk",
                     },
@@ -72,15 +72,15 @@ class MyStack : Stack
             },
             Location = "westus",
             ResourceGroupName = "scgroup",
-            SecuritySettings = new AzureNextGen.StorageCache.Latest.Inputs.CacheSecuritySettingsArgs
+            SecuritySettings = new AzureNextGen.StorageCache..Inputs.CacheSecuritySettingsArgs
             {
                 AccessPolicies = 
                 {
-                    new AzureNextGen.StorageCache.Latest.Inputs.NfsAccessPolicyArgs
+                    new AzureNextGen.StorageCache..Inputs.NfsAccessPolicyArgs
                     {
                         AccessRules = 
                         {
-                            new AzureNextGen.StorageCache.Latest.Inputs.NfsAccessRuleArgs
+                            new AzureNextGen.StorageCache..Inputs.NfsAccessRuleArgs
                             {
                                 Access = "rw",
                                 RootSquash = false,
@@ -93,7 +93,7 @@ class MyStack : Stack
                     },
                 },
             },
-            Sku = new AzureNextGen.StorageCache.Latest.Inputs.CacheSkuArgs
+            Sku = new AzureNextGen.StorageCache..Inputs.CacheSkuArgs
             {
                 Name = "Standard_2G",
             },
@@ -117,7 +117,7 @@ class MyStack : Stack
 package main
 
 import (
-	storagecache "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/storagecache/latest"
+	storagecache "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/storagecache"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -200,13 +200,13 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-cache = azure_nextgen.storagecache.latest.Cache("cache",
+cache = azure_nextgen.storagecache.Cache("cache",
     cache_name="sc1",
     cache_size_gb=3072,
-    directory_services_settings=azure_nextgen.storagecache.latest.CacheDirectorySettingsArgs(
-        active_directory=azure_nextgen.storagecache.latest.CacheActiveDirectorySettingsArgs(
+    directory_services_settings=azure_nextgen.storagecache.CacheDirectorySettingsArgs(
+        active_directory=azure_nextgen.storagecache.CacheActiveDirectorySettingsArgs(
             cache_net_bios_name="contosoSmb",
-            credentials=azure_nextgen.storagecache.latest.CacheActiveDirectorySettingsCredentialsArgs(
+            credentials=azure_nextgen.storagecache.CacheActiveDirectorySettingsCredentialsArgs(
                 password="<password>",
                 username="consotoAdmin",
             ),
@@ -215,8 +215,8 @@ cache = azure_nextgen.storagecache.latest.Cache("cache",
             primary_dns_ip_address="192.0.2.10",
             secondary_dns_ip_address="192.0.2.11",
         ),
-        username_download=azure_nextgen.storagecache.latest.CacheUsernameDownloadSettingsArgs(
-            credentials=azure_nextgen.storagecache.latest.CacheUsernameDownloadSettingsCredentialsArgs(
+        username_download=azure_nextgen.storagecache.CacheUsernameDownloadSettingsArgs(
+            credentials=azure_nextgen.storagecache.CacheUsernameDownloadSettingsCredentialsArgs(
                 bind_dn="cn=ldapadmin,dc=contosoad,dc=contoso,dc=local",
                 bind_password="<bindPassword>",
             ),
@@ -226,19 +226,19 @@ cache = azure_nextgen.storagecache.latest.Cache("cache",
             username_source="LDAP",
         ),
     ),
-    encryption_settings=azure_nextgen.storagecache.latest.CacheEncryptionSettingsArgs(
-        key_encryption_key=azure_nextgen.storagecache.latest.KeyVaultKeyReferenceArgs(
+    encryption_settings=azure_nextgen.storagecache.CacheEncryptionSettingsArgs(
+        key_encryption_key=azure_nextgen.storagecache.KeyVaultKeyReferenceArgs(
             key_url="https://keyvault-cmk.vault.azure.net/keys/key2047/test",
-            source_vault=azure_nextgen.storagecache.latest.KeyVaultKeyReferenceSourceVaultArgs(
+            source_vault=azure_nextgen.storagecache.KeyVaultKeyReferenceSourceVaultArgs(
                 id="/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/scgroup/providers/Microsoft.KeyVault/vaults/keyvault-cmk",
             ),
         ),
     ),
     location="westus",
     resource_group_name="scgroup",
-    security_settings=azure_nextgen.storagecache.latest.CacheSecuritySettingsArgs(
-        access_policies=[azure_nextgen.storagecache.latest.NfsAccessPolicyArgs(
-            access_rules=[azure_nextgen.storagecache.latest.NfsAccessRuleArgs(
+    security_settings=azure_nextgen.storagecache.CacheSecuritySettingsArgs(
+        access_policies=[azure_nextgen.storagecache.NfsAccessPolicyArgs(
+            access_rules=[azure_nextgen.storagecache.NfsAccessRuleArgs(
                 access="rw",
                 root_squash=False,
                 scope="default",
@@ -248,7 +248,7 @@ cache = azure_nextgen.storagecache.latest.Cache("cache",
             name="default",
         )],
     ),
-    sku=azure_nextgen.storagecache.latest.CacheSkuArgs(
+    sku=azure_nextgen.storagecache.CacheSkuArgs(
         name="Standard_2G",
     ),
     subnet="/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/scgroup/providers/Microsoft.Network/virtualNetworks/scvnet/subnets/sub1",
@@ -266,7 +266,7 @@ cache = azure_nextgen.storagecache.latest.Cache("cache",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const cache = new azure_nextgen.storagecache.latest.Cache("cache", {
+const cache = new azure_nextgen.storagecache.Cache("cache", {
     cacheName: "sc1",
     cacheSizeGB: 3072,
     directoryServicesSettings: {
@@ -337,15 +337,15 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var cache = new AzureNextGen.StorageCache.Latest.Cache("cache", new AzureNextGen.StorageCache.Latest.CacheArgs
+        var cache = new AzureNextGen.StorageCache..Cache("cache", new AzureNextGen.StorageCache..CacheArgs
         {
             CacheName = "sc1",
             CacheSizeGB = 3072,
-            DirectoryServicesSettings = new AzureNextGen.StorageCache.Latest.Inputs.CacheDirectorySettingsArgs
+            DirectoryServicesSettings = new AzureNextGen.StorageCache..Inputs.CacheDirectorySettingsArgs
             {
-                UsernameDownload = new AzureNextGen.StorageCache.Latest.Inputs.CacheUsernameDownloadSettingsArgs
+                UsernameDownload = new AzureNextGen.StorageCache..Inputs.CacheUsernameDownloadSettingsArgs
                 {
-                    Credentials = new AzureNextGen.StorageCache.Latest.Inputs.CacheUsernameDownloadSettingsCredentialsArgs
+                    Credentials = new AzureNextGen.StorageCache..Inputs.CacheUsernameDownloadSettingsCredentialsArgs
                     {
                         BindDn = "cn=ldapadmin,dc=contosoad,dc=contoso,dc=local",
                         BindPassword = "<bindPassword>",
@@ -356,12 +356,12 @@ class MyStack : Stack
                     UsernameSource = "LDAP",
                 },
             },
-            EncryptionSettings = new AzureNextGen.StorageCache.Latest.Inputs.CacheEncryptionSettingsArgs
+            EncryptionSettings = new AzureNextGen.StorageCache..Inputs.CacheEncryptionSettingsArgs
             {
-                KeyEncryptionKey = new AzureNextGen.StorageCache.Latest.Inputs.KeyVaultKeyReferenceArgs
+                KeyEncryptionKey = new AzureNextGen.StorageCache..Inputs.KeyVaultKeyReferenceArgs
                 {
                     KeyUrl = "https://keyvault-cmk.vault.azure.net/keys/key2048/test",
-                    SourceVault = new AzureNextGen.StorageCache.Latest.Inputs.KeyVaultKeyReferenceSourceVaultArgs
+                    SourceVault = new AzureNextGen.StorageCache..Inputs.KeyVaultKeyReferenceSourceVaultArgs
                     {
                         Id = "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/scgroup/providers/Microsoft.KeyVault/vaults/keyvault-cmk",
                     },
@@ -369,15 +369,15 @@ class MyStack : Stack
             },
             Location = "westus",
             ResourceGroupName = "scgroup",
-            SecuritySettings = new AzureNextGen.StorageCache.Latest.Inputs.CacheSecuritySettingsArgs
+            SecuritySettings = new AzureNextGen.StorageCache..Inputs.CacheSecuritySettingsArgs
             {
                 AccessPolicies = 
                 {
-                    new AzureNextGen.StorageCache.Latest.Inputs.NfsAccessPolicyArgs
+                    new AzureNextGen.StorageCache..Inputs.NfsAccessPolicyArgs
                     {
                         AccessRules = 
                         {
-                            new AzureNextGen.StorageCache.Latest.Inputs.NfsAccessRuleArgs
+                            new AzureNextGen.StorageCache..Inputs.NfsAccessRuleArgs
                             {
                                 Access = "rw",
                                 RootSquash = false,
@@ -390,7 +390,7 @@ class MyStack : Stack
                     },
                 },
             },
-            Sku = new AzureNextGen.StorageCache.Latest.Inputs.CacheSkuArgs
+            Sku = new AzureNextGen.StorageCache..Inputs.CacheSkuArgs
             {
                 Name = "Standard_2G",
             },
@@ -414,7 +414,7 @@ class MyStack : Stack
 package main
 
 import (
-	storagecache "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/storagecache/latest"
+	storagecache "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/storagecache"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -486,12 +486,12 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-cache = azure_nextgen.storagecache.latest.Cache("cache",
+cache = azure_nextgen.storagecache.Cache("cache",
     cache_name="sc1",
     cache_size_gb=3072,
-    directory_services_settings=azure_nextgen.storagecache.latest.CacheDirectorySettingsArgs(
-        username_download=azure_nextgen.storagecache.latest.CacheUsernameDownloadSettingsArgs(
-            credentials=azure_nextgen.storagecache.latest.CacheUsernameDownloadSettingsCredentialsArgs(
+    directory_services_settings=azure_nextgen.storagecache.CacheDirectorySettingsArgs(
+        username_download=azure_nextgen.storagecache.CacheUsernameDownloadSettingsArgs(
+            credentials=azure_nextgen.storagecache.CacheUsernameDownloadSettingsCredentialsArgs(
                 bind_dn="cn=ldapadmin,dc=contosoad,dc=contoso,dc=local",
                 bind_password="<bindPassword>",
             ),
@@ -501,19 +501,19 @@ cache = azure_nextgen.storagecache.latest.Cache("cache",
             username_source="LDAP",
         ),
     ),
-    encryption_settings=azure_nextgen.storagecache.latest.CacheEncryptionSettingsArgs(
-        key_encryption_key=azure_nextgen.storagecache.latest.KeyVaultKeyReferenceArgs(
+    encryption_settings=azure_nextgen.storagecache.CacheEncryptionSettingsArgs(
+        key_encryption_key=azure_nextgen.storagecache.KeyVaultKeyReferenceArgs(
             key_url="https://keyvault-cmk.vault.azure.net/keys/key2048/test",
-            source_vault=azure_nextgen.storagecache.latest.KeyVaultKeyReferenceSourceVaultArgs(
+            source_vault=azure_nextgen.storagecache.KeyVaultKeyReferenceSourceVaultArgs(
                 id="/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/scgroup/providers/Microsoft.KeyVault/vaults/keyvault-cmk",
             ),
         ),
     ),
     location="westus",
     resource_group_name="scgroup",
-    security_settings=azure_nextgen.storagecache.latest.CacheSecuritySettingsArgs(
-        access_policies=[azure_nextgen.storagecache.latest.NfsAccessPolicyArgs(
-            access_rules=[azure_nextgen.storagecache.latest.NfsAccessRuleArgs(
+    security_settings=azure_nextgen.storagecache.CacheSecuritySettingsArgs(
+        access_policies=[azure_nextgen.storagecache.NfsAccessPolicyArgs(
+            access_rules=[azure_nextgen.storagecache.NfsAccessRuleArgs(
                 access="rw",
                 root_squash=False,
                 scope="default",
@@ -523,7 +523,7 @@ cache = azure_nextgen.storagecache.latest.Cache("cache",
             name="default",
         )],
     ),
-    sku=azure_nextgen.storagecache.latest.CacheSkuArgs(
+    sku=azure_nextgen.storagecache.CacheSkuArgs(
         name="Standard_2G",
     ),
     subnet="/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/scgroup/providers/Microsoft.Network/virtualNetworks/scvnet/subnets/sub1",
@@ -541,7 +541,7 @@ cache = azure_nextgen.storagecache.latest.Cache("cache",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const cache = new azure_nextgen.storagecache.latest.Cache("cache", {
+const cache = new azure_nextgen.storagecache.Cache("cache", {
     cacheName: "sc1",
     cacheSizeGB: 3072,
     directoryServicesSettings: {
@@ -807,7 +807,7 @@ The Cache resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#directoryservicessettings_csharp" style="color: inherit; text-decoration: inherit;">Directory<wbr>Services<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cachedirectorysettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Cache.<wbr>Inputs.<wbr>Cache<wbr>Directory<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#cachedirectorysettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Cache..<wbr>Inputs.<wbr>Cache<wbr>Directory<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies Directory Services settings of the cache.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -816,7 +816,7 @@ The Cache resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#encryptionsettings_csharp" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cacheencryptionsettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Cache.<wbr>Inputs.<wbr>Cache<wbr>Encryption<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#cacheencryptionsettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Cache..<wbr>Inputs.<wbr>Cache<wbr>Encryption<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies encryption settings of the cache.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -825,7 +825,7 @@ The Cache resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cacheidentity">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Cache.<wbr>Inputs.<wbr>Cache<wbr>Identity<wbr>Args</a></span>
+        <span class="property-type"><a href="#cacheidentity">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Cache..<wbr>Inputs.<wbr>Cache<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The identity of the cache, if configured.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -843,7 +843,7 @@ The Cache resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#networksettings_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cachenetworksettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Cache.<wbr>Inputs.<wbr>Cache<wbr>Network<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#cachenetworksettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Cache..<wbr>Inputs.<wbr>Cache<wbr>Network<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies network settings of the cache.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -852,7 +852,7 @@ The Cache resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#provisioningstatetype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Cache.<wbr>Provisioning<wbr>State<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#provisioningstatetype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Cache..<wbr>Provisioning<wbr>State<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}ARM provisioning state, see https://github.com/Azure/azure-resource-manager-rpc/blob/master/v1.0/Addendum.md#provisioningstate-property{{% /md %}}</dd>
     <dt class="property-optional"
@@ -861,7 +861,7 @@ The Cache resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#securitysettings_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cachesecuritysettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Cache.<wbr>Inputs.<wbr>Cache<wbr>Security<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#cachesecuritysettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Cache..<wbr>Inputs.<wbr>Cache<wbr>Security<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies security settings of the cache.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -870,7 +870,7 @@ The Cache resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cachesku">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Cache.<wbr>Inputs.<wbr>Cache<wbr>Sku<wbr>Args</a></span>
+        <span class="property-type"><a href="#cachesku">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Cache..<wbr>Inputs.<wbr>Cache<wbr>Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}SKU for the Cache.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1279,7 +1279,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#health_csharp" style="color: inherit; text-decoration: inherit;">Health</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cachehealthresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Cache.<wbr>Outputs.<wbr>Cache<wbr>Health<wbr>Response</a></span>
+        <span class="property-type"><a href="#cachehealthresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Cache..<wbr>Outputs.<wbr>Cache<wbr>Health<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Health of the Cache.{{% /md %}}</dd>
     <dt class="property-"
@@ -1315,7 +1315,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#systemdata_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Cache.<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
+        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Cache..<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The system meta data relating to this resource.{{% /md %}}</dd>
     <dt class="property-"
@@ -1333,7 +1333,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#upgradestatus_csharp" style="color: inherit; text-decoration: inherit;">Upgrade<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cacheupgradestatusresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Cache.<wbr>Outputs.<wbr>Cache<wbr>Upgrade<wbr>Status<wbr>Response</a></span>
+        <span class="property-type"><a href="#cacheupgradestatusresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Cache..<wbr>Outputs.<wbr>Cache<wbr>Upgrade<wbr>Status<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Upgrade status of the Cache.{{% /md %}}</dd>
 </dl>
@@ -1603,7 +1603,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#credentials_csharp" style="color: inherit; text-decoration: inherit;">Credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cacheactivedirectorysettingscredentials">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Cache.<wbr>Inputs.<wbr>Cache<wbr>Active<wbr>Directory<wbr>Settings<wbr>Credentials<wbr>Args</a></span>
+        <span class="property-type"><a href="#cacheactivedirectorysettingscredentials">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Cache..<wbr>Inputs.<wbr>Cache<wbr>Active<wbr>Directory<wbr>Settings<wbr>Credentials<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Active Directory admin credentials used to join the HPC Cache to a domain.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1952,7 +1952,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#credentials_csharp" style="color: inherit; text-decoration: inherit;">Credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cacheactivedirectorysettingsresponsecredentials">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Cache.<wbr>Inputs.<wbr>Cache<wbr>Active<wbr>Directory<wbr>Settings<wbr>Response<wbr>Credentials<wbr>Args</a></span>
+        <span class="property-type"><a href="#cacheactivedirectorysettingsresponsecredentials">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Cache..<wbr>Inputs.<wbr>Cache<wbr>Active<wbr>Directory<wbr>Settings<wbr>Response<wbr>Credentials<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Active Directory admin credentials used to join the HPC Cache to a domain.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2283,7 +2283,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#activedirectory_csharp" style="color: inherit; text-decoration: inherit;">Active<wbr>Directory</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cacheactivedirectorysettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Cache.<wbr>Inputs.<wbr>Cache<wbr>Active<wbr>Directory<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#cacheactivedirectorysettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Cache..<wbr>Inputs.<wbr>Cache<wbr>Active<wbr>Directory<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies settings for joining the HPC Cache to an Active Directory domain.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2292,7 +2292,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#usernamedownload_csharp" style="color: inherit; text-decoration: inherit;">Username<wbr>Download</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cacheusernamedownloadsettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Cache.<wbr>Inputs.<wbr>Cache<wbr>Username<wbr>Download<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#cacheusernamedownloadsettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Cache..<wbr>Inputs.<wbr>Cache<wbr>Username<wbr>Download<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies settings for Extended Groups. Extended Groups allows users to be members of more than 16 groups.{{% /md %}}</dd>
 </dl>
@@ -2381,7 +2381,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#activedirectory_csharp" style="color: inherit; text-decoration: inherit;">Active<wbr>Directory</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cacheactivedirectorysettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Cache.<wbr>Inputs.<wbr>Cache<wbr>Active<wbr>Directory<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#cacheactivedirectorysettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Cache..<wbr>Inputs.<wbr>Cache<wbr>Active<wbr>Directory<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies settings for joining the HPC Cache to an Active Directory domain.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2390,7 +2390,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#usernamedownload_csharp" style="color: inherit; text-decoration: inherit;">Username<wbr>Download</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cacheusernamedownloadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Cache.<wbr>Inputs.<wbr>Cache<wbr>Username<wbr>Download<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#cacheusernamedownloadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Cache..<wbr>Inputs.<wbr>Cache<wbr>Username<wbr>Download<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies settings for Extended Groups. Extended Groups allows users to be members of more than 16 groups.{{% /md %}}</dd>
 </dl>
@@ -2479,7 +2479,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keyencryptionkey_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Encryption<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultkeyreference">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Cache.<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>Key<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#keyvaultkeyreference">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Cache..<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>Key<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the location of the key encryption key in Key Vault.{{% /md %}}</dd>
 </dl>
@@ -2541,7 +2541,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keyencryptionkey_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Encryption<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultkeyreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Cache.<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>Key<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#keyvaultkeyreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Cache..<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>Key<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the location of the key encryption key in Key Vault.{{% /md %}}</dd>
 </dl>
@@ -2701,7 +2701,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cacheidentitytype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Cache.<wbr>Cache<wbr>Identity<wbr>Type</a></span>
+        <span class="property-type"><a href="#cacheidentitytype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Cache..<wbr>Cache<wbr>Identity<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of identity used for the cache{{% /md %}}</dd>
 </dl>
@@ -3157,7 +3157,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accesspolicies_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nfsaccesspolicy">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Cache.<wbr>Inputs.<wbr>Nfs<wbr>Access<wbr>Policy<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#nfsaccesspolicy">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Cache..<wbr>Inputs.<wbr>Nfs<wbr>Access<wbr>Policy<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}NFS access policies defined for this cache.{{% /md %}}</dd>
 </dl>
@@ -3219,7 +3219,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accesspolicies_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nfsaccesspolicyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Cache.<wbr>Inputs.<wbr>Nfs<wbr>Access<wbr>Policy<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#nfsaccesspolicyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Cache..<wbr>Inputs.<wbr>Nfs<wbr>Access<wbr>Policy<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}NFS access policies defined for this cache.{{% /md %}}</dd>
 </dl>
@@ -3567,7 +3567,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#credentials_csharp" style="color: inherit; text-decoration: inherit;">Credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cacheusernamedownloadsettingscredentials">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Cache.<wbr>Inputs.<wbr>Cache<wbr>Username<wbr>Download<wbr>Settings<wbr>Credentials<wbr>Args</a></span>
+        <span class="property-type"><a href="#cacheusernamedownloadsettingscredentials">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Cache..<wbr>Inputs.<wbr>Cache<wbr>Username<wbr>Download<wbr>Settings<wbr>Credentials<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}When present, these are the credentials for the secure LDAP connection.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3639,7 +3639,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#usernamesource_csharp" style="color: inherit; text-decoration: inherit;">Username<wbr>Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#usernamesource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Cache.<wbr>Username<wbr>Source</a></span>
+        <span class="property-type">string | <a href="#usernamesource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Cache..<wbr>Username<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}This setting determines how the cache gets username and group names for clients.{{% /md %}}</dd>
 </dl>
@@ -4096,7 +4096,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#credentials_csharp" style="color: inherit; text-decoration: inherit;">Credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cacheusernamedownloadsettingsresponsecredentials">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Cache.<wbr>Inputs.<wbr>Cache<wbr>Username<wbr>Download<wbr>Settings<wbr>Response<wbr>Credentials<wbr>Args</a></span>
+        <span class="property-type"><a href="#cacheusernamedownloadsettingsresponsecredentials">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Cache..<wbr>Inputs.<wbr>Cache<wbr>Username<wbr>Download<wbr>Settings<wbr>Response<wbr>Credentials<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}When present, these are the credentials for the secure LDAP connection.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4634,7 +4634,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourcevault_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Vault</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultkeyreferencesourcevault">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Cache.<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>Key<wbr>Reference<wbr>Source<wbr>Vault<wbr>Args</a></span>
+        <span class="property-type"><a href="#keyvaultkeyreferencesourcevault">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Cache..<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>Key<wbr>Reference<wbr>Source<wbr>Vault<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes a resource Id to source Key Vault.{{% /md %}}</dd>
 </dl>
@@ -4732,7 +4732,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourcevault_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Vault</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultkeyreferenceresponsesourcevault">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Cache.<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>Key<wbr>Reference<wbr>Response<wbr>Source<wbr>Vault<wbr>Args</a></span>
+        <span class="property-type"><a href="#keyvaultkeyreferenceresponsesourcevault">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Cache..<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>Key<wbr>Reference<wbr>Response<wbr>Source<wbr>Vault<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes a resource Id to source Key Vault.{{% /md %}}</dd>
 </dl>
@@ -4945,7 +4945,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accessrules_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nfsaccessrule">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Cache.<wbr>Inputs.<wbr>Nfs<wbr>Access<wbr>Rule<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#nfsaccessrule">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Cache..<wbr>Inputs.<wbr>Nfs<wbr>Access<wbr>Rule<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The set of rules describing client accesses allowed under this policy.{{% /md %}}</dd>
     <dt class="property-required"
@@ -5043,7 +5043,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accessrules_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nfsaccessruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Cache.<wbr>Inputs.<wbr>Nfs<wbr>Access<wbr>Rule<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#nfsaccessruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Cache..<wbr>Inputs.<wbr>Nfs<wbr>Access<wbr>Rule<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The set of rules describing client accesses allowed under this policy.{{% /md %}}</dd>
     <dt class="property-required"
@@ -5141,7 +5141,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#access_csharp" style="color: inherit; text-decoration: inherit;">Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#nfsaccessruleaccess">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Cache.<wbr>Nfs<wbr>Access<wbr>Rule<wbr>Access</a></span>
+        <span class="property-type">string | <a href="#nfsaccessruleaccess">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Cache..<wbr>Nfs<wbr>Access<wbr>Rule<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}Access allowed by this rule.{{% /md %}}</dd>
     <dt class="property-required"
@@ -5150,7 +5150,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scope_csharp" style="color: inherit; text-decoration: inherit;">Scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#nfsaccessrulescope">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Cache.<wbr>Nfs<wbr>Access<wbr>Rule<wbr>Scope</a></span>
+        <span class="property-type">string | <a href="#nfsaccessrulescope">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Cache..<wbr>Nfs<wbr>Access<wbr>Rule<wbr>Scope</a></span>
     </dt>
     <dd>{{% md %}}Scope for this rule. The scope and filter determine which clients match the rule.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -6221,7 +6221,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:storagecache/latest:Cache sc1 /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/scgroup/providers/Microsoft.StorageCache/caches/sc1 
+$ pulumi import azure-nextgen:storagecache:Cache sc1 /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/scgroup/providers/Microsoft.StorageCache/caches/sc1 
 ```
 
 

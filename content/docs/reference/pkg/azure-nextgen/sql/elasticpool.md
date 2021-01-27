@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.sql.ElasticPool resource with ex
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Represents a database elastic pool.
-Latest API Version: 2014-04-01.
+API Version: 2014-04-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var elasticPool = new AzureNextGen.Sql.Latest.ElasticPool("elasticPool", new AzureNextGen.Sql.Latest.ElasticPoolArgs
+        var elasticPool = new AzureNextGen.Sql..ElasticPool("elasticPool", new AzureNextGen.Sql..ElasticPoolArgs
         {
             DatabaseDtuMax = 5,
             DatabaseDtuMin = 0,
@@ -53,7 +53,7 @@ class MyStack : Stack
 package main
 
 import (
-	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql/latest"
+	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -87,7 +87,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-elastic_pool = azure_nextgen.sql.latest.ElasticPool("elasticPool",
+elastic_pool = azure_nextgen.sql.ElasticPool("elasticPool",
     database_dtu_max=5,
     database_dtu_min=0,
     dtu=50,
@@ -108,7 +108,7 @@ elastic_pool = azure_nextgen.sql.latest.ElasticPool("elasticPool",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const elasticPool = new azure_nextgen.sql.latest.ElasticPool("elasticPool", {
+const elasticPool = new azure_nextgen.sql.ElasticPool("elasticPool", {
     databaseDtuMax: 5,
     databaseDtuMin: 0,
     dtu: 50,
@@ -134,7 +134,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var elasticPool = new AzureNextGen.Sql.Latest.ElasticPool("elasticPool", new AzureNextGen.Sql.Latest.ElasticPoolArgs
+        var elasticPool = new AzureNextGen.Sql..ElasticPool("elasticPool", new AzureNextGen.Sql..ElasticPoolArgs
         {
             ElasticPoolName = "sqlcrudtest-8102",
             Location = "Japan East",
@@ -155,7 +155,7 @@ class MyStack : Stack
 package main
 
 import (
-	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql/latest"
+	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -184,7 +184,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-elastic_pool = azure_nextgen.sql.latest.ElasticPool("elasticPool",
+elastic_pool = azure_nextgen.sql.ElasticPool("elasticPool",
     elastic_pool_name="sqlcrudtest-8102",
     location="Japan East",
     resource_group_name="sqlcrudtest-2369",
@@ -200,7 +200,7 @@ elastic_pool = azure_nextgen.sql.latest.ElasticPool("elasticPool",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const elasticPool = new azure_nextgen.sql.latest.ElasticPool("elasticPool", {
+const elasticPool = new azure_nextgen.sql.ElasticPool("elasticPool", {
     elasticPoolName: "sqlcrudtest-8102",
     location: "Japan East",
     resourceGroupName: "sqlcrudtest-2369",
@@ -463,7 +463,7 @@ The ElasticPool resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#edition_csharp" style="color: inherit; text-decoration: inherit;">Edition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#elasticpooledition">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql.<wbr>Elastic<wbr>Pool<wbr>Edition</a></span>
+        <span class="property-type">string | <a href="#elasticpooledition">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql..<wbr>Elastic<wbr>Pool<wbr>Edition</a></span>
     </dt>
     <dd>{{% md %}}The edition of the elastic pool.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1135,7 +1135,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:sql/latest:ElasticPool sqlcrudtest-8102 /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/sqlcrudtest-2369/providers/Microsoft.Sql/servers/sqlcrudtest-8069/elasticPools/sqlcrudtest-8102 
+$ pulumi import azure-nextgen:sql:ElasticPool sqlcrudtest-8102 /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/sqlcrudtest-2369/providers/Microsoft.Sql/servers/sqlcrudtest-8069/elasticPools/sqlcrudtest-8102 
 ```
 
 

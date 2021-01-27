@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.network.HubVirtualNetworkConnect
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 HubVirtualNetworkConnection Resource.
-Latest API Version: 2020-08-01.
+API Version: 2020-08-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,26 +27,26 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var hubVirtualNetworkConnection = new AzureNextGen.Network.Latest.HubVirtualNetworkConnection("hubVirtualNetworkConnection", new AzureNextGen.Network.Latest.HubVirtualNetworkConnectionArgs
+        var hubVirtualNetworkConnection = new AzureNextGen.Network..HubVirtualNetworkConnection("hubVirtualNetworkConnection", new AzureNextGen.Network..HubVirtualNetworkConnectionArgs
         {
             ConnectionName = "connection1",
             EnableInternetSecurity = false,
-            RemoteVirtualNetwork = new AzureNextGen.Network.Latest.Inputs.SubResourceArgs
+            RemoteVirtualNetwork = new AzureNextGen.Network..Inputs.SubResourceArgs
             {
                 Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/SpokeVnet1",
             },
             ResourceGroupName = "rg1",
-            RoutingConfiguration = new AzureNextGen.Network.Latest.Inputs.RoutingConfigurationArgs
+            RoutingConfiguration = new AzureNextGen.Network..Inputs.RoutingConfigurationArgs
             {
-                AssociatedRouteTable = new AzureNextGen.Network.Latest.Inputs.SubResourceArgs
+                AssociatedRouteTable = new AzureNextGen.Network..Inputs.SubResourceArgs
                 {
                     Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualHubs/virtualHub1/hubRouteTables/hubRouteTable1",
                 },
-                PropagatedRouteTables = new AzureNextGen.Network.Latest.Inputs.PropagatedRouteTableArgs
+                PropagatedRouteTables = new AzureNextGen.Network..Inputs.PropagatedRouteTableArgs
                 {
                     Ids = 
                     {
-                        new AzureNextGen.Network.Latest.Inputs.SubResourceArgs
+                        new AzureNextGen.Network..Inputs.SubResourceArgs
                         {
                             Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualHubs/virtualHub1/hubRouteTables/hubRouteTable1",
                         },
@@ -57,11 +57,11 @@ class MyStack : Stack
                         "label2",
                     },
                 },
-                VnetRoutes = new AzureNextGen.Network.Latest.Inputs.VnetRouteArgs
+                VnetRoutes = new AzureNextGen.Network..Inputs.VnetRouteArgs
                 {
                     StaticRoutes = 
                     {
-                        new AzureNextGen.Network.Latest.Inputs.StaticRouteArgs
+                        new AzureNextGen.Network..Inputs.StaticRouteArgs
                         {
                             AddressPrefixes = 
                             {
@@ -71,7 +71,7 @@ class MyStack : Stack
                             Name = "route1",
                             NextHopIpAddress = "10.0.0.68",
                         },
-                        new AzureNextGen.Network.Latest.Inputs.StaticRouteArgs
+                        new AzureNextGen.Network..Inputs.StaticRouteArgs
                         {
                             AddressPrefixes = 
                             {
@@ -100,7 +100,7 @@ class MyStack : Stack
 package main
 
 import (
-	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network/latest"
+	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -168,19 +168,19 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-hub_virtual_network_connection = azure_nextgen.network.latest.HubVirtualNetworkConnection("hubVirtualNetworkConnection",
+hub_virtual_network_connection = azure_nextgen.network.HubVirtualNetworkConnection("hubVirtualNetworkConnection",
     connection_name="connection1",
     enable_internet_security=False,
-    remote_virtual_network=azure_nextgen.network.latest.SubResourceArgs(
+    remote_virtual_network=azure_nextgen.network.SubResourceArgs(
         id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/SpokeVnet1",
     ),
     resource_group_name="rg1",
-    routing_configuration=azure_nextgen.network.latest.RoutingConfigurationArgs(
-        associated_route_table=azure_nextgen.network.latest.SubResourceArgs(
+    routing_configuration=azure_nextgen.network.RoutingConfigurationArgs(
+        associated_route_table=azure_nextgen.network.SubResourceArgs(
             id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualHubs/virtualHub1/hubRouteTables/hubRouteTable1",
         ),
-        propagated_route_tables=azure_nextgen.network.latest.PropagatedRouteTableArgs(
-            ids=[azure_nextgen.network.latest.SubResourceArgs(
+        propagated_route_tables=azure_nextgen.network.PropagatedRouteTableArgs(
+            ids=[azure_nextgen.network.SubResourceArgs(
                 id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualHubs/virtualHub1/hubRouteTables/hubRouteTable1",
             )],
             labels=[
@@ -188,9 +188,9 @@ hub_virtual_network_connection = azure_nextgen.network.latest.HubVirtualNetworkC
                 "label2",
             ],
         ),
-        vnet_routes=azure_nextgen.network.latest.VnetRouteArgs(
+        vnet_routes=azure_nextgen.network.VnetRouteArgs(
             static_routes=[
-                azure_nextgen.network.latest.StaticRouteArgs(
+                azure_nextgen.network.StaticRouteArgs(
                     address_prefixes=[
                         "10.1.0.0/16",
                         "10.2.0.0/16",
@@ -198,7 +198,7 @@ hub_virtual_network_connection = azure_nextgen.network.latest.HubVirtualNetworkC
                     name="route1",
                     next_hop_ip_address="10.0.0.68",
                 ),
-                azure_nextgen.network.latest.StaticRouteArgs(
+                azure_nextgen.network.StaticRouteArgs(
                     address_prefixes=[
                         "10.3.0.0/16",
                         "10.4.0.0/16",
@@ -221,7 +221,7 @@ hub_virtual_network_connection = azure_nextgen.network.latest.HubVirtualNetworkC
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const hubVirtualNetworkConnection = new azure_nextgen.network.latest.HubVirtualNetworkConnection("hubVirtualNetworkConnection", {
+const hubVirtualNetworkConnection = new azure_nextgen.network.HubVirtualNetworkConnection("hubVirtualNetworkConnection", {
     connectionName: "connection1",
     enableInternetSecurity: false,
     remoteVirtualNetwork: {
@@ -530,7 +530,7 @@ The HubVirtualNetworkConnection resource accepts the following [input]({{< relre
 <a href="#remotevirtualnetwork_csharp" style="color: inherit; text-decoration: inherit;">Remote<wbr>Virtual<wbr>Network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Reference to the remote virtual network.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -539,7 +539,7 @@ The HubVirtualNetworkConnection resource accepts the following [input]({{< relre
 <a href="#routingconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Routing<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routingconfiguration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Routing<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#routingconfiguration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Routing<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Routing Configuration indicating the associated and propagated route tables on this connection.{{% /md %}}</dd>
 </dl>
@@ -993,7 +993,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ids_csharp" style="color: inherit; text-decoration: inherit;">Ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#subresource">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of resource ids of all the RouteTables.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1091,7 +1091,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ids_csharp" style="color: inherit; text-decoration: inherit;">Ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#subresourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of resource ids of all the RouteTables.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1189,7 +1189,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#associatedroutetable_csharp" style="color: inherit; text-decoration: inherit;">Associated<wbr>Route<wbr>Table</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The resource id RouteTable associated with this RoutingConfiguration.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1198,7 +1198,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#propagatedroutetables_csharp" style="color: inherit; text-decoration: inherit;">Propagated<wbr>Route<wbr>Tables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#propagatedroutetable">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Propagated<wbr>Route<wbr>Table<wbr>Args</a></span>
+        <span class="property-type"><a href="#propagatedroutetable">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Propagated<wbr>Route<wbr>Table<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The list of RouteTables to advertise the routes to.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1207,7 +1207,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vnetroutes_csharp" style="color: inherit; text-decoration: inherit;">Vnet<wbr>Routes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vnetroute">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Vnet<wbr>Route<wbr>Args</a></span>
+        <span class="property-type"><a href="#vnetroute">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Vnet<wbr>Route<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List of routes that control routing from VirtualHub into a virtual network connection.{{% /md %}}</dd>
 </dl>
@@ -1323,7 +1323,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#associatedroutetable_csharp" style="color: inherit; text-decoration: inherit;">Associated<wbr>Route<wbr>Table</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The resource id RouteTable associated with this RoutingConfiguration.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1332,7 +1332,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#propagatedroutetables_csharp" style="color: inherit; text-decoration: inherit;">Propagated<wbr>Route<wbr>Tables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#propagatedroutetableresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Propagated<wbr>Route<wbr>Table<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#propagatedroutetableresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Propagated<wbr>Route<wbr>Table<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The list of RouteTables to advertise the routes to.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1341,7 +1341,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vnetroutes_csharp" style="color: inherit; text-decoration: inherit;">Vnet<wbr>Routes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vnetrouteresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Vnet<wbr>Route<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#vnetrouteresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Vnet<wbr>Route<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List of routes that control routing from VirtualHub into a virtual network connection.{{% /md %}}</dd>
 </dl>
@@ -1849,7 +1849,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#staticroutes_csharp" style="color: inherit; text-decoration: inherit;">Static<wbr>Routes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#staticroute">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Static<wbr>Route<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#staticroute">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Static<wbr>Route<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of all Static Routes.{{% /md %}}</dd>
 </dl>
@@ -1911,7 +1911,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#staticroutes_csharp" style="color: inherit; text-decoration: inherit;">Static<wbr>Routes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#staticrouteresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Static<wbr>Route<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#staticrouteresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Static<wbr>Route<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of all Static Routes.{{% /md %}}</dd>
 </dl>
@@ -1967,7 +1967,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:network/latest:HubVirtualNetworkConnection connection1 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualHubs/virtualHub1/hubVirtualNetworkConnections/connection1 
+$ pulumi import azure-nextgen:network:HubVirtualNetworkConnection connection1 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualHubs/virtualHub1/hubVirtualNetworkConnections/connection1 
 ```
 
 

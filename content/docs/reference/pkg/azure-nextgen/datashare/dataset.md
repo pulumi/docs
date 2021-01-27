@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.datashare.DataSet resource with 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 A DataSet data transfer object.
-Latest API Version: 2019-11-01.
+API Version: 2019-11-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var dataSet = new AzureNextGen.DataShare.Latest.DataSet("dataSet", new AzureNextGen.DataShare.Latest.DataSetArgs
+        var dataSet = new AzureNextGen.DataShare..DataSet("dataSet", new AzureNextGen.DataShare..DataSetArgs
         {
             AccountName = "Account1",
             DataSetName = "Dataset1",
@@ -49,7 +49,7 @@ class MyStack : Stack
 package main
 
 import (
-	datashare "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datashare/latest"
+	datashare "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datashare"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -79,7 +79,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-data_set = azure_nextgen.datashare.latest.DataSet("dataSet",
+data_set = azure_nextgen.datashare.DataSet("dataSet",
     account_name="Account1",
     data_set_name="Dataset1",
     kind="Blob",
@@ -96,7 +96,7 @@ data_set = azure_nextgen.datashare.latest.DataSet("dataSet",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const dataSet = new azure_nextgen.datashare.latest.DataSet("dataSet", {
+const dataSet = new azure_nextgen.datashare.DataSet("dataSet", {
     accountName: "Account1",
     dataSetName: "Dataset1",
     kind: "Blob",
@@ -118,7 +118,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var dataSet = new AzureNextGen.DataShare.Latest.DataSet("dataSet", new AzureNextGen.DataShare.Latest.DataSetArgs
+        var dataSet = new AzureNextGen.DataShare..DataSet("dataSet", new AzureNextGen.DataShare..DataSetArgs
         {
             AccountName = "Account1",
             DataSetName = "Dataset1",
@@ -140,7 +140,7 @@ class MyStack : Stack
 package main
 
 import (
-	datashare "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datashare/latest"
+	datashare "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datashare"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -170,7 +170,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-data_set = azure_nextgen.datashare.latest.DataSet("dataSet",
+data_set = azure_nextgen.datashare.DataSet("dataSet",
     account_name="Account1",
     data_set_name="Dataset1",
     kind="KustoCluster",
@@ -187,7 +187,7 @@ data_set = azure_nextgen.datashare.latest.DataSet("dataSet",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const dataSet = new azure_nextgen.datashare.latest.DataSet("dataSet", {
+const dataSet = new azure_nextgen.datashare.DataSet("dataSet", {
     accountName: "Account1",
     dataSetName: "Dataset1",
     kind: "KustoCluster",
@@ -209,7 +209,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var dataSet = new AzureNextGen.DataShare.Latest.DataSet("dataSet", new AzureNextGen.DataShare.Latest.DataSetArgs
+        var dataSet = new AzureNextGen.DataShare..DataSet("dataSet", new AzureNextGen.DataShare..DataSetArgs
         {
             AccountName = "Account1",
             DataSetName = "Dataset1",
@@ -231,7 +231,7 @@ class MyStack : Stack
 package main
 
 import (
-	datashare "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datashare/latest"
+	datashare "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datashare"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -261,7 +261,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-data_set = azure_nextgen.datashare.latest.DataSet("dataSet",
+data_set = azure_nextgen.datashare.DataSet("dataSet",
     account_name="Account1",
     data_set_name="Dataset1",
     kind="KustoDatabase",
@@ -278,7 +278,7 @@ data_set = azure_nextgen.datashare.latest.DataSet("dataSet",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const dataSet = new azure_nextgen.datashare.latest.DataSet("dataSet", {
+const dataSet = new azure_nextgen.datashare.DataSet("dataSet", {
     accountName: "Account1",
     dataSetName: "Dataset1",
     kind: "KustoDatabase",
@@ -300,7 +300,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var dataSet = new AzureNextGen.DataShare.Latest.DataSet("dataSet", new AzureNextGen.DataShare.Latest.DataSetArgs
+        var dataSet = new AzureNextGen.DataShare..DataSet("dataSet", new AzureNextGen.DataShare..DataSetArgs
         {
             AccountName = "Account1",
             DataSetName = "Dataset1",
@@ -322,7 +322,7 @@ class MyStack : Stack
 package main
 
 import (
-	datashare "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datashare/latest"
+	datashare "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datashare"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -352,7 +352,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-data_set = azure_nextgen.datashare.latest.DataSet("dataSet",
+data_set = azure_nextgen.datashare.DataSet("dataSet",
     account_name="Account1",
     data_set_name="Dataset1",
     kind="SqlDBTable",
@@ -369,7 +369,7 @@ data_set = azure_nextgen.datashare.latest.DataSet("dataSet",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const dataSet = new azure_nextgen.datashare.latest.DataSet("dataSet", {
+const dataSet = new azure_nextgen.datashare.DataSet("dataSet", {
     accountName: "Account1",
     dataSetName: "Dataset1",
     kind: "SqlDBTable",
@@ -391,7 +391,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var dataSet = new AzureNextGen.DataShare.Latest.DataSet("dataSet", new AzureNextGen.DataShare.Latest.DataSetArgs
+        var dataSet = new AzureNextGen.DataShare..DataSet("dataSet", new AzureNextGen.DataShare..DataSetArgs
         {
             AccountName = "Account1",
             DataSetName = "Dataset1",
@@ -413,7 +413,7 @@ class MyStack : Stack
 package main
 
 import (
-	datashare "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datashare/latest"
+	datashare "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datashare"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -443,7 +443,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-data_set = azure_nextgen.datashare.latest.DataSet("dataSet",
+data_set = azure_nextgen.datashare.DataSet("dataSet",
     account_name="Account1",
     data_set_name="Dataset1",
     kind="SqlDWTable",
@@ -460,7 +460,7 @@ data_set = azure_nextgen.datashare.latest.DataSet("dataSet",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const dataSet = new azure_nextgen.datashare.latest.DataSet("dataSet", {
+const dataSet = new azure_nextgen.datashare.DataSet("dataSet", {
     accountName: "Account1",
     dataSetName: "Dataset1",
     kind: "SqlDWTable",
@@ -679,7 +679,7 @@ The DataSet resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#kind">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Share.<wbr>Kind</a></span>
+        <span class="property-type">string | <a href="#kind">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Share..<wbr>Kind</a></span>
     </dt>
     <dd>{{% md %}}Kind of data set.{{% /md %}}</dd>
     <dt class="property-required"
@@ -1040,7 +1040,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:datashare/latest:DataSet Dataset1 /subscriptions/433a8dfd-e5d5-4e77-ad86-90acdc75eb1a/resourceGroups/SampleResourceGroup/providers/Microsoft.DataShare/accounts/Account1/shares/Share1/datasets/Dataset1 
+$ pulumi import azure-nextgen:datashare:DataSet Dataset1 /subscriptions/433a8dfd-e5d5-4e77-ad86-90acdc75eb1a/resourceGroups/SampleResourceGroup/providers/Microsoft.DataShare/accounts/Account1/shares/Share1/datasets/Dataset1 
 ```
 
 

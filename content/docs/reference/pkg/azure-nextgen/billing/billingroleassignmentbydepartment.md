@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.billing.BillingRoleAssignmentByD
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The role assignment
+API Version: 2019-10-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var billingRoleAssignmentByDepartment = new AzureNextGen.Billing.V20191001Preview.BillingRoleAssignmentByDepartment("billingRoleAssignmentByDepartment", new AzureNextGen.Billing.V20191001Preview.BillingRoleAssignmentByDepartmentArgs
+        var billingRoleAssignmentByDepartment = new AzureNextGen.Billing..BillingRoleAssignmentByDepartment("billingRoleAssignmentByDepartment", new AzureNextGen.Billing..BillingRoleAssignmentByDepartmentArgs
         {
             BillingAccountName = "{billingAccountName}",
             BillingRoleAssignmentName = "{billingRoleAssignmentName}",
@@ -49,7 +50,7 @@ class MyStack : Stack
 package main
 
 import (
-	billing "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/billing/v20191001preview"
+	billing "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/billing"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -80,7 +81,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-billing_role_assignment_by_department = azure_nextgen.billing.v20191001preview.BillingRoleAssignmentByDepartment("billingRoleAssignmentByDepartment",
+billing_role_assignment_by_department = azure_nextgen.billing.BillingRoleAssignmentByDepartment("billingRoleAssignmentByDepartment",
     billing_account_name="{billingAccountName}",
     billing_role_assignment_name="{billingRoleAssignmentName}",
     department_name="{departmentName}",
@@ -98,7 +99,7 @@ billing_role_assignment_by_department = azure_nextgen.billing.v20191001preview.B
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const billingRoleAssignmentByDepartment = new azure_nextgen.billing.v20191001preview.BillingRoleAssignmentByDepartment("billingRoleAssignmentByDepartment", {
+const billingRoleAssignmentByDepartment = new azure_nextgen.billing.BillingRoleAssignmentByDepartment("billingRoleAssignmentByDepartment", {
     billingAccountName: "{billingAccountName}",
     billingRoleAssignmentName: "{billingRoleAssignmentName}",
     departmentName: "{departmentName}",
@@ -933,7 +934,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:billing/v20191001preview:BillingRoleAssignmentByDepartment 9dfd08c2-62a3-4d47-85bd-1cdba1408402 /providers/Microsoft.Billing/billingAccounts/7898901/departments/97603/billingRoleAssignments/9dfd08c2-62a3-4d47-85bd-1cdba1408402 
+$ pulumi import azure-nextgen:billing:BillingRoleAssignmentByDepartment 9dfd08c2-62a3-4d47-85bd-1cdba1408402 /providers/Microsoft.Billing/billingAccounts/7898901/departments/97603/billingRoleAssignments/9dfd08c2-62a3-4d47-85bd-1cdba1408402 
 ```
 
 

@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.machinelearningservices.LinkedWo
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Linked workspace.
-Latest API Version: 2020-03-01.
+API Version: 2020-03-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,11 +27,11 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var linkedWorkspace = new AzureNextGen.MachineLearningServices.Latest.LinkedWorkspace("linkedWorkspace", new AzureNextGen.MachineLearningServices.Latest.LinkedWorkspaceArgs
+        var linkedWorkspace = new AzureNextGen.MachineLearningServices..LinkedWorkspace("linkedWorkspace", new AzureNextGen.MachineLearningServices..LinkedWorkspaceArgs
         {
             LinkName = "link-1",
             Name = "link-1",
-            Properties = new AzureNextGen.MachineLearningServices.Latest.Inputs.LinkedWorkspacePropsArgs
+            Properties = new AzureNextGen.MachineLearningServices..Inputs.LinkedWorkspacePropsArgs
             {
                 LinkedWorkspaceResourceId = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1/providers/Microsoft.Synapse/workspaces/linkedWorkspace-1",
                 UserAssignedIdentityResourceId = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1/providers/Microsoft.ManagedIdentity/userAssignedIdentities/uai1",
@@ -53,7 +53,7 @@ class MyStack : Stack
 package main
 
 import (
-	machinelearningservices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/machinelearningservices/latest"
+	machinelearningservices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/machinelearningservices"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -86,10 +86,10 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-linked_workspace = azure_nextgen.machinelearningservices.latest.LinkedWorkspace("linkedWorkspace",
+linked_workspace = azure_nextgen.machinelearningservices.LinkedWorkspace("linkedWorkspace",
     link_name="link-1",
     name="link-1",
-    properties=azure_nextgen.machinelearningservices.latest.LinkedWorkspacePropsArgs(
+    properties=azure_nextgen.machinelearningservices.LinkedWorkspacePropsArgs(
         linked_workspace_resource_id="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1/providers/Microsoft.Synapse/workspaces/linkedWorkspace-1",
         user_assigned_identity_resource_id="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1/providers/Microsoft.ManagedIdentity/userAssignedIdentities/uai1",
     ),
@@ -106,7 +106,7 @@ linked_workspace = azure_nextgen.machinelearningservices.latest.LinkedWorkspace(
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const linkedWorkspace = new azure_nextgen.machinelearningservices.latest.LinkedWorkspace("linkedWorkspace", {
+const linkedWorkspace = new azure_nextgen.machinelearningservices.LinkedWorkspace("linkedWorkspace", {
     linkName: "link-1",
     name: "link-1",
     properties: {
@@ -346,7 +346,7 @@ The LinkedWorkspace resource accepts the following [input]({{< relref "/docs/int
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedworkspaceprops">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Linked<wbr>Workspace<wbr>Props<wbr>Args</a></span>
+        <span class="property-type"><a href="#linkedworkspaceprops">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services..<wbr>Inputs.<wbr>Linked<wbr>Workspace<wbr>Props<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}LinkedWorkspace specific properties.{{% /md %}}</dd>
 </dl>
@@ -819,7 +819,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:machinelearningservices/latest:LinkedWorkspace link-1 /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1/providers/Microsoft.MachineLearningServices/workspaces/workspace-1/linkedWorkspaces/link-1 
+$ pulumi import azure-nextgen:machinelearningservices:LinkedWorkspace link-1 /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1/providers/Microsoft.MachineLearningServices/workspaces/workspace-1/linkedWorkspaces/link-1 
 ```
 
 

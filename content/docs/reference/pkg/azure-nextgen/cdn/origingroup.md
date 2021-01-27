@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.cdn.OriginGroup resource with ex
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Origin group comprising of origins is used for load balancing to origins when the content cannot be served from CDN.
-Latest API Version: 2020-09-01.
+API Version: 2020-09-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,10 +27,10 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var originGroup = new AzureNextGen.Cdn.Latest.OriginGroup("originGroup", new AzureNextGen.Cdn.Latest.OriginGroupArgs
+        var originGroup = new AzureNextGen.Cdn..OriginGroup("originGroup", new AzureNextGen.Cdn..OriginGroupArgs
         {
             EndpointName = "endpoint1",
-            HealthProbeSettings = new AzureNextGen.Cdn.Latest.Inputs.HealthProbeParametersArgs
+            HealthProbeSettings = new AzureNextGen.Cdn..Inputs.HealthProbeParametersArgs
             {
                 ProbeIntervalInSeconds = 120,
                 ProbePath = "/health.aspx",
@@ -40,14 +40,14 @@ class MyStack : Stack
             OriginGroupName = "origingroup1",
             Origins = 
             {
-                new AzureNextGen.Cdn.Latest.Inputs.ResourceReferenceArgs
+                new AzureNextGen.Cdn..Inputs.ResourceReferenceArgs
                 {
                     Id = "/subscriptions/subid/resourceGroups/RG/providers/Microsoft.Cdn/profiles/profile1/endpoints/endpoint1/origins/origin1",
                 },
             },
             ProfileName = "profile1",
             ResourceGroupName = "RG",
-            ResponseBasedOriginErrorDetectionSettings = new AzureNextGen.Cdn.Latest.Inputs.ResponseBasedOriginErrorDetectionParametersArgs
+            ResponseBasedOriginErrorDetectionSettings = new AzureNextGen.Cdn..Inputs.ResponseBasedOriginErrorDetectionParametersArgs
             {
                 ResponseBasedDetectedErrorTypes = "TcpErrorsOnly",
                 ResponseBasedFailoverThresholdPercentage = 10,
@@ -67,7 +67,7 @@ class MyStack : Stack
 package main
 
 import (
-	cdn "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/cdn/latest"
+	cdn "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/cdn"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -111,21 +111,21 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-origin_group = azure_nextgen.cdn.latest.OriginGroup("originGroup",
+origin_group = azure_nextgen.cdn.OriginGroup("originGroup",
     endpoint_name="endpoint1",
-    health_probe_settings=azure_nextgen.cdn.latest.HealthProbeParametersArgs(
+    health_probe_settings=azure_nextgen.cdn.HealthProbeParametersArgs(
         probe_interval_in_seconds=120,
         probe_path="/health.aspx",
         probe_protocol="Http",
         probe_request_type="GET",
     ),
     origin_group_name="origingroup1",
-    origins=[azure_nextgen.cdn.latest.ResourceReferenceArgs(
+    origins=[azure_nextgen.cdn.ResourceReferenceArgs(
         id="/subscriptions/subid/resourceGroups/RG/providers/Microsoft.Cdn/profiles/profile1/endpoints/endpoint1/origins/origin1",
     )],
     profile_name="profile1",
     resource_group_name="RG",
-    response_based_origin_error_detection_settings=azure_nextgen.cdn.latest.ResponseBasedOriginErrorDetectionParametersArgs(
+    response_based_origin_error_detection_settings=azure_nextgen.cdn.ResponseBasedOriginErrorDetectionParametersArgs(
         response_based_detected_error_types="TcpErrorsOnly",
         response_based_failover_threshold_percentage=10,
     ))
@@ -140,7 +140,7 @@ origin_group = azure_nextgen.cdn.latest.OriginGroup("originGroup",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const originGroup = new azure_nextgen.cdn.latest.OriginGroup("originGroup", {
+const originGroup = new azure_nextgen.cdn.OriginGroup("originGroup", {
     endpointName: "endpoint1",
     healthProbeSettings: {
         probeIntervalInSeconds: 120,
@@ -371,7 +371,7 @@ The OriginGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#origins_csharp" style="color: inherit; text-decoration: inherit;">Origins</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcereference">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn.<wbr>Inputs.<wbr>Resource<wbr>Reference<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#resourcereference">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn..<wbr>Inputs.<wbr>Resource<wbr>Reference<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The source of the content being delivered via CDN within given origin group.{{% /md %}}</dd>
     <dt class="property-required"
@@ -398,7 +398,7 @@ The OriginGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#healthprobesettings_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>Probe<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healthprobeparameters">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn.<wbr>Inputs.<wbr>Health<wbr>Probe<wbr>Parameters<wbr>Args</a></span>
+        <span class="property-type"><a href="#healthprobeparameters">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn..<wbr>Inputs.<wbr>Health<wbr>Probe<wbr>Parameters<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Health probe settings to the origin that is used to determine the health of the origin.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -407,7 +407,7 @@ The OriginGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#responsebasedoriginerrordetectionsettings_csharp" style="color: inherit; text-decoration: inherit;">Response<wbr>Based<wbr>Origin<wbr>Error<wbr>Detection<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#responsebasedoriginerrordetectionparameters">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn.<wbr>Inputs.<wbr>Response<wbr>Based<wbr>Origin<wbr>Error<wbr>Detection<wbr>Parameters<wbr>Args</a></span>
+        <span class="property-type"><a href="#responsebasedoriginerrordetectionparameters">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn..<wbr>Inputs.<wbr>Response<wbr>Based<wbr>Origin<wbr>Error<wbr>Detection<wbr>Parameters<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The JSON object that contains the properties to determine origin health using real requests/responses. This property is currently not supported.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -708,7 +708,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#systemdata_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn.<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
+        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn..<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Read only system data{{% /md %}}</dd>
     <dt class="property-"
@@ -942,7 +942,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#probeprotocol_csharp" style="color: inherit; text-decoration: inherit;">Probe<wbr>Protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#probeprotocol">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn.<wbr>Probe<wbr>Protocol</a></span>
+        <span class="property-type"><a href="#probeprotocol">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn..<wbr>Probe<wbr>Protocol</a></span>
     </dt>
     <dd>{{% md %}}Protocol to use for health probe.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -951,7 +951,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#proberequesttype_csharp" style="color: inherit; text-decoration: inherit;">Probe<wbr>Request<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healthproberequesttype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn.<wbr>Health<wbr>Probe<wbr>Request<wbr>Type</a></span>
+        <span class="property-type"><a href="#healthproberequesttype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn..<wbr>Health<wbr>Probe<wbr>Request<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of health probe request that is made.{{% /md %}}</dd>
 </dl>
@@ -1722,7 +1722,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#httperrorranges_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Error<wbr>Ranges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httperrorrangeparameters">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn.<wbr>Inputs.<wbr>Http<wbr>Error<wbr>Range<wbr>Parameters<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#httperrorrangeparameters">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn..<wbr>Inputs.<wbr>Http<wbr>Error<wbr>Range<wbr>Parameters<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of Http status code ranges that are considered as server errors for origin and it is marked as unhealthy.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1731,7 +1731,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#responsebaseddetectederrortypes_csharp" style="color: inherit; text-decoration: inherit;">Response<wbr>Based<wbr>Detected<wbr>Error<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#responsebaseddetectederrortypes">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn.<wbr>Response<wbr>Based<wbr>Detected<wbr>Error<wbr>Types</a></span>
+        <span class="property-type"><a href="#responsebaseddetectederrortypes">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn..<wbr>Response<wbr>Based<wbr>Detected<wbr>Error<wbr>Types</a></span>
     </dt>
     <dd>{{% md %}}Type of response errors for real user requests for which origin will be deemed unhealthy{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1856,7 +1856,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#httperrorranges_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Error<wbr>Ranges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httperrorrangeparametersresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn.<wbr>Inputs.<wbr>Http<wbr>Error<wbr>Range<wbr>Parameters<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#httperrorrangeparametersresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn..<wbr>Inputs.<wbr>Http<wbr>Error<wbr>Range<wbr>Parameters<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of Http status code ranges that are considered as server errors for origin and it is marked as unhealthy.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2226,7 +2226,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:cdn/latest:OriginGroup originGroup1 /subscriptions/subid/resourcegroups/RG/providers/Microsoft.Cdn/profiles/profile1/endpoints/endpoint1/originGroups/originGroup1 
+$ pulumi import azure-nextgen:cdn:OriginGroup originGroup1 /subscriptions/subid/resourcegroups/RG/providers/Microsoft.Cdn/profiles/profile1/endpoints/endpoint1/originGroups/originGroup1 
 ```
 
 

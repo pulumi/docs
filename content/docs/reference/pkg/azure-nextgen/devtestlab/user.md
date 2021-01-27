@@ -11,13 +11,13 @@ meta_desc: "Documentation for the azure-nextgen.devtestlab.User resource with ex
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Profile of a lab user.
-Latest API Version: 2018-09-15.
+API Version: 2018-09-15.
 ## Import
 
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:devtestlab/latest:User myresource1 /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DevTestLab/labs/{labName}/users/{name} 
+$ pulumi import azure-nextgen:devtestlab:User myresource1 /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DevTestLab/labs/{labName}/users/{name} 
 ```
 
 
@@ -236,7 +236,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#useridentity">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>User<wbr>Identity<wbr>Args</a></span>
+        <span class="property-type"><a href="#useridentity">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab..<wbr>Inputs.<wbr>User<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The identity of the user.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -254,7 +254,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#secretstore_csharp" style="color: inherit; text-decoration: inherit;">Secret<wbr>Store</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#usersecretstore">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>User<wbr>Secret<wbr>Store<wbr>Args</a></span>
+        <span class="property-type"><a href="#usersecretstore">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab..<wbr>Inputs.<wbr>User<wbr>Secret<wbr>Store<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The secret store of the user.{{% /md %}}</dd>
     <dt class="property-optional"

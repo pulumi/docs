@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.network.ApplicationSecurityGroup
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 An application security group in a resource group.
-Latest API Version: 2020-08-01.
+API Version: 2020-08-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var applicationSecurityGroup = new AzureNextGen.Network.Latest.ApplicationSecurityGroup("applicationSecurityGroup", new AzureNextGen.Network.Latest.ApplicationSecurityGroupArgs
+        var applicationSecurityGroup = new AzureNextGen.Network..ApplicationSecurityGroup("applicationSecurityGroup", new AzureNextGen.Network..ApplicationSecurityGroupArgs
         {
             ApplicationSecurityGroupName = "test-asg",
             Location = "westus",
@@ -47,7 +47,7 @@ class MyStack : Stack
 package main
 
 import (
-	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network/latest"
+	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -75,7 +75,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-application_security_group = azure_nextgen.network.latest.ApplicationSecurityGroup("applicationSecurityGroup",
+application_security_group = azure_nextgen.network.ApplicationSecurityGroup("applicationSecurityGroup",
     application_security_group_name="test-asg",
     location="westus",
     resource_group_name="rg1")
@@ -90,7 +90,7 @@ application_security_group = azure_nextgen.network.latest.ApplicationSecurityGro
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const applicationSecurityGroup = new azure_nextgen.network.latest.ApplicationSecurityGroup("applicationSecurityGroup", {
+const applicationSecurityGroup = new azure_nextgen.network.ApplicationSecurityGroup("applicationSecurityGroup", {
     applicationSecurityGroupName: "test-asg",
     location: "westus",
     resourceGroupName: "rg1",
@@ -742,7 +742,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:network/latest:ApplicationSecurityGroup test-asg /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationSecurityGroups/test-asg 
+$ pulumi import azure-nextgen:network:ApplicationSecurityGroup test-asg /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationSecurityGroups/test-asg 
 ```
 
 

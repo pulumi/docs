@@ -179,7 +179,7 @@ The following output properties are available:
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#solutionpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Operations<wbr>Management.<wbr>Outputs.<wbr>Solution<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#solutionpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Operations<wbr>Management..<wbr>Outputs.<wbr>Solution<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Properties for solution object supported by the OperationsManagement resource provider.{{% /md %}}</dd>
     <dt class="property-"
@@ -206,7 +206,7 @@ The following output properties are available:
 <a href="#plan_csharp" style="color: inherit; text-decoration: inherit;">Plan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#solutionplanresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Operations<wbr>Management.<wbr>Outputs.<wbr>Solution<wbr>Plan<wbr>Response</a></span>
+        <span class="property-type"><a href="#solutionplanresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Operations<wbr>Management..<wbr>Outputs.<wbr>Solution<wbr>Plan<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Plan for solution object supported by the OperationsManagement resource provider.{{% /md %}}</dd>
     <dt class="property-"

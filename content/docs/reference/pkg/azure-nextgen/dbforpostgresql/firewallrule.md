@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.dbforpostgresql.FirewallRule res
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Represents a server firewall rule.
-Latest API Version: 2017-12-01.
+API Version: 2017-12-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var firewallRule = new AzureNextGen.DBforPostgreSQL.Latest.FirewallRule("firewallRule", new AzureNextGen.DBforPostgreSQL.Latest.FirewallRuleArgs
+        var firewallRule = new AzureNextGen.DBforPostgreSQL..FirewallRule("firewallRule", new AzureNextGen.DBforPostgreSQL..FirewallRuleArgs
         {
             EndIpAddress = "255.255.255.255",
             FirewallRuleName = "rule1",
@@ -49,7 +49,7 @@ class MyStack : Stack
 package main
 
 import (
-	dbforpostgresql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/dbforpostgresql/latest"
+	dbforpostgresql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/dbforpostgresql"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -79,7 +79,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-firewall_rule = azure_nextgen.dbforpostgresql.latest.FirewallRule("firewallRule",
+firewall_rule = azure_nextgen.dbforpostgresql.FirewallRule("firewallRule",
     end_ip_address="255.255.255.255",
     firewall_rule_name="rule1",
     resource_group_name="TestGroup",
@@ -96,7 +96,7 @@ firewall_rule = azure_nextgen.dbforpostgresql.latest.FirewallRule("firewallRule"
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const firewallRule = new azure_nextgen.dbforpostgresql.latest.FirewallRule("firewallRule", {
+const firewallRule = new azure_nextgen.dbforpostgresql.FirewallRule("firewallRule", {
     endIpAddress: "255.255.255.255",
     firewallRuleName: "rule1",
     resourceGroupName: "TestGroup",
@@ -642,7 +642,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:dbforpostgresql/latest:FirewallRule rule1 /subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/TestGroup/providers/Microsoft.DBforPostgreSQL/servers/testserver/firewallRules/rule1 
+$ pulumi import azure-nextgen:dbforpostgresql:FirewallRule rule1 /subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/TestGroup/providers/Microsoft.DBforPostgreSQL/servers/testserver/firewallRules/rule1 
 ```
 
 

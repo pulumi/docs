@@ -251,7 +251,7 @@ The following output properties are available:
 <a href="#identifier_csharp" style="color: inherit; text-decoration: inherit;">Identifier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#galleryidentifierresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Outputs.<wbr>Gallery<wbr>Identifier<wbr>Response</a></span>
+        <span class="property-type"><a href="#galleryidentifierresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Outputs.<wbr>Gallery<wbr>Identifier<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes the gallery unique name.{{% /md %}}</dd>
     <dt class="property-"
@@ -260,7 +260,7 @@ The following output properties are available:
 <a href="#sharingprofile_csharp" style="color: inherit; text-decoration: inherit;">Sharing<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sharingprofileresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Outputs.<wbr>Sharing<wbr>Profile<wbr>Response</a></span>
+        <span class="property-type"><a href="#sharingprofileresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Outputs.<wbr>Sharing<wbr>Profile<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Profile for gallery sharing to subscription or tenant{{% /md %}}</dd>
     <dt class="property-"
@@ -728,7 +728,7 @@ The following output properties are available:
 <a href="#groups_csharp" style="color: inherit; text-decoration: inherit;">Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sharingprofilegroupresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Sharing<wbr>Profile<wbr>Group<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#sharingprofilegroupresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Inputs.<wbr>Sharing<wbr>Profile<wbr>Group<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of sharing profile groups.{{% /md %}}</dd>
     <dt class="property-optional"

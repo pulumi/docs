@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.storsimple.BackupScheduleGroup r
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The Backup Schedule Group
-Latest API Version: 2016-10-01.
+API Version: 2016-10-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var backupScheduleGroup = new AzureNextGen.StorSimple.Latest.BackupScheduleGroup("backupScheduleGroup", new AzureNextGen.StorSimple.Latest.BackupScheduleGroupArgs
+        var backupScheduleGroup = new AzureNextGen.StorSimple..BackupScheduleGroup("backupScheduleGroup", new AzureNextGen.StorSimple..BackupScheduleGroupArgs
         {
             DeviceName = "HSDK-4XY4FI2IVG",
             ManagerName = "hAzureSDKOperations",
@@ -49,7 +49,7 @@ class MyStack : Stack
 package main
 
 import (
-	storsimple "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/storsimple/latest"
+	storsimple "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/storsimple"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -79,12 +79,12 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-backup_schedule_group = azure_nextgen.storsimple.latest.BackupScheduleGroup("backupScheduleGroup",
+backup_schedule_group = azure_nextgen.storsimple.BackupScheduleGroup("backupScheduleGroup",
     device_name="HSDK-4XY4FI2IVG",
     manager_name="hAzureSDKOperations",
     resource_group_name="ResourceGroupForSDKTest",
     schedule_group_name="BackupSchGroupForSDKTest",
-    start_time=azure_nextgen.storsimple.latest.TimeArgs())
+    start_time=azure_nextgen.storsimple.TimeArgs())
 
 ```
 
@@ -96,7 +96,7 @@ backup_schedule_group = azure_nextgen.storsimple.latest.BackupScheduleGroup("bac
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const backupScheduleGroup = new azure_nextgen.storsimple.latest.BackupScheduleGroup("backupScheduleGroup", {
+const backupScheduleGroup = new azure_nextgen.storsimple.BackupScheduleGroup("backupScheduleGroup", {
     deviceName: "HSDK-4XY4FI2IVG",
     managerName: "hAzureSDKOperations",
     resourceGroupName: "ResourceGroupForSDKTest",
@@ -333,7 +333,7 @@ The BackupScheduleGroup resource accepts the following [input]({{< relref "/docs
 <a href="#starttime_csharp" style="color: inherit; text-decoration: inherit;">Start<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#time">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stor<wbr>Simple.<wbr>Inputs.<wbr>Time<wbr>Args</a></span>
+        <span class="property-type"><a href="#time">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stor<wbr>Simple..<wbr>Inputs.<wbr>Time<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The start time. When this field is specified we will generate Default GrandFather Father Son Backup Schedules.{{% /md %}}</dd>
 </dl>
@@ -914,7 +914,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:storsimple/latest:BackupScheduleGroup BackupSchGroupForSDKTest /subscriptions/9eb689cd-7243-43b4-b6f6-5c65cb296641/resourceGroups/ResourceGroupForSDKTest/providers/Microsoft.StorSimple/managers/hAzureSDKOperations/devices/hsdk-4xy4fi2ivg/backupScheduleGroups/BackupSchGroupForSDKTest 
+$ pulumi import azure-nextgen:storsimple:BackupScheduleGroup BackupSchGroupForSDKTest /subscriptions/9eb689cd-7243-43b4-b6f6-5c65cb296641/resourceGroups/ResourceGroupForSDKTest/providers/Microsoft.StorSimple/managers/hAzureSDKOperations/devices/hsdk-4xy4fi2ivg/backupScheduleGroups/BackupSchGroupForSDKTest 
 ```
 
 

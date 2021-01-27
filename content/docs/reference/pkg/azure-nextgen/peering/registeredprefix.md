@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.peering.RegisteredPrefix resourc
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The customer's prefix that is registered by the peering service provider.
-Latest API Version: 2020-10-01.
+API Version: 2020-10-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var registeredPrefix = new AzureNextGen.Peering.Latest.RegisteredPrefix("registeredPrefix", new AzureNextGen.Peering.Latest.RegisteredPrefixArgs
+        var registeredPrefix = new AzureNextGen.Peering..RegisteredPrefix("registeredPrefix", new AzureNextGen.Peering..RegisteredPrefixArgs
         {
             PeeringName = "peeringName",
             Prefix = "10.22.20.0/24",
@@ -48,7 +48,7 @@ class MyStack : Stack
 package main
 
 import (
-	peering "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/peering/latest"
+	peering "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/peering"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -77,7 +77,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-registered_prefix = azure_nextgen.peering.latest.RegisteredPrefix("registeredPrefix",
+registered_prefix = azure_nextgen.peering.RegisteredPrefix("registeredPrefix",
     peering_name="peeringName",
     prefix="10.22.20.0/24",
     registered_prefix_name="registeredPrefixName",
@@ -93,7 +93,7 @@ registered_prefix = azure_nextgen.peering.latest.RegisteredPrefix("registeredPre
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const registeredPrefix = new azure_nextgen.peering.latest.RegisteredPrefix("registeredPrefix", {
+const registeredPrefix = new azure_nextgen.peering.RegisteredPrefix("registeredPrefix", {
     peeringName: "peeringName",
     prefix: "10.22.20.0/24",
     registeredPrefixName: "registeredPrefixName",
@@ -746,7 +746,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:peering/latest:RegisteredPrefix registeredPrefixName /subscriptions/subId/resourceGroups/rgName/providers/Microsoft.Peering/peerings/peeringName/registeredPrefixes/registeredPrefixName 
+$ pulumi import azure-nextgen:peering:RegisteredPrefix registeredPrefixName /subscriptions/subId/resourceGroups/rgName/providers/Microsoft.Peering/peerings/peeringName/registeredPrefixes/registeredPrefixName 
 ```
 
 

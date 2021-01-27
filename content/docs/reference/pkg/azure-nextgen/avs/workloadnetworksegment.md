@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.avs.WorkloadNetworkSegment resou
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 NSX Segment
+API Version: 2020-07-17-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var workloadNetworkSegment = new AzureNextGen.AVS.V20200717Preview.WorkloadNetworkSegment("workloadNetworkSegment", new AzureNextGen.AVS.V20200717Preview.WorkloadNetworkSegmentArgs
+        var workloadNetworkSegment = new AzureNextGen.AVS..WorkloadNetworkSegment("workloadNetworkSegment", new AzureNextGen.AVS..WorkloadNetworkSegmentArgs
         {
             ConnectedGateway = "/infra/tier-1s/gateway",
             DisplayName = "segment1",
@@ -34,7 +35,7 @@ class MyStack : Stack
             ResourceGroupName = "group1",
             Revision = 1,
             SegmentId = "segment1",
-            Subnet = new AzureNextGen.AVS.V20200717Preview.Inputs.WorkloadNetworkSegmentSubnetArgs
+            Subnet = new AzureNextGen.AVS..Inputs.WorkloadNetworkSegmentSubnetArgs
             {
                 DhcpRanges = 
                 {
@@ -57,7 +58,7 @@ class MyStack : Stack
 package main
 
 import (
-	avs "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/avs/v20200717preview"
+	avs "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/avs"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -94,14 +95,14 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-workload_network_segment = azure_nextgen.avs.v20200717preview.WorkloadNetworkSegment("workloadNetworkSegment",
+workload_network_segment = azure_nextgen.avs.WorkloadNetworkSegment("workloadNetworkSegment",
     connected_gateway="/infra/tier-1s/gateway",
     display_name="segment1",
     private_cloud_name="cloud1",
     resource_group_name="group1",
     revision=1,
     segment_id="segment1",
-    subnet=azure_nextgen.avs.v20200717preview.WorkloadNetworkSegmentSubnetArgs(
+    subnet=azure_nextgen.avs.WorkloadNetworkSegmentSubnetArgs(
         dhcp_ranges=["40.20.0.0-40.20.0.1"],
         gateway_address="40.20.20.20/16",
     ))
@@ -116,7 +117,7 @@ workload_network_segment = azure_nextgen.avs.v20200717preview.WorkloadNetworkSeg
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const workloadNetworkSegment = new azure_nextgen.avs.v20200717preview.WorkloadNetworkSegment("workloadNetworkSegment", {
+const workloadNetworkSegment = new azure_nextgen.avs.WorkloadNetworkSegment("workloadNetworkSegment", {
     connectedGateway: "/infra/tier-1s/gateway",
     displayName: "segment1",
     privateCloudName: "cloud1",
@@ -376,7 +377,7 @@ The WorkloadNetworkSegment resource accepts the following [input]({{< relref "/d
 <a href="#subnet_csharp" style="color: inherit; text-decoration: inherit;">Subnet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workloadnetworksegmentsubnet">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>AVS.<wbr>Inputs.<wbr>Workload<wbr>Network<wbr>Segment<wbr>Subnet<wbr>Args</a></span>
+        <span class="property-type"><a href="#workloadnetworksegmentsubnet">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>AVS..<wbr>Inputs.<wbr>Workload<wbr>Network<wbr>Segment<wbr>Subnet<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Subnet which to connect segment to.{{% /md %}}</dd>
 </dl>
@@ -623,7 +624,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#portvif_csharp" style="color: inherit; text-decoration: inherit;">Port<wbr>Vif</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workloadnetworksegmentportvifresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>AVS.<wbr>Outputs.<wbr>Workload<wbr>Network<wbr>Segment<wbr>Port<wbr>Vif<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#workloadnetworksegmentportvifresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>AVS..<wbr>Outputs.<wbr>Workload<wbr>Network<wbr>Segment<wbr>Port<wbr>Vif<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Port Vif which segment is associated with.{{% /md %}}</dd>
     <dt class="property-"
@@ -1109,7 +1110,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:avs/v20200717preview:WorkloadNetworkSegment segment1 /subscriptions/{subscription-id}/resourceGroups/group1/providers/Microsoft.AVS/privateClouds/cloud1/workloadNetworks/default/segments/segment1 
+$ pulumi import azure-nextgen:avs:WorkloadNetworkSegment segment1 /subscriptions/{subscription-id}/resourceGroups/group1/providers/Microsoft.AVS/privateClouds/cloud1/workloadNetworks/default/segments/segment1 
 ```
 
 

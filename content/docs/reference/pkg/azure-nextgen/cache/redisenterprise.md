@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.cache.RedisEnterprise resource w
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Describes the RedisEnterprise cluster
+API Version: 2020-10-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,13 +27,13 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var redisEnterprise = new AzureNextGen.Cache.V20201001Preview.RedisEnterprise("redisEnterprise", new AzureNextGen.Cache.V20201001Preview.RedisEnterpriseArgs
+        var redisEnterprise = new AzureNextGen.Cache..RedisEnterprise("redisEnterprise", new AzureNextGen.Cache..RedisEnterpriseArgs
         {
             ClusterName = "cache1",
             Location = "West US",
             MinimumTlsVersion = "1.2",
             ResourceGroupName = "rg1",
-            Sku = new AzureNextGen.Cache.V20201001Preview.Inputs.SkuArgs
+            Sku = new AzureNextGen.Cache..Inputs.SkuArgs
             {
                 Capacity = 3,
                 Name = "EnterpriseFlash_F300",
@@ -62,7 +63,7 @@ class MyStack : Stack
 package main
 
 import (
-	cache "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/cache/v20201001preview"
+	cache "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/cache"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -103,12 +104,12 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-redis_enterprise = azure_nextgen.cache.v20201001preview.RedisEnterprise("redisEnterprise",
+redis_enterprise = azure_nextgen.cache.RedisEnterprise("redisEnterprise",
     cluster_name="cache1",
     location="West US",
     minimum_tls_version="1.2",
     resource_group_name="rg1",
-    sku=azure_nextgen.cache.v20201001preview.SkuArgs(
+    sku=azure_nextgen.cache.SkuArgs(
         capacity=3,
         name="EnterpriseFlash_F300",
     ),
@@ -131,7 +132,7 @@ redis_enterprise = azure_nextgen.cache.v20201001preview.RedisEnterprise("redisEn
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const redisEnterprise = new azure_nextgen.cache.v20201001preview.RedisEnterprise("redisEnterprise", {
+const redisEnterprise = new azure_nextgen.cache.RedisEnterprise("redisEnterprise", {
     clusterName: "cache1",
     location: "West US",
     minimumTlsVersion: "1.2",
@@ -370,7 +371,7 @@ The RedisEnterprise resource accepts the following [input]({{< relref "/docs/int
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sku">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cache.<wbr>Inputs.<wbr>Sku<wbr>Args</a></span>
+        <span class="property-type"><a href="#sku">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cache..<wbr>Inputs.<wbr>Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The SKU to create, which affects price, performance, and features.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -653,7 +654,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privateendpointconnections_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint<wbr>Connections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointconnectionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cache.<wbr>Outputs.<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#privateendpointconnectionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cache..<wbr>Outputs.<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of private endpoint connections associated with the specified RedisEnterprise cluster{{% /md %}}</dd>
     <dt class="property-"
@@ -968,7 +969,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privatelinkserviceconnectionstate_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cache.<wbr>Inputs.<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cache..<wbr>Inputs.<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A collection of information about the state of the connection between service consumer and provider.{{% /md %}}</dd>
     <dt class="property-required"
@@ -995,7 +996,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privateendpoint_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cache.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#privateendpointresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cache..<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The resource of private end point.{{% /md %}}</dd>
 </dl>
@@ -1388,7 +1389,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#skuname">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cache.<wbr>Sku<wbr>Name</a></span>
+        <span class="property-type">string | <a href="#skuname">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cache..<wbr>Sku<wbr>Name</a></span>
     </dt>
     <dd>{{% md %}}The type of RedisEnterprise cluster to deploy. Possible values: (Enterprise_E10, EnterpriseFlash_F300 etc.){{% /md %}}</dd>
     <dt class="property-optional"
@@ -1656,7 +1657,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:cache/v20201001preview:RedisEnterprise cache1 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Cache/redisEnterprise/cache1 
+$ pulumi import azure-nextgen:cache:RedisEnterprise cache1 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Cache/redisEnterprise/cache1 
 ```
 
 

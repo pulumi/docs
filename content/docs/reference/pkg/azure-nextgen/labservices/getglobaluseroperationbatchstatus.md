@@ -159,7 +159,7 @@ The following output properties are available:
 <a href="#items_csharp" style="color: inherit; text-decoration: inherit;">Items</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#operationbatchstatusresponseitemresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Lab<wbr>Services.<wbr>Outputs.<wbr>Operation<wbr>Batch<wbr>Status<wbr>Response<wbr>Item<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#operationbatchstatusresponseitemresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Lab<wbr>Services..<wbr>Outputs.<wbr>Operation<wbr>Batch<wbr>Status<wbr>Response<wbr>Item<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Gets a collection of items that contain the operation url and status.{{% /md %}}</dd>
 </dl>

@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.keyvault.Secret resource with ex
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Resource information with extended details.
-Latest API Version: 2019-09-01.
+API Version: 2019-09-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,9 +27,9 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var secret = new AzureNextGen.KeyVault.Latest.Secret("secret", new AzureNextGen.KeyVault.Latest.SecretArgs
+        var secret = new AzureNextGen.KeyVault..Secret("secret", new AzureNextGen.KeyVault..SecretArgs
         {
-            Properties = new AzureNextGen.KeyVault.Latest.Inputs.SecretPropertiesArgs
+            Properties = new AzureNextGen.KeyVault..Inputs.SecretPropertiesArgs
             {
                 Value = "secret-value",
             },
@@ -51,7 +51,7 @@ class MyStack : Stack
 package main
 
 import (
-	keyvault "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/keyvault/latest"
+	keyvault "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/keyvault"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -82,8 +82,8 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-secret = azure_nextgen.keyvault.latest.Secret("secret",
-    properties=azure_nextgen.keyvault.latest.SecretPropertiesArgs(
+secret = azure_nextgen.keyvault.Secret("secret",
+    properties=azure_nextgen.keyvault.SecretPropertiesArgs(
         value="secret-value",
     ),
     resource_group_name="sample-group",
@@ -100,7 +100,7 @@ secret = azure_nextgen.keyvault.latest.Secret("secret",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const secret = new azure_nextgen.keyvault.latest.Secret("secret", {
+const secret = new azure_nextgen.keyvault.Secret("secret", {
     properties: {
         value: "secret-value",
     },
@@ -302,7 +302,7 @@ The Secret resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Key<wbr>Vault.<wbr>Inputs.<wbr>Secret<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#secretproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Key<wbr>Vault..<wbr>Inputs.<wbr>Secret<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties of the secret{{% /md %}}</dd>
     <dt class="property-required"
@@ -1033,7 +1033,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#attributes_csharp" style="color: inherit; text-decoration: inherit;">Attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretattributes">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Key<wbr>Vault.<wbr>Inputs.<wbr>Secret<wbr>Attributes<wbr>Args</a></span>
+        <span class="property-type"><a href="#secretattributes">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Key<wbr>Vault..<wbr>Inputs.<wbr>Secret<wbr>Attributes<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The attributes of the secret.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1185,7 +1185,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#attributes_csharp" style="color: inherit; text-decoration: inherit;">Attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretattributesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Key<wbr>Vault.<wbr>Inputs.<wbr>Secret<wbr>Attributes<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#secretattributesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Key<wbr>Vault..<wbr>Inputs.<wbr>Secret<wbr>Attributes<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The attributes of the secret.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1367,7 +1367,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:keyvault/latest:Secret secret-name /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/sample-group/providers/Microsoft.KeyVault/vaults/sample-vault/secrets/secret-name 
+$ pulumi import azure-nextgen:keyvault:Secret secret-name /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/sample-group/providers/Microsoft.KeyVault/vaults/sample-vault/secrets/secret-name 
 ```
 
 

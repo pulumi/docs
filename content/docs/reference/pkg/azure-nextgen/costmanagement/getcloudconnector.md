@@ -161,7 +161,7 @@ The following output properties are available:
 <a href="#collectioninfo_csharp" style="color: inherit; text-decoration: inherit;">Collection<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectorcollectioninforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cost<wbr>Management.<wbr>Outputs.<wbr>Connector<wbr>Collection<wbr>Info<wbr>Response</a></span>
+        <span class="property-type"><a href="#connectorcollectioninforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cost<wbr>Management..<wbr>Outputs.<wbr>Connector<wbr>Collection<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Collection information{{% /md %}}</dd>
     <dt class="property-"
@@ -884,16 +884,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Short error code{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="errorinnermessage_csharp">
-<a href="#errorinnermessage_csharp" style="color: inherit; text-decoration: inherit;">Error<wbr>Inner<wbr>Message</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}External Provider error message{{% /md %}}</dd>
+    <dd>{{% md %}}Short error message{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="errormessage_csharp">
@@ -911,7 +902,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Time the error started occurring (Last time error occurred in lastChecked){{% /md %}}</dd>
+    <dd>{{% md %}}Time the error started occurring (Last time error occurred in lastRun){{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -926,16 +917,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Short error code{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="errorinnermessage_go">
-<a href="#errorinnermessage_go" style="color: inherit; text-decoration: inherit;">Error<wbr>Inner<wbr>Message</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}External Provider error message{{% /md %}}</dd>
+    <dd>{{% md %}}Short error message{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="errormessage_go">
@@ -953,7 +935,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Time the error started occurring (Last time error occurred in lastChecked){{% /md %}}</dd>
+    <dd>{{% md %}}Time the error started occurring (Last time error occurred in lastRun){{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -968,16 +950,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Short error code{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="errorinnermessage_nodejs">
-<a href="#errorinnermessage_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Inner<wbr>Message</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}External Provider error message{{% /md %}}</dd>
+    <dd>{{% md %}}Short error message{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="errormessage_nodejs">
@@ -995,7 +968,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Time the error started occurring (Last time error occurred in lastChecked){{% /md %}}</dd>
+    <dd>{{% md %}}Time the error started occurring (Last time error occurred in lastRun){{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -1010,16 +983,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Short error code{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="error_inner_message_python">
-<a href="#error_inner_message_python" style="color: inherit; text-decoration: inherit;">error_<wbr>inner_<wbr>message</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}External Provider error message{{% /md %}}</dd>
+    <dd>{{% md %}}Short error message{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="error_message_python">
@@ -1037,7 +1001,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Time the error started occurring (Last time error occurred in lastChecked){{% /md %}}</dd>
+    <dd>{{% md %}}Time the error started occurring (Last time error occurred in lastRun){{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -1053,13 +1017,13 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="lastchecked_csharp">
-<a href="#lastchecked_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Checked</a>
+        <span id="lastrun_csharp">
+<a href="#lastrun_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Run</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Last time the data acquisition process initiated connecting to the external provider{{% /md %}}</dd>
+    <dd>{{% md %}}Last time the data acquisition process completed (even if no new data was found){{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="lastupdated_csharp">
@@ -1084,7 +1048,7 @@ The following output properties are available:
 <a href="#error_csharp" style="color: inherit; text-decoration: inherit;">Error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectorcollectionerrorinforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Connector<wbr>Collection<wbr>Error<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#connectorcollectionerrorinforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cost<wbr>Management..<wbr>Inputs.<wbr>Connector<wbr>Collection<wbr>Error<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Error information of last collection{{% /md %}}</dd>
 </dl>
@@ -1095,13 +1059,13 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="lastchecked_go">
-<a href="#lastchecked_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Checked</a>
+        <span id="lastrun_go">
+<a href="#lastrun_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Run</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Last time the data acquisition process initiated connecting to the external provider{{% /md %}}</dd>
+    <dd>{{% md %}}Last time the data acquisition process completed (even if no new data was found){{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="lastupdated_go">
@@ -1137,13 +1101,13 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="lastchecked_nodejs">
-<a href="#lastchecked_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Checked</a>
+        <span id="lastrun_nodejs">
+<a href="#lastrun_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Run</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Last time the data acquisition process initiated connecting to the external provider{{% /md %}}</dd>
+    <dd>{{% md %}}Last time the data acquisition process completed (even if no new data was found){{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="lastupdated_nodejs">
@@ -1179,13 +1143,13 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="last_checked_python">
-<a href="#last_checked_python" style="color: inherit; text-decoration: inherit;">last_<wbr>checked</a>
+        <span id="last_run_python">
+<a href="#last_run_python" style="color: inherit; text-decoration: inherit;">last_<wbr>run</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Last time the data acquisition process initiated connecting to the external provider{{% /md %}}</dd>
+    <dd>{{% md %}}Last time the data acquisition process completed (even if no new data was found){{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="last_updated_python">

@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.documentdb.DatabaseAccountGremli
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 An Azure Cosmos DB Gremlin database.
-Latest API Version: 2016-03-31.
+API Version: 2016-03-31.
 
 {{% examples %}}
 ## Example Usage
@@ -27,12 +27,12 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var databaseAccountGremlinDatabase = new AzureNextGen.DocumentDB.Latest.DatabaseAccountGremlinDatabase("databaseAccountGremlinDatabase", new AzureNextGen.DocumentDB.Latest.DatabaseAccountGremlinDatabaseArgs
+        var databaseAccountGremlinDatabase = new AzureNextGen.DocumentDB..DatabaseAccountGremlinDatabase("databaseAccountGremlinDatabase", new AzureNextGen.DocumentDB..DatabaseAccountGremlinDatabaseArgs
         {
             AccountName = "ddb1",
             DatabaseName = "databaseName",
             Options = ,
-            Resource = new AzureNextGen.DocumentDB.Latest.Inputs.GremlinDatabaseResourceArgs
+            Resource = new AzureNextGen.DocumentDB..Inputs.GremlinDatabaseResourceArgs
             {
                 Id = "databaseName",
             },
@@ -52,7 +52,7 @@ class MyStack : Stack
 package main
 
 import (
-	documentdb "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/documentdb/latest"
+	documentdb "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/documentdb"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -84,11 +84,11 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-database_account_gremlin_database = azure_nextgen.documentdb.latest.DatabaseAccountGremlinDatabase("databaseAccountGremlinDatabase",
+database_account_gremlin_database = azure_nextgen.documentdb.DatabaseAccountGremlinDatabase("databaseAccountGremlinDatabase",
     account_name="ddb1",
     database_name="databaseName",
     options={},
-    resource=azure_nextgen.documentdb.latest.GremlinDatabaseResourceArgs(
+    resource=azure_nextgen.documentdb.GremlinDatabaseResourceArgs(
         id="databaseName",
     ),
     resource_group_name="rg1")
@@ -103,7 +103,7 @@ database_account_gremlin_database = azure_nextgen.documentdb.latest.DatabaseAcco
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const databaseAccountGremlinDatabase = new azure_nextgen.documentdb.latest.DatabaseAccountGremlinDatabase("databaseAccountGremlinDatabase", {
+const databaseAccountGremlinDatabase = new azure_nextgen.documentdb.DatabaseAccountGremlinDatabase("databaseAccountGremlinDatabase", {
     accountName: "ddb1",
     databaseName: "databaseName",
     options: {},
@@ -333,7 +333,7 @@ The DatabaseAccountGremlinDatabase resource accepts the following [input]({{< re
 <a href="#resource_csharp" style="color: inherit; text-decoration: inherit;">Resource</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gremlindatabaseresource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Gremlin<wbr>Database<wbr>Resource<wbr>Args</a></span>
+        <span class="property-type"><a href="#gremlindatabaseresource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB..<wbr>Inputs.<wbr>Gremlin<wbr>Database<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The standard JSON format of a Gremlin database{{% /md %}}</dd>
     <dt class="property-required"
@@ -897,7 +897,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:documentdb/latest:DatabaseAccountGremlinDatabase databaseName databaseName 
+$ pulumi import azure-nextgen:documentdb:DatabaseAccountGremlinDatabase databaseName databaseName 
 ```
 
 

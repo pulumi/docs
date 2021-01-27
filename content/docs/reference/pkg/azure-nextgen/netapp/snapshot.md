@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.netapp.Snapshot resource with ex
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Snapshot of a Volume
-Latest API Version: 2020-09-01.
+API Version: 2020-09-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var snapshot = new AzureNextGen.NetApp.Latest.Snapshot("snapshot", new AzureNextGen.NetApp.Latest.SnapshotArgs
+        var snapshot = new AzureNextGen.NetApp..Snapshot("snapshot", new AzureNextGen.NetApp..SnapshotArgs
         {
             AccountName = "account1",
             Location = "eastus",
@@ -50,7 +50,7 @@ class MyStack : Stack
 package main
 
 import (
-	netapp "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/netapp/latest"
+	netapp "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/netapp"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -81,7 +81,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-snapshot = azure_nextgen.netapp.latest.Snapshot("snapshot",
+snapshot = azure_nextgen.netapp.Snapshot("snapshot",
     account_name="account1",
     location="eastus",
     pool_name="pool1",
@@ -99,7 +99,7 @@ snapshot = azure_nextgen.netapp.latest.Snapshot("snapshot",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const snapshot = new azure_nextgen.netapp.latest.Snapshot("snapshot", {
+const snapshot = new azure_nextgen.netapp.Snapshot("snapshot", {
     accountName: "account1",
     location: "eastus",
     poolName: "pool1",
@@ -790,7 +790,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:netapp/latest:Snapshot account1/pool1/volume1/snapshot1 /subscriptions/D633CC2E-722B-4AE1-B636-BBD9E4C60ED9/resourceGroups/myRG/providers/Microsoft.NetApp/netAppAccounts/account1/capacityPools/pool1/volumes/volume1/snapshots/snapshot1 
+$ pulumi import azure-nextgen:netapp:Snapshot account1/pool1/volume1/snapshot1 /subscriptions/D633CC2E-722B-4AE1-B636-BBD9E4C60ED9/resourceGroups/myRG/providers/Microsoft.NetApp/netAppAccounts/account1/capacityPools/pool1/volumes/volume1/snapshots/snapshot1 
 ```
 
 

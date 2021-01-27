@@ -233,7 +233,7 @@ The following output properties are available:
 <a href="#storagelocation_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#packetcapturestoragelocationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Outputs.<wbr>Packet<wbr>Capture<wbr>Storage<wbr>Location<wbr>Response</a></span>
+        <span class="property-type"><a href="#packetcapturestoragelocationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Outputs.<wbr>Packet<wbr>Capture<wbr>Storage<wbr>Location<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The storage location for a packet capture session.{{% /md %}}</dd>
     <dt class="property-"
@@ -260,7 +260,7 @@ The following output properties are available:
 <a href="#filters_csharp" style="color: inherit; text-decoration: inherit;">Filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#packetcapturefilterresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Outputs.<wbr>Packet<wbr>Capture<wbr>Filter<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#packetcapturefilterresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Outputs.<wbr>Packet<wbr>Capture<wbr>Filter<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of packet capture filters.{{% /md %}}</dd>
     <dt class="property-"

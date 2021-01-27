@@ -11,7 +11,6 @@ Explore the resources and functions of the hybridcompute module in the Azure Nex
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="guestconfigurationhcrpassignment" title="GuestConfigurationHCRPAssignment"><span class="symbol resource"></span>GuestConfigurationHCRPAssignment</a></li>
     <li><a href="machine" title="Machine"><span class="symbol resource"></span>Machine</a></li>
     <li><a href="machineextension" title="MachineExtension"><span class="symbol resource"></span>MachineExtension</a></li>
     <li><a href="privateendpointconnection" title="PrivateEndpointConnection"><span class="symbol resource"></span>PrivateEndpointConnection</a></li>
@@ -21,7 +20,6 @@ Explore the resources and functions of the hybridcompute module in the Azure Nex
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getguestconfigurationhcrpassignment" title="GetGuestConfigurationHCRPAssignment"><span class="symbol function"></span>GetGuestConfigurationHCRPAssignment</a></li>
     <li><a href="getmachine" title="GetMachine"><span class="symbol function"></span>GetMachine</a></li>
     <li><a href="getmachineextension" title="GetMachineExtension"><span class="symbol function"></span>GetMachineExtension</a></li>
     <li><a href="getprivateendpointconnection" title="GetPrivateEndpointConnection"><span class="symbol function"></span>GetPrivateEndpointConnection</a></li>
@@ -36,7 +34,7 @@ Explore the resources and functions of the hybridcompute module in the Azure Nex
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.5.0</dd>
+	<dd>0.6.0</dd>
 </dl>
 
 

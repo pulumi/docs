@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.dbformysql.VirtualNetworkRule re
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 A virtual network rule.
-Latest API Version: 2017-12-01.
+API Version: 2017-12-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var virtualNetworkRule = new AzureNextGen.DBforMySQL.Latest.VirtualNetworkRule("virtualNetworkRule", new AzureNextGen.DBforMySQL.Latest.VirtualNetworkRuleArgs
+        var virtualNetworkRule = new AzureNextGen.DBforMySQL..VirtualNetworkRule("virtualNetworkRule", new AzureNextGen.DBforMySQL..VirtualNetworkRuleArgs
         {
             IgnoreMissingVnetServiceEndpoint = false,
             ResourceGroupName = "TestGroup",
@@ -49,7 +49,7 @@ class MyStack : Stack
 package main
 
 import (
-	dbformysql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/dbformysql/latest"
+	dbformysql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/dbformysql"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -79,7 +79,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-virtual_network_rule = azure_nextgen.dbformysql.latest.VirtualNetworkRule("virtualNetworkRule",
+virtual_network_rule = azure_nextgen.dbformysql.VirtualNetworkRule("virtualNetworkRule",
     ignore_missing_vnet_service_endpoint=False,
     resource_group_name="TestGroup",
     server_name="vnet-test-svr",
@@ -96,7 +96,7 @@ virtual_network_rule = azure_nextgen.dbformysql.latest.VirtualNetworkRule("virtu
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const virtualNetworkRule = new azure_nextgen.dbformysql.latest.VirtualNetworkRule("virtualNetworkRule", {
+const virtualNetworkRule = new azure_nextgen.dbformysql.VirtualNetworkRule("virtualNetworkRule", {
     ignoreMissingVnetServiceEndpoint: false,
     resourceGroupName: "TestGroup",
     serverName: "vnet-test-svr",
@@ -678,7 +678,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:dbformysql/latest:VirtualNetworkRule vnet-firewall-rule /subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/TestGroup/providers/Microsoft.DBforMySQL/servers/vnet-test-svr/virtualNetworkRules/vnet-firewall-rule 
+$ pulumi import azure-nextgen:dbformysql:VirtualNetworkRule vnet-firewall-rule /subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/TestGroup/providers/Microsoft.DBforMySQL/servers/vnet-test-svr/virtualNetworkRules/vnet-firewall-rule 
 ```
 
 

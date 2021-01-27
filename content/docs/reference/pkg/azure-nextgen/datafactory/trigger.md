@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.datafactory.Trigger resource wit
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Trigger resource type.
-Latest API Version: 2018-06-01.
+API Version: 2018-06-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,14 +27,14 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var trigger = new AzureNextGen.DataFactory.Latest.Trigger("trigger", new AzureNextGen.DataFactory.Latest.TriggerArgs
+        var trigger = new AzureNextGen.DataFactory..Trigger("trigger", new AzureNextGen.DataFactory..TriggerArgs
         {
             FactoryName = "exampleFactoryName",
             Properties = 
             {
                 { "pipelines", 
                 {
-                    new AzureNextGen.DataFactory.Latest.Inputs.TriggerPipelineReferenceArgs
+                    new AzureNextGen.DataFactory..Inputs.TriggerPipelineReferenceArgs
                     {
                         Parameters = 
                         {
@@ -43,7 +43,7 @@ class MyStack : Stack
                                 "exampleoutput.csv",
                             } },
                         },
-                        PipelineReference = new AzureNextGen.DataFactory.Latest.Inputs.PipelineReferenceArgs
+                        PipelineReference = new AzureNextGen.DataFactory..Inputs.PipelineReferenceArgs
                         {
                             ReferenceName = "examplePipeline",
                             Type = "PipelineReference",
@@ -84,14 +84,14 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-trigger = azure_nextgen.datafactory.latest.Trigger("trigger",
+trigger = azure_nextgen.datafactory.Trigger("trigger",
     factory_name="exampleFactoryName",
     properties={
-        "pipelines": [azure_nextgen.datafactory.latest.TriggerPipelineReferenceArgs(
+        "pipelines": [azure_nextgen.datafactory.TriggerPipelineReferenceArgs(
             parameters={
                 "OutputBlobNameList": ["exampleoutput.csv"],
             },
-            pipeline_reference=azure_nextgen.datafactory.latest.PipelineReferenceArgs(
+            pipeline_reference=azure_nextgen.datafactory.PipelineReferenceArgs(
                 reference_name="examplePipeline",
                 type="PipelineReference",
             ),
@@ -120,7 +120,7 @@ trigger = azure_nextgen.datafactory.latest.Trigger("trigger",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const trigger = new azure_nextgen.datafactory.latest.Trigger("trigger", {
+const trigger = new azure_nextgen.datafactory.Trigger("trigger", {
     factoryName: "exampleFactoryName",
     properties: {
         pipelines: [{
@@ -161,7 +161,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var trigger = new AzureNextGen.DataFactory.Latest.Trigger("trigger", new AzureNextGen.DataFactory.Latest.TriggerArgs
+        var trigger = new AzureNextGen.DataFactory..Trigger("trigger", new AzureNextGen.DataFactory..TriggerArgs
         {
             FactoryName = "exampleFactoryName",
             Properties = 
@@ -169,7 +169,7 @@ class MyStack : Stack
                 { "description", "Example description" },
                 { "pipelines", 
                 {
-                    new AzureNextGen.DataFactory.Latest.Inputs.TriggerPipelineReferenceArgs
+                    new AzureNextGen.DataFactory..Inputs.TriggerPipelineReferenceArgs
                     {
                         Parameters = 
                         {
@@ -178,7 +178,7 @@ class MyStack : Stack
                                 "exampleoutput.csv",
                             } },
                         },
-                        PipelineReference = new AzureNextGen.DataFactory.Latest.Inputs.PipelineReferenceArgs
+                        PipelineReference = new AzureNextGen.DataFactory..Inputs.PipelineReferenceArgs
                         {
                             ReferenceName = "examplePipeline",
                             Type = "PipelineReference",
@@ -219,15 +219,15 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-trigger = azure_nextgen.datafactory.latest.Trigger("trigger",
+trigger = azure_nextgen.datafactory.Trigger("trigger",
     factory_name="exampleFactoryName",
     properties={
         "description": "Example description",
-        "pipelines": [azure_nextgen.datafactory.latest.TriggerPipelineReferenceArgs(
+        "pipelines": [azure_nextgen.datafactory.TriggerPipelineReferenceArgs(
             parameters={
                 "OutputBlobNameList": ["exampleoutput.csv"],
             },
-            pipeline_reference=azure_nextgen.datafactory.latest.PipelineReferenceArgs(
+            pipeline_reference=azure_nextgen.datafactory.PipelineReferenceArgs(
                 reference_name="examplePipeline",
                 type="PipelineReference",
             ),
@@ -256,7 +256,7 @@ trigger = azure_nextgen.datafactory.latest.Trigger("trigger",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const trigger = new azure_nextgen.datafactory.latest.Trigger("trigger", {
+const trigger = new azure_nextgen.datafactory.Trigger("trigger", {
     factoryName: "exampleFactoryName",
     properties: {
         description: "Example description",
@@ -486,7 +486,7 @@ The Trigger resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#blobeventstrigger">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Blob<wbr>Events<wbr>Trigger<wbr>Args</a> | <a href="#blobtrigger">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Blob<wbr>Trigger<wbr>Args</a> | <a href="#chainingtrigger">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Chaining<wbr>Trigger<wbr>Args</a> | <a href="#customeventstrigger">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Custom<wbr>Events<wbr>Trigger<wbr>Args</a> | <a href="#multiplepipelinetrigger">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Multiple<wbr>Pipeline<wbr>Trigger<wbr>Args</a> | <a href="#reruntumblingwindowtrigger">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Rerun<wbr>Tumbling<wbr>Window<wbr>Trigger<wbr>Args</a> | <a href="#scheduletrigger">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Schedule<wbr>Trigger<wbr>Args</a> | <a href="#tumblingwindowtrigger">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Tumbling<wbr>Window<wbr>Trigger<wbr>Args</a></span>
+        <span class="property-type"><a href="#blobeventstrigger">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Blob<wbr>Events<wbr>Trigger<wbr>Args</a> | <a href="#blobtrigger">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Blob<wbr>Trigger<wbr>Args</a> | <a href="#chainingtrigger">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Chaining<wbr>Trigger<wbr>Args</a> | <a href="#customeventstrigger">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Custom<wbr>Events<wbr>Trigger<wbr>Args</a> | <a href="#multiplepipelinetrigger">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Multiple<wbr>Pipeline<wbr>Trigger<wbr>Args</a> | <a href="#reruntumblingwindowtrigger">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Rerun<wbr>Tumbling<wbr>Window<wbr>Trigger<wbr>Args</a> | <a href="#scheduletrigger">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Schedule<wbr>Trigger<wbr>Args</a> | <a href="#tumblingwindowtrigger">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Tumbling<wbr>Window<wbr>Trigger<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties of the trigger.{{% /md %}}</dd>
     <dt class="property-required"
@@ -870,7 +870,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#events_csharp" style="color: inherit; text-decoration: inherit;">Events</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Union&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Blob<wbr>Event<wbr>Types&gt;&gt;</span>
+        <span class="property-type">List&lt;Union&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Blob<wbr>Event<wbr>Types&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}The type of events that cause this trigger to fire.{{% /md %}}</dd>
     <dt class="property-required"
@@ -933,7 +933,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pipelines_csharp" style="color: inherit; text-decoration: inherit;">Pipelines</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerpipelinereference">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Trigger<wbr>Pipeline<wbr>Reference<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#triggerpipelinereference">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Trigger<wbr>Pipeline<wbr>Reference<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Pipelines that need to be started.{{% /md %}}</dd>
 </dl>
@@ -1256,7 +1256,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pipelines_csharp" style="color: inherit; text-decoration: inherit;">Pipelines</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerpipelinereferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Trigger<wbr>Pipeline<wbr>Reference<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#triggerpipelinereferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Trigger<wbr>Pipeline<wbr>Reference<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Pipelines that need to be started.{{% /md %}}</dd>
 </dl>
@@ -1543,7 +1543,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linkedservice_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereference">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#linkedservicereference">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Azure Storage linked service reference.{{% /md %}}</dd>
     <dt class="property-required"
@@ -1579,7 +1579,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pipelines_csharp" style="color: inherit; text-decoration: inherit;">Pipelines</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerpipelinereference">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Trigger<wbr>Pipeline<wbr>Reference<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#triggerpipelinereference">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Trigger<wbr>Pipeline<wbr>Reference<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Pipelines that need to be started.{{% /md %}}</dd>
 </dl>
@@ -1785,7 +1785,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linkedservice_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Azure Storage linked service reference.{{% /md %}}</dd>
     <dt class="property-required"
@@ -1830,7 +1830,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pipelines_csharp" style="color: inherit; text-decoration: inherit;">Pipelines</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerpipelinereferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Trigger<wbr>Pipeline<wbr>Reference<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#triggerpipelinereferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Trigger<wbr>Pipeline<wbr>Reference<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Pipelines that need to be started.{{% /md %}}</dd>
 </dl>
@@ -2054,7 +2054,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dependson_csharp" style="color: inherit; text-decoration: inherit;">Depends<wbr>On</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinereference">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Pipeline<wbr>Reference<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#pipelinereference">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Pipeline<wbr>Reference<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Upstream Pipelines.{{% /md %}}</dd>
     <dt class="property-required"
@@ -2063,7 +2063,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pipeline_csharp" style="color: inherit; text-decoration: inherit;">Pipeline</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerpipelinereference">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Trigger<wbr>Pipeline<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#triggerpipelinereference">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Trigger<wbr>Pipeline<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Pipeline for which runs are created when all upstream pipelines complete successfully.{{% /md %}}</dd>
     <dt class="property-required"
@@ -2260,7 +2260,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dependson_csharp" style="color: inherit; text-decoration: inherit;">Depends<wbr>On</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinereferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Pipeline<wbr>Reference<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#pipelinereferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Pipeline<wbr>Reference<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Upstream Pipelines.{{% /md %}}</dd>
     <dt class="property-required"
@@ -2269,7 +2269,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pipeline_csharp" style="color: inherit; text-decoration: inherit;">Pipeline</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerpipelinereferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Trigger<wbr>Pipeline<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#triggerpipelinereferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Trigger<wbr>Pipeline<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Pipeline for which runs are created when all upstream pipelines complete successfully.{{% /md %}}</dd>
     <dt class="property-required"
@@ -2538,7 +2538,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pipelines_csharp" style="color: inherit; text-decoration: inherit;">Pipelines</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerpipelinereference">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Trigger<wbr>Pipeline<wbr>Reference<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#triggerpipelinereference">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Trigger<wbr>Pipeline<wbr>Reference<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Pipelines that need to be started.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2825,7 +2825,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pipelines_csharp" style="color: inherit; text-decoration: inherit;">Pipelines</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerpipelinereferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Trigger<wbr>Pipeline<wbr>Reference<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#triggerpipelinereferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Trigger<wbr>Pipeline<wbr>Reference<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Pipelines that need to be started.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3536,7 +3536,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pipelines_csharp" style="color: inherit; text-decoration: inherit;">Pipelines</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerpipelinereference">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Trigger<wbr>Pipeline<wbr>Reference<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#triggerpipelinereference">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Trigger<wbr>Pipeline<wbr>Reference<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Pipelines that need to be started.{{% /md %}}</dd>
 </dl>
@@ -3679,7 +3679,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pipelines_csharp" style="color: inherit; text-decoration: inherit;">Pipelines</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerpipelinereferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Trigger<wbr>Pipeline<wbr>Reference<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#triggerpipelinereferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Trigger<wbr>Pipeline<wbr>Reference<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Pipelines that need to be started.{{% /md %}}</dd>
 </dl>
@@ -4195,7 +4195,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#monthlyoccurrences_csharp" style="color: inherit; text-decoration: inherit;">Monthly<wbr>Occurrences</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recurrencescheduleoccurrence">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Recurrence<wbr>Schedule<wbr>Occurrence<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#recurrencescheduleoccurrence">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Recurrence<wbr>Schedule<wbr>Occurrence<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The monthly occurrences.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4204,7 +4204,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#weekdays_csharp" style="color: inherit; text-decoration: inherit;">Week<wbr>Days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#daysofweek">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Days<wbr>Of<wbr>Week&gt;</a></span>
+        <span class="property-type"><a href="#daysofweek">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Days<wbr>Of<wbr>Week&gt;</a></span>
     </dt>
     <dd>{{% md %}}The days of the week.{{% /md %}}</dd>
 </dl>
@@ -4374,7 +4374,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#day_csharp" style="color: inherit; text-decoration: inherit;">Day</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dayofweek">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Day<wbr>Of<wbr>Week</a></span>
+        <span class="property-type"><a href="#dayofweek">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Day<wbr>Of<wbr>Week</a></span>
     </dt>
     <dd>{{% md %}}The day of the week.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4597,7 +4597,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#monthlyoccurrences_csharp" style="color: inherit; text-decoration: inherit;">Monthly<wbr>Occurrences</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recurrencescheduleoccurrenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Recurrence<wbr>Schedule<wbr>Occurrence<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#recurrencescheduleoccurrenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Recurrence<wbr>Schedule<wbr>Occurrence<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The monthly occurrences.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -5492,7 +5492,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recurrence_csharp" style="color: inherit; text-decoration: inherit;">Recurrence</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scheduletriggerrecurrence">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Schedule<wbr>Trigger<wbr>Recurrence<wbr>Args</a></span>
+        <span class="property-type"><a href="#scheduletriggerrecurrence">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Schedule<wbr>Trigger<wbr>Recurrence<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Recurrence schedule configuration.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -5519,7 +5519,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pipelines_csharp" style="color: inherit; text-decoration: inherit;">Pipelines</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerpipelinereference">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Trigger<wbr>Pipeline<wbr>Reference<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#triggerpipelinereference">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Trigger<wbr>Pipeline<wbr>Reference<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Pipelines that need to be started.{{% /md %}}</dd>
 </dl>
@@ -5671,7 +5671,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#frequency_csharp" style="color: inherit; text-decoration: inherit;">Frequency</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#recurrencefrequency">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Recurrence<wbr>Frequency</a></span>
+        <span class="property-type">string | <a href="#recurrencefrequency">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Recurrence<wbr>Frequency</a></span>
     </dt>
     <dd>{{% md %}}The frequency.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -5689,7 +5689,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schedule_csharp" style="color: inherit; text-decoration: inherit;">Schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recurrenceschedule">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Recurrence<wbr>Schedule<wbr>Args</a></span>
+        <span class="property-type"><a href="#recurrenceschedule">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Recurrence<wbr>Schedule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The recurrence schedule.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -5931,7 +5931,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schedule_csharp" style="color: inherit; text-decoration: inherit;">Schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recurrencescheduleresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Recurrence<wbr>Schedule<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#recurrencescheduleresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Recurrence<wbr>Schedule<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The recurrence schedule.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -6146,7 +6146,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recurrence_csharp" style="color: inherit; text-decoration: inherit;">Recurrence</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scheduletriggerrecurrenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Schedule<wbr>Trigger<wbr>Recurrence<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#scheduletriggerrecurrenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Schedule<wbr>Trigger<wbr>Recurrence<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Recurrence schedule configuration.{{% /md %}}</dd>
     <dt class="property-required"
@@ -6182,7 +6182,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pipelines_csharp" style="color: inherit; text-decoration: inherit;">Pipelines</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerpipelinereferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Trigger<wbr>Pipeline<wbr>Reference<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#triggerpipelinereferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Trigger<wbr>Pipeline<wbr>Reference<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Pipelines that need to be started.{{% /md %}}</dd>
 </dl>
@@ -6548,7 +6548,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#referencetrigger_csharp" style="color: inherit; text-decoration: inherit;">Reference<wbr>Trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerreference">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Trigger<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#triggerreference">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Trigger<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Referenced trigger.{{% /md %}}</dd>
 </dl>
@@ -6610,7 +6610,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#referencetrigger_csharp" style="color: inherit; text-decoration: inherit;">Reference<wbr>Trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Trigger<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#triggerreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Trigger<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Referenced trigger.{{% /md %}}</dd>
 </dl>
@@ -6681,7 +6681,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pipelinereference_csharp" style="color: inherit; text-decoration: inherit;">Pipeline<wbr>Reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinereference">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Pipeline<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#pipelinereference">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Pipeline<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Pipeline reference.{{% /md %}}</dd>
 </dl>
@@ -6779,7 +6779,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pipelinereference_csharp" style="color: inherit; text-decoration: inherit;">Pipeline<wbr>Reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinereferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Pipeline<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#pipelinereferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Pipeline<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Pipeline reference.{{% /md %}}</dd>
 </dl>
@@ -7110,7 +7110,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#frequency_csharp" style="color: inherit; text-decoration: inherit;">Frequency</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#tumblingwindowfrequency">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Tumbling<wbr>Window<wbr>Frequency</a></span>
+        <span class="property-type">string | <a href="#tumblingwindowfrequency">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Tumbling<wbr>Window<wbr>Frequency</a></span>
     </dt>
     <dd>{{% md %}}The frequency of the time windows.{{% /md %}}</dd>
     <dt class="property-required"
@@ -7137,7 +7137,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pipeline_csharp" style="color: inherit; text-decoration: inherit;">Pipeline</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerpipelinereference">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Trigger<wbr>Pipeline<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#triggerpipelinereference">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Trigger<wbr>Pipeline<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Pipeline for which runs are created when an event is fired for trigger window that is ready.{{% /md %}}</dd>
     <dt class="property-required"
@@ -7200,7 +7200,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retrypolicy_csharp" style="color: inherit; text-decoration: inherit;">Retry<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#retrypolicy">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Retry<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#retrypolicy">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Retry<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Retry policy that will be applied for failed pipeline runs.{{% /md %}}</dd>
 </dl>
@@ -7532,7 +7532,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#referencetrigger_csharp" style="color: inherit; text-decoration: inherit;">Reference<wbr>Trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerreference">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Trigger<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#triggerreference">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Trigger<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Referenced trigger.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -7666,7 +7666,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#referencetrigger_csharp" style="color: inherit; text-decoration: inherit;">Reference<wbr>Trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Trigger<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#triggerreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Trigger<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Referenced trigger.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -7827,7 +7827,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pipeline_csharp" style="color: inherit; text-decoration: inherit;">Pipeline</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerpipelinereferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Trigger<wbr>Pipeline<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#triggerpipelinereferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Trigger<wbr>Pipeline<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Pipeline for which runs are created when an event is fired for trigger window that is ready.{{% /md %}}</dd>
     <dt class="property-required"
@@ -7899,7 +7899,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retrypolicy_csharp" style="color: inherit; text-decoration: inherit;">Retry<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#retrypolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Retry<wbr>Policy<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#retrypolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Retry<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Retry policy that will be applied for failed pipeline runs.{{% /md %}}</dd>
 </dl>
@@ -8252,7 +8252,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:datafactory/latest:Trigger exampleTrigger /subscriptions/12345678-1234-1234-1234-12345678abc/resourceGroups/exampleResourceGroup/providers/Microsoft.DataFactory/factories/exampleFactoryName/triggers/exampleTrigger 
+$ pulumi import azure-nextgen:datafactory:Trigger exampleTrigger /subscriptions/12345678-1234-1234-1234-12345678abc/resourceGroups/exampleResourceGroup/providers/Microsoft.DataFactory/factories/exampleFactoryName/triggers/exampleTrigger 
 ```
 
 

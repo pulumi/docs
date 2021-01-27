@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.network.ExpressRouteCircuit reso
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 ExpressRouteCircuit resource.
-Latest API Version: 2020-08-01.
+API Version: 2020-08-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var expressRouteCircuit = new AzureNextGen.Network.Latest.ExpressRouteCircuit("expressRouteCircuit", new AzureNextGen.Network.Latest.ExpressRouteCircuitArgs
+        var expressRouteCircuit = new AzureNextGen.Network..ExpressRouteCircuit("expressRouteCircuit", new AzureNextGen.Network..ExpressRouteCircuitArgs
         {
             AllowClassicOperations = false,
             Authorizations = {},
@@ -35,13 +35,13 @@ class MyStack : Stack
             Location = "Brazil South",
             Peerings = {},
             ResourceGroupName = "rg1",
-            ServiceProviderProperties = new AzureNextGen.Network.Latest.Inputs.ExpressRouteCircuitServiceProviderPropertiesArgs
+            ServiceProviderProperties = new AzureNextGen.Network..Inputs.ExpressRouteCircuitServiceProviderPropertiesArgs
             {
                 BandwidthInMbps = 200,
                 PeeringLocation = "Silicon Valley",
                 ServiceProviderName = "Equinix",
             },
-            Sku = new AzureNextGen.Network.Latest.Inputs.ExpressRouteCircuitSkuArgs
+            Sku = new AzureNextGen.Network..Inputs.ExpressRouteCircuitSkuArgs
             {
                 Family = "MeteredData",
                 Name = "Standard_MeteredData",
@@ -62,7 +62,7 @@ class MyStack : Stack
 package main
 
 import (
-	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network/latest"
+	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -103,19 +103,19 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-express_route_circuit = azure_nextgen.network.latest.ExpressRouteCircuit("expressRouteCircuit",
+express_route_circuit = azure_nextgen.network.ExpressRouteCircuit("expressRouteCircuit",
     allow_classic_operations=False,
     authorizations=[],
     circuit_name="circuitName",
     location="Brazil South",
     peerings=[],
     resource_group_name="rg1",
-    service_provider_properties=azure_nextgen.network.latest.ExpressRouteCircuitServiceProviderPropertiesArgs(
+    service_provider_properties=azure_nextgen.network.ExpressRouteCircuitServiceProviderPropertiesArgs(
         bandwidth_in_mbps=200,
         peering_location="Silicon Valley",
         service_provider_name="Equinix",
     ),
-    sku=azure_nextgen.network.latest.ExpressRouteCircuitSkuArgs(
+    sku=azure_nextgen.network.ExpressRouteCircuitSkuArgs(
         family="MeteredData",
         name="Standard_MeteredData",
         tier="Standard",
@@ -131,7 +131,7 @@ express_route_circuit = azure_nextgen.network.latest.ExpressRouteCircuit("expres
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const expressRouteCircuit = new azure_nextgen.network.latest.ExpressRouteCircuit("expressRouteCircuit", {
+const expressRouteCircuit = new azure_nextgen.network.ExpressRouteCircuit("expressRouteCircuit", {
     allowClassicOperations: false,
     authorizations: [],
     circuitName: "circuitName",
@@ -164,17 +164,17 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var expressRouteCircuit = new AzureNextGen.Network.Latest.ExpressRouteCircuit("expressRouteCircuit", new AzureNextGen.Network.Latest.ExpressRouteCircuitArgs
+        var expressRouteCircuit = new AzureNextGen.Network..ExpressRouteCircuit("expressRouteCircuit", new AzureNextGen.Network..ExpressRouteCircuitArgs
         {
             BandwidthInGbps = 10,
             CircuitName = "expressRouteCircuit1",
-            ExpressRoutePort = new AzureNextGen.Network.Latest.Inputs.SubResourceArgs
+            ExpressRoutePort = new AzureNextGen.Network..Inputs.SubResourceArgs
             {
                 Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/expressRoutePorts/portName",
             },
             Location = "westus",
             ResourceGroupName = "rg1",
-            Sku = new AzureNextGen.Network.Latest.Inputs.ExpressRouteCircuitSkuArgs
+            Sku = new AzureNextGen.Network..Inputs.ExpressRouteCircuitSkuArgs
             {
                 Family = "MeteredData",
                 Name = "Premium_MeteredData",
@@ -195,7 +195,7 @@ class MyStack : Stack
 package main
 
 import (
-	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network/latest"
+	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -232,15 +232,15 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-express_route_circuit = azure_nextgen.network.latest.ExpressRouteCircuit("expressRouteCircuit",
+express_route_circuit = azure_nextgen.network.ExpressRouteCircuit("expressRouteCircuit",
     bandwidth_in_gbps=10,
     circuit_name="expressRouteCircuit1",
-    express_route_port=azure_nextgen.network.latest.SubResourceArgs(
+    express_route_port=azure_nextgen.network.SubResourceArgs(
         id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/expressRoutePorts/portName",
     ),
     location="westus",
     resource_group_name="rg1",
-    sku=azure_nextgen.network.latest.ExpressRouteCircuitSkuArgs(
+    sku=azure_nextgen.network.ExpressRouteCircuitSkuArgs(
         family="MeteredData",
         name="Premium_MeteredData",
         tier="Premium",
@@ -256,7 +256,7 @@ express_route_circuit = azure_nextgen.network.latest.ExpressRouteCircuit("expres
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const expressRouteCircuit = new azure_nextgen.network.latest.ExpressRouteCircuit("expressRouteCircuit", {
+const expressRouteCircuit = new azure_nextgen.network.ExpressRouteCircuit("expressRouteCircuit", {
     bandwidthInGbps: 10,
     circuitName: "expressRouteCircuit1",
     expressRoutePort: {
@@ -491,7 +491,7 @@ The ExpressRouteCircuit resource accepts the following [input]({{< relref "/docs
 <a href="#authorizations_csharp" style="color: inherit; text-decoration: inherit;">Authorizations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#expressroutecircuitauthorization">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Express<wbr>Route<wbr>Circuit<wbr>Authorization<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#expressroutecircuitauthorization">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Express<wbr>Route<wbr>Circuit<wbr>Authorization<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of authorizations.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -518,7 +518,7 @@ The ExpressRouteCircuit resource accepts the following [input]({{< relref "/docs
 <a href="#expressrouteport_csharp" style="color: inherit; text-decoration: inherit;">Express<wbr>Route<wbr>Port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The reference to the ExpressRoutePort resource when the circuit is provisioned on an ExpressRoutePort resource.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -563,7 +563,7 @@ The ExpressRouteCircuit resource accepts the following [input]({{< relref "/docs
 <a href="#peerings_csharp" style="color: inherit; text-decoration: inherit;">Peerings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#expressroutecircuitpeering">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Express<wbr>Route<wbr>Circuit<wbr>Peering<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#expressroutecircuitpeering">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Express<wbr>Route<wbr>Circuit<wbr>Peering<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of peerings.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -590,7 +590,7 @@ The ExpressRouteCircuit resource accepts the following [input]({{< relref "/docs
 <a href="#serviceproviderproperties_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Provider<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#expressroutecircuitserviceproviderproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Express<wbr>Route<wbr>Circuit<wbr>Service<wbr>Provider<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#expressroutecircuitserviceproviderproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Express<wbr>Route<wbr>Circuit<wbr>Service<wbr>Provider<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The ServiceProviderProperties.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -599,7 +599,7 @@ The ExpressRouteCircuit resource accepts the following [input]({{< relref "/docs
 <a href="#serviceproviderprovisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Provider<wbr>Provisioning<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#serviceproviderprovisioningstate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Service<wbr>Provider<wbr>Provisioning<wbr>State</a></span>
+        <span class="property-type">string | <a href="#serviceproviderprovisioningstate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Service<wbr>Provider<wbr>Provisioning<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}The ServiceProviderProvisioningState state of the resource.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -608,7 +608,7 @@ The ExpressRouteCircuit resource accepts the following [input]({{< relref "/docs
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#expressroutecircuitsku">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Express<wbr>Route<wbr>Circuit<wbr>Sku<wbr>Args</a></span>
+        <span class="property-type"><a href="#expressroutecircuitsku">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Express<wbr>Route<wbr>Circuit<wbr>Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The SKU.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1442,7 +1442,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authorizationusestatus_csharp" style="color: inherit; text-decoration: inherit;">Authorization<wbr>Use<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#authorizationusestatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Authorization<wbr>Use<wbr>Status</a></span>
+        <span class="property-type">string | <a href="#authorizationusestatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Authorization<wbr>Use<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}The authorization use status.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1899,7 +1899,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expressroutecircuitpeering_csharp" style="color: inherit; text-decoration: inherit;">Express<wbr>Route<wbr>Circuit<wbr>Peering</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Reference to Express Route Circuit Private Peering Resource of the circuit initiating connection.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1917,7 +1917,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipv6circuitconnectionconfig_csharp" style="color: inherit; text-decoration: inherit;">Ipv6Circuit<wbr>Connection<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipv6circuitconnectionconfig">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Ipv6Circuit<wbr>Connection<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#ipv6circuitconnectionconfig">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Ipv6Circuit<wbr>Connection<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}IPv6 Address PrefixProperties of the express route circuit connection.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1935,7 +1935,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#peerexpressroutecircuitpeering_csharp" style="color: inherit; text-decoration: inherit;">Peer<wbr>Express<wbr>Route<wbr>Circuit<wbr>Peering</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Reference to Express Route Circuit Private Peering Resource of the peered circuit.{{% /md %}}</dd>
 </dl>
@@ -2213,7 +2213,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expressroutecircuitpeering_csharp" style="color: inherit; text-decoration: inherit;">Express<wbr>Route<wbr>Circuit<wbr>Peering</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Reference to Express Route Circuit Private Peering Resource of the circuit initiating connection.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2231,7 +2231,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipv6circuitconnectionconfig_csharp" style="color: inherit; text-decoration: inherit;">Ipv6Circuit<wbr>Connection<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipv6circuitconnectionconfigresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Ipv6Circuit<wbr>Connection<wbr>Config<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#ipv6circuitconnectionconfigresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Ipv6Circuit<wbr>Connection<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}IPv6 Address PrefixProperties of the express route circuit connection.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2249,7 +2249,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#peerexpressroutecircuitpeering_csharp" style="color: inherit; text-decoration: inherit;">Peer<wbr>Express<wbr>Route<wbr>Circuit<wbr>Peering</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Reference to Express Route Circuit Private Peering Resource of the peered circuit.{{% /md %}}</dd>
 </dl>
@@ -2590,7 +2590,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#connections_csharp" style="color: inherit; text-decoration: inherit;">Connections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#expressroutecircuitconnection">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Express<wbr>Route<wbr>Circuit<wbr>Connection<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#expressroutecircuitconnection">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Express<wbr>Route<wbr>Circuit<wbr>Connection<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of circuit connections associated with Azure Private Peering for this circuit.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2617,7 +2617,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipv6peeringconfig_csharp" style="color: inherit; text-decoration: inherit;">Ipv6Peering<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipv6expressroutecircuitpeeringconfig">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Ipv6Express<wbr>Route<wbr>Circuit<wbr>Peering<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#ipv6expressroutecircuitpeeringconfig">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Ipv6Express<wbr>Route<wbr>Circuit<wbr>Peering<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The IPv6 peering configuration.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2626,7 +2626,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#microsoftpeeringconfig_csharp" style="color: inherit; text-decoration: inherit;">Microsoft<wbr>Peering<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#expressroutecircuitpeeringconfig">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Express<wbr>Route<wbr>Circuit<wbr>Peering<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#expressroutecircuitpeeringconfig">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Express<wbr>Route<wbr>Circuit<wbr>Peering<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Microsoft peering configuration.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2653,7 +2653,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#peeringtype_csharp" style="color: inherit; text-decoration: inherit;">Peering<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#expressroutepeeringtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Express<wbr>Route<wbr>Peering<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#expressroutepeeringtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Express<wbr>Route<wbr>Peering<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The peering type.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2680,7 +2680,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#routefilter_csharp" style="color: inherit; text-decoration: inherit;">Route<wbr>Filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The reference to the RouteFilter resource.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2716,7 +2716,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#expressroutepeeringstate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Express<wbr>Route<wbr>Peering<wbr>State</a></span>
+        <span class="property-type">string | <a href="#expressroutepeeringstate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Express<wbr>Route<wbr>Peering<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}The peering state.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2725,7 +2725,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#stats_csharp" style="color: inherit; text-decoration: inherit;">Stats</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#expressroutecircuitstats">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Express<wbr>Route<wbr>Circuit<wbr>Stats<wbr>Args</a></span>
+        <span class="property-type"><a href="#expressroutecircuitstats">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Express<wbr>Route<wbr>Circuit<wbr>Stats<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The peering stats of express route circuit.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3721,7 +3721,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#peeredconnections_csharp" style="color: inherit; text-decoration: inherit;">Peered<wbr>Connections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#peerexpressroutecircuitconnectionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Peer<wbr>Express<wbr>Route<wbr>Circuit<wbr>Connection<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#peerexpressroutecircuitconnectionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Peer<wbr>Express<wbr>Route<wbr>Circuit<wbr>Connection<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of peered circuit connections associated with Azure Private Peering for this circuit.{{% /md %}}</dd>
     <dt class="property-required"
@@ -3757,7 +3757,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#connections_csharp" style="color: inherit; text-decoration: inherit;">Connections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#expressroutecircuitconnectionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Express<wbr>Route<wbr>Circuit<wbr>Connection<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#expressroutecircuitconnectionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Express<wbr>Route<wbr>Circuit<wbr>Connection<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of circuit connections associated with Azure Private Peering for this circuit.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3766,7 +3766,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expressrouteconnection_csharp" style="color: inherit; text-decoration: inherit;">Express<wbr>Route<wbr>Connection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#expressrouteconnectionidresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Express<wbr>Route<wbr>Connection<wbr>Id<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#expressrouteconnectionidresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Express<wbr>Route<wbr>Connection<wbr>Id<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The ExpressRoute connection.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3793,7 +3793,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipv6peeringconfig_csharp" style="color: inherit; text-decoration: inherit;">Ipv6Peering<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipv6expressroutecircuitpeeringconfigresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Ipv6Express<wbr>Route<wbr>Circuit<wbr>Peering<wbr>Config<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#ipv6expressroutecircuitpeeringconfigresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Ipv6Express<wbr>Route<wbr>Circuit<wbr>Peering<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The IPv6 peering configuration.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3802,7 +3802,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#microsoftpeeringconfig_csharp" style="color: inherit; text-decoration: inherit;">Microsoft<wbr>Peering<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#expressroutecircuitpeeringconfigresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Express<wbr>Route<wbr>Circuit<wbr>Peering<wbr>Config<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#expressroutecircuitpeeringconfigresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Express<wbr>Route<wbr>Circuit<wbr>Peering<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Microsoft peering configuration.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3856,7 +3856,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#routefilter_csharp" style="color: inherit; text-decoration: inherit;">Route<wbr>Filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The reference to the RouteFilter resource.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3901,7 +3901,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#stats_csharp" style="color: inherit; text-decoration: inherit;">Stats</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#expressroutecircuitstatsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Express<wbr>Route<wbr>Circuit<wbr>Stats<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#expressroutecircuitstatsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Express<wbr>Route<wbr>Circuit<wbr>Stats<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The peering stats of express route circuit.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4899,7 +4899,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#family_csharp" style="color: inherit; text-decoration: inherit;">Family</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#expressroutecircuitskufamily">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Express<wbr>Route<wbr>Circuit<wbr>Sku<wbr>Family</a></span>
+        <span class="property-type">string | <a href="#expressroutecircuitskufamily">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Express<wbr>Route<wbr>Circuit<wbr>Sku<wbr>Family</a></span>
     </dt>
     <dd>{{% md %}}The family of the SKU.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4917,7 +4917,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tier_csharp" style="color: inherit; text-decoration: inherit;">Tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#expressroutecircuitskutier">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Express<wbr>Route<wbr>Circuit<wbr>Sku<wbr>Tier</a></span>
+        <span class="property-type">string | <a href="#expressroutecircuitskutier">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Express<wbr>Route<wbr>Circuit<wbr>Sku<wbr>Tier</a></span>
     </dt>
     <dd>{{% md %}}The tier of the SKU.{{% /md %}}</dd>
 </dl>
@@ -5905,7 +5905,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#microsoftpeeringconfig_csharp" style="color: inherit; text-decoration: inherit;">Microsoft<wbr>Peering<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#expressroutecircuitpeeringconfig">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Express<wbr>Route<wbr>Circuit<wbr>Peering<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#expressroutecircuitpeeringconfig">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Express<wbr>Route<wbr>Circuit<wbr>Peering<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Microsoft peering configuration.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -5923,7 +5923,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#routefilter_csharp" style="color: inherit; text-decoration: inherit;">Route<wbr>Filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The reference to the RouteFilter resource.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -5941,7 +5941,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#expressroutecircuitpeeringstate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Express<wbr>Route<wbr>Circuit<wbr>Peering<wbr>State</a></span>
+        <span class="property-type">string | <a href="#expressroutecircuitpeeringstate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Express<wbr>Route<wbr>Circuit<wbr>Peering<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}The state of peering.{{% /md %}}</dd>
 </dl>
@@ -6111,7 +6111,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#microsoftpeeringconfig_csharp" style="color: inherit; text-decoration: inherit;">Microsoft<wbr>Peering<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#expressroutecircuitpeeringconfigresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Express<wbr>Route<wbr>Circuit<wbr>Peering<wbr>Config<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#expressroutecircuitpeeringconfigresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Express<wbr>Route<wbr>Circuit<wbr>Peering<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Microsoft peering configuration.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -6129,7 +6129,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#routefilter_csharp" style="color: inherit; text-decoration: inherit;">Route<wbr>Filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The reference to the RouteFilter resource.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -6380,7 +6380,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expressroutecircuitpeering_csharp" style="color: inherit; text-decoration: inherit;">Express<wbr>Route<wbr>Circuit<wbr>Peering</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Reference to Express Route Circuit Private Peering Resource of the circuit.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -6407,7 +6407,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#peerexpressroutecircuitpeering_csharp" style="color: inherit; text-decoration: inherit;">Peer<wbr>Express<wbr>Route<wbr>Circuit<wbr>Peering</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Reference to Express Route Circuit Private Peering Resource of the peered circuit.{{% /md %}}</dd>
 </dl>
@@ -6911,7 +6911,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:network/latest:ExpressRouteCircuit expressRouteCircuit1 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/expressRouteCircuits/expressRouteCircuit1 
+$ pulumi import azure-nextgen:network:ExpressRouteCircuit expressRouteCircuit1 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/expressRouteCircuits/expressRouteCircuit1 
 ```
 
 

@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.customproviders.Association reso
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The resource definition of this association.
+API Version: 2018-09-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var association = new AzureNextGen.CustomProviders.V20180901Preview.Association("association", new AzureNextGen.CustomProviders.V20180901Preview.AssociationArgs
+        var association = new AzureNextGen.CustomProviders..Association("association", new AzureNextGen.CustomProviders..AssociationArgs
         {
             AssociationName = "associationName",
             Scope = "scope",
@@ -46,7 +47,7 @@ class MyStack : Stack
 package main
 
 import (
-	customproviders "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/customproviders/v20180901preview"
+	customproviders "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/customproviders"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -74,7 +75,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-association = azure_nextgen.customproviders.v20180901preview.Association("association",
+association = azure_nextgen.customproviders.Association("association",
     association_name="associationName",
     scope="scope",
     target_resource_id="/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/appRG/providers/Microsoft.Solutions/applications/applicationName")
@@ -89,7 +90,7 @@ association = azure_nextgen.customproviders.v20180901preview.Association("associ
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const association = new azure_nextgen.customproviders.v20180901preview.Association("association", {
+const association = new azure_nextgen.customproviders.Association("association", {
     associationName: "associationName",
     scope: "scope",
     targetResourceId: "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/appRG/providers/Microsoft.Solutions/applications/applicationName",
@@ -597,7 +598,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:customproviders/v20180901preview:Association associationName /scope/providers/Microsoft.CustomProviders/associations/associationName 
+$ pulumi import azure-nextgen:customproviders:Association associationName /scope/providers/Microsoft.CustomProviders/associations/associationName 
 ```
 
 

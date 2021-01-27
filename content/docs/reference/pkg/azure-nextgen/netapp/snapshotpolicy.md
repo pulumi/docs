@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.netapp.SnapshotPolicy resource w
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Snapshot policy information
-Latest API Version: 2020-09-01.
+API Version: 2020-09-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,22 +27,22 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var snapshotPolicy = new AzureNextGen.NetApp.Latest.SnapshotPolicy("snapshotPolicy", new AzureNextGen.NetApp.Latest.SnapshotPolicyArgs
+        var snapshotPolicy = new AzureNextGen.NetApp..SnapshotPolicy("snapshotPolicy", new AzureNextGen.NetApp..SnapshotPolicyArgs
         {
             AccountName = "account1",
-            DailySchedule = new AzureNextGen.NetApp.Latest.Inputs.DailyScheduleArgs
+            DailySchedule = new AzureNextGen.NetApp..Inputs.DailyScheduleArgs
             {
                 Hour = 14,
                 Minute = 30,
                 SnapshotsToKeep = 4,
             },
-            HourlySchedule = new AzureNextGen.NetApp.Latest.Inputs.HourlyScheduleArgs
+            HourlySchedule = new AzureNextGen.NetApp..Inputs.HourlyScheduleArgs
             {
                 Minute = 50,
                 SnapshotsToKeep = 2,
             },
             Location = "eastus",
-            MonthlySchedule = new AzureNextGen.NetApp.Latest.Inputs.MonthlyScheduleArgs
+            MonthlySchedule = new AzureNextGen.NetApp..Inputs.MonthlyScheduleArgs
             {
                 DaysOfMonth = "10,11,12",
                 Hour = 14,
@@ -51,7 +51,7 @@ class MyStack : Stack
             },
             ResourceGroupName = "myRG",
             SnapshotPolicyName = "snapshotPolicyName",
-            WeeklySchedule = new AzureNextGen.NetApp.Latest.Inputs.WeeklyScheduleArgs
+            WeeklySchedule = new AzureNextGen.NetApp..Inputs.WeeklyScheduleArgs
             {
                 Day = "Wednesday",
                 Hour = 14,
@@ -73,7 +73,7 @@ class MyStack : Stack
 package main
 
 import (
-	netapp "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/netapp/latest"
+	netapp "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/netapp"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -123,19 +123,19 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-snapshot_policy = azure_nextgen.netapp.latest.SnapshotPolicy("snapshotPolicy",
+snapshot_policy = azure_nextgen.netapp.SnapshotPolicy("snapshotPolicy",
     account_name="account1",
-    daily_schedule=azure_nextgen.netapp.latest.DailyScheduleArgs(
+    daily_schedule=azure_nextgen.netapp.DailyScheduleArgs(
         hour=14,
         minute=30,
         snapshots_to_keep=4,
     ),
-    hourly_schedule=azure_nextgen.netapp.latest.HourlyScheduleArgs(
+    hourly_schedule=azure_nextgen.netapp.HourlyScheduleArgs(
         minute=50,
         snapshots_to_keep=2,
     ),
     location="eastus",
-    monthly_schedule=azure_nextgen.netapp.latest.MonthlyScheduleArgs(
+    monthly_schedule=azure_nextgen.netapp.MonthlyScheduleArgs(
         days_of_month="10,11,12",
         hour=14,
         minute=15,
@@ -143,7 +143,7 @@ snapshot_policy = azure_nextgen.netapp.latest.SnapshotPolicy("snapshotPolicy",
     ),
     resource_group_name="myRG",
     snapshot_policy_name="snapshotPolicyName",
-    weekly_schedule=azure_nextgen.netapp.latest.WeeklyScheduleArgs(
+    weekly_schedule=azure_nextgen.netapp.WeeklyScheduleArgs(
         day="Wednesday",
         hour=14,
         minute=45,
@@ -160,7 +160,7 @@ snapshot_policy = azure_nextgen.netapp.latest.SnapshotPolicy("snapshotPolicy",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const snapshotPolicy = new azure_nextgen.netapp.latest.SnapshotPolicy("snapshotPolicy", {
+const snapshotPolicy = new azure_nextgen.netapp.SnapshotPolicy("snapshotPolicy", {
     accountName: "account1",
     dailySchedule: {
         hour: 14,
@@ -417,7 +417,7 @@ The SnapshotPolicy resource accepts the following [input]({{< relref "/docs/intr
 <a href="#dailyschedule_csharp" style="color: inherit; text-decoration: inherit;">Daily<wbr>Schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dailyschedule">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Net<wbr>App.<wbr>Inputs.<wbr>Daily<wbr>Schedule<wbr>Args</a></span>
+        <span class="property-type"><a href="#dailyschedule">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Net<wbr>App..<wbr>Inputs.<wbr>Daily<wbr>Schedule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Schedule for daily snapshots{{% /md %}}</dd>
     <dt class="property-optional"
@@ -435,7 +435,7 @@ The SnapshotPolicy resource accepts the following [input]({{< relref "/docs/intr
 <a href="#hourlyschedule_csharp" style="color: inherit; text-decoration: inherit;">Hourly<wbr>Schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hourlyschedule">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Net<wbr>App.<wbr>Inputs.<wbr>Hourly<wbr>Schedule<wbr>Args</a></span>
+        <span class="property-type"><a href="#hourlyschedule">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Net<wbr>App..<wbr>Inputs.<wbr>Hourly<wbr>Schedule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Schedule for hourly snapshots{{% /md %}}</dd>
     <dt class="property-optional"
@@ -444,7 +444,7 @@ The SnapshotPolicy resource accepts the following [input]({{< relref "/docs/intr
 <a href="#monthlyschedule_csharp" style="color: inherit; text-decoration: inherit;">Monthly<wbr>Schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#monthlyschedule">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Net<wbr>App.<wbr>Inputs.<wbr>Monthly<wbr>Schedule<wbr>Args</a></span>
+        <span class="property-type"><a href="#monthlyschedule">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Net<wbr>App..<wbr>Inputs.<wbr>Monthly<wbr>Schedule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Schedule for monthly snapshots{{% /md %}}</dd>
     <dt class="property-optional"
@@ -462,7 +462,7 @@ The SnapshotPolicy resource accepts the following [input]({{< relref "/docs/intr
 <a href="#weeklyschedule_csharp" style="color: inherit; text-decoration: inherit;">Weekly<wbr>Schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#weeklyschedule">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Net<wbr>App.<wbr>Inputs.<wbr>Weekly<wbr>Schedule<wbr>Args</a></span>
+        <span class="property-type"><a href="#weeklyschedule">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Net<wbr>App..<wbr>Inputs.<wbr>Weekly<wbr>Schedule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Schedule for weekly snapshots{{% /md %}}</dd>
 </dl>
@@ -2378,7 +2378,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:netapp/latest:SnapshotPolicy account1/snapshotPolicy1 /subscriptions/D633CC2E-722B-4AE1-B636-BBD9E4C60ED9/resourceGroups/myRG/providers/Microsoft.NetApp/netAppAccounts/account1/snapshotPolicies/snapshotPolicy1 
+$ pulumi import azure-nextgen:netapp:SnapshotPolicy account1/snapshotPolicy1 /subscriptions/D633CC2E-722B-4AE1-B636-BBD9E4C60ED9/resourceGroups/myRG/providers/Microsoft.NetApp/netAppAccounts/account1/snapshotPolicies/snapshotPolicy1 
 ```
 
 

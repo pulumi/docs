@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.botservice.Bot resource with exa
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Bot resource definition
-Latest API Version: 2020-06-02.
+API Version: 2020-06-02.
 
 {{% examples %}}
 ## Example Usage
@@ -27,12 +27,12 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var bot = new AzureNextGen.BotService.Latest.Bot("bot", new AzureNextGen.BotService.Latest.BotArgs
+        var bot = new AzureNextGen.BotService..Bot("bot", new AzureNextGen.BotService..BotArgs
         {
             Etag = "etag1",
             Kind = "sdk",
             Location = "West US",
-            Properties = new AzureNextGen.BotService.Latest.Inputs.BotPropertiesArgs
+            Properties = new AzureNextGen.BotService..Inputs.BotPropertiesArgs
             {
                 CmekKeyVaultUrl = "https://myCmekKey",
                 Description = "The description of the bot",
@@ -53,7 +53,7 @@ class MyStack : Stack
             },
             ResourceGroupName = "OneResourceGroupName",
             ResourceName = "samplebotname",
-            Sku = new AzureNextGen.BotService.Latest.Inputs.SkuArgs
+            Sku = new AzureNextGen.BotService..Inputs.SkuArgs
             {
                 Name = "S1",
             },
@@ -77,7 +77,7 @@ class MyStack : Stack
 package main
 
 import (
-	botservice "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/botservice/latest"
+	botservice "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/botservice"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -131,11 +131,11 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-bot = azure_nextgen.botservice.latest.Bot("bot",
+bot = azure_nextgen.botservice.Bot("bot",
     etag="etag1",
     kind="sdk",
     location="West US",
-    properties=azure_nextgen.botservice.latest.BotPropertiesArgs(
+    properties=azure_nextgen.botservice.BotPropertiesArgs(
         cmek_key_vault_url="https://myCmekKey",
         description="The description of the bot",
         developer_app_insight_key="appinsightskey",
@@ -154,7 +154,7 @@ bot = azure_nextgen.botservice.latest.Bot("bot",
     ),
     resource_group_name="OneResourceGroupName",
     resource_name="samplebotname",
-    sku=azure_nextgen.botservice.latest.SkuArgs(
+    sku=azure_nextgen.botservice.SkuArgs(
         name="S1",
     ),
     tags={
@@ -172,7 +172,7 @@ bot = azure_nextgen.botservice.latest.Bot("bot",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const bot = new azure_nextgen.botservice.latest.Bot("bot", {
+const bot = new azure_nextgen.botservice.Bot("bot", {
     etag: "etag1",
     kind: "sdk",
     location: "West US",
@@ -424,7 +424,7 @@ The Bot resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#kind">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service.<wbr>Kind</a></span>
+        <span class="property-type">string | <a href="#kind">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service..<wbr>Kind</a></span>
     </dt>
     <dd>{{% md %}}Required. Gets or sets the Kind of the resource.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -442,7 +442,7 @@ The Bot resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#botproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Bot<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#botproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service..<wbr>Inputs.<wbr>Bot<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to bot resource{{% /md %}}</dd>
     <dt class="property-optional"
@@ -451,7 +451,7 @@ The Bot resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sku">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Sku<wbr>Args</a></span>
+        <span class="property-type"><a href="#sku">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service..<wbr>Inputs.<wbr>Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the SKU of the resource.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1938,7 +1938,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#skuname">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service.<wbr>Sku<wbr>Name</a></span>
+        <span class="property-type">string | <a href="#skuname">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service..<wbr>Sku<wbr>Name</a></span>
     </dt>
     <dd>{{% md %}}The sku name{{% /md %}}</dd>
 </dl>
@@ -2130,7 +2130,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:botservice/latest:Bot samplebotname /subscriptions/subscription-id/resourceGroups/OneResourceGroupName/providers/Microsoft.BotService/botServices/samplebotname 
+$ pulumi import azure-nextgen:botservice:Bot samplebotname /subscriptions/subscription-id/resourceGroups/OneResourceGroupName/providers/Microsoft.BotService/botServices/samplebotname 
 ```
 
 

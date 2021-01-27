@@ -188,7 +188,7 @@ The following output properties are available:
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#b2cresourceskuresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Azure<wbr>Active<wbr>Directory.<wbr>Outputs.<wbr>B2CResource<wbr>SKUResponse</a></span>
+        <span class="property-type"><a href="#b2cresourceskuresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Azure<wbr>Active<wbr>Directory..<wbr>Outputs.<wbr>B2CResource<wbr>SKUResponse</a></span>
     </dt>
     <dd>{{% md %}}SKU properties of the Azure AD B2C tenant. Learn more about Azure AD B2C billing at [aka.ms/b2cBilling](https://aka.ms/b2cBilling).{{% /md %}}</dd>
     <dt class="property-"
@@ -206,7 +206,7 @@ The following output properties are available:
 <a href="#billingconfig_csharp" style="color: inherit; text-decoration: inherit;">Billing<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#b2ctenantresourcepropertiesresponsebillingconfig">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Azure<wbr>Active<wbr>Directory.<wbr>Outputs.<wbr>B2CTenant<wbr>Resource<wbr>Properties<wbr>Response<wbr>Billing<wbr>Config</a></span>
+        <span class="property-type"><a href="#b2ctenantresourcepropertiesresponsebillingconfig">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Azure<wbr>Active<wbr>Directory..<wbr>Outputs.<wbr>B2CTenant<wbr>Resource<wbr>Properties<wbr>Response<wbr>Billing<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The billing configuration for the tenant.{{% /md %}}</dd>
     <dt class="property-"

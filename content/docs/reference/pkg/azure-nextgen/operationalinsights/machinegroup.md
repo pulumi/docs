@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.operationalinsights.MachineGroup
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 A user-defined logical grouping of machines.
+API Version: 2015-11-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var machineGroup = new AzureNextGen.OperationalInsights.V20151101Preview.MachineGroup("machineGroup", new AzureNextGen.OperationalInsights.V20151101Preview.MachineGroupArgs
+        var machineGroup = new AzureNextGen.OperationalInsights..MachineGroup("machineGroup", new AzureNextGen.OperationalInsights..MachineGroupArgs
         {
             Count = 1,
             DisplayName = "Foo",
@@ -35,7 +36,7 @@ class MyStack : Stack
             MachineGroupName = "ccfbf4bf-dc08-4371-9e9b-00a8d875d45a",
             Machines = 
             {
-                new AzureNextGen.OperationalInsights.V20151101Preview.Inputs.MachineReferenceWithHintsArgs
+                new AzureNextGen.OperationalInsights..Inputs.MachineReferenceWithHintsArgs
                 {
                     Id = "/subscriptions/63BE4E24-FDF0-4E9C-9342-6A5D5A359722/resourceGroups/rg-sm/providers/Microsoft.OperationalInsights/workspaces/D6F79F14-E563-469B-84B5-9286D2803B2F/machines/m-0fe4b501-7ac9-41d7-a4e1-1591a0789519",
                     Kind = "ref:machinewithhints",
@@ -58,7 +59,7 @@ class MyStack : Stack
 package main
 
 import (
-	operationalinsights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/operationalinsights/v20151101preview"
+	operationalinsights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/operationalinsights"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -96,13 +97,13 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-machine_group = azure_nextgen.operationalinsights.v20151101preview.MachineGroup("machineGroup",
+machine_group = azure_nextgen.operationalinsights.MachineGroup("machineGroup",
     count=1,
     display_name="Foo",
     etag="8cd3a8a1-4b1f-43fc-ae3c-b2c092561444",
     kind="machineGroup",
     machine_group_name="ccfbf4bf-dc08-4371-9e9b-00a8d875d45a",
-    machines=[azure_nextgen.operationalinsights.v20151101preview.MachineReferenceWithHintsArgs(
+    machines=[azure_nextgen.operationalinsights.MachineReferenceWithHintsArgs(
         id="/subscriptions/63BE4E24-FDF0-4E9C-9342-6A5D5A359722/resourceGroups/rg-sm/providers/Microsoft.OperationalInsights/workspaces/D6F79F14-E563-469B-84B5-9286D2803B2F/machines/m-0fe4b501-7ac9-41d7-a4e1-1591a0789519",
         kind="ref:machinewithhints",
     )],
@@ -119,7 +120,7 @@ machine_group = azure_nextgen.operationalinsights.v20151101preview.MachineGroup(
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const machineGroup = new azure_nextgen.operationalinsights.v20151101preview.MachineGroup("machineGroup", {
+const machineGroup = new azure_nextgen.operationalinsights.MachineGroup("machineGroup", {
     count: 1,
     displayName: "Foo",
     etag: "8cd3a8a1-4b1f-43fc-ae3c-b2c092561444",
@@ -380,7 +381,7 @@ The MachineGroup resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#grouptype_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#machinegrouptype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Operational<wbr>Insights.<wbr>Machine<wbr>Group<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#machinegrouptype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Operational<wbr>Insights..<wbr>Machine<wbr>Group<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of the machine group{{% /md %}}</dd>
     <dt class="property-optional"
@@ -389,7 +390,7 @@ The MachineGroup resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#machines_csharp" style="color: inherit; text-decoration: inherit;">Machines</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#machinereferencewithhints">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Operational<wbr>Insights.<wbr>Inputs.<wbr>Machine<wbr>Reference<wbr>With<wbr>Hints<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#machinereferencewithhints">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Operational<wbr>Insights..<wbr>Inputs.<wbr>Machine<wbr>Reference<wbr>With<wbr>Hints<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}References of the machines in this group. The hints within each reference do not represent the current value of the corresponding fields. They are a snapshot created during the last time the machine group was updated.{{% /md %}}</dd>
 </dl>
@@ -1113,7 +1114,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:operationalinsights/v20151101preview:MachineGroup ccfbf4bf-dc08-4371-9e9b-00a8d875d45a /subscriptions/63BE4E24-FDF0-4E9C-9342-6A5D5A359722/resourceGroups/rg-sm/providers/Microsoft.OperationalInsights/workspaces/D6F79F14-E563-469B-84B5-9286D2803B2F/machineGroups/ccfbf4bf-dc08-4371-9e9b-00a8d875d45a 
+$ pulumi import azure-nextgen:operationalinsights:MachineGroup ccfbf4bf-dc08-4371-9e9b-00a8d875d45a /subscriptions/63BE4E24-FDF0-4E9C-9342-6A5D5A359722/resourceGroups/rg-sm/providers/Microsoft.OperationalInsights/workspaces/D6F79F14-E563-469B-84B5-9286D2803B2F/machineGroups/ccfbf4bf-dc08-4371-9e9b-00a8d875d45a 
 ```
 
 

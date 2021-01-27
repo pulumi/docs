@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.media.StreamingPolicy resource w
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 A Streaming Policy resource
-Latest API Version: 2020-05-01.
+API Version: 2020-05-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,12 +27,12 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var streamingPolicy = new AzureNextGen.Media.Latest.StreamingPolicy("streamingPolicy", new AzureNextGen.Media.Latest.StreamingPolicyArgs
+        var streamingPolicy = new AzureNextGen.Media..StreamingPolicy("streamingPolicy", new AzureNextGen.Media..StreamingPolicyArgs
         {
             AccountName = "contosomedia",
-            NoEncryption = new AzureNextGen.Media.Latest.Inputs.NoEncryptionArgs
+            NoEncryption = new AzureNextGen.Media..Inputs.NoEncryptionArgs
             {
-                EnabledProtocols = new AzureNextGen.Media.Latest.Inputs.EnabledProtocolsArgs
+                EnabledProtocols = new AzureNextGen.Media..Inputs.EnabledProtocolsArgs
                 {
                     Dash = true,
                     Download = true,
@@ -57,7 +57,7 @@ class MyStack : Stack
 package main
 
 import (
-	media "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/media/latest"
+	media "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/media"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -93,10 +93,10 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-streaming_policy = azure_nextgen.media.latest.StreamingPolicy("streamingPolicy",
+streaming_policy = azure_nextgen.media.StreamingPolicy("streamingPolicy",
     account_name="contosomedia",
-    no_encryption=azure_nextgen.media.latest.NoEncryptionArgs(
-        enabled_protocols=azure_nextgen.media.latest.EnabledProtocolsArgs(
+    no_encryption=azure_nextgen.media.NoEncryptionArgs(
+        enabled_protocols=azure_nextgen.media.EnabledProtocolsArgs(
             dash=True,
             download=True,
             hls=True,
@@ -116,7 +116,7 @@ streaming_policy = azure_nextgen.media.latest.StreamingPolicy("streamingPolicy",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const streamingPolicy = new azure_nextgen.media.latest.StreamingPolicy("streamingPolicy", {
+const streamingPolicy = new azure_nextgen.media.StreamingPolicy("streamingPolicy", {
     accountName: "contosomedia",
     noEncryption: {
         enabledProtocols: {
@@ -144,27 +144,27 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var streamingPolicy = new AzureNextGen.Media.Latest.StreamingPolicy("streamingPolicy", new AzureNextGen.Media.Latest.StreamingPolicyArgs
+        var streamingPolicy = new AzureNextGen.Media..StreamingPolicy("streamingPolicy", new AzureNextGen.Media..StreamingPolicyArgs
         {
             AccountName = "contosomedia",
-            CommonEncryptionCbcs = new AzureNextGen.Media.Latest.Inputs.CommonEncryptionCbcsArgs
+            CommonEncryptionCbcs = new AzureNextGen.Media..Inputs.CommonEncryptionCbcsArgs
             {
-                ContentKeys = new AzureNextGen.Media.Latest.Inputs.StreamingPolicyContentKeysArgs
+                ContentKeys = new AzureNextGen.Media..Inputs.StreamingPolicyContentKeysArgs
                 {
-                    DefaultKey = new AzureNextGen.Media.Latest.Inputs.DefaultKeyArgs
+                    DefaultKey = new AzureNextGen.Media..Inputs.DefaultKeyArgs
                     {
                         Label = "cbcsDefaultKey",
                     },
                 },
-                Drm = new AzureNextGen.Media.Latest.Inputs.CbcsDrmConfigurationArgs
+                Drm = new AzureNextGen.Media..Inputs.CbcsDrmConfigurationArgs
                 {
-                    FairPlay = new AzureNextGen.Media.Latest.Inputs.StreamingPolicyFairPlayConfigurationArgs
+                    FairPlay = new AzureNextGen.Media..Inputs.StreamingPolicyFairPlayConfigurationArgs
                     {
                         AllowPersistentLicense = true,
                         CustomLicenseAcquisitionUrlTemplate = "https://contoso.com/{AssetAlternativeId}/fairplay/{ContentKeyId}",
                     },
                 },
-                EnabledProtocols = new AzureNextGen.Media.Latest.Inputs.EnabledProtocolsArgs
+                EnabledProtocols = new AzureNextGen.Media..Inputs.EnabledProtocolsArgs
                 {
                     Dash = false,
                     Download = false,
@@ -190,7 +190,7 @@ class MyStack : Stack
 package main
 
 import (
-	media "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/media/latest"
+	media "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/media"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -238,21 +238,21 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-streaming_policy = azure_nextgen.media.latest.StreamingPolicy("streamingPolicy",
+streaming_policy = azure_nextgen.media.StreamingPolicy("streamingPolicy",
     account_name="contosomedia",
-    common_encryption_cbcs=azure_nextgen.media.latest.CommonEncryptionCbcsArgs(
-        content_keys=azure_nextgen.media.latest.StreamingPolicyContentKeysArgs(
-            default_key=azure_nextgen.media.latest.DefaultKeyArgs(
+    common_encryption_cbcs=azure_nextgen.media.CommonEncryptionCbcsArgs(
+        content_keys=azure_nextgen.media.StreamingPolicyContentKeysArgs(
+            default_key=azure_nextgen.media.DefaultKeyArgs(
                 label="cbcsDefaultKey",
             ),
         ),
-        drm=azure_nextgen.media.latest.CbcsDrmConfigurationArgs(
-            fair_play=azure_nextgen.media.latest.StreamingPolicyFairPlayConfigurationArgs(
+        drm=azure_nextgen.media.CbcsDrmConfigurationArgs(
+            fair_play=azure_nextgen.media.StreamingPolicyFairPlayConfigurationArgs(
                 allow_persistent_license=True,
                 custom_license_acquisition_url_template="https://contoso.com/{AssetAlternativeId}/fairplay/{ContentKeyId}",
             ),
         ),
-        enabled_protocols=azure_nextgen.media.latest.EnabledProtocolsArgs(
+        enabled_protocols=azure_nextgen.media.EnabledProtocolsArgs(
             dash=False,
             download=False,
             hls=True,
@@ -273,7 +273,7 @@ streaming_policy = azure_nextgen.media.latest.StreamingPolicy("streamingPolicy",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const streamingPolicy = new azure_nextgen.media.latest.StreamingPolicy("streamingPolicy", {
+const streamingPolicy = new azure_nextgen.media.StreamingPolicy("streamingPolicy", {
     accountName: "contosomedia",
     commonEncryptionCbcs: {
         contentKeys: {
@@ -313,18 +313,18 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var streamingPolicy = new AzureNextGen.Media.Latest.StreamingPolicy("streamingPolicy", new AzureNextGen.Media.Latest.StreamingPolicyArgs
+        var streamingPolicy = new AzureNextGen.Media..StreamingPolicy("streamingPolicy", new AzureNextGen.Media..StreamingPolicyArgs
         {
             AccountName = "contosomedia",
-            CommonEncryptionCenc = new AzureNextGen.Media.Latest.Inputs.CommonEncryptionCencArgs
+            CommonEncryptionCenc = new AzureNextGen.Media..Inputs.CommonEncryptionCencArgs
             {
                 ClearTracks = 
                 {
-                    new AzureNextGen.Media.Latest.Inputs.TrackSelectionArgs
+                    new AzureNextGen.Media..Inputs.TrackSelectionArgs
                     {
                         TrackSelections = 
                         {
-                            new AzureNextGen.Media.Latest.Inputs.TrackPropertyConditionArgs
+                            new AzureNextGen.Media..Inputs.TrackPropertyConditionArgs
                             {
                                 Operation = "Equal",
                                 Property = "FourCC",
@@ -333,26 +333,26 @@ class MyStack : Stack
                         },
                     },
                 },
-                ContentKeys = new AzureNextGen.Media.Latest.Inputs.StreamingPolicyContentKeysArgs
+                ContentKeys = new AzureNextGen.Media..Inputs.StreamingPolicyContentKeysArgs
                 {
-                    DefaultKey = new AzureNextGen.Media.Latest.Inputs.DefaultKeyArgs
+                    DefaultKey = new AzureNextGen.Media..Inputs.DefaultKeyArgs
                     {
                         Label = "cencDefaultKey",
                     },
                 },
-                Drm = new AzureNextGen.Media.Latest.Inputs.CencDrmConfigurationArgs
+                Drm = new AzureNextGen.Media..Inputs.CencDrmConfigurationArgs
                 {
-                    PlayReady = new AzureNextGen.Media.Latest.Inputs.StreamingPolicyPlayReadyConfigurationArgs
+                    PlayReady = new AzureNextGen.Media..Inputs.StreamingPolicyPlayReadyConfigurationArgs
                     {
                         CustomLicenseAcquisitionUrlTemplate = "https://contoso.com/{AssetAlternativeId}/playready/{ContentKeyId}",
                         PlayReadyCustomAttributes = "PlayReady CustomAttributes",
                     },
-                    Widevine = new AzureNextGen.Media.Latest.Inputs.StreamingPolicyWidevineConfigurationArgs
+                    Widevine = new AzureNextGen.Media..Inputs.StreamingPolicyWidevineConfigurationArgs
                     {
                         CustomLicenseAcquisitionUrlTemplate = "https://contoso.com/{AssetAlternativeId}/widevine/{ContentKeyId",
                     },
                 },
-                EnabledProtocols = new AzureNextGen.Media.Latest.Inputs.EnabledProtocolsArgs
+                EnabledProtocols = new AzureNextGen.Media..Inputs.EnabledProtocolsArgs
                 {
                     Dash = true,
                     Download = false,
@@ -378,7 +378,7 @@ class MyStack : Stack
 package main
 
 import (
-	media "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/media/latest"
+	media "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/media"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -440,31 +440,31 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-streaming_policy = azure_nextgen.media.latest.StreamingPolicy("streamingPolicy",
+streaming_policy = azure_nextgen.media.StreamingPolicy("streamingPolicy",
     account_name="contosomedia",
-    common_encryption_cenc=azure_nextgen.media.latest.CommonEncryptionCencArgs(
-        clear_tracks=[azure_nextgen.media.latest.TrackSelectionArgs(
-            track_selections=[azure_nextgen.media.latest.TrackPropertyConditionArgs(
+    common_encryption_cenc=azure_nextgen.media.CommonEncryptionCencArgs(
+        clear_tracks=[azure_nextgen.media.TrackSelectionArgs(
+            track_selections=[azure_nextgen.media.TrackPropertyConditionArgs(
                 operation="Equal",
                 property="FourCC",
                 value="hev1",
             )],
         )],
-        content_keys=azure_nextgen.media.latest.StreamingPolicyContentKeysArgs(
-            default_key=azure_nextgen.media.latest.DefaultKeyArgs(
+        content_keys=azure_nextgen.media.StreamingPolicyContentKeysArgs(
+            default_key=azure_nextgen.media.DefaultKeyArgs(
                 label="cencDefaultKey",
             ),
         ),
-        drm=azure_nextgen.media.latest.CencDrmConfigurationArgs(
-            play_ready=azure_nextgen.media.latest.StreamingPolicyPlayReadyConfigurationArgs(
+        drm=azure_nextgen.media.CencDrmConfigurationArgs(
+            play_ready=azure_nextgen.media.StreamingPolicyPlayReadyConfigurationArgs(
                 custom_license_acquisition_url_template="https://contoso.com/{AssetAlternativeId}/playready/{ContentKeyId}",
                 play_ready_custom_attributes="PlayReady CustomAttributes",
             ),
-            widevine=azure_nextgen.media.latest.StreamingPolicyWidevineConfigurationArgs(
+            widevine=azure_nextgen.media.StreamingPolicyWidevineConfigurationArgs(
                 custom_license_acquisition_url_template="https://contoso.com/{AssetAlternativeId}/widevine/{ContentKeyId",
             ),
         ),
-        enabled_protocols=azure_nextgen.media.latest.EnabledProtocolsArgs(
+        enabled_protocols=azure_nextgen.media.EnabledProtocolsArgs(
             dash=True,
             download=False,
             hls=False,
@@ -485,7 +485,7 @@ streaming_policy = azure_nextgen.media.latest.StreamingPolicy("streamingPolicy",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const streamingPolicy = new azure_nextgen.media.latest.StreamingPolicy("streamingPolicy", {
+const streamingPolicy = new azure_nextgen.media.StreamingPolicy("streamingPolicy", {
     accountName: "contosomedia",
     commonEncryptionCenc: {
         clearTracks: [{
@@ -535,21 +535,21 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var streamingPolicy = new AzureNextGen.Media.Latest.StreamingPolicy("streamingPolicy", new AzureNextGen.Media.Latest.StreamingPolicyArgs
+        var streamingPolicy = new AzureNextGen.Media..StreamingPolicy("streamingPolicy", new AzureNextGen.Media..StreamingPolicyArgs
         {
             AccountName = "contosomedia",
             DefaultContentKeyPolicyName = "PolicyWithClearKeyOptionAndTokenRestriction",
-            EnvelopeEncryption = new AzureNextGen.Media.Latest.Inputs.EnvelopeEncryptionArgs
+            EnvelopeEncryption = new AzureNextGen.Media..Inputs.EnvelopeEncryptionArgs
             {
-                ContentKeys = new AzureNextGen.Media.Latest.Inputs.StreamingPolicyContentKeysArgs
+                ContentKeys = new AzureNextGen.Media..Inputs.StreamingPolicyContentKeysArgs
                 {
-                    DefaultKey = new AzureNextGen.Media.Latest.Inputs.DefaultKeyArgs
+                    DefaultKey = new AzureNextGen.Media..Inputs.DefaultKeyArgs
                     {
                         Label = "aesDefaultKey",
                     },
                 },
                 CustomKeyAcquisitionUrlTemplate = "https://contoso.com/{AssetAlternativeId}/envelope/{ContentKeyId}",
-                EnabledProtocols = new AzureNextGen.Media.Latest.Inputs.EnabledProtocolsArgs
+                EnabledProtocols = new AzureNextGen.Media..Inputs.EnabledProtocolsArgs
                 {
                     Dash = true,
                     Download = false,
@@ -574,7 +574,7 @@ class MyStack : Stack
 package main
 
 import (
-	media "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/media/latest"
+	media "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/media"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -617,17 +617,17 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-streaming_policy = azure_nextgen.media.latest.StreamingPolicy("streamingPolicy",
+streaming_policy = azure_nextgen.media.StreamingPolicy("streamingPolicy",
     account_name="contosomedia",
     default_content_key_policy_name="PolicyWithClearKeyOptionAndTokenRestriction",
-    envelope_encryption=azure_nextgen.media.latest.EnvelopeEncryptionArgs(
-        content_keys=azure_nextgen.media.latest.StreamingPolicyContentKeysArgs(
-            default_key=azure_nextgen.media.latest.DefaultKeyArgs(
+    envelope_encryption=azure_nextgen.media.EnvelopeEncryptionArgs(
+        content_keys=azure_nextgen.media.StreamingPolicyContentKeysArgs(
+            default_key=azure_nextgen.media.DefaultKeyArgs(
                 label="aesDefaultKey",
             ),
         ),
         custom_key_acquisition_url_template="https://contoso.com/{AssetAlternativeId}/envelope/{ContentKeyId}",
-        enabled_protocols=azure_nextgen.media.latest.EnabledProtocolsArgs(
+        enabled_protocols=azure_nextgen.media.EnabledProtocolsArgs(
             dash=True,
             download=False,
             hls=True,
@@ -647,7 +647,7 @@ streaming_policy = azure_nextgen.media.latest.StreamingPolicy("streamingPolicy",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const streamingPolicy = new azure_nextgen.media.latest.StreamingPolicy("streamingPolicy", {
+const streamingPolicy = new azure_nextgen.media.StreamingPolicy("streamingPolicy", {
     accountName: "contosomedia",
     defaultContentKeyPolicyName: "PolicyWithClearKeyOptionAndTokenRestriction",
     envelopeEncryption: {
@@ -682,27 +682,27 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var streamingPolicy = new AzureNextGen.Media.Latest.StreamingPolicy("streamingPolicy", new AzureNextGen.Media.Latest.StreamingPolicyArgs
+        var streamingPolicy = new AzureNextGen.Media..StreamingPolicy("streamingPolicy", new AzureNextGen.Media..StreamingPolicyArgs
         {
             AccountName = "contosomedia",
-            CommonEncryptionCbcs = new AzureNextGen.Media.Latest.Inputs.CommonEncryptionCbcsArgs
+            CommonEncryptionCbcs = new AzureNextGen.Media..Inputs.CommonEncryptionCbcsArgs
             {
-                ContentKeys = new AzureNextGen.Media.Latest.Inputs.StreamingPolicyContentKeysArgs
+                ContentKeys = new AzureNextGen.Media..Inputs.StreamingPolicyContentKeysArgs
                 {
-                    DefaultKey = new AzureNextGen.Media.Latest.Inputs.DefaultKeyArgs
+                    DefaultKey = new AzureNextGen.Media..Inputs.DefaultKeyArgs
                     {
                         Label = "cbcsDefaultKey",
                     },
                 },
-                Drm = new AzureNextGen.Media.Latest.Inputs.CbcsDrmConfigurationArgs
+                Drm = new AzureNextGen.Media..Inputs.CbcsDrmConfigurationArgs
                 {
-                    FairPlay = new AzureNextGen.Media.Latest.Inputs.StreamingPolicyFairPlayConfigurationArgs
+                    FairPlay = new AzureNextGen.Media..Inputs.StreamingPolicyFairPlayConfigurationArgs
                     {
                         AllowPersistentLicense = true,
                         CustomLicenseAcquisitionUrlTemplate = "https://contoso.com/{AssetAlternativeId}/fairplay/{ContentKeyId}",
                     },
                 },
-                EnabledProtocols = new AzureNextGen.Media.Latest.Inputs.EnabledProtocolsArgs
+                EnabledProtocols = new AzureNextGen.Media..Inputs.EnabledProtocolsArgs
                 {
                     Dash = false,
                     Download = false,
@@ -710,15 +710,15 @@ class MyStack : Stack
                     SmoothStreaming = false,
                 },
             },
-            CommonEncryptionCenc = new AzureNextGen.Media.Latest.Inputs.CommonEncryptionCencArgs
+            CommonEncryptionCenc = new AzureNextGen.Media..Inputs.CommonEncryptionCencArgs
             {
                 ClearTracks = 
                 {
-                    new AzureNextGen.Media.Latest.Inputs.TrackSelectionArgs
+                    new AzureNextGen.Media..Inputs.TrackSelectionArgs
                     {
                         TrackSelections = 
                         {
-                            new AzureNextGen.Media.Latest.Inputs.TrackPropertyConditionArgs
+                            new AzureNextGen.Media..Inputs.TrackPropertyConditionArgs
                             {
                                 Operation = "Equal",
                                 Property = "FourCC",
@@ -727,26 +727,26 @@ class MyStack : Stack
                         },
                     },
                 },
-                ContentKeys = new AzureNextGen.Media.Latest.Inputs.StreamingPolicyContentKeysArgs
+                ContentKeys = new AzureNextGen.Media..Inputs.StreamingPolicyContentKeysArgs
                 {
-                    DefaultKey = new AzureNextGen.Media.Latest.Inputs.DefaultKeyArgs
+                    DefaultKey = new AzureNextGen.Media..Inputs.DefaultKeyArgs
                     {
                         Label = "cencDefaultKey",
                     },
                 },
-                Drm = new AzureNextGen.Media.Latest.Inputs.CencDrmConfigurationArgs
+                Drm = new AzureNextGen.Media..Inputs.CencDrmConfigurationArgs
                 {
-                    PlayReady = new AzureNextGen.Media.Latest.Inputs.StreamingPolicyPlayReadyConfigurationArgs
+                    PlayReady = new AzureNextGen.Media..Inputs.StreamingPolicyPlayReadyConfigurationArgs
                     {
                         CustomLicenseAcquisitionUrlTemplate = "https://contoso.com/{AssetAlternativeId}/playready/{ContentKeyId}",
                         PlayReadyCustomAttributes = "PlayReady CustomAttributes",
                     },
-                    Widevine = new AzureNextGen.Media.Latest.Inputs.StreamingPolicyWidevineConfigurationArgs
+                    Widevine = new AzureNextGen.Media..Inputs.StreamingPolicyWidevineConfigurationArgs
                     {
                         CustomLicenseAcquisitionUrlTemplate = "https://contoso.com/{AssetAlternativeId}/widevine/{ContentKeyId",
                     },
                 },
-                EnabledProtocols = new AzureNextGen.Media.Latest.Inputs.EnabledProtocolsArgs
+                EnabledProtocols = new AzureNextGen.Media..Inputs.EnabledProtocolsArgs
                 {
                     Dash = true,
                     Download = false,
@@ -755,17 +755,17 @@ class MyStack : Stack
                 },
             },
             DefaultContentKeyPolicyName = "PolicyWithMultipleOptions",
-            EnvelopeEncryption = new AzureNextGen.Media.Latest.Inputs.EnvelopeEncryptionArgs
+            EnvelopeEncryption = new AzureNextGen.Media..Inputs.EnvelopeEncryptionArgs
             {
-                ContentKeys = new AzureNextGen.Media.Latest.Inputs.StreamingPolicyContentKeysArgs
+                ContentKeys = new AzureNextGen.Media..Inputs.StreamingPolicyContentKeysArgs
                 {
-                    DefaultKey = new AzureNextGen.Media.Latest.Inputs.DefaultKeyArgs
+                    DefaultKey = new AzureNextGen.Media..Inputs.DefaultKeyArgs
                     {
                         Label = "aesDefaultKey",
                     },
                 },
                 CustomKeyAcquisitionUrlTemplate = "https://contoso.com/{AssetAlternativeId}/envelope/{ContentKeyId}",
-                EnabledProtocols = new AzureNextGen.Media.Latest.Inputs.EnabledProtocolsArgs
+                EnabledProtocols = new AzureNextGen.Media..Inputs.EnabledProtocolsArgs
                 {
                     Dash = true,
                     Download = false,
@@ -790,7 +790,7 @@ class MyStack : Stack
 package main
 
 import (
-	media "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/media/latest"
+	media "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/media"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -885,50 +885,50 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-streaming_policy = azure_nextgen.media.latest.StreamingPolicy("streamingPolicy",
+streaming_policy = azure_nextgen.media.StreamingPolicy("streamingPolicy",
     account_name="contosomedia",
-    common_encryption_cbcs=azure_nextgen.media.latest.CommonEncryptionCbcsArgs(
-        content_keys=azure_nextgen.media.latest.StreamingPolicyContentKeysArgs(
-            default_key=azure_nextgen.media.latest.DefaultKeyArgs(
+    common_encryption_cbcs=azure_nextgen.media.CommonEncryptionCbcsArgs(
+        content_keys=azure_nextgen.media.StreamingPolicyContentKeysArgs(
+            default_key=azure_nextgen.media.DefaultKeyArgs(
                 label="cbcsDefaultKey",
             ),
         ),
-        drm=azure_nextgen.media.latest.CbcsDrmConfigurationArgs(
-            fair_play=azure_nextgen.media.latest.StreamingPolicyFairPlayConfigurationArgs(
+        drm=azure_nextgen.media.CbcsDrmConfigurationArgs(
+            fair_play=azure_nextgen.media.StreamingPolicyFairPlayConfigurationArgs(
                 allow_persistent_license=True,
                 custom_license_acquisition_url_template="https://contoso.com/{AssetAlternativeId}/fairplay/{ContentKeyId}",
             ),
         ),
-        enabled_protocols=azure_nextgen.media.latest.EnabledProtocolsArgs(
+        enabled_protocols=azure_nextgen.media.EnabledProtocolsArgs(
             dash=False,
             download=False,
             hls=True,
             smooth_streaming=False,
         ),
     ),
-    common_encryption_cenc=azure_nextgen.media.latest.CommonEncryptionCencArgs(
-        clear_tracks=[azure_nextgen.media.latest.TrackSelectionArgs(
-            track_selections=[azure_nextgen.media.latest.TrackPropertyConditionArgs(
+    common_encryption_cenc=azure_nextgen.media.CommonEncryptionCencArgs(
+        clear_tracks=[azure_nextgen.media.TrackSelectionArgs(
+            track_selections=[azure_nextgen.media.TrackPropertyConditionArgs(
                 operation="Equal",
                 property="FourCC",
                 value="hev1",
             )],
         )],
-        content_keys=azure_nextgen.media.latest.StreamingPolicyContentKeysArgs(
-            default_key=azure_nextgen.media.latest.DefaultKeyArgs(
+        content_keys=azure_nextgen.media.StreamingPolicyContentKeysArgs(
+            default_key=azure_nextgen.media.DefaultKeyArgs(
                 label="cencDefaultKey",
             ),
         ),
-        drm=azure_nextgen.media.latest.CencDrmConfigurationArgs(
-            play_ready=azure_nextgen.media.latest.StreamingPolicyPlayReadyConfigurationArgs(
+        drm=azure_nextgen.media.CencDrmConfigurationArgs(
+            play_ready=azure_nextgen.media.StreamingPolicyPlayReadyConfigurationArgs(
                 custom_license_acquisition_url_template="https://contoso.com/{AssetAlternativeId}/playready/{ContentKeyId}",
                 play_ready_custom_attributes="PlayReady CustomAttributes",
             ),
-            widevine=azure_nextgen.media.latest.StreamingPolicyWidevineConfigurationArgs(
+            widevine=azure_nextgen.media.StreamingPolicyWidevineConfigurationArgs(
                 custom_license_acquisition_url_template="https://contoso.com/{AssetAlternativeId}/widevine/{ContentKeyId",
             ),
         ),
-        enabled_protocols=azure_nextgen.media.latest.EnabledProtocolsArgs(
+        enabled_protocols=azure_nextgen.media.EnabledProtocolsArgs(
             dash=True,
             download=False,
             hls=False,
@@ -936,14 +936,14 @@ streaming_policy = azure_nextgen.media.latest.StreamingPolicy("streamingPolicy",
         ),
     ),
     default_content_key_policy_name="PolicyWithMultipleOptions",
-    envelope_encryption=azure_nextgen.media.latest.EnvelopeEncryptionArgs(
-        content_keys=azure_nextgen.media.latest.StreamingPolicyContentKeysArgs(
-            default_key=azure_nextgen.media.latest.DefaultKeyArgs(
+    envelope_encryption=azure_nextgen.media.EnvelopeEncryptionArgs(
+        content_keys=azure_nextgen.media.StreamingPolicyContentKeysArgs(
+            default_key=azure_nextgen.media.DefaultKeyArgs(
                 label="aesDefaultKey",
             ),
         ),
         custom_key_acquisition_url_template="https://contoso.com/{AssetAlternativeId}/envelope/{ContentKeyId}",
-        enabled_protocols=azure_nextgen.media.latest.EnabledProtocolsArgs(
+        enabled_protocols=azure_nextgen.media.EnabledProtocolsArgs(
             dash=True,
             download=False,
             hls=True,
@@ -963,7 +963,7 @@ streaming_policy = azure_nextgen.media.latest.StreamingPolicy("streamingPolicy",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const streamingPolicy = new azure_nextgen.media.latest.StreamingPolicy("streamingPolicy", {
+const streamingPolicy = new azure_nextgen.media.StreamingPolicy("streamingPolicy", {
     accountName: "contosomedia",
     commonEncryptionCbcs: {
         contentKeys: {
@@ -1252,7 +1252,7 @@ The StreamingPolicy resource accepts the following [input]({{< relref "/docs/int
 <a href="#commonencryptioncbcs_csharp" style="color: inherit; text-decoration: inherit;">Common<wbr>Encryption<wbr>Cbcs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#commonencryptioncbcs">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Common<wbr>Encryption<wbr>Cbcs<wbr>Args</a></span>
+        <span class="property-type"><a href="#commonencryptioncbcs">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Common<wbr>Encryption<wbr>Cbcs<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration of CommonEncryptionCbcs{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1261,7 +1261,7 @@ The StreamingPolicy resource accepts the following [input]({{< relref "/docs/int
 <a href="#commonencryptioncenc_csharp" style="color: inherit; text-decoration: inherit;">Common<wbr>Encryption<wbr>Cenc</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#commonencryptioncenc">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Common<wbr>Encryption<wbr>Cenc<wbr>Args</a></span>
+        <span class="property-type"><a href="#commonencryptioncenc">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Common<wbr>Encryption<wbr>Cenc<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration of CommonEncryptionCenc{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1279,7 +1279,7 @@ The StreamingPolicy resource accepts the following [input]({{< relref "/docs/int
 <a href="#envelopeencryption_csharp" style="color: inherit; text-decoration: inherit;">Envelope<wbr>Encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#envelopeencryption">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Envelope<wbr>Encryption<wbr>Args</a></span>
+        <span class="property-type"><a href="#envelopeencryption">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Envelope<wbr>Encryption<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration of EnvelopeEncryption{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1288,7 +1288,7 @@ The StreamingPolicy resource accepts the following [input]({{< relref "/docs/int
 <a href="#noencryption_csharp" style="color: inherit; text-decoration: inherit;">No<wbr>Encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#noencryption">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>No<wbr>Encryption<wbr>Args</a></span>
+        <span class="property-type"><a href="#noencryption">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>No<wbr>Encryption<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configurations of NoEncryption{{% /md %}}</dd>
 </dl>
@@ -1724,7 +1724,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fairplay_csharp" style="color: inherit; text-decoration: inherit;">Fair<wbr>Play</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingpolicyfairplayconfiguration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Streaming<wbr>Policy<wbr>Fair<wbr>Play<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#streamingpolicyfairplayconfiguration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Streaming<wbr>Policy<wbr>Fair<wbr>Play<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}FairPlay configurations{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1733,7 +1733,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#playready_csharp" style="color: inherit; text-decoration: inherit;">Play<wbr>Ready</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingpolicyplayreadyconfiguration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Streaming<wbr>Policy<wbr>Play<wbr>Ready<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#streamingpolicyplayreadyconfiguration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Streaming<wbr>Policy<wbr>Play<wbr>Ready<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}PlayReady configurations{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1742,7 +1742,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#widevine_csharp" style="color: inherit; text-decoration: inherit;">Widevine</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingpolicywidevineconfiguration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Streaming<wbr>Policy<wbr>Widevine<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#streamingpolicywidevineconfiguration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Streaming<wbr>Policy<wbr>Widevine<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Widevine configurations{{% /md %}}</dd>
 </dl>
@@ -1858,7 +1858,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fairplay_csharp" style="color: inherit; text-decoration: inherit;">Fair<wbr>Play</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingpolicyfairplayconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Streaming<wbr>Policy<wbr>Fair<wbr>Play<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#streamingpolicyfairplayconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Streaming<wbr>Policy<wbr>Fair<wbr>Play<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}FairPlay configurations{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1867,7 +1867,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#playready_csharp" style="color: inherit; text-decoration: inherit;">Play<wbr>Ready</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingpolicyplayreadyconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Streaming<wbr>Policy<wbr>Play<wbr>Ready<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#streamingpolicyplayreadyconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Streaming<wbr>Policy<wbr>Play<wbr>Ready<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}PlayReady configurations{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1876,7 +1876,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#widevine_csharp" style="color: inherit; text-decoration: inherit;">Widevine</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingpolicywidevineconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Streaming<wbr>Policy<wbr>Widevine<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#streamingpolicywidevineconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Streaming<wbr>Policy<wbr>Widevine<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Widevine configurations{{% /md %}}</dd>
 </dl>
@@ -1992,7 +1992,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#playready_csharp" style="color: inherit; text-decoration: inherit;">Play<wbr>Ready</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingpolicyplayreadyconfiguration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Streaming<wbr>Policy<wbr>Play<wbr>Ready<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#streamingpolicyplayreadyconfiguration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Streaming<wbr>Policy<wbr>Play<wbr>Ready<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}PlayReady configurations{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2001,7 +2001,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#widevine_csharp" style="color: inherit; text-decoration: inherit;">Widevine</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingpolicywidevineconfiguration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Streaming<wbr>Policy<wbr>Widevine<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#streamingpolicywidevineconfiguration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Streaming<wbr>Policy<wbr>Widevine<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Widevine configurations{{% /md %}}</dd>
 </dl>
@@ -2090,7 +2090,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#playready_csharp" style="color: inherit; text-decoration: inherit;">Play<wbr>Ready</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingpolicyplayreadyconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Streaming<wbr>Policy<wbr>Play<wbr>Ready<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#streamingpolicyplayreadyconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Streaming<wbr>Policy<wbr>Play<wbr>Ready<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}PlayReady configurations{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2099,7 +2099,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#widevine_csharp" style="color: inherit; text-decoration: inherit;">Widevine</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingpolicywidevineconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Streaming<wbr>Policy<wbr>Widevine<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#streamingpolicywidevineconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Streaming<wbr>Policy<wbr>Widevine<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Widevine configurations{{% /md %}}</dd>
 </dl>
@@ -2188,7 +2188,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cleartracks_csharp" style="color: inherit; text-decoration: inherit;">Clear<wbr>Tracks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trackselection">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Track<wbr>Selection<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#trackselection">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Track<wbr>Selection<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Representing which tracks should not be encrypted{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2197,7 +2197,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#contentkeys_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingpolicycontentkeys">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Streaming<wbr>Policy<wbr>Content<wbr>Keys<wbr>Args</a></span>
+        <span class="property-type"><a href="#streamingpolicycontentkeys">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Streaming<wbr>Policy<wbr>Content<wbr>Keys<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Representing default content key for each encryption scheme and separate content keys for specific tracks{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2206,7 +2206,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#drm_csharp" style="color: inherit; text-decoration: inherit;">Drm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cbcsdrmconfiguration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Cbcs<wbr>Drm<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#cbcsdrmconfiguration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Cbcs<wbr>Drm<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration of DRMs for current encryption scheme{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2215,7 +2215,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enabledprotocols_csharp" style="color: inherit; text-decoration: inherit;">Enabled<wbr>Protocols</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#enabledprotocols">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Enabled<wbr>Protocols<wbr>Args</a></span>
+        <span class="property-type"><a href="#enabledprotocols">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Enabled<wbr>Protocols<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Representing supported protocols{{% /md %}}</dd>
 </dl>
@@ -2358,7 +2358,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cleartracks_csharp" style="color: inherit; text-decoration: inherit;">Clear<wbr>Tracks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trackselectionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Track<wbr>Selection<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#trackselectionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Track<wbr>Selection<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Representing which tracks should not be encrypted{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2367,7 +2367,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#contentkeys_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingpolicycontentkeysresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Streaming<wbr>Policy<wbr>Content<wbr>Keys<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#streamingpolicycontentkeysresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Streaming<wbr>Policy<wbr>Content<wbr>Keys<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Representing default content key for each encryption scheme and separate content keys for specific tracks{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2376,7 +2376,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#drm_csharp" style="color: inherit; text-decoration: inherit;">Drm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cbcsdrmconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Cbcs<wbr>Drm<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#cbcsdrmconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Cbcs<wbr>Drm<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration of DRMs for current encryption scheme{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2385,7 +2385,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enabledprotocols_csharp" style="color: inherit; text-decoration: inherit;">Enabled<wbr>Protocols</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#enabledprotocolsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Enabled<wbr>Protocols<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#enabledprotocolsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Enabled<wbr>Protocols<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Representing supported protocols{{% /md %}}</dd>
 </dl>
@@ -2528,7 +2528,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cleartracks_csharp" style="color: inherit; text-decoration: inherit;">Clear<wbr>Tracks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trackselection">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Track<wbr>Selection<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#trackselection">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Track<wbr>Selection<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Representing which tracks should not be encrypted{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2537,7 +2537,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#contentkeys_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingpolicycontentkeys">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Streaming<wbr>Policy<wbr>Content<wbr>Keys<wbr>Args</a></span>
+        <span class="property-type"><a href="#streamingpolicycontentkeys">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Streaming<wbr>Policy<wbr>Content<wbr>Keys<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Representing default content key for each encryption scheme and separate content keys for specific tracks{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2546,7 +2546,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#drm_csharp" style="color: inherit; text-decoration: inherit;">Drm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cencdrmconfiguration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Cenc<wbr>Drm<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#cencdrmconfiguration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Cenc<wbr>Drm<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration of DRMs for CommonEncryptionCenc encryption scheme{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2555,7 +2555,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enabledprotocols_csharp" style="color: inherit; text-decoration: inherit;">Enabled<wbr>Protocols</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#enabledprotocols">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Enabled<wbr>Protocols<wbr>Args</a></span>
+        <span class="property-type"><a href="#enabledprotocols">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Enabled<wbr>Protocols<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Representing supported protocols{{% /md %}}</dd>
 </dl>
@@ -2698,7 +2698,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cleartracks_csharp" style="color: inherit; text-decoration: inherit;">Clear<wbr>Tracks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trackselectionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Track<wbr>Selection<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#trackselectionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Track<wbr>Selection<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Representing which tracks should not be encrypted{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2707,7 +2707,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#contentkeys_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingpolicycontentkeysresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Streaming<wbr>Policy<wbr>Content<wbr>Keys<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#streamingpolicycontentkeysresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Streaming<wbr>Policy<wbr>Content<wbr>Keys<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Representing default content key for each encryption scheme and separate content keys for specific tracks{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2716,7 +2716,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#drm_csharp" style="color: inherit; text-decoration: inherit;">Drm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cencdrmconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Cenc<wbr>Drm<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#cencdrmconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Cenc<wbr>Drm<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration of DRMs for CommonEncryptionCenc encryption scheme{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2725,7 +2725,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enabledprotocols_csharp" style="color: inherit; text-decoration: inherit;">Enabled<wbr>Protocols</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#enabledprotocolsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Enabled<wbr>Protocols<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#enabledprotocolsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Enabled<wbr>Protocols<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Representing supported protocols{{% /md %}}</dd>
 </dl>
@@ -3404,7 +3404,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cleartracks_csharp" style="color: inherit; text-decoration: inherit;">Clear<wbr>Tracks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trackselection">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Track<wbr>Selection<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#trackselection">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Track<wbr>Selection<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Representing which tracks should not be encrypted{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3413,7 +3413,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#contentkeys_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingpolicycontentkeys">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Streaming<wbr>Policy<wbr>Content<wbr>Keys<wbr>Args</a></span>
+        <span class="property-type"><a href="#streamingpolicycontentkeys">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Streaming<wbr>Policy<wbr>Content<wbr>Keys<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Representing default content key for each encryption scheme and separate content keys for specific tracks{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3431,7 +3431,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enabledprotocols_csharp" style="color: inherit; text-decoration: inherit;">Enabled<wbr>Protocols</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#enabledprotocols">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Enabled<wbr>Protocols<wbr>Args</a></span>
+        <span class="property-type"><a href="#enabledprotocols">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Enabled<wbr>Protocols<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Representing supported protocols{{% /md %}}</dd>
 </dl>
@@ -3574,7 +3574,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cleartracks_csharp" style="color: inherit; text-decoration: inherit;">Clear<wbr>Tracks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trackselectionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Track<wbr>Selection<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#trackselectionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Track<wbr>Selection<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Representing which tracks should not be encrypted{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3583,7 +3583,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#contentkeys_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingpolicycontentkeysresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Streaming<wbr>Policy<wbr>Content<wbr>Keys<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#streamingpolicycontentkeysresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Streaming<wbr>Policy<wbr>Content<wbr>Keys<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Representing default content key for each encryption scheme and separate content keys for specific tracks{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3601,7 +3601,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enabledprotocols_csharp" style="color: inherit; text-decoration: inherit;">Enabled<wbr>Protocols</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#enabledprotocolsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Enabled<wbr>Protocols<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#enabledprotocolsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Enabled<wbr>Protocols<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Representing supported protocols{{% /md %}}</dd>
 </dl>
@@ -3744,7 +3744,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enabledprotocols_csharp" style="color: inherit; text-decoration: inherit;">Enabled<wbr>Protocols</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#enabledprotocols">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Enabled<wbr>Protocols<wbr>Args</a></span>
+        <span class="property-type"><a href="#enabledprotocols">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Enabled<wbr>Protocols<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Representing supported protocols{{% /md %}}</dd>
 </dl>
@@ -3806,7 +3806,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enabledprotocols_csharp" style="color: inherit; text-decoration: inherit;">Enabled<wbr>Protocols</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#enabledprotocolsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Enabled<wbr>Protocols<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#enabledprotocolsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Enabled<wbr>Protocols<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Representing supported protocols{{% /md %}}</dd>
 </dl>
@@ -3886,7 +3886,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tracks_csharp" style="color: inherit; text-decoration: inherit;">Tracks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trackselection">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Track<wbr>Selection<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#trackselection">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Track<wbr>Selection<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Tracks which use this content key{{% /md %}}</dd>
 </dl>
@@ -4020,7 +4020,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tracks_csharp" style="color: inherit; text-decoration: inherit;">Tracks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trackselectionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Track<wbr>Selection<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#trackselectionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Track<wbr>Selection<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Tracks which use this content key{{% /md %}}</dd>
 </dl>
@@ -4136,7 +4136,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#defaultkey_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#defaultkey">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Default<wbr>Key<wbr>Args</a></span>
+        <span class="property-type"><a href="#defaultkey">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Default<wbr>Key<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Default content key for an encryption scheme{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4145,7 +4145,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keytotrackmappings_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>To<wbr>Track<wbr>Mappings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingpolicycontentkey">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Streaming<wbr>Policy<wbr>Content<wbr>Key<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#streamingpolicycontentkey">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Streaming<wbr>Policy<wbr>Content<wbr>Key<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Representing tracks needs separate content key{{% /md %}}</dd>
 </dl>
@@ -4234,7 +4234,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#defaultkey_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#defaultkeyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Default<wbr>Key<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#defaultkeyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Default<wbr>Key<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Default content key for an encryption scheme{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4243,7 +4243,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keytotrackmappings_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>To<wbr>Track<wbr>Mappings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingpolicycontentkeyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Streaming<wbr>Policy<wbr>Content<wbr>Key<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#streamingpolicycontentkeyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Streaming<wbr>Policy<wbr>Content<wbr>Key<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Representing tracks needs separate content key{{% /md %}}</dd>
 </dl>
@@ -4886,7 +4886,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operation_csharp" style="color: inherit; text-decoration: inherit;">Operation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#trackpropertycompareoperation">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Track<wbr>Property<wbr>Compare<wbr>Operation</a></span>
+        <span class="property-type">string | <a href="#trackpropertycompareoperation">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Track<wbr>Property<wbr>Compare<wbr>Operation</a></span>
     </dt>
     <dd>{{% md %}}Track property condition operation{{% /md %}}</dd>
     <dt class="property-required"
@@ -4895,7 +4895,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#property_csharp" style="color: inherit; text-decoration: inherit;">Property</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#trackpropertytype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Track<wbr>Property<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#trackpropertytype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Track<wbr>Property<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Track property type{{% /md %}}</dd>
     <dt class="property-optional"
@@ -5192,7 +5192,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trackselections_csharp" style="color: inherit; text-decoration: inherit;">Track<wbr>Selections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trackpropertycondition">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Track<wbr>Property<wbr>Condition<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#trackpropertycondition">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Track<wbr>Property<wbr>Condition<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}TrackSelections is a track property condition list which can specify track(s){{% /md %}}</dd>
 </dl>
@@ -5254,7 +5254,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trackselections_csharp" style="color: inherit; text-decoration: inherit;">Track<wbr>Selections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trackpropertyconditionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Track<wbr>Property<wbr>Condition<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#trackpropertyconditionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Track<wbr>Property<wbr>Condition<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}TrackSelections is a track property condition list which can specify track(s){{% /md %}}</dd>
 </dl>
@@ -5310,7 +5310,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:media/latest:StreamingPolicy UserCreatedSecureStreamingPolicy /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/contoso/providers/Microsoft.Media/mediaservices/contosomedia/streamingPolicies/UserCreatedSecureStreamingPolicy 
+$ pulumi import azure-nextgen:media:StreamingPolicy UserCreatedSecureStreamingPolicy /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/contoso/providers/Microsoft.Media/mediaservices/contosomedia/streamingPolicies/UserCreatedSecureStreamingPolicy 
 ```
 
 

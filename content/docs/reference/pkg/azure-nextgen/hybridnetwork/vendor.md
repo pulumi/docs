@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.hybridnetwork.Vendor resource wi
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Vendor resource.
+API Version: 2020-01-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var vendor = new AzureNextGen.HybridNetwork.V20200101Preview.Vendor("vendor", new AzureNextGen.HybridNetwork.V20200101Preview.VendorArgs
+        var vendor = new AzureNextGen.HybridNetwork..Vendor("vendor", new AzureNextGen.HybridNetwork..VendorArgs
         {
             VendorName = "TestVendor",
         });
@@ -44,7 +45,7 @@ class MyStack : Stack
 package main
 
 import (
-	hybridnetwork "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/hybridnetwork/v20200101preview"
+	hybridnetwork "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/hybridnetwork"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -70,7 +71,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-vendor = azure_nextgen.hybridnetwork.v20200101preview.Vendor("vendor", vendor_name="TestVendor")
+vendor = azure_nextgen.hybridnetwork.Vendor("vendor", vendor_name="TestVendor")
 
 ```
 
@@ -82,7 +83,7 @@ vendor = azure_nextgen.hybridnetwork.v20200101preview.Vendor("vendor", vendor_na
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const vendor = new azure_nextgen.hybridnetwork.v20200101preview.Vendor("vendor", {vendorName: "TestVendor"});
+const vendor = new azure_nextgen.hybridnetwork.Vendor("vendor", {vendorName: "TestVendor"});
 
 ```
 
@@ -371,7 +372,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#skus_csharp" style="color: inherit; text-decoration: inherit;">Skus</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Network.<wbr>Outputs.<wbr>Sub<wbr>Resource<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#subresourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Network..<wbr>Outputs.<wbr>Sub<wbr>Resource<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of IDs of the vendor skus offered by the vendor.{{% /md %}}</dd>
     <dt class="property-"
@@ -616,7 +617,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:hybridnetwork/v20200101preview:Vendor TestVendor /subscriptions/subid/providers/Microsoft.HybridNetwork/vendors/TestVendor 
+$ pulumi import azure-nextgen:hybridnetwork:Vendor TestVendor /subscriptions/subid/providers/Microsoft.HybridNetwork/vendors/TestVendor 
 ```
 
 

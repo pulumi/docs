@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.synapse.SqlPoolWorkloadGroup res
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Workload group operations for a sql pool
-Latest API Version: 2020-12-01.
+API Version: 2020-12-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var sqlPoolWorkloadGroup = new AzureNextGen.Synapse.Latest.SqlPoolWorkloadGroup("sqlPoolWorkloadGroup", new AzureNextGen.Synapse.Latest.SqlPoolWorkloadGroupArgs
+        var sqlPoolWorkloadGroup = new AzureNextGen.Synapse..SqlPoolWorkloadGroup("sqlPoolWorkloadGroup", new AzureNextGen.Synapse..SqlPoolWorkloadGroupArgs
         {
             Importance = "normal",
             MaxResourcePercent = 100,
@@ -54,7 +54,7 @@ class MyStack : Stack
 package main
 
 import (
-	synapse "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/synapse/latest"
+	synapse "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/synapse"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -89,7 +89,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-sql_pool_workload_group = azure_nextgen.synapse.latest.SqlPoolWorkloadGroup("sqlPoolWorkloadGroup",
+sql_pool_workload_group = azure_nextgen.synapse.SqlPoolWorkloadGroup("sqlPoolWorkloadGroup",
     importance="normal",
     max_resource_percent=100,
     max_resource_percent_per_request=3,
@@ -111,7 +111,7 @@ sql_pool_workload_group = azure_nextgen.synapse.latest.SqlPoolWorkloadGroup("sql
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const sqlPoolWorkloadGroup = new azure_nextgen.synapse.latest.SqlPoolWorkloadGroup("sqlPoolWorkloadGroup", {
+const sqlPoolWorkloadGroup = new azure_nextgen.synapse.SqlPoolWorkloadGroup("sqlPoolWorkloadGroup", {
     importance: "normal",
     maxResourcePercent: 100,
     maxResourcePercentPerRequest: 3,
@@ -138,7 +138,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var sqlPoolWorkloadGroup = new AzureNextGen.Synapse.Latest.SqlPoolWorkloadGroup("sqlPoolWorkloadGroup", new AzureNextGen.Synapse.Latest.SqlPoolWorkloadGroupArgs
+        var sqlPoolWorkloadGroup = new AzureNextGen.Synapse..SqlPoolWorkloadGroup("sqlPoolWorkloadGroup", new AzureNextGen.Synapse..SqlPoolWorkloadGroupArgs
         {
             MaxResourcePercent = 100,
             MinResourcePercent = 0,
@@ -162,7 +162,7 @@ class MyStack : Stack
 package main
 
 import (
-	synapse "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/synapse/latest"
+	synapse "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/synapse"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -194,7 +194,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-sql_pool_workload_group = azure_nextgen.synapse.latest.SqlPoolWorkloadGroup("sqlPoolWorkloadGroup",
+sql_pool_workload_group = azure_nextgen.synapse.SqlPoolWorkloadGroup("sqlPoolWorkloadGroup",
     max_resource_percent=100,
     min_resource_percent=0,
     min_resource_percent_per_request=3,
@@ -213,7 +213,7 @@ sql_pool_workload_group = azure_nextgen.synapse.latest.SqlPoolWorkloadGroup("sql
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const sqlPoolWorkloadGroup = new azure_nextgen.synapse.latest.SqlPoolWorkloadGroup("sqlPoolWorkloadGroup", {
+const sqlPoolWorkloadGroup = new azure_nextgen.synapse.SqlPoolWorkloadGroup("sqlPoolWorkloadGroup", {
     maxResourcePercent: 100,
     minResourcePercent: 0,
     minResourcePercentPerRequest: 3,
@@ -941,7 +941,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:synapse/latest:SqlPoolWorkloadGroup smallrc /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/sqlcrudtest-6852/providers/Microsoft.Synapse/workspaces/sqlcrudtest-2080/sqlPools/workloadGroups/smallrc 
+$ pulumi import azure-nextgen:synapse:SqlPoolWorkloadGroup smallrc /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/sqlcrudtest-6852/providers/Microsoft.Synapse/workspaces/sqlcrudtest-2080/sqlPools/workloadGroups/smallrc 
 ```
 
 

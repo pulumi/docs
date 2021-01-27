@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.migrate.Group resource with exam
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 A group created in a Migration project.
-Latest API Version: 2019-10-01.
+API Version: 2019-10-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var @group = new AzureNextGen.Migrate.Latest.Group("group", new AzureNextGen.Migrate.Latest.GroupArgs
+        var @group = new AzureNextGen.Migrate..Group("group", new AzureNextGen.Migrate..GroupArgs
         {
             ETag = "\"1e000c2c-0000-0d00-0000-5cdaa4190000\"",
             GroupName = "Group2",
@@ -48,7 +48,7 @@ class MyStack : Stack
 package main
 
 import (
-	migrate "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/migrate/latest"
+	migrate "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/migrate"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -77,7 +77,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-group = azure_nextgen.migrate.latest.Group("group",
+group = azure_nextgen.migrate.Group("group",
     e_tag="\"1e000c2c-0000-0d00-0000-5cdaa4190000\"",
     group_name="Group2",
     project_name="abgoyalWEselfhostb72bproject",
@@ -93,7 +93,7 @@ group = azure_nextgen.migrate.latest.Group("group",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const group = new azure_nextgen.migrate.latest.Group("group", {
+const group = new azure_nextgen.migrate.Group("group", {
     eTag: "\"1e000c2c-0000-0d00-0000-5cdaa4190000\"",
     groupName: "Group2",
     projectName: "abgoyalWEselfhostb72bproject",
@@ -486,7 +486,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#grouppropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Outputs.<wbr>Group<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#grouppropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate..<wbr>Outputs.<wbr>Group<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Properties of the group.{{% /md %}}</dd>
     <dt class="property-"
@@ -884,7 +884,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:migrate/latest:Group Group2 /subscriptions/6393a73f-8d55-47ef-b6dd-179b3e0c7910/resourceGroups/abgoyal-westeurope/providers/Microsoft.Migrate/assessmentprojects/abgoyalWEselfhostb72bproject/groups/Group2 
+$ pulumi import azure-nextgen:migrate:Group Group2 /subscriptions/6393a73f-8d55-47ef-b6dd-179b3e0c7910/resourceGroups/abgoyal-westeurope/providers/Microsoft.Migrate/assessmentprojects/abgoyalWEselfhostb72bproject/groups/Group2 
 ```
 
 

@@ -224,7 +224,7 @@ The following output properties are available:
 <a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#quantumworkspaceresponseidentity">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Quantum.<wbr>Outputs.<wbr>Quantum<wbr>Workspace<wbr>Response<wbr>Identity</a></span>
+        <span class="property-type"><a href="#quantumworkspaceresponseidentity">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Quantum..<wbr>Outputs.<wbr>Quantum<wbr>Workspace<wbr>Response<wbr>Identity</a></span>
     </dt>
     <dd>{{% md %}}Managed Identity information.{{% /md %}}</dd>
     <dt class="property-"
@@ -233,7 +233,7 @@ The following output properties are available:
 <a href="#providers_csharp" style="color: inherit; text-decoration: inherit;">Providers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#providerresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Quantum.<wbr>Outputs.<wbr>Provider<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#providerresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Quantum..<wbr>Outputs.<wbr>Provider<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of Providers selected for this Workspace{{% /md %}}</dd>
     <dt class="property-"

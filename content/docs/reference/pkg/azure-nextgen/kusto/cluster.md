@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.kusto.Cluster resource with exam
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Class representing a Kusto cluster.
-Latest API Version: 2020-09-18.
+API Version: 2020-09-18.
 
 {{% examples %}}
 ## Example Usage
@@ -27,19 +27,19 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var cluster = new AzureNextGen.Kusto.Latest.Cluster("cluster", new AzureNextGen.Kusto.Latest.ClusterArgs
+        var cluster = new AzureNextGen.Kusto..Cluster("cluster", new AzureNextGen.Kusto..ClusterArgs
         {
             ClusterName = "kustoclusterrptest4",
             EnableDoubleEncryption = false,
             EnablePurge = true,
             EnableStreamingIngest = true,
-            Identity = new AzureNextGen.Kusto.Latest.Inputs.IdentityArgs
+            Identity = new AzureNextGen.Kusto..Inputs.IdentityArgs
             {
                 Type = "SystemAssigned",
             },
             Location = "westus",
             ResourceGroupName = "kustorptest",
-            Sku = new AzureNextGen.Kusto.Latest.Inputs.AzureSkuArgs
+            Sku = new AzureNextGen.Kusto..Inputs.AzureSkuArgs
             {
                 Capacity = 2,
                 Name = "Standard_L8s",
@@ -60,7 +60,7 @@ class MyStack : Stack
 package main
 
 import (
-	kusto "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/kusto/latest"
+	kusto "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/kusto"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -99,17 +99,17 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-cluster = azure_nextgen.kusto.latest.Cluster("cluster",
+cluster = azure_nextgen.kusto.Cluster("cluster",
     cluster_name="kustoclusterrptest4",
     enable_double_encryption=False,
     enable_purge=True,
     enable_streaming_ingest=True,
-    identity=azure_nextgen.kusto.latest.IdentityArgs(
+    identity=azure_nextgen.kusto.IdentityArgs(
         type="SystemAssigned",
     ),
     location="westus",
     resource_group_name="kustorptest",
-    sku=azure_nextgen.kusto.latest.AzureSkuArgs(
+    sku=azure_nextgen.kusto.AzureSkuArgs(
         capacity=2,
         name="Standard_L8s",
         tier="Standard",
@@ -125,7 +125,7 @@ cluster = azure_nextgen.kusto.latest.Cluster("cluster",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const cluster = new azure_nextgen.kusto.latest.Cluster("cluster", {
+const cluster = new azure_nextgen.kusto.Cluster("cluster", {
     clusterName: "kustoclusterrptest4",
     enableDoubleEncryption: false,
     enablePurge: true,
@@ -362,7 +362,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azuresku">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Kusto.<wbr>Inputs.<wbr>Azure<wbr>Sku<wbr>Args</a></span>
+        <span class="property-type"><a href="#azuresku">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Kusto..<wbr>Inputs.<wbr>Azure<wbr>Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The SKU of the cluster.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -407,7 +407,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#enginetype_csharp" style="color: inherit; text-decoration: inherit;">Engine<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#enginetype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Kusto.<wbr>Engine<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#enginetype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Kusto..<wbr>Engine<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The engine type{{% /md %}}</dd>
     <dt class="property-optional"
@@ -416,7 +416,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identity">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Kusto.<wbr>Inputs.<wbr>Identity<wbr>Args</a></span>
+        <span class="property-type"><a href="#identity">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Kusto..<wbr>Inputs.<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The identity of the cluster, if configured.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -425,7 +425,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#keyvaultproperties_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Kusto.<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#keyvaultproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Kusto..<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}KeyVault properties for the cluster encryption.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -434,7 +434,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#optimizedautoscale_csharp" style="color: inherit; text-decoration: inherit;">Optimized<wbr>Autoscale</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#optimizedautoscale">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Kusto.<wbr>Inputs.<wbr>Optimized<wbr>Autoscale<wbr>Args</a></span>
+        <span class="property-type"><a href="#optimizedautoscale">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Kusto..<wbr>Inputs.<wbr>Optimized<wbr>Autoscale<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optimized auto scale definition.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -452,7 +452,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#trustedexternaltenants_csharp" style="color: inherit; text-decoration: inherit;">Trusted<wbr>External<wbr>Tenants</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trustedexternaltenant">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Kusto.<wbr>Inputs.<wbr>Trusted<wbr>External<wbr>Tenant<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#trustedexternaltenant">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Kusto..<wbr>Inputs.<wbr>Trusted<wbr>External<wbr>Tenant<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The cluster's external tenants.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -461,7 +461,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#virtualnetworkconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkconfiguration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Kusto.<wbr>Inputs.<wbr>Virtual<wbr>Network<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnetworkconfiguration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Kusto..<wbr>Inputs.<wbr>Virtual<wbr>Network<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Virtual network definition.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -960,7 +960,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#languageextensions_csharp" style="color: inherit; text-decoration: inherit;">Language<wbr>Extensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#languageextensionslistresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Kusto.<wbr>Outputs.<wbr>Language<wbr>Extensions<wbr>List<wbr>Response</a></span>
+        <span class="property-type"><a href="#languageextensionslistresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Kusto..<wbr>Outputs.<wbr>Language<wbr>Extensions<wbr>List<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}List of the cluster's language extensions.{{% /md %}}</dd>
     <dt class="property-"
@@ -1302,7 +1302,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#azureskuname">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Kusto.<wbr>Azure<wbr>Sku<wbr>Name</a></span>
+        <span class="property-type">string | <a href="#azureskuname">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Kusto..<wbr>Azure<wbr>Sku<wbr>Name</a></span>
     </dt>
     <dd>{{% md %}}SKU name.{{% /md %}}</dd>
     <dt class="property-required"
@@ -1311,7 +1311,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tier_csharp" style="color: inherit; text-decoration: inherit;">Tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#azureskutier">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Kusto.<wbr>Azure<wbr>Sku<wbr>Tier</a></span>
+        <span class="property-type">string | <a href="#azureskutier">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Kusto..<wbr>Azure<wbr>Sku<wbr>Tier</a></span>
     </dt>
     <dd>{{% md %}}SKU tier.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1844,7 +1844,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#identitytype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Kusto.<wbr>Identity<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#identitytype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Kusto..<wbr>Identity<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of managed identity used. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user-assigned identities. The type 'None' will remove all identities.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1969,7 +1969,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userassignedidentities_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Kusto.<wbr>Inputs.<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Kusto..<wbr>Inputs.<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}The list of user identities associated with the Kusto cluster. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd>
 </dl>
@@ -2666,7 +2666,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#languageextensionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Kusto.<wbr>Inputs.<wbr>Language<wbr>Extension<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#languageextensionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Kusto..<wbr>Inputs.<wbr>Language<wbr>Extension<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of language extensions.{{% /md %}}</dd>
 </dl>
@@ -3454,7 +3454,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:kusto/latest:Cluster KustoClusterRPTest4 /subscriptions/12345678-1234-1234-1234-123456789098/resourceGroups/kustorptest/providers/Microsoft.Kusto/Clusters/KustoClusterRPTest4 
+$ pulumi import azure-nextgen:kusto:Cluster KustoClusterRPTest4 /subscriptions/12345678-1234-1234-1234-123456789098/resourceGroups/kustorptest/providers/Microsoft.Kusto/Clusters/KustoClusterRPTest4 
 ```
 
 

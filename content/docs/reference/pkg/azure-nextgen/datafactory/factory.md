@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.datafactory.Factory resource wit
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Factory resource type.
-Latest API Version: 2018-06-01.
+API Version: 2018-06-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var factory = new AzureNextGen.DataFactory.Latest.Factory("factory", new AzureNextGen.DataFactory.Latest.FactoryArgs
+        var factory = new AzureNextGen.DataFactory..Factory("factory", new AzureNextGen.DataFactory..FactoryArgs
         {
             FactoryName = "exampleFactoryName",
             Location = "East US",
@@ -47,7 +47,7 @@ class MyStack : Stack
 package main
 
 import (
-	datafactory "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datafactory/latest"
+	datafactory "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datafactory"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -75,7 +75,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-factory = azure_nextgen.datafactory.latest.Factory("factory",
+factory = azure_nextgen.datafactory.Factory("factory",
     factory_name="exampleFactoryName",
     location="East US",
     resource_group_name="exampleResourceGroup")
@@ -90,7 +90,7 @@ factory = azure_nextgen.datafactory.latest.Factory("factory",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const factory = new azure_nextgen.datafactory.latest.Factory("factory", {
+const factory = new azure_nextgen.datafactory.Factory("factory", {
     factoryName: "exampleFactoryName",
     location: "East US",
     resourceGroupName: "exampleResourceGroup",
@@ -307,7 +307,7 @@ The Factory resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#encryption_csharp" style="color: inherit; text-decoration: inherit;">Encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionconfiguration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Encryption<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#encryptionconfiguration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Encryption<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties to enable Customer Managed Key for the factory.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -316,7 +316,7 @@ The Factory resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#globalparameters_csharp" style="color: inherit; text-decoration: inherit;">Global<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Global<wbr>Parameter<wbr>Specification<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Global<wbr>Parameter<wbr>Specification<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}List of parameters for factory.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -325,7 +325,7 @@ The Factory resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#factoryidentity">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Factory<wbr>Identity<wbr>Args</a></span>
+        <span class="property-type"><a href="#factoryidentity">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Factory<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Managed service identity of the factory.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -343,7 +343,7 @@ The Factory resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#publicnetworkaccess_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Network<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#publicnetworkaccess">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Public<wbr>Network<wbr>Access</a></span>
+        <span class="property-type">string | <a href="#publicnetworkaccess">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Public<wbr>Network<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}Whether or not public network access is allowed for the data factory.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -352,7 +352,7 @@ The Factory resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#repoconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Repo<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#factorygithubconfiguration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Factory<wbr>Git<wbr>Hub<wbr>Configuration<wbr>Args</a> | <a href="#factoryvstsconfiguration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Factory<wbr>VSTSConfiguration<wbr>Args</a></span>
+        <span class="property-type"><a href="#factorygithubconfiguration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Factory<wbr>Git<wbr>Hub<wbr>Configuration<wbr>Args</a> | <a href="#factoryvstsconfiguration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Factory<wbr>VSTSConfiguration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Git repo information of the factory.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1074,7 +1074,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cmkidentitydefinition">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>CMKIdentity<wbr>Definition<wbr>Args</a></span>
+        <span class="property-type"><a href="#cmkidentitydefinition">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>CMKIdentity<wbr>Definition<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}User assigned identity to use to authenticate to customer's key vault. If not provided Managed Service Identity will be used.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1244,7 +1244,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cmkidentitydefinitionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>CMKIdentity<wbr>Definition<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#cmkidentitydefinitionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>CMKIdentity<wbr>Definition<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}User assigned identity to use to authenticate to customer's key vault. If not provided Managed Service Identity will be used.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1880,7 +1880,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#factoryidentitytype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Factory<wbr>Identity<wbr>Type</a></span>
+        <span class="property-type"><a href="#factoryidentitytype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Factory<wbr>Identity<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The identity type.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2734,7 +2734,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#globalparametertype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Global<wbr>Parameter<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#globalparametertype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Global<wbr>Parameter<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Global Parameter type.{{% /md %}}</dd>
     <dt class="property-required"
@@ -3032,7 +3032,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:datafactory/latest:Factory exampleFactoryName /subscriptions/12345678-1234-1234-1234-12345678abc/resourceGroups/exampleResourceGroup/providers/Microsoft.DataFactory/factories/exampleFactoryName 
+$ pulumi import azure-nextgen:datafactory:Factory exampleFactoryName /subscriptions/12345678-1234-1234-1234-12345678abc/resourceGroups/exampleResourceGroup/providers/Microsoft.DataFactory/factories/exampleFactoryName 
 ```
 
 

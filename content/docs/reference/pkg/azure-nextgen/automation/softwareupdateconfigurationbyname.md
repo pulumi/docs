@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.automation.SoftwareUpdateConfigu
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Software update configuration properties.
-Latest API Version: 2019-06-01.
+API Version: 2019-06-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,13 +27,13 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var softwareUpdateConfigurationByName = new AzureNextGen.Automation.Latest.SoftwareUpdateConfigurationByName("softwareUpdateConfigurationByName", new AzureNextGen.Automation.Latest.SoftwareUpdateConfigurationByNameArgs
+        var softwareUpdateConfigurationByName = new AzureNextGen.Automation..SoftwareUpdateConfigurationByName("softwareUpdateConfigurationByName", new AzureNextGen.Automation..SoftwareUpdateConfigurationByNameArgs
         {
             AutomationAccountName = "myaccount",
             ResourceGroupName = "mygroup",
-            ScheduleInfo = new AzureNextGen.Automation.Latest.Inputs.SUCSchedulePropertiesArgs
+            ScheduleInfo = new AzureNextGen.Automation..Inputs.SUCSchedulePropertiesArgs
             {
-                AdvancedSchedule = new AzureNextGen.Automation.Latest.Inputs.AdvancedScheduleArgs
+                AdvancedSchedule = new AzureNextGen.Automation..Inputs.AdvancedScheduleArgs
                 {
                     WeekDays = 
                     {
@@ -48,13 +48,13 @@ class MyStack : Stack
                 TimeZone = "America/Los_Angeles",
             },
             SoftwareUpdateConfigurationName = "testpatch",
-            Tasks = new AzureNextGen.Automation.Latest.Inputs.SoftwareUpdateConfigurationTasksArgs
+            Tasks = new AzureNextGen.Automation..Inputs.SoftwareUpdateConfigurationTasksArgs
             {
-                PostTask = new AzureNextGen.Automation.Latest.Inputs.TaskPropertiesArgs
+                PostTask = new AzureNextGen.Automation..Inputs.TaskPropertiesArgs
                 {
                     Source = "GetCache",
                 },
-                PreTask = new AzureNextGen.Automation.Latest.Inputs.TaskPropertiesArgs
+                PreTask = new AzureNextGen.Automation..Inputs.TaskPropertiesArgs
                 {
                     Parameters = 
                     {
@@ -63,7 +63,7 @@ class MyStack : Stack
                     Source = "HelloWorld",
                 },
             },
-            UpdateConfiguration = new AzureNextGen.Automation.Latest.Inputs.UpdateConfigurationArgs
+            UpdateConfiguration = new AzureNextGen.Automation..Inputs.UpdateConfigurationArgs
             {
                 AzureVirtualMachines = 
                 {
@@ -78,11 +78,11 @@ class MyStack : Stack
                     "box2.contoso.com",
                 },
                 OperatingSystem = "Windows",
-                Targets = new AzureNextGen.Automation.Latest.Inputs.TargetPropertiesArgs
+                Targets = new AzureNextGen.Automation..Inputs.TargetPropertiesArgs
                 {
                     AzureQueries = 
                     {
-                        new AzureNextGen.Automation.Latest.Inputs.AzureQueryPropertiesArgs
+                        new AzureNextGen.Automation..Inputs.AzureQueryPropertiesArgs
                         {
                             Locations = 
                             {
@@ -94,7 +94,7 @@ class MyStack : Stack
                                 "/subscriptions/5ae68d89-69a4-454f-b5ce-e443cc4e0067/resourceGroups/myresources",
                                 "/subscriptions/5ae68d89-69a4-454f-b5ce-e443cc4e0067",
                             },
-                            TagSettings = new AzureNextGen.Automation.Latest.Inputs.TagSettingsPropertiesArgs
+                            TagSettings = new AzureNextGen.Automation..Inputs.TagSettingsPropertiesArgs
                             {
                                 FilterOperator = "All",
                                 Tags = 
@@ -117,19 +117,19 @@ class MyStack : Stack
                     },
                     NonAzureQueries = 
                     {
-                        new AzureNextGen.Automation.Latest.Inputs.NonAzureQueryPropertiesArgs
+                        new AzureNextGen.Automation..Inputs.NonAzureQueryPropertiesArgs
                         {
                             FunctionAlias = "SavedSearch1",
                             WorkspaceId = "WorkspaceId1",
                         },
-                        new AzureNextGen.Automation.Latest.Inputs.NonAzureQueryPropertiesArgs
+                        new AzureNextGen.Automation..Inputs.NonAzureQueryPropertiesArgs
                         {
                             FunctionAlias = "SavedSearch2",
                             WorkspaceId = "WorkspaceId2",
                         },
                     },
                 },
-                Windows = new AzureNextGen.Automation.Latest.Inputs.WindowsPropertiesArgs
+                Windows = new AzureNextGen.Automation..Inputs.WindowsPropertiesArgs
                 {
                     ExcludedKbNumbers = 
                     {
@@ -155,7 +155,7 @@ class MyStack : Stack
 package main
 
 import (
-	automation "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/automation/latest"
+	automation "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/automation"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -267,11 +267,11 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-software_update_configuration_by_name = azure_nextgen.automation.latest.SoftwareUpdateConfigurationByName("softwareUpdateConfigurationByName",
+software_update_configuration_by_name = azure_nextgen.automation.SoftwareUpdateConfigurationByName("softwareUpdateConfigurationByName",
     automation_account_name="myaccount",
     resource_group_name="mygroup",
-    schedule_info=azure_nextgen.automation.latest.SUCSchedulePropertiesArgs(
-        advanced_schedule=azure_nextgen.automation.latest.AdvancedScheduleArgs(
+    schedule_info=azure_nextgen.automation.SUCSchedulePropertiesArgs(
+        advanced_schedule=azure_nextgen.automation.AdvancedScheduleArgs(
             week_days=[
                 "Monday",
                 "Thursday",
@@ -284,18 +284,18 @@ software_update_configuration_by_name = azure_nextgen.automation.latest.Software
         time_zone="America/Los_Angeles",
     ),
     software_update_configuration_name="testpatch",
-    tasks=azure_nextgen.automation.latest.SoftwareUpdateConfigurationTasksArgs(
-        post_task=azure_nextgen.automation.latest.TaskPropertiesArgs(
+    tasks=azure_nextgen.automation.SoftwareUpdateConfigurationTasksArgs(
+        post_task=azure_nextgen.automation.TaskPropertiesArgs(
             source="GetCache",
         ),
-        pre_task=azure_nextgen.automation.latest.TaskPropertiesArgs(
+        pre_task=azure_nextgen.automation.TaskPropertiesArgs(
             parameters={
                 "COMPUTERNAME": "Computer1",
             },
             source="HelloWorld",
         ),
     ),
-    update_configuration=azure_nextgen.automation.latest.UpdateConfigurationArgs(
+    update_configuration=azure_nextgen.automation.UpdateConfigurationArgs(
         azure_virtual_machines=[
             "/subscriptions/5ae68d89-69a4-454f-b5ce-e443cc4e0067/resourceGroups/myresources/providers/Microsoft.Compute/virtualMachines/vm-01",
             "/subscriptions/5ae68d89-69a4-454f-b5ce-e443cc4e0067/resourceGroups/myresources/providers/Microsoft.Compute/virtualMachines/vm-02",
@@ -307,8 +307,8 @@ software_update_configuration_by_name = azure_nextgen.automation.latest.Software
             "box2.contoso.com",
         ],
         operating_system="Windows",
-        targets=azure_nextgen.automation.latest.TargetPropertiesArgs(
-            azure_queries=[azure_nextgen.automation.latest.AzureQueryPropertiesArgs(
+        targets=azure_nextgen.automation.TargetPropertiesArgs(
+            azure_queries=[azure_nextgen.automation.AzureQueryPropertiesArgs(
                 locations=[
                     "Japan East",
                     "UK South",
@@ -317,7 +317,7 @@ software_update_configuration_by_name = azure_nextgen.automation.latest.Software
                     "/subscriptions/5ae68d89-69a4-454f-b5ce-e443cc4e0067/resourceGroups/myresources",
                     "/subscriptions/5ae68d89-69a4-454f-b5ce-e443cc4e0067",
                 ],
-                tag_settings=azure_nextgen.automation.latest.TagSettingsPropertiesArgs(
+                tag_settings=azure_nextgen.automation.TagSettingsPropertiesArgs(
                     filter_operator="All",
                     tags={
                         "tag1": [
@@ -334,17 +334,17 @@ software_update_configuration_by_name = azure_nextgen.automation.latest.Software
                 ),
             )],
             non_azure_queries=[
-                azure_nextgen.automation.latest.NonAzureQueryPropertiesArgs(
+                azure_nextgen.automation.NonAzureQueryPropertiesArgs(
                     function_alias="SavedSearch1",
                     workspace_id="WorkspaceId1",
                 ),
-                azure_nextgen.automation.latest.NonAzureQueryPropertiesArgs(
+                azure_nextgen.automation.NonAzureQueryPropertiesArgs(
                     function_alias="SavedSearch2",
                     workspace_id="WorkspaceId2",
                 ),
             ],
         ),
-        windows=azure_nextgen.automation.latest.WindowsPropertiesArgs(
+        windows=azure_nextgen.automation.WindowsPropertiesArgs(
             excluded_kb_numbers=[
                 "168934",
                 "168973",
@@ -364,7 +364,7 @@ software_update_configuration_by_name = azure_nextgen.automation.latest.Software
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const softwareUpdateConfigurationByName = new azure_nextgen.automation.latest.SoftwareUpdateConfigurationByName("softwareUpdateConfigurationByName", {
+const softwareUpdateConfigurationByName = new azure_nextgen.automation.SoftwareUpdateConfigurationByName("softwareUpdateConfigurationByName", {
     automationAccountName: "myaccount",
     resourceGroupName: "mygroup",
     scheduleInfo: {
@@ -663,7 +663,7 @@ The SoftwareUpdateConfigurationByName resource accepts the following [input]({{<
 <a href="#scheduleinfo_csharp" style="color: inherit; text-decoration: inherit;">Schedule<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sucscheduleproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automation.<wbr>Inputs.<wbr>SUCSchedule<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#sucscheduleproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automation..<wbr>Inputs.<wbr>SUCSchedule<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Schedule information for the Software update configuration{{% /md %}}</dd>
     <dt class="property-required"
@@ -681,7 +681,7 @@ The SoftwareUpdateConfigurationByName resource accepts the following [input]({{<
 <a href="#updateconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Update<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#updateconfiguration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automation.<wbr>Inputs.<wbr>Update<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#updateconfiguration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automation..<wbr>Inputs.<wbr>Update<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}update specific properties for the Software update configuration{{% /md %}}</dd>
     <dt class="property-optional"
@@ -690,7 +690,7 @@ The SoftwareUpdateConfigurationByName resource accepts the following [input]({{<
 <a href="#error_csharp" style="color: inherit; text-decoration: inherit;">Error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#errorresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automation.<wbr>Inputs.<wbr>Error<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#errorresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automation..<wbr>Inputs.<wbr>Error<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Details of provisioning error{{% /md %}}</dd>
     <dt class="property-optional"
@@ -699,7 +699,7 @@ The SoftwareUpdateConfigurationByName resource accepts the following [input]({{<
 <a href="#tasks_csharp" style="color: inherit; text-decoration: inherit;">Tasks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#softwareupdateconfigurationtasks">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automation.<wbr>Inputs.<wbr>Software<wbr>Update<wbr>Configuration<wbr>Tasks<wbr>Args</a></span>
+        <span class="property-type"><a href="#softwareupdateconfigurationtasks">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automation..<wbr>Inputs.<wbr>Software<wbr>Update<wbr>Configuration<wbr>Tasks<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Tasks information for the Software update configuration.{{% /md %}}</dd>
 </dl>
@@ -1261,7 +1261,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#monthlyoccurrences_csharp" style="color: inherit; text-decoration: inherit;">Monthly<wbr>Occurrences</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#advancedschedulemonthlyoccurrence">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automation.<wbr>Inputs.<wbr>Advanced<wbr>Schedule<wbr>Monthly<wbr>Occurrence<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#advancedschedulemonthlyoccurrence">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automation..<wbr>Inputs.<wbr>Advanced<wbr>Schedule<wbr>Monthly<wbr>Occurrence<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Occurrences of days within a month.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1386,7 +1386,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#day_csharp" style="color: inherit; text-decoration: inherit;">Day</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#scheduleday">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automation.<wbr>Schedule<wbr>Day</a></span>
+        <span class="property-type">string | <a href="#scheduleday">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automation..<wbr>Schedule<wbr>Day</a></span>
     </dt>
     <dd>{{% md %}}Day of the occurrence. Must be one of monday, tuesday, wednesday, thursday, friday, saturday, sunday.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1591,7 +1591,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#monthlyoccurrences_csharp" style="color: inherit; text-decoration: inherit;">Monthly<wbr>Occurrences</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#advancedschedulemonthlyoccurrenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automation.<wbr>Inputs.<wbr>Advanced<wbr>Schedule<wbr>Monthly<wbr>Occurrence<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#advancedschedulemonthlyoccurrenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automation..<wbr>Inputs.<wbr>Advanced<wbr>Schedule<wbr>Monthly<wbr>Occurrence<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Occurrences of days within a month.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1734,7 +1734,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tagsettings_csharp" style="color: inherit; text-decoration: inherit;">Tag<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tagsettingsproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automation.<wbr>Inputs.<wbr>Tag<wbr>Settings<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#tagsettingsproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automation..<wbr>Inputs.<wbr>Tag<wbr>Settings<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Tag settings for the VM.{{% /md %}}</dd>
 </dl>
@@ -1868,7 +1868,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tagsettings_csharp" style="color: inherit; text-decoration: inherit;">Tag<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tagsettingspropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automation.<wbr>Inputs.<wbr>Tag<wbr>Settings<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#tagsettingspropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automation..<wbr>Inputs.<wbr>Tag<wbr>Settings<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Tag settings for the VM.{{% /md %}}</dd>
 </dl>
@@ -2189,7 +2189,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#includedpackageclassifications_csharp" style="color: inherit; text-decoration: inherit;">Included<wbr>Package<wbr>Classifications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#linuxupdateclasses">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automation.<wbr>Linux<wbr>Update<wbr>Classes</a></span>
+        <span class="property-type">string | <a href="#linuxupdateclasses">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automation..<wbr>Linux<wbr>Update<wbr>Classes</a></span>
     </dt>
     <dd>{{% md %}}Update classifications included in the software update configuration.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2808,7 +2808,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#advancedschedule_csharp" style="color: inherit; text-decoration: inherit;">Advanced<wbr>Schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#advancedschedule">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automation.<wbr>Inputs.<wbr>Advanced<wbr>Schedule<wbr>Args</a></span>
+        <span class="property-type"><a href="#advancedschedule">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automation..<wbr>Inputs.<wbr>Advanced<wbr>Schedule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the advanced schedule.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2853,7 +2853,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#frequency_csharp" style="color: inherit; text-decoration: inherit;">Frequency</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#schedulefrequency">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automation.<wbr>Schedule<wbr>Frequency</a></span>
+        <span class="property-type">string | <a href="#schedulefrequency">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automation..<wbr>Schedule<wbr>Frequency</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the frequency of the schedule.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3311,7 +3311,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#advancedschedule_csharp" style="color: inherit; text-decoration: inherit;">Advanced<wbr>Schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#advancedscheduleresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automation.<wbr>Inputs.<wbr>Advanced<wbr>Schedule<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#advancedscheduleresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automation..<wbr>Inputs.<wbr>Advanced<wbr>Schedule<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the advanced schedule.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3980,7 +3980,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#posttask_csharp" style="color: inherit; text-decoration: inherit;">Post<wbr>Task</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#taskproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automation.<wbr>Inputs.<wbr>Task<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#taskproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automation..<wbr>Inputs.<wbr>Task<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Post task properties.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3989,7 +3989,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pretask_csharp" style="color: inherit; text-decoration: inherit;">Pre<wbr>Task</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#taskproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automation.<wbr>Inputs.<wbr>Task<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#taskproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automation..<wbr>Inputs.<wbr>Task<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Pre task properties.{{% /md %}}</dd>
 </dl>
@@ -4078,7 +4078,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#posttask_csharp" style="color: inherit; text-decoration: inherit;">Post<wbr>Task</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#taskpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automation.<wbr>Inputs.<wbr>Task<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#taskpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automation..<wbr>Inputs.<wbr>Task<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Post task properties.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4087,7 +4087,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pretask_csharp" style="color: inherit; text-decoration: inherit;">Pre<wbr>Task</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#taskpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automation.<wbr>Inputs.<wbr>Task<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#taskpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automation..<wbr>Inputs.<wbr>Task<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Pre task properties.{{% /md %}}</dd>
 </dl>
@@ -4214,7 +4214,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filteroperator_csharp" style="color: inherit; text-decoration: inherit;">Filter<wbr>Operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tagoperators">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automation.<wbr>Tag<wbr>Operators</a></span>
+        <span class="property-type"><a href="#tagoperators">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automation..<wbr>Tag<wbr>Operators</a></span>
     </dt>
     <dd>{{% md %}}Filter VMs by Any or All specified tags.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4410,7 +4410,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azurequeries_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Queries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurequeryproperties">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automation.<wbr>Inputs.<wbr>Azure<wbr>Query<wbr>Properties<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#azurequeryproperties">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automation..<wbr>Inputs.<wbr>Azure<wbr>Query<wbr>Properties<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of Azure queries in the software update configuration.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4419,7 +4419,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nonazurequeries_csharp" style="color: inherit; text-decoration: inherit;">Non<wbr>Azure<wbr>Queries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nonazurequeryproperties">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automation.<wbr>Inputs.<wbr>Non<wbr>Azure<wbr>Query<wbr>Properties<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#nonazurequeryproperties">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automation..<wbr>Inputs.<wbr>Non<wbr>Azure<wbr>Query<wbr>Properties<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of non Azure queries in the software update configuration.{{% /md %}}</dd>
 </dl>
@@ -4508,7 +4508,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azurequeries_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Queries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurequerypropertiesresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automation.<wbr>Inputs.<wbr>Azure<wbr>Query<wbr>Properties<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#azurequerypropertiesresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automation..<wbr>Inputs.<wbr>Azure<wbr>Query<wbr>Properties<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of Azure queries in the software update configuration.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4517,7 +4517,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nonazurequeries_csharp" style="color: inherit; text-decoration: inherit;">Non<wbr>Azure<wbr>Queries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nonazurequerypropertiesresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automation.<wbr>Inputs.<wbr>Non<wbr>Azure<wbr>Query<wbr>Properties<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#nonazurequerypropertiesresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automation..<wbr>Inputs.<wbr>Non<wbr>Azure<wbr>Query<wbr>Properties<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of non Azure queries in the software update configuration.{{% /md %}}</dd>
 </dl>
@@ -4802,7 +4802,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operatingsystem_csharp" style="color: inherit; text-decoration: inherit;">Operating<wbr>System</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#operatingsystemtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automation.<wbr>Operating<wbr>System<wbr>Type</a></span>
+        <span class="property-type"><a href="#operatingsystemtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automation..<wbr>Operating<wbr>System<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}operating system of target machines{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4829,7 +4829,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linux_csharp" style="color: inherit; text-decoration: inherit;">Linux</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linuxproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automation.<wbr>Inputs.<wbr>Linux<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#linuxproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automation..<wbr>Inputs.<wbr>Linux<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linux specific update configuration.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4847,7 +4847,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#targets_csharp" style="color: inherit; text-decoration: inherit;">Targets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#targetproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automation.<wbr>Inputs.<wbr>Target<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#targetproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automation..<wbr>Inputs.<wbr>Target<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Group targets for the software update configuration.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4856,7 +4856,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#windows_csharp" style="color: inherit; text-decoration: inherit;">Windows</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#windowsproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automation.<wbr>Inputs.<wbr>Windows<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#windowsproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automation..<wbr>Inputs.<wbr>Windows<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Windows specific update configuration.{{% /md %}}</dd>
 </dl>
@@ -5107,7 +5107,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linux_csharp" style="color: inherit; text-decoration: inherit;">Linux</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linuxpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automation.<wbr>Inputs.<wbr>Linux<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#linuxpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automation..<wbr>Inputs.<wbr>Linux<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linux specific update configuration.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -5125,7 +5125,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#targets_csharp" style="color: inherit; text-decoration: inherit;">Targets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#targetpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automation.<wbr>Inputs.<wbr>Target<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#targetpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automation..<wbr>Inputs.<wbr>Target<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Group targets for the software update configuration.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -5134,7 +5134,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#windows_csharp" style="color: inherit; text-decoration: inherit;">Windows</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#windowspropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automation.<wbr>Inputs.<wbr>Windows<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#windowspropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automation..<wbr>Inputs.<wbr>Windows<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Windows specific update configuration.{{% /md %}}</dd>
 </dl>
@@ -5376,7 +5376,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#includedupdateclassifications_csharp" style="color: inherit; text-decoration: inherit;">Included<wbr>Update<wbr>Classifications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#windowsupdateclasses">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automation.<wbr>Windows<wbr>Update<wbr>Classes</a></span>
+        <span class="property-type">string | <a href="#windowsupdateclasses">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automation..<wbr>Windows<wbr>Update<wbr>Classes</a></span>
     </dt>
     <dd>{{% md %}}Update classification included in the software update configuration. A comma separated string with required values{{% /md %}}</dd>
     <dt class="property-optional"
@@ -5786,7 +5786,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:automation/latest:SoftwareUpdateConfigurationByName testpatch /subscriptions/51766542-3ed7-4a72-a187-0c8ab644ddab/resourceGroups/mygroup/providers/Microsoft.Automation/automationAccounts/myaccount/softwareUpdateConfigurations/testpatch 
+$ pulumi import azure-nextgen:automation:SoftwareUpdateConfigurationByName testpatch /subscriptions/51766542-3ed7-4a72-a187-0c8ab644ddab/resourceGroups/mygroup/providers/Microsoft.Automation/automationAccounts/myaccount/softwareUpdateConfigurations/testpatch 
 ```
 
 

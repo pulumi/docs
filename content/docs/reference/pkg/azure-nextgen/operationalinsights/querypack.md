@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.operationalinsights.QueryPack re
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 An Log Analytics QueryPack definition.
+API Version: 2019-09-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var queryPack = new AzureNextGen.OperationalInsights.V20190901Preview.QueryPack("queryPack", new AzureNextGen.OperationalInsights.V20190901Preview.QueryPackArgs
+        var queryPack = new AzureNextGen.OperationalInsights..QueryPack("queryPack", new AzureNextGen.OperationalInsights..QueryPackArgs
         {
             Location = "South Central US",
             QueryPackName = "my-querypack",
@@ -46,7 +47,7 @@ class MyStack : Stack
 package main
 
 import (
-	operationalinsights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/operationalinsights/v20190901preview"
+	operationalinsights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/operationalinsights"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -74,7 +75,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-query_pack = azure_nextgen.operationalinsights.v20190901preview.QueryPack("queryPack",
+query_pack = azure_nextgen.operationalinsights.QueryPack("queryPack",
     location="South Central US",
     query_pack_name="my-querypack",
     resource_group_name="my-resource-group")
@@ -89,7 +90,7 @@ query_pack = azure_nextgen.operationalinsights.v20190901preview.QueryPack("query
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const queryPack = new azure_nextgen.operationalinsights.v20190901preview.QueryPack("queryPack", {
+const queryPack = new azure_nextgen.operationalinsights.QueryPack("queryPack", {
     location: "South Central US",
     queryPackName: "my-querypack",
     resourceGroupName: "my-resource-group",
@@ -109,7 +110,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var queryPack = new AzureNextGen.OperationalInsights.V20190901Preview.QueryPack("queryPack", new AzureNextGen.OperationalInsights.V20190901Preview.QueryPackArgs
+        var queryPack = new AzureNextGen.OperationalInsights..QueryPack("queryPack", new AzureNextGen.OperationalInsights..QueryPackArgs
         {
             Location = "South Central US",
             QueryPackName = "my-querypack",
@@ -133,7 +134,7 @@ class MyStack : Stack
 package main
 
 import (
-	operationalinsights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/operationalinsights/v20190901preview"
+	operationalinsights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/operationalinsights"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -164,7 +165,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-query_pack = azure_nextgen.operationalinsights.v20190901preview.QueryPack("queryPack",
+query_pack = azure_nextgen.operationalinsights.QueryPack("queryPack",
     location="South Central US",
     query_pack_name="my-querypack",
     resource_group_name="my-resource-group",
@@ -182,7 +183,7 @@ query_pack = azure_nextgen.operationalinsights.v20190901preview.QueryPack("query
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const queryPack = new azure_nextgen.operationalinsights.v20190901preview.QueryPack("queryPack", {
+const queryPack = new azure_nextgen.operationalinsights.QueryPack("queryPack", {
     location: "South Central US",
     queryPackName: "my-querypack",
     resourceGroupName: "my-resource-group",
@@ -837,7 +838,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:operationalinsights/v20190901preview:QueryPack my-querypack /subscriptions/86dc51d3-92ed-4d7e-947a-775ea79b4919/resourceGroups/my-resource-group/providers/microsoft.operationalinsights/queryPacks/my-querypack 
+$ pulumi import azure-nextgen:operationalinsights:QueryPack my-querypack /subscriptions/86dc51d3-92ed-4d7e-947a-775ea79b4919/resourceGroups/my-resource-group/providers/microsoft.operationalinsights/queryPacks/my-querypack 
 ```
 
 

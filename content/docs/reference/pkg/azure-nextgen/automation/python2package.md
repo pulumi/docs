@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.automation.Python2Package resour
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Definition of the module type.
-Latest API Version: 2019-06-01.
+API Version: 2019-06-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,12 +27,12 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var python2Package = new AzureNextGen.Automation.Latest.Python2Package("python2Package", new AzureNextGen.Automation.Latest.Python2PackageArgs
+        var python2Package = new AzureNextGen.Automation..Python2Package("python2Package", new AzureNextGen.Automation..Python2PackageArgs
         {
             AutomationAccountName = "myAutomationAccount33",
-            ContentLink = new AzureNextGen.Automation.Latest.Inputs.ContentLinkArgs
+            ContentLink = new AzureNextGen.Automation..Inputs.ContentLinkArgs
             {
-                ContentHash = new AzureNextGen.Automation.Latest.Inputs.ContentHashArgs
+                ContentHash = new AzureNextGen.Automation..Inputs.ContentHashArgs
                 {
                     Algorithm = "sha265",
                     Value = "07E108A962B81DD9C9BAA89BB47C0F6EE52B29E83758B07795E408D258B2B87A",
@@ -58,7 +58,7 @@ class MyStack : Stack
 package main
 
 import (
-	automation "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/automation/latest"
+	automation "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/automation"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -95,10 +95,10 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-python2_package = azure_nextgen.automation.latest.Python2Package("python2Package",
+python2_package = azure_nextgen.automation.Python2Package("python2Package",
     automation_account_name="myAutomationAccount33",
-    content_link=azure_nextgen.automation.latest.ContentLinkArgs(
-        content_hash=azure_nextgen.automation.latest.ContentHashArgs(
+    content_link=azure_nextgen.automation.ContentLinkArgs(
+        content_hash=azure_nextgen.automation.ContentHashArgs(
             algorithm="sha265",
             value="07E108A962B81DD9C9BAA89BB47C0F6EE52B29E83758B07795E408D258B2B87A",
         ),
@@ -119,7 +119,7 @@ python2_package = azure_nextgen.automation.latest.Python2Package("python2Package
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const python2Package = new azure_nextgen.automation.latest.Python2Package("python2Package", {
+const python2Package = new azure_nextgen.automation.Python2Package("python2Package", {
     automationAccountName: "myAutomationAccount33",
     contentLink: {
         contentHash: {
@@ -336,7 +336,7 @@ The Python2Package resource accepts the following [input]({{< relref "/docs/intr
 <a href="#contentlink_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentlink">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automation.<wbr>Inputs.<wbr>Content<wbr>Link<wbr>Args</a></span>
+        <span class="property-type"><a href="#contentlink">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automation..<wbr>Inputs.<wbr>Content<wbr>Link<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the module content link.{{% /md %}}</dd>
     <dt class="property-required"
@@ -592,7 +592,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#error_csharp" style="color: inherit; text-decoration: inherit;">Error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#moduleerrorinforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automation.<wbr>Outputs.<wbr>Module<wbr>Error<wbr>Info<wbr>Response</a></span>
+        <span class="property-type"><a href="#moduleerrorinforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automation..<wbr>Outputs.<wbr>Module<wbr>Error<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the error info of the module.{{% /md %}}</dd>
     <dt class="property-"
@@ -1310,7 +1310,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#contenthash_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Hash</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contenthash">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automation.<wbr>Inputs.<wbr>Content<wbr>Hash<wbr>Args</a></span>
+        <span class="property-type"><a href="#contenthash">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automation..<wbr>Inputs.<wbr>Content<wbr>Hash<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the hash.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1444,7 +1444,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#contenthash_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Hash</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contenthashresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automation.<wbr>Inputs.<wbr>Content<wbr>Hash<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#contenthashresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automation..<wbr>Inputs.<wbr>Content<wbr>Hash<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the hash.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1670,7 +1670,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:automation/latest:Python2Package OmsCompositeResources /subscriptions/subid/resourceGroups/rg/providers/Microsoft.Automation/automationAccounts/myAutomationAccount33/python2Packages/OmsCompositeResources 
+$ pulumi import azure-nextgen:automation:Python2Package OmsCompositeResources /subscriptions/subid/resourceGroups/rg/providers/Microsoft.Automation/automationAccounts/myAutomationAccount33/python2Packages/OmsCompositeResources 
 ```
 
 

@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.subscription.Alias resource with
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Subscription Information with the alias.
-Latest API Version: 2020-09-01.
+API Version: 2020-09-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,10 +27,10 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var @alias = new AzureNextGen.Subscription.Latest.Alias("alias", new AzureNextGen.Subscription.Latest.AliasArgs
+        var @alias = new AzureNextGen.Subscription..Alias("alias", new AzureNextGen.Subscription..AliasArgs
         {
             AliasName = "aliasForNewSub",
-            Properties = new AzureNextGen.Subscription.Latest.Inputs.PutAliasRequestPropertiesArgs
+            Properties = new AzureNextGen.Subscription..Inputs.PutAliasRequestPropertiesArgs
             {
                 BillingScope = "/providers/Microsoft.Billing/billingAccounts/e879cf0f-2b4d-5431-109a-f72fc9868693:024cabf4-7321-4cf9-be59-df0c77ca51de_2019-05-31/billingProfiles/PE2Q-NOIT-BG7-TGB/invoiceSections/MTT4-OBS7-PJA-TGB",
                 DisplayName = "Contoso MCA subscription",
@@ -51,7 +51,7 @@ class MyStack : Stack
 package main
 
 import (
-	subscription "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/subscription/latest"
+	subscription "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/subscription"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -82,9 +82,9 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-alias = azure_nextgen.subscription.latest.Alias("alias",
+alias = azure_nextgen.subscription.Alias("alias",
     alias_name="aliasForNewSub",
-    properties=azure_nextgen.subscription.latest.PutAliasRequestPropertiesArgs(
+    properties=azure_nextgen.subscription.PutAliasRequestPropertiesArgs(
         billing_scope="/providers/Microsoft.Billing/billingAccounts/e879cf0f-2b4d-5431-109a-f72fc9868693:024cabf4-7321-4cf9-be59-df0c77ca51de_2019-05-31/billingProfiles/PE2Q-NOIT-BG7-TGB/invoiceSections/MTT4-OBS7-PJA-TGB",
         display_name="Contoso MCA subscription",
         workload="Production",
@@ -100,7 +100,7 @@ alias = azure_nextgen.subscription.latest.Alias("alias",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const alias = new azure_nextgen.subscription.latest.Alias("alias", {
+const alias = new azure_nextgen.subscription.Alias("alias", {
     aliasName: "aliasForNewSub",
     properties: {
         billingScope: "/providers/Microsoft.Billing/billingAccounts/e879cf0f-2b4d-5431-109a-f72fc9868693:024cabf4-7321-4cf9-be59-df0c77ca51de_2019-05-31/billingProfiles/PE2Q-NOIT-BG7-TGB/invoiceSections/MTT4-OBS7-PJA-TGB",
@@ -311,7 +311,7 @@ The Alias resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#putaliasrequestproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Subscription.<wbr>Inputs.<wbr>Put<wbr>Alias<wbr>Request<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#putaliasrequestproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Subscription..<wbr>Inputs.<wbr>Put<wbr>Alias<wbr>Request<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Put alias request properties.{{% /md %}}</dd>
 </dl>
@@ -585,7 +585,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workload_csharp" style="color: inherit; text-decoration: inherit;">Workload</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#workload">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Subscription.<wbr>Workload</a></span>
+        <span class="property-type">string | <a href="#workload">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Subscription..<wbr>Workload</a></span>
     </dt>
     <dd>{{% md %}}The workload type of the subscription. It can be either Production or DevTest.{{% /md %}}</dd>
 </dl>
@@ -885,7 +885,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:subscription/latest:Alias aliasForNewSub /providers/Microsoft.Subscription/aliases/aliasForNewSub 
+$ pulumi import azure-nextgen:subscription:Alias aliasForNewSub /providers/Microsoft.Subscription/aliases/aliasForNewSub 
 ```
 
 

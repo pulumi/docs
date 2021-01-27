@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.containerservice.PrivateEndpoint
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 A private endpoint connection
-Latest API Version: 2020-12-01.
+API Version: 2020-12-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,10 +27,10 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var privateEndpointConnection = new AzureNextGen.ContainerService.Latest.PrivateEndpointConnection("privateEndpointConnection", new AzureNextGen.ContainerService.Latest.PrivateEndpointConnectionArgs
+        var privateEndpointConnection = new AzureNextGen.ContainerService..PrivateEndpointConnection("privateEndpointConnection", new AzureNextGen.ContainerService..PrivateEndpointConnectionArgs
         {
             PrivateEndpointConnectionName = "privateendpointconnection1",
-            PrivateLinkServiceConnectionState = new AzureNextGen.ContainerService.Latest.Inputs.PrivateLinkServiceConnectionStateArgs
+            PrivateLinkServiceConnectionState = new AzureNextGen.ContainerService..Inputs.PrivateLinkServiceConnectionStateArgs
             {
                 Status = "Approved",
             },
@@ -51,7 +51,7 @@ class MyStack : Stack
 package main
 
 import (
-	containerservice "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/containerservice/latest"
+	containerservice "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/containerservice"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -82,9 +82,9 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-private_endpoint_connection = azure_nextgen.containerservice.latest.PrivateEndpointConnection("privateEndpointConnection",
+private_endpoint_connection = azure_nextgen.containerservice.PrivateEndpointConnection("privateEndpointConnection",
     private_endpoint_connection_name="privateendpointconnection1",
-    private_link_service_connection_state=azure_nextgen.containerservice.latest.PrivateLinkServiceConnectionStateArgs(
+    private_link_service_connection_state=azure_nextgen.containerservice.PrivateLinkServiceConnectionStateArgs(
         status="Approved",
     ),
     resource_group_name="rg1",
@@ -100,7 +100,7 @@ private_endpoint_connection = azure_nextgen.containerservice.latest.PrivateEndpo
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const privateEndpointConnection = new azure_nextgen.containerservice.latest.PrivateEndpointConnection("privateEndpointConnection", {
+const privateEndpointConnection = new azure_nextgen.containerservice.PrivateEndpointConnection("privateEndpointConnection", {
     privateEndpointConnectionName: "privateendpointconnection1",
     privateLinkServiceConnectionState: {
         status: "Approved",
@@ -311,7 +311,7 @@ The PrivateEndpointConnection resource accepts the following [input]({{< relref 
 <a href="#privatelinkserviceconnectionstate_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkserviceconnectionstate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Args</a></span>
+        <span class="property-type"><a href="#privatelinkserviceconnectionstate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service..<wbr>Inputs.<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A collection of information about the state of the connection between service consumer and provider.{{% /md %}}</dd>
     <dt class="property-required"
@@ -338,7 +338,7 @@ The PrivateEndpointConnection resource accepts the following [input]({{< relref 
 <a href="#privateendpoint_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpoint">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Args</a></span>
+        <span class="property-type"><a href="#privateendpoint">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service..<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The resource of private endpoint.{{% /md %}}</dd>
 </dl>
@@ -880,7 +880,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#connectionstatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Connection<wbr>Status</a></span>
+        <span class="property-type">string | <a href="#connectionstatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service..<wbr>Connection<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}The private link service connection status.{{% /md %}}</dd>
 </dl>
@@ -1061,7 +1061,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:containerservice/latest:PrivateEndpointConnection privateendpointconnection1 /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ContainerService/managedClusters/{resourceName}/privateEndpointConnections/{privateEndpointConnectionName} 
+$ pulumi import azure-nextgen:containerservice:PrivateEndpointConnection privateendpointconnection1 /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ContainerService/managedClusters/{resourceName}/privateEndpointConnections/{privateEndpointConnectionName} 
 ```
 
 

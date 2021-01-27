@@ -72,7 +72,7 @@ The following arguments are supported:
 <a href="#intervallength_csharp" style="color: inherit; text-decoration: inherit;">Interval<wbr>Length</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#intervalinmins">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Interval<wbr>In<wbr>Mins</a></span>
+        <span class="property-type"><a href="#intervalinmins">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Interval<wbr>In<wbr>Mins</a></span>
     </dt>
     <dd>{{% md %}}Interval value in minutes used to create LogAnalytics call rate logs.{{% /md %}}</dd>
     <dt class="property-required"
@@ -447,7 +447,7 @@ The following output properties are available:
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loganalyticsoutputresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Outputs.<wbr>Log<wbr>Analytics<wbr>Output<wbr>Response</a></span>
+        <span class="property-type"><a href="#loganalyticsoutputresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Outputs.<wbr>Log<wbr>Analytics<wbr>Output<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}LogAnalyticsOutput{{% /md %}}</dd>
 </dl>

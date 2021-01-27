@@ -132,7 +132,7 @@ The following output properties are available:
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#invoicesectionwithcreatesubpermissionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Billing.<wbr>Outputs.<wbr>Invoice<wbr>Section<wbr>With<wbr>Create<wbr>Sub<wbr>Permission<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#invoicesectionwithcreatesubpermissionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Billing..<wbr>Outputs.<wbr>Invoice<wbr>Section<wbr>With<wbr>Create<wbr>Sub<wbr>Permission<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of invoice section properties with create subscription permission.{{% /md %}}</dd>
 </dl>
@@ -416,7 +416,7 @@ The following output properties are available:
 <a href="#enabledazureplans_csharp" style="color: inherit; text-decoration: inherit;">Enabled<wbr>Azure<wbr>Plans</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureplanresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Billing.<wbr>Inputs.<wbr>Azure<wbr>Plan<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#azureplanresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Billing..<wbr>Inputs.<wbr>Azure<wbr>Plan<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Enabled azure plans for the associated billing profile.{{% /md %}}</dd>
 </dl>

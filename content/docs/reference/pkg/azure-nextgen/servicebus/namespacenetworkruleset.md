@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.servicebus.NamespaceNetworkRuleS
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Description of NetworkRuleSet resource.
-Latest API Version: 2017-04-01.
+API Version: 2017-04-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,32 +27,32 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var namespaceNetworkRuleSet = new AzureNextGen.ServiceBus.Latest.NamespaceNetworkRuleSet("namespaceNetworkRuleSet", new AzureNextGen.ServiceBus.Latest.NamespaceNetworkRuleSetArgs
+        var namespaceNetworkRuleSet = new AzureNextGen.ServiceBus..NamespaceNetworkRuleSet("namespaceNetworkRuleSet", new AzureNextGen.ServiceBus..NamespaceNetworkRuleSetArgs
         {
             DefaultAction = "Deny",
             IpRules = 
             {
-                new AzureNextGen.ServiceBus.Latest.Inputs.NWRuleSetIpRulesArgs
+                new AzureNextGen.ServiceBus..Inputs.NWRuleSetIpRulesArgs
                 {
                     Action = "Allow",
                     IpMask = "1.1.1.1",
                 },
-                new AzureNextGen.ServiceBus.Latest.Inputs.NWRuleSetIpRulesArgs
+                new AzureNextGen.ServiceBus..Inputs.NWRuleSetIpRulesArgs
                 {
                     Action = "Allow",
                     IpMask = "1.1.1.2",
                 },
-                new AzureNextGen.ServiceBus.Latest.Inputs.NWRuleSetIpRulesArgs
+                new AzureNextGen.ServiceBus..Inputs.NWRuleSetIpRulesArgs
                 {
                     Action = "Allow",
                     IpMask = "1.1.1.3",
                 },
-                new AzureNextGen.ServiceBus.Latest.Inputs.NWRuleSetIpRulesArgs
+                new AzureNextGen.ServiceBus..Inputs.NWRuleSetIpRulesArgs
                 {
                     Action = "Allow",
                     IpMask = "1.1.1.4",
                 },
-                new AzureNextGen.ServiceBus.Latest.Inputs.NWRuleSetIpRulesArgs
+                new AzureNextGen.ServiceBus..Inputs.NWRuleSetIpRulesArgs
                 {
                     Action = "Allow",
                     IpMask = "1.1.1.5",
@@ -62,26 +62,26 @@ class MyStack : Stack
             ResourceGroupName = "ResourceGroup",
             VirtualNetworkRules = 
             {
-                new AzureNextGen.ServiceBus.Latest.Inputs.NWRuleSetVirtualNetworkRulesArgs
+                new AzureNextGen.ServiceBus..Inputs.NWRuleSetVirtualNetworkRulesArgs
                 {
                     IgnoreMissingVnetServiceEndpoint = true,
-                    Subnet = new AzureNextGen.ServiceBus.Latest.Inputs.SubnetArgs
+                    Subnet = new AzureNextGen.ServiceBus..Inputs.SubnetArgs
                     {
                         Id = "/subscriptions/subscriptionid/resourcegroups/resourcegroupid/providers/Microsoft.Network/virtualNetworks/myvn/subnets/subnet2",
                     },
                 },
-                new AzureNextGen.ServiceBus.Latest.Inputs.NWRuleSetVirtualNetworkRulesArgs
+                new AzureNextGen.ServiceBus..Inputs.NWRuleSetVirtualNetworkRulesArgs
                 {
                     IgnoreMissingVnetServiceEndpoint = false,
-                    Subnet = new AzureNextGen.ServiceBus.Latest.Inputs.SubnetArgs
+                    Subnet = new AzureNextGen.ServiceBus..Inputs.SubnetArgs
                     {
                         Id = "/subscriptions/subscriptionid/resourcegroups/resourcegroupid/providers/Microsoft.Network/virtualNetworks/myvn/subnets/subnet3",
                     },
                 },
-                new AzureNextGen.ServiceBus.Latest.Inputs.NWRuleSetVirtualNetworkRulesArgs
+                new AzureNextGen.ServiceBus..Inputs.NWRuleSetVirtualNetworkRulesArgs
                 {
                     IgnoreMissingVnetServiceEndpoint = false,
-                    Subnet = new AzureNextGen.ServiceBus.Latest.Inputs.SubnetArgs
+                    Subnet = new AzureNextGen.ServiceBus..Inputs.SubnetArgs
                     {
                         Id = "/subscriptions/subscriptionid/resourcegroups/resourcegroupid/providers/Microsoft.Network/virtualNetworks/myvn/subnets/subnet6",
                     },
@@ -102,7 +102,7 @@ class MyStack : Stack
 package main
 
 import (
-	servicebus "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/servicebus/latest"
+	servicebus "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/servicebus"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -172,26 +172,26 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-namespace_network_rule_set = azure_nextgen.servicebus.latest.NamespaceNetworkRuleSet("namespaceNetworkRuleSet",
+namespace_network_rule_set = azure_nextgen.servicebus.NamespaceNetworkRuleSet("namespaceNetworkRuleSet",
     default_action="Deny",
     ip_rules=[
-        azure_nextgen.servicebus.latest.NWRuleSetIpRulesArgs(
+        azure_nextgen.servicebus.NWRuleSetIpRulesArgs(
             action="Allow",
             ip_mask="1.1.1.1",
         ),
-        azure_nextgen.servicebus.latest.NWRuleSetIpRulesArgs(
+        azure_nextgen.servicebus.NWRuleSetIpRulesArgs(
             action="Allow",
             ip_mask="1.1.1.2",
         ),
-        azure_nextgen.servicebus.latest.NWRuleSetIpRulesArgs(
+        azure_nextgen.servicebus.NWRuleSetIpRulesArgs(
             action="Allow",
             ip_mask="1.1.1.3",
         ),
-        azure_nextgen.servicebus.latest.NWRuleSetIpRulesArgs(
+        azure_nextgen.servicebus.NWRuleSetIpRulesArgs(
             action="Allow",
             ip_mask="1.1.1.4",
         ),
-        azure_nextgen.servicebus.latest.NWRuleSetIpRulesArgs(
+        azure_nextgen.servicebus.NWRuleSetIpRulesArgs(
             action="Allow",
             ip_mask="1.1.1.5",
         ),
@@ -199,21 +199,21 @@ namespace_network_rule_set = azure_nextgen.servicebus.latest.NamespaceNetworkRul
     namespace_name="sdk-Namespace-6019",
     resource_group_name="ResourceGroup",
     virtual_network_rules=[
-        azure_nextgen.servicebus.latest.NWRuleSetVirtualNetworkRulesArgs(
+        azure_nextgen.servicebus.NWRuleSetVirtualNetworkRulesArgs(
             ignore_missing_vnet_service_endpoint=True,
-            subnet=azure_nextgen.servicebus.latest.SubnetArgs(
+            subnet=azure_nextgen.servicebus.SubnetArgs(
                 id="/subscriptions/subscriptionid/resourcegroups/resourcegroupid/providers/Microsoft.Network/virtualNetworks/myvn/subnets/subnet2",
             ),
         ),
-        azure_nextgen.servicebus.latest.NWRuleSetVirtualNetworkRulesArgs(
+        azure_nextgen.servicebus.NWRuleSetVirtualNetworkRulesArgs(
             ignore_missing_vnet_service_endpoint=False,
-            subnet=azure_nextgen.servicebus.latest.SubnetArgs(
+            subnet=azure_nextgen.servicebus.SubnetArgs(
                 id="/subscriptions/subscriptionid/resourcegroups/resourcegroupid/providers/Microsoft.Network/virtualNetworks/myvn/subnets/subnet3",
             ),
         ),
-        azure_nextgen.servicebus.latest.NWRuleSetVirtualNetworkRulesArgs(
+        azure_nextgen.servicebus.NWRuleSetVirtualNetworkRulesArgs(
             ignore_missing_vnet_service_endpoint=False,
-            subnet=azure_nextgen.servicebus.latest.SubnetArgs(
+            subnet=azure_nextgen.servicebus.SubnetArgs(
                 id="/subscriptions/subscriptionid/resourcegroups/resourcegroupid/providers/Microsoft.Network/virtualNetworks/myvn/subnets/subnet6",
             ),
         ),
@@ -229,7 +229,7 @@ namespace_network_rule_set = azure_nextgen.servicebus.latest.NamespaceNetworkRul
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const namespaceNetworkRuleSet = new azure_nextgen.servicebus.latest.NamespaceNetworkRuleSet("namespaceNetworkRuleSet", {
+const namespaceNetworkRuleSet = new azure_nextgen.servicebus.NamespaceNetworkRuleSet("namespaceNetworkRuleSet", {
     defaultAction: "Deny",
     ipRules: [
         {
@@ -488,7 +488,7 @@ The NamespaceNetworkRuleSet resource accepts the following [input]({{< relref "/
 <a href="#defaultaction_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#defaultaction">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Bus.<wbr>Default<wbr>Action</a></span>
+        <span class="property-type">string | <a href="#defaultaction">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Bus..<wbr>Default<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}Default Action for Network Rule Set{{% /md %}}</dd>
     <dt class="property-optional"
@@ -497,7 +497,7 @@ The NamespaceNetworkRuleSet resource accepts the following [input]({{< relref "/
 <a href="#iprules_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nwrulesetiprules">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Bus.<wbr>Inputs.<wbr>NWRule<wbr>Set<wbr>Ip<wbr>Rules<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#nwrulesetiprules">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Bus..<wbr>Inputs.<wbr>NWRule<wbr>Set<wbr>Ip<wbr>Rules<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of IpRules{{% /md %}}</dd>
     <dt class="property-optional"
@@ -506,7 +506,7 @@ The NamespaceNetworkRuleSet resource accepts the following [input]({{< relref "/
 <a href="#virtualnetworkrules_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nwrulesetvirtualnetworkrules">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Bus.<wbr>Inputs.<wbr>NWRule<wbr>Set<wbr>Virtual<wbr>Network<wbr>Rules<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#nwrulesetvirtualnetworkrules">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Bus..<wbr>Inputs.<wbr>NWRule<wbr>Set<wbr>Virtual<wbr>Network<wbr>Rules<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List VirtualNetwork Rules{{% /md %}}</dd>
 </dl>
@@ -863,7 +863,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#action_csharp" style="color: inherit; text-decoration: inherit;">Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#networkruleipaction">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Bus.<wbr>Network<wbr>Rule<wbr>IPAction</a></span>
+        <span class="property-type">string | <a href="#networkruleipaction">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Bus..<wbr>Network<wbr>Rule<wbr>IPAction</a></span>
     </dt>
     <dd>{{% md %}}The IP Filter Action{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1068,7 +1068,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subnet_csharp" style="color: inherit; text-decoration: inherit;">Subnet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subnet">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Bus.<wbr>Inputs.<wbr>Subnet<wbr>Args</a></span>
+        <span class="property-type"><a href="#subnet">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Bus..<wbr>Inputs.<wbr>Subnet<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Subnet properties{{% /md %}}</dd>
 </dl>
@@ -1166,7 +1166,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subnet_csharp" style="color: inherit; text-decoration: inherit;">Subnet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subnetresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Bus.<wbr>Inputs.<wbr>Subnet<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subnetresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Bus..<wbr>Inputs.<wbr>Subnet<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Subnet properties{{% /md %}}</dd>
 </dl>
@@ -1403,7 +1403,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:servicebus/latest:NamespaceNetworkRuleSet default /subscriptions/854d368f-1828-428f-8f3c-f2affa9b2f7d/resourceGroups/resourcegroupid/providers/Microsoft.ServiceBus/namespaces/sdk-Namespace-9659/networkrulesets/default 
+$ pulumi import azure-nextgen:servicebus:NamespaceNetworkRuleSet default /subscriptions/854d368f-1828-428f-8f3c-f2affa9b2f7d/resourceGroups/resourcegroupid/providers/Microsoft.ServiceBus/namespaces/sdk-Namespace-9659/networkrulesets/default 
 ```
 
 

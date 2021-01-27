@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.authorization.RoleDefinition res
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Role definition.
-Latest API Version: 2015-07-01.
+API Version: 2015-07-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var roleDefinition = new AzureNextGen.Authorization.Latest.RoleDefinition("roleDefinition", new AzureNextGen.Authorization.Latest.RoleDefinitionArgs
+        var roleDefinition = new AzureNextGen.Authorization..RoleDefinition("roleDefinition", new AzureNextGen.Authorization..RoleDefinitionArgs
         {
             RoleDefinitionId = "roleDefinitionId",
             Scope = "scope",
@@ -46,7 +46,7 @@ class MyStack : Stack
 package main
 
 import (
-	authorization "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/authorization/latest"
+	authorization "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/authorization"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -73,7 +73,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-role_definition = azure_nextgen.authorization.latest.RoleDefinition("roleDefinition",
+role_definition = azure_nextgen.authorization.RoleDefinition("roleDefinition",
     role_definition_id="roleDefinitionId",
     scope="scope")
 
@@ -87,7 +87,7 @@ role_definition = azure_nextgen.authorization.latest.RoleDefinition("roleDefinit
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const roleDefinition = new azure_nextgen.authorization.latest.RoleDefinition("roleDefinition", {
+const roleDefinition = new azure_nextgen.authorization.RoleDefinition("roleDefinition", {
     roleDefinitionId: "roleDefinitionId",
     scope: "scope",
 });
@@ -321,7 +321,7 @@ The RoleDefinition resource accepts the following [input]({{< relref "/docs/intr
 <a href="#permissions_csharp" style="color: inherit; text-decoration: inherit;">Permissions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#permission">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Authorization.<wbr>Inputs.<wbr>Permission<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#permission">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Authorization..<wbr>Inputs.<wbr>Permission<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Role definition permissions.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -902,7 +902,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:authorization/latest:RoleDefinition roleDefinitionId /subscriptions/subID/providers/Microsoft.Authorization/roleDefinitions/roleDefinitionId 
+$ pulumi import azure-nextgen:authorization:RoleDefinition roleDefinitionId /subscriptions/subID/providers/Microsoft.Authorization/roleDefinitions/roleDefinitionId 
 ```
 
 

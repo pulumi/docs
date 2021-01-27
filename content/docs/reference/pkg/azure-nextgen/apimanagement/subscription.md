@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.apimanagement.Subscription resou
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Subscription details.
-Latest API Version: 2019-12-01.
+API Version: 2019-12-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var subscription = new AzureNextGen.ApiManagement.Latest.Subscription("subscription", new AzureNextGen.ApiManagement.Latest.SubscriptionArgs
+        var subscription = new AzureNextGen.ApiManagement..Subscription("subscription", new AzureNextGen.ApiManagement..SubscriptionArgs
         {
             DisplayName = "testsub",
             OwnerId = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/users/57127d485157a511ace86ae7",
@@ -50,7 +50,7 @@ class MyStack : Stack
 package main
 
 import (
-	apimanagement "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/apimanagement/latest"
+	apimanagement "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/apimanagement"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -81,7 +81,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-subscription = azure_nextgen.apimanagement.latest.Subscription("subscription",
+subscription = azure_nextgen.apimanagement.Subscription("subscription",
     display_name="testsub",
     owner_id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/users/57127d485157a511ace86ae7",
     resource_group_name="rg1",
@@ -99,7 +99,7 @@ subscription = azure_nextgen.apimanagement.latest.Subscription("subscription",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const subscription = new azure_nextgen.apimanagement.latest.Subscription("subscription", {
+const subscription = new azure_nextgen.apimanagement.Subscription("subscription", {
     displayName: "testsub",
     ownerId: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/users/57127d485157a511ace86ae7",
     resourceGroupName: "rg1",
@@ -402,7 +402,7 @@ The Subscription resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subscriptionstate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management.<wbr>Subscription<wbr>State</a></span>
+        <span class="property-type"><a href="#subscriptionstate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management..<wbr>Subscription<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}Initial subscription state. If no value is specified, subscription is created with Submitted state. Possible states are * active – the subscription is active, * suspended – the subscription is blocked, and the subscriber cannot call any APIs of the product, * submitted – the subscription request has been made by the developer, but has not yet been approved or rejected, * rejected – the subscription request has been denied by an administrator, * cancelled – the subscription has been cancelled by the developer or administrator, * expired – the subscription reached its expiration date and was deactivated.{{% /md %}}</dd>
 </dl>
@@ -1216,7 +1216,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:apimanagement/latest:Subscription testsub /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/subscriptions/testsub 
+$ pulumi import azure-nextgen:apimanagement:Subscription testsub /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/subscriptions/testsub 
 ```
 
 

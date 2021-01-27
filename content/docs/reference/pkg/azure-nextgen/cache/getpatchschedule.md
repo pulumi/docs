@@ -215,7 +215,7 @@ The following output properties are available:
 <a href="#scheduleentries_csharp" style="color: inherit; text-decoration: inherit;">Schedule<wbr>Entries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scheduleentryresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cache.<wbr>Outputs.<wbr>Schedule<wbr>Entry<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#scheduleentryresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cache..<wbr>Outputs.<wbr>Schedule<wbr>Entry<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of patch schedules for a Redis cache.{{% /md %}}</dd>
     <dt class="property-"

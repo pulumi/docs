@@ -204,7 +204,7 @@ The following output properties are available:
 <a href="#nodes_csharp" style="color: inherit; text-decoration: inherit;">Nodes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amlcomputenodeinformationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Outputs.<wbr>Aml<wbr>Compute<wbr>Node<wbr>Information<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#amlcomputenodeinformationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services..<wbr>Outputs.<wbr>Aml<wbr>Compute<wbr>Node<wbr>Information<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The collection of returned AmlCompute nodes details.{{% /md %}}</dd>
 </dl>

@@ -206,7 +206,7 @@ The following output properties are available:
 <a href="#controllerdetails_csharp" style="color: inherit; text-decoration: inherit;">Controller<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#controllerdetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Delegated<wbr>Network.<wbr>Outputs.<wbr>Controller<wbr>Details<wbr>Response</a></span>
+        <span class="property-type"><a href="#controllerdetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Delegated<wbr>Network..<wbr>Outputs.<wbr>Controller<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}controller details{{% /md %}}</dd>
     <dt class="property-"
@@ -224,7 +224,7 @@ The following output properties are available:
 <a href="#subnetdetails_csharp" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subnetdetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Delegated<wbr>Network.<wbr>Outputs.<wbr>Subnet<wbr>Details<wbr>Response</a></span>
+        <span class="property-type"><a href="#subnetdetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Delegated<wbr>Network..<wbr>Outputs.<wbr>Subnet<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}orchestrator details{{% /md %}}</dd>
     <dt class="property-"

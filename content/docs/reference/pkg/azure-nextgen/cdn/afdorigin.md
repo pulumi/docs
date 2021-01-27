@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.cdn.AFDOrigin resource with exam
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 CDN origin is the source of the content being delivered via CDN. When the edge nodes represented by an endpoint do not have the requested content cached, they attempt to fetch it from one or more of the configured origins.
-Latest API Version: 2020-09-01.
+API Version: 2020-09-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var afdOrigin = new AzureNextGen.Cdn.Latest.AFDOrigin("afdOrigin", new AzureNextGen.Cdn.Latest.AFDOriginArgs
+        var afdOrigin = new AzureNextGen.Cdn..AFDOrigin("afdOrigin", new AzureNextGen.Cdn..AFDOriginArgs
         {
             EnabledState = "Enabled",
             HostName = "host1.blob.core.windows.net",
@@ -53,7 +53,7 @@ class MyStack : Stack
 package main
 
 import (
-	cdn "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/cdn/latest"
+	cdn "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/cdn"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -87,7 +87,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-afd_origin = azure_nextgen.cdn.latest.AFDOrigin("afdOrigin",
+afd_origin = azure_nextgen.cdn.AFDOrigin("afdOrigin",
     enabled_state="Enabled",
     host_name="host1.blob.core.windows.net",
     http_port=80,
@@ -108,7 +108,7 @@ afd_origin = azure_nextgen.cdn.latest.AFDOrigin("afdOrigin",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const afdOrigin = new azure_nextgen.cdn.latest.AFDOrigin("afdOrigin", {
+const afdOrigin = new azure_nextgen.cdn.AFDOrigin("afdOrigin", {
     enabledState: "Enabled",
     hostName: "host1.blob.core.windows.net",
     httpPort: 80,
@@ -358,7 +358,7 @@ The AFDOrigin resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#azureorigin_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Origin</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcereference">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn.<wbr>Inputs.<wbr>Resource<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcereference">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn..<wbr>Inputs.<wbr>Resource<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Resource reference to the Azure origin resource.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -367,7 +367,7 @@ The AFDOrigin resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#enabledstate_csharp" style="color: inherit; text-decoration: inherit;">Enabled<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#enabledstate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn.<wbr>Enabled<wbr>State</a></span>
+        <span class="property-type">string | <a href="#enabledstate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn..<wbr>Enabled<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}Whether to enable health probes to be made against backends defined under backendPools. Health probes can only be disabled if there is a single enabled backend in single enabled backend pool.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -412,7 +412,7 @@ The AFDOrigin resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#sharedprivatelinkresource_csharp" style="color: inherit; text-decoration: inherit;">Shared<wbr>Private<wbr>Link<wbr>Resource</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sharedprivatelinkresourceproperties">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn.<wbr>Inputs.<wbr>Shared<wbr>Private<wbr>Link<wbr>Resource<wbr>Properties<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#sharedprivatelinkresourceproperties">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn..<wbr>Inputs.<wbr>Shared<wbr>Private<wbr>Link<wbr>Resource<wbr>Properties<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The properties of the private link resource for private origin.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -848,7 +848,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#systemdata_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn.<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
+        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn..<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Read only system data{{% /md %}}</dd>
     <dt class="property-"
@@ -1235,7 +1235,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privatelink_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcereference">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn.<wbr>Inputs.<wbr>Resource<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcereference">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn..<wbr>Inputs.<wbr>Resource<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The resource id of the resource the shared private link resource is for.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1262,7 +1262,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sharedprivatelinkresourcestatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn.<wbr>Shared<wbr>Private<wbr>Link<wbr>Resource<wbr>Status</a></span>
+        <span class="property-type"><a href="#sharedprivatelinkresourcestatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn..<wbr>Shared<wbr>Private<wbr>Link<wbr>Resource<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}Status of the shared private link resource. Can be Pending, Approved, Rejected, Disconnected, or Timeout.{{% /md %}}</dd>
 </dl>
@@ -1441,7 +1441,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privatelink_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcereferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn.<wbr>Inputs.<wbr>Resource<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcereferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn..<wbr>Inputs.<wbr>Resource<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The resource id of the resource the shared private link resource is for.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1936,7 +1936,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:cdn/latest:AFDOrigin origin1 /subscriptions/subid/resourcegroups/RG/providers/Microsoft.Cdn/profiles/profile1/origingroups/origingroup1/origins/origin1 
+$ pulumi import azure-nextgen:cdn:AFDOrigin origin1 /subscriptions/subid/resourcegroups/RG/providers/Microsoft.Cdn/profiles/profile1/origingroups/origingroup1/origins/origin1 
 ```
 
 

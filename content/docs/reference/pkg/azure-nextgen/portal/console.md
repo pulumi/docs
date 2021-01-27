@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.portal.Console resource with exa
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Cloud shell console
-Latest API Version: 2018-10-01.
+API Version: 2018-10-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,10 +27,10 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var console = new AzureNextGen.Portal.Latest.Console("console", new AzureNextGen.Portal.Latest.ConsoleArgs
+        var console = new AzureNextGen.Portal..Console("console", new AzureNextGen.Portal..ConsoleArgs
         {
             ConsoleName = "default",
-            Properties = new AzureNextGen.Portal.Latest.Inputs.ConsoleCreatePropertiesArgs
+            Properties = new AzureNextGen.Portal..Inputs.ConsoleCreatePropertiesArgs
             {
                 OsType = "Linux",
             },
@@ -49,7 +49,7 @@ class MyStack : Stack
 package main
 
 import (
-	portal "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/portal/latest"
+	portal "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/portal"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -78,9 +78,9 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-console = azure_nextgen.portal.latest.Console("console",
+console = azure_nextgen.portal.Console("console",
     console_name="default",
-    properties=azure_nextgen.portal.latest.ConsoleCreatePropertiesArgs(
+    properties=azure_nextgen.portal.ConsoleCreatePropertiesArgs(
         os_type="Linux",
     ))
 
@@ -94,7 +94,7 @@ console = azure_nextgen.portal.latest.Console("console",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const console = new azure_nextgen.portal.latest.Console("console", {
+const console = new azure_nextgen.portal.Console("console", {
     consoleName: "default",
     properties: {
         osType: "Linux",
@@ -303,7 +303,7 @@ The Console resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#consolecreateproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Portal.<wbr>Inputs.<wbr>Console<wbr>Create<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#consolecreateproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Portal..<wbr>Inputs.<wbr>Console<wbr>Create<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Cloud shell properties for creating a console.{{% /md %}}</dd>
 </dl>
@@ -469,7 +469,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ostype_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#ostype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Portal.<wbr>Os<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#ostype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Portal..<wbr>Os<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The operating system type of the cloud shell.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -478,7 +478,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#provisioningstate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Portal.<wbr>Provisioning<wbr>State</a></span>
+        <span class="property-type">string | <a href="#provisioningstate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Portal..<wbr>Provisioning<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}Provisioning state of the console.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -863,7 +863,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:portal/latest:Console myresource1 /providers/Microsoft.Portal/consoles/{consoleName} 
+$ pulumi import azure-nextgen:portal:Console myresource1 /providers/Microsoft.Portal/consoles/{consoleName} 
 ```
 
 

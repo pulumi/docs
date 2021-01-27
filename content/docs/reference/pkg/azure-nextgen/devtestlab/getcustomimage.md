@@ -296,7 +296,7 @@ The following output properties are available:
 <a href="#customimageplan_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Image<wbr>Plan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customimagepropertiesfromplanresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Outputs.<wbr>Custom<wbr>Image<wbr>Properties<wbr>From<wbr>Plan<wbr>Response</a></span>
+        <span class="property-type"><a href="#customimagepropertiesfromplanresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab..<wbr>Outputs.<wbr>Custom<wbr>Image<wbr>Properties<wbr>From<wbr>Plan<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Storage information about the plan related to this custom image{{% /md %}}</dd>
     <dt class="property-"
@@ -305,7 +305,7 @@ The following output properties are available:
 <a href="#datadiskstorageinfo_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Disk<wbr>Storage<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datadiskstoragetypeinforesponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Outputs.<wbr>Data<wbr>Disk<wbr>Storage<wbr>Type<wbr>Info<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#datadiskstoragetypeinforesponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab..<wbr>Outputs.<wbr>Data<wbr>Disk<wbr>Storage<wbr>Type<wbr>Info<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Storage information about the data disks present in the custom image{{% /md %}}</dd>
     <dt class="property-"
@@ -368,7 +368,7 @@ The following output properties are available:
 <a href="#vhd_csharp" style="color: inherit; text-decoration: inherit;">Vhd</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customimagepropertiescustomresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Outputs.<wbr>Custom<wbr>Image<wbr>Properties<wbr>Custom<wbr>Response</a></span>
+        <span class="property-type"><a href="#customimagepropertiescustomresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab..<wbr>Outputs.<wbr>Custom<wbr>Image<wbr>Properties<wbr>Custom<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The VHD from which the image is to be created.{{% /md %}}</dd>
     <dt class="property-"
@@ -377,7 +377,7 @@ The following output properties are available:
 <a href="#vm_csharp" style="color: inherit; text-decoration: inherit;">Vm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customimagepropertiesfromvmresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Outputs.<wbr>Custom<wbr>Image<wbr>Properties<wbr>From<wbr>Vm<wbr>Response</a></span>
+        <span class="property-type"><a href="#customimagepropertiesfromvmresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab..<wbr>Outputs.<wbr>Custom<wbr>Image<wbr>Properties<wbr>From<wbr>Vm<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The virtual machine from which the image is to be created.{{% /md %}}</dd>
 </dl>
@@ -1160,7 +1160,7 @@ The following output properties are available:
 <a href="#linuxosinfo_csharp" style="color: inherit; text-decoration: inherit;">Linux<wbr>Os<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linuxosinforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Linux<wbr>Os<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#linuxosinforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab..<wbr>Inputs.<wbr>Linux<wbr>Os<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Linux OS information of the VM.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1178,7 +1178,7 @@ The following output properties are available:
 <a href="#windowsosinfo_csharp" style="color: inherit; text-decoration: inherit;">Windows<wbr>Os<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#windowsosinforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Windows<wbr>Os<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#windowsosinforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab..<wbr>Inputs.<wbr>Windows<wbr>Os<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Windows OS information of the VM.{{% /md %}}</dd>
 </dl>

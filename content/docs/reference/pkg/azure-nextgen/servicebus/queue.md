@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.servicebus.Queue resource with e
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Description of queue Resource.
-Latest API Version: 2017-04-01.
+API Version: 2017-04-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var queue = new AzureNextGen.ServiceBus.Latest.Queue("queue", new AzureNextGen.ServiceBus.Latest.QueueArgs
+        var queue = new AzureNextGen.ServiceBus..Queue("queue", new AzureNextGen.ServiceBus..QueueArgs
         {
             EnablePartitioning = true,
             NamespaceName = "sdk-Namespace-3174",
@@ -48,7 +48,7 @@ class MyStack : Stack
 package main
 
 import (
-	servicebus "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/servicebus/latest"
+	servicebus "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/servicebus"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -77,7 +77,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-queue = azure_nextgen.servicebus.latest.Queue("queue",
+queue = azure_nextgen.servicebus.Queue("queue",
     enable_partitioning=True,
     namespace_name="sdk-Namespace-3174",
     queue_name="sdk-Queues-5647",
@@ -93,7 +93,7 @@ queue = azure_nextgen.servicebus.latest.Queue("queue",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const queue = new azure_nextgen.servicebus.latest.Queue("queue", {
+const queue = new azure_nextgen.servicebus.Queue("queue", {
     enablePartitioning: true,
     namespaceName: "sdk-Namespace-3174",
     queueName: "sdk-Queues-5647",
@@ -446,7 +446,7 @@ The Queue resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#entitystatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Bus.<wbr>Entity<wbr>Status</a></span>
+        <span class="property-type"><a href="#entitystatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Bus..<wbr>Entity<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}Enumerates the possible values for the status of a messaging entity.{{% /md %}}</dd>
 </dl>
@@ -981,7 +981,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#countdetails_csharp" style="color: inherit; text-decoration: inherit;">Count<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#messagecountdetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Bus.<wbr>Outputs.<wbr>Message<wbr>Count<wbr>Details<wbr>Response</a></span>
+        <span class="property-type"><a href="#messagecountdetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Bus..<wbr>Outputs.<wbr>Message<wbr>Count<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Message Count Details.{{% /md %}}</dd>
     <dt class="property-"
@@ -1626,7 +1626,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:servicebus/latest:Queue sdk-Queues-5647 /subscriptions/5f750a97-50d9-4e36-8081-c9ee4c0210d4/resourceGroups/ArunMonocle/providers/Microsoft.ServiceBus/namespaces/sdk-Namespace-3174/queues/sdk-Queues-5647 
+$ pulumi import azure-nextgen:servicebus:Queue sdk-Queues-5647 /subscriptions/5f750a97-50d9-4e36-8081-c9ee4c0210d4/resourceGroups/ArunMonocle/providers/Microsoft.ServiceBus/namespaces/sdk-Namespace-3174/queues/sdk-Queues-5647 
 ```
 
 

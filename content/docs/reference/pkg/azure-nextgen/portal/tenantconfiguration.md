@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.portal.TenantConfiguration resou
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Tenant configuration.
+API Version: 2020-09-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var tenantConfiguration = new AzureNextGen.Portal.V20200901Preview.TenantConfiguration("tenantConfiguration", new AzureNextGen.Portal.V20200901Preview.TenantConfigurationArgs
+        var tenantConfiguration = new AzureNextGen.Portal..TenantConfiguration("tenantConfiguration", new AzureNextGen.Portal..TenantConfigurationArgs
         {
             ConfigurationName = "default",
             EnforcePrivateMarkdownStorage = true,
@@ -45,7 +46,7 @@ class MyStack : Stack
 package main
 
 import (
-	portal "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/portal/v20200901preview"
+	portal "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/portal"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -72,7 +73,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-tenant_configuration = azure_nextgen.portal.v20200901preview.TenantConfiguration("tenantConfiguration",
+tenant_configuration = azure_nextgen.portal.TenantConfiguration("tenantConfiguration",
     configuration_name="default",
     enforce_private_markdown_storage=True)
 
@@ -86,7 +87,7 @@ tenant_configuration = azure_nextgen.portal.v20200901preview.TenantConfiguration
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const tenantConfiguration = new azure_nextgen.portal.v20200901preview.TenantConfiguration("tenantConfiguration", {
+const tenantConfiguration = new azure_nextgen.portal.TenantConfiguration("tenantConfiguration", {
     configurationName: "default",
     enforcePrivateMarkdownStorage: true,
 });
@@ -521,7 +522,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:portal/v20200901preview:TenantConfiguration default /providers/Microsoft.Portal/tenantConfigurations/default 
+$ pulumi import azure-nextgen:portal:TenantConfiguration default /providers/Microsoft.Portal/tenantConfigurations/default 
 ```
 
 

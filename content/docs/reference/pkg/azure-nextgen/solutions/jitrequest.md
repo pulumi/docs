@@ -11,13 +11,13 @@ meta_desc: "Documentation for the azure-nextgen.solutions.JitRequest resource wi
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Information about JIT request definition.
-Latest API Version: 2019-07-01.
+API Version: 2019-07-01.
 ## Import
 
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:solutions/latest:JitRequest myresource1 /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Solutions/jitRequests/{jitRequestName} 
+$ pulumi import azure-nextgen:solutions:JitRequest myresource1 /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Solutions/jitRequests/{jitRequestName} 
 ```
 
 
@@ -218,7 +218,7 @@ The JitRequest resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#jitauthorizationpolicies_csharp" style="color: inherit; text-decoration: inherit;">Jit<wbr>Authorization<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jitauthorizationpolicies">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Solutions.<wbr>Inputs.<wbr>Jit<wbr>Authorization<wbr>Policies<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#jitauthorizationpolicies">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Solutions..<wbr>Inputs.<wbr>Jit<wbr>Authorization<wbr>Policies<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The JIT authorization policies.{{% /md %}}</dd>
     <dt class="property-required"
@@ -236,7 +236,7 @@ The JitRequest resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#jitschedulingpolicy_csharp" style="color: inherit; text-decoration: inherit;">Jit<wbr>Scheduling<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jitschedulingpolicy">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Solutions.<wbr>Inputs.<wbr>Jit<wbr>Scheduling<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#jitschedulingpolicy">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Solutions..<wbr>Inputs.<wbr>Jit<wbr>Scheduling<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The JIT request properties.{{% /md %}}</dd>
     <dt class="property-required"
@@ -492,7 +492,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#createdby_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>By</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationclientdetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Solutions.<wbr>Outputs.<wbr>Application<wbr>Client<wbr>Details<wbr>Response</a></span>
+        <span class="property-type"><a href="#applicationclientdetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Solutions..<wbr>Outputs.<wbr>Application<wbr>Client<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The client entity that created the JIT request.{{% /md %}}</dd>
     <dt class="property-"
@@ -555,7 +555,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#updatedby_csharp" style="color: inherit; text-decoration: inherit;">Updated<wbr>By</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationclientdetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Solutions.<wbr>Outputs.<wbr>Application<wbr>Client<wbr>Details<wbr>Response</a></span>
+        <span class="property-type"><a href="#applicationclientdetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Solutions..<wbr>Outputs.<wbr>Application<wbr>Client<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The client entity that last updated the JIT request.{{% /md %}}</dd>
 </dl>

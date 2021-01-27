@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.appplatform.Certificate resource
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Certificate resource payload.
-Latest API Version: 2020-07-01.
+API Version: 2020-07-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,10 +27,10 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var certificate = new AzureNextGen.AppPlatform.Latest.Certificate("certificate", new AzureNextGen.AppPlatform.Latest.CertificateArgs
+        var certificate = new AzureNextGen.AppPlatform..Certificate("certificate", new AzureNextGen.AppPlatform..CertificateArgs
         {
             CertificateName = "mycertificate",
-            Properties = new AzureNextGen.AppPlatform.Latest.Inputs.CertificatePropertiesArgs
+            Properties = new AzureNextGen.AppPlatform..Inputs.CertificatePropertiesArgs
             {
                 CertVersion = "08a219d06d874795a96db47e06fbb01e",
                 KeyVaultCertName = "mycert",
@@ -53,7 +53,7 @@ class MyStack : Stack
 package main
 
 import (
-	appplatform "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/appplatform/latest"
+	appplatform "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/appplatform"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -86,9 +86,9 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-certificate = azure_nextgen.appplatform.latest.Certificate("certificate",
+certificate = azure_nextgen.appplatform.Certificate("certificate",
     certificate_name="mycertificate",
-    properties=azure_nextgen.appplatform.latest.CertificatePropertiesArgs(
+    properties=azure_nextgen.appplatform.CertificatePropertiesArgs(
         cert_version="08a219d06d874795a96db47e06fbb01e",
         key_vault_cert_name="mycert",
         vault_uri="https://myvault.vault.azure.net",
@@ -106,7 +106,7 @@ certificate = azure_nextgen.appplatform.latest.Certificate("certificate",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const certificate = new azure_nextgen.appplatform.latest.Certificate("certificate", {
+const certificate = new azure_nextgen.appplatform.Certificate("certificate", {
     certificateName: "mycertificate",
     properties: {
         certVersion: "08a219d06d874795a96db47e06fbb01e",
@@ -337,7 +337,7 @@ The Certificate resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificateproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>App<wbr>Platform.<wbr>Inputs.<wbr>Certificate<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#certificateproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>App<wbr>Platform..<wbr>Inputs.<wbr>Certificate<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties of the certificate resource payload.{{% /md %}}</dd>
 </dl>
@@ -1143,7 +1143,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:appplatform/latest:Certificate mycertificate /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.AppPlatform/Spring/myservice/certificates/mycertificate 
+$ pulumi import azure-nextgen:appplatform:Certificate mycertificate /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.AppPlatform/Spring/myservice/certificates/mycertificate 
 ```
 
 

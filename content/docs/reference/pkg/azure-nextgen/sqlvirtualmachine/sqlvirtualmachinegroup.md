@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.sqlvirtualmachine.SqlVirtualMach
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 A SQL virtual machine group.
+API Version: 2017-03-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var sqlVirtualMachineGroup = new AzureNextGen.SqlVirtualMachine.V20170301Preview.SqlVirtualMachineGroup("sqlVirtualMachineGroup", new AzureNextGen.SqlVirtualMachine.V20170301Preview.SqlVirtualMachineGroupArgs
+        var sqlVirtualMachineGroup = new AzureNextGen.SqlVirtualMachine..SqlVirtualMachineGroup("sqlVirtualMachineGroup", new AzureNextGen.SqlVirtualMachine..SqlVirtualMachineGroupArgs
         {
             Location = "northeurope",
             ResourceGroupName = "testrg",
@@ -37,7 +38,7 @@ class MyStack : Stack
             {
                 { "mytag", "myval" },
             },
-            WsfcDomainProfile = new AzureNextGen.SqlVirtualMachine.V20170301Preview.Inputs.WsfcDomainProfileArgs
+            WsfcDomainProfile = new AzureNextGen.SqlVirtualMachine..Inputs.WsfcDomainProfileArgs
             {
                 ClusterBootstrapAccount = "testrpadmin",
                 ClusterOperatorAccount = "testrp@testdomain.com",
@@ -62,7 +63,7 @@ class MyStack : Stack
 package main
 
 import (
-	sqlvirtualmachine "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sqlvirtualmachine/v20170301preview"
+	sqlvirtualmachine "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sqlvirtualmachine"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -104,7 +105,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-sql_virtual_machine_group = azure_nextgen.sqlvirtualmachine.v20170301preview.SqlVirtualMachineGroup("sqlVirtualMachineGroup",
+sql_virtual_machine_group = azure_nextgen.sqlvirtualmachine.SqlVirtualMachineGroup("sqlVirtualMachineGroup",
     location="northeurope",
     resource_group_name="testrg",
     sql_image_offer="SQL2016-WS2016",
@@ -113,7 +114,7 @@ sql_virtual_machine_group = azure_nextgen.sqlvirtualmachine.v20170301preview.Sql
     tags={
         "mytag": "myval",
     },
-    wsfc_domain_profile=azure_nextgen.sqlvirtualmachine.v20170301preview.WsfcDomainProfileArgs(
+    wsfc_domain_profile=azure_nextgen.sqlvirtualmachine.WsfcDomainProfileArgs(
         cluster_bootstrap_account="testrpadmin",
         cluster_operator_account="testrp@testdomain.com",
         domain_fqdn="testdomain.com",
@@ -133,7 +134,7 @@ sql_virtual_machine_group = azure_nextgen.sqlvirtualmachine.v20170301preview.Sql
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const sqlVirtualMachineGroup = new azure_nextgen.sqlvirtualmachine.v20170301preview.SqlVirtualMachineGroup("sqlVirtualMachineGroup", {
+const sqlVirtualMachineGroup = new azure_nextgen.sqlvirtualmachine.SqlVirtualMachineGroup("sqlVirtualMachineGroup", {
     location: "northeurope",
     resourceGroupName: "testrg",
     sqlImageOffer: "SQL2016-WS2016",
@@ -382,7 +383,7 @@ The SqlVirtualMachineGroup resource accepts the following [input]({{< relref "/d
 <a href="#sqlimagesku_csharp" style="color: inherit; text-decoration: inherit;">Sql<wbr>Image<wbr>Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#sqlvmgroupimagesku">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql<wbr>Virtual<wbr>Machine.<wbr>Sql<wbr>Vm<wbr>Group<wbr>Image<wbr>Sku</a></span>
+        <span class="property-type">string | <a href="#sqlvmgroupimagesku">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql<wbr>Virtual<wbr>Machine..<wbr>Sql<wbr>Vm<wbr>Group<wbr>Image<wbr>Sku</a></span>
     </dt>
     <dd>{{% md %}}SQL image sku.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -400,7 +401,7 @@ The SqlVirtualMachineGroup resource accepts the following [input]({{< relref "/d
 <a href="#wsfcdomainprofile_csharp" style="color: inherit; text-decoration: inherit;">Wsfc<wbr>Domain<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#wsfcdomainprofile">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql<wbr>Virtual<wbr>Machine.<wbr>Inputs.<wbr>Wsfc<wbr>Domain<wbr>Profile<wbr>Args</a></span>
+        <span class="property-type"><a href="#wsfcdomainprofile">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql<wbr>Virtual<wbr>Machine..<wbr>Inputs.<wbr>Wsfc<wbr>Domain<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Cluster Active Directory domain profile.{{% /md %}}</dd>
 </dl>
@@ -1577,7 +1578,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:sqlvirtualmachine/v20170301preview:SqlVirtualMachineGroup testvmgroup /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg/providers/Microsoft.SqlVirtualMachine/sqlVirtualMachineGroups/testvmgroup 
+$ pulumi import azure-nextgen:sqlvirtualmachine:SqlVirtualMachineGroup testvmgroup /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg/providers/Microsoft.SqlVirtualMachine/sqlVirtualMachineGroups/testvmgroup 
 ```
 
 

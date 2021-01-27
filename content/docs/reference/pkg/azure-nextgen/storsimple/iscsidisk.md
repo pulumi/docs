@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.storsimple.IscsiDisk resource wi
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The iSCSI disk.
-Latest API Version: 2016-10-01.
+API Version: 2016-10-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var iscsiDisk = new AzureNextGen.StorSimple.Latest.IscsiDisk("iscsiDisk", new AzureNextGen.StorSimple.Latest.IscsiDiskArgs
+        var iscsiDisk = new AzureNextGen.StorSimple..IscsiDisk("iscsiDisk", new AzureNextGen.StorSimple..IscsiDiskArgs
         {
             AccessControlRecords = {},
             DataPolicy = "Tiered",
@@ -55,7 +55,7 @@ class MyStack : Stack
 package main
 
 import (
-	storsimple "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/storsimple/latest"
+	storsimple "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/storsimple"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -91,7 +91,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-iscsi_disk = azure_nextgen.storsimple.latest.IscsiDisk("iscsiDisk",
+iscsi_disk = azure_nextgen.storsimple.IscsiDisk("iscsiDisk",
     access_control_records=[],
     data_policy="Tiered",
     description="Demo IscsiDisk for SDK Test Tiered",
@@ -114,7 +114,7 @@ iscsi_disk = azure_nextgen.storsimple.latest.IscsiDisk("iscsiDisk",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const iscsiDisk = new azure_nextgen.storsimple.latest.IscsiDisk("iscsiDisk", {
+const iscsiDisk = new azure_nextgen.storsimple.IscsiDisk("iscsiDisk", {
     accessControlRecords: [],
     dataPolicy: "Tiered",
     description: "Demo IscsiDisk for SDK Test Tiered",
@@ -330,7 +330,7 @@ The IscsiDisk resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#datapolicy_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datapolicy">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stor<wbr>Simple.<wbr>Data<wbr>Policy</a></span>
+        <span class="property-type"><a href="#datapolicy">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stor<wbr>Simple..<wbr>Data<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}The data policy.{{% /md %}}</dd>
     <dt class="property-required"
@@ -357,7 +357,7 @@ The IscsiDisk resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#diskstatus_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diskstatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stor<wbr>Simple.<wbr>Disk<wbr>Status</a></span>
+        <span class="property-type"><a href="#diskstatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stor<wbr>Simple..<wbr>Disk<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}The disk status.{{% /md %}}</dd>
     <dt class="property-required"
@@ -384,7 +384,7 @@ The IscsiDisk resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#monitoringstatus_csharp" style="color: inherit; text-decoration: inherit;">Monitoring<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#monitoringstatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stor<wbr>Simple.<wbr>Monitoring<wbr>Status</a></span>
+        <span class="property-type"><a href="#monitoringstatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stor<wbr>Simple..<wbr>Monitoring<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}The monitoring.{{% /md %}}</dd>
     <dt class="property-required"
@@ -1088,7 +1088,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:storsimple/latest:IscsiDisk Auto-TestIscsiDisk1 /subscriptions/9eb689cd-7243-43b4-b6f6-5c65cb296641/resourceGroups/ResourceGroupForSDKTest/providers/Microsoft.StorSimple/managers/hAzureSDKOperations/devices/HSDK-0NZI14MDTF/iscsiServers/HSDK-0NZI14MDTF/disks/Auto-TestIscsiDisk1 
+$ pulumi import azure-nextgen:storsimple:IscsiDisk Auto-TestIscsiDisk1 /subscriptions/9eb689cd-7243-43b4-b6f6-5c65cb296641/resourceGroups/ResourceGroupForSDKTest/providers/Microsoft.StorSimple/managers/hAzureSDKOperations/devices/HSDK-0NZI14MDTF/iscsiServers/HSDK-0NZI14MDTF/disks/Auto-TestIscsiDisk1 
 ```
 
 

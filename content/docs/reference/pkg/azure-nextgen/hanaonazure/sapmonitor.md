@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.hanaonazure.SapMonitor resource 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 SAP monitor info on Azure (ARM properties and SAP monitor properties)
+API Version: 2020-02-07-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var sapMonitor = new AzureNextGen.HanaOnAzure.V20200207Preview.SapMonitor("sapMonitor", new AzureNextGen.HanaOnAzure.V20200207Preview.SapMonitorArgs
+        var sapMonitor = new AzureNextGen.HanaOnAzure..SapMonitor("sapMonitor", new AzureNextGen.HanaOnAzure..SapMonitorArgs
         {
             EnableCustomerAnalytics = true,
             Location = "westus",
@@ -55,7 +56,7 @@ class MyStack : Stack
 package main
 
 import (
-	hanaonazure "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/hanaonazure/v20200207preview"
+	hanaonazure "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/hanaonazure"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -91,7 +92,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-sap_monitor = azure_nextgen.hanaonazure.v20200207preview.SapMonitor("sapMonitor",
+sap_monitor = azure_nextgen.hanaonazure.SapMonitor("sapMonitor",
     enable_customer_analytics=True,
     location="westus",
     log_analytics_workspace_arm_id="/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/myResourceGroup/providers/microsoft.operationalinsights/workspaces/myWorkspace",
@@ -114,7 +115,7 @@ sap_monitor = azure_nextgen.hanaonazure.v20200207preview.SapMonitor("sapMonitor"
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const sapMonitor = new azure_nextgen.hanaonazure.v20200207preview.SapMonitor("sapMonitor", {
+const sapMonitor = new azure_nextgen.hanaonazure.SapMonitor("sapMonitor", {
     enableCustomerAnalytics: true,
     location: "westus",
     logAnalyticsWorkspaceArmId: "/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/myResourceGroup/providers/microsoft.operationalinsights/workspaces/myWorkspace",
@@ -918,7 +919,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:hanaonazure/v20200207preview:SapMonitor myHanaInstance /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.HanaOnAzure/hanaInstances/myHanaInstance 
+$ pulumi import azure-nextgen:hanaonazure:SapMonitor myHanaInstance /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.HanaOnAzure/hanaInstances/myHanaInstance 
 ```
 
 

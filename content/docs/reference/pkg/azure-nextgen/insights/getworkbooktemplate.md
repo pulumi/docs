@@ -161,7 +161,7 @@ The following output properties are available:
 <a href="#galleries_csharp" style="color: inherit; text-decoration: inherit;">Galleries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workbooktemplategalleryresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Outputs.<wbr>Workbook<wbr>Template<wbr>Gallery<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#workbooktemplategalleryresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Outputs.<wbr>Workbook<wbr>Template<wbr>Gallery<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Workbook galleries supported by the template.{{% /md %}}</dd>
     <dt class="property-"
@@ -224,7 +224,7 @@ The following output properties are available:
 <a href="#localized_csharp" style="color: inherit; text-decoration: inherit;">Localized</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Immutable<wbr>Array&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Outputs.<wbr>Workbook<wbr>Template<wbr>Localized<wbr>Gallery<wbr>Response&gt;&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Immutable<wbr>Array&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Outputs.<wbr>Workbook<wbr>Template<wbr>Localized<wbr>Gallery<wbr>Response&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}Key value pair of localized gallery. Each key is the locale code of languages supported by the Azure portal.{{% /md %}}</dd>
     <dt class="property-"
@@ -769,7 +769,7 @@ The following output properties are available:
 <a href="#galleries_csharp" style="color: inherit; text-decoration: inherit;">Galleries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workbooktemplategalleryresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Inputs.<wbr>Workbook<wbr>Template<wbr>Gallery<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#workbooktemplategalleryresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Inputs.<wbr>Workbook<wbr>Template<wbr>Gallery<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Workbook galleries supported by the template.{{% /md %}}</dd>
     <dt class="property-optional"

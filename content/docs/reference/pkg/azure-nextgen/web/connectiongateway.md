@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.web.ConnectionGateway resource w
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The gateway definition
-Latest API Version: 2016-06-01.
+API Version: 2016-06-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,13 +27,13 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var connectionGateway = new AzureNextGen.Web.Latest.ConnectionGateway("connectionGateway", new AzureNextGen.Web.Latest.ConnectionGatewayArgs
+        var connectionGateway = new AzureNextGen.Web..ConnectionGateway("connectionGateway", new AzureNextGen.Web..ConnectionGatewayArgs
         {
             ConnectionGatewayName = "test123",
-            Properties = new AzureNextGen.Web.Latest.Inputs.ConnectionGatewayDefinitionPropertiesArgs
+            Properties = new AzureNextGen.Web..Inputs.ConnectionGatewayDefinitionPropertiesArgs
             {
                 BackendUri = "https://WABI-WEST-US-redirect.analysis.windows.net",
-                ConnectionGatewayInstallation = new AzureNextGen.Web.Latest.Inputs.ConnectionGatewayReferenceArgs
+                ConnectionGatewayInstallation = new AzureNextGen.Web..Inputs.ConnectionGatewayReferenceArgs
                 {
                     Id = "/subscriptions/34adfa4f-cedf-4dc0-ba29-b6d1a69ab345/providers/Microsoft.Web/locations/westus/connectionGatewayInstallations/865dccd1-5d5c-45fe-b5a0-249d4de4134c",
                 },
@@ -61,7 +61,7 @@ class MyStack : Stack
 package main
 
 import (
-	web "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/web/latest"
+	web "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/web"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -100,11 +100,11 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-connection_gateway = azure_nextgen.web.latest.ConnectionGateway("connectionGateway",
+connection_gateway = azure_nextgen.web.ConnectionGateway("connectionGateway",
     connection_gateway_name="test123",
-    properties=azure_nextgen.web.latest.ConnectionGatewayDefinitionPropertiesArgs(
+    properties=azure_nextgen.web.ConnectionGatewayDefinitionPropertiesArgs(
         backend_uri="https://WABI-WEST-US-redirect.analysis.windows.net",
-        connection_gateway_installation=azure_nextgen.web.latest.ConnectionGatewayReferenceArgs(
+        connection_gateway_installation=azure_nextgen.web.ConnectionGatewayReferenceArgs(
             id="/subscriptions/34adfa4f-cedf-4dc0-ba29-b6d1a69ab345/providers/Microsoft.Web/locations/westus/connectionGatewayInstallations/865dccd1-5d5c-45fe-b5a0-249d4de4134c",
         ),
         contact_information=["test123@microsoft.com"],
@@ -124,7 +124,7 @@ connection_gateway = azure_nextgen.web.latest.ConnectionGateway("connectionGatew
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const connectionGateway = new azure_nextgen.web.latest.ConnectionGateway("connectionGateway", {
+const connectionGateway = new azure_nextgen.web.ConnectionGateway("connectionGateway", {
     connectionGatewayName: "test123",
     properties: {
         backendUri: "https://WABI-WEST-US-redirect.analysis.windows.net",
@@ -368,7 +368,7 @@ The ConnectionGateway resource accepts the following [input]({{< relref "/docs/i
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectiongatewaydefinitionproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web.<wbr>Inputs.<wbr>Connection<wbr>Gateway<wbr>Definition<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#connectiongatewaydefinitionproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web..<wbr>Inputs.<wbr>Connection<wbr>Gateway<wbr>Definition<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -768,7 +768,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#connectiongatewayinstallation_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>Gateway<wbr>Installation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectiongatewayreference">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web.<wbr>Inputs.<wbr>Connection<wbr>Gateway<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#connectiongatewayreference">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web..<wbr>Inputs.<wbr>Connection<wbr>Gateway<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The gateway installation reference{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1046,7 +1046,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#connectiongatewayinstallation_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>Gateway<wbr>Installation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectiongatewayreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web.<wbr>Inputs.<wbr>Connection<wbr>Gateway<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#connectiongatewayreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web..<wbr>Inputs.<wbr>Connection<wbr>Gateway<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The gateway installation reference{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1649,7 +1649,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:web/latest:ConnectionGateway test123 /subscriptions/34adfa4f-cedf-4dc0-ba29-b6d1a69ab345/resourceGroups/testResourceGroup/providers/Microsoft.Web/connectionGateways/test123 
+$ pulumi import azure-nextgen:web:ConnectionGateway test123 /subscriptions/34adfa4f-cedf-4dc0-ba29-b6d1a69ab345/resourceGroups/testResourceGroup/providers/Microsoft.Web/connectionGateways/test123 
 ```
 
 

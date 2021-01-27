@@ -206,7 +206,7 @@ The following output properties are available:
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceskuresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Analysis<wbr>Services.<wbr>Outputs.<wbr>Resource<wbr>Sku<wbr>Response</a></span>
+        <span class="property-type"><a href="#resourceskuresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Analysis<wbr>Services..<wbr>Outputs.<wbr>Resource<wbr>Sku<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The SKU of the Analysis Services resource.{{% /md %}}</dd>
     <dt class="property-"
@@ -233,7 +233,7 @@ The following output properties are available:
 <a href="#asadministrators_csharp" style="color: inherit; text-decoration: inherit;">As<wbr>Administrators</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serveradministratorsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Analysis<wbr>Services.<wbr>Outputs.<wbr>Server<wbr>Administrators<wbr>Response</a></span>
+        <span class="property-type"><a href="#serveradministratorsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Analysis<wbr>Services..<wbr>Outputs.<wbr>Server<wbr>Administrators<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}A collection of AS server administrators{{% /md %}}</dd>
     <dt class="property-"
@@ -251,7 +251,7 @@ The following output properties are available:
 <a href="#gatewaydetails_csharp" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gatewaydetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Analysis<wbr>Services.<wbr>Outputs.<wbr>Gateway<wbr>Details<wbr>Response</a></span>
+        <span class="property-type"><a href="#gatewaydetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Analysis<wbr>Services..<wbr>Outputs.<wbr>Gateway<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The gateway details configured for the AS server.{{% /md %}}</dd>
     <dt class="property-"
@@ -260,7 +260,7 @@ The following output properties are available:
 <a href="#ipv4firewallsettings_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>V4Firewall<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipv4firewallsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Analysis<wbr>Services.<wbr>Outputs.<wbr>IPv4Firewall<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#ipv4firewallsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Analysis<wbr>Services..<wbr>Outputs.<wbr>IPv4Firewall<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The firewall settings for the AS server.{{% /md %}}</dd>
     <dt class="property-"
@@ -1061,7 +1061,7 @@ The following output properties are available:
 <a href="#firewallrules_csharp" style="color: inherit; text-decoration: inherit;">Firewall<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipv4firewallruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Analysis<wbr>Services.<wbr>Inputs.<wbr>IPv4Firewall<wbr>Rule<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#ipv4firewallruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Analysis<wbr>Services..<wbr>Inputs.<wbr>IPv4Firewall<wbr>Rule<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}An array of firewall rules.{{% /md %}}</dd>
 </dl>

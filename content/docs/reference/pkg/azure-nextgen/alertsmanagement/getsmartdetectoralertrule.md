@@ -197,7 +197,7 @@ The following output properties are available:
 <a href="#actiongroups_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongroupsinformationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Alerts<wbr>Management.<wbr>Outputs.<wbr>Action<wbr>Groups<wbr>Information<wbr>Response</a></span>
+        <span class="property-type"><a href="#actiongroupsinformationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Alerts<wbr>Management..<wbr>Outputs.<wbr>Action<wbr>Groups<wbr>Information<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The alert rule actions.{{% /md %}}</dd>
     <dt class="property-"
@@ -206,7 +206,7 @@ The following output properties are available:
 <a href="#detector_csharp" style="color: inherit; text-decoration: inherit;">Detector</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#detectorresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Alerts<wbr>Management.<wbr>Outputs.<wbr>Detector<wbr>Response</a></span>
+        <span class="property-type"><a href="#detectorresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Alerts<wbr>Management..<wbr>Outputs.<wbr>Detector<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The alert rule's detector.{{% /md %}}</dd>
     <dt class="property-"
@@ -305,7 +305,7 @@ The following output properties are available:
 <a href="#throttling_csharp" style="color: inherit; text-decoration: inherit;">Throttling</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#throttlinginformationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Alerts<wbr>Management.<wbr>Outputs.<wbr>Throttling<wbr>Information<wbr>Response</a></span>
+        <span class="property-type"><a href="#throttlinginformationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Alerts<wbr>Management..<wbr>Outputs.<wbr>Throttling<wbr>Information<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The alert rule throttling information.{{% /md %}}</dd>
 </dl>

@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.securityinsights.Bookmark resour
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Represents a bookmark in Azure Security Insights.
+API Version: 2020-01-01.
 
 {{% examples %}}
 ## Example Usage
@@ -26,11 +27,11 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var bookmark = new AzureNextGen.SecurityInsights.V20190101Preview.Bookmark("bookmark", new AzureNextGen.SecurityInsights.V20190101Preview.BookmarkArgs
+        var bookmark = new AzureNextGen.SecurityInsights..Bookmark("bookmark", new AzureNextGen.SecurityInsights..BookmarkArgs
         {
             BookmarkId = "73e01a99-5cd7-4139-a149-9f2736ff2ab5",
             Created = "2019-01-01T13:15:30Z",
-            CreatedBy = new AzureNextGen.SecurityInsights.V20190101Preview.Inputs.UserInfoArgs
+            CreatedBy = new AzureNextGen.SecurityInsights..Inputs.UserInfoArgs
             {
                 ObjectId = "2046feea-040d-4a46-9e2b-91c2941bfa70",
             },
@@ -42,12 +43,11 @@ class MyStack : Stack
                 "Tag2",
             },
             Notes = "Found a suspicious activity",
-            OperationalInsightsResourceProvider = "Microsoft.OperationalInsights",
             Query = "SecurityEvent | where TimeGenerated > ago(1d) and TimeGenerated < ago(2d)",
             QueryResult = "Security Event query result",
             ResourceGroupName = "myRg",
             Updated = "2019-01-01T13:15:30Z",
-            UpdatedBy = new AzureNextGen.SecurityInsights.V20190101Preview.Inputs.UserInfoArgs
+            UpdatedBy = new AzureNextGen.SecurityInsights..Inputs.UserInfoArgs
             {
                 ObjectId = "2046feea-040d-4a46-9e2b-91c2941bfa70",
             },
@@ -67,7 +67,7 @@ class MyStack : Stack
 package main
 
 import (
-	securityinsights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/securityinsights/v20190101preview"
+	securityinsights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/securityinsights"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -85,12 +85,11 @@ func main() {
 				pulumi.String("Tag1"),
 				pulumi.String("Tag2"),
 			},
-			Notes:                               pulumi.String("Found a suspicious activity"),
-			OperationalInsightsResourceProvider: pulumi.String("Microsoft.OperationalInsights"),
-			Query:                               pulumi.String("SecurityEvent | where TimeGenerated > ago(1d) and TimeGenerated < ago(2d)"),
-			QueryResult:                         pulumi.String("Security Event query result"),
-			ResourceGroupName:                   pulumi.String("myRg"),
-			Updated:                             pulumi.String("2019-01-01T13:15:30Z"),
+			Notes:             pulumi.String("Found a suspicious activity"),
+			Query:             pulumi.String("SecurityEvent | where TimeGenerated > ago(1d) and TimeGenerated < ago(2d)"),
+			QueryResult:       pulumi.String("Security Event query result"),
+			ResourceGroupName: pulumi.String("myRg"),
+			Updated:           pulumi.String("2019-01-01T13:15:30Z"),
 			UpdatedBy: &securityinsights.UserInfoArgs{
 				ObjectId: pulumi.String("2046feea-040d-4a46-9e2b-91c2941bfa70"),
 			},
@@ -113,10 +112,10 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-bookmark = azure_nextgen.securityinsights.v20190101preview.Bookmark("bookmark",
+bookmark = azure_nextgen.securityinsights.Bookmark("bookmark",
     bookmark_id="73e01a99-5cd7-4139-a149-9f2736ff2ab5",
     created="2019-01-01T13:15:30Z",
-    created_by=azure_nextgen.securityinsights.v20190101preview.UserInfoArgs(
+    created_by=azure_nextgen.securityinsights.UserInfoArgs(
         object_id="2046feea-040d-4a46-9e2b-91c2941bfa70",
     ),
     display_name="My bookmark",
@@ -126,12 +125,11 @@ bookmark = azure_nextgen.securityinsights.v20190101preview.Bookmark("bookmark",
         "Tag2",
     ],
     notes="Found a suspicious activity",
-    operational_insights_resource_provider="Microsoft.OperationalInsights",
     query="SecurityEvent | where TimeGenerated > ago(1d) and TimeGenerated < ago(2d)",
     query_result="Security Event query result",
     resource_group_name="myRg",
     updated="2019-01-01T13:15:30Z",
-    updated_by=azure_nextgen.securityinsights.v20190101preview.UserInfoArgs(
+    updated_by=azure_nextgen.securityinsights.UserInfoArgs(
         object_id="2046feea-040d-4a46-9e2b-91c2941bfa70",
     ),
     workspace_name="myWorkspace")
@@ -146,7 +144,7 @@ bookmark = azure_nextgen.securityinsights.v20190101preview.Bookmark("bookmark",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const bookmark = new azure_nextgen.securityinsights.v20190101preview.Bookmark("bookmark", {
+const bookmark = new azure_nextgen.securityinsights.Bookmark("bookmark", {
     bookmarkId: "73e01a99-5cd7-4139-a149-9f2736ff2ab5",
     created: "2019-01-01T13:15:30Z",
     createdBy: {
@@ -159,7 +157,6 @@ const bookmark = new azure_nextgen.securityinsights.v20190101preview.Bookmark("b
         "Tag2",
     ],
     notes: "Found a suspicious activity",
-    operationalInsightsResourceProvider: "Microsoft.OperationalInsights",
     query: "SecurityEvent | where TimeGenerated > ago(1d) and TimeGenerated < ago(2d)",
     queryResult: "Security Event query result",
     resourceGroupName: "myRg",
@@ -186,7 +183,7 @@ const bookmark = new azure_nextgen.securityinsights.v20190101preview.Bookmark("b
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Bookmark</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">bookmark_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">created</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">created_by</span><span class="p">:</span> <span class="nx">Optional[UserInfoArgs]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">incident_info</span><span class="p">:</span> <span class="nx">Optional[IncidentInfoArgs]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">notes</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">operational_insights_resource_provider</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">query</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">query_result</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">updated</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">updated_by</span><span class="p">:</span> <span class="nx">Optional[UserInfoArgs]</span> = None<span class="p">, </span><span class="nx">workspace_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Bookmark</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">bookmark_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">created</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">created_by</span><span class="p">:</span> <span class="nx">Optional[UserInfoArgs]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">incident_info</span><span class="p">:</span> <span class="nx">Optional[IncidentInfoArgs]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">notes</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">query</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">query_result</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">updated</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">updated_by</span><span class="p">:</span> <span class="nx">Optional[UserInfoArgs]</span> = None<span class="p">, </span><span class="nx">workspace_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -377,15 +374,6 @@ The Bookmark resource accepts the following [input]({{< relref "/docs/intro/conc
     <dd>{{% md %}}The display name of the bookmark{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="operationalinsightsresourceprovider_csharp">
-<a href="#operationalinsightsresourceprovider_csharp" style="color: inherit; text-decoration: inherit;">Operational<wbr>Insights<wbr>Resource<wbr>Provider</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The namespace of workspaces resource provider- Microsoft.OperationalInsights.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="query_csharp">
 <a href="#query_csharp" style="color: inherit; text-decoration: inherit;">Query</a>
 </span>
@@ -426,7 +414,7 @@ The Bookmark resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#createdby_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>By</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userinfo">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security<wbr>Insights.<wbr>Inputs.<wbr>User<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#userinfo">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security<wbr>Insights..<wbr>Inputs.<wbr>User<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes a user that created the bookmark{{% /md %}}</dd>
     <dt class="property-optional"
@@ -444,7 +432,7 @@ The Bookmark resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#incidentinfo_csharp" style="color: inherit; text-decoration: inherit;">Incident<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#incidentinfo">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security<wbr>Insights.<wbr>Inputs.<wbr>Incident<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#incidentinfo">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security<wbr>Insights..<wbr>Inputs.<wbr>Incident<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes an incident that relates to bookmark{{% /md %}}</dd>
     <dt class="property-optional"
@@ -489,7 +477,7 @@ The Bookmark resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#updatedby_csharp" style="color: inherit; text-decoration: inherit;">Updated<wbr>By</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userinfo">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security<wbr>Insights.<wbr>Inputs.<wbr>User<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#userinfo">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security<wbr>Insights..<wbr>Inputs.<wbr>User<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes a user that updated the bookmark{{% /md %}}</dd>
 </dl>
@@ -516,15 +504,6 @@ The Bookmark resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The display name of the bookmark{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="operationalinsightsresourceprovider_go">
-<a href="#operationalinsightsresourceprovider_go" style="color: inherit; text-decoration: inherit;">Operational<wbr>Insights<wbr>Resource<wbr>Provider</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The namespace of workspaces resource provider- Microsoft.OperationalInsights.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="query_go">
@@ -659,15 +638,6 @@ The Bookmark resource accepts the following [input]({{< relref "/docs/intro/conc
     <dd>{{% md %}}The display name of the bookmark{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="operationalinsightsresourceprovider_nodejs">
-<a href="#operationalinsightsresourceprovider_nodejs" style="color: inherit; text-decoration: inherit;">operational<wbr>Insights<wbr>Resource<wbr>Provider</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The namespace of workspaces resource provider- Microsoft.OperationalInsights.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="query_nodejs">
 <a href="#query_nodejs" style="color: inherit; text-decoration: inherit;">query</a>
 </span>
@@ -798,15 +768,6 @@ The Bookmark resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The display name of the bookmark{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="operational_insights_resource_provider_python">
-<a href="#operational_insights_resource_provider_python" style="color: inherit; text-decoration: inherit;">operational_<wbr>insights_<wbr>resource_<wbr>provider</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The namespace of workspaces resource provider- Microsoft.OperationalInsights.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="query_python">
@@ -1158,7 +1119,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#severity_csharp" style="color: inherit; text-decoration: inherit;">Severity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#caseseverity">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security<wbr>Insights.<wbr>Case<wbr>Severity</a></span>
+        <span class="property-type">string | <a href="#caseseverity">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security<wbr>Insights..<wbr>Case<wbr>Severity</a></span>
     </dt>
     <dd>{{% md %}}The severity of the incident{{% /md %}}</dd>
     <dt class="property-required"
@@ -1670,7 +1631,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:securityinsights/v20190101preview:Bookmark 73e01a99-5cd7-4139-a149-9f2736ff2ab5 /subscriptions/d0cfe6b2-9ac0-4464-9919-dccaee2e48c0/resourceGroups/myRg/providers/Microsoft.OperationalIinsights/workspaces/myWorkspace/providers/Microsoft.SecurityInsights/bookmarks/73e01a99-5cd7-4139-a149-9f2736ff2ab5 
+$ pulumi import azure-nextgen:securityinsights:Bookmark 73e01a99-5cd7-4139-a149-9f2736ff2ab5 /subscriptions/d0cfe6b2-9ac0-4464-9919-dccaee2e48c0/resourceGroups/myRg/providers/Microsoft.OperationalIinsights/workspaces/myWorkspace/providers/Microsoft.SecurityInsights/bookmarks/73e01a99-5cd7-4139-a149-9f2736ff2ab5 
 ```
 
 

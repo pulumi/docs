@@ -11,13 +11,13 @@ meta_desc: "Documentation for the azure-nextgen.web.WebAppDiagnosticLogsConfigur
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Configuration of App Service site logs.
-Latest API Version: 2020-09-01.
+API Version: 2020-09-01.
 ## Import
 
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:web/latest:WebAppDiagnosticLogsConfiguration myresource1 /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/config/logs 
+$ pulumi import azure-nextgen:web:WebAppDiagnosticLogsConfiguration myresource1 /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/config/logs 
 ```
 
 
@@ -227,7 +227,7 @@ The WebAppDiagnosticLogsConfiguration resource accepts the following [input]({{<
 <a href="#applicationlogs_csharp" style="color: inherit; text-decoration: inherit;">Application<wbr>Logs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationlogsconfig">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web.<wbr>Inputs.<wbr>Application<wbr>Logs<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationlogsconfig">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web..<wbr>Inputs.<wbr>Application<wbr>Logs<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Application logs configuration.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -236,7 +236,7 @@ The WebAppDiagnosticLogsConfiguration resource accepts the following [input]({{<
 <a href="#detailederrormessages_csharp" style="color: inherit; text-decoration: inherit;">Detailed<wbr>Error<wbr>Messages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#enabledconfig">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web.<wbr>Inputs.<wbr>Enabled<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#enabledconfig">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web..<wbr>Inputs.<wbr>Enabled<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Detailed error messages configuration.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -245,7 +245,7 @@ The WebAppDiagnosticLogsConfiguration resource accepts the following [input]({{<
 <a href="#failedrequeststracing_csharp" style="color: inherit; text-decoration: inherit;">Failed<wbr>Requests<wbr>Tracing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#enabledconfig">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web.<wbr>Inputs.<wbr>Enabled<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#enabledconfig">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web..<wbr>Inputs.<wbr>Enabled<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Failed requests tracing configuration.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -254,7 +254,7 @@ The WebAppDiagnosticLogsConfiguration resource accepts the following [input]({{<
 <a href="#httplogs_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Logs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httplogsconfig">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web.<wbr>Inputs.<wbr>Http<wbr>Logs<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#httplogsconfig">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web..<wbr>Inputs.<wbr>Http<wbr>Logs<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}HTTP logs configuration.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -501,7 +501,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#systemdata_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web.<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
+        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web..<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The system metadata relating to this resource.{{% /md %}}</dd>
     <dt class="property-"
@@ -636,7 +636,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azureblobstorage_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Blob<wbr>Storage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureblobstorageapplicationlogsconfig">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Application<wbr>Logs<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#azureblobstorageapplicationlogsconfig">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web..<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Application<wbr>Logs<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Application logs to blob storage configuration.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -645,7 +645,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azuretablestorage_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Table<wbr>Storage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azuretablestorageapplicationlogsconfig">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web.<wbr>Inputs.<wbr>Azure<wbr>Table<wbr>Storage<wbr>Application<wbr>Logs<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#azuretablestorageapplicationlogsconfig">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web..<wbr>Inputs.<wbr>Azure<wbr>Table<wbr>Storage<wbr>Application<wbr>Logs<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Application logs to azure table storage configuration.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -654,7 +654,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filesystem_csharp" style="color: inherit; text-decoration: inherit;">File<wbr>System</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#filesystemapplicationlogsconfig">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web.<wbr>Inputs.<wbr>File<wbr>System<wbr>Application<wbr>Logs<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#filesystemapplicationlogsconfig">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web..<wbr>Inputs.<wbr>File<wbr>System<wbr>Application<wbr>Logs<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Application logs to file system configuration.{{% /md %}}</dd>
 </dl>
@@ -770,7 +770,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azureblobstorage_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Blob<wbr>Storage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureblobstorageapplicationlogsconfigresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Application<wbr>Logs<wbr>Config<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azureblobstorageapplicationlogsconfigresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web..<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Application<wbr>Logs<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Application logs to blob storage configuration.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -779,7 +779,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azuretablestorage_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Table<wbr>Storage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azuretablestorageapplicationlogsconfigresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web.<wbr>Inputs.<wbr>Azure<wbr>Table<wbr>Storage<wbr>Application<wbr>Logs<wbr>Config<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azuretablestorageapplicationlogsconfigresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web..<wbr>Inputs.<wbr>Azure<wbr>Table<wbr>Storage<wbr>Application<wbr>Logs<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Application logs to azure table storage configuration.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -788,7 +788,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filesystem_csharp" style="color: inherit; text-decoration: inherit;">File<wbr>System</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#filesystemapplicationlogsconfigresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web.<wbr>Inputs.<wbr>File<wbr>System<wbr>Application<wbr>Logs<wbr>Config<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#filesystemapplicationlogsconfigresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web..<wbr>Inputs.<wbr>File<wbr>System<wbr>Application<wbr>Logs<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Application logs to file system configuration.{{% /md %}}</dd>
 </dl>
@@ -904,7 +904,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#level_csharp" style="color: inherit; text-decoration: inherit;">Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loglevel">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web.<wbr>Log<wbr>Level</a></span>
+        <span class="property-type"><a href="#loglevel">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web..<wbr>Log<wbr>Level</a></span>
     </dt>
     <dd>{{% md %}}Log level.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1481,7 +1481,7 @@ Remove blobs older than X days.
 <a href="#level_csharp" style="color: inherit; text-decoration: inherit;">Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loglevel">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web.<wbr>Log<wbr>Level</a></span>
+        <span class="property-type"><a href="#loglevel">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web..<wbr>Log<wbr>Level</a></span>
     </dt>
     <dd>{{% md %}}Log level.{{% /md %}}</dd>
 </dl>
@@ -1792,7 +1792,7 @@ Remove blobs older than X days.
 <a href="#level_csharp" style="color: inherit; text-decoration: inherit;">Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loglevel">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web.<wbr>Log<wbr>Level</a></span>
+        <span class="property-type"><a href="#loglevel">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web..<wbr>Log<wbr>Level</a></span>
     </dt>
     <dd>{{% md %}}Log level.{{% /md %}}</dd>
 </dl>
@@ -2216,7 +2216,7 @@ Value can range between 25 and 100.{{% /md %}}</dd>
 <a href="#azureblobstorage_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Blob<wbr>Storage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureblobstoragehttplogsconfig">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Http<wbr>Logs<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#azureblobstoragehttplogsconfig">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web..<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Http<wbr>Logs<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Http logs to azure blob storage configuration.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2225,7 +2225,7 @@ Value can range between 25 and 100.{{% /md %}}</dd>
 <a href="#filesystem_csharp" style="color: inherit; text-decoration: inherit;">File<wbr>System</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#filesystemhttplogsconfig">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web.<wbr>Inputs.<wbr>File<wbr>System<wbr>Http<wbr>Logs<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#filesystemhttplogsconfig">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web..<wbr>Inputs.<wbr>File<wbr>System<wbr>Http<wbr>Logs<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Http logs to file system configuration.{{% /md %}}</dd>
 </dl>
@@ -2314,7 +2314,7 @@ Value can range between 25 and 100.{{% /md %}}</dd>
 <a href="#azureblobstorage_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Blob<wbr>Storage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureblobstoragehttplogsconfigresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Http<wbr>Logs<wbr>Config<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azureblobstoragehttplogsconfigresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web..<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Http<wbr>Logs<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Http logs to azure blob storage configuration.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2323,7 +2323,7 @@ Value can range between 25 and 100.{{% /md %}}</dd>
 <a href="#filesystem_csharp" style="color: inherit; text-decoration: inherit;">File<wbr>System</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#filesystemhttplogsconfigresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web.<wbr>Inputs.<wbr>File<wbr>System<wbr>Http<wbr>Logs<wbr>Config<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#filesystemhttplogsconfigresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web..<wbr>Inputs.<wbr>File<wbr>System<wbr>Http<wbr>Logs<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Http logs to file system configuration.{{% /md %}}</dd>
 </dl>

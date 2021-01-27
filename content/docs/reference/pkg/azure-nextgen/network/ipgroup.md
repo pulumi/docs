@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.network.IpGroup resource with ex
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The IpGroups resource information.
-Latest API Version: 2020-08-01.
+API Version: 2020-08-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var ipGroup = new AzureNextGen.Network.Latest.IpGroup("ipGroup", new AzureNextGen.Network.Latest.IpGroupArgs
+        var ipGroup = new AzureNextGen.Network..IpGroup("ipGroup", new AzureNextGen.Network..IpGroupArgs
         {
             IpAddresses = 
             {
@@ -57,7 +57,7 @@ class MyStack : Stack
 package main
 
 import (
-	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network/latest"
+	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -93,7 +93,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-ip_group = azure_nextgen.network.latest.IpGroup("ipGroup",
+ip_group = azure_nextgen.network.IpGroup("ipGroup",
     ip_addresses=[
         "13.64.39.16/32",
         "40.74.146.80/31",
@@ -116,7 +116,7 @@ ip_group = azure_nextgen.network.latest.IpGroup("ipGroup",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const ipGroup = new azure_nextgen.network.latest.IpGroup("ipGroup", {
+const ipGroup = new azure_nextgen.network.IpGroup("ipGroup", {
     ipAddresses: [
         "13.64.39.16/32",
         "40.74.146.80/31",
@@ -579,7 +579,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#firewallpolicies_csharp" style="color: inherit; text-decoration: inherit;">Firewall<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Outputs.<wbr>Sub<wbr>Resource<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#subresourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Outputs.<wbr>Sub<wbr>Resource<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of references to Firewall Policies resources that this IpGroups is associated with.{{% /md %}}</dd>
     <dt class="property-"
@@ -588,7 +588,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#firewalls_csharp" style="color: inherit; text-decoration: inherit;">Firewalls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Outputs.<wbr>Sub<wbr>Resource<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#subresourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Outputs.<wbr>Sub<wbr>Resource<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of references to Firewall resources that this IpGroups is associated with.{{% /md %}}</dd>
     <dt class="property-"
@@ -914,7 +914,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:network/latest:IpGroup ipGroups1 /subscriptions/subId/providers/Microsoft.Network/resourceGroup/myResourceGroup/ipGroups/ipGroups1 
+$ pulumi import azure-nextgen:network:IpGroup ipGroups1 /subscriptions/subId/providers/Microsoft.Network/resourceGroup/myResourceGroup/ipGroups/ipGroups1 
 ```
 
 

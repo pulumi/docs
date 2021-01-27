@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.resources.TemplateSpecVersion re
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Template Spec Version object.
+API Version: 2019-06-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var templateSpecVersion = new AzureNextGen.Resources.V20190601Preview.TemplateSpecVersion("templateSpecVersion", new AzureNextGen.Resources.V20190601Preview.TemplateSpecVersionArgs
+        var templateSpecVersion = new AzureNextGen.Resources..TemplateSpecVersion("templateSpecVersion", new AzureNextGen.Resources..TemplateSpecVersionArgs
         {
             Description = "This is version v1.0 of our template content",
             Location = "eastus",
@@ -59,7 +60,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-template_spec_version = azure_nextgen.resources.v20190601preview.TemplateSpecVersion("templateSpecVersion",
+template_spec_version = azure_nextgen.resources.TemplateSpecVersion("templateSpecVersion",
     description="This is version v1.0 of our template content",
     location="eastus",
     resource_group_name="templateSpecRG",
@@ -82,7 +83,7 @@ template_spec_version = azure_nextgen.resources.v20190601preview.TemplateSpecVer
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const templateSpecVersion = new azure_nextgen.resources.v20190601preview.TemplateSpecVersion("templateSpecVersion", {
+const templateSpecVersion = new azure_nextgen.resources.TemplateSpecVersion("templateSpecVersion", {
     description: "This is version v1.0 of our template content",
     location: "eastus",
     resourceGroupName: "templateSpecRG",
@@ -325,7 +326,7 @@ The TemplateSpecVersion resource accepts the following [input]({{< relref "/docs
 <a href="#artifacts_csharp" style="color: inherit; text-decoration: inherit;">Artifacts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#templatespectemplateartifact">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Resources.<wbr>Inputs.<wbr>Template<wbr>Spec<wbr>Template<wbr>Artifact<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#templatespectemplateartifact">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Resources..<wbr>Inputs.<wbr>Template<wbr>Spec<wbr>Template<wbr>Artifact<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}An array of Template Spec artifacts.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -626,7 +627,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#systemdata_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Resources.<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
+        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Resources..<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Azure Resource Manager metadata containing createdBy and modifiedBy information.{{% /md %}}</dd>
     <dt class="property-"
@@ -1220,7 +1221,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:resources/v20190601preview:TemplateSpecVersion v1.0 /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/templateSpecRG/providers/Microsoft.Resources/templateSpecs/simpleTemplateSpec/versions/v1.0 
+$ pulumi import azure-nextgen:resources:TemplateSpecVersion v1.0 /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/templateSpecRG/providers/Microsoft.Resources/templateSpecs/simpleTemplateSpec/versions/v1.0 
 ```
 
 

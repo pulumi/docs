@@ -215,7 +215,7 @@ The following output properties are available:
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectiongatewaydefinitionresponseproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web.<wbr>Outputs.<wbr>Connection<wbr>Gateway<wbr>Definition<wbr>Response<wbr>Properties</a></span>
+        <span class="property-type"><a href="#connectiongatewaydefinitionresponseproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web..<wbr>Outputs.<wbr>Connection<wbr>Gateway<wbr>Definition<wbr>Response<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-"
@@ -495,7 +495,7 @@ The following output properties are available:
 <a href="#connectiongatewayinstallation_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>Gateway<wbr>Installation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectiongatewayreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web.<wbr>Inputs.<wbr>Connection<wbr>Gateway<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#connectiongatewayreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web..<wbr>Inputs.<wbr>Connection<wbr>Gateway<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The gateway installation reference{{% /md %}}</dd>
     <dt class="property-optional"

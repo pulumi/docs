@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.customerinsights.RoleAssignment 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The Role Assignment resource format.
-Latest API Version: 2017-04-26.
+API Version: 2017-04-26.
 
 {{% examples %}}
 ## Example Usage
@@ -27,18 +27,18 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var roleAssignment = new AzureNextGen.CustomerInsights.Latest.RoleAssignment("roleAssignment", new AzureNextGen.CustomerInsights.Latest.RoleAssignmentArgs
+        var roleAssignment = new AzureNextGen.CustomerInsights..RoleAssignment("roleAssignment", new AzureNextGen.CustomerInsights..RoleAssignmentArgs
         {
             AssignmentName = "assignmentName8976",
             HubName = "sdkTestHub",
             Principals = 
             {
-                new AzureNextGen.CustomerInsights.Latest.Inputs.AssignmentPrincipalArgs
+                new AzureNextGen.CustomerInsights..Inputs.AssignmentPrincipalArgs
                 {
                     PrincipalId = "4c54c38ffa9b416ba5a6d6c8a20cbe7e",
                     PrincipalType = "User",
                 },
-                new AzureNextGen.CustomerInsights.Latest.Inputs.AssignmentPrincipalArgs
+                new AzureNextGen.CustomerInsights..Inputs.AssignmentPrincipalArgs
                 {
                     PrincipalId = "93061d15a5054f2b9948ae25724cf9d5",
                     PrincipalType = "User",
@@ -61,7 +61,7 @@ class MyStack : Stack
 package main
 
 import (
-	customerinsights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/customerinsights/latest"
+	customerinsights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/customerinsights"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -100,15 +100,15 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-role_assignment = azure_nextgen.customerinsights.latest.RoleAssignment("roleAssignment",
+role_assignment = azure_nextgen.customerinsights.RoleAssignment("roleAssignment",
     assignment_name="assignmentName8976",
     hub_name="sdkTestHub",
     principals=[
-        azure_nextgen.customerinsights.latest.AssignmentPrincipalArgs(
+        azure_nextgen.customerinsights.AssignmentPrincipalArgs(
             principal_id="4c54c38ffa9b416ba5a6d6c8a20cbe7e",
             principal_type="User",
         ),
-        azure_nextgen.customerinsights.latest.AssignmentPrincipalArgs(
+        azure_nextgen.customerinsights.AssignmentPrincipalArgs(
             principal_id="93061d15a5054f2b9948ae25724cf9d5",
             principal_type="User",
         ),
@@ -126,7 +126,7 @@ role_assignment = azure_nextgen.customerinsights.latest.RoleAssignment("roleAssi
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const roleAssignment = new azure_nextgen.customerinsights.latest.RoleAssignment("roleAssignment", {
+const roleAssignment = new azure_nextgen.customerinsights.RoleAssignment("roleAssignment", {
     assignmentName: "assignmentName8976",
     hubName: "sdkTestHub",
     principals: [
@@ -354,7 +354,7 @@ The RoleAssignment resource accepts the following [input]({{< relref "/docs/intr
 <a href="#principals_csharp" style="color: inherit; text-decoration: inherit;">Principals</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#assignmentprincipal">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights.<wbr>Inputs.<wbr>Assignment<wbr>Principal<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#assignmentprincipal">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights..<wbr>Inputs.<wbr>Assignment<wbr>Principal<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The principals being assigned to.{{% /md %}}</dd>
     <dt class="property-required"
@@ -372,7 +372,7 @@ The RoleAssignment resource accepts the following [input]({{< relref "/docs/intr
 <a href="#role_csharp" style="color: inherit; text-decoration: inherit;">Role</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#roletypes">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights.<wbr>Role<wbr>Types</a></span>
+        <span class="property-type"><a href="#roletypes">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights..<wbr>Role<wbr>Types</a></span>
     </dt>
     <dd>{{% md %}}Type of roles.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -381,7 +381,7 @@ The RoleAssignment resource accepts the following [input]({{< relref "/docs/intr
 <a href="#conflationpolicies_csharp" style="color: inherit; text-decoration: inherit;">Conflation<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcesetdescription">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights.<wbr>Inputs.<wbr>Resource<wbr>Set<wbr>Description<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcesetdescription">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights..<wbr>Inputs.<wbr>Resource<wbr>Set<wbr>Description<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Widget types set for the assignment.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -390,7 +390,7 @@ The RoleAssignment resource accepts the following [input]({{< relref "/docs/intr
 <a href="#connectors_csharp" style="color: inherit; text-decoration: inherit;">Connectors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcesetdescription">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights.<wbr>Inputs.<wbr>Resource<wbr>Set<wbr>Description<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcesetdescription">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights..<wbr>Inputs.<wbr>Resource<wbr>Set<wbr>Description<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Connectors set for the assignment.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -417,7 +417,7 @@ The RoleAssignment resource accepts the following [input]({{< relref "/docs/intr
 <a href="#interactions_csharp" style="color: inherit; text-decoration: inherit;">Interactions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcesetdescription">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights.<wbr>Inputs.<wbr>Resource<wbr>Set<wbr>Description<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcesetdescription">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights..<wbr>Inputs.<wbr>Resource<wbr>Set<wbr>Description<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Interactions set for the assignment.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -426,7 +426,7 @@ The RoleAssignment resource accepts the following [input]({{< relref "/docs/intr
 <a href="#kpis_csharp" style="color: inherit; text-decoration: inherit;">Kpis</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcesetdescription">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights.<wbr>Inputs.<wbr>Resource<wbr>Set<wbr>Description<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcesetdescription">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights..<wbr>Inputs.<wbr>Resource<wbr>Set<wbr>Description<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Kpis set for the assignment.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -435,7 +435,7 @@ The RoleAssignment resource accepts the following [input]({{< relref "/docs/intr
 <a href="#links_csharp" style="color: inherit; text-decoration: inherit;">Links</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcesetdescription">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights.<wbr>Inputs.<wbr>Resource<wbr>Set<wbr>Description<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcesetdescription">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights..<wbr>Inputs.<wbr>Resource<wbr>Set<wbr>Description<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Links set for the assignment.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -444,7 +444,7 @@ The RoleAssignment resource accepts the following [input]({{< relref "/docs/intr
 <a href="#profiles_csharp" style="color: inherit; text-decoration: inherit;">Profiles</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcesetdescription">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights.<wbr>Inputs.<wbr>Resource<wbr>Set<wbr>Description<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcesetdescription">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights..<wbr>Inputs.<wbr>Resource<wbr>Set<wbr>Description<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Profiles set for the assignment.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -453,7 +453,7 @@ The RoleAssignment resource accepts the following [input]({{< relref "/docs/intr
 <a href="#relationshiplinks_csharp" style="color: inherit; text-decoration: inherit;">Relationship<wbr>Links</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcesetdescription">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights.<wbr>Inputs.<wbr>Resource<wbr>Set<wbr>Description<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcesetdescription">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights..<wbr>Inputs.<wbr>Resource<wbr>Set<wbr>Description<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Role assignments set for the relationship links.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -462,7 +462,7 @@ The RoleAssignment resource accepts the following [input]({{< relref "/docs/intr
 <a href="#relationships_csharp" style="color: inherit; text-decoration: inherit;">Relationships</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcesetdescription">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights.<wbr>Inputs.<wbr>Resource<wbr>Set<wbr>Description<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcesetdescription">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights..<wbr>Inputs.<wbr>Resource<wbr>Set<wbr>Description<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Role assignments set for the relationships.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -471,7 +471,7 @@ The RoleAssignment resource accepts the following [input]({{< relref "/docs/intr
 <a href="#roleassignments_csharp" style="color: inherit; text-decoration: inherit;">Role<wbr>Assignments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcesetdescription">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights.<wbr>Inputs.<wbr>Resource<wbr>Set<wbr>Description<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcesetdescription">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights..<wbr>Inputs.<wbr>Resource<wbr>Set<wbr>Description<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Role assignments set for the assignment.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -480,7 +480,7 @@ The RoleAssignment resource accepts the following [input]({{< relref "/docs/intr
 <a href="#saspolicies_csharp" style="color: inherit; text-decoration: inherit;">Sas<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcesetdescription">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights.<wbr>Inputs.<wbr>Resource<wbr>Set<wbr>Description<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcesetdescription">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights..<wbr>Inputs.<wbr>Resource<wbr>Set<wbr>Description<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Sas Policies set for the assignment.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -489,7 +489,7 @@ The RoleAssignment resource accepts the following [input]({{< relref "/docs/intr
 <a href="#segments_csharp" style="color: inherit; text-decoration: inherit;">Segments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcesetdescription">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights.<wbr>Inputs.<wbr>Resource<wbr>Set<wbr>Description<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcesetdescription">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights..<wbr>Inputs.<wbr>Resource<wbr>Set<wbr>Description<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Role assignments set for the assignment.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -498,7 +498,7 @@ The RoleAssignment resource accepts the following [input]({{< relref "/docs/intr
 <a href="#views_csharp" style="color: inherit; text-decoration: inherit;">Views</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcesetdescription">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights.<wbr>Inputs.<wbr>Resource<wbr>Set<wbr>Description<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcesetdescription">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights..<wbr>Inputs.<wbr>Resource<wbr>Set<wbr>Description<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Views set for the assignment.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -507,7 +507,7 @@ The RoleAssignment resource accepts the following [input]({{< relref "/docs/intr
 <a href="#widgettypes_csharp" style="color: inherit; text-decoration: inherit;">Widget<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcesetdescription">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights.<wbr>Inputs.<wbr>Resource<wbr>Set<wbr>Description<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcesetdescription">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights..<wbr>Inputs.<wbr>Resource<wbr>Set<wbr>Description<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Widget types set for the assignment.{{% /md %}}</dd>
 </dl>
@@ -1831,7 +1831,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:customerinsights/latest:RoleAssignment azSdkTestHub/assignmentName8976 /subscriptions/c909e979-ef71-4def-a970-bc7c154db8c5/resourceGroups/TestHubRG/providers/Microsoft.CustomerInsights/hubs/azSdkTestHub/RoleAssignments/assignmentName8976 
+$ pulumi import azure-nextgen:customerinsights:RoleAssignment azSdkTestHub/assignmentName8976 /subscriptions/c909e979-ef71-4def-a970-bc7c154db8c5/resourceGroups/TestHubRG/providers/Microsoft.CustomerInsights/hubs/azSdkTestHub/RoleAssignments/assignmentName8976 
 ```
 
 

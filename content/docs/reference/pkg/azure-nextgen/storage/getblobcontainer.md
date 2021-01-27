@@ -251,7 +251,7 @@ The following output properties are available:
 <a href="#immutabilitypolicy_csharp" style="color: inherit; text-decoration: inherit;">Immutability<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#immutabilitypolicypropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Outputs.<wbr>Immutability<wbr>Policy<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#immutabilitypolicypropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage..<wbr>Outputs.<wbr>Immutability<wbr>Policy<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The ImmutabilityPolicy property of the container.{{% /md %}}</dd>
     <dt class="property-"
@@ -296,7 +296,7 @@ The following output properties are available:
 <a href="#legalhold_csharp" style="color: inherit; text-decoration: inherit;">Legal<wbr>Hold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#legalholdpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Outputs.<wbr>Legal<wbr>Hold<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#legalholdpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage..<wbr>Outputs.<wbr>Legal<wbr>Hold<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The LegalHold property of the container.{{% /md %}}</dd>
     <dt class="property-"
@@ -972,7 +972,7 @@ The following output properties are available:
 <a href="#updatehistory_csharp" style="color: inherit; text-decoration: inherit;">Update<wbr>History</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#updatehistorypropertyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Inputs.<wbr>Update<wbr>History<wbr>Property<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#updatehistorypropertyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage..<wbr>Inputs.<wbr>Update<wbr>History<wbr>Property<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The ImmutabilityPolicy update history of the blob container.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1174,7 +1174,7 @@ The following output properties are available:
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tagpropertyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Inputs.<wbr>Tag<wbr>Property<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#tagpropertyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage..<wbr>Inputs.<wbr>Tag<wbr>Property<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of LegalHold tags of a blob container.{{% /md %}}</dd>
 </dl>

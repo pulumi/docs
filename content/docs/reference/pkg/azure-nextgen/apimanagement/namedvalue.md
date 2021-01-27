@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.apimanagement.NamedValue resourc
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 NamedValue details.
-Latest API Version: 2019-12-01.
+API Version: 2019-12-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var namedValue = new AzureNextGen.ApiManagement.Latest.NamedValue("namedValue", new AzureNextGen.ApiManagement.Latest.NamedValueArgs
+        var namedValue = new AzureNextGen.ApiManagement..NamedValue("namedValue", new AzureNextGen.ApiManagement..NamedValueArgs
         {
             DisplayName = "prop3name",
             NamedValueId = "testprop2",
@@ -55,7 +55,7 @@ class MyStack : Stack
 package main
 
 import (
-	apimanagement "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/apimanagement/latest"
+	apimanagement "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/apimanagement"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -90,7 +90,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-named_value = azure_nextgen.apimanagement.latest.NamedValue("namedValue",
+named_value = azure_nextgen.apimanagement.NamedValue("namedValue",
     display_name="prop3name",
     named_value_id="testprop2",
     resource_group_name="rg1",
@@ -112,7 +112,7 @@ named_value = azure_nextgen.apimanagement.latest.NamedValue("namedValue",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const namedValue = new azure_nextgen.apimanagement.latest.NamedValue("namedValue", {
+const namedValue = new azure_nextgen.apimanagement.NamedValue("namedValue", {
     displayName: "prop3name",
     namedValueId: "testprop2",
     resourceGroupName: "rg1",
@@ -735,7 +735,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:apimanagement/latest:NamedValue testprop2 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/namedValues/testprop2 
+$ pulumi import azure-nextgen:apimanagement:NamedValue testprop2 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/namedValues/testprop2 
 ```
 
 

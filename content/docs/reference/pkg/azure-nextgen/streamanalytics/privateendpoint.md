@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.streamanalytics.PrivateEndpoint 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Complete information about the private endpoint.
+API Version: 2020-03-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,15 +27,15 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var privateEndpoint = new AzureNextGen.StreamAnalytics.V20200301Preview.PrivateEndpoint("privateEndpoint", new AzureNextGen.StreamAnalytics.V20200301Preview.PrivateEndpointArgs
+        var privateEndpoint = new AzureNextGen.StreamAnalytics..PrivateEndpoint("privateEndpoint", new AzureNextGen.StreamAnalytics..PrivateEndpointArgs
         {
             ClusterName = "testcluster",
             PrivateEndpointName = "testpe",
-            Properties = new AzureNextGen.StreamAnalytics.V20200301Preview.Inputs.PrivateEndpointPropertiesArgs
+            Properties = new AzureNextGen.StreamAnalytics..Inputs.PrivateEndpointPropertiesArgs
             {
                 ManualPrivateLinkServiceConnections = 
                 {
-                    new AzureNextGen.StreamAnalytics.V20200301Preview.Inputs.PrivateLinkServiceConnectionArgs
+                    new AzureNextGen.StreamAnalytics..Inputs.PrivateLinkServiceConnectionArgs
                     {
                         GroupIds = 
                         {
@@ -60,7 +61,7 @@ class MyStack : Stack
 package main
 
 import (
-	streamanalytics "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/streamanalytics/v20200301preview"
+	streamanalytics "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/streamanalytics"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -98,11 +99,11 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-private_endpoint = azure_nextgen.streamanalytics.v20200301preview.PrivateEndpoint("privateEndpoint",
+private_endpoint = azure_nextgen.streamanalytics.PrivateEndpoint("privateEndpoint",
     cluster_name="testcluster",
     private_endpoint_name="testpe",
-    properties=azure_nextgen.streamanalytics.v20200301preview.PrivateEndpointPropertiesArgs(
-        manual_private_link_service_connections=[azure_nextgen.streamanalytics.v20200301preview.PrivateLinkServiceConnectionArgs(
+    properties=azure_nextgen.streamanalytics.PrivateEndpointPropertiesArgs(
+        manual_private_link_service_connections=[azure_nextgen.streamanalytics.PrivateLinkServiceConnectionArgs(
             group_ids=["groupIdFromResource"],
             private_link_service_id="/subscriptions/subId/resourceGroups/rg1/providers/Microsoft.Network/privateLinkServices/testPls",
         )],
@@ -119,7 +120,7 @@ private_endpoint = azure_nextgen.streamanalytics.v20200301preview.PrivateEndpoin
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const privateEndpoint = new azure_nextgen.streamanalytics.v20200301preview.PrivateEndpoint("privateEndpoint", {
+const privateEndpoint = new azure_nextgen.streamanalytics.PrivateEndpoint("privateEndpoint", {
     clusterName: "testcluster",
     privateEndpointName: "testpe",
     properties: {
@@ -351,7 +352,7 @@ The PrivateEndpoint resource accepts the following [input]({{< relref "/docs/int
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#privateendpointproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics..<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The properties associated with a private endpoint.{{% /md %}}</dd>
 </dl>
@@ -679,7 +680,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#manualprivatelinkserviceconnections_csharp" style="color: inherit; text-decoration: inherit;">Manual<wbr>Private<wbr>Link<wbr>Service<wbr>Connections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkserviceconnection">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#privatelinkserviceconnection">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics..<wbr>Inputs.<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of connections to the remote resource. Immutable after it is set.{{% /md %}}</dd>
 </dl>
@@ -750,7 +751,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#manualprivatelinkserviceconnections_csharp" style="color: inherit; text-decoration: inherit;">Manual<wbr>Private<wbr>Link<wbr>Service<wbr>Connections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkserviceconnectionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#privatelinkserviceconnectionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics..<wbr>Inputs.<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of connections to the remote resource. Immutable after it is set.{{% /md %}}</dd>
 </dl>
@@ -1116,7 +1117,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privatelinkserviceconnectionstate_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkconnectionstateresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Private<wbr>Link<wbr>Connection<wbr>State<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#privatelinkconnectionstateresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics..<wbr>Inputs.<wbr>Private<wbr>Link<wbr>Connection<wbr>State<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A collection of read-only information about the state of the connection to the private remote resource.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1271,7 +1272,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:streamanalytics/v20200301preview:PrivateEndpoint An Example Private Endpoint /subscriptions/34adfa4f-cedf-4dc0-ba29-b6d1a69ab345/resourceGroups/sjrg/providers/Microsoft.StreamAnalytics/clusters/testcluster/privateEndpoints/AnExamplePrivateEndpoint 
+$ pulumi import azure-nextgen:streamanalytics:PrivateEndpoint An Example Private Endpoint /subscriptions/34adfa4f-cedf-4dc0-ba29-b6d1a69ab345/resourceGroups/sjrg/providers/Microsoft.StreamAnalytics/clusters/testcluster/privateEndpoints/AnExamplePrivateEndpoint 
 ```
 
 

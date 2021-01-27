@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.dbforpostgresql.ServerKey resour
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 A PostgreSQL Server key.
-Latest API Version: 2020-01-01.
+API Version: 2020-01-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var serverKey = new AzureNextGen.DBforPostgreSQL.Latest.ServerKey("serverKey", new AzureNextGen.DBforPostgreSQL.Latest.ServerKeyArgs
+        var serverKey = new AzureNextGen.DBforPostgreSQL..ServerKey("serverKey", new AzureNextGen.DBforPostgreSQL..ServerKeyArgs
         {
             KeyName = "someVault_someKey_01234567890123456789012345678901",
             ResourceGroupName = "testrg",
@@ -49,7 +49,7 @@ class MyStack : Stack
 package main
 
 import (
-	dbforpostgresql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/dbforpostgresql/latest"
+	dbforpostgresql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/dbforpostgresql"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -79,7 +79,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-server_key = azure_nextgen.dbforpostgresql.latest.ServerKey("serverKey",
+server_key = azure_nextgen.dbforpostgresql.ServerKey("serverKey",
     key_name="someVault_someKey_01234567890123456789012345678901",
     resource_group_name="testrg",
     server_key_type="AzureKeyVault",
@@ -96,7 +96,7 @@ server_key = azure_nextgen.dbforpostgresql.latest.ServerKey("serverKey",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const serverKey = new azure_nextgen.dbforpostgresql.latest.ServerKey("serverKey", {
+const serverKey = new azure_nextgen.dbforpostgresql.ServerKey("serverKey", {
     keyName: "someVault_someKey_01234567890123456789012345678901",
     resourceGroupName: "testrg",
     serverKeyType: "AzureKeyVault",
@@ -315,7 +315,7 @@ The ServerKey resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#serverkeytype_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>Key<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#serverkeytype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>DBfor<wbr>Postgre<wbr>SQL.<wbr>Server<wbr>Key<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#serverkeytype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>DBfor<wbr>Postgre<wbr>SQL..<wbr>Server<wbr>Key<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The key type like 'AzureKeyVault'.{{% /md %}}</dd>
     <dt class="property-required"
@@ -748,7 +748,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:dbforpostgresql/latest:ServerKey omeVault_someKey_01234567890123456789012345678901 /subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/testrg/providers/Microsoft.DBforPostgreSQL/servers/testserver/keys/someVault_someKey_01234567890123456789012345678901 
+$ pulumi import azure-nextgen:dbforpostgresql:ServerKey omeVault_someKey_01234567890123456789012345678901 /subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/testrg/providers/Microsoft.DBforPostgreSQL/servers/testserver/keys/someVault_someKey_01234567890123456789012345678901 
 ```
 
 

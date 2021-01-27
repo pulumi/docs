@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.blueprint.Artifact resource with
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Represents a blueprint artifact.
+API Version: 2018-11-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var artifact = new AzureNextGen.Blueprint.V20181101Preview.Artifact("artifact", new AzureNextGen.Blueprint.V20181101Preview.ArtifactArgs
+        var artifact = new AzureNextGen.Blueprint..Artifact("artifact", new AzureNextGen.Blueprint..ArtifactArgs
         {
             ArtifactName = "storageTemplate",
             BlueprintName = "simpleBlueprint",
@@ -47,7 +48,7 @@ class MyStack : Stack
 package main
 
 import (
-	blueprint "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/blueprint/v20181101preview"
+	blueprint "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/blueprint"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -76,7 +77,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-artifact = azure_nextgen.blueprint.v20181101preview.Artifact("artifact",
+artifact = azure_nextgen.blueprint.Artifact("artifact",
     artifact_name="storageTemplate",
     blueprint_name="simpleBlueprint",
     kind="template",
@@ -92,7 +93,7 @@ artifact = azure_nextgen.blueprint.v20181101preview.Artifact("artifact",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const artifact = new azure_nextgen.blueprint.v20181101preview.Artifact("artifact", {
+const artifact = new azure_nextgen.blueprint.Artifact("artifact", {
     artifactName: "storageTemplate",
     blueprintName: "simpleBlueprint",
     kind: "template",
@@ -113,7 +114,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var artifact = new AzureNextGen.Blueprint.V20181101Preview.Artifact("artifact", new AzureNextGen.Blueprint.V20181101Preview.ArtifactArgs
+        var artifact = new AzureNextGen.Blueprint..Artifact("artifact", new AzureNextGen.Blueprint..ArtifactArgs
         {
             ArtifactName = "costCenterPolicy",
             BlueprintName = "simpleBlueprint",
@@ -134,7 +135,7 @@ class MyStack : Stack
 package main
 
 import (
-	blueprint "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/blueprint/v20181101preview"
+	blueprint "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/blueprint"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -163,7 +164,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-artifact = azure_nextgen.blueprint.v20181101preview.Artifact("artifact",
+artifact = azure_nextgen.blueprint.Artifact("artifact",
     artifact_name="costCenterPolicy",
     blueprint_name="simpleBlueprint",
     kind="policyAssignment",
@@ -179,7 +180,7 @@ artifact = azure_nextgen.blueprint.v20181101preview.Artifact("artifact",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const artifact = new azure_nextgen.blueprint.v20181101preview.Artifact("artifact", {
+const artifact = new azure_nextgen.blueprint.Artifact("artifact", {
     artifactName: "costCenterPolicy",
     blueprintName: "simpleBlueprint",
     kind: "policyAssignment",
@@ -200,7 +201,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var artifact = new AzureNextGen.Blueprint.V20181101Preview.Artifact("artifact", new AzureNextGen.Blueprint.V20181101Preview.ArtifactArgs
+        var artifact = new AzureNextGen.Blueprint..Artifact("artifact", new AzureNextGen.Blueprint..ArtifactArgs
         {
             ArtifactName = "ownerAssignment",
             BlueprintName = "simpleBlueprint",
@@ -221,7 +222,7 @@ class MyStack : Stack
 package main
 
 import (
-	blueprint "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/blueprint/v20181101preview"
+	blueprint "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/blueprint"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -250,7 +251,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-artifact = azure_nextgen.blueprint.v20181101preview.Artifact("artifact",
+artifact = azure_nextgen.blueprint.Artifact("artifact",
     artifact_name="ownerAssignment",
     blueprint_name="simpleBlueprint",
     kind="roleAssignment",
@@ -266,7 +267,7 @@ artifact = azure_nextgen.blueprint.v20181101preview.Artifact("artifact",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const artifact = new azure_nextgen.blueprint.v20181101preview.Artifact("artifact", {
+const artifact = new azure_nextgen.blueprint.Artifact("artifact", {
     artifactName: "ownerAssignment",
     blueprintName: "simpleBlueprint",
     kind: "roleAssignment",
@@ -287,7 +288,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var artifact = new AzureNextGen.Blueprint.V20181101Preview.Artifact("artifact", new AzureNextGen.Blueprint.V20181101Preview.ArtifactArgs
+        var artifact = new AzureNextGen.Blueprint..Artifact("artifact", new AzureNextGen.Blueprint..ArtifactArgs
         {
             ArtifactName = "storageTemplate",
             BlueprintName = "simpleBlueprint",
@@ -308,7 +309,7 @@ class MyStack : Stack
 package main
 
 import (
-	blueprint "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/blueprint/v20181101preview"
+	blueprint "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/blueprint"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -337,7 +338,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-artifact = azure_nextgen.blueprint.v20181101preview.Artifact("artifact",
+artifact = azure_nextgen.blueprint.Artifact("artifact",
     artifact_name="storageTemplate",
     blueprint_name="simpleBlueprint",
     kind="template",
@@ -353,7 +354,7 @@ artifact = azure_nextgen.blueprint.v20181101preview.Artifact("artifact",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const artifact = new azure_nextgen.blueprint.v20181101preview.Artifact("artifact", {
+const artifact = new azure_nextgen.blueprint.Artifact("artifact", {
     artifactName: "storageTemplate",
     blueprintName: "simpleBlueprint",
     kind: "template",
@@ -374,7 +375,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var artifact = new AzureNextGen.Blueprint.V20181101Preview.Artifact("artifact", new AzureNextGen.Blueprint.V20181101Preview.ArtifactArgs
+        var artifact = new AzureNextGen.Blueprint..Artifact("artifact", new AzureNextGen.Blueprint..ArtifactArgs
         {
             ArtifactName = "costCenterPolicy",
             BlueprintName = "simpleBlueprint",
@@ -395,7 +396,7 @@ class MyStack : Stack
 package main
 
 import (
-	blueprint "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/blueprint/v20181101preview"
+	blueprint "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/blueprint"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -424,7 +425,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-artifact = azure_nextgen.blueprint.v20181101preview.Artifact("artifact",
+artifact = azure_nextgen.blueprint.Artifact("artifact",
     artifact_name="costCenterPolicy",
     blueprint_name="simpleBlueprint",
     kind="policyAssignment",
@@ -440,7 +441,7 @@ artifact = azure_nextgen.blueprint.v20181101preview.Artifact("artifact",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const artifact = new azure_nextgen.blueprint.v20181101preview.Artifact("artifact", {
+const artifact = new azure_nextgen.blueprint.Artifact("artifact", {
     artifactName: "costCenterPolicy",
     blueprintName: "simpleBlueprint",
     kind: "policyAssignment",
@@ -461,7 +462,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var artifact = new AzureNextGen.Blueprint.V20181101Preview.Artifact("artifact", new AzureNextGen.Blueprint.V20181101Preview.ArtifactArgs
+        var artifact = new AzureNextGen.Blueprint..Artifact("artifact", new AzureNextGen.Blueprint..ArtifactArgs
         {
             ArtifactName = "ownerAssignment",
             BlueprintName = "simpleBlueprint",
@@ -482,7 +483,7 @@ class MyStack : Stack
 package main
 
 import (
-	blueprint "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/blueprint/v20181101preview"
+	blueprint "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/blueprint"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -511,7 +512,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-artifact = azure_nextgen.blueprint.v20181101preview.Artifact("artifact",
+artifact = azure_nextgen.blueprint.Artifact("artifact",
     artifact_name="ownerAssignment",
     blueprint_name="simpleBlueprint",
     kind="roleAssignment",
@@ -527,7 +528,7 @@ artifact = azure_nextgen.blueprint.v20181101preview.Artifact("artifact",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const artifact = new azure_nextgen.blueprint.v20181101preview.Artifact("artifact", {
+const artifact = new azure_nextgen.blueprint.Artifact("artifact", {
     artifactName: "ownerAssignment",
     blueprintName: "simpleBlueprint",
     kind: "roleAssignment",
@@ -745,7 +746,7 @@ The Artifact resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#artifactkind">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Blueprint.<wbr>Artifact<wbr>Kind</a></span>
+        <span class="property-type">string | <a href="#artifactkind">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Blueprint..<wbr>Artifact<wbr>Kind</a></span>
     </dt>
     <dd>{{% md %}}Specifies the kind of blueprint artifact.{{% /md %}}</dd>
     <dt class="property-required"
@@ -1086,7 +1087,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:blueprint/v20181101preview:Artifact ownerAssignment /subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Blueprint/blueprints/simpleBlueprint/artifacts/ownerAssignment 
+$ pulumi import azure-nextgen:blueprint:Artifact ownerAssignment /subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Blueprint/blueprints/simpleBlueprint/artifacts/ownerAssignment 
 ```
 
 

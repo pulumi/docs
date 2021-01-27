@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.automation.PrivateEndpointConnec
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 A private endpoint connection
+API Version: 2020-01-13-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,11 +27,11 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var privateEndpointConnection = new AzureNextGen.Automation.V20200113Preview.PrivateEndpointConnection("privateEndpointConnection", new AzureNextGen.Automation.V20200113Preview.PrivateEndpointConnectionArgs
+        var privateEndpointConnection = new AzureNextGen.Automation..PrivateEndpointConnection("privateEndpointConnection", new AzureNextGen.Automation..PrivateEndpointConnectionArgs
         {
             AutomationAccountName = "ddb1",
             PrivateEndpointConnectionName = "privateEndpointConnectionName",
-            PrivateLinkServiceConnectionState = new AzureNextGen.Automation.V20200113Preview.Inputs.PrivateLinkServiceConnectionStatePropertyArgs
+            PrivateLinkServiceConnectionState = new AzureNextGen.Automation..Inputs.PrivateLinkServiceConnectionStatePropertyArgs
             {
                 Description = "Approved by johndoe@contoso.com",
                 Status = "Approved",
@@ -51,7 +52,7 @@ class MyStack : Stack
 package main
 
 import (
-	automation "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/automation/v20200113preview"
+	automation "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/automation"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -83,10 +84,10 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-private_endpoint_connection = azure_nextgen.automation.v20200113preview.PrivateEndpointConnection("privateEndpointConnection",
+private_endpoint_connection = azure_nextgen.automation.PrivateEndpointConnection("privateEndpointConnection",
     automation_account_name="ddb1",
     private_endpoint_connection_name="privateEndpointConnectionName",
-    private_link_service_connection_state=azure_nextgen.automation.v20200113preview.PrivateLinkServiceConnectionStatePropertyArgs(
+    private_link_service_connection_state=azure_nextgen.automation.PrivateLinkServiceConnectionStatePropertyArgs(
         description="Approved by johndoe@contoso.com",
         status="Approved",
     ),
@@ -102,7 +103,7 @@ private_endpoint_connection = azure_nextgen.automation.v20200113preview.PrivateE
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const privateEndpointConnection = new azure_nextgen.automation.v20200113preview.PrivateEndpointConnection("privateEndpointConnection", {
+const privateEndpointConnection = new azure_nextgen.automation.PrivateEndpointConnection("privateEndpointConnection", {
     automationAccountName: "ddb1",
     privateEndpointConnectionName: "privateEndpointConnectionName",
     privateLinkServiceConnectionState: {
@@ -332,7 +333,7 @@ The PrivateEndpointConnection resource accepts the following [input]({{< relref 
 <a href="#privateendpoint_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointproperty">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automation.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Property<wbr>Args</a></span>
+        <span class="property-type"><a href="#privateendpointproperty">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automation..<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Property<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Private endpoint which the connection belongs to.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -341,7 +342,7 @@ The PrivateEndpointConnection resource accepts the following [input]({{< relref 
 <a href="#privatelinkserviceconnectionstate_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkserviceconnectionstateproperty">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automation.<wbr>Inputs.<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Property<wbr>Args</a></span>
+        <span class="property-type"><a href="#privatelinkserviceconnectionstateproperty">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automation..<wbr>Inputs.<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Property<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Connection State of the Private Endpoint Connection.{{% /md %}}</dd>
 </dl>
@@ -1010,7 +1011,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:automation/v20200113preview:PrivateEndpointConnection privateEndpointConnectionName /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/rg1/providers/Microsoft.Automation/automationAccounts/ddb1/privateEndpointConnections/privateEndpointConnectionName 
+$ pulumi import azure-nextgen:automation:PrivateEndpointConnection privateEndpointConnectionName /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/rg1/providers/Microsoft.Automation/automationAccounts/ddb1/privateEndpointConnections/privateEndpointConnectionName 
 ```
 
 

@@ -332,7 +332,7 @@ The following output properties are available:
 <a href="#recommendedindex_csharp" style="color: inherit; text-decoration: inherit;">Recommended<wbr>Index</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recommendedindexresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql.<wbr>Outputs.<wbr>Recommended<wbr>Index<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#recommendedindexresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql..<wbr>Outputs.<wbr>Recommended<wbr>Index<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The recommended indices for this database.{{% /md %}}</dd>
     <dt class="property-"
@@ -350,7 +350,7 @@ The following output properties are available:
 <a href="#servicetieradvisors_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Tier<wbr>Advisors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetieradvisorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql.<wbr>Outputs.<wbr>Service<wbr>Tier<wbr>Advisor<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#servicetieradvisorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql..<wbr>Outputs.<wbr>Service<wbr>Tier<wbr>Advisor<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of service tier advisors for this database. Expanded property{{% /md %}}</dd>
     <dt class="property-"
@@ -368,7 +368,7 @@ The following output properties are available:
 <a href="#transparentdataencryption_csharp" style="color: inherit; text-decoration: inherit;">Transparent<wbr>Data<wbr>Encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transparentdataencryptionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql.<wbr>Outputs.<wbr>Transparent<wbr>Data<wbr>Encryption<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#transparentdataencryptionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql..<wbr>Outputs.<wbr>Transparent<wbr>Data<wbr>Encryption<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The transparent data encryption info for this database.{{% /md %}}</dd>
     <dt class="property-"
@@ -1784,7 +1784,7 @@ Get-AzSqlServerServiceObjective -Location <location>
 <a href="#estimatedimpact_csharp" style="color: inherit; text-decoration: inherit;">Estimated<wbr>Impact</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#operationimpactresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql.<wbr>Inputs.<wbr>Operation<wbr>Impact<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#operationimpactresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql..<wbr>Inputs.<wbr>Operation<wbr>Impact<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The estimated impact of doing recommended index action.{{% /md %}}</dd>
     <dt class="property-required"
@@ -1847,7 +1847,7 @@ Get-AzSqlServerServiceObjective -Location <location>
 <a href="#reportedimpact_csharp" style="color: inherit; text-decoration: inherit;">Reported<wbr>Impact</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#operationimpactresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql.<wbr>Inputs.<wbr>Operation<wbr>Impact<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#operationimpactresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql..<wbr>Inputs.<wbr>Operation<wbr>Impact<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The values reported after index action is complete.{{% /md %}}</dd>
     <dt class="property-required"
@@ -2490,7 +2490,7 @@ Get-AzSqlServerServiceObjective -Location <location>
 <a href="#servicelevelobjectiveusagemetrics_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Level<wbr>Objective<wbr>Usage<wbr>Metrics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slousagemetricresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql.<wbr>Inputs.<wbr>Slo<wbr>Usage<wbr>Metric<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#slousagemetricresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql..<wbr>Inputs.<wbr>Slo<wbr>Usage<wbr>Metric<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets serviceLevelObjectiveUsageMetrics for the service tier advisor.{{% /md %}}</dd>
     <dt class="property-required"

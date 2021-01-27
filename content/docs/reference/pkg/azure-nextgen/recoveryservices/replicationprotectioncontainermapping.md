@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.recoveryservices.ReplicationProt
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Protection container mapping object.
-Latest API Version: 2018-07-10.
+API Version: 2018-07-10.
 
 {{% examples %}}
 ## Example Usage
@@ -27,11 +27,11 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var replicationProtectionContainerMapping = new AzureNextGen.RecoveryServices.Latest.ReplicationProtectionContainerMapping("replicationProtectionContainerMapping", new AzureNextGen.RecoveryServices.Latest.ReplicationProtectionContainerMappingArgs
+        var replicationProtectionContainerMapping = new AzureNextGen.RecoveryServices..ReplicationProtectionContainerMapping("replicationProtectionContainerMapping", new AzureNextGen.RecoveryServices..ReplicationProtectionContainerMappingArgs
         {
             FabricName = "cloud1",
             MappingName = "cloud1protectionprofile1",
-            Properties = new AzureNextGen.RecoveryServices.Latest.Inputs.CreateProtectionContainerMappingInputPropertiesArgs
+            Properties = new AzureNextGen.RecoveryServices..Inputs.CreateProtectionContainerMappingInputPropertiesArgs
             {
                 PolicyId = "/Subscriptions/c183865e-6077-46f2-a3b1-deb0f4f4650a/resourceGroups/resourceGroupPS1/providers/Microsoft.RecoveryServices/vaults/vault1/replicationPolicies/protectionprofile1",
                 ProviderSpecificInput = ,
@@ -55,7 +55,7 @@ class MyStack : Stack
 package main
 
 import (
-	recoveryservices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/recoveryservices/latest"
+	recoveryservices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/recoveryservices"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -90,10 +90,10 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-replication_protection_container_mapping = azure_nextgen.recoveryservices.latest.ReplicationProtectionContainerMapping("replicationProtectionContainerMapping",
+replication_protection_container_mapping = azure_nextgen.recoveryservices.ReplicationProtectionContainerMapping("replicationProtectionContainerMapping",
     fabric_name="cloud1",
     mapping_name="cloud1protectionprofile1",
-    properties=azure_nextgen.recoveryservices.latest.CreateProtectionContainerMappingInputPropertiesArgs(
+    properties=azure_nextgen.recoveryservices.CreateProtectionContainerMappingInputPropertiesArgs(
         policy_id="/Subscriptions/c183865e-6077-46f2-a3b1-deb0f4f4650a/resourceGroups/resourceGroupPS1/providers/Microsoft.RecoveryServices/vaults/vault1/replicationPolicies/protectionprofile1",
         provider_specific_input={},
         target_protection_container_id="Microsoft Azure",
@@ -112,7 +112,7 @@ replication_protection_container_mapping = azure_nextgen.recoveryservices.latest
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const replicationProtectionContainerMapping = new azure_nextgen.recoveryservices.latest.ReplicationProtectionContainerMapping("replicationProtectionContainerMapping", {
+const replicationProtectionContainerMapping = new azure_nextgen.recoveryservices.ReplicationProtectionContainerMapping("replicationProtectionContainerMapping", {
     fabricName: "cloud1",
     mappingName: "cloud1protectionprofile1",
     properties: {
@@ -363,7 +363,7 @@ The ReplicationProtectionContainerMapping resource accepts the following [input]
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#createprotectioncontainermappinginputproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Create<wbr>Protection<wbr>Container<wbr>Mapping<wbr>Input<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#createprotectioncontainermappinginputproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Create<wbr>Protection<wbr>Container<wbr>Mapping<wbr>Input<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configure protection input properties.{{% /md %}}</dd>
 </dl>
@@ -745,7 +745,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#agentautoupdatestatus_csharp" style="color: inherit; text-decoration: inherit;">Agent<wbr>Auto<wbr>Update<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#agentautoupdatestatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Agent<wbr>Auto<wbr>Update<wbr>Status</a></span>
+        <span class="property-type">string | <a href="#agentautoupdatestatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Agent<wbr>Auto<wbr>Update<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}A value indicating whether the auto update is enabled.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1060,7 +1060,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#providerspecificinput_csharp" style="color: inherit; text-decoration: inherit;">Provider<wbr>Specific<wbr>Input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#a2acontainermappinginput">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>A2AContainer<wbr>Mapping<wbr>Input<wbr>Args</a> | <a href="#vmwarecbtcontainermappinginput">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>VMware<wbr>Cbt<wbr>Container<wbr>Mapping<wbr>Input<wbr>Args</a></span>
+        <span class="property-type"><a href="#a2acontainermappinginput">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>A2AContainer<wbr>Mapping<wbr>Input<wbr>Args</a> | <a href="#vmwarecbtcontainermappinginput">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>VMware<wbr>Cbt<wbr>Container<wbr>Mapping<wbr>Input<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Provider specific input for pairing.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1275,7 +1275,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#innerhealtherrors_csharp" style="color: inherit; text-decoration: inherit;">Inner<wbr>Health<wbr>Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#innerhealtherrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Inner<wbr>Health<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#innerhealtherrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Inner<wbr>Health<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The inner health errors. HealthError having a list of HealthError as child errors is problematic. InnerHealthError is used because this will prevent an infinite loop of structures when Hydra tries to auto-generate the contract. We are exposing the related health errors as inner health errors and all API consumers can utilize this in the same fashion as Exception -&gt; InnerException.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2218,7 +2218,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#healtherrordetails_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>Error<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healtherrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Health<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#healtherrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Health<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Health error.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2245,7 +2245,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#providerspecificdetails_csharp" style="color: inherit; text-decoration: inherit;">Provider<wbr>Specific<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#a2aprotectioncontainermappingdetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>A2AProtection<wbr>Container<wbr>Mapping<wbr>Details<wbr>Response<wbr>Args</a> | <a href="#vmwarecbtprotectioncontainermappingdetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>VMware<wbr>Cbt<wbr>Protection<wbr>Container<wbr>Mapping<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#a2aprotectioncontainermappingdetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>A2AProtection<wbr>Container<wbr>Mapping<wbr>Details<wbr>Response<wbr>Args</a> | <a href="#vmwarecbtprotectioncontainermappingdetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>VMware<wbr>Cbt<wbr>Protection<wbr>Container<wbr>Mapping<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Provider specific provider details.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3109,7 +3109,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:recoveryservices/latest:ReplicationProtectionContainerMapping cloud1protectionprofile1 /Subscriptions/c183865e-6077-46f2-a3b1-deb0f4f4650a/resourceGroups/resourceGroupPS1/providers/Microsoft.RecoveryServices/vaults/vault1/replicationFabrics/cloud1/replicationProtectionContainers/cloud_6d224fc6-f326-5d35-96de-fbf51efb3179/replicationProtectionContainerMappings/cloud1protectionprofile1 
+$ pulumi import azure-nextgen:recoveryservices:ReplicationProtectionContainerMapping cloud1protectionprofile1 /Subscriptions/c183865e-6077-46f2-a3b1-deb0f4f4650a/resourceGroups/resourceGroupPS1/providers/Microsoft.RecoveryServices/vaults/vault1/replicationFabrics/cloud1/replicationProtectionContainers/cloud_6d224fc6-f326-5d35-96de-fbf51efb3179/replicationProtectionContainerMappings/cloud1protectionprofile1 
 ```
 
 

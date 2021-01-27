@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.security.OnPremiseIotSensor reso
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 On-premise IoT sensor
+API Version: 2020-08-06-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var onPremiseIotSensor = new AzureNextGen.Security.V20200806Preview.OnPremiseIotSensor("onPremiseIotSensor", new AzureNextGen.Security.V20200806Preview.OnPremiseIotSensorArgs
+        var onPremiseIotSensor = new AzureNextGen.Security..OnPremiseIotSensor("onPremiseIotSensor", new AzureNextGen.Security..OnPremiseIotSensorArgs
         {
             OnPremiseIotSensorName = "mySensor",
         });
@@ -44,7 +45,7 @@ class MyStack : Stack
 package main
 
 import (
-	security "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/security/v20200806preview"
+	security "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/security"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -70,7 +71,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-on_premise_iot_sensor = azure_nextgen.security.v20200806preview.OnPremiseIotSensor("onPremiseIotSensor", on_premise_iot_sensor_name="mySensor")
+on_premise_iot_sensor = azure_nextgen.security.OnPremiseIotSensor("onPremiseIotSensor", on_premise_iot_sensor_name="mySensor")
 
 ```
 
@@ -82,7 +83,7 @@ on_premise_iot_sensor = azure_nextgen.security.v20200806preview.OnPremiseIotSens
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const onPremiseIotSensor = new azure_nextgen.security.v20200806preview.OnPremiseIotSensor("onPremiseIotSensor", {onPremiseIotSensorName: "mySensor"});
+const onPremiseIotSensor = new azure_nextgen.security.OnPremiseIotSensor("onPremiseIotSensor", {onPremiseIotSensorName: "mySensor"});
 
 ```
 
@@ -478,7 +479,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:security/v20200806preview:OnPremiseIotSensor mySensor /subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23/providers/Microsoft.Security/iotSensors/mySensor 
+$ pulumi import azure-nextgen:security:OnPremiseIotSensor mySensor /subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23/providers/Microsoft.Security/iotSensors/mySensor 
 ```
 
 

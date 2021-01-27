@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.sql.SensitivityLabel resource wi
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 A sensitivity label.
+API Version: 2020-08-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var sensitivityLabel = new AzureNextGen.Sql.V20200801Preview.SensitivityLabel("sensitivityLabel", new AzureNextGen.Sql.V20200801Preview.SensitivityLabelArgs
+        var sensitivityLabel = new AzureNextGen.Sql..SensitivityLabel("sensitivityLabel", new AzureNextGen.Sql..SensitivityLabelArgs
         {
             ColumnName = "myColumn",
             DatabaseName = "myDatabase",
@@ -55,7 +56,7 @@ class MyStack : Stack
 package main
 
 import (
-	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql/v20200801preview"
+	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -92,7 +93,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-sensitivity_label = azure_nextgen.sql.v20200801preview.SensitivityLabel("sensitivityLabel",
+sensitivity_label = azure_nextgen.sql.SensitivityLabel("sensitivityLabel",
     column_name="myColumn",
     database_name="myDatabase",
     information_type="PhoneNumber",
@@ -116,7 +117,7 @@ sensitivity_label = azure_nextgen.sql.v20200801preview.SensitivityLabel("sensiti
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const sensitivityLabel = new azure_nextgen.sql.v20200801preview.SensitivityLabel("sensitivityLabel", {
+const sensitivityLabel = new azure_nextgen.sql.SensitivityLabel("sensitivityLabel", {
     columnName: "myColumn",
     databaseName: "myDatabase",
     informationType: "PhoneNumber",
@@ -423,7 +424,7 @@ The SensitivityLabel resource accepts the following [input]({{< relref "/docs/in
 <a href="#rank_csharp" style="color: inherit; text-decoration: inherit;">Rank</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sensitivitylabelrank">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql.<wbr>Sensitivity<wbr>Label<wbr>Rank</a></span>
+        <span class="property-type"><a href="#sensitivitylabelrank">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql..<wbr>Sensitivity<wbr>Label<wbr>Rank</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 </dl>
@@ -1059,7 +1060,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:sql/v20200801preview:SensitivityLabel current /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/myRG/providers/Microsoft.Sql/servers/myServer/databases/myDatabase/schemas/dbo/tables/myTable/columns/myColumn/sensitivityLabels/current 
+$ pulumi import azure-nextgen:sql:SensitivityLabel current /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/myRG/providers/Microsoft.Sql/servers/myServer/databases/myDatabase/schemas/dbo/tables/myTable/columns/myColumn/sensitivityLabels/current 
 ```
 
 

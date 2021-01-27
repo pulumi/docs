@@ -231,7 +231,7 @@ The following output properties are available:
 <a href="#queries_csharp" style="color: inherit; text-decoration: inherit;">Queries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workflowtriggerlistcallbackurlqueriesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Outputs.<wbr>Workflow<wbr>Trigger<wbr>List<wbr>Callback<wbr>Url<wbr>Queries<wbr>Response</a></span>
+        <span class="property-type"><a href="#workflowtriggerlistcallbackurlqueriesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Outputs.<wbr>Workflow<wbr>Trigger<wbr>List<wbr>Callback<wbr>Url<wbr>Queries<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets the workflow trigger callback URL query parameters.{{% /md %}}</dd>
     <dt class="property-"

@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.insights.DiagnosticSetting resou
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The diagnostic setting resource.
+API Version: 2017-05-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,18 +27,18 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var diagnosticSetting = new AzureNextGen.Insights.V20170501Preview.DiagnosticSetting("diagnosticSetting", new AzureNextGen.Insights.V20170501Preview.DiagnosticSettingArgs
+        var diagnosticSetting = new AzureNextGen.Insights..DiagnosticSetting("diagnosticSetting", new AzureNextGen.Insights..DiagnosticSettingArgs
         {
             EventHubAuthorizationRuleId = "/subscriptions/1a66ce04-b633-4a0b-b2bc-a912ec8986a6/resourceGroups/montest/providers/microsoft.eventhub/namespaces/mynamespace/eventhubs/myeventhub/authorizationrules/myrule",
             EventHubName = "myeventhub",
             LogAnalyticsDestinationType = "Dedicated",
             Logs = 
             {
-                new AzureNextGen.Insights.V20170501Preview.Inputs.LogSettingsArgs
+                new AzureNextGen.Insights..Inputs.LogSettingsArgs
                 {
                     Category = "WorkflowRuntime",
                     Enabled = true,
-                    RetentionPolicy = new AzureNextGen.Insights.V20170501Preview.Inputs.RetentionPolicyArgs
+                    RetentionPolicy = new AzureNextGen.Insights..Inputs.RetentionPolicyArgs
                     {
                         Days = 0,
                         Enabled = false,
@@ -46,11 +47,11 @@ class MyStack : Stack
             },
             Metrics = 
             {
-                new AzureNextGen.Insights.V20170501Preview.Inputs.MetricSettingsArgs
+                new AzureNextGen.Insights..Inputs.MetricSettingsArgs
                 {
                     Category = "WorkflowMetrics",
                     Enabled = true,
-                    RetentionPolicy = new AzureNextGen.Insights.V20170501Preview.Inputs.RetentionPolicyArgs
+                    RetentionPolicy = new AzureNextGen.Insights..Inputs.RetentionPolicyArgs
                     {
                         Days = 0,
                         Enabled = false,
@@ -76,7 +77,7 @@ class MyStack : Stack
 package main
 
 import (
-	insights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/insights/v20170501preview"
+	insights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/insights"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -128,22 +129,22 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-diagnostic_setting = azure_nextgen.insights.v20170501preview.DiagnosticSetting("diagnosticSetting",
+diagnostic_setting = azure_nextgen.insights.DiagnosticSetting("diagnosticSetting",
     event_hub_authorization_rule_id="/subscriptions/1a66ce04-b633-4a0b-b2bc-a912ec8986a6/resourceGroups/montest/providers/microsoft.eventhub/namespaces/mynamespace/eventhubs/myeventhub/authorizationrules/myrule",
     event_hub_name="myeventhub",
     log_analytics_destination_type="Dedicated",
-    logs=[azure_nextgen.insights.v20170501preview.LogSettingsArgs(
+    logs=[azure_nextgen.insights.LogSettingsArgs(
         category="WorkflowRuntime",
         enabled=True,
-        retention_policy=azure_nextgen.insights.v20170501preview.RetentionPolicyArgs(
+        retention_policy=azure_nextgen.insights.RetentionPolicyArgs(
             days=0,
             enabled=False,
         ),
     )],
-    metrics=[azure_nextgen.insights.v20170501preview.MetricSettingsArgs(
+    metrics=[azure_nextgen.insights.MetricSettingsArgs(
         category="WorkflowMetrics",
         enabled=True,
-        retention_policy=azure_nextgen.insights.v20170501preview.RetentionPolicyArgs(
+        retention_policy=azure_nextgen.insights.RetentionPolicyArgs(
             days=0,
             enabled=False,
         ),
@@ -163,7 +164,7 @@ diagnostic_setting = azure_nextgen.insights.v20170501preview.DiagnosticSetting("
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const diagnosticSetting = new azure_nextgen.insights.v20170501preview.DiagnosticSetting("diagnosticSetting", {
+const diagnosticSetting = new azure_nextgen.insights.DiagnosticSetting("diagnosticSetting", {
     eventHubAuthorizationRuleId: "/subscriptions/1a66ce04-b633-4a0b-b2bc-a912ec8986a6/resourceGroups/montest/providers/microsoft.eventhub/namespaces/mynamespace/eventhubs/myeventhub/authorizationrules/myrule",
     eventHubName: "myeventhub",
     logAnalyticsDestinationType: "Dedicated",
@@ -427,7 +428,7 @@ The DiagnosticSetting resource accepts the following [input]({{< relref "/docs/i
 <a href="#logs_csharp" style="color: inherit; text-decoration: inherit;">Logs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#logsettings">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Inputs.<wbr>Log<wbr>Settings<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#logsettings">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Inputs.<wbr>Log<wbr>Settings<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of logs settings.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -436,7 +437,7 @@ The DiagnosticSetting resource accepts the following [input]({{< relref "/docs/i
 <a href="#metrics_csharp" style="color: inherit; text-decoration: inherit;">Metrics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricsettings">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Inputs.<wbr>Metric<wbr>Settings<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#metricsettings">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Inputs.<wbr>Metric<wbr>Settings<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of metric settings.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -899,7 +900,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retentionpolicy_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#retentionpolicy">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Inputs.<wbr>Retention<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#retentionpolicy">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Inputs.<wbr>Retention<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}the retention policy for this log.{{% /md %}}</dd>
 </dl>
@@ -1033,7 +1034,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retentionpolicy_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#retentionpolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Inputs.<wbr>Retention<wbr>Policy<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#retentionpolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Inputs.<wbr>Retention<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}the retention policy for this log.{{% /md %}}</dd>
 </dl>
@@ -1167,7 +1168,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retentionpolicy_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#retentionpolicy">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Inputs.<wbr>Retention<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#retentionpolicy">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Inputs.<wbr>Retention<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}the retention policy for this category.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1337,7 +1338,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retentionpolicy_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#retentionpolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Inputs.<wbr>Retention<wbr>Policy<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#retentionpolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Inputs.<wbr>Retention<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}the retention policy for this category.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1679,7 +1680,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:insights/v20170501preview:DiagnosticSetting mysetting /subscriptions/1a66ce04-b633-4a0b-b2bc-a912ec8986a6/resourcegroups/viruela1/providers/microsoft.logic/workflows/viruela6/diagnosticSettings/mysetting 
+$ pulumi import azure-nextgen:insights:DiagnosticSetting mysetting /subscriptions/1a66ce04-b633-4a0b-b2bc-a912ec8986a6/resourcegroups/viruela1/providers/microsoft.logic/workflows/viruela6/diagnosticSettings/mysetting 
 ```
 
 

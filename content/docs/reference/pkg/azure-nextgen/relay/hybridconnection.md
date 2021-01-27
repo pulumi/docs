@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.relay.HybridConnection resource 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Description of hybrid connection resource.
-Latest API Version: 2017-04-01.
+API Version: 2017-04-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var hybridConnection = new AzureNextGen.Relay.Latest.HybridConnection("hybridConnection", new AzureNextGen.Relay.Latest.HybridConnectionArgs
+        var hybridConnection = new AzureNextGen.Relay..HybridConnection("hybridConnection", new AzureNextGen.Relay..HybridConnectionArgs
         {
             HybridConnectionName = "example-Relay-Hybrid-01",
             NamespaceName = "example-RelayNamespace-01",
@@ -48,7 +48,7 @@ class MyStack : Stack
 package main
 
 import (
-	relay "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/relay/latest"
+	relay "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/relay"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -77,7 +77,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-hybrid_connection = azure_nextgen.relay.latest.HybridConnection("hybridConnection",
+hybrid_connection = azure_nextgen.relay.HybridConnection("hybridConnection",
     hybrid_connection_name="example-Relay-Hybrid-01",
     namespace_name="example-RelayNamespace-01",
     requires_client_authorization=True,
@@ -93,7 +93,7 @@ hybrid_connection = azure_nextgen.relay.latest.HybridConnection("hybridConnectio
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const hybridConnection = new azure_nextgen.relay.latest.HybridConnection("hybridConnection", {
+const hybridConnection = new azure_nextgen.relay.HybridConnection("hybridConnection", {
     hybridConnectionName: "example-Relay-Hybrid-01",
     namespaceName: "example-RelayNamespace-01",
     requiresClientAuthorization: true,
@@ -746,7 +746,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:relay/latest:HybridConnection example-Relay-Hybrid-01 /subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/resourcegroup/providers/Microsoft.Relay/namespaces/example-RelayNamespace-01/HybridConnections/example-Relay-Hybrid-01 
+$ pulumi import azure-nextgen:relay:HybridConnection example-Relay-Hybrid-01 /subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/resourcegroup/providers/Microsoft.Relay/namespaces/example-RelayNamespace-01/HybridConnections/example-Relay-Hybrid-01 
 ```
 
 

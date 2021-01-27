@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.logic.IntegrationAccountPartner 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The integration account partner.
-Latest API Version: 2019-05-01.
+API Version: 2019-05-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,15 +27,15 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var integrationAccountPartner = new AzureNextGen.Logic.Latest.IntegrationAccountPartner("integrationAccountPartner", new AzureNextGen.Logic.Latest.IntegrationAccountPartnerArgs
+        var integrationAccountPartner = new AzureNextGen.Logic..IntegrationAccountPartner("integrationAccountPartner", new AzureNextGen.Logic..IntegrationAccountPartnerArgs
         {
-            Content = new AzureNextGen.Logic.Latest.Inputs.PartnerContentArgs
+            Content = new AzureNextGen.Logic..Inputs.PartnerContentArgs
             {
-                B2b = new AzureNextGen.Logic.Latest.Inputs.B2BPartnerContentArgs
+                B2b = new AzureNextGen.Logic..Inputs.B2BPartnerContentArgs
                 {
                     BusinessIdentities = 
                     {
-                        new AzureNextGen.Logic.Latest.Inputs.BusinessIdentityArgs
+                        new AzureNextGen.Logic..Inputs.BusinessIdentityArgs
                         {
                             Qualifier = "AA",
                             Value = "ZZ",
@@ -65,7 +65,7 @@ class MyStack : Stack
 package main
 
 import (
-	logic "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/logic/latest"
+	logic "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/logic"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -107,10 +107,10 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-integration_account_partner = azure_nextgen.logic.latest.IntegrationAccountPartner("integrationAccountPartner",
-    content=azure_nextgen.logic.latest.PartnerContentArgs(
-        b2b=azure_nextgen.logic.latest.B2BPartnerContentArgs(
-            business_identities=[azure_nextgen.logic.latest.BusinessIdentityArgs(
+integration_account_partner = azure_nextgen.logic.IntegrationAccountPartner("integrationAccountPartner",
+    content=azure_nextgen.logic.PartnerContentArgs(
+        b2b=azure_nextgen.logic.B2BPartnerContentArgs(
+            business_identities=[azure_nextgen.logic.BusinessIdentityArgs(
                 qualifier="AA",
                 value="ZZ",
             )],
@@ -134,7 +134,7 @@ integration_account_partner = azure_nextgen.logic.latest.IntegrationAccountPartn
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const integrationAccountPartner = new azure_nextgen.logic.latest.IntegrationAccountPartner("integrationAccountPartner", {
+const integrationAccountPartner = new azure_nextgen.logic.IntegrationAccountPartner("integrationAccountPartner", {
     content: {
         b2b: {
             businessIdentities: [{
@@ -345,7 +345,7 @@ The IntegrationAccountPartner resource accepts the following [input]({{< relref 
 <a href="#content_csharp" style="color: inherit; text-decoration: inherit;">Content</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#partnercontent">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>Partner<wbr>Content<wbr>Args</a></span>
+        <span class="property-type"><a href="#partnercontent">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>Partner<wbr>Content<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The partner content.{{% /md %}}</dd>
     <dt class="property-required"
@@ -372,7 +372,7 @@ The IntegrationAccountPartner resource accepts the following [input]({{< relref 
 <a href="#partnertype_csharp" style="color: inherit; text-decoration: inherit;">Partner<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#partnertype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Partner<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#partnertype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Partner<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The partner type.{{% /md %}}</dd>
     <dt class="property-required"
@@ -880,7 +880,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#businessidentities_csharp" style="color: inherit; text-decoration: inherit;">Business<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#businessidentity">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>Business<wbr>Identity<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#businessidentity">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>Business<wbr>Identity<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of partner business identities.{{% /md %}}</dd>
 </dl>
@@ -942,7 +942,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#businessidentities_csharp" style="color: inherit; text-decoration: inherit;">Business<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#businessidentityresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>Business<wbr>Identity<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#businessidentityresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>Business<wbr>Identity<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of partner business identities.{{% /md %}}</dd>
 </dl>
@@ -1200,7 +1200,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#b2b_csharp" style="color: inherit; text-decoration: inherit;">B2b</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#b2bpartnercontent">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>B2BPartner<wbr>Content<wbr>Args</a></span>
+        <span class="property-type"><a href="#b2bpartnercontent">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>B2BPartner<wbr>Content<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The B2B partner content.{{% /md %}}</dd>
 </dl>
@@ -1262,7 +1262,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#b2b_csharp" style="color: inherit; text-decoration: inherit;">B2b</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#b2bpartnercontentresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>B2BPartner<wbr>Content<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#b2bpartnercontentresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>B2BPartner<wbr>Content<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The B2B partner content.{{% /md %}}</dd>
 </dl>
@@ -1356,7 +1356,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:logic/latest:IntegrationAccountPartner testPartner /subscriptions/34adfa4f-cedf-4dc0-ba29-b6d1a69ab345/resourceGroups/flowrg/providers/Microsoft.Logic/integrationAccounts/testIntegrationAccount/partners/testPartner 
+$ pulumi import azure-nextgen:logic:IntegrationAccountPartner testPartner /subscriptions/34adfa4f-cedf-4dc0-ba29-b6d1a69ab345/resourceGroups/flowrg/providers/Microsoft.Logic/integrationAccounts/testIntegrationAccount/partners/testPartner 
 ```
 
 

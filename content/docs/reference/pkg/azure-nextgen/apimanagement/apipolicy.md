@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.apimanagement.ApiPolicy resource
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Policy Contract details.
-Latest API Version: 2019-12-01.
+API Version: 2019-12-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var apiPolicy = new AzureNextGen.ApiManagement.Latest.ApiPolicy("apiPolicy", new AzureNextGen.ApiManagement.Latest.ApiPolicyArgs
+        var apiPolicy = new AzureNextGen.ApiManagement..ApiPolicy("apiPolicy", new AzureNextGen.ApiManagement..ApiPolicyArgs
         {
             ApiId = "5600b57e7e8880006a040001",
             Format = "xml",
@@ -50,7 +50,7 @@ class MyStack : Stack
 package main
 
 import (
-	apimanagement "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/apimanagement/latest"
+	apimanagement "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/apimanagement"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -81,7 +81,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-api_policy = azure_nextgen.apimanagement.latest.ApiPolicy("apiPolicy",
+api_policy = azure_nextgen.apimanagement.ApiPolicy("apiPolicy",
     api_id="5600b57e7e8880006a040001",
     format="xml",
     policy_id="policy",
@@ -99,7 +99,7 @@ api_policy = azure_nextgen.apimanagement.latest.ApiPolicy("apiPolicy",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const apiPolicy = new azure_nextgen.apimanagement.latest.ApiPolicy("apiPolicy", {
+const apiPolicy = new azure_nextgen.apimanagement.ApiPolicy("apiPolicy", {
     apiId: "5600b57e7e8880006a040001",
     format: "xml",
     policyId: "policy",
@@ -122,7 +122,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var apiPolicy = new AzureNextGen.ApiManagement.Latest.ApiPolicy("apiPolicy", new AzureNextGen.ApiManagement.Latest.ApiPolicyArgs
+        var apiPolicy = new AzureNextGen.ApiManagement..ApiPolicy("apiPolicy", new AzureNextGen.ApiManagement..ApiPolicyArgs
         {
             ApiId = "5600b57e7e8880006a040001",
             Format = "rawxml",
@@ -152,7 +152,7 @@ class MyStack : Stack
 package main
 
 import (
-	apimanagement "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/apimanagement/latest"
+	apimanagement "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/apimanagement"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -183,7 +183,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-api_policy = azure_nextgen.apimanagement.latest.ApiPolicy("apiPolicy",
+api_policy = azure_nextgen.apimanagement.ApiPolicy("apiPolicy",
     api_id="5600b57e7e8880006a040001",
     format="rawxml",
     policy_id="policy",
@@ -208,7 +208,7 @@ api_policy = azure_nextgen.apimanagement.latest.ApiPolicy("apiPolicy",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const apiPolicy = new azure_nextgen.apimanagement.latest.ApiPolicy("apiPolicy", {
+const apiPolicy = new azure_nextgen.apimanagement.ApiPolicy("apiPolicy", {
     apiId: "5600b57e7e8880006a040001",
     format: "rawxml",
     policyId: "policy",
@@ -462,7 +462,7 @@ The ApiPolicy resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#format_csharp" style="color: inherit; text-decoration: inherit;">Format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#policycontentformat">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management.<wbr>Policy<wbr>Content<wbr>Format</a></span>
+        <span class="property-type">string | <a href="#policycontentformat">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management..<wbr>Policy<wbr>Content<wbr>Format</a></span>
     </dt>
     <dd>{{% md %}}Format of the policyContent.{{% /md %}}</dd>
 </dl>
@@ -856,7 +856,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:apimanagement/latest:ApiPolicy policy /subscriptions/4c1a3bc6-89f9-46fe-a175-5d8984b25095/resourcegroups/Api-DF-West-US/providers/Microsoft.ApiManagement/service/samirmsiservice2/apis/echo-api/operations/create-resource/policies/policy 
+$ pulumi import azure-nextgen:apimanagement:ApiPolicy policy /subscriptions/4c1a3bc6-89f9-46fe-a175-5d8984b25095/resourcegroups/Api-DF-West-US/providers/Microsoft.ApiManagement/service/samirmsiservice2/apis/echo-api/operations/create-resource/policies/policy 
 ```
 
 

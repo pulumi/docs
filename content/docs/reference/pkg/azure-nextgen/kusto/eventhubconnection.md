@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.kusto.EventHubConnection resourc
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Class representing an event hub connection.
+API Version: 2018-09-07-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var eventHubConnection = new AzureNextGen.Kusto.V20180907Preview.EventHubConnection("eventHubConnection", new AzureNextGen.Kusto.V20180907Preview.EventHubConnectionArgs
+        var eventHubConnection = new AzureNextGen.Kusto..EventHubConnection("eventHubConnection", new AzureNextGen.Kusto..EventHubConnectionArgs
         {
             ClusterName = "KustoClusterRPTest4",
             ConsumerGroup = "testConsumerGroup1",
@@ -50,7 +51,7 @@ class MyStack : Stack
 package main
 
 import (
-	kusto "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/kusto/v20180907preview"
+	kusto "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/kusto"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -82,7 +83,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-event_hub_connection = azure_nextgen.kusto.v20180907preview.EventHubConnection("eventHubConnection",
+event_hub_connection = azure_nextgen.kusto.EventHubConnection("eventHubConnection",
     cluster_name="KustoClusterRPTest4",
     consumer_group="testConsumerGroup1",
     database_name="KustoDatabase8",
@@ -101,7 +102,7 @@ event_hub_connection = azure_nextgen.kusto.v20180907preview.EventHubConnection("
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const eventHubConnection = new azure_nextgen.kusto.v20180907preview.EventHubConnection("eventHubConnection", {
+const eventHubConnection = new azure_nextgen.kusto.EventHubConnection("eventHubConnection", {
     clusterName: "KustoClusterRPTest4",
     consumerGroup: "testConsumerGroup1",
     databaseName: "KustoDatabase8",
@@ -358,7 +359,7 @@ The EventHubConnection resource accepts the following [input]({{< relref "/docs/
 <a href="#dataformat_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#dataformat">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Kusto.<wbr>Data<wbr>Format</a></span>
+        <span class="property-type">string | <a href="#dataformat">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Kusto..<wbr>Data<wbr>Format</a></span>
     </dt>
     <dd>{{% md %}}The data format of the message. Optionally the data format can be added to each message.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -879,7 +880,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:kusto/v20180907preview:EventHubConnection KustoClusterRPTest4/KustoDatabase8 /subscriptions/12345678-1234-1234-1234-123456789098/resourceGroups/kustorptest/providers/Microsoft.Kusto/clusters/KustoClusterRPTest4/Databases/KustoDatabase8 
+$ pulumi import azure-nextgen:kusto:EventHubConnection KustoClusterRPTest4/KustoDatabase8 /subscriptions/12345678-1234-1234-1234-123456789098/resourceGroups/kustorptest/providers/Microsoft.Kusto/clusters/KustoClusterRPTest4/Databases/KustoDatabase8 
 ```
 
 

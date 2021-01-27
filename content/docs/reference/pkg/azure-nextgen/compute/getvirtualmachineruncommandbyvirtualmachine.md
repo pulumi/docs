@@ -242,7 +242,7 @@ The following output properties are available:
 <a href="#instanceview_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>View</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineruncommandinstanceviewresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Outputs.<wbr>Virtual<wbr>Machine<wbr>Run<wbr>Command<wbr>Instance<wbr>View<wbr>Response</a></span>
+        <span class="property-type"><a href="#virtualmachineruncommandinstanceviewresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Outputs.<wbr>Virtual<wbr>Machine<wbr>Run<wbr>Command<wbr>Instance<wbr>View<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The virtual machine run command instance view.{{% /md %}}</dd>
     <dt class="property-"
@@ -314,7 +314,7 @@ The following output properties are available:
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#runcommandinputparameterresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Outputs.<wbr>Run<wbr>Command<wbr>Input<wbr>Parameter<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#runcommandinputparameterresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Outputs.<wbr>Run<wbr>Command<wbr>Input<wbr>Parameter<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The parameters used by the script.{{% /md %}}</dd>
     <dt class="property-"
@@ -323,7 +323,7 @@ The following output properties are available:
 <a href="#protectedparameters_csharp" style="color: inherit; text-decoration: inherit;">Protected<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#runcommandinputparameterresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Outputs.<wbr>Run<wbr>Command<wbr>Input<wbr>Parameter<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#runcommandinputparameterresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Outputs.<wbr>Run<wbr>Command<wbr>Input<wbr>Parameter<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The parameters used by the script.{{% /md %}}</dd>
     <dt class="property-"
@@ -350,7 +350,7 @@ The following output properties are available:
 <a href="#source_csharp" style="color: inherit; text-decoration: inherit;">Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineruncommandscriptsourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Outputs.<wbr>Virtual<wbr>Machine<wbr>Run<wbr>Command<wbr>Script<wbr>Source<wbr>Response</a></span>
+        <span class="property-type"><a href="#virtualmachineruncommandscriptsourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Outputs.<wbr>Virtual<wbr>Machine<wbr>Run<wbr>Command<wbr>Script<wbr>Source<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The source of the run command script.{{% /md %}}</dd>
     <dt class="property-"
@@ -1223,7 +1223,7 @@ The following output properties are available:
 <a href="#statuses_csharp" style="color: inherit; text-decoration: inherit;">Statuses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceviewstatusresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Instance<wbr>View<wbr>Status<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#instanceviewstatusresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Inputs.<wbr>Instance<wbr>View<wbr>Status<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The resource status information.{{% /md %}}</dd>
 </dl>

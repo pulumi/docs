@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.servicefabricmesh.Application re
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 This type describes an application resource.
+API Version: 2018-09-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var application = new AzureNextGen.ServiceFabricMesh.V20180901Preview.Application("application", new AzureNextGen.ServiceFabricMesh.V20180901Preview.ApplicationArgs
+        var application = new AzureNextGen.ServiceFabricMesh..Application("application", new AzureNextGen.ServiceFabricMesh..ApplicationArgs
         {
             ApplicationResourceName = "sampleApplication",
             Description = "Service Fabric Mesh sample application.",
@@ -34,15 +35,15 @@ class MyStack : Stack
             ResourceGroupName = "sbz_demo",
             Services = 
             {
-                new AzureNextGen.ServiceFabricMesh.V20180901Preview.Inputs.ServiceResourceDescriptionArgs
+                new AzureNextGen.ServiceFabricMesh..Inputs.ServiceResourceDescriptionArgs
                 {
                     CodePackages = 
                     {
-                        new AzureNextGen.ServiceFabricMesh.V20180901Preview.Inputs.ContainerCodePackagePropertiesArgs
+                        new AzureNextGen.ServiceFabricMesh..Inputs.ContainerCodePackagePropertiesArgs
                         {
                             Endpoints = 
                             {
-                                new AzureNextGen.ServiceFabricMesh.V20180901Preview.Inputs.EndpointPropertiesArgs
+                                new AzureNextGen.ServiceFabricMesh..Inputs.EndpointPropertiesArgs
                                 {
                                     Name = "helloWorldListener",
                                     Port = 80,
@@ -50,9 +51,9 @@ class MyStack : Stack
                             },
                             Image = "seabreeze/sbz-helloworld:1.0-alpine",
                             Name = "helloWorldCode",
-                            Resources = new AzureNextGen.ServiceFabricMesh.V20180901Preview.Inputs.ResourceRequirementsArgs
+                            Resources = new AzureNextGen.ServiceFabricMesh..Inputs.ResourceRequirementsArgs
                             {
-                                Requests = new AzureNextGen.ServiceFabricMesh.V20180901Preview.Inputs.ResourceRequestsArgs
+                                Requests = new AzureNextGen.ServiceFabricMesh..Inputs.ResourceRequestsArgs
                                 {
                                     Cpu = 1,
                                     MemoryInGB = 1,
@@ -64,11 +65,11 @@ class MyStack : Stack
                     Name = "helloWorldService",
                     NetworkRefs = 
                     {
-                        new AzureNextGen.ServiceFabricMesh.V20180901Preview.Inputs.NetworkRefArgs
+                        new AzureNextGen.ServiceFabricMesh..Inputs.NetworkRefArgs
                         {
                             EndpointRefs = 
                             {
-                                new AzureNextGen.ServiceFabricMesh.V20180901Preview.Inputs.EndpointRefArgs
+                                new AzureNextGen.ServiceFabricMesh..Inputs.EndpointRefArgs
                                 {
                                     Name = "helloWorldListener",
                                 },
@@ -96,7 +97,7 @@ class MyStack : Stack
 package main
 
 import (
-	servicefabricmesh "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/servicefabricmesh/v20180901preview"
+	servicefabricmesh "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/servicefabricmesh"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -162,21 +163,21 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-application = azure_nextgen.servicefabricmesh.v20180901preview.Application("application",
+application = azure_nextgen.servicefabricmesh.Application("application",
     application_resource_name="sampleApplication",
     description="Service Fabric Mesh sample application.",
     location="EastUS",
     resource_group_name="sbz_demo",
-    services=[azure_nextgen.servicefabricmesh.v20180901preview.ServiceResourceDescriptionArgs(
-        code_packages=[azure_nextgen.servicefabricmesh.v20180901preview.ContainerCodePackagePropertiesArgs(
-            endpoints=[azure_nextgen.servicefabricmesh.v20180901preview.EndpointPropertiesArgs(
+    services=[azure_nextgen.servicefabricmesh.ServiceResourceDescriptionArgs(
+        code_packages=[azure_nextgen.servicefabricmesh.ContainerCodePackagePropertiesArgs(
+            endpoints=[azure_nextgen.servicefabricmesh.EndpointPropertiesArgs(
                 name="helloWorldListener",
                 port=80,
             )],
             image="seabreeze/sbz-helloworld:1.0-alpine",
             name="helloWorldCode",
-            resources=azure_nextgen.servicefabricmesh.v20180901preview.ResourceRequirementsArgs(
-                requests=azure_nextgen.servicefabricmesh.v20180901preview.ResourceRequestsArgs(
+            resources=azure_nextgen.servicefabricmesh.ResourceRequirementsArgs(
+                requests=azure_nextgen.servicefabricmesh.ResourceRequestsArgs(
                     cpu=1,
                     memory_in_gb=1,
                 ),
@@ -184,8 +185,8 @@ application = azure_nextgen.servicefabricmesh.v20180901preview.Application("appl
         )],
         description="SeaBreeze Hello World Service.",
         name="helloWorldService",
-        network_refs=[azure_nextgen.servicefabricmesh.v20180901preview.NetworkRefArgs(
-            endpoint_refs=[azure_nextgen.servicefabricmesh.v20180901preview.EndpointRefArgs(
+        network_refs=[azure_nextgen.servicefabricmesh.NetworkRefArgs(
+            endpoint_refs=[azure_nextgen.servicefabricmesh.EndpointRefArgs(
                 name="helloWorldListener",
             )],
             name="/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/sbz_demo/providers/Microsoft.ServiceFabricMesh/networks/sampleNetwork",
@@ -205,7 +206,7 @@ application = azure_nextgen.servicefabricmesh.v20180901preview.Application("appl
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const application = new azure_nextgen.servicefabricmesh.v20180901preview.Application("application", {
+const application = new azure_nextgen.servicefabricmesh.Application("application", {
     applicationResourceName: "sampleApplication",
     description: "Service Fabric Mesh sample application.",
     location: "EastUS",
@@ -477,7 +478,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#diagnostics_csharp" style="color: inherit; text-decoration: inherit;">Diagnostics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diagnosticsdescription">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Diagnostics<wbr>Description<wbr>Args</a></span>
+        <span class="property-type"><a href="#diagnosticsdescription">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh..<wbr>Inputs.<wbr>Diagnostics<wbr>Description<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the diagnostics definition and usage for an application resource.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -486,7 +487,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#services_csharp" style="color: inherit; text-decoration: inherit;">Services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceresourcedescription">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Service<wbr>Resource<wbr>Description<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#serviceresourcedescription">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh..<wbr>Inputs.<wbr>Service<wbr>Resource<wbr>Description<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Describes the services in the application. This property is used to create or modify services of the application. On get only the name of the service is returned. The service description can be obtained by querying for the service resource.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1379,7 +1380,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#creationparameters_csharp" style="color: inherit; text-decoration: inherit;">Creation<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationscopedvolumecreationparametersservicefabricvolumedisk">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Application<wbr>Scoped<wbr>Volume<wbr>Creation<wbr>Parameters<wbr>Service<wbr>Fabric<wbr>Volume<wbr>Disk<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationscopedvolumecreationparametersservicefabricvolumedisk">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh..<wbr>Inputs.<wbr>Application<wbr>Scoped<wbr>Volume<wbr>Creation<wbr>Parameters<wbr>Service<wbr>Fabric<wbr>Volume<wbr>Disk<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes parameters for creating application-scoped volumes.{{% /md %}}</dd>
     <dt class="property-required"
@@ -1549,7 +1550,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sizedisk_csharp" style="color: inherit; text-decoration: inherit;">Size<wbr>Disk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#sizetypes">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Size<wbr>Types</a></span>
+        <span class="property-type">string | <a href="#sizetypes">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh..<wbr>Size<wbr>Types</a></span>
     </dt>
     <dd>{{% md %}}Volume size{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1745,7 +1746,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#creationparameters_csharp" style="color: inherit; text-decoration: inherit;">Creation<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationscopedvolumecreationparametersservicefabricvolumediskresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Application<wbr>Scoped<wbr>Volume<wbr>Creation<wbr>Parameters<wbr>Service<wbr>Fabric<wbr>Volume<wbr>Disk<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationscopedvolumecreationparametersservicefabricvolumediskresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh..<wbr>Inputs.<wbr>Application<wbr>Scoped<wbr>Volume<wbr>Creation<wbr>Parameters<wbr>Service<wbr>Fabric<wbr>Volume<wbr>Disk<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes parameters for creating application-scoped volumes.{{% /md %}}</dd>
     <dt class="property-required"
@@ -1915,7 +1916,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mechanism_csharp" style="color: inherit; text-decoration: inherit;">Mechanism</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#addremovereplicascalingmechanism">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Add<wbr>Remove<wbr>Replica<wbr>Scaling<wbr>Mechanism<wbr>Args</a></span>
+        <span class="property-type"><a href="#addremovereplicascalingmechanism">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh..<wbr>Inputs.<wbr>Add<wbr>Remove<wbr>Replica<wbr>Scaling<wbr>Mechanism<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The mechanism that is used to scale when auto scaling operation is invoked.{{% /md %}}</dd>
     <dt class="property-required"
@@ -1933,7 +1934,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trigger_csharp" style="color: inherit; text-decoration: inherit;">Trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#averageloadscalingtrigger">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Average<wbr>Load<wbr>Scaling<wbr>Trigger<wbr>Args</a></span>
+        <span class="property-type"><a href="#averageloadscalingtrigger">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh..<wbr>Inputs.<wbr>Average<wbr>Load<wbr>Scaling<wbr>Trigger<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Determines when auto scaling operation will be invoked.{{% /md %}}</dd>
 </dl>
@@ -2049,7 +2050,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mechanism_csharp" style="color: inherit; text-decoration: inherit;">Mechanism</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#addremovereplicascalingmechanismresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Add<wbr>Remove<wbr>Replica<wbr>Scaling<wbr>Mechanism<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#addremovereplicascalingmechanismresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh..<wbr>Inputs.<wbr>Add<wbr>Remove<wbr>Replica<wbr>Scaling<wbr>Mechanism<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The mechanism that is used to scale when auto scaling operation is invoked.{{% /md %}}</dd>
     <dt class="property-required"
@@ -2067,7 +2068,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trigger_csharp" style="color: inherit; text-decoration: inherit;">Trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#averageloadscalingtriggerresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Average<wbr>Load<wbr>Scaling<wbr>Trigger<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#averageloadscalingtriggerresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh..<wbr>Inputs.<wbr>Average<wbr>Load<wbr>Scaling<wbr>Trigger<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Determines when auto scaling operation will be invoked.{{% /md %}}</dd>
 </dl>
@@ -2183,7 +2184,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#autoscalingresourcemetricname">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Auto<wbr>Scaling<wbr>Resource<wbr>Metric<wbr>Name</a></span>
+        <span class="property-type">string | <a href="#autoscalingresourcemetricname">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh..<wbr>Auto<wbr>Scaling<wbr>Resource<wbr>Metric<wbr>Name</a></span>
     </dt>
     <dd>{{% md %}}Name of the resource.{{% /md %}}</dd>
 </dl>
@@ -2354,7 +2355,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metric_csharp" style="color: inherit; text-decoration: inherit;">Metric</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalingresourcemetric">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Auto<wbr>Scaling<wbr>Resource<wbr>Metric<wbr>Args</a></span>
+        <span class="property-type"><a href="#autoscalingresourcemetric">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh..<wbr>Inputs.<wbr>Auto<wbr>Scaling<wbr>Resource<wbr>Metric<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Description of the metric that is used for scaling.{{% /md %}}</dd>
     <dt class="property-required"
@@ -2524,7 +2525,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metric_csharp" style="color: inherit; text-decoration: inherit;">Metric</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalingresourcemetricresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Auto<wbr>Scaling<wbr>Resource<wbr>Metric<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#autoscalingresourcemetricresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh..<wbr>Inputs.<wbr>Auto<wbr>Scaling<wbr>Resource<wbr>Metric<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Description of the metric that is used for scaling.{{% /md %}}</dd>
     <dt class="property-required"
@@ -3259,7 +3260,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resources_csharp" style="color: inherit; text-decoration: inherit;">Resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcerequirements">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Resource<wbr>Requirements<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcerequirements">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh..<wbr>Inputs.<wbr>Resource<wbr>Requirements<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The resources required by this container.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3277,7 +3278,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#diagnostics_csharp" style="color: inherit; text-decoration: inherit;">Diagnostics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diagnosticsref">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Diagnostics<wbr>Ref<wbr>Args</a></span>
+        <span class="property-type"><a href="#diagnosticsref">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh..<wbr>Inputs.<wbr>Diagnostics<wbr>Ref<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Reference to sinks in DiagnosticsDescription.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3286,7 +3287,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpoints_csharp" style="color: inherit; text-decoration: inherit;">Endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointproperties">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Endpoint<wbr>Properties<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#endpointproperties">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh..<wbr>Inputs.<wbr>Endpoint<wbr>Properties<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The endpoints exposed by this container.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3304,7 +3305,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#environmentvariables_csharp" style="color: inherit; text-decoration: inherit;">Environment<wbr>Variables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentvariable">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Environment<wbr>Variable<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#environmentvariable">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh..<wbr>Inputs.<wbr>Environment<wbr>Variable<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The environment variables to set in this container{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3313,7 +3314,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#imageregistrycredential_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Registry<wbr>Credential</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imageregistrycredential">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Image<wbr>Registry<wbr>Credential<wbr>Args</a></span>
+        <span class="property-type"><a href="#imageregistrycredential">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh..<wbr>Inputs.<wbr>Image<wbr>Registry<wbr>Credential<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Image registry credential.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3322,7 +3323,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerlabel">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Container<wbr>Label<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#containerlabel">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh..<wbr>Inputs.<wbr>Container<wbr>Label<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The labels to set in this container.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3331,7 +3332,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#reliablecollectionsrefs_csharp" style="color: inherit; text-decoration: inherit;">Reliable<wbr>Collections<wbr>Refs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reliablecollectionsref">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Reliable<wbr>Collections<wbr>Ref<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#reliablecollectionsref">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh..<wbr>Inputs.<wbr>Reliable<wbr>Collections<wbr>Ref<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of ReliableCollection resources used by this particular code package. Please refer to ReliableCollectionsRef for more details.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3340,7 +3341,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#settings_csharp" style="color: inherit; text-decoration: inherit;">Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#setting">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Setting<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#setting">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh..<wbr>Inputs.<wbr>Setting<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The settings to set in this container. The setting file path can be fetched from environment variable "Fabric_SettingPath". The path for Windows container is "C:\\secrets". The path for Linux container is "/var/secrets".{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3349,7 +3350,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#volumerefs_csharp" style="color: inherit; text-decoration: inherit;">Volume<wbr>Refs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volumereference">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Volume<wbr>Reference<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#volumereference">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh..<wbr>Inputs.<wbr>Volume<wbr>Reference<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Volumes to be attached to the container. The lifetime of these volumes is independent of the application's lifetime.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3358,7 +3359,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#volumes_csharp" style="color: inherit; text-decoration: inherit;">Volumes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationscopedvolume">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Application<wbr>Scoped<wbr>Volume<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#applicationscopedvolume">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh..<wbr>Inputs.<wbr>Application<wbr>Scoped<wbr>Volume<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Volumes to be attached to the container. The lifetime of these volumes is scoped to the application's lifetime.{{% /md %}}</dd>
 </dl>
@@ -3780,7 +3781,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#instanceview_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>View</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerinstanceviewresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Container<wbr>Instance<wbr>View<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#containerinstanceviewresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh..<wbr>Inputs.<wbr>Container<wbr>Instance<wbr>View<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Runtime information of a container instance.{{% /md %}}</dd>
     <dt class="property-required"
@@ -3798,7 +3799,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resources_csharp" style="color: inherit; text-decoration: inherit;">Resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcerequirementsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Resource<wbr>Requirements<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcerequirementsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh..<wbr>Inputs.<wbr>Resource<wbr>Requirements<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The resources required by this container.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3816,7 +3817,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#diagnostics_csharp" style="color: inherit; text-decoration: inherit;">Diagnostics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diagnosticsrefresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Diagnostics<wbr>Ref<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#diagnosticsrefresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh..<wbr>Inputs.<wbr>Diagnostics<wbr>Ref<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Reference to sinks in DiagnosticsDescription.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3825,7 +3826,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpoints_csharp" style="color: inherit; text-decoration: inherit;">Endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointpropertiesresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Endpoint<wbr>Properties<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#endpointpropertiesresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh..<wbr>Inputs.<wbr>Endpoint<wbr>Properties<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The endpoints exposed by this container.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3843,7 +3844,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#environmentvariables_csharp" style="color: inherit; text-decoration: inherit;">Environment<wbr>Variables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentvariableresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Environment<wbr>Variable<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#environmentvariableresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh..<wbr>Inputs.<wbr>Environment<wbr>Variable<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The environment variables to set in this container{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3852,7 +3853,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#imageregistrycredential_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Registry<wbr>Credential</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imageregistrycredentialresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Image<wbr>Registry<wbr>Credential<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#imageregistrycredentialresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh..<wbr>Inputs.<wbr>Image<wbr>Registry<wbr>Credential<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Image registry credential.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3861,7 +3862,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerlabelresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Container<wbr>Label<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#containerlabelresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh..<wbr>Inputs.<wbr>Container<wbr>Label<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The labels to set in this container.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3870,7 +3871,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#reliablecollectionsrefs_csharp" style="color: inherit; text-decoration: inherit;">Reliable<wbr>Collections<wbr>Refs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reliablecollectionsrefresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Reliable<wbr>Collections<wbr>Ref<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#reliablecollectionsrefresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh..<wbr>Inputs.<wbr>Reliable<wbr>Collections<wbr>Ref<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of ReliableCollection resources used by this particular code package. Please refer to ReliableCollectionsRef for more details.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3879,7 +3880,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#settings_csharp" style="color: inherit; text-decoration: inherit;">Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#settingresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Setting<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#settingresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh..<wbr>Inputs.<wbr>Setting<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The settings to set in this container. The setting file path can be fetched from environment variable "Fabric_SettingPath". The path for Windows container is "C:\\secrets". The path for Linux container is "/var/secrets".{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3888,7 +3889,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#volumerefs_csharp" style="color: inherit; text-decoration: inherit;">Volume<wbr>Refs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volumereferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Volume<wbr>Reference<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#volumereferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh..<wbr>Inputs.<wbr>Volume<wbr>Reference<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Volumes to be attached to the container. The lifetime of these volumes is independent of the application's lifetime.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3897,7 +3898,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#volumes_csharp" style="color: inherit; text-decoration: inherit;">Volumes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationscopedvolumeresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Application<wbr>Scoped<wbr>Volume<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#applicationscopedvolumeresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh..<wbr>Inputs.<wbr>Application<wbr>Scoped<wbr>Volume<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Volumes to be attached to the container. The lifetime of these volumes is scoped to the application's lifetime.{{% /md %}}</dd>
 </dl>
@@ -4579,7 +4580,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#currentstate_csharp" style="color: inherit; text-decoration: inherit;">Current<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerstateresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Container<wbr>State<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#containerstateresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh..<wbr>Inputs.<wbr>Container<wbr>State<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Current container instance state.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4588,7 +4589,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#events_csharp" style="color: inherit; text-decoration: inherit;">Events</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containereventresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Container<wbr>Event<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#containereventresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh..<wbr>Inputs.<wbr>Container<wbr>Event<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The events of this container instance.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4597,7 +4598,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#previousstate_csharp" style="color: inherit; text-decoration: inherit;">Previous<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerstateresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Container<wbr>State<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#containerstateresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh..<wbr>Inputs.<wbr>Container<wbr>State<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Previous container instance state.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -5169,7 +5170,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sinks_csharp" style="color: inherit; text-decoration: inherit;">Sinks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureinternalmonitoringpipelinesinkdescription">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Azure<wbr>Internal<wbr>Monitoring<wbr>Pipeline<wbr>Sink<wbr>Description<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#azureinternalmonitoringpipelinesinkdescription">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh..<wbr>Inputs.<wbr>Azure<wbr>Internal<wbr>Monitoring<wbr>Pipeline<wbr>Sink<wbr>Description<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of supported sinks that can be referenced.{{% /md %}}</dd>
 </dl>
@@ -5303,7 +5304,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sinks_csharp" style="color: inherit; text-decoration: inherit;">Sinks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureinternalmonitoringpipelinesinkdescriptionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Azure<wbr>Internal<wbr>Monitoring<wbr>Pipeline<wbr>Sink<wbr>Description<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#azureinternalmonitoringpipelinesinkdescriptionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh..<wbr>Inputs.<wbr>Azure<wbr>Internal<wbr>Monitoring<wbr>Pipeline<wbr>Sink<wbr>Description<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of supported sinks that can be referenced.{{% /md %}}</dd>
 </dl>
@@ -6399,7 +6400,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpointrefs_csharp" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Refs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointref">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Endpoint<wbr>Ref<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#endpointref">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh..<wbr>Inputs.<wbr>Endpoint<wbr>Ref<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of endpoints that are exposed on this network.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -6497,7 +6498,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpointrefs_csharp" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Refs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointrefresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Endpoint<wbr>Ref<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#endpointrefresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh..<wbr>Inputs.<wbr>Endpoint<wbr>Ref<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of endpoints that are exposed on this network.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -7221,7 +7222,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#requests_csharp" style="color: inherit; text-decoration: inherit;">Requests</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcerequests">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Resource<wbr>Requests<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcerequests">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh..<wbr>Inputs.<wbr>Resource<wbr>Requests<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the requested resources for a given container.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -7230,7 +7231,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#limits_csharp" style="color: inherit; text-decoration: inherit;">Limits</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcelimits">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Resource<wbr>Limits<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcelimits">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh..<wbr>Inputs.<wbr>Resource<wbr>Limits<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the maximum limits on the resources for a given container.{{% /md %}}</dd>
 </dl>
@@ -7319,7 +7320,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#requests_csharp" style="color: inherit; text-decoration: inherit;">Requests</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcerequestsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Resource<wbr>Requests<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcerequestsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh..<wbr>Inputs.<wbr>Resource<wbr>Requests<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the requested resources for a given container.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -7328,7 +7329,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#limits_csharp" style="color: inherit; text-decoration: inherit;">Limits</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcelimitsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Resource<wbr>Limits<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcelimitsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh..<wbr>Inputs.<wbr>Resource<wbr>Limits<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the maximum limits on the resources for a given container.{{% /md %}}</dd>
 </dl>
@@ -7417,7 +7418,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#codepackages_csharp" style="color: inherit; text-decoration: inherit;">Code<wbr>Packages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containercodepackageproperties">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Container<wbr>Code<wbr>Package<wbr>Properties<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#containercodepackageproperties">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh..<wbr>Inputs.<wbr>Container<wbr>Code<wbr>Package<wbr>Properties<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Describes the set of code packages that forms the service. A code package describes the container and the properties for running it. All the code packages are started together on the same host and share the same context (network, process etc.).{{% /md %}}</dd>
     <dt class="property-required"
@@ -7426,7 +7427,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ostype_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#operatingsystemtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Operating<wbr>System<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#operatingsystemtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh..<wbr>Operating<wbr>System<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The operation system required by the code in service.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -7435,7 +7436,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#autoscalingpolicies_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Scaling<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalingpolicy">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Auto<wbr>Scaling<wbr>Policy<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#autoscalingpolicy">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh..<wbr>Inputs.<wbr>Auto<wbr>Scaling<wbr>Policy<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Auto scaling policies{{% /md %}}</dd>
     <dt class="property-optional"
@@ -7453,7 +7454,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#diagnostics_csharp" style="color: inherit; text-decoration: inherit;">Diagnostics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diagnosticsref">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Diagnostics<wbr>Ref<wbr>Args</a></span>
+        <span class="property-type"><a href="#diagnosticsref">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh..<wbr>Inputs.<wbr>Diagnostics<wbr>Ref<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Reference to sinks in DiagnosticsDescription.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -7471,7 +7472,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#networkrefs_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Refs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkref">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Network<wbr>Ref<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#networkref">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh..<wbr>Inputs.<wbr>Network<wbr>Ref<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The names of the private networks that this service needs to be part of.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -7731,7 +7732,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#codepackages_csharp" style="color: inherit; text-decoration: inherit;">Code<wbr>Packages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containercodepackagepropertiesresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Container<wbr>Code<wbr>Package<wbr>Properties<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#containercodepackagepropertiesresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh..<wbr>Inputs.<wbr>Container<wbr>Code<wbr>Package<wbr>Properties<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Describes the set of code packages that forms the service. A code package describes the container and the properties for running it. All the code packages are started together on the same host and share the same context (network, process etc.).{{% /md %}}</dd>
     <dt class="property-required"
@@ -7812,7 +7813,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#autoscalingpolicies_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Scaling<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalingpolicyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Auto<wbr>Scaling<wbr>Policy<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#autoscalingpolicyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh..<wbr>Inputs.<wbr>Auto<wbr>Scaling<wbr>Policy<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Auto scaling policies{{% /md %}}</dd>
     <dt class="property-optional"
@@ -7830,7 +7831,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#diagnostics_csharp" style="color: inherit; text-decoration: inherit;">Diagnostics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diagnosticsrefresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Diagnostics<wbr>Ref<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#diagnosticsrefresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh..<wbr>Inputs.<wbr>Diagnostics<wbr>Ref<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Reference to sinks in DiagnosticsDescription.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -7848,7 +7849,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#networkrefs_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Refs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkrefresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Network<wbr>Ref<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#networkrefresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh..<wbr>Inputs.<wbr>Network<wbr>Ref<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The names of the private networks that this service needs to be part of.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -8801,7 +8802,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:servicefabricmesh/v20180901preview:Application sampleApplication /subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/sbz_demo/providers/Microsoft.ServiceFabricMesh/applications/sampleApplication 
+$ pulumi import azure-nextgen:servicefabricmesh:Application sampleApplication /subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/sbz_demo/providers/Microsoft.ServiceFabricMesh/applications/sampleApplication 
 ```
 
 

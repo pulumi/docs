@@ -233,7 +233,7 @@ The following output properties are available:
 <a href="#storageaccount_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageaccountpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Experimentation.<wbr>Outputs.<wbr>Storage<wbr>Account<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#storageaccountpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Experimentation..<wbr>Outputs.<wbr>Storage<wbr>Account<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The properties of the storage account for the machine learning team account.{{% /md %}}</dd>
     <dt class="property-"

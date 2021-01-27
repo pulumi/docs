@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.sql.GeoBackupPolicy resource wit
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 A database geo backup policy.
-Latest API Version: 2014-04-01.
+API Version: 2014-04-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var geoBackupPolicy = new AzureNextGen.Sql.Latest.GeoBackupPolicy("geoBackupPolicy", new AzureNextGen.Sql.Latest.GeoBackupPolicyArgs
+        var geoBackupPolicy = new AzureNextGen.Sql..GeoBackupPolicy("geoBackupPolicy", new AzureNextGen.Sql..GeoBackupPolicyArgs
         {
             DatabaseName = "testdw",
             GeoBackupPolicyName = "Default",
@@ -49,7 +49,7 @@ class MyStack : Stack
 package main
 
 import (
-	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql/latest"
+	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -79,7 +79,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-geo_backup_policy = azure_nextgen.sql.latest.GeoBackupPolicy("geoBackupPolicy",
+geo_backup_policy = azure_nextgen.sql.GeoBackupPolicy("geoBackupPolicy",
     database_name="testdw",
     geo_backup_policy_name="Default",
     resource_group_name="sqlcrudtest-4799",
@@ -96,7 +96,7 @@ geo_backup_policy = azure_nextgen.sql.latest.GeoBackupPolicy("geoBackupPolicy",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const geoBackupPolicy = new azure_nextgen.sql.latest.GeoBackupPolicy("geoBackupPolicy", {
+const geoBackupPolicy = new azure_nextgen.sql.GeoBackupPolicy("geoBackupPolicy", {
     databaseName: "testdw",
     geoBackupPolicyName: "Default",
     resourceGroupName: "sqlcrudtest-4799",
@@ -333,7 +333,7 @@ The GeoBackupPolicy resource accepts the following [input]({{< relref "/docs/int
 <a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#geobackuppolicystate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql.<wbr>Geo<wbr>Backup<wbr>Policy<wbr>State</a></span>
+        <span class="property-type"><a href="#geobackuppolicystate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql..<wbr>Geo<wbr>Backup<wbr>Policy<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}The state of the geo backup policy.{{% /md %}}</dd>
 </dl>
@@ -792,7 +792,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:sql/latest:GeoBackupPolicy Default /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/sqlcrudtest-4799/providers/Microsoft.Sql/servers/sqlcrudtest-5961/databases/testdw/geoBackupPolicies/Default 
+$ pulumi import azure-nextgen:sql:GeoBackupPolicy Default /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/sqlcrudtest-4799/providers/Microsoft.Sql/servers/sqlcrudtest-5961/databases/testdw/geoBackupPolicies/Default 
 ```
 
 

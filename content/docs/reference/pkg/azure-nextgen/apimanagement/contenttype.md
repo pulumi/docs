@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.apimanagement.ContentType resour
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Content type contract details.
-Latest API Version: 2019-12-01.
+API Version: 2019-12-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var contentType = new AzureNextGen.ApiManagement.Latest.ContentType("contentType", new AzureNextGen.ApiManagement.Latest.ContentTypeArgs
+        var contentType = new AzureNextGen.ApiManagement..ContentType("contentType", new AzureNextGen.ApiManagement..ContentTypeArgs
         {
             ContentTypeId = "page",
             ResourceGroupName = "rg1",
@@ -47,7 +47,7 @@ class MyStack : Stack
 package main
 
 import (
-	apimanagement "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/apimanagement/latest"
+	apimanagement "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/apimanagement"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -75,7 +75,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-content_type = azure_nextgen.apimanagement.latest.ContentType("contentType",
+content_type = azure_nextgen.apimanagement.ContentType("contentType",
     content_type_id="page",
     resource_group_name="rg1",
     service_name="apimService1")
@@ -90,7 +90,7 @@ content_type = azure_nextgen.apimanagement.latest.ContentType("contentType",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const contentType = new azure_nextgen.apimanagement.latest.ContentType("contentType", {
+const contentType = new azure_nextgen.apimanagement.ContentType("contentType", {
     contentTypeId: "page",
     resourceGroupName: "rg1",
     serviceName: "apimService1",
@@ -670,7 +670,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:apimanagement/latest:ContentType page /contentTypes/page 
+$ pulumi import azure-nextgen:apimanagement:ContentType page /contentTypes/page 
 ```
 
 

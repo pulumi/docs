@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.storage.FileServiceProperties re
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The properties of File services in storage account.
-Latest API Version: 2019-06-01.
+API Version: 2019-06-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,14 +27,14 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var fileServiceProperties = new AzureNextGen.Storage.Latest.FileServiceProperties("fileServiceProperties", new AzureNextGen.Storage.Latest.FileServicePropertiesArgs
+        var fileServiceProperties = new AzureNextGen.Storage..FileServiceProperties("fileServiceProperties", new AzureNextGen.Storage..FileServicePropertiesArgs
         {
             AccountName = "sto8607",
-            Cors = new AzureNextGen.Storage.Latest.Inputs.CorsRulesArgs
+            Cors = new AzureNextGen.Storage..Inputs.CorsRulesArgs
             {
                 CorsRules = 
                 {
-                    new AzureNextGen.Storage.Latest.Inputs.CorsRuleArgs
+                    new AzureNextGen.Storage..Inputs.CorsRuleArgs
                     {
                         AllowedHeaders = 
                         {
@@ -62,7 +62,7 @@ class MyStack : Stack
                         },
                         MaxAgeInSeconds = 100,
                     },
-                    new AzureNextGen.Storage.Latest.Inputs.CorsRuleArgs
+                    new AzureNextGen.Storage..Inputs.CorsRuleArgs
                     {
                         AllowedHeaders = 
                         {
@@ -82,7 +82,7 @@ class MyStack : Stack
                         },
                         MaxAgeInSeconds = 2,
                     },
-                    new AzureNextGen.Storage.Latest.Inputs.CorsRuleArgs
+                    new AzureNextGen.Storage..Inputs.CorsRuleArgs
                     {
                         AllowedHeaders = 
                         {
@@ -125,7 +125,7 @@ class MyStack : Stack
 package main
 
 import (
-	storage "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/storage/latest"
+	storage "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/storage"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -214,11 +214,11 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-file_service_properties = azure_nextgen.storage.latest.FileServiceProperties("fileServiceProperties",
+file_service_properties = azure_nextgen.storage.FileServiceProperties("fileServiceProperties",
     account_name="sto8607",
-    cors=azure_nextgen.storage.latest.CorsRulesArgs(
+    cors=azure_nextgen.storage.CorsRulesArgs(
         cors_rules=[
-            azure_nextgen.storage.latest.CorsRuleArgs(
+            azure_nextgen.storage.CorsRuleArgs(
                 allowed_headers=[
                     "x-ms-meta-abc",
                     "x-ms-meta-data*",
@@ -239,14 +239,14 @@ file_service_properties = azure_nextgen.storage.latest.FileServiceProperties("fi
                 exposed_headers=["x-ms-meta-*"],
                 max_age_in_seconds=100,
             ),
-            azure_nextgen.storage.latest.CorsRuleArgs(
+            azure_nextgen.storage.CorsRuleArgs(
                 allowed_headers=["*"],
                 allowed_methods=["GET"],
                 allowed_origins=["*"],
                 exposed_headers=["*"],
                 max_age_in_seconds=2,
             ),
-            azure_nextgen.storage.latest.CorsRuleArgs(
+            azure_nextgen.storage.CorsRuleArgs(
                 allowed_headers=["x-ms-meta-12345675754564*"],
                 allowed_methods=[
                     "GET",
@@ -278,7 +278,7 @@ file_service_properties = azure_nextgen.storage.latest.FileServiceProperties("fi
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const fileServiceProperties = new azure_nextgen.storage.latest.FileServiceProperties("fileServiceProperties", {
+const fileServiceProperties = new azure_nextgen.storage.FileServiceProperties("fileServiceProperties", {
     accountName: "sto8607",
     cors: {
         corsRules: [
@@ -553,7 +553,7 @@ The FileServiceProperties resource accepts the following [input]({{< relref "/do
 <a href="#cors_csharp" style="color: inherit; text-decoration: inherit;">Cors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#corsrules">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Inputs.<wbr>Cors<wbr>Rules<wbr>Args</a></span>
+        <span class="property-type"><a href="#corsrules">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage..<wbr>Inputs.<wbr>Cors<wbr>Rules<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies CORS rules for the File service. You can include up to five CorsRule elements in the request. If no CorsRule elements are included in the request body, all CORS rules will be deleted, and CORS will be disabled for the File service.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -562,7 +562,7 @@ The FileServiceProperties resource accepts the following [input]({{< relref "/do
 <a href="#sharedeleteretentionpolicy_csharp" style="color: inherit; text-decoration: inherit;">Share<wbr>Delete<wbr>Retention<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deleteretentionpolicy">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Inputs.<wbr>Delete<wbr>Retention<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#deleteretentionpolicy">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage..<wbr>Inputs.<wbr>Delete<wbr>Retention<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The file service properties for share soft delete.{{% /md %}}</dd>
 </dl>
@@ -755,7 +755,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skuresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Outputs.<wbr>Sku<wbr>Response</a></span>
+        <span class="property-type"><a href="#skuresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage..<wbr>Outputs.<wbr>Sku<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Sku name and tier.{{% /md %}}</dd>
     <dt class="property-"
@@ -1329,7 +1329,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#corsrules_csharp" style="color: inherit; text-decoration: inherit;">Cors<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#corsrule">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Inputs.<wbr>Cors<wbr>Rule<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#corsrule">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage..<wbr>Inputs.<wbr>Cors<wbr>Rule<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The List of CORS rules. You can include up to five CorsRule elements in the request. {{% /md %}}</dd>
 </dl>
@@ -1391,7 +1391,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#corsrules_csharp" style="color: inherit; text-decoration: inherit;">Cors<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#corsruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Inputs.<wbr>Cors<wbr>Rule<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#corsruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage..<wbr>Inputs.<wbr>Cors<wbr>Rule<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The List of CORS rules. You can include up to five CorsRule elements in the request. {{% /md %}}</dd>
 </dl>
@@ -1741,7 +1741,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:storage/latest:FileServiceProperties default /subscriptions/{subscription-id}/resourceGroups/res4410/providers/Microsoft.Storage/storageAccounts/sto8607/fileServices/default 
+$ pulumi import azure-nextgen:storage:FileServiceProperties default /subscriptions/{subscription-id}/resourceGroups/res4410/providers/Microsoft.Storage/storageAccounts/sto8607/fileServices/default 
 ```
 
 

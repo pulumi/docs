@@ -11,13 +11,13 @@ meta_desc: "Documentation for the azure-nextgen.attestation.AttestationProvider 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Attestation service response message.
-Latest API Version: 2020-10-01.
+API Version: 2020-10-01.
 ## Import
 
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:attestation/latest:AttestationProvider myattestationprovider subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/MyResourceGroup/providers/Microsoft.Attestation/attestationProviders/myattestationprovider 
+$ pulumi import azure-nextgen:attestation:AttestationProvider myattestationprovider subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/MyResourceGroup/providers/Microsoft.Attestation/attestationProviders/myattestationprovider 
 ```
 
 
@@ -218,7 +218,7 @@ The AttestationProvider resource accepts the following [input]({{< relref "/docs
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#attestationservicecreationspecificparams">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Attestation.<wbr>Inputs.<wbr>Attestation<wbr>Service<wbr>Creation<wbr>Specific<wbr>Params<wbr>Args</a></span>
+        <span class="property-type"><a href="#attestationservicecreationspecificparams">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Attestation..<wbr>Inputs.<wbr>Attestation<wbr>Service<wbr>Creation<wbr>Specific<wbr>Params<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties of the attestation provider{{% /md %}}</dd>
     <dt class="property-required"
@@ -438,7 +438,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privateendpointconnections_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint<wbr>Connections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointconnectionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Attestation.<wbr>Outputs.<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#privateendpointconnectionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Attestation..<wbr>Outputs.<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of private endpoint connections associated with the attestation provider.{{% /md %}}</dd>
     <dt class="property-"
@@ -447,7 +447,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#systemdata_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Attestation.<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
+        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Attestation..<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The system metadata relating to this resource{{% /md %}}</dd>
     <dt class="property-"
@@ -744,7 +744,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policysigningcertificates_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Signing<wbr>Certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jsonwebkeyset">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Attestation.<wbr>Inputs.<wbr>JSONWeb<wbr>Key<wbr>Set<wbr>Args</a></span>
+        <span class="property-type"><a href="#jsonwebkeyset">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Attestation..<wbr>Inputs.<wbr>JSONWeb<wbr>Key<wbr>Set<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}JSON Web Key Set defining a set of X.509 Certificates that will represent the parent certificate for the signing certificate used for policy operations{{% /md %}}</dd>
 </dl>
@@ -1544,7 +1544,7 @@ certificate.{{% /md %}}</dd>
 <a href="#keys_csharp" style="color: inherit; text-decoration: inherit;">Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jsonwebkey">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Attestation.<wbr>Inputs.<wbr>JSONWeb<wbr>Key<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#jsonwebkey">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Attestation..<wbr>Inputs.<wbr>JSONWeb<wbr>Key<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The value of the "keys" parameter is an array of JWK values.  By
 default, the order of the JWK values within the array does not imply
@@ -1640,7 +1640,7 @@ desired.{{% /md %}}</dd>
 <a href="#privatelinkserviceconnectionstate_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Attestation.<wbr>Inputs.<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Attestation..<wbr>Inputs.<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A collection of information about the state of the connection between service consumer and provider.{{% /md %}}</dd>
     <dt class="property-required"
@@ -1667,7 +1667,7 @@ desired.{{% /md %}}</dd>
 <a href="#privateendpoint_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Attestation.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#privateendpointresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Attestation..<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The resource of private end point.{{% /md %}}</dd>
 </dl>

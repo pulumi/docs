@@ -170,7 +170,7 @@ The following output properties are available:
 <a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedserviceidentityresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Blueprint.<wbr>Outputs.<wbr>Managed<wbr>Service<wbr>Identity<wbr>Response</a></span>
+        <span class="property-type"><a href="#managedserviceidentityresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Blueprint..<wbr>Outputs.<wbr>Managed<wbr>Service<wbr>Identity<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Managed identity for this blueprint assignment.{{% /md %}}</dd>
     <dt class="property-"
@@ -197,7 +197,7 @@ The following output properties are available:
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Blueprint.<wbr>Outputs.<wbr>Parameter<wbr>Value<wbr>Response&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Blueprint..<wbr>Outputs.<wbr>Parameter<wbr>Value<wbr>Response&gt;</span>
     </dt>
     <dd>{{% md %}}Blueprint assignment parameter values.{{% /md %}}</dd>
     <dt class="property-"
@@ -215,7 +215,7 @@ The following output properties are available:
 <a href="#resourcegroups_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Blueprint.<wbr>Outputs.<wbr>Resource<wbr>Group<wbr>Value<wbr>Response&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Blueprint..<wbr>Outputs.<wbr>Resource<wbr>Group<wbr>Value<wbr>Response&gt;</span>
     </dt>
     <dd>{{% md %}}Names and locations of resource group placeholders.{{% /md %}}</dd>
     <dt class="property-"
@@ -224,7 +224,7 @@ The following output properties are available:
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#assignmentstatusresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Blueprint.<wbr>Outputs.<wbr>Assignment<wbr>Status<wbr>Response</a></span>
+        <span class="property-type"><a href="#assignmentstatusresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Blueprint..<wbr>Outputs.<wbr>Assignment<wbr>Status<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Status of blueprint assignment. This field is readonly.{{% /md %}}</dd>
     <dt class="property-"
@@ -269,7 +269,7 @@ The following output properties are available:
 <a href="#locks_csharp" style="color: inherit; text-decoration: inherit;">Locks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#assignmentlocksettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Blueprint.<wbr>Outputs.<wbr>Assignment<wbr>Lock<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#assignmentlocksettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Blueprint..<wbr>Outputs.<wbr>Assignment<wbr>Lock<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Defines how resources deployed by a blueprint assignment are locked.{{% /md %}}</dd>
     <dt class="property-"
@@ -1074,7 +1074,7 @@ The following output properties are available:
 <a href="#userassignedidentities_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Blueprint.<wbr>Inputs.<wbr>User<wbr>Assigned<wbr>Identity<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Blueprint..<wbr>Inputs.<wbr>User<wbr>Assigned<wbr>Identity<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}The list of user-assigned managed identities associated with the resource. Key is the Azure resource Id of the managed identity.{{% /md %}}</dd>
 </dl>
@@ -1222,7 +1222,7 @@ The following output properties are available:
 <a href="#reference_csharp" style="color: inherit; text-decoration: inherit;">Reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretvaluereferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Blueprint.<wbr>Inputs.<wbr>Secret<wbr>Value<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#secretvaluereferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Blueprint..<wbr>Inputs.<wbr>Secret<wbr>Value<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Parameter value as reference type.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1428,7 +1428,7 @@ The following output properties are available:
 <a href="#keyvault_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Blueprint.<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#keyvaultreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Blueprint..<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the reference to a given Azure Key Vault.{{% /md %}}</dd>
     <dt class="property-required"

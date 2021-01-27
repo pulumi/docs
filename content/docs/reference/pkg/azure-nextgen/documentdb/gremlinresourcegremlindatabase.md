@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.documentdb.GremlinResourceGremli
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 An Azure Cosmos DB Gremlin database.
-Latest API Version: 2020-09-01.
+API Version: 2020-09-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,13 +27,13 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var gremlinResourceGremlinDatabase = new AzureNextGen.DocumentDB.Latest.GremlinResourceGremlinDatabase("gremlinResourceGremlinDatabase", new AzureNextGen.DocumentDB.Latest.GremlinResourceGremlinDatabaseArgs
+        var gremlinResourceGremlinDatabase = new AzureNextGen.DocumentDB..GremlinResourceGremlinDatabase("gremlinResourceGremlinDatabase", new AzureNextGen.DocumentDB..GremlinResourceGremlinDatabaseArgs
         {
             AccountName = "ddb1",
             DatabaseName = "databaseName",
             Location = "West US",
             Options = ,
-            Resource = new AzureNextGen.DocumentDB.Latest.Inputs.GremlinDatabaseResourceArgs
+            Resource = new AzureNextGen.DocumentDB..Inputs.GremlinDatabaseResourceArgs
             {
                 Id = "databaseName",
             },
@@ -54,7 +54,7 @@ class MyStack : Stack
 package main
 
 import (
-	documentdb "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/documentdb/latest"
+	documentdb "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/documentdb"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -88,12 +88,12 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-gremlin_resource_gremlin_database = azure_nextgen.documentdb.latest.GremlinResourceGremlinDatabase("gremlinResourceGremlinDatabase",
+gremlin_resource_gremlin_database = azure_nextgen.documentdb.GremlinResourceGremlinDatabase("gremlinResourceGremlinDatabase",
     account_name="ddb1",
     database_name="databaseName",
     location="West US",
-    options=azure_nextgen.documentdb.latest.CreateUpdateOptionsArgs(),
-    resource=azure_nextgen.documentdb.latest.GremlinDatabaseResourceArgs(
+    options=azure_nextgen.documentdb.CreateUpdateOptionsArgs(),
+    resource=azure_nextgen.documentdb.GremlinDatabaseResourceArgs(
         id="databaseName",
     ),
     resource_group_name="rg1",
@@ -109,7 +109,7 @@ gremlin_resource_gremlin_database = azure_nextgen.documentdb.latest.GremlinResou
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const gremlinResourceGremlinDatabase = new azure_nextgen.documentdb.latest.GremlinResourceGremlinDatabase("gremlinResourceGremlinDatabase", {
+const gremlinResourceGremlinDatabase = new azure_nextgen.documentdb.GremlinResourceGremlinDatabase("gremlinResourceGremlinDatabase", {
     accountName: "ddb1",
     databaseName: "databaseName",
     location: "West US",
@@ -332,7 +332,7 @@ The GremlinResourceGremlinDatabase resource accepts the following [input]({{< re
 <a href="#resource_csharp" style="color: inherit; text-decoration: inherit;">Resource</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gremlindatabaseresource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Gremlin<wbr>Database<wbr>Resource<wbr>Args</a></span>
+        <span class="property-type"><a href="#gremlindatabaseresource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB..<wbr>Inputs.<wbr>Gremlin<wbr>Database<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The standard JSON format of a Gremlin database{{% /md %}}</dd>
     <dt class="property-required"
@@ -359,7 +359,7 @@ The GremlinResourceGremlinDatabase resource accepts the following [input]({{< re
 <a href="#options_csharp" style="color: inherit; text-decoration: inherit;">Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#createupdateoptions">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Create<wbr>Update<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#createupdateoptions">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB..<wbr>Inputs.<wbr>Create<wbr>Update<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A key-value pair of options to be applied for the request. This corresponds to the headers sent with the request.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -865,7 +865,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#autoscalesettings_csharp" style="color: inherit; text-decoration: inherit;">Autoscale<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalesettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Autoscale<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#autoscalesettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB..<wbr>Inputs.<wbr>Autoscale<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the Autoscale settings.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -963,7 +963,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#autoscalesettings_csharp" style="color: inherit; text-decoration: inherit;">Autoscale<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Autoscale<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#autoscalesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB..<wbr>Inputs.<wbr>Autoscale<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the Autoscale settings.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1287,7 +1287,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:documentdb/latest:GremlinResourceGremlinDatabase databaseName /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.DocumentDB/databaseAccounts/ddb1/gremlinDatabases/databaseName 
+$ pulumi import azure-nextgen:documentdb:GremlinResourceGremlinDatabase databaseName /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.DocumentDB/databaseAccounts/ddb1/gremlinDatabases/databaseName 
 ```
 
 

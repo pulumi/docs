@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.documentdb.DatabaseAccount resou
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 An Azure Cosmos DB database account.
-Latest API Version: 2020-09-01.
+API Version: 2020-09-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,23 +27,23 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var databaseAccount = new AzureNextGen.DocumentDB.Latest.DatabaseAccount("databaseAccount", new AzureNextGen.DocumentDB.Latest.DatabaseAccountArgs
+        var databaseAccount = new AzureNextGen.DocumentDB..DatabaseAccount("databaseAccount", new AzureNextGen.DocumentDB..DatabaseAccountArgs
         {
             AccountName = "ddb1",
-            ApiProperties = new AzureNextGen.DocumentDB.Latest.Inputs.ApiPropertiesArgs
+            ApiProperties = new AzureNextGen.DocumentDB..Inputs.ApiPropertiesArgs
             {
                 ServerVersion = "3.2",
             },
             BackupPolicy = 
             {
-                { "periodicModeProperties", new AzureNextGen.DocumentDB.Latest.Inputs.PeriodicModePropertiesArgs
+                { "periodicModeProperties", new AzureNextGen.DocumentDB..Inputs.PeriodicModePropertiesArgs
                 {
                     BackupIntervalInMinutes = 240,
                     BackupRetentionIntervalInHours = 8,
                 } },
                 { "type", "Periodic" },
             },
-            ConsistencyPolicy = new AzureNextGen.DocumentDB.Latest.Inputs.ConsistencyPolicyArgs
+            ConsistencyPolicy = new AzureNextGen.DocumentDB..Inputs.ConsistencyPolicyArgs
             {
                 DefaultConsistencyLevel = "BoundedStaleness",
                 MaxIntervalInSeconds = 10,
@@ -51,7 +51,7 @@ class MyStack : Stack
             },
             Cors = 
             {
-                new AzureNextGen.DocumentDB.Latest.Inputs.CorsPolicyArgs
+                new AzureNextGen.DocumentDB..Inputs.CorsPolicyArgs
                 {
                     AllowedOrigins = "https://test",
                 },
@@ -61,11 +61,11 @@ class MyStack : Stack
             EnableFreeTier = false,
             IpRules = 
             {
-                new AzureNextGen.DocumentDB.Latest.Inputs.IpAddressOrRangeArgs
+                new AzureNextGen.DocumentDB..Inputs.IpAddressOrRangeArgs
                 {
                     IpAddressOrRange = "23.43.230.120",
                 },
-                new AzureNextGen.DocumentDB.Latest.Inputs.IpAddressOrRangeArgs
+                new AzureNextGen.DocumentDB..Inputs.IpAddressOrRangeArgs
                 {
                     IpAddressOrRange = "110.12.240.0/12",
                 },
@@ -76,13 +76,13 @@ class MyStack : Stack
             Location = "westus",
             Locations = 
             {
-                new AzureNextGen.DocumentDB.Latest.Inputs.LocationArgs
+                new AzureNextGen.DocumentDB..Inputs.LocationArgs
                 {
                     FailoverPriority = 0,
                     IsZoneRedundant = false,
                     LocationName = "southcentralus",
                 },
-                new AzureNextGen.DocumentDB.Latest.Inputs.LocationArgs
+                new AzureNextGen.DocumentDB..Inputs.LocationArgs
                 {
                     FailoverPriority = 1,
                     IsZoneRedundant = false,
@@ -93,7 +93,7 @@ class MyStack : Stack
             Tags = ,
             VirtualNetworkRules = 
             {
-                new AzureNextGen.DocumentDB.Latest.Inputs.VirtualNetworkRuleArgs
+                new AzureNextGen.DocumentDB..Inputs.VirtualNetworkRuleArgs
                 {
                     Id = "/subscriptions/subId/resourceGroups/rg/providers/Microsoft.Network/virtualNetworks/vnet1/subnets/subnet1",
                     IgnoreMissingVNetServiceEndpoint = false,
@@ -118,34 +118,34 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-database_account = azure_nextgen.documentdb.latest.DatabaseAccount("databaseAccount",
+database_account = azure_nextgen.documentdb.DatabaseAccount("databaseAccount",
     account_name="ddb1",
-    api_properties=azure_nextgen.documentdb.latest.ApiPropertiesArgs(
+    api_properties=azure_nextgen.documentdb.ApiPropertiesArgs(
         server_version="3.2",
     ),
     backup_policy={
-        "periodicModeProperties": azure_nextgen.documentdb.latest.PeriodicModePropertiesArgs(
+        "periodicModeProperties": azure_nextgen.documentdb.PeriodicModePropertiesArgs(
             backup_interval_in_minutes=240,
             backup_retention_interval_in_hours=8,
         ),
         "type": "Periodic",
     },
-    consistency_policy=azure_nextgen.documentdb.latest.ConsistencyPolicyArgs(
+    consistency_policy=azure_nextgen.documentdb.ConsistencyPolicyArgs(
         default_consistency_level="BoundedStaleness",
         max_interval_in_seconds=10,
         max_staleness_prefix=200,
     ),
-    cors=[azure_nextgen.documentdb.latest.CorsPolicyArgs(
+    cors=[azure_nextgen.documentdb.CorsPolicyArgs(
         allowed_origins="https://test",
     )],
     database_account_offer_type="Standard",
     enable_analytical_storage=True,
     enable_free_tier=False,
     ip_rules=[
-        azure_nextgen.documentdb.latest.IpAddressOrRangeArgs(
+        azure_nextgen.documentdb.IpAddressOrRangeArgs(
             ip_address_or_range="23.43.230.120",
         ),
-        azure_nextgen.documentdb.latest.IpAddressOrRangeArgs(
+        azure_nextgen.documentdb.IpAddressOrRangeArgs(
             ip_address_or_range="110.12.240.0/12",
         ),
     ],
@@ -154,12 +154,12 @@ database_account = azure_nextgen.documentdb.latest.DatabaseAccount("databaseAcco
     kind="MongoDB",
     location="westus",
     locations=[
-        azure_nextgen.documentdb.latest.LocationArgs(
+        azure_nextgen.documentdb.LocationArgs(
             failover_priority=0,
             is_zone_redundant=False,
             location_name="southcentralus",
         ),
-        azure_nextgen.documentdb.latest.LocationArgs(
+        azure_nextgen.documentdb.LocationArgs(
             failover_priority=1,
             is_zone_redundant=False,
             location_name="eastus",
@@ -167,7 +167,7 @@ database_account = azure_nextgen.documentdb.latest.DatabaseAccount("databaseAcco
     ],
     resource_group_name="rg1",
     tags={},
-    virtual_network_rules=[azure_nextgen.documentdb.latest.VirtualNetworkRuleArgs(
+    virtual_network_rules=[azure_nextgen.documentdb.VirtualNetworkRuleArgs(
         id="/subscriptions/subId/resourceGroups/rg/providers/Microsoft.Network/virtualNetworks/vnet1/subnets/subnet1",
         ignore_missing_v_net_service_endpoint=False,
     )])
@@ -182,7 +182,7 @@ database_account = azure_nextgen.documentdb.latest.DatabaseAccount("databaseAcco
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const databaseAccount = new azure_nextgen.documentdb.latest.DatabaseAccount("databaseAccount", {
+const databaseAccount = new azure_nextgen.documentdb.DatabaseAccount("databaseAccount", {
     accountName: "ddb1",
     apiProperties: {
         serverVersion: "3.2",
@@ -251,14 +251,14 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var databaseAccount = new AzureNextGen.DocumentDB.Latest.DatabaseAccount("databaseAccount", new AzureNextGen.DocumentDB.Latest.DatabaseAccountArgs
+        var databaseAccount = new AzureNextGen.DocumentDB..DatabaseAccount("databaseAccount", new AzureNextGen.DocumentDB..DatabaseAccountArgs
         {
             AccountName = "ddb1",
             DatabaseAccountOfferType = "Standard",
             Location = "westus",
             Locations = 
             {
-                new AzureNextGen.DocumentDB.Latest.Inputs.LocationArgs
+                new AzureNextGen.DocumentDB..Inputs.LocationArgs
                 {
                     FailoverPriority = 0,
                     IsZoneRedundant = false,
@@ -281,7 +281,7 @@ class MyStack : Stack
 package main
 
 import (
-	documentdb "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/documentdb/latest"
+	documentdb "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/documentdb"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -317,11 +317,11 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-database_account = azure_nextgen.documentdb.latest.DatabaseAccount("databaseAccount",
+database_account = azure_nextgen.documentdb.DatabaseAccount("databaseAccount",
     account_name="ddb1",
     database_account_offer_type="Standard",
     location="westus",
-    locations=[azure_nextgen.documentdb.latest.LocationArgs(
+    locations=[azure_nextgen.documentdb.LocationArgs(
         failover_priority=0,
         is_zone_redundant=False,
         location_name="southcentralus",
@@ -338,7 +338,7 @@ database_account = azure_nextgen.documentdb.latest.DatabaseAccount("databaseAcco
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const databaseAccount = new azure_nextgen.documentdb.latest.DatabaseAccount("databaseAccount", {
+const databaseAccount = new azure_nextgen.documentdb.DatabaseAccount("databaseAccount", {
     accountName: "ddb1",
     databaseAccountOfferType: "Standard",
     location: "westus",
@@ -552,7 +552,7 @@ The DatabaseAccount resource accepts the following [input]({{< relref "/docs/int
 <a href="#databaseaccountoffertype_csharp" style="color: inherit; text-decoration: inherit;">Database<wbr>Account<wbr>Offer<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databaseaccountoffertype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB.<wbr>Database<wbr>Account<wbr>Offer<wbr>Type</a></span>
+        <span class="property-type"><a href="#databaseaccountoffertype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB..<wbr>Database<wbr>Account<wbr>Offer<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The offer type for the database{{% /md %}}</dd>
     <dt class="property-required"
@@ -561,7 +561,7 @@ The DatabaseAccount resource accepts the following [input]({{< relref "/docs/int
 <a href="#locations_csharp" style="color: inherit; text-decoration: inherit;">Locations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#location">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Location<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#location">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB..<wbr>Inputs.<wbr>Location<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}An array that contains the georeplication locations enabled for the Cosmos DB account.{{% /md %}}</dd>
     <dt class="property-required"
@@ -579,7 +579,7 @@ The DatabaseAccount resource accepts the following [input]({{< relref "/docs/int
 <a href="#apiproperties_csharp" style="color: inherit; text-decoration: inherit;">Api<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apiproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Api<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#apiproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB..<wbr>Inputs.<wbr>Api<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}API specific properties. Currently, supported only for MongoDB API.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -588,7 +588,7 @@ The DatabaseAccount resource accepts the following [input]({{< relref "/docs/int
 <a href="#backuppolicy_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#continuousmodebackuppolicy">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Continuous<wbr>Mode<wbr>Backup<wbr>Policy<wbr>Args</a> | <a href="#periodicmodebackuppolicy">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Periodic<wbr>Mode<wbr>Backup<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#continuousmodebackuppolicy">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB..<wbr>Inputs.<wbr>Continuous<wbr>Mode<wbr>Backup<wbr>Policy<wbr>Args</a> | <a href="#periodicmodebackuppolicy">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB..<wbr>Inputs.<wbr>Periodic<wbr>Mode<wbr>Backup<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The object representing the policy for taking backups on an account.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -597,7 +597,7 @@ The DatabaseAccount resource accepts the following [input]({{< relref "/docs/int
 <a href="#capabilities_csharp" style="color: inherit; text-decoration: inherit;">Capabilities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#capability">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Capability<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#capability">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB..<wbr>Inputs.<wbr>Capability<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of Cosmos DB capabilities for the account{{% /md %}}</dd>
     <dt class="property-optional"
@@ -606,7 +606,7 @@ The DatabaseAccount resource accepts the following [input]({{< relref "/docs/int
 <a href="#connectoroffer_csharp" style="color: inherit; text-decoration: inherit;">Connector<wbr>Offer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#connectoroffer">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB.<wbr>Connector<wbr>Offer</a></span>
+        <span class="property-type">string | <a href="#connectoroffer">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB..<wbr>Connector<wbr>Offer</a></span>
     </dt>
     <dd>{{% md %}}The cassandra connector offer type for the Cosmos DB database C* account.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -615,7 +615,7 @@ The DatabaseAccount resource accepts the following [input]({{< relref "/docs/int
 <a href="#consistencypolicy_csharp" style="color: inherit; text-decoration: inherit;">Consistency<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#consistencypolicy">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Consistency<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#consistencypolicy">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB..<wbr>Inputs.<wbr>Consistency<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The consistency policy for the Cosmos DB account.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -624,7 +624,7 @@ The DatabaseAccount resource accepts the following [input]({{< relref "/docs/int
 <a href="#cors_csharp" style="color: inherit; text-decoration: inherit;">Cors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#corspolicy">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Cors<wbr>Policy<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#corspolicy">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB..<wbr>Inputs.<wbr>Cors<wbr>Policy<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The CORS policy for the Cosmos DB database account.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -687,7 +687,7 @@ The DatabaseAccount resource accepts the following [input]({{< relref "/docs/int
 <a href="#iprules_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipaddressorrange">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Ip<wbr>Address<wbr>Or<wbr>Range<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#ipaddressorrange">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB..<wbr>Inputs.<wbr>Ip<wbr>Address<wbr>Or<wbr>Range<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of IpRules.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -714,7 +714,7 @@ The DatabaseAccount resource accepts the following [input]({{< relref "/docs/int
 <a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#databaseaccountkind">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB.<wbr>Database<wbr>Account<wbr>Kind</a></span>
+        <span class="property-type">string | <a href="#databaseaccountkind">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB..<wbr>Database<wbr>Account<wbr>Kind</a></span>
     </dt>
     <dd>{{% md %}}Indicates the type of database account. This can only be set at database account creation.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -741,7 +741,7 @@ The DatabaseAccount resource accepts the following [input]({{< relref "/docs/int
 <a href="#virtualnetworkrules_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkrule">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Virtual<wbr>Network<wbr>Rule<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#virtualnetworkrule">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB..<wbr>Inputs.<wbr>Virtual<wbr>Network<wbr>Rule<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of Virtual Network ACL rules configured for the Cosmos DB account.{{% /md %}}</dd>
 </dl>
@@ -1411,7 +1411,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#failoverpolicies_csharp" style="color: inherit; text-decoration: inherit;">Failover<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#failoverpolicyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB.<wbr>Outputs.<wbr>Failover<wbr>Policy<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#failoverpolicyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB..<wbr>Outputs.<wbr>Failover<wbr>Policy<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}An array that contains the regions ordered by their failover priorities.{{% /md %}}</dd>
     <dt class="property-"
@@ -1438,7 +1438,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privateendpointconnections_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint<wbr>Connections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointconnectionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB.<wbr>Outputs.<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#privateendpointconnectionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB..<wbr>Outputs.<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of Private Endpoint Connections configured for the Cosmos DB account.{{% /md %}}</dd>
     <dt class="property-"
@@ -1465,7 +1465,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#readlocations_csharp" style="color: inherit; text-decoration: inherit;">Read<wbr>Locations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#locationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB.<wbr>Outputs.<wbr>Location<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#locationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB..<wbr>Outputs.<wbr>Location<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}An array that contains of the read locations enabled for the Cosmos DB account.{{% /md %}}</dd>
     <dt class="property-"
@@ -1483,7 +1483,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#writelocations_csharp" style="color: inherit; text-decoration: inherit;">Write<wbr>Locations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#locationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB.<wbr>Outputs.<wbr>Location<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#locationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB..<wbr>Outputs.<wbr>Location<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}An array that contains the write location for the Cosmos DB account.{{% /md %}}</dd>
 </dl>
@@ -1798,7 +1798,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#serverversion_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#serverversion">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB.<wbr>Server<wbr>Version</a></span>
+        <span class="property-type">string | <a href="#serverversion">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB..<wbr>Server<wbr>Version</a></span>
     </dt>
     <dd>{{% md %}}Describes the ServerVersion of an a MongoDB account.{{% /md %}}</dd>
 </dl>
@@ -2076,7 +2076,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#defaultconsistencylevel_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Consistency<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#defaultconsistencylevel">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB.<wbr>Default<wbr>Consistency<wbr>Level</a></span>
+        <span class="property-type"><a href="#defaultconsistencylevel">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB..<wbr>Default<wbr>Consistency<wbr>Level</a></span>
     </dt>
     <dd>{{% md %}}The default consistency level and configuration settings of the Cosmos DB account.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3580,7 +3580,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#periodicmodeproperties_csharp" style="color: inherit; text-decoration: inherit;">Periodic<wbr>Mode<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#periodicmodeproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Periodic<wbr>Mode<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#periodicmodeproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB..<wbr>Inputs.<wbr>Periodic<wbr>Mode<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration values for periodic mode backup{{% /md %}}</dd>
 </dl>
@@ -3642,7 +3642,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#periodicmodeproperties_csharp" style="color: inherit; text-decoration: inherit;">Periodic<wbr>Mode<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#periodicmodepropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Periodic<wbr>Mode<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#periodicmodepropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB..<wbr>Inputs.<wbr>Periodic<wbr>Mode<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration values for periodic mode backup{{% /md %}}</dd>
 </dl>
@@ -3927,7 +3927,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privateendpoint_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointpropertyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Property<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#privateendpointpropertyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB..<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Property<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Private endpoint which the connection belongs to.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3936,7 +3936,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privatelinkserviceconnectionstate_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkserviceconnectionstatepropertyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Property<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#privatelinkserviceconnectionstatepropertyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB..<wbr>Inputs.<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Property<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Connection State of the Private Endpoint Connection.{{% /md %}}</dd>
 </dl>
@@ -4173,6 +4173,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Any action that is required beyond basic workflow (approve/ reject/ disconnect){{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="description_csharp">
+<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The private link service connection description.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
@@ -4195,6 +4204,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Any action that is required beyond basic workflow (approve/ reject/ disconnect){{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="description_go">
+<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The private link service connection description.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="status_go">
@@ -4221,6 +4239,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Any action that is required beyond basic workflow (approve/ reject/ disconnect){{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="description_nodejs">
+<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The private link service connection description.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
@@ -4243,6 +4270,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Any action that is required beyond basic workflow (approve/ reject/ disconnect){{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="description_python">
+<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The private link service connection description.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="status_python">
@@ -4494,7 +4530,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:documentdb/latest:DatabaseAccount ddb1 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.DocumentDB/databaseAccounts/ddb1 
+$ pulumi import azure-nextgen:documentdb:DatabaseAccount ddb1 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.DocumentDB/databaseAccounts/ddb1 
 ```
 
 

@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.automation.Schedule resource wit
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Definition of the schedule.
-Latest API Version: 2019-06-01.
+API Version: 2019-06-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var schedule = new AzureNextGen.Automation.Latest.Schedule("schedule", new AzureNextGen.Automation.Latest.ScheduleArgs
+        var schedule = new AzureNextGen.Automation..Schedule("schedule", new AzureNextGen.Automation..ScheduleArgs
         {
             AdvancedSchedule = ,
             AutomationAccountName = "myAutomationAccount33",
@@ -54,7 +54,7 @@ class MyStack : Stack
 package main
 
 import (
-	automation "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/automation/latest"
+	automation "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/automation"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -89,8 +89,8 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-schedule = azure_nextgen.automation.latest.Schedule("schedule",
-    advanced_schedule=azure_nextgen.automation.latest.AdvancedScheduleArgs(),
+schedule = azure_nextgen.automation.Schedule("schedule",
+    advanced_schedule=azure_nextgen.automation.AdvancedScheduleArgs(),
     automation_account_name="myAutomationAccount33",
     description="my description of schedule goes here",
     expiry_time="2017-04-01T17:28:57.2494819Z",
@@ -111,7 +111,7 @@ schedule = azure_nextgen.automation.latest.Schedule("schedule",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const schedule = new azure_nextgen.automation.latest.Schedule("schedule", {
+const schedule = new azure_nextgen.automation.Schedule("schedule", {
     advancedSchedule: {},
     automationAccountName: "myAutomationAccount33",
     description: "my description of schedule goes here",
@@ -326,7 +326,7 @@ The Schedule resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#frequency_csharp" style="color: inherit; text-decoration: inherit;">Frequency</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#schedulefrequency">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automation.<wbr>Schedule<wbr>Frequency</a></span>
+        <span class="property-type">string | <a href="#schedulefrequency">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automation..<wbr>Schedule<wbr>Frequency</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the frequency of the schedule.{{% /md %}}</dd>
     <dt class="property-required"
@@ -371,7 +371,7 @@ The Schedule resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#advancedschedule_csharp" style="color: inherit; text-decoration: inherit;">Advanced<wbr>Schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#advancedschedule">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automation.<wbr>Inputs.<wbr>Advanced<wbr>Schedule<wbr>Args</a></span>
+        <span class="property-type"><a href="#advancedschedule">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automation..<wbr>Inputs.<wbr>Advanced<wbr>Schedule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the AdvancedSchedule.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1113,7 +1113,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#monthlyoccurrences_csharp" style="color: inherit; text-decoration: inherit;">Monthly<wbr>Occurrences</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#advancedschedulemonthlyoccurrence">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automation.<wbr>Inputs.<wbr>Advanced<wbr>Schedule<wbr>Monthly<wbr>Occurrence<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#advancedschedulemonthlyoccurrence">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automation..<wbr>Inputs.<wbr>Advanced<wbr>Schedule<wbr>Monthly<wbr>Occurrence<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Occurrences of days within a month.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1238,7 +1238,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#day_csharp" style="color: inherit; text-decoration: inherit;">Day</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#scheduleday">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automation.<wbr>Schedule<wbr>Day</a></span>
+        <span class="property-type">string | <a href="#scheduleday">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automation..<wbr>Schedule<wbr>Day</a></span>
     </dt>
     <dd>{{% md %}}Day of the occurrence. Must be one of monday, tuesday, wednesday, thursday, friday, saturday, sunday.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1443,7 +1443,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#monthlyoccurrences_csharp" style="color: inherit; text-decoration: inherit;">Monthly<wbr>Occurrences</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#advancedschedulemonthlyoccurrenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automation.<wbr>Inputs.<wbr>Advanced<wbr>Schedule<wbr>Monthly<wbr>Occurrence<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#advancedschedulemonthlyoccurrenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automation..<wbr>Inputs.<wbr>Advanced<wbr>Schedule<wbr>Monthly<wbr>Occurrence<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Occurrences of days within a month.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1710,7 +1710,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:automation/latest:Schedule mySchedule /subscriptions/subid/resourceGroups/rg/providers/Microsoft.Automation/automationAccounts/myAutomationAccount33/schedules/mySchedule 
+$ pulumi import azure-nextgen:automation:Schedule mySchedule /subscriptions/subid/resourceGroups/rg/providers/Microsoft.Automation/automationAccounts/myAutomationAccount33/schedules/mySchedule 
 ```
 
 

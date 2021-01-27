@@ -287,7 +287,7 @@ The following output properties are available:
 <a href="#artifacts_csharp" style="color: inherit; text-decoration: inherit;">Artifacts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceunitartifactsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Deployment<wbr>Manager.<wbr>Outputs.<wbr>Service<wbr>Unit<wbr>Artifacts<wbr>Response</a></span>
+        <span class="property-type"><a href="#serviceunitartifactsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Deployment<wbr>Manager..<wbr>Outputs.<wbr>Service<wbr>Unit<wbr>Artifacts<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The artifacts for the service unit.{{% /md %}}</dd>
     <dt class="property-"

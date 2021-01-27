@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.netapp.BackupPolicy resource wit
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Backup policy information
-Latest API Version: 2020-09-01.
+API Version: 2020-09-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var backupPolicy = new AzureNextGen.NetApp.Latest.BackupPolicy("backupPolicy", new AzureNextGen.NetApp.Latest.BackupPolicyArgs
+        var backupPolicy = new AzureNextGen.NetApp..BackupPolicy("backupPolicy", new AzureNextGen.NetApp..BackupPolicyArgs
         {
             AccountName = "account1",
             BackupPolicyName = "backupPolicyName",
@@ -52,7 +52,7 @@ class MyStack : Stack
 package main
 
 import (
-	netapp "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/netapp/latest"
+	netapp "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/netapp"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -85,7 +85,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-backup_policy = azure_nextgen.netapp.latest.BackupPolicy("backupPolicy",
+backup_policy = azure_nextgen.netapp.BackupPolicy("backupPolicy",
     account_name="account1",
     backup_policy_name="backupPolicyName",
     daily_backups_to_keep=10,
@@ -105,7 +105,7 @@ backup_policy = azure_nextgen.netapp.latest.BackupPolicy("backupPolicy",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const backupPolicy = new azure_nextgen.netapp.latest.BackupPolicy("backupPolicy", {
+const backupPolicy = new azure_nextgen.netapp.BackupPolicy("backupPolicy", {
     accountName: "account1",
     backupPolicyName: "backupPolicyName",
     dailyBackupsToKeep: 10,
@@ -381,7 +381,7 @@ The BackupPolicy resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#volumebackups_csharp" style="color: inherit; text-decoration: inherit;">Volume<wbr>Backups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volumebackups">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Net<wbr>App.<wbr>Inputs.<wbr>Volume<wbr>Backups<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#volumebackups">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Net<wbr>App..<wbr>Inputs.<wbr>Volume<wbr>Backups<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of volumes assigned to this policy{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1214,7 +1214,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:netapp/latest:BackupPolicy account1/backupPolicyName /subscriptions/D633CC2E-722B-4AE1-B636-BBD9E4C60ED9/resourceGroups/myRG/providers/Microsoft.NetApp/netAppAccounts/account1/backupPolocies/backupPolicyName 
+$ pulumi import azure-nextgen:netapp:BackupPolicy account1/backupPolicyName /subscriptions/D633CC2E-722B-4AE1-B636-BBD9E4C60ED9/resourceGroups/myRG/providers/Microsoft.NetApp/netAppAccounts/account1/backupPolocies/backupPolicyName 
 ```
 
 

@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.storagesync.SyncGroup resource w
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Sync Group object.
-Latest API Version: 2020-09-01.
+API Version: 2020-09-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var syncGroup = new AzureNextGen.StorageSync.Latest.SyncGroup("syncGroup", new AzureNextGen.StorageSync.Latest.SyncGroupArgs
+        var syncGroup = new AzureNextGen.StorageSync..SyncGroup("syncGroup", new AzureNextGen.StorageSync..SyncGroupArgs
         {
             ResourceGroupName = "SampleResourceGroup_1",
             StorageSyncServiceName = "SampleStorageSyncService_1",
@@ -47,7 +47,7 @@ class MyStack : Stack
 package main
 
 import (
-	storagesync "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/storagesync/latest"
+	storagesync "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/storagesync"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -75,7 +75,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-sync_group = azure_nextgen.storagesync.latest.SyncGroup("syncGroup",
+sync_group = azure_nextgen.storagesync.SyncGroup("syncGroup",
     resource_group_name="SampleResourceGroup_1",
     storage_sync_service_name="SampleStorageSyncService_1",
     sync_group_name="SampleSyncGroup_1")
@@ -90,7 +90,7 @@ sync_group = azure_nextgen.storagesync.latest.SyncGroup("syncGroup",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const syncGroup = new azure_nextgen.storagesync.latest.SyncGroup("syncGroup", {
+const syncGroup = new azure_nextgen.storagesync.SyncGroup("syncGroup", {
     resourceGroupName: "SampleResourceGroup_1",
     storageSyncServiceName: "SampleStorageSyncService_1",
     syncGroupName: "SampleSyncGroup_1",
@@ -634,7 +634,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:storagesync/latest:SyncGroup SampleSyncGroup_1 /subscriptions/3a048283-338f-4002-a9dd-a50fdadcb392/resourceGroups/SampleResourceGroup_1/providers/Microsoft.StorageSync/storageSyncServices/SampleStorageSyncService_1/syncGroups/SampleSyncGroup_1 
+$ pulumi import azure-nextgen:storagesync:SyncGroup SampleSyncGroup_1 /subscriptions/3a048283-338f-4002-a9dd-a50fdadcb392/resourceGroups/SampleResourceGroup_1/providers/Microsoft.StorageSync/storageSyncServices/SampleStorageSyncService_1/syncGroups/SampleSyncGroup_1 
 ```
 
 

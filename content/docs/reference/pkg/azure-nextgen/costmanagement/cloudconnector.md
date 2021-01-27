@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.costmanagement.CloudConnector re
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The Connector model definition
+API Version: 2019-03-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var cloudConnector = new AzureNextGen.CostManagement.V20190301Preview.CloudConnector("cloudConnector", new AzureNextGen.CostManagement.V20190301Preview.CloudConnectorArgs
+        var cloudConnector = new AzureNextGen.CostManagement..CloudConnector("cloudConnector", new AzureNextGen.CostManagement..CloudConnectorArgs
         {
             ConnectorName = "aws-123456789012",
             CredentialsKey = "arn:aws:iam::123456789012:role/AzureCostManagementRole",
@@ -48,7 +49,7 @@ class MyStack : Stack
 package main
 
 import (
-	costmanagement "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/costmanagement/v20190301preview"
+	costmanagement "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/costmanagement"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -78,7 +79,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-cloud_connector = azure_nextgen.costmanagement.v20190301preview.CloudConnector("cloudConnector",
+cloud_connector = azure_nextgen.costmanagement.CloudConnector("cloudConnector",
     connector_name="aws-123456789012",
     credentials_key="arn:aws:iam::123456789012:role/AzureCostManagementRole",
     credentials_secret="external-id",
@@ -95,7 +96,7 @@ cloud_connector = azure_nextgen.costmanagement.v20190301preview.CloudConnector("
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const cloudConnector = new azure_nextgen.costmanagement.v20190301preview.CloudConnector("cloudConnector", {
+const cloudConnector = new azure_nextgen.costmanagement.CloudConnector("cloudConnector", {
     connectorName: "aws-123456789012",
     credentialsKey: "arn:aws:iam::123456789012:role/AzureCostManagementRole",
     credentialsSecret: "external-id",
@@ -305,7 +306,7 @@ The CloudConnector resource accepts the following [input]({{< relref "/docs/intr
 <a href="#billingmodel_csharp" style="color: inherit; text-decoration: inherit;">Billing<wbr>Model</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#connectorbillingmodel">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cost<wbr>Management.<wbr>Connector<wbr>Billing<wbr>Model</a></span>
+        <span class="property-type">string | <a href="#connectorbillingmodel">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cost<wbr>Management..<wbr>Connector<wbr>Billing<wbr>Model</a></span>
     </dt>
     <dd>{{% md %}}Connector billing model{{% /md %}}</dd>
     <dt class="property-optional"
@@ -651,7 +652,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#collectioninfo_csharp" style="color: inherit; text-decoration: inherit;">Collection<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectorcollectioninforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cost<wbr>Management.<wbr>Outputs.<wbr>Connector<wbr>Collection<wbr>Info<wbr>Response</a></span>
+        <span class="property-type"><a href="#connectorcollectioninforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cost<wbr>Management..<wbr>Outputs.<wbr>Connector<wbr>Collection<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Collection information{{% /md %}}</dd>
     <dt class="property-"
@@ -1139,16 +1140,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Short error code{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="errorinnermessage_csharp">
-<a href="#errorinnermessage_csharp" style="color: inherit; text-decoration: inherit;">Error<wbr>Inner<wbr>Message</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}External Provider error message{{% /md %}}</dd>
+    <dd>{{% md %}}Short error message{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="errormessage_csharp">
@@ -1166,7 +1158,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Time the error started occurring (Last time error occurred in lastChecked){{% /md %}}</dd>
+    <dd>{{% md %}}Time the error started occurring (Last time error occurred in lastRun){{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -1181,16 +1173,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Short error code{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="errorinnermessage_go">
-<a href="#errorinnermessage_go" style="color: inherit; text-decoration: inherit;">Error<wbr>Inner<wbr>Message</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}External Provider error message{{% /md %}}</dd>
+    <dd>{{% md %}}Short error message{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="errormessage_go">
@@ -1208,7 +1191,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Time the error started occurring (Last time error occurred in lastChecked){{% /md %}}</dd>
+    <dd>{{% md %}}Time the error started occurring (Last time error occurred in lastRun){{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -1223,16 +1206,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Short error code{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="errorinnermessage_nodejs">
-<a href="#errorinnermessage_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Inner<wbr>Message</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}External Provider error message{{% /md %}}</dd>
+    <dd>{{% md %}}Short error message{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="errormessage_nodejs">
@@ -1250,7 +1224,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Time the error started occurring (Last time error occurred in lastChecked){{% /md %}}</dd>
+    <dd>{{% md %}}Time the error started occurring (Last time error occurred in lastRun){{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -1265,16 +1239,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Short error code{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="error_inner_message_python">
-<a href="#error_inner_message_python" style="color: inherit; text-decoration: inherit;">error_<wbr>inner_<wbr>message</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}External Provider error message{{% /md %}}</dd>
+    <dd>{{% md %}}Short error message{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="error_message_python">
@@ -1292,7 +1257,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Time the error started occurring (Last time error occurred in lastChecked){{% /md %}}</dd>
+    <dd>{{% md %}}Time the error started occurring (Last time error occurred in lastRun){{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -1303,13 +1268,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="lastchecked_csharp">
-<a href="#lastchecked_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Checked</a>
+        <span id="lastrun_csharp">
+<a href="#lastrun_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Run</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Last time the data acquisition process initiated connecting to the external provider{{% /md %}}</dd>
+    <dd>{{% md %}}Last time the data acquisition process completed (even if no new data was found){{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="lastupdated_csharp">
@@ -1334,7 +1299,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#error_csharp" style="color: inherit; text-decoration: inherit;">Error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectorcollectionerrorinforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Connector<wbr>Collection<wbr>Error<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#connectorcollectionerrorinforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cost<wbr>Management..<wbr>Inputs.<wbr>Connector<wbr>Collection<wbr>Error<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Error information of last collection{{% /md %}}</dd>
 </dl>
@@ -1345,13 +1310,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="lastchecked_go">
-<a href="#lastchecked_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Checked</a>
+        <span id="lastrun_go">
+<a href="#lastrun_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Run</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Last time the data acquisition process initiated connecting to the external provider{{% /md %}}</dd>
+    <dd>{{% md %}}Last time the data acquisition process completed (even if no new data was found){{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="lastupdated_go">
@@ -1387,13 +1352,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="lastchecked_nodejs">
-<a href="#lastchecked_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Checked</a>
+        <span id="lastrun_nodejs">
+<a href="#lastrun_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Run</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Last time the data acquisition process initiated connecting to the external provider{{% /md %}}</dd>
+    <dd>{{% md %}}Last time the data acquisition process completed (even if no new data was found){{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="lastupdated_nodejs">
@@ -1429,13 +1394,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="last_checked_python">
-<a href="#last_checked_python" style="color: inherit; text-decoration: inherit;">last_<wbr>checked</a>
+        <span id="last_run_python">
+<a href="#last_run_python" style="color: inherit; text-decoration: inherit;">last_<wbr>run</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Last time the data acquisition process initiated connecting to the external provider{{% /md %}}</dd>
+    <dd>{{% md %}}Last time the data acquisition process completed (even if no new data was found){{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="last_updated_python">
@@ -1471,7 +1436,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:costmanagement/v20190301preview:CloudConnector aws-123456789012 /providers/Microsoft.CostManagement/cloudConnectors/aws-123456789012 
+$ pulumi import azure-nextgen:costmanagement:CloudConnector aws-123456789012 /providers/Microsoft.CostManagement/cloudConnectors/aws-123456789012 
 ```
 
 

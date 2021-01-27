@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.insights.AnalyticsItem resource 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Properties that define an Analytics item that is associated to an Application Insights component.
-Latest API Version: 2015-05-01.
+API Version: 2015-05-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var analyticsItem = new AzureNextGen.Insights.Latest.AnalyticsItem("analyticsItem", new AzureNextGen.Insights.Latest.AnalyticsItemArgs
+        var analyticsItem = new AzureNextGen.Insights..AnalyticsItem("analyticsItem", new AzureNextGen.Insights..AnalyticsItemArgs
         {
             Content = @"let newExceptionsTimeRange = 1d;
 let timeRangeToCheckBefore = 7d;
@@ -63,7 +63,7 @@ exceptions
 package main
 
 import (
-	insights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/insights/latest"
+	insights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/insights"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -95,7 +95,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-analytics_item = azure_nextgen.insights.latest.AnalyticsItem("analyticsItem",
+analytics_item = azure_nextgen.insights.AnalyticsItem("analyticsItem",
     content="""let newExceptionsTimeRange = 1d;
 let timeRangeToCheckBefore = 7d;
 exceptions
@@ -126,7 +126,7 @@ exceptions
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const analyticsItem = new azure_nextgen.insights.latest.AnalyticsItem("analyticsItem", {
+const analyticsItem = new azure_nextgen.insights.AnalyticsItem("analyticsItem", {
     content: `let newExceptionsTimeRange = 1d;
 let timeRangeToCheckBefore = 7d;
 exceptions
@@ -404,7 +404,7 @@ The AnalyticsItem resource accepts the following [input]({{< relref "/docs/intro
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationinsightscomponentanalyticsitemproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Inputs.<wbr>Application<wbr>Insights<wbr>Component<wbr>Analytics<wbr>Item<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationinsightscomponentanalyticsitemproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Inputs.<wbr>Application<wbr>Insights<wbr>Component<wbr>Analytics<wbr>Item<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A set of properties that can be defined in the context of a specific item type. Each type may have its own properties.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -413,7 +413,7 @@ The AnalyticsItem resource accepts the following [input]({{< relref "/docs/intro
 <a href="#scope_csharp" style="color: inherit; text-decoration: inherit;">Scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#itemscope">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Item<wbr>Scope</a></span>
+        <span class="property-type">string | <a href="#itemscope">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Item<wbr>Scope</a></span>
     </dt>
     <dd>{{% md %}}Enum indicating if this item definition is owned by a specific user or is shared between all users with access to the Application Insights component.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -422,7 +422,7 @@ The AnalyticsItem resource accepts the following [input]({{< relref "/docs/intro
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#itemtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Item<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#itemtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Item<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Enum indicating the type of the Analytics item.{{% /md %}}</dd>
 </dl>
@@ -1122,7 +1122,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:insights/latest:AnalyticsItem myresource1 /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/microsoft.insights/components/{resourceName}/{scopePath}/item 
+$ pulumi import azure-nextgen:insights:AnalyticsItem myresource1 /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/microsoft.insights/components/{resourceName}/{scopePath}/item 
 ```
 
 

@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.dbformariadb.Database resource w
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Represents a Database.
-Latest API Version: 2018-06-01.
+API Version: 2018-06-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var database = new AzureNextGen.DBforMariaDB.Latest.Database("database", new AzureNextGen.DBforMariaDB.Latest.DatabaseArgs
+        var database = new AzureNextGen.DBforMariaDB..Database("database", new AzureNextGen.DBforMariaDB..DatabaseArgs
         {
             Charset = "utf8",
             Collation = "utf8_general_ci",
@@ -49,7 +49,7 @@ class MyStack : Stack
 package main
 
 import (
-	dbformariadb "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/dbformariadb/latest"
+	dbformariadb "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/dbformariadb"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -79,7 +79,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-database = azure_nextgen.dbformariadb.latest.Database("database",
+database = azure_nextgen.dbformariadb.Database("database",
     charset="utf8",
     collation="utf8_general_ci",
     database_name="db1",
@@ -96,7 +96,7 @@ database = azure_nextgen.dbformariadb.latest.Database("database",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const database = new azure_nextgen.dbformariadb.latest.Database("database", {
+const database = new azure_nextgen.dbformariadb.Database("database", {
     charset: "utf8",
     collation: "utf8_general_ci",
     databaseName: "db1",
@@ -642,7 +642,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:dbformariadb/latest:Database db1 /subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/TestGroup/providers/Microsoft.DBforMariaDB/servers/testserver/databases/db1 
+$ pulumi import azure-nextgen:dbformariadb:Database db1 /subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/TestGroup/providers/Microsoft.DBforMariaDB/servers/testserver/databases/db1 
 ```
 
 

@@ -168,7 +168,7 @@ The following output properties are available:
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#unencryptedcredentialsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Outputs.<wbr>Unencrypted<wbr>Credentials<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#unencryptedcredentialsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box..<wbr>Outputs.<wbr>Unencrypted<wbr>Credentials<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of unencrypted credentials.{{% /md %}}</dd>
 </dl>
@@ -295,7 +295,7 @@ The following output properties are available:
 <a href="#sharecredentialdetails_csharp" style="color: inherit; text-decoration: inherit;">Share<wbr>Credential<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sharecredentialdetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Share<wbr>Credential<wbr>Details<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#sharecredentialdetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box..<wbr>Inputs.<wbr>Share<wbr>Credential<wbr>Details<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Per share level unencrypted access credentials.{{% /md %}}</dd>
 </dl>
@@ -649,7 +649,7 @@ The following output properties are available:
 <a href="#additionalinfo_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalerrorinforesponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Additional<wbr>Error<wbr>Info<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#additionalerrorinforesponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box..<wbr>Inputs.<wbr>Additional<wbr>Error<wbr>Info<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Cloud error additional info.{{% /md %}}</dd>
     <dt class="property-required"
@@ -658,7 +658,7 @@ The following output properties are available:
 <a href="#details_csharp" style="color: inherit; text-decoration: inherit;">Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clouderrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Cloud<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#clouderrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box..<wbr>Inputs.<wbr>Cloud<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Cloud error details.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -860,7 +860,7 @@ The following output properties are available:
 <a href="#dcaccesssecuritycode_csharp" style="color: inherit; text-decoration: inherit;">Dc<wbr>Access<wbr>Security<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dcaccesssecuritycoderesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Dc<wbr>Access<wbr>Security<wbr>Code<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#dcaccesssecuritycoderesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box..<wbr>Inputs.<wbr>Dc<wbr>Access<wbr>Security<wbr>Code<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Dc Access Security Code for Customer Managed Shipping{{% /md %}}</dd>
     <dt class="property-required"
@@ -869,7 +869,7 @@ The following output properties are available:
 <a href="#disksecrets_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Secrets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#disksecretresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Disk<wbr>Secret<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#disksecretresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box..<wbr>Inputs.<wbr>Disk<wbr>Secret<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Contains the list of secrets object for that device.{{% /md %}}</dd>
     <dt class="property-required"
@@ -878,7 +878,7 @@ The following output properties are available:
 <a href="#error_csharp" style="color: inherit; text-decoration: inherit;">Error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clouderrorresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Cloud<wbr>Error<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#clouderrorresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box..<wbr>Inputs.<wbr>Cloud<wbr>Error<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Error while fetching the secrets.{{% /md %}}</dd>
     <dt class="property-required"
@@ -1071,7 +1071,7 @@ The following output properties are available:
 <a href="#cabinetpodsecrets_csharp" style="color: inherit; text-decoration: inherit;">Cabinet<wbr>Pod<wbr>Secrets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databoxheavysecretresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Data<wbr>Box<wbr>Heavy<wbr>Secret<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#databoxheavysecretresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box..<wbr>Inputs.<wbr>Data<wbr>Box<wbr>Heavy<wbr>Secret<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Contains the list of secret objects for a databox heavy job.{{% /md %}}</dd>
     <dt class="property-required"
@@ -1080,7 +1080,7 @@ The following output properties are available:
 <a href="#dcaccesssecuritycode_csharp" style="color: inherit; text-decoration: inherit;">Dc<wbr>Access<wbr>Security<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dcaccesssecuritycoderesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Dc<wbr>Access<wbr>Security<wbr>Code<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#dcaccesssecuritycoderesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box..<wbr>Inputs.<wbr>Dc<wbr>Access<wbr>Security<wbr>Code<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Dc Access Security Code for Customer Managed Shipping{{% /md %}}</dd>
     <dt class="property-required"
@@ -1089,7 +1089,7 @@ The following output properties are available:
 <a href="#error_csharp" style="color: inherit; text-decoration: inherit;">Error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clouderrorresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Cloud<wbr>Error<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#clouderrorresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box..<wbr>Inputs.<wbr>Cloud<wbr>Error<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Error while fetching the secrets.{{% /md %}}</dd>
 </dl>
@@ -1210,7 +1210,7 @@ The following output properties are available:
 <a href="#accountcredentialdetails_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Credential<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accountcredentialdetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Account<wbr>Credential<wbr>Details<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#accountcredentialdetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box..<wbr>Inputs.<wbr>Account<wbr>Credential<wbr>Details<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Per account level access credentials.{{% /md %}}</dd>
     <dt class="property-required"
@@ -1246,7 +1246,7 @@ The following output properties are available:
 <a href="#networkconfigurations_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appliancenetworkconfigurationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Appliance<wbr>Network<wbr>Configuration<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#appliancenetworkconfigurationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box..<wbr>Inputs.<wbr>Appliance<wbr>Network<wbr>Configuration<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Network configuration of the appliance.{{% /md %}}</dd>
 </dl>
@@ -1421,7 +1421,7 @@ The following output properties are available:
 <a href="#accountcredentialdetails_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Credential<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accountcredentialdetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Account<wbr>Credential<wbr>Details<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#accountcredentialdetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box..<wbr>Inputs.<wbr>Account<wbr>Credential<wbr>Details<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Per account level access credentials.{{% /md %}}</dd>
     <dt class="property-required"
@@ -1457,7 +1457,7 @@ The following output properties are available:
 <a href="#networkconfigurations_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appliancenetworkconfigurationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Appliance<wbr>Network<wbr>Configuration<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#appliancenetworkconfigurationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box..<wbr>Inputs.<wbr>Appliance<wbr>Network<wbr>Configuration<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Network configuration of the appliance.{{% /md %}}</dd>
 </dl>
@@ -1632,7 +1632,7 @@ The following output properties are available:
 <a href="#dcaccesssecuritycode_csharp" style="color: inherit; text-decoration: inherit;">Dc<wbr>Access<wbr>Security<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dcaccesssecuritycoderesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Dc<wbr>Access<wbr>Security<wbr>Code<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#dcaccesssecuritycoderesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box..<wbr>Inputs.<wbr>Dc<wbr>Access<wbr>Security<wbr>Code<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Dc Access Security Code for Customer Managed Shipping{{% /md %}}</dd>
     <dt class="property-required"
@@ -1641,7 +1641,7 @@ The following output properties are available:
 <a href="#error_csharp" style="color: inherit; text-decoration: inherit;">Error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clouderrorresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Cloud<wbr>Error<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#clouderrorresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box..<wbr>Inputs.<wbr>Cloud<wbr>Error<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Error while fetching the secrets.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1650,7 +1650,7 @@ The following output properties are available:
 <a href="#podsecrets_csharp" style="color: inherit; text-decoration: inherit;">Pod<wbr>Secrets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databoxsecretresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Data<wbr>Box<wbr>Secret<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#databoxsecretresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box..<wbr>Inputs.<wbr>Data<wbr>Box<wbr>Secret<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Contains the list of secret objects for a job.{{% /md %}}</dd>
 </dl>
@@ -2197,7 +2197,7 @@ The following output properties are available:
 <a href="#jobsecrets_csharp" style="color: inherit; text-decoration: inherit;">Job<wbr>Secrets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databoxdiskjobsecretsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Data<wbr>Box<wbr>Disk<wbr>Job<wbr>Secrets<wbr>Response<wbr>Args</a> | <a href="#databoxheavyjobsecretsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Data<wbr>Box<wbr>Heavy<wbr>Job<wbr>Secrets<wbr>Response<wbr>Args</a> | <a href="#databoxjobsecretsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Databox<wbr>Job<wbr>Secrets<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#databoxdiskjobsecretsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box..<wbr>Inputs.<wbr>Data<wbr>Box<wbr>Disk<wbr>Job<wbr>Secrets<wbr>Response<wbr>Args</a> | <a href="#databoxheavyjobsecretsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box..<wbr>Inputs.<wbr>Data<wbr>Box<wbr>Heavy<wbr>Job<wbr>Secrets<wbr>Response<wbr>Args</a> | <a href="#databoxjobsecretsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box..<wbr>Inputs.<wbr>Databox<wbr>Job<wbr>Secrets<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Secrets related to this job.{{% /md %}}</dd>
 </dl>

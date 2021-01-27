@@ -231,7 +231,7 @@ The following output properties are available:
 <a href="#inputs_csharp" style="color: inherit; text-decoration: inherit;">Inputs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#expressionrootresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Outputs.<wbr>Expression<wbr>Root<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#expressionrootresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Outputs.<wbr>Expression<wbr>Root<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 </dl>
@@ -322,7 +322,7 @@ The following output properties are available:
 <a href="#details_csharp" style="color: inherit; text-decoration: inherit;">Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureresourceerrorinforesponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>Azure<wbr>Resource<wbr>Error<wbr>Info<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#azureresourceerrorinforesponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>Azure<wbr>Resource<wbr>Error<wbr>Info<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The error details.{{% /md %}}</dd>
 </dl>
@@ -443,7 +443,7 @@ The following output properties are available:
 <a href="#error_csharp" style="color: inherit; text-decoration: inherit;">Error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureresourceerrorinforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>Azure<wbr>Resource<wbr>Error<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azureresourceerrorinforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>Azure<wbr>Resource<wbr>Error<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The azure resource error info.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -452,7 +452,7 @@ The following output properties are available:
 <a href="#subexpressions_csharp" style="color: inherit; text-decoration: inherit;">Subexpressions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#expressionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>Expression<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#expressionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>Expression<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The sub expressions.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -618,7 +618,7 @@ The following output properties are available:
 <a href="#error_csharp" style="color: inherit; text-decoration: inherit;">Error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureresourceerrorinforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>Azure<wbr>Resource<wbr>Error<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azureresourceerrorinforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>Azure<wbr>Resource<wbr>Error<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The azure resource error info.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -636,7 +636,7 @@ The following output properties are available:
 <a href="#subexpressions_csharp" style="color: inherit; text-decoration: inherit;">Subexpressions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#expressionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>Expression<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#expressionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>Expression<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The sub expressions.{{% /md %}}</dd>
     <dt class="property-optional"

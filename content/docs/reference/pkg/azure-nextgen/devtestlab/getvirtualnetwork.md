@@ -242,7 +242,7 @@ The following output properties are available:
 <a href="#externalsubnets_csharp" style="color: inherit; text-decoration: inherit;">External<wbr>Subnets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#externalsubnetresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Outputs.<wbr>External<wbr>Subnet<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#externalsubnetresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab..<wbr>Outputs.<wbr>External<wbr>Subnet<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The external subnet properties.{{% /md %}}</dd>
     <dt class="property-"
@@ -296,7 +296,7 @@ The following output properties are available:
 <a href="#allowedsubnets_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Subnets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subnetresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Outputs.<wbr>Subnet<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#subnetresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab..<wbr>Outputs.<wbr>Subnet<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The allowed subnets of the virtual network.{{% /md %}}</dd>
     <dt class="property-"
@@ -332,7 +332,7 @@ The following output properties are available:
 <a href="#subnetoverrides_csharp" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Overrides</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subnetoverrideresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Outputs.<wbr>Subnet<wbr>Override<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#subnetoverrideresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab..<wbr>Outputs.<wbr>Subnet<wbr>Override<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The subnet overrides of the virtual network.{{% /md %}}</dd>
     <dt class="property-"
@@ -962,7 +962,7 @@ The following output properties are available:
 <a href="#sharedpublicipaddressconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Shared<wbr>Public<wbr>Ip<wbr>Address<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subnetsharedpublicipaddressconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Subnet<wbr>Shared<wbr>Public<wbr>Ip<wbr>Address<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subnetsharedpublicipaddressconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab..<wbr>Inputs.<wbr>Subnet<wbr>Shared<wbr>Public<wbr>Ip<wbr>Address<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties that virtual machines on this subnet will share.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1330,7 +1330,7 @@ The following output properties are available:
 <a href="#allowedports_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#portresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Port<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#portresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab..<wbr>Inputs.<wbr>Port<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Backend ports that virtual machines on this subnet are allowed to expose{{% /md %}}</dd>
 </dl>

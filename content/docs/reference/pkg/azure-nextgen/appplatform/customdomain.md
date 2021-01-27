@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.appplatform.CustomDomain resourc
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Custom domain resource payload.
-Latest API Version: 2020-07-01.
+API Version: 2020-07-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,11 +27,11 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var customDomain = new AzureNextGen.AppPlatform.Latest.CustomDomain("customDomain", new AzureNextGen.AppPlatform.Latest.CustomDomainArgs
+        var customDomain = new AzureNextGen.AppPlatform..CustomDomain("customDomain", new AzureNextGen.AppPlatform..CustomDomainArgs
         {
             AppName = "myapp",
             DomainName = "mydomain.com",
-            Properties = new AzureNextGen.AppPlatform.Latest.Inputs.CustomDomainPropertiesArgs
+            Properties = new AzureNextGen.AppPlatform..Inputs.CustomDomainPropertiesArgs
             {
                 CertName = "mycert",
                 Thumbprint = "934367bf1c97033f877db0f15cb1b586957d3133",
@@ -53,7 +53,7 @@ class MyStack : Stack
 package main
 
 import (
-	appplatform "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/appplatform/latest"
+	appplatform "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/appplatform"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -86,10 +86,10 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-custom_domain = azure_nextgen.appplatform.latest.CustomDomain("customDomain",
+custom_domain = azure_nextgen.appplatform.CustomDomain("customDomain",
     app_name="myapp",
     domain_name="mydomain.com",
-    properties=azure_nextgen.appplatform.latest.CustomDomainPropertiesArgs(
+    properties=azure_nextgen.appplatform.CustomDomainPropertiesArgs(
         cert_name="mycert",
         thumbprint="934367bf1c97033f877db0f15cb1b586957d3133",
     ),
@@ -106,7 +106,7 @@ custom_domain = azure_nextgen.appplatform.latest.CustomDomain("customDomain",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const customDomain = new azure_nextgen.appplatform.latest.CustomDomain("customDomain", {
+const customDomain = new azure_nextgen.appplatform.CustomDomain("customDomain", {
     appName: "myapp",
     domainName: "mydomain.com",
     properties: {
@@ -346,7 +346,7 @@ The CustomDomain resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customdomainproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>App<wbr>Platform.<wbr>Inputs.<wbr>Custom<wbr>Domain<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#customdomainproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>App<wbr>Platform..<wbr>Inputs.<wbr>Custom<wbr>Domain<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties of the custom domain resource.{{% /md %}}</dd>
 </dl>
@@ -891,7 +891,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:appplatform/latest:CustomDomain mydomain.com /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.AppPlatform/Spring/myservice/apps/myapp/domains/mydomain.com 
+$ pulumi import azure-nextgen:appplatform:CustomDomain mydomain.com /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.AppPlatform/Spring/myservice/apps/myapp/domains/mydomain.com 
 ```
 
 

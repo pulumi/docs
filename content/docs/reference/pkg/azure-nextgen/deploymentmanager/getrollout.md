@@ -233,7 +233,7 @@ The following output properties are available:
 <a href="#operationinfo_csharp" style="color: inherit; text-decoration: inherit;">Operation<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rolloutoperationinforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Deployment<wbr>Manager.<wbr>Outputs.<wbr>Rollout<wbr>Operation<wbr>Info<wbr>Response</a></span>
+        <span class="property-type"><a href="#rolloutoperationinforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Deployment<wbr>Manager..<wbr>Outputs.<wbr>Rollout<wbr>Operation<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Operational information of the rollout.{{% /md %}}</dd>
     <dt class="property-"
@@ -242,7 +242,7 @@ The following output properties are available:
 <a href="#services_csharp" style="color: inherit; text-decoration: inherit;">Services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Deployment<wbr>Manager.<wbr>Outputs.<wbr>Service<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#serviceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Deployment<wbr>Manager..<wbr>Outputs.<wbr>Service<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The detailed information on the services being deployed.{{% /md %}}</dd>
     <dt class="property-"
@@ -260,7 +260,7 @@ The following output properties are available:
 <a href="#stepgroups_csharp" style="color: inherit; text-decoration: inherit;">Step<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#stepgroupresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Deployment<wbr>Manager.<wbr>Outputs.<wbr>Step<wbr>Group<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#stepgroupresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Deployment<wbr>Manager..<wbr>Outputs.<wbr>Step<wbr>Group<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of step groups that define the orchestration.{{% /md %}}</dd>
     <dt class="property-"
@@ -305,7 +305,7 @@ The following output properties are available:
 <a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identityresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Deployment<wbr>Manager.<wbr>Outputs.<wbr>Identity<wbr>Response</a></span>
+        <span class="property-type"><a href="#identityresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Deployment<wbr>Manager..<wbr>Outputs.<wbr>Identity<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Identity for the resource.{{% /md %}}</dd>
     <dt class="property-"
@@ -756,7 +756,7 @@ The following output properties are available:
 <a href="#details_csharp" style="color: inherit; text-decoration: inherit;">Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clouderrorbodyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Deployment<wbr>Manager.<wbr>Inputs.<wbr>Cloud<wbr>Error<wbr>Body<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#clouderrorbodyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Deployment<wbr>Manager..<wbr>Inputs.<wbr>Cloud<wbr>Error<wbr>Body<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}More detailed error information.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1442,7 +1442,7 @@ The following output properties are available:
 <a href="#error_csharp" style="color: inherit; text-decoration: inherit;">Error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clouderrorbodyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Deployment<wbr>Manager.<wbr>Inputs.<wbr>Cloud<wbr>Error<wbr>Body<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#clouderrorbodyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Deployment<wbr>Manager..<wbr>Inputs.<wbr>Cloud<wbr>Error<wbr>Body<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The detailed error information for any failure.{{% /md %}}</dd>
     <dt class="property-required"
@@ -1644,7 +1644,7 @@ The following output properties are available:
 <a href="#messages_csharp" style="color: inherit; text-decoration: inherit;">Messages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#messageresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Deployment<wbr>Manager.<wbr>Inputs.<wbr>Message<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#messageresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Deployment<wbr>Manager..<wbr>Inputs.<wbr>Message<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Supplementary informative messages during rollout.{{% /md %}}</dd>
     <dt class="property-required"
@@ -1662,7 +1662,7 @@ The following output properties are available:
 <a href="#operationinfo_csharp" style="color: inherit; text-decoration: inherit;">Operation<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#stepoperationinforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Deployment<wbr>Manager.<wbr>Inputs.<wbr>Step<wbr>Operation<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#stepoperationinforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Deployment<wbr>Manager..<wbr>Inputs.<wbr>Step<wbr>Operation<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Detailed information of specific action execution.{{% /md %}}</dd>
     <dt class="property-required"
@@ -1671,7 +1671,7 @@ The following output properties are available:
 <a href="#resourceoperations_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Operations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceoperationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Deployment<wbr>Manager.<wbr>Inputs.<wbr>Resource<wbr>Operation<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#resourceoperationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Deployment<wbr>Manager..<wbr>Inputs.<wbr>Resource<wbr>Operation<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Set of resource operations that were performed, if any, on an Azure resource.{{% /md %}}</dd>
     <dt class="property-required"
@@ -1918,7 +1918,7 @@ The following output properties are available:
 <a href="#serviceunits_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Units</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceunitresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Deployment<wbr>Manager.<wbr>Inputs.<wbr>Service<wbr>Unit<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#serviceunitresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Deployment<wbr>Manager..<wbr>Inputs.<wbr>Service<wbr>Unit<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The detailed information about the units that make up the service.{{% /md %}}</dd>
 </dl>
@@ -2259,7 +2259,7 @@ The following output properties are available:
 <a href="#artifacts_csharp" style="color: inherit; text-decoration: inherit;">Artifacts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceunitartifactsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Deployment<wbr>Manager.<wbr>Inputs.<wbr>Service<wbr>Unit<wbr>Artifacts<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceunitartifactsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Deployment<wbr>Manager..<wbr>Inputs.<wbr>Service<wbr>Unit<wbr>Artifacts<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The artifacts for the service unit.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2277,7 +2277,7 @@ The following output properties are available:
 <a href="#steps_csharp" style="color: inherit; text-decoration: inherit;">Steps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rolloutstepresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Deployment<wbr>Manager.<wbr>Inputs.<wbr>Rollout<wbr>Step<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#rolloutstepresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Deployment<wbr>Manager..<wbr>Inputs.<wbr>Rollout<wbr>Step<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Detailed step information, if present.{{% /md %}}</dd>
 </dl>
@@ -2479,7 +2479,7 @@ The following output properties are available:
 <a href="#postdeploymentsteps_csharp" style="color: inherit; text-decoration: inherit;">Post<wbr>Deployment<wbr>Steps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#prepoststepresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Deployment<wbr>Manager.<wbr>Inputs.<wbr>Pre<wbr>Post<wbr>Step<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#prepoststepresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Deployment<wbr>Manager..<wbr>Inputs.<wbr>Pre<wbr>Post<wbr>Step<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of steps to be run after deploying the target.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2488,7 +2488,7 @@ The following output properties are available:
 <a href="#predeploymentsteps_csharp" style="color: inherit; text-decoration: inherit;">Pre<wbr>Deployment<wbr>Steps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#prepoststepresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Deployment<wbr>Manager.<wbr>Inputs.<wbr>Pre<wbr>Post<wbr>Step<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#prepoststepresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Deployment<wbr>Manager..<wbr>Inputs.<wbr>Pre<wbr>Post<wbr>Step<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of steps to be run before deploying the target.{{% /md %}}</dd>
 </dl>
@@ -2708,7 +2708,7 @@ The following output properties are available:
 <a href="#error_csharp" style="color: inherit; text-decoration: inherit;">Error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clouderrorbodyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Deployment<wbr>Manager.<wbr>Inputs.<wbr>Cloud<wbr>Error<wbr>Body<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#clouderrorbodyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Deployment<wbr>Manager..<wbr>Inputs.<wbr>Cloud<wbr>Error<wbr>Body<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The errors, if any, for the action.{{% /md %}}</dd>
 </dl>

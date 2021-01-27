@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.sql.Server resource with example
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Represents a server.
-Latest API Version: 2014-04-01.
+API Version: 2014-04-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var server = new AzureNextGen.Sql.Latest.Server("server", new AzureNextGen.Sql.Latest.ServerArgs
+        var server = new AzureNextGen.Sql..Server("server", new AzureNextGen.Sql..ServerArgs
         {
             AdministratorLogin = "dummylogin",
             AdministratorLoginPassword = "<administratorLoginPassword>",
@@ -54,7 +54,7 @@ class MyStack : Stack
 package main
 
 import (
-	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql/latest"
+	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -88,7 +88,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-server = azure_nextgen.sql.latest.Server("server",
+server = azure_nextgen.sql.Server("server",
     administrator_login="dummylogin",
     administrator_login_password="<administratorLoginPassword>",
     location="Japan East",
@@ -109,7 +109,7 @@ server = azure_nextgen.sql.latest.Server("server",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const server = new azure_nextgen.sql.latest.Server("server", {
+const server = new azure_nextgen.sql.Server("server", {
     administratorLogin: "dummylogin",
     administratorLoginPassword: "<administratorLoginPassword>",
     location: "Japan East",
@@ -135,7 +135,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var server = new AzureNextGen.Sql.Latest.Server("server", new AzureNextGen.Sql.Latest.ServerArgs
+        var server = new AzureNextGen.Sql..Server("server", new AzureNextGen.Sql..ServerArgs
         {
             AdministratorLogin = "dummylogin",
             AdministratorLoginPassword = "<administratorLoginPassword>",
@@ -157,7 +157,7 @@ class MyStack : Stack
 package main
 
 import (
-	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql/latest"
+	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -187,7 +187,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-server = azure_nextgen.sql.latest.Server("server",
+server = azure_nextgen.sql.Server("server",
     administrator_login="dummylogin",
     administrator_login_password="<administratorLoginPassword>",
     location="Japan East",
@@ -204,7 +204,7 @@ server = azure_nextgen.sql.latest.Server("server",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const server = new azure_nextgen.sql.latest.Server("server", {
+const server = new azure_nextgen.sql.Server("server", {
     administratorLogin: "dummylogin",
     administratorLoginPassword: "<administratorLoginPassword>",
     location: "Japan East",
@@ -459,7 +459,7 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#serverversion">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql.<wbr>Server<wbr>Version</a></span>
+        <span class="property-type">string | <a href="#serverversion">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql..<wbr>Server<wbr>Version</a></span>
     </dt>
     <dd>{{% md %}}The version of the server.{{% /md %}}</dd>
 </dl>
@@ -1044,7 +1044,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:sql/latest:Server sqlcrudtest-4645 /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/sqlcrudtest-7398/providers/Microsoft.Sql/servers/sqlcrudtest-4645 
+$ pulumi import azure-nextgen:sql:Server sqlcrudtest-4645 /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/sqlcrudtest-7398/providers/Microsoft.Sql/servers/sqlcrudtest-4645 
 ```
 
 

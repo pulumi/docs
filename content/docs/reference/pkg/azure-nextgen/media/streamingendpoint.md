@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.media.StreamingEndpoint resource
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The streaming endpoint.
-Latest API Version: 2020-05-01.
+API Version: 2020-05-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,21 +27,21 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var streamingEndpoint = new AzureNextGen.Media.Latest.StreamingEndpoint("streamingEndpoint", new AzureNextGen.Media.Latest.StreamingEndpointArgs
+        var streamingEndpoint = new AzureNextGen.Media..StreamingEndpoint("streamingEndpoint", new AzureNextGen.Media..StreamingEndpointArgs
         {
-            AccessControl = new AzureNextGen.Media.Latest.Inputs.StreamingEndpointAccessControlArgs
+            AccessControl = new AzureNextGen.Media..Inputs.StreamingEndpointAccessControlArgs
             {
-                Akamai = new AzureNextGen.Media.Latest.Inputs.AkamaiAccessControlArgs
+                Akamai = new AzureNextGen.Media..Inputs.AkamaiAccessControlArgs
                 {
                     AkamaiSignatureHeaderAuthenticationKeyList = 
                     {
-                        new AzureNextGen.Media.Latest.Inputs.AkamaiSignatureHeaderAuthenticationKeyArgs
+                        new AzureNextGen.Media..Inputs.AkamaiSignatureHeaderAuthenticationKeyArgs
                         {
                             Base64Key = "dGVzdGlkMQ==",
                             Expiration = "2029-12-31T16:00:00-08:00",
                             Identifier = "id1",
                         },
-                        new AzureNextGen.Media.Latest.Inputs.AkamaiSignatureHeaderAuthenticationKeyArgs
+                        new AzureNextGen.Media..Inputs.AkamaiSignatureHeaderAuthenticationKeyArgs
                         {
                             Base64Key = "dGVzdGlkMQ==",
                             Expiration = "2030-12-31T16:00:00-08:00",
@@ -49,11 +49,11 @@ class MyStack : Stack
                         },
                     },
                 },
-                Ip = new AzureNextGen.Media.Latest.Inputs.IPAccessControlArgs
+                Ip = new AzureNextGen.Media..Inputs.IPAccessControlArgs
                 {
                     Allow = 
                     {
-                        new AzureNextGen.Media.Latest.Inputs.IPRangeArgs
+                        new AzureNextGen.Media..Inputs.IPRangeArgs
                         {
                             Address = "192.168.1.1",
                             Name = "AllowedIp",
@@ -89,7 +89,7 @@ class MyStack : Stack
 package main
 
 import (
-	media "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/media/latest"
+	media "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/media"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -150,24 +150,24 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-streaming_endpoint = azure_nextgen.media.latest.StreamingEndpoint("streamingEndpoint",
-    access_control=azure_nextgen.media.latest.StreamingEndpointAccessControlArgs(
-        akamai=azure_nextgen.media.latest.AkamaiAccessControlArgs(
+streaming_endpoint = azure_nextgen.media.StreamingEndpoint("streamingEndpoint",
+    access_control=azure_nextgen.media.StreamingEndpointAccessControlArgs(
+        akamai=azure_nextgen.media.AkamaiAccessControlArgs(
             akamai_signature_header_authentication_key_list=[
-                azure_nextgen.media.latest.AkamaiSignatureHeaderAuthenticationKeyArgs(
+                azure_nextgen.media.AkamaiSignatureHeaderAuthenticationKeyArgs(
                     base64_key="dGVzdGlkMQ==",
                     expiration="2029-12-31T16:00:00-08:00",
                     identifier="id1",
                 ),
-                azure_nextgen.media.latest.AkamaiSignatureHeaderAuthenticationKeyArgs(
+                azure_nextgen.media.AkamaiSignatureHeaderAuthenticationKeyArgs(
                     base64_key="dGVzdGlkMQ==",
                     expiration="2030-12-31T16:00:00-08:00",
                     identifier="id2",
                 ),
             ],
         ),
-        ip=azure_nextgen.media.latest.IPAccessControlArgs(
-            allow=[azure_nextgen.media.latest.IPRangeArgs(
+        ip=azure_nextgen.media.IPAccessControlArgs(
+            allow=[azure_nextgen.media.IPRangeArgs(
                 address="192.168.1.1",
                 name="AllowedIp",
             )],
@@ -196,7 +196,7 @@ streaming_endpoint = azure_nextgen.media.latest.StreamingEndpoint("streamingEndp
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const streamingEndpoint = new azure_nextgen.media.latest.StreamingEndpoint("streamingEndpoint", {
+const streamingEndpoint = new azure_nextgen.media.StreamingEndpoint("streamingEndpoint", {
     accessControl: {
         akamai: {
             akamaiSignatureHeaderAuthenticationKeyList: [
@@ -471,7 +471,7 @@ The StreamingEndpoint resource accepts the following [input]({{< relref "/docs/i
 <a href="#accesscontrol_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Control</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingendpointaccesscontrol">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Streaming<wbr>Endpoint<wbr>Access<wbr>Control<wbr>Args</a></span>
+        <span class="property-type"><a href="#streamingendpointaccesscontrol">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Streaming<wbr>Endpoint<wbr>Access<wbr>Control<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The access control definition of the streaming endpoint.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -525,7 +525,7 @@ The StreamingEndpoint resource accepts the following [input]({{< relref "/docs/i
 <a href="#crosssiteaccesspolicies_csharp" style="color: inherit; text-decoration: inherit;">Cross<wbr>Site<wbr>Access<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#crosssiteaccesspolicies">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Cross<wbr>Site<wbr>Access<wbr>Policies<wbr>Args</a></span>
+        <span class="property-type"><a href="#crosssiteaccesspolicies">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Cross<wbr>Site<wbr>Access<wbr>Policies<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The streaming endpoint access policies.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1393,7 +1393,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#akamaisignatureheaderauthenticationkeylist_csharp" style="color: inherit; text-decoration: inherit;">Akamai<wbr>Signature<wbr>Header<wbr>Authentication<wbr>Key<wbr>List</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#akamaisignatureheaderauthenticationkey">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Akamai<wbr>Signature<wbr>Header<wbr>Authentication<wbr>Key<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#akamaisignatureheaderauthenticationkey">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Akamai<wbr>Signature<wbr>Header<wbr>Authentication<wbr>Key<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}authentication key list{{% /md %}}</dd>
 </dl>
@@ -1455,7 +1455,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#akamaisignatureheaderauthenticationkeylist_csharp" style="color: inherit; text-decoration: inherit;">Akamai<wbr>Signature<wbr>Header<wbr>Authentication<wbr>Key<wbr>List</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#akamaisignatureheaderauthenticationkeyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Akamai<wbr>Signature<wbr>Header<wbr>Authentication<wbr>Key<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#akamaisignatureheaderauthenticationkeyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Akamai<wbr>Signature<wbr>Header<wbr>Authentication<wbr>Key<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}authentication key list{{% /md %}}</dd>
 </dl>
@@ -1981,7 +1981,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allow_csharp" style="color: inherit; text-decoration: inherit;">Allow</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iprange">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>IPRange<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#iprange">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>IPRange<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The IP allow list.{{% /md %}}</dd>
 </dl>
@@ -2043,7 +2043,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allow_csharp" style="color: inherit; text-decoration: inherit;">Allow</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iprangeresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>IPRange<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#iprangeresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>IPRange<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The IP allow list.{{% /md %}}</dd>
 </dl>
@@ -2373,7 +2373,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#akamai_csharp" style="color: inherit; text-decoration: inherit;">Akamai</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#akamaiaccesscontrol">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Akamai<wbr>Access<wbr>Control<wbr>Args</a></span>
+        <span class="property-type"><a href="#akamaiaccesscontrol">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Akamai<wbr>Access<wbr>Control<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The access control of Akamai{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2382,7 +2382,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ip_csharp" style="color: inherit; text-decoration: inherit;">Ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipaccesscontrol">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>IPAccess<wbr>Control<wbr>Args</a></span>
+        <span class="property-type"><a href="#ipaccesscontrol">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>IPAccess<wbr>Control<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The IP access control of the streaming endpoint.{{% /md %}}</dd>
 </dl>
@@ -2471,7 +2471,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#akamai_csharp" style="color: inherit; text-decoration: inherit;">Akamai</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#akamaiaccesscontrolresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Akamai<wbr>Access<wbr>Control<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#akamaiaccesscontrolresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Akamai<wbr>Access<wbr>Control<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The access control of Akamai{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2480,7 +2480,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ip_csharp" style="color: inherit; text-decoration: inherit;">Ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipaccesscontrolresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>IPAccess<wbr>Control<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#ipaccesscontrolresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>IPAccess<wbr>Control<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The IP access control of the streaming endpoint.{{% /md %}}</dd>
 </dl>
@@ -2563,7 +2563,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:media/latest:StreamingEndpoint myStreamingEndpoint1 /subscriptions/0a6ec948-5a62-437d-b9df-934dc7c1b722/resourceGroups/mediaresources/providers/Microsoft.Media/mediaservices/slitestmedia10/streamingendpoints/myStreamingEndpoint1 
+$ pulumi import azure-nextgen:media:StreamingEndpoint myStreamingEndpoint1 /subscriptions/0a6ec948-5a62-437d-b9df-934dc7c1b722/resourceGroups/mediaresources/providers/Microsoft.Media/mediaservices/slitestmedia10/streamingendpoints/myStreamingEndpoint1 
 ```
 
 

@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.avs.WorkloadNetworkVMGroup resou
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 NSX VM Group
+API Version: 2020-07-17-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var workloadNetworkVMGroup = new AzureNextGen.AVS.V20200717Preview.WorkloadNetworkVMGroup("workloadNetworkVMGroup", new AzureNextGen.AVS.V20200717Preview.WorkloadNetworkVMGroupArgs
+        var workloadNetworkVMGroup = new AzureNextGen.AVS..WorkloadNetworkVMGroup("workloadNetworkVMGroup", new AzureNextGen.AVS..WorkloadNetworkVMGroupArgs
         {
             DisplayName = "vmGroup1",
             Members = 
@@ -52,7 +53,7 @@ class MyStack : Stack
 package main
 
 import (
-	avs "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/avs/v20200717preview"
+	avs "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/avs"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -85,7 +86,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-workload_network_vm_group = azure_nextgen.avs.v20200717preview.WorkloadNetworkVMGroup("workloadNetworkVMGroup",
+workload_network_vm_group = azure_nextgen.avs.WorkloadNetworkVMGroup("workloadNetworkVMGroup",
     display_name="vmGroup1",
     members=["564d43da-fefc-2a3b-1d92-42855622fa50"],
     private_cloud_name="cloud1",
@@ -103,7 +104,7 @@ workload_network_vm_group = azure_nextgen.avs.v20200717preview.WorkloadNetworkVM
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const workloadNetworkVMGroup = new azure_nextgen.avs.v20200717preview.WorkloadNetworkVMGroup("workloadNetworkVMGroup", {
+const workloadNetworkVMGroup = new azure_nextgen.avs.WorkloadNetworkVMGroup("workloadNetworkVMGroup", {
     displayName: "vmGroup1",
     members: ["564d43da-fefc-2a3b-1d92-42855622fa50"],
     privateCloudName: "cloud1",
@@ -758,7 +759,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:avs/v20200717preview:WorkloadNetworkVMGroup vmGroup1 /subscriptions/{subscription-id}/resourceGroups/group1/providers/Microsoft.AVS/privateClouds/cloud1/workloadNetworks/default/vmGroups/vmGroup1 
+$ pulumi import azure-nextgen:avs:WorkloadNetworkVMGroup vmGroup1 /subscriptions/{subscription-id}/resourceGroups/group1/providers/Microsoft.AVS/privateClouds/cloud1/workloadNetworks/default/vmGroups/vmGroup1 
 ```
 
 

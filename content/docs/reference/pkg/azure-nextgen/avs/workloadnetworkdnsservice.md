@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.avs.WorkloadNetworkDnsService re
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 NSX DNS Service
+API Version: 2020-07-17-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var workloadNetworkDnsService = new AzureNextGen.AVS.V20200717Preview.WorkloadNetworkDnsService("workloadNetworkDnsService", new AzureNextGen.AVS.V20200717Preview.WorkloadNetworkDnsServiceArgs
+        var workloadNetworkDnsService = new AzureNextGen.AVS..WorkloadNetworkDnsService("workloadNetworkDnsService", new AzureNextGen.AVS..WorkloadNetworkDnsServiceArgs
         {
             DefaultDnsZone = "defaultDnsZone1",
             DisplayName = "dnsService1",
@@ -55,7 +56,7 @@ class MyStack : Stack
 package main
 
 import (
-	avs "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/avs/v20200717preview"
+	avs "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/avs"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -91,7 +92,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-workload_network_dns_service = azure_nextgen.avs.v20200717preview.WorkloadNetworkDnsService("workloadNetworkDnsService",
+workload_network_dns_service = azure_nextgen.avs.WorkloadNetworkDnsService("workloadNetworkDnsService",
     default_dns_zone="defaultDnsZone1",
     display_name="dnsService1",
     dns_service_id="dnsService1",
@@ -112,7 +113,7 @@ workload_network_dns_service = azure_nextgen.avs.v20200717preview.WorkloadNetwor
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const workloadNetworkDnsService = new azure_nextgen.avs.v20200717preview.WorkloadNetworkDnsService("workloadNetworkDnsService", {
+const workloadNetworkDnsService = new azure_nextgen.avs.WorkloadNetworkDnsService("workloadNetworkDnsService", {
     defaultDnsZone: "defaultDnsZone1",
     displayName: "dnsService1",
     dnsServiceId: "dnsService1",
@@ -380,7 +381,7 @@ The WorkloadNetworkDnsService resource accepts the following [input]({{< relref 
 <a href="#loglevel_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#dnsserviceloglevelenum">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>AVS.<wbr>Dns<wbr>Service<wbr>Log<wbr>Level<wbr>Enum</a></span>
+        <span class="property-type">string | <a href="#dnsserviceloglevelenum">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>AVS..<wbr>Dns<wbr>Service<wbr>Log<wbr>Level<wbr>Enum</a></span>
     </dt>
     <dd>{{% md %}}DNS Service log level.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -944,7 +945,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:avs/v20200717preview:WorkloadNetworkDnsService dnsService1 /subscriptions/{subscription-id}/resourceGroups/group1/providers/Microsoft.AVS/privateClouds/cloud1/workloadNetworks/default/dnsServices/dnsService1 
+$ pulumi import azure-nextgen:avs:WorkloadNetworkDnsService dnsService1 /subscriptions/{subscription-id}/resourceGroups/group1/providers/Microsoft.AVS/privateClouds/cloud1/workloadNetworks/default/dnsServices/dnsService1 
 ```
 
 

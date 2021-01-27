@@ -242,7 +242,7 @@ The following output properties are available:
 <a href="#plan_csharp" style="color: inherit; text-decoration: inherit;">Plan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#extensionresourceplanresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Visual<wbr>Studio.<wbr>Outputs.<wbr>Extension<wbr>Resource<wbr>Plan<wbr>Response</a></span>
+        <span class="property-type"><a href="#extensionresourceplanresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Visual<wbr>Studio..<wbr>Outputs.<wbr>Extension<wbr>Resource<wbr>Plan<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The extension plan that was purchased.{{% /md %}}</dd>
     <dt class="property-"

@@ -197,7 +197,7 @@ The following output properties are available:
 <a href="#activitysettings_csharp" style="color: inherit; text-decoration: inherit;">Activity<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rosettanetpipactivitysettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Outputs.<wbr>Rosetta<wbr>Net<wbr>Pip<wbr>Activity<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#rosettanetpipactivitysettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Outputs.<wbr>Rosetta<wbr>Net<wbr>Pip<wbr>Activity<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The RosettaNet process configuration activity settings.{{% /md %}}</dd>
     <dt class="property-"
@@ -233,7 +233,7 @@ The following output properties are available:
 <a href="#initiatorrolesettings_csharp" style="color: inherit; text-decoration: inherit;">Initiator<wbr>Role<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rosettanetpiprolesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Outputs.<wbr>Rosetta<wbr>Net<wbr>Pip<wbr>Role<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#rosettanetpiprolesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Outputs.<wbr>Rosetta<wbr>Net<wbr>Pip<wbr>Role<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The RosettaNet initiator role settings.{{% /md %}}</dd>
     <dt class="property-"
@@ -278,7 +278,7 @@ The following output properties are available:
 <a href="#responderrolesettings_csharp" style="color: inherit; text-decoration: inherit;">Responder<wbr>Role<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rosettanetpiprolesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Outputs.<wbr>Rosetta<wbr>Net<wbr>Pip<wbr>Role<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#rosettanetpiprolesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Outputs.<wbr>Rosetta<wbr>Net<wbr>Pip<wbr>Role<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The RosettaNet responder role settings.{{% /md %}}</dd>
     <dt class="property-"
@@ -1196,7 +1196,7 @@ The following output properties are available:
 <a href="#acknowledgmentofreceiptsettings_csharp" style="color: inherit; text-decoration: inherit;">Acknowledgment<wbr>Of<wbr>Receipt<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rosettanetpipacknowledgmentofreceiptsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>Rosetta<wbr>Net<wbr>Pip<wbr>Acknowledgment<wbr>Of<wbr>Receipt<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#rosettanetpipacknowledgmentofreceiptsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>Rosetta<wbr>Net<wbr>Pip<wbr>Acknowledgment<wbr>Of<wbr>Receipt<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The RosettaNet ProcessConfiguration acknowledgement settings.{{% /md %}}</dd>
     <dt class="property-required"
@@ -1205,7 +1205,7 @@ The following output properties are available:
 <a href="#activitybehavior_csharp" style="color: inherit; text-decoration: inherit;">Activity<wbr>Behavior</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rosettanetpipactivitybehaviorresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>Rosetta<wbr>Net<wbr>Pip<wbr>Activity<wbr>Behavior<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#rosettanetpipactivitybehaviorresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>Rosetta<wbr>Net<wbr>Pip<wbr>Activity<wbr>Behavior<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The RosettaNet ProcessConfiguration activity behavior.{{% /md %}}</dd>
     <dt class="property-required"
@@ -1483,7 +1483,7 @@ The following output properties are available:
 <a href="#businessdocument_csharp" style="color: inherit; text-decoration: inherit;">Business<wbr>Document</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rosettanetpipbusinessdocumentresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>Rosetta<wbr>Net<wbr>Pip<wbr>Business<wbr>Document<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#rosettanetpipbusinessdocumentresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>Rosetta<wbr>Net<wbr>Pip<wbr>Business<wbr>Document<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The RosettaNet ProcessConfiguration business document.{{% /md %}}</dd>
     <dt class="property-required"

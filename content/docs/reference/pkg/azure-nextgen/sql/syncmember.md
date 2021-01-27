@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.sql.SyncMember resource with exa
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 An Azure SQL Database sync member.
+API Version: 2020-08-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,118 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var syncMember = new AzureNextGen.Sql.V20200801Preview.SyncMember("syncMember", new AzureNextGen.Sql.V20200801Preview.SyncMemberArgs
-        {
-            DatabaseName = "syncgroupcrud-4328",
-            DatabaseType = "AzureSqlDatabase",
-            ResourceGroupName = "syncgroupcrud-65440",
-            ServerName = "syncgroupcrud-8475",
-            SyncDirection = "Bidirectional",
-            SyncGroupName = "syncgroupcrud-3187",
-            SyncMemberAzureDatabaseResourceId = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/syncgroupcrud-65440/providers/Microsoft.Sql/servers/syncgroupcrud-8475/databases/syncgroupcrud-4328",
-            SyncMemberName = "syncmembercrud-4879",
-            UsePrivateLinkConnection = true,
-            UserName = "myUser",
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql/v20200801preview"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := sql.NewSyncMember(ctx, "syncMember", &sql.SyncMemberArgs{
-			DatabaseName:                      pulumi.String("syncgroupcrud-4328"),
-			DatabaseType:                      pulumi.String("AzureSqlDatabase"),
-			ResourceGroupName:                 pulumi.String("syncgroupcrud-65440"),
-			ServerName:                        pulumi.String("syncgroupcrud-8475"),
-			SyncDirection:                     pulumi.String("Bidirectional"),
-			SyncGroupName:                     pulumi.String("syncgroupcrud-3187"),
-			SyncMemberAzureDatabaseResourceId: pulumi.String("/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/syncgroupcrud-65440/providers/Microsoft.Sql/servers/syncgroupcrud-8475/databases/syncgroupcrud-4328"),
-			SyncMemberName:                    pulumi.String("syncmembercrud-4879"),
-			UsePrivateLinkConnection:          pulumi.Bool(true),
-			UserName:                          pulumi.String("myUser"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azure_nextgen as azure_nextgen
-
-sync_member = azure_nextgen.sql.v20200801preview.SyncMember("syncMember",
-    database_name="syncgroupcrud-4328",
-    database_type="AzureSqlDatabase",
-    resource_group_name="syncgroupcrud-65440",
-    server_name="syncgroupcrud-8475",
-    sync_direction="Bidirectional",
-    sync_group_name="syncgroupcrud-3187",
-    sync_member_azure_database_resource_id="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/syncgroupcrud-65440/providers/Microsoft.Sql/servers/syncgroupcrud-8475/databases/syncgroupcrud-4328",
-    sync_member_name="syncmembercrud-4879",
-    use_private_link_connection=True,
-    user_name="myUser")
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure-nextgen";
-
-const syncMember = new azure_nextgen.sql.v20200801preview.SyncMember("syncMember", {
-    databaseName: "syncgroupcrud-4328",
-    databaseType: "AzureSqlDatabase",
-    resourceGroupName: "syncgroupcrud-65440",
-    serverName: "syncgroupcrud-8475",
-    syncDirection: "Bidirectional",
-    syncGroupName: "syncgroupcrud-3187",
-    syncMemberAzureDatabaseResourceId: "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/syncgroupcrud-65440/providers/Microsoft.Sql/servers/syncgroupcrud-8475/databases/syncgroupcrud-4328",
-    syncMemberName: "syncmembercrud-4879",
-    usePrivateLinkConnection: true,
-    userName: "myUser",
-});
-
-```
-
-{{% /example %}}
-
-### Update a sync member
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureNextGen = Pulumi.AzureNextGen;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var syncMember = new AzureNextGen.Sql.V20200801Preview.SyncMember("syncMember", new AzureNextGen.Sql.V20200801Preview.SyncMemberArgs
+        var syncMember = new AzureNextGen.Sql..SyncMember("syncMember", new AzureNextGen.Sql..SyncMemberArgs
         {
             DatabaseName = "syncgroupcrud-7421",
             DatabaseType = "AzureSqlDatabase",
@@ -164,7 +54,7 @@ class MyStack : Stack
 package main
 
 import (
-	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql/v20200801preview"
+	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -199,7 +89,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-sync_member = azure_nextgen.sql.v20200801preview.SyncMember("syncMember",
+sync_member = azure_nextgen.sql.SyncMember("syncMember",
     database_name="syncgroupcrud-7421",
     database_type="AzureSqlDatabase",
     resource_group_name="syncgroupcrud-65440",
@@ -221,11 +111,122 @@ sync_member = azure_nextgen.sql.v20200801preview.SyncMember("syncMember",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const syncMember = new azure_nextgen.sql.v20200801preview.SyncMember("syncMember", {
+const syncMember = new azure_nextgen.sql.SyncMember("syncMember", {
     databaseName: "syncgroupcrud-7421",
     databaseType: "AzureSqlDatabase",
     resourceGroupName: "syncgroupcrud-65440",
     serverName: "syncgroupcrud-3379.database.windows.net",
+    syncDirection: "Bidirectional",
+    syncGroupName: "syncgroupcrud-3187",
+    syncMemberAzureDatabaseResourceId: "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/syncgroupcrud-65440/providers/Microsoft.Sql/servers/syncgroupcrud-8475/databases/syncgroupcrud-4328",
+    syncMemberName: "syncmembercrud-4879",
+    usePrivateLinkConnection: true,
+    userName: "myUser",
+});
+
+```
+
+{{% /example %}}
+
+### Update a sync member
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureNextGen = Pulumi.AzureNextGen;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var syncMember = new AzureNextGen.Sql..SyncMember("syncMember", new AzureNextGen.Sql..SyncMemberArgs
+        {
+            DatabaseName = "syncgroupcrud-4328",
+            DatabaseType = "AzureSqlDatabase",
+            ResourceGroupName = "syncgroupcrud-65440",
+            ServerName = "syncgroupcrud-8475",
+            SyncDirection = "Bidirectional",
+            SyncGroupName = "syncgroupcrud-3187",
+            SyncMemberAzureDatabaseResourceId = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/syncgroupcrud-65440/providers/Microsoft.Sql/servers/syncgroupcrud-8475/databases/syncgroupcrud-4328",
+            SyncMemberName = "syncmembercrud-4879",
+            UsePrivateLinkConnection = true,
+            UserName = "myUser",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+
+```go
+package main
+
+import (
+	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := sql.NewSyncMember(ctx, "syncMember", &sql.SyncMemberArgs{
+			DatabaseName:                      pulumi.String("syncgroupcrud-4328"),
+			DatabaseType:                      pulumi.String("AzureSqlDatabase"),
+			ResourceGroupName:                 pulumi.String("syncgroupcrud-65440"),
+			ServerName:                        pulumi.String("syncgroupcrud-8475"),
+			SyncDirection:                     pulumi.String("Bidirectional"),
+			SyncGroupName:                     pulumi.String("syncgroupcrud-3187"),
+			SyncMemberAzureDatabaseResourceId: pulumi.String("/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/syncgroupcrud-65440/providers/Microsoft.Sql/servers/syncgroupcrud-8475/databases/syncgroupcrud-4328"),
+			SyncMemberName:                    pulumi.String("syncmembercrud-4879"),
+			UsePrivateLinkConnection:          pulumi.Bool(true),
+			UserName:                          pulumi.String("myUser"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azure_nextgen as azure_nextgen
+
+sync_member = azure_nextgen.sql.SyncMember("syncMember",
+    database_name="syncgroupcrud-4328",
+    database_type="AzureSqlDatabase",
+    resource_group_name="syncgroupcrud-65440",
+    server_name="syncgroupcrud-8475",
+    sync_direction="Bidirectional",
+    sync_group_name="syncgroupcrud-3187",
+    sync_member_azure_database_resource_id="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/syncgroupcrud-65440/providers/Microsoft.Sql/servers/syncgroupcrud-8475/databases/syncgroupcrud-4328",
+    sync_member_name="syncmembercrud-4879",
+    use_private_link_connection=True,
+    user_name="myUser")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
+
+const syncMember = new azure_nextgen.sql.SyncMember("syncMember", {
+    databaseName: "syncgroupcrud-4328",
+    databaseType: "AzureSqlDatabase",
+    resourceGroupName: "syncgroupcrud-65440",
+    serverName: "syncgroupcrud-8475",
     syncDirection: "Bidirectional",
     syncGroupName: "syncgroupcrud-3187",
     syncMemberAzureDatabaseResourceId: "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/syncgroupcrud-65440/providers/Microsoft.Sql/servers/syncgroupcrud-8475/databases/syncgroupcrud-4328",
@@ -472,7 +473,7 @@ The SyncMember resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#databasetype_csharp" style="color: inherit; text-decoration: inherit;">Database<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#syncmemberdbtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql.<wbr>Sync<wbr>Member<wbr>Db<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#syncmemberdbtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql..<wbr>Sync<wbr>Member<wbr>Db<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Database type of the sync member.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -508,7 +509,7 @@ The SyncMember resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#syncdirection_csharp" style="color: inherit; text-decoration: inherit;">Sync<wbr>Direction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#syncdirection">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql.<wbr>Sync<wbr>Direction</a></span>
+        <span class="property-type">string | <a href="#syncdirection">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql..<wbr>Sync<wbr>Direction</a></span>
     </dt>
     <dd>{{% md %}}Sync direction of the sync member.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1220,7 +1221,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:sql/v20200801preview:SyncMember syncmembercrud-4879 /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/syncgroupcrud-65440/providers/Microsoft.Sql/servers/syncgroupcrud-8475/databases/syncgroupcrud-4328/syncGroups/syncgroupcrud-3187/syncMembers/syncmembercrud-4879 
+$ pulumi import azure-nextgen:sql:SyncMember syncmembercrud-4879 /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/syncgroupcrud-65440/providers/Microsoft.Sql/servers/syncgroupcrud-8475/databases/syncgroupcrud-4328/syncGroups/syncgroupcrud-3187/syncMembers/syncmembercrud-4879 
 ```
 
 

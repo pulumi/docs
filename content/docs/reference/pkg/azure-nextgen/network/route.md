@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.network.Route resource with exam
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Route resource.
-Latest API Version: 2020-08-01.
+API Version: 2020-08-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var route = new AzureNextGen.Network.Latest.Route("route", new AzureNextGen.Network.Latest.RouteArgs
+        var route = new AzureNextGen.Network..Route("route", new AzureNextGen.Network..RouteArgs
         {
             AddressPrefix = "10.0.3.0/24",
             NextHopType = "VirtualNetworkGateway",
@@ -49,7 +49,7 @@ class MyStack : Stack
 package main
 
 import (
-	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network/latest"
+	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -79,7 +79,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-route = azure_nextgen.network.latest.Route("route",
+route = azure_nextgen.network.Route("route",
     address_prefix="10.0.3.0/24",
     next_hop_type="VirtualNetworkGateway",
     resource_group_name="rg1",
@@ -96,7 +96,7 @@ route = azure_nextgen.network.latest.Route("route",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const route = new azure_nextgen.network.latest.Route("route", {
+const route = new azure_nextgen.network.Route("route", {
     addressPrefix: "10.0.3.0/24",
     nextHopType: "VirtualNetworkGateway",
     resourceGroupName: "rg1",
@@ -297,7 +297,7 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#nexthoptype_csharp" style="color: inherit; text-decoration: inherit;">Next<wbr>Hop<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#routenexthoptype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Route<wbr>Next<wbr>Hop<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#routenexthoptype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Route<wbr>Next<wbr>Hop<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of Azure hop the packet should be sent to.{{% /md %}}</dd>
     <dt class="property-required"
@@ -888,7 +888,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:network/latest:Route route1 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/routeTables/testrt/routes/route1 
+$ pulumi import azure-nextgen:network:Route route1 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/routeTables/testrt/routes/route1 
 ```
 
 

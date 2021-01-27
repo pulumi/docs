@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.storsimple.BandwidthSetting reso
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The bandwidth setting.
-Latest API Version: 2017-06-01.
+API Version: 2017-06-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,14 +27,14 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var bandwidthSetting = new AzureNextGen.StorSimple.Latest.BandwidthSetting("bandwidthSetting", new AzureNextGen.StorSimple.Latest.BandwidthSettingArgs
+        var bandwidthSetting = new AzureNextGen.StorSimple..BandwidthSetting("bandwidthSetting", new AzureNextGen.StorSimple..BandwidthSettingArgs
         {
             BandwidthSettingName = "BWSForTest",
             ManagerName = "ManagerForSDKTest1",
             ResourceGroupName = "ResourceGroupForSDKTest",
             Schedules = 
             {
-                new AzureNextGen.StorSimple.Latest.Inputs.BandwidthScheduleArgs
+                new AzureNextGen.StorSimple..Inputs.BandwidthScheduleArgs
                 {
                     Days = 
                     {
@@ -42,13 +42,13 @@ class MyStack : Stack
                         "Sunday",
                     },
                     RateInMbps = 10,
-                    Start = new AzureNextGen.StorSimple.Latest.Inputs.TimeArgs
+                    Start = new AzureNextGen.StorSimple..Inputs.TimeArgs
                     {
                         Hours = 10,
                         Minutes = 0,
                         Seconds = 0,
                     },
-                    Stop = new AzureNextGen.StorSimple.Latest.Inputs.TimeArgs
+                    Stop = new AzureNextGen.StorSimple..Inputs.TimeArgs
                     {
                         Hours = 20,
                         Minutes = 0,
@@ -75,22 +75,22 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-bandwidth_setting = azure_nextgen.storsimple.latest.BandwidthSetting("bandwidthSetting",
+bandwidth_setting = azure_nextgen.storsimple.BandwidthSetting("bandwidthSetting",
     bandwidth_setting_name="BWSForTest",
     manager_name="ManagerForSDKTest1",
     resource_group_name="ResourceGroupForSDKTest",
-    schedules=[azure_nextgen.storsimple.latest.BandwidthScheduleArgs(
+    schedules=[azure_nextgen.storsimple.BandwidthScheduleArgs(
         days=[
             "Saturday",
             "Sunday",
         ],
         rate_in_mbps=10,
-        start=azure_nextgen.storsimple.latest.TimeArgs(
+        start=azure_nextgen.storsimple.TimeArgs(
             hours=10,
             minutes=0,
             seconds=0,
         ),
-        stop=azure_nextgen.storsimple.latest.TimeArgs(
+        stop=azure_nextgen.storsimple.TimeArgs(
             hours=20,
             minutes=0,
             seconds=0,
@@ -107,7 +107,7 @@ bandwidth_setting = azure_nextgen.storsimple.latest.BandwidthSetting("bandwidthS
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const bandwidthSetting = new azure_nextgen.storsimple.latest.BandwidthSetting("bandwidthSetting", {
+const bandwidthSetting = new azure_nextgen.storsimple.BandwidthSetting("bandwidthSetting", {
     bandwidthSettingName: "BWSForTest",
     managerName: "ManagerForSDKTest1",
     resourceGroupName: "ResourceGroupForSDKTest",
@@ -350,7 +350,7 @@ The BandwidthSetting resource accepts the following [input]({{< relref "/docs/in
 <a href="#schedules_csharp" style="color: inherit; text-decoration: inherit;">Schedules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bandwidthschedule">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stor<wbr>Simple.<wbr>Inputs.<wbr>Bandwidth<wbr>Schedule<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#bandwidthschedule">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stor<wbr>Simple..<wbr>Inputs.<wbr>Bandwidth<wbr>Schedule<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The schedules.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -359,7 +359,7 @@ The BandwidthSetting resource accepts the following [input]({{< relref "/docs/in
 <a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kind">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stor<wbr>Simple.<wbr>Kind</a></span>
+        <span class="property-type"><a href="#kind">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stor<wbr>Simple..<wbr>Kind</a></span>
     </dt>
     <dd>{{% md %}}The Kind of the object. Currently only Series8000 is supported{{% /md %}}</dd>
 </dl>
@@ -714,7 +714,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#days_csharp" style="color: inherit; text-decoration: inherit;">Days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dayofweek">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stor<wbr>Simple.<wbr>Day<wbr>Of<wbr>Week&gt;</a></span>
+        <span class="property-type"><a href="#dayofweek">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stor<wbr>Simple..<wbr>Day<wbr>Of<wbr>Week&gt;</a></span>
     </dt>
     <dd>{{% md %}}The days of the week when this schedule is applicable.{{% /md %}}</dd>
     <dt class="property-required"
@@ -732,7 +732,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#start_csharp" style="color: inherit; text-decoration: inherit;">Start</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#time">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stor<wbr>Simple.<wbr>Inputs.<wbr>Time<wbr>Args</a></span>
+        <span class="property-type"><a href="#time">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stor<wbr>Simple..<wbr>Inputs.<wbr>Time<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The start time of the schedule.{{% /md %}}</dd>
     <dt class="property-required"
@@ -741,7 +741,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#stop_csharp" style="color: inherit; text-decoration: inherit;">Stop</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#time">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stor<wbr>Simple.<wbr>Inputs.<wbr>Time<wbr>Args</a></span>
+        <span class="property-type"><a href="#time">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stor<wbr>Simple..<wbr>Inputs.<wbr>Time<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The stop time of the schedule.{{% /md %}}</dd>
 </dl>
@@ -902,7 +902,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#start_csharp" style="color: inherit; text-decoration: inherit;">Start</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timeresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stor<wbr>Simple.<wbr>Inputs.<wbr>Time<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#timeresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stor<wbr>Simple..<wbr>Inputs.<wbr>Time<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The start time of the schedule.{{% /md %}}</dd>
     <dt class="property-required"
@@ -911,7 +911,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#stop_csharp" style="color: inherit; text-decoration: inherit;">Stop</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timeresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stor<wbr>Simple.<wbr>Inputs.<wbr>Time<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#timeresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stor<wbr>Simple..<wbr>Inputs.<wbr>Time<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The stop time of the schedule.{{% /md %}}</dd>
 </dl>
@@ -1424,7 +1424,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:storsimple/latest:BandwidthSetting BWSForTest /subscriptions/4385cf00-2d3a-425a-832f-f4285b1c9dce/resourceGroups/ResourceGroupForSDKTest/providers/Microsoft.StorSimple/managers/ManagerForSDKTest1/bandwidthSettings/BWSForTest 
+$ pulumi import azure-nextgen:storsimple:BandwidthSetting BWSForTest /subscriptions/4385cf00-2d3a-425a-832f-f4285b1c9dce/resourceGroups/ResourceGroupForSDKTest/providers/Microsoft.StorSimple/managers/ManagerForSDKTest1/bandwidthSettings/BWSForTest 
 ```
 
 

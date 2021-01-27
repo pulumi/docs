@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.network.TrafficManagerUserMetric
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Class representing Traffic Manager User Metrics.
-Latest API Version: 2018-04-01.
+API Version: 2018-04-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var trafficManagerUserMetricsKey = new AzureNextGen.Network.Latest.TrafficManagerUserMetricsKey("trafficManagerUserMetricsKey", new AzureNextGen.Network.Latest.TrafficManagerUserMetricsKeyArgs
+        var trafficManagerUserMetricsKey = new AzureNextGen.Network..TrafficManagerUserMetricsKey("trafficManagerUserMetricsKey", new AzureNextGen.Network..TrafficManagerUserMetricsKeyArgs
         {
         });
     }
@@ -44,7 +44,7 @@ class MyStack : Stack
 package main
 
 import (
-	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network/latest"
+	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -68,7 +68,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-traffic_manager_user_metrics_key = azure_nextgen.network.latest.TrafficManagerUserMetricsKey("trafficManagerUserMetricsKey")
+traffic_manager_user_metrics_key = azure_nextgen.network.TrafficManagerUserMetricsKey("trafficManagerUserMetricsKey")
 
 ```
 
@@ -80,7 +80,7 @@ traffic_manager_user_metrics_key = azure_nextgen.network.latest.TrafficManagerUs
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const trafficManagerUserMetricsKey = new azure_nextgen.network.latest.TrafficManagerUserMetricsKey("trafficManagerUserMetricsKey", {});
+const trafficManagerUserMetricsKey = new azure_nextgen.network.TrafficManagerUserMetricsKey("trafficManagerUserMetricsKey", {});
 
 ```
 
@@ -476,7 +476,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:network/latest:TrafficManagerUserMetricsKey default /providers/Microsoft.Network/trafficManagerUserMetricsKeys/default 
+$ pulumi import azure-nextgen:network:TrafficManagerUserMetricsKey default /providers/Microsoft.Network/trafficManagerUserMetricsKeys/default 
 ```
 
 

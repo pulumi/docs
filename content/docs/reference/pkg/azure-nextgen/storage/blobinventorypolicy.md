@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.storage.BlobInventoryPolicy reso
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The storage account blob inventory policy.
+API Version: 2020-08-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,21 +27,21 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var blobInventoryPolicy = new AzureNextGen.Storage.V20200801Preview.BlobInventoryPolicy("blobInventoryPolicy", new AzureNextGen.Storage.V20200801Preview.BlobInventoryPolicyArgs
+        var blobInventoryPolicy = new AzureNextGen.Storage..BlobInventoryPolicy("blobInventoryPolicy", new AzureNextGen.Storage..BlobInventoryPolicyArgs
         {
             AccountName = "sto9699",
             BlobInventoryPolicyName = "default",
-            Policy = new AzureNextGen.Storage.V20200801Preview.Inputs.BlobInventoryPolicySchemaArgs
+            Policy = new AzureNextGen.Storage..Inputs.BlobInventoryPolicySchemaArgs
             {
                 Destination = "containerName",
                 Enabled = true,
                 Rules = 
                 {
-                    new AzureNextGen.Storage.V20200801Preview.Inputs.BlobInventoryPolicyRuleArgs
+                    new AzureNextGen.Storage..Inputs.BlobInventoryPolicyRuleArgs
                     {
-                        Definition = new AzureNextGen.Storage.V20200801Preview.Inputs.BlobInventoryPolicyDefinitionArgs
+                        Definition = new AzureNextGen.Storage..Inputs.BlobInventoryPolicyDefinitionArgs
                         {
-                            Filters = new AzureNextGen.Storage.V20200801Preview.Inputs.BlobInventoryPolicyFilterArgs
+                            Filters = new AzureNextGen.Storage..Inputs.BlobInventoryPolicyFilterArgs
                             {
                                 BlobTypes = 
                                 {
@@ -79,7 +80,7 @@ class MyStack : Stack
 package main
 
 import (
-	storage "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/storage/v20200801preview"
+	storage "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/storage"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -133,15 +134,15 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-blob_inventory_policy = azure_nextgen.storage.v20200801preview.BlobInventoryPolicy("blobInventoryPolicy",
+blob_inventory_policy = azure_nextgen.storage.BlobInventoryPolicy("blobInventoryPolicy",
     account_name="sto9699",
     blob_inventory_policy_name="default",
-    policy=azure_nextgen.storage.v20200801preview.BlobInventoryPolicySchemaArgs(
+    policy=azure_nextgen.storage.BlobInventoryPolicySchemaArgs(
         destination="containerName",
         enabled=True,
-        rules=[azure_nextgen.storage.v20200801preview.BlobInventoryPolicyRuleArgs(
-            definition=azure_nextgen.storage.v20200801preview.BlobInventoryPolicyDefinitionArgs(
-                filters=azure_nextgen.storage.v20200801preview.BlobInventoryPolicyFilterArgs(
+        rules=[azure_nextgen.storage.BlobInventoryPolicyRuleArgs(
+            definition=azure_nextgen.storage.BlobInventoryPolicyDefinitionArgs(
+                filters=azure_nextgen.storage.BlobInventoryPolicyFilterArgs(
                     blob_types=[
                         "blockBlob",
                         "appendBlob",
@@ -172,7 +173,7 @@ blob_inventory_policy = azure_nextgen.storage.v20200801preview.BlobInventoryPoli
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const blobInventoryPolicy = new azure_nextgen.storage.v20200801preview.BlobInventoryPolicy("blobInventoryPolicy", {
+const blobInventoryPolicy = new azure_nextgen.storage.BlobInventoryPolicy("blobInventoryPolicy", {
     accountName: "sto9699",
     blobInventoryPolicyName: "default",
     policy: {
@@ -413,7 +414,7 @@ The BlobInventoryPolicy resource accepts the following [input]({{< relref "/docs
 <a href="#policy_csharp" style="color: inherit; text-decoration: inherit;">Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#blobinventorypolicyschema">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Inputs.<wbr>Blob<wbr>Inventory<wbr>Policy<wbr>Schema<wbr>Args</a></span>
+        <span class="property-type"><a href="#blobinventorypolicyschema">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage..<wbr>Inputs.<wbr>Blob<wbr>Inventory<wbr>Policy<wbr>Schema<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The storage account blob inventory policy object. It is composed of policy rules.{{% /md %}}</dd>
     <dt class="property-required"
@@ -597,7 +598,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#systemdata_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
+        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage..<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Metadata pertaining to creation and last modification of the resource.{{% /md %}}</dd>
     <dt class="property-"
@@ -786,7 +787,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filters_csharp" style="color: inherit; text-decoration: inherit;">Filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#blobinventorypolicyfilter">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Inputs.<wbr>Blob<wbr>Inventory<wbr>Policy<wbr>Filter<wbr>Args</a></span>
+        <span class="property-type"><a href="#blobinventorypolicyfilter">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage..<wbr>Inputs.<wbr>Blob<wbr>Inventory<wbr>Policy<wbr>Filter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An object that defines the filter set.{{% /md %}}</dd>
 </dl>
@@ -848,7 +849,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filters_csharp" style="color: inherit; text-decoration: inherit;">Filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#blobinventorypolicyfilterresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Inputs.<wbr>Blob<wbr>Inventory<wbr>Policy<wbr>Filter<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#blobinventorypolicyfilterresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage..<wbr>Inputs.<wbr>Blob<wbr>Inventory<wbr>Policy<wbr>Filter<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An object that defines the filter set.{{% /md %}}</dd>
 </dl>
@@ -1250,7 +1251,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#definition_csharp" style="color: inherit; text-decoration: inherit;">Definition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#blobinventorypolicydefinition">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Inputs.<wbr>Blob<wbr>Inventory<wbr>Policy<wbr>Definition<wbr>Args</a></span>
+        <span class="property-type"><a href="#blobinventorypolicydefinition">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage..<wbr>Inputs.<wbr>Blob<wbr>Inventory<wbr>Policy<wbr>Definition<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An object that defines the blob inventory policy rule.{{% /md %}}</dd>
     <dt class="property-required"
@@ -1384,7 +1385,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#definition_csharp" style="color: inherit; text-decoration: inherit;">Definition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#blobinventorypolicydefinitionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Inputs.<wbr>Blob<wbr>Inventory<wbr>Policy<wbr>Definition<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#blobinventorypolicydefinitionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage..<wbr>Inputs.<wbr>Blob<wbr>Inventory<wbr>Policy<wbr>Definition<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An object that defines the blob inventory policy rule.{{% /md %}}</dd>
     <dt class="property-required"
@@ -1536,7 +1537,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rules_csharp" style="color: inherit; text-decoration: inherit;">Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#blobinventorypolicyrule">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Inputs.<wbr>Blob<wbr>Inventory<wbr>Policy<wbr>Rule<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#blobinventorypolicyrule">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage..<wbr>Inputs.<wbr>Blob<wbr>Inventory<wbr>Policy<wbr>Rule<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The storage account blob inventory policy rules. The rule is applied when it is enabled.{{% /md %}}</dd>
     <dt class="property-required"
@@ -1545,7 +1546,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#inventoryruletype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Inventory<wbr>Rule<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#inventoryruletype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage..<wbr>Inventory<wbr>Rule<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The valid value is Inventory{{% /md %}}</dd>
 </dl>
@@ -1706,7 +1707,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rules_csharp" style="color: inherit; text-decoration: inherit;">Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#blobinventorypolicyruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Inputs.<wbr>Blob<wbr>Inventory<wbr>Policy<wbr>Rule<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#blobinventorypolicyruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage..<wbr>Inputs.<wbr>Blob<wbr>Inventory<wbr>Policy<wbr>Rule<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The storage account blob inventory policy rules. The rule is applied when it is enabled.{{% /md %}}</dd>
     <dt class="property-required"
@@ -2124,7 +2125,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:storage/v20200801preview:BlobInventoryPolicy DefaultInventoryPolicy /subscriptions/{subscription-id}/resourceGroups/res7687/providers/Microsoft.Storage/storageAccounts/sto9699/inventoryPolicies/default 
+$ pulumi import azure-nextgen:storage:BlobInventoryPolicy DefaultInventoryPolicy /subscriptions/{subscription-id}/resourceGroups/res7687/providers/Microsoft.Storage/storageAccounts/sto9699/inventoryPolicies/default 
 ```
 
 

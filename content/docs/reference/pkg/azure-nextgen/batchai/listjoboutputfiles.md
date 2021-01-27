@@ -384,7 +384,7 @@ The following output properties are available:
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fileresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI.<wbr>Outputs.<wbr>File<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#fileresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI..<wbr>Outputs.<wbr>File<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The collection of returned job directories and files.{{% /md %}}</dd>
 </dl>

@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.logic.RosettaNetProcessConfigura
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The integration account RosettaNet process configuration.
-Latest API Version: 2016-06-01.
+API Version: 2016-06-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,16 +27,16 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var rosettaNetProcessConfiguration = new AzureNextGen.Logic.Latest.RosettaNetProcessConfiguration("rosettaNetProcessConfiguration", new AzureNextGen.Logic.Latest.RosettaNetProcessConfigurationArgs
+        var rosettaNetProcessConfiguration = new AzureNextGen.Logic..RosettaNetProcessConfiguration("rosettaNetProcessConfiguration", new AzureNextGen.Logic..RosettaNetProcessConfigurationArgs
         {
-            ActivitySettings = new AzureNextGen.Logic.Latest.Inputs.RosettaNetPipActivitySettingsArgs
+            ActivitySettings = new AzureNextGen.Logic..Inputs.RosettaNetPipActivitySettingsArgs
             {
-                AcknowledgmentOfReceiptSettings = new AzureNextGen.Logic.Latest.Inputs.RosettaNetPipAcknowledgmentOfReceiptSettingsArgs
+                AcknowledgmentOfReceiptSettings = new AzureNextGen.Logic..Inputs.RosettaNetPipAcknowledgmentOfReceiptSettingsArgs
                 {
                     IsNonRepudiationRequired = false,
                     TimeToAcknowledgeInSeconds = 600,
                 },
-                ActivityBehavior = new AzureNextGen.Logic.Latest.Inputs.RosettaNetPipActivityBehaviorArgs
+                ActivityBehavior = new AzureNextGen.Logic..Inputs.RosettaNetPipActivityBehaviorArgs
                 {
                     ActionType = "DoubleAction",
                     IsAuthorizationRequired = false,
@@ -50,10 +50,10 @@ class MyStack : Stack
                 ActivityType = "RequestResponse",
             },
             Description = "Test description",
-            InitiatorRoleSettings = new AzureNextGen.Logic.Latest.Inputs.RosettaNetPipRoleSettingsArgs
+            InitiatorRoleSettings = new AzureNextGen.Logic..Inputs.RosettaNetPipRoleSettingsArgs
             {
                 Action = "Purchase Order Request",
-                BusinessDocument = new AzureNextGen.Logic.Latest.Inputs.RosettaNetPipBusinessDocumentArgs
+                BusinessDocument = new AzureNextGen.Logic..Inputs.RosettaNetPipBusinessDocumentArgs
                 {
                     Description = "A request to accept a purchase order for fulfillment..",
                     Name = "Purchase Order Request",
@@ -70,10 +70,10 @@ class MyStack : Stack
             ProcessName = "Request Purchase Order",
             ProcessVersion = "V02.02.00",
             ResourceGroupName = "testrg123",
-            ResponderRoleSettings = new AzureNextGen.Logic.Latest.Inputs.RosettaNetPipRoleSettingsArgs
+            ResponderRoleSettings = new AzureNextGen.Logic..Inputs.RosettaNetPipRoleSettingsArgs
             {
                 Action = "Purchase Order Confirmation Action",
-                BusinessDocument = new AzureNextGen.Logic.Latest.Inputs.RosettaNetPipBusinessDocumentArgs
+                BusinessDocument = new AzureNextGen.Logic..Inputs.RosettaNetPipBusinessDocumentArgs
                 {
                     Description = "Formally confirms the status of line item(s) in a Purchase Order. A Purchase Order line item may have one of the following states: accepted, rejected, or pending.",
                     Name = "Purchase Order Confirmation",
@@ -101,7 +101,7 @@ class MyStack : Stack
 package main
 
 import (
-	logic "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/logic/latest"
+	logic "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/logic"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -176,13 +176,13 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-rosetta_net_process_configuration = azure_nextgen.logic.latest.RosettaNetProcessConfiguration("rosettaNetProcessConfiguration",
-    activity_settings=azure_nextgen.logic.latest.RosettaNetPipActivitySettingsArgs(
-        acknowledgment_of_receipt_settings=azure_nextgen.logic.latest.RosettaNetPipAcknowledgmentOfReceiptSettingsArgs(
+rosetta_net_process_configuration = azure_nextgen.logic.RosettaNetProcessConfiguration("rosettaNetProcessConfiguration",
+    activity_settings=azure_nextgen.logic.RosettaNetPipActivitySettingsArgs(
+        acknowledgment_of_receipt_settings=azure_nextgen.logic.RosettaNetPipAcknowledgmentOfReceiptSettingsArgs(
             is_non_repudiation_required=False,
             time_to_acknowledge_in_seconds=600,
         ),
-        activity_behavior=azure_nextgen.logic.latest.RosettaNetPipActivityBehaviorArgs(
+        activity_behavior=azure_nextgen.logic.RosettaNetPipActivityBehaviorArgs(
             action_type="DoubleAction",
             is_authorization_required=False,
             is_secured_transport_required=False,
@@ -195,9 +195,9 @@ rosetta_net_process_configuration = azure_nextgen.logic.latest.RosettaNetProcess
         activity_type="RequestResponse",
     ),
     description="Test description",
-    initiator_role_settings=azure_nextgen.logic.latest.RosettaNetPipRoleSettingsArgs(
+    initiator_role_settings=azure_nextgen.logic.RosettaNetPipRoleSettingsArgs(
         action="Purchase Order Request",
-        business_document=azure_nextgen.logic.latest.RosettaNetPipBusinessDocumentArgs(
+        business_document=azure_nextgen.logic.RosettaNetPipBusinessDocumentArgs(
             description="A request to accept a purchase order for fulfillment..",
             name="Purchase Order Request",
             version="V02.02.00",
@@ -213,9 +213,9 @@ rosetta_net_process_configuration = azure_nextgen.logic.latest.RosettaNetProcess
     process_name="Request Purchase Order",
     process_version="V02.02.00",
     resource_group_name="testrg123",
-    responder_role_settings=azure_nextgen.logic.latest.RosettaNetPipRoleSettingsArgs(
+    responder_role_settings=azure_nextgen.logic.RosettaNetPipRoleSettingsArgs(
         action="Purchase Order Confirmation Action",
-        business_document=azure_nextgen.logic.latest.RosettaNetPipBusinessDocumentArgs(
+        business_document=azure_nextgen.logic.RosettaNetPipBusinessDocumentArgs(
             description="Formally confirms the status of line item(s) in a Purchase Order. A Purchase Order line item may have one of the following states: accepted, rejected, or pending.",
             name="Purchase Order Confirmation",
             version="V02.02.00",
@@ -238,7 +238,7 @@ rosetta_net_process_configuration = azure_nextgen.logic.latest.RosettaNetProcess
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const rosettaNetProcessConfiguration = new azure_nextgen.logic.latest.RosettaNetProcessConfiguration("rosettaNetProcessConfiguration", {
+const rosettaNetProcessConfiguration = new azure_nextgen.logic.RosettaNetProcessConfiguration("rosettaNetProcessConfiguration", {
     activitySettings: {
         acknowledgmentOfReceiptSettings: {
             isNonRepudiationRequired: false,
@@ -484,7 +484,7 @@ The RosettaNetProcessConfiguration resource accepts the following [input]({{< re
 <a href="#activitysettings_csharp" style="color: inherit; text-decoration: inherit;">Activity<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rosettanetpipactivitysettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>Rosetta<wbr>Net<wbr>Pip<wbr>Activity<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#rosettanetpipactivitysettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>Rosetta<wbr>Net<wbr>Pip<wbr>Activity<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The RosettaNet process configuration activity settings.{{% /md %}}</dd>
     <dt class="property-required"
@@ -493,7 +493,7 @@ The RosettaNetProcessConfiguration resource accepts the following [input]({{< re
 <a href="#initiatorrolesettings_csharp" style="color: inherit; text-decoration: inherit;">Initiator<wbr>Role<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rosettanetpiprolesettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>Rosetta<wbr>Net<wbr>Pip<wbr>Role<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#rosettanetpiprolesettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>Rosetta<wbr>Net<wbr>Pip<wbr>Role<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The RosettaNet initiator role settings.{{% /md %}}</dd>
     <dt class="property-required"
@@ -547,7 +547,7 @@ The RosettaNetProcessConfiguration resource accepts the following [input]({{< re
 <a href="#responderrolesettings_csharp" style="color: inherit; text-decoration: inherit;">Responder<wbr>Role<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rosettanetpiprolesettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>Rosetta<wbr>Net<wbr>Pip<wbr>Role<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#rosettanetpiprolesettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>Rosetta<wbr>Net<wbr>Pip<wbr>Role<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The RosettaNet responder role settings.{{% /md %}}</dd>
     <dt class="property-required"
@@ -1441,7 +1441,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#actiontype_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rosettanetactiontype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Rosetta<wbr>Net<wbr>Action<wbr>Type</a></span>
+        <span class="property-type"><a href="#rosettanetactiontype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Rosetta<wbr>Net<wbr>Action<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The value indicating whether the RosettaNet PIP is used for a single action.{{% /md %}}</dd>
     <dt class="property-required"
@@ -1477,7 +1477,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#persistentconfidentialityscope_csharp" style="color: inherit; text-decoration: inherit;">Persistent<wbr>Confidentiality<wbr>Scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rosettanetpipconfidentialityscope">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Rosetta<wbr>Net<wbr>Pip<wbr>Confidentiality<wbr>Scope</a></span>
+        <span class="property-type"><a href="#rosettanetpipconfidentialityscope">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Rosetta<wbr>Net<wbr>Pip<wbr>Confidentiality<wbr>Scope</a></span>
     </dt>
     <dd>{{% md %}}The persistent confidentiality encryption scope.{{% /md %}}</dd>
     <dt class="property-required"
@@ -1486,7 +1486,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#responsetype_csharp" style="color: inherit; text-decoration: inherit;">Response<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rosettanetresponsetype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Rosetta<wbr>Net<wbr>Response<wbr>Type</a></span>
+        <span class="property-type"><a href="#rosettanetresponsetype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Rosetta<wbr>Net<wbr>Response<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The value indicating whether the RosettaNet PIP communication is synchronous.{{% /md %}}</dd>
     <dt class="property-required"
@@ -2069,7 +2069,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#acknowledgmentofreceiptsettings_csharp" style="color: inherit; text-decoration: inherit;">Acknowledgment<wbr>Of<wbr>Receipt<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rosettanetpipacknowledgmentofreceiptsettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>Rosetta<wbr>Net<wbr>Pip<wbr>Acknowledgment<wbr>Of<wbr>Receipt<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#rosettanetpipacknowledgmentofreceiptsettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>Rosetta<wbr>Net<wbr>Pip<wbr>Acknowledgment<wbr>Of<wbr>Receipt<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The RosettaNet ProcessConfiguration acknowledgement settings.{{% /md %}}</dd>
     <dt class="property-required"
@@ -2078,7 +2078,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#activitybehavior_csharp" style="color: inherit; text-decoration: inherit;">Activity<wbr>Behavior</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rosettanetpipactivitybehavior">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>Rosetta<wbr>Net<wbr>Pip<wbr>Activity<wbr>Behavior<wbr>Args</a></span>
+        <span class="property-type"><a href="#rosettanetpipactivitybehavior">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>Rosetta<wbr>Net<wbr>Pip<wbr>Activity<wbr>Behavior<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The RosettaNet ProcessConfiguration activity behavior.{{% /md %}}</dd>
     <dt class="property-required"
@@ -2087,7 +2087,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#activitytype_csharp" style="color: inherit; text-decoration: inherit;">Activity<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rosettanetpipactivitytype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Rosetta<wbr>Net<wbr>Pip<wbr>Activity<wbr>Type</a></span>
+        <span class="property-type"><a href="#rosettanetpipactivitytype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Rosetta<wbr>Net<wbr>Pip<wbr>Activity<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The RosettaNet ProcessConfiguration activity type.{{% /md %}}</dd>
 </dl>
@@ -2203,7 +2203,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#acknowledgmentofreceiptsettings_csharp" style="color: inherit; text-decoration: inherit;">Acknowledgment<wbr>Of<wbr>Receipt<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rosettanetpipacknowledgmentofreceiptsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>Rosetta<wbr>Net<wbr>Pip<wbr>Acknowledgment<wbr>Of<wbr>Receipt<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#rosettanetpipacknowledgmentofreceiptsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>Rosetta<wbr>Net<wbr>Pip<wbr>Acknowledgment<wbr>Of<wbr>Receipt<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The RosettaNet ProcessConfiguration acknowledgement settings.{{% /md %}}</dd>
     <dt class="property-required"
@@ -2212,7 +2212,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#activitybehavior_csharp" style="color: inherit; text-decoration: inherit;">Activity<wbr>Behavior</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rosettanetpipactivitybehaviorresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>Rosetta<wbr>Net<wbr>Pip<wbr>Activity<wbr>Behavior<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#rosettanetpipactivitybehaviorresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>Rosetta<wbr>Net<wbr>Pip<wbr>Activity<wbr>Behavior<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The RosettaNet ProcessConfiguration activity behavior.{{% /md %}}</dd>
     <dt class="property-required"
@@ -2746,7 +2746,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#businessdocument_csharp" style="color: inherit; text-decoration: inherit;">Business<wbr>Document</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rosettanetpipbusinessdocument">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>Rosetta<wbr>Net<wbr>Pip<wbr>Business<wbr>Document<wbr>Args</a></span>
+        <span class="property-type"><a href="#rosettanetpipbusinessdocument">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>Rosetta<wbr>Net<wbr>Pip<wbr>Business<wbr>Document<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The RosettaNet ProcessConfiguration business document.{{% /md %}}</dd>
     <dt class="property-required"
@@ -2764,7 +2764,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#roletype_csharp" style="color: inherit; text-decoration: inherit;">Role<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rosettanetpiproletype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Rosetta<wbr>Net<wbr>Pip<wbr>Role<wbr>Type</a></span>
+        <span class="property-type"><a href="#rosettanetpiproletype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Rosetta<wbr>Net<wbr>Pip<wbr>Role<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The RosettaNet ProcessConfiguration role type.{{% /md %}}</dd>
     <dt class="property-required"
@@ -3024,7 +3024,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#businessdocument_csharp" style="color: inherit; text-decoration: inherit;">Business<wbr>Document</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rosettanetpipbusinessdocumentresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>Rosetta<wbr>Net<wbr>Pip<wbr>Business<wbr>Document<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#rosettanetpipbusinessdocumentresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>Rosetta<wbr>Net<wbr>Pip<wbr>Business<wbr>Document<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The RosettaNet ProcessConfiguration business document.{{% /md %}}</dd>
     <dt class="property-required"
@@ -3387,7 +3387,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:logic/latest:RosettaNetProcessConfiguration 3A4 /subscriptions/34adfa4f-cedf-4dc0-ba29-b6d1a69ab345/resourceGroups/testrg123/providers/Microsoft.Logic/integrationAccounts/testia123/rosettaNetProcessConfigurations/3A4 
+$ pulumi import azure-nextgen:logic:RosettaNetProcessConfiguration 3A4 /subscriptions/34adfa4f-cedf-4dc0-ba29-b6d1a69ab345/resourceGroups/testrg123/providers/Microsoft.Logic/integrationAccounts/testia123/rosettaNetProcessConfigurations/3A4 
 ```
 
 

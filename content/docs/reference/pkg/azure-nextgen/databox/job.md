@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.databox.Job resource with exampl
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Job Resource.
-Latest API Version: 2020-11-01.
+API Version: 2020-11-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,11 +27,11 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var job = new AzureNextGen.DataBox.Latest.Job("job", new AzureNextGen.DataBox.Latest.JobArgs
+        var job = new AzureNextGen.DataBox..Job("job", new AzureNextGen.DataBox..JobArgs
         {
             Details = 
             {
-                { "contactDetails", new AzureNextGen.DataBox.Latest.Inputs.ContactDetailsArgs
+                { "contactDetails", new AzureNextGen.DataBox..Inputs.ContactDetailsArgs
                 {
                     ContactName = "Public SDK Test",
                     EmailList = 
@@ -43,7 +43,7 @@ class MyStack : Stack
                 } },
                 { "dataImportDetails", 
                 {
-                    new AzureNextGen.DataBox.Latest.Inputs.DataImportDetailsArgs
+                    new AzureNextGen.DataBox..Inputs.DataImportDetailsArgs
                     {
                         AccountDetails = 
                         {
@@ -53,7 +53,7 @@ class MyStack : Stack
                     },
                 } },
                 { "jobDetailsType", "DataBox" },
-                { "shippingAddress", new AzureNextGen.DataBox.Latest.Inputs.ShippingAddressArgs
+                { "shippingAddress", new AzureNextGen.DataBox..Inputs.ShippingAddressArgs
                 {
                     AddressType = "Commercial",
                     City = "San Francisco",
@@ -68,7 +68,7 @@ class MyStack : Stack
             JobName = "SdkJob952",
             Location = "westus",
             ResourceGroupName = "SdkRg5154",
-            Sku = new AzureNextGen.DataBox.Latest.Inputs.SkuArgs
+            Sku = new AzureNextGen.DataBox..Inputs.SkuArgs
             {
                 Name = "DataBox",
             },
@@ -92,22 +92,22 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-job = azure_nextgen.databox.latest.Job("job",
+job = azure_nextgen.databox.Job("job",
     details={
-        "contactDetails": azure_nextgen.databox.latest.ContactDetailsArgs(
+        "contactDetails": azure_nextgen.databox.ContactDetailsArgs(
             contact_name="Public SDK Test",
             email_list=["testing@microsoft.com"],
             phone="1234567890",
             phone_extension="1234",
         ),
-        "dataImportDetails": [azure_nextgen.databox.latest.DataImportDetailsArgs(
+        "dataImportDetails": [azure_nextgen.databox.DataImportDetailsArgs(
             account_details={
                 "dataAccountType": "StorageAccount",
                 "storageAccountId": "/subscriptions/fa68082f-8ff7-4a25-95c7-ce9da541242f/resourcegroups/databoxbvt/providers/Microsoft.Storage/storageAccounts/databoxbvttestaccount",
             },
         )],
         "jobDetailsType": "DataBox",
-        "shippingAddress": azure_nextgen.databox.latest.ShippingAddressArgs(
+        "shippingAddress": azure_nextgen.databox.ShippingAddressArgs(
             address_type="Commercial",
             city="San Francisco",
             company_name="Microsoft",
@@ -121,7 +121,7 @@ job = azure_nextgen.databox.latest.Job("job",
     job_name="SdkJob952",
     location="westus",
     resource_group_name="SdkRg5154",
-    sku=azure_nextgen.databox.latest.SkuArgs(
+    sku=azure_nextgen.databox.SkuArgs(
         name="DataBox",
     ),
     transfer_type="ImportToAzure")
@@ -136,7 +136,7 @@ job = azure_nextgen.databox.latest.Job("job",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const job = new azure_nextgen.databox.latest.Job("job", {
+const job = new azure_nextgen.databox.Job("job", {
     details: {
         contactDetails: {
             contactName: "Public SDK Test",
@@ -185,11 +185,11 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var job = new AzureNextGen.DataBox.Latest.Job("job", new AzureNextGen.DataBox.Latest.JobArgs
+        var job = new AzureNextGen.DataBox..Job("job", new AzureNextGen.DataBox..JobArgs
         {
             Details = 
             {
-                { "contactDetails", new AzureNextGen.DataBox.Latest.Inputs.ContactDetailsArgs
+                { "contactDetails", new AzureNextGen.DataBox..Inputs.ContactDetailsArgs
                 {
                     ContactName = "Public SDK Test",
                     EmailList = 
@@ -201,7 +201,7 @@ class MyStack : Stack
                 } },
                 { "dataImportDetails", 
                 {
-                    new AzureNextGen.DataBox.Latest.Inputs.DataImportDetailsArgs
+                    new AzureNextGen.DataBox..Inputs.DataImportDetailsArgs
                     {
                         AccountDetails = 
                         {
@@ -213,7 +213,7 @@ class MyStack : Stack
                 } },
                 { "devicePassword", "<devicePassword>" },
                 { "jobDetailsType", "DataBox" },
-                { "shippingAddress", new AzureNextGen.DataBox.Latest.Inputs.ShippingAddressArgs
+                { "shippingAddress", new AzureNextGen.DataBox..Inputs.ShippingAddressArgs
                 {
                     AddressType = "Commercial",
                     City = "San Francisco",
@@ -228,7 +228,7 @@ class MyStack : Stack
             JobName = "SdkJob9640",
             Location = "westus",
             ResourceGroupName = "SdkRg7478",
-            Sku = new AzureNextGen.DataBox.Latest.Inputs.SkuArgs
+            Sku = new AzureNextGen.DataBox..Inputs.SkuArgs
             {
                 Name = "DataBox",
             },
@@ -252,15 +252,15 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-job = azure_nextgen.databox.latest.Job("job",
+job = azure_nextgen.databox.Job("job",
     details={
-        "contactDetails": azure_nextgen.databox.latest.ContactDetailsArgs(
+        "contactDetails": azure_nextgen.databox.ContactDetailsArgs(
             contact_name="Public SDK Test",
             email_list=["testing@microsoft.com"],
             phone="1234567890",
             phone_extension="1234",
         ),
-        "dataImportDetails": [azure_nextgen.databox.latest.DataImportDetailsArgs(
+        "dataImportDetails": [azure_nextgen.databox.DataImportDetailsArgs(
             account_details={
                 "dataAccountType": "StorageAccount",
                 "sharePassword": "<sharePassword>",
@@ -269,7 +269,7 @@ job = azure_nextgen.databox.latest.Job("job",
         )],
         "devicePassword": "<devicePassword>",
         "jobDetailsType": "DataBox",
-        "shippingAddress": azure_nextgen.databox.latest.ShippingAddressArgs(
+        "shippingAddress": azure_nextgen.databox.ShippingAddressArgs(
             address_type="Commercial",
             city="San Francisco",
             company_name="Microsoft",
@@ -283,7 +283,7 @@ job = azure_nextgen.databox.latest.Job("job",
     job_name="SdkJob9640",
     location="westus",
     resource_group_name="SdkRg7478",
-    sku=azure_nextgen.databox.latest.SkuArgs(
+    sku=azure_nextgen.databox.SkuArgs(
         name="DataBox",
     ),
     transfer_type="ImportToAzure")
@@ -298,7 +298,7 @@ job = azure_nextgen.databox.latest.Job("job",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const job = new azure_nextgen.databox.latest.Job("job", {
+const job = new azure_nextgen.databox.Job("job", {
     details: {
         contactDetails: {
             contactName: "Public SDK Test",
@@ -349,11 +349,11 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var job = new AzureNextGen.DataBox.Latest.Job("job", new AzureNextGen.DataBox.Latest.JobArgs
+        var job = new AzureNextGen.DataBox..Job("job", new AzureNextGen.DataBox..JobArgs
         {
             Details = 
             {
-                { "contactDetails", new AzureNextGen.DataBox.Latest.Inputs.ContactDetailsArgs
+                { "contactDetails", new AzureNextGen.DataBox..Inputs.ContactDetailsArgs
                 {
                     ContactName = "Public SDK Test",
                     EmailList = 
@@ -365,7 +365,7 @@ class MyStack : Stack
                 } },
                 { "dataImportDetails", 
                 {
-                    new AzureNextGen.DataBox.Latest.Inputs.DataImportDetailsArgs
+                    new AzureNextGen.DataBox..Inputs.DataImportDetailsArgs
                     {
                         AccountDetails = 
                         {
@@ -375,14 +375,14 @@ class MyStack : Stack
                     },
                 } },
                 { "jobDetailsType", "DataBox" },
-                { "preferences", new AzureNextGen.DataBox.Latest.Inputs.PreferencesArgs
+                { "preferences", new AzureNextGen.DataBox..Inputs.PreferencesArgs
                 {
-                    EncryptionPreferences = new AzureNextGen.DataBox.Latest.Inputs.EncryptionPreferencesArgs
+                    EncryptionPreferences = new AzureNextGen.DataBox..Inputs.EncryptionPreferencesArgs
                     {
                         DoubleEncryption = "Enabled",
                     },
                 } },
-                { "shippingAddress", new AzureNextGen.DataBox.Latest.Inputs.ShippingAddressArgs
+                { "shippingAddress", new AzureNextGen.DataBox..Inputs.ShippingAddressArgs
                 {
                     AddressType = "Commercial",
                     City = "San Francisco",
@@ -397,7 +397,7 @@ class MyStack : Stack
             JobName = "SdkJob6599",
             Location = "westus",
             ResourceGroupName = "SdkRg608",
-            Sku = new AzureNextGen.DataBox.Latest.Inputs.SkuArgs
+            Sku = new AzureNextGen.DataBox..Inputs.SkuArgs
             {
                 Name = "DataBox",
             },
@@ -421,27 +421,27 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-job = azure_nextgen.databox.latest.Job("job",
+job = azure_nextgen.databox.Job("job",
     details={
-        "contactDetails": azure_nextgen.databox.latest.ContactDetailsArgs(
+        "contactDetails": azure_nextgen.databox.ContactDetailsArgs(
             contact_name="Public SDK Test",
             email_list=["testing@microsoft.com"],
             phone="1234567890",
             phone_extension="1234",
         ),
-        "dataImportDetails": [azure_nextgen.databox.latest.DataImportDetailsArgs(
+        "dataImportDetails": [azure_nextgen.databox.DataImportDetailsArgs(
             account_details={
                 "dataAccountType": "StorageAccount",
                 "storageAccountId": "/subscriptions/fa68082f-8ff7-4a25-95c7-ce9da541242f/resourcegroups/databoxbvt/providers/Microsoft.Storage/storageAccounts/databoxbvttestaccount",
             },
         )],
         "jobDetailsType": "DataBox",
-        "preferences": azure_nextgen.databox.latest.PreferencesArgs(
-            encryption_preferences=azure_nextgen.databox.latest.EncryptionPreferencesArgs(
+        "preferences": azure_nextgen.databox.PreferencesArgs(
+            encryption_preferences=azure_nextgen.databox.EncryptionPreferencesArgs(
                 double_encryption="Enabled",
             ),
         ),
-        "shippingAddress": azure_nextgen.databox.latest.ShippingAddressArgs(
+        "shippingAddress": azure_nextgen.databox.ShippingAddressArgs(
             address_type="Commercial",
             city="San Francisco",
             company_name="Microsoft",
@@ -455,7 +455,7 @@ job = azure_nextgen.databox.latest.Job("job",
     job_name="SdkJob6599",
     location="westus",
     resource_group_name="SdkRg608",
-    sku=azure_nextgen.databox.latest.SkuArgs(
+    sku=azure_nextgen.databox.SkuArgs(
         name="DataBox",
     ),
     transfer_type="ImportToAzure")
@@ -470,7 +470,7 @@ job = azure_nextgen.databox.latest.Job("job",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const job = new azure_nextgen.databox.latest.Job("job", {
+const job = new azure_nextgen.databox.Job("job", {
     details: {
         contactDetails: {
             contactName: "Public SDK Test",
@@ -524,11 +524,11 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var job = new AzureNextGen.DataBox.Latest.Job("job", new AzureNextGen.DataBox.Latest.JobArgs
+        var job = new AzureNextGen.DataBox..Job("job", new AzureNextGen.DataBox..JobArgs
         {
             Details = 
             {
-                { "contactDetails", new AzureNextGen.DataBox.Latest.Inputs.ContactDetailsArgs
+                { "contactDetails", new AzureNextGen.DataBox..Inputs.ContactDetailsArgs
                 {
                     ContactName = "Public SDK Test",
                     EmailList = 
@@ -540,18 +540,18 @@ class MyStack : Stack
                 } },
                 { "dataExportDetails", 
                 {
-                    new AzureNextGen.DataBox.Latest.Inputs.DataExportDetailsArgs
+                    new AzureNextGen.DataBox..Inputs.DataExportDetailsArgs
                     {
                         AccountDetails = 
                         {
                             { "dataAccountType", "StorageAccount" },
                             { "storageAccountId", "/subscriptions/fa68082f-8ff7-4a25-95c7-ce9da541242f/resourceGroups/akvenkat/providers/Microsoft.Storage/storageAccounts/aaaaaa2" },
                         },
-                        TransferConfiguration = new AzureNextGen.DataBox.Latest.Inputs.TransferConfigurationArgs
+                        TransferConfiguration = new AzureNextGen.DataBox..Inputs.TransferConfigurationArgs
                         {
-                            TransferAllDetails = new AzureNextGen.DataBox.Latest.Inputs.TransferConfigurationTransferAllDetailsArgs
+                            TransferAllDetails = new AzureNextGen.DataBox..Inputs.TransferConfigurationTransferAllDetailsArgs
                             {
-                                Include = new AzureNextGen.DataBox.Latest.Inputs.TransferAllDetailsArgs
+                                Include = new AzureNextGen.DataBox..Inputs.TransferAllDetailsArgs
                                 {
                                     DataAccountType = "StorageAccount",
                                     TransferAllBlobs = true,
@@ -563,7 +563,7 @@ class MyStack : Stack
                     },
                 } },
                 { "jobDetailsType", "DataBox" },
-                { "shippingAddress", new AzureNextGen.DataBox.Latest.Inputs.ShippingAddressArgs
+                { "shippingAddress", new AzureNextGen.DataBox..Inputs.ShippingAddressArgs
                 {
                     AddressType = "Commercial",
                     City = "San Francisco",
@@ -578,7 +578,7 @@ class MyStack : Stack
             JobName = "SdkJob6429",
             Location = "westus",
             ResourceGroupName = "SdkRg8091",
-            Sku = new AzureNextGen.DataBox.Latest.Inputs.SkuArgs
+            Sku = new AzureNextGen.DataBox..Inputs.SkuArgs
             {
                 Name = "DataBox",
             },
@@ -602,22 +602,22 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-job = azure_nextgen.databox.latest.Job("job",
+job = azure_nextgen.databox.Job("job",
     details={
-        "contactDetails": azure_nextgen.databox.latest.ContactDetailsArgs(
+        "contactDetails": azure_nextgen.databox.ContactDetailsArgs(
             contact_name="Public SDK Test",
             email_list=["testing@microsoft.com"],
             phone="1234567890",
             phone_extension="1234",
         ),
-        "dataExportDetails": [azure_nextgen.databox.latest.DataExportDetailsArgs(
+        "dataExportDetails": [azure_nextgen.databox.DataExportDetailsArgs(
             account_details={
                 "dataAccountType": "StorageAccount",
                 "storageAccountId": "/subscriptions/fa68082f-8ff7-4a25-95c7-ce9da541242f/resourceGroups/akvenkat/providers/Microsoft.Storage/storageAccounts/aaaaaa2",
             },
-            transfer_configuration=azure_nextgen.databox.latest.TransferConfigurationArgs(
-                transfer_all_details=azure_nextgen.databox.latest.TransferConfigurationTransferAllDetailsArgs(
-                    include=azure_nextgen.databox.latest.TransferAllDetailsArgs(
+            transfer_configuration=azure_nextgen.databox.TransferConfigurationArgs(
+                transfer_all_details=azure_nextgen.databox.TransferConfigurationTransferAllDetailsArgs(
+                    include=azure_nextgen.databox.TransferAllDetailsArgs(
                         data_account_type="StorageAccount",
                         transfer_all_blobs=True,
                         transfer_all_files=True,
@@ -627,7 +627,7 @@ job = azure_nextgen.databox.latest.Job("job",
             ),
         )],
         "jobDetailsType": "DataBox",
-        "shippingAddress": azure_nextgen.databox.latest.ShippingAddressArgs(
+        "shippingAddress": azure_nextgen.databox.ShippingAddressArgs(
             address_type="Commercial",
             city="San Francisco",
             company_name="Microsoft",
@@ -641,7 +641,7 @@ job = azure_nextgen.databox.latest.Job("job",
     job_name="SdkJob6429",
     location="westus",
     resource_group_name="SdkRg8091",
-    sku=azure_nextgen.databox.latest.SkuArgs(
+    sku=azure_nextgen.databox.SkuArgs(
         name="DataBox",
     ),
     transfer_type="ExportFromAzure")
@@ -656,7 +656,7 @@ job = azure_nextgen.databox.latest.Job("job",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const job = new azure_nextgen.databox.latest.Job("job", {
+const job = new azure_nextgen.databox.Job("job", {
     details: {
         contactDetails: {
             contactName: "Public SDK Test",
@@ -715,11 +715,11 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var job = new AzureNextGen.DataBox.Latest.Job("job", new AzureNextGen.DataBox.Latest.JobArgs
+        var job = new AzureNextGen.DataBox..Job("job", new AzureNextGen.DataBox..JobArgs
         {
             Details = 
             {
-                { "contactDetails", new AzureNextGen.DataBox.Latest.Inputs.ContactDetailsArgs
+                { "contactDetails", new AzureNextGen.DataBox..Inputs.ContactDetailsArgs
                 {
                     ContactName = "Public SDK Test",
                     EmailList = 
@@ -731,7 +731,7 @@ class MyStack : Stack
                 } },
                 { "dataImportDetails", 
                 {
-                    new AzureNextGen.DataBox.Latest.Inputs.DataImportDetailsArgs
+                    new AzureNextGen.DataBox..Inputs.DataImportDetailsArgs
                     {
                         AccountDetails = 
                         {
@@ -741,7 +741,7 @@ class MyStack : Stack
                     },
                 } },
                 { "jobDetailsType", "DataBox" },
-                { "shippingAddress", new AzureNextGen.DataBox.Latest.Inputs.ShippingAddressArgs
+                { "shippingAddress", new AzureNextGen.DataBox..Inputs.ShippingAddressArgs
                 {
                     AddressType = "Commercial",
                     City = "San Francisco",
@@ -753,7 +753,7 @@ class MyStack : Stack
                     StreetAddress2 = "Unit 1",
                 } },
             },
-            Identity = new AzureNextGen.DataBox.Latest.Inputs.ResourceIdentityArgs
+            Identity = new AzureNextGen.DataBox..Inputs.ResourceIdentityArgs
             {
                 Type = "UserAssigned",
                 UserAssignedIdentities = 
@@ -764,7 +764,7 @@ class MyStack : Stack
             JobName = "SdkJob5337",
             Location = "westus",
             ResourceGroupName = "SdkRg7552",
-            Sku = new AzureNextGen.DataBox.Latest.Inputs.SkuArgs
+            Sku = new AzureNextGen.DataBox..Inputs.SkuArgs
             {
                 Name = "DataBox",
             },
@@ -788,22 +788,22 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-job = azure_nextgen.databox.latest.Job("job",
+job = azure_nextgen.databox.Job("job",
     details={
-        "contactDetails": azure_nextgen.databox.latest.ContactDetailsArgs(
+        "contactDetails": azure_nextgen.databox.ContactDetailsArgs(
             contact_name="Public SDK Test",
             email_list=["testing@microsoft.com"],
             phone="1234567890",
             phone_extension="1234",
         ),
-        "dataImportDetails": [azure_nextgen.databox.latest.DataImportDetailsArgs(
+        "dataImportDetails": [azure_nextgen.databox.DataImportDetailsArgs(
             account_details={
                 "dataAccountType": "StorageAccount",
                 "storageAccountId": "/subscriptions/fa68082f-8ff7-4a25-95c7-ce9da541242f/resourceGroups/databoxbvt1/providers/Microsoft.Storage/storageAccounts/databoxbvttestaccount2",
             },
         )],
         "jobDetailsType": "DataBox",
-        "shippingAddress": azure_nextgen.databox.latest.ShippingAddressArgs(
+        "shippingAddress": azure_nextgen.databox.ShippingAddressArgs(
             address_type="Commercial",
             city="San Francisco",
             company_name="Microsoft",
@@ -814,7 +814,7 @@ job = azure_nextgen.databox.latest.Job("job",
             street_address2="Unit 1",
         ),
     },
-    identity=azure_nextgen.databox.latest.ResourceIdentityArgs(
+    identity=azure_nextgen.databox.ResourceIdentityArgs(
         type="UserAssigned",
         user_assigned_identities={
             "/subscriptions/fa68082f-8ff7-4a25-95c7-ce9da541242f/resourceGroups/akvenkat/providers/Microsoft.ManagedIdentity/userAssignedIdentities/sdkIdentity": {},
@@ -823,7 +823,7 @@ job = azure_nextgen.databox.latest.Job("job",
     job_name="SdkJob5337",
     location="westus",
     resource_group_name="SdkRg7552",
-    sku=azure_nextgen.databox.latest.SkuArgs(
+    sku=azure_nextgen.databox.SkuArgs(
         name="DataBox",
     ),
     transfer_type="ImportToAzure")
@@ -838,7 +838,7 @@ job = azure_nextgen.databox.latest.Job("job",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const job = new azure_nextgen.databox.latest.Job("job", {
+const job = new azure_nextgen.databox.Job("job", {
     details: {
         contactDetails: {
             contactName: "Public SDK Test",
@@ -1099,7 +1099,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sku">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Sku<wbr>Args</a></span>
+        <span class="property-type"><a href="#sku">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box..<wbr>Inputs.<wbr>Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The sku type.{{% /md %}}</dd>
     <dt class="property-required"
@@ -1108,7 +1108,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#transfertype_csharp" style="color: inherit; text-decoration: inherit;">Transfer<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#transfertype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Transfer<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#transfertype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box..<wbr>Transfer<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of the data transfer.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1117,7 +1117,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#deliveryinfo_csharp" style="color: inherit; text-decoration: inherit;">Delivery<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobdeliveryinfo">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Job<wbr>Delivery<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#jobdeliveryinfo">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box..<wbr>Inputs.<wbr>Job<wbr>Delivery<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Delivery Info of Job.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1126,7 +1126,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#deliverytype_csharp" style="color: inherit; text-decoration: inherit;">Delivery<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#jobdeliverytype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Job<wbr>Delivery<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#jobdeliverytype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box..<wbr>Job<wbr>Delivery<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Delivery type of Job.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1135,7 +1135,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#details_csharp" style="color: inherit; text-decoration: inherit;">Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databoxdiskjobdetails">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Data<wbr>Box<wbr>Disk<wbr>Job<wbr>Details<wbr>Args</a> | <a href="#databoxheavyjobdetails">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Data<wbr>Box<wbr>Heavy<wbr>Job<wbr>Details<wbr>Args</a> | <a href="#databoxjobdetails">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Data<wbr>Box<wbr>Job<wbr>Details<wbr>Args</a></span>
+        <span class="property-type"><a href="#databoxdiskjobdetails">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box..<wbr>Inputs.<wbr>Data<wbr>Box<wbr>Disk<wbr>Job<wbr>Details<wbr>Args</a> | <a href="#databoxheavyjobdetails">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box..<wbr>Inputs.<wbr>Data<wbr>Box<wbr>Heavy<wbr>Job<wbr>Details<wbr>Args</a> | <a href="#databoxjobdetails">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box..<wbr>Inputs.<wbr>Data<wbr>Box<wbr>Job<wbr>Details<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Details of a job run. This field will only be sent for expand details filter.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1144,7 +1144,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidentity">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Resource<wbr>Identity<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourceidentity">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box..<wbr>Inputs.<wbr>Resource<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Msi identity of the resource{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1472,7 +1472,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#error_csharp" style="color: inherit; text-decoration: inherit;">Error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clouderrorresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Outputs.<wbr>Cloud<wbr>Error<wbr>Response</a></span>
+        <span class="property-type"><a href="#clouderrorresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box..<wbr>Outputs.<wbr>Cloud<wbr>Error<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Top level error for the job.{{% /md %}}</dd>
     <dt class="property-"
@@ -2611,7 +2611,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#additionalinfo_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalerrorinforesponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Additional<wbr>Error<wbr>Info<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#additionalerrorinforesponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box..<wbr>Inputs.<wbr>Additional<wbr>Error<wbr>Info<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Cloud error additional info.{{% /md %}}</dd>
     <dt class="property-required"
@@ -2620,7 +2620,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#details_csharp" style="color: inherit; text-decoration: inherit;">Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clouderrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Cloud<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#clouderrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box..<wbr>Inputs.<wbr>Cloud<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Cloud error details.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2853,7 +2853,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#notificationpreference_csharp" style="color: inherit; text-decoration: inherit;">Notification<wbr>Preference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#notificationpreference">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Notification<wbr>Preference<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#notificationpreference">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box..<wbr>Inputs.<wbr>Notification<wbr>Preference<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Notification preference for a job stage.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3095,7 +3095,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#notificationpreference_csharp" style="color: inherit; text-decoration: inherit;">Notification<wbr>Preference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#notificationpreferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Notification<wbr>Preference<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#notificationpreferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box..<wbr>Inputs.<wbr>Notification<wbr>Preference<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Notification preference for a job stage.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4347,7 +4347,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#contactdetails_csharp" style="color: inherit; text-decoration: inherit;">Contact<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contactdetails">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Contact<wbr>Details<wbr>Args</a></span>
+        <span class="property-type"><a href="#contactdetails">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box..<wbr>Inputs.<wbr>Contact<wbr>Details<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Contact details for notification and shipping.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4356,7 +4356,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#dataexportdetails_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Export<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dataexportdetails">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Data<wbr>Export<wbr>Details<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#dataexportdetails">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box..<wbr>Inputs.<wbr>Data<wbr>Export<wbr>Details<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Details of the data to be exported from azure.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4365,7 +4365,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#dataimportdetails_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Import<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dataimportdetails">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Data<wbr>Import<wbr>Details<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#dataimportdetails">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box..<wbr>Inputs.<wbr>Data<wbr>Import<wbr>Details<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Details of the data to be imported into azure.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4383,7 +4383,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#keyencryptionkey_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Encryption<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyencryptionkey">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Key<wbr>Encryption<wbr>Key<wbr>Args</a></span>
+        <span class="property-type"><a href="#keyencryptionkey">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box..<wbr>Inputs.<wbr>Key<wbr>Encryption<wbr>Key<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Details about which key encryption type is being used.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4401,7 +4401,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#preferences_csharp" style="color: inherit; text-decoration: inherit;">Preferences</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preferences">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Preferences<wbr>Args</a></span>
+        <span class="property-type"><a href="#preferences">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box..<wbr>Inputs.<wbr>Preferences<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Preferences for the order.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4419,7 +4419,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#shippingaddress_csharp" style="color: inherit; text-decoration: inherit;">Shipping<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#shippingaddress">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Shipping<wbr>Address<wbr>Args</a></span>
+        <span class="property-type"><a href="#shippingaddress">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box..<wbr>Inputs.<wbr>Shipping<wbr>Address<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Shipping address of the customer.{{% /md %}}</dd>
 </dl>
@@ -4706,7 +4706,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#contactdetails_csharp" style="color: inherit; text-decoration: inherit;">Contact<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contactdetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Contact<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#contactdetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box..<wbr>Inputs.<wbr>Contact<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Contact details for notification and shipping.{{% /md %}}</dd>
     <dt class="property-required"
@@ -4724,7 +4724,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#copyprogress_csharp" style="color: inherit; text-decoration: inherit;">Copy<wbr>Progress</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databoxdiskcopyprogressresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Data<wbr>Box<wbr>Disk<wbr>Copy<wbr>Progress<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#databoxdiskcopyprogressresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box..<wbr>Inputs.<wbr>Data<wbr>Box<wbr>Disk<wbr>Copy<wbr>Progress<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Copy progress per disk.{{% /md %}}</dd>
     <dt class="property-required"
@@ -4733,7 +4733,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#deliverypackage_csharp" style="color: inherit; text-decoration: inherit;">Delivery<wbr>Package</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#packageshippingdetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Package<wbr>Shipping<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#packageshippingdetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box..<wbr>Inputs.<wbr>Package<wbr>Shipping<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Delivery package shipping details.{{% /md %}}</dd>
     <dt class="property-required"
@@ -4751,7 +4751,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#jobstages_csharp" style="color: inherit; text-decoration: inherit;">Job<wbr>Stages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobstagesresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Job<wbr>Stages<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#jobstagesresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box..<wbr>Inputs.<wbr>Job<wbr>Stages<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of stages that run in the job.{{% /md %}}</dd>
     <dt class="property-required"
@@ -4760,7 +4760,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#returnpackage_csharp" style="color: inherit; text-decoration: inherit;">Return<wbr>Package</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#packageshippingdetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Package<wbr>Shipping<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#packageshippingdetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box..<wbr>Inputs.<wbr>Package<wbr>Shipping<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Return package shipping details.{{% /md %}}</dd>
     <dt class="property-required"
@@ -4778,7 +4778,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#dataexportdetails_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Export<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dataexportdetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Data<wbr>Export<wbr>Details<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#dataexportdetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box..<wbr>Inputs.<wbr>Data<wbr>Export<wbr>Details<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Details of the data to be exported from azure.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4787,7 +4787,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#dataimportdetails_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Import<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dataimportdetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Data<wbr>Import<wbr>Details<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#dataimportdetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box..<wbr>Inputs.<wbr>Data<wbr>Import<wbr>Details<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Details of the data to be imported into azure.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4805,7 +4805,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#keyencryptionkey_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Encryption<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyencryptionkeyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Key<wbr>Encryption<wbr>Key<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#keyencryptionkeyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box..<wbr>Inputs.<wbr>Key<wbr>Encryption<wbr>Key<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Details about which key encryption type is being used.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4823,7 +4823,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#preferences_csharp" style="color: inherit; text-decoration: inherit;">Preferences</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preferencesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Preferences<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#preferencesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box..<wbr>Inputs.<wbr>Preferences<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Preferences for the order.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4841,7 +4841,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#shippingaddress_csharp" style="color: inherit; text-decoration: inherit;">Shipping<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#shippingaddressresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Shipping<wbr>Address<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#shippingaddressresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box..<wbr>Inputs.<wbr>Shipping<wbr>Address<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Shipping address of the customer.{{% /md %}}</dd>
 </dl>
@@ -5469,7 +5469,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#contactdetails_csharp" style="color: inherit; text-decoration: inherit;">Contact<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contactdetails">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Contact<wbr>Details<wbr>Args</a></span>
+        <span class="property-type"><a href="#contactdetails">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box..<wbr>Inputs.<wbr>Contact<wbr>Details<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Contact details for notification and shipping.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -5478,7 +5478,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#dataexportdetails_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Export<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dataexportdetails">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Data<wbr>Export<wbr>Details<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#dataexportdetails">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box..<wbr>Inputs.<wbr>Data<wbr>Export<wbr>Details<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Details of the data to be exported from azure.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -5487,7 +5487,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#dataimportdetails_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Import<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dataimportdetails">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Data<wbr>Import<wbr>Details<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#dataimportdetails">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box..<wbr>Inputs.<wbr>Data<wbr>Import<wbr>Details<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Details of the data to be imported into azure.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -5514,7 +5514,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#keyencryptionkey_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Encryption<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyencryptionkey">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Key<wbr>Encryption<wbr>Key<wbr>Args</a></span>
+        <span class="property-type"><a href="#keyencryptionkey">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box..<wbr>Inputs.<wbr>Key<wbr>Encryption<wbr>Key<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Details about which key encryption type is being used.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -5523,7 +5523,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#preferences_csharp" style="color: inherit; text-decoration: inherit;">Preferences</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preferences">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Preferences<wbr>Args</a></span>
+        <span class="property-type"><a href="#preferences">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box..<wbr>Inputs.<wbr>Preferences<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Preferences for the order.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -5532,7 +5532,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#shippingaddress_csharp" style="color: inherit; text-decoration: inherit;">Shipping<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#shippingaddress">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Shipping<wbr>Address<wbr>Args</a></span>
+        <span class="property-type"><a href="#shippingaddress">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box..<wbr>Inputs.<wbr>Shipping<wbr>Address<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Shipping address of the customer.{{% /md %}}</dd>
 </dl>
@@ -5792,7 +5792,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#contactdetails_csharp" style="color: inherit; text-decoration: inherit;">Contact<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contactdetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Contact<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#contactdetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box..<wbr>Inputs.<wbr>Contact<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Contact details for notification and shipping.{{% /md %}}</dd>
     <dt class="property-required"
@@ -5810,7 +5810,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#copyprogress_csharp" style="color: inherit; text-decoration: inherit;">Copy<wbr>Progress</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#copyprogressresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Copy<wbr>Progress<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#copyprogressresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box..<wbr>Inputs.<wbr>Copy<wbr>Progress<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Copy progress per account.{{% /md %}}</dd>
     <dt class="property-required"
@@ -5819,7 +5819,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#deliverypackage_csharp" style="color: inherit; text-decoration: inherit;">Delivery<wbr>Package</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#packageshippingdetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Package<wbr>Shipping<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#packageshippingdetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box..<wbr>Inputs.<wbr>Package<wbr>Shipping<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Delivery package shipping details.{{% /md %}}</dd>
     <dt class="property-required"
@@ -5828,7 +5828,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#jobstages_csharp" style="color: inherit; text-decoration: inherit;">Job<wbr>Stages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobstagesresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Job<wbr>Stages<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#jobstagesresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box..<wbr>Inputs.<wbr>Job<wbr>Stages<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of stages that run in the job.{{% /md %}}</dd>
     <dt class="property-required"
@@ -5837,7 +5837,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#returnpackage_csharp" style="color: inherit; text-decoration: inherit;">Return<wbr>Package</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#packageshippingdetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Package<wbr>Shipping<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#packageshippingdetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box..<wbr>Inputs.<wbr>Package<wbr>Shipping<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Return package shipping details.{{% /md %}}</dd>
     <dt class="property-required"
@@ -5855,7 +5855,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#dataexportdetails_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Export<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dataexportdetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Data<wbr>Export<wbr>Details<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#dataexportdetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box..<wbr>Inputs.<wbr>Data<wbr>Export<wbr>Details<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Details of the data to be exported from azure.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -5864,7 +5864,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#dataimportdetails_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Import<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dataimportdetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Data<wbr>Import<wbr>Details<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#dataimportdetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box..<wbr>Inputs.<wbr>Data<wbr>Import<wbr>Details<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Details of the data to be imported into azure.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -5891,7 +5891,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#keyencryptionkey_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Encryption<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyencryptionkeyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Key<wbr>Encryption<wbr>Key<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#keyencryptionkeyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box..<wbr>Inputs.<wbr>Key<wbr>Encryption<wbr>Key<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Details about which key encryption type is being used.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -5900,7 +5900,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#preferences_csharp" style="color: inherit; text-decoration: inherit;">Preferences</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preferencesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Preferences<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#preferencesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box..<wbr>Inputs.<wbr>Preferences<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Preferences for the order.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -5909,7 +5909,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#shippingaddress_csharp" style="color: inherit; text-decoration: inherit;">Shipping<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#shippingaddressresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Shipping<wbr>Address<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#shippingaddressresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box..<wbr>Inputs.<wbr>Shipping<wbr>Address<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Shipping address of the customer.{{% /md %}}</dd>
 </dl>
@@ -6349,7 +6349,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#contactdetails_csharp" style="color: inherit; text-decoration: inherit;">Contact<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contactdetails">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Contact<wbr>Details<wbr>Args</a></span>
+        <span class="property-type"><a href="#contactdetails">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box..<wbr>Inputs.<wbr>Contact<wbr>Details<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Contact details for notification and shipping.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -6358,7 +6358,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#dataexportdetails_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Export<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dataexportdetails">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Data<wbr>Export<wbr>Details<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#dataexportdetails">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box..<wbr>Inputs.<wbr>Data<wbr>Export<wbr>Details<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Details of the data to be exported from azure.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -6367,7 +6367,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#dataimportdetails_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Import<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dataimportdetails">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Data<wbr>Import<wbr>Details<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#dataimportdetails">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box..<wbr>Inputs.<wbr>Data<wbr>Import<wbr>Details<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Details of the data to be imported into azure.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -6394,7 +6394,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#keyencryptionkey_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Encryption<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyencryptionkey">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Key<wbr>Encryption<wbr>Key<wbr>Args</a></span>
+        <span class="property-type"><a href="#keyencryptionkey">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box..<wbr>Inputs.<wbr>Key<wbr>Encryption<wbr>Key<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Details about which key encryption type is being used.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -6403,7 +6403,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#preferences_csharp" style="color: inherit; text-decoration: inherit;">Preferences</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preferences">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Preferences<wbr>Args</a></span>
+        <span class="property-type"><a href="#preferences">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box..<wbr>Inputs.<wbr>Preferences<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Preferences for the order.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -6412,7 +6412,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#shippingaddress_csharp" style="color: inherit; text-decoration: inherit;">Shipping<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#shippingaddress">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Shipping<wbr>Address<wbr>Args</a></span>
+        <span class="property-type"><a href="#shippingaddress">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box..<wbr>Inputs.<wbr>Shipping<wbr>Address<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Shipping address of the customer.{{% /md %}}</dd>
 </dl>
@@ -6672,7 +6672,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#contactdetails_csharp" style="color: inherit; text-decoration: inherit;">Contact<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contactdetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Contact<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#contactdetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box..<wbr>Inputs.<wbr>Contact<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Contact details for notification and shipping.{{% /md %}}</dd>
     <dt class="property-required"
@@ -6690,7 +6690,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#copyprogress_csharp" style="color: inherit; text-decoration: inherit;">Copy<wbr>Progress</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#copyprogressresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Copy<wbr>Progress<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#copyprogressresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box..<wbr>Inputs.<wbr>Copy<wbr>Progress<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Copy progress per storage account.{{% /md %}}</dd>
     <dt class="property-required"
@@ -6699,7 +6699,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#deliverypackage_csharp" style="color: inherit; text-decoration: inherit;">Delivery<wbr>Package</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#packageshippingdetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Package<wbr>Shipping<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#packageshippingdetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box..<wbr>Inputs.<wbr>Package<wbr>Shipping<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Delivery package shipping details.{{% /md %}}</dd>
     <dt class="property-required"
@@ -6708,7 +6708,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#jobstages_csharp" style="color: inherit; text-decoration: inherit;">Job<wbr>Stages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobstagesresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Job<wbr>Stages<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#jobstagesresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box..<wbr>Inputs.<wbr>Job<wbr>Stages<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of stages that run in the job.{{% /md %}}</dd>
     <dt class="property-required"
@@ -6717,7 +6717,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#returnpackage_csharp" style="color: inherit; text-decoration: inherit;">Return<wbr>Package</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#packageshippingdetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Package<wbr>Shipping<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#packageshippingdetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box..<wbr>Inputs.<wbr>Package<wbr>Shipping<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Return package shipping details.{{% /md %}}</dd>
     <dt class="property-required"
@@ -6735,7 +6735,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#dataexportdetails_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Export<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dataexportdetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Data<wbr>Export<wbr>Details<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#dataexportdetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box..<wbr>Inputs.<wbr>Data<wbr>Export<wbr>Details<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Details of the data to be exported from azure.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -6744,7 +6744,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#dataimportdetails_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Import<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dataimportdetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Data<wbr>Import<wbr>Details<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#dataimportdetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box..<wbr>Inputs.<wbr>Data<wbr>Import<wbr>Details<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Details of the data to be imported into azure.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -6771,7 +6771,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#keyencryptionkey_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Encryption<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyencryptionkeyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Key<wbr>Encryption<wbr>Key<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#keyencryptionkeyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box..<wbr>Inputs.<wbr>Key<wbr>Encryption<wbr>Key<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Details about which key encryption type is being used.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -6780,7 +6780,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#preferences_csharp" style="color: inherit; text-decoration: inherit;">Preferences</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preferencesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Preferences<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#preferencesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box..<wbr>Inputs.<wbr>Preferences<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Preferences for the order.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -6789,7 +6789,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#shippingaddress_csharp" style="color: inherit; text-decoration: inherit;">Shipping<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#shippingaddressresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Shipping<wbr>Address<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#shippingaddressresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box..<wbr>Inputs.<wbr>Shipping<wbr>Address<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Shipping address of the customer.{{% /md %}}</dd>
 </dl>
@@ -7229,7 +7229,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#accountdetails_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#manageddiskdetails">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Managed<wbr>Disk<wbr>Details<wbr>Args</a> | <a href="#storageaccountdetails">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Storage<wbr>Account<wbr>Details<wbr>Args</a></span>
+        <span class="property-type"><a href="#manageddiskdetails">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box..<wbr>Inputs.<wbr>Managed<wbr>Disk<wbr>Details<wbr>Args</a> | <a href="#storageaccountdetails">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box..<wbr>Inputs.<wbr>Storage<wbr>Account<wbr>Details<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Account details of the data to be transferred{{% /md %}}</dd>
     <dt class="property-required"
@@ -7238,7 +7238,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#transferconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Transfer<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transferconfiguration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Transfer<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#transferconfiguration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box..<wbr>Inputs.<wbr>Transfer<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration for the data transfer.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -7247,7 +7247,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#logcollectionlevel_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Collection<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#logcollectionlevel">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Log<wbr>Collection<wbr>Level</a></span>
+        <span class="property-type">string | <a href="#logcollectionlevel">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box..<wbr>Log<wbr>Collection<wbr>Level</a></span>
     </dt>
     <dd>{{% md %}}Level of the logs to be collected.{{% /md %}}</dd>
 </dl>
@@ -7363,7 +7363,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#accountdetails_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#manageddiskdetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Managed<wbr>Disk<wbr>Details<wbr>Response<wbr>Args</a> | <a href="#storageaccountdetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Storage<wbr>Account<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#manageddiskdetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box..<wbr>Inputs.<wbr>Managed<wbr>Disk<wbr>Details<wbr>Response<wbr>Args</a> | <a href="#storageaccountdetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box..<wbr>Inputs.<wbr>Storage<wbr>Account<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Account details of the data to be transferred{{% /md %}}</dd>
     <dt class="property-required"
@@ -7372,7 +7372,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#transferconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Transfer<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transferconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Transfer<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#transferconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box..<wbr>Inputs.<wbr>Transfer<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration for the data transfer.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -7497,7 +7497,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#accountdetails_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#manageddiskdetails">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Managed<wbr>Disk<wbr>Details<wbr>Args</a> | <a href="#storageaccountdetails">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Storage<wbr>Account<wbr>Details<wbr>Args</a></span>
+        <span class="property-type"><a href="#manageddiskdetails">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box..<wbr>Inputs.<wbr>Managed<wbr>Disk<wbr>Details<wbr>Args</a> | <a href="#storageaccountdetails">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box..<wbr>Inputs.<wbr>Storage<wbr>Account<wbr>Details<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Account details of the data to be transferred{{% /md %}}</dd>
 </dl>
@@ -7559,7 +7559,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#accountdetails_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#manageddiskdetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Managed<wbr>Disk<wbr>Details<wbr>Response<wbr>Args</a> | <a href="#storageaccountdetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Storage<wbr>Account<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#manageddiskdetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box..<wbr>Inputs.<wbr>Managed<wbr>Disk<wbr>Details<wbr>Response<wbr>Args</a> | <a href="#storageaccountdetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box..<wbr>Inputs.<wbr>Storage<wbr>Account<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Account details of the data to be transferred{{% /md %}}</dd>
 </dl>
@@ -7659,7 +7659,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#doubleencryption_csharp" style="color: inherit; text-decoration: inherit;">Double<wbr>Encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#doubleencryption">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Double<wbr>Encryption</a></span>
+        <span class="property-type">string | <a href="#doubleencryption">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box..<wbr>Double<wbr>Encryption</a></span>
     </dt>
     <dd>{{% md %}}Defines secondary layer of software-based encryption enablement.{{% /md %}}</dd>
 </dl>
@@ -7792,7 +7792,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#filterfiletype_csharp" style="color: inherit; text-decoration: inherit;">Filter<wbr>File<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#filterfiletype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Filter<wbr>File<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#filterfiletype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box..<wbr>Filter<wbr>File<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of the filter file.{{% /md %}}</dd>
 </dl>
@@ -8026,7 +8026,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#userassigned_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userassignedproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>User<wbr>Assigned<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#userassignedproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box..<wbr>Inputs.<wbr>User<wbr>Assigned<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}User assigned identity properties.{{% /md %}}</dd>
 </dl>
@@ -8124,7 +8124,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#userassigned_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userassignedpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>User<wbr>Assigned<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#userassignedpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box..<wbr>Inputs.<wbr>User<wbr>Assigned<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}User assigned identity properties.{{% /md %}}</dd>
 </dl>
@@ -8619,7 +8619,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#kektype_csharp" style="color: inherit; text-decoration: inherit;">Kek<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#kektype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Kek<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#kektype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box..<wbr>Kek<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of encryption key used for key encryption.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -8628,7 +8628,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#identityproperties_csharp" style="color: inherit; text-decoration: inherit;">Identity<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identityproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Identity<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#identityproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box..<wbr>Inputs.<wbr>Identity<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Managed identity properties used for key encryption.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -8798,7 +8798,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#identityproperties_csharp" style="color: inherit; text-decoration: inherit;">Identity<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identitypropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Identity<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#identitypropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box..<wbr>Inputs.<wbr>Identity<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Managed identity properties used for key encryption.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -9274,7 +9274,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#stagename_csharp" style="color: inherit; text-decoration: inherit;">Stage<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#notificationstagename">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Notification<wbr>Stage<wbr>Name</a></span>
+        <span class="property-type">string | <a href="#notificationstagename">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box..<wbr>Notification<wbr>Stage<wbr>Name</a></span>
     </dt>
     <dd>{{% md %}}Name of the stage.{{% /md %}}</dd>
 </dl>
@@ -9665,7 +9665,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#encryptionpreferences_csharp" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Preferences</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionpreferences">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Encryption<wbr>Preferences<wbr>Args</a></span>
+        <span class="property-type"><a href="#encryptionpreferences">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box..<wbr>Inputs.<wbr>Encryption<wbr>Preferences<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Preferences related to the Encryption.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -9683,7 +9683,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#transportpreferences_csharp" style="color: inherit; text-decoration: inherit;">Transport<wbr>Preferences</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transportpreferences">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Transport<wbr>Preferences<wbr>Args</a></span>
+        <span class="property-type"><a href="#transportpreferences">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box..<wbr>Inputs.<wbr>Transport<wbr>Preferences<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Preferences related to the shipment logistics of the sku.{{% /md %}}</dd>
 </dl>
@@ -9799,7 +9799,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#encryptionpreferences_csharp" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Preferences</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionpreferencesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Encryption<wbr>Preferences<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#encryptionpreferencesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box..<wbr>Inputs.<wbr>Encryption<wbr>Preferences<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Preferences related to the Encryption.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -9817,7 +9817,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#transportpreferences_csharp" style="color: inherit; text-decoration: inherit;">Transport<wbr>Preferences</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transportpreferencesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Transport<wbr>Preferences<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#transportpreferencesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box..<wbr>Inputs.<wbr>Transport<wbr>Preferences<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Preferences related to the shipment logistics of the sku.{{% /md %}}</dd>
 </dl>
@@ -10058,7 +10058,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#userassignedidentities_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>User<wbr>Assigned<wbr>Identity<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box..<wbr>Inputs.<wbr>User<wbr>Assigned<wbr>Identity<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}User Assigned Identities{{% /md %}}</dd>
 </dl>
@@ -10219,7 +10219,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#addresstype_csharp" style="color: inherit; text-decoration: inherit;">Address<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#addresstype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Address<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#addresstype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box..<wbr>Address<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of address.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -10973,7 +10973,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#skuname">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Sku<wbr>Name</a></span>
+        <span class="property-type">string | <a href="#skuname">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box..<wbr>Sku<wbr>Name</a></span>
     </dt>
     <dd>{{% md %}}The sku name.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -11483,7 +11483,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#dataaccounttype_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Account<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#dataaccounttype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Data<wbr>Account<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#dataaccounttype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box..<wbr>Data<wbr>Account<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of the account of data{{% /md %}}</dd>
     <dt class="property-optional"
@@ -11751,7 +11751,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#transferconfigurationtype_csharp" style="color: inherit; text-decoration: inherit;">Transfer<wbr>Configuration<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#transferconfigurationtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Transfer<wbr>Configuration<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#transferconfigurationtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box..<wbr>Transfer<wbr>Configuration<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of the configuration for transfer.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -11760,7 +11760,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#transferalldetails_csharp" style="color: inherit; text-decoration: inherit;">Transfer<wbr>All<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transferconfigurationtransferalldetails">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Transfer<wbr>Configuration<wbr>Transfer<wbr>All<wbr>Details<wbr>Args</a></span>
+        <span class="property-type"><a href="#transferconfigurationtransferalldetails">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box..<wbr>Inputs.<wbr>Transfer<wbr>Configuration<wbr>Transfer<wbr>All<wbr>Details<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Map of filter type and the details to transfer all data. This field is required only if the TransferConfigurationType is given as TransferAll{{% /md %}}</dd>
     <dt class="property-optional"
@@ -11769,7 +11769,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#transferfilterdetails_csharp" style="color: inherit; text-decoration: inherit;">Transfer<wbr>Filter<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transferconfigurationtransferfilterdetails">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Transfer<wbr>Configuration<wbr>Transfer<wbr>Filter<wbr>Details<wbr>Args</a></span>
+        <span class="property-type"><a href="#transferconfigurationtransferfilterdetails">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box..<wbr>Inputs.<wbr>Transfer<wbr>Configuration<wbr>Transfer<wbr>Filter<wbr>Details<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Map of filter type and the details to filter. This field is required only if the TransferConfigurationType is given as TransferUsingFilter.{{% /md %}}</dd>
 </dl>
@@ -11894,7 +11894,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#transferalldetails_csharp" style="color: inherit; text-decoration: inherit;">Transfer<wbr>All<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transferconfigurationresponsetransferalldetails">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Transfer<wbr>Configuration<wbr>Response<wbr>Transfer<wbr>All<wbr>Details<wbr>Args</a></span>
+        <span class="property-type"><a href="#transferconfigurationresponsetransferalldetails">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box..<wbr>Inputs.<wbr>Transfer<wbr>Configuration<wbr>Response<wbr>Transfer<wbr>All<wbr>Details<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Map of filter type and the details to transfer all data. This field is required only if the TransferConfigurationType is given as TransferAll{{% /md %}}</dd>
     <dt class="property-optional"
@@ -11903,7 +11903,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#transferfilterdetails_csharp" style="color: inherit; text-decoration: inherit;">Transfer<wbr>Filter<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transferconfigurationresponsetransferfilterdetails">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Transfer<wbr>Configuration<wbr>Response<wbr>Transfer<wbr>Filter<wbr>Details<wbr>Args</a></span>
+        <span class="property-type"><a href="#transferconfigurationresponsetransferfilterdetails">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box..<wbr>Inputs.<wbr>Transfer<wbr>Configuration<wbr>Response<wbr>Transfer<wbr>Filter<wbr>Details<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Map of filter type and the details to filter. This field is required only if the TransferConfigurationType is given as TransferUsingFilter.{{% /md %}}</dd>
 </dl>
@@ -12019,7 +12019,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#include_csharp" style="color: inherit; text-decoration: inherit;">Include</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transferalldetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Transfer<wbr>All<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#transferalldetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box..<wbr>Inputs.<wbr>Transfer<wbr>All<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Details to transfer all data.{{% /md %}}</dd>
 </dl>
@@ -12081,7 +12081,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#include_csharp" style="color: inherit; text-decoration: inherit;">Include</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transferfilterdetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Transfer<wbr>Filter<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#transferfilterdetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box..<wbr>Inputs.<wbr>Transfer<wbr>Filter<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Details of the filtering the transfer of data.{{% /md %}}</dd>
 </dl>
@@ -12143,7 +12143,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#include_csharp" style="color: inherit; text-decoration: inherit;">Include</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transferalldetails">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Transfer<wbr>All<wbr>Details<wbr>Args</a></span>
+        <span class="property-type"><a href="#transferalldetails">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box..<wbr>Inputs.<wbr>Transfer<wbr>All<wbr>Details<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Details to transfer all data.{{% /md %}}</dd>
 </dl>
@@ -12205,7 +12205,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#include_csharp" style="color: inherit; text-decoration: inherit;">Include</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transferfilterdetails">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Transfer<wbr>Filter<wbr>Details<wbr>Args</a></span>
+        <span class="property-type"><a href="#transferfilterdetails">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box..<wbr>Inputs.<wbr>Transfer<wbr>Filter<wbr>Details<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Details of the filtering the transfer of data.{{% /md %}}</dd>
 </dl>
@@ -12305,7 +12305,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#dataaccounttype_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Account<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#dataaccounttype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Data<wbr>Account<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#dataaccounttype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box..<wbr>Data<wbr>Account<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of the account of data.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -12314,7 +12314,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#azurefilefilterdetails_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>File<wbr>Filter<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefilefilterdetails">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Azure<wbr>File<wbr>Filter<wbr>Details<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurefilefilterdetails">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box..<wbr>Inputs.<wbr>Azure<wbr>File<wbr>Filter<wbr>Details<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Filter details to transfer Azure files.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -12323,7 +12323,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#blobfilterdetails_csharp" style="color: inherit; text-decoration: inherit;">Blob<wbr>Filter<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#blobfilterdetails">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Blob<wbr>Filter<wbr>Details<wbr>Args</a></span>
+        <span class="property-type"><a href="#blobfilterdetails">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box..<wbr>Inputs.<wbr>Blob<wbr>Filter<wbr>Details<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Filter details to transfer blobs.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -12332,7 +12332,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#filterfiledetails_csharp" style="color: inherit; text-decoration: inherit;">Filter<wbr>File<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#filterfiledetails">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Filter<wbr>File<wbr>Details<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#filterfiledetails">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box..<wbr>Inputs.<wbr>Filter<wbr>File<wbr>Details<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Details of the filter files to be used for data transfer.{{% /md %}}</dd>
 </dl>
@@ -12484,7 +12484,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#azurefilefilterdetails_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>File<wbr>Filter<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefilefilterdetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Azure<wbr>File<wbr>Filter<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurefilefilterdetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box..<wbr>Inputs.<wbr>Azure<wbr>File<wbr>Filter<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Filter details to transfer Azure files.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -12493,7 +12493,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#blobfilterdetails_csharp" style="color: inherit; text-decoration: inherit;">Blob<wbr>Filter<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#blobfilterdetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Blob<wbr>Filter<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#blobfilterdetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box..<wbr>Inputs.<wbr>Blob<wbr>Filter<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Filter details to transfer blobs.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -12502,7 +12502,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#filterfiledetails_csharp" style="color: inherit; text-decoration: inherit;">Filter<wbr>File<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#filterfiledetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Filter<wbr>File<wbr>Details<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#filterfiledetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box..<wbr>Inputs.<wbr>Filter<wbr>File<wbr>Details<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Details of the filter files to be used for data transfer.{{% /md %}}</dd>
 </dl>
@@ -12683,7 +12683,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#preferredshipmenttype_csharp" style="color: inherit; text-decoration: inherit;">Preferred<wbr>Shipment<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#transportshipmenttypes">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Transport<wbr>Shipment<wbr>Types</a></span>
+        <span class="property-type">string | <a href="#transportshipmenttypes">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box..<wbr>Transport<wbr>Shipment<wbr>Types</a></span>
     </dt>
     <dd>{{% md %}}Indicates Shipment Logistics type that the customer preferred.{{% /md %}}</dd>
 </dl>
@@ -13061,7 +13061,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:databox/latest:Job SdkJob5337 /subscriptions/fa68082f-8ff7-4a25-95c7-ce9da541242f/resourceGroups/SdkRg7552/providers/Microsoft.DataBox/jobs/SdkJob5337 
+$ pulumi import azure-nextgen:databox:Job SdkJob5337 /subscriptions/fa68082f-8ff7-4a25-95c7-ce9da541242f/resourceGroups/SdkRg7552/providers/Microsoft.DataBox/jobs/SdkJob5337 
 ```
 
 

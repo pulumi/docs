@@ -179,7 +179,7 @@ The following output properties are available:
 <a href="#migrationproperties_csharp" style="color: inherit; text-decoration: inherit;">Migration<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migrationpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Aad.<wbr>Outputs.<wbr>Migration<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#migrationpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Aad..<wbr>Outputs.<wbr>Migration<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Migration Properties{{% /md %}}</dd>
     <dt class="property-"
@@ -260,7 +260,7 @@ The following output properties are available:
 <a href="#domainsecuritysettings_csharp" style="color: inherit; text-decoration: inherit;">Domain<wbr>Security<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainsecuritysettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Aad.<wbr>Outputs.<wbr>Domain<wbr>Security<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#domainsecuritysettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Aad..<wbr>Outputs.<wbr>Domain<wbr>Security<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}DomainSecurity Settings{{% /md %}}</dd>
     <dt class="property-"
@@ -287,7 +287,7 @@ The following output properties are available:
 <a href="#ldapssettings_csharp" style="color: inherit; text-decoration: inherit;">Ldaps<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ldapssettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Aad.<wbr>Outputs.<wbr>Ldaps<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#ldapssettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Aad..<wbr>Outputs.<wbr>Ldaps<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Secure LDAP Settings{{% /md %}}</dd>
     <dt class="property-"
@@ -305,7 +305,7 @@ The following output properties are available:
 <a href="#notificationsettings_csharp" style="color: inherit; text-decoration: inherit;">Notification<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#notificationsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Aad.<wbr>Outputs.<wbr>Notification<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#notificationsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Aad..<wbr>Outputs.<wbr>Notification<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Notification Settings{{% /md %}}</dd>
     <dt class="property-"
@@ -314,7 +314,7 @@ The following output properties are available:
 <a href="#replicasets_csharp" style="color: inherit; text-decoration: inherit;">Replica<wbr>Sets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#replicasetresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Aad.<wbr>Outputs.<wbr>Replica<wbr>Set<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#replicasetresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Aad..<wbr>Outputs.<wbr>Replica<wbr>Set<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of ReplicaSets{{% /md %}}</dd>
     <dt class="property-"
@@ -323,7 +323,7 @@ The following output properties are available:
 <a href="#resourceforestsettings_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Forest<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceforestsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Aad.<wbr>Outputs.<wbr>Resource<wbr>Forest<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#resourceforestsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Aad..<wbr>Outputs.<wbr>Resource<wbr>Forest<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Resource Forest Settings{{% /md %}}</dd>
     <dt class="property-"
@@ -2184,7 +2184,7 @@ The following output properties are available:
 <a href="#migrationprogress_csharp" style="color: inherit; text-decoration: inherit;">Migration<wbr>Progress</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migrationprogressresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Aad.<wbr>Inputs.<wbr>Migration<wbr>Progress<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#migrationprogressresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Aad..<wbr>Inputs.<wbr>Migration<wbr>Progress<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Migration Progress{{% /md %}}</dd>
     <dt class="property-required"
@@ -2480,7 +2480,7 @@ The following output properties are available:
 <a href="#healthalerts_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>Alerts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healthalertresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Aad.<wbr>Inputs.<wbr>Health<wbr>Alert<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#healthalertresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Aad..<wbr>Inputs.<wbr>Health<wbr>Alert<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of Domain Health Alerts{{% /md %}}</dd>
     <dt class="property-required"
@@ -2498,7 +2498,7 @@ The following output properties are available:
 <a href="#healthmonitors_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>Monitors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healthmonitorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Aad.<wbr>Inputs.<wbr>Health<wbr>Monitor<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#healthmonitorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Aad..<wbr>Inputs.<wbr>Health<wbr>Monitor<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of Domain Health Monitors{{% /md %}}</dd>
     <dt class="property-required"
@@ -2862,7 +2862,7 @@ The following output properties are available:
 <a href="#settings_csharp" style="color: inherit; text-decoration: inherit;">Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#foresttrustresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Aad.<wbr>Inputs.<wbr>Forest<wbr>Trust<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#foresttrustresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Aad..<wbr>Inputs.<wbr>Forest<wbr>Trust<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of settings for Resource Forest{{% /md %}}</dd>
 </dl>

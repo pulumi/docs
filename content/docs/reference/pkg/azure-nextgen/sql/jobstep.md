@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.sql.JobStep resource with exampl
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 A job step.
+API Version: 2020-08-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,16 +27,16 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var jobStep = new AzureNextGen.Sql.V20200801Preview.JobStep("jobStep", new AzureNextGen.Sql.V20200801Preview.JobStepArgs
+        var jobStep = new AzureNextGen.Sql..JobStep("jobStep", new AzureNextGen.Sql..JobStepArgs
         {
-            Action = new AzureNextGen.Sql.V20200801Preview.Inputs.JobStepActionArgs
+            Action = new AzureNextGen.Sql..Inputs.JobStepActionArgs
             {
                 Source = "Inline",
                 Type = "TSql",
                 Value = "select 2",
             },
             Credential = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/group1/providers/Microsoft.Sql/servers/server1/jobAgents/agent1/credentials/cred1",
-            ExecutionOptions = new AzureNextGen.Sql.V20200801Preview.Inputs.JobStepExecutionOptionsArgs
+            ExecutionOptions = new AzureNextGen.Sql..Inputs.JobStepExecutionOptionsArgs
             {
                 InitialRetryIntervalSeconds = 11,
                 MaximumRetryIntervalSeconds = 222,
@@ -45,7 +46,7 @@ class MyStack : Stack
             },
             JobAgentName = "agent1",
             JobName = "job1",
-            Output = new AzureNextGen.Sql.V20200801Preview.Inputs.JobStepOutputArgs
+            Output = new AzureNextGen.Sql..Inputs.JobStepOutputArgs
             {
                 Credential = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/group1/providers/Microsoft.Sql/servers/server1/jobAgents/agent1/credentials/cred0",
                 DatabaseName = "database3",
@@ -76,7 +77,7 @@ class MyStack : Stack
 package main
 
 import (
-	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql/v20200801preview"
+	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -131,14 +132,14 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-job_step = azure_nextgen.sql.v20200801preview.JobStep("jobStep",
-    action=azure_nextgen.sql.v20200801preview.JobStepActionArgs(
+job_step = azure_nextgen.sql.JobStep("jobStep",
+    action=azure_nextgen.sql.JobStepActionArgs(
         source="Inline",
         type="TSql",
         value="select 2",
     ),
     credential="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/group1/providers/Microsoft.Sql/servers/server1/jobAgents/agent1/credentials/cred1",
-    execution_options=azure_nextgen.sql.v20200801preview.JobStepExecutionOptionsArgs(
+    execution_options=azure_nextgen.sql.JobStepExecutionOptionsArgs(
         initial_retry_interval_seconds=11,
         maximum_retry_interval_seconds=222,
         retry_attempts=42,
@@ -147,7 +148,7 @@ job_step = azure_nextgen.sql.v20200801preview.JobStep("jobStep",
     ),
     job_agent_name="agent1",
     job_name="job1",
-    output=azure_nextgen.sql.v20200801preview.JobStepOutputArgs(
+    output=azure_nextgen.sql.JobStepOutputArgs(
         credential="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/group1/providers/Microsoft.Sql/servers/server1/jobAgents/agent1/credentials/cred0",
         database_name="database3",
         resource_group_name="group3",
@@ -173,7 +174,7 @@ job_step = azure_nextgen.sql.v20200801preview.JobStep("jobStep",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const jobStep = new azure_nextgen.sql.v20200801preview.JobStep("jobStep", {
+const jobStep = new azure_nextgen.sql.JobStep("jobStep", {
     action: {
         source: "Inline",
         type: "TSql",
@@ -220,9 +221,9 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var jobStep = new AzureNextGen.Sql.V20200801Preview.JobStep("jobStep", new AzureNextGen.Sql.V20200801Preview.JobStepArgs
+        var jobStep = new AzureNextGen.Sql..JobStep("jobStep", new AzureNextGen.Sql..JobStepArgs
         {
-            Action = new AzureNextGen.Sql.V20200801Preview.Inputs.JobStepActionArgs
+            Action = new AzureNextGen.Sql..Inputs.JobStepActionArgs
             {
                 Value = "select 1",
             },
@@ -248,7 +249,7 @@ class MyStack : Stack
 package main
 
 import (
-	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql/v20200801preview"
+	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -283,8 +284,8 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-job_step = azure_nextgen.sql.v20200801preview.JobStep("jobStep",
-    action=azure_nextgen.sql.v20200801preview.JobStepActionArgs(
+job_step = azure_nextgen.sql.JobStep("jobStep",
+    action=azure_nextgen.sql.JobStepActionArgs(
         value="select 1",
     ),
     credential="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/group1/providers/Microsoft.Sql/servers/server1/jobAgents/agent1/credentials/cred0",
@@ -305,7 +306,7 @@ job_step = azure_nextgen.sql.v20200801preview.JobStep("jobStep",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const jobStep = new azure_nextgen.sql.v20200801preview.JobStep("jobStep", {
+const jobStep = new azure_nextgen.sql.JobStep("jobStep", {
     action: {
         value: "select 1",
     },
@@ -511,7 +512,7 @@ The JobStep resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#action_csharp" style="color: inherit; text-decoration: inherit;">Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobstepaction">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql.<wbr>Inputs.<wbr>Job<wbr>Step<wbr>Action<wbr>Args</a></span>
+        <span class="property-type"><a href="#jobstepaction">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql..<wbr>Inputs.<wbr>Job<wbr>Step<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The action payload of the job step.{{% /md %}}</dd>
     <dt class="property-required"
@@ -583,7 +584,7 @@ The JobStep resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#executionoptions_csharp" style="color: inherit; text-decoration: inherit;">Execution<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobstepexecutionoptions">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql.<wbr>Inputs.<wbr>Job<wbr>Step<wbr>Execution<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#jobstepexecutionoptions">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql..<wbr>Inputs.<wbr>Job<wbr>Step<wbr>Execution<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Execution options for the job step.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -592,7 +593,7 @@ The JobStep resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#output_csharp" style="color: inherit; text-decoration: inherit;">Output</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobstepoutput">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql.<wbr>Inputs.<wbr>Job<wbr>Step<wbr>Output<wbr>Args</a></span>
+        <span class="property-type"><a href="#jobstepoutput">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql..<wbr>Inputs.<wbr>Job<wbr>Step<wbr>Output<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Output destination properties of the job step.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1091,7 +1092,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_csharp" style="color: inherit; text-decoration: inherit;">Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#jobstepactionsource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql.<wbr>Job<wbr>Step<wbr>Action<wbr>Source</a></span>
+        <span class="property-type">string | <a href="#jobstepactionsource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql..<wbr>Job<wbr>Step<wbr>Action<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}The source of the action to execute.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1100,7 +1101,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#jobstepactiontype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql.<wbr>Job<wbr>Step<wbr>Action<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#jobstepactiontype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql..<wbr>Job<wbr>Step<wbr>Action<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of action being executed by the job step.{{% /md %}}</dd>
 </dl>
@@ -1885,7 +1886,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#jobstepoutputtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql.<wbr>Job<wbr>Step<wbr>Output<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#jobstepoutputtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql..<wbr>Job<wbr>Step<wbr>Output<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The output destination type.{{% /md %}}</dd>
 </dl>
@@ -2474,7 +2475,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:sql/v20200801preview:JobStep step1 /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/group1/providers/Microsoft.Sql/servers/server1/jobAgents/agent1/jobs/job1/steps/step1 
+$ pulumi import azure-nextgen:sql:JobStep step1 /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/group1/providers/Microsoft.Sql/servers/server1/jobAgents/agent1/jobs/job1/steps/step1 
 ```
 
 

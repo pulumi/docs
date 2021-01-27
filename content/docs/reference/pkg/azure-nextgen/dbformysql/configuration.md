@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.dbformysql.Configuration resourc
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Represents a Configuration.
-Latest API Version: 2017-12-01.
+API Version: 2017-12-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var configuration = new AzureNextGen.DBforMySQL.Latest.Configuration("configuration", new AzureNextGen.DBforMySQL.Latest.ConfigurationArgs
+        var configuration = new AzureNextGen.DBforMySQL..Configuration("configuration", new AzureNextGen.DBforMySQL..ConfigurationArgs
         {
             ConfigurationName = "event_scheduler",
             ResourceGroupName = "TestGroup",
@@ -49,7 +49,7 @@ class MyStack : Stack
 package main
 
 import (
-	dbformysql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/dbformysql/latest"
+	dbformysql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/dbformysql"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -79,7 +79,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-configuration = azure_nextgen.dbformysql.latest.Configuration("configuration",
+configuration = azure_nextgen.dbformysql.Configuration("configuration",
     configuration_name="event_scheduler",
     resource_group_name="TestGroup",
     server_name="testserver",
@@ -96,7 +96,7 @@ configuration = azure_nextgen.dbformysql.latest.Configuration("configuration",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const configuration = new azure_nextgen.dbformysql.latest.Configuration("configuration", {
+const configuration = new azure_nextgen.dbformysql.Configuration("configuration", {
     configurationName: "event_scheduler",
     resourceGroupName: "TestGroup",
     serverName: "testserver",
@@ -786,7 +786,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:dbformysql/latest:Configuration event_scheduler /subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/TestGroup/providers/Microsoft.DBforMySQL/servers/testserver/configurations/event_scheduler 
+$ pulumi import azure-nextgen:dbformysql:Configuration event_scheduler /subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/TestGroup/providers/Microsoft.DBforMySQL/servers/testserver/configurations/event_scheduler 
 ```
 
 

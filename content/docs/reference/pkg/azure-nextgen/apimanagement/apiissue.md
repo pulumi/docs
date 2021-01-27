@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.apimanagement.ApiIssue resource 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Issue Contract details.
-Latest API Version: 2019-12-01.
+API Version: 2019-12-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var apiIssue = new AzureNextGen.ApiManagement.Latest.ApiIssue("apiIssue", new AzureNextGen.ApiManagement.Latest.ApiIssueArgs
+        var apiIssue = new AzureNextGen.ApiManagement..ApiIssue("apiIssue", new AzureNextGen.ApiManagement..ApiIssueArgs
         {
             ApiId = "57d1f7558aa04f15146d9d8a",
             CreatedDate = "2018-02-01T22:21:20.467Z",
@@ -53,7 +53,7 @@ class MyStack : Stack
 package main
 
 import (
-	apimanagement "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/apimanagement/latest"
+	apimanagement "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/apimanagement"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -87,7 +87,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-api_issue = azure_nextgen.apimanagement.latest.ApiIssue("apiIssue",
+api_issue = azure_nextgen.apimanagement.ApiIssue("apiIssue",
     api_id="57d1f7558aa04f15146d9d8a",
     created_date="2018-02-01T22:21:20.467Z",
     description="New API issue description",
@@ -108,7 +108,7 @@ api_issue = azure_nextgen.apimanagement.latest.ApiIssue("apiIssue",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const apiIssue = new azure_nextgen.apimanagement.latest.ApiIssue("apiIssue", {
+const apiIssue = new azure_nextgen.apimanagement.ApiIssue("apiIssue", {
     apiId: "57d1f7558aa04f15146d9d8a",
     createdDate: "2018-02-01T22:21:20.467Z",
     description: "New API issue description",
@@ -385,7 +385,7 @@ The ApiIssue resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#state">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management.<wbr>State</a></span>
+        <span class="property-type">string | <a href="#state">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management..<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}Status of the issue.{{% /md %}}</dd>
 </dl>
@@ -868,7 +868,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:apimanagement/latest:ApiIssue 57d2ef278aa04f0ad01d6cdc /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/apis/57d1f7558aa04f15146d9d8a/issues/57d2ef278aa04f0ad01d6cdc 
+$ pulumi import azure-nextgen:apimanagement:ApiIssue 57d2ef278aa04f0ad01d6cdc /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/apis/57d1f7558aa04f15146d9d8a/issues/57d2ef278aa04f0ad01d6cdc 
 ```
 
 

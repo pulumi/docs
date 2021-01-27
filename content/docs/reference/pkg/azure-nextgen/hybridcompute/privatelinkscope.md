@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.hybridcompute.PrivateLinkScope r
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 An Azure Arc PrivateLinkScope definition.
+API Version: 2020-08-15-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var privateLinkScope = new AzureNextGen.HybridCompute.V20200815Preview.PrivateLinkScope("privateLinkScope", new AzureNextGen.HybridCompute.V20200815Preview.PrivateLinkScopeArgs
+        var privateLinkScope = new AzureNextGen.HybridCompute..PrivateLinkScope("privateLinkScope", new AzureNextGen.HybridCompute..PrivateLinkScopeArgs
         {
             Location = "westus",
             ResourceGroupName = "my-resource-group",
@@ -46,7 +47,7 @@ class MyStack : Stack
 package main
 
 import (
-	hybridcompute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/hybridcompute/v20200815preview"
+	hybridcompute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/hybridcompute"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -74,7 +75,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-private_link_scope = azure_nextgen.hybridcompute.v20200815preview.PrivateLinkScope("privateLinkScope",
+private_link_scope = azure_nextgen.hybridcompute.PrivateLinkScope("privateLinkScope",
     location="westus",
     resource_group_name="my-resource-group",
     scope_name="my-privatelinkscope")
@@ -89,7 +90,7 @@ private_link_scope = azure_nextgen.hybridcompute.v20200815preview.PrivateLinkSco
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const privateLinkScope = new azure_nextgen.hybridcompute.v20200815preview.PrivateLinkScope("privateLinkScope", {
+const privateLinkScope = new azure_nextgen.hybridcompute.PrivateLinkScope("privateLinkScope", {
     location: "westus",
     resourceGroupName: "my-resource-group",
     scopeName: "my-privatelinkscope",
@@ -109,7 +110,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var privateLinkScope = new AzureNextGen.HybridCompute.V20200815Preview.PrivateLinkScope("privateLinkScope", new AzureNextGen.HybridCompute.V20200815Preview.PrivateLinkScopeArgs
+        var privateLinkScope = new AzureNextGen.HybridCompute..PrivateLinkScope("privateLinkScope", new AzureNextGen.HybridCompute..PrivateLinkScopeArgs
         {
             Location = "westus",
             ResourceGroupName = "my-resource-group",
@@ -133,7 +134,7 @@ class MyStack : Stack
 package main
 
 import (
-	hybridcompute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/hybridcompute/v20200815preview"
+	hybridcompute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/hybridcompute"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -164,7 +165,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-private_link_scope = azure_nextgen.hybridcompute.v20200815preview.PrivateLinkScope("privateLinkScope",
+private_link_scope = azure_nextgen.hybridcompute.PrivateLinkScope("privateLinkScope",
     location="westus",
     resource_group_name="my-resource-group",
     scope_name="my-privatelinkscope",
@@ -182,7 +183,7 @@ private_link_scope = azure_nextgen.hybridcompute.v20200815preview.PrivateLinkSco
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const privateLinkScope = new azure_nextgen.hybridcompute.v20200815preview.PrivateLinkScope("privateLinkScope", {
+const privateLinkScope = new azure_nextgen.hybridcompute.PrivateLinkScope("privateLinkScope", {
     location: "westus",
     resourceGroupName: "my-resource-group",
     scopeName: "my-privatelinkscope",
@@ -411,7 +412,7 @@ The PrivateLinkScope resource accepts the following [input]({{< relref "/docs/in
 <a href="#publicnetworkaccess_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Network<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#publicnetworkaccesstype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Compute.<wbr>Public<wbr>Network<wbr>Access<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#publicnetworkaccesstype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Compute..<wbr>Public<wbr>Network<wbr>Access<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether machines associated with the private link scope can also use public Azure Arc service endpoints.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -613,7 +614,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privateendpointconnections_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint<wbr>Connections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointconnectionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Compute.<wbr>Outputs.<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#privateendpointconnectionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Compute..<wbr>Outputs.<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of private endpoint connections.{{% /md %}}</dd>
     <dt class="property-"
@@ -847,7 +848,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privateendpoint_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointpropertyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Compute.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Property<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#privateendpointpropertyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Compute..<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Property<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Private endpoint which the connection belongs to.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -856,7 +857,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privatelinkserviceconnectionstate_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkserviceconnectionstatepropertyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Compute.<wbr>Inputs.<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Property<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#privatelinkserviceconnectionstatepropertyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Compute..<wbr>Inputs.<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Property<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Connection state of the private endpoint connection.{{% /md %}}</dd>
 </dl>
@@ -1281,7 +1282,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:hybridcompute/v20200815preview:PrivateLinkScope my-privatelinkscope /subscriptions/86dc51d3-92ed-4d7e-947a-775ea79b4919/resourceGroups/my-resource-group/providers/microsoft.hybridCompute/privateLinkScopes/my-privatelinkscope 
+$ pulumi import azure-nextgen:hybridcompute:PrivateLinkScope my-privatelinkscope /subscriptions/86dc51d3-92ed-4d7e-947a-775ea79b4919/resourceGroups/my-resource-group/providers/microsoft.hybridCompute/privateLinkScopes/my-privatelinkscope 
 ```
 
 

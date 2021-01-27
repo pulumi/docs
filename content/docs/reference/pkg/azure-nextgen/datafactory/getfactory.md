@@ -224,7 +224,7 @@ The following output properties are available:
 <a href="#encryption_csharp" style="color: inherit; text-decoration: inherit;">Encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Encryption<wbr>Configuration<wbr>Response</a></span>
+        <span class="property-type"><a href="#encryptionconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Outputs.<wbr>Encryption<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Properties to enable Customer Managed Key for the factory.{{% /md %}}</dd>
     <dt class="property-"
@@ -233,7 +233,7 @@ The following output properties are available:
 <a href="#globalparameters_csharp" style="color: inherit; text-decoration: inherit;">Global<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Global<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Outputs.<wbr>Global<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
     </dt>
     <dd>{{% md %}}List of parameters for factory.{{% /md %}}</dd>
     <dt class="property-"
@@ -242,7 +242,7 @@ The following output properties are available:
 <a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#factoryidentityresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Factory<wbr>Identity<wbr>Response</a></span>
+        <span class="property-type"><a href="#factoryidentityresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Outputs.<wbr>Factory<wbr>Identity<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Managed service identity of the factory.{{% /md %}}</dd>
     <dt class="property-"
@@ -269,7 +269,7 @@ The following output properties are available:
 <a href="#repoconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Repo<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#factorygithubconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Factory<wbr>Git<wbr>Hub<wbr>Configuration<wbr>Response</a> | <a href="#factoryvstsconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Factory<wbr>VSTSConfiguration<wbr>Response</a></span>
+        <span class="property-type"><a href="#factorygithubconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Outputs.<wbr>Factory<wbr>Git<wbr>Hub<wbr>Configuration<wbr>Response</a> | <a href="#factoryvstsconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Outputs.<wbr>Factory<wbr>VSTSConfiguration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Git repo information of the factory.{{% /md %}}</dd>
     <dt class="property-"
@@ -787,7 +787,7 @@ The following output properties are available:
 <a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cmkidentitydefinitionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>CMKIdentity<wbr>Definition<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#cmkidentitydefinitionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>CMKIdentity<wbr>Definition<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}User assigned identity to use to authenticate to customer's key vault. If not provided Managed Service Identity will be used.{{% /md %}}</dd>
     <dt class="property-optional"

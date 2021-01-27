@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.notificationhubs.NotificationHub
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Description of a NotificationHub Resource.
-Latest API Version: 2017-04-01.
+API Version: 2017-04-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var notificationHub = new AzureNextGen.NotificationHubs.Latest.NotificationHub("notificationHub", new AzureNextGen.NotificationHubs.Latest.NotificationHubArgs
+        var notificationHub = new AzureNextGen.NotificationHubs..NotificationHub("notificationHub", new AzureNextGen.NotificationHubs..NotificationHubArgs
         {
             Location = "eastus",
             NamespaceName = "nh-sdk-ns",
@@ -48,7 +48,7 @@ class MyStack : Stack
 package main
 
 import (
-	notificationhubs "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/notificationhubs/latest"
+	notificationhubs "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/notificationhubs"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -77,7 +77,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-notification_hub = azure_nextgen.notificationhubs.latest.NotificationHub("notificationHub",
+notification_hub = azure_nextgen.notificationhubs.NotificationHub("notificationHub",
     location="eastus",
     namespace_name="nh-sdk-ns",
     notification_hub_name="nh-sdk-hub",
@@ -93,7 +93,7 @@ notification_hub = azure_nextgen.notificationhubs.latest.NotificationHub("notifi
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const notificationHub = new azure_nextgen.notificationhubs.latest.NotificationHub("notificationHub", {
+const notificationHub = new azure_nextgen.notificationhubs.NotificationHub("notificationHub", {
     location: "eastus",
     namespaceName: "nh-sdk-ns",
     notificationHubName: "nh-sdk-hub",
@@ -320,7 +320,7 @@ The NotificationHub resource accepts the following [input]({{< relref "/docs/int
 <a href="#admcredential_csharp" style="color: inherit; text-decoration: inherit;">Adm<wbr>Credential</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#admcredential">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Notification<wbr>Hubs.<wbr>Inputs.<wbr>Adm<wbr>Credential<wbr>Args</a></span>
+        <span class="property-type"><a href="#admcredential">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Notification<wbr>Hubs..<wbr>Inputs.<wbr>Adm<wbr>Credential<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The AdmCredential of the created NotificationHub{{% /md %}}</dd>
     <dt class="property-optional"
@@ -329,7 +329,7 @@ The NotificationHub resource accepts the following [input]({{< relref "/docs/int
 <a href="#apnscredential_csharp" style="color: inherit; text-decoration: inherit;">Apns<wbr>Credential</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apnscredential">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Notification<wbr>Hubs.<wbr>Inputs.<wbr>Apns<wbr>Credential<wbr>Args</a></span>
+        <span class="property-type"><a href="#apnscredential">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Notification<wbr>Hubs..<wbr>Inputs.<wbr>Apns<wbr>Credential<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The ApnsCredential of the created NotificationHub{{% /md %}}</dd>
     <dt class="property-optional"
@@ -338,7 +338,7 @@ The NotificationHub resource accepts the following [input]({{< relref "/docs/int
 <a href="#authorizationrules_csharp" style="color: inherit; text-decoration: inherit;">Authorization<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sharedaccessauthorizationruleproperties">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Notification<wbr>Hubs.<wbr>Inputs.<wbr>Shared<wbr>Access<wbr>Authorization<wbr>Rule<wbr>Properties<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#sharedaccessauthorizationruleproperties">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Notification<wbr>Hubs..<wbr>Inputs.<wbr>Shared<wbr>Access<wbr>Authorization<wbr>Rule<wbr>Properties<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The AuthorizationRules of the created NotificationHub{{% /md %}}</dd>
     <dt class="property-optional"
@@ -347,7 +347,7 @@ The NotificationHub resource accepts the following [input]({{< relref "/docs/int
 <a href="#baiducredential_csharp" style="color: inherit; text-decoration: inherit;">Baidu<wbr>Credential</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#baiducredential">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Notification<wbr>Hubs.<wbr>Inputs.<wbr>Baidu<wbr>Credential<wbr>Args</a></span>
+        <span class="property-type"><a href="#baiducredential">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Notification<wbr>Hubs..<wbr>Inputs.<wbr>Baidu<wbr>Credential<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The BaiduCredential of the created NotificationHub{{% /md %}}</dd>
     <dt class="property-optional"
@@ -356,7 +356,7 @@ The NotificationHub resource accepts the following [input]({{< relref "/docs/int
 <a href="#gcmcredential_csharp" style="color: inherit; text-decoration: inherit;">Gcm<wbr>Credential</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gcmcredential">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Notification<wbr>Hubs.<wbr>Inputs.<wbr>Gcm<wbr>Credential<wbr>Args</a></span>
+        <span class="property-type"><a href="#gcmcredential">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Notification<wbr>Hubs..<wbr>Inputs.<wbr>Gcm<wbr>Credential<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The GcmCredential of the created NotificationHub{{% /md %}}</dd>
     <dt class="property-optional"
@@ -374,7 +374,7 @@ The NotificationHub resource accepts the following [input]({{< relref "/docs/int
 <a href="#mpnscredential_csharp" style="color: inherit; text-decoration: inherit;">Mpns<wbr>Credential</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mpnscredential">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Notification<wbr>Hubs.<wbr>Inputs.<wbr>Mpns<wbr>Credential<wbr>Args</a></span>
+        <span class="property-type"><a href="#mpnscredential">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Notification<wbr>Hubs..<wbr>Inputs.<wbr>Mpns<wbr>Credential<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The MpnsCredential of the created NotificationHub{{% /md %}}</dd>
     <dt class="property-optional"
@@ -401,7 +401,7 @@ The NotificationHub resource accepts the following [input]({{< relref "/docs/int
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sku">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Notification<wbr>Hubs.<wbr>Inputs.<wbr>Sku<wbr>Args</a></span>
+        <span class="property-type"><a href="#sku">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Notification<wbr>Hubs..<wbr>Inputs.<wbr>Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The sku of the created namespace{{% /md %}}</dd>
     <dt class="property-optional"
@@ -419,7 +419,7 @@ The NotificationHub resource accepts the following [input]({{< relref "/docs/int
 <a href="#wnscredential_csharp" style="color: inherit; text-decoration: inherit;">Wns<wbr>Credential</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#wnscredential">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Notification<wbr>Hubs.<wbr>Inputs.<wbr>Wns<wbr>Credential<wbr>Args</a></span>
+        <span class="property-type"><a href="#wnscredential">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Notification<wbr>Hubs..<wbr>Inputs.<wbr>Wns<wbr>Credential<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The WnsCredential of the created NotificationHub{{% /md %}}</dd>
 </dl>
@@ -2646,7 +2646,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rights_csharp" style="color: inherit; text-decoration: inherit;">Rights</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accessrights">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Notification<wbr>Hubs.<wbr>Access<wbr>Rights&gt;</a></span>
+        <span class="property-type"><a href="#accessrights">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Notification<wbr>Hubs..<wbr>Access<wbr>Rights&gt;</a></span>
     </dt>
     <dd>{{% md %}}The rights associated with the rule.{{% /md %}}</dd>
 </dl>
@@ -3058,7 +3058,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#skuname">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Notification<wbr>Hubs.<wbr>Sku<wbr>Name</a></span>
+        <span class="property-type">string | <a href="#skuname">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Notification<wbr>Hubs..<wbr>Sku<wbr>Name</a></span>
     </dt>
     <dd>{{% md %}}Name of the notification hub sku{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3778,7 +3778,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:notificationhubs/latest:NotificationHub nh-sdk-hub /subscriptions/29cfa613-cbbc-4512-b1d6-1b3a92c7fa40/resourceGroups/sdkresourceGroup/providers/Microsoft.NotificationHubs/namespaces/nh-sdk-ns/notificationHubs/nh-sdk-hub 
+$ pulumi import azure-nextgen:notificationhubs:NotificationHub nh-sdk-hub /subscriptions/29cfa613-cbbc-4512-b1d6-1b3a92c7fa40/resourceGroups/sdkresourceGroup/providers/Microsoft.NotificationHubs/namespaces/nh-sdk-ns/notificationHubs/nh-sdk-hub 
 ```
 
 

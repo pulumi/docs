@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.peering.RegisteredAsn resource w
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The customer's ASN that is registered by the peering service provider.
-Latest API Version: 2020-10-01.
+API Version: 2020-10-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var registeredAsn = new AzureNextGen.Peering.Latest.RegisteredAsn("registeredAsn", new AzureNextGen.Peering.Latest.RegisteredAsnArgs
+        var registeredAsn = new AzureNextGen.Peering..RegisteredAsn("registeredAsn", new AzureNextGen.Peering..RegisteredAsnArgs
         {
             Asn = 65000,
             PeeringName = "peeringName",
@@ -48,7 +48,7 @@ class MyStack : Stack
 package main
 
 import (
-	peering "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/peering/latest"
+	peering "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/peering"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -77,7 +77,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-registered_asn = azure_nextgen.peering.latest.RegisteredAsn("registeredAsn",
+registered_asn = azure_nextgen.peering.RegisteredAsn("registeredAsn",
     asn=65000,
     peering_name="peeringName",
     registered_asn_name="registeredAsnName",
@@ -93,7 +93,7 @@ registered_asn = azure_nextgen.peering.latest.RegisteredAsn("registeredAsn",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const registeredAsn = new azure_nextgen.peering.latest.RegisteredAsn("registeredAsn", {
+const registeredAsn = new azure_nextgen.peering.RegisteredAsn("registeredAsn", {
     asn: 65000,
     peeringName: "peeringName",
     registeredAsnName: "registeredAsnName",
@@ -674,7 +674,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:peering/latest:RegisteredAsn registeredAsnName /subscriptions/subId/resourceGroups/rgName/providers/Microsoft.Peering/peerings/peeringName/registeredAsns/registeredAsnName 
+$ pulumi import azure-nextgen:peering:RegisteredAsn registeredAsnName /subscriptions/subId/resourceGroups/rgName/providers/Microsoft.Peering/peerings/peeringName/registeredAsns/registeredAsnName 
 ```
 
 

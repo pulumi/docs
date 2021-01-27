@@ -161,7 +161,7 @@ The following output properties are available:
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Portal.<wbr>Outputs.<wbr>User<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#userpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Portal..<wbr>Outputs.<wbr>User<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The cloud shell user settings properties.{{% /md %}}</dd>
 </dl>
@@ -503,7 +503,7 @@ The following output properties are available:
 <a href="#storageprofile_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageprofileresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Portal.<wbr>Inputs.<wbr>Storage<wbr>Profile<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#storageprofileresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Portal..<wbr>Inputs.<wbr>Storage<wbr>Profile<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The storage profile of the user settings.{{% /md %}}</dd>
     <dt class="property-required"
@@ -512,7 +512,7 @@ The following output properties are available:
 <a href="#terminalsettings_csharp" style="color: inherit; text-decoration: inherit;">Terminal<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#terminalsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Portal.<wbr>Inputs.<wbr>Terminal<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#terminalsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Portal..<wbr>Inputs.<wbr>Terminal<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings for terminal appearance.{{% /md %}}</dd>
 </dl>

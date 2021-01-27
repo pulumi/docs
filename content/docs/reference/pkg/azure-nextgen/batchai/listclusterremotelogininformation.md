@@ -204,7 +204,7 @@ The following output properties are available:
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#remotelogininformationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI.<wbr>Outputs.<wbr>Remote<wbr>Login<wbr>Information<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#remotelogininformationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI..<wbr>Outputs.<wbr>Remote<wbr>Login<wbr>Information<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The collection of returned remote login details.{{% /md %}}</dd>
 </dl>

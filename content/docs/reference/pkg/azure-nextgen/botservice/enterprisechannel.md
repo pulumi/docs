@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.botservice.EnterpriseChannel res
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Enterprise Channel resource definition
-Latest API Version: 2018-07-12.
+API Version: 2018-07-12.
 
 {{% examples %}}
 ## Example Usage
@@ -27,15 +27,15 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var enterpriseChannel = new AzureNextGen.BotService.Latest.EnterpriseChannel("enterpriseChannel", new AzureNextGen.BotService.Latest.EnterpriseChannelArgs
+        var enterpriseChannel = new AzureNextGen.BotService..EnterpriseChannel("enterpriseChannel", new AzureNextGen.BotService..EnterpriseChannelArgs
         {
             Etag = "etag1",
             Location = "West US",
-            Properties = new AzureNextGen.BotService.Latest.Inputs.EnterpriseChannelPropertiesArgs
+            Properties = new AzureNextGen.BotService..Inputs.EnterpriseChannelPropertiesArgs
             {
                 Nodes = 
                 {
-                    new AzureNextGen.BotService.Latest.Inputs.EnterpriseChannelNodeArgs
+                    new AzureNextGen.BotService..Inputs.EnterpriseChannelNodeArgs
                     {
                         AzureLocation = "WestUs",
                         AzureSku = "Int1",
@@ -45,7 +45,7 @@ class MyStack : Stack
             },
             ResourceGroupName = "OneResourceGroupName",
             ResourceName = "contoso-dl",
-            Sku = new AzureNextGen.BotService.Latest.Inputs.SkuArgs
+            Sku = new AzureNextGen.BotService..Inputs.SkuArgs
             {
                 Name = "S1",
             },
@@ -69,7 +69,7 @@ class MyStack : Stack
 package main
 
 import (
-	botservice "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/botservice/latest"
+	botservice "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/botservice"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -114,11 +114,11 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-enterprise_channel = azure_nextgen.botservice.latest.EnterpriseChannel("enterpriseChannel",
+enterprise_channel = azure_nextgen.botservice.EnterpriseChannel("enterpriseChannel",
     etag="etag1",
     location="West US",
-    properties=azure_nextgen.botservice.latest.EnterpriseChannelPropertiesArgs(
-        nodes=[azure_nextgen.botservice.latest.EnterpriseChannelNodeArgs(
+    properties=azure_nextgen.botservice.EnterpriseChannelPropertiesArgs(
+        nodes=[azure_nextgen.botservice.EnterpriseChannelNodeArgs(
             azure_location="WestUs",
             azure_sku="Int1",
             name="Node 1",
@@ -126,7 +126,7 @@ enterprise_channel = azure_nextgen.botservice.latest.EnterpriseChannel("enterpri
     ),
     resource_group_name="OneResourceGroupName",
     resource_name="contoso-dl",
-    sku=azure_nextgen.botservice.latest.SkuArgs(
+    sku=azure_nextgen.botservice.SkuArgs(
         name="S1",
     ),
     tags={
@@ -144,7 +144,7 @@ enterprise_channel = azure_nextgen.botservice.latest.EnterpriseChannel("enterpri
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const enterpriseChannel = new azure_nextgen.botservice.latest.EnterpriseChannel("enterpriseChannel", {
+const enterpriseChannel = new azure_nextgen.botservice.EnterpriseChannel("enterpriseChannel", {
     etag: "etag1",
     location: "West US",
     properties: {
@@ -385,7 +385,7 @@ The EnterpriseChannel resource accepts the following [input]({{< relref "/docs/i
 <a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#kind">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service.<wbr>Kind</a></span>
+        <span class="property-type">string | <a href="#kind">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service..<wbr>Kind</a></span>
     </dt>
     <dd>{{% md %}}Required. Gets or sets the Kind of the resource.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -403,7 +403,7 @@ The EnterpriseChannel resource accepts the following [input]({{< relref "/docs/i
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#enterprisechannelproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Enterprise<wbr>Channel<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#enterprisechannelproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service..<wbr>Inputs.<wbr>Enterprise<wbr>Channel<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to an Enterprise Channel resource.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -412,7 +412,7 @@ The EnterpriseChannel resource accepts the following [input]({{< relref "/docs/i
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sku">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Sku<wbr>Args</a></span>
+        <span class="property-type"><a href="#sku">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service..<wbr>Inputs.<wbr>Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the SKU of the resource.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -848,7 +848,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#enterprisechannelnodestate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service.<wbr>Enterprise<wbr>Channel<wbr>Node<wbr>State</a></span>
+        <span class="property-type">string | <a href="#enterprisechannelnodestate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service..<wbr>Enterprise<wbr>Channel<wbr>Node<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}The current state of the Enterprise Channel Node.{{% /md %}}</dd>
 </dl>
@@ -1299,7 +1299,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nodes_csharp" style="color: inherit; text-decoration: inherit;">Nodes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#enterprisechannelnode">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Enterprise<wbr>Channel<wbr>Node<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#enterprisechannelnode">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service..<wbr>Inputs.<wbr>Enterprise<wbr>Channel<wbr>Node<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The nodes associated with the Enterprise Channel.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1308,7 +1308,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#enterprisechannelstate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service.<wbr>Enterprise<wbr>Channel<wbr>State</a></span>
+        <span class="property-type">string | <a href="#enterprisechannelstate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service..<wbr>Enterprise<wbr>Channel<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}The current state of the Enterprise Channel.{{% /md %}}</dd>
 </dl>
@@ -1397,7 +1397,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nodes_csharp" style="color: inherit; text-decoration: inherit;">Nodes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#enterprisechannelnoderesponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Enterprise<wbr>Channel<wbr>Node<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#enterprisechannelnoderesponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service..<wbr>Inputs.<wbr>Enterprise<wbr>Channel<wbr>Node<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The nodes associated with the Enterprise Channel.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1651,7 +1651,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#skuname">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service.<wbr>Sku<wbr>Name</a></span>
+        <span class="property-type">string | <a href="#skuname">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service..<wbr>Sku<wbr>Name</a></span>
     </dt>
     <dd>{{% md %}}The sku name{{% /md %}}</dd>
 </dl>
@@ -1843,7 +1843,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:botservice/latest:EnterpriseChannel myresource1 someid 
+$ pulumi import azure-nextgen:botservice:EnterpriseChannel myresource1 someid 
 ```
 
 

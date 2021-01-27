@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.operationsmanagement.ManagementC
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The container for solution.
+API Version: 2015-11-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var managementConfiguration = new AzureNextGen.OperationsManagement.V20151101Preview.ManagementConfiguration("managementConfiguration", new AzureNextGen.OperationsManagement.V20151101Preview.ManagementConfigurationArgs
+        var managementConfiguration = new AzureNextGen.OperationsManagement..ManagementConfiguration("managementConfiguration", new AzureNextGen.OperationsManagement..ManagementConfigurationArgs
         {
             Location = "East US",
             ManagementConfigurationName = "managementConfiguration1",
@@ -46,7 +47,7 @@ class MyStack : Stack
 package main
 
 import (
-	operationsmanagement "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/operationsmanagement/v20151101preview"
+	operationsmanagement "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/operationsmanagement"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -74,7 +75,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-management_configuration = azure_nextgen.operationsmanagement.v20151101preview.ManagementConfiguration("managementConfiguration",
+management_configuration = azure_nextgen.operationsmanagement.ManagementConfiguration("managementConfiguration",
     location="East US",
     management_configuration_name="managementConfiguration1",
     resource_group_name="rg1")
@@ -89,7 +90,7 @@ management_configuration = azure_nextgen.operationsmanagement.v20151101preview.M
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const managementConfiguration = new azure_nextgen.operationsmanagement.v20151101preview.ManagementConfiguration("managementConfiguration", {
+const managementConfiguration = new azure_nextgen.operationsmanagement.ManagementConfiguration("managementConfiguration", {
     location: "East US",
     managementConfigurationName: "managementConfiguration1",
     resourceGroupName: "rg1",
@@ -315,7 +316,7 @@ The ManagementConfiguration resource accepts the following [input]({{< relref "/
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementconfigurationproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Operations<wbr>Management.<wbr>Inputs.<wbr>Management<wbr>Configuration<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#managementconfigurationproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Operations<wbr>Management..<wbr>Inputs.<wbr>Management<wbr>Configuration<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties for ManagementConfiguration object supported by the OperationsManagement resource provider.{{% /md %}}</dd>
 </dl>
@@ -803,7 +804,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#armtemplateparameter">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Operations<wbr>Management.<wbr>Inputs.<wbr>Arm<wbr>Template<wbr>Parameter<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#armtemplateparameter">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Operations<wbr>Management..<wbr>Inputs.<wbr>Arm<wbr>Template<wbr>Parameter<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Parameters to run the ARM template{{% /md %}}</dd>
     <dt class="property-required"
@@ -973,7 +974,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#armtemplateparameterresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Operations<wbr>Management.<wbr>Inputs.<wbr>Arm<wbr>Template<wbr>Parameter<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#armtemplateparameterresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Operations<wbr>Management..<wbr>Inputs.<wbr>Arm<wbr>Template<wbr>Parameter<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Parameters to run the ARM template{{% /md %}}</dd>
     <dt class="property-required"
@@ -1173,7 +1174,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:operationsmanagement/v20151101preview:ManagementConfiguration managementConfiguration1 subscriptions/subid/resourcegroups/rg1/providers/Microsoft.OperationsManagement/ManagementConfigurations/managementConfiguration1 
+$ pulumi import azure-nextgen:operationsmanagement:ManagementConfiguration managementConfiguration1 subscriptions/subid/resourcegroups/rg1/providers/Microsoft.OperationsManagement/ManagementConfigurations/managementConfiguration1 
 ```
 
 

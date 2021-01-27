@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.compute.GalleryApplication resou
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Specifies information about the gallery Application Definition that you want to create or update.
-Latest API Version: 2020-09-30.
+API Version: 2020-09-30.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var galleryApplication = new AzureNextGen.Compute.Latest.GalleryApplication("galleryApplication", new AzureNextGen.Compute.Latest.GalleryApplicationArgs
+        var galleryApplication = new AzureNextGen.Compute..GalleryApplication("galleryApplication", new AzureNextGen.Compute..GalleryApplicationArgs
         {
             Description = "This is the gallery application description.",
             Eula = "This is the gallery application EULA.",
@@ -53,7 +53,7 @@ class MyStack : Stack
 package main
 
 import (
-	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute/latest"
+	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -87,7 +87,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-gallery_application = azure_nextgen.compute.latest.GalleryApplication("galleryApplication",
+gallery_application = azure_nextgen.compute.GalleryApplication("galleryApplication",
     description="This is the gallery application description.",
     eula="This is the gallery application EULA.",
     gallery_application_name="myGalleryApplicationName",
@@ -108,7 +108,7 @@ gallery_application = azure_nextgen.compute.latest.GalleryApplication("galleryAp
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const galleryApplication = new azure_nextgen.compute.latest.GalleryApplication("galleryApplication", {
+const galleryApplication = new azure_nextgen.compute.GalleryApplication("galleryApplication", {
     description: "This is the gallery application description.",
     eula: "This is the gallery application EULA.",
     galleryApplicationName: "myGalleryApplicationName",
@@ -349,7 +349,7 @@ The GalleryApplication resource accepts the following [input]({{< relref "/docs/
 <a href="#supportedostype_csharp" style="color: inherit; text-decoration: inherit;">Supported<wbr>OSType</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#operatingsystemtypes">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Operating<wbr>System<wbr>Types</a></span>
+        <span class="property-type"><a href="#operatingsystemtypes">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Operating<wbr>System<wbr>Types</a></span>
     </dt>
     <dd>{{% md %}}This property allows you to specify the supported type of the OS that application is built for. <br><br> Possible values are: <br><br> **Windows** <br><br> **Linux**{{% /md %}}</dd>
     <dt class="property-optional"
@@ -916,7 +916,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:compute/latest:GalleryApplication myGalleryApplicationName /subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/galleries/myGalleryName/applications/myGalleryApplicationName 
+$ pulumi import azure-nextgen:compute:GalleryApplication myGalleryApplicationName /subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/galleries/myGalleryName/applications/myGalleryApplicationName 
 ```
 
 

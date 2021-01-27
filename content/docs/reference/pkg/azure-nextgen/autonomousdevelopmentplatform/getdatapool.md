@@ -215,7 +215,7 @@ The following output properties are available:
 <a href="#locations_csharp" style="color: inherit; text-decoration: inherit;">Locations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datapoollocationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Autonomous<wbr>Development<wbr>Platform.<wbr>Outputs.<wbr>Data<wbr>Pool<wbr>Location<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#datapoollocationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Autonomous<wbr>Development<wbr>Platform..<wbr>Outputs.<wbr>Data<wbr>Pool<wbr>Location<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the collection of locations where Data Pool resources should be created.{{% /md %}}</dd>
     <dt class="property-"
@@ -242,7 +242,7 @@ The following output properties are available:
 <a href="#systemdata_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Autonomous<wbr>Development<wbr>Platform.<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
+        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Autonomous<wbr>Development<wbr>Platform..<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The system meta data relating to this resource.{{% /md %}}</dd>
     <dt class="property-"

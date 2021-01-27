@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.resources.ResourceGroup resource
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Resource group information.
-Latest API Version: 2020-08-01.
+API Version: 2020-08-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var resourceGroup = new AzureNextGen.Resources.Latest.ResourceGroup("resourceGroup", new AzureNextGen.Resources.Latest.ResourceGroupArgs
+        var resourceGroup = new AzureNextGen.Resources..ResourceGroup("resourceGroup", new AzureNextGen.Resources..ResourceGroupArgs
         {
             Location = "eastus",
             ResourceGroupName = "my-resource-group",
@@ -46,7 +46,7 @@ class MyStack : Stack
 package main
 
 import (
-	resources "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/resources/latest"
+	resources "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/resources"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -73,7 +73,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-resource_group = azure_nextgen.resources.latest.ResourceGroup("resourceGroup",
+resource_group = azure_nextgen.resources.ResourceGroup("resourceGroup",
     location="eastus",
     resource_group_name="my-resource-group")
 
@@ -87,7 +87,7 @@ resource_group = azure_nextgen.resources.latest.ResourceGroup("resourceGroup",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const resourceGroup = new azure_nextgen.resources.latest.ResourceGroup("resourceGroup", {
+const resourceGroup = new azure_nextgen.resources.ResourceGroup("resourceGroup", {
     location: "eastus",
     resourceGroupName: "my-resource-group",
 });
@@ -478,7 +478,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcegrouppropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Resources.<wbr>Outputs.<wbr>Resource<wbr>Group<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#resourcegrouppropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Resources..<wbr>Outputs.<wbr>Resource<wbr>Group<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The resource group properties.{{% /md %}}</dd>
     <dt class="property-"
@@ -696,7 +696,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:resources/latest:ResourceGroup my-resource-group /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/my-resource-group 
+$ pulumi import azure-nextgen:resources:ResourceGroup my-resource-group /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/my-resource-group 
 ```
 
 

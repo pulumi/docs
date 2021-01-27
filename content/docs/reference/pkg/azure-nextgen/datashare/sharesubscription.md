@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.datashare.ShareSubscription reso
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 A share subscription data transfer object.
-Latest API Version: 2019-11-01.
+API Version: 2019-11-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var shareSubscription = new AzureNextGen.DataShare.Latest.ShareSubscription("shareSubscription", new AzureNextGen.DataShare.Latest.ShareSubscriptionArgs
+        var shareSubscription = new AzureNextGen.DataShare..ShareSubscription("shareSubscription", new AzureNextGen.DataShare..ShareSubscriptionArgs
         {
             AccountName = "Account1",
             InvitationId = "12345678-1234-1234-12345678abd",
@@ -49,7 +49,7 @@ class MyStack : Stack
 package main
 
 import (
-	datashare "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datashare/latest"
+	datashare "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datashare"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -79,7 +79,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-share_subscription = azure_nextgen.datashare.latest.ShareSubscription("shareSubscription",
+share_subscription = azure_nextgen.datashare.ShareSubscription("shareSubscription",
     account_name="Account1",
     invitation_id="12345678-1234-1234-12345678abd",
     resource_group_name="SampleResourceGroup",
@@ -96,7 +96,7 @@ share_subscription = azure_nextgen.datashare.latest.ShareSubscription("shareSubs
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const shareSubscription = new azure_nextgen.datashare.latest.ShareSubscription("shareSubscription", {
+const shareSubscription = new azure_nextgen.datashare.ShareSubscription("shareSubscription", {
     accountName: "Account1",
     invitationId: "12345678-1234-1234-12345678abd",
     resourceGroupName: "SampleResourceGroup",
@@ -1074,7 +1074,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:datashare/latest:ShareSubscription ShareSubscription1 /subscriptions/433a8dfd-e5d5-4e77-ad86-90acdc75eb1a/resourceGroups/SampleResourceGroup/providers/Microsoft.DataShare/accounts/Account1/sharesubscriptions/ShareSubscription1 
+$ pulumi import azure-nextgen:datashare:ShareSubscription ShareSubscription1 /subscriptions/433a8dfd-e5d5-4e77-ad86-90acdc75eb1a/resourceGroups/SampleResourceGroup/providers/Microsoft.DataShare/accounts/Account1/sharesubscriptions/ShareSubscription1 
 ```
 
 

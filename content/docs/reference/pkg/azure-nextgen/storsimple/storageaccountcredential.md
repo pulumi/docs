@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.storsimple.StorageAccountCredent
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The storage account credential.
-Latest API Version: 2017-06-01.
+API Version: 2017-06-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,9 +27,9 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var storageAccountCredential = new AzureNextGen.StorSimple.Latest.StorageAccountCredential("storageAccountCredential", new AzureNextGen.StorSimple.Latest.StorageAccountCredentialArgs
+        var storageAccountCredential = new AzureNextGen.StorSimple..StorageAccountCredential("storageAccountCredential", new AzureNextGen.StorSimple..StorageAccountCredentialArgs
         {
-            AccessKey = new AzureNextGen.StorSimple.Latest.Inputs.AsymmetricEncryptedSecretArgs
+            AccessKey = new AzureNextGen.StorSimple..Inputs.AsymmetricEncryptedSecretArgs
             {
                 EncryptionAlgorithm = "RSAES_PKCS1_v_1_5",
                 EncryptionCertThumbprint = "A872A2DF196AC7682EE24791E7DE2E2A360F5926",
@@ -55,7 +55,7 @@ class MyStack : Stack
 package main
 
 import (
-	storsimple "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/storsimple/latest"
+	storsimple "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/storsimple"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -90,8 +90,8 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-storage_account_credential = azure_nextgen.storsimple.latest.StorageAccountCredential("storageAccountCredential",
-    access_key=azure_nextgen.storsimple.latest.AsymmetricEncryptedSecretArgs(
+storage_account_credential = azure_nextgen.storsimple.StorageAccountCredential("storageAccountCredential",
+    access_key=azure_nextgen.storsimple.AsymmetricEncryptedSecretArgs(
         encryption_algorithm="RSAES_PKCS1_v_1_5",
         encryption_cert_thumbprint="A872A2DF196AC7682EE24791E7DE2E2A360F5926",
         value="ATuJSkmrFk4h8r1jrZ4nd3nthLSddcguEO5QLO/NECUtTuB9kL4dNv3/jC4WOvFkeVr3x1UvfhlIeMmJBF1SMr6hR1JzD0xNU/TtQqUeXN7V3jk7I+2l67P9StuHWR6OMd3XOLwvznxOEQtEWpweDiobZU1ZiY03WafcGZFpV5j6tEoHeopoZ1J/GhPtkYmx+TqxzUN6qnir5rP3NSYiZciImP/qu8U9yUV/xpVRv39KvFc2Yr5SpKpMMRUj55XW10UnPer63M6KovF8X9Wi/fNnrZAs1Esl5XddZETGrW/e5B++VMJ6w0Q/uvPR+UBwrOU0804l0SzwdIe3qVVd0Q==",
@@ -112,7 +112,7 @@ storage_account_credential = azure_nextgen.storsimple.latest.StorageAccountCrede
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const storageAccountCredential = new azure_nextgen.storsimple.latest.StorageAccountCredential("storageAccountCredential", {
+const storageAccountCredential = new azure_nextgen.storsimple.StorageAccountCredential("storageAccountCredential", {
     accessKey: {
         encryptionAlgorithm: "RSAES_PKCS1_v_1_5",
         encryptionCertThumbprint: "A872A2DF196AC7682EE24791E7DE2E2A360F5926",
@@ -345,7 +345,7 @@ The StorageAccountCredential resource accepts the following [input]({{< relref "
 <a href="#sslstatus_csharp" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sslstatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stor<wbr>Simple.<wbr>Ssl<wbr>Status</a></span>
+        <span class="property-type"><a href="#sslstatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stor<wbr>Simple..<wbr>Ssl<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}Signifies whether SSL needs to be enabled or not.{{% /md %}}</dd>
     <dt class="property-required"
@@ -363,7 +363,7 @@ The StorageAccountCredential resource accepts the following [input]({{< relref "
 <a href="#accesskey_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#asymmetricencryptedsecret">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stor<wbr>Simple.<wbr>Inputs.<wbr>Asymmetric<wbr>Encrypted<wbr>Secret<wbr>Args</a></span>
+        <span class="property-type"><a href="#asymmetricencryptedsecret">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stor<wbr>Simple..<wbr>Inputs.<wbr>Asymmetric<wbr>Encrypted<wbr>Secret<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The details of the storage account password.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -372,7 +372,7 @@ The StorageAccountCredential resource accepts the following [input]({{< relref "
 <a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kind">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stor<wbr>Simple.<wbr>Kind</a></span>
+        <span class="property-type"><a href="#kind">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stor<wbr>Simple..<wbr>Kind</a></span>
     </dt>
     <dd>{{% md %}}The Kind of the object. Currently only Series8000 is supported{{% /md %}}</dd>
 </dl>
@@ -781,7 +781,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryptionalgorithm_csharp" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionalgorithm">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stor<wbr>Simple.<wbr>Encryption<wbr>Algorithm</a></span>
+        <span class="property-type"><a href="#encryptionalgorithm">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stor<wbr>Simple..<wbr>Encryption<wbr>Algorithm</a></span>
     </dt>
     <dd>{{% md %}}The algorithm used to encrypt "Value".{{% /md %}}</dd>
     <dt class="property-required"
@@ -1157,7 +1157,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:storsimple/latest:StorageAccountCredential SACForTest /subscriptions/4385cf00-2d3a-425a-832f-f4285b1c9dce/resourceGroups/ResourceGroupForSDKTest/providers/Microsoft.StorSimple/managers/ManagerForSDKTest1/storageAccountCredentials/SACForTest 
+$ pulumi import azure-nextgen:storsimple:StorageAccountCredential SACForTest /subscriptions/4385cf00-2d3a-425a-832f-f4285b1c9dce/resourceGroups/ResourceGroupForSDKTest/providers/Microsoft.StorSimple/managers/ManagerForSDKTest1/storageAccountCredentials/SACForTest 
 ```
 
 

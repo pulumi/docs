@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.eventgrid.Topic resource with ex
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 EventGrid Topic
-Latest API Version: 2020-06-01.
+API Version: 2020-06-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,16 +27,16 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var topic = new AzureNextGen.EventGrid.Latest.Topic("topic", new AzureNextGen.EventGrid.Latest.TopicArgs
+        var topic = new AzureNextGen.EventGrid..Topic("topic", new AzureNextGen.EventGrid..TopicArgs
         {
             InboundIpRules = 
             {
-                new AzureNextGen.EventGrid.Latest.Inputs.InboundIpRuleArgs
+                new AzureNextGen.EventGrid..Inputs.InboundIpRuleArgs
                 {
                     Action = "Allow",
                     IpMask = "12.18.30.15",
                 },
-                new AzureNextGen.EventGrid.Latest.Inputs.InboundIpRuleArgs
+                new AzureNextGen.EventGrid..Inputs.InboundIpRuleArgs
                 {
                     Action = "Allow",
                     IpMask = "12.18.176.1",
@@ -66,7 +66,7 @@ class MyStack : Stack
 package main
 
 import (
-	eventgrid "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/eventgrid/latest"
+	eventgrid "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/eventgrid"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -109,13 +109,13 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-topic = azure_nextgen.eventgrid.latest.Topic("topic",
+topic = azure_nextgen.eventgrid.Topic("topic",
     inbound_ip_rules=[
-        azure_nextgen.eventgrid.latest.InboundIpRuleArgs(
+        azure_nextgen.eventgrid.InboundIpRuleArgs(
             action="Allow",
             ip_mask="12.18.30.15",
         ),
-        azure_nextgen.eventgrid.latest.InboundIpRuleArgs(
+        azure_nextgen.eventgrid.InboundIpRuleArgs(
             action="Allow",
             ip_mask="12.18.176.1",
         ),
@@ -139,7 +139,7 @@ topic = azure_nextgen.eventgrid.latest.Topic("topic",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const topic = new azure_nextgen.eventgrid.latest.Topic("topic", {
+const topic = new azure_nextgen.eventgrid.Topic("topic", {
     inboundIpRules: [
         {
             action: "Allow",
@@ -380,7 +380,7 @@ The Topic resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#inboundiprules_csharp" style="color: inherit; text-decoration: inherit;">Inbound<wbr>Ip<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inboundiprule">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Inbound<wbr>Ip<wbr>Rule<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#inboundiprule">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid..<wbr>Inputs.<wbr>Inbound<wbr>Ip<wbr>Rule<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}This can be used to restrict traffic from specific IPs instead of all IPs. Note: These are considered only if PublicNetworkAccess is enabled.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -389,7 +389,7 @@ The Topic resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#inputschema_csharp" style="color: inherit; text-decoration: inherit;">Input<wbr>Schema</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#inputschema">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid.<wbr>Input<wbr>Schema</a></span>
+        <span class="property-type">string | <a href="#inputschema">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid..<wbr>Input<wbr>Schema</a></span>
     </dt>
     <dd>{{% md %}}This determines the format that Event Grid should expect for incoming events published to the topic.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -398,7 +398,7 @@ The Topic resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#inputschemamapping_csharp" style="color: inherit; text-decoration: inherit;">Input<wbr>Schema<wbr>Mapping</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jsoninputschemamapping">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Json<wbr>Input<wbr>Schema<wbr>Mapping<wbr>Args</a></span>
+        <span class="property-type"><a href="#jsoninputschemamapping">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid..<wbr>Inputs.<wbr>Json<wbr>Input<wbr>Schema<wbr>Mapping<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This enables publishing using custom event schemas. An InputSchemaMapping can be specified to map various properties of a source schema to various required properties of the EventGridEvent schema.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -407,7 +407,7 @@ The Topic resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#privateendpointconnections_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint<wbr>Connections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointconnection">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#privateendpointconnection">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid..<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -416,7 +416,7 @@ The Topic resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#publicnetworkaccess_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Network<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#publicnetworkaccess">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid.<wbr>Public<wbr>Network<wbr>Access</a></span>
+        <span class="property-type">string | <a href="#publicnetworkaccess">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid..<wbr>Public<wbr>Network<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}This determines if traffic is allowed over public network. By default it is enabled. 
 You can further restrict to specific IPs by configuring <seealso cref="P:Microsoft.Azure.Events.ResourceProvider.Common.Contracts.TopicProperties.InboundIpRules" />{{% /md %}}</dd>
@@ -982,7 +982,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#persistedconnectionstatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid.<wbr>Persisted<wbr>Connection<wbr>Status</a></span>
+        <span class="property-type">string | <a href="#persistedconnectionstatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid..<wbr>Persisted<wbr>Connection<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}Status of the connection.{{% /md %}}</dd>
 </dl>
@@ -1232,7 +1232,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#action_csharp" style="color: inherit; text-decoration: inherit;">Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#ipactiontype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid.<wbr>Ip<wbr>Action<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#ipactiontype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid..<wbr>Ip<wbr>Action<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Action to perform based on the match or no match of the IpMask.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1824,7 +1824,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dataversion_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jsonfieldwithdefault">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Json<wbr>Field<wbr>With<wbr>Default<wbr>Args</a></span>
+        <span class="property-type"><a href="#jsonfieldwithdefault">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid..<wbr>Inputs.<wbr>Json<wbr>Field<wbr>With<wbr>Default<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The mapping information for the DataVersion property of the Event Grid Event.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1833,7 +1833,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#eventtime_csharp" style="color: inherit; text-decoration: inherit;">Event<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jsonfield">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Json<wbr>Field<wbr>Args</a></span>
+        <span class="property-type"><a href="#jsonfield">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid..<wbr>Inputs.<wbr>Json<wbr>Field<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The mapping information for the EventTime property of the Event Grid Event.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1842,7 +1842,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#eventtype_csharp" style="color: inherit; text-decoration: inherit;">Event<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jsonfieldwithdefault">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Json<wbr>Field<wbr>With<wbr>Default<wbr>Args</a></span>
+        <span class="property-type"><a href="#jsonfieldwithdefault">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid..<wbr>Inputs.<wbr>Json<wbr>Field<wbr>With<wbr>Default<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The mapping information for the EventType property of the Event Grid Event.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1851,7 +1851,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jsonfield">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Json<wbr>Field<wbr>Args</a></span>
+        <span class="property-type"><a href="#jsonfield">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid..<wbr>Inputs.<wbr>Json<wbr>Field<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The mapping information for the Id property of the Event Grid Event.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1860,7 +1860,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subject_csharp" style="color: inherit; text-decoration: inherit;">Subject</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jsonfieldwithdefault">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Json<wbr>Field<wbr>With<wbr>Default<wbr>Args</a></span>
+        <span class="property-type"><a href="#jsonfieldwithdefault">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid..<wbr>Inputs.<wbr>Json<wbr>Field<wbr>With<wbr>Default<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The mapping information for the Subject property of the Event Grid Event.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1869,7 +1869,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#topic_csharp" style="color: inherit; text-decoration: inherit;">Topic</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jsonfield">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Json<wbr>Field<wbr>Args</a></span>
+        <span class="property-type"><a href="#jsonfield">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid..<wbr>Inputs.<wbr>Json<wbr>Field<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The mapping information for the Topic property of the Event Grid Event.{{% /md %}}</dd>
 </dl>
@@ -2066,7 +2066,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dataversion_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jsonfieldwithdefaultresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Json<wbr>Field<wbr>With<wbr>Default<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#jsonfieldwithdefaultresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid..<wbr>Inputs.<wbr>Json<wbr>Field<wbr>With<wbr>Default<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The mapping information for the DataVersion property of the Event Grid Event.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2075,7 +2075,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#eventtime_csharp" style="color: inherit; text-decoration: inherit;">Event<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jsonfieldresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Json<wbr>Field<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#jsonfieldresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid..<wbr>Inputs.<wbr>Json<wbr>Field<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The mapping information for the EventTime property of the Event Grid Event.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2084,7 +2084,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#eventtype_csharp" style="color: inherit; text-decoration: inherit;">Event<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jsonfieldwithdefaultresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Json<wbr>Field<wbr>With<wbr>Default<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#jsonfieldwithdefaultresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid..<wbr>Inputs.<wbr>Json<wbr>Field<wbr>With<wbr>Default<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The mapping information for the EventType property of the Event Grid Event.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2093,7 +2093,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jsonfieldresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Json<wbr>Field<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#jsonfieldresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid..<wbr>Inputs.<wbr>Json<wbr>Field<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The mapping information for the Id property of the Event Grid Event.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2102,7 +2102,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subject_csharp" style="color: inherit; text-decoration: inherit;">Subject</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jsonfieldwithdefaultresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Json<wbr>Field<wbr>With<wbr>Default<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#jsonfieldwithdefaultresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid..<wbr>Inputs.<wbr>Json<wbr>Field<wbr>With<wbr>Default<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The mapping information for the Subject property of the Event Grid Event.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2111,7 +2111,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#topic_csharp" style="color: inherit; text-decoration: inherit;">Topic</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jsonfieldresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Json<wbr>Field<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#jsonfieldresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid..<wbr>Inputs.<wbr>Json<wbr>Field<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The mapping information for the Topic property of the Event Grid Event.{{% /md %}}</dd>
 </dl>
@@ -2433,7 +2433,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privateendpoint_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpoint">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Args</a></span>
+        <span class="property-type"><a href="#privateendpoint">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid..<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Private Endpoint resource for this Connection.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2442,7 +2442,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privatelinkserviceconnectionstate_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionstate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Connection<wbr>State<wbr>Args</a></span>
+        <span class="property-type"><a href="#connectionstate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid..<wbr>Inputs.<wbr>Connection<wbr>State<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Details about the state of the connection.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2451,7 +2451,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#resourceprovisioningstate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid.<wbr>Resource<wbr>Provisioning<wbr>State</a></span>
+        <span class="property-type">string | <a href="#resourceprovisioningstate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid..<wbr>Resource<wbr>Provisioning<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}Provisioning state of the Private Endpoint Connection.{{% /md %}}</dd>
 </dl>
@@ -2630,7 +2630,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privateendpoint_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#privateendpointresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid..<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Private Endpoint resource for this Connection.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2639,7 +2639,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privatelinkserviceconnectionstate_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionstateresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Connection<wbr>State<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#connectionstateresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid..<wbr>Inputs.<wbr>Connection<wbr>State<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Details about the state of the connection.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3036,7 +3036,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:eventgrid/latest:Topic exampletopic1 /subscriptions/5b4b650e-28b9-4790-b3ab-ddbd88d727c4/resourceGroups/examplerg/providers/Microsoft.EventGrid/topics/exampletopic1 
+$ pulumi import azure-nextgen:eventgrid:Topic exampletopic1 /subscriptions/5b4b650e-28b9-4790-b3ab-ddbd88d727c4/resourceGroups/examplerg/providers/Microsoft.EventGrid/topics/exampletopic1 
 ```
 
 

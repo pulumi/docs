@@ -269,7 +269,7 @@ The following output properties are available:
 <a href="#compliancestatus_csharp" style="color: inherit; text-decoration: inherit;">Compliance<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#compliancestatusresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Kubernetes<wbr>Configuration.<wbr>Outputs.<wbr>Compliance<wbr>Status<wbr>Response</a></span>
+        <span class="property-type"><a href="#compliancestatusresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Kubernetes<wbr>Configuration..<wbr>Outputs.<wbr>Compliance<wbr>Status<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Compliance Status of the Configuration{{% /md %}}</dd>
     <dt class="property-"
@@ -341,7 +341,7 @@ The following output properties are available:
 <a href="#helmoperatorproperties_csharp" style="color: inherit; text-decoration: inherit;">Helm<wbr>Operator<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#helmoperatorpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Kubernetes<wbr>Configuration.<wbr>Outputs.<wbr>Helm<wbr>Operator<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#helmoperatorpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Kubernetes<wbr>Configuration..<wbr>Outputs.<wbr>Helm<wbr>Operator<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Properties for Helm operator.{{% /md %}}</dd>
     <dt class="property-"
@@ -413,7 +413,7 @@ The following output properties are available:
 <a href="#systemdata_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Kubernetes<wbr>Configuration.<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
+        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Kubernetes<wbr>Configuration..<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Top level metadata https://github.com/Azure/azure-resource-manager-rpc/blob/master/v1.0/common-api-contracts.md#system-metadata-for-all-azure-resources{{% /md %}}</dd>
 </dl>

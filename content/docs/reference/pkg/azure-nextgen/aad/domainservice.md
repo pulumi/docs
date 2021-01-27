@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.aad.DomainService resource with 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Domain service.
-Latest API Version: 2020-01-01.
+API Version: 2020-01-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,10 +27,10 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var domainService = new AzureNextGen.Aad.Latest.DomainService("domainService", new AzureNextGen.Aad.Latest.DomainServiceArgs
+        var domainService = new AzureNextGen.Aad..DomainService("domainService", new AzureNextGen.Aad..DomainServiceArgs
         {
             DomainName = "TestDomainService.com",
-            DomainSecuritySettings = new AzureNextGen.Aad.Latest.Inputs.DomainSecuritySettingsArgs
+            DomainSecuritySettings = new AzureNextGen.Aad..Inputs.DomainSecuritySettingsArgs
             {
                 NtlmV1 = "Enabled",
                 SyncNtlmPasswords = "Enabled",
@@ -38,7 +38,7 @@ class MyStack : Stack
             },
             DomainServiceName = "TestDomainService.com",
             FilteredSync = "Enabled",
-            LdapsSettings = new AzureNextGen.Aad.Latest.Inputs.LdapsSettingsArgs
+            LdapsSettings = new AzureNextGen.Aad..Inputs.LdapsSettingsArgs
             {
                 ExternalAccess = "Enabled",
                 Ldaps = "Enabled",
@@ -46,7 +46,7 @@ class MyStack : Stack
                 PfxCertificatePassword = "<pfxCertificatePassword>",
             },
             Location = "West US",
-            NotificationSettings = new AzureNextGen.Aad.Latest.Inputs.NotificationSettingsArgs
+            NotificationSettings = new AzureNextGen.Aad..Inputs.NotificationSettingsArgs
             {
                 AdditionalRecipients = 
                 {
@@ -58,7 +58,7 @@ class MyStack : Stack
             },
             ReplicaSets = 
             {
-                new AzureNextGen.Aad.Latest.Inputs.ReplicaSetArgs
+                new AzureNextGen.Aad..Inputs.ReplicaSetArgs
                 {
                     Location = "West US",
                     SubnetId = "/subscriptions/1639790a-76a2-4ac4-98d9-8562f5dfcb4d/resourceGroups/TestNetworkResourceGroup/providers/Microsoft.Network/virtualNetworks/TestVnetWUS/subnets/TestSubnetWUS",
@@ -80,7 +80,7 @@ class MyStack : Stack
 package main
 
 import (
-	aad "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/aad/latest"
+	aad "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/aad"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -135,23 +135,23 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-domain_service = azure_nextgen.aad.latest.DomainService("domainService",
+domain_service = azure_nextgen.aad.DomainService("domainService",
     domain_name="TestDomainService.com",
-    domain_security_settings=azure_nextgen.aad.latest.DomainSecuritySettingsArgs(
+    domain_security_settings=azure_nextgen.aad.DomainSecuritySettingsArgs(
         ntlm_v1="Enabled",
         sync_ntlm_passwords="Enabled",
         tls_v1="Disabled",
     ),
     domain_service_name="TestDomainService.com",
     filtered_sync="Enabled",
-    ldaps_settings=azure_nextgen.aad.latest.LdapsSettingsArgs(
+    ldaps_settings=azure_nextgen.aad.LdapsSettingsArgs(
         external_access="Enabled",
         ldaps="Enabled",
         pfx_certificate="MIIDPDCCAiSgAwIBAgIQQUI9P6tq2p9OFIJa7DLNvTANBgkqhkiG9w0BAQsFADAgMR4w...",
         pfx_certificate_password="<pfxCertificatePassword>",
     ),
     location="West US",
-    notification_settings=azure_nextgen.aad.latest.NotificationSettingsArgs(
+    notification_settings=azure_nextgen.aad.NotificationSettingsArgs(
         additional_recipients=[
             "jicha@microsoft.com",
             "caalmont@microsoft.com",
@@ -159,7 +159,7 @@ domain_service = azure_nextgen.aad.latest.DomainService("domainService",
         notify_dc_admins="Enabled",
         notify_global_admins="Enabled",
     ),
-    replica_sets=[azure_nextgen.aad.latest.ReplicaSetArgs(
+    replica_sets=[azure_nextgen.aad.ReplicaSetArgs(
         location="West US",
         subnet_id="/subscriptions/1639790a-76a2-4ac4-98d9-8562f5dfcb4d/resourceGroups/TestNetworkResourceGroup/providers/Microsoft.Network/virtualNetworks/TestVnetWUS/subnets/TestSubnetWUS",
     )],
@@ -175,7 +175,7 @@ domain_service = azure_nextgen.aad.latest.DomainService("domainService",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const domainService = new azure_nextgen.aad.latest.DomainService("domainService", {
+const domainService = new azure_nextgen.aad.DomainService("domainService", {
     domainName: "TestDomainService.com",
     domainSecuritySettings: {
         ntlmV1: "Enabled",
@@ -435,7 +435,7 @@ The DomainService resource accepts the following [input]({{< relref "/docs/intro
 <a href="#domainsecuritysettings_csharp" style="color: inherit; text-decoration: inherit;">Domain<wbr>Security<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainsecuritysettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Aad.<wbr>Inputs.<wbr>Domain<wbr>Security<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#domainsecuritysettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Aad..<wbr>Inputs.<wbr>Domain<wbr>Security<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}DomainSecurity Settings{{% /md %}}</dd>
     <dt class="property-optional"
@@ -453,7 +453,7 @@ The DomainService resource accepts the following [input]({{< relref "/docs/intro
 <a href="#filteredsync_csharp" style="color: inherit; text-decoration: inherit;">Filtered<wbr>Sync</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#filteredsync">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Aad.<wbr>Filtered<wbr>Sync</a></span>
+        <span class="property-type">string | <a href="#filteredsync">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Aad..<wbr>Filtered<wbr>Sync</a></span>
     </dt>
     <dd>{{% md %}}Enabled or Disabled flag to turn on Group-based filtered sync{{% /md %}}</dd>
     <dt class="property-optional"
@@ -462,7 +462,7 @@ The DomainService resource accepts the following [input]({{< relref "/docs/intro
 <a href="#ldapssettings_csharp" style="color: inherit; text-decoration: inherit;">Ldaps<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ldapssettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Aad.<wbr>Inputs.<wbr>Ldaps<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#ldapssettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Aad..<wbr>Inputs.<wbr>Ldaps<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Secure LDAP Settings{{% /md %}}</dd>
     <dt class="property-optional"
@@ -480,7 +480,7 @@ The DomainService resource accepts the following [input]({{< relref "/docs/intro
 <a href="#notificationsettings_csharp" style="color: inherit; text-decoration: inherit;">Notification<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#notificationsettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Aad.<wbr>Inputs.<wbr>Notification<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#notificationsettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Aad..<wbr>Inputs.<wbr>Notification<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Notification Settings{{% /md %}}</dd>
     <dt class="property-optional"
@@ -489,7 +489,7 @@ The DomainService resource accepts the following [input]({{< relref "/docs/intro
 <a href="#replicasets_csharp" style="color: inherit; text-decoration: inherit;">Replica<wbr>Sets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#replicaset">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Aad.<wbr>Inputs.<wbr>Replica<wbr>Set<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#replicaset">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Aad..<wbr>Inputs.<wbr>Replica<wbr>Set<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of ReplicaSets{{% /md %}}</dd>
     <dt class="property-optional"
@@ -498,7 +498,7 @@ The DomainService resource accepts the following [input]({{< relref "/docs/intro
 <a href="#resourceforestsettings_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Forest<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceforestsettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Aad.<wbr>Inputs.<wbr>Resource<wbr>Forest<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourceforestsettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Aad..<wbr>Inputs.<wbr>Resource<wbr>Forest<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Resource Forest Settings{{% /md %}}</dd>
     <dt class="property-optional"
@@ -952,7 +952,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#migrationproperties_csharp" style="color: inherit; text-decoration: inherit;">Migration<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migrationpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Aad.<wbr>Outputs.<wbr>Migration<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#migrationpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Aad..<wbr>Outputs.<wbr>Migration<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Migration Properties{{% /md %}}</dd>
     <dt class="property-"
@@ -1294,7 +1294,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ntlmv1_csharp" style="color: inherit; text-decoration: inherit;">Ntlm<wbr>V1</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#ntlmv1">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Aad.<wbr>Ntlm<wbr>V1</a></span>
+        <span class="property-type">string | <a href="#ntlmv1">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Aad..<wbr>Ntlm<wbr>V1</a></span>
     </dt>
     <dd>{{% md %}}A flag to determine whether or not NtlmV1 is enabled or disabled.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1303,7 +1303,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#synckerberospasswords_csharp" style="color: inherit; text-decoration: inherit;">Sync<wbr>Kerberos<wbr>Passwords</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#synckerberospasswords">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Aad.<wbr>Sync<wbr>Kerberos<wbr>Passwords</a></span>
+        <span class="property-type">string | <a href="#synckerberospasswords">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Aad..<wbr>Sync<wbr>Kerberos<wbr>Passwords</a></span>
     </dt>
     <dd>{{% md %}}A flag to determine whether or not SyncKerberosPasswords is enabled or disabled.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1312,7 +1312,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#syncntlmpasswords_csharp" style="color: inherit; text-decoration: inherit;">Sync<wbr>Ntlm<wbr>Passwords</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#syncntlmpasswords">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Aad.<wbr>Sync<wbr>Ntlm<wbr>Passwords</a></span>
+        <span class="property-type">string | <a href="#syncntlmpasswords">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Aad..<wbr>Sync<wbr>Ntlm<wbr>Passwords</a></span>
     </dt>
     <dd>{{% md %}}A flag to determine whether or not SyncNtlmPasswords is enabled or disabled.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1321,7 +1321,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#synconprempasswords_csharp" style="color: inherit; text-decoration: inherit;">Sync<wbr>On<wbr>Prem<wbr>Passwords</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#synconprempasswords">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Aad.<wbr>Sync<wbr>On<wbr>Prem<wbr>Passwords</a></span>
+        <span class="property-type">string | <a href="#synconprempasswords">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Aad..<wbr>Sync<wbr>On<wbr>Prem<wbr>Passwords</a></span>
     </dt>
     <dd>{{% md %}}A flag to determine whether or not SyncOnPremPasswords is enabled or disabled.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1330,7 +1330,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tlsv1_csharp" style="color: inherit; text-decoration: inherit;">Tls<wbr>V1</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#tlsv1">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Aad.<wbr>Tls<wbr>V1</a></span>
+        <span class="property-type">string | <a href="#tlsv1">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Aad..<wbr>Tls<wbr>V1</a></span>
     </dt>
     <dd>{{% md %}}A flag to determine whether or not TlsV1 is enabled or disabled.{{% /md %}}</dd>
 </dl>
@@ -2644,7 +2644,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#externalaccess_csharp" style="color: inherit; text-decoration: inherit;">External<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#externalaccess">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Aad.<wbr>External<wbr>Access</a></span>
+        <span class="property-type">string | <a href="#externalaccess">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Aad..<wbr>External<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}A flag to determine whether or not Secure LDAP access over the internet is enabled or disabled.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2653,7 +2653,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ldaps_csharp" style="color: inherit; text-decoration: inherit;">Ldaps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#ldaps">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Aad.<wbr>Ldaps</a></span>
+        <span class="property-type">string | <a href="#ldaps">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Aad..<wbr>Ldaps</a></span>
     </dt>
     <dd>{{% md %}}A flag to determine whether or not Secure LDAP is enabled or disabled.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3190,7 +3190,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#migrationprogress_csharp" style="color: inherit; text-decoration: inherit;">Migration<wbr>Progress</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migrationprogressresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Aad.<wbr>Inputs.<wbr>Migration<wbr>Progress<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#migrationprogressresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Aad..<wbr>Inputs.<wbr>Migration<wbr>Progress<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Migration Progress{{% /md %}}</dd>
     <dt class="property-required"
@@ -3333,7 +3333,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#notifydcadmins_csharp" style="color: inherit; text-decoration: inherit;">Notify<wbr>Dc<wbr>Admins</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#notifydcadmins">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Aad.<wbr>Notify<wbr>Dc<wbr>Admins</a></span>
+        <span class="property-type">string | <a href="#notifydcadmins">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Aad..<wbr>Notify<wbr>Dc<wbr>Admins</a></span>
     </dt>
     <dd>{{% md %}}Should domain controller admins be notified{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3342,7 +3342,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#notifyglobaladmins_csharp" style="color: inherit; text-decoration: inherit;">Notify<wbr>Global<wbr>Admins</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#notifyglobaladmins">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Aad.<wbr>Notify<wbr>Global<wbr>Admins</a></span>
+        <span class="property-type">string | <a href="#notifyglobaladmins">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Aad..<wbr>Notify<wbr>Global<wbr>Admins</a></span>
     </dt>
     <dd>{{% md %}}Should global admins be notified{{% /md %}}</dd>
 </dl>
@@ -3822,7 +3822,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#healthalerts_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>Alerts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healthalertresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Aad.<wbr>Inputs.<wbr>Health<wbr>Alert<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#healthalertresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Aad..<wbr>Inputs.<wbr>Health<wbr>Alert<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of Domain Health Alerts{{% /md %}}</dd>
     <dt class="property-required"
@@ -3840,7 +3840,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#healthmonitors_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>Monitors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healthmonitorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Aad.<wbr>Inputs.<wbr>Health<wbr>Monitor<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#healthmonitorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Aad..<wbr>Inputs.<wbr>Health<wbr>Monitor<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of Domain Health Monitors{{% /md %}}</dd>
     <dt class="property-required"
@@ -4199,7 +4199,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#settings_csharp" style="color: inherit; text-decoration: inherit;">Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#foresttrust">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Aad.<wbr>Inputs.<wbr>Forest<wbr>Trust<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#foresttrust">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Aad..<wbr>Inputs.<wbr>Forest<wbr>Trust<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of settings for Resource Forest{{% /md %}}</dd>
 </dl>
@@ -4297,7 +4297,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#settings_csharp" style="color: inherit; text-decoration: inherit;">Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#foresttrustresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Aad.<wbr>Inputs.<wbr>Forest<wbr>Trust<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#foresttrustresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Aad..<wbr>Inputs.<wbr>Forest<wbr>Trust<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of settings for Resource Forest{{% /md %}}</dd>
 </dl>
@@ -4532,7 +4532,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:aad/latest:DomainService TestDomainService.com /subscriptions/1639790a-76a2-4ac4-98d9-8562f5dfcb4d/resourceGroups/TestResourceGroup/providers/Microsoft.AAD/DomainServices/TestDomainService.com 
+$ pulumi import azure-nextgen:aad:DomainService TestDomainService.com /subscriptions/1639790a-76a2-4ac4-98d9-8562f5dfcb4d/resourceGroups/TestResourceGroup/providers/Microsoft.AAD/DomainServices/TestDomainService.com 
 ```
 
 

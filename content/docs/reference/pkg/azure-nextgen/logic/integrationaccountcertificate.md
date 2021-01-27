@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.logic.IntegrationAccountCertific
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The integration account certificate.
-Latest API Version: 2019-05-01.
+API Version: 2019-05-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,14 +27,14 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var integrationAccountCertificate = new AzureNextGen.Logic.Latest.IntegrationAccountCertificate("integrationAccountCertificate", new AzureNextGen.Logic.Latest.IntegrationAccountCertificateArgs
+        var integrationAccountCertificate = new AzureNextGen.Logic..IntegrationAccountCertificate("integrationAccountCertificate", new AzureNextGen.Logic..IntegrationAccountCertificateArgs
         {
             CertificateName = "testCertificate",
             IntegrationAccountName = "testIntegrationAccount",
-            Key = new AzureNextGen.Logic.Latest.Inputs.KeyVaultKeyReferenceArgs
+            Key = new AzureNextGen.Logic..Inputs.KeyVaultKeyReferenceArgs
             {
                 KeyName = "<keyName>",
-                KeyVault = new AzureNextGen.Logic.Latest.Inputs.KeyVaultKeyReferenceKeyVaultArgs
+                KeyVault = new AzureNextGen.Logic..Inputs.KeyVaultKeyReferenceKeyVaultArgs
                 {
                     Id = "/subscriptions/34adfa4f-cedf-4dc0-ba29-b6d1a69ab345/resourcegroups/testResourceGroup/providers/microsoft.keyvault/vaults/<keyVaultName>",
                 },
@@ -58,7 +58,7 @@ class MyStack : Stack
 package main
 
 import (
-	logic "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/logic/latest"
+	logic "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/logic"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -95,12 +95,12 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-integration_account_certificate = azure_nextgen.logic.latest.IntegrationAccountCertificate("integrationAccountCertificate",
+integration_account_certificate = azure_nextgen.logic.IntegrationAccountCertificate("integrationAccountCertificate",
     certificate_name="testCertificate",
     integration_account_name="testIntegrationAccount",
-    key=azure_nextgen.logic.latest.KeyVaultKeyReferenceArgs(
+    key=azure_nextgen.logic.KeyVaultKeyReferenceArgs(
         key_name="<keyName>",
-        key_vault=azure_nextgen.logic.latest.KeyVaultKeyReferenceKeyVaultArgs(
+        key_vault=azure_nextgen.logic.KeyVaultKeyReferenceKeyVaultArgs(
             id="/subscriptions/34adfa4f-cedf-4dc0-ba29-b6d1a69ab345/resourcegroups/testResourceGroup/providers/microsoft.keyvault/vaults/<keyVaultName>",
         ),
         key_version="87d9764197604449b9b8eb7bd8710868",
@@ -119,7 +119,7 @@ integration_account_certificate = azure_nextgen.logic.latest.IntegrationAccountC
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const integrationAccountCertificate = new azure_nextgen.logic.latest.IntegrationAccountCertificate("integrationAccountCertificate", {
+const integrationAccountCertificate = new azure_nextgen.logic.IntegrationAccountCertificate("integrationAccountCertificate", {
     certificateName: "testCertificate",
     integrationAccountName: "testIntegrationAccount",
     key: {
@@ -354,7 +354,7 @@ The IntegrationAccountCertificate resource accepts the following [input]({{< rel
 <a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultkeyreference">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>Key<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#keyvaultkeyreference">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>Key<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The key details in the key vault.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -871,7 +871,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keyvault_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultkeyreferencekeyvault">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>Key<wbr>Reference<wbr>Key<wbr>Vault<wbr>Args</a></span>
+        <span class="property-type"><a href="#keyvaultkeyreferencekeyvault">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>Key<wbr>Reference<wbr>Key<wbr>Vault<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The key vault reference.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1067,7 +1067,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keyvault_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultkeyreferenceresponsekeyvault">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>Key<wbr>Reference<wbr>Response<wbr>Key<wbr>Vault<wbr>Args</a></span>
+        <span class="property-type"><a href="#keyvaultkeyreferenceresponsekeyvault">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>Key<wbr>Reference<wbr>Response<wbr>Key<wbr>Vault<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The key vault reference.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1320,7 +1320,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:logic/latest:IntegrationAccountCertificate testCertificate /subscriptions/34adfa4f-cedf-4dc0-ba29-b6d1a69ab345/resourceGroups/testResourceGroup/providers/Microsoft.Logic/integrationAccounts/testIntegrationAccount/certificates/testCertificate 
+$ pulumi import azure-nextgen:logic:IntegrationAccountCertificate testCertificate /subscriptions/34adfa4f-cedf-4dc0-ba29-b6d1a69ab345/resourceGroups/testResourceGroup/providers/Microsoft.Logic/integrationAccounts/testIntegrationAccount/certificates/testCertificate 
 ```
 
 

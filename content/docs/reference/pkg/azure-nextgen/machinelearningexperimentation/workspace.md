@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.machinelearningexperimentation.W
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 An object that represents a machine learning team account workspace.
+API Version: 2017-05-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var workspace = new AzureNextGen.MachineLearningExperimentation.V20170501Preview.Workspace("workspace", new AzureNextGen.MachineLearningExperimentation.V20170501Preview.WorkspaceArgs
+        var workspace = new AzureNextGen.MachineLearningExperimentation..Workspace("workspace", new AzureNextGen.MachineLearningExperimentation..WorkspaceArgs
         {
             AccountName = "testaccount",
             FriendlyName = "testName",
@@ -52,7 +53,7 @@ class MyStack : Stack
 package main
 
 import (
-	machinelearningexperimentation "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/machinelearningexperimentation/v20170501preview"
+	machinelearningexperimentation "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/machinelearningexperimentation"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -85,7 +86,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-workspace = azure_nextgen.machinelearningexperimentation.v20170501preview.Workspace("workspace",
+workspace = azure_nextgen.machinelearningexperimentation.Workspace("workspace",
     account_name="testaccount",
     friendly_name="testName",
     location="East US",
@@ -105,7 +106,7 @@ workspace = azure_nextgen.machinelearningexperimentation.v20170501preview.Worksp
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const workspace = new azure_nextgen.machinelearningexperimentation.v20170501preview.Workspace("workspace", {
+const workspace = new azure_nextgen.machinelearningexperimentation.Workspace("workspace", {
     accountName: "testaccount",
     friendlyName: "testName",
     location: "East US",
@@ -870,7 +871,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:machinelearningexperimentation/v20170501preview:Workspace testworkspace /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.MachineLearningExperimentation/accounts/testaccount/workspaces/testworkspace 
+$ pulumi import azure-nextgen:machinelearningexperimentation:Workspace testworkspace /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.MachineLearningExperimentation/accounts/testaccount/workspaces/testworkspace 
 ```
 
 

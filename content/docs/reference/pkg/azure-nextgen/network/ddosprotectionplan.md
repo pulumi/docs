@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.network.DdosProtectionPlan resou
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 A DDoS protection plan in a resource group.
-Latest API Version: 2020-08-01.
+API Version: 2020-08-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var ddosProtectionPlan = new AzureNextGen.Network.Latest.DdosProtectionPlan("ddosProtectionPlan", new AzureNextGen.Network.Latest.DdosProtectionPlanArgs
+        var ddosProtectionPlan = new AzureNextGen.Network..DdosProtectionPlan("ddosProtectionPlan", new AzureNextGen.Network..DdosProtectionPlanArgs
         {
             DdosProtectionPlanName = "test-plan",
             Location = "westus",
@@ -47,7 +47,7 @@ class MyStack : Stack
 package main
 
 import (
-	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network/latest"
+	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -75,7 +75,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-ddos_protection_plan = azure_nextgen.network.latest.DdosProtectionPlan("ddosProtectionPlan",
+ddos_protection_plan = azure_nextgen.network.DdosProtectionPlan("ddosProtectionPlan",
     ddos_protection_plan_name="test-plan",
     location="westus",
     resource_group_name="rg1")
@@ -90,7 +90,7 @@ ddos_protection_plan = azure_nextgen.network.latest.DdosProtectionPlan("ddosProt
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const ddosProtectionPlan = new azure_nextgen.network.latest.DdosProtectionPlan("ddosProtectionPlan", {
+const ddosProtectionPlan = new azure_nextgen.network.DdosProtectionPlan("ddosProtectionPlan", {
     ddosProtectionPlanName: "test-plan",
     location: "westus",
     resourceGroupName: "rg1",
@@ -518,7 +518,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#virtualnetworks_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Networks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Outputs.<wbr>Sub<wbr>Resource<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#subresourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Outputs.<wbr>Sub<wbr>Resource<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of virtual networks associated with the DDoS protection plan resource. This list is read-only.{{% /md %}}</dd>
 </dl>
@@ -808,7 +808,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:network/latest:DdosProtectionPlan test-plan /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/ddosProtectionPlans/test-plan 
+$ pulumi import azure-nextgen:network:DdosProtectionPlan test-plan /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/ddosProtectionPlans/test-plan 
 ```
 
 

@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.hybriddata.JobDefinition resourc
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Job Definition.
-Latest API Version: 2019-06-01.
+API Version: 2019-06-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var jobDefinition = new AzureNextGen.HybridData.Latest.JobDefinition("jobDefinition", new AzureNextGen.HybridData.Latest.JobDefinitionArgs
+        var jobDefinition = new AzureNextGen.HybridData..JobDefinition("jobDefinition", new AzureNextGen.HybridData..JobDefinitionArgs
         {
             DataManagerName = "TestAzureSDKOperations",
             DataServiceInput = 
@@ -70,7 +70,7 @@ class MyStack : Stack
 package main
 
 import (
-	hybriddata "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/hybriddata/latest"
+	hybriddata "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/hybriddata"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -118,7 +118,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-job_definition = azure_nextgen.hybriddata.latest.JobDefinition("jobDefinition",
+job_definition = azure_nextgen.hybriddata.JobDefinition("jobDefinition",
     data_manager_name="TestAzureSDKOperations",
     data_service_input={
         "AzureStorageType": "Blob",
@@ -149,7 +149,7 @@ job_definition = azure_nextgen.hybriddata.latest.JobDefinition("jobDefinition",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const jobDefinition = new azure_nextgen.hybriddata.latest.JobDefinition("jobDefinition", {
+const jobDefinition = new azure_nextgen.hybriddata.JobDefinition("jobDefinition", {
     dataManagerName: "TestAzureSDKOperations",
     dataServiceInput: {
         AzureStorageType: "Blob",
@@ -418,7 +418,7 @@ The JobDefinition resource accepts the following [input]({{< relref "/docs/intro
 <a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#state">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Data.<wbr>State</a></span>
+        <span class="property-type"><a href="#state">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Data..<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}State of the job definition.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -427,7 +427,7 @@ The JobDefinition resource accepts the following [input]({{< relref "/docs/intro
 <a href="#customersecrets_csharp" style="color: inherit; text-decoration: inherit;">Customer<wbr>Secrets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customersecret">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Data.<wbr>Inputs.<wbr>Customer<wbr>Secret<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#customersecret">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Data..<wbr>Inputs.<wbr>Customer<wbr>Secret<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of customer secrets containing a key identifier and key value. The key identifier is a way for the specific data source to understand the key. Value contains customer secret encrypted by the encryptionKeys.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -454,7 +454,7 @@ The JobDefinition resource accepts the following [input]({{< relref "/docs/intro
 <a href="#runlocation_csharp" style="color: inherit; text-decoration: inherit;">Run<wbr>Location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#runlocation">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Data.<wbr>Run<wbr>Location</a></span>
+        <span class="property-type"><a href="#runlocation">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Data..<wbr>Run<wbr>Location</a></span>
     </dt>
     <dd>{{% md %}}This is the preferred geo location for the job to run.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -463,7 +463,7 @@ The JobDefinition resource accepts the following [input]({{< relref "/docs/intro
 <a href="#schedules_csharp" style="color: inherit; text-decoration: inherit;">Schedules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#schedule">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Data.<wbr>Inputs.<wbr>Schedule<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#schedule">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Data..<wbr>Inputs.<wbr>Schedule<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Schedule for running the job definition{{% /md %}}</dd>
     <dt class="property-optional"
@@ -472,7 +472,7 @@ The JobDefinition resource accepts the following [input]({{< relref "/docs/intro
 <a href="#userconfirmation_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Confirmation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userconfirmation">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Data.<wbr>User<wbr>Confirmation</a></span>
+        <span class="property-type"><a href="#userconfirmation">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Data..<wbr>User<wbr>Confirmation</a></span>
     </dt>
     <dd>{{% md %}}Enum to detect if user confirmation is required. If not passed will default to NotRequired.{{% /md %}}</dd>
 </dl>
@@ -1007,7 +1007,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#algorithm_csharp" style="color: inherit; text-decoration: inherit;">Algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#supportedalgorithm">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Data.<wbr>Supported<wbr>Algorithm</a></span>
+        <span class="property-type"><a href="#supportedalgorithm">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Data..<wbr>Supported<wbr>Algorithm</a></span>
     </dt>
     <dd>{{% md %}}The encryption algorithm used to encrypt data.{{% /md %}}</dd>
     <dt class="property-required"
@@ -1841,7 +1841,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:hybriddata/latest:JobDefinition jobdeffromtestcode1 /subscriptions/6e0219f5-327a-4365-904f-05eed4227ad7/resourceGroups/ResourceGroupForSDKTest/providers/Microsoft.HybridData/dataManagers/TestAzureSDKOperations/dataServices/DataTransformation/jobDefinitions/jobdeffromtestcode1 
+$ pulumi import azure-nextgen:hybriddata:JobDefinition jobdeffromtestcode1 /subscriptions/6e0219f5-327a-4365-904f-05eed4227ad7/resourceGroups/ResourceGroupForSDKTest/providers/Microsoft.HybridData/dataManagers/TestAzureSDKOperations/dataServices/DataTransformation/jobDefinitions/jobdeffromtestcode1 
 ```
 
 

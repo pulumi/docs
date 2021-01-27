@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.avs.WorkloadNetworkDhcp resource
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 NSX DHCP
+API Version: 2020-07-17-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var workloadNetworkDhcp = new AzureNextGen.AVS.V20200717Preview.WorkloadNetworkDhcp("workloadNetworkDhcp", new AzureNextGen.AVS.V20200717Preview.WorkloadNetworkDhcpArgs
+        var workloadNetworkDhcp = new AzureNextGen.AVS..WorkloadNetworkDhcp("workloadNetworkDhcp", new AzureNextGen.AVS..WorkloadNetworkDhcpArgs
         {
             DhcpId = "dhcp1",
             DhcpType = "SERVER",
@@ -49,7 +50,7 @@ class MyStack : Stack
 package main
 
 import (
-	avs "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/avs/v20200717preview"
+	avs "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/avs"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -80,7 +81,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-workload_network_dhcp = azure_nextgen.avs.v20200717preview.WorkloadNetworkDhcp("workloadNetworkDhcp",
+workload_network_dhcp = azure_nextgen.avs.WorkloadNetworkDhcp("workloadNetworkDhcp",
     dhcp_id="dhcp1",
     dhcp_type="SERVER",
     display_name="dhcpConfigurations1",
@@ -98,7 +99,7 @@ workload_network_dhcp = azure_nextgen.avs.v20200717preview.WorkloadNetworkDhcp("
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const workloadNetworkDhcp = new azure_nextgen.avs.v20200717preview.WorkloadNetworkDhcp("workloadNetworkDhcp", {
+const workloadNetworkDhcp = new azure_nextgen.avs.WorkloadNetworkDhcp("workloadNetworkDhcp", {
     dhcpId: "dhcp1",
     dhcpType: "SERVER",
     displayName: "dhcpConfigurations1",
@@ -309,7 +310,7 @@ The WorkloadNetworkDhcp resource accepts the following [input]({{< relref "/docs
 <a href="#dhcptype_csharp" style="color: inherit; text-decoration: inherit;">Dhcp<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#dhcptypeenum">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>AVS.<wbr>Dhcp<wbr>Type<wbr>Enum</a></span>
+        <span class="property-type">string | <a href="#dhcptypeenum">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>AVS..<wbr>Dhcp<wbr>Type<wbr>Enum</a></span>
     </dt>
     <dd>{{% md %}}Type of DHCP: SERVER or RELAY.{{% /md %}}</dd>
     <dt class="property-required"
@@ -787,7 +788,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:avs/v20200717preview:WorkloadNetworkDhcp dhcp1 /subscriptions/{subscription-id}/resourceGroups/group1/providers/Microsoft.AVS/privateClouds/cloud1/workloadNetworks/default/dhcpConfigurations/dhcpConfigurations1 
+$ pulumi import azure-nextgen:avs:WorkloadNetworkDhcp dhcp1 /subscriptions/{subscription-id}/resourceGroups/group1/providers/Microsoft.AVS/privateClouds/cloud1/workloadNetworks/default/dhcpConfigurations/dhcpConfigurations1 
 ```
 
 

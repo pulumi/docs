@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.managedidentity.UserAssignedIden
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Describes an identity resource.
-Latest API Version: 2018-11-30.
+API Version: 2018-11-30.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var userAssignedIdentity = new AzureNextGen.ManagedIdentity.Latest.UserAssignedIdentity("userAssignedIdentity", new AzureNextGen.ManagedIdentity.Latest.UserAssignedIdentityArgs
+        var userAssignedIdentity = new AzureNextGen.ManagedIdentity..UserAssignedIdentity("userAssignedIdentity", new AzureNextGen.ManagedIdentity..UserAssignedIdentityArgs
         {
             Location = "eastus",
             ResourceGroupName = "rgName",
@@ -52,7 +52,7 @@ class MyStack : Stack
 package main
 
 import (
-	managedidentity "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/managedidentity/latest"
+	managedidentity "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/managedidentity"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -84,7 +84,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-user_assigned_identity = azure_nextgen.managedidentity.latest.UserAssignedIdentity("userAssignedIdentity",
+user_assigned_identity = azure_nextgen.managedidentity.UserAssignedIdentity("userAssignedIdentity",
     location="eastus",
     resource_group_name="rgName",
     resource_name="resourceName",
@@ -103,7 +103,7 @@ user_assigned_identity = azure_nextgen.managedidentity.latest.UserAssignedIdenti
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const userAssignedIdentity = new azure_nextgen.managedidentity.latest.UserAssignedIdentity("userAssignedIdentity", {
+const userAssignedIdentity = new azure_nextgen.managedidentity.UserAssignedIdentity("userAssignedIdentity", {
     location: "eastus",
     resourceGroupName: "rgName",
     resourceName: "resourceName",
@@ -723,7 +723,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:managedidentity/latest:UserAssignedIdentity identityName /subscriptions/subid/resourcegroups/rgName/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identityName 
+$ pulumi import azure-nextgen:managedidentity:UserAssignedIdentity identityName /subscriptions/subid/resourcegroups/rgName/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identityName 
 ```
 
 

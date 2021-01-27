@@ -305,7 +305,7 @@ The following output properties are available:
 <a href="#runbook_csharp" style="color: inherit; text-decoration: inherit;">Runbook</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#runbookassociationpropertyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automation.<wbr>Outputs.<wbr>Runbook<wbr>Association<wbr>Property<wbr>Response</a></span>
+        <span class="property-type"><a href="#runbookassociationpropertyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automation..<wbr>Outputs.<wbr>Runbook<wbr>Association<wbr>Property<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the runbook the webhook is associated with.{{% /md %}}</dd>
     <dt class="property-"

@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.apimanagement.GatewayApiEntityTa
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Api details.
-Latest API Version: 2019-12-01.
+API Version: 2019-12-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var gatewayApiEntityTag = new AzureNextGen.ApiManagement.Latest.GatewayApiEntityTag("gatewayApiEntityTag", new AzureNextGen.ApiManagement.Latest.GatewayApiEntityTagArgs
+        var gatewayApiEntityTag = new AzureNextGen.ApiManagement..GatewayApiEntityTag("gatewayApiEntityTag", new AzureNextGen.ApiManagement..GatewayApiEntityTagArgs
         {
             ApiId = "echo-api",
             GatewayId = "gw1",
@@ -49,7 +49,7 @@ class MyStack : Stack
 package main
 
 import (
-	apimanagement "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/apimanagement/latest"
+	apimanagement "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/apimanagement"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -79,7 +79,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-gateway_api_entity_tag = azure_nextgen.apimanagement.latest.GatewayApiEntityTag("gatewayApiEntityTag",
+gateway_api_entity_tag = azure_nextgen.apimanagement.GatewayApiEntityTag("gatewayApiEntityTag",
     api_id="echo-api",
     gateway_id="gw1",
     provisioning_state="created",
@@ -96,7 +96,7 @@ gateway_api_entity_tag = azure_nextgen.apimanagement.latest.GatewayApiEntityTag(
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const gatewayApiEntityTag = new azure_nextgen.apimanagement.latest.GatewayApiEntityTag("gatewayApiEntityTag", {
+const gatewayApiEntityTag = new azure_nextgen.apimanagement.GatewayApiEntityTag("gatewayApiEntityTag", {
     apiId: "echo-api",
     gatewayId: "gw1",
     provisioningState: "created",
@@ -333,7 +333,7 @@ The GatewayApiEntityTag resource accepts the following [input]({{< relref "/docs
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#provisioningstate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management.<wbr>Provisioning<wbr>State</a></span>
+        <span class="property-type"><a href="#provisioningstate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management..<wbr>Provisioning<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}Provisioning state.{{% /md %}}</dd>
 </dl>
@@ -598,7 +598,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#apiversionset_csharp" style="color: inherit; text-decoration: inherit;">Api<wbr>Version<wbr>Set</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apiversionsetcontractdetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management.<wbr>Outputs.<wbr>Api<wbr>Version<wbr>Set<wbr>Contract<wbr>Details<wbr>Response</a></span>
+        <span class="property-type"><a href="#apiversionsetcontractdetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management..<wbr>Outputs.<wbr>Api<wbr>Version<wbr>Set<wbr>Contract<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Version set details{{% /md %}}</dd>
     <dt class="property-"
@@ -616,7 +616,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authenticationsettings_csharp" style="color: inherit; text-decoration: inherit;">Authentication<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authenticationsettingscontractresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management.<wbr>Outputs.<wbr>Authentication<wbr>Settings<wbr>Contract<wbr>Response</a></span>
+        <span class="property-type"><a href="#authenticationsettingscontractresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management..<wbr>Outputs.<wbr>Authentication<wbr>Settings<wbr>Contract<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Collection of authentication settings included into this API.{{% /md %}}</dd>
     <dt class="property-"
@@ -679,7 +679,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subscriptionkeyparameternames_csharp" style="color: inherit; text-decoration: inherit;">Subscription<wbr>Key<wbr>Parameter<wbr>Names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subscriptionkeyparameternamescontractresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management.<wbr>Outputs.<wbr>Subscription<wbr>Key<wbr>Parameter<wbr>Names<wbr>Contract<wbr>Response</a></span>
+        <span class="property-type"><a href="#subscriptionkeyparameternamescontractresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management..<wbr>Outputs.<wbr>Subscription<wbr>Key<wbr>Parameter<wbr>Names<wbr>Contract<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Protocols over which API is made available.{{% /md %}}</dd>
     <dt class="property-"
@@ -1542,7 +1542,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#oauth2_csharp" style="color: inherit; text-decoration: inherit;">OAuth2</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oauth2authenticationsettingscontractresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>OAuth2Authentication<wbr>Settings<wbr>Contract<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#oauth2authenticationsettingscontractresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management..<wbr>Inputs.<wbr>OAuth2Authentication<wbr>Settings<wbr>Contract<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}OAuth2 Authentication settings{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1551,7 +1551,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#openid_csharp" style="color: inherit; text-decoration: inherit;">Openid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#openidauthenticationsettingscontractresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Open<wbr>Id<wbr>Authentication<wbr>Settings<wbr>Contract<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#openidauthenticationsettingscontractresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management..<wbr>Inputs.<wbr>Open<wbr>Id<wbr>Authentication<wbr>Settings<wbr>Contract<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}OpenID Connect Authentication Settings{{% /md %}}</dd>
 </dl>
@@ -1958,7 +1958,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:apimanagement/latest:GatewayApiEntityTag echo-api /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/gateways/gw1/apis/echo-api 
+$ pulumi import azure-nextgen:apimanagement:GatewayApiEntityTag echo-api /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/gateways/gw1/apis/echo-api 
 ```
 
 

@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.eventhub.DisasterRecoveryConfig 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Single item in List or Get Alias(Disaster Recovery configuration) operation
-Latest API Version: 2017-04-01.
+API Version: 2017-04-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var disasterRecoveryConfig = new AzureNextGen.EventHub.Latest.DisasterRecoveryConfig("disasterRecoveryConfig", new AzureNextGen.EventHub.Latest.DisasterRecoveryConfigArgs
+        var disasterRecoveryConfig = new AzureNextGen.EventHub..DisasterRecoveryConfig("disasterRecoveryConfig", new AzureNextGen.EventHub..DisasterRecoveryConfigArgs
         {
             Alias = "sdk-DisasterRecovery-3814",
             NamespaceName = "sdk-Namespace-8859",
@@ -48,7 +48,7 @@ class MyStack : Stack
 package main
 
 import (
-	eventhub "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/eventhub/latest"
+	eventhub "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/eventhub"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -77,7 +77,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-disaster_recovery_config = azure_nextgen.eventhub.latest.DisasterRecoveryConfig("disasterRecoveryConfig",
+disaster_recovery_config = azure_nextgen.eventhub.DisasterRecoveryConfig("disasterRecoveryConfig",
     alias="sdk-DisasterRecovery-3814",
     namespace_name="sdk-Namespace-8859",
     partner_namespace="sdk-Namespace-37",
@@ -93,7 +93,7 @@ disaster_recovery_config = azure_nextgen.eventhub.latest.DisasterRecoveryConfig(
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const disasterRecoveryConfig = new azure_nextgen.eventhub.latest.DisasterRecoveryConfig("disasterRecoveryConfig", {
+const disasterRecoveryConfig = new azure_nextgen.eventhub.DisasterRecoveryConfig("disasterRecoveryConfig", {
     alias: "sdk-DisasterRecovery-3814",
     namespaceName: "sdk-Namespace-8859",
     partnerNamespace: "sdk-Namespace-37",
@@ -746,7 +746,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:eventhub/latest:DisasterRecoveryConfig sdk-DisasterRecovery-3814 /subscriptions/exampleResourceGroup/resourceGroups/exampleResourceGroup/providers/Microsoft.EventHub/namespaces/sdk-Namespace-8859/disasterRecoveryConfig/sdk-DisasterRecovery-3814 
+$ pulumi import azure-nextgen:eventhub:DisasterRecoveryConfig sdk-DisasterRecovery-3814 /subscriptions/exampleResourceGroup/resourceGroups/exampleResourceGroup/providers/Microsoft.EventHub/namespaces/sdk-Namespace-8859/disasterRecoveryConfig/sdk-DisasterRecovery-3814 
 ```
 
 

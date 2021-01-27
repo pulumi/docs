@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.media.MediaService resource with
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 A Media Services account.
-Latest API Version: 2020-05-01.
+API Version: 2020-05-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,14 +27,14 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var mediaService = new AzureNextGen.Media.Latest.MediaService("mediaService", new AzureNextGen.Media.Latest.MediaServiceArgs
+        var mediaService = new AzureNextGen.Media..MediaService("mediaService", new AzureNextGen.Media..MediaServiceArgs
         {
             AccountName = "contososports",
             Location = "South Central US",
             ResourceGroupName = "contoso",
             StorageAccounts = 
             {
-                new AzureNextGen.Media.Latest.Inputs.StorageAccountArgs
+                new AzureNextGen.Media..Inputs.StorageAccountArgs
                 {
                     Id = "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/contoso/providers/Microsoft.Storage/storageAccounts/contososportsstore",
                     Type = "Primary",
@@ -60,7 +60,7 @@ class MyStack : Stack
 package main
 
 import (
-	media "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/media/latest"
+	media "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/media"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -98,11 +98,11 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-media_service = azure_nextgen.media.latest.MediaService("mediaService",
+media_service = azure_nextgen.media.MediaService("mediaService",
     account_name="contososports",
     location="South Central US",
     resource_group_name="contoso",
-    storage_accounts=[azure_nextgen.media.latest.StorageAccountArgs(
+    storage_accounts=[azure_nextgen.media.StorageAccountArgs(
         id="/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/contoso/providers/Microsoft.Storage/storageAccounts/contososportsstore",
         type="Primary",
     )],
@@ -121,7 +121,7 @@ media_service = azure_nextgen.media.latest.MediaService("mediaService",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const mediaService = new azure_nextgen.media.latest.MediaService("mediaService", {
+const mediaService = new azure_nextgen.media.MediaService("mediaService", {
     accountName: "contososports",
     location: "South Central US",
     resourceGroupName: "contoso",
@@ -355,7 +355,7 @@ The MediaService resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#encryption_csharp" style="color: inherit; text-decoration: inherit;">Encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accountencryption">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Account<wbr>Encryption<wbr>Args</a></span>
+        <span class="property-type"><a href="#accountencryption">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Account<wbr>Encryption<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The account encryption properties.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -364,7 +364,7 @@ The MediaService resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mediaserviceidentity">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Media<wbr>Service<wbr>Identity<wbr>Args</a></span>
+        <span class="property-type"><a href="#mediaserviceidentity">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Media<wbr>Service<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Managed Identity for the Media Services account.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -373,7 +373,7 @@ The MediaService resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#storageaccounts_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Accounts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageaccount">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Storage<wbr>Account<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#storageaccount">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Storage<wbr>Account<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The storage accounts for this resource.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -382,7 +382,7 @@ The MediaService resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#storageauthentication_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Authentication</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#storageauthentication">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Storage<wbr>Authentication</a></span>
+        <span class="property-type">string | <a href="#storageauthentication">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Storage<wbr>Authentication</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -827,7 +827,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#accountencryptionkeytype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Account<wbr>Encryption<wbr>Key<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#accountencryptionkeytype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Account<wbr>Encryption<wbr>Key<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of key used to encrypt the Account Key.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -836,7 +836,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keyvaultproperties_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#keyvaultproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The properties of the key used to encrypt the account.{{% /md %}}</dd>
 </dl>
@@ -972,7 +972,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keyvaultproperties_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#keyvaultpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The properties of the key used to encrypt the account.{{% /md %}}</dd>
 </dl>
@@ -1259,7 +1259,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#managedidentitytype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Managed<wbr>Identity<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#managedidentitytype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Managed<wbr>Identity<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The identity type.{{% /md %}}</dd>
 </dl>
@@ -1455,7 +1455,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#storageaccounttype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Storage<wbr>Account<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#storageaccounttype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Storage<wbr>Account<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of the storage account.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1721,7 +1721,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:media/latest:MediaService contososports /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/contoso/providers/Microsoft.Media/mediaservices/contososports 
+$ pulumi import azure-nextgen:media:MediaService contososports /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/contoso/providers/Microsoft.Media/mediaservices/contososports 
 ```
 
 

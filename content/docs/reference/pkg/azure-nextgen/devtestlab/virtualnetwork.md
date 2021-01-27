@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.devtestlab.VirtualNetwork resour
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 A virtual network.
-Latest API Version: 2018-09-15.
+API Version: 2018-09-15.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var virtualNetwork = new AzureNextGen.DevTestLab.Latest.VirtualNetwork("virtualNetwork", new AzureNextGen.DevTestLab.Latest.VirtualNetworkArgs
+        var virtualNetwork = new AzureNextGen.DevTestLab..VirtualNetwork("virtualNetwork", new AzureNextGen.DevTestLab..VirtualNetworkArgs
         {
             LabName = "{devtestlab-name}",
             Location = "{azure-location}",
@@ -52,7 +52,7 @@ class MyStack : Stack
 package main
 
 import (
-	devtestlab "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/devtestlab/latest"
+	devtestlab "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/devtestlab"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -84,7 +84,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-virtual_network = azure_nextgen.devtestlab.latest.VirtualNetwork("virtualNetwork",
+virtual_network = azure_nextgen.devtestlab.VirtualNetwork("virtualNetwork",
     lab_name="{devtestlab-name}",
     location="{azure-location}",
     name="{virtualnetwork-name}",
@@ -103,7 +103,7 @@ virtual_network = azure_nextgen.devtestlab.latest.VirtualNetwork("virtualNetwork
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const virtualNetwork = new azure_nextgen.devtestlab.latest.VirtualNetwork("virtualNetwork", {
+const virtualNetwork = new azure_nextgen.devtestlab.VirtualNetwork("virtualNetwork", {
     labName: "{devtestlab-name}",
     location: "{azure-location}",
     name: "{virtualnetwork-name}",
@@ -333,7 +333,7 @@ The VirtualNetwork resource accepts the following [input]({{< relref "/docs/intr
 <a href="#allowedsubnets_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Subnets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subnet">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Subnet<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#subnet">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab..<wbr>Inputs.<wbr>Subnet<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The allowed subnets of the virtual network.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -369,7 +369,7 @@ The VirtualNetwork resource accepts the following [input]({{< relref "/docs/intr
 <a href="#subnetoverrides_csharp" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Overrides</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subnetoverride">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Subnet<wbr>Override<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#subnetoverride">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab..<wbr>Inputs.<wbr>Subnet<wbr>Override<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The subnet overrides of the virtual network.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -670,7 +670,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#externalsubnets_csharp" style="color: inherit; text-decoration: inherit;">External<wbr>Subnets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#externalsubnetresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Outputs.<wbr>External<wbr>Subnet<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#externalsubnetresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab..<wbr>Outputs.<wbr>External<wbr>Subnet<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The external subnet properties.{{% /md %}}</dd>
     <dt class="property-"
@@ -1020,7 +1020,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transportprotocol_csharp" style="color: inherit; text-decoration: inherit;">Transport<wbr>Protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#transportprotocol">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Transport<wbr>Protocol</a></span>
+        <span class="property-type">string | <a href="#transportprotocol">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab..<wbr>Transport<wbr>Protocol</a></span>
     </dt>
     <dd>{{% md %}}Protocol type of the port.{{% /md %}}</dd>
 </dl>
@@ -1207,7 +1207,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowpublicip_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Public<wbr>Ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#usagepermissiontype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Usage<wbr>Permission<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#usagepermissiontype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab..<wbr>Usage<wbr>Permission<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The permission policy of the subnet for allowing public IP addresses (i.e. Allow, Deny)).{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1359,7 +1359,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sharedpublicipaddressconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Shared<wbr>Public<wbr>Ip<wbr>Address<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subnetsharedpublicipaddressconfiguration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Subnet<wbr>Shared<wbr>Public<wbr>Ip<wbr>Address<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#subnetsharedpublicipaddressconfiguration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab..<wbr>Inputs.<wbr>Subnet<wbr>Shared<wbr>Public<wbr>Ip<wbr>Address<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties that virtual machines on this subnet will share.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1368,7 +1368,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#useinvmcreationpermission_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>In<wbr>Vm<wbr>Creation<wbr>Permission</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#usagepermissiontype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Usage<wbr>Permission<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#usagepermissiontype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab..<wbr>Usage<wbr>Permission<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether this subnet can be used during virtual machine creation (i.e. Allow, Deny).{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1377,7 +1377,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#usepublicipaddresspermission_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Public<wbr>Ip<wbr>Address<wbr>Permission</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#usagepermissiontype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Usage<wbr>Permission<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#usagepermissiontype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab..<wbr>Usage<wbr>Permission<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether public IP addresses can be assigned to virtual machines on this subnet (i.e. Allow, Deny).{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1601,7 +1601,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sharedpublicipaddressconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Shared<wbr>Public<wbr>Ip<wbr>Address<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subnetsharedpublicipaddressconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Subnet<wbr>Shared<wbr>Public<wbr>Ip<wbr>Address<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subnetsharedpublicipaddressconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab..<wbr>Inputs.<wbr>Subnet<wbr>Shared<wbr>Public<wbr>Ip<wbr>Address<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties that virtual machines on this subnet will share.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1959,7 +1959,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowedports_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#port">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Port<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#port">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab..<wbr>Inputs.<wbr>Port<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Backend ports that virtual machines on this subnet are allowed to expose{{% /md %}}</dd>
 </dl>
@@ -2021,7 +2021,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowedports_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#portresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Port<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#portresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab..<wbr>Inputs.<wbr>Port<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Backend ports that virtual machines on this subnet are allowed to expose{{% /md %}}</dd>
 </dl>
@@ -2161,7 +2161,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:devtestlab/latest:VirtualNetwork {virtualnetwork-name} /subscriptions/{subscription-id}/resourcegroups/myResourceGroup/providers/microsoft.devtestlab/labs/{devtestlab-name}/virtualnetworks/{virtualnetwork-name} 
+$ pulumi import azure-nextgen:devtestlab:VirtualNetwork {virtualnetwork-name} /subscriptions/{subscription-id}/resourcegroups/myResourceGroup/providers/microsoft.devtestlab/labs/{devtestlab-name}/virtualnetworks/{virtualnetwork-name} 
 ```
 
 

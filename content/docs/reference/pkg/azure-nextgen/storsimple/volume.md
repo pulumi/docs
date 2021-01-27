@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.storsimple.Volume resource with 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The volume.
-Latest API Version: 2017-06-01.
+API Version: 2017-06-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var volume = new AzureNextGen.StorSimple.Latest.Volume("volume", new AzureNextGen.StorSimple.Latest.VolumeArgs
+        var volume = new AzureNextGen.StorSimple..Volume("volume", new AzureNextGen.StorSimple..VolumeArgs
         {
             AccessControlRecordIds = 
             {
@@ -57,7 +57,7 @@ class MyStack : Stack
 package main
 
 import (
-	storsimple "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/storsimple/latest"
+	storsimple "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/storsimple"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -94,7 +94,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-volume = azure_nextgen.storsimple.latest.Volume("volume",
+volume = azure_nextgen.storsimple.Volume("volume",
     access_control_record_ids=["/subscriptions/4385cf00-2d3a-425a-832f-f4285b1c9dce/resourceGroups/ResourceGroupForSDKTest/providers/Microsoft.StorSimple/managers/ManagerForSDKTest1/accessControlRecords/ACR2"],
     device_name="Device05ForSDKTest",
     manager_name="ManagerForSDKTest1",
@@ -116,7 +116,7 @@ volume = azure_nextgen.storsimple.latest.Volume("volume",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const volume = new azure_nextgen.storsimple.latest.Volume("volume", {
+const volume = new azure_nextgen.storsimple.Volume("volume", {
     accessControlRecordIds: ["/subscriptions/4385cf00-2d3a-425a-832f-f4285b1c9dce/resourceGroups/ResourceGroupForSDKTest/providers/Microsoft.StorSimple/managers/ManagerForSDKTest1/accessControlRecords/ACR2"],
     deviceName: "Device05ForSDKTest",
     managerName: "ManagerForSDKTest1",
@@ -349,7 +349,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#monitoringstatus_csharp" style="color: inherit; text-decoration: inherit;">Monitoring<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#monitoringstatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stor<wbr>Simple.<wbr>Monitoring<wbr>Status</a></span>
+        <span class="property-type"><a href="#monitoringstatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stor<wbr>Simple..<wbr>Monitoring<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}The monitoring status of the volume.{{% /md %}}</dd>
     <dt class="property-required"
@@ -394,7 +394,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#volumestatus_csharp" style="color: inherit; text-decoration: inherit;">Volume<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volumestatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stor<wbr>Simple.<wbr>Volume<wbr>Status</a></span>
+        <span class="property-type"><a href="#volumestatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stor<wbr>Simple..<wbr>Volume<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}The volume status.{{% /md %}}</dd>
     <dt class="property-required"
@@ -403,7 +403,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#volumetype_csharp" style="color: inherit; text-decoration: inherit;">Volume<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volumetype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stor<wbr>Simple.<wbr>Volume<wbr>Type</a></span>
+        <span class="property-type"><a href="#volumetype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stor<wbr>Simple..<wbr>Volume<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of the volume.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -412,7 +412,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kind">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stor<wbr>Simple.<wbr>Kind</a></span>
+        <span class="property-type"><a href="#kind">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stor<wbr>Simple..<wbr>Kind</a></span>
     </dt>
     <dd>{{% md %}}The Kind of the object. Currently only Series8000 is supported{{% /md %}}</dd>
 </dl>
@@ -1183,7 +1183,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:storsimple/latest:Volume Volume1ForSDKTest /subscriptions/4385cf00-2d3a-425a-832f-f4285b1c9dce/resourceGroups/ResourceGroupForSDKTest/providers/Microsoft.StorSimple/managers/ManagerForSDKTest1/devices/Device05ForSDKTest/volumeContainers/VolumeContainerForSDKTest/volumes/Volume1ForSDKTest 
+$ pulumi import azure-nextgen:storsimple:Volume Volume1ForSDKTest /subscriptions/4385cf00-2d3a-425a-832f-f4285b1c9dce/resourceGroups/ResourceGroupForSDKTest/providers/Microsoft.StorSimple/managers/ManagerForSDKTest1/devices/Device05ForSDKTest/volumeContainers/VolumeContainerForSDKTest/volumes/Volume1ForSDKTest 
 ```
 
 

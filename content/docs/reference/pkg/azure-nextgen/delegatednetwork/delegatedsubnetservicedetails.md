@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.delegatednetwork.DelegatedSubnet
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Represents an instance of a orchestrator.
+API Version: 2020-08-08-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,16 +27,16 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var delegatedSubnetServiceDetails = new AzureNextGen.DelegatedNetwork.V20200808Preview.DelegatedSubnetServiceDetails("delegatedSubnetServiceDetails", new AzureNextGen.DelegatedNetwork.V20200808Preview.DelegatedSubnetServiceDetailsArgs
+        var delegatedSubnetServiceDetails = new AzureNextGen.DelegatedNetwork..DelegatedSubnetServiceDetails("delegatedSubnetServiceDetails", new AzureNextGen.DelegatedNetwork..DelegatedSubnetServiceDetailsArgs
         {
-            ControllerDetails = new AzureNextGen.DelegatedNetwork.V20200808Preview.Inputs.ControllerDetailsArgs
+            ControllerDetails = new AzureNextGen.DelegatedNetwork..Inputs.ControllerDetailsArgs
             {
                 Id = "/subscriptions/613192d7-503f-477a-9cfe-4efc3ee2bd60/resourceGroups/TestRG/providers/Microsoft.DelegatedNetwork/controller/dnctestcontroller",
             },
             Location = "West US",
             ResourceGroupName = "TestRG",
             ResourceName = "delegated1",
-            SubnetDetails = new AzureNextGen.DelegatedNetwork.V20200808Preview.Inputs.SubnetDetailsArgs
+            SubnetDetails = new AzureNextGen.DelegatedNetwork..Inputs.SubnetDetailsArgs
             {
                 Id = "/subscriptions/613192d7-503f-477a-9cfe-4efc3ee2bd60/resourceGroups/TestRG/providers/Microsoft.Network/virtualNetworks/testvnet/subnets/testsubnet",
             },
@@ -54,7 +55,7 @@ class MyStack : Stack
 package main
 
 import (
-	delegatednetwork "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/delegatednetwork/v20200808preview"
+	delegatednetwork "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/delegatednetwork"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -88,14 +89,14 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-delegated_subnet_service_details = azure_nextgen.delegatednetwork.v20200808preview.DelegatedSubnetServiceDetails("delegatedSubnetServiceDetails",
-    controller_details=azure_nextgen.delegatednetwork.v20200808preview.ControllerDetailsArgs(
+delegated_subnet_service_details = azure_nextgen.delegatednetwork.DelegatedSubnetServiceDetails("delegatedSubnetServiceDetails",
+    controller_details=azure_nextgen.delegatednetwork.ControllerDetailsArgs(
         id="/subscriptions/613192d7-503f-477a-9cfe-4efc3ee2bd60/resourceGroups/TestRG/providers/Microsoft.DelegatedNetwork/controller/dnctestcontroller",
     ),
     location="West US",
     resource_group_name="TestRG",
     resource_name="delegated1",
-    subnet_details=azure_nextgen.delegatednetwork.v20200808preview.SubnetDetailsArgs(
+    subnet_details=azure_nextgen.delegatednetwork.SubnetDetailsArgs(
         id="/subscriptions/613192d7-503f-477a-9cfe-4efc3ee2bd60/resourceGroups/TestRG/providers/Microsoft.Network/virtualNetworks/testvnet/subnets/testsubnet",
     ))
 
@@ -109,7 +110,7 @@ delegated_subnet_service_details = azure_nextgen.delegatednetwork.v20200808previ
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const delegatedSubnetServiceDetails = new azure_nextgen.delegatednetwork.v20200808preview.DelegatedSubnetServiceDetails("delegatedSubnetServiceDetails", {
+const delegatedSubnetServiceDetails = new azure_nextgen.delegatednetwork.DelegatedSubnetServiceDetails("delegatedSubnetServiceDetails", {
     controllerDetails: {
         id: "/subscriptions/613192d7-503f-477a-9cfe-4efc3ee2bd60/resourceGroups/TestRG/providers/Microsoft.DelegatedNetwork/controller/dnctestcontroller",
     },
@@ -332,7 +333,7 @@ The DelegatedSubnetServiceDetails resource accepts the following [input]({{< rel
 <a href="#controllerdetails_csharp" style="color: inherit; text-decoration: inherit;">Controller<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#controllerdetails">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Delegated<wbr>Network.<wbr>Inputs.<wbr>Controller<wbr>Details<wbr>Args</a></span>
+        <span class="property-type"><a href="#controllerdetails">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Delegated<wbr>Network..<wbr>Inputs.<wbr>Controller<wbr>Details<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}controller details{{% /md %}}</dd>
     <dt class="property-optional"
@@ -350,7 +351,7 @@ The DelegatedSubnetServiceDetails resource accepts the following [input]({{< rel
 <a href="#subnetdetails_csharp" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subnetdetails">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Delegated<wbr>Network.<wbr>Inputs.<wbr>Subnet<wbr>Details<wbr>Args</a></span>
+        <span class="property-type"><a href="#subnetdetails">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Delegated<wbr>Network..<wbr>Inputs.<wbr>Subnet<wbr>Details<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}orchestrator details{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1019,7 +1020,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:delegatednetwork/v20200808preview:DelegatedSubnetServiceDetails delegated1 /subscriptions/613192d7-503f-477a-9cfe-4efc3ee2bd60/resourceGroups/TestRG/providers/Microsoft.DelegatedNetwork/delegatedSubnets/delegated1 
+$ pulumi import azure-nextgen:delegatednetwork:DelegatedSubnetServiceDetails delegated1 /subscriptions/613192d7-503f-477a-9cfe-4efc3ee2bd60/resourceGroups/TestRG/providers/Microsoft.DelegatedNetwork/delegatedSubnets/delegated1 
 ```
 
 

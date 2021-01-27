@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.customerinsights.RelationshipLin
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The relationship link resource format.
-Latest API Version: 2017-04-26.
+API Version: 2017-04-26.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var relationshipLink = new AzureNextGen.CustomerInsights.Latest.RelationshipLink("relationshipLink", new AzureNextGen.CustomerInsights.Latest.RelationshipLinkArgs
+        var relationshipLink = new AzureNextGen.CustomerInsights..RelationshipLink("relationshipLink", new AzureNextGen.CustomerInsights..RelationshipLinkArgs
         {
             Description = 
             {
@@ -41,7 +41,7 @@ class MyStack : Stack
             InteractionType = "testInteraction4332",
             ProfilePropertyReferences = 
             {
-                new AzureNextGen.CustomerInsights.Latest.Inputs.ParticipantProfilePropertyReferenceArgs
+                new AzureNextGen.CustomerInsights..Inputs.ParticipantProfilePropertyReferenceArgs
                 {
                     InteractionPropertyName = "profile1",
                     ProfilePropertyName = "ProfileId",
@@ -49,7 +49,7 @@ class MyStack : Stack
             },
             RelatedProfilePropertyReferences = 
             {
-                new AzureNextGen.CustomerInsights.Latest.Inputs.ParticipantProfilePropertyReferenceArgs
+                new AzureNextGen.CustomerInsights..Inputs.ParticipantProfilePropertyReferenceArgs
                 {
                     InteractionPropertyName = "profile1",
                     ProfilePropertyName = "ProfileId",
@@ -73,7 +73,7 @@ class MyStack : Stack
 package main
 
 import (
-	customerinsights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/customerinsights/latest"
+	customerinsights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/customerinsights"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -121,7 +121,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-relationship_link = azure_nextgen.customerinsights.latest.RelationshipLink("relationshipLink",
+relationship_link = azure_nextgen.customerinsights.RelationshipLink("relationshipLink",
     description={
         "en-us": "Link Description",
     },
@@ -130,11 +130,11 @@ relationship_link = azure_nextgen.customerinsights.latest.RelationshipLink("rela
     },
     hub_name="sdkTestHub",
     interaction_type="testInteraction4332",
-    profile_property_references=[azure_nextgen.customerinsights.latest.ParticipantProfilePropertyReferenceArgs(
+    profile_property_references=[azure_nextgen.customerinsights.ParticipantProfilePropertyReferenceArgs(
         interaction_property_name="profile1",
         profile_property_name="ProfileId",
     )],
-    related_profile_property_references=[azure_nextgen.customerinsights.latest.ParticipantProfilePropertyReferenceArgs(
+    related_profile_property_references=[azure_nextgen.customerinsights.ParticipantProfilePropertyReferenceArgs(
         interaction_property_name="profile1",
         profile_property_name="ProfileId",
     )],
@@ -152,7 +152,7 @@ relationship_link = azure_nextgen.customerinsights.latest.RelationshipLink("rela
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const relationshipLink = new azure_nextgen.customerinsights.latest.RelationshipLink("relationshipLink", {
+const relationshipLink = new azure_nextgen.customerinsights.RelationshipLink("relationshipLink", {
     description: {
         "en-us": "Link Description",
     },
@@ -385,7 +385,7 @@ The RelationshipLink resource accepts the following [input]({{< relref "/docs/in
 <a href="#profilepropertyreferences_csharp" style="color: inherit; text-decoration: inherit;">Profile<wbr>Property<wbr>References</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#participantprofilepropertyreference">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights.<wbr>Inputs.<wbr>Participant<wbr>Profile<wbr>Property<wbr>Reference<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#participantprofilepropertyreference">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights..<wbr>Inputs.<wbr>Participant<wbr>Profile<wbr>Property<wbr>Reference<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The property references for the Profile of the Relationship.{{% /md %}}</dd>
     <dt class="property-required"
@@ -394,7 +394,7 @@ The RelationshipLink resource accepts the following [input]({{< relref "/docs/in
 <a href="#relatedprofilepropertyreferences_csharp" style="color: inherit; text-decoration: inherit;">Related<wbr>Profile<wbr>Property<wbr>References</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#participantprofilepropertyreference">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights.<wbr>Inputs.<wbr>Participant<wbr>Profile<wbr>Property<wbr>Reference<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#participantprofilepropertyreference">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights..<wbr>Inputs.<wbr>Participant<wbr>Profile<wbr>Property<wbr>Reference<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The property references for the Related Profile of the Relationship.{{% /md %}}</dd>
     <dt class="property-required"
@@ -448,7 +448,7 @@ The RelationshipLink resource accepts the following [input]({{< relref "/docs/in
 <a href="#mappings_csharp" style="color: inherit; text-decoration: inherit;">Mappings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#relationshiplinkfieldmapping">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights.<wbr>Inputs.<wbr>Relationship<wbr>Link<wbr>Field<wbr>Mapping<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#relationshiplinkfieldmapping">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights..<wbr>Inputs.<wbr>Relationship<wbr>Link<wbr>Field<wbr>Mapping<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The mappings between Interaction and Relationship fields.{{% /md %}}</dd>
 </dl>
@@ -1298,7 +1298,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linktype_csharp" style="color: inherit; text-decoration: inherit;">Link<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linktypes">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights.<wbr>Link<wbr>Types</a></span>
+        <span class="property-type"><a href="#linktypes">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights..<wbr>Link<wbr>Types</a></span>
     </dt>
     <dd>{{% md %}}Link type.{{% /md %}}</dd>
 </dl>
@@ -1542,7 +1542,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:customerinsights/latest:RelationshipLink sdkTestHub/Somelink /subscriptions/c909e979-ef71-4def-a970-bc7c154db8c5/resourceGroups/TestHubRG/providers/Microsoft.CustomerInsights/hubs/sdkTestHub/relationshipLinks/Somelink 
+$ pulumi import azure-nextgen:customerinsights:RelationshipLink sdkTestHub/Somelink /subscriptions/c909e979-ef71-4def-a970-bc7c154db8c5/resourceGroups/TestHubRG/providers/Microsoft.CustomerInsights/hubs/sdkTestHub/relationshipLinks/Somelink 
 ```
 
 

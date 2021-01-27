@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.apimanagement.ApiTagDescription 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Contract details.
-Latest API Version: 2019-12-01.
+API Version: 2019-12-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var apiTagDescription = new AzureNextGen.ApiManagement.Latest.ApiTagDescription("apiTagDescription", new AzureNextGen.ApiManagement.Latest.ApiTagDescriptionArgs
+        var apiTagDescription = new AzureNextGen.ApiManagement..ApiTagDescription("apiTagDescription", new AzureNextGen.ApiManagement..ApiTagDescriptionArgs
         {
             ApiId = "5931a75ae4bbd512a88c680b",
             Description = "Some description that will be displayed for operation's tag if the tag is assigned to operation of the API",
@@ -51,7 +51,7 @@ class MyStack : Stack
 package main
 
 import (
-	apimanagement "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/apimanagement/latest"
+	apimanagement "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/apimanagement"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -83,7 +83,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-api_tag_description = azure_nextgen.apimanagement.latest.ApiTagDescription("apiTagDescription",
+api_tag_description = azure_nextgen.apimanagement.ApiTagDescription("apiTagDescription",
     api_id="5931a75ae4bbd512a88c680b",
     description="Some description that will be displayed for operation's tag if the tag is assigned to operation of the API",
     external_docs_description="Description of the external docs resource",
@@ -102,7 +102,7 @@ api_tag_description = azure_nextgen.apimanagement.latest.ApiTagDescription("apiT
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const apiTagDescription = new azure_nextgen.apimanagement.latest.ApiTagDescription("apiTagDescription", {
+const apiTagDescription = new azure_nextgen.apimanagement.ApiTagDescription("apiTagDescription", {
     apiId: "5931a75ae4bbd512a88c680b",
     description: "Some description that will be displayed for operation's tag if the tag is assigned to operation of the API",
     externalDocsDescription: "Description of the external docs resource",
@@ -794,7 +794,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:apimanagement/latest:ApiTagDescription tagId1 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/apis/5931a75ae4bbd512a88c680b/tagDescriptions/tagId1 
+$ pulumi import azure-nextgen:apimanagement:ApiTagDescription tagId1 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/apis/5931a75ae4bbd512a88c680b/tagDescriptions/tagId1 
 ```
 
 

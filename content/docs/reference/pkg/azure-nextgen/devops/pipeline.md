@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.devops.Pipeline resource with ex
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Pipeline used to configure Continuous Integration (CI) & Continuous Delivery (CD) for Azure resources.
+API Version: 2020-07-13-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,11 +27,11 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var pipeline = new AzureNextGen.DevOps.V20200713Preview.Pipeline("pipeline", new AzureNextGen.DevOps.V20200713Preview.PipelineArgs
+        var pipeline = new AzureNextGen.DevOps..Pipeline("pipeline", new AzureNextGen.DevOps..PipelineArgs
         {
-            BootstrapConfiguration = new AzureNextGen.DevOps.V20200713Preview.Inputs.BootstrapConfigurationArgs
+            BootstrapConfiguration = new AzureNextGen.DevOps..Inputs.BootstrapConfigurationArgs
             {
-                Template = new AzureNextGen.DevOps.V20200713Preview.Inputs.PipelineTemplateArgs
+                Template = new AzureNextGen.DevOps..Inputs.PipelineTemplateArgs
                 {
                     Id = "ms.vss-continuous-delivery-pipeline-templates.aspnet-windowswebapp",
                     Parameters = 
@@ -63,7 +64,7 @@ class MyStack : Stack
 package main
 
 import (
-	devops "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/devops/v20200713preview"
+	devops "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/devops"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -105,9 +106,9 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-pipeline = azure_nextgen.devops.v20200713preview.Pipeline("pipeline",
-    bootstrap_configuration=azure_nextgen.devops.v20200713preview.BootstrapConfigurationArgs(
-        template=azure_nextgen.devops.v20200713preview.PipelineTemplateArgs(
+pipeline = azure_nextgen.devops.Pipeline("pipeline",
+    bootstrap_configuration=azure_nextgen.devops.BootstrapConfigurationArgs(
+        template=azure_nextgen.devops.PipelineTemplateArgs(
             id="ms.vss-continuous-delivery-pipeline-templates.aspnet-windowswebapp",
             parameters={
                 "appInsightLocation": "South India",
@@ -134,7 +135,7 @@ pipeline = azure_nextgen.devops.v20200713preview.Pipeline("pipeline",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const pipeline = new azure_nextgen.devops.v20200713preview.Pipeline("pipeline", {
+const pipeline = new azure_nextgen.devops.Pipeline("pipeline", {
     bootstrapConfiguration: {
         template: {
             id: "ms.vss-continuous-delivery-pipeline-templates.aspnet-windowswebapp",
@@ -168,11 +169,11 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var pipeline = new AzureNextGen.DevOps.V20200713Preview.Pipeline("pipeline", new AzureNextGen.DevOps.V20200713Preview.PipelineArgs
+        var pipeline = new AzureNextGen.DevOps..Pipeline("pipeline", new AzureNextGen.DevOps..PipelineArgs
         {
-            BootstrapConfiguration = new AzureNextGen.DevOps.V20200713Preview.Inputs.BootstrapConfigurationArgs
+            BootstrapConfiguration = new AzureNextGen.DevOps..Inputs.BootstrapConfigurationArgs
             {
-                Template = new AzureNextGen.DevOps.V20200713Preview.Inputs.PipelineTemplateArgs
+                Template = new AzureNextGen.DevOps..Inputs.PipelineTemplateArgs
                 {
                     Id = "ms.vss-continuous-delivery-pipeline-templates.aspnet-windowswebapp",
                     Parameters = 
@@ -205,7 +206,7 @@ class MyStack : Stack
 package main
 
 import (
-	devops "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/devops/v20200713preview"
+	devops "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/devops"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -247,9 +248,9 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-pipeline = azure_nextgen.devops.v20200713preview.Pipeline("pipeline",
-    bootstrap_configuration=azure_nextgen.devops.v20200713preview.BootstrapConfigurationArgs(
-        template=azure_nextgen.devops.v20200713preview.PipelineTemplateArgs(
+pipeline = azure_nextgen.devops.Pipeline("pipeline",
+    bootstrap_configuration=azure_nextgen.devops.BootstrapConfigurationArgs(
+        template=azure_nextgen.devops.PipelineTemplateArgs(
             id="ms.vss-continuous-delivery-pipeline-templates.aspnet-windowswebapp",
             parameters={
                 "appInsightLocation": "South India",
@@ -276,7 +277,7 @@ pipeline = azure_nextgen.devops.v20200713preview.Pipeline("pipeline",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const pipeline = new azure_nextgen.devops.v20200713preview.Pipeline("pipeline", {
+const pipeline = new azure_nextgen.devops.Pipeline("pipeline", {
     bootstrapConfiguration: {
         template: {
             id: "ms.vss-continuous-delivery-pipeline-templates.aspnet-windowswebapp",
@@ -489,7 +490,7 @@ The Pipeline resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#bootstrapconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Bootstrap<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bootstrapconfiguration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Ops.<wbr>Inputs.<wbr>Bootstrap<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#bootstrapconfiguration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Ops..<wbr>Inputs.<wbr>Bootstrap<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration used to bootstrap the Pipeline.{{% /md %}}</dd>
     <dt class="property-required"
@@ -507,7 +508,7 @@ The Pipeline resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#pipelinetype_csharp" style="color: inherit; text-decoration: inherit;">Pipeline<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#pipelinetypeenum">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Ops.<wbr>Pipeline<wbr>Type<wbr>Enum</a></span>
+        <span class="property-type">string | <a href="#pipelinetypeenum">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Ops..<wbr>Pipeline<wbr>Type<wbr>Enum</a></span>
     </dt>
     <dd>{{% md %}}Specifies which CI/CD provider to use. Valid options are 'azurePipeline', 'githubWorkflow'.{{% /md %}}</dd>
     <dt class="property-required"
@@ -763,7 +764,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#systemdata_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Ops.<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
+        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Ops..<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The system metadata pertaining to this resource.{{% /md %}}</dd>
     <dt class="property-"
@@ -952,7 +953,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authorizationtype_csharp" style="color: inherit; text-decoration: inherit;">Authorization<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#authorizationtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Ops.<wbr>Authorization<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#authorizationtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Ops..<wbr>Authorization<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of authorization.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1178,7 +1179,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#template_csharp" style="color: inherit; text-decoration: inherit;">Template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinetemplate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Ops.<wbr>Inputs.<wbr>Pipeline<wbr>Template<wbr>Args</a></span>
+        <span class="property-type"><a href="#pipelinetemplate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Ops..<wbr>Inputs.<wbr>Pipeline<wbr>Template<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Template used to bootstrap the pipeline.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1187,7 +1188,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourcerepository_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Repository</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#coderepository">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Ops.<wbr>Inputs.<wbr>Code<wbr>Repository<wbr>Args</a></span>
+        <span class="property-type"><a href="#coderepository">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Ops..<wbr>Inputs.<wbr>Code<wbr>Repository<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Repository containing the source code for the pipeline. Currently only 'azurePipeline' pipeline type supports this.{{% /md %}}</dd>
 </dl>
@@ -1276,7 +1277,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#template_csharp" style="color: inherit; text-decoration: inherit;">Template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinetemplateresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Ops.<wbr>Inputs.<wbr>Pipeline<wbr>Template<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#pipelinetemplateresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Ops..<wbr>Inputs.<wbr>Pipeline<wbr>Template<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Template used to bootstrap the pipeline.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1285,7 +1286,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourcerepository_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Repository</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#coderepositoryresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Ops.<wbr>Inputs.<wbr>Code<wbr>Repository<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#coderepositoryresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Ops..<wbr>Inputs.<wbr>Code<wbr>Repository<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Repository containing the source code for the pipeline. Currently only 'azurePipeline' pipeline type supports this.{{% /md %}}</dd>
 </dl>
@@ -1392,7 +1393,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#repositorytype_csharp" style="color: inherit; text-decoration: inherit;">Repository<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#coderepositorytype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Ops.<wbr>Code<wbr>Repository<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#coderepositorytype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Ops..<wbr>Code<wbr>Repository<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of code repository.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1401,7 +1402,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authorization_csharp" style="color: inherit; text-decoration: inherit;">Authorization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authorization">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Ops.<wbr>Inputs.<wbr>Authorization<wbr>Args</a></span>
+        <span class="property-type"><a href="#authorization">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Ops..<wbr>Inputs.<wbr>Authorization<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Authorization info to access the code repository.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1607,7 +1608,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authorization_csharp" style="color: inherit; text-decoration: inherit;">Authorization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authorizationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Ops.<wbr>Inputs.<wbr>Authorization<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#authorizationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Ops..<wbr>Inputs.<wbr>Authorization<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Authorization info to access the code repository.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2294,7 +2295,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:devops/v20200713preview:Pipeline myAspNetWebAppPipeline /subscriptions/{subscriptionId}/resourceGroups/myAspNetWebAppPipeline-rg/providers/Microsoft.DevOps/pipelines/myAspNetWebAppPipeline 
+$ pulumi import azure-nextgen:devops:Pipeline myAspNetWebAppPipeline /subscriptions/{subscriptionId}/resourceGroups/myAspNetWebAppPipeline-rg/providers/Microsoft.DevOps/pipelines/myAspNetWebAppPipeline 
 ```
 
 

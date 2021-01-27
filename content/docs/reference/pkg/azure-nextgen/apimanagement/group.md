@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.apimanagement.Group resource wit
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Contract details.
-Latest API Version: 2019-12-01.
+API Version: 2019-12-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var @group = new AzureNextGen.ApiManagement.Latest.Group("group", new AzureNextGen.ApiManagement.Latest.GroupArgs
+        var @group = new AzureNextGen.ApiManagement..Group("group", new AzureNextGen.ApiManagement..GroupArgs
         {
             DisplayName = "temp group",
             GroupId = "tempgroup",
@@ -48,7 +48,7 @@ class MyStack : Stack
 package main
 
 import (
-	apimanagement "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/apimanagement/latest"
+	apimanagement "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/apimanagement"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -77,7 +77,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-group = azure_nextgen.apimanagement.latest.Group("group",
+group = azure_nextgen.apimanagement.Group("group",
     display_name="temp group",
     group_id="tempgroup",
     resource_group_name="rg1",
@@ -93,7 +93,7 @@ group = azure_nextgen.apimanagement.latest.Group("group",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const group = new azure_nextgen.apimanagement.latest.Group("group", {
+const group = new azure_nextgen.apimanagement.Group("group", {
     displayName: "temp group",
     groupId: "tempgroup",
     resourceGroupName: "rg1",
@@ -114,7 +114,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var @group = new AzureNextGen.ApiManagement.Latest.Group("group", new AzureNextGen.ApiManagement.Latest.GroupArgs
+        var @group = new AzureNextGen.ApiManagement..Group("group", new AzureNextGen.ApiManagement..GroupArgs
         {
             Description = "new group to test",
             DisplayName = "NewGroup (samiraad.onmicrosoft.com)",
@@ -138,7 +138,7 @@ class MyStack : Stack
 package main
 
 import (
-	apimanagement "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/apimanagement/latest"
+	apimanagement "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/apimanagement"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -170,7 +170,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-group = azure_nextgen.apimanagement.latest.Group("group",
+group = azure_nextgen.apimanagement.Group("group",
     description="new group to test",
     display_name="NewGroup (samiraad.onmicrosoft.com)",
     external_id="aad://samiraad.onmicrosoft.com/groups/83cf2753-5831-4675-bc0e-2f8dc067c58d",
@@ -189,7 +189,7 @@ group = azure_nextgen.apimanagement.latest.Group("group",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const group = new azure_nextgen.apimanagement.latest.Group("group", {
+const group = new azure_nextgen.apimanagement.Group("group", {
     description: "new group to test",
     displayName: "NewGroup (samiraad.onmicrosoft.com)",
     externalId: "aad://samiraad.onmicrosoft.com/groups/83cf2753-5831-4675-bc0e-2f8dc067c58d",
@@ -446,7 +446,7 @@ The Group resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#grouptype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management.<wbr>Group<wbr>Type</a></span>
+        <span class="property-type"><a href="#grouptype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management..<wbr>Group<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Group type.{{% /md %}}</dd>
 </dl>
@@ -859,7 +859,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:apimanagement/latest:Group aadGroup /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/groups/aadGroup 
+$ pulumi import azure-nextgen:apimanagement:Group aadGroup /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/groups/aadGroup 
 ```
 
 

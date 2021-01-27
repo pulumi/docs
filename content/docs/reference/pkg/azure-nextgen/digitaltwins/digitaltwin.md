@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.digitaltwins.DigitalTwin resourc
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The description of the DigitalTwins service.
-Latest API Version: 2020-12-01.
+API Version: 2020-12-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var digitalTwin = new AzureNextGen.DigitalTwins.Latest.DigitalTwin("digitalTwin", new AzureNextGen.DigitalTwins.Latest.DigitalTwinArgs
+        var digitalTwin = new AzureNextGen.DigitalTwins..DigitalTwin("digitalTwin", new AzureNextGen.DigitalTwins..DigitalTwinArgs
         {
             Location = "WestUS2",
             ResourceGroupName = "resRg",
@@ -47,7 +47,7 @@ class MyStack : Stack
 package main
 
 import (
-	digitaltwins "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/digitaltwins/latest"
+	digitaltwins "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/digitaltwins"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -75,7 +75,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-digital_twin = azure_nextgen.digitaltwins.latest.DigitalTwin("digitalTwin",
+digital_twin = azure_nextgen.digitaltwins.DigitalTwin("digitalTwin",
     location="WestUS2",
     resource_group_name="resRg",
     resource_name="myDigitalTwinsService")
@@ -90,7 +90,7 @@ digital_twin = azure_nextgen.digitaltwins.latest.DigitalTwin("digitalTwin",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const digitalTwin = new azure_nextgen.digitaltwins.latest.DigitalTwin("digitalTwin", {
+const digitalTwin = new azure_nextgen.digitaltwins.DigitalTwin("digitalTwin", {
     location: "WestUS2",
     resourceGroupName: "resRg",
     resourceName: "myDigitalTwinsService",
@@ -110,9 +110,9 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var digitalTwin = new AzureNextGen.DigitalTwins.Latest.DigitalTwin("digitalTwin", new AzureNextGen.DigitalTwins.Latest.DigitalTwinArgs
+        var digitalTwin = new AzureNextGen.DigitalTwins..DigitalTwin("digitalTwin", new AzureNextGen.DigitalTwins..DigitalTwinArgs
         {
-            Identity = new AzureNextGen.DigitalTwins.Latest.Inputs.DigitalTwinsIdentityArgs
+            Identity = new AzureNextGen.DigitalTwins..Inputs.DigitalTwinsIdentityArgs
             {
                 Type = "SystemAssigned",
             },
@@ -134,7 +134,7 @@ class MyStack : Stack
 package main
 
 import (
-	digitaltwins "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/digitaltwins/latest"
+	digitaltwins "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/digitaltwins"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -165,8 +165,8 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-digital_twin = azure_nextgen.digitaltwins.latest.DigitalTwin("digitalTwin",
-    identity=azure_nextgen.digitaltwins.latest.DigitalTwinsIdentityArgs(
+digital_twin = azure_nextgen.digitaltwins.DigitalTwin("digitalTwin",
+    identity=azure_nextgen.digitaltwins.DigitalTwinsIdentityArgs(
         type="SystemAssigned",
     ),
     location="WestUS2",
@@ -183,7 +183,7 @@ digital_twin = azure_nextgen.digitaltwins.latest.DigitalTwin("digitalTwin",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const digitalTwin = new azure_nextgen.digitaltwins.latest.DigitalTwin("digitalTwin", {
+const digitalTwin = new azure_nextgen.digitaltwins.DigitalTwin("digitalTwin", {
     identity: {
         type: "SystemAssigned",
     },
@@ -206,7 +206,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var digitalTwin = new AzureNextGen.DigitalTwins.Latest.DigitalTwin("digitalTwin", new AzureNextGen.DigitalTwins.Latest.DigitalTwinArgs
+        var digitalTwin = new AzureNextGen.DigitalTwins..DigitalTwin("digitalTwin", new AzureNextGen.DigitalTwins..DigitalTwinArgs
         {
             Location = "WestUS2",
             PublicNetworkAccess = "Enabled",
@@ -227,7 +227,7 @@ class MyStack : Stack
 package main
 
 import (
-	digitaltwins "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/digitaltwins/latest"
+	digitaltwins "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/digitaltwins"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -256,7 +256,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-digital_twin = azure_nextgen.digitaltwins.latest.DigitalTwin("digitalTwin",
+digital_twin = azure_nextgen.digitaltwins.DigitalTwin("digitalTwin",
     location="WestUS2",
     public_network_access="Enabled",
     resource_group_name="resRg",
@@ -272,7 +272,7 @@ digital_twin = azure_nextgen.digitaltwins.latest.DigitalTwin("digitalTwin",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const digitalTwin = new azure_nextgen.digitaltwins.latest.DigitalTwin("digitalTwin", {
+const digitalTwin = new azure_nextgen.digitaltwins.DigitalTwin("digitalTwin", {
     location: "WestUS2",
     publicNetworkAccess: "Enabled",
     resourceGroupName: "resRg",
@@ -499,7 +499,7 @@ The DigitalTwin resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#digitaltwinsidentity">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Digital<wbr>Twins.<wbr>Inputs.<wbr>Digital<wbr>Twins<wbr>Identity<wbr>Args</a></span>
+        <span class="property-type"><a href="#digitaltwinsidentity">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Digital<wbr>Twins..<wbr>Inputs.<wbr>Digital<wbr>Twins<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The managed identity for the DigitalTwinsInstance.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -508,7 +508,7 @@ The DigitalTwin resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#privateendpointconnections_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint<wbr>Connections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointconnection">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Digital<wbr>Twins.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#privateendpointconnection">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Digital<wbr>Twins..<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -517,7 +517,7 @@ The DigitalTwin resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#publicnetworkaccess_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Network<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#publicnetworkaccess">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Digital<wbr>Twins.<wbr>Public<wbr>Network<wbr>Access</a></span>
+        <span class="property-type">string | <a href="#publicnetworkaccess">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Digital<wbr>Twins..<wbr>Public<wbr>Network<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}Public network access for the DigitalTwinsInstance.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1052,7 +1052,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#privatelinkserviceconnectionstatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Digital<wbr>Twins.<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>Status</a></span>
+        <span class="property-type">string | <a href="#privatelinkserviceconnectionstatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Digital<wbr>Twins..<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}The status of a private endpoint connection.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1373,7 +1373,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#digitaltwinsidentitytype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Digital<wbr>Twins.<wbr>Digital<wbr>Twins<wbr>Identity<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#digitaltwinsidentitytype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Digital<wbr>Twins..<wbr>Digital<wbr>Twins<wbr>Identity<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of Managed Identity used by the DigitalTwinsInstance. Only SystemAssigned is supported.{{% /md %}}</dd>
 </dl>
@@ -1607,7 +1607,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointconnectionproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Digital<wbr>Twins.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#privateendpointconnectionproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Digital<wbr>Twins..<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 </dl>
@@ -1678,7 +1678,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privatelinkserviceconnectionstate_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionpropertiesprivatelinkserviceconnectionstate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Digital<wbr>Twins.<wbr>Inputs.<wbr>Connection<wbr>Properties<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Args</a></span>
+        <span class="property-type"><a href="#connectionpropertiesprivatelinkserviceconnectionstate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Digital<wbr>Twins..<wbr>Inputs.<wbr>Connection<wbr>Properties<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 </dl>
@@ -1785,7 +1785,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointconnectionresponseproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Digital<wbr>Twins.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Response<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#privateendpointconnectionresponseproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Digital<wbr>Twins..<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Response<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-required"
@@ -1955,7 +1955,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privateendpoint_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionpropertiesresponseprivateendpoint">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Digital<wbr>Twins.<wbr>Inputs.<wbr>Connection<wbr>Properties<wbr>Response<wbr>Private<wbr>Endpoint<wbr>Args</a></span>
+        <span class="property-type"><a href="#connectionpropertiesresponseprivateendpoint">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Digital<wbr>Twins..<wbr>Inputs.<wbr>Connection<wbr>Properties<wbr>Response<wbr>Private<wbr>Endpoint<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1964,7 +1964,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privatelinkserviceconnectionstate_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionpropertiesresponseprivatelinkserviceconnectionstate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Digital<wbr>Twins.<wbr>Inputs.<wbr>Connection<wbr>Properties<wbr>Response<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Args</a></span>
+        <span class="property-type"><a href="#connectionpropertiesresponseprivatelinkserviceconnectionstate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Digital<wbr>Twins..<wbr>Inputs.<wbr>Connection<wbr>Properties<wbr>Response<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 </dl>
@@ -2193,7 +2193,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:digitaltwins/latest:DigitalTwin myDigitalTwinsService /subscriptions/50016170-c839-41ba-a724-51e9df440b9e/resourcegroups/resRg/providers/Microsoft.DigitalTwins/digitalTwinsInstances/myDigitalTwinsService 
+$ pulumi import azure-nextgen:digitaltwins:DigitalTwin myDigitalTwinsService /subscriptions/50016170-c839-41ba-a724-51e9df440b9e/resourcegroups/resRg/providers/Microsoft.DigitalTwins/digitalTwinsInstances/myDigitalTwinsService 
 ```
 
 

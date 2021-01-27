@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.resources.DeploymentScript resou
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Deployment script object.
+API Version: 2019-10-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,9 +27,9 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var deploymentScript = new AzureNextGen.Resources.V20191001Preview.DeploymentScript("deploymentScript", new AzureNextGen.Resources.V20191001Preview.DeploymentScriptArgs
+        var deploymentScript = new AzureNextGen.Resources..DeploymentScript("deploymentScript", new AzureNextGen.Resources..DeploymentScriptArgs
         {
-            Identity = new AzureNextGen.Resources.V20191001Preview.Inputs.ManagedServiceIdentityArgs
+            Identity = new AzureNextGen.Resources..Inputs.ManagedServiceIdentityArgs
             {
                 Type = "UserAssigned",
                 UserAssignedIdentities = 
@@ -55,7 +56,7 @@ class MyStack : Stack
 package main
 
 import (
-	resources "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/resources/v20191001preview"
+	resources "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/resources"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -90,8 +91,8 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-deployment_script = azure_nextgen.resources.v20191001preview.DeploymentScript("deploymentScript",
-    identity=azure_nextgen.resources.v20191001preview.ManagedServiceIdentityArgs(
+deployment_script = azure_nextgen.resources.DeploymentScript("deploymentScript",
+    identity=azure_nextgen.resources.ManagedServiceIdentityArgs(
         type="UserAssigned",
         user_assigned_identities={
             "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/scriptRG/providers/Microsoft.ManagedIdentity/userAssignedIdentities/uai": {},
@@ -112,7 +113,7 @@ deployment_script = azure_nextgen.resources.v20191001preview.DeploymentScript("d
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const deploymentScript = new azure_nextgen.resources.v20191001preview.DeploymentScript("deploymentScript", {
+const deploymentScript = new azure_nextgen.resources.DeploymentScript("deploymentScript", {
     identity: {
         type: "UserAssigned",
         userAssignedIdentities: {
@@ -139,9 +140,9 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var deploymentScript = new AzureNextGen.Resources.V20191001Preview.DeploymentScript("deploymentScript", new AzureNextGen.Resources.V20191001Preview.DeploymentScriptArgs
+        var deploymentScript = new AzureNextGen.Resources..DeploymentScript("deploymentScript", new AzureNextGen.Resources..DeploymentScriptArgs
         {
-            Identity = new AzureNextGen.Resources.V20191001Preview.Inputs.ManagedServiceIdentityArgs
+            Identity = new AzureNextGen.Resources..Inputs.ManagedServiceIdentityArgs
             {
                 Type = "UserAssigned",
                 UserAssignedIdentities = 
@@ -168,7 +169,7 @@ class MyStack : Stack
 package main
 
 import (
-	resources "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/resources/v20191001preview"
+	resources "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/resources"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -203,8 +204,8 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-deployment_script = azure_nextgen.resources.v20191001preview.DeploymentScript("deploymentScript",
-    identity=azure_nextgen.resources.v20191001preview.ManagedServiceIdentityArgs(
+deployment_script = azure_nextgen.resources.DeploymentScript("deploymentScript",
+    identity=azure_nextgen.resources.ManagedServiceIdentityArgs(
         type="UserAssigned",
         user_assigned_identities={
             "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/scriptRG/providers/Microsoft.ManagedIdentity/userAssignedIdentities/uai": {},
@@ -225,7 +226,7 @@ deployment_script = azure_nextgen.resources.v20191001preview.DeploymentScript("d
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const deploymentScript = new azure_nextgen.resources.v20191001preview.DeploymentScript("deploymentScript", {
+const deploymentScript = new azure_nextgen.resources.DeploymentScript("deploymentScript", {
     identity: {
         type: "UserAssigned",
         userAssignedIdentities: {
@@ -252,9 +253,9 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var deploymentScript = new AzureNextGen.Resources.V20191001Preview.DeploymentScript("deploymentScript", new AzureNextGen.Resources.V20191001Preview.DeploymentScriptArgs
+        var deploymentScript = new AzureNextGen.Resources..DeploymentScript("deploymentScript", new AzureNextGen.Resources..DeploymentScriptArgs
         {
-            Identity = new AzureNextGen.Resources.V20191001Preview.Inputs.ManagedServiceIdentityArgs
+            Identity = new AzureNextGen.Resources..Inputs.ManagedServiceIdentityArgs
             {
                 Type = "UserAssigned",
                 UserAssignedIdentities = 
@@ -281,7 +282,7 @@ class MyStack : Stack
 package main
 
 import (
-	resources "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/resources/v20191001preview"
+	resources "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/resources"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -316,8 +317,8 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-deployment_script = azure_nextgen.resources.v20191001preview.DeploymentScript("deploymentScript",
-    identity=azure_nextgen.resources.v20191001preview.ManagedServiceIdentityArgs(
+deployment_script = azure_nextgen.resources.DeploymentScript("deploymentScript",
+    identity=azure_nextgen.resources.ManagedServiceIdentityArgs(
         type="UserAssigned",
         user_assigned_identities={
             "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/scriptRG/providers/Microsoft.ManagedIdentity/userAssignedIdentities/uai": {},
@@ -338,7 +339,7 @@ deployment_script = azure_nextgen.resources.v20191001preview.DeploymentScript("d
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const deploymentScript = new azure_nextgen.resources.v20191001preview.DeploymentScript("deploymentScript", {
+const deploymentScript = new azure_nextgen.resources.DeploymentScript("deploymentScript", {
     identity: {
         type: "UserAssigned",
         userAssignedIdentities: {
@@ -365,9 +366,9 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var deploymentScript = new AzureNextGen.Resources.V20191001Preview.DeploymentScript("deploymentScript", new AzureNextGen.Resources.V20191001Preview.DeploymentScriptArgs
+        var deploymentScript = new AzureNextGen.Resources..DeploymentScript("deploymentScript", new AzureNextGen.Resources..DeploymentScriptArgs
         {
-            Identity = new AzureNextGen.Resources.V20191001Preview.Inputs.ManagedServiceIdentityArgs
+            Identity = new AzureNextGen.Resources..Inputs.ManagedServiceIdentityArgs
             {
                 Type = "UserAssigned",
                 UserAssignedIdentities = 
@@ -394,7 +395,7 @@ class MyStack : Stack
 package main
 
 import (
-	resources "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/resources/v20191001preview"
+	resources "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/resources"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -429,8 +430,8 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-deployment_script = azure_nextgen.resources.v20191001preview.DeploymentScript("deploymentScript",
-    identity=azure_nextgen.resources.v20191001preview.ManagedServiceIdentityArgs(
+deployment_script = azure_nextgen.resources.DeploymentScript("deploymentScript",
+    identity=azure_nextgen.resources.ManagedServiceIdentityArgs(
         type="UserAssigned",
         user_assigned_identities={
             "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/scriptRG/providers/Microsoft.ManagedIdentity/userAssignedIdentities/uai": {},
@@ -451,7 +452,7 @@ deployment_script = azure_nextgen.resources.v20191001preview.DeploymentScript("d
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const deploymentScript = new azure_nextgen.resources.v20191001preview.DeploymentScript("deploymentScript", {
+const deploymentScript = new azure_nextgen.resources.DeploymentScript("deploymentScript", {
     identity: {
         type: "UserAssigned",
         userAssignedIdentities: {
@@ -657,7 +658,7 @@ The DeploymentScript resource accepts the following [input]({{< relref "/docs/in
 <a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedserviceidentity">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Resources.<wbr>Inputs.<wbr>Managed<wbr>Service<wbr>Identity<wbr>Args</a></span>
+        <span class="property-type"><a href="#managedserviceidentity">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Resources..<wbr>Inputs.<wbr>Managed<wbr>Service<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Managed identity to be used for this deployment script. Currently, only user-assigned MSI is supported.{{% /md %}}</dd>
     <dt class="property-required"
@@ -666,7 +667,7 @@ The DeploymentScript resource accepts the following [input]({{< relref "/docs/in
 <a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#scripttype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Resources.<wbr>Script<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#scripttype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Resources..<wbr>Script<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of the script.{{% /md %}}</dd>
     <dt class="property-required"
@@ -922,7 +923,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#systemdata_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Resources.<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
+        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Resources..<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The system metadata related to this resource.{{% /md %}}</dd>
     <dt class="property-"
@@ -1093,7 +1094,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#managedserviceidentitytype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Resources.<wbr>Managed<wbr>Service<wbr>Identity<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#managedserviceidentitytype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Resources..<wbr>Managed<wbr>Service<wbr>Identity<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of the managed identity.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1236,7 +1237,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userassignedidentities_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Resources.<wbr>Inputs.<wbr>User<wbr>Assigned<wbr>Identity<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Resources..<wbr>Inputs.<wbr>User<wbr>Assigned<wbr>Identity<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}The list of user-assigned managed identities associated with the resource. Key is the Azure resource Id of the managed identity.{{% /md %}}</dd>
 </dl>
@@ -1754,7 +1755,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:resources/v20191001preview:DeploymentScript myresource1 /subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/Microsoft.Resources/deploymentScripts/{scriptName} 
+$ pulumi import azure-nextgen:resources:DeploymentScript myresource1 /subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/Microsoft.Resources/deploymentScripts/{scriptName} 
 ```
 
 

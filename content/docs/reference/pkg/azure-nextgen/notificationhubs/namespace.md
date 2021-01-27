@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.notificationhubs.Namespace resou
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Description of a Namespace resource.
-Latest API Version: 2017-04-01.
+API Version: 2017-04-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,12 +27,12 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var @namespace = new AzureNextGen.NotificationHubs.Latest.Namespace("namespace", new AzureNextGen.NotificationHubs.Latest.NamespaceArgs
+        var @namespace = new AzureNextGen.NotificationHubs..Namespace("namespace", new AzureNextGen.NotificationHubs..NamespaceArgs
         {
             Location = "South Central US",
             NamespaceName = "nh-sdk-ns",
             ResourceGroupName = "5ktrial",
-            Sku = new AzureNextGen.NotificationHubs.Latest.Inputs.SkuArgs
+            Sku = new AzureNextGen.NotificationHubs..Inputs.SkuArgs
             {
                 Name = "Standard",
                 Tier = "Standard",
@@ -57,7 +57,7 @@ class MyStack : Stack
 package main
 
 import (
-	notificationhubs "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/notificationhubs/latest"
+	notificationhubs "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/notificationhubs"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -93,11 +93,11 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-namespace = azure_nextgen.notificationhubs.latest.Namespace("namespace",
+namespace = azure_nextgen.notificationhubs.Namespace("namespace",
     location="South Central US",
     namespace_name="nh-sdk-ns",
     resource_group_name="5ktrial",
-    sku=azure_nextgen.notificationhubs.latest.SkuArgs(
+    sku=azure_nextgen.notificationhubs.SkuArgs(
         name="Standard",
         tier="Standard",
     ),
@@ -116,7 +116,7 @@ namespace = azure_nextgen.notificationhubs.latest.Namespace("namespace",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const namespace = new azure_nextgen.notificationhubs.latest.Namespace("namespace", {
+const namespace = new azure_nextgen.notificationhubs.Namespace("namespace", {
     location: "South Central US",
     namespaceName: "nh-sdk-ns",
     resourceGroupName: "5ktrial",
@@ -395,7 +395,7 @@ The Namespace resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#namespacetype_csharp" style="color: inherit; text-decoration: inherit;">Namespace<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#namespacetype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Notification<wbr>Hubs.<wbr>Namespace<wbr>Type</a></span>
+        <span class="property-type"><a href="#namespacetype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Notification<wbr>Hubs..<wbr>Namespace<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The namespace type.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -440,7 +440,7 @@ The Namespace resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sku">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Notification<wbr>Hubs.<wbr>Inputs.<wbr>Sku<wbr>Args</a></span>
+        <span class="property-type"><a href="#sku">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Notification<wbr>Hubs..<wbr>Inputs.<wbr>Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The sku of the created namespace{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1184,7 +1184,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#skuname">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Notification<wbr>Hubs.<wbr>Sku<wbr>Name</a></span>
+        <span class="property-type">string | <a href="#skuname">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Notification<wbr>Hubs..<wbr>Sku<wbr>Name</a></span>
     </dt>
     <dd>{{% md %}}Name of the notification hub sku{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1636,7 +1636,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:notificationhubs/latest:Namespace sdk-Namespace-2924 /subscriptions/29cfa613-cbbc-4512-b1d6-1b3a92c7fa40/resourceGroups/ArunMonocle/providers/Microsoft.NotificationHubs/namespaces/sdk-Namespace-2924 
+$ pulumi import azure-nextgen:notificationhubs:Namespace sdk-Namespace-2924 /subscriptions/29cfa613-cbbc-4512-b1d6-1b3a92c7fa40/resourceGroups/ArunMonocle/providers/Microsoft.NotificationHubs/namespaces/sdk-Namespace-2924 
 ```
 
 

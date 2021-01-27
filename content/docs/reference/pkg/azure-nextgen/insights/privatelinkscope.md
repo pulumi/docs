@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.insights.PrivateLinkScope resour
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 An Azure Monitor PrivateLinkScope definition.
+API Version: 2019-10-17-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var privateLinkScope = new AzureNextGen.Insights.V20191017Preview.PrivateLinkScope("privateLinkScope", new AzureNextGen.Insights.V20191017Preview.PrivateLinkScopeArgs
+        var privateLinkScope = new AzureNextGen.Insights..PrivateLinkScope("privateLinkScope", new AzureNextGen.Insights..PrivateLinkScopeArgs
         {
             Location = "Global",
             ResourceGroupName = "my-resource-group",
@@ -46,7 +47,7 @@ class MyStack : Stack
 package main
 
 import (
-	insights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/insights/v20191017preview"
+	insights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/insights"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -74,7 +75,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-private_link_scope = azure_nextgen.insights.v20191017preview.PrivateLinkScope("privateLinkScope",
+private_link_scope = azure_nextgen.insights.PrivateLinkScope("privateLinkScope",
     location="Global",
     resource_group_name="my-resource-group",
     scope_name="my-privatelinkscope")
@@ -89,7 +90,7 @@ private_link_scope = azure_nextgen.insights.v20191017preview.PrivateLinkScope("p
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const privateLinkScope = new azure_nextgen.insights.v20191017preview.PrivateLinkScope("privateLinkScope", {
+const privateLinkScope = new azure_nextgen.insights.PrivateLinkScope("privateLinkScope", {
     location: "Global",
     resourceGroupName: "my-resource-group",
     scopeName: "my-privatelinkscope",
@@ -109,7 +110,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var privateLinkScope = new AzureNextGen.Insights.V20191017Preview.PrivateLinkScope("privateLinkScope", new AzureNextGen.Insights.V20191017Preview.PrivateLinkScopeArgs
+        var privateLinkScope = new AzureNextGen.Insights..PrivateLinkScope("privateLinkScope", new AzureNextGen.Insights..PrivateLinkScopeArgs
         {
             Location = "Global",
             ResourceGroupName = "my-resource-group",
@@ -133,7 +134,7 @@ class MyStack : Stack
 package main
 
 import (
-	insights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/insights/v20191017preview"
+	insights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/insights"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -164,7 +165,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-private_link_scope = azure_nextgen.insights.v20191017preview.PrivateLinkScope("privateLinkScope",
+private_link_scope = azure_nextgen.insights.PrivateLinkScope("privateLinkScope",
     location="Global",
     resource_group_name="my-resource-group",
     scope_name="my-privatelinkscope",
@@ -182,7 +183,7 @@ private_link_scope = azure_nextgen.insights.v20191017preview.PrivateLinkScope("p
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const privateLinkScope = new azure_nextgen.insights.v20191017preview.PrivateLinkScope("privateLinkScope", {
+const privateLinkScope = new azure_nextgen.insights.PrivateLinkScope("privateLinkScope", {
     location: "Global",
     resourceGroupName: "my-resource-group",
     scopeName: "my-privatelinkscope",
@@ -577,7 +578,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privateendpointconnections_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint<wbr>Connections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointconnectionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Outputs.<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#privateendpointconnectionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Outputs.<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of private endpoint connections.{{% /md %}}</dd>
     <dt class="property-"
@@ -811,7 +812,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privateendpoint_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointpropertyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Property<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#privateendpointpropertyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Property<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Private endpoint which the connection belongs to.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -820,7 +821,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privatelinkserviceconnectionstate_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkserviceconnectionstatepropertyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Inputs.<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Property<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#privatelinkserviceconnectionstatepropertyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Inputs.<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Property<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Connection state of the private endpoint connection.{{% /md %}}</dd>
 </dl>
@@ -1207,7 +1208,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:insights/v20191017preview:PrivateLinkScope my-privatelinkscope /subscriptions/86dc51d3-92ed-4d7e-947a-775ea79b4919/resourceGroups/my-resource-group/providers/microsoft.insights/privateLinkScopes/my-privatelinkscope 
+$ pulumi import azure-nextgen:insights:PrivateLinkScope my-privatelinkscope /subscriptions/86dc51d3-92ed-4d7e-947a-775ea79b4919/resourceGroups/my-resource-group/providers/microsoft.insights/privateLinkScopes/my-privatelinkscope 
 ```
 
 

@@ -11,13 +11,13 @@ meta_desc: "Documentation for the azure-nextgen.labservices.Environment resource
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Represents an environment instance
-Latest API Version: 2018-10-15.
+API Version: 2018-10-15.
 ## Import
 
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:labservices/latest:Environment myresource1 /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.LabServices/labaccounts/{labAccountName}/labs/{labName}/environmentsettings/{environmentSettingName}/environments/{environmentName} 
+$ pulumi import azure-nextgen:labservices:Environment myresource1 /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.LabServices/labaccounts/{labAccountName}/labs/{labName}/environmentsettings/{environmentSettingName}/environments/{environmentName} 
 ```
 
 
@@ -272,7 +272,7 @@ The Environment resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#resourcesets_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Sets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceset">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Lab<wbr>Services.<wbr>Inputs.<wbr>Resource<wbr>Set<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourceset">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Lab<wbr>Services..<wbr>Inputs.<wbr>Resource<wbr>Set<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The set of a VM and the setting id it was created for{{% /md %}}</dd>
     <dt class="property-optional"
@@ -654,7 +654,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#latestoperationresult_csharp" style="color: inherit; text-decoration: inherit;">Latest<wbr>Operation<wbr>Result</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#latestoperationresultresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Lab<wbr>Services.<wbr>Outputs.<wbr>Latest<wbr>Operation<wbr>Result<wbr>Response</a></span>
+        <span class="property-type"><a href="#latestoperationresultresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Lab<wbr>Services..<wbr>Outputs.<wbr>Latest<wbr>Operation<wbr>Result<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The details of the latest operation. ex: status, error{{% /md %}}</dd>
     <dt class="property-"
@@ -672,7 +672,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#networkinterface_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Interface</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkinterfaceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Lab<wbr>Services.<wbr>Outputs.<wbr>Network<wbr>Interface<wbr>Response</a></span>
+        <span class="property-type"><a href="#networkinterfaceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Lab<wbr>Services..<wbr>Outputs.<wbr>Network<wbr>Interface<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Network details of the environment{{% /md %}}</dd>
     <dt class="property-"

@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.machinelearningservices.MachineL
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Machine Learning compute object wrapped into ARM resource envelope.
-Latest API Version: 2020-08-01.
+API Version: 2020-08-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var machineLearningCompute = new AzureNextGen.MachineLearningServices.Latest.MachineLearningCompute("machineLearningCompute", new AzureNextGen.MachineLearningServices.Latest.MachineLearningComputeArgs
+        var machineLearningCompute = new AzureNextGen.MachineLearningServices..MachineLearningCompute("machineLearningCompute", new AzureNextGen.MachineLearningServices..MachineLearningComputeArgs
         {
             ComputeName = "compute123",
             Location = "eastus",
@@ -56,7 +56,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-machine_learning_compute = azure_nextgen.machinelearningservices.latest.MachineLearningCompute("machineLearningCompute",
+machine_learning_compute = azure_nextgen.machinelearningservices.MachineLearningCompute("machineLearningCompute",
     compute_name="compute123",
     location="eastus",
     properties={
@@ -75,7 +75,7 @@ machine_learning_compute = azure_nextgen.machinelearningservices.latest.MachineL
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const machineLearningCompute = new azure_nextgen.machinelearningservices.latest.MachineLearningCompute("machineLearningCompute", {
+const machineLearningCompute = new azure_nextgen.machinelearningservices.MachineLearningCompute("machineLearningCompute", {
     computeName: "compute123",
     location: "eastus",
     properties: {
@@ -99,10 +99,10 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var machineLearningCompute = new AzureNextGen.MachineLearningServices.Latest.MachineLearningCompute("machineLearningCompute", new AzureNextGen.MachineLearningServices.Latest.MachineLearningComputeArgs
+        var machineLearningCompute = new AzureNextGen.MachineLearningServices..MachineLearningCompute("machineLearningCompute", new AzureNextGen.MachineLearningServices..MachineLearningComputeArgs
         {
             ComputeName = "compute123",
-            Identity = new AzureNextGen.MachineLearningServices.Latest.Inputs.IdentityArgs
+            Identity = new AzureNextGen.MachineLearningServices..Inputs.IdentityArgs
             {
                 Type = "SystemAssigned,UserAssigned",
                 UserAssignedIdentities = 
@@ -117,7 +117,7 @@ class MyStack : Stack
                 { "properties", 
                 {
                     { "remoteLoginPortPublicAccess", "NotSpecified" },
-                    { "scaleSettings", new AzureNextGen.MachineLearningServices.Latest.Inputs.ScaleSettingsArgs
+                    { "scaleSettings", new AzureNextGen.MachineLearningServices..Inputs.ScaleSettingsArgs
                     {
                         MaxNodeCount = 1,
                         MinNodeCount = 0,
@@ -148,9 +148,9 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-machine_learning_compute = azure_nextgen.machinelearningservices.latest.MachineLearningCompute("machineLearningCompute",
+machine_learning_compute = azure_nextgen.machinelearningservices.MachineLearningCompute("machineLearningCompute",
     compute_name="compute123",
-    identity=azure_nextgen.machinelearningservices.latest.IdentityArgs(
+    identity=azure_nextgen.machinelearningservices.IdentityArgs(
         type="SystemAssigned,UserAssigned",
         user_assigned_identities={
             "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity-name": {},
@@ -161,7 +161,7 @@ machine_learning_compute = azure_nextgen.machinelearningservices.latest.MachineL
         "computeType": "AmlCompute",
         "properties": {
             "remoteLoginPortPublicAccess": "NotSpecified",
-            "scaleSettings": azure_nextgen.machinelearningservices.latest.ScaleSettingsArgs(
+            "scaleSettings": azure_nextgen.machinelearningservices.ScaleSettingsArgs(
                 max_node_count=1,
                 min_node_count=0,
                 node_idle_time_before_scale_down="PT5M",
@@ -183,7 +183,7 @@ machine_learning_compute = azure_nextgen.machinelearningservices.latest.MachineL
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const machineLearningCompute = new azure_nextgen.machinelearningservices.latest.MachineLearningCompute("machineLearningCompute", {
+const machineLearningCompute = new azure_nextgen.machinelearningservices.MachineLearningCompute("machineLearningCompute", {
     computeName: "compute123",
     identity: {
         type: "SystemAssigned,UserAssigned",
@@ -223,7 +223,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var machineLearningCompute = new AzureNextGen.MachineLearningServices.Latest.MachineLearningCompute("machineLearningCompute", new AzureNextGen.MachineLearningServices.Latest.MachineLearningComputeArgs
+        var machineLearningCompute = new AzureNextGen.MachineLearningServices..MachineLearningCompute("machineLearningCompute", new AzureNextGen.MachineLearningServices..MachineLearningComputeArgs
         {
             ComputeName = "compute123",
             Location = "eastus",
@@ -233,7 +233,7 @@ class MyStack : Stack
                 { "properties", 
                 {
                     { "applicationSharingPolicy", "Personal" },
-                    { "sshSettings", new AzureNextGen.MachineLearningServices.Latest.Inputs.ComputeInstanceSshSettingsArgs
+                    { "sshSettings", new AzureNextGen.MachineLearningServices..Inputs.ComputeInstanceSshSettingsArgs
                     {
                         SshPublicAccess = "Disabled",
                     } },
@@ -262,14 +262,14 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-machine_learning_compute = azure_nextgen.machinelearningservices.latest.MachineLearningCompute("machineLearningCompute",
+machine_learning_compute = azure_nextgen.machinelearningservices.MachineLearningCompute("machineLearningCompute",
     compute_name="compute123",
     location="eastus",
     properties={
         "computeType": "ComputeInstance",
         "properties": {
             "applicationSharingPolicy": "Personal",
-            "sshSettings": azure_nextgen.machinelearningservices.latest.ComputeInstanceSshSettingsArgs(
+            "sshSettings": azure_nextgen.machinelearningservices.ComputeInstanceSshSettingsArgs(
                 ssh_public_access="Disabled",
             ),
             "subnet": "test-subnet-resource-id",
@@ -289,7 +289,7 @@ machine_learning_compute = azure_nextgen.machinelearningservices.latest.MachineL
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const machineLearningCompute = new azure_nextgen.machinelearningservices.latest.MachineLearningCompute("machineLearningCompute", {
+const machineLearningCompute = new azure_nextgen.machinelearningservices.MachineLearningCompute("machineLearningCompute", {
     computeName: "compute123",
     location: "eastus",
     properties: {
@@ -321,7 +321,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var machineLearningCompute = new AzureNextGen.MachineLearningServices.Latest.MachineLearningCompute("machineLearningCompute", new AzureNextGen.MachineLearningServices.Latest.MachineLearningComputeArgs
+        var machineLearningCompute = new AzureNextGen.MachineLearningServices..MachineLearningCompute("machineLearningCompute", new AzureNextGen.MachineLearningServices..MachineLearningComputeArgs
         {
             ComputeName = "compute123",
             Location = "eastus",
@@ -354,7 +354,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-machine_learning_compute = azure_nextgen.machinelearningservices.latest.MachineLearningCompute("machineLearningCompute",
+machine_learning_compute = azure_nextgen.machinelearningservices.MachineLearningCompute("machineLearningCompute",
     compute_name="compute123",
     location="eastus",
     properties={
@@ -376,7 +376,7 @@ machine_learning_compute = azure_nextgen.machinelearningservices.latest.MachineL
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const machineLearningCompute = new azure_nextgen.machinelearningservices.latest.MachineLearningCompute("machineLearningCompute", {
+const machineLearningCompute = new azure_nextgen.machinelearningservices.MachineLearningCompute("machineLearningCompute", {
     computeName: "compute123",
     location: "eastus",
     properties: {
@@ -403,7 +403,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var machineLearningCompute = new AzureNextGen.MachineLearningServices.Latest.MachineLearningCompute("machineLearningCompute", new AzureNextGen.MachineLearningServices.Latest.MachineLearningComputeArgs
+        var machineLearningCompute = new AzureNextGen.MachineLearningServices..MachineLearningCompute("machineLearningCompute", new AzureNextGen.MachineLearningServices..MachineLearningComputeArgs
         {
             ComputeName = "compute123",
             Location = "eastus",
@@ -432,7 +432,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-machine_learning_compute = azure_nextgen.machinelearningservices.latest.MachineLearningCompute("machineLearningCompute",
+machine_learning_compute = azure_nextgen.machinelearningservices.MachineLearningCompute("machineLearningCompute",
     compute_name="compute123",
     location="eastus",
     properties={
@@ -451,7 +451,7 @@ machine_learning_compute = azure_nextgen.machinelearningservices.latest.MachineL
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const machineLearningCompute = new azure_nextgen.machinelearningservices.latest.MachineLearningCompute("machineLearningCompute", {
+const machineLearningCompute = new azure_nextgen.machinelearningservices.MachineLearningCompute("machineLearningCompute", {
     computeName: "compute123",
     location: "eastus",
     properties: {
@@ -475,7 +475,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var machineLearningCompute = new AzureNextGen.MachineLearningServices.Latest.MachineLearningCompute("machineLearningCompute", new AzureNextGen.MachineLearningServices.Latest.MachineLearningComputeArgs
+        var machineLearningCompute = new AzureNextGen.MachineLearningServices..MachineLearningCompute("machineLearningCompute", new AzureNextGen.MachineLearningServices..MachineLearningComputeArgs
         {
             ComputeName = "compute123",
             Location = "eastus",
@@ -510,7 +510,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-machine_learning_compute = azure_nextgen.machinelearningservices.latest.MachineLearningCompute("machineLearningCompute",
+machine_learning_compute = azure_nextgen.machinelearningservices.MachineLearningCompute("machineLearningCompute",
     compute_name="compute123",
     location="eastus",
     properties={
@@ -534,7 +534,7 @@ machine_learning_compute = azure_nextgen.machinelearningservices.latest.MachineL
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const machineLearningCompute = new azure_nextgen.machinelearningservices.latest.MachineLearningCompute("machineLearningCompute", {
+const machineLearningCompute = new azure_nextgen.machinelearningservices.MachineLearningCompute("machineLearningCompute", {
     computeName: "compute123",
     location: "eastus",
     properties: {
@@ -563,10 +563,10 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var machineLearningCompute = new AzureNextGen.MachineLearningServices.Latest.MachineLearningCompute("machineLearningCompute", new AzureNextGen.MachineLearningServices.Latest.MachineLearningComputeArgs
+        var machineLearningCompute = new AzureNextGen.MachineLearningServices..MachineLearningCompute("machineLearningCompute", new AzureNextGen.MachineLearningServices..MachineLearningComputeArgs
         {
             ComputeName = "compute123",
-            Identity = new AzureNextGen.MachineLearningServices.Latest.Inputs.IdentityArgs
+            Identity = new AzureNextGen.MachineLearningServices..Inputs.IdentityArgs
             {
                 Type = "SystemAssigned,UserAssigned",
                 UserAssignedIdentities = 
@@ -580,7 +580,7 @@ class MyStack : Stack
                 { "computeType", "AmlCompute" },
                 { "properties", 
                 {
-                    { "scaleSettings", new AzureNextGen.MachineLearningServices.Latest.Inputs.ScaleSettingsArgs
+                    { "scaleSettings", new AzureNextGen.MachineLearningServices..Inputs.ScaleSettingsArgs
                     {
                         MaxNodeCount = 1,
                         MinNodeCount = 0,
@@ -609,9 +609,9 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-machine_learning_compute = azure_nextgen.machinelearningservices.latest.MachineLearningCompute("machineLearningCompute",
+machine_learning_compute = azure_nextgen.machinelearningservices.MachineLearningCompute("machineLearningCompute",
     compute_name="compute123",
-    identity=azure_nextgen.machinelearningservices.latest.IdentityArgs(
+    identity=azure_nextgen.machinelearningservices.IdentityArgs(
         type="SystemAssigned,UserAssigned",
         user_assigned_identities={
             "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity-name": {},
@@ -621,7 +621,7 @@ machine_learning_compute = azure_nextgen.machinelearningservices.latest.MachineL
     properties={
         "computeType": "AmlCompute",
         "properties": {
-            "scaleSettings": azure_nextgen.machinelearningservices.latest.ScaleSettingsArgs(
+            "scaleSettings": azure_nextgen.machinelearningservices.ScaleSettingsArgs(
                 max_node_count=1,
                 min_node_count=0,
                 node_idle_time_before_scale_down="PT5M",
@@ -641,7 +641,7 @@ machine_learning_compute = azure_nextgen.machinelearningservices.latest.MachineL
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const machineLearningCompute = new azure_nextgen.machinelearningservices.latest.MachineLearningCompute("machineLearningCompute", {
+const machineLearningCompute = new azure_nextgen.machinelearningservices.MachineLearningCompute("machineLearningCompute", {
     computeName: "compute123",
     identity: {
         type: "SystemAssigned,UserAssigned",
@@ -884,7 +884,7 @@ The MachineLearningCompute resource accepts the following [input]({{< relref "/d
 <a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identity">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Identity<wbr>Args</a></span>
+        <span class="property-type"><a href="#identity">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services..<wbr>Inputs.<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The identity of the resource.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -902,7 +902,7 @@ The MachineLearningCompute resource accepts the following [input]({{< relref "/d
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aks">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>AKSArgs</a> | <a href="#amlcompute">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Aml<wbr>Compute<wbr>Args</a> | <a href="#computeinstance">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Compute<wbr>Instance<wbr>Args</a> | <a href="#datafactory">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Data<wbr>Factory<wbr>Args</a> | <a href="#datalakeanalytics">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Data<wbr>Lake<wbr>Analytics<wbr>Args</a> | <a href="#databricks">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Databricks<wbr>Args</a> | <a href="#hdinsight">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>HDInsight<wbr>Args</a> | <a href="#virtualmachine">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Virtual<wbr>Machine<wbr>Args</a></span>
+        <span class="property-type"><a href="#aks">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services..<wbr>Inputs.<wbr>AKSArgs</a> | <a href="#amlcompute">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services..<wbr>Inputs.<wbr>Aml<wbr>Compute<wbr>Args</a> | <a href="#computeinstance">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services..<wbr>Inputs.<wbr>Compute<wbr>Instance<wbr>Args</a> | <a href="#datafactory">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services..<wbr>Inputs.<wbr>Data<wbr>Factory<wbr>Args</a> | <a href="#datalakeanalytics">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services..<wbr>Inputs.<wbr>Data<wbr>Lake<wbr>Analytics<wbr>Args</a> | <a href="#databricks">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services..<wbr>Inputs.<wbr>Databricks<wbr>Args</a> | <a href="#hdinsight">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services..<wbr>Inputs.<wbr>HDInsight<wbr>Args</a> | <a href="#virtualmachine">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services..<wbr>Inputs.<wbr>Virtual<wbr>Machine<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Compute properties{{% /md %}}</dd>
     <dt class="property-optional"
@@ -911,7 +911,7 @@ The MachineLearningCompute resource accepts the following [input]({{< relref "/d
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sku">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Sku<wbr>Args</a></span>
+        <span class="property-type"><a href="#sku">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services..<wbr>Inputs.<wbr>Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The sku of the workspace.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1338,7 +1338,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aksproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>AKSProperties<wbr>Args</a></span>
+        <span class="property-type"><a href="#aksproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services..<wbr>Inputs.<wbr>AKSProperties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}AKS properties{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1508,7 +1508,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#aksnetworkingconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Aks<wbr>Networking<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aksnetworkingconfiguration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Aks<wbr>Networking<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#aksnetworkingconfiguration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services..<wbr>Inputs.<wbr>Aks<wbr>Networking<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}AKS networking configuration for vnet{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1526,7 +1526,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sslconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sslconfiguration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Ssl<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#sslconfiguration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services..<wbr>Inputs.<wbr>Ssl<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}SSL configuration{{% /md %}}</dd>
 </dl>
@@ -1723,7 +1723,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provisioningerrors_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#machinelearningserviceerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#machinelearningserviceerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services..<wbr>Inputs.<wbr>Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Errors during provisioning{{% /md %}}</dd>
     <dt class="property-required"
@@ -1759,7 +1759,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aksresponseproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>AKSResponse<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#aksresponseproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services..<wbr>Inputs.<wbr>AKSResponse<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}AKS properties{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2046,7 +2046,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#systemservices_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemserviceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>System<wbr>Service<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#systemserviceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services..<wbr>Inputs.<wbr>System<wbr>Service<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}System services{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2073,7 +2073,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#aksnetworkingconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Aks<wbr>Networking<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aksnetworkingconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Aks<wbr>Networking<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#aksnetworkingconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services..<wbr>Inputs.<wbr>Aks<wbr>Networking<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}AKS networking configuration for vnet{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2091,7 +2091,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sslconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sslconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Ssl<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sslconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services..<wbr>Inputs.<wbr>Ssl<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}SSL configuration{{% /md %}}</dd>
 </dl>
@@ -2646,7 +2646,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amlcomputeproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Aml<wbr>Compute<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#amlcomputeproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services..<wbr>Inputs.<wbr>Aml<wbr>Compute<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}AML Compute properties{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2798,7 +2798,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#remoteloginportpublicaccess_csharp" style="color: inherit; text-decoration: inherit;">Remote<wbr>Login<wbr>Port<wbr>Public<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#remoteloginportpublicaccess">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Remote<wbr>Login<wbr>Port<wbr>Public<wbr>Access</a></span>
+        <span class="property-type">string | <a href="#remoteloginportpublicaccess">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services..<wbr>Remote<wbr>Login<wbr>Port<wbr>Public<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}State of the public SSH port. Possible values are: Disabled - Indicates that the public ssh port is closed on all nodes of the cluster. Enabled - Indicates that the public ssh port is open on all nodes of the cluster. NotSpecified - Indicates that the public ssh port is closed on all nodes of the cluster if VNet is defined, else is open all public nodes. It can be default only during cluster creation time, after creation it will be either enabled or disabled.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2807,7 +2807,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scalesettings_csharp" style="color: inherit; text-decoration: inherit;">Scale<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Scale<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#scalesettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services..<wbr>Inputs.<wbr>Scale<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Scale settings for AML Compute{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2816,7 +2816,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subnet_csharp" style="color: inherit; text-decoration: inherit;">Subnet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceid">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Resource<wbr>Id<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourceid">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services..<wbr>Inputs.<wbr>Resource<wbr>Id<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Virtual network subnet resource ID the compute nodes belong to.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2825,7 +2825,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#useraccountcredentials_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Account<wbr>Credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#useraccountcredentials">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>User<wbr>Account<wbr>Credentials<wbr>Args</a></span>
+        <span class="property-type"><a href="#useraccountcredentials">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services..<wbr>Inputs.<wbr>User<wbr>Account<wbr>Credentials<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Credentials for an administrator user account that will be created on each compute node.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2834,7 +2834,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vmpriority_csharp" style="color: inherit; text-decoration: inherit;">Vm<wbr>Priority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#vmpriority">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Vm<wbr>Priority</a></span>
+        <span class="property-type">string | <a href="#vmpriority">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services..<wbr>Vm<wbr>Priority</a></span>
     </dt>
     <dd>{{% md %}}Virtual Machine priority{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3067,7 +3067,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provisioningerrors_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#machinelearningserviceerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#machinelearningserviceerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services..<wbr>Inputs.<wbr>Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Errors during provisioning{{% /md %}}</dd>
     <dt class="property-required"
@@ -3103,7 +3103,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amlcomputeresponseproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Aml<wbr>Compute<wbr>Response<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#amlcomputeresponseproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services..<wbr>Inputs.<wbr>Aml<wbr>Compute<wbr>Response<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}AML Compute properties{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3417,7 +3417,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errors_csharp" style="color: inherit; text-decoration: inherit;">Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#machinelearningserviceerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#machinelearningserviceerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services..<wbr>Inputs.<wbr>Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Collection of errors encountered by various compute nodes during node setup.{{% /md %}}</dd>
     <dt class="property-required"
@@ -3426,7 +3426,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nodestatecounts_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>State<wbr>Counts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodestatecountsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Node<wbr>State<wbr>Counts<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#nodestatecountsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services..<wbr>Inputs.<wbr>Node<wbr>State<wbr>Counts<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Counts of various node states on the compute.{{% /md %}}</dd>
     <dt class="property-required"
@@ -3453,7 +3453,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scalesettings_csharp" style="color: inherit; text-decoration: inherit;">Scale<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Scale<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#scalesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services..<wbr>Inputs.<wbr>Scale<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Scale settings for AML Compute{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3462,7 +3462,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subnet_csharp" style="color: inherit; text-decoration: inherit;">Subnet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Resource<wbr>Id<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourceidresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services..<wbr>Inputs.<wbr>Resource<wbr>Id<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Virtual network subnet resource ID the compute nodes belong to.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3471,7 +3471,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#useraccountcredentials_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Account<wbr>Credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#useraccountcredentialsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>User<wbr>Account<wbr>Credentials<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#useraccountcredentialsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services..<wbr>Inputs.<wbr>User<wbr>Account<wbr>Credentials<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Credentials for an administrator user account that will be created on each compute node.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3904,7 +3904,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#computeinstanceproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Compute<wbr>Instance<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#computeinstanceproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services..<wbr>Inputs.<wbr>Compute<wbr>Instance<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Compute Instance properties{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4520,7 +4520,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#applicationsharingpolicy_csharp" style="color: inherit; text-decoration: inherit;">Application<wbr>Sharing<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#applicationsharingpolicy">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Application<wbr>Sharing<wbr>Policy</a></span>
+        <span class="property-type">string | <a href="#applicationsharingpolicy">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services..<wbr>Application<wbr>Sharing<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Policy for sharing applications on this compute instance among users of parent workspace. If Personal, only the creator can access applications on this compute instance. When Shared, any workspace user can access applications on this instance depending on his/her assigned role.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4529,7 +4529,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sshsettings_csharp" style="color: inherit; text-decoration: inherit;">Ssh<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#computeinstancesshsettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Compute<wbr>Instance<wbr>Ssh<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#computeinstancesshsettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services..<wbr>Inputs.<wbr>Compute<wbr>Instance<wbr>Ssh<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies policy and settings for SSH access.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4538,7 +4538,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subnet_csharp" style="color: inherit; text-decoration: inherit;">Subnet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceid">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Resource<wbr>Id<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourceid">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services..<wbr>Inputs.<wbr>Resource<wbr>Id<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Virtual network subnet resource ID the compute nodes belong to.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4717,7 +4717,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provisioningerrors_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#machinelearningserviceerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#machinelearningserviceerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services..<wbr>Inputs.<wbr>Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Errors during provisioning{{% /md %}}</dd>
     <dt class="property-required"
@@ -4753,7 +4753,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#computeinstanceresponseproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Compute<wbr>Instance<wbr>Response<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#computeinstanceresponseproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services..<wbr>Inputs.<wbr>Compute<wbr>Instance<wbr>Response<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Compute Instance properties{{% /md %}}</dd>
     <dt class="property-optional"
@@ -5040,7 +5040,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#applications_csharp" style="color: inherit; text-decoration: inherit;">Applications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#computeinstanceapplicationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Compute<wbr>Instance<wbr>Application<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#computeinstanceapplicationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services..<wbr>Inputs.<wbr>Compute<wbr>Instance<wbr>Application<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Describes available applications and their endpoints on this ComputeInstance.{{% /md %}}</dd>
     <dt class="property-required"
@@ -5049,7 +5049,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#connectivityendpoints_csharp" style="color: inherit; text-decoration: inherit;">Connectivity<wbr>Endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#computeinstanceconnectivityendpointsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Compute<wbr>Instance<wbr>Connectivity<wbr>Endpoints<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#computeinstanceconnectivityendpointsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services..<wbr>Inputs.<wbr>Compute<wbr>Instance<wbr>Connectivity<wbr>Endpoints<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes all connectivity endpoints available for this ComputeInstance.{{% /md %}}</dd>
     <dt class="property-required"
@@ -5058,7 +5058,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#createdby_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>By</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#computeinstancecreatedbyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Compute<wbr>Instance<wbr>Created<wbr>By<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#computeinstancecreatedbyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services..<wbr>Inputs.<wbr>Compute<wbr>Instance<wbr>Created<wbr>By<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes information on user who created this ComputeInstance.{{% /md %}}</dd>
     <dt class="property-required"
@@ -5067,7 +5067,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errors_csharp" style="color: inherit; text-decoration: inherit;">Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#machinelearningserviceerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#machinelearningserviceerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services..<wbr>Inputs.<wbr>Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Collection of errors encountered on this ComputeInstance.{{% /md %}}</dd>
     <dt class="property-required"
@@ -5076,7 +5076,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastoperation_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Operation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#computeinstancelastoperationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Compute<wbr>Instance<wbr>Last<wbr>Operation<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#computeinstancelastoperationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services..<wbr>Inputs.<wbr>Compute<wbr>Instance<wbr>Last<wbr>Operation<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The last operation on ComputeInstance.{{% /md %}}</dd>
     <dt class="property-required"
@@ -5103,7 +5103,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sshsettings_csharp" style="color: inherit; text-decoration: inherit;">Ssh<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#computeinstancesshsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Compute<wbr>Instance<wbr>Ssh<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#computeinstancesshsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services..<wbr>Inputs.<wbr>Compute<wbr>Instance<wbr>Ssh<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies policy and settings for SSH access.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -5112,7 +5112,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subnet_csharp" style="color: inherit; text-decoration: inherit;">Subnet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Resource<wbr>Id<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourceidresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services..<wbr>Inputs.<wbr>Resource<wbr>Id<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Virtual network subnet resource ID the compute nodes belong to.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -5435,7 +5435,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sshpublicaccess_csharp" style="color: inherit; text-decoration: inherit;">Ssh<wbr>Public<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#sshpublicaccess">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Ssh<wbr>Public<wbr>Access</a></span>
+        <span class="property-type">string | <a href="#sshpublicaccess">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services..<wbr>Ssh<wbr>Public<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}State of the public SSH port. Possible values are: Disabled - Indicates that the public ssh port is closed on this instance. Enabled - Indicates that the public ssh port is open and accessible according to the VNet/subnet policy if applicable.{{% /md %}}</dd>
 </dl>
@@ -5855,7 +5855,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provisioningerrors_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#machinelearningserviceerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#machinelearningserviceerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services..<wbr>Inputs.<wbr>Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Errors during provisioning{{% /md %}}</dd>
     <dt class="property-required"
@@ -6160,7 +6160,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datalakeanalyticsproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Data<wbr>Lake<wbr>Analytics<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#datalakeanalyticsproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services..<wbr>Inputs.<wbr>Data<wbr>Lake<wbr>Analytics<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -6401,7 +6401,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provisioningerrors_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#machinelearningserviceerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#machinelearningserviceerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services..<wbr>Inputs.<wbr>Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Errors during provisioning{{% /md %}}</dd>
     <dt class="property-required"
@@ -6437,7 +6437,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datalakeanalyticsresponseproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Data<wbr>Lake<wbr>Analytics<wbr>Response<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#datalakeanalyticsresponseproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services..<wbr>Inputs.<wbr>Data<wbr>Lake<wbr>Analytics<wbr>Response<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -6804,7 +6804,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databricksproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Databricks<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#databricksproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services..<wbr>Inputs.<wbr>Databricks<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -7045,7 +7045,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provisioningerrors_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#machinelearningserviceerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#machinelearningserviceerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services..<wbr>Inputs.<wbr>Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Errors during provisioning{{% /md %}}</dd>
     <dt class="property-required"
@@ -7081,7 +7081,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databricksresponseproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Databricks<wbr>Response<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#databricksresponseproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services..<wbr>Inputs.<wbr>Databricks<wbr>Response<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -7537,7 +7537,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#details_csharp" style="color: inherit; text-decoration: inherit;">Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#errordetailresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Error<wbr>Detail<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#errordetailresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services..<wbr>Inputs.<wbr>Error<wbr>Detail<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}An array of error detail objects.{{% /md %}}</dd>
     <dt class="property-required"
@@ -7680,7 +7680,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hdinsightproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>HDInsight<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#hdinsightproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services..<wbr>Inputs.<wbr>HDInsight<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -7841,7 +7841,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#administratoraccount_csharp" style="color: inherit; text-decoration: inherit;">Administrator<wbr>Account</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinesshcredentials">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Virtual<wbr>Machine<wbr>Ssh<wbr>Credentials<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualmachinesshcredentials">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services..<wbr>Inputs.<wbr>Virtual<wbr>Machine<wbr>Ssh<wbr>Credentials<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Admin credentials for master node of the cluster{{% /md %}}</dd>
     <dt class="property-optional"
@@ -7993,7 +7993,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provisioningerrors_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#machinelearningserviceerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#machinelearningserviceerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services..<wbr>Inputs.<wbr>Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Errors during provisioning{{% /md %}}</dd>
     <dt class="property-required"
@@ -8029,7 +8029,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hdinsightresponseproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>HDInsight<wbr>Response<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#hdinsightresponseproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services..<wbr>Inputs.<wbr>HDInsight<wbr>Response<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -8325,7 +8325,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#administratoraccount_csharp" style="color: inherit; text-decoration: inherit;">Administrator<wbr>Account</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinesshcredentialsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Virtual<wbr>Machine<wbr>Ssh<wbr>Credentials<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualmachinesshcredentialsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services..<wbr>Inputs.<wbr>Virtual<wbr>Machine<wbr>Ssh<wbr>Credentials<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Admin credentials for master node of the cluster{{% /md %}}</dd>
     <dt class="property-optional"
@@ -8450,7 +8450,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidentitytype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Resource<wbr>Identity<wbr>Type</a></span>
+        <span class="property-type"><a href="#resourceidentitytype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services..<wbr>Resource<wbr>Identity<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The identity type.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -8575,7 +8575,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userassignedidentities_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services..<wbr>Inputs.<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}The list of user identities associated with resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd>
 </dl>
@@ -8816,7 +8816,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#error_csharp" style="color: inherit; text-decoration: inherit;">Error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#errorresponseresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Error<wbr>Response<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#errorresponseresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services..<wbr>Inputs.<wbr>Error<wbr>Response<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The error response.{{% /md %}}</dd>
 </dl>
@@ -10606,7 +10606,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Virtual<wbr>Machine<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualmachineproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services..<wbr>Inputs.<wbr>Virtual<wbr>Machine<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -10767,7 +10767,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#administratoraccount_csharp" style="color: inherit; text-decoration: inherit;">Administrator<wbr>Account</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinesshcredentials">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Virtual<wbr>Machine<wbr>Ssh<wbr>Credentials<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualmachinesshcredentials">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services..<wbr>Inputs.<wbr>Virtual<wbr>Machine<wbr>Ssh<wbr>Credentials<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Admin credentials for virtual machine{{% /md %}}</dd>
     <dt class="property-optional"
@@ -10955,7 +10955,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provisioningerrors_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#machinelearningserviceerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#machinelearningserviceerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services..<wbr>Inputs.<wbr>Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Errors during provisioning{{% /md %}}</dd>
     <dt class="property-required"
@@ -10991,7 +10991,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineresponseproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Virtual<wbr>Machine<wbr>Response<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualmachineresponseproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services..<wbr>Inputs.<wbr>Virtual<wbr>Machine<wbr>Response<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -11287,7 +11287,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#administratoraccount_csharp" style="color: inherit; text-decoration: inherit;">Administrator<wbr>Account</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinesshcredentialsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Virtual<wbr>Machine<wbr>Ssh<wbr>Credentials<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualmachinesshcredentialsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services..<wbr>Inputs.<wbr>Virtual<wbr>Machine<wbr>Ssh<wbr>Credentials<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Admin credentials for virtual machine{{% /md %}}</dd>
     <dt class="property-optional"
@@ -11820,7 +11820,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:machinelearningservices/latest:MachineLearningCompute compute123 /subscriptions/34adfa4f-cedf-4dc0-ba29-b6d1a69ab345/resourceGroups/testrg123/providers/Microsoft.MachineLearningServices/workspaces/workspaces123/computes/compute123 
+$ pulumi import azure-nextgen:machinelearningservices:MachineLearningCompute compute123 /subscriptions/34adfa4f-cedf-4dc0-ba29-b6d1a69ab345/resourceGroups/testrg123/providers/Microsoft.MachineLearningServices/workspaces/workspaces123/computes/compute123 
 ```
 
 

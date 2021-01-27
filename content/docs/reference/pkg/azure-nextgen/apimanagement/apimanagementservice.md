@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.apimanagement.ApiManagementServi
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 A single API Management service resource in List or Get response.
-Latest API Version: 2019-12-01.
+API Version: 2019-12-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,28 +27,28 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var apiManagementService = new AzureNextGen.ApiManagement.Latest.ApiManagementService("apiManagementService", new AzureNextGen.ApiManagement.Latest.ApiManagementServiceArgs
+        var apiManagementService = new AzureNextGen.ApiManagement..ApiManagementService("apiManagementService", new AzureNextGen.ApiManagement..ApiManagementServiceArgs
         {
             AdditionalLocations = 
             {
-                new AzureNextGen.ApiManagement.Latest.Inputs.AdditionalLocationArgs
+                new AzureNextGen.ApiManagement..Inputs.AdditionalLocationArgs
                 {
                     DisableGateway = true,
                     Location = "East US",
-                    Sku = new AzureNextGen.ApiManagement.Latest.Inputs.ApiManagementServiceSkuPropertiesArgs
+                    Sku = new AzureNextGen.ApiManagement..Inputs.ApiManagementServiceSkuPropertiesArgs
                     {
                         Capacity = 1,
                         Name = "Premium",
                     },
                 },
             },
-            ApiVersionConstraint = new AzureNextGen.ApiManagement.Latest.Inputs.ApiVersionConstraintArgs
+            ApiVersionConstraint = new AzureNextGen.ApiManagement..Inputs.ApiVersionConstraintArgs
             {
                 MinApiVersion = "2019-01-01",
             },
             HostnameConfigurations = 
             {
-                new AzureNextGen.ApiManagement.Latest.Inputs.HostnameConfigurationArgs
+                new AzureNextGen.ApiManagement..Inputs.HostnameConfigurationArgs
                 {
                     CertificatePassword = "Password",
                     DefaultSslBinding = true,
@@ -56,14 +56,14 @@ class MyStack : Stack
                     HostName = "gateway1.msitesting.net",
                     Type = "Proxy",
                 },
-                new AzureNextGen.ApiManagement.Latest.Inputs.HostnameConfigurationArgs
+                new AzureNextGen.ApiManagement..Inputs.HostnameConfigurationArgs
                 {
                     CertificatePassword = "Password",
                     EncodedCertificate = "****** Base 64 Encoded Certificate ************",
                     HostName = "mgmt.msitesting.net",
                     Type = "Management",
                 },
-                new AzureNextGen.ApiManagement.Latest.Inputs.HostnameConfigurationArgs
+                new AzureNextGen.ApiManagement..Inputs.HostnameConfigurationArgs
                 {
                     CertificatePassword = "Password",
                     EncodedCertificate = "****** Base 64 Encoded Certificate ************",
@@ -76,7 +76,7 @@ class MyStack : Stack
             PublisherName = "autorestsdk",
             ResourceGroupName = "rg1",
             ServiceName = "apimService1",
-            Sku = new AzureNextGen.ApiManagement.Latest.Inputs.ApiManagementServiceSkuPropertiesArgs
+            Sku = new AzureNextGen.ApiManagement..Inputs.ApiManagementServiceSkuPropertiesArgs
             {
                 Capacity = 1,
                 Name = "Premium",
@@ -103,7 +103,7 @@ class MyStack : Stack
 package main
 
 import (
-	apimanagement "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/apimanagement/latest"
+	apimanagement "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/apimanagement"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -177,33 +177,33 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-api_management_service = azure_nextgen.apimanagement.latest.ApiManagementService("apiManagementService",
-    additional_locations=[azure_nextgen.apimanagement.latest.AdditionalLocationArgs(
+api_management_service = azure_nextgen.apimanagement.ApiManagementService("apiManagementService",
+    additional_locations=[azure_nextgen.apimanagement.AdditionalLocationArgs(
         disable_gateway=True,
         location="East US",
-        sku=azure_nextgen.apimanagement.latest.ApiManagementServiceSkuPropertiesArgs(
+        sku=azure_nextgen.apimanagement.ApiManagementServiceSkuPropertiesArgs(
             capacity=1,
             name="Premium",
         ),
     )],
-    api_version_constraint=azure_nextgen.apimanagement.latest.ApiVersionConstraintArgs(
+    api_version_constraint=azure_nextgen.apimanagement.ApiVersionConstraintArgs(
         min_api_version="2019-01-01",
     ),
     hostname_configurations=[
-        azure_nextgen.apimanagement.latest.HostnameConfigurationArgs(
+        azure_nextgen.apimanagement.HostnameConfigurationArgs(
             certificate_password="Password",
             default_ssl_binding=True,
             encoded_certificate="****** Base 64 Encoded Certificate ************",
             host_name="gateway1.msitesting.net",
             type="Proxy",
         ),
-        azure_nextgen.apimanagement.latest.HostnameConfigurationArgs(
+        azure_nextgen.apimanagement.HostnameConfigurationArgs(
             certificate_password="Password",
             encoded_certificate="****** Base 64 Encoded Certificate ************",
             host_name="mgmt.msitesting.net",
             type="Management",
         ),
-        azure_nextgen.apimanagement.latest.HostnameConfigurationArgs(
+        azure_nextgen.apimanagement.HostnameConfigurationArgs(
             certificate_password="Password",
             encoded_certificate="****** Base 64 Encoded Certificate ************",
             host_name="portal1.msitesting.net",
@@ -215,7 +215,7 @@ api_management_service = azure_nextgen.apimanagement.latest.ApiManagementService
     publisher_name="autorestsdk",
     resource_group_name="rg1",
     service_name="apimService1",
-    sku=azure_nextgen.apimanagement.latest.ApiManagementServiceSkuPropertiesArgs(
+    sku=azure_nextgen.apimanagement.ApiManagementServiceSkuPropertiesArgs(
         capacity=1,
         name="Premium",
     ),
@@ -236,7 +236,7 @@ api_management_service = azure_nextgen.apimanagement.latest.ApiManagementService
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const apiManagementService = new azure_nextgen.apimanagement.latest.ApiManagementService("apiManagementService", {
+const apiManagementService = new azure_nextgen.apimanagement.ApiManagementService("apiManagementService", {
     additionalLocations: [{
         disableGateway: true,
         location: "East US",
@@ -300,14 +300,14 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var apiManagementService = new AzureNextGen.ApiManagement.Latest.ApiManagementService("apiManagementService", new AzureNextGen.ApiManagement.Latest.ApiManagementServiceArgs
+        var apiManagementService = new AzureNextGen.ApiManagement..ApiManagementService("apiManagementService", new AzureNextGen.ApiManagement..ApiManagementServiceArgs
         {
             Location = "South Central US",
             PublisherEmail = "foo@contoso.com",
             PublisherName = "foo",
             ResourceGroupName = "rg1",
             ServiceName = "apimService1",
-            Sku = new AzureNextGen.ApiManagement.Latest.Inputs.ApiManagementServiceSkuPropertiesArgs
+            Sku = new AzureNextGen.ApiManagement..Inputs.ApiManagementServiceSkuPropertiesArgs
             {
                 Capacity = 1,
                 Name = "Developer",
@@ -332,7 +332,7 @@ class MyStack : Stack
 package main
 
 import (
-	apimanagement "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/apimanagement/latest"
+	apimanagement "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/apimanagement"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -370,13 +370,13 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-api_management_service = azure_nextgen.apimanagement.latest.ApiManagementService("apiManagementService",
+api_management_service = azure_nextgen.apimanagement.ApiManagementService("apiManagementService",
     location="South Central US",
     publisher_email="foo@contoso.com",
     publisher_name="foo",
     resource_group_name="rg1",
     service_name="apimService1",
-    sku=azure_nextgen.apimanagement.latest.ApiManagementServiceSkuPropertiesArgs(
+    sku=azure_nextgen.apimanagement.ApiManagementServiceSkuPropertiesArgs(
         capacity=1,
         name="Developer",
     ),
@@ -395,7 +395,7 @@ api_management_service = azure_nextgen.apimanagement.latest.ApiManagementService
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const apiManagementService = new azure_nextgen.apimanagement.latest.ApiManagementService("apiManagementService", {
+const apiManagementService = new azure_nextgen.apimanagement.ApiManagementService("apiManagementService", {
     location: "South Central US",
     publisherEmail: "foo@contoso.com",
     publisherName: "foo",
@@ -425,9 +425,9 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var apiManagementService = new AzureNextGen.ApiManagement.Latest.ApiManagementService("apiManagementService", new AzureNextGen.ApiManagement.Latest.ApiManagementServiceArgs
+        var apiManagementService = new AzureNextGen.ApiManagement..ApiManagementService("apiManagementService", new AzureNextGen.ApiManagement..ApiManagementServiceArgs
         {
-            Identity = new AzureNextGen.ApiManagement.Latest.Inputs.ApiManagementServiceIdentityArgs
+            Identity = new AzureNextGen.ApiManagement..Inputs.ApiManagementServiceIdentityArgs
             {
                 Type = "SystemAssigned",
             },
@@ -436,7 +436,7 @@ class MyStack : Stack
             PublisherName = "autorestsdk",
             ResourceGroupName = "rg1",
             ServiceName = "apimService1",
-            Sku = new AzureNextGen.ApiManagement.Latest.Inputs.ApiManagementServiceSkuPropertiesArgs
+            Sku = new AzureNextGen.ApiManagement..Inputs.ApiManagementServiceSkuPropertiesArgs
             {
                 Capacity = 0,
                 Name = "Consumption",
@@ -462,7 +462,7 @@ class MyStack : Stack
 package main
 
 import (
-	apimanagement "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/apimanagement/latest"
+	apimanagement "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/apimanagement"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -504,8 +504,8 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-api_management_service = azure_nextgen.apimanagement.latest.ApiManagementService("apiManagementService",
-    identity=azure_nextgen.apimanagement.latest.ApiManagementServiceIdentityArgs(
+api_management_service = azure_nextgen.apimanagement.ApiManagementService("apiManagementService",
+    identity=azure_nextgen.apimanagement.ApiManagementServiceIdentityArgs(
         type="SystemAssigned",
     ),
     location="West US",
@@ -513,7 +513,7 @@ api_management_service = azure_nextgen.apimanagement.latest.ApiManagementService
     publisher_name="autorestsdk",
     resource_group_name="rg1",
     service_name="apimService1",
-    sku=azure_nextgen.apimanagement.latest.ApiManagementServiceSkuPropertiesArgs(
+    sku=azure_nextgen.apimanagement.ApiManagementServiceSkuPropertiesArgs(
         capacity=0,
         name="Consumption",
     ),
@@ -533,7 +533,7 @@ api_management_service = azure_nextgen.apimanagement.latest.ApiManagementService
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const apiManagementService = new azure_nextgen.apimanagement.latest.ApiManagementService("apiManagementService", {
+const apiManagementService = new azure_nextgen.apimanagement.ApiManagementService("apiManagementService", {
     identity: {
         type: "SystemAssigned",
     },
@@ -567,11 +567,11 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var apiManagementService = new AzureNextGen.ApiManagement.Latest.ApiManagementService("apiManagementService", new AzureNextGen.ApiManagement.Latest.ApiManagementServiceArgs
+        var apiManagementService = new AzureNextGen.ApiManagement..ApiManagementService("apiManagementService", new AzureNextGen.ApiManagement..ApiManagementServiceArgs
         {
             Certificates = 
             {
-                new AzureNextGen.ApiManagement.Latest.Inputs.CertificateConfigurationArgs
+                new AzureNextGen.ApiManagement..Inputs.CertificateConfigurationArgs
                 {
                     CertificatePassword = "Password",
                     EncodedCertificate = "*******Base64 encoded Certificate******************",
@@ -583,7 +583,7 @@ class MyStack : Stack
             PublisherName = "autorestsdk",
             ResourceGroupName = "rg1",
             ServiceName = "apimService1",
-            Sku = new AzureNextGen.ApiManagement.Latest.Inputs.ApiManagementServiceSkuPropertiesArgs
+            Sku = new AzureNextGen.ApiManagement..Inputs.ApiManagementServiceSkuPropertiesArgs
             {
                 Capacity = 1,
                 Name = "Basic",
@@ -609,7 +609,7 @@ class MyStack : Stack
 package main
 
 import (
-	apimanagement "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/apimanagement/latest"
+	apimanagement "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/apimanagement"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -655,8 +655,8 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-api_management_service = azure_nextgen.apimanagement.latest.ApiManagementService("apiManagementService",
-    certificates=[azure_nextgen.apimanagement.latest.CertificateConfigurationArgs(
+api_management_service = azure_nextgen.apimanagement.ApiManagementService("apiManagementService",
+    certificates=[azure_nextgen.apimanagement.CertificateConfigurationArgs(
         certificate_password="Password",
         encoded_certificate="*******Base64 encoded Certificate******************",
         store_name="CertificateAuthority",
@@ -666,7 +666,7 @@ api_management_service = azure_nextgen.apimanagement.latest.ApiManagementService
     publisher_name="autorestsdk",
     resource_group_name="rg1",
     service_name="apimService1",
-    sku=azure_nextgen.apimanagement.latest.ApiManagementServiceSkuPropertiesArgs(
+    sku=azure_nextgen.apimanagement.ApiManagementServiceSkuPropertiesArgs(
         capacity=1,
         name="Basic",
     ),
@@ -686,7 +686,7 @@ api_management_service = azure_nextgen.apimanagement.latest.ApiManagementService
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const apiManagementService = new azure_nextgen.apimanagement.latest.ApiManagementService("apiManagementService", {
+const apiManagementService = new azure_nextgen.apimanagement.ApiManagementService("apiManagementService", {
     certificates: [{
         certificatePassword: "Password",
         encodedCertificate: "*******Base64 encoded Certificate******************",
@@ -722,9 +722,9 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var apiManagementService = new AzureNextGen.ApiManagement.Latest.ApiManagementService("apiManagementService", new AzureNextGen.ApiManagement.Latest.ApiManagementServiceArgs
+        var apiManagementService = new AzureNextGen.ApiManagement..ApiManagementService("apiManagementService", new AzureNextGen.ApiManagement..ApiManagementServiceArgs
         {
-            Identity = new AzureNextGen.ApiManagement.Latest.Inputs.ApiManagementServiceIdentityArgs
+            Identity = new AzureNextGen.ApiManagement..Inputs.ApiManagementServiceIdentityArgs
             {
                 Type = "UserAssigned",
                 UserAssignedIdentities = 
@@ -737,7 +737,7 @@ class MyStack : Stack
             PublisherName = "autorestsdk",
             ResourceGroupName = "rg1",
             ServiceName = "apimService1",
-            Sku = new AzureNextGen.ApiManagement.Latest.Inputs.ApiManagementServiceSkuPropertiesArgs
+            Sku = new AzureNextGen.ApiManagement..Inputs.ApiManagementServiceSkuPropertiesArgs
             {
                 Capacity = 0,
                 Name = "Consumption",
@@ -767,11 +767,11 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-api_management_service = azure_nextgen.apimanagement.latest.ApiManagementService("apiManagementService",
-    identity=azure_nextgen.apimanagement.latest.ApiManagementServiceIdentityArgs(
+api_management_service = azure_nextgen.apimanagement.ApiManagementService("apiManagementService",
+    identity=azure_nextgen.apimanagement.ApiManagementServiceIdentityArgs(
         type="UserAssigned",
         user_assigned_identities={
-            "/subscriptions/subid/resourcegroups/rg1/providers/Microsoft.ManagedIdentity/userAssignedIdentities/apimService1": azure_nextgen.apimanagement.latest.UserIdentityPropertiesArgs(),
+            "/subscriptions/subid/resourcegroups/rg1/providers/Microsoft.ManagedIdentity/userAssignedIdentities/apimService1": azure_nextgen.apimanagement.UserIdentityPropertiesArgs(),
         },
     ),
     location="West US",
@@ -779,7 +779,7 @@ api_management_service = azure_nextgen.apimanagement.latest.ApiManagementService
     publisher_name="autorestsdk",
     resource_group_name="rg1",
     service_name="apimService1",
-    sku=azure_nextgen.apimanagement.latest.ApiManagementServiceSkuPropertiesArgs(
+    sku=azure_nextgen.apimanagement.ApiManagementServiceSkuPropertiesArgs(
         capacity=0,
         name="Consumption",
     ),
@@ -799,7 +799,7 @@ api_management_service = azure_nextgen.apimanagement.latest.ApiManagementService
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const apiManagementService = new azure_nextgen.apimanagement.latest.ApiManagementService("apiManagementService", {
+const apiManagementService = new azure_nextgen.apimanagement.ApiManagementService("apiManagementService", {
     identity: {
         type: "UserAssigned",
         userAssignedIdentities: {
@@ -1060,7 +1060,7 @@ The ApiManagementService resource accepts the following [input]({{< relref "/doc
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apimanagementserviceskuproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Api<wbr>Management<wbr>Service<wbr>Sku<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#apimanagementserviceskuproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management..<wbr>Inputs.<wbr>Api<wbr>Management<wbr>Service<wbr>Sku<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}SKU properties of the API Management service.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1069,7 +1069,7 @@ The ApiManagementService resource accepts the following [input]({{< relref "/doc
 <a href="#additionallocations_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Locations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionallocation">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Additional<wbr>Location<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#additionallocation">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management..<wbr>Inputs.<wbr>Additional<wbr>Location<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Additional datacenter locations of the API Management service.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1078,7 +1078,7 @@ The ApiManagementService resource accepts the following [input]({{< relref "/doc
 <a href="#apiversionconstraint_csharp" style="color: inherit; text-decoration: inherit;">Api<wbr>Version<wbr>Constraint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apiversionconstraint">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Api<wbr>Version<wbr>Constraint<wbr>Args</a></span>
+        <span class="property-type"><a href="#apiversionconstraint">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management..<wbr>Inputs.<wbr>Api<wbr>Version<wbr>Constraint<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Control Plane Apis version constraint for the API Management service.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1087,7 +1087,7 @@ The ApiManagementService resource accepts the following [input]({{< relref "/doc
 <a href="#certificates_csharp" style="color: inherit; text-decoration: inherit;">Certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificateconfiguration">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Certificate<wbr>Configuration<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#certificateconfiguration">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management..<wbr>Inputs.<wbr>Certificate<wbr>Configuration<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of Certificates that need to be installed in the API Management service. Max supported certificates that can be installed is 10.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1123,7 +1123,7 @@ The ApiManagementService resource accepts the following [input]({{< relref "/doc
 <a href="#hostnameconfigurations_csharp" style="color: inherit; text-decoration: inherit;">Hostname<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hostnameconfiguration">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Hostname<wbr>Configuration<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#hostnameconfiguration">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management..<wbr>Inputs.<wbr>Hostname<wbr>Configuration<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Custom hostname configuration of the API Management service.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1132,7 +1132,7 @@ The ApiManagementService resource accepts the following [input]({{< relref "/doc
 <a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apimanagementserviceidentity">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Api<wbr>Management<wbr>Service<wbr>Identity<wbr>Args</a></span>
+        <span class="property-type"><a href="#apimanagementserviceidentity">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management..<wbr>Inputs.<wbr>Api<wbr>Management<wbr>Service<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Managed service identity of the Api Management service.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1159,7 +1159,7 @@ The ApiManagementService resource accepts the following [input]({{< relref "/doc
 <a href="#virtualnetworkconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkconfiguration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Virtual<wbr>Network<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnetworkconfiguration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management..<wbr>Inputs.<wbr>Virtual<wbr>Network<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Virtual network configuration of the API Management service.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1168,7 +1168,7 @@ The ApiManagementService resource accepts the following [input]({{< relref "/doc
 <a href="#virtualnetworktype_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#virtualnetworktype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management.<wbr>Virtual<wbr>Network<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#virtualnetworktype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management..<wbr>Virtual<wbr>Network<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of VPN in which API Management service needs to be configured in. None (Default Value) means the API Management service is not part of any Virtual Network, External means the API Management deployment is set up inside a Virtual Network having an Internet Facing Endpoint, and Internal means that API Management deployment is setup inside a Virtual Network having an Intranet Facing Endpoint only.{{% /md %}}</dd>
 </dl>
@@ -2279,7 +2279,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apimanagementserviceskuproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Api<wbr>Management<wbr>Service<wbr>Sku<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#apimanagementserviceskuproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management..<wbr>Inputs.<wbr>Api<wbr>Management<wbr>Service<wbr>Sku<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}SKU properties of the API Management service.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2297,7 +2297,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#virtualnetworkconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkconfiguration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Virtual<wbr>Network<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnetworkconfiguration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management..<wbr>Inputs.<wbr>Virtual<wbr>Network<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Virtual network configuration for the location.{{% /md %}}</dd>
 </dl>
@@ -2476,7 +2476,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apimanagementserviceskupropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Api<wbr>Management<wbr>Service<wbr>Sku<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#apimanagementserviceskupropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management..<wbr>Inputs.<wbr>Api<wbr>Management<wbr>Service<wbr>Sku<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}SKU properties of the API Management service.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2494,7 +2494,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#virtualnetworkconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Virtual<wbr>Network<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnetworkconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management..<wbr>Inputs.<wbr>Virtual<wbr>Network<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Virtual network configuration for the location.{{% /md %}}</dd>
 </dl>
@@ -2718,7 +2718,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#apimidentitytype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management.<wbr>Apim<wbr>Identity<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#apimidentitytype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management..<wbr>Apim<wbr>Identity<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of identity used for the resource. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user assigned identities. The type 'None' will remove any identities from the service.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2727,7 +2727,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userassignedidentities_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>User<wbr>Identity<wbr>Properties<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management..<wbr>Inputs.<wbr>User<wbr>Identity<wbr>Properties<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}The list of user identities associated with the resource. The user identity 
 dictionary key references will be ARM resource ids in the form: 
@@ -2855,7 +2855,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#userassignedidentities_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>User<wbr>Identity<wbr>Properties<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management..<wbr>Inputs.<wbr>User<wbr>Identity<wbr>Properties<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}The list of user identities associated with the resource. The user identity 
 dictionary key references will be ARM resource ids in the form: 
@@ -3019,7 +3019,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#skutype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management.<wbr>Sku<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#skutype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management..<wbr>Sku<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Name of the Sku.{{% /md %}}</dd>
 </dl>
@@ -3393,7 +3393,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#certificate_csharp" style="color: inherit; text-decoration: inherit;">Certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificateinformation">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Certificate<wbr>Information<wbr>Args</a></span>
+        <span class="property-type"><a href="#certificateinformation">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management..<wbr>Inputs.<wbr>Certificate<wbr>Information<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Certificate information.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3563,7 +3563,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#certificate_csharp" style="color: inherit; text-decoration: inherit;">Certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificateinformationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Certificate<wbr>Information<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#certificateinformationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management..<wbr>Inputs.<wbr>Certificate<wbr>Information<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Certificate information.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4001,7 +4001,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#hostnametype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management.<wbr>Hostname<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#hostnametype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management..<wbr>Hostname<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Hostname type.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4010,7 +4010,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#certificate_csharp" style="color: inherit; text-decoration: inherit;">Certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificateinformation">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Certificate<wbr>Information<wbr>Args</a></span>
+        <span class="property-type"><a href="#certificateinformation">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management..<wbr>Inputs.<wbr>Certificate<wbr>Information<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Certificate information.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4324,7 +4324,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#certificate_csharp" style="color: inherit; text-decoration: inherit;">Certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificateinformationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Certificate<wbr>Information<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#certificateinformationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management..<wbr>Inputs.<wbr>Certificate<wbr>Information<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Certificate information.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -5176,7 +5176,7 @@ dictionary key references will be ARM resource ids in the form:
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:apimanagement/latest:ApiManagementService apimService1 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1 
+$ pulumi import azure-nextgen:apimanagement:ApiManagementService apimService1 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1 
 ```
 
 

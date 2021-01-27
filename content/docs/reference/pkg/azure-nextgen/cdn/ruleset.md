@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.cdn.RuleSet resource with exampl
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Friendly RuleSet name mapping to the any RuleSet or secret related information.
-Latest API Version: 2020-09-01.
+API Version: 2020-09-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var ruleSet = new AzureNextGen.Cdn.Latest.RuleSet("ruleSet", new AzureNextGen.Cdn.Latest.RuleSetArgs
+        var ruleSet = new AzureNextGen.Cdn..RuleSet("ruleSet", new AzureNextGen.Cdn..RuleSetArgs
         {
             ProfileName = "profile1",
             ResourceGroupName = "RG",
@@ -47,7 +47,7 @@ class MyStack : Stack
 package main
 
 import (
-	cdn "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/cdn/latest"
+	cdn "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/cdn"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -75,7 +75,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-rule_set = azure_nextgen.cdn.latest.RuleSet("ruleSet",
+rule_set = azure_nextgen.cdn.RuleSet("ruleSet",
     profile_name="profile1",
     resource_group_name="RG",
     rule_set_name="ruleSet1")
@@ -90,7 +90,7 @@ rule_set = azure_nextgen.cdn.latest.RuleSet("ruleSet",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const ruleSet = new azure_nextgen.cdn.latest.RuleSet("ruleSet", {
+const ruleSet = new azure_nextgen.cdn.RuleSet("ruleSet", {
     profileName: "profile1",
     resourceGroupName: "RG",
     ruleSetName: "ruleSet1",
@@ -464,7 +464,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#systemdata_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn.<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
+        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn..<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Read only system data{{% /md %}}</dd>
     <dt class="property-"
@@ -916,7 +916,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:cdn/latest:RuleSet ruleSet1 /subscriptions/subid/resourcegroups/RG/providers/Microsoft.Cdn/profiles/profile1/rulesets/ruleSet1 
+$ pulumi import azure-nextgen:cdn:RuleSet ruleSet1 /subscriptions/subid/resourcegroups/RG/providers/Microsoft.Cdn/profiles/profile1/rulesets/ruleSet1 
 ```
 
 

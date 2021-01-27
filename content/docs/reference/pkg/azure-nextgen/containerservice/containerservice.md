@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.containerservice.ContainerServic
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Container service.
-Latest API Version: 2017-01-31.
+API Version: 2017-01-31.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var containerService = new AzureNextGen.ContainerService.Latest.ContainerService("containerService", new AzureNextGen.ContainerService.Latest.ContainerServiceArgs
+        var containerService = new AzureNextGen.ContainerService..ContainerService("containerService", new AzureNextGen.ContainerService..ContainerServiceArgs
         {
             ContainerServiceName = "acs1",
             Location = "location1",
@@ -47,7 +47,7 @@ class MyStack : Stack
 package main
 
 import (
-	containerservice "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/containerservice/latest"
+	containerservice "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/containerservice"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -75,7 +75,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-container_service = azure_nextgen.containerservice.latest.ContainerService("containerService",
+container_service = azure_nextgen.containerservice.ContainerService("containerService",
     container_service_name="acs1",
     location="location1",
     resource_group_name="rg1")
@@ -90,7 +90,7 @@ container_service = azure_nextgen.containerservice.latest.ContainerService("cont
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const containerService = new azure_nextgen.containerservice.latest.ContainerService("containerService", {
+const containerService = new azure_nextgen.containerservice.ContainerService("containerService", {
     containerServiceName: "acs1",
     location: "location1",
     resourceGroupName: "rg1",
@@ -289,7 +289,7 @@ The ContainerService resource accepts the following [input]({{< relref "/docs/in
 <a href="#agentpoolprofiles_csharp" style="color: inherit; text-decoration: inherit;">Agent<wbr>Pool<wbr>Profiles</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerserviceagentpoolprofile">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Container<wbr>Service<wbr>Agent<wbr>Pool<wbr>Profile<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#containerserviceagentpoolprofile">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service..<wbr>Inputs.<wbr>Container<wbr>Service<wbr>Agent<wbr>Pool<wbr>Profile<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Properties of the agent pool.{{% /md %}}</dd>
     <dt class="property-required"
@@ -307,7 +307,7 @@ The ContainerService resource accepts the following [input]({{< relref "/docs/in
 <a href="#linuxprofile_csharp" style="color: inherit; text-decoration: inherit;">Linux<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerservicelinuxprofile">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Container<wbr>Service<wbr>Linux<wbr>Profile<wbr>Args</a></span>
+        <span class="property-type"><a href="#containerservicelinuxprofile">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service..<wbr>Inputs.<wbr>Container<wbr>Service<wbr>Linux<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties of Linux VMs.{{% /md %}}</dd>
     <dt class="property-required"
@@ -325,7 +325,7 @@ The ContainerService resource accepts the following [input]({{< relref "/docs/in
 <a href="#masterprofile_csharp" style="color: inherit; text-decoration: inherit;">Master<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerservicemasterprofile">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Container<wbr>Service<wbr>Master<wbr>Profile<wbr>Args</a></span>
+        <span class="property-type"><a href="#containerservicemasterprofile">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service..<wbr>Inputs.<wbr>Container<wbr>Service<wbr>Master<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties of master agents.{{% /md %}}</dd>
     <dt class="property-required"
@@ -343,7 +343,7 @@ The ContainerService resource accepts the following [input]({{< relref "/docs/in
 <a href="#customprofile_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerservicecustomprofile">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Container<wbr>Service<wbr>Custom<wbr>Profile<wbr>Args</a></span>
+        <span class="property-type"><a href="#containerservicecustomprofile">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service..<wbr>Inputs.<wbr>Container<wbr>Service<wbr>Custom<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties for custom clusters.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -352,7 +352,7 @@ The ContainerService resource accepts the following [input]({{< relref "/docs/in
 <a href="#diagnosticsprofile_csharp" style="color: inherit; text-decoration: inherit;">Diagnostics<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerservicediagnosticsprofile">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Container<wbr>Service<wbr>Diagnostics<wbr>Profile<wbr>Args</a></span>
+        <span class="property-type"><a href="#containerservicediagnosticsprofile">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service..<wbr>Inputs.<wbr>Container<wbr>Service<wbr>Diagnostics<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties of the diagnostic agent.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -361,7 +361,7 @@ The ContainerService resource accepts the following [input]({{< relref "/docs/in
 <a href="#orchestratorprofile_csharp" style="color: inherit; text-decoration: inherit;">Orchestrator<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerserviceorchestratorprofile">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Container<wbr>Service<wbr>Orchestrator<wbr>Profile<wbr>Args</a></span>
+        <span class="property-type"><a href="#containerserviceorchestratorprofile">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service..<wbr>Inputs.<wbr>Container<wbr>Service<wbr>Orchestrator<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties of the orchestrator.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -370,7 +370,7 @@ The ContainerService resource accepts the following [input]({{< relref "/docs/in
 <a href="#serviceprincipalprofile_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Principal<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerserviceserviceprincipalprofile">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Container<wbr>Service<wbr>Service<wbr>Principal<wbr>Profile<wbr>Args</a></span>
+        <span class="property-type"><a href="#containerserviceserviceprincipalprofile">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service..<wbr>Inputs.<wbr>Container<wbr>Service<wbr>Service<wbr>Principal<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties for cluster service principals.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -388,7 +388,7 @@ The ContainerService resource accepts the following [input]({{< relref "/docs/in
 <a href="#windowsprofile_csharp" style="color: inherit; text-decoration: inherit;">Windows<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerservicewindowsprofile">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Container<wbr>Service<wbr>Windows<wbr>Profile<wbr>Args</a></span>
+        <span class="property-type"><a href="#containerservicewindowsprofile">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service..<wbr>Inputs.<wbr>Container<wbr>Service<wbr>Windows<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties of Windows VMs.{{% /md %}}</dd>
 </dl>
@@ -959,7 +959,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vmsize_csharp" style="color: inherit; text-decoration: inherit;">Vm<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#containerservicevmsizetypes">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Container<wbr>Service<wbr>VMSize<wbr>Types</a></span>
+        <span class="property-type">string | <a href="#containerservicevmsizetypes">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service..<wbr>Container<wbr>Service<wbr>VMSize<wbr>Types</a></span>
     </dt>
     <dd>{{% md %}}Size of agent VMs.{{% /md %}}</dd>
 </dl>
@@ -1432,7 +1432,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vmdiagnostics_csharp" style="color: inherit; text-decoration: inherit;">Vm<wbr>Diagnostics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerservicevmdiagnostics">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Container<wbr>Service<wbr>VMDiagnostics<wbr>Args</a></span>
+        <span class="property-type"><a href="#containerservicevmdiagnostics">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service..<wbr>Inputs.<wbr>Container<wbr>Service<wbr>VMDiagnostics<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Profile for the container service VM diagnostic agent.{{% /md %}}</dd>
 </dl>
@@ -1494,7 +1494,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vmdiagnostics_csharp" style="color: inherit; text-decoration: inherit;">Vm<wbr>Diagnostics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerservicevmdiagnosticsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Container<wbr>Service<wbr>VMDiagnostics<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#containerservicevmdiagnosticsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service..<wbr>Inputs.<wbr>Container<wbr>Service<wbr>VMDiagnostics<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Profile for the container service VM diagnostic agent.{{% /md %}}</dd>
 </dl>
@@ -1565,7 +1565,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ssh_csharp" style="color: inherit; text-decoration: inherit;">Ssh</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerservicesshconfiguration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Container<wbr>Service<wbr>Ssh<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#containerservicesshconfiguration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service..<wbr>Inputs.<wbr>Container<wbr>Service<wbr>Ssh<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}SSH configuration for Linux-based VMs running on Azure.{{% /md %}}</dd>
 </dl>
@@ -1663,7 +1663,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ssh_csharp" style="color: inherit; text-decoration: inherit;">Ssh</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerservicesshconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Container<wbr>Service<wbr>Ssh<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#containerservicesshconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service..<wbr>Inputs.<wbr>Container<wbr>Service<wbr>Ssh<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}SSH configuration for Linux-based VMs running on Azure.{{% /md %}}</dd>
 </dl>
@@ -1984,7 +1984,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#orchestratortype_csharp" style="color: inherit; text-decoration: inherit;">Orchestrator<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerserviceorchestratortypes">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Container<wbr>Service<wbr>Orchestrator<wbr>Types</a></span>
+        <span class="property-type"><a href="#containerserviceorchestratortypes">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service..<wbr>Container<wbr>Service<wbr>Orchestrator<wbr>Types</a></span>
     </dt>
     <dd>{{% md %}}The orchestrator to use to manage container service cluster resources. Valid values are Swarm, DCOS, and Custom.{{% /md %}}</dd>
 </dl>
@@ -2358,7 +2358,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publickeys_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerservicesshpublickey">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Container<wbr>Service<wbr>Ssh<wbr>Public<wbr>Key<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#containerservicesshpublickey">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service..<wbr>Inputs.<wbr>Container<wbr>Service<wbr>Ssh<wbr>Public<wbr>Key<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of SSH public keys used to authenticate with Linux-based VMs. Only expect one key specified.{{% /md %}}</dd>
 </dl>
@@ -2420,7 +2420,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publickeys_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerservicesshpublickeyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Container<wbr>Service<wbr>Ssh<wbr>Public<wbr>Key<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#containerservicesshpublickeyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service..<wbr>Inputs.<wbr>Container<wbr>Service<wbr>Ssh<wbr>Public<wbr>Key<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of SSH public keys used to authenticate with Linux-based VMs. Only expect one key specified.{{% /md %}}</dd>
 </dl>
@@ -4370,7 +4370,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:containerservice/latest:ContainerService acs1 /subscriptions/subid1/resourceGroups/rg1/providers/Microsoft.ContainerService/containerServices/acs1 
+$ pulumi import azure-nextgen:containerservice:ContainerService acs1 /subscriptions/subid1/resourceGroups/rg1/providers/Microsoft.ContainerService/containerServices/acs1 
 ```
 
 

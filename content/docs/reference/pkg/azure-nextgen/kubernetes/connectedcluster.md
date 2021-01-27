@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.kubernetes.ConnectedCluster reso
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Represents a connected cluster.
+API Version: 2020-01-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,9 +27,9 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var connectedCluster = new AzureNextGen.Kubernetes.V20200101Preview.ConnectedCluster("connectedCluster", new AzureNextGen.Kubernetes.V20200101Preview.ConnectedClusterArgs
+        var connectedCluster = new AzureNextGen.Kubernetes..ConnectedCluster("connectedCluster", new AzureNextGen.Kubernetes..ConnectedClusterArgs
         {
-            AadProfile = new AzureNextGen.Kubernetes.V20200101Preview.Inputs.ConnectedClusterAADProfileArgs
+            AadProfile = new AzureNextGen.Kubernetes..Inputs.ConnectedClusterAADProfileArgs
             {
                 ClientAppId = "f8cd1fd9-154f-4da7-b348-595f283c13a3",
                 ServerAppId = "45c27b16-e262-4c55-b572-b3b8f7788eb8",
@@ -36,7 +37,7 @@ class MyStack : Stack
             },
             AgentPublicKeyCertificate = "MIICYzCCAcygAwIBAgIBADANBgkqhkiG9w0BAQUFADAuMQswCQYDVQQGEwJVUzEMMAoGA1UEChMDSUJNMREwDwYDVQQLEwhMb2NhbCBDQTAeFw05OTEyMjIwNTAwMDBaFw0wMDEyMjMwNDU5NTlaMC4xCzAJBgNVBAYTAlVTMQwwCgYDVQQKEwNJQk0xETAPBgNVBAsTCExvY2FsIENBMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQD2bZEo7xGaX2/0GHkrNFZvlxBou9v1Jmt/PDiTMPve8r9FeJAQ0QdvFST/0JPQYD20rH0bimdDLgNdNynmyRoS2S/IInfpmf69iyc2G0TPyRvmHIiOZbdCd+YBHQi1adkj17NDcWj6S14tVurFX73zx0sNoMS79q3tuXKrDsxeuwIDAQABo4GQMIGNMEsGCVUdDwGG+EIBDQQ+EzxHZW5lcmF0ZWQgYnkgdGhlIFNlY3VyZVdheSBTZWN1cml0eSBTZXJ2ZXIgZm9yIE9TLzM5MCAoUkFDRikwDgYDVR0PAQH/BAQDAgAGMA8GA1UdEwEB/wQFMAMBAf8wHQYDVR0OBBYEFJ3+ocRyCTJw067dLSwr/nalx6YMMA0GCSqGSIb3DQEBBQUAA4GBAMaQzt+zaj1GU77yzlr8iiMBXgdQrwsZZWJo5exnAucJAEYQZmOfyLiM D6oYq+ZnfvM0n8G/Y79q8nhwvuxpYOnRSAXFp6xSkrIOeZtJMY1h00LKp/JX3Ng1svZ2agE126JHsQ0bhzN5TKsYfbwfTwfjdWAGy6Vf1nYi/rO+ryMO",
             ClusterName = "testCluster",
-            Identity = new AzureNextGen.Kubernetes.V20200101Preview.Inputs.ConnectedClusterIdentityArgs
+            Identity = new AzureNextGen.Kubernetes..Inputs.ConnectedClusterIdentityArgs
             {
                 Type = "SystemAssigned",
             },
@@ -58,7 +59,7 @@ class MyStack : Stack
 package main
 
 import (
-	kubernetes "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/kubernetes/v20200101preview"
+	kubernetes "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/kubernetes"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -96,15 +97,15 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-connected_cluster = azure_nextgen.kubernetes.v20200101preview.ConnectedCluster("connectedCluster",
-    aad_profile=azure_nextgen.kubernetes.v20200101preview.ConnectedClusterAADProfileArgs(
+connected_cluster = azure_nextgen.kubernetes.ConnectedCluster("connectedCluster",
+    aad_profile=azure_nextgen.kubernetes.ConnectedClusterAADProfileArgs(
         client_app_id="f8cd1fd9-154f-4da7-b348-595f283c13a3",
         server_app_id="45c27b16-e262-4c55-b572-b3b8f7788eb8",
         tenant_id="72f988bf-86f1-41af-91ab-2d7cd011db47",
     ),
     agent_public_key_certificate="MIICYzCCAcygAwIBAgIBADANBgkqhkiG9w0BAQUFADAuMQswCQYDVQQGEwJVUzEMMAoGA1UEChMDSUJNMREwDwYDVQQLEwhMb2NhbCBDQTAeFw05OTEyMjIwNTAwMDBaFw0wMDEyMjMwNDU5NTlaMC4xCzAJBgNVBAYTAlVTMQwwCgYDVQQKEwNJQk0xETAPBgNVBAsTCExvY2FsIENBMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQD2bZEo7xGaX2/0GHkrNFZvlxBou9v1Jmt/PDiTMPve8r9FeJAQ0QdvFST/0JPQYD20rH0bimdDLgNdNynmyRoS2S/IInfpmf69iyc2G0TPyRvmHIiOZbdCd+YBHQi1adkj17NDcWj6S14tVurFX73zx0sNoMS79q3tuXKrDsxeuwIDAQABo4GQMIGNMEsGCVUdDwGG+EIBDQQ+EzxHZW5lcmF0ZWQgYnkgdGhlIFNlY3VyZVdheSBTZWN1cml0eSBTZXJ2ZXIgZm9yIE9TLzM5MCAoUkFDRikwDgYDVR0PAQH/BAQDAgAGMA8GA1UdEwEB/wQFMAMBAf8wHQYDVR0OBBYEFJ3+ocRyCTJw067dLSwr/nalx6YMMA0GCSqGSIb3DQEBBQUAA4GBAMaQzt+zaj1GU77yzlr8iiMBXgdQrwsZZWJo5exnAucJAEYQZmOfyLiM D6oYq+ZnfvM0n8G/Y79q8nhwvuxpYOnRSAXFp6xSkrIOeZtJMY1h00LKp/JX3Ng1svZ2agE126JHsQ0bhzN5TKsYfbwfTwfjdWAGy6Vf1nYi/rO+ryMO",
     cluster_name="testCluster",
-    identity=azure_nextgen.kubernetes.v20200101preview.ConnectedClusterIdentityArgs(
+    identity=azure_nextgen.kubernetes.ConnectedClusterIdentityArgs(
         type="SystemAssigned",
     ),
     location="East US",
@@ -121,7 +122,7 @@ connected_cluster = azure_nextgen.kubernetes.v20200101preview.ConnectedCluster("
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const connectedCluster = new azure_nextgen.kubernetes.v20200101preview.ConnectedCluster("connectedCluster", {
+const connectedCluster = new azure_nextgen.kubernetes.ConnectedCluster("connectedCluster", {
     aadProfile: {
         clientAppId: "f8cd1fd9-154f-4da7-b348-595f283c13a3",
         serverAppId: "45c27b16-e262-4c55-b572-b3b8f7788eb8",
@@ -330,7 +331,7 @@ The ConnectedCluster resource accepts the following [input]({{< relref "/docs/in
 <a href="#aadprofile_csharp" style="color: inherit; text-decoration: inherit;">Aad<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectedclusteraadprofile">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Kubernetes.<wbr>Inputs.<wbr>Connected<wbr>Cluster<wbr>AADProfile<wbr>Args</a></span>
+        <span class="property-type"><a href="#connectedclusteraadprofile">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Kubernetes..<wbr>Inputs.<wbr>Connected<wbr>Cluster<wbr>AADProfile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}AAD profile of the connected cluster.{{% /md %}}</dd>
     <dt class="property-required"
@@ -357,7 +358,7 @@ The ConnectedCluster resource accepts the following [input]({{< relref "/docs/in
 <a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectedclusteridentity">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Kubernetes.<wbr>Inputs.<wbr>Connected<wbr>Cluster<wbr>Identity<wbr>Args</a></span>
+        <span class="property-type"><a href="#connectedclusteridentity">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Kubernetes..<wbr>Inputs.<wbr>Connected<wbr>Cluster<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The identity of the connected cluster.{{% /md %}}</dd>
     <dt class="property-required"
@@ -384,7 +385,7 @@ The ConnectedCluster resource accepts the following [input]({{< relref "/docs/in
 <a href="#connectivitystatus_csharp" style="color: inherit; text-decoration: inherit;">Connectivity<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#connectivitystatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Kubernetes.<wbr>Connectivity<wbr>Status</a></span>
+        <span class="property-type">string | <a href="#connectivitystatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Kubernetes..<wbr>Connectivity<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}Represents the connectivity status of the connected cluster.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -411,7 +412,7 @@ The ConnectedCluster resource accepts the following [input]({{< relref "/docs/in
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#provisioningstate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Kubernetes.<wbr>Provisioning<wbr>State</a></span>
+        <span class="property-type">string | <a href="#provisioningstate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Kubernetes..<wbr>Provisioning<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}Provisioning state of the connected cluster resource.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1421,7 +1422,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidentitytype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Kubernetes.<wbr>Resource<wbr>Identity<wbr>Type</a></span>
+        <span class="property-type"><a href="#resourceidentitytype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Kubernetes..<wbr>Resource<wbr>Identity<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of identity used for the connected cluster. The type 'SystemAssigned, includes a system created identity. The type 'None' means no identity is assigned to the connected cluster.{{% /md %}}</dd>
 </dl>
@@ -1781,7 +1782,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:kubernetes/v20200101preview:ConnectedCluster connectedCluster1 72f988bf-86f1-41af-91ab-2d7cd011db47 
+$ pulumi import azure-nextgen:kubernetes:ConnectedCluster connectedCluster1 72f988bf-86f1-41af-91ab-2d7cd011db47 
 ```
 
 

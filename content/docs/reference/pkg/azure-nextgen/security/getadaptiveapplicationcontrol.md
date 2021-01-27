@@ -179,7 +179,7 @@ The following output properties are available:
 <a href="#issues_csharp" style="color: inherit; text-decoration: inherit;">Issues</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#adaptiveapplicationcontrolissuesummaryresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security.<wbr>Outputs.<wbr>Adaptive<wbr>Application<wbr>Control<wbr>Issue<wbr>Summary<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#adaptiveapplicationcontrolissuesummaryresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security..<wbr>Outputs.<wbr>Adaptive<wbr>Application<wbr>Control<wbr>Issue<wbr>Summary<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-"
@@ -242,7 +242,7 @@ The following output properties are available:
 <a href="#pathrecommendations_csharp" style="color: inherit; text-decoration: inherit;">Path<wbr>Recommendations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pathrecommendationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security.<wbr>Outputs.<wbr>Path<wbr>Recommendation<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#pathrecommendationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security..<wbr>Outputs.<wbr>Path<wbr>Recommendation<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-"
@@ -251,7 +251,7 @@ The following output properties are available:
 <a href="#protectionmode_csharp" style="color: inherit; text-decoration: inherit;">Protection<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#protectionmoderesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security.<wbr>Outputs.<wbr>Protection<wbr>Mode<wbr>Response</a></span>
+        <span class="property-type"><a href="#protectionmoderesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security..<wbr>Outputs.<wbr>Protection<wbr>Mode<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The protection mode of the collection/file types. Exe/Msi/Script are used for Windows, Executable is used for Linux.{{% /md %}}</dd>
     <dt class="property-"
@@ -260,7 +260,7 @@ The following output properties are available:
 <a href="#vmrecommendations_csharp" style="color: inherit; text-decoration: inherit;">Vm<wbr>Recommendations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vmrecommendationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security.<wbr>Outputs.<wbr>Vm<wbr>Recommendation<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#vmrecommendationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security..<wbr>Outputs.<wbr>Vm<wbr>Recommendation<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 </dl>
@@ -778,7 +778,7 @@ The following output properties are available:
 <a href="#publisherinfo_csharp" style="color: inherit; text-decoration: inherit;">Publisher<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#publisherinforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security.<wbr>Inputs.<wbr>Publisher<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#publisherinforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security..<wbr>Inputs.<wbr>Publisher<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Represents the publisher information of a process/rule{{% /md %}}</dd>
     <dt class="property-optional"
@@ -805,7 +805,7 @@ The following output properties are available:
 <a href="#usernames_csharp" style="color: inherit; text-decoration: inherit;">Usernames</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userrecommendationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security.<wbr>Inputs.<wbr>User<wbr>Recommendation<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#userrecommendationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security..<wbr>Inputs.<wbr>User<wbr>Recommendation<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 </dl>

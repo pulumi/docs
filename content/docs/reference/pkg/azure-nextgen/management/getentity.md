@@ -421,7 +421,7 @@ The following output properties are available:
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#entityinforesponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Management.<wbr>Outputs.<wbr>Entity<wbr>Info<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#entityinforesponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Management..<wbr>Outputs.<wbr>Entity<wbr>Info<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of entities.{{% /md %}}</dd>
 </dl>
@@ -620,7 +620,7 @@ The following output properties are available:
 <a href="#parent_csharp" style="color: inherit; text-decoration: inherit;">Parent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#entityparentgroupinforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Management.<wbr>Inputs.<wbr>Entity<wbr>Parent<wbr>Group<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#entityparentgroupinforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Management..<wbr>Inputs.<wbr>Entity<wbr>Parent<wbr>Group<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}(Optional) The ID of the parent management group.{{% /md %}}</dd>
     <dt class="property-optional"

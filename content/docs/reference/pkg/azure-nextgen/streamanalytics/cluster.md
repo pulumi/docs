@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.streamanalytics.Cluster resource
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 A Stream Analytics Cluster object
+API Version: 2020-03-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,12 +27,12 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var cluster = new AzureNextGen.StreamAnalytics.V20200301Preview.Cluster("cluster", new AzureNextGen.StreamAnalytics.V20200301Preview.ClusterArgs
+        var cluster = new AzureNextGen.StreamAnalytics..Cluster("cluster", new AzureNextGen.StreamAnalytics..ClusterArgs
         {
             ClusterName = "An Example Cluster",
             Location = "North US",
             ResourceGroupName = "sjrg",
-            Sku = new AzureNextGen.StreamAnalytics.V20200301Preview.Inputs.ClusterSkuArgs
+            Sku = new AzureNextGen.StreamAnalytics..Inputs.ClusterSkuArgs
             {
                 Capacity = 48,
                 Name = "Default",
@@ -55,7 +56,7 @@ class MyStack : Stack
 package main
 
 import (
-	streamanalytics "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/streamanalytics/v20200301preview"
+	streamanalytics "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/streamanalytics"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -90,11 +91,11 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-cluster = azure_nextgen.streamanalytics.v20200301preview.Cluster("cluster",
+cluster = azure_nextgen.streamanalytics.Cluster("cluster",
     cluster_name="An Example Cluster",
     location="North US",
     resource_group_name="sjrg",
-    sku=azure_nextgen.streamanalytics.v20200301preview.ClusterSkuArgs(
+    sku=azure_nextgen.streamanalytics.ClusterSkuArgs(
         capacity=48,
         name="Default",
     ),
@@ -112,7 +113,7 @@ cluster = azure_nextgen.streamanalytics.v20200301preview.Cluster("cluster",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const cluster = new azure_nextgen.streamanalytics.v20200301preview.Cluster("cluster", {
+const cluster = new azure_nextgen.streamanalytics.Cluster("cluster", {
     clusterName: "An Example Cluster",
     location: "North US",
     resourceGroupName: "sjrg",
@@ -345,7 +346,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustersku">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Cluster<wbr>Sku<wbr>Args</a></span>
+        <span class="property-type"><a href="#clustersku">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics..<wbr>Inputs.<wbr>Cluster<wbr>Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The SKU of the cluster. This determines the size/capacity of the cluster. Required on PUT (CreateOrUpdate) requests.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -556,7 +557,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Outputs.<wbr>Cluster<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#clusterpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics..<wbr>Outputs.<wbr>Cluster<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The properties associated with a Stream Analytics cluster.{{% /md %}}</dd>
     <dt class="property-"
@@ -960,7 +961,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#clusterskuname">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Cluster<wbr>Sku<wbr>Name</a></span>
+        <span class="property-type">string | <a href="#clusterskuname">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics..<wbr>Cluster<wbr>Sku<wbr>Name</a></span>
     </dt>
     <dd>{{% md %}}Specifies the SKU name of the cluster. Required on PUT (CreateOrUpdate) requests.{{% /md %}}</dd>
 </dl>
@@ -1171,7 +1172,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:streamanalytics/v20200301preview:Cluster An Example Cluster /subscriptions/34adfa4f-cedf-4dc0-ba29-b6d1a69ab345/resourceGroups/sjrg/providers/Microsoft.StreamAnalytics/clusters/AnExampleStreamingCluster 
+$ pulumi import azure-nextgen:streamanalytics:Cluster An Example Cluster /subscriptions/34adfa4f-cedf-4dc0-ba29-b6d1a69ab345/resourceGroups/sjrg/providers/Microsoft.StreamAnalytics/clusters/AnExampleStreamingCluster 
 ```
 
 

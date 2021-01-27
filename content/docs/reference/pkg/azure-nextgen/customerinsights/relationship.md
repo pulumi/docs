@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.customerinsights.Relationship re
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The relationship resource format.
-Latest API Version: 2017-04-26.
+API Version: 2017-04-26.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var relationship = new AzureNextGen.CustomerInsights.Latest.Relationship("relationship", new AzureNextGen.CustomerInsights.Latest.RelationshipArgs
+        var relationship = new AzureNextGen.CustomerInsights..Relationship("relationship", new AzureNextGen.CustomerInsights..RelationshipArgs
         {
             Cardinality = "OneToOne",
             Description = 
@@ -59,7 +59,7 @@ class MyStack : Stack
 package main
 
 import (
-	customerinsights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/customerinsights/latest"
+	customerinsights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/customerinsights"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -97,7 +97,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-relationship = azure_nextgen.customerinsights.latest.Relationship("relationship",
+relationship = azure_nextgen.customerinsights.Relationship("relationship",
     cardinality="OneToOne",
     description={
         "en-us": "Relationship Description",
@@ -122,7 +122,7 @@ relationship = azure_nextgen.customerinsights.latest.Relationship("relationship"
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const relationship = new azure_nextgen.customerinsights.latest.Relationship("relationship", {
+const relationship = new azure_nextgen.customerinsights.Relationship("relationship", {
     cardinality: "OneToOne",
     description: {
         "en-us": "Relationship Description",
@@ -376,7 +376,7 @@ The Relationship resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#cardinality_csharp" style="color: inherit; text-decoration: inherit;">Cardinality</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cardinalitytypes">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights.<wbr>Cardinality<wbr>Types</a></span>
+        <span class="property-type"><a href="#cardinalitytypes">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights..<wbr>Cardinality<wbr>Types</a></span>
     </dt>
     <dd>{{% md %}}The Relationship Cardinality.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -412,7 +412,7 @@ The Relationship resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#fields_csharp" style="color: inherit; text-decoration: inherit;">Fields</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#propertydefinition">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights.<wbr>Inputs.<wbr>Property<wbr>Definition<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#propertydefinition">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights..<wbr>Inputs.<wbr>Property<wbr>Definition<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The properties of the Relationship.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -421,7 +421,7 @@ The Relationship resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#lookupmappings_csharp" style="color: inherit; text-decoration: inherit;">Lookup<wbr>Mappings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#relationshiptypemapping">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights.<wbr>Inputs.<wbr>Relationship<wbr>Type<wbr>Mapping<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#relationshiptypemapping">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights..<wbr>Inputs.<wbr>Relationship<wbr>Type<wbr>Mapping<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Optional property to be used to map fields in profile to their strong ids in related profile.{{% /md %}}</dd>
 </dl>
@@ -1521,7 +1521,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enumvalidvalues_csharp" style="color: inherit; text-decoration: inherit;">Enum<wbr>Valid<wbr>Values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#profileenumvalidvaluesformat">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights.<wbr>Inputs.<wbr>Profile<wbr>Enum<wbr>Valid<wbr>Values<wbr>Format<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#profileenumvalidvaluesformat">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights..<wbr>Inputs.<wbr>Profile<wbr>Enum<wbr>Valid<wbr>Values<wbr>Format<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Describes valid values for an enum property.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2060,7 +2060,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datasourceprecedencerules_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Source<wbr>Precedence<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourceprecedenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights.<wbr>Inputs.<wbr>Data<wbr>Source<wbr>Precedence<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#datasourceprecedenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights..<wbr>Inputs.<wbr>Data<wbr>Source<wbr>Precedence<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}This is specific to interactions modeled as activities. Data sources are used to determine where data is stored and also in precedence rules.{{% /md %}}</dd>
     <dt class="property-required"
@@ -2096,7 +2096,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enumvalidvalues_csharp" style="color: inherit; text-decoration: inherit;">Enum<wbr>Valid<wbr>Values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#profileenumvalidvaluesformatresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights.<wbr>Inputs.<wbr>Profile<wbr>Enum<wbr>Valid<wbr>Values<wbr>Format<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#profileenumvalidvaluesformatresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights..<wbr>Inputs.<wbr>Profile<wbr>Enum<wbr>Valid<wbr>Values<wbr>Format<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Describes valid values for an enum property.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2858,7 +2858,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fieldmappings_csharp" style="color: inherit; text-decoration: inherit;">Field<wbr>Mappings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#relationshiptypefieldmapping">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights.<wbr>Inputs.<wbr>Relationship<wbr>Type<wbr>Field<wbr>Mapping<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#relationshiptypefieldmapping">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights..<wbr>Inputs.<wbr>Relationship<wbr>Type<wbr>Field<wbr>Mapping<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Maps a profile property with the StrongId of related profile. This is an array to support StrongIds that are composite key as well.{{% /md %}}</dd>
 </dl>
@@ -2920,7 +2920,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fieldmappings_csharp" style="color: inherit; text-decoration: inherit;">Field<wbr>Mappings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#relationshiptypefieldmappingresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights.<wbr>Inputs.<wbr>Relationship<wbr>Type<wbr>Field<wbr>Mapping<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#relationshiptypefieldmappingresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights..<wbr>Inputs.<wbr>Relationship<wbr>Type<wbr>Field<wbr>Mapping<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Maps a profile property with the StrongId of related profile. This is an array to support StrongIds that are composite key as well.{{% /md %}}</dd>
 </dl>
@@ -2976,7 +2976,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:customerinsights/latest:Relationship sdkTestHub/testProfile2326994 /subscriptions/c909e979-ef71-4def-a970-bc7c154db8c5/resourceGroups/TestHubRG/providers/Microsoft.CustomerInsights/hubs/sdkTestHub/relationships/SomeRelationship 
+$ pulumi import azure-nextgen:customerinsights:Relationship sdkTestHub/testProfile2326994 /subscriptions/c909e979-ef71-4def-a970-bc7c154db8c5/resourceGroups/TestHubRG/providers/Microsoft.CustomerInsights/hubs/sdkTestHub/relationships/SomeRelationship 
 ```
 
 

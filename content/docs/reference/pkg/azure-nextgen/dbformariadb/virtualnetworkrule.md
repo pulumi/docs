@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.dbformariadb.VirtualNetworkRule 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 A virtual network rule.
-Latest API Version: 2018-06-01.
+API Version: 2018-06-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var virtualNetworkRule = new AzureNextGen.DBforMariaDB.Latest.VirtualNetworkRule("virtualNetworkRule", new AzureNextGen.DBforMariaDB.Latest.VirtualNetworkRuleArgs
+        var virtualNetworkRule = new AzureNextGen.DBforMariaDB..VirtualNetworkRule("virtualNetworkRule", new AzureNextGen.DBforMariaDB..VirtualNetworkRuleArgs
         {
             IgnoreMissingVnetServiceEndpoint = false,
             ResourceGroupName = "TestGroup",
@@ -49,7 +49,7 @@ class MyStack : Stack
 package main
 
 import (
-	dbformariadb "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/dbformariadb/latest"
+	dbformariadb "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/dbformariadb"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -79,7 +79,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-virtual_network_rule = azure_nextgen.dbformariadb.latest.VirtualNetworkRule("virtualNetworkRule",
+virtual_network_rule = azure_nextgen.dbformariadb.VirtualNetworkRule("virtualNetworkRule",
     ignore_missing_vnet_service_endpoint=False,
     resource_group_name="TestGroup",
     server_name="vnet-test-svr",
@@ -96,7 +96,7 @@ virtual_network_rule = azure_nextgen.dbformariadb.latest.VirtualNetworkRule("vir
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const virtualNetworkRule = new azure_nextgen.dbformariadb.latest.VirtualNetworkRule("virtualNetworkRule", {
+const virtualNetworkRule = new azure_nextgen.dbformariadb.VirtualNetworkRule("virtualNetworkRule", {
     ignoreMissingVnetServiceEndpoint: false,
     resourceGroupName: "TestGroup",
     serverName: "vnet-test-svr",
@@ -678,7 +678,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:dbformariadb/latest:VirtualNetworkRule vnet-firewall-rule /subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/TestGroup/providers/Microsoft.DBforMariaDB/servers/vnet-test-svr/virtualNetworkRules/vnet-firewall-rule 
+$ pulumi import azure-nextgen:dbformariadb:VirtualNetworkRule vnet-firewall-rule /subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/TestGroup/providers/Microsoft.DBforMariaDB/servers/vnet-test-svr/virtualNetworkRules/vnet-firewall-rule 
 ```
 
 

@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.compute.DiskAccessAPrivateEndpoi
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The Private Endpoint Connection resource.
-Latest API Version: 2020-09-30.
+API Version: 2020-09-30.
 
 {{% examples %}}
 ## Example Usage
@@ -27,11 +27,11 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var diskAccessAPrivateEndpointConnection = new AzureNextGen.Compute.Latest.DiskAccessAPrivateEndpointConnection("diskAccessAPrivateEndpointConnection", new AzureNextGen.Compute.Latest.DiskAccessAPrivateEndpointConnectionArgs
+        var diskAccessAPrivateEndpointConnection = new AzureNextGen.Compute..DiskAccessAPrivateEndpointConnection("diskAccessAPrivateEndpointConnection", new AzureNextGen.Compute..DiskAccessAPrivateEndpointConnectionArgs
         {
             DiskAccessName = "myDiskAccess",
             PrivateEndpointConnectionName = "myPrivateEndpointConnection",
-            PrivateLinkServiceConnectionState = new AzureNextGen.Compute.Latest.Inputs.PrivateLinkServiceConnectionStateArgs
+            PrivateLinkServiceConnectionState = new AzureNextGen.Compute..Inputs.PrivateLinkServiceConnectionStateArgs
             {
                 Description = "Approving myPrivateEndpointConnection",
                 Status = "Approved",
@@ -52,7 +52,7 @@ class MyStack : Stack
 package main
 
 import (
-	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute/latest"
+	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -84,10 +84,10 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-disk_access_a_private_endpoint_connection = azure_nextgen.compute.latest.DiskAccessAPrivateEndpointConnection("diskAccessAPrivateEndpointConnection",
+disk_access_a_private_endpoint_connection = azure_nextgen.compute.DiskAccessAPrivateEndpointConnection("diskAccessAPrivateEndpointConnection",
     disk_access_name="myDiskAccess",
     private_endpoint_connection_name="myPrivateEndpointConnection",
-    private_link_service_connection_state=azure_nextgen.compute.latest.PrivateLinkServiceConnectionStateArgs(
+    private_link_service_connection_state=azure_nextgen.compute.PrivateLinkServiceConnectionStateArgs(
         description="Approving myPrivateEndpointConnection",
         status="Approved",
     ),
@@ -103,7 +103,7 @@ disk_access_a_private_endpoint_connection = azure_nextgen.compute.latest.DiskAcc
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const diskAccessAPrivateEndpointConnection = new azure_nextgen.compute.latest.DiskAccessAPrivateEndpointConnection("diskAccessAPrivateEndpointConnection", {
+const diskAccessAPrivateEndpointConnection = new azure_nextgen.compute.DiskAccessAPrivateEndpointConnection("diskAccessAPrivateEndpointConnection", {
     diskAccessName: "myDiskAccess",
     privateEndpointConnectionName: "myPrivateEndpointConnection",
     privateLinkServiceConnectionState: {
@@ -324,7 +324,7 @@ The DiskAccessAPrivateEndpointConnection resource accepts the following [input](
 <a href="#privatelinkserviceconnectionstate_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkserviceconnectionstate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Args</a></span>
+        <span class="property-type"><a href="#privatelinkserviceconnectionstate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Inputs.<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A collection of information about the state of the connection between DiskAccess and Virtual Network.{{% /md %}}</dd>
     <dt class="property-required"
@@ -517,7 +517,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privateendpoint_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Outputs.<wbr>Private<wbr>Endpoint<wbr>Response</a></span>
+        <span class="property-type"><a href="#privateendpointresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Outputs.<wbr>Private<wbr>Endpoint<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The resource of private end point.{{% /md %}}</dd>
 </dl>
@@ -823,7 +823,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#privateendpointserviceconnectionstatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Private<wbr>Endpoint<wbr>Service<wbr>Connection<wbr>Status</a></span>
+        <span class="property-type">string | <a href="#privateendpointserviceconnectionstatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Private<wbr>Endpoint<wbr>Service<wbr>Connection<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether the connection has been Approved/Rejected/Removed by the owner of the service.{{% /md %}}</dd>
 </dl>
@@ -1067,7 +1067,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:compute/latest:DiskAccessAPrivateEndpointConnection myPrivateEndpointConnectionName /subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskAccesses/myDiskAccess/privateEndpoinConnections/myPrivateEndpointConnectionName 
+$ pulumi import azure-nextgen:compute:DiskAccessAPrivateEndpointConnection myPrivateEndpointConnectionName /subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskAccesses/myDiskAccess/privateEndpoinConnections/myPrivateEndpointConnectionName 
 ```
 
 

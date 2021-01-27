@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.containerservice.AgentPool resou
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Agent Pool.
-Latest API Version: 2020-12-01.
+API Version: 2020-12-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var agentPool = new AzureNextGen.ContainerService.Latest.AgentPool("agentPool", new AzureNextGen.ContainerService.Latest.AgentPoolArgs
+        var agentPool = new AzureNextGen.ContainerService..AgentPool("agentPool", new AzureNextGen.ContainerService..AgentPoolArgs
         {
             AgentPoolName = "agentpool1",
             Count = 3,
@@ -52,7 +52,7 @@ class MyStack : Stack
 package main
 
 import (
-	containerservice "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/containerservice/latest"
+	containerservice "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/containerservice"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -85,7 +85,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-agent_pool = azure_nextgen.containerservice.latest.AgentPool("agentPool",
+agent_pool = azure_nextgen.containerservice.AgentPool("agentPool",
     agent_pool_name="agentpool1",
     count=3,
     enable_encryption_at_host=True,
@@ -105,7 +105,7 @@ agent_pool = azure_nextgen.containerservice.latest.AgentPool("agentPool",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const agentPool = new azure_nextgen.containerservice.latest.AgentPool("agentPool", {
+const agentPool = new azure_nextgen.containerservice.AgentPool("agentPool", {
     agentPoolName: "agentpool1",
     count: 3,
     enableEncryptionAtHost: true,
@@ -130,7 +130,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var agentPool = new AzureNextGen.ContainerService.Latest.AgentPool("agentPool", new AzureNextGen.ContainerService.Latest.AgentPoolArgs
+        var agentPool = new AzureNextGen.ContainerService..AgentPool("agentPool", new AzureNextGen.ContainerService..AgentPoolArgs
         {
             AgentPoolName = "agentpool1",
             Count = 3,
@@ -156,7 +156,7 @@ class MyStack : Stack
 package main
 
 import (
-	containerservice "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/containerservice/latest"
+	containerservice "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/containerservice"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -190,7 +190,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-agent_pool = azure_nextgen.containerservice.latest.AgentPool("agentPool",
+agent_pool = azure_nextgen.containerservice.AgentPool("agentPool",
     agent_pool_name="agentpool1",
     count=3,
     orchestrator_version="",
@@ -211,7 +211,7 @@ agent_pool = azure_nextgen.containerservice.latest.AgentPool("agentPool",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const agentPool = new azure_nextgen.containerservice.latest.AgentPool("agentPool", {
+const agentPool = new azure_nextgen.containerservice.AgentPool("agentPool", {
     agentPoolName: "agentpool1",
     count: 3,
     orchestratorVersion: "",
@@ -237,11 +237,11 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var agentPool = new AzureNextGen.ContainerService.Latest.AgentPool("agentPool", new AzureNextGen.ContainerService.Latest.AgentPoolArgs
+        var agentPool = new AzureNextGen.ContainerService..AgentPool("agentPool", new AzureNextGen.ContainerService..AgentPoolArgs
         {
             AgentPoolName = "agentpool1",
             Count = 3,
-            KubeletConfig = new AzureNextGen.ContainerService.Latest.Inputs.KubeletConfigArgs
+            KubeletConfig = new AzureNextGen.ContainerService..Inputs.KubeletConfigArgs
             {
                 AllowedUnsafeSysctls = 
                 {
@@ -256,10 +256,10 @@ class MyStack : Stack
                 ImageGcLowThreshold = 70,
                 TopologyManagerPolicy = "best-effort",
             },
-            LinuxOSConfig = new AzureNextGen.ContainerService.Latest.Inputs.LinuxOSConfigArgs
+            LinuxOSConfig = new AzureNextGen.ContainerService..Inputs.LinuxOSConfigArgs
             {
                 SwapFileSizeMB = 1500,
-                Sysctls = new AzureNextGen.ContainerService.Latest.Inputs.SysctlConfigArgs
+                Sysctls = new AzureNextGen.ContainerService..Inputs.SysctlConfigArgs
                 {
                     KernelThreadsMax = 99999,
                     NetCoreWmemDefault = 12345,
@@ -289,7 +289,7 @@ class MyStack : Stack
 package main
 
 import (
-	containerservice "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/containerservice/latest"
+	containerservice "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/containerservice"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -345,10 +345,10 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-agent_pool = azure_nextgen.containerservice.latest.AgentPool("agentPool",
+agent_pool = azure_nextgen.containerservice.AgentPool("agentPool",
     agent_pool_name="agentpool1",
     count=3,
-    kubelet_config=azure_nextgen.containerservice.latest.KubeletConfigArgs(
+    kubelet_config=azure_nextgen.containerservice.KubeletConfigArgs(
         allowed_unsafe_sysctls=[
             "kernel.msg*",
             "net.core.somaxconn",
@@ -361,9 +361,9 @@ agent_pool = azure_nextgen.containerservice.latest.AgentPool("agentPool",
         image_gc_low_threshold=70,
         topology_manager_policy="best-effort",
     ),
-    linux_os_config=azure_nextgen.containerservice.latest.LinuxOSConfigArgs(
+    linux_os_config=azure_nextgen.containerservice.LinuxOSConfigArgs(
         swap_file_size_mb=1500,
-        sysctls=azure_nextgen.containerservice.latest.SysctlConfigArgs(
+        sysctls=azure_nextgen.containerservice.SysctlConfigArgs(
             kernel_threads_max=99999,
             net_core_wmem_default=12345,
             net_ipv4_ip_local_port_range="20000 60000",
@@ -388,7 +388,7 @@ agent_pool = azure_nextgen.containerservice.latest.AgentPool("agentPool",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const agentPool = new azure_nextgen.containerservice.latest.AgentPool("agentPool", {
+const agentPool = new azure_nextgen.containerservice.AgentPool("agentPool", {
     agentPoolName: "agentpool1",
     count: 3,
     kubeletConfig: {
@@ -436,7 +436,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var agentPool = new AzureNextGen.ContainerService.Latest.AgentPool("agentPool", new AzureNextGen.ContainerService.Latest.AgentPoolArgs
+        var agentPool = new AzureNextGen.ContainerService..AgentPool("agentPool", new AzureNextGen.ContainerService..AgentPoolArgs
         {
             AgentPoolName = "agentpool1",
             Count = 3,
@@ -461,7 +461,7 @@ class MyStack : Stack
 package main
 
 import (
-	containerservice "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/containerservice/latest"
+	containerservice "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/containerservice"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -494,7 +494,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-agent_pool = azure_nextgen.containerservice.latest.AgentPool("agentPool",
+agent_pool = azure_nextgen.containerservice.AgentPool("agentPool",
     agent_pool_name="agentpool1",
     count=3,
     orchestrator_version="",
@@ -514,7 +514,7 @@ agent_pool = azure_nextgen.containerservice.latest.AgentPool("agentPool",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const agentPool = new azure_nextgen.containerservice.latest.AgentPool("agentPool", {
+const agentPool = new azure_nextgen.containerservice.AgentPool("agentPool", {
     agentPoolName: "agentpool1",
     count: 3,
     orchestratorVersion: "",
@@ -539,7 +539,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var agentPool = new AzureNextGen.ContainerService.Latest.AgentPool("agentPool", new AzureNextGen.ContainerService.Latest.AgentPoolArgs
+        var agentPool = new AzureNextGen.ContainerService..AgentPool("agentPool", new AzureNextGen.ContainerService..AgentPoolArgs
         {
             AgentPoolName = "agentpool1",
             Count = 3,
@@ -577,7 +577,7 @@ class MyStack : Stack
 package main
 
 import (
-	containerservice "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/containerservice/latest"
+	containerservice "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/containerservice"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -620,7 +620,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-agent_pool = azure_nextgen.containerservice.latest.AgentPool("agentPool",
+agent_pool = azure_nextgen.containerservice.AgentPool("agentPool",
     agent_pool_name="agentpool1",
     count=3,
     node_labels={
@@ -648,7 +648,7 @@ agent_pool = azure_nextgen.containerservice.latest.AgentPool("agentPool",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const agentPool = new azure_nextgen.containerservice.latest.AgentPool("agentPool", {
+const agentPool = new azure_nextgen.containerservice.AgentPool("agentPool", {
     agentPoolName: "agentpool1",
     count: 3,
     nodeLabels: {
@@ -681,7 +681,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var agentPool = new AzureNextGen.ContainerService.Latest.AgentPool("agentPool", new AzureNextGen.ContainerService.Latest.AgentPoolArgs
+        var agentPool = new AzureNextGen.ContainerService..AgentPool("agentPool", new AzureNextGen.ContainerService..AgentPoolArgs
         {
             AgentPoolName = "agentpool1",
             Count = 3,
@@ -720,7 +720,7 @@ class MyStack : Stack
 package main
 
 import (
-	containerservice "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/containerservice/latest"
+	containerservice "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/containerservice"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -764,7 +764,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-agent_pool = azure_nextgen.containerservice.latest.AgentPool("agentPool",
+agent_pool = azure_nextgen.containerservice.AgentPool("agentPool",
     agent_pool_name="agentpool1",
     count=3,
     mode="User",
@@ -793,7 +793,7 @@ agent_pool = azure_nextgen.containerservice.latest.AgentPool("agentPool",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const agentPool = new azure_nextgen.containerservice.latest.AgentPool("agentPool", {
+const agentPool = new azure_nextgen.containerservice.AgentPool("agentPool", {
     agentPoolName: "agentpool1",
     count: 3,
     mode: "User",
@@ -827,7 +827,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var agentPool = new AzureNextGen.ContainerService.Latest.AgentPool("agentPool", new AzureNextGen.ContainerService.Latest.AgentPoolArgs
+        var agentPool = new AzureNextGen.ContainerService..AgentPool("agentPool", new AzureNextGen.ContainerService..AgentPoolArgs
         {
             AgentPoolName = "agentpool1",
             Count = 3,
@@ -860,7 +860,7 @@ class MyStack : Stack
 package main
 
 import (
-	containerservice "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/containerservice/latest"
+	containerservice "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/containerservice"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -900,7 +900,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-agent_pool = azure_nextgen.containerservice.latest.AgentPool("agentPool",
+agent_pool = azure_nextgen.containerservice.AgentPool("agentPool",
     agent_pool_name="agentpool1",
     count=3,
     enable_auto_scaling=True,
@@ -925,7 +925,7 @@ agent_pool = azure_nextgen.containerservice.latest.AgentPool("agentPool",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const agentPool = new azure_nextgen.containerservice.latest.AgentPool("agentPool", {
+const agentPool = new azure_nextgen.containerservice.AgentPool("agentPool", {
     agentPoolName: "agentpool1",
     count: 3,
     enableAutoScaling: true,
@@ -1206,7 +1206,7 @@ The AgentPool resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#kubeletconfig_csharp" style="color: inherit; text-decoration: inherit;">Kubelet<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubeletconfig">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Kubelet<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#kubeletconfig">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service..<wbr>Inputs.<wbr>Kubelet<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}KubeletConfig specifies the configuration of kubelet on agent nodes.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1215,7 +1215,7 @@ The AgentPool resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#kubeletdisktype_csharp" style="color: inherit; text-decoration: inherit;">Kubelet<wbr>Disk<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#kubeletdisktype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Kubelet<wbr>Disk<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#kubeletdisktype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service..<wbr>Kubelet<wbr>Disk<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}KubeletDiskType determines the placement of emptyDir volumes, container runtime data root, and Kubelet ephemeral storage. Currently allows one value, OS, resulting in Kubelet using the OS disk for data.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1224,7 +1224,7 @@ The AgentPool resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#linuxosconfig_csharp" style="color: inherit; text-decoration: inherit;">Linux<wbr>OSConfig</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linuxosconfig">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Linux<wbr>OSConfig<wbr>Args</a></span>
+        <span class="property-type"><a href="#linuxosconfig">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service..<wbr>Inputs.<wbr>Linux<wbr>OSConfig<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}LinuxOSConfig specifies the OS configuration of linux agent nodes.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1260,7 +1260,7 @@ The AgentPool resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#mode_csharp" style="color: inherit; text-decoration: inherit;">Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#agentpoolmode">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Agent<wbr>Pool<wbr>Mode</a></span>
+        <span class="property-type">string | <a href="#agentpoolmode">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service..<wbr>Agent<wbr>Pool<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}AgentPoolMode represents mode of an agent pool{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1305,7 +1305,7 @@ The AgentPool resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#osdisktype_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Disk<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#osdisktype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>OSDisk<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#osdisktype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service..<wbr>OSDisk<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}OS disk type to be used for machines in a given agent pool. Allowed values are 'Ephemeral' and 'Managed'. Defaults to 'Managed'. May not be changed after creation.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1314,7 +1314,7 @@ The AgentPool resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#ostype_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#ostype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>OSType</a></span>
+        <span class="property-type">string | <a href="#ostype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service..<wbr>OSType</a></span>
     </dt>
     <dd>{{% md %}}OsType to be used to specify os type. Choose from Linux and Windows. Default to Linux.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1341,7 +1341,7 @@ The AgentPool resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#scalesetevictionpolicy_csharp" style="color: inherit; text-decoration: inherit;">Scale<wbr>Set<wbr>Eviction<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#scalesetevictionpolicy">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Scale<wbr>Set<wbr>Eviction<wbr>Policy</a></span>
+        <span class="property-type">string | <a href="#scalesetevictionpolicy">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service..<wbr>Scale<wbr>Set<wbr>Eviction<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}ScaleSetEvictionPolicy to be used to specify eviction policy for Spot virtual machine scale set. Default to Delete.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1350,7 +1350,7 @@ The AgentPool resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#scalesetpriority_csharp" style="color: inherit; text-decoration: inherit;">Scale<wbr>Set<wbr>Priority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#scalesetpriority">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Scale<wbr>Set<wbr>Priority</a></span>
+        <span class="property-type">string | <a href="#scalesetpriority">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service..<wbr>Scale<wbr>Set<wbr>Priority</a></span>
     </dt>
     <dd>{{% md %}}ScaleSetPriority to be used to specify virtual machine scale set priority. Default to regular.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1377,7 +1377,7 @@ The AgentPool resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#agentpooltype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Agent<wbr>Pool<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#agentpooltype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service..<wbr>Agent<wbr>Pool<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}AgentPoolType represents types of an agent pool{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1386,7 +1386,7 @@ The AgentPool resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#upgradesettings_csharp" style="color: inherit; text-decoration: inherit;">Upgrade<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#agentpoolupgradesettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Agent<wbr>Pool<wbr>Upgrade<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#agentpoolupgradesettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service..<wbr>Inputs.<wbr>Agent<wbr>Pool<wbr>Upgrade<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings for upgrading the agentpool{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1395,7 +1395,7 @@ The AgentPool resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#vmsize_csharp" style="color: inherit; text-decoration: inherit;">Vm<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#containerservicevmsizetypes">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Container<wbr>Service<wbr>VMSize<wbr>Types</a></span>
+        <span class="property-type">string | <a href="#containerservicevmsizetypes">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service..<wbr>Container<wbr>Service<wbr>VMSize<wbr>Types</a></span>
     </dt>
     <dd>{{% md %}}Size of agent VMs.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2308,7 +2308,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#powerstate_csharp" style="color: inherit; text-decoration: inherit;">Power<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#powerstateresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Outputs.<wbr>Power<wbr>State<wbr>Response</a></span>
+        <span class="property-type"><a href="#powerstateresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service..<wbr>Outputs.<wbr>Power<wbr>State<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes whether the Agent Pool is Running or Stopped{{% /md %}}</dd>
     <dt class="property-"
@@ -4994,7 +4994,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sysctls_csharp" style="color: inherit; text-decoration: inherit;">Sysctls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sysctlconfig">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Sysctl<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#sysctlconfig">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service..<wbr>Inputs.<wbr>Sysctl<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Sysctl settings for Linux agent nodes.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -5164,7 +5164,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sysctls_csharp" style="color: inherit; text-decoration: inherit;">Sysctls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sysctlconfigresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Sysctl<wbr>Config<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sysctlconfigresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service..<wbr>Inputs.<wbr>Sysctl<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Sysctl settings for Linux agent nodes.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -7601,7 +7601,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:containerservice/latest:AgentPool agentpool1 /subscriptions/subid1/resourcegroups/rg1/providers/Microsoft.ContainerService/managedClusters/clustername1/agentPools/agentpool1 
+$ pulumi import azure-nextgen:containerservice:AgentPool agentpool1 /subscriptions/subid1/resourcegroups/rg1/providers/Microsoft.ContainerService/managedClusters/clustername1/agentPools/agentpool1 
 ```
 
 

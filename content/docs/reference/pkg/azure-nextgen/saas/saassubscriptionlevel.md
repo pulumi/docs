@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.saas.SaasSubscriptionLevel resou
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 SaaS REST API resource definition.
+API Version: 2018-03-01-beta.
 
 {{% examples %}}
 ## Example Usage
@@ -26,9 +27,9 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var saasSubscriptionLevel = new AzureNextGen.SaaS.V20180301Beta.SaasSubscriptionLevel("saasSubscriptionLevel", new AzureNextGen.SaaS.V20180301Beta.SaasSubscriptionLevelArgs
+        var saasSubscriptionLevel = new AzureNextGen.SaaS..SaasSubscriptionLevel("saasSubscriptionLevel", new AzureNextGen.SaaS..SaasSubscriptionLevelArgs
         {
-            Properties = new AzureNextGen.SaaS.V20180301Beta.Inputs.SaasCreationPropertiesArgs
+            Properties = new AzureNextGen.SaaS..Inputs.SaasCreationPropertiesArgs
             {
                 OfferId = "contosoOffer",
                 PaymentChannelMetadata = 
@@ -58,7 +59,7 @@ class MyStack : Stack
 package main
 
 import (
-	saas "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/saas/v20180301beta"
+	saas "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/saas"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -96,8 +97,8 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-saas_subscription_level = azure_nextgen.saas.v20180301beta.SaasSubscriptionLevel("saasSubscriptionLevel",
-    properties=azure_nextgen.saas.v20180301beta.SaasCreationPropertiesArgs(
+saas_subscription_level = azure_nextgen.saas.SaasSubscriptionLevel("saasSubscriptionLevel",
+    properties=azure_nextgen.saas.SaasCreationPropertiesArgs(
         offer_id="contosoOffer",
         payment_channel_metadata={
             "AzureSubscriptionId": "155af98a-3205-47e7-883b-a2ab9db9f88d",
@@ -121,7 +122,7 @@ saas_subscription_level = azure_nextgen.saas.v20180301beta.SaasSubscriptionLevel
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const saasSubscriptionLevel = new azure_nextgen.saas.v20180301beta.SaasSubscriptionLevel("saasSubscriptionLevel", {
+const saasSubscriptionLevel = new azure_nextgen.saas.SaasSubscriptionLevel("saasSubscriptionLevel", {
     properties: {
         offerId: "contosoOffer",
         paymentChannelMetadata: {
@@ -357,7 +358,7 @@ The SaasSubscriptionLevel resource accepts the following [input]({{< relref "/do
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#saascreationproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Saa<wbr>S.<wbr>Inputs.<wbr>Saas<wbr>Creation<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#saascreationproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Saa<wbr>S..<wbr>Inputs.<wbr>Saas<wbr>Creation<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties of the SaaS resource that are relevant for creation.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -714,7 +715,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#paymentchanneltype_csharp" style="color: inherit; text-decoration: inherit;">Payment<wbr>Channel<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#paymentchanneltype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Saa<wbr>S.<wbr>Payment<wbr>Channel<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#paymentchanneltype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Saa<wbr>S..<wbr>Payment<wbr>Channel<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The Payment channel for the SaasSubscription.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1414,7 +1415,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#term_csharp" style="color: inherit; text-decoration: inherit;">Term</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#saaspropertiesresponseterm">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Saa<wbr>S.<wbr>Inputs.<wbr>Saas<wbr>Properties<wbr>Response<wbr>Term<wbr>Args</a></span>
+        <span class="property-type"><a href="#saaspropertiesresponseterm">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Saa<wbr>S..<wbr>Inputs.<wbr>Saas<wbr>Properties<wbr>Response<wbr>Term<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The current Term object.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1911,7 +1912,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:saas/v20180301beta:SaasSubscriptionLevel MyContosoSubscription /subscriptions/c825645b-e31b-9cf4-1cee-2aba9e58bc7c/resourceGroups/my-saas-rg/providers/Microsoft.SaaS/resources/MyContosoSubscription 
+$ pulumi import azure-nextgen:saas:SaasSubscriptionLevel MyContosoSubscription /subscriptions/c825645b-e31b-9cf4-1cee-2aba9e58bc7c/resourceGroups/my-saas-rg/providers/Microsoft.SaaS/resources/MyContosoSubscription 
 ```
 
 

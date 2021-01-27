@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.cache.FirewallRule resource with
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 A firewall rule on a redis cache has a name, and describes a contiguous range of IP addresses permitted to connect
-Latest API Version: 2020-06-01.
+API Version: 2020-06-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var firewallRule = new AzureNextGen.Cache.Latest.FirewallRule("firewallRule", new AzureNextGen.Cache.Latest.FirewallRuleArgs
+        var firewallRule = new AzureNextGen.Cache..FirewallRule("firewallRule", new AzureNextGen.Cache..FirewallRuleArgs
         {
             CacheName = "cache1",
             EndIP = "192.168.1.4",
@@ -49,7 +49,7 @@ class MyStack : Stack
 package main
 
 import (
-	cache "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/cache/latest"
+	cache "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/cache"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -79,7 +79,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-firewall_rule = azure_nextgen.cache.latest.FirewallRule("firewallRule",
+firewall_rule = azure_nextgen.cache.FirewallRule("firewallRule",
     cache_name="cache1",
     end_ip="192.168.1.4",
     resource_group_name="rg1",
@@ -96,7 +96,7 @@ firewall_rule = azure_nextgen.cache.latest.FirewallRule("firewallRule",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const firewallRule = new azure_nextgen.cache.latest.FirewallRule("firewallRule", {
+const firewallRule = new azure_nextgen.cache.FirewallRule("firewallRule", {
     cacheName: "cache1",
     endIP: "192.168.1.4",
     resourceGroupName: "rg1",
@@ -642,7 +642,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:cache/latest:FirewallRule cache1/rule1 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Cache/Redis/cache1/firewallRules/rule1 
+$ pulumi import azure-nextgen:cache:FirewallRule cache1/rule1 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Cache/Redis/cache1/firewallRules/rule1 
 ```
 
 

@@ -188,7 +188,7 @@ The following output properties are available:
 <a href="#systemdata_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Power<wbr>Platform.<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
+        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Power<wbr>Platform..<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Metadata pertaining to creation and last modification of the resource.{{% /md %}}</dd>
     <dt class="property-"
@@ -206,7 +206,7 @@ The following output properties are available:
 <a href="#encryption_csharp" style="color: inherit; text-decoration: inherit;">Encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#propertiesresponseencryption">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Power<wbr>Platform.<wbr>Outputs.<wbr>Properties<wbr>Response<wbr>Encryption</a></span>
+        <span class="property-type"><a href="#propertiesresponseencryption">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Power<wbr>Platform..<wbr>Outputs.<wbr>Properties<wbr>Response<wbr>Encryption</a></span>
     </dt>
     <dd>{{% md %}}The encryption settings for a configuration store.{{% /md %}}</dd>
     <dt class="property-"
@@ -215,7 +215,7 @@ The following output properties are available:
 <a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#enterprisepolicyidentityresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Power<wbr>Platform.<wbr>Outputs.<wbr>Enterprise<wbr>Policy<wbr>Identity<wbr>Response</a></span>
+        <span class="property-type"><a href="#enterprisepolicyidentityresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Power<wbr>Platform..<wbr>Outputs.<wbr>Enterprise<wbr>Policy<wbr>Identity<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The identity of the EnterprisePolicy.{{% /md %}}</dd>
     <dt class="property-"
@@ -224,7 +224,7 @@ The following output properties are available:
 <a href="#lockbox_csharp" style="color: inherit; text-decoration: inherit;">Lockbox</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#propertiesresponselockbox">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Power<wbr>Platform.<wbr>Outputs.<wbr>Properties<wbr>Response<wbr>Lockbox</a></span>
+        <span class="property-type"><a href="#propertiesresponselockbox">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Power<wbr>Platform..<wbr>Outputs.<wbr>Properties<wbr>Response<wbr>Lockbox</a></span>
     </dt>
     <dd>{{% md %}}Settings concerning lockbox.{{% /md %}}</dd>
     <dt class="property-"
@@ -782,7 +782,7 @@ The following output properties are available:
 <a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keypropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Power<wbr>Platform.<wbr>Inputs.<wbr>Key<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#keypropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Power<wbr>Platform..<wbr>Inputs.<wbr>Key<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Identity of the secret that includes name and version.{{% /md %}}</dd>
 </dl>
@@ -903,7 +903,7 @@ The following output properties are available:
 <a href="#keyvaultproperties_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Power<wbr>Platform.<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#keyvaultpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Power<wbr>Platform..<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Key vault properties.{{% /md %}}</dd>
 </dl>

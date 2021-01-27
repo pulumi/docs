@@ -269,7 +269,7 @@ The following output properties are available:
 <a href="#databasesinfo_csharp" style="color: inherit; text-decoration: inherit;">Databases<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databaseinforesponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Outputs.<wbr>Database<wbr>Info<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#databaseinforesponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Outputs.<wbr>Database<wbr>Info<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of DatabaseInfo{{% /md %}}</dd>
     <dt class="property-"
@@ -278,7 +278,7 @@ The following output properties are available:
 <a href="#sourceconnectioninfo_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Connection<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#misqlconnectioninforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Outputs.<wbr>Mi<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response</a> | <a href="#mysqlconnectioninforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Outputs.<wbr>My<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response</a> | <a href="#postgresqlconnectioninforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Outputs.<wbr>Postgre<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response</a> | <a href="#sqlconnectioninforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Outputs.<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response</a></span>
+        <span class="property-type"><a href="#misqlconnectioninforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Outputs.<wbr>Mi<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response</a> | <a href="#mysqlconnectioninforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Outputs.<wbr>My<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response</a> | <a href="#postgresqlconnectioninforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Outputs.<wbr>Postgre<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response</a> | <a href="#sqlconnectioninforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Outputs.<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Information for connecting to source{{% /md %}}</dd>
     <dt class="property-"
@@ -296,7 +296,7 @@ The following output properties are available:
 <a href="#targetconnectioninfo_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Connection<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#misqlconnectioninforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Outputs.<wbr>Mi<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response</a> | <a href="#mysqlconnectioninforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Outputs.<wbr>My<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response</a> | <a href="#postgresqlconnectioninforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Outputs.<wbr>Postgre<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response</a> | <a href="#sqlconnectioninforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Outputs.<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response</a></span>
+        <span class="property-type"><a href="#misqlconnectioninforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Outputs.<wbr>Mi<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response</a> | <a href="#mysqlconnectioninforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Outputs.<wbr>My<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response</a> | <a href="#postgresqlconnectioninforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Outputs.<wbr>Postgre<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response</a> | <a href="#sqlconnectioninforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Outputs.<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Information for connecting to target{{% /md %}}</dd>
 </dl>

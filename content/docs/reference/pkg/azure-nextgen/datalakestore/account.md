@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.datalakestore.Account resource w
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Data Lake Store account information.
-Latest API Version: 2016-11-01.
+API Version: 2016-11-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,13 +27,13 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var account = new AzureNextGen.DataLakeStore.Latest.Account("account", new AzureNextGen.DataLakeStore.Latest.AccountArgs
+        var account = new AzureNextGen.DataLakeStore..Account("account", new AzureNextGen.DataLakeStore..AccountArgs
         {
             AccountName = "contosoadla",
             DefaultGroup = "test_default_group",
-            EncryptionConfig = new AzureNextGen.DataLakeStore.Latest.Inputs.EncryptionConfigArgs
+            EncryptionConfig = new AzureNextGen.DataLakeStore..Inputs.EncryptionConfigArgs
             {
-                KeyVaultMetaInfo = new AzureNextGen.DataLakeStore.Latest.Inputs.KeyVaultMetaInfoArgs
+                KeyVaultMetaInfo = new AzureNextGen.DataLakeStore..Inputs.KeyVaultMetaInfoArgs
                 {
                     EncryptionKeyName = "test_encryption_key_name",
                     EncryptionKeyVersion = "encryption_key_version",
@@ -45,7 +45,7 @@ class MyStack : Stack
             FirewallAllowAzureIps = "Enabled",
             FirewallRules = 
             {
-                new AzureNextGen.DataLakeStore.Latest.Inputs.CreateFirewallRuleWithAccountParametersArgs
+                new AzureNextGen.DataLakeStore..Inputs.CreateFirewallRuleWithAccountParametersArgs
                 {
                     EndIpAddress = "2.2.2.2",
                     Name = "test_rule",
@@ -53,7 +53,7 @@ class MyStack : Stack
                 },
             },
             FirewallState = "Enabled",
-            Identity = new AzureNextGen.DataLakeStore.Latest.Inputs.EncryptionIdentityArgs
+            Identity = new AzureNextGen.DataLakeStore..Inputs.EncryptionIdentityArgs
             {
                 Type = "SystemAssigned",
             },
@@ -67,7 +67,7 @@ class MyStack : Stack
             TrustedIdProviderState = "Enabled",
             TrustedIdProviders = 
             {
-                new AzureNextGen.DataLakeStore.Latest.Inputs.CreateTrustedIdProviderWithAccountParametersArgs
+                new AzureNextGen.DataLakeStore..Inputs.CreateTrustedIdProviderWithAccountParametersArgs
                 {
                     IdProvider = "https://sts.windows.net/ea9ec534-a3e3-4e45-ad36-3afc5bb291c1",
                     Name = "test_trusted_id_provider_name",
@@ -88,7 +88,7 @@ class MyStack : Stack
 package main
 
 import (
-	datalakestore "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datalakestore/latest"
+	datalakestore "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datalakestore"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -149,11 +149,11 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-account = azure_nextgen.datalakestore.latest.Account("account",
+account = azure_nextgen.datalakestore.Account("account",
     account_name="contosoadla",
     default_group="test_default_group",
-    encryption_config=azure_nextgen.datalakestore.latest.EncryptionConfigArgs(
-        key_vault_meta_info=azure_nextgen.datalakestore.latest.KeyVaultMetaInfoArgs(
+    encryption_config=azure_nextgen.datalakestore.EncryptionConfigArgs(
+        key_vault_meta_info=azure_nextgen.datalakestore.KeyVaultMetaInfoArgs(
             encryption_key_name="test_encryption_key_name",
             encryption_key_version="encryption_key_version",
             key_vault_resource_id="34adfa4f-cedf-4dc0-ba29-b6d1a69ab345",
@@ -162,13 +162,13 @@ account = azure_nextgen.datalakestore.latest.Account("account",
     ),
     encryption_state="Enabled",
     firewall_allow_azure_ips="Enabled",
-    firewall_rules=[azure_nextgen.datalakestore.latest.CreateFirewallRuleWithAccountParametersArgs(
+    firewall_rules=[azure_nextgen.datalakestore.CreateFirewallRuleWithAccountParametersArgs(
         end_ip_address="2.2.2.2",
         name="test_rule",
         start_ip_address="1.1.1.1",
     )],
     firewall_state="Enabled",
-    identity=azure_nextgen.datalakestore.latest.EncryptionIdentityArgs(
+    identity=azure_nextgen.datalakestore.EncryptionIdentityArgs(
         type="SystemAssigned",
     ),
     location="eastus2",
@@ -178,7 +178,7 @@ account = azure_nextgen.datalakestore.latest.Account("account",
         "test_key": "test_value",
     },
     trusted_id_provider_state="Enabled",
-    trusted_id_providers=[azure_nextgen.datalakestore.latest.CreateTrustedIdProviderWithAccountParametersArgs(
+    trusted_id_providers=[azure_nextgen.datalakestore.CreateTrustedIdProviderWithAccountParametersArgs(
         id_provider="https://sts.windows.net/ea9ec534-a3e3-4e45-ad36-3afc5bb291c1",
         name="test_trusted_id_provider_name",
     )])
@@ -193,7 +193,7 @@ account = azure_nextgen.datalakestore.latest.Account("account",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const account = new azure_nextgen.datalakestore.latest.Account("account", {
+const account = new azure_nextgen.datalakestore.Account("account", {
     accountName: "contosoadla",
     defaultGroup: "test_default_group",
     encryptionConfig: {
@@ -457,7 +457,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#encryptionconfig_csharp" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionconfig">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Lake<wbr>Store.<wbr>Inputs.<wbr>Encryption<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#encryptionconfig">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Lake<wbr>Store..<wbr>Inputs.<wbr>Encryption<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Key Vault encryption configuration.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -466,7 +466,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#encryptionstate_csharp" style="color: inherit; text-decoration: inherit;">Encryption<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionstate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Lake<wbr>Store.<wbr>Encryption<wbr>State</a></span>
+        <span class="property-type"><a href="#encryptionstate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Lake<wbr>Store..<wbr>Encryption<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}The current state of encryption for this Data Lake Store account.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -475,7 +475,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#firewallallowazureips_csharp" style="color: inherit; text-decoration: inherit;">Firewall<wbr>Allow<wbr>Azure<wbr>Ips</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallallowazureipsstate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Lake<wbr>Store.<wbr>Firewall<wbr>Allow<wbr>Azure<wbr>Ips<wbr>State</a></span>
+        <span class="property-type"><a href="#firewallallowazureipsstate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Lake<wbr>Store..<wbr>Firewall<wbr>Allow<wbr>Azure<wbr>Ips<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}The current state of allowing or disallowing IPs originating within Azure through the firewall. If the firewall is disabled, this is not enforced.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -484,7 +484,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#firewallrules_csharp" style="color: inherit; text-decoration: inherit;">Firewall<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#createfirewallrulewithaccountparameters">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Lake<wbr>Store.<wbr>Inputs.<wbr>Create<wbr>Firewall<wbr>Rule<wbr>With<wbr>Account<wbr>Parameters<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#createfirewallrulewithaccountparameters">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Lake<wbr>Store..<wbr>Inputs.<wbr>Create<wbr>Firewall<wbr>Rule<wbr>With<wbr>Account<wbr>Parameters<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of firewall rules associated with this Data Lake Store account.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -493,7 +493,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#firewallstate_csharp" style="color: inherit; text-decoration: inherit;">Firewall<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallstate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Lake<wbr>Store.<wbr>Firewall<wbr>State</a></span>
+        <span class="property-type"><a href="#firewallstate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Lake<wbr>Store..<wbr>Firewall<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}The current state of the IP address firewall for this Data Lake Store account.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -502,7 +502,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionidentity">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Lake<wbr>Store.<wbr>Inputs.<wbr>Encryption<wbr>Identity<wbr>Args</a></span>
+        <span class="property-type"><a href="#encryptionidentity">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Lake<wbr>Store..<wbr>Inputs.<wbr>Encryption<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Key Vault encryption identity, if any.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -511,7 +511,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#newtier_csharp" style="color: inherit; text-decoration: inherit;">New<wbr>Tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tiertype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Lake<wbr>Store.<wbr>Tier<wbr>Type</a></span>
+        <span class="property-type"><a href="#tiertype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Lake<wbr>Store..<wbr>Tier<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The commitment tier to use for next month.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -529,7 +529,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#trustedidproviderstate_csharp" style="color: inherit; text-decoration: inherit;">Trusted<wbr>Id<wbr>Provider<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trustedidproviderstate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Lake<wbr>Store.<wbr>Trusted<wbr>Id<wbr>Provider<wbr>State</a></span>
+        <span class="property-type"><a href="#trustedidproviderstate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Lake<wbr>Store..<wbr>Trusted<wbr>Id<wbr>Provider<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}The current state of the trusted identity provider feature for this Data Lake Store account.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -538,7 +538,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#trustedidproviders_csharp" style="color: inherit; text-decoration: inherit;">Trusted<wbr>Id<wbr>Providers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#createtrustedidproviderwithaccountparameters">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Lake<wbr>Store.<wbr>Inputs.<wbr>Create<wbr>Trusted<wbr>Id<wbr>Provider<wbr>With<wbr>Account<wbr>Parameters<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#createtrustedidproviderwithaccountparameters">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Lake<wbr>Store..<wbr>Inputs.<wbr>Create<wbr>Trusted<wbr>Id<wbr>Provider<wbr>With<wbr>Account<wbr>Parameters<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of trusted identity providers associated with this Data Lake Store account.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -547,7 +547,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#virtualnetworkrules_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#createvirtualnetworkrulewithaccountparameters">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Lake<wbr>Store.<wbr>Inputs.<wbr>Create<wbr>Virtual<wbr>Network<wbr>Rule<wbr>With<wbr>Account<wbr>Parameters<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#createvirtualnetworkrulewithaccountparameters">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Lake<wbr>Store..<wbr>Inputs.<wbr>Create<wbr>Virtual<wbr>Network<wbr>Rule<wbr>With<wbr>Account<wbr>Parameters<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of virtual network rules associated with this Data Lake Store account.{{% /md %}}</dd>
 </dl>
@@ -1754,7 +1754,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionconfigtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Lake<wbr>Store.<wbr>Encryption<wbr>Config<wbr>Type</a></span>
+        <span class="property-type"><a href="#encryptionconfigtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Lake<wbr>Store..<wbr>Encryption<wbr>Config<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of encryption configuration being used. Currently the only supported types are 'UserManaged' and 'ServiceManaged'.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1763,7 +1763,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keyvaultmetainfo_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Meta<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultmetainfo">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Lake<wbr>Store.<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>Meta<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#keyvaultmetainfo">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Lake<wbr>Store..<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>Meta<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Key Vault information for connecting to user managed encryption keys.{{% /md %}}</dd>
 </dl>
@@ -1861,7 +1861,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keyvaultmetainfo_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Meta<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultmetainforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Lake<wbr>Store.<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>Meta<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#keyvaultmetainforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Lake<wbr>Store..<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>Meta<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Key Vault information for connecting to user managed encryption keys.{{% /md %}}</dd>
 </dl>
@@ -1988,7 +1988,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionidentitytype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Lake<wbr>Store.<wbr>Encryption<wbr>Identity<wbr>Type</a></span>
+        <span class="property-type"><a href="#encryptionidentitytype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Lake<wbr>Store..<wbr>Encryption<wbr>Identity<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of encryption being used. Currently the only supported type is 'SystemAssigned'.{{% /md %}}</dd>
 </dl>
@@ -3252,7 +3252,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:datalakestore/latest:Account contosoadla 34adfa4f-cedf-4dc0-ba29-b6d1a69ab345 
+$ pulumi import azure-nextgen:datalakestore:Account contosoadla 34adfa4f-cedf-4dc0-ba29-b6d1a69ab345 
 ```
 
 

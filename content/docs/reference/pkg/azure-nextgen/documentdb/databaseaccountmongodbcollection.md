@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.documentdb.DatabaseAccountMongoD
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 An Azure Cosmos DB MongoDB collection.
-Latest API Version: 2016-03-31.
+API Version: 2016-03-31.
 
 {{% examples %}}
 ## Example Usage
@@ -27,27 +27,27 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var databaseAccountMongoDBCollection = new AzureNextGen.DocumentDB.Latest.DatabaseAccountMongoDBCollection("databaseAccountMongoDBCollection", new AzureNextGen.DocumentDB.Latest.DatabaseAccountMongoDBCollectionArgs
+        var databaseAccountMongoDBCollection = new AzureNextGen.DocumentDB..DatabaseAccountMongoDBCollection("databaseAccountMongoDBCollection", new AzureNextGen.DocumentDB..DatabaseAccountMongoDBCollectionArgs
         {
             AccountName = "ddb1",
             CollectionName = "collectionName",
             DatabaseName = "databaseName",
             Options = ,
-            Resource = new AzureNextGen.DocumentDB.Latest.Inputs.MongoDBCollectionResourceArgs
+            Resource = new AzureNextGen.DocumentDB..Inputs.MongoDBCollectionResourceArgs
             {
                 Id = "testcoll",
                 Indexes = 
                 {
-                    new AzureNextGen.DocumentDB.Latest.Inputs.MongoIndexArgs
+                    new AzureNextGen.DocumentDB..Inputs.MongoIndexArgs
                     {
-                        Key = new AzureNextGen.DocumentDB.Latest.Inputs.MongoIndexKeysArgs
+                        Key = new AzureNextGen.DocumentDB..Inputs.MongoIndexKeysArgs
                         {
                             Keys = 
                             {
                                 "testKey",
                             },
                         },
-                        Options = new AzureNextGen.DocumentDB.Latest.Inputs.MongoIndexOptionsArgs
+                        Options = new AzureNextGen.DocumentDB..Inputs.MongoIndexOptionsArgs
                         {
                             ExpireAfterSeconds = 100,
                             Unique = true,
@@ -75,7 +75,7 @@ class MyStack : Stack
 package main
 
 import (
-	documentdb "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/documentdb/latest"
+	documentdb "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/documentdb"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -124,18 +124,18 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-database_account_mongo_db_collection = azure_nextgen.documentdb.latest.DatabaseAccountMongoDBCollection("databaseAccountMongoDBCollection",
+database_account_mongo_db_collection = azure_nextgen.documentdb.DatabaseAccountMongoDBCollection("databaseAccountMongoDBCollection",
     account_name="ddb1",
     collection_name="collectionName",
     database_name="databaseName",
     options={},
-    resource=azure_nextgen.documentdb.latest.MongoDBCollectionResourceArgs(
+    resource=azure_nextgen.documentdb.MongoDBCollectionResourceArgs(
         id="testcoll",
-        indexes=[azure_nextgen.documentdb.latest.MongoIndexArgs(
-            key=azure_nextgen.documentdb.latest.MongoIndexKeysArgs(
+        indexes=[azure_nextgen.documentdb.MongoIndexArgs(
+            key=azure_nextgen.documentdb.MongoIndexKeysArgs(
                 keys=["testKey"],
             ),
-            options=azure_nextgen.documentdb.latest.MongoIndexOptionsArgs(
+            options=azure_nextgen.documentdb.MongoIndexOptionsArgs(
                 expire_after_seconds=100,
                 unique=True,
             ),
@@ -156,7 +156,7 @@ database_account_mongo_db_collection = azure_nextgen.documentdb.latest.DatabaseA
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const databaseAccountMongoDBCollection = new azure_nextgen.documentdb.latest.DatabaseAccountMongoDBCollection("databaseAccountMongoDBCollection", {
+const databaseAccountMongoDBCollection = new azure_nextgen.documentdb.DatabaseAccountMongoDBCollection("databaseAccountMongoDBCollection", {
     accountName: "ddb1",
     collectionName: "collectionName",
     databaseName: "databaseName",
@@ -408,7 +408,7 @@ The DatabaseAccountMongoDBCollection resource accepts the following [input]({{< 
 <a href="#resource_csharp" style="color: inherit; text-decoration: inherit;">Resource</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mongodbcollectionresource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Mongo<wbr>DBCollection<wbr>Resource<wbr>Args</a></span>
+        <span class="property-type"><a href="#mongodbcollectionresource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB..<wbr>Inputs.<wbr>Mongo<wbr>DBCollection<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The standard JSON format of a MongoDB collection{{% /md %}}</dd>
     <dt class="property-required"
@@ -646,7 +646,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#indexes_csharp" style="color: inherit; text-decoration: inherit;">Indexes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mongoindexresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB.<wbr>Outputs.<wbr>Mongo<wbr>Index<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#mongoindexresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB..<wbr>Outputs.<wbr>Mongo<wbr>Index<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of index keys{{% /md %}}</dd>
     <dt class="property-"
@@ -925,7 +925,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#indexes_csharp" style="color: inherit; text-decoration: inherit;">Indexes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mongoindex">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Mongo<wbr>Index<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#mongoindex">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB..<wbr>Inputs.<wbr>Mongo<wbr>Index<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of index keys{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1077,7 +1077,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mongoindexkeys">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Mongo<wbr>Index<wbr>Keys<wbr>Args</a></span>
+        <span class="property-type"><a href="#mongoindexkeys">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB..<wbr>Inputs.<wbr>Mongo<wbr>Index<wbr>Keys<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Cosmos DB MongoDB collection index keys{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1086,7 +1086,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#options_csharp" style="color: inherit; text-decoration: inherit;">Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mongoindexoptions">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Mongo<wbr>Index<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#mongoindexoptions">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB..<wbr>Inputs.<wbr>Mongo<wbr>Index<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Cosmos DB MongoDB collection index key options{{% /md %}}</dd>
 </dl>
@@ -1495,7 +1495,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mongoindexkeysresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Mongo<wbr>Index<wbr>Keys<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#mongoindexkeysresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB..<wbr>Inputs.<wbr>Mongo<wbr>Index<wbr>Keys<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Cosmos DB MongoDB collection index keys{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1504,7 +1504,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#options_csharp" style="color: inherit; text-decoration: inherit;">Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mongoindexoptionsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Mongo<wbr>Index<wbr>Options<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#mongoindexoptionsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB..<wbr>Inputs.<wbr>Mongo<wbr>Index<wbr>Options<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Cosmos DB MongoDB collection index key options{{% /md %}}</dd>
 </dl>
@@ -1587,7 +1587,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:documentdb/latest:DatabaseAccountMongoDBCollection collectionName collectionName 
+$ pulumi import azure-nextgen:documentdb:DatabaseAccountMongoDBCollection collectionName collectionName 
 ```
 
 

@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.machinelearningservices.Workspac
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Workspace connection.
-Latest API Version: 2020-08-01.
+API Version: 2020-08-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var workspaceConnection = new AzureNextGen.MachineLearningServices.Latest.WorkspaceConnection("workspaceConnection", new AzureNextGen.MachineLearningServices.Latest.WorkspaceConnectionArgs
+        var workspaceConnection = new AzureNextGen.MachineLearningServices..WorkspaceConnection("workspaceConnection", new AzureNextGen.MachineLearningServices..WorkspaceConnectionArgs
         {
             AuthType = "PAT",
             Category = "ACR",
@@ -52,7 +52,7 @@ class MyStack : Stack
 package main
 
 import (
-	machinelearningservices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/machinelearningservices/latest"
+	machinelearningservices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/machinelearningservices"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -85,7 +85,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-workspace_connection = azure_nextgen.machinelearningservices.latest.WorkspaceConnection("workspaceConnection",
+workspace_connection = azure_nextgen.machinelearningservices.WorkspaceConnection("workspaceConnection",
     auth_type="PAT",
     category="ACR",
     connection_name="connection-1",
@@ -105,7 +105,7 @@ workspace_connection = azure_nextgen.machinelearningservices.latest.WorkspaceCon
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const workspaceConnection = new azure_nextgen.machinelearningservices.latest.WorkspaceConnection("workspaceConnection", {
+const workspaceConnection = new azure_nextgen.machinelearningservices.WorkspaceConnection("workspaceConnection", {
     authType: "PAT",
     category: "ACR",
     connectionName: "connection-1",
@@ -726,7 +726,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:machinelearningservices/latest:WorkspaceConnection connection-1 /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1/providers/Microsoft.MachineLearningServices/workspaces/workspace-1/connections/connection-1 
+$ pulumi import azure-nextgen:machinelearningservices:WorkspaceConnection connection-1 /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1/providers/Microsoft.MachineLearningServices/workspaces/workspace-1/connections/connection-1 
 ```
 
 

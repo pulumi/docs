@@ -341,7 +341,7 @@ The following output properties are available:
 <a href="#schema_csharp" style="color: inherit; text-decoration: inherit;">Schema</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#syncgroupschemaresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql.<wbr>Outputs.<wbr>Sync<wbr>Group<wbr>Schema<wbr>Response</a></span>
+        <span class="property-type"><a href="#syncgroupschemaresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql..<wbr>Outputs.<wbr>Sync<wbr>Group<wbr>Schema<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Sync schema of the sync group.{{% /md %}}</dd>
     <dt class="property-"
@@ -350,7 +350,7 @@ The following output properties are available:
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skuresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql.<wbr>Outputs.<wbr>Sku<wbr>Response</a></span>
+        <span class="property-type"><a href="#skuresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql..<wbr>Outputs.<wbr>Sku<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The name and capacity of the SKU.{{% /md %}}</dd>
     <dt class="property-"
@@ -1066,7 +1066,7 @@ The following output properties are available:
 <a href="#tables_csharp" style="color: inherit; text-decoration: inherit;">Tables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#syncgroupschematableresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql.<wbr>Inputs.<wbr>Sync<wbr>Group<wbr>Schema<wbr>Table<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#syncgroupschematableresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql..<wbr>Inputs.<wbr>Sync<wbr>Group<wbr>Schema<wbr>Table<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of tables in sync group schema.{{% /md %}}</dd>
 </dl>
@@ -1299,7 +1299,7 @@ The following output properties are available:
 <a href="#columns_csharp" style="color: inherit; text-decoration: inherit;">Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#syncgroupschematablecolumnresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql.<wbr>Inputs.<wbr>Sync<wbr>Group<wbr>Schema<wbr>Table<wbr>Column<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#syncgroupschematablecolumnresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql..<wbr>Inputs.<wbr>Sync<wbr>Group<wbr>Schema<wbr>Table<wbr>Column<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of columns in sync group schema.{{% /md %}}</dd>
     <dt class="property-optional"

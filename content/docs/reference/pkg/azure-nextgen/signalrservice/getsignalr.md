@@ -207,7 +207,7 @@ The hostname will be of format: &lt;hostNamePrefix&gt;.service.signalr.net.{{% /
 <a href="#privateendpointconnections_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint<wbr>Connections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointconnectionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Signal<wbr>RService.<wbr>Outputs.<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#privateendpointconnectionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Signal<wbr>RService..<wbr>Outputs.<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Private endpoint connections to the SignalR resource.{{% /md %}}</dd>
     <dt class="property-"
@@ -261,7 +261,7 @@ The hostname will be of format: &lt;hostNamePrefix&gt;.service.signalr.net.{{% /
 <a href="#cors_csharp" style="color: inherit; text-decoration: inherit;">Cors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#signalrcorssettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Signal<wbr>RService.<wbr>Outputs.<wbr>Signal<wbr>RCors<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#signalrcorssettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Signal<wbr>RService..<wbr>Outputs.<wbr>Signal<wbr>RCors<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Cross-Origin Resource Sharing (CORS) settings.{{% /md %}}</dd>
     <dt class="property-"
@@ -270,7 +270,7 @@ The hostname will be of format: &lt;hostNamePrefix&gt;.service.signalr.net.{{% /
 <a href="#features_csharp" style="color: inherit; text-decoration: inherit;">Features</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#signalrfeatureresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Signal<wbr>RService.<wbr>Outputs.<wbr>Signal<wbr>RFeature<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#signalrfeatureresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Signal<wbr>RService..<wbr>Outputs.<wbr>Signal<wbr>RFeature<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of SignalR featureFlags. e.g. ServiceMode.
 
@@ -302,7 +302,7 @@ But keep in mind, the default value doesn't mean "false". It varies in terms of 
 <a href="#networkacls_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>ACLs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#signalrnetworkaclsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Signal<wbr>RService.<wbr>Outputs.<wbr>Signal<wbr>RNetwork<wbr>ACLs<wbr>Response</a></span>
+        <span class="property-type"><a href="#signalrnetworkaclsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Signal<wbr>RService..<wbr>Outputs.<wbr>Signal<wbr>RNetwork<wbr>ACLs<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Network ACLs{{% /md %}}</dd>
     <dt class="property-"
@@ -311,7 +311,7 @@ But keep in mind, the default value doesn't mean "false". It varies in terms of 
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceskuresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Signal<wbr>RService.<wbr>Outputs.<wbr>Resource<wbr>Sku<wbr>Response</a></span>
+        <span class="property-type"><a href="#resourceskuresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Signal<wbr>RService..<wbr>Outputs.<wbr>Resource<wbr>Sku<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The billing information of the resource.(e.g. Free, Standard){{% /md %}}</dd>
     <dt class="property-"
@@ -329,7 +329,7 @@ But keep in mind, the default value doesn't mean "false". It varies in terms of 
 <a href="#upstream_csharp" style="color: inherit; text-decoration: inherit;">Upstream</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serverlessupstreamsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Signal<wbr>RService.<wbr>Outputs.<wbr>Serverless<wbr>Upstream<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#serverlessupstreamsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Signal<wbr>RService..<wbr>Outputs.<wbr>Serverless<wbr>Upstream<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Upstream settings when the Azure SignalR is in server-less mode.{{% /md %}}</dd>
 </dl>
@@ -1184,7 +1184,7 @@ But keep in mind, the default value doesn't mean "false". It varies in terms of 
 <a href="#privateendpoint_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Signal<wbr>RService.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#privateendpointresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Signal<wbr>RService..<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Private endpoint associated with the private endpoint connection{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1193,7 +1193,7 @@ But keep in mind, the default value doesn't mean "false". It varies in terms of 
 <a href="#privatelinkserviceconnectionstate_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Signal<wbr>RService.<wbr>Inputs.<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Signal<wbr>RService..<wbr>Inputs.<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Connection state{{% /md %}}</dd>
 </dl>
@@ -1844,7 +1844,7 @@ If present, following values are allowed:
 <a href="#templates_csharp" style="color: inherit; text-decoration: inherit;">Templates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#upstreamtemplateresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Signal<wbr>RService.<wbr>Inputs.<wbr>Upstream<wbr>Template<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#upstreamtemplateresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Signal<wbr>RService..<wbr>Inputs.<wbr>Upstream<wbr>Template<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the list of Upstream URL templates. Order matters, and the first matching template takes effects.{{% /md %}}</dd>
 </dl>
@@ -2134,7 +2134,7 @@ If present, following values are allowed:
 <a href="#privateendpoints_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointaclresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Signal<wbr>RService.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>ACLResponse<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#privateendpointaclresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Signal<wbr>RService..<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>ACLResponse<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}ACLs for requests from private endpoints{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2143,7 +2143,7 @@ If present, following values are allowed:
 <a href="#publicnetwork_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkaclresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Signal<wbr>RService.<wbr>Inputs.<wbr>Network<wbr>ACLResponse<wbr>Args</a></span>
+        <span class="property-type"><a href="#networkaclresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Signal<wbr>RService..<wbr>Inputs.<wbr>Network<wbr>ACLResponse<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}ACL for requests from public network{{% /md %}}</dd>
 </dl>

@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.visualstudio.Account resource wi
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The response to an account resource GET request.
+API Version: 2017-11-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var account = new AzureNextGen.VisualStudio.V20171101Preview.Account("account", new AzureNextGen.VisualStudio.V20171101Preview.AccountArgs
+        var account = new AzureNextGen.VisualStudio..Account("account", new AzureNextGen.VisualStudio..AccountArgs
         {
             AccountName = "Example",
             Location = "Central US",
@@ -50,7 +51,7 @@ class MyStack : Stack
 package main
 
 import (
-	visualstudio "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/visualstudio/v20171101preview"
+	visualstudio "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/visualstudio"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -82,7 +83,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-account = azure_nextgen.visualstudio.v20171101preview.Account("account",
+account = azure_nextgen.visualstudio.Account("account",
     account_name="Example",
     location="Central US",
     operation_type="create",
@@ -101,7 +102,7 @@ account = azure_nextgen.visualstudio.v20171101preview.Account("account",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const account = new azure_nextgen.visualstudio.v20171101preview.Account("account", {
+const account = new azure_nextgen.visualstudio.Account("account", {
     accountName: "Example",
     location: "Central US",
     operationType: "create",
@@ -340,7 +341,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#operationtype_csharp" style="color: inherit; text-decoration: inherit;">Operation<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#accountresourcerequestoperationtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Visual<wbr>Studio.<wbr>Account<wbr>Resource<wbr>Request<wbr>Operation<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#accountresourcerequestoperationtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Visual<wbr>Studio..<wbr>Account<wbr>Resource<wbr>Request<wbr>Operation<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of the operation.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -779,7 +780,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:visualstudio/v20171101preview:Account VS-Example-Group /subscriptions/0de7f055-dbea-498d-8e9e-da287eedca90/resourceGroups/VS-Example-Group/providers/Microsoft.VisualStudio/account/Example 
+$ pulumi import azure-nextgen:visualstudio:Account VS-Example-Group /subscriptions/0de7f055-dbea-498d-8e9e-da287eedca90/resourceGroups/VS-Example-Group/providers/Microsoft.VisualStudio/account/Example 
 ```
 
 

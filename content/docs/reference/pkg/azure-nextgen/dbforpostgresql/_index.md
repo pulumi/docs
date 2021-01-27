@@ -17,6 +17,7 @@ Explore the resources and functions of the dbforpostgresql module in the Azure N
     <li><a href="privateendpointconnection" title="PrivateEndpointConnection"><span class="symbol resource"></span>PrivateEndpointConnection</a></li>
     <li><a href="server" title="Server"><span class="symbol resource"></span>Server</a></li>
     <li><a href="serveradministrator" title="ServerAdministrator"><span class="symbol resource"></span>ServerAdministrator</a></li>
+    <li><a href="servergroup" title="ServerGroup"><span class="symbol resource"></span>ServerGroup</a></li>
     <li><a href="serverkey" title="ServerKey"><span class="symbol resource"></span>ServerKey</a></li>
     <li><a href="virtualnetworkrule" title="VirtualNetworkRule"><span class="symbol resource"></span>VirtualNetworkRule</a></li>
 </ul>
@@ -29,6 +30,7 @@ Explore the resources and functions of the dbforpostgresql module in the Azure N
     <li><a href="getprivateendpointconnection" title="GetPrivateEndpointConnection"><span class="symbol function"></span>GetPrivateEndpointConnection</a></li>
     <li><a href="getserver" title="GetServer"><span class="symbol function"></span>GetServer</a></li>
     <li><a href="getserveradministrator" title="GetServerAdministrator"><span class="symbol function"></span>GetServerAdministrator</a></li>
+    <li><a href="getservergroup" title="GetServerGroup"><span class="symbol function"></span>GetServerGroup</a></li>
     <li><a href="getserverkey" title="GetServerKey"><span class="symbol function"></span>GetServerKey</a></li>
     <li><a href="getvirtualnetworkrule" title="GetVirtualNetworkRule"><span class="symbol function"></span>GetVirtualNetworkRule</a></li>
 </ul>
@@ -40,7 +42,7 @@ Explore the resources and functions of the dbforpostgresql module in the Azure N
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.5.0</dd>
+	<dd>0.6.0</dd>
 </dl>
 
 

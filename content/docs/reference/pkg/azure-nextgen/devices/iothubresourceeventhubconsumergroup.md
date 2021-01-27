@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.devices.IotHubResourceEventHubCo
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The properties of the EventHubConsumerGroupInfo object.
-Latest API Version: 2020-08-31.
+API Version: 2020-08-31.
 
 {{% examples %}}
 ## Example Usage
@@ -27,11 +27,11 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var iotHubResourceEventHubConsumerGroup = new AzureNextGen.Devices.Latest.IotHubResourceEventHubConsumerGroup("iotHubResourceEventHubConsumerGroup", new AzureNextGen.Devices.Latest.IotHubResourceEventHubConsumerGroupArgs
+        var iotHubResourceEventHubConsumerGroup = new AzureNextGen.Devices..IotHubResourceEventHubConsumerGroup("iotHubResourceEventHubConsumerGroup", new AzureNextGen.Devices..IotHubResourceEventHubConsumerGroupArgs
         {
             EventHubEndpointName = "events",
             Name = "test",
-            Properties = new AzureNextGen.Devices.Latest.Inputs.EventHubConsumerGroupNameArgs
+            Properties = new AzureNextGen.Devices..Inputs.EventHubConsumerGroupNameArgs
             {
                 Name = "test",
             },
@@ -52,7 +52,7 @@ class MyStack : Stack
 package main
 
 import (
-	devices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/devices/latest"
+	devices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/devices"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -84,10 +84,10 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-iot_hub_resource_event_hub_consumer_group = azure_nextgen.devices.latest.IotHubResourceEventHubConsumerGroup("iotHubResourceEventHubConsumerGroup",
+iot_hub_resource_event_hub_consumer_group = azure_nextgen.devices.IotHubResourceEventHubConsumerGroup("iotHubResourceEventHubConsumerGroup",
     event_hub_endpoint_name="events",
     name="test",
-    properties=azure_nextgen.devices.latest.EventHubConsumerGroupNameArgs(
+    properties=azure_nextgen.devices.EventHubConsumerGroupNameArgs(
         name="test",
     ),
     resource_group_name="myResourceGroup",
@@ -103,7 +103,7 @@ iot_hub_resource_event_hub_consumer_group = azure_nextgen.devices.latest.IotHubR
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const iotHubResourceEventHubConsumerGroup = new azure_nextgen.devices.latest.IotHubResourceEventHubConsumerGroup("iotHubResourceEventHubConsumerGroup", {
+const iotHubResourceEventHubConsumerGroup = new azure_nextgen.devices.IotHubResourceEventHubConsumerGroup("iotHubResourceEventHubConsumerGroup", {
     eventHubEndpointName: "events",
     name: "test",
     properties: {
@@ -342,7 +342,7 @@ The IotHubResourceEventHubConsumerGroup resource accepts the following [input]({
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventhubconsumergroupname">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Devices.<wbr>Inputs.<wbr>Event<wbr>Hub<wbr>Consumer<wbr>Group<wbr>Name<wbr>Args</a></span>
+        <span class="property-type"><a href="#eventhubconsumergroupname">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Devices..<wbr>Inputs.<wbr>Event<wbr>Hub<wbr>Consumer<wbr>Group<wbr>Name<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The EventHub consumer group name.{{% /md %}}</dd>
 </dl>
@@ -717,7 +717,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:devices/latest:IotHubResourceEventHubConsumerGroup test /subscriptions/cmd-sub-1/resourceGroups/cmd-rg-1/providers/Microsoft.Devices/IotHubs/test-hub-2/eventHubEndpoints/events/ConsumerGroups/%24Default 
+$ pulumi import azure-nextgen:devices:IotHubResourceEventHubConsumerGroup test /subscriptions/cmd-sub-1/resourceGroups/cmd-rg-1/providers/Microsoft.Devices/IotHubs/test-hub-2/eventHubEndpoints/events/ConsumerGroups/%24Default 
 ```
 
 

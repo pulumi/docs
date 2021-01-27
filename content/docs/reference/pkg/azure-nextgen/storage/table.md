@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.storage.Table resource with exam
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Properties of the table, including Id, resource name, resource type.
-Latest API Version: 2019-06-01.
+API Version: 2019-06-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var table = new AzureNextGen.Storage.Latest.Table("table", new AzureNextGen.Storage.Latest.TableArgs
+        var table = new AzureNextGen.Storage..Table("table", new AzureNextGen.Storage..TableArgs
         {
             AccountName = "sto328",
             ResourceGroupName = "res3376",
@@ -47,7 +47,7 @@ class MyStack : Stack
 package main
 
 import (
-	storage "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/storage/latest"
+	storage "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/storage"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -75,7 +75,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-table = azure_nextgen.storage.latest.Table("table",
+table = azure_nextgen.storage.Table("table",
     account_name="sto328",
     resource_group_name="res3376",
     table_name="table6185")
@@ -90,7 +90,7 @@ table = azure_nextgen.storage.latest.Table("table",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const table = new azure_nextgen.storage.latest.Table("table", {
+const table = new azure_nextgen.storage.Table("table", {
     accountName: "sto328",
     resourceGroupName: "res3376",
     tableName: "table6185",
@@ -562,7 +562,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:storage/latest:Table table6185 /subscriptions/{subscription-id}/resourceGroups/res3376/providers/Microsoft.Storage/storageAccounts/sto328/tableServices/default/tables/table6185 
+$ pulumi import azure-nextgen:storage:Table table6185 /subscriptions/{subscription-id}/resourceGroups/res3376/providers/Microsoft.Storage/storageAccounts/sto328/tableServices/default/tables/table6185 
 ```
 
 

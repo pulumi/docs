@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.network.ExpressRouteCircuitAutho
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Authorization in an ExpressRouteCircuit resource.
-Latest API Version: 2020-08-01.
+API Version: 2020-08-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var expressRouteCircuitAuthorization = new AzureNextGen.Network.Latest.ExpressRouteCircuitAuthorization("expressRouteCircuitAuthorization", new AzureNextGen.Network.Latest.ExpressRouteCircuitAuthorizationArgs
+        var expressRouteCircuitAuthorization = new AzureNextGen.Network..ExpressRouteCircuitAuthorization("expressRouteCircuitAuthorization", new AzureNextGen.Network..ExpressRouteCircuitAuthorizationArgs
         {
             AuthorizationName = "authorizatinName",
             CircuitName = "circuitName",
@@ -47,7 +47,7 @@ class MyStack : Stack
 package main
 
 import (
-	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network/latest"
+	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -75,7 +75,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-express_route_circuit_authorization = azure_nextgen.network.latest.ExpressRouteCircuitAuthorization("expressRouteCircuitAuthorization",
+express_route_circuit_authorization = azure_nextgen.network.ExpressRouteCircuitAuthorization("expressRouteCircuitAuthorization",
     authorization_name="authorizatinName",
     circuit_name="circuitName",
     resource_group_name="rg1")
@@ -90,7 +90,7 @@ express_route_circuit_authorization = azure_nextgen.network.latest.ExpressRouteC
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const expressRouteCircuitAuthorization = new azure_nextgen.network.latest.ExpressRouteCircuitAuthorization("expressRouteCircuitAuthorization", {
+const expressRouteCircuitAuthorization = new azure_nextgen.network.ExpressRouteCircuitAuthorization("expressRouteCircuitAuthorization", {
     authorizationName: "authorizatinName",
     circuitName: "circuitName",
     resourceGroupName: "rg1",
@@ -325,7 +325,7 @@ The ExpressRouteCircuitAuthorization resource accepts the following [input]({{< 
 <a href="#authorizationusestatus_csharp" style="color: inherit; text-decoration: inherit;">Authorization<wbr>Use<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#authorizationusestatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Authorization<wbr>Use<wbr>Status</a></span>
+        <span class="property-type">string | <a href="#authorizationusestatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Authorization<wbr>Use<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}The authorization use status.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -784,7 +784,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:network/latest:ExpressRouteCircuitAuthorization authorizationName /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/expressRouteCircuits/circuitName/authorizations/authorizationName 
+$ pulumi import azure-nextgen:network:ExpressRouteCircuitAuthorization authorizationName /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/expressRouteCircuits/circuitName/authorizations/authorizationName 
 ```
 
 

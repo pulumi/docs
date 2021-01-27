@@ -251,7 +251,7 @@ The following output properties are available:
 <a href="#starttime_csharp" style="color: inherit; text-decoration: inherit;">Start<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timeresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stor<wbr>Simple.<wbr>Outputs.<wbr>Time<wbr>Response</a></span>
+        <span class="property-type"><a href="#timeresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stor<wbr>Simple..<wbr>Outputs.<wbr>Time<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The start time. When this field is specified we will generate Default GrandFather Father Son Backup Schedules.{{% /md %}}</dd>
     <dt class="property-"

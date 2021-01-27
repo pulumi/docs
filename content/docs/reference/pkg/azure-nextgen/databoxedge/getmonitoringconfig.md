@@ -206,7 +206,7 @@ The following output properties are available:
 <a href="#metricconfigurations_csharp" style="color: inherit; text-decoration: inherit;">Metric<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricconfigurationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Outputs.<wbr>Metric<wbr>Configuration<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#metricconfigurationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge..<wbr>Outputs.<wbr>Metric<wbr>Configuration<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The metrics configuration details{{% /md %}}</dd>
     <dt class="property-"
@@ -378,7 +378,7 @@ The following output properties are available:
 <a href="#countersets_csharp" style="color: inherit; text-decoration: inherit;">Counter<wbr>Sets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metriccountersetresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Inputs.<wbr>Metric<wbr>Counter<wbr>Set<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#metriccountersetresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge..<wbr>Inputs.<wbr>Metric<wbr>Counter<wbr>Set<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Host name for the IoT hub associated to the device.{{% /md %}}</dd>
     <dt class="property-required"
@@ -562,7 +562,7 @@ The following output properties are available:
 <a href="#additionaldimensions_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Dimensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricdimensionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Inputs.<wbr>Metric<wbr>Dimension<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#metricdimensionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge..<wbr>Inputs.<wbr>Metric<wbr>Dimension<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The additional dimensions to be added to metric.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -571,7 +571,7 @@ The following output properties are available:
 <a href="#dimensionfilter_csharp" style="color: inherit; text-decoration: inherit;">Dimension<wbr>Filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricdimensionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Inputs.<wbr>Metric<wbr>Dimension<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#metricdimensionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge..<wbr>Inputs.<wbr>Metric<wbr>Dimension<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The dimension filter.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -728,7 +728,7 @@ The following output properties are available:
 <a href="#counters_csharp" style="color: inherit; text-decoration: inherit;">Counters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metriccounterresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Inputs.<wbr>Metric<wbr>Counter<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#metriccounterresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge..<wbr>Inputs.<wbr>Metric<wbr>Counter<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The counters that should be collected in this set.{{% /md %}}</dd>
 </dl>

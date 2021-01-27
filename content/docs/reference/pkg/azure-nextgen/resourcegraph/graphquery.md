@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.resourcegraph.GraphQuery resourc
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Graph Query entity definition.
+API Version: 2020-04-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var graphQuery = new AzureNextGen.ResourceGraph.V20200401Preview.GraphQuery("graphQuery", new AzureNextGen.ResourceGraph.V20200401Preview.GraphQueryArgs
+        var graphQuery = new AzureNextGen.ResourceGraph..GraphQuery("graphQuery", new AzureNextGen.ResourceGraph..GraphQueryArgs
         {
             Description = "Docker VMs in PROD",
             Query = "where isnotnull(tags['Prod']) and properties.extensions[0].Name == 'docker'",
@@ -48,7 +49,7 @@ class MyStack : Stack
 package main
 
 import (
-	resourcegraph "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/resourcegraph/v20200401preview"
+	resourcegraph "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/resourcegraph"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -78,7 +79,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-graph_query = azure_nextgen.resourcegraph.v20200401preview.GraphQuery("graphQuery",
+graph_query = azure_nextgen.resourcegraph.GraphQuery("graphQuery",
     description="Docker VMs in PROD",
     query="where isnotnull(tags['Prod']) and properties.extensions[0].Name == 'docker'",
     resource_group_name="my-resource-group",
@@ -95,7 +96,7 @@ graph_query = azure_nextgen.resourcegraph.v20200401preview.GraphQuery("graphQuer
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const graphQuery = new azure_nextgen.resourcegraph.v20200401preview.GraphQuery("graphQuery", {
+const graphQuery = new azure_nextgen.resourcegraph.GraphQuery("graphQuery", {
     description: "Docker VMs in PROD",
     query: "where isnotnull(tags['Prod']) and properties.extensions[0].Name == 'docker'",
     resourceGroupName: "my-resource-group",
@@ -119,7 +120,7 @@ const graphQuery = new azure_nextgen.resourcegraph.v20200401preview.GraphQuery("
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">GraphQuery</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">e_tag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">query</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_name_</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">GraphQuery</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">query</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_name_</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -329,7 +330,7 @@ The GraphQuery resource accepts the following [input]({{< relref "/docs/intro/co
     <dt class="property-optional"
             title="Optional">
         <span id="etag_csharp">
-<a href="#etag_csharp" style="color: inherit; text-decoration: inherit;">ETag</a>
+<a href="#etag_csharp" style="color: inherit; text-decoration: inherit;">Etag</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -389,7 +390,7 @@ The GraphQuery resource accepts the following [input]({{< relref "/docs/intro/co
     <dt class="property-optional"
             title="Optional">
         <span id="etag_go">
-<a href="#etag_go" style="color: inherit; text-decoration: inherit;">ETag</a>
+<a href="#etag_go" style="color: inherit; text-decoration: inherit;">Etag</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -449,7 +450,7 @@ The GraphQuery resource accepts the following [input]({{< relref "/docs/intro/co
     <dt class="property-optional"
             title="Optional">
         <span id="etag_nodejs">
-<a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">e<wbr>Tag</a>
+<a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -508,8 +509,8 @@ The GraphQuery resource accepts the following [input]({{< relref "/docs/intro/co
     <dd>{{% md %}}The description of a graph query.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="e_tag_python">
-<a href="#e_tag_python" style="color: inherit; text-decoration: inherit;">e_<wbr>tag</a>
+        <span id="etag_python">
+<a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -579,7 +580,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#systemdata_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Resource<wbr>Graph.<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
+        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Resource<wbr>Graph..<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Metadata pertaining to creation and last modification of the resource.{{% /md %}}</dd>
     <dt class="property-"
@@ -1067,7 +1068,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:resourcegraph/v20200401preview:GraphQuery MyDockerVMs  /subscriptions/024e2271-06fa-46b6-9079-f1ed3c7b070e/resources/my-resource-group/providers/Microsoft.ResourceGraph/queries/MyDockerVMs 
+$ pulumi import azure-nextgen:resourcegraph:GraphQuery MyDockerVMs  /subscriptions/024e2271-06fa-46b6-9079-f1ed3c7b070e/resources/my-resource-group/providers/Microsoft.ResourceGraph/queries/MyDockerVMs 
 ```
 
 

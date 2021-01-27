@@ -242,7 +242,7 @@ The following output properties are available:
 <a href="#authorizations_csharp" style="color: inherit; text-decoration: inherit;">Authorizations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspaceproviderauthorizationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Databricks.<wbr>Outputs.<wbr>Workspace<wbr>Provider<wbr>Authorization<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#workspaceproviderauthorizationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Databricks..<wbr>Outputs.<wbr>Workspace<wbr>Provider<wbr>Authorization<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The workspace provider authorizations.{{% /md %}}</dd>
     <dt class="property-"
@@ -251,7 +251,7 @@ The following output properties are available:
 <a href="#createdby_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>By</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#createdbyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Databricks.<wbr>Outputs.<wbr>Created<wbr>By<wbr>Response</a></span>
+        <span class="property-type"><a href="#createdbyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Databricks..<wbr>Outputs.<wbr>Created<wbr>By<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Indicates the Object ID, PUID and Application ID of entity that created the workspace.{{% /md %}}</dd>
     <dt class="property-"
@@ -260,7 +260,7 @@ The following output properties are available:
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspacecustomparametersresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Databricks.<wbr>Outputs.<wbr>Workspace<wbr>Custom<wbr>Parameters<wbr>Response</a></span>
+        <span class="property-type"><a href="#workspacecustomparametersresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Databricks..<wbr>Outputs.<wbr>Workspace<wbr>Custom<wbr>Parameters<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The workspace's custom parameters.{{% /md %}}</dd>
     <dt class="property-"
@@ -269,7 +269,7 @@ The following output properties are available:
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skuresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Databricks.<wbr>Outputs.<wbr>Sku<wbr>Response</a></span>
+        <span class="property-type"><a href="#skuresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Databricks..<wbr>Outputs.<wbr>Sku<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The SKU of the resource.{{% /md %}}</dd>
     <dt class="property-"
@@ -278,7 +278,7 @@ The following output properties are available:
 <a href="#storageaccountidentity_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedidentityconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Databricks.<wbr>Outputs.<wbr>Managed<wbr>Identity<wbr>Configuration<wbr>Response</a></span>
+        <span class="property-type"><a href="#managedidentityconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Databricks..<wbr>Outputs.<wbr>Managed<wbr>Identity<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The details of Managed Identity of Storage Account{{% /md %}}</dd>
     <dt class="property-"
@@ -305,7 +305,7 @@ The following output properties are available:
 <a href="#updatedby_csharp" style="color: inherit; text-decoration: inherit;">Updated<wbr>By</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#createdbyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Databricks.<wbr>Outputs.<wbr>Created<wbr>By<wbr>Response</a></span>
+        <span class="property-type"><a href="#createdbyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Databricks..<wbr>Outputs.<wbr>Created<wbr>By<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Indicates the Object ID, PUID and Application ID of entity that last updated the workspace.{{% /md %}}</dd>
 </dl>
@@ -1469,7 +1469,7 @@ The following output properties are available:
 <a href="#amlworkspaceid_csharp" style="color: inherit; text-decoration: inherit;">Aml<wbr>Workspace<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspacecustomstringparameterresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Databricks.<wbr>Inputs.<wbr>Workspace<wbr>Custom<wbr>String<wbr>Parameter<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#workspacecustomstringparameterresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Databricks..<wbr>Inputs.<wbr>Workspace<wbr>Custom<wbr>String<wbr>Parameter<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The ID of a Azure Machine Learning workspace to link with Databricks workspace{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1478,7 +1478,7 @@ The following output properties are available:
 <a href="#customprivatesubnetname_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Private<wbr>Subnet<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspacecustomstringparameterresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Databricks.<wbr>Inputs.<wbr>Workspace<wbr>Custom<wbr>String<wbr>Parameter<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#workspacecustomstringparameterresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Databricks..<wbr>Inputs.<wbr>Workspace<wbr>Custom<wbr>String<wbr>Parameter<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The name of the Private Subnet within the Virtual Network{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1487,7 +1487,7 @@ The following output properties are available:
 <a href="#custompublicsubnetname_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Public<wbr>Subnet<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspacecustomstringparameterresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Databricks.<wbr>Inputs.<wbr>Workspace<wbr>Custom<wbr>String<wbr>Parameter<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#workspacecustomstringparameterresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Databricks..<wbr>Inputs.<wbr>Workspace<wbr>Custom<wbr>String<wbr>Parameter<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The name of a Public Subnet within the Virtual Network{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1496,7 +1496,7 @@ The following output properties are available:
 <a href="#customvirtualnetworkid_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Virtual<wbr>Network<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspacecustomstringparameterresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Databricks.<wbr>Inputs.<wbr>Workspace<wbr>Custom<wbr>String<wbr>Parameter<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#workspacecustomstringparameterresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Databricks..<wbr>Inputs.<wbr>Workspace<wbr>Custom<wbr>String<wbr>Parameter<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The ID of a Virtual Network where this Databricks Cluster should be created{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1505,7 +1505,7 @@ The following output properties are available:
 <a href="#enablenopublicip_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>No<wbr>Public<wbr>Ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspacecustombooleanparameterresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Databricks.<wbr>Inputs.<wbr>Workspace<wbr>Custom<wbr>Boolean<wbr>Parameter<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#workspacecustombooleanparameterresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Databricks..<wbr>Inputs.<wbr>Workspace<wbr>Custom<wbr>Boolean<wbr>Parameter<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Should the Public IP be Disabled?{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1514,7 +1514,7 @@ The following output properties are available:
 <a href="#encryption_csharp" style="color: inherit; text-decoration: inherit;">Encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspaceencryptionparameterresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Databricks.<wbr>Inputs.<wbr>Workspace<wbr>Encryption<wbr>Parameter<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#workspaceencryptionparameterresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Databricks..<wbr>Inputs.<wbr>Workspace<wbr>Encryption<wbr>Parameter<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Contains the encryption details for Customer-Managed Key (CMK) enabled workspace.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1523,7 +1523,7 @@ The following output properties are available:
 <a href="#prepareencryption_csharp" style="color: inherit; text-decoration: inherit;">Prepare<wbr>Encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspacecustombooleanparameterresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Databricks.<wbr>Inputs.<wbr>Workspace<wbr>Custom<wbr>Boolean<wbr>Parameter<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#workspacecustombooleanparameterresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Databricks..<wbr>Inputs.<wbr>Workspace<wbr>Custom<wbr>Boolean<wbr>Parameter<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Prepare the workspace for encryption. Enables the Managed Identity for managed storage account.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1532,7 +1532,7 @@ The following output properties are available:
 <a href="#requireinfrastructureencryption_csharp" style="color: inherit; text-decoration: inherit;">Require<wbr>Infrastructure<wbr>Encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspacecustombooleanparameterresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Databricks.<wbr>Inputs.<wbr>Workspace<wbr>Custom<wbr>Boolean<wbr>Parameter<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#workspacecustombooleanparameterresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Databricks..<wbr>Inputs.<wbr>Workspace<wbr>Custom<wbr>Boolean<wbr>Parameter<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A boolean indicating whether or not the DBFS root file system will be enabled with secondary layer of encryption with platform managed keys for data at rest.{{% /md %}}</dd>
 </dl>
@@ -1900,7 +1900,7 @@ The following output properties are available:
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Databricks.<wbr>Inputs.<wbr>Encryption<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#encryptionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Databricks..<wbr>Inputs.<wbr>Encryption<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The value which should be used for this field.{{% /md %}}</dd>
 </dl>

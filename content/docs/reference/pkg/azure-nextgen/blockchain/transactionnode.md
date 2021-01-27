@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.blockchain.TransactionNode resou
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Payload of the transaction node which is the request/response of the resource provider.
+API Version: 2018-06-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var transactionNode = new AzureNextGen.Blockchain.V20180601Preview.TransactionNode("transactionNode", new AzureNextGen.Blockchain.V20180601Preview.TransactionNodeArgs
+        var transactionNode = new AzureNextGen.Blockchain..TransactionNode("transactionNode", new AzureNextGen.Blockchain..TransactionNodeArgs
         {
             BlockchainMemberName = "contosemember1",
             Location = "southeastasia",
@@ -48,7 +49,7 @@ class MyStack : Stack
 package main
 
 import (
-	blockchain "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/blockchain/v20180601preview"
+	blockchain "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/blockchain"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -78,7 +79,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-transaction_node = azure_nextgen.blockchain.v20180601preview.TransactionNode("transactionNode",
+transaction_node = azure_nextgen.blockchain.TransactionNode("transactionNode",
     blockchain_member_name="contosemember1",
     location="southeastasia",
     password="<password>",
@@ -95,7 +96,7 @@ transaction_node = azure_nextgen.blockchain.v20180601preview.TransactionNode("tr
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const transactionNode = new azure_nextgen.blockchain.v20180601preview.TransactionNode("transactionNode", {
+const transactionNode = new azure_nextgen.blockchain.TransactionNode("transactionNode", {
     blockchainMemberName: "contosemember1",
     location: "southeastasia",
     password: "<password>",
@@ -323,7 +324,7 @@ The TransactionNode resource accepts the following [input]({{< relref "/docs/int
 <a href="#firewallrules_csharp" style="color: inherit; text-decoration: inherit;">Firewall<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallrule">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Blockchain.<wbr>Inputs.<wbr>Firewall<wbr>Rule<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#firewallrule">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Blockchain..<wbr>Inputs.<wbr>Firewall<wbr>Rule<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the firewall rules.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1093,7 +1094,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:blockchain/v20180601preview:TransactionNode txnode2 /subscriptions/51766542-3ed7-4a72-a187-0c8ab644ddab/resourceGroups/mygroup/providers/Microsoft.Blockchain/blockchainMembers/contosemember1/transactionNodes/txnode2 
+$ pulumi import azure-nextgen:blockchain:TransactionNode txnode2 /subscriptions/51766542-3ed7-4a72-a187-0c8ab644ddab/resourceGroups/mygroup/providers/Microsoft.Blockchain/blockchainMembers/contosemember1/transactionNodes/txnode2 
 ```
 
 

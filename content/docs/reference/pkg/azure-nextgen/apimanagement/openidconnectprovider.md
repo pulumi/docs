@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.apimanagement.OpenIdConnectProvi
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 OpenId Connect Provider details.
-Latest API Version: 2019-12-01.
+API Version: 2019-12-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var openIdConnectProvider = new AzureNextGen.ApiManagement.Latest.OpenIdConnectProvider("openIdConnectProvider", new AzureNextGen.ApiManagement.Latest.OpenIdConnectProviderArgs
+        var openIdConnectProvider = new AzureNextGen.ApiManagement..OpenIdConnectProvider("openIdConnectProvider", new AzureNextGen.ApiManagement..OpenIdConnectProviderArgs
         {
             ClientId = "oidprovidertemplate3",
             ClientSecret = "x",
@@ -51,7 +51,7 @@ class MyStack : Stack
 package main
 
 import (
-	apimanagement "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/apimanagement/latest"
+	apimanagement "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/apimanagement"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -83,7 +83,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-open_id_connect_provider = azure_nextgen.apimanagement.latest.OpenIdConnectProvider("openIdConnectProvider",
+open_id_connect_provider = azure_nextgen.apimanagement.OpenIdConnectProvider("openIdConnectProvider",
     client_id="oidprovidertemplate3",
     client_secret="x",
     display_name="templateoidprovider3",
@@ -102,7 +102,7 @@ open_id_connect_provider = azure_nextgen.apimanagement.latest.OpenIdConnectProvi
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const openIdConnectProvider = new azure_nextgen.apimanagement.latest.OpenIdConnectProvider("openIdConnectProvider", {
+const openIdConnectProvider = new azure_nextgen.apimanagement.OpenIdConnectProvider("openIdConnectProvider", {
     clientId: "oidprovidertemplate3",
     clientSecret: "x",
     displayName: "templateoidprovider3",
@@ -758,7 +758,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:apimanagement/latest:OpenIdConnectProvider templateOpenIdConnect3 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/openidConnectProviders/templateOpenIdConnect3 
+$ pulumi import azure-nextgen:apimanagement:OpenIdConnectProvider templateOpenIdConnect3 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/openidConnectProviders/templateOpenIdConnect3 
 ```
 
 

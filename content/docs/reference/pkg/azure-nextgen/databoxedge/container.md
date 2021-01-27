@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.databoxedge.Container resource w
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Represents a container on the  Data Box Edge/Gateway device.
-Latest API Version: 2020-09-01.
+API Version: 2020-09-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var container = new AzureNextGen.DataBoxEdge.Latest.Container("container", new AzureNextGen.DataBoxEdge.Latest.ContainerArgs
+        var container = new AzureNextGen.DataBoxEdge..Container("container", new AzureNextGen.DataBoxEdge..ContainerArgs
         {
             ContainerName = "blobcontainer1",
             DataFormat = "BlockBlob",
@@ -49,7 +49,7 @@ class MyStack : Stack
 package main
 
 import (
-	databoxedge "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/databoxedge/latest"
+	databoxedge "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/databoxedge"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -79,7 +79,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-container = azure_nextgen.databoxedge.latest.Container("container",
+container = azure_nextgen.databoxedge.Container("container",
     container_name="blobcontainer1",
     data_format="BlockBlob",
     device_name="testedgedevice",
@@ -96,7 +96,7 @@ container = azure_nextgen.databoxedge.latest.Container("container",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const container = new azure_nextgen.databoxedge.latest.Container("container", {
+const container = new azure_nextgen.databoxedge.Container("container", {
     containerName: "blobcontainer1",
     dataFormat: "BlockBlob",
     deviceName: "testedgedevice",
@@ -306,7 +306,7 @@ The Container resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#dataformat_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#azurecontainerdataformat">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Azure<wbr>Container<wbr>Data<wbr>Format</a></span>
+        <span class="property-type">string | <a href="#azurecontainerdataformat">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge..<wbr>Azure<wbr>Container<wbr>Data<wbr>Format</a></span>
     </dt>
     <dd>{{% md %}}DataFormat for Container{{% /md %}}</dd>
     <dt class="property-required"
@@ -544,7 +544,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#refreshdetails_csharp" style="color: inherit; text-decoration: inherit;">Refresh<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#refreshdetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Outputs.<wbr>Refresh<wbr>Details<wbr>Response</a></span>
+        <span class="property-type"><a href="#refreshdetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge..<wbr>Outputs.<wbr>Refresh<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Details of the refresh job on this container.{{% /md %}}</dd>
     <dt class="property-"
@@ -553,7 +553,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#systemdata_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
+        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge..<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Container in DataBoxEdge Resource{{% /md %}}</dd>
     <dt class="property-"
@@ -1248,7 +1248,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:databoxedge/latest:Container blobcontainer-5e155efe /subscriptions/4385cf00-2d3a-425a-832f-f4285b1c9dce/resourceGroups/GroupForDataBoxEdgeAutomation/providers/Microsoft.DataBoxEdge/dataBoxEdgeDevices/testedgedevice/storageAccounts/storageaccount1/containers/blobcontainer1 
+$ pulumi import azure-nextgen:databoxedge:Container blobcontainer-5e155efe /subscriptions/4385cf00-2d3a-425a-832f-f4285b1c9dce/resourceGroups/GroupForDataBoxEdgeAutomation/providers/Microsoft.DataBoxEdge/dataBoxEdgeDevices/testedgedevice/storageAccounts/storageaccount1/containers/blobcontainer1 
 ```
 
 

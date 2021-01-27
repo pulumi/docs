@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.insights.SubscriptionDiagnosticS
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The subscription diagnostic setting resource.
+API Version: 2017-05-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,13 +27,13 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var subscriptionDiagnosticSetting = new AzureNextGen.Insights.V20170501Preview.SubscriptionDiagnosticSetting("subscriptionDiagnosticSetting", new AzureNextGen.Insights.V20170501Preview.SubscriptionDiagnosticSettingArgs
+        var subscriptionDiagnosticSetting = new AzureNextGen.Insights..SubscriptionDiagnosticSetting("subscriptionDiagnosticSetting", new AzureNextGen.Insights..SubscriptionDiagnosticSettingArgs
         {
             EventHubAuthorizationRuleId = "/subscriptions/fb9f25f9-5785-4510-a38f-a62f188eb9f8/resourceGroups/montest/providers/microsoft.eventhub/namespaces/mynamespace/eventhubs/myeventhub/authorizationrules/myrule",
             EventHubName = "myeventhub",
             Logs = 
             {
-                new AzureNextGen.Insights.V20170501Preview.Inputs.SubscriptionLogSettingsArgs
+                new AzureNextGen.Insights..Inputs.SubscriptionLogSettingsArgs
                 {
                     Category = "Security",
                     Enabled = true,
@@ -56,7 +57,7 @@ class MyStack : Stack
 package main
 
 import (
-	insights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/insights/v20170501preview"
+	insights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/insights"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -92,10 +93,10 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-subscription_diagnostic_setting = azure_nextgen.insights.v20170501preview.SubscriptionDiagnosticSetting("subscriptionDiagnosticSetting",
+subscription_diagnostic_setting = azure_nextgen.insights.SubscriptionDiagnosticSetting("subscriptionDiagnosticSetting",
     event_hub_authorization_rule_id="/subscriptions/fb9f25f9-5785-4510-a38f-a62f188eb9f8/resourceGroups/montest/providers/microsoft.eventhub/namespaces/mynamespace/eventhubs/myeventhub/authorizationrules/myrule",
     event_hub_name="myeventhub",
-    logs=[azure_nextgen.insights.v20170501preview.SubscriptionLogSettingsArgs(
+    logs=[azure_nextgen.insights.SubscriptionLogSettingsArgs(
         category="Security",
         enabled=True,
     )],
@@ -113,7 +114,7 @@ subscription_diagnostic_setting = azure_nextgen.insights.v20170501preview.Subscr
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const subscriptionDiagnosticSetting = new azure_nextgen.insights.v20170501preview.SubscriptionDiagnosticSetting("subscriptionDiagnosticSetting", {
+const subscriptionDiagnosticSetting = new azure_nextgen.insights.SubscriptionDiagnosticSetting("subscriptionDiagnosticSetting", {
     eventHubAuthorizationRuleId: "/subscriptions/fb9f25f9-5785-4510-a38f-a62f188eb9f8/resourceGroups/montest/providers/microsoft.eventhub/namespaces/mynamespace/eventhubs/myeventhub/authorizationrules/myrule",
     eventHubName: "myeventhub",
     logs: [{
@@ -354,7 +355,7 @@ The SubscriptionDiagnosticSetting resource accepts the following [input]({{< rel
 <a href="#logs_csharp" style="color: inherit; text-decoration: inherit;">Logs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subscriptionlogsettings">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Inputs.<wbr>Subscription<wbr>Log<wbr>Settings<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#subscriptionlogsettings">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Inputs.<wbr>Subscription<wbr>Log<wbr>Settings<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of logs settings.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -935,7 +936,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:insights/v20170501preview:SubscriptionDiagnosticSetting ds4 subscriptions/fb9f25f9-5785-4510-a38f-a62f188eb9f8/providers/AzureResourceManager/diagnosticSettings/ds4 
+$ pulumi import azure-nextgen:insights:SubscriptionDiagnosticSetting ds4 subscriptions/fb9f25f9-5785-4510-a38f-a62f188eb9f8/providers/AzureResourceManager/diagnosticSettings/ds4 
 ```
 
 

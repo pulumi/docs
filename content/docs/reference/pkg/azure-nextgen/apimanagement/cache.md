@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.apimanagement.Cache resource wit
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Cache details.
-Latest API Version: 2019-12-01.
+API Version: 2019-12-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var cache = new AzureNextGen.ApiManagement.Latest.Cache("cache", new AzureNextGen.ApiManagement.Latest.CacheArgs
+        var cache = new AzureNextGen.ApiManagement..Cache("cache", new AzureNextGen.ApiManagement..CacheArgs
         {
             CacheId = "westindia",
             ConnectionString = "contoso5.redis.cache.windows.net,ssl=true,password=...",
@@ -50,7 +50,7 @@ class MyStack : Stack
 package main
 
 import (
-	apimanagement "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/apimanagement/latest"
+	apimanagement "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/apimanagement"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -81,7 +81,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-cache = azure_nextgen.apimanagement.latest.Cache("cache",
+cache = azure_nextgen.apimanagement.Cache("cache",
     cache_id="westindia",
     connection_string="contoso5.redis.cache.windows.net,ssl=true,password=...",
     description="Redis cache instances in West India",
@@ -99,7 +99,7 @@ cache = azure_nextgen.apimanagement.latest.Cache("cache",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const cache = new azure_nextgen.apimanagement.latest.Cache("cache", {
+const cache = new azure_nextgen.apimanagement.Cache("cache", {
     cacheId: "westindia",
     connectionString: "contoso5.redis.cache.windows.net,ssl=true,password=...",
     description: "Redis cache instances in West India",
@@ -682,7 +682,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:apimanagement/latest:Cache westindia /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/caches/westindia 
+$ pulumi import azure-nextgen:apimanagement:Cache westindia /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/caches/westindia 
 ```
 
 

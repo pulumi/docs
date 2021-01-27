@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.maps.Creator resource with examp
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 An Azure resource which represents Maps Creator product and provides ability to manage private location data.
+API Version: 2020-02-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var creator = new AzureNextGen.Maps.V20200201Preview.Creator("creator", new AzureNextGen.Maps.V20200201Preview.CreatorArgs
+        var creator = new AzureNextGen.Maps..Creator("creator", new AzureNextGen.Maps..CreatorArgs
         {
             AccountName = "myMapsAccount",
             CreatorName = "myCreator",
@@ -51,7 +52,7 @@ class MyStack : Stack
 package main
 
 import (
-	maps "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/maps/v20200201preview"
+	maps "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/maps"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -83,7 +84,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-creator = azure_nextgen.maps.v20200201preview.Creator("creator",
+creator = azure_nextgen.maps.Creator("creator",
     account_name="myMapsAccount",
     creator_name="myCreator",
     location="unitedstates",
@@ -102,7 +103,7 @@ creator = azure_nextgen.maps.v20200201preview.Creator("creator",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const creator = new azure_nextgen.maps.v20200201preview.Creator("creator", {
+const creator = new azure_nextgen.maps.Creator("creator", {
     accountName: "myMapsAccount",
     creatorName: "myCreator",
     location: "unitedstates",
@@ -534,7 +535,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#creatorpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Maps.<wbr>Outputs.<wbr>Creator<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#creatorpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Maps..<wbr>Outputs.<wbr>Creator<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The Creator resource properties.{{% /md %}}</dd>
     <dt class="property-"
@@ -752,7 +753,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:maps/v20200201preview:Creator myCreator /subscriptions/21a9967a-e8a9-4656-a70b-96ff1c4d05a0/resourceGroups/myResourceGroup/providers/Microsoft.Maps/accounts/myMapsAccount/creators/myCreator 
+$ pulumi import azure-nextgen:maps:Creator myCreator /subscriptions/21a9967a-e8a9-4656-a70b-96ff1c4d05a0/resourceGroups/myResourceGroup/providers/Microsoft.Maps/accounts/myMapsAccount/creators/myCreator 
 ```
 
 

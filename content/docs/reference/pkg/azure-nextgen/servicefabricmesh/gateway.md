@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.servicefabricmesh.Gateway resour
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 This type describes a gateway resource.
+API Version: 2018-09-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,45 +27,45 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var gateway = new AzureNextGen.ServiceFabricMesh.V20180901Preview.Gateway("gateway", new AzureNextGen.ServiceFabricMesh.V20180901Preview.GatewayArgs
+        var gateway = new AzureNextGen.ServiceFabricMesh..Gateway("gateway", new AzureNextGen.ServiceFabricMesh..GatewayArgs
         {
             Description = "Service Fabric Mesh sample gateway.",
-            DestinationNetwork = new AzureNextGen.ServiceFabricMesh.V20180901Preview.Inputs.NetworkRefArgs
+            DestinationNetwork = new AzureNextGen.ServiceFabricMesh..Inputs.NetworkRefArgs
             {
                 Name = "helloWorldNetwork",
             },
             GatewayResourceName = "sampleGateway",
             Http = 
             {
-                new AzureNextGen.ServiceFabricMesh.V20180901Preview.Inputs.HttpConfigArgs
+                new AzureNextGen.ServiceFabricMesh..Inputs.HttpConfigArgs
                 {
                     Hosts = 
                     {
-                        new AzureNextGen.ServiceFabricMesh.V20180901Preview.Inputs.HttpHostConfigArgs
+                        new AzureNextGen.ServiceFabricMesh..Inputs.HttpHostConfigArgs
                         {
                             Name = "contoso.com",
                             Routes = 
                             {
-                                new AzureNextGen.ServiceFabricMesh.V20180901Preview.Inputs.HttpRouteConfigArgs
+                                new AzureNextGen.ServiceFabricMesh..Inputs.HttpRouteConfigArgs
                                 {
-                                    Destination = new AzureNextGen.ServiceFabricMesh.V20180901Preview.Inputs.GatewayDestinationArgs
+                                    Destination = new AzureNextGen.ServiceFabricMesh..Inputs.GatewayDestinationArgs
                                     {
                                         ApplicationName = "httpHelloWorldApp",
                                         EndpointName = "indexHttpEndpoint",
                                         ServiceName = "indexService",
                                     },
-                                    Match = new AzureNextGen.ServiceFabricMesh.V20180901Preview.Inputs.HttpRouteMatchRuleArgs
+                                    Match = new AzureNextGen.ServiceFabricMesh..Inputs.HttpRouteMatchRuleArgs
                                     {
                                         Headers = 
                                         {
-                                            new AzureNextGen.ServiceFabricMesh.V20180901Preview.Inputs.HttpRouteMatchHeaderArgs
+                                            new AzureNextGen.ServiceFabricMesh..Inputs.HttpRouteMatchHeaderArgs
                                             {
                                                 Name = "accept",
                                                 Type = "exact",
                                                 Value = "application/json",
                                             },
                                         },
-                                        Path = new AzureNextGen.ServiceFabricMesh.V20180901Preview.Inputs.HttpRouteMatchPathArgs
+                                        Path = new AzureNextGen.ServiceFabricMesh..Inputs.HttpRouteMatchPathArgs
                                         {
                                             Rewrite = "/",
                                             Type = "prefix",
@@ -82,16 +83,16 @@ class MyStack : Stack
             },
             Location = "EastUS",
             ResourceGroupName = "sbz_demo",
-            SourceNetwork = new AzureNextGen.ServiceFabricMesh.V20180901Preview.Inputs.NetworkRefArgs
+            SourceNetwork = new AzureNextGen.ServiceFabricMesh..Inputs.NetworkRefArgs
             {
                 Name = "Open",
             },
             Tags = ,
             Tcp = 
             {
-                new AzureNextGen.ServiceFabricMesh.V20180901Preview.Inputs.TcpConfigArgs
+                new AzureNextGen.ServiceFabricMesh..Inputs.TcpConfigArgs
                 {
-                    Destination = new AzureNextGen.ServiceFabricMesh.V20180901Preview.Inputs.GatewayDestinationArgs
+                    Destination = new AzureNextGen.ServiceFabricMesh..Inputs.GatewayDestinationArgs
                     {
                         ApplicationName = "helloWorldApp",
                         EndpointName = "helloWorldListener",
@@ -116,7 +117,7 @@ class MyStack : Stack
 package main
 
 import (
-	servicefabricmesh "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/servicefabricmesh/v20180901preview"
+	servicefabricmesh "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/servicefabricmesh"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -198,28 +199,28 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-gateway = azure_nextgen.servicefabricmesh.v20180901preview.Gateway("gateway",
+gateway = azure_nextgen.servicefabricmesh.Gateway("gateway",
     description="Service Fabric Mesh sample gateway.",
-    destination_network=azure_nextgen.servicefabricmesh.v20180901preview.NetworkRefArgs(
+    destination_network=azure_nextgen.servicefabricmesh.NetworkRefArgs(
         name="helloWorldNetwork",
     ),
     gateway_resource_name="sampleGateway",
-    http=[azure_nextgen.servicefabricmesh.v20180901preview.HttpConfigArgs(
-        hosts=[azure_nextgen.servicefabricmesh.v20180901preview.HttpHostConfigArgs(
+    http=[azure_nextgen.servicefabricmesh.HttpConfigArgs(
+        hosts=[azure_nextgen.servicefabricmesh.HttpHostConfigArgs(
             name="contoso.com",
-            routes=[azure_nextgen.servicefabricmesh.v20180901preview.HttpRouteConfigArgs(
-                destination=azure_nextgen.servicefabricmesh.v20180901preview.GatewayDestinationArgs(
+            routes=[azure_nextgen.servicefabricmesh.HttpRouteConfigArgs(
+                destination=azure_nextgen.servicefabricmesh.GatewayDestinationArgs(
                     application_name="httpHelloWorldApp",
                     endpoint_name="indexHttpEndpoint",
                     service_name="indexService",
                 ),
-                match=azure_nextgen.servicefabricmesh.v20180901preview.HttpRouteMatchRuleArgs(
-                    headers=[azure_nextgen.servicefabricmesh.v20180901preview.HttpRouteMatchHeaderArgs(
+                match=azure_nextgen.servicefabricmesh.HttpRouteMatchRuleArgs(
+                    headers=[azure_nextgen.servicefabricmesh.HttpRouteMatchHeaderArgs(
                         name="accept",
                         type="exact",
                         value="application/json",
                     )],
-                    path=azure_nextgen.servicefabricmesh.v20180901preview.HttpRouteMatchPathArgs(
+                    path=azure_nextgen.servicefabricmesh.HttpRouteMatchPathArgs(
                         rewrite="/",
                         type="prefix",
                         value="/index",
@@ -233,12 +234,12 @@ gateway = azure_nextgen.servicefabricmesh.v20180901preview.Gateway("gateway",
     )],
     location="EastUS",
     resource_group_name="sbz_demo",
-    source_network=azure_nextgen.servicefabricmesh.v20180901preview.NetworkRefArgs(
+    source_network=azure_nextgen.servicefabricmesh.NetworkRefArgs(
         name="Open",
     ),
     tags={},
-    tcp=[azure_nextgen.servicefabricmesh.v20180901preview.TcpConfigArgs(
-        destination=azure_nextgen.servicefabricmesh.v20180901preview.GatewayDestinationArgs(
+    tcp=[azure_nextgen.servicefabricmesh.TcpConfigArgs(
+        destination=azure_nextgen.servicefabricmesh.GatewayDestinationArgs(
             application_name="helloWorldApp",
             endpoint_name="helloWorldListener",
             service_name="helloWorldService",
@@ -257,7 +258,7 @@ gateway = azure_nextgen.servicefabricmesh.v20180901preview.Gateway("gateway",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const gateway = new azure_nextgen.servicefabricmesh.v20180901preview.Gateway("gateway", {
+const gateway = new azure_nextgen.servicefabricmesh.Gateway("gateway", {
     description: "Service Fabric Mesh sample gateway.",
     destinationNetwork: {
         name: "helloWorldNetwork",
@@ -500,7 +501,7 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#destinationnetwork_csharp" style="color: inherit; text-decoration: inherit;">Destination<wbr>Network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkref">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Network<wbr>Ref<wbr>Args</a></span>
+        <span class="property-type"><a href="#networkref">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh..<wbr>Inputs.<wbr>Network<wbr>Ref<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Network that the Application is using.{{% /md %}}</dd>
     <dt class="property-required"
@@ -536,7 +537,7 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#sourcenetwork_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkref">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Network<wbr>Ref<wbr>Args</a></span>
+        <span class="property-type"><a href="#networkref">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh..<wbr>Inputs.<wbr>Network<wbr>Ref<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Network the gateway should listen on for requests.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -554,7 +555,7 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#http_csharp" style="color: inherit; text-decoration: inherit;">Http</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpconfig">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Http<wbr>Config<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#httpconfig">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh..<wbr>Inputs.<wbr>Http<wbr>Config<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Configuration for http connectivity for this gateway.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -572,7 +573,7 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#tcp_csharp" style="color: inherit; text-decoration: inherit;">Tcp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tcpconfig">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Tcp<wbr>Config<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#tcpconfig">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh..<wbr>Inputs.<wbr>Tcp<wbr>Config<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Configuration for tcp connectivity for this gateway.{{% /md %}}</dd>
 </dl>
@@ -1565,7 +1566,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hosts_csharp" style="color: inherit; text-decoration: inherit;">Hosts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httphostconfig">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Http<wbr>Host<wbr>Config<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#httphostconfig">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh..<wbr>Inputs.<wbr>Http<wbr>Host<wbr>Config<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}description for routing.{{% /md %}}</dd>
     <dt class="property-required"
@@ -1699,7 +1700,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hosts_csharp" style="color: inherit; text-decoration: inherit;">Hosts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httphostconfigresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Http<wbr>Host<wbr>Config<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#httphostconfigresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh..<wbr>Inputs.<wbr>Http<wbr>Host<wbr>Config<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}description for routing.{{% /md %}}</dd>
     <dt class="property-required"
@@ -1842,7 +1843,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#routes_csharp" style="color: inherit; text-decoration: inherit;">Routes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httprouteconfig">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Http<wbr>Route<wbr>Config<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#httprouteconfig">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh..<wbr>Inputs.<wbr>Http<wbr>Route<wbr>Config<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Route information to use for routing. Routes are processed in the order they are specified. Specify routes that are more specific before routes that can handle general cases.{{% /md %}}</dd>
 </dl>
@@ -1940,7 +1941,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#routes_csharp" style="color: inherit; text-decoration: inherit;">Routes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httprouteconfigresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Http<wbr>Route<wbr>Config<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#httprouteconfigresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh..<wbr>Inputs.<wbr>Http<wbr>Route<wbr>Config<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Route information to use for routing. Routes are processed in the order they are specified. Specify routes that are more specific before routes that can handle general cases.{{% /md %}}</dd>
 </dl>
@@ -2029,7 +2030,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#destination_csharp" style="color: inherit; text-decoration: inherit;">Destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gatewaydestination">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Gateway<wbr>Destination<wbr>Args</a></span>
+        <span class="property-type"><a href="#gatewaydestination">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh..<wbr>Inputs.<wbr>Gateway<wbr>Destination<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes destination endpoint for routing traffic.{{% /md %}}</dd>
     <dt class="property-required"
@@ -2038,7 +2039,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#match_csharp" style="color: inherit; text-decoration: inherit;">Match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httproutematchrule">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Http<wbr>Route<wbr>Match<wbr>Rule<wbr>Args</a></span>
+        <span class="property-type"><a href="#httproutematchrule">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh..<wbr>Inputs.<wbr>Http<wbr>Route<wbr>Match<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes a rule for http route matching.{{% /md %}}</dd>
     <dt class="property-required"
@@ -2163,7 +2164,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#destination_csharp" style="color: inherit; text-decoration: inherit;">Destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gatewaydestinationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Gateway<wbr>Destination<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#gatewaydestinationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh..<wbr>Inputs.<wbr>Gateway<wbr>Destination<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes destination endpoint for routing traffic.{{% /md %}}</dd>
     <dt class="property-required"
@@ -2172,7 +2173,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#match_csharp" style="color: inherit; text-decoration: inherit;">Match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httproutematchruleresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Http<wbr>Route<wbr>Match<wbr>Rule<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#httproutematchruleresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh..<wbr>Inputs.<wbr>Http<wbr>Route<wbr>Match<wbr>Rule<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes a rule for http route matching.{{% /md %}}</dd>
     <dt class="property-required"
@@ -2306,7 +2307,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#headermatchtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Header<wbr>Match<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#headermatchtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh..<wbr>Header<wbr>Match<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}how to match header value{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2565,7 +2566,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#pathmatchtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Path<wbr>Match<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#pathmatchtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh..<wbr>Path<wbr>Match<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}how to match value in the Uri{{% /md %}}</dd>
     <dt class="property-required"
@@ -2833,7 +2834,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httproutematchpath">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Http<wbr>Route<wbr>Match<wbr>Path<wbr>Args</a></span>
+        <span class="property-type"><a href="#httproutematchpath">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh..<wbr>Inputs.<wbr>Http<wbr>Route<wbr>Match<wbr>Path<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Path to match for routing.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2842,7 +2843,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#headers_csharp" style="color: inherit; text-decoration: inherit;">Headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httproutematchheader">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Http<wbr>Route<wbr>Match<wbr>Header<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#httproutematchheader">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh..<wbr>Inputs.<wbr>Http<wbr>Route<wbr>Match<wbr>Header<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}headers and their values to match in request.{{% /md %}}</dd>
 </dl>
@@ -2931,7 +2932,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httproutematchpathresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Http<wbr>Route<wbr>Match<wbr>Path<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#httproutematchpathresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh..<wbr>Inputs.<wbr>Http<wbr>Route<wbr>Match<wbr>Path<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Path to match for routing.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2940,7 +2941,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#headers_csharp" style="color: inherit; text-decoration: inherit;">Headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httproutematchheaderresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Http<wbr>Route<wbr>Match<wbr>Header<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#httproutematchheaderresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh..<wbr>Inputs.<wbr>Http<wbr>Route<wbr>Match<wbr>Header<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}headers and their values to match in request.{{% /md %}}</dd>
 </dl>
@@ -3029,7 +3030,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpointrefs_csharp" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Refs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointref">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Endpoint<wbr>Ref<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#endpointref">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh..<wbr>Inputs.<wbr>Endpoint<wbr>Ref<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of endpoints that are exposed on this network.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3127,7 +3128,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpointrefs_csharp" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Refs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointrefresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Endpoint<wbr>Ref<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#endpointrefresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh..<wbr>Inputs.<wbr>Endpoint<wbr>Ref<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of endpoints that are exposed on this network.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3255,7 +3256,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#destination_csharp" style="color: inherit; text-decoration: inherit;">Destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gatewaydestination">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Gateway<wbr>Destination<wbr>Args</a></span>
+        <span class="property-type"><a href="#gatewaydestination">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh..<wbr>Inputs.<wbr>Gateway<wbr>Destination<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes destination endpoint for routing traffic.{{% /md %}}</dd>
     <dt class="property-required"
@@ -3389,7 +3390,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#destination_csharp" style="color: inherit; text-decoration: inherit;">Destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gatewaydestinationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Gateway<wbr>Destination<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#gatewaydestinationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Fabric<wbr>Mesh..<wbr>Inputs.<wbr>Gateway<wbr>Destination<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes destination endpoint for routing traffic.{{% /md %}}</dd>
     <dt class="property-required"
@@ -3517,7 +3518,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:servicefabricmesh/v20180901preview:Gateway sampleGateway /subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/sbz_demo/providers/Microsoft.ServiceFabricMesh/gateways/sampleGateway 
+$ pulumi import azure-nextgen:servicefabricmesh:Gateway sampleGateway /subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/sbz_demo/providers/Microsoft.ServiceFabricMesh/gateways/sampleGateway 
 ```
 
 

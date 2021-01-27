@@ -215,7 +215,7 @@ The following output properties are available:
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventgridresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Digital<wbr>Twins.<wbr>Outputs.<wbr>Event<wbr>Grid<wbr>Response</a> | <a href="#eventhubresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Digital<wbr>Twins.<wbr>Outputs.<wbr>Event<wbr>Hub<wbr>Response</a> | <a href="#servicebusresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Digital<wbr>Twins.<wbr>Outputs.<wbr>Service<wbr>Bus<wbr>Response</a></span>
+        <span class="property-type"><a href="#eventgridresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Digital<wbr>Twins..<wbr>Outputs.<wbr>Event<wbr>Grid<wbr>Response</a> | <a href="#eventhubresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Digital<wbr>Twins..<wbr>Outputs.<wbr>Event<wbr>Hub<wbr>Response</a> | <a href="#servicebusresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Digital<wbr>Twins..<wbr>Outputs.<wbr>Service<wbr>Bus<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}DigitalTwinsInstance endpoint resource properties.{{% /md %}}</dd>
     <dt class="property-"

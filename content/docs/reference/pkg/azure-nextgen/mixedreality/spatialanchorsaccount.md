@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.mixedreality.SpatialAnchorsAccou
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 SpatialAnchorsAccount Response.
-Latest API Version: 2021-01-01.
+API Version: 2021-01-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var spatialAnchorsAccount = new AzureNextGen.MixedReality.Latest.SpatialAnchorsAccount("spatialAnchorsAccount", new AzureNextGen.MixedReality.Latest.SpatialAnchorsAccountArgs
+        var spatialAnchorsAccount = new AzureNextGen.MixedReality..SpatialAnchorsAccount("spatialAnchorsAccount", new AzureNextGen.MixedReality..SpatialAnchorsAccountArgs
         {
             AccountName = "MyAccount",
             Location = "eastus2euap",
@@ -47,7 +47,7 @@ class MyStack : Stack
 package main
 
 import (
-	mixedreality "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/mixedreality/latest"
+	mixedreality "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/mixedreality"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -75,7 +75,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-spatial_anchors_account = azure_nextgen.mixedreality.latest.SpatialAnchorsAccount("spatialAnchorsAccount",
+spatial_anchors_account = azure_nextgen.mixedreality.SpatialAnchorsAccount("spatialAnchorsAccount",
     account_name="MyAccount",
     location="eastus2euap",
     resource_group_name="MyResourceGroup")
@@ -90,7 +90,7 @@ spatial_anchors_account = azure_nextgen.mixedreality.latest.SpatialAnchorsAccoun
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const spatialAnchorsAccount = new azure_nextgen.mixedreality.latest.SpatialAnchorsAccount("spatialAnchorsAccount", {
+const spatialAnchorsAccount = new azure_nextgen.mixedreality.SpatialAnchorsAccount("spatialAnchorsAccount", {
     accountName: "MyAccount",
     location: "eastus2euap",
     resourceGroupName: "MyResourceGroup",
@@ -316,7 +316,7 @@ The SpatialAnchorsAccount resource accepts the following [input]({{< relref "/do
 <a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identity">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Mixed<wbr>Reality.<wbr>Inputs.<wbr>Identity<wbr>Args</a></span>
+        <span class="property-type"><a href="#identity">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Mixed<wbr>Reality..<wbr>Inputs.<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The identity associated with this account{{% /md %}}</dd>
     <dt class="property-optional"
@@ -325,7 +325,7 @@ The SpatialAnchorsAccount resource accepts the following [input]({{< relref "/do
 <a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sku">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Mixed<wbr>Reality.<wbr>Inputs.<wbr>Sku<wbr>Args</a></span>
+        <span class="property-type"><a href="#sku">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Mixed<wbr>Reality..<wbr>Inputs.<wbr>Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The kind of account, if supported{{% /md %}}</dd>
     <dt class="property-optional"
@@ -334,7 +334,7 @@ The SpatialAnchorsAccount resource accepts the following [input]({{< relref "/do
 <a href="#plan_csharp" style="color: inherit; text-decoration: inherit;">Plan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identity">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Mixed<wbr>Reality.<wbr>Inputs.<wbr>Identity<wbr>Args</a></span>
+        <span class="property-type"><a href="#identity">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Mixed<wbr>Reality..<wbr>Inputs.<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The plan associated with this account{{% /md %}}</dd>
     <dt class="property-optional"
@@ -343,7 +343,7 @@ The SpatialAnchorsAccount resource accepts the following [input]({{< relref "/do
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sku">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Mixed<wbr>Reality.<wbr>Inputs.<wbr>Sku<wbr>Args</a></span>
+        <span class="property-type"><a href="#sku">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Mixed<wbr>Reality..<wbr>Inputs.<wbr>Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The sku associated with this account{{% /md %}}</dd>
     <dt class="property-optional"
@@ -644,7 +644,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#systemdata_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Mixed<wbr>Reality.<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
+        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Mixed<wbr>Reality..<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}System metadata for this account{{% /md %}}</dd>
     <dt class="property-"
@@ -860,7 +860,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidentitytype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Mixed<wbr>Reality.<wbr>Resource<wbr>Identity<wbr>Type</a></span>
+        <span class="property-type"><a href="#resourceidentitytype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Mixed<wbr>Reality..<wbr>Resource<wbr>Identity<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The identity type.{{% /md %}}</dd>
 </dl>
@@ -1122,7 +1122,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tier_csharp" style="color: inherit; text-decoration: inherit;">Tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skutier">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Mixed<wbr>Reality.<wbr>Sku<wbr>Tier</a></span>
+        <span class="property-type"><a href="#skutier">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Mixed<wbr>Reality..<wbr>Sku<wbr>Tier</a></span>
     </dt>
     <dd>{{% md %}}This field is required to be implemented by the Resource Provider if the service has more than one tier, but is not required on a PUT.{{% /md %}}</dd>
 </dl>
@@ -1788,7 +1788,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:mixedreality/latest:SpatialAnchorsAccount MyAccount /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/MyResourceGroup/providers/Microsoft.MixedReality/spatialAnchorsAccounts/MyAccount 
+$ pulumi import azure-nextgen:mixedreality:SpatialAnchorsAccount MyAccount /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/MyResourceGroup/providers/Microsoft.MixedReality/spatialAnchorsAccounts/MyAccount 
 ```
 
 

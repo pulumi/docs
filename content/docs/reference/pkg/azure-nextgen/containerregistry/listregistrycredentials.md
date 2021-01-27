@@ -159,7 +159,7 @@ The following output properties are available:
 <a href="#passwords_csharp" style="color: inherit; text-decoration: inherit;">Passwords</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#registrypasswordresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry.<wbr>Outputs.<wbr>Registry<wbr>Password<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#registrypasswordresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry..<wbr>Outputs.<wbr>Registry<wbr>Password<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of passwords for a container registry.{{% /md %}}</dd>
     <dt class="property-"

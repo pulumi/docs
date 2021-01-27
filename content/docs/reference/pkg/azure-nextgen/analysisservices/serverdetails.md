@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.analysisservices.ServerDetails r
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Represents an instance of an Analysis Services resource.
-Latest API Version: 2017-08-01.
+API Version: 2017-08-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,9 +27,9 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var serverDetails = new AzureNextGen.AnalysisServices.Latest.ServerDetails("serverDetails", new AzureNextGen.AnalysisServices.Latest.ServerDetailsArgs
+        var serverDetails = new AzureNextGen.AnalysisServices..ServerDetails("serverDetails", new AzureNextGen.AnalysisServices..ServerDetailsArgs
         {
-            AsAdministrators = new AzureNextGen.AnalysisServices.Latest.Inputs.ServerAdministratorsArgs
+            AsAdministrators = new AzureNextGen.AnalysisServices..Inputs.ServerAdministratorsArgs
             {
                 Members = 
                 {
@@ -40,7 +40,7 @@ class MyStack : Stack
             Location = "West US",
             ResourceGroupName = "TestRG",
             ServerName = "azsdktest",
-            Sku = new AzureNextGen.AnalysisServices.Latest.Inputs.ResourceSkuArgs
+            Sku = new AzureNextGen.AnalysisServices..Inputs.ResourceSkuArgs
             {
                 Capacity = 1,
                 Name = "S1",
@@ -65,7 +65,7 @@ class MyStack : Stack
 package main
 
 import (
-	analysisservices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/analysisservices/latest"
+	analysisservices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/analysisservices"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -107,8 +107,8 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-server_details = azure_nextgen.analysisservices.latest.ServerDetails("serverDetails",
-    as_administrators=azure_nextgen.analysisservices.latest.ServerAdministratorsArgs(
+server_details = azure_nextgen.analysisservices.ServerDetails("serverDetails",
+    as_administrators=azure_nextgen.analysisservices.ServerAdministratorsArgs(
         members=[
             "azsdktest@microsoft.com",
             "azsdktest2@microsoft.com",
@@ -117,7 +117,7 @@ server_details = azure_nextgen.analysisservices.latest.ServerDetails("serverDeta
     location="West US",
     resource_group_name="TestRG",
     server_name="azsdktest",
-    sku=azure_nextgen.analysisservices.latest.ResourceSkuArgs(
+    sku=azure_nextgen.analysisservices.ResourceSkuArgs(
         capacity=1,
         name="S1",
         tier="Standard",
@@ -136,7 +136,7 @@ server_details = azure_nextgen.analysisservices.latest.ServerDetails("serverDeta
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const serverDetails = new azure_nextgen.analysisservices.latest.ServerDetails("serverDetails", {
+const serverDetails = new azure_nextgen.analysisservices.ServerDetails("serverDetails", {
     asAdministrators: {
         members: [
             "azsdktest@microsoft.com",
@@ -376,7 +376,7 @@ The ServerDetails resource accepts the following [input]({{< relref "/docs/intro
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcesku">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Analysis<wbr>Services.<wbr>Inputs.<wbr>Resource<wbr>Sku<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcesku">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Analysis<wbr>Services..<wbr>Inputs.<wbr>Resource<wbr>Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The SKU of the Analysis Services resource.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -385,7 +385,7 @@ The ServerDetails resource accepts the following [input]({{< relref "/docs/intro
 <a href="#asadministrators_csharp" style="color: inherit; text-decoration: inherit;">As<wbr>Administrators</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serveradministrators">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Analysis<wbr>Services.<wbr>Inputs.<wbr>Server<wbr>Administrators<wbr>Args</a></span>
+        <span class="property-type"><a href="#serveradministrators">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Analysis<wbr>Services..<wbr>Inputs.<wbr>Server<wbr>Administrators<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A collection of AS server administrators{{% /md %}}</dd>
     <dt class="property-optional"
@@ -403,7 +403,7 @@ The ServerDetails resource accepts the following [input]({{< relref "/docs/intro
 <a href="#gatewaydetails_csharp" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gatewaydetails">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Analysis<wbr>Services.<wbr>Inputs.<wbr>Gateway<wbr>Details<wbr>Args</a></span>
+        <span class="property-type"><a href="#gatewaydetails">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Analysis<wbr>Services..<wbr>Inputs.<wbr>Gateway<wbr>Details<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The gateway details configured for the AS server.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -412,7 +412,7 @@ The ServerDetails resource accepts the following [input]({{< relref "/docs/intro
 <a href="#ipv4firewallsettings_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>V4Firewall<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipv4firewallsettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Analysis<wbr>Services.<wbr>Inputs.<wbr>IPv4Firewall<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#ipv4firewallsettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Analysis<wbr>Services..<wbr>Inputs.<wbr>IPv4Firewall<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The firewall settings for the AS server.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -430,7 +430,7 @@ The ServerDetails resource accepts the following [input]({{< relref "/docs/intro
 <a href="#querypoolconnectionmode_csharp" style="color: inherit; text-decoration: inherit;">Querypool<wbr>Connection<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionmode">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Analysis<wbr>Services.<wbr>Connection<wbr>Mode</a></span>
+        <span class="property-type"><a href="#connectionmode">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Analysis<wbr>Services..<wbr>Connection<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}How the read-write server's participation in the query pool is controlled.<br/>It can have the following values: <ul><li>readOnly - indicates that the read-write server is intended not to participate in query operations</li><li>all - indicates that the read-write server can participate in query operations</li></ul>Specifying readOnly when capacity is 1 results in error.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1575,7 +1575,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#firewallrules_csharp" style="color: inherit; text-decoration: inherit;">Firewall<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipv4firewallrule">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Analysis<wbr>Services.<wbr>Inputs.<wbr>IPv4Firewall<wbr>Rule<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#ipv4firewallrule">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Analysis<wbr>Services..<wbr>Inputs.<wbr>IPv4Firewall<wbr>Rule<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}An array of firewall rules.{{% /md %}}</dd>
 </dl>
@@ -1673,7 +1673,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#firewallrules_csharp" style="color: inherit; text-decoration: inherit;">Firewall<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipv4firewallruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Analysis<wbr>Services.<wbr>Inputs.<wbr>IPv4Firewall<wbr>Rule<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#ipv4firewallruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Analysis<wbr>Services..<wbr>Inputs.<wbr>IPv4Firewall<wbr>Rule<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}An array of firewall rules.{{% /md %}}</dd>
 </dl>
@@ -1780,7 +1780,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tier_csharp" style="color: inherit; text-decoration: inherit;">Tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#skutier">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Analysis<wbr>Services.<wbr>Sku<wbr>Tier</a></span>
+        <span class="property-type">string | <a href="#skutier">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Analysis<wbr>Services..<wbr>Sku<wbr>Tier</a></span>
     </dt>
     <dd>{{% md %}}The name of the Azure pricing tier to which the SKU applies.{{% /md %}}</dd>
 </dl>
@@ -2194,7 +2194,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:analysisservices/latest:ServerDetails azsdktest /subscriptions/613192d7-503f-477a-9cfe-4efc3ee2bd60/resourceGroups/TestRG/providers/Microsoft.AnalysisServices/servers/azsdktest 
+$ pulumi import azure-nextgen:analysisservices:ServerDetails azsdktest /subscriptions/613192d7-503f-477a-9cfe-4efc3ee2bd60/resourceGroups/TestRG/providers/Microsoft.AnalysisServices/servers/azsdktest 
 ```
 
 

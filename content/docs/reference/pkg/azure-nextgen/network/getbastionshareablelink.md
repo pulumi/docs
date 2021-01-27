@@ -72,7 +72,7 @@ The following arguments are supported:
 <a href="#vms_csharp" style="color: inherit; text-decoration: inherit;">Vms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bastionshareablelink">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Bastion<wbr>Shareable<wbr>Link<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#bastionshareablelink">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Bastion<wbr>Shareable<wbr>Link<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of VM references.{{% /md %}}</dd>
 </dl>
@@ -204,7 +204,7 @@ The following output properties are available:
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bastionshareablelinkresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Outputs.<wbr>Bastion<wbr>Shareable<wbr>Link<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#bastionshareablelinkresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Outputs.<wbr>Bastion<wbr>Shareable<wbr>Link<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of Bastion Shareable Links for the request.{{% /md %}}</dd>
 </dl>
@@ -304,7 +304,7 @@ The following output properties are available:
 <a href="#vm_csharp" style="color: inherit; text-decoration: inherit;">Vm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vm">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>VMArgs</a></span>
+        <span class="property-type"><a href="#vm">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>VMArgs</a></span>
     </dt>
     <dd>{{% md %}}Reference of the virtual machine resource.{{% /md %}}</dd>
 </dl>
@@ -398,7 +398,7 @@ The following output properties are available:
 <a href="#vm_csharp" style="color: inherit; text-decoration: inherit;">Vm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vmresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>VMResponse<wbr>Args</a></span>
+        <span class="property-type"><a href="#vmresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>VMResponse<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Reference of the virtual machine resource.{{% /md %}}</dd>
 </dl>

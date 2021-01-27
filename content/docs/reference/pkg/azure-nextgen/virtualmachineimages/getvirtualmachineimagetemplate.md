@@ -179,7 +179,7 @@ The following output properties are available:
 <a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imagetemplateidentityresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Virtual<wbr>Machine<wbr>Images.<wbr>Outputs.<wbr>Image<wbr>Template<wbr>Identity<wbr>Response</a></span>
+        <span class="property-type"><a href="#imagetemplateidentityresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Virtual<wbr>Machine<wbr>Images..<wbr>Outputs.<wbr>Image<wbr>Template<wbr>Identity<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The identity of the image template, if configured.{{% /md %}}</dd>
     <dt class="property-"
@@ -188,7 +188,7 @@ The following output properties are available:
 <a href="#lastrunstatus_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Run<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imagetemplatelastrunstatusresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Virtual<wbr>Machine<wbr>Images.<wbr>Outputs.<wbr>Image<wbr>Template<wbr>Last<wbr>Run<wbr>Status<wbr>Response</a></span>
+        <span class="property-type"><a href="#imagetemplatelastrunstatusresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Virtual<wbr>Machine<wbr>Images..<wbr>Outputs.<wbr>Image<wbr>Template<wbr>Last<wbr>Run<wbr>Status<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}State of 'run' that is currently executing or was last executed.{{% /md %}}</dd>
     <dt class="property-"
@@ -215,7 +215,7 @@ The following output properties are available:
 <a href="#provisioningerror_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>Error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#provisioningerrorresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Virtual<wbr>Machine<wbr>Images.<wbr>Outputs.<wbr>Provisioning<wbr>Error<wbr>Response</a></span>
+        <span class="property-type"><a href="#provisioningerrorresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Virtual<wbr>Machine<wbr>Images..<wbr>Outputs.<wbr>Provisioning<wbr>Error<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Provisioning error, if any{{% /md %}}</dd>
     <dt class="property-"
@@ -233,7 +233,7 @@ The following output properties are available:
 <a href="#source_csharp" style="color: inherit; text-decoration: inherit;">Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imagetemplatemanagedimagesourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Virtual<wbr>Machine<wbr>Images.<wbr>Outputs.<wbr>Image<wbr>Template<wbr>Managed<wbr>Image<wbr>Source<wbr>Response</a> | <a href="#imagetemplateplatformimagesourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Virtual<wbr>Machine<wbr>Images.<wbr>Outputs.<wbr>Image<wbr>Template<wbr>Platform<wbr>Image<wbr>Source<wbr>Response</a> | <a href="#imagetemplatesharedimageversionsourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Virtual<wbr>Machine<wbr>Images.<wbr>Outputs.<wbr>Image<wbr>Template<wbr>Shared<wbr>Image<wbr>Version<wbr>Source<wbr>Response</a></span>
+        <span class="property-type"><a href="#imagetemplatemanagedimagesourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Virtual<wbr>Machine<wbr>Images..<wbr>Outputs.<wbr>Image<wbr>Template<wbr>Managed<wbr>Image<wbr>Source<wbr>Response</a> | <a href="#imagetemplateplatformimagesourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Virtual<wbr>Machine<wbr>Images..<wbr>Outputs.<wbr>Image<wbr>Template<wbr>Platform<wbr>Image<wbr>Source<wbr>Response</a> | <a href="#imagetemplatesharedimageversionsourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Virtual<wbr>Machine<wbr>Images..<wbr>Outputs.<wbr>Image<wbr>Template<wbr>Shared<wbr>Image<wbr>Version<wbr>Source<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the properties used to describe the source image.{{% /md %}}</dd>
     <dt class="property-"
@@ -278,7 +278,7 @@ The following output properties are available:
 <a href="#vmprofile_csharp" style="color: inherit; text-decoration: inherit;">Vm<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imagetemplatevmprofileresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Virtual<wbr>Machine<wbr>Images.<wbr>Outputs.<wbr>Image<wbr>Template<wbr>Vm<wbr>Profile<wbr>Response</a></span>
+        <span class="property-type"><a href="#imagetemplatevmprofileresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Virtual<wbr>Machine<wbr>Images..<wbr>Outputs.<wbr>Image<wbr>Template<wbr>Vm<wbr>Profile<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes how virtual machine is set up to build images{{% /md %}}</dd>
 </dl>
@@ -886,7 +886,7 @@ The following output properties are available:
 <a href="#userassignedidentities_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Virtual<wbr>Machine<wbr>Images.<wbr>Inputs.<wbr>Image<wbr>Template<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Virtual<wbr>Machine<wbr>Images..<wbr>Inputs.<wbr>Image<wbr>Template<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}The list of user identities associated with the image template. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd>
 </dl>
@@ -1545,7 +1545,7 @@ The following output properties are available:
 <a href="#planinfo_csharp" style="color: inherit; text-decoration: inherit;">Plan<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#platformimagepurchaseplanresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Virtual<wbr>Machine<wbr>Images.<wbr>Inputs.<wbr>Platform<wbr>Image<wbr>Purchase<wbr>Plan<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#platformimagepurchaseplanresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Virtual<wbr>Machine<wbr>Images..<wbr>Inputs.<wbr>Platform<wbr>Image<wbr>Purchase<wbr>Plan<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional configuration of purchase plan for platform image.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2815,7 +2815,7 @@ The following output properties are available:
 <a href="#vnetconfig_csharp" style="color: inherit; text-decoration: inherit;">Vnet<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkconfigresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Virtual<wbr>Machine<wbr>Images.<wbr>Inputs.<wbr>Virtual<wbr>Network<wbr>Config<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnetworkconfigresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Virtual<wbr>Machine<wbr>Images..<wbr>Inputs.<wbr>Virtual<wbr>Network<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional configuration of the virtual network to use to deploy the build virtual machine in. Omit if no specific virtual network needs to be used.{{% /md %}}</dd>
 </dl>

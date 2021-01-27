@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.network.CustomIPPrefix resource 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Custom IP prefix resource.
-Latest API Version: 2020-08-01.
+API Version: 2020-08-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var customIPPrefix = new AzureNextGen.Network.Latest.CustomIPPrefix("customIPPrefix", new AzureNextGen.Network.Latest.CustomIPPrefixArgs
+        var customIPPrefix = new AzureNextGen.Network..CustomIPPrefix("customIPPrefix", new AzureNextGen.Network..CustomIPPrefixArgs
         {
             Cidr = "0.0.0.0/24",
             CustomIpPrefixName = "test-customipprefix",
@@ -48,7 +48,7 @@ class MyStack : Stack
 package main
 
 import (
-	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network/latest"
+	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -77,7 +77,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-custom_ip_prefix = azure_nextgen.network.latest.CustomIPPrefix("customIPPrefix",
+custom_ip_prefix = azure_nextgen.network.CustomIPPrefix("customIPPrefix",
     cidr="0.0.0.0/24",
     custom_ip_prefix_name="test-customipprefix",
     location="westus",
@@ -93,7 +93,7 @@ custom_ip_prefix = azure_nextgen.network.latest.CustomIPPrefix("customIPPrefix",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const customIPPrefix = new azure_nextgen.network.latest.CustomIPPrefix("customIPPrefix", {
+const customIPPrefix = new azure_nextgen.network.CustomIPPrefix("customIPPrefix", {
     cidr: "0.0.0.0/24",
     customIpPrefixName: "test-customipprefix",
     location: "westus",
@@ -320,7 +320,7 @@ The CustomIPPrefix resource accepts the following [input]({{< relref "/docs/intr
 <a href="#commissionedstate_csharp" style="color: inherit; text-decoration: inherit;">Commissioned<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#commissionedstate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Commissioned<wbr>State</a></span>
+        <span class="property-type">string | <a href="#commissionedstate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Commissioned<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}The commissioned state of the Custom IP Prefix.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -329,7 +329,7 @@ The CustomIPPrefix resource accepts the following [input]({{< relref "/docs/intr
 <a href="#extendedlocation_csharp" style="color: inherit; text-decoration: inherit;">Extended<wbr>Location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#extendedlocation">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Extended<wbr>Location<wbr>Args</a></span>
+        <span class="property-type"><a href="#extendedlocation">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Extended<wbr>Location<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The extended location of the custom IP prefix.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -684,7 +684,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publicipprefixes_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Ip<wbr>Prefixes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Outputs.<wbr>Sub<wbr>Resource<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#subresourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Outputs.<wbr>Sub<wbr>Resource<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of all referenced PublicIpPrefixes.{{% /md %}}</dd>
     <dt class="property-"
@@ -1015,7 +1015,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#extendedlocationtypes">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Extended<wbr>Location<wbr>Types</a></span>
+        <span class="property-type">string | <a href="#extendedlocationtypes">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Extended<wbr>Location<wbr>Types</a></span>
     </dt>
     <dd>{{% md %}}The type of the extended location.{{% /md %}}</dd>
 </dl>
@@ -1288,7 +1288,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:network/latest:CustomIPPrefix test-customipprefix /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/customIpPrefixes/test-customipprefix 
+$ pulumi import azure-nextgen:network:CustomIPPrefix test-customipprefix /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/customIpPrefixes/test-customipprefix 
 ```
 
 

@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.apimanagement.AuthorizationServe
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 External OAuth authorization server settings.
-Latest API Version: 2019-12-01.
+API Version: 2019-12-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var authorizationServer = new AzureNextGen.ApiManagement.Latest.AuthorizationServer("authorizationServer", new AzureNextGen.ApiManagement.Latest.AuthorizationServerArgs
+        var authorizationServer = new AzureNextGen.ApiManagement..AuthorizationServer("authorizationServer", new AzureNextGen.ApiManagement..AuthorizationServerArgs
         {
             AuthorizationEndpoint = "https://www.contoso.com/oauth2/auth",
             AuthorizationMethods = 
@@ -75,7 +75,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-authorization_server = azure_nextgen.apimanagement.latest.AuthorizationServer("authorizationServer",
+authorization_server = azure_nextgen.apimanagement.AuthorizationServer("authorizationServer",
     authorization_endpoint="https://www.contoso.com/oauth2/auth",
     authorization_methods=["GET"],
     authsid="newauthServer",
@@ -107,7 +107,7 @@ authorization_server = azure_nextgen.apimanagement.latest.AuthorizationServer("a
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const authorizationServer = new azure_nextgen.apimanagement.latest.AuthorizationServer("authorizationServer", {
+const authorizationServer = new azure_nextgen.apimanagement.AuthorizationServer("authorizationServer", {
     authorizationEndpoint: "https://www.contoso.com/oauth2/auth",
     authorizationMethods: ["GET"],
     authsid: "newauthServer",
@@ -368,7 +368,7 @@ The AuthorizationServer resource accepts the following [input]({{< relref "/docs
 <a href="#granttypes_csharp" style="color: inherit; text-decoration: inherit;">Grant<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Union&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management.<wbr>Grant<wbr>Type&gt;&gt;</span>
+        <span class="property-type">List&lt;Union&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management..<wbr>Grant<wbr>Type&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}Form of an authorization grant, which the client uses to request the access token.{{% /md %}}</dd>
     <dt class="property-required"
@@ -395,7 +395,7 @@ The AuthorizationServer resource accepts the following [input]({{< relref "/docs
 <a href="#authorizationmethods_csharp" style="color: inherit; text-decoration: inherit;">Authorization<wbr>Methods</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authorizationmethod">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management.<wbr>Authorization<wbr>Method&gt;</a></span>
+        <span class="property-type"><a href="#authorizationmethod">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management..<wbr>Authorization<wbr>Method&gt;</a></span>
     </dt>
     <dd>{{% md %}}HTTP verbs supported by the authorization endpoint. GET must be always present. POST is optional.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -404,7 +404,7 @@ The AuthorizationServer resource accepts the following [input]({{< relref "/docs
 <a href="#bearertokensendingmethods_csharp" style="color: inherit; text-decoration: inherit;">Bearer<wbr>Token<wbr>Sending<wbr>Methods</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Union&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management.<wbr>Bearer<wbr>Token<wbr>Sending<wbr>Method&gt;&gt;</span>
+        <span class="property-type">List&lt;Union&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management..<wbr>Bearer<wbr>Token<wbr>Sending<wbr>Method&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}Specifies the mechanism by which access token is passed to the API. {{% /md %}}</dd>
     <dt class="property-optional"
@@ -413,7 +413,7 @@ The AuthorizationServer resource accepts the following [input]({{< relref "/docs
 <a href="#clientauthenticationmethod_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Authentication<wbr>Method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Union&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management.<wbr>Client<wbr>Authentication<wbr>Method&gt;&gt;</span>
+        <span class="property-type">List&lt;Union&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management..<wbr>Client<wbr>Authentication<wbr>Method&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}Method of authentication supported by the token endpoint of this authorization server. Possible values are Basic and/or Body. When Body is specified, client credentials and other parameters are passed within the request body in the application/x-www-form-urlencoded format.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -476,7 +476,7 @@ The AuthorizationServer resource accepts the following [input]({{< relref "/docs
 <a href="#tokenbodyparameters_csharp" style="color: inherit; text-decoration: inherit;">Token<wbr>Body<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tokenbodyparametercontract">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Token<wbr>Body<wbr>Parameter<wbr>Contract<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#tokenbodyparametercontract">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management..<wbr>Inputs.<wbr>Token<wbr>Body<wbr>Parameter<wbr>Contract<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Additional parameters required by the token endpoint of this authorization server represented as an array of JSON objects with name and value string properties, i.e. {"name" : "name value", "value": "a value"}.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1588,7 +1588,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:apimanagement/latest:AuthorizationServer newauthServer /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/authorizationServers/newauthServer 
+$ pulumi import azure-nextgen:apimanagement:AuthorizationServer newauthServer /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/authorizationServers/newauthServer 
 ```
 
 

@@ -224,7 +224,7 @@ The following output properties are available:
 <a href="#systemdata_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Cache.<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
+        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Cache..<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The system meta data relating to this resource.{{% /md %}}</dd>
     <dt class="property-"
@@ -251,7 +251,7 @@ The following output properties are available:
 <a href="#clfs_csharp" style="color: inherit; text-decoration: inherit;">Clfs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clfstargetresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Cache.<wbr>Outputs.<wbr>Clfs<wbr>Target<wbr>Response</a></span>
+        <span class="property-type"><a href="#clfstargetresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Cache..<wbr>Outputs.<wbr>Clfs<wbr>Target<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Properties when targetType is clfs.{{% /md %}}</dd>
     <dt class="property-"
@@ -260,7 +260,7 @@ The following output properties are available:
 <a href="#junctions_csharp" style="color: inherit; text-decoration: inherit;">Junctions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#namespacejunctionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Cache.<wbr>Outputs.<wbr>Namespace<wbr>Junction<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#namespacejunctionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Cache..<wbr>Outputs.<wbr>Namespace<wbr>Junction<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of Cache namespace junctions to target for namespace associations.{{% /md %}}</dd>
     <dt class="property-"
@@ -269,7 +269,7 @@ The following output properties are available:
 <a href="#nfs3_csharp" style="color: inherit; text-decoration: inherit;">Nfs3</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nfs3targetresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Cache.<wbr>Outputs.<wbr>Nfs3Target<wbr>Response</a></span>
+        <span class="property-type"><a href="#nfs3targetresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Cache..<wbr>Outputs.<wbr>Nfs3Target<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Properties when targetType is nfs3.{{% /md %}}</dd>
     <dt class="property-"
@@ -287,7 +287,7 @@ The following output properties are available:
 <a href="#unknown_csharp" style="color: inherit; text-decoration: inherit;">Unknown</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#unknowntargetresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Cache.<wbr>Outputs.<wbr>Unknown<wbr>Target<wbr>Response</a></span>
+        <span class="property-type"><a href="#unknowntargetresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Cache..<wbr>Outputs.<wbr>Unknown<wbr>Target<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Properties when targetType is unknown.{{% /md %}}</dd>
 </dl>

@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.appconfiguration.KeyValue resour
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The key-value resource along with all resource properties.
+API Version: 2020-07-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var keyValue = new AzureNextGen.AppConfiguration.V20200701Preview.KeyValue("keyValue", new AzureNextGen.AppConfiguration.V20200701Preview.KeyValueArgs
+        var keyValue = new AzureNextGen.AppConfiguration..KeyValue("keyValue", new AzureNextGen.AppConfiguration..KeyValueArgs
         {
             ConfigStoreName = "contoso",
             KeyValueName = "myKey$myLabel",
@@ -54,7 +55,7 @@ package main
 import (
 	"fmt"
 
-	appconfiguration "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/appconfiguration/v20200701preview"
+	appconfiguration "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/appconfiguration"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -87,7 +88,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-key_value = azure_nextgen.appconfiguration.v20200701preview.KeyValue("keyValue",
+key_value = azure_nextgen.appconfiguration.KeyValue("keyValue",
     config_store_name="contoso",
     key_value_name="myKey$myLabel",
     resource_group_name="myResourceGroup",
@@ -107,7 +108,7 @@ key_value = azure_nextgen.appconfiguration.v20200701preview.KeyValue("keyValue",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const keyValue = new azure_nextgen.appconfiguration.v20200701preview.KeyValue("keyValue", {
+const keyValue = new azure_nextgen.appconfiguration.KeyValue("keyValue", {
     configStoreName: "contoso",
     keyValueName: `myKey$myLabel`,
     resourceGroupName: "myResourceGroup",
@@ -888,7 +889,7 @@ A locked key-value may not be modified until it is unlocked.{{% /md %}}</dd>
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:appconfiguration/v20200701preview:KeyValue myKey$myLabel /subscriptions/c80fb759-c965-4c6a-9110-9b2b2d038882/resourceGroups/myResourceGroup/providers/Microsoft.AppConfiguration/configurationStores/contoso/keyValues/myKey$myLabel 
+$ pulumi import azure-nextgen:appconfiguration:KeyValue myKey$myLabel /subscriptions/c80fb759-c965-4c6a-9110-9b2b2d038882/resourceGroups/myResourceGroup/providers/Microsoft.AppConfiguration/configurationStores/contoso/keyValues/myKey$myLabel 
 ```
 
 

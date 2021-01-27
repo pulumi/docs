@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.sql.ManagedInstanceKey resource 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 A managed instance key.
+API Version: 2020-08-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var managedInstanceKey = new AzureNextGen.Sql.V20200801Preview.ManagedInstanceKey("managedInstanceKey", new AzureNextGen.Sql.V20200801Preview.ManagedInstanceKeyArgs
+        var managedInstanceKey = new AzureNextGen.Sql..ManagedInstanceKey("managedInstanceKey", new AzureNextGen.Sql..ManagedInstanceKeyArgs
         {
             KeyName = "someVault_someKey_01234567890123456789012345678901",
             ManagedInstanceName = "sqlcrudtest-4645",
@@ -48,7 +49,7 @@ class MyStack : Stack
 package main
 
 import (
-	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql/v20200801preview"
+	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -78,7 +79,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-managed_instance_key = azure_nextgen.sql.v20200801preview.ManagedInstanceKey("managedInstanceKey",
+managed_instance_key = azure_nextgen.sql.ManagedInstanceKey("managedInstanceKey",
     key_name="someVault_someKey_01234567890123456789012345678901",
     managed_instance_name="sqlcrudtest-4645",
     resource_group_name="sqlcrudtest-7398",
@@ -95,7 +96,7 @@ managed_instance_key = azure_nextgen.sql.v20200801preview.ManagedInstanceKey("ma
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const managedInstanceKey = new azure_nextgen.sql.v20200801preview.ManagedInstanceKey("managedInstanceKey", {
+const managedInstanceKey = new azure_nextgen.sql.ManagedInstanceKey("managedInstanceKey", {
     keyName: "someVault_someKey_01234567890123456789012345678901",
     managedInstanceName: "sqlcrudtest-4645",
     resourceGroupName: "sqlcrudtest-7398",
@@ -323,7 +324,7 @@ The ManagedInstanceKey resource accepts the following [input]({{< relref "/docs/
 <a href="#serverkeytype_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>Key<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#serverkeytype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql.<wbr>Server<wbr>Key<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#serverkeytype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql..<wbr>Server<wbr>Key<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The key type like 'ServiceManaged', 'AzureKeyVault'.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -791,7 +792,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:sql/v20200801preview:ManagedInstanceKey sqlcrudtest-4645 /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/sqlcrudtest-7398/providers/Microsoft.Sql/managedInstances/sqlcrudtest-4645/keys/someVault_someKey_01234567890123456789012345678901 
+$ pulumi import azure-nextgen:sql:ManagedInstanceKey sqlcrudtest-4645 /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/sqlcrudtest-7398/providers/Microsoft.Sql/managedInstances/sqlcrudtest-4645/keys/someVault_someKey_01234567890123456789012345678901 
 ```
 
 

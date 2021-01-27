@@ -54,7 +54,7 @@ The following arguments are supported:
 <a href="#authenticationmethod_csharp" style="color: inherit; text-decoration: inherit;">Authentication<wbr>Method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#authenticationmethod">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Kubernetes.<wbr>Authentication<wbr>Method</a></span>
+        <span class="property-type">string | <a href="#authenticationmethod">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Kubernetes..<wbr>Authentication<wbr>Method</a></span>
     </dt>
     <dd>{{% md %}}The mode of client authentication.{{% /md %}}</dd>
     <dt class="property-required"
@@ -81,7 +81,7 @@ The following arguments are supported:
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authenticationdetailsvalue">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Kubernetes.<wbr>Inputs.<wbr>Authentication<wbr>Details<wbr>Value<wbr>Args</a></span>
+        <span class="property-type"><a href="#authenticationdetailsvalue">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Kubernetes..<wbr>Inputs.<wbr>Authentication<wbr>Details<wbr>Value<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Authentication token value.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -267,7 +267,7 @@ The following output properties are available:
 <a href="#hybridconnectionconfig_csharp" style="color: inherit; text-decoration: inherit;">Hybrid<wbr>Connection<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hybridconnectionconfigresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Kubernetes.<wbr>Outputs.<wbr>Hybrid<wbr>Connection<wbr>Config<wbr>Response</a></span>
+        <span class="property-type"><a href="#hybridconnectionconfigresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Kubernetes..<wbr>Outputs.<wbr>Hybrid<wbr>Connection<wbr>Config<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Contains the REP (rendezvous endpoint) and “Sender” access token.{{% /md %}}</dd>
     <dt class="property-"
@@ -276,7 +276,7 @@ The following output properties are available:
 <a href="#kubeconfigs_csharp" style="color: inherit; text-decoration: inherit;">Kubeconfigs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#credentialresultresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Kubernetes.<wbr>Outputs.<wbr>Credential<wbr>Result<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#credentialresultresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Kubernetes..<wbr>Outputs.<wbr>Credential<wbr>Result<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Base64-encoded Kubernetes configuration file.{{% /md %}}</dd>
 </dl>

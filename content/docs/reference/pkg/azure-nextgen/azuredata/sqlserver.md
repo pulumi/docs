@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.azuredata.SqlServer resource wit
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 A SQL server.
+API Version: 2019-07-24-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var sqlServer = new AzureNextGen.AzureData.V20190724Preview.SqlServer("sqlServer", new AzureNextGen.AzureData.V20190724Preview.SqlServerArgs
+        var sqlServer = new AzureNextGen.AzureData..SqlServer("sqlServer", new AzureNextGen.AzureData..SqlServerArgs
         {
             Cores = 8,
             Edition = "Latin",
@@ -51,7 +52,7 @@ class MyStack : Stack
 package main
 
 import (
-	azuredata "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/azuredata/v20190724preview"
+	azuredata "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/azuredata"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -84,7 +85,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-sql_server = azure_nextgen.azuredata.v20190724preview.SqlServer("sqlServer",
+sql_server = azure_nextgen.azuredata.SqlServer("sqlServer",
     cores=8,
     edition="Latin",
     property_bag="",
@@ -104,7 +105,7 @@ sql_server = azure_nextgen.azuredata.v20190724preview.SqlServer("sqlServer",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const sqlServer = new azure_nextgen.azuredata.v20190724preview.SqlServer("sqlServer", {
+const sqlServer = new azure_nextgen.azuredata.SqlServer("sqlServer", {
     cores: 8,
     edition: "Latin",
     propertyBag: "",
@@ -761,7 +762,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:azuredata/v20190724preview:SqlServer testsqlserver /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg/providers/Microsoft.AzureData/SqlServerRegistrations/testsqlregistration/sqlServers/testsqlserver 
+$ pulumi import azure-nextgen:azuredata:SqlServer testsqlserver /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg/providers/Microsoft.AzureData/SqlServerRegistrations/testsqlregistration/sqlServers/testsqlserver 
 ```
 
 

@@ -242,7 +242,7 @@ The following output properties are available:
 <a href="#groupbymetadata_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>By<wbr>Metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kpigroupbymetadataresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights.<wbr>Outputs.<wbr>Kpi<wbr>Group<wbr>By<wbr>Metadata<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#kpigroupbymetadataresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights..<wbr>Outputs.<wbr>Kpi<wbr>Group<wbr>By<wbr>Metadata<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The KPI GroupByMetadata.{{% /md %}}</dd>
     <dt class="property-"
@@ -278,7 +278,7 @@ The following output properties are available:
 <a href="#participantprofilesmetadata_csharp" style="color: inherit; text-decoration: inherit;">Participant<wbr>Profiles<wbr>Metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kpiparticipantprofilesmetadataresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights.<wbr>Outputs.<wbr>Kpi<wbr>Participant<wbr>Profiles<wbr>Metadata<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#kpiparticipantprofilesmetadataresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights..<wbr>Outputs.<wbr>Kpi<wbr>Participant<wbr>Profiles<wbr>Metadata<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The participant profiles.{{% /md %}}</dd>
     <dt class="property-"
@@ -314,7 +314,7 @@ The following output properties are available:
 <a href="#aliases_csharp" style="color: inherit; text-decoration: inherit;">Aliases</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kpialiasresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights.<wbr>Outputs.<wbr>Kpi<wbr>Alias<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#kpialiasresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights..<wbr>Outputs.<wbr>Kpi<wbr>Alias<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The aliases.{{% /md %}}</dd>
     <dt class="property-"
@@ -350,7 +350,7 @@ The following output properties are available:
 <a href="#extracts_csharp" style="color: inherit; text-decoration: inherit;">Extracts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kpiextractresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights.<wbr>Outputs.<wbr>Kpi<wbr>Extract<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#kpiextractresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights..<wbr>Outputs.<wbr>Kpi<wbr>Extract<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The KPI extracts.{{% /md %}}</dd>
     <dt class="property-"
@@ -377,7 +377,7 @@ The following output properties are available:
 <a href="#thresholds_csharp" style="color: inherit; text-decoration: inherit;">Thres<wbr>Holds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kpithresholdsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights.<wbr>Outputs.<wbr>Kpi<wbr>Thresholds<wbr>Response</a></span>
+        <span class="property-type"><a href="#kpithresholdsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights..<wbr>Outputs.<wbr>Kpi<wbr>Thresholds<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The KPI thresholds.{{% /md %}}</dd>
     <dt class="property-"

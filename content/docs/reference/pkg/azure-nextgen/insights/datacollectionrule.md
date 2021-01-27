@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.insights.DataCollectionRule reso
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Definition of ARM tracked top level resource.
+API Version: 2019-11-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,12 +27,12 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var dataCollectionRule = new AzureNextGen.Insights.V20191101Preview.DataCollectionRule("dataCollectionRule", new AzureNextGen.Insights.V20191101Preview.DataCollectionRuleArgs
+        var dataCollectionRule = new AzureNextGen.Insights..DataCollectionRule("dataCollectionRule", new AzureNextGen.Insights..DataCollectionRuleArgs
         {
             DataCollectionRuleName = "myCollectionRule",
             DataFlows = 
             {
-                new AzureNextGen.Insights.V20191101Preview.Inputs.DataFlowArgs
+                new AzureNextGen.Insights..Inputs.DataFlowArgs
                 {
                     Destinations = 
                     {
@@ -45,11 +46,11 @@ class MyStack : Stack
                     },
                 },
             },
-            DataSources = new AzureNextGen.Insights.V20191101Preview.Inputs.DataCollectionRuleDataSourcesArgs
+            DataSources = new AzureNextGen.Insights..Inputs.DataCollectionRuleDataSourcesArgs
             {
                 PerformanceCounters = 
                 {
-                    new AzureNextGen.Insights.V20191101Preview.Inputs.PerfCounterDataSourceArgs
+                    new AzureNextGen.Insights..Inputs.PerfCounterDataSourceArgs
                     {
                         CounterSpecifiers = 
                         {
@@ -66,7 +67,7 @@ class MyStack : Stack
                             "Microsoft-Perf",
                         },
                     },
-                    new AzureNextGen.Insights.V20191101Preview.Inputs.PerfCounterDataSourceArgs
+                    new AzureNextGen.Insights..Inputs.PerfCounterDataSourceArgs
                     {
                         CounterSpecifiers = 
                         {
@@ -83,7 +84,7 @@ class MyStack : Stack
                 },
                 Syslog = 
                 {
-                    new AzureNextGen.Insights.V20191101Preview.Inputs.SyslogDataSourceArgs
+                    new AzureNextGen.Insights..Inputs.SyslogDataSourceArgs
                     {
                         FacilityNames = 
                         {
@@ -101,7 +102,7 @@ class MyStack : Stack
                             "Microsoft-Syslog",
                         },
                     },
-                    new AzureNextGen.Insights.V20191101Preview.Inputs.SyslogDataSourceArgs
+                    new AzureNextGen.Insights..Inputs.SyslogDataSourceArgs
                     {
                         FacilityNames = 
                         {
@@ -122,7 +123,7 @@ class MyStack : Stack
                 },
                 WindowsEventLogs = 
                 {
-                    new AzureNextGen.Insights.V20191101Preview.Inputs.WindowsEventLogDataSourceArgs
+                    new AzureNextGen.Insights..Inputs.WindowsEventLogDataSourceArgs
                     {
                         Name = "cloudSecurityTeamEvents",
                         ScheduledTransferPeriod = "PT1M",
@@ -135,7 +136,7 @@ class MyStack : Stack
                             "Security!",
                         },
                     },
-                    new AzureNextGen.Insights.V20191101Preview.Inputs.WindowsEventLogDataSourceArgs
+                    new AzureNextGen.Insights..Inputs.WindowsEventLogDataSourceArgs
                     {
                         Name = "appTeam1AppEvents",
                         ScheduledTransferPeriod = "PT5M",
@@ -151,11 +152,11 @@ class MyStack : Stack
                     },
                 },
             },
-            Destinations = new AzureNextGen.Insights.V20191101Preview.Inputs.DataCollectionRuleDestinationsArgs
+            Destinations = new AzureNextGen.Insights..Inputs.DataCollectionRuleDestinationsArgs
             {
                 LogAnalytics = 
                 {
-                    new AzureNextGen.Insights.V20191101Preview.Inputs.LogAnalyticsDestinationArgs
+                    new AzureNextGen.Insights..Inputs.LogAnalyticsDestinationArgs
                     {
                         Name = "centralWorkspace",
                         WorkspaceResourceId = "/subscriptions/703362b3-f278-4e4b-9179-c76eaf41ffc2/resourceGroups/myResourceGroup/providers/Microsoft.OperationalInsights/workspaces/centralTeamWorkspace",
@@ -181,7 +182,7 @@ package main
 import (
 	"fmt"
 
-	insights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/insights/v20191101preview"
+	insights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/insights"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -311,9 +312,9 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-data_collection_rule = azure_nextgen.insights.v20191101preview.DataCollectionRule("dataCollectionRule",
+data_collection_rule = azure_nextgen.insights.DataCollectionRule("dataCollectionRule",
     data_collection_rule_name="myCollectionRule",
-    data_flows=[azure_nextgen.insights.v20191101preview.DataFlowArgs(
+    data_flows=[azure_nextgen.insights.DataFlowArgs(
         destinations=["centralWorkspace"],
         streams=[
             "Microsoft-Perf",
@@ -321,9 +322,9 @@ data_collection_rule = azure_nextgen.insights.v20191101preview.DataCollectionRul
             "Microsoft-WindowsEvent",
         ],
     )],
-    data_sources=azure_nextgen.insights.v20191101preview.DataCollectionRuleDataSourcesArgs(
+    data_sources=azure_nextgen.insights.DataCollectionRuleDataSourcesArgs(
         performance_counters=[
-            azure_nextgen.insights.v20191101preview.PerfCounterDataSourceArgs(
+            azure_nextgen.insights.PerfCounterDataSourceArgs(
                 counter_specifiers=[
                     "\\Processor(_Total)\\% Processor Time",
                     "\\Memory\\Committed Bytes",
@@ -335,7 +336,7 @@ data_collection_rule = azure_nextgen.insights.v20191101preview.DataCollectionRul
                 scheduled_transfer_period="PT1M",
                 streams=["Microsoft-Perf"],
             ),
-            azure_nextgen.insights.v20191101preview.PerfCounterDataSourceArgs(
+            azure_nextgen.insights.PerfCounterDataSourceArgs(
                 counter_specifiers=["\\Process(_Total)\\Thread Count"],
                 name="appTeamExtraCounters",
                 sampling_frequency_in_seconds=30,
@@ -344,7 +345,7 @@ data_collection_rule = azure_nextgen.insights.v20191101preview.DataCollectionRul
             ),
         ],
         syslog=[
-            azure_nextgen.insights.v20191101preview.SyslogDataSourceArgs(
+            azure_nextgen.insights.SyslogDataSourceArgs(
                 facility_names=["cron"],
                 log_levels=[
                     "Debug",
@@ -354,7 +355,7 @@ data_collection_rule = azure_nextgen.insights.v20191101preview.DataCollectionRul
                 name="cronSyslog",
                 streams=["Microsoft-Syslog"],
             ),
-            azure_nextgen.insights.v20191101preview.SyslogDataSourceArgs(
+            azure_nextgen.insights.SyslogDataSourceArgs(
                 facility_names=["syslog"],
                 log_levels=[
                     "Alert",
@@ -366,13 +367,13 @@ data_collection_rule = azure_nextgen.insights.v20191101preview.DataCollectionRul
             ),
         ],
         windows_event_logs=[
-            azure_nextgen.insights.v20191101preview.WindowsEventLogDataSourceArgs(
+            azure_nextgen.insights.WindowsEventLogDataSourceArgs(
                 name="cloudSecurityTeamEvents",
                 scheduled_transfer_period="PT1M",
                 streams=["Microsoft-WindowsEvent"],
                 x_path_queries=["Security!"],
             ),
-            azure_nextgen.insights.v20191101preview.WindowsEventLogDataSourceArgs(
+            azure_nextgen.insights.WindowsEventLogDataSourceArgs(
                 name="appTeam1AppEvents",
                 scheduled_transfer_period="PT5M",
                 streams=["Microsoft-WindowsEvent"],
@@ -383,8 +384,8 @@ data_collection_rule = azure_nextgen.insights.v20191101preview.DataCollectionRul
             ),
         ],
     ),
-    destinations=azure_nextgen.insights.v20191101preview.DataCollectionRuleDestinationsArgs(
-        log_analytics=[azure_nextgen.insights.v20191101preview.LogAnalyticsDestinationArgs(
+    destinations=azure_nextgen.insights.DataCollectionRuleDestinationsArgs(
+        log_analytics=[azure_nextgen.insights.LogAnalyticsDestinationArgs(
             name="centralWorkspace",
             workspace_resource_id="/subscriptions/703362b3-f278-4e4b-9179-c76eaf41ffc2/resourceGroups/myResourceGroup/providers/Microsoft.OperationalInsights/workspaces/centralTeamWorkspace",
         )],
@@ -402,7 +403,7 @@ data_collection_rule = azure_nextgen.insights.v20191101preview.DataCollectionRul
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const dataCollectionRule = new azure_nextgen.insights.v20191101preview.DataCollectionRule("dataCollectionRule", {
+const dataCollectionRule = new azure_nextgen.insights.DataCollectionRule("dataCollectionRule", {
     dataCollectionRuleName: "myCollectionRule",
     dataFlows: [{
         destinations: ["centralWorkspace"],
@@ -686,7 +687,7 @@ The DataCollectionRule resource accepts the following [input]({{< relref "/docs/
 <a href="#dataflows_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Flows</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dataflow">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Inputs.<wbr>Data<wbr>Flow<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#dataflow">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Inputs.<wbr>Data<wbr>Flow<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The specification of data flows.{{% /md %}}</dd>
     <dt class="property-required"
@@ -695,7 +696,7 @@ The DataCollectionRule resource accepts the following [input]({{< relref "/docs/
 <a href="#destinations_csharp" style="color: inherit; text-decoration: inherit;">Destinations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datacollectionruledestinations">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Inputs.<wbr>Data<wbr>Collection<wbr>Rule<wbr>Destinations<wbr>Args</a></span>
+        <span class="property-type"><a href="#datacollectionruledestinations">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Inputs.<wbr>Data<wbr>Collection<wbr>Rule<wbr>Destinations<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The specification of destinations.{{% /md %}}</dd>
     <dt class="property-required"
@@ -722,7 +723,7 @@ The DataCollectionRule resource accepts the following [input]({{< relref "/docs/
 <a href="#datasources_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Sources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datacollectionruledatasources">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Inputs.<wbr>Data<wbr>Collection<wbr>Rule<wbr>Data<wbr>Sources<wbr>Args</a></span>
+        <span class="property-type"><a href="#datacollectionruledatasources">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Inputs.<wbr>Data<wbr>Collection<wbr>Rule<wbr>Data<wbr>Sources<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The specification of data sources. 
 This property is optional and can be omitted if the rule is meant to be used via direct calls to the provisioned endpoint.{{% /md %}}</dd>
@@ -1216,7 +1217,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extensions_csharp" style="color: inherit; text-decoration: inherit;">Extensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#extensiondatasource">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Inputs.<wbr>Extension<wbr>Data<wbr>Source<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#extensiondatasource">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Inputs.<wbr>Extension<wbr>Data<wbr>Source<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of Azure VM extension data source configurations.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1225,7 +1226,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#performancecounters_csharp" style="color: inherit; text-decoration: inherit;">Performance<wbr>Counters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#perfcounterdatasource">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Inputs.<wbr>Perf<wbr>Counter<wbr>Data<wbr>Source<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#perfcounterdatasource">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Inputs.<wbr>Perf<wbr>Counter<wbr>Data<wbr>Source<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of performance counter data source configurations.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1234,7 +1235,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#syslog_csharp" style="color: inherit; text-decoration: inherit;">Syslog</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#syslogdatasource">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Inputs.<wbr>Syslog<wbr>Data<wbr>Source<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#syslogdatasource">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Inputs.<wbr>Syslog<wbr>Data<wbr>Source<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of Syslog data source configurations.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1243,7 +1244,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#windowseventlogs_csharp" style="color: inherit; text-decoration: inherit;">Windows<wbr>Event<wbr>Logs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#windowseventlogdatasource">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Inputs.<wbr>Windows<wbr>Event<wbr>Log<wbr>Data<wbr>Source<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#windowseventlogdatasource">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Inputs.<wbr>Windows<wbr>Event<wbr>Log<wbr>Data<wbr>Source<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of Windows Event Log data source configurations.{{% /md %}}</dd>
 </dl>
@@ -1386,7 +1387,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azuremonitormetrics_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Monitor<wbr>Metrics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#destinationsspecazuremonitormetrics">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Inputs.<wbr>Destinations<wbr>Spec<wbr>Azure<wbr>Monitor<wbr>Metrics<wbr>Args</a></span>
+        <span class="property-type"><a href="#destinationsspecazuremonitormetrics">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Inputs.<wbr>Destinations<wbr>Spec<wbr>Azure<wbr>Monitor<wbr>Metrics<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Azure Monitor Metrics destination.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1395,7 +1396,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#loganalytics_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Analytics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loganalyticsdestination">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Inputs.<wbr>Log<wbr>Analytics<wbr>Destination<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#loganalyticsdestination">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Inputs.<wbr>Log<wbr>Analytics<wbr>Destination<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of Log Analytics destinations.{{% /md %}}</dd>
 </dl>
@@ -1484,7 +1485,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extensions_csharp" style="color: inherit; text-decoration: inherit;">Extensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#extensiondatasourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Inputs.<wbr>Extension<wbr>Data<wbr>Source<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#extensiondatasourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Inputs.<wbr>Extension<wbr>Data<wbr>Source<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of Azure VM extension data source configurations.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1493,7 +1494,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#performancecounters_csharp" style="color: inherit; text-decoration: inherit;">Performance<wbr>Counters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#perfcounterdatasourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Inputs.<wbr>Perf<wbr>Counter<wbr>Data<wbr>Source<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#perfcounterdatasourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Inputs.<wbr>Perf<wbr>Counter<wbr>Data<wbr>Source<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of performance counter data source configurations.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1502,7 +1503,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#syslog_csharp" style="color: inherit; text-decoration: inherit;">Syslog</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#syslogdatasourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Inputs.<wbr>Syslog<wbr>Data<wbr>Source<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#syslogdatasourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Inputs.<wbr>Syslog<wbr>Data<wbr>Source<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of Syslog data source configurations.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1511,7 +1512,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#windowseventlogs_csharp" style="color: inherit; text-decoration: inherit;">Windows<wbr>Event<wbr>Logs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#windowseventlogdatasourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Inputs.<wbr>Windows<wbr>Event<wbr>Log<wbr>Data<wbr>Source<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#windowseventlogdatasourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Inputs.<wbr>Windows<wbr>Event<wbr>Log<wbr>Data<wbr>Source<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of Windows Event Log data source configurations.{{% /md %}}</dd>
 </dl>
@@ -1654,7 +1655,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azuremonitormetrics_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Monitor<wbr>Metrics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#destinationsspecresponseazuremonitormetrics">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Inputs.<wbr>Destinations<wbr>Spec<wbr>Response<wbr>Azure<wbr>Monitor<wbr>Metrics<wbr>Args</a></span>
+        <span class="property-type"><a href="#destinationsspecresponseazuremonitormetrics">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Inputs.<wbr>Destinations<wbr>Spec<wbr>Response<wbr>Azure<wbr>Monitor<wbr>Metrics<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Azure Monitor Metrics destination.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1663,7 +1664,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#loganalytics_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Analytics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loganalyticsdestinationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Inputs.<wbr>Log<wbr>Analytics<wbr>Destination<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#loganalyticsdestinationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Inputs.<wbr>Log<wbr>Analytics<wbr>Destination<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of Log Analytics destinations.{{% /md %}}</dd>
 </dl>
@@ -1761,7 +1762,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#streams_csharp" style="color: inherit; text-decoration: inherit;">Streams</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Union&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Known<wbr>Data<wbr>Flow<wbr>Streams&gt;&gt;</span>
+        <span class="property-type">List&lt;Union&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Known<wbr>Data<wbr>Flow<wbr>Streams&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}List of streams for this data flow.{{% /md %}}</dd>
 </dl>
@@ -2099,7 +2100,7 @@ This name should be unique across all data sources (regardless of type) within t
 <a href="#streams_csharp" style="color: inherit; text-decoration: inherit;">Streams</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Union&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Known<wbr>Extension<wbr>Data<wbr>Source<wbr>Streams&gt;&gt;</span>
+        <span class="property-type">List&lt;Union&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Known<wbr>Extension<wbr>Data<wbr>Source<wbr>Streams&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}List of streams that this data source will be sent to.
 A stream indicates what schema will be used for this data and usually what table in Log Analytics the data will be sent to.{{% /md %}}</dd>
@@ -3532,7 +3533,7 @@ This name should be unique across all data sources (regardless of type) within t
 <a href="#scheduledtransferperiod_csharp" style="color: inherit; text-decoration: inherit;">Scheduled<wbr>Transfer<wbr>Period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#knownperfcounterdatasourcescheduledtransferperiod">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Known<wbr>Perf<wbr>Counter<wbr>Data<wbr>Source<wbr>Scheduled<wbr>Transfer<wbr>Period</a></span>
+        <span class="property-type">string | <a href="#knownperfcounterdatasourcescheduledtransferperiod">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Known<wbr>Perf<wbr>Counter<wbr>Data<wbr>Source<wbr>Scheduled<wbr>Transfer<wbr>Period</a></span>
     </dt>
     <dd>{{% md %}}The interval between data uploads (scheduled transfers), rounded up to the nearest minute.{{% /md %}}</dd>
     <dt class="property-required"
@@ -3541,7 +3542,7 @@ This name should be unique across all data sources (regardless of type) within t
 <a href="#streams_csharp" style="color: inherit; text-decoration: inherit;">Streams</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Union&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Known<wbr>Perf<wbr>Counter<wbr>Data<wbr>Source<wbr>Streams&gt;&gt;</span>
+        <span class="property-type">List&lt;Union&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Known<wbr>Perf<wbr>Counter<wbr>Data<wbr>Source<wbr>Streams&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}List of streams that this data source will be sent to.
 A stream indicates what schema will be used for this data and usually what table in Log Analytics the data will be sent to.{{% /md %}}</dd>
@@ -3946,7 +3947,7 @@ A stream indicates what schema will be used for this data and usually what table
 <a href="#facilitynames_csharp" style="color: inherit; text-decoration: inherit;">Facility<wbr>Names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Union&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Known<wbr>Syslog<wbr>Data<wbr>Source<wbr>Facility<wbr>Names&gt;&gt;</span>
+        <span class="property-type">List&lt;Union&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Known<wbr>Syslog<wbr>Data<wbr>Source<wbr>Facility<wbr>Names&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}The list of facility names.{{% /md %}}</dd>
     <dt class="property-required"
@@ -3965,7 +3966,7 @@ This name should be unique across all data sources (regardless of type) within t
 <a href="#streams_csharp" style="color: inherit; text-decoration: inherit;">Streams</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Union&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Known<wbr>Syslog<wbr>Data<wbr>Source<wbr>Streams&gt;&gt;</span>
+        <span class="property-type">List&lt;Union&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Known<wbr>Syslog<wbr>Data<wbr>Source<wbr>Streams&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}List of streams that this data source will be sent to.
 A stream indicates what schema will be used for this data and usually what table in Log Analytics the data will be sent to.{{% /md %}}</dd>
@@ -3975,7 +3976,7 @@ A stream indicates what schema will be used for this data and usually what table
 <a href="#loglevels_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Levels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Union&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Known<wbr>Syslog<wbr>Data<wbr>Source<wbr>Log<wbr>Levels&gt;&gt;</span>
+        <span class="property-type">List&lt;Union&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Known<wbr>Syslog<wbr>Data<wbr>Source<wbr>Log<wbr>Levels&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}The log levels to collect.{{% /md %}}</dd>
 </dl>
@@ -4312,7 +4313,7 @@ This name should be unique across all data sources (regardless of type) within t
 <a href="#scheduledtransferperiod_csharp" style="color: inherit; text-decoration: inherit;">Scheduled<wbr>Transfer<wbr>Period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#knownwindowseventlogdatasourcescheduledtransferperiod">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Known<wbr>Windows<wbr>Event<wbr>Log<wbr>Data<wbr>Source<wbr>Scheduled<wbr>Transfer<wbr>Period</a></span>
+        <span class="property-type">string | <a href="#knownwindowseventlogdatasourcescheduledtransferperiod">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Known<wbr>Windows<wbr>Event<wbr>Log<wbr>Data<wbr>Source<wbr>Scheduled<wbr>Transfer<wbr>Period</a></span>
     </dt>
     <dd>{{% md %}}The interval between data uploads (scheduled transfers), rounded up to the nearest minute.{{% /md %}}</dd>
     <dt class="property-required"
@@ -4321,7 +4322,7 @@ This name should be unique across all data sources (regardless of type) within t
 <a href="#streams_csharp" style="color: inherit; text-decoration: inherit;">Streams</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Union&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Known<wbr>Windows<wbr>Event<wbr>Log<wbr>Data<wbr>Source<wbr>Streams&gt;&gt;</span>
+        <span class="property-type">List&lt;Union&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Known<wbr>Windows<wbr>Event<wbr>Log<wbr>Data<wbr>Source<wbr>Streams&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}List of streams that this data source will be sent to.
 A stream indicates what schema will be used for this data and usually what table in Log Analytics the data will be sent to.{{% /md %}}</dd>
@@ -4652,7 +4653,7 @@ A stream indicates what schema will be used for this data and usually what table
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:insights/v20191101preview:DataCollectionRule myCollectionRule /subscriptions/703362b3-f278-4e4b-9179-c76eaf41ffc2/resourceGroups/myResourceGroup/providers/Microsoft.Insights/dataCollectionRules/myCollectionRule 
+$ pulumi import azure-nextgen:insights:DataCollectionRule myCollectionRule /subscriptions/703362b3-f278-4e4b-9179-c76eaf41ffc2/resourceGroups/myResourceGroup/providers/Microsoft.Insights/dataCollectionRules/myCollectionRule 
 ```
 
 

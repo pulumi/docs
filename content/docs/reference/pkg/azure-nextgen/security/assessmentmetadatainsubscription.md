@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.security.AssessmentMetadataInSub
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Security assessment metadata
-Latest API Version: 2020-01-01.
+API Version: 2020-01-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var assessmentMetadataInSubscription = new AzureNextGen.Security.Latest.AssessmentMetadataInSubscription("assessmentMetadataInSubscription", new AzureNextGen.Security.Latest.AssessmentMetadataInSubscriptionArgs
+        var assessmentMetadataInSubscription = new AzureNextGen.Security..AssessmentMetadataInSubscription("assessmentMetadataInSubscription", new AzureNextGen.Security..AssessmentMetadataInSubscriptionArgs
         {
             AssessmentMetadataName = "ca039e75-a276-4175-aebc-bcd41e4b14b7",
             AssessmentType = "CustomerManaged",
@@ -62,7 +62,7 @@ class MyStack : Stack
 package main
 
 import (
-	security "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/security/latest"
+	security "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/security"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -103,7 +103,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-assessment_metadata_in_subscription = azure_nextgen.security.latest.AssessmentMetadataInSubscription("assessmentMetadataInSubscription",
+assessment_metadata_in_subscription = azure_nextgen.security.AssessmentMetadataInSubscription("assessmentMetadataInSubscription",
     assessment_metadata_name="ca039e75-a276-4175-aebc-bcd41e4b14b7",
     assessment_type="CustomerManaged",
     category=["Compute"],
@@ -129,7 +129,7 @@ assessment_metadata_in_subscription = azure_nextgen.security.latest.AssessmentMe
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const assessmentMetadataInSubscription = new azure_nextgen.security.latest.AssessmentMetadataInSubscription("assessmentMetadataInSubscription", {
+const assessmentMetadataInSubscription = new azure_nextgen.security.AssessmentMetadataInSubscription("assessmentMetadataInSubscription", {
     assessmentMetadataName: "ca039e75-a276-4175-aebc-bcd41e4b14b7",
     assessmentType: "CustomerManaged",
     category: ["Compute"],
@@ -348,7 +348,7 @@ The AssessmentMetadataInSubscription resource accepts the following [input]({{< 
 <a href="#assessmenttype_csharp" style="color: inherit; text-decoration: inherit;">Assessment<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#assessmenttype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security.<wbr>Assessment<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#assessmenttype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security..<wbr>Assessment<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}BuiltIn if the assessment based on built-in Azure Policy definition, Custom if the assessment based on custom Azure Policy definition{{% /md %}}</dd>
     <dt class="property-required"
@@ -366,7 +366,7 @@ The AssessmentMetadataInSubscription resource accepts the following [input]({{< 
 <a href="#severity_csharp" style="color: inherit; text-decoration: inherit;">Severity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#severity">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security.<wbr>Severity</a></span>
+        <span class="property-type">string | <a href="#severity">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security..<wbr>Severity</a></span>
     </dt>
     <dd>{{% md %}}The severity level of the assessment{{% /md %}}</dd>
     <dt class="property-optional"
@@ -375,7 +375,7 @@ The AssessmentMetadataInSubscription resource accepts the following [input]({{< 
 <a href="#category_csharp" style="color: inherit; text-decoration: inherit;">Category</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Union&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security.<wbr>Category&gt;&gt;</span>
+        <span class="property-type">List&lt;Union&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security..<wbr>Category&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -393,7 +393,7 @@ The AssessmentMetadataInSubscription resource accepts the following [input]({{< 
 <a href="#implementationeffort_csharp" style="color: inherit; text-decoration: inherit;">Implementation<wbr>Effort</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#implementationeffort">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security.<wbr>Implementation<wbr>Effort</a></span>
+        <span class="property-type">string | <a href="#implementationeffort">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security..<wbr>Implementation<wbr>Effort</a></span>
     </dt>
     <dd>{{% md %}}The implementation effort required to remediate this assessment{{% /md %}}</dd>
     <dt class="property-optional"
@@ -402,7 +402,7 @@ The AssessmentMetadataInSubscription resource accepts the following [input]({{< 
 <a href="#partnerdata_csharp" style="color: inherit; text-decoration: inherit;">Partner<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securityassessmentmetadatapartnerdata">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security.<wbr>Inputs.<wbr>Security<wbr>Assessment<wbr>Metadata<wbr>Partner<wbr>Data<wbr>Args</a></span>
+        <span class="property-type"><a href="#securityassessmentmetadatapartnerdata">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security..<wbr>Inputs.<wbr>Security<wbr>Assessment<wbr>Metadata<wbr>Partner<wbr>Data<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the partner that created the assessment{{% /md %}}</dd>
     <dt class="property-optional"
@@ -429,7 +429,7 @@ The AssessmentMetadataInSubscription resource accepts the following [input]({{< 
 <a href="#threats_csharp" style="color: inherit; text-decoration: inherit;">Threats</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Union&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security.<wbr>Threats&gt;&gt;</span>
+        <span class="property-type">List&lt;Union&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security..<wbr>Threats&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -438,7 +438,7 @@ The AssessmentMetadataInSubscription resource accepts the following [input]({{< 
 <a href="#userimpact_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Impact</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#userimpact">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security.<wbr>User<wbr>Impact</a></span>
+        <span class="property-type">string | <a href="#userimpact">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security..<wbr>User<wbr>Impact</a></span>
     </dt>
     <dd>{{% md %}}The user impact of the assessment{{% /md %}}</dd>
 </dl>
@@ -1584,7 +1584,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:security/latest:AssessmentMetadataInSubscription ca039e75-a276-4175-aebc-bcd41e4b14b7 /providers/Microsoft.Security/assessmentMetadata/ca039e75-a276-4175-aebc-bcd41e4b14b7 
+$ pulumi import azure-nextgen:security:AssessmentMetadataInSubscription ca039e75-a276-4175-aebc-bcd41e4b14b7 /providers/Microsoft.Security/assessmentMetadata/ca039e75-a276-4175-aebc-bcd41e4b14b7 
 ```
 
 

@@ -233,7 +233,7 @@ The following output properties are available:
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterskuresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Hub.<wbr>Outputs.<wbr>Cluster<wbr>Sku<wbr>Response</a></span>
+        <span class="property-type"><a href="#clusterskuresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Hub..<wbr>Outputs.<wbr>Cluster<wbr>Sku<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Properties of the cluster SKU.{{% /md %}}</dd>
     <dt class="property-"

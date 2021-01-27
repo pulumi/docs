@@ -215,7 +215,7 @@ The following output properties are available:
 <a href="#armrolereceivers_csharp" style="color: inherit; text-decoration: inherit;">Arm<wbr>Role<wbr>Receivers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#armrolereceiverresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Outputs.<wbr>Arm<wbr>Role<wbr>Receiver<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#armrolereceiverresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Outputs.<wbr>Arm<wbr>Role<wbr>Receiver<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of ARM role receivers that are part of this action group. Roles are Azure RBAC roles and only built-in roles are supported.{{% /md %}}</dd>
     <dt class="property-"
@@ -224,7 +224,7 @@ The following output properties are available:
 <a href="#automationrunbookreceivers_csharp" style="color: inherit; text-decoration: inherit;">Automation<wbr>Runbook<wbr>Receivers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#automationrunbookreceiverresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Outputs.<wbr>Automation<wbr>Runbook<wbr>Receiver<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#automationrunbookreceiverresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Outputs.<wbr>Automation<wbr>Runbook<wbr>Receiver<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of AutomationRunbook receivers that are part of this action group.{{% /md %}}</dd>
     <dt class="property-"
@@ -233,7 +233,7 @@ The following output properties are available:
 <a href="#azureapppushreceivers_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>App<wbr>Push<wbr>Receivers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureapppushreceiverresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Outputs.<wbr>Azure<wbr>App<wbr>Push<wbr>Receiver<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#azureapppushreceiverresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Outputs.<wbr>Azure<wbr>App<wbr>Push<wbr>Receiver<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of AzureAppPush receivers that are part of this action group.{{% /md %}}</dd>
     <dt class="property-"
@@ -242,7 +242,7 @@ The following output properties are available:
 <a href="#azurefunctionreceivers_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Function<wbr>Receivers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefunctionreceiverresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Outputs.<wbr>Azure<wbr>Function<wbr>Receiver<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#azurefunctionreceiverresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Outputs.<wbr>Azure<wbr>Function<wbr>Receiver<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of azure function receivers that are part of this action group.{{% /md %}}</dd>
     <dt class="property-"
@@ -251,7 +251,7 @@ The following output properties are available:
 <a href="#emailreceivers_csharp" style="color: inherit; text-decoration: inherit;">Email<wbr>Receivers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#emailreceiverresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Outputs.<wbr>Email<wbr>Receiver<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#emailreceiverresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Outputs.<wbr>Email<wbr>Receiver<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of email receivers that are part of this action group.{{% /md %}}</dd>
     <dt class="property-"
@@ -260,7 +260,7 @@ The following output properties are available:
 <a href="#itsmreceivers_csharp" style="color: inherit; text-decoration: inherit;">Itsm<wbr>Receivers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#itsmreceiverresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Outputs.<wbr>Itsm<wbr>Receiver<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#itsmreceiverresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Outputs.<wbr>Itsm<wbr>Receiver<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of ITSM receivers that are part of this action group.{{% /md %}}</dd>
     <dt class="property-"
@@ -269,7 +269,7 @@ The following output properties are available:
 <a href="#logicappreceivers_csharp" style="color: inherit; text-decoration: inherit;">Logic<wbr>App<wbr>Receivers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#logicappreceiverresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Outputs.<wbr>Logic<wbr>App<wbr>Receiver<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#logicappreceiverresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Outputs.<wbr>Logic<wbr>App<wbr>Receiver<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of logic app receivers that are part of this action group.{{% /md %}}</dd>
     <dt class="property-"
@@ -278,7 +278,7 @@ The following output properties are available:
 <a href="#smsreceivers_csharp" style="color: inherit; text-decoration: inherit;">Sms<wbr>Receivers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#smsreceiverresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Outputs.<wbr>Sms<wbr>Receiver<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#smsreceiverresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Outputs.<wbr>Sms<wbr>Receiver<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of SMS receivers that are part of this action group.{{% /md %}}</dd>
     <dt class="property-"
@@ -296,7 +296,7 @@ The following output properties are available:
 <a href="#voicereceivers_csharp" style="color: inherit; text-decoration: inherit;">Voice<wbr>Receivers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#voicereceiverresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Outputs.<wbr>Voice<wbr>Receiver<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#voicereceiverresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Outputs.<wbr>Voice<wbr>Receiver<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of voice receivers that are part of this action group.{{% /md %}}</dd>
     <dt class="property-"
@@ -305,7 +305,7 @@ The following output properties are available:
 <a href="#webhookreceivers_csharp" style="color: inherit; text-decoration: inherit;">Webhook<wbr>Receivers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webhookreceiverresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Outputs.<wbr>Webhook<wbr>Receiver<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#webhookreceiverresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Outputs.<wbr>Webhook<wbr>Receiver<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of webhook receivers that are part of this action group.{{% /md %}}</dd>
 </dl>

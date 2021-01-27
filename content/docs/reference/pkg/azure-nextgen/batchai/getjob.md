@@ -314,7 +314,7 @@ The following output properties are available:
 <a href="#caffe2settings_csharp" style="color: inherit; text-decoration: inherit;">Caffe2Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#caffe2settingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI.<wbr>Outputs.<wbr>Caffe2Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#caffe2settingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI..<wbr>Outputs.<wbr>Caffe2Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Caffe2 job settings.{{% /md %}}</dd>
     <dt class="property-"
@@ -323,7 +323,7 @@ The following output properties are available:
 <a href="#caffesettings_csharp" style="color: inherit; text-decoration: inherit;">Caffe<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#caffesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI.<wbr>Outputs.<wbr>Caffe<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#caffesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI..<wbr>Outputs.<wbr>Caffe<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Caffe job settings.{{% /md %}}</dd>
     <dt class="property-"
@@ -332,7 +332,7 @@ The following output properties are available:
 <a href="#chainersettings_csharp" style="color: inherit; text-decoration: inherit;">Chainer<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#chainersettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI.<wbr>Outputs.<wbr>Chainer<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#chainersettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI..<wbr>Outputs.<wbr>Chainer<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Chainer job settings.{{% /md %}}</dd>
     <dt class="property-"
@@ -341,7 +341,7 @@ The following output properties are available:
 <a href="#cluster_csharp" style="color: inherit; text-decoration: inherit;">Cluster</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI.<wbr>Outputs.<wbr>Resource<wbr>Id<wbr>Response</a></span>
+        <span class="property-type"><a href="#resourceidresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI..<wbr>Outputs.<wbr>Resource<wbr>Id<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Resource ID of the cluster associated with the job.{{% /md %}}</dd>
     <dt class="property-"
@@ -350,7 +350,7 @@ The following output properties are available:
 <a href="#cntksettings_csharp" style="color: inherit; text-decoration: inherit;">Cntk<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cntksettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI.<wbr>Outputs.<wbr>CNTKsettings<wbr>Response</a></span>
+        <span class="property-type"><a href="#cntksettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI..<wbr>Outputs.<wbr>CNTKsettings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}CNTK (aka Microsoft Cognitive Toolkit) job settings.{{% /md %}}</dd>
     <dt class="property-"
@@ -359,7 +359,7 @@ The following output properties are available:
 <a href="#constraints_csharp" style="color: inherit; text-decoration: inherit;">Constraints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobpropertiesresponseconstraints">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI.<wbr>Outputs.<wbr>Job<wbr>Properties<wbr>Response<wbr>Constraints</a></span>
+        <span class="property-type"><a href="#jobpropertiesresponseconstraints">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI..<wbr>Outputs.<wbr>Job<wbr>Properties<wbr>Response<wbr>Constraints</a></span>
     </dt>
     <dd>{{% md %}}Constraints associated with the Job.{{% /md %}}</dd>
     <dt class="property-"
@@ -368,7 +368,7 @@ The following output properties are available:
 <a href="#containersettings_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containersettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI.<wbr>Outputs.<wbr>Container<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#containersettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI..<wbr>Outputs.<wbr>Container<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}If the container was downloaded as part of cluster setup then the same container image will be used. If not provided, the job will run on the VM.{{% /md %}}</dd>
     <dt class="property-"
@@ -377,7 +377,7 @@ The following output properties are available:
 <a href="#custommpisettings_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Mpi<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#custommpisettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI.<wbr>Outputs.<wbr>Custom<wbr>Mpi<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#custommpisettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI..<wbr>Outputs.<wbr>Custom<wbr>Mpi<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Custom MPI job settings.{{% /md %}}</dd>
     <dt class="property-"
@@ -386,7 +386,7 @@ The following output properties are available:
 <a href="#customtoolkitsettings_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Toolkit<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customtoolkitsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI.<wbr>Outputs.<wbr>Custom<wbr>Toolkit<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#customtoolkitsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI..<wbr>Outputs.<wbr>Custom<wbr>Toolkit<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Custom tool kit job settings.{{% /md %}}</dd>
     <dt class="property-"
@@ -395,7 +395,7 @@ The following output properties are available:
 <a href="#environmentvariables_csharp" style="color: inherit; text-decoration: inherit;">Environment<wbr>Variables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentvariableresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI.<wbr>Outputs.<wbr>Environment<wbr>Variable<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#environmentvariableresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI..<wbr>Outputs.<wbr>Environment<wbr>Variable<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}A collection of user defined environment variables to be setup for the job.{{% /md %}}</dd>
     <dt class="property-"
@@ -404,7 +404,7 @@ The following output properties are available:
 <a href="#executioninfo_csharp" style="color: inherit; text-decoration: inherit;">Execution<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobpropertiesresponseexecutioninfo">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI.<wbr>Outputs.<wbr>Job<wbr>Properties<wbr>Response<wbr>Execution<wbr>Info</a></span>
+        <span class="property-type"><a href="#jobpropertiesresponseexecutioninfo">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI..<wbr>Outputs.<wbr>Job<wbr>Properties<wbr>Response<wbr>Execution<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Information about the execution of a job.{{% /md %}}</dd>
     <dt class="property-"
@@ -413,7 +413,7 @@ The following output properties are available:
 <a href="#horovodsettings_csharp" style="color: inherit; text-decoration: inherit;">Horovod<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#horovodsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI.<wbr>Outputs.<wbr>Horovod<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#horovodsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI..<wbr>Outputs.<wbr>Horovod<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the settings for Horovod job.{{% /md %}}</dd>
     <dt class="property-"
@@ -422,7 +422,7 @@ The following output properties are available:
 <a href="#inputdirectories_csharp" style="color: inherit; text-decoration: inherit;">Input<wbr>Directories</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputdirectoryresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI.<wbr>Outputs.<wbr>Input<wbr>Directory<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#inputdirectoryresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI..<wbr>Outputs.<wbr>Input<wbr>Directory<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of input directories for the job.{{% /md %}}</dd>
     <dt class="property-"
@@ -431,7 +431,7 @@ The following output properties are available:
 <a href="#jobpreparation_csharp" style="color: inherit; text-decoration: inherit;">Job<wbr>Preparation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobpreparationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI.<wbr>Outputs.<wbr>Job<wbr>Preparation<wbr>Response</a></span>
+        <span class="property-type"><a href="#jobpreparationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI..<wbr>Outputs.<wbr>Job<wbr>Preparation<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The specified actions will run on all the nodes that are part of the job{{% /md %}}</dd>
     <dt class="property-"
@@ -440,7 +440,7 @@ The following output properties are available:
 <a href="#mountvolumes_csharp" style="color: inherit; text-decoration: inherit;">Mount<wbr>Volumes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mountvolumesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI.<wbr>Outputs.<wbr>Mount<wbr>Volumes<wbr>Response</a></span>
+        <span class="property-type"><a href="#mountvolumesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI..<wbr>Outputs.<wbr>Mount<wbr>Volumes<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Collection of mount volumes available to the job during execution. These volumes are mounted before the job execution and unmounted after the job completion. The volumes are mounted at location specified by $AZ_BATCHAI_JOB_MOUNT_ROOT environment variable.{{% /md %}}</dd>
     <dt class="property-"
@@ -458,7 +458,7 @@ The following output properties are available:
 <a href="#outputdirectories_csharp" style="color: inherit; text-decoration: inherit;">Output<wbr>Directories</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#outputdirectoryresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI.<wbr>Outputs.<wbr>Output<wbr>Directory<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#outputdirectoryresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI..<wbr>Outputs.<wbr>Output<wbr>Directory<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of output directories for the job.{{% /md %}}</dd>
     <dt class="property-"
@@ -467,7 +467,7 @@ The following output properties are available:
 <a href="#pytorchsettings_csharp" style="color: inherit; text-decoration: inherit;">Py<wbr>Torch<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pytorchsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI.<wbr>Outputs.<wbr>Py<wbr>Torch<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#pytorchsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI..<wbr>Outputs.<wbr>Py<wbr>Torch<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}pyTorch job settings.{{% /md %}}</dd>
     <dt class="property-"
@@ -485,7 +485,7 @@ The following output properties are available:
 <a href="#secrets_csharp" style="color: inherit; text-decoration: inherit;">Secrets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentvariablewithsecretvalueresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI.<wbr>Outputs.<wbr>Environment<wbr>Variable<wbr>With<wbr>Secret<wbr>Value<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#environmentvariablewithsecretvalueresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI..<wbr>Outputs.<wbr>Environment<wbr>Variable<wbr>With<wbr>Secret<wbr>Value<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}A collection of user defined environment variables with secret values to be setup for the job. Server will never report values of these variables back.{{% /md %}}</dd>
     <dt class="property-"
@@ -503,7 +503,7 @@ The following output properties are available:
 <a href="#tensorflowsettings_csharp" style="color: inherit; text-decoration: inherit;">Tensor<wbr>Flow<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tensorflowsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI.<wbr>Outputs.<wbr>Tensor<wbr>Flow<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#tensorflowsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI..<wbr>Outputs.<wbr>Tensor<wbr>Flow<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}TensorFlow job settings.{{% /md %}}</dd>
     <dt class="property-"
@@ -1440,7 +1440,7 @@ The following output properties are available:
 <a href="#credentials_csharp" style="color: inherit; text-decoration: inherit;">Credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurestoragecredentialsinforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI.<wbr>Inputs.<wbr>Azure<wbr>Storage<wbr>Credentials<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurestoragecredentialsinforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI..<wbr>Inputs.<wbr>Azure<wbr>Storage<wbr>Credentials<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information about the Azure storage credentials.{{% /md %}}</dd>
     <dt class="property-required"
@@ -1651,7 +1651,7 @@ The following output properties are available:
 <a href="#credentials_csharp" style="color: inherit; text-decoration: inherit;">Credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurestoragecredentialsinforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI.<wbr>Inputs.<wbr>Azure<wbr>Storage<wbr>Credentials<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurestoragecredentialsinforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI..<wbr>Inputs.<wbr>Azure<wbr>Storage<wbr>Credentials<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information about the Azure storage credentials.{{% /md %}}</dd>
     <dt class="property-required"
@@ -1889,7 +1889,7 @@ The following output properties are available:
 <a href="#accountkeysecretreference_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Key<wbr>Secret<wbr>Reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI.<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#keyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI..<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information about KeyVault secret storing the storage account key. One of accountKey or accountKeySecretReference must be specified.{{% /md %}}</dd>
 </dl>
@@ -1992,7 +1992,7 @@ The following output properties are available:
 <a href="#details_csharp" style="color: inherit; text-decoration: inherit;">Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#namevaluepairresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI.<wbr>Inputs.<wbr>Name<wbr>Value<wbr>Pair<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#namevaluepairresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI..<wbr>Inputs.<wbr>Name<wbr>Value<wbr>Pair<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of additional details about the error.{{% /md %}}</dd>
     <dt class="property-required"
@@ -2894,7 +2894,7 @@ The following output properties are available:
 <a href="#imagesourceregistry_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Source<wbr>Registry</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imagesourceregistryresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI.<wbr>Inputs.<wbr>Image<wbr>Source<wbr>Registry<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#imagesourceregistryresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI..<wbr>Inputs.<wbr>Image<wbr>Source<wbr>Registry<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information about docker image and docker registry to download the container from.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3288,7 +3288,7 @@ The following output properties are available:
 <a href="#valuesecretreference_csharp" style="color: inherit; text-decoration: inherit;">Value<wbr>Secret<wbr>Reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI.<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#keyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI..<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}KeyVault store and secret which contains the value for the environment variable. One of value or valueSecretReference must be provided.{{% /md %}}</dd>
 </dl>
@@ -3409,7 +3409,7 @@ The following output properties are available:
 <a href="#fileserver_csharp" style="color: inherit; text-decoration: inherit;">File<wbr>Server</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI.<wbr>Inputs.<wbr>Resource<wbr>Id<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourceidresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI..<wbr>Inputs.<wbr>Resource<wbr>Id<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Resource ID of the existing File Server to be mounted.{{% /md %}}</dd>
     <dt class="property-required"
@@ -3768,7 +3768,7 @@ The following output properties are available:
 <a href="#credentials_csharp" style="color: inherit; text-decoration: inherit;">Credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateregistrycredentialsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI.<wbr>Inputs.<wbr>Private<wbr>Registry<wbr>Credentials<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#privateregistrycredentialsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI..<wbr>Inputs.<wbr>Private<wbr>Registry<wbr>Credentials<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Credentials to access the private docker repository.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4144,7 +4144,7 @@ The following output properties are available:
 <a href="#errors_csharp" style="color: inherit; text-decoration: inherit;">Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#batchaierrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI.<wbr>Inputs.<wbr>Batch<wbr>AIError<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#batchaierrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI..<wbr>Inputs.<wbr>Batch<wbr>AIError<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A collection of errors encountered by the service during job execution.{{% /md %}}</dd>
     <dt class="property-required"
@@ -4319,7 +4319,7 @@ The following output properties are available:
 <a href="#sourcevault_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Vault</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI.<wbr>Inputs.<wbr>Resource<wbr>Id<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourceidresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI..<wbr>Inputs.<wbr>Resource<wbr>Id<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Fully qualified resource identifier of the Key Vault.{{% /md %}}</dd>
 </dl>
@@ -4413,7 +4413,7 @@ The following output properties are available:
 <a href="#azureblobfilesystems_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Blob<wbr>File<wbr>Systems</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureblobfilesystemreferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>File<wbr>System<wbr>Reference<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#azureblobfilesystemreferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI..<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>File<wbr>System<wbr>Reference<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A collection of Azure Blob Containers that are to be mounted to the cluster nodes.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4422,7 +4422,7 @@ The following output properties are available:
 <a href="#azurefileshares_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>File<wbr>Shares</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefilesharereferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI.<wbr>Inputs.<wbr>Azure<wbr>File<wbr>Share<wbr>Reference<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#azurefilesharereferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI..<wbr>Inputs.<wbr>Azure<wbr>File<wbr>Share<wbr>Reference<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A collection of Azure File Shares that are to be mounted to the cluster nodes.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4431,7 +4431,7 @@ The following output properties are available:
 <a href="#fileservers_csharp" style="color: inherit; text-decoration: inherit;">File<wbr>Servers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fileserverreferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI.<wbr>Inputs.<wbr>File<wbr>Server<wbr>Reference<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#fileserverreferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI..<wbr>Inputs.<wbr>File<wbr>Server<wbr>Reference<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A collection of Batch AI File Servers that are to be mounted to the cluster nodes.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4440,7 +4440,7 @@ The following output properties are available:
 <a href="#unmanagedfilesystems_csharp" style="color: inherit; text-decoration: inherit;">Unmanaged<wbr>File<wbr>Systems</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#unmanagedfilesystemreferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI.<wbr>Inputs.<wbr>Unmanaged<wbr>File<wbr>System<wbr>Reference<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#unmanagedfilesystemreferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI..<wbr>Inputs.<wbr>Unmanaged<wbr>File<wbr>System<wbr>Reference<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A collection of unmanaged file systems that are to be mounted to the cluster nodes.{{% /md %}}</dd>
 </dl>
@@ -4848,7 +4848,7 @@ The following output properties are available:
 <a href="#passwordsecretreference_csharp" style="color: inherit; text-decoration: inherit;">Password<wbr>Secret<wbr>Reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI.<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#keyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI..<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}KeyVault Secret storing the password. Users can store their secrets in Azure KeyVault and pass it to the Batch AI service to integrate with KeyVault. One of password or passwordSecretReference must be specified.{{% /md %}}</dd>
 </dl>

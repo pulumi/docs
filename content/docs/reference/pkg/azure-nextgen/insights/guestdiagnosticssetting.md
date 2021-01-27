@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.insights.GuestDiagnosticsSetting
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Virtual machine guest diagnostics settings resource.
+API Version: 2018-06-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,22 +27,22 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var guestDiagnosticsSetting = new AzureNextGen.Insights.V20180601Preview.GuestDiagnosticsSetting("guestDiagnosticsSetting", new AzureNextGen.Insights.V20180601Preview.GuestDiagnosticsSettingArgs
+        var guestDiagnosticsSetting = new AzureNextGen.Insights..GuestDiagnosticsSetting("guestDiagnosticsSetting", new AzureNextGen.Insights..GuestDiagnosticsSettingArgs
         {
             DataSources = 
             {
-                new AzureNextGen.Insights.V20180601Preview.Inputs.DataSourceArgs
+                new AzureNextGen.Insights..Inputs.DataSourceArgs
                 {
-                    Configuration = new AzureNextGen.Insights.V20180601Preview.Inputs.DataSourceConfigurationArgs
+                    Configuration = new AzureNextGen.Insights..Inputs.DataSourceConfigurationArgs
                     {
                         PerfCounters = 
                         {
-                            new AzureNextGen.Insights.V20180601Preview.Inputs.PerformanceCounterConfigurationArgs
+                            new AzureNextGen.Insights..Inputs.PerformanceCounterConfigurationArgs
                             {
                                 Name = "\\Process(_Total)\\%Processor Time",
                                 SamplingPeriod = "PT1M",
                             },
-                            new AzureNextGen.Insights.V20180601Preview.Inputs.PerformanceCounterConfigurationArgs
+                            new AzureNextGen.Insights..Inputs.PerformanceCounterConfigurationArgs
                             {
                                 Name = "\\Process(_Total)\\Working Set",
                                 SamplingPeriod = "PT1M",
@@ -51,23 +52,23 @@ class MyStack : Stack
                     Kind = "PerformanceCounter",
                     Sinks = 
                     {
-                        new AzureNextGen.Insights.V20180601Preview.Inputs.SinkConfigurationArgs
+                        new AzureNextGen.Insights..Inputs.SinkConfigurationArgs
                         {
                             Kind = "LogAnalytics",
                         },
                     },
                 },
-                new AzureNextGen.Insights.V20180601Preview.Inputs.DataSourceArgs
+                new AzureNextGen.Insights..Inputs.DataSourceArgs
                 {
-                    Configuration = new AzureNextGen.Insights.V20180601Preview.Inputs.DataSourceConfigurationArgs
+                    Configuration = new AzureNextGen.Insights..Inputs.DataSourceConfigurationArgs
                     {
                         Providers = 
                         {
-                            new AzureNextGen.Insights.V20180601Preview.Inputs.EtwProviderConfigurationArgs
+                            new AzureNextGen.Insights..Inputs.EtwProviderConfigurationArgs
                             {
                                 Id = "1",
                             },
-                            new AzureNextGen.Insights.V20180601Preview.Inputs.EtwProviderConfigurationArgs
+                            new AzureNextGen.Insights..Inputs.EtwProviderConfigurationArgs
                             {
                                 Id = "2",
                             },
@@ -76,24 +77,24 @@ class MyStack : Stack
                     Kind = "ETWProviders",
                     Sinks = 
                     {
-                        new AzureNextGen.Insights.V20180601Preview.Inputs.SinkConfigurationArgs
+                        new AzureNextGen.Insights..Inputs.SinkConfigurationArgs
                         {
                             Kind = "LogAnalytics",
                         },
                     },
                 },
-                new AzureNextGen.Insights.V20180601Preview.Inputs.DataSourceArgs
+                new AzureNextGen.Insights..Inputs.DataSourceArgs
                 {
-                    Configuration = new AzureNextGen.Insights.V20180601Preview.Inputs.DataSourceConfigurationArgs
+                    Configuration = new AzureNextGen.Insights..Inputs.DataSourceConfigurationArgs
                     {
                         EventLogs = 
                         {
-                            new AzureNextGen.Insights.V20180601Preview.Inputs.EventLogConfigurationArgs
+                            new AzureNextGen.Insights..Inputs.EventLogConfigurationArgs
                             {
                                 Filter = "SourceName == Xyz AND EventId = \"100\" AND  $Xpath/Column=\"DCName\" = \"CatWoman\"",
                                 LogName = "Application",
                             },
-                            new AzureNextGen.Insights.V20180601Preview.Inputs.EventLogConfigurationArgs
+                            new AzureNextGen.Insights..Inputs.EventLogConfigurationArgs
                             {
                                 Filter = "SourceName == Xyz AND EventId = \"100\" AND  $Xpath/Column=\"DCName\" = \"BatMan\"",
                                 LogName = "Application",
@@ -103,7 +104,7 @@ class MyStack : Stack
                     Kind = "WindowsEventLogs",
                     Sinks = 
                     {
-                        new AzureNextGen.Insights.V20180601Preview.Inputs.SinkConfigurationArgs
+                        new AzureNextGen.Insights..Inputs.SinkConfigurationArgs
                         {
                             Kind = "LogAnalytics",
                         },
@@ -132,7 +133,7 @@ package main
 import (
 	"fmt"
 
-	insights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/insights/v20180601preview"
+	insights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/insights"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -222,57 +223,57 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-guest_diagnostics_setting = azure_nextgen.insights.v20180601preview.GuestDiagnosticsSetting("guestDiagnosticsSetting",
+guest_diagnostics_setting = azure_nextgen.insights.GuestDiagnosticsSetting("guestDiagnosticsSetting",
     data_sources=[
-        azure_nextgen.insights.v20180601preview.DataSourceArgs(
-            configuration=azure_nextgen.insights.v20180601preview.DataSourceConfigurationArgs(
+        azure_nextgen.insights.DataSourceArgs(
+            configuration=azure_nextgen.insights.DataSourceConfigurationArgs(
                 perf_counters=[
-                    azure_nextgen.insights.v20180601preview.PerformanceCounterConfigurationArgs(
+                    azure_nextgen.insights.PerformanceCounterConfigurationArgs(
                         name="\\Process(_Total)\\%Processor Time",
                         sampling_period="PT1M",
                     ),
-                    azure_nextgen.insights.v20180601preview.PerformanceCounterConfigurationArgs(
+                    azure_nextgen.insights.PerformanceCounterConfigurationArgs(
                         name="\\Process(_Total)\\Working Set",
                         sampling_period="PT1M",
                     ),
                 ],
             ),
             kind="PerformanceCounter",
-            sinks=[azure_nextgen.insights.v20180601preview.SinkConfigurationArgs(
+            sinks=[azure_nextgen.insights.SinkConfigurationArgs(
                 kind="LogAnalytics",
             )],
         ),
-        azure_nextgen.insights.v20180601preview.DataSourceArgs(
-            configuration=azure_nextgen.insights.v20180601preview.DataSourceConfigurationArgs(
+        azure_nextgen.insights.DataSourceArgs(
+            configuration=azure_nextgen.insights.DataSourceConfigurationArgs(
                 providers=[
-                    azure_nextgen.insights.v20180601preview.EtwProviderConfigurationArgs(
+                    azure_nextgen.insights.EtwProviderConfigurationArgs(
                         id="1",
                     ),
-                    azure_nextgen.insights.v20180601preview.EtwProviderConfigurationArgs(
+                    azure_nextgen.insights.EtwProviderConfigurationArgs(
                         id="2",
                     ),
                 ],
             ),
             kind="ETWProviders",
-            sinks=[azure_nextgen.insights.v20180601preview.SinkConfigurationArgs(
+            sinks=[azure_nextgen.insights.SinkConfigurationArgs(
                 kind="LogAnalytics",
             )],
         ),
-        azure_nextgen.insights.v20180601preview.DataSourceArgs(
-            configuration=azure_nextgen.insights.v20180601preview.DataSourceConfigurationArgs(
+        azure_nextgen.insights.DataSourceArgs(
+            configuration=azure_nextgen.insights.DataSourceConfigurationArgs(
                 event_logs=[
-                    azure_nextgen.insights.v20180601preview.EventLogConfigurationArgs(
+                    azure_nextgen.insights.EventLogConfigurationArgs(
                         filter="SourceName == Xyz AND EventId = \"100\" AND  $Xpath/Column=\"DCName\" = \"CatWoman\"",
                         log_name="Application",
                     ),
-                    azure_nextgen.insights.v20180601preview.EventLogConfigurationArgs(
+                    azure_nextgen.insights.EventLogConfigurationArgs(
                         filter="SourceName == Xyz AND EventId = \"100\" AND  $Xpath/Column=\"DCName\" = \"BatMan\"",
                         log_name="Application",
                     ),
                 ],
             ),
             kind="WindowsEventLogs",
-            sinks=[azure_nextgen.insights.v20180601preview.SinkConfigurationArgs(
+            sinks=[azure_nextgen.insights.SinkConfigurationArgs(
                 kind="LogAnalytics",
             )],
         ),
@@ -293,7 +294,7 @@ guest_diagnostics_setting = azure_nextgen.insights.v20180601preview.GuestDiagnos
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const guestDiagnosticsSetting = new azure_nextgen.insights.v20180601preview.GuestDiagnosticsSetting("guestDiagnosticsSetting", {
+const guestDiagnosticsSetting = new azure_nextgen.insights.GuestDiagnosticsSetting("guestDiagnosticsSetting", {
     dataSources: [
         {
             configuration: {
@@ -575,7 +576,7 @@ The GuestDiagnosticsSetting resource accepts the following [input]({{< relref "/
 <a href="#datasources_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Sources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasource">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Inputs.<wbr>Data<wbr>Source<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#datasource">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Inputs.<wbr>Data<wbr>Source<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}the array of data source object which are configured to collect and send data{{% /md %}}</dd>
     <dt class="property-optional"
@@ -975,7 +976,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#configuration_csharp" style="color: inherit; text-decoration: inherit;">Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourceconfiguration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Inputs.<wbr>Data<wbr>Source<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#datasourceconfiguration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Inputs.<wbr>Data<wbr>Source<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-required"
@@ -993,7 +994,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sinks_csharp" style="color: inherit; text-decoration: inherit;">Sinks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sinkconfiguration">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Inputs.<wbr>Sink<wbr>Configuration<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#sinkconfiguration">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Inputs.<wbr>Sink<wbr>Configuration<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 </dl>
@@ -1109,7 +1110,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#eventlogs_csharp" style="color: inherit; text-decoration: inherit;">Event<wbr>Logs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventlogconfiguration">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Inputs.<wbr>Event<wbr>Log<wbr>Configuration<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#eventlogconfiguration">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Inputs.<wbr>Event<wbr>Log<wbr>Configuration<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Windows event logs configuration.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1118,7 +1119,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#perfcounters_csharp" style="color: inherit; text-decoration: inherit;">Perf<wbr>Counters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#performancecounterconfiguration">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Inputs.<wbr>Performance<wbr>Counter<wbr>Configuration<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#performancecounterconfiguration">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Inputs.<wbr>Performance<wbr>Counter<wbr>Configuration<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Performance counter configuration{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1127,7 +1128,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#providers_csharp" style="color: inherit; text-decoration: inherit;">Providers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#etwproviderconfiguration">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Inputs.<wbr>Etw<wbr>Provider<wbr>Configuration<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#etwproviderconfiguration">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Inputs.<wbr>Etw<wbr>Provider<wbr>Configuration<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}ETW providers configuration{{% /md %}}</dd>
 </dl>
@@ -1243,7 +1244,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#eventlogs_csharp" style="color: inherit; text-decoration: inherit;">Event<wbr>Logs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventlogconfigurationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Inputs.<wbr>Event<wbr>Log<wbr>Configuration<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#eventlogconfigurationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Inputs.<wbr>Event<wbr>Log<wbr>Configuration<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Windows event logs configuration.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1252,7 +1253,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#perfcounters_csharp" style="color: inherit; text-decoration: inherit;">Perf<wbr>Counters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#performancecounterconfigurationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Inputs.<wbr>Performance<wbr>Counter<wbr>Configuration<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#performancecounterconfigurationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Inputs.<wbr>Performance<wbr>Counter<wbr>Configuration<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Performance counter configuration{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1261,7 +1262,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#providers_csharp" style="color: inherit; text-decoration: inherit;">Providers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#etwproviderconfigurationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Inputs.<wbr>Etw<wbr>Provider<wbr>Configuration<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#etwproviderconfigurationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Inputs.<wbr>Etw<wbr>Provider<wbr>Configuration<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}ETW providers configuration{{% /md %}}</dd>
 </dl>
@@ -1377,7 +1378,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#configuration_csharp" style="color: inherit; text-decoration: inherit;">Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourceconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Inputs.<wbr>Data<wbr>Source<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#datasourceconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Inputs.<wbr>Data<wbr>Source<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-required"
@@ -1395,7 +1396,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sinks_csharp" style="color: inherit; text-decoration: inherit;">Sinks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sinkconfigurationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Inputs.<wbr>Sink<wbr>Configuration<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#sinkconfigurationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Inputs.<wbr>Sink<wbr>Configuration<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 </dl>
@@ -1779,7 +1780,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#events_csharp" style="color: inherit; text-decoration: inherit;">Events</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#etweventconfiguration">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Inputs.<wbr>Etw<wbr>Event<wbr>Configuration<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#etweventconfiguration">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Inputs.<wbr>Etw<wbr>Event<wbr>Configuration<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-required"
@@ -1877,7 +1878,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#events_csharp" style="color: inherit; text-decoration: inherit;">Events</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#etweventconfigurationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Inputs.<wbr>Etw<wbr>Event<wbr>Configuration<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#etweventconfigurationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Inputs.<wbr>Etw<wbr>Event<wbr>Configuration<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-required"
@@ -2557,7 +2558,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:insights/v20180601preview:guestDiagnosticsSetting SampleDiagSetting /subscriptions/187f412d-1758-44d9-b052-169e2564721d/resourceGroups/Default-ResourceGroup/providers/microsoft.insights/guestDiagnosticSettings/SampleDiagSetting 
+$ pulumi import azure-nextgen:insights:guestDiagnosticsSetting SampleDiagSetting /subscriptions/187f412d-1758-44d9-b052-169e2564721d/resourceGroups/Default-ResourceGroup/providers/microsoft.insights/guestDiagnosticSettings/SampleDiagSetting 
 ```
 
 

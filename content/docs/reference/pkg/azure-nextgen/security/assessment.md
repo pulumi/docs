@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.security.Assessment resource wit
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Security assessment on a resource
-Latest API Version: 2020-01-01.
+API Version: 2020-01-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var assessment = new AzureNextGen.Security.Latest.Assessment("assessment", new AzureNextGen.Security.Latest.AssessmentArgs
+        var assessment = new AzureNextGen.Security..Assessment("assessment", new AzureNextGen.Security..AssessmentArgs
         {
             AssessmentName = "8bb8be0a-6010-4789-812f-e4d661c4ed0e",
             ResourceDetails = 
@@ -35,7 +35,7 @@ class MyStack : Stack
                 { "source", "Azure" },
             },
             ResourceId = "subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23/resourceGroups/myRg/providers/Microsoft.Compute/virtualMachineScaleSets/vmss2",
-            Status = new AzureNextGen.Security.Latest.Inputs.AssessmentStatusArgs
+            Status = new AzureNextGen.Security..Inputs.AssessmentStatusArgs
             {
                 Code = "Healthy",
             },
@@ -58,13 +58,13 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-assessment = azure_nextgen.security.latest.Assessment("assessment",
+assessment = azure_nextgen.security.Assessment("assessment",
     assessment_name="8bb8be0a-6010-4789-812f-e4d661c4ed0e",
     resource_details={
         "source": "Azure",
     },
     resource_id="subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23/resourceGroups/myRg/providers/Microsoft.Compute/virtualMachineScaleSets/vmss2",
-    status=azure_nextgen.security.latest.AssessmentStatusArgs(
+    status=azure_nextgen.security.AssessmentStatusArgs(
         code="Healthy",
     ))
 
@@ -78,7 +78,7 @@ assessment = azure_nextgen.security.latest.Assessment("assessment",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const assessment = new azure_nextgen.security.latest.Assessment("assessment", {
+const assessment = new azure_nextgen.security.Assessment("assessment", {
     assessmentName: "8bb8be0a-6010-4789-812f-e4d661c4ed0e",
     resourceDetails: {
         source: "Azure",
@@ -291,7 +291,7 @@ The Assessment resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#resourcedetails_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureresourcedetails">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security.<wbr>Inputs.<wbr>Azure<wbr>Resource<wbr>Details<wbr>Args</a> | <a href="#onpremiseresourcedetails">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security.<wbr>Inputs.<wbr>On<wbr>Premise<wbr>Resource<wbr>Details<wbr>Args</a> | <a href="#onpremisesqlresourcedetails">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security.<wbr>Inputs.<wbr>On<wbr>Premise<wbr>Sql<wbr>Resource<wbr>Details<wbr>Args</a></span>
+        <span class="property-type"><a href="#azureresourcedetails">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security..<wbr>Inputs.<wbr>Azure<wbr>Resource<wbr>Details<wbr>Args</a> | <a href="#onpremiseresourcedetails">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security..<wbr>Inputs.<wbr>On<wbr>Premise<wbr>Resource<wbr>Details<wbr>Args</a> | <a href="#onpremisesqlresourcedetails">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security..<wbr>Inputs.<wbr>On<wbr>Premise<wbr>Sql<wbr>Resource<wbr>Details<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Details of the resource that was assessed{{% /md %}}</dd>
     <dt class="property-required"
@@ -309,7 +309,7 @@ The Assessment resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#assessmentstatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security.<wbr>Inputs.<wbr>Assessment<wbr>Status<wbr>Args</a></span>
+        <span class="property-type"><a href="#assessmentstatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security..<wbr>Inputs.<wbr>Assessment<wbr>Status<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The result of the assessment{{% /md %}}</dd>
     <dt class="property-optional"
@@ -327,7 +327,7 @@ The Assessment resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#metadata_csharp" style="color: inherit; text-decoration: inherit;">Metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securityassessmentmetadataproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security.<wbr>Inputs.<wbr>Security<wbr>Assessment<wbr>Metadata<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#securityassessmentmetadataproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security..<wbr>Inputs.<wbr>Security<wbr>Assessment<wbr>Metadata<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes properties of an assessment metadata.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -336,7 +336,7 @@ The Assessment resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#partnersdata_csharp" style="color: inherit; text-decoration: inherit;">Partners<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securityassessmentpartnerdata">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security.<wbr>Inputs.<wbr>Security<wbr>Assessment<wbr>Partner<wbr>Data<wbr>Args</a></span>
+        <span class="property-type"><a href="#securityassessmentpartnerdata">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security..<wbr>Inputs.<wbr>Security<wbr>Assessment<wbr>Partner<wbr>Data<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Data regarding 3rd party partner integration{{% /md %}}</dd>
 </dl>
@@ -583,7 +583,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#links_csharp" style="color: inherit; text-decoration: inherit;">Links</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#assessmentlinksresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security.<wbr>Outputs.<wbr>Assessment<wbr>Links<wbr>Response</a></span>
+        <span class="property-type"><a href="#assessmentlinksresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security..<wbr>Outputs.<wbr>Assessment<wbr>Links<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Links relevant to the assessment{{% /md %}}</dd>
     <dt class="property-"
@@ -843,7 +843,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#code_csharp" style="color: inherit; text-decoration: inherit;">Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#assessmentstatuscode">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security.<wbr>Assessment<wbr>Status<wbr>Code</a></span>
+        <span class="property-type">string | <a href="#assessmentstatuscode">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security..<wbr>Assessment<wbr>Status<wbr>Code</a></span>
     </dt>
     <dd>{{% md %}}Programmatic code for the status of the assessment{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2499,7 +2499,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#assessmenttype_csharp" style="color: inherit; text-decoration: inherit;">Assessment<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#assessmenttype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security.<wbr>Assessment<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#assessmenttype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security..<wbr>Assessment<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}BuiltIn if the assessment based on built-in Azure Policy definition, Custom if the assessment based on custom Azure Policy definition{{% /md %}}</dd>
     <dt class="property-required"
@@ -2517,7 +2517,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#severity_csharp" style="color: inherit; text-decoration: inherit;">Severity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#severity">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security.<wbr>Severity</a></span>
+        <span class="property-type">string | <a href="#severity">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security..<wbr>Severity</a></span>
     </dt>
     <dd>{{% md %}}The severity level of the assessment{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2526,7 +2526,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#category_csharp" style="color: inherit; text-decoration: inherit;">Category</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Union&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security.<wbr>Category&gt;&gt;</span>
+        <span class="property-type">List&lt;Union&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security..<wbr>Category&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2544,7 +2544,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#implementationeffort_csharp" style="color: inherit; text-decoration: inherit;">Implementation<wbr>Effort</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#implementationeffort">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security.<wbr>Implementation<wbr>Effort</a></span>
+        <span class="property-type">string | <a href="#implementationeffort">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security..<wbr>Implementation<wbr>Effort</a></span>
     </dt>
     <dd>{{% md %}}The implementation effort required to remediate this assessment{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2553,7 +2553,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#partnerdata_csharp" style="color: inherit; text-decoration: inherit;">Partner<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securityassessmentmetadatapartnerdata">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security.<wbr>Inputs.<wbr>Security<wbr>Assessment<wbr>Metadata<wbr>Partner<wbr>Data<wbr>Args</a></span>
+        <span class="property-type"><a href="#securityassessmentmetadatapartnerdata">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security..<wbr>Inputs.<wbr>Security<wbr>Assessment<wbr>Metadata<wbr>Partner<wbr>Data<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the partner that created the assessment{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2580,7 +2580,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#threats_csharp" style="color: inherit; text-decoration: inherit;">Threats</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Union&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security.<wbr>Threats&gt;&gt;</span>
+        <span class="property-type">List&lt;Union&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security..<wbr>Threats&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2589,7 +2589,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userimpact_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Impact</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#userimpact">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security.<wbr>User<wbr>Impact</a></span>
+        <span class="property-type">string | <a href="#userimpact">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security..<wbr>User<wbr>Impact</a></span>
     </dt>
     <dd>{{% md %}}The user impact of the assessment{{% /md %}}</dd>
 </dl>
@@ -2984,7 +2984,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#partnerdata_csharp" style="color: inherit; text-decoration: inherit;">Partner<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securityassessmentmetadatapartnerdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security.<wbr>Inputs.<wbr>Security<wbr>Assessment<wbr>Metadata<wbr>Partner<wbr>Data<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#securityassessmentmetadatapartnerdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security..<wbr>Inputs.<wbr>Security<wbr>Assessment<wbr>Metadata<wbr>Partner<wbr>Data<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the partner that created the assessment{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3747,7 +3747,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:security/latest:Assessment 8bb8be0a-6010-4789-812f-e4d661c4ed0e /subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23/resourceGroups/myRg/providers/Microsoft.Compute/virtualMachineScaleSets/vmss1/providers/Microsoft.Security/assessments/8bb8be0a-6010-4789-812f-e4d661c4ed0e 
+$ pulumi import azure-nextgen:security:Assessment 8bb8be0a-6010-4789-812f-e4d661c4ed0e /subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23/resourceGroups/myRg/providers/Microsoft.Compute/virtualMachineScaleSets/vmss1/providers/Microsoft.Security/assessments/8bb8be0a-6010-4789-812f-e4d661c4ed0e 
 ```
 
 

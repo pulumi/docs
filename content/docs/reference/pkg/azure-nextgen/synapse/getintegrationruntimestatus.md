@@ -204,7 +204,7 @@ The following output properties are available:
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedintegrationruntimestatusresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Synapse.<wbr>Outputs.<wbr>Managed<wbr>Integration<wbr>Runtime<wbr>Status<wbr>Response</a> | <a href="#selfhostedintegrationruntimestatusresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Synapse.<wbr>Outputs.<wbr>Self<wbr>Hosted<wbr>Integration<wbr>Runtime<wbr>Status<wbr>Response</a></span>
+        <span class="property-type"><a href="#managedintegrationruntimestatusresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Synapse..<wbr>Outputs.<wbr>Managed<wbr>Integration<wbr>Runtime<wbr>Status<wbr>Response</a> | <a href="#selfhostedintegrationruntimestatusresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Synapse..<wbr>Outputs.<wbr>Self<wbr>Hosted<wbr>Integration<wbr>Runtime<wbr>Status<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Integration runtime properties.{{% /md %}}</dd>
 </dl>
@@ -708,7 +708,7 @@ The following output properties are available:
 <a href="#errors_csharp" style="color: inherit; text-decoration: inherit;">Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedintegrationruntimeerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Synapse.<wbr>Inputs.<wbr>Managed<wbr>Integration<wbr>Runtime<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#managedintegrationruntimeerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Synapse..<wbr>Inputs.<wbr>Managed<wbr>Integration<wbr>Runtime<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The errors that occurred on this integration runtime node.{{% /md %}}</dd>
 </dl>
@@ -1094,7 +1094,7 @@ The following output properties are available:
 <a href="#lastoperation_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Operation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedintegrationruntimeoperationresultresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Synapse.<wbr>Inputs.<wbr>Managed<wbr>Integration<wbr>Runtime<wbr>Operation<wbr>Result<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#managedintegrationruntimeoperationresultresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Synapse..<wbr>Inputs.<wbr>Managed<wbr>Integration<wbr>Runtime<wbr>Operation<wbr>Result<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The last operation result that occurred on this integration runtime.{{% /md %}}</dd>
     <dt class="property-required"
@@ -1103,7 +1103,7 @@ The following output properties are available:
 <a href="#nodes_csharp" style="color: inherit; text-decoration: inherit;">Nodes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedintegrationruntimenoderesponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Synapse.<wbr>Inputs.<wbr>Managed<wbr>Integration<wbr>Runtime<wbr>Node<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#managedintegrationruntimenoderesponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Synapse..<wbr>Inputs.<wbr>Managed<wbr>Integration<wbr>Runtime<wbr>Node<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of nodes for managed integration runtime.{{% /md %}}</dd>
     <dt class="property-required"
@@ -1112,7 +1112,7 @@ The following output properties are available:
 <a href="#othererrors_csharp" style="color: inherit; text-decoration: inherit;">Other<wbr>Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedintegrationruntimeerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Synapse.<wbr>Inputs.<wbr>Managed<wbr>Integration<wbr>Runtime<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#managedintegrationruntimeerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Synapse..<wbr>Inputs.<wbr>Managed<wbr>Integration<wbr>Runtime<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The errors that occurred on this integration runtime.{{% /md %}}</dd>
     <dt class="property-required"
@@ -2155,7 +2155,7 @@ The following output properties are available:
 <a href="#links_csharp" style="color: inherit; text-decoration: inherit;">Links</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedintegrationruntimeresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Synapse.<wbr>Inputs.<wbr>Linked<wbr>Integration<wbr>Runtime<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#linkedintegrationruntimeresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Synapse..<wbr>Inputs.<wbr>Linked<wbr>Integration<wbr>Runtime<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of linked integration runtimes that are created to share with this integration runtime.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2164,7 +2164,7 @@ The following output properties are available:
 <a href="#nodes_csharp" style="color: inherit; text-decoration: inherit;">Nodes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#selfhostedintegrationruntimenoderesponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Synapse.<wbr>Inputs.<wbr>Self<wbr>Hosted<wbr>Integration<wbr>Runtime<wbr>Node<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#selfhostedintegrationruntimenoderesponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Synapse..<wbr>Inputs.<wbr>Self<wbr>Hosted<wbr>Integration<wbr>Runtime<wbr>Node<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of nodes for this integration runtime.{{% /md %}}</dd>
 </dl>

@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.netapp.Pool resource with exampl
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Capacity pool resource
-Latest API Version: 2020-09-01.
+API Version: 2020-09-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var pool = new AzureNextGen.NetApp.Latest.Pool("pool", new AzureNextGen.NetApp.Latest.PoolArgs
+        var pool = new AzureNextGen.NetApp..Pool("pool", new AzureNextGen.NetApp..PoolArgs
         {
             AccountName = "account1",
             Location = "eastus",
@@ -51,7 +51,7 @@ class MyStack : Stack
 package main
 
 import (
-	netapp "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/netapp/latest"
+	netapp "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/netapp"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -83,7 +83,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-pool = azure_nextgen.netapp.latest.Pool("pool",
+pool = azure_nextgen.netapp.Pool("pool",
     account_name="account1",
     location="eastus",
     pool_name="pool1",
@@ -102,7 +102,7 @@ pool = azure_nextgen.netapp.latest.Pool("pool",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const pool = new azure_nextgen.netapp.latest.Pool("pool", {
+const pool = new azure_nextgen.netapp.Pool("pool", {
     accountName: "account1",
     location: "eastus",
     poolName: "pool1",
@@ -341,7 +341,7 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#servicelevel_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#servicelevel">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Net<wbr>App.<wbr>Service<wbr>Level</a></span>
+        <span class="property-type">string | <a href="#servicelevel">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Net<wbr>App..<wbr>Service<wbr>Level</a></span>
     </dt>
     <dd>{{% md %}}The service level of the file system{{% /md %}}</dd>
     <dt class="property-required"
@@ -359,7 +359,7 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#qostype_csharp" style="color: inherit; text-decoration: inherit;">Qos<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#qostype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Net<wbr>App.<wbr>Qos<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#qostype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Net<wbr>App..<wbr>Qos<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The qos type of the pool{{% /md %}}</dd>
     <dt class="property-optional"
@@ -990,7 +990,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:netapp/latest:Pool account1/pool1 /subscriptions/D633CC2E-722B-4AE1-B636-BBD9E4C60ED9/resourceGroups/myRG/providers/Microsoft.NetApp/netAppAccounts/account1/capacityPools/pool1 
+$ pulumi import azure-nextgen:netapp:Pool account1/pool1 /subscriptions/D633CC2E-722B-4AE1-B636-BBD9E4C60ED9/resourceGroups/myRG/providers/Microsoft.NetApp/netAppAccounts/account1/capacityPools/pool1 
 ```
 
 

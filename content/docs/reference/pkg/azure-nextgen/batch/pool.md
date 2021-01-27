@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.batch.Pool resource with example
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Contains information about a pool.
-Latest API Version: 2021-01-01.
+API Version: 2021-01-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,14 +27,14 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var pool = new AzureNextGen.Batch.Latest.Pool("pool", new AzureNextGen.Batch.Latest.PoolArgs
+        var pool = new AzureNextGen.Batch..Pool("pool", new AzureNextGen.Batch..PoolArgs
         {
             AccountName = "sampleacct",
-            DeploymentConfiguration = new AzureNextGen.Batch.Latest.Inputs.DeploymentConfigurationArgs
+            DeploymentConfiguration = new AzureNextGen.Batch..Inputs.DeploymentConfigurationArgs
             {
-                VirtualMachineConfiguration = new AzureNextGen.Batch.Latest.Inputs.VirtualMachineConfigurationArgs
+                VirtualMachineConfiguration = new AzureNextGen.Batch..Inputs.VirtualMachineConfigurationArgs
                 {
-                    ImageReference = new AzureNextGen.Batch.Latest.Inputs.ImageReferenceArgs
+                    ImageReference = new AzureNextGen.Batch..Inputs.ImageReferenceArgs
                     {
                         Id = "/subscriptions/subid/resourceGroups/networking-group/providers/Microsoft.Compute/galleries/testgallery/images/testimagedef/versions/0.0.1",
                     },
@@ -59,7 +59,7 @@ class MyStack : Stack
 package main
 
 import (
-	batch "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/batch/latest"
+	batch "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/batch"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -96,11 +96,11 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-pool = azure_nextgen.batch.latest.Pool("pool",
+pool = azure_nextgen.batch.Pool("pool",
     account_name="sampleacct",
-    deployment_configuration=azure_nextgen.batch.latest.DeploymentConfigurationArgs(
-        virtual_machine_configuration=azure_nextgen.batch.latest.VirtualMachineConfigurationArgs(
-            image_reference=azure_nextgen.batch.latest.ImageReferenceArgs(
+    deployment_configuration=azure_nextgen.batch.DeploymentConfigurationArgs(
+        virtual_machine_configuration=azure_nextgen.batch.VirtualMachineConfigurationArgs(
+            image_reference=azure_nextgen.batch.ImageReferenceArgs(
                 id="/subscriptions/subid/resourceGroups/networking-group/providers/Microsoft.Compute/galleries/testgallery/images/testimagedef/versions/0.0.1",
             ),
             node_agent_sku_id="batch.node.ubuntu 18.04",
@@ -120,7 +120,7 @@ pool = azure_nextgen.batch.latest.Pool("pool",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const pool = new azure_nextgen.batch.latest.Pool("pool", {
+const pool = new azure_nextgen.batch.Pool("pool", {
     accountName: "sampleacct",
     deploymentConfiguration: {
         virtualMachineConfiguration: {
@@ -149,7 +149,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var pool = new AzureNextGen.Batch.Latest.Pool("pool", new AzureNextGen.Batch.Latest.PoolArgs
+        var pool = new AzureNextGen.Batch..Pool("pool", new AzureNextGen.Batch..PoolArgs
         {
             AccountName = "sampleacct",
             ApplicationLicenses = 
@@ -159,7 +159,7 @@ class MyStack : Stack
             },
             ApplicationPackages = 
             {
-                new AzureNextGen.Batch.Latest.Inputs.ApplicationPackageReferenceArgs
+                new AzureNextGen.Batch..Inputs.ApplicationPackageReferenceArgs
                 {
                     Id = "/subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.Batch/batchAccounts/sampleacct/pools/testpool/applications/app_1234",
                     Version = "asdf",
@@ -167,7 +167,7 @@ class MyStack : Stack
             },
             Certificates = 
             {
-                new AzureNextGen.Batch.Latest.Inputs.CertificateReferenceArgs
+                new AzureNextGen.Batch..Inputs.CertificateReferenceArgs
                 {
                     Id = "/subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.Batch/batchAccounts/sampleacct/pools/testpool/certificates/sha1-1234567",
                     StoreLocation = "LocalMachine",
@@ -178,9 +178,9 @@ class MyStack : Stack
                     },
                 },
             },
-            DeploymentConfiguration = new AzureNextGen.Batch.Latest.Inputs.DeploymentConfigurationArgs
+            DeploymentConfiguration = new AzureNextGen.Batch..Inputs.DeploymentConfigurationArgs
             {
-                CloudServiceConfiguration = new AzureNextGen.Batch.Latest.Inputs.CloudServiceConfigurationArgs
+                CloudServiceConfiguration = new AzureNextGen.Batch..Inputs.CloudServiceConfigurationArgs
                 {
                     OsFamily = "4",
                     OsVersion = "WA-GUEST-OS-4.45_201708-01",
@@ -190,20 +190,20 @@ class MyStack : Stack
             InterNodeCommunication = "Enabled",
             Metadata = 
             {
-                new AzureNextGen.Batch.Latest.Inputs.MetadataItemArgs
+                new AzureNextGen.Batch..Inputs.MetadataItemArgs
                 {
                     Name = "metadata-1",
                     Value = "value-1",
                 },
-                new AzureNextGen.Batch.Latest.Inputs.MetadataItemArgs
+                new AzureNextGen.Batch..Inputs.MetadataItemArgs
                 {
                     Name = "metadata-2",
                     Value = "value-2",
                 },
             },
-            NetworkConfiguration = new AzureNextGen.Batch.Latest.Inputs.NetworkConfigurationArgs
+            NetworkConfiguration = new AzureNextGen.Batch..Inputs.NetworkConfigurationArgs
             {
-                PublicIPAddressConfiguration = new AzureNextGen.Batch.Latest.Inputs.PublicIPAddressConfigurationArgs
+                PublicIPAddressConfiguration = new AzureNextGen.Batch..Inputs.PublicIPAddressConfigurationArgs
                 {
                     IpAddressIds = 
                     {
@@ -216,9 +216,9 @@ class MyStack : Stack
             },
             PoolName = "testpool",
             ResourceGroupName = "default-azurebatch-japaneast",
-            ScaleSettings = new AzureNextGen.Batch.Latest.Inputs.ScaleSettingsArgs
+            ScaleSettings = new AzureNextGen.Batch..Inputs.ScaleSettingsArgs
             {
-                FixedScale = new AzureNextGen.Batch.Latest.Inputs.FixedScaleSettingsArgs
+                FixedScale = new AzureNextGen.Batch..Inputs.FixedScaleSettingsArgs
                 {
                     NodeDeallocationOption = "TaskCompletion",
                     ResizeTimeout = "PT8M",
@@ -226,12 +226,12 @@ class MyStack : Stack
                     TargetLowPriorityNodes = 28,
                 },
             },
-            StartTask = new AzureNextGen.Batch.Latest.Inputs.StartTaskArgs
+            StartTask = new AzureNextGen.Batch..Inputs.StartTaskArgs
             {
                 CommandLine = "cmd /c SET",
                 EnvironmentSettings = 
                 {
-                    new AzureNextGen.Batch.Latest.Inputs.EnvironmentSettingArgs
+                    new AzureNextGen.Batch..Inputs.EnvironmentSettingArgs
                     {
                         Name = "MYSET",
                         Value = "1234",
@@ -240,16 +240,16 @@ class MyStack : Stack
                 MaxTaskRetryCount = 6,
                 ResourceFiles = 
                 {
-                    new AzureNextGen.Batch.Latest.Inputs.ResourceFileArgs
+                    new AzureNextGen.Batch..Inputs.ResourceFileArgs
                     {
                         FileMode = "777",
                         FilePath = "c:\\temp\\gohere",
                         HttpUrl = "https://testaccount.blob.core.windows.net/example-blob-file",
                     },
                 },
-                UserIdentity = new AzureNextGen.Batch.Latest.Inputs.UserIdentityArgs
+                UserIdentity = new AzureNextGen.Batch..Inputs.UserIdentityArgs
                 {
-                    AutoUser = new AzureNextGen.Batch.Latest.Inputs.AutoUserSpecificationArgs
+                    AutoUser = new AzureNextGen.Batch..Inputs.AutoUserSpecificationArgs
                     {
                         ElevationLevel = "Admin",
                         Scope = "Pool",
@@ -257,17 +257,17 @@ class MyStack : Stack
                 },
                 WaitForSuccess = true,
             },
-            TaskSchedulingPolicy = new AzureNextGen.Batch.Latest.Inputs.TaskSchedulingPolicyArgs
+            TaskSchedulingPolicy = new AzureNextGen.Batch..Inputs.TaskSchedulingPolicyArgs
             {
                 NodeFillType = "Pack",
             },
             TaskSlotsPerNode = 13,
             UserAccounts = 
             {
-                new AzureNextGen.Batch.Latest.Inputs.UserAccountArgs
+                new AzureNextGen.Batch..Inputs.UserAccountArgs
                 {
                     ElevationLevel = "Admin",
-                    LinuxUserConfiguration = new AzureNextGen.Batch.Latest.Inputs.LinuxUserConfigurationArgs
+                    LinuxUserConfiguration = new AzureNextGen.Batch..Inputs.LinuxUserConfigurationArgs
                     {
                         Gid = 4567,
                         SshPrivateKey = "sshprivatekeyvalue",
@@ -297,24 +297,24 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-pool = azure_nextgen.batch.latest.Pool("pool",
+pool = azure_nextgen.batch.Pool("pool",
     account_name="sampleacct",
     application_licenses=[
         "app-license0",
         "app-license1",
     ],
-    application_packages=[azure_nextgen.batch.latest.ApplicationPackageReferenceArgs(
+    application_packages=[azure_nextgen.batch.ApplicationPackageReferenceArgs(
         id="/subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.Batch/batchAccounts/sampleacct/pools/testpool/applications/app_1234",
         version="asdf",
     )],
-    certificates=[azure_nextgen.batch.latest.CertificateReferenceArgs(
+    certificates=[azure_nextgen.batch.CertificateReferenceArgs(
         id="/subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.Batch/batchAccounts/sampleacct/pools/testpool/certificates/sha1-1234567",
         store_location="LocalMachine",
         store_name="MY",
         visibility=["RemoteUser"],
     )],
-    deployment_configuration=azure_nextgen.batch.latest.DeploymentConfigurationArgs(
-        cloud_service_configuration=azure_nextgen.batch.latest.CloudServiceConfigurationArgs(
+    deployment_configuration=azure_nextgen.batch.DeploymentConfigurationArgs(
+        cloud_service_configuration=azure_nextgen.batch.CloudServiceConfigurationArgs(
             os_family="4",
             os_version="WA-GUEST-OS-4.45_201708-01",
         ),
@@ -322,17 +322,17 @@ pool = azure_nextgen.batch.latest.Pool("pool",
     display_name="my-pool-name",
     inter_node_communication="Enabled",
     metadata=[
-        azure_nextgen.batch.latest.MetadataItemArgs(
+        azure_nextgen.batch.MetadataItemArgs(
             name="metadata-1",
             value="value-1",
         ),
-        azure_nextgen.batch.latest.MetadataItemArgs(
+        azure_nextgen.batch.MetadataItemArgs(
             name="metadata-2",
             value="value-2",
         ),
     ],
-    network_configuration=azure_nextgen.batch.latest.NetworkConfigurationArgs(
-        public_ip_address_configuration=azure_nextgen.batch.latest.PublicIPAddressConfigurationArgs(
+    network_configuration=azure_nextgen.batch.NetworkConfigurationArgs(
+        public_ip_address_configuration=azure_nextgen.batch.PublicIPAddressConfigurationArgs(
             ip_address_ids=[
                 "/subscriptions/subid1/resourceGroups/rg13/providers/Microsoft.Network/publicIPAddresses/ip135",
                 "/subscriptions/subid2/resourceGroups/rg24/providers/Microsoft.Network/publicIPAddresses/ip268",
@@ -343,41 +343,41 @@ pool = azure_nextgen.batch.latest.Pool("pool",
     ),
     pool_name="testpool",
     resource_group_name="default-azurebatch-japaneast",
-    scale_settings=azure_nextgen.batch.latest.ScaleSettingsArgs(
-        fixed_scale=azure_nextgen.batch.latest.FixedScaleSettingsArgs(
+    scale_settings=azure_nextgen.batch.ScaleSettingsArgs(
+        fixed_scale=azure_nextgen.batch.FixedScaleSettingsArgs(
             node_deallocation_option="TaskCompletion",
             resize_timeout="PT8M",
             target_dedicated_nodes=6,
             target_low_priority_nodes=28,
         ),
     ),
-    start_task=azure_nextgen.batch.latest.StartTaskArgs(
+    start_task=azure_nextgen.batch.StartTaskArgs(
         command_line="cmd /c SET",
-        environment_settings=[azure_nextgen.batch.latest.EnvironmentSettingArgs(
+        environment_settings=[azure_nextgen.batch.EnvironmentSettingArgs(
             name="MYSET",
             value="1234",
         )],
         max_task_retry_count=6,
-        resource_files=[azure_nextgen.batch.latest.ResourceFileArgs(
+        resource_files=[azure_nextgen.batch.ResourceFileArgs(
             file_mode="777",
             file_path="c:\\temp\\gohere",
             http_url="https://testaccount.blob.core.windows.net/example-blob-file",
         )],
-        user_identity=azure_nextgen.batch.latest.UserIdentityArgs(
-            auto_user=azure_nextgen.batch.latest.AutoUserSpecificationArgs(
+        user_identity=azure_nextgen.batch.UserIdentityArgs(
+            auto_user=azure_nextgen.batch.AutoUserSpecificationArgs(
                 elevation_level="Admin",
                 scope="Pool",
             ),
         ),
         wait_for_success=True,
     ),
-    task_scheduling_policy=azure_nextgen.batch.latest.TaskSchedulingPolicyArgs(
+    task_scheduling_policy=azure_nextgen.batch.TaskSchedulingPolicyArgs(
         node_fill_type="Pack",
     ),
     task_slots_per_node=13,
-    user_accounts=[azure_nextgen.batch.latest.UserAccountArgs(
+    user_accounts=[azure_nextgen.batch.UserAccountArgs(
         elevation_level="Admin",
-        linux_user_configuration=azure_nextgen.batch.latest.LinuxUserConfigurationArgs(
+        linux_user_configuration=azure_nextgen.batch.LinuxUserConfigurationArgs(
             gid=4567,
             ssh_private_key="sshprivatekeyvalue",
             uid=1234,
@@ -397,7 +397,7 @@ pool = azure_nextgen.batch.latest.Pool("pool",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const pool = new azure_nextgen.batch.latest.Pool("pool", {
+const pool = new azure_nextgen.batch.Pool("pool", {
     accountName: "sampleacct",
     applicationLicenses: [
         "app-license0",
@@ -502,23 +502,23 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var pool = new AzureNextGen.Batch.Latest.Pool("pool", new AzureNextGen.Batch.Latest.PoolArgs
+        var pool = new AzureNextGen.Batch..Pool("pool", new AzureNextGen.Batch..PoolArgs
         {
             AccountName = "sampleacct",
-            DeploymentConfiguration = new AzureNextGen.Batch.Latest.Inputs.DeploymentConfigurationArgs
+            DeploymentConfiguration = new AzureNextGen.Batch..Inputs.DeploymentConfigurationArgs
             {
-                VirtualMachineConfiguration = new AzureNextGen.Batch.Latest.Inputs.VirtualMachineConfigurationArgs
+                VirtualMachineConfiguration = new AzureNextGen.Batch..Inputs.VirtualMachineConfigurationArgs
                 {
                     DataDisks = 
                     {
-                        new AzureNextGen.Batch.Latest.Inputs.DataDiskArgs
+                        new AzureNextGen.Batch..Inputs.DataDiskArgs
                         {
                             Caching = "ReadWrite",
                             DiskSizeGB = 30,
                             Lun = 0,
                             StorageAccountType = "Premium_LRS",
                         },
-                        new AzureNextGen.Batch.Latest.Inputs.DataDiskArgs
+                        new AzureNextGen.Batch..Inputs.DataDiskArgs
                         {
                             Caching = "None",
                             DiskSizeGB = 200,
@@ -526,7 +526,7 @@ class MyStack : Stack
                             StorageAccountType = "Standard_LRS",
                         },
                     },
-                    DiskEncryptionConfiguration = new AzureNextGen.Batch.Latest.Inputs.DiskEncryptionConfigurationArgs
+                    DiskEncryptionConfiguration = new AzureNextGen.Batch..Inputs.DiskEncryptionConfigurationArgs
                     {
                         Targets = 
                         {
@@ -534,7 +534,7 @@ class MyStack : Stack
                             "TemporaryDisk",
                         },
                     },
-                    ImageReference = new AzureNextGen.Batch.Latest.Inputs.ImageReferenceArgs
+                    ImageReference = new AzureNextGen.Batch..Inputs.ImageReferenceArgs
                     {
                         Offer = "WindowsServer",
                         Publisher = "MicrosoftWindowsServer",
@@ -543,23 +543,23 @@ class MyStack : Stack
                     },
                     LicenseType = "Windows_Server",
                     NodeAgentSkuId = "batch.node.windows amd64",
-                    NodePlacementConfiguration = new AzureNextGen.Batch.Latest.Inputs.NodePlacementConfigurationArgs
+                    NodePlacementConfiguration = new AzureNextGen.Batch..Inputs.NodePlacementConfigurationArgs
                     {
                         Policy = "Zonal",
                     },
-                    WindowsConfiguration = new AzureNextGen.Batch.Latest.Inputs.WindowsConfigurationArgs
+                    WindowsConfiguration = new AzureNextGen.Batch..Inputs.WindowsConfigurationArgs
                     {
                         EnableAutomaticUpdates = false,
                     },
                 },
             },
-            NetworkConfiguration = new AzureNextGen.Batch.Latest.Inputs.NetworkConfigurationArgs
+            NetworkConfiguration = new AzureNextGen.Batch..Inputs.NetworkConfigurationArgs
             {
-                EndpointConfiguration = new AzureNextGen.Batch.Latest.Inputs.PoolEndpointConfigurationArgs
+                EndpointConfiguration = new AzureNextGen.Batch..Inputs.PoolEndpointConfigurationArgs
                 {
                     InboundNatPools = 
                     {
-                        new AzureNextGen.Batch.Latest.Inputs.InboundNatPoolArgs
+                        new AzureNextGen.Batch..Inputs.InboundNatPoolArgs
                         {
                             BackendPort = 12001,
                             FrontendPortRangeEnd = 15100,
@@ -567,7 +567,7 @@ class MyStack : Stack
                             Name = "testnat",
                             NetworkSecurityGroupRules = 
                             {
-                                new AzureNextGen.Batch.Latest.Inputs.NetworkSecurityGroupRuleArgs
+                                new AzureNextGen.Batch..Inputs.NetworkSecurityGroupRuleArgs
                                 {
                                     Access = "Allow",
                                     Priority = 150,
@@ -578,7 +578,7 @@ class MyStack : Stack
                                         "2",
                                     },
                                 },
-                                new AzureNextGen.Batch.Latest.Inputs.NetworkSecurityGroupRuleArgs
+                                new AzureNextGen.Batch..Inputs.NetworkSecurityGroupRuleArgs
                                 {
                                     Access = "Deny",
                                     Priority = 3500,
@@ -596,9 +596,9 @@ class MyStack : Stack
             },
             PoolName = "testpool",
             ResourceGroupName = "default-azurebatch-japaneast",
-            ScaleSettings = new AzureNextGen.Batch.Latest.Inputs.ScaleSettingsArgs
+            ScaleSettings = new AzureNextGen.Batch..Inputs.ScaleSettingsArgs
             {
-                AutoScale = new AzureNextGen.Batch.Latest.Inputs.AutoScaleSettingsArgs
+                AutoScale = new AzureNextGen.Batch..Inputs.AutoScaleSettingsArgs
                 {
                     EvaluationInterval = "PT5M",
                     Formula = "$TargetDedicatedNodes=1",
@@ -624,31 +624,31 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-pool = azure_nextgen.batch.latest.Pool("pool",
+pool = azure_nextgen.batch.Pool("pool",
     account_name="sampleacct",
-    deployment_configuration=azure_nextgen.batch.latest.DeploymentConfigurationArgs(
-        virtual_machine_configuration=azure_nextgen.batch.latest.VirtualMachineConfigurationArgs(
+    deployment_configuration=azure_nextgen.batch.DeploymentConfigurationArgs(
+        virtual_machine_configuration=azure_nextgen.batch.VirtualMachineConfigurationArgs(
             data_disks=[
-                azure_nextgen.batch.latest.DataDiskArgs(
+                azure_nextgen.batch.DataDiskArgs(
                     caching="ReadWrite",
                     disk_size_gb=30,
                     lun=0,
                     storage_account_type="Premium_LRS",
                 ),
-                azure_nextgen.batch.latest.DataDiskArgs(
+                azure_nextgen.batch.DataDiskArgs(
                     caching="None",
                     disk_size_gb=200,
                     lun=1,
                     storage_account_type="Standard_LRS",
                 ),
             ],
-            disk_encryption_configuration=azure_nextgen.batch.latest.DiskEncryptionConfigurationArgs(
+            disk_encryption_configuration=azure_nextgen.batch.DiskEncryptionConfigurationArgs(
                 targets=[
                     "OsDisk",
                     "TemporaryDisk",
                 ],
             ),
-            image_reference=azure_nextgen.batch.latest.ImageReferenceArgs(
+            image_reference=azure_nextgen.batch.ImageReferenceArgs(
                 offer="WindowsServer",
                 publisher="MicrosoftWindowsServer",
                 sku="2016-Datacenter-SmallDisk",
@@ -656,23 +656,23 @@ pool = azure_nextgen.batch.latest.Pool("pool",
             ),
             license_type="Windows_Server",
             node_agent_sku_id="batch.node.windows amd64",
-            node_placement_configuration=azure_nextgen.batch.latest.NodePlacementConfigurationArgs(
+            node_placement_configuration=azure_nextgen.batch.NodePlacementConfigurationArgs(
                 policy="Zonal",
             ),
-            windows_configuration=azure_nextgen.batch.latest.WindowsConfigurationArgs(
+            windows_configuration=azure_nextgen.batch.WindowsConfigurationArgs(
                 enable_automatic_updates=False,
             ),
         ),
     ),
-    network_configuration=azure_nextgen.batch.latest.NetworkConfigurationArgs(
-        endpoint_configuration=azure_nextgen.batch.latest.PoolEndpointConfigurationArgs(
-            inbound_nat_pools=[azure_nextgen.batch.latest.InboundNatPoolArgs(
+    network_configuration=azure_nextgen.batch.NetworkConfigurationArgs(
+        endpoint_configuration=azure_nextgen.batch.PoolEndpointConfigurationArgs(
+            inbound_nat_pools=[azure_nextgen.batch.InboundNatPoolArgs(
                 backend_port=12001,
                 frontend_port_range_end=15100,
                 frontend_port_range_start=15000,
                 name="testnat",
                 network_security_group_rules=[
-                    azure_nextgen.batch.latest.NetworkSecurityGroupRuleArgs(
+                    azure_nextgen.batch.NetworkSecurityGroupRuleArgs(
                         access="Allow",
                         priority=150,
                         source_address_prefix="192.100.12.45",
@@ -681,7 +681,7 @@ pool = azure_nextgen.batch.latest.Pool("pool",
                             "2",
                         ],
                     ),
-                    azure_nextgen.batch.latest.NetworkSecurityGroupRuleArgs(
+                    azure_nextgen.batch.NetworkSecurityGroupRuleArgs(
                         access="Deny",
                         priority=3500,
                         source_address_prefix="*",
@@ -694,8 +694,8 @@ pool = azure_nextgen.batch.latest.Pool("pool",
     ),
     pool_name="testpool",
     resource_group_name="default-azurebatch-japaneast",
-    scale_settings=azure_nextgen.batch.latest.ScaleSettingsArgs(
-        auto_scale=azure_nextgen.batch.latest.AutoScaleSettingsArgs(
+    scale_settings=azure_nextgen.batch.ScaleSettingsArgs(
+        auto_scale=azure_nextgen.batch.AutoScaleSettingsArgs(
             evaluation_interval="PT5M",
             formula="$TargetDedicatedNodes=1",
         ),
@@ -712,7 +712,7 @@ pool = azure_nextgen.batch.latest.Pool("pool",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const pool = new azure_nextgen.batch.latest.Pool("pool", {
+const pool = new azure_nextgen.batch.Pool("pool", {
     accountName: "sampleacct",
     deploymentConfiguration: {
         virtualMachineConfiguration: {
@@ -805,21 +805,21 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var pool = new AzureNextGen.Batch.Latest.Pool("pool", new AzureNextGen.Batch.Latest.PoolArgs
+        var pool = new AzureNextGen.Batch..Pool("pool", new AzureNextGen.Batch..PoolArgs
         {
             AccountName = "sampleacct",
-            DeploymentConfiguration = new AzureNextGen.Batch.Latest.Inputs.DeploymentConfigurationArgs
+            DeploymentConfiguration = new AzureNextGen.Batch..Inputs.DeploymentConfigurationArgs
             {
-                CloudServiceConfiguration = new AzureNextGen.Batch.Latest.Inputs.CloudServiceConfigurationArgs
+                CloudServiceConfiguration = new AzureNextGen.Batch..Inputs.CloudServiceConfigurationArgs
                 {
                     OsFamily = "5",
                 },
             },
             PoolName = "testpool",
             ResourceGroupName = "default-azurebatch-japaneast",
-            ScaleSettings = new AzureNextGen.Batch.Latest.Inputs.ScaleSettingsArgs
+            ScaleSettings = new AzureNextGen.Batch..Inputs.ScaleSettingsArgs
             {
-                FixedScale = new AzureNextGen.Batch.Latest.Inputs.FixedScaleSettingsArgs
+                FixedScale = new AzureNextGen.Batch..Inputs.FixedScaleSettingsArgs
                 {
                     TargetDedicatedNodes = 3,
                 },
@@ -840,7 +840,7 @@ class MyStack : Stack
 package main
 
 import (
-	batch "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/batch/latest"
+	batch "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/batch"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -879,17 +879,17 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-pool = azure_nextgen.batch.latest.Pool("pool",
+pool = azure_nextgen.batch.Pool("pool",
     account_name="sampleacct",
-    deployment_configuration=azure_nextgen.batch.latest.DeploymentConfigurationArgs(
-        cloud_service_configuration=azure_nextgen.batch.latest.CloudServiceConfigurationArgs(
+    deployment_configuration=azure_nextgen.batch.DeploymentConfigurationArgs(
+        cloud_service_configuration=azure_nextgen.batch.CloudServiceConfigurationArgs(
             os_family="5",
         ),
     ),
     pool_name="testpool",
     resource_group_name="default-azurebatch-japaneast",
-    scale_settings=azure_nextgen.batch.latest.ScaleSettingsArgs(
-        fixed_scale=azure_nextgen.batch.latest.FixedScaleSettingsArgs(
+    scale_settings=azure_nextgen.batch.ScaleSettingsArgs(
+        fixed_scale=azure_nextgen.batch.FixedScaleSettingsArgs(
             target_dedicated_nodes=3,
         ),
     ),
@@ -905,7 +905,7 @@ pool = azure_nextgen.batch.latest.Pool("pool",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const pool = new azure_nextgen.batch.latest.Pool("pool", {
+const pool = new azure_nextgen.batch.Pool("pool", {
     accountName: "sampleacct",
     deploymentConfiguration: {
         cloudServiceConfiguration: {
@@ -936,14 +936,14 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var pool = new AzureNextGen.Batch.Latest.Pool("pool", new AzureNextGen.Batch.Latest.PoolArgs
+        var pool = new AzureNextGen.Batch..Pool("pool", new AzureNextGen.Batch..PoolArgs
         {
             AccountName = "sampleacct",
-            DeploymentConfiguration = new AzureNextGen.Batch.Latest.Inputs.DeploymentConfigurationArgs
+            DeploymentConfiguration = new AzureNextGen.Batch..Inputs.DeploymentConfigurationArgs
             {
-                VirtualMachineConfiguration = new AzureNextGen.Batch.Latest.Inputs.VirtualMachineConfigurationArgs
+                VirtualMachineConfiguration = new AzureNextGen.Batch..Inputs.VirtualMachineConfigurationArgs
                 {
-                    ImageReference = new AzureNextGen.Batch.Latest.Inputs.ImageReferenceArgs
+                    ImageReference = new AzureNextGen.Batch..Inputs.ImageReferenceArgs
                     {
                         Offer = "UbuntuServer",
                         Publisher = "Canonical",
@@ -955,9 +955,9 @@ class MyStack : Stack
             },
             PoolName = "testpool",
             ResourceGroupName = "default-azurebatch-japaneast",
-            ScaleSettings = new AzureNextGen.Batch.Latest.Inputs.ScaleSettingsArgs
+            ScaleSettings = new AzureNextGen.Batch..Inputs.ScaleSettingsArgs
             {
-                AutoScale = new AzureNextGen.Batch.Latest.Inputs.AutoScaleSettingsArgs
+                AutoScale = new AzureNextGen.Batch..Inputs.AutoScaleSettingsArgs
                 {
                     EvaluationInterval = "PT5M",
                     Formula = "$TargetDedicatedNodes=1",
@@ -981,7 +981,7 @@ package main
 import (
 	"fmt"
 
-	batch "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/batch/latest"
+	batch "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/batch"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -1027,11 +1027,11 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-pool = azure_nextgen.batch.latest.Pool("pool",
+pool = azure_nextgen.batch.Pool("pool",
     account_name="sampleacct",
-    deployment_configuration=azure_nextgen.batch.latest.DeploymentConfigurationArgs(
-        virtual_machine_configuration=azure_nextgen.batch.latest.VirtualMachineConfigurationArgs(
-            image_reference=azure_nextgen.batch.latest.ImageReferenceArgs(
+    deployment_configuration=azure_nextgen.batch.DeploymentConfigurationArgs(
+        virtual_machine_configuration=azure_nextgen.batch.VirtualMachineConfigurationArgs(
+            image_reference=azure_nextgen.batch.ImageReferenceArgs(
                 offer="UbuntuServer",
                 publisher="Canonical",
                 sku="18.04-LTS",
@@ -1042,8 +1042,8 @@ pool = azure_nextgen.batch.latest.Pool("pool",
     ),
     pool_name="testpool",
     resource_group_name="default-azurebatch-japaneast",
-    scale_settings=azure_nextgen.batch.latest.ScaleSettingsArgs(
-        auto_scale=azure_nextgen.batch.latest.AutoScaleSettingsArgs(
+    scale_settings=azure_nextgen.batch.ScaleSettingsArgs(
+        auto_scale=azure_nextgen.batch.AutoScaleSettingsArgs(
             evaluation_interval="PT5M",
             formula="$TargetDedicatedNodes=1",
         ),
@@ -1060,7 +1060,7 @@ pool = azure_nextgen.batch.latest.Pool("pool",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const pool = new azure_nextgen.batch.latest.Pool("pool", {
+const pool = new azure_nextgen.batch.Pool("pool", {
     accountName: "sampleacct",
     deploymentConfiguration: {
         virtualMachineConfiguration: {
@@ -1098,23 +1098,23 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var pool = new AzureNextGen.Batch.Latest.Pool("pool", new AzureNextGen.Batch.Latest.PoolArgs
+        var pool = new AzureNextGen.Batch..Pool("pool", new AzureNextGen.Batch..PoolArgs
         {
             AccountName = "sampleacct",
-            DeploymentConfiguration = new AzureNextGen.Batch.Latest.Inputs.DeploymentConfigurationArgs
+            DeploymentConfiguration = new AzureNextGen.Batch..Inputs.DeploymentConfigurationArgs
             {
-                VirtualMachineConfiguration = new AzureNextGen.Batch.Latest.Inputs.VirtualMachineConfigurationArgs
+                VirtualMachineConfiguration = new AzureNextGen.Batch..Inputs.VirtualMachineConfigurationArgs
                 {
-                    ImageReference = new AzureNextGen.Batch.Latest.Inputs.ImageReferenceArgs
+                    ImageReference = new AzureNextGen.Batch..Inputs.ImageReferenceArgs
                     {
                         Id = "/subscriptions/subid/resourceGroups/networking-group/providers/Microsoft.Compute/galleries/testgallery/images/testimagedef/versions/0.0.1",
                     },
                     NodeAgentSkuId = "batch.node.ubuntu 18.04",
                 },
             },
-            NetworkConfiguration = new AzureNextGen.Batch.Latest.Inputs.NetworkConfigurationArgs
+            NetworkConfiguration = new AzureNextGen.Batch..Inputs.NetworkConfigurationArgs
             {
-                PublicIPAddressConfiguration = new AzureNextGen.Batch.Latest.Inputs.PublicIPAddressConfigurationArgs
+                PublicIPAddressConfiguration = new AzureNextGen.Batch..Inputs.PublicIPAddressConfigurationArgs
                 {
                     Provision = "NoPublicIPAddresses",
                 },
@@ -1138,7 +1138,7 @@ class MyStack : Stack
 package main
 
 import (
-	batch "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/batch/latest"
+	batch "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/batch"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -1181,18 +1181,18 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-pool = azure_nextgen.batch.latest.Pool("pool",
+pool = azure_nextgen.batch.Pool("pool",
     account_name="sampleacct",
-    deployment_configuration=azure_nextgen.batch.latest.DeploymentConfigurationArgs(
-        virtual_machine_configuration=azure_nextgen.batch.latest.VirtualMachineConfigurationArgs(
-            image_reference=azure_nextgen.batch.latest.ImageReferenceArgs(
+    deployment_configuration=azure_nextgen.batch.DeploymentConfigurationArgs(
+        virtual_machine_configuration=azure_nextgen.batch.VirtualMachineConfigurationArgs(
+            image_reference=azure_nextgen.batch.ImageReferenceArgs(
                 id="/subscriptions/subid/resourceGroups/networking-group/providers/Microsoft.Compute/galleries/testgallery/images/testimagedef/versions/0.0.1",
             ),
             node_agent_sku_id="batch.node.ubuntu 18.04",
         ),
     ),
-    network_configuration=azure_nextgen.batch.latest.NetworkConfigurationArgs(
-        public_ip_address_configuration=azure_nextgen.batch.latest.PublicIPAddressConfigurationArgs(
+    network_configuration=azure_nextgen.batch.NetworkConfigurationArgs(
+        public_ip_address_configuration=azure_nextgen.batch.PublicIPAddressConfigurationArgs(
             provision="NoPublicIPAddresses",
         ),
         subnet_id="/subscriptions/subid/resourceGroups/rg1234/providers/Microsoft.Network/virtualNetworks/network1234/subnets/subnet123",
@@ -1211,7 +1211,7 @@ pool = azure_nextgen.batch.latest.Pool("pool",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const pool = new azure_nextgen.batch.latest.Pool("pool", {
+const pool = new azure_nextgen.batch.Pool("pool", {
     accountName: "sampleacct",
     deploymentConfiguration: {
         virtualMachineConfiguration: {
@@ -1246,23 +1246,23 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var pool = new AzureNextGen.Batch.Latest.Pool("pool", new AzureNextGen.Batch.Latest.PoolArgs
+        var pool = new AzureNextGen.Batch..Pool("pool", new AzureNextGen.Batch..PoolArgs
         {
             AccountName = "sampleacct",
-            DeploymentConfiguration = new AzureNextGen.Batch.Latest.Inputs.DeploymentConfigurationArgs
+            DeploymentConfiguration = new AzureNextGen.Batch..Inputs.DeploymentConfigurationArgs
             {
-                VirtualMachineConfiguration = new AzureNextGen.Batch.Latest.Inputs.VirtualMachineConfigurationArgs
+                VirtualMachineConfiguration = new AzureNextGen.Batch..Inputs.VirtualMachineConfigurationArgs
                 {
-                    ImageReference = new AzureNextGen.Batch.Latest.Inputs.ImageReferenceArgs
+                    ImageReference = new AzureNextGen.Batch..Inputs.ImageReferenceArgs
                     {
                         Id = "/subscriptions/subid/resourceGroups/networking-group/providers/Microsoft.Compute/galleries/testgallery/images/testimagedef/versions/0.0.1",
                     },
                     NodeAgentSkuId = "batch.node.ubuntu 18.04",
                 },
             },
-            NetworkConfiguration = new AzureNextGen.Batch.Latest.Inputs.NetworkConfigurationArgs
+            NetworkConfiguration = new AzureNextGen.Batch..Inputs.NetworkConfigurationArgs
             {
-                PublicIPAddressConfiguration = new AzureNextGen.Batch.Latest.Inputs.PublicIPAddressConfigurationArgs
+                PublicIPAddressConfiguration = new AzureNextGen.Batch..Inputs.PublicIPAddressConfigurationArgs
                 {
                     IpAddressIds = 
                     {
@@ -1290,7 +1290,7 @@ class MyStack : Stack
 package main
 
 import (
-	batch "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/batch/latest"
+	batch "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/batch"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -1336,18 +1336,18 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-pool = azure_nextgen.batch.latest.Pool("pool",
+pool = azure_nextgen.batch.Pool("pool",
     account_name="sampleacct",
-    deployment_configuration=azure_nextgen.batch.latest.DeploymentConfigurationArgs(
-        virtual_machine_configuration=azure_nextgen.batch.latest.VirtualMachineConfigurationArgs(
-            image_reference=azure_nextgen.batch.latest.ImageReferenceArgs(
+    deployment_configuration=azure_nextgen.batch.DeploymentConfigurationArgs(
+        virtual_machine_configuration=azure_nextgen.batch.VirtualMachineConfigurationArgs(
+            image_reference=azure_nextgen.batch.ImageReferenceArgs(
                 id="/subscriptions/subid/resourceGroups/networking-group/providers/Microsoft.Compute/galleries/testgallery/images/testimagedef/versions/0.0.1",
             ),
             node_agent_sku_id="batch.node.ubuntu 18.04",
         ),
     ),
-    network_configuration=azure_nextgen.batch.latest.NetworkConfigurationArgs(
-        public_ip_address_configuration=azure_nextgen.batch.latest.PublicIPAddressConfigurationArgs(
+    network_configuration=azure_nextgen.batch.NetworkConfigurationArgs(
+        public_ip_address_configuration=azure_nextgen.batch.PublicIPAddressConfigurationArgs(
             ip_address_ids=["/subscriptions/subid1/resourceGroups/rg13/providers/Microsoft.Network/publicIPAddresses/ip135"],
             provision="UserManaged",
         ),
@@ -1367,7 +1367,7 @@ pool = azure_nextgen.batch.latest.Pool("pool",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const pool = new azure_nextgen.batch.latest.Pool("pool", {
+const pool = new azure_nextgen.batch.Pool("pool", {
     accountName: "sampleacct",
     deploymentConfiguration: {
         virtualMachineConfiguration: {
@@ -1403,14 +1403,14 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var pool = new AzureNextGen.Batch.Latest.Pool("pool", new AzureNextGen.Batch.Latest.PoolArgs
+        var pool = new AzureNextGen.Batch..Pool("pool", new AzureNextGen.Batch..PoolArgs
         {
             AccountName = "sampleacct",
-            DeploymentConfiguration = new AzureNextGen.Batch.Latest.Inputs.DeploymentConfigurationArgs
+            DeploymentConfiguration = new AzureNextGen.Batch..Inputs.DeploymentConfigurationArgs
             {
-                VirtualMachineConfiguration = new AzureNextGen.Batch.Latest.Inputs.VirtualMachineConfigurationArgs
+                VirtualMachineConfiguration = new AzureNextGen.Batch..Inputs.VirtualMachineConfigurationArgs
                 {
-                    ImageReference = new AzureNextGen.Batch.Latest.Inputs.ImageReferenceArgs
+                    ImageReference = new AzureNextGen.Batch..Inputs.ImageReferenceArgs
                     {
                         Offer = "UbuntuServer",
                         Publisher = "Canonical",
@@ -1420,7 +1420,7 @@ class MyStack : Stack
                     NodeAgentSkuId = "batch.node.ubuntu 18.04",
                 },
             },
-            Identity = new AzureNextGen.Batch.Latest.Inputs.BatchPoolIdentityArgs
+            Identity = new AzureNextGen.Batch..Inputs.BatchPoolIdentityArgs
             {
                 Type = "UserAssigned",
                 UserAssignedIdentities = 
@@ -1431,9 +1431,9 @@ class MyStack : Stack
             },
             PoolName = "testpool",
             ResourceGroupName = "default-azurebatch-japaneast",
-            ScaleSettings = new AzureNextGen.Batch.Latest.Inputs.ScaleSettingsArgs
+            ScaleSettings = new AzureNextGen.Batch..Inputs.ScaleSettingsArgs
             {
-                AutoScale = new AzureNextGen.Batch.Latest.Inputs.AutoScaleSettingsArgs
+                AutoScale = new AzureNextGen.Batch..Inputs.AutoScaleSettingsArgs
                 {
                     EvaluationInterval = "PT5M",
                     Formula = "$TargetDedicatedNodes=1",
@@ -1457,7 +1457,7 @@ package main
 import (
 	"fmt"
 
-	batch "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/batch/latest"
+	batch "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/batch"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -1510,11 +1510,11 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-pool = azure_nextgen.batch.latest.Pool("pool",
+pool = azure_nextgen.batch.Pool("pool",
     account_name="sampleacct",
-    deployment_configuration=azure_nextgen.batch.latest.DeploymentConfigurationArgs(
-        virtual_machine_configuration=azure_nextgen.batch.latest.VirtualMachineConfigurationArgs(
-            image_reference=azure_nextgen.batch.latest.ImageReferenceArgs(
+    deployment_configuration=azure_nextgen.batch.DeploymentConfigurationArgs(
+        virtual_machine_configuration=azure_nextgen.batch.VirtualMachineConfigurationArgs(
+            image_reference=azure_nextgen.batch.ImageReferenceArgs(
                 offer="UbuntuServer",
                 publisher="Canonical",
                 sku="18.04-LTS",
@@ -1523,7 +1523,7 @@ pool = azure_nextgen.batch.latest.Pool("pool",
             node_agent_sku_id="batch.node.ubuntu 18.04",
         ),
     ),
-    identity=azure_nextgen.batch.latest.BatchPoolIdentityArgs(
+    identity=azure_nextgen.batch.BatchPoolIdentityArgs(
         type="UserAssigned",
         user_assigned_identities={
             "/subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.ManagedIdentity/userAssignedIdentities/id1": {},
@@ -1532,8 +1532,8 @@ pool = azure_nextgen.batch.latest.Pool("pool",
     ),
     pool_name="testpool",
     resource_group_name="default-azurebatch-japaneast",
-    scale_settings=azure_nextgen.batch.latest.ScaleSettingsArgs(
-        auto_scale=azure_nextgen.batch.latest.AutoScaleSettingsArgs(
+    scale_settings=azure_nextgen.batch.ScaleSettingsArgs(
+        auto_scale=azure_nextgen.batch.AutoScaleSettingsArgs(
             evaluation_interval="PT5M",
             formula="$TargetDedicatedNodes=1",
         ),
@@ -1550,7 +1550,7 @@ pool = azure_nextgen.batch.latest.Pool("pool",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const pool = new azure_nextgen.batch.latest.Pool("pool", {
+const pool = new azure_nextgen.batch.Pool("pool", {
     accountName: "sampleacct",
     deploymentConfiguration: {
         virtualMachineConfiguration: {
@@ -1595,16 +1595,16 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var pool = new AzureNextGen.Batch.Latest.Pool("pool", new AzureNextGen.Batch.Latest.PoolArgs
+        var pool = new AzureNextGen.Batch..Pool("pool", new AzureNextGen.Batch..PoolArgs
         {
             AccountName = "sampleacct",
-            DeploymentConfiguration = new AzureNextGen.Batch.Latest.Inputs.DeploymentConfigurationArgs
+            DeploymentConfiguration = new AzureNextGen.Batch..Inputs.DeploymentConfigurationArgs
             {
-                VirtualMachineConfiguration = new AzureNextGen.Batch.Latest.Inputs.VirtualMachineConfigurationArgs
+                VirtualMachineConfiguration = new AzureNextGen.Batch..Inputs.VirtualMachineConfigurationArgs
                 {
                     Extensions = 
                     {
-                        new AzureNextGen.Batch.Latest.Inputs.VMExtensionArgs
+                        new AzureNextGen.Batch..Inputs.VMExtensionArgs
                         {
                             AutoUpgradeMinorVersion = true,
                             Name = "batchextension1",
@@ -1621,7 +1621,7 @@ class MyStack : Stack
                             TypeHandlerVersion = "1.0",
                         },
                     },
-                    ImageReference = new AzureNextGen.Batch.Latest.Inputs.ImageReferenceArgs
+                    ImageReference = new AzureNextGen.Batch..Inputs.ImageReferenceArgs
                     {
                         Offer = "UbuntuServer",
                         Publisher = "Canonical",
@@ -1632,9 +1632,9 @@ class MyStack : Stack
             },
             PoolName = "testpool",
             ResourceGroupName = "default-azurebatch-japaneast",
-            ScaleSettings = new AzureNextGen.Batch.Latest.Inputs.ScaleSettingsArgs
+            ScaleSettings = new AzureNextGen.Batch..Inputs.ScaleSettingsArgs
             {
-                AutoScale = new AzureNextGen.Batch.Latest.Inputs.AutoScaleSettingsArgs
+                AutoScale = new AzureNextGen.Batch..Inputs.AutoScaleSettingsArgs
                 {
                     EvaluationInterval = "PT5M",
                     Formula = "$TargetDedicatedNodes=1",
@@ -1658,7 +1658,7 @@ package main
 import (
 	"fmt"
 
-	batch "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/batch/latest"
+	batch "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/batch"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -1718,11 +1718,11 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-pool = azure_nextgen.batch.latest.Pool("pool",
+pool = azure_nextgen.batch.Pool("pool",
     account_name="sampleacct",
-    deployment_configuration=azure_nextgen.batch.latest.DeploymentConfigurationArgs(
-        virtual_machine_configuration=azure_nextgen.batch.latest.VirtualMachineConfigurationArgs(
-            extensions=[azure_nextgen.batch.latest.VMExtensionArgs(
+    deployment_configuration=azure_nextgen.batch.DeploymentConfigurationArgs(
+        virtual_machine_configuration=azure_nextgen.batch.VirtualMachineConfigurationArgs(
+            extensions=[azure_nextgen.batch.VMExtensionArgs(
                 auto_upgrade_minor_version=True,
                 name="batchextension1",
                 protected_settings={
@@ -1735,7 +1735,7 @@ pool = azure_nextgen.batch.latest.Pool("pool",
                 type="SecurityMonitoringForLinux",
                 type_handler_version="1.0",
             )],
-            image_reference=azure_nextgen.batch.latest.ImageReferenceArgs(
+            image_reference=azure_nextgen.batch.ImageReferenceArgs(
                 offer="UbuntuServer",
                 publisher="Canonical",
                 sku="16.04.0-LTS",
@@ -1745,8 +1745,8 @@ pool = azure_nextgen.batch.latest.Pool("pool",
     ),
     pool_name="testpool",
     resource_group_name="default-azurebatch-japaneast",
-    scale_settings=azure_nextgen.batch.latest.ScaleSettingsArgs(
-        auto_scale=azure_nextgen.batch.latest.AutoScaleSettingsArgs(
+    scale_settings=azure_nextgen.batch.ScaleSettingsArgs(
+        auto_scale=azure_nextgen.batch.AutoScaleSettingsArgs(
             evaluation_interval="PT5M",
             formula="$TargetDedicatedNodes=1",
         ),
@@ -1763,7 +1763,7 @@ pool = azure_nextgen.batch.latest.Pool("pool",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const pool = new azure_nextgen.batch.latest.Pool("pool", {
+const pool = new azure_nextgen.batch.Pool("pool", {
     accountName: "sampleacct",
     deploymentConfiguration: {
         virtualMachineConfiguration: {
@@ -2028,7 +2028,7 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#applicationpackages_csharp" style="color: inherit; text-decoration: inherit;">Application<wbr>Packages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationpackagereference">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch.<wbr>Inputs.<wbr>Application<wbr>Package<wbr>Reference<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#applicationpackagereference">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch..<wbr>Inputs.<wbr>Application<wbr>Package<wbr>Reference<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Changes to application package references affect all new compute nodes joining the pool, but do not affect compute nodes that are already in the pool until they are rebooted or reimaged. There is a maximum of 10 application package references on any given pool.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2037,7 +2037,7 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#certificates_csharp" style="color: inherit; text-decoration: inherit;">Certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatereference">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch.<wbr>Inputs.<wbr>Certificate<wbr>Reference<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#certificatereference">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch..<wbr>Inputs.<wbr>Certificate<wbr>Reference<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}For Windows compute nodes, the Batch service installs the certificates to the specified certificate store and location. For Linux compute nodes, the certificates are stored in a directory inside the task working directory and an environment variable AZ_BATCH_CERTIFICATES_DIR is supplied to the task to query for this location. For certificates with visibility of 'remoteUser', a 'certs' directory is created in the user's home directory (e.g., /home/{user-name}/certs) and certificates are placed in that directory.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2046,7 +2046,7 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#deploymentconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentconfiguration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch.<wbr>Inputs.<wbr>Deployment<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#deploymentconfiguration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch..<wbr>Inputs.<wbr>Deployment<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Using CloudServiceConfiguration specifies that the nodes should be creating using Azure Cloud Services (PaaS), while VirtualMachineConfiguration uses Azure Virtual Machines (IaaS).{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2064,7 +2064,7 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#batchpoolidentity">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch.<wbr>Inputs.<wbr>Batch<wbr>Pool<wbr>Identity<wbr>Args</a></span>
+        <span class="property-type"><a href="#batchpoolidentity">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch..<wbr>Inputs.<wbr>Batch<wbr>Pool<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The type of identity used for the Batch Pool.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2073,7 +2073,7 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#internodecommunication_csharp" style="color: inherit; text-decoration: inherit;">Inter<wbr>Node<wbr>Communication</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#internodecommunicationstate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch.<wbr>Inter<wbr>Node<wbr>Communication<wbr>State</a></span>
+        <span class="property-type"><a href="#internodecommunicationstate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch..<wbr>Inter<wbr>Node<wbr>Communication<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}This imposes restrictions on which nodes can be assigned to the pool. Enabling this value can reduce the chance of the requested number of nodes to be allocated in the pool. If not specified, this value defaults to 'Disabled'.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2082,7 +2082,7 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#metadata_csharp" style="color: inherit; text-decoration: inherit;">Metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metadataitem">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch.<wbr>Inputs.<wbr>Metadata<wbr>Item<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#metadataitem">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch..<wbr>Inputs.<wbr>Metadata<wbr>Item<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The Batch service does not assign any meaning to metadata; it is solely for the use of user code.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2091,7 +2091,7 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#mountconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Mount<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mountconfiguration">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch.<wbr>Inputs.<wbr>Mount<wbr>Configuration<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#mountconfiguration">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch..<wbr>Inputs.<wbr>Mount<wbr>Configuration<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}This supports Azure Files, NFS, CIFS/SMB, and Blobfuse.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2100,7 +2100,7 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#networkconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkconfiguration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch.<wbr>Inputs.<wbr>Network<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#networkconfiguration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch..<wbr>Inputs.<wbr>Network<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The network configuration for a pool.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2109,7 +2109,7 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#scalesettings_csharp" style="color: inherit; text-decoration: inherit;">Scale<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch.<wbr>Inputs.<wbr>Scale<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#scalesettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch..<wbr>Inputs.<wbr>Scale<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines the desired size of the pool. This can either be 'fixedScale' where the requested targetDedicatedNodes is specified, or 'autoScale' which defines a formula which is periodically reevaluated. If this property is not specified, the pool will have a fixed scale with 0 targetDedicatedNodes.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2118,7 +2118,7 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#starttask_csharp" style="color: inherit; text-decoration: inherit;">Start<wbr>Task</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#starttask">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch.<wbr>Inputs.<wbr>Start<wbr>Task<wbr>Args</a></span>
+        <span class="property-type"><a href="#starttask">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch..<wbr>Inputs.<wbr>Start<wbr>Task<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}In an PATCH (update) operation, this property can be set to an empty object to remove the start task from the pool.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2127,7 +2127,7 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#taskschedulingpolicy_csharp" style="color: inherit; text-decoration: inherit;">Task<wbr>Scheduling<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#taskschedulingpolicy">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch.<wbr>Inputs.<wbr>Task<wbr>Scheduling<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#taskschedulingpolicy">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch..<wbr>Inputs.<wbr>Task<wbr>Scheduling<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}If not specified, the default is spread.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2145,7 +2145,7 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#useraccounts_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Accounts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#useraccount">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch.<wbr>Inputs.<wbr>User<wbr>Account<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#useraccount">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch..<wbr>Inputs.<wbr>User<wbr>Account<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2725,7 +2725,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#autoscalerun_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Scale<wbr>Run</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalerunresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch.<wbr>Outputs.<wbr>Auto<wbr>Scale<wbr>Run<wbr>Response</a></span>
+        <span class="property-type"><a href="#autoscalerunresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch..<wbr>Outputs.<wbr>Auto<wbr>Scale<wbr>Run<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}This property is set only if the pool automatically scales, i.e. autoScaleSettings are used.{{% /md %}}</dd>
     <dt class="property-"
@@ -2815,7 +2815,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resizeoperationstatus_csharp" style="color: inherit; text-decoration: inherit;">Resize<wbr>Operation<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resizeoperationstatusresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch.<wbr>Outputs.<wbr>Resize<wbr>Operation<wbr>Status<wbr>Response</a></span>
+        <span class="property-type"><a href="#resizeoperationstatusresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch..<wbr>Outputs.<wbr>Resize<wbr>Operation<wbr>Status<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes either the current operation (if the pool AllocationState is Resizing) or the previously completed operation (if the AllocationState is Steady).{{% /md %}}</dd>
     <dt class="property-"
@@ -3461,7 +3461,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#details_csharp" style="color: inherit; text-decoration: inherit;">Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalerunerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch.<wbr>Inputs.<wbr>Auto<wbr>Scale<wbr>Run<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#autoscalerunerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch..<wbr>Inputs.<wbr>Auto<wbr>Scale<wbr>Run<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 </dl>
@@ -3586,7 +3586,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#error_csharp" style="color: inherit; text-decoration: inherit;">Error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalerunerrorresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch.<wbr>Inputs.<wbr>Auto<wbr>Scale<wbr>Run<wbr>Error<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#autoscalerunerrorresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch..<wbr>Inputs.<wbr>Auto<wbr>Scale<wbr>Run<wbr>Error<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3945,7 +3945,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#elevationlevel_csharp" style="color: inherit; text-decoration: inherit;">Elevation<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elevationlevel">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch.<wbr>Elevation<wbr>Level</a></span>
+        <span class="property-type"><a href="#elevationlevel">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch..<wbr>Elevation<wbr>Level</a></span>
     </dt>
     <dd>{{% md %}}The default value is nonAdmin.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3954,7 +3954,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scope_csharp" style="color: inherit; text-decoration: inherit;">Scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autouserscope">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch.<wbr>Auto<wbr>User<wbr>Scope</a></span>
+        <span class="property-type"><a href="#autouserscope">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch..<wbr>Auto<wbr>User<wbr>Scope</a></span>
     </dt>
     <dd>{{% md %}}The default value is Pool. If the pool is running Windows a value of Task should be specified if stricter isolation between tasks is required. For example, if the task mutates the registry in a way which could impact other tasks, or if certificates have been specified on the pool which should not be accessible by normal tasks but should be accessible by start tasks.{{% /md %}}</dd>
 </dl>
@@ -5037,7 +5037,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#poolidentitytype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch.<wbr>Pool<wbr>Identity<wbr>Type</a></span>
+        <span class="property-type"><a href="#poolidentitytype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch..<wbr>Pool<wbr>Identity<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of identity used for the Batch Pool.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -5144,7 +5144,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userassignedidentities_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch.<wbr>Inputs.<wbr>Batch<wbr>Pool<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch..<wbr>Inputs.<wbr>Batch<wbr>Pool<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}The list of user identities associated with the Batch pool. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd>
 </dl>
@@ -5798,7 +5798,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storelocation_csharp" style="color: inherit; text-decoration: inherit;">Store<wbr>Location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatestorelocation">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch.<wbr>Certificate<wbr>Store<wbr>Location</a></span>
+        <span class="property-type"><a href="#certificatestorelocation">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch..<wbr>Certificate<wbr>Store<wbr>Location</a></span>
     </dt>
     <dd>{{% md %}}The default value is currentUser. This property is applicable only for pools configured with Windows nodes (that is, created with cloudServiceConfiguration, or with virtualMachineConfiguration using a Windows image reference). For Linux compute nodes, the certificates are stored in a directory inside the task working directory and an environment variable AZ_BATCH_CERTIFICATES_DIR is supplied to the task to query for this location. For certificates with visibility of 'remoteUser', a 'certs' directory is created in the user's home directory (e.g., /home/{user-name}/certs) and certificates are placed in that directory.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -5816,7 +5816,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#visibility_csharp" style="color: inherit; text-decoration: inherit;">Visibility</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatevisibility">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch.<wbr>Certificate<wbr>Visibility&gt;</a></span>
+        <span class="property-type"><a href="#certificatevisibility">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch..<wbr>Certificate<wbr>Visibility&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 </dl>
@@ -6501,7 +6501,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containertype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch.<wbr>Container<wbr>Type</a></span>
+        <span class="property-type"><a href="#containertype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch..<wbr>Container<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -6519,7 +6519,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#containerregistries_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Registries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerregistry">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch.<wbr>Inputs.<wbr>Container<wbr>Registry<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#containerregistry">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch..<wbr>Inputs.<wbr>Container<wbr>Registry<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}If any images must be downloaded from a private registry which requires credentials, then those credentials must be provided here.{{% /md %}}</dd>
 </dl>
@@ -6653,7 +6653,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#containerregistries_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Registries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerregistryresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch.<wbr>Inputs.<wbr>Container<wbr>Registry<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#containerregistryresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch..<wbr>Inputs.<wbr>Container<wbr>Registry<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}If any images must be downloaded from a private registry which requires credentials, then those credentials must be provided here.{{% /md %}}</dd>
 </dl>
@@ -7123,7 +7123,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#caching_csharp" style="color: inherit; text-decoration: inherit;">Caching</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cachingtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch.<wbr>Caching<wbr>Type</a></span>
+        <span class="property-type"><a href="#cachingtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch..<wbr>Caching<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Values are:
 
@@ -7138,7 +7138,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storageaccounttype_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageaccounttype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch.<wbr>Storage<wbr>Account<wbr>Type</a></span>
+        <span class="property-type"><a href="#storageaccounttype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch..<wbr>Storage<wbr>Account<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}If omitted, the default is "Standard_LRS". Values are:
 
@@ -7517,7 +7517,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cloudserviceconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Service<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudserviceconfiguration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch.<wbr>Inputs.<wbr>Cloud<wbr>Service<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#cloudserviceconfiguration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch..<wbr>Inputs.<wbr>Cloud<wbr>Service<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This property and virtualMachineConfiguration are mutually exclusive and one of the properties must be specified. This property cannot be specified if the Batch account was created with its poolAllocationMode property set to 'UserSubscription'.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -7526,7 +7526,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#virtualmachineconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Machine<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineconfiguration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch.<wbr>Inputs.<wbr>Virtual<wbr>Machine<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualmachineconfiguration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch..<wbr>Inputs.<wbr>Virtual<wbr>Machine<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This property and cloudServiceConfiguration are mutually exclusive and one of the properties must be specified.{{% /md %}}</dd>
 </dl>
@@ -7615,7 +7615,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cloudserviceconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Service<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudserviceconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch.<wbr>Inputs.<wbr>Cloud<wbr>Service<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#cloudserviceconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch..<wbr>Inputs.<wbr>Cloud<wbr>Service<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This property and virtualMachineConfiguration are mutually exclusive and one of the properties must be specified. This property cannot be specified if the Batch account was created with its poolAllocationMode property set to 'UserSubscription'.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -7624,7 +7624,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#virtualmachineconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Machine<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch.<wbr>Inputs.<wbr>Virtual<wbr>Machine<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualmachineconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch..<wbr>Inputs.<wbr>Virtual<wbr>Machine<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This property and cloudServiceConfiguration are mutually exclusive and one of the properties must be specified.{{% /md %}}</dd>
 </dl>
@@ -7713,7 +7713,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#targets_csharp" style="color: inherit; text-decoration: inherit;">Targets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diskencryptiontarget">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch.<wbr>Disk<wbr>Encryption<wbr>Target&gt;</a></span>
+        <span class="property-type"><a href="#diskencryptiontarget">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch..<wbr>Disk<wbr>Encryption<wbr>Target&gt;</a></span>
     </dt>
     <dd>{{% md %}}On Linux pool, only "TemporaryDisk" is supported; on Windows pool, "OsDisk" and "TemporaryDisk" must be specified.{{% /md %}}</dd>
 </dl>
@@ -8109,7 +8109,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nodedeallocationoption_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Deallocation<wbr>Option</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#computenodedeallocationoption">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch.<wbr>Compute<wbr>Node<wbr>Deallocation<wbr>Option</a></span>
+        <span class="property-type"><a href="#computenodedeallocationoption">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch..<wbr>Compute<wbr>Node<wbr>Deallocation<wbr>Option</a></span>
     </dt>
     <dd>{{% md %}}If omitted, the default value is Requeue.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -8981,7 +8981,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protocol_csharp" style="color: inherit; text-decoration: inherit;">Protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inboundendpointprotocol">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch.<wbr>Inbound<wbr>Endpoint<wbr>Protocol</a></span>
+        <span class="property-type"><a href="#inboundendpointprotocol">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch..<wbr>Inbound<wbr>Endpoint<wbr>Protocol</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -8990,7 +8990,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#networksecuritygrouprules_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Security<wbr>Group<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networksecuritygrouprule">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch.<wbr>Inputs.<wbr>Network<wbr>Security<wbr>Group<wbr>Rule<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#networksecuritygrouprule">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch..<wbr>Inputs.<wbr>Network<wbr>Security<wbr>Group<wbr>Rule<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The maximum number of rules that can be specified across all the endpoints on a Batch pool is 25. If no network security group rules are specified, a default rule will be created to allow inbound access to the specified backendPort. If the maximum number of network security group rules is exceeded the request fails with HTTP status code 400.{{% /md %}}</dd>
 </dl>
@@ -9232,7 +9232,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#networksecuritygrouprules_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Security<wbr>Group<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networksecuritygroupruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch.<wbr>Inputs.<wbr>Network<wbr>Security<wbr>Group<wbr>Rule<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#networksecuritygroupruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch..<wbr>Inputs.<wbr>Network<wbr>Security<wbr>Group<wbr>Rule<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The maximum number of rules that can be specified across all the endpoints on a Batch pool is 25. If no network security group rules are specified, a default rule will be created to allow inbound access to the specified backendPort. If the maximum number of network security group rules is exceeded the request fails with HTTP status code 400.{{% /md %}}</dd>
 </dl>
@@ -9969,7 +9969,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azureblobfilesystemconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Blob<wbr>File<wbr>System<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureblobfilesystemconfiguration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>File<wbr>System<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#azureblobfilesystemconfiguration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch..<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>File<wbr>System<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This property is mutually exclusive with all other properties.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -9978,7 +9978,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azurefileshareconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>File<wbr>Share<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefileshareconfiguration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch.<wbr>Inputs.<wbr>Azure<wbr>File<wbr>Share<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurefileshareconfiguration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch..<wbr>Inputs.<wbr>Azure<wbr>File<wbr>Share<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This property is mutually exclusive with all other properties.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -9987,7 +9987,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cifsmountconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Cifs<wbr>Mount<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cifsmountconfiguration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch.<wbr>Inputs.<wbr>CIFSMount<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#cifsmountconfiguration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch..<wbr>Inputs.<wbr>CIFSMount<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This property is mutually exclusive with all other properties.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -9996,7 +9996,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nfsmountconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Nfs<wbr>Mount<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nfsmountconfiguration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch.<wbr>Inputs.<wbr>NFSMount<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#nfsmountconfiguration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch..<wbr>Inputs.<wbr>NFSMount<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This property is mutually exclusive with all other properties.{{% /md %}}</dd>
 </dl>
@@ -10139,7 +10139,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azureblobfilesystemconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Blob<wbr>File<wbr>System<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureblobfilesystemconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>File<wbr>System<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azureblobfilesystemconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch..<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>File<wbr>System<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This property is mutually exclusive with all other properties.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -10148,7 +10148,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azurefileshareconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>File<wbr>Share<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefileshareconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch.<wbr>Inputs.<wbr>Azure<wbr>File<wbr>Share<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurefileshareconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch..<wbr>Inputs.<wbr>Azure<wbr>File<wbr>Share<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This property is mutually exclusive with all other properties.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -10157,7 +10157,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cifsmountconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Cifs<wbr>Mount<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cifsmountconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch.<wbr>Inputs.<wbr>CIFSMount<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#cifsmountconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch..<wbr>Inputs.<wbr>CIFSMount<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This property is mutually exclusive with all other properties.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -10166,7 +10166,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nfsmountconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Nfs<wbr>Mount<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nfsmountconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch.<wbr>Inputs.<wbr>NFSMount<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#nfsmountconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch..<wbr>Inputs.<wbr>NFSMount<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This property is mutually exclusive with all other properties.{{% /md %}}</dd>
 </dl>
@@ -10577,7 +10577,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpointconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#poolendpointconfiguration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch.<wbr>Inputs.<wbr>Pool<wbr>Endpoint<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#poolendpointconfiguration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch..<wbr>Inputs.<wbr>Pool<wbr>Endpoint<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Pool endpoint configuration is only supported on pools with the virtualMachineConfiguration property.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -10586,7 +10586,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publicipaddressconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>IPAddress<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#publicipaddressconfiguration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch.<wbr>Inputs.<wbr>Public<wbr>IPAddress<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#publicipaddressconfiguration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch..<wbr>Inputs.<wbr>Public<wbr>IPAddress<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This property is only supported on Pools with the virtualMachineConfiguration property.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -10711,7 +10711,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpointconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#poolendpointconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch.<wbr>Inputs.<wbr>Pool<wbr>Endpoint<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#poolendpointconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch..<wbr>Inputs.<wbr>Pool<wbr>Endpoint<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Pool endpoint configuration is only supported on pools with the virtualMachineConfiguration property.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -10720,7 +10720,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publicipaddressconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>IPAddress<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#publicipaddressconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch.<wbr>Inputs.<wbr>Public<wbr>IPAddress<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#publicipaddressconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch..<wbr>Inputs.<wbr>Public<wbr>IPAddress<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This property is only supported on Pools with the virtualMachineConfiguration property.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -10845,7 +10845,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#access_csharp" style="color: inherit; text-decoration: inherit;">Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networksecuritygroupruleaccess">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch.<wbr>Network<wbr>Security<wbr>Group<wbr>Rule<wbr>Access</a></span>
+        <span class="property-type"><a href="#networksecuritygroupruleaccess">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch..<wbr>Network<wbr>Security<wbr>Group<wbr>Rule<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-required"
@@ -11223,7 +11223,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policy_csharp" style="color: inherit; text-decoration: inherit;">Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodeplacementpolicytype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch.<wbr>Node<wbr>Placement<wbr>Policy<wbr>Type</a></span>
+        <span class="property-type"><a href="#nodeplacementpolicytype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch..<wbr>Node<wbr>Placement<wbr>Policy<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Allocation policy used by Batch Service to provision the nodes. If not specified, Batch will use the regional policy.{{% /md %}}</dd>
 </dl>
@@ -11385,7 +11385,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inboundnatpools_csharp" style="color: inherit; text-decoration: inherit;">Inbound<wbr>Nat<wbr>Pools</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inboundnatpool">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch.<wbr>Inputs.<wbr>Inbound<wbr>Nat<wbr>Pool<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#inboundnatpool">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch..<wbr>Inputs.<wbr>Inbound<wbr>Nat<wbr>Pool<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The maximum number of inbound NAT pools per Batch pool is 5. If the maximum number of inbound NAT pools is exceeded the request fails with HTTP status code 400. This cannot be specified if the IPAddressProvisioningType is NoPublicIPAddresses.{{% /md %}}</dd>
 </dl>
@@ -11447,7 +11447,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inboundnatpools_csharp" style="color: inherit; text-decoration: inherit;">Inbound<wbr>Nat<wbr>Pools</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inboundnatpoolresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch.<wbr>Inputs.<wbr>Inbound<wbr>Nat<wbr>Pool<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#inboundnatpoolresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch..<wbr>Inputs.<wbr>Inbound<wbr>Nat<wbr>Pool<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The maximum number of inbound NAT pools per Batch pool is 5. If the maximum number of inbound NAT pools is exceeded the request fails with HTTP status code 400. This cannot be specified if the IPAddressProvisioningType is NoPublicIPAddresses.{{% /md %}}</dd>
 </dl>
@@ -11556,7 +11556,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provision_csharp" style="color: inherit; text-decoration: inherit;">Provision</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipaddressprovisioningtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch.<wbr>IPAddress<wbr>Provisioning<wbr>Type</a></span>
+        <span class="property-type"><a href="#ipaddressprovisioningtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch..<wbr>IPAddress<wbr>Provisioning<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The default value is BatchManaged{{% /md %}}</dd>
 </dl>
@@ -11761,7 +11761,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#details_csharp" style="color: inherit; text-decoration: inherit;">Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resizeerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch.<wbr>Inputs.<wbr>Resize<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#resizeerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch..<wbr>Inputs.<wbr>Resize<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 </dl>
@@ -11877,7 +11877,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errors_csharp" style="color: inherit; text-decoration: inherit;">Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resizeerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch.<wbr>Inputs.<wbr>Resize<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#resizeerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch..<wbr>Inputs.<wbr>Resize<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}This property is set only if an error occurred during the last pool resize, and only when the pool allocationState is Steady.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -12603,7 +12603,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#autoscale_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Scale</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalesettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch.<wbr>Inputs.<wbr>Auto<wbr>Scale<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#autoscalesettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch..<wbr>Inputs.<wbr>Auto<wbr>Scale<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This property and fixedScale are mutually exclusive and one of the properties must be specified.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -12612,7 +12612,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fixedscale_csharp" style="color: inherit; text-decoration: inherit;">Fixed<wbr>Scale</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fixedscalesettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch.<wbr>Inputs.<wbr>Fixed<wbr>Scale<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#fixedscalesettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch..<wbr>Inputs.<wbr>Fixed<wbr>Scale<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This property and autoScale are mutually exclusive and one of the properties must be specified.{{% /md %}}</dd>
 </dl>
@@ -12701,7 +12701,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#autoscale_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Scale</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch.<wbr>Inputs.<wbr>Auto<wbr>Scale<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#autoscalesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch..<wbr>Inputs.<wbr>Auto<wbr>Scale<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This property and fixedScale are mutually exclusive and one of the properties must be specified.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -12710,7 +12710,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fixedscale_csharp" style="color: inherit; text-decoration: inherit;">Fixed<wbr>Scale</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fixedscalesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch.<wbr>Inputs.<wbr>Fixed<wbr>Scale<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#fixedscalesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch..<wbr>Inputs.<wbr>Fixed<wbr>Scale<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This property and autoScale are mutually exclusive and one of the properties must be specified.{{% /md %}}</dd>
 </dl>
@@ -12808,7 +12808,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#containersettings_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#taskcontainersettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch.<wbr>Inputs.<wbr>Task<wbr>Container<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#taskcontainersettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch..<wbr>Inputs.<wbr>Task<wbr>Container<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}When this is specified, all directories recursively below the AZ_BATCH_NODE_ROOT_DIR (the root of Azure Batch directories on the node) are mapped into the container, all task environment variables are mapped into the container, and the task command line is executed in the container.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -12817,7 +12817,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#environmentsettings_csharp" style="color: inherit; text-decoration: inherit;">Environment<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentsetting">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch.<wbr>Inputs.<wbr>Environment<wbr>Setting<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#environmentsetting">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch..<wbr>Inputs.<wbr>Environment<wbr>Setting<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -12835,7 +12835,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resourcefiles_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Files</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcefile">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch.<wbr>Inputs.<wbr>Resource<wbr>File<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#resourcefile">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch..<wbr>Inputs.<wbr>Resource<wbr>File<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -12844,7 +12844,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#useridentity_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#useridentity">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch.<wbr>Inputs.<wbr>User<wbr>Identity<wbr>Args</a></span>
+        <span class="property-type"><a href="#useridentity">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch..<wbr>Inputs.<wbr>User<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}If omitted, the task runs as a non-administrative user unique to the task.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -13086,7 +13086,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#containersettings_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#taskcontainersettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch.<wbr>Inputs.<wbr>Task<wbr>Container<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#taskcontainersettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch..<wbr>Inputs.<wbr>Task<wbr>Container<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}When this is specified, all directories recursively below the AZ_BATCH_NODE_ROOT_DIR (the root of Azure Batch directories on the node) are mapped into the container, all task environment variables are mapped into the container, and the task command line is executed in the container.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -13095,7 +13095,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#environmentsettings_csharp" style="color: inherit; text-decoration: inherit;">Environment<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentsettingresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch.<wbr>Inputs.<wbr>Environment<wbr>Setting<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#environmentsettingresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch..<wbr>Inputs.<wbr>Environment<wbr>Setting<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -13113,7 +13113,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resourcefiles_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Files</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcefileresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch.<wbr>Inputs.<wbr>Resource<wbr>File<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#resourcefileresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch..<wbr>Inputs.<wbr>Resource<wbr>File<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -13122,7 +13122,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#useridentity_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#useridentityresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch.<wbr>Inputs.<wbr>User<wbr>Identity<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#useridentityresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch..<wbr>Inputs.<wbr>User<wbr>Identity<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}If omitted, the task runs as a non-administrative user unique to the task.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -13411,7 +13411,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#registry_csharp" style="color: inherit; text-decoration: inherit;">Registry</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerregistry">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch.<wbr>Inputs.<wbr>Container<wbr>Registry<wbr>Args</a></span>
+        <span class="property-type"><a href="#containerregistry">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch..<wbr>Inputs.<wbr>Container<wbr>Registry<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This setting can be omitted if was already provided at pool creation.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -13420,7 +13420,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workingdirectory_csharp" style="color: inherit; text-decoration: inherit;">Working<wbr>Directory</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerworkingdirectory">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch.<wbr>Container<wbr>Working<wbr>Directory</a></span>
+        <span class="property-type"><a href="#containerworkingdirectory">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch..<wbr>Container<wbr>Working<wbr>Directory</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 </dl>
@@ -13581,7 +13581,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#registry_csharp" style="color: inherit; text-decoration: inherit;">Registry</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerregistryresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch.<wbr>Inputs.<wbr>Container<wbr>Registry<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#containerregistryresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch..<wbr>Inputs.<wbr>Container<wbr>Registry<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This setting can be omitted if was already provided at pool creation.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -13733,7 +13733,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nodefilltype_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Fill<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#computenodefilltype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch.<wbr>Compute<wbr>Node<wbr>Fill<wbr>Type</a></span>
+        <span class="property-type"><a href="#computenodefilltype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch..<wbr>Compute<wbr>Node<wbr>Fill<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 </dl>
@@ -13875,7 +13875,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#elevationlevel_csharp" style="color: inherit; text-decoration: inherit;">Elevation<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elevationlevel">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch.<wbr>Elevation<wbr>Level</a></span>
+        <span class="property-type"><a href="#elevationlevel">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch..<wbr>Elevation<wbr>Level</a></span>
     </dt>
     <dd>{{% md %}}nonAdmin - The auto user is a standard user without elevated access. admin - The auto user is a user with elevated access and operates with full Administrator permissions. The default value is nonAdmin.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -13884,7 +13884,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linuxuserconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Linux<wbr>User<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linuxuserconfiguration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch.<wbr>Inputs.<wbr>Linux<wbr>User<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#linuxuserconfiguration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch..<wbr>Inputs.<wbr>Linux<wbr>User<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This property is ignored if specified on a Windows pool. If not specified, the user is created with the default options.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -13893,7 +13893,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#windowsuserconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Windows<wbr>User<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#windowsuserconfiguration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch.<wbr>Inputs.<wbr>Windows<wbr>User<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#windowsuserconfiguration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch..<wbr>Inputs.<wbr>Windows<wbr>User<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This property can only be specified if the user is on a Windows pool. If not specified and on a Windows pool, the user is created with the default options.{{% /md %}}</dd>
 </dl>
@@ -14090,7 +14090,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linuxuserconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Linux<wbr>User<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linuxuserconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch.<wbr>Inputs.<wbr>Linux<wbr>User<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#linuxuserconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch..<wbr>Inputs.<wbr>Linux<wbr>User<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This property is ignored if specified on a Windows pool. If not specified, the user is created with the default options.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -14099,7 +14099,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#windowsuserconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Windows<wbr>User<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#windowsuserconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch.<wbr>Inputs.<wbr>Windows<wbr>User<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#windowsuserconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch..<wbr>Inputs.<wbr>Windows<wbr>User<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This property can only be specified if the user is on a Windows pool. If not specified and on a Windows pool, the user is created with the default options.{{% /md %}}</dd>
 </dl>
@@ -14269,7 +14269,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#autouser_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>User</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autouserspecification">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch.<wbr>Inputs.<wbr>Auto<wbr>User<wbr>Specification<wbr>Args</a></span>
+        <span class="property-type"><a href="#autouserspecification">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch..<wbr>Inputs.<wbr>Auto<wbr>User<wbr>Specification<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The userName and autoUser properties are mutually exclusive; you must specify one but not both.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -14367,7 +14367,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#autouser_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>User</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autouserspecificationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch.<wbr>Inputs.<wbr>Auto<wbr>User<wbr>Specification<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#autouserspecificationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch..<wbr>Inputs.<wbr>Auto<wbr>User<wbr>Specification<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The userName and autoUser properties are mutually exclusive; you must specify one but not both.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -15093,7 +15093,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#imagereference_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imagereference">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch.<wbr>Inputs.<wbr>Image<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#imagereference">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch..<wbr>Inputs.<wbr>Image<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-required"
@@ -15111,7 +15111,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#containerconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerconfiguration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch.<wbr>Inputs.<wbr>Container<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#containerconfiguration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch..<wbr>Inputs.<wbr>Container<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}If specified, setup is performed on each node in the pool to allow tasks to run in containers. All regular tasks and job manager tasks run on this pool must specify the containerSettings property, and all other tasks may specify it.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -15120,7 +15120,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datadisks_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datadisk">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch.<wbr>Inputs.<wbr>Data<wbr>Disk<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#datadisk">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch..<wbr>Inputs.<wbr>Data<wbr>Disk<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}This property must be specified if the compute nodes in the pool need to have empty data disks attached to them.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -15129,7 +15129,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#diskencryptionconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Encryption<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diskencryptionconfiguration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch.<wbr>Inputs.<wbr>Disk<wbr>Encryption<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#diskencryptionconfiguration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch..<wbr>Inputs.<wbr>Disk<wbr>Encryption<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}If specified, encryption is performed on each node in the pool during node provisioning.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -15138,7 +15138,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extensions_csharp" style="color: inherit; text-decoration: inherit;">Extensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vmextension">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch.<wbr>Inputs.<wbr>VMExtension<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#vmextension">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch..<wbr>Inputs.<wbr>VMExtension<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}If specified, the extensions mentioned in this configuration will be installed on each node.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -15160,7 +15160,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nodeplacementconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Placement<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodeplacementconfiguration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch.<wbr>Inputs.<wbr>Node<wbr>Placement<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#nodeplacementconfiguration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch..<wbr>Inputs.<wbr>Node<wbr>Placement<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This configuration will specify rules on how nodes in the pool will be physically allocated.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -15169,7 +15169,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#windowsconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Windows<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#windowsconfiguration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch.<wbr>Inputs.<wbr>Windows<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#windowsconfiguration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch..<wbr>Inputs.<wbr>Windows<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This property must not be specified if the imageReference specifies a Linux OS image.{{% /md %}}</dd>
 </dl>
@@ -15459,7 +15459,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#imagereference_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imagereferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch.<wbr>Inputs.<wbr>Image<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#imagereferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch..<wbr>Inputs.<wbr>Image<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-required"
@@ -15477,7 +15477,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#containerconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch.<wbr>Inputs.<wbr>Container<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#containerconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch..<wbr>Inputs.<wbr>Container<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}If specified, setup is performed on each node in the pool to allow tasks to run in containers. All regular tasks and job manager tasks run on this pool must specify the containerSettings property, and all other tasks may specify it.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -15486,7 +15486,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datadisks_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datadiskresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch.<wbr>Inputs.<wbr>Data<wbr>Disk<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#datadiskresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch..<wbr>Inputs.<wbr>Data<wbr>Disk<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}This property must be specified if the compute nodes in the pool need to have empty data disks attached to them.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -15495,7 +15495,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#diskencryptionconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Encryption<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diskencryptionconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch.<wbr>Inputs.<wbr>Disk<wbr>Encryption<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#diskencryptionconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch..<wbr>Inputs.<wbr>Disk<wbr>Encryption<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}If specified, encryption is performed on each node in the pool during node provisioning.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -15504,7 +15504,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extensions_csharp" style="color: inherit; text-decoration: inherit;">Extensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vmextensionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch.<wbr>Inputs.<wbr>VMExtension<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#vmextensionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch..<wbr>Inputs.<wbr>VMExtension<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}If specified, the extensions mentioned in this configuration will be installed on each node.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -15526,7 +15526,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nodeplacementconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Placement<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodeplacementconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch.<wbr>Inputs.<wbr>Node<wbr>Placement<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#nodeplacementconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch..<wbr>Inputs.<wbr>Node<wbr>Placement<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This configuration will specify rules on how nodes in the pool will be physically allocated.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -15535,7 +15535,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#windowsconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Windows<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#windowsconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch.<wbr>Inputs.<wbr>Windows<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#windowsconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch..<wbr>Inputs.<wbr>Windows<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This property must not be specified if the imageReference specifies a Linux OS image.{{% /md %}}</dd>
 </dl>
@@ -15949,7 +15949,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#loginmode_csharp" style="color: inherit; text-decoration: inherit;">Login<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loginmode">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch.<wbr>Login<wbr>Mode</a></span>
+        <span class="property-type"><a href="#loginmode">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch..<wbr>Login<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}Specifies login mode for the user. The default value for VirtualMachineConfiguration pools is interactive mode and for CloudServiceConfiguration pools is batch mode.{{% /md %}}</dd>
 </dl>
@@ -16067,7 +16067,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:batch/latest:Pool testpool /subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.Batch/batchAccounts/sampleacct/pools/testpool 
+$ pulumi import azure-nextgen:batch:Pool testpool /subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.Batch/batchAccounts/sampleacct/pools/testpool 
 ```
 
 

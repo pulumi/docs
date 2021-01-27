@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.authorization.AccessReviewSchedu
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Access Review Schedule Definition.
+API Version: 2018-05-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var accessReviewScheduleDefinitionById = new AzureNextGen.Authorization.V20180501Preview.AccessReviewScheduleDefinitionById("accessReviewScheduleDefinitionById", new AzureNextGen.Authorization.V20180501Preview.AccessReviewScheduleDefinitionByIdArgs
+        var accessReviewScheduleDefinitionById = new AzureNextGen.Authorization..AccessReviewScheduleDefinitionById("accessReviewScheduleDefinitionById", new AzureNextGen.Authorization..AccessReviewScheduleDefinitionByIdArgs
         {
             ScheduleDefinitionId = "fa73e90b-5bf1-45fd-a182-35ce5fc0674d",
         });
@@ -44,7 +45,7 @@ class MyStack : Stack
 package main
 
 import (
-	authorization "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/authorization/v20180501preview"
+	authorization "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/authorization"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -70,7 +71,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-access_review_schedule_definition_by_id = azure_nextgen.authorization.v20180501preview.AccessReviewScheduleDefinitionById("accessReviewScheduleDefinitionById", schedule_definition_id="fa73e90b-5bf1-45fd-a182-35ce5fc0674d")
+access_review_schedule_definition_by_id = azure_nextgen.authorization.AccessReviewScheduleDefinitionById("accessReviewScheduleDefinitionById", schedule_definition_id="fa73e90b-5bf1-45fd-a182-35ce5fc0674d")
 
 ```
 
@@ -82,7 +83,7 @@ access_review_schedule_definition_by_id = azure_nextgen.authorization.v20180501p
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const accessReviewScheduleDefinitionById = new azure_nextgen.authorization.v20180501preview.AccessReviewScheduleDefinitionById("accessReviewScheduleDefinitionById", {scheduleDefinitionId: "fa73e90b-5bf1-45fd-a182-35ce5fc0674d"});
+const accessReviewScheduleDefinitionById = new azure_nextgen.authorization.AccessReviewScheduleDefinitionById("accessReviewScheduleDefinitionById", {scheduleDefinitionId: "fa73e90b-5bf1-45fd-a182-35ce5fc0674d"});
 
 ```
 
@@ -295,7 +296,7 @@ The AccessReviewScheduleDefinitionById resource accepts the following [input]({{
 <a href="#defaultdecision_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Decision</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#defaultdecisiontype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Authorization.<wbr>Default<wbr>Decision<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#defaultdecisiontype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Authorization..<wbr>Default<wbr>Decision<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}This specifies the behavior for the autoReview feature when an access review completes.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -358,7 +359,7 @@ The AccessReviewScheduleDefinitionById resource accepts the following [input]({{
 <a href="#instances_csharp" style="color: inherit; text-decoration: inherit;">Instances</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accessreviewinstance">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Authorization.<wbr>Inputs.<wbr>Access<wbr>Review<wbr>Instance<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#accessreviewinstance">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Authorization..<wbr>Inputs.<wbr>Access<wbr>Review<wbr>Instance<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}This is the collection of instances returned when one does an expand on it.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -421,7 +422,7 @@ The AccessReviewScheduleDefinitionById resource accepts the following [input]({{
 <a href="#reviewers_csharp" style="color: inherit; text-decoration: inherit;">Reviewers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accessreviewreviewer">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Authorization.<wbr>Inputs.<wbr>Access<wbr>Review<wbr>Reviewer<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#accessreviewreviewer">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Authorization..<wbr>Inputs.<wbr>Access<wbr>Review<wbr>Reviewer<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}This is the collection of reviewers.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -439,7 +440,7 @@ The AccessReviewScheduleDefinitionById resource accepts the following [input]({{
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#accessreviewrecurrencerangetype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Authorization.<wbr>Access<wbr>Review<wbr>Recurrence<wbr>Range<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#accessreviewrecurrencerangetype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Authorization..<wbr>Access<wbr>Review<wbr>Recurrence<wbr>Range<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The recurrence range type. The possible values are: endDate, noEnd, numbered.{{% /md %}}</dd>
 </dl>
@@ -1974,7 +1975,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:authorization/v20180501preview:AccessReviewScheduleDefinitionById fa73e90b-5bf1-45fd-a182-35ce5fc0674d /subscriptions/fa73e90b-5bf1-45fd-a182-35ce5fc0674d/providers/Microsoft.Authorization/accessReviewScheduleDefinitions/fa73e90b-5bf1-45fd-a182-35ce5fc0674d 
+$ pulumi import azure-nextgen:authorization:AccessReviewScheduleDefinitionById fa73e90b-5bf1-45fd-a182-35ce5fc0674d /subscriptions/fa73e90b-5bf1-45fd-a182-35ce5fc0674d/providers/Microsoft.Authorization/accessReviewScheduleDefinitions/fa73e90b-5bf1-45fd-a182-35ce5fc0674d 
 ```
 
 

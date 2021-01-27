@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.compute.CloudService resource wi
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Describes the cloud service.
+API Version: 2020-10-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,30 +27,30 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var cloudService = new AzureNextGen.Compute.V20201001Preview.CloudService("cloudService", new AzureNextGen.Compute.V20201001Preview.CloudServiceArgs
+        var cloudService = new AzureNextGen.Compute..CloudService("cloudService", new AzureNextGen.Compute..CloudServiceArgs
         {
             CloudServiceName = "{cs-name}",
             Location = "westus",
-            Properties = new AzureNextGen.Compute.V20201001Preview.Inputs.CloudServicePropertiesArgs
+            Properties = new AzureNextGen.Compute..Inputs.CloudServicePropertiesArgs
             {
                 Configuration = "{ServiceConfiguration}",
-                NetworkProfile = new AzureNextGen.Compute.V20201001Preview.Inputs.CloudServiceNetworkProfileArgs
+                NetworkProfile = new AzureNextGen.Compute..Inputs.CloudServiceNetworkProfileArgs
                 {
                     LoadBalancerConfigurations = 
                     {
-                        new AzureNextGen.Compute.V20201001Preview.Inputs.LoadBalancerConfigurationArgs
+                        new AzureNextGen.Compute..Inputs.LoadBalancerConfigurationArgs
                         {
                             Name = "contosolb",
-                            Properties = new AzureNextGen.Compute.V20201001Preview.Inputs.LoadBalancerConfigurationPropertiesArgs
+                            Properties = new AzureNextGen.Compute..Inputs.LoadBalancerConfigurationPropertiesArgs
                             {
                                 FrontendIPConfigurations = 
                                 {
-                                    new AzureNextGen.Compute.V20201001Preview.Inputs.LoadBalancerFrontendIPConfigurationArgs
+                                    new AzureNextGen.Compute..Inputs.LoadBalancerFrontendIPConfigurationArgs
                                     {
                                         Name = "contosofe",
-                                        Properties = new AzureNextGen.Compute.V20201001Preview.Inputs.LoadBalancerFrontendIPConfigurationPropertiesArgs
+                                        Properties = new AzureNextGen.Compute..Inputs.LoadBalancerFrontendIPConfigurationPropertiesArgs
                                         {
-                                            PublicIPAddress = new AzureNextGen.Compute.V20201001Preview.Inputs.SubResourceArgs
+                                            PublicIPAddress = new AzureNextGen.Compute..Inputs.SubResourceArgs
                                             {
                                                 Id = "/subscriptions/{subscription-id}/resourceGroups/ConstosoRG/providers/Microsoft.Network/publicIPAddresses/contosopublicip",
                                             },
@@ -61,24 +62,24 @@ class MyStack : Stack
                     },
                 },
                 PackageUrl = "{PackageUrl}",
-                RoleProfile = new AzureNextGen.Compute.V20201001Preview.Inputs.CloudServiceRoleProfileArgs
+                RoleProfile = new AzureNextGen.Compute..Inputs.CloudServiceRoleProfileArgs
                 {
                     Roles = 
                     {
-                        new AzureNextGen.Compute.V20201001Preview.Inputs.CloudServiceRoleProfilePropertiesArgs
+                        new AzureNextGen.Compute..Inputs.CloudServiceRoleProfilePropertiesArgs
                         {
                             Name = "ContosoFrontend",
-                            Sku = new AzureNextGen.Compute.V20201001Preview.Inputs.CloudServiceRoleSkuArgs
+                            Sku = new AzureNextGen.Compute..Inputs.CloudServiceRoleSkuArgs
                             {
                                 Capacity = 1,
                                 Name = "Standard_D1_v2",
                                 Tier = "Standard",
                             },
                         },
-                        new AzureNextGen.Compute.V20201001Preview.Inputs.CloudServiceRoleProfilePropertiesArgs
+                        new AzureNextGen.Compute..Inputs.CloudServiceRoleProfilePropertiesArgs
                         {
                             Name = "ContosoBackend",
-                            Sku = new AzureNextGen.Compute.V20201001Preview.Inputs.CloudServiceRoleSkuArgs
+                            Sku = new AzureNextGen.Compute..Inputs.CloudServiceRoleSkuArgs
                             {
                                 Capacity = 1,
                                 Name = "Standard_D1_v2",
@@ -105,7 +106,7 @@ class MyStack : Stack
 package main
 
 import (
-	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute/v20201001preview"
+	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -177,19 +178,19 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-cloud_service = azure_nextgen.compute.v20201001preview.CloudService("cloudService",
+cloud_service = azure_nextgen.compute.CloudService("cloudService",
     cloud_service_name="{cs-name}",
     location="westus",
-    properties=azure_nextgen.compute.v20201001preview.CloudServicePropertiesArgs(
+    properties=azure_nextgen.compute.CloudServicePropertiesArgs(
         configuration="{ServiceConfiguration}",
-        network_profile=azure_nextgen.compute.v20201001preview.CloudServiceNetworkProfileArgs(
-            load_balancer_configurations=[azure_nextgen.compute.v20201001preview.LoadBalancerConfigurationArgs(
+        network_profile=azure_nextgen.compute.CloudServiceNetworkProfileArgs(
+            load_balancer_configurations=[azure_nextgen.compute.LoadBalancerConfigurationArgs(
                 name="contosolb",
-                properties=azure_nextgen.compute.v20201001preview.LoadBalancerConfigurationPropertiesArgs(
-                    frontend_ip_configurations=[azure_nextgen.compute.v20201001preview.LoadBalancerFrontendIPConfigurationArgs(
+                properties=azure_nextgen.compute.LoadBalancerConfigurationPropertiesArgs(
+                    frontend_ip_configurations=[azure_nextgen.compute.LoadBalancerFrontendIPConfigurationArgs(
                         name="contosofe",
-                        properties=azure_nextgen.compute.v20201001preview.LoadBalancerFrontendIPConfigurationPropertiesArgs(
-                            public_ip_address=azure_nextgen.compute.v20201001preview.SubResourceArgs(
+                        properties=azure_nextgen.compute.LoadBalancerFrontendIPConfigurationPropertiesArgs(
+                            public_ip_address=azure_nextgen.compute.SubResourceArgs(
                                 id="/subscriptions/{subscription-id}/resourceGroups/ConstosoRG/providers/Microsoft.Network/publicIPAddresses/contosopublicip",
                             ),
                         ),
@@ -198,19 +199,19 @@ cloud_service = azure_nextgen.compute.v20201001preview.CloudService("cloudServic
             )],
         ),
         package_url="{PackageUrl}",
-        role_profile=azure_nextgen.compute.v20201001preview.CloudServiceRoleProfileArgs(
+        role_profile=azure_nextgen.compute.CloudServiceRoleProfileArgs(
             roles=[
-                azure_nextgen.compute.v20201001preview.CloudServiceRoleProfilePropertiesArgs(
+                azure_nextgen.compute.CloudServiceRoleProfilePropertiesArgs(
                     name="ContosoFrontend",
-                    sku=azure_nextgen.compute.v20201001preview.CloudServiceRoleSkuArgs(
+                    sku=azure_nextgen.compute.CloudServiceRoleSkuArgs(
                         capacity=1,
                         name="Standard_D1_v2",
                         tier="Standard",
                     ),
                 ),
-                azure_nextgen.compute.v20201001preview.CloudServiceRoleProfilePropertiesArgs(
+                azure_nextgen.compute.CloudServiceRoleProfilePropertiesArgs(
                     name="ContosoBackend",
-                    sku=azure_nextgen.compute.v20201001preview.CloudServiceRoleSkuArgs(
+                    sku=azure_nextgen.compute.CloudServiceRoleSkuArgs(
                         capacity=1,
                         name="Standard_D1_v2",
                         tier="Standard",
@@ -232,7 +233,7 @@ cloud_service = azure_nextgen.compute.v20201001preview.CloudService("cloudServic
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const cloudService = new azure_nextgen.compute.v20201001preview.CloudService("cloudService", {
+const cloudService = new azure_nextgen.compute.CloudService("cloudService", {
     cloudServiceName: "{cs-name}",
     location: "westus",
     properties: {
@@ -292,30 +293,30 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var cloudService = new AzureNextGen.Compute.V20201001Preview.CloudService("cloudService", new AzureNextGen.Compute.V20201001Preview.CloudServiceArgs
+        var cloudService = new AzureNextGen.Compute..CloudService("cloudService", new AzureNextGen.Compute..CloudServiceArgs
         {
             CloudServiceName = "{cs-name}",
             Location = "westus",
-            Properties = new AzureNextGen.Compute.V20201001Preview.Inputs.CloudServicePropertiesArgs
+            Properties = new AzureNextGen.Compute..Inputs.CloudServicePropertiesArgs
             {
                 Configuration = "{ServiceConfiguration}",
-                NetworkProfile = new AzureNextGen.Compute.V20201001Preview.Inputs.CloudServiceNetworkProfileArgs
+                NetworkProfile = new AzureNextGen.Compute..Inputs.CloudServiceNetworkProfileArgs
                 {
                     LoadBalancerConfigurations = 
                     {
-                        new AzureNextGen.Compute.V20201001Preview.Inputs.LoadBalancerConfigurationArgs
+                        new AzureNextGen.Compute..Inputs.LoadBalancerConfigurationArgs
                         {
                             Name = "myLoadBalancer",
-                            Properties = new AzureNextGen.Compute.V20201001Preview.Inputs.LoadBalancerConfigurationPropertiesArgs
+                            Properties = new AzureNextGen.Compute..Inputs.LoadBalancerConfigurationPropertiesArgs
                             {
                                 FrontendIPConfigurations = 
                                 {
-                                    new AzureNextGen.Compute.V20201001Preview.Inputs.LoadBalancerFrontendIPConfigurationArgs
+                                    new AzureNextGen.Compute..Inputs.LoadBalancerFrontendIPConfigurationArgs
                                     {
                                         Name = "myfe",
-                                        Properties = new AzureNextGen.Compute.V20201001Preview.Inputs.LoadBalancerFrontendIPConfigurationPropertiesArgs
+                                        Properties = new AzureNextGen.Compute..Inputs.LoadBalancerFrontendIPConfigurationPropertiesArgs
                                         {
-                                            PublicIPAddress = new AzureNextGen.Compute.V20201001Preview.Inputs.SubResourceArgs
+                                            PublicIPAddress = new AzureNextGen.Compute..Inputs.SubResourceArgs
                                             {
                                                 Id = "/subscriptions/{subscription-id}/resourceGroups/ConstosoRG/providers/Microsoft.Network/publicIPAddresses/myPublicIP",
                                             },
@@ -327,14 +328,14 @@ class MyStack : Stack
                     },
                 },
                 PackageUrl = "{PackageUrl}",
-                RoleProfile = new AzureNextGen.Compute.V20201001Preview.Inputs.CloudServiceRoleProfileArgs
+                RoleProfile = new AzureNextGen.Compute..Inputs.CloudServiceRoleProfileArgs
                 {
                     Roles = 
                     {
-                        new AzureNextGen.Compute.V20201001Preview.Inputs.CloudServiceRoleProfilePropertiesArgs
+                        new AzureNextGen.Compute..Inputs.CloudServiceRoleProfilePropertiesArgs
                         {
                             Name = "ContosoFrontend",
-                            Sku = new AzureNextGen.Compute.V20201001Preview.Inputs.CloudServiceRoleSkuArgs
+                            Sku = new AzureNextGen.Compute..Inputs.CloudServiceRoleSkuArgs
                             {
                                 Capacity = 1,
                                 Name = "Standard_D1_v2",
@@ -361,7 +362,7 @@ class MyStack : Stack
 package main
 
 import (
-	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute/v20201001preview"
+	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -425,19 +426,19 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-cloud_service = azure_nextgen.compute.v20201001preview.CloudService("cloudService",
+cloud_service = azure_nextgen.compute.CloudService("cloudService",
     cloud_service_name="{cs-name}",
     location="westus",
-    properties=azure_nextgen.compute.v20201001preview.CloudServicePropertiesArgs(
+    properties=azure_nextgen.compute.CloudServicePropertiesArgs(
         configuration="{ServiceConfiguration}",
-        network_profile=azure_nextgen.compute.v20201001preview.CloudServiceNetworkProfileArgs(
-            load_balancer_configurations=[azure_nextgen.compute.v20201001preview.LoadBalancerConfigurationArgs(
+        network_profile=azure_nextgen.compute.CloudServiceNetworkProfileArgs(
+            load_balancer_configurations=[azure_nextgen.compute.LoadBalancerConfigurationArgs(
                 name="myLoadBalancer",
-                properties=azure_nextgen.compute.v20201001preview.LoadBalancerConfigurationPropertiesArgs(
-                    frontend_ip_configurations=[azure_nextgen.compute.v20201001preview.LoadBalancerFrontendIPConfigurationArgs(
+                properties=azure_nextgen.compute.LoadBalancerConfigurationPropertiesArgs(
+                    frontend_ip_configurations=[azure_nextgen.compute.LoadBalancerFrontendIPConfigurationArgs(
                         name="myfe",
-                        properties=azure_nextgen.compute.v20201001preview.LoadBalancerFrontendIPConfigurationPropertiesArgs(
-                            public_ip_address=azure_nextgen.compute.v20201001preview.SubResourceArgs(
+                        properties=azure_nextgen.compute.LoadBalancerFrontendIPConfigurationPropertiesArgs(
+                            public_ip_address=azure_nextgen.compute.SubResourceArgs(
                                 id="/subscriptions/{subscription-id}/resourceGroups/ConstosoRG/providers/Microsoft.Network/publicIPAddresses/myPublicIP",
                             ),
                         ),
@@ -446,10 +447,10 @@ cloud_service = azure_nextgen.compute.v20201001preview.CloudService("cloudServic
             )],
         ),
         package_url="{PackageUrl}",
-        role_profile=azure_nextgen.compute.v20201001preview.CloudServiceRoleProfileArgs(
-            roles=[azure_nextgen.compute.v20201001preview.CloudServiceRoleProfilePropertiesArgs(
+        role_profile=azure_nextgen.compute.CloudServiceRoleProfileArgs(
+            roles=[azure_nextgen.compute.CloudServiceRoleProfilePropertiesArgs(
                 name="ContosoFrontend",
-                sku=azure_nextgen.compute.v20201001preview.CloudServiceRoleSkuArgs(
+                sku=azure_nextgen.compute.CloudServiceRoleSkuArgs(
                     capacity=1,
                     name="Standard_D1_v2",
                     tier="Standard",
@@ -470,7 +471,7 @@ cloud_service = azure_nextgen.compute.v20201001preview.CloudService("cloudServic
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const cloudService = new azure_nextgen.compute.v20201001preview.CloudService("cloudService", {
+const cloudService = new azure_nextgen.compute.CloudService("cloudService", {
     cloudServiceName: "{cs-name}",
     location: "westus",
     properties: {
@@ -520,30 +521,30 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var cloudService = new AzureNextGen.Compute.V20201001Preview.CloudService("cloudService", new AzureNextGen.Compute.V20201001Preview.CloudServiceArgs
+        var cloudService = new AzureNextGen.Compute..CloudService("cloudService", new AzureNextGen.Compute..CloudServiceArgs
         {
             CloudServiceName = "{cs-name}",
             Location = "westus",
-            Properties = new AzureNextGen.Compute.V20201001Preview.Inputs.CloudServicePropertiesArgs
+            Properties = new AzureNextGen.Compute..Inputs.CloudServicePropertiesArgs
             {
                 Configuration = "{ServiceConfiguration}",
-                NetworkProfile = new AzureNextGen.Compute.V20201001Preview.Inputs.CloudServiceNetworkProfileArgs
+                NetworkProfile = new AzureNextGen.Compute..Inputs.CloudServiceNetworkProfileArgs
                 {
                     LoadBalancerConfigurations = 
                     {
-                        new AzureNextGen.Compute.V20201001Preview.Inputs.LoadBalancerConfigurationArgs
+                        new AzureNextGen.Compute..Inputs.LoadBalancerConfigurationArgs
                         {
                             Name = "contosolb",
-                            Properties = new AzureNextGen.Compute.V20201001Preview.Inputs.LoadBalancerConfigurationPropertiesArgs
+                            Properties = new AzureNextGen.Compute..Inputs.LoadBalancerConfigurationPropertiesArgs
                             {
                                 FrontendIPConfigurations = 
                                 {
-                                    new AzureNextGen.Compute.V20201001Preview.Inputs.LoadBalancerFrontendIPConfigurationArgs
+                                    new AzureNextGen.Compute..Inputs.LoadBalancerFrontendIPConfigurationArgs
                                     {
                                         Name = "contosofe",
-                                        Properties = new AzureNextGen.Compute.V20201001Preview.Inputs.LoadBalancerFrontendIPConfigurationPropertiesArgs
+                                        Properties = new AzureNextGen.Compute..Inputs.LoadBalancerFrontendIPConfigurationPropertiesArgs
                                         {
-                                            PublicIPAddress = new AzureNextGen.Compute.V20201001Preview.Inputs.SubResourceArgs
+                                            PublicIPAddress = new AzureNextGen.Compute..Inputs.SubResourceArgs
                                             {
                                                 Id = "/subscriptions/{subscription-id}/resourceGroups/ConstosoRG/providers/Microsoft.Network/publicIPAddresses/contosopublicip",
                                             },
@@ -554,19 +555,19 @@ class MyStack : Stack
                         },
                     },
                 },
-                OsProfile = new AzureNextGen.Compute.V20201001Preview.Inputs.CloudServiceOsProfileArgs
+                OsProfile = new AzureNextGen.Compute..Inputs.CloudServiceOsProfileArgs
                 {
                     Secrets = 
                     {
-                        new AzureNextGen.Compute.V20201001Preview.Inputs.CloudServiceVaultSecretGroupArgs
+                        new AzureNextGen.Compute..Inputs.CloudServiceVaultSecretGroupArgs
                         {
-                            SourceVault = new AzureNextGen.Compute.V20201001Preview.Inputs.SubResourceArgs
+                            SourceVault = new AzureNextGen.Compute..Inputs.SubResourceArgs
                             {
                                 Id = "/subscriptions/{subscription-id}/resourceGroups/ConstosoRG/providers/Microsoft.KeyVault/vaults/{keyvault-name}",
                             },
                             VaultCertificates = 
                             {
-                                new AzureNextGen.Compute.V20201001Preview.Inputs.CloudServiceVaultCertificateArgs
+                                new AzureNextGen.Compute..Inputs.CloudServiceVaultCertificateArgs
                                 {
                                     CertificateUrl = "https://{keyvault-name}.vault.azure.net:443/secrets/ContosoCertificate/{secret-id}",
                                 },
@@ -575,14 +576,14 @@ class MyStack : Stack
                     },
                 },
                 PackageUrl = "{PackageUrl}",
-                RoleProfile = new AzureNextGen.Compute.V20201001Preview.Inputs.CloudServiceRoleProfileArgs
+                RoleProfile = new AzureNextGen.Compute..Inputs.CloudServiceRoleProfileArgs
                 {
                     Roles = 
                     {
-                        new AzureNextGen.Compute.V20201001Preview.Inputs.CloudServiceRoleProfilePropertiesArgs
+                        new AzureNextGen.Compute..Inputs.CloudServiceRoleProfilePropertiesArgs
                         {
                             Name = "ContosoFrontend",
-                            Sku = new AzureNextGen.Compute.V20201001Preview.Inputs.CloudServiceRoleSkuArgs
+                            Sku = new AzureNextGen.Compute..Inputs.CloudServiceRoleSkuArgs
                             {
                                 Capacity = 1,
                                 Name = "Standard_D1_v2",
@@ -609,7 +610,7 @@ class MyStack : Stack
 package main
 
 import (
-	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute/v20201001preview"
+	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -687,19 +688,19 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-cloud_service = azure_nextgen.compute.v20201001preview.CloudService("cloudService",
+cloud_service = azure_nextgen.compute.CloudService("cloudService",
     cloud_service_name="{cs-name}",
     location="westus",
-    properties=azure_nextgen.compute.v20201001preview.CloudServicePropertiesArgs(
+    properties=azure_nextgen.compute.CloudServicePropertiesArgs(
         configuration="{ServiceConfiguration}",
-        network_profile=azure_nextgen.compute.v20201001preview.CloudServiceNetworkProfileArgs(
-            load_balancer_configurations=[azure_nextgen.compute.v20201001preview.LoadBalancerConfigurationArgs(
+        network_profile=azure_nextgen.compute.CloudServiceNetworkProfileArgs(
+            load_balancer_configurations=[azure_nextgen.compute.LoadBalancerConfigurationArgs(
                 name="contosolb",
-                properties=azure_nextgen.compute.v20201001preview.LoadBalancerConfigurationPropertiesArgs(
-                    frontend_ip_configurations=[azure_nextgen.compute.v20201001preview.LoadBalancerFrontendIPConfigurationArgs(
+                properties=azure_nextgen.compute.LoadBalancerConfigurationPropertiesArgs(
+                    frontend_ip_configurations=[azure_nextgen.compute.LoadBalancerFrontendIPConfigurationArgs(
                         name="contosofe",
-                        properties=azure_nextgen.compute.v20201001preview.LoadBalancerFrontendIPConfigurationPropertiesArgs(
-                            public_ip_address=azure_nextgen.compute.v20201001preview.SubResourceArgs(
+                        properties=azure_nextgen.compute.LoadBalancerFrontendIPConfigurationPropertiesArgs(
+                            public_ip_address=azure_nextgen.compute.SubResourceArgs(
                                 id="/subscriptions/{subscription-id}/resourceGroups/ConstosoRG/providers/Microsoft.Network/publicIPAddresses/contosopublicip",
                             ),
                         ),
@@ -707,21 +708,21 @@ cloud_service = azure_nextgen.compute.v20201001preview.CloudService("cloudServic
                 ),
             )],
         ),
-        os_profile=azure_nextgen.compute.v20201001preview.CloudServiceOsProfileArgs(
-            secrets=[azure_nextgen.compute.v20201001preview.CloudServiceVaultSecretGroupArgs(
-                source_vault=azure_nextgen.compute.v20201001preview.SubResourceArgs(
+        os_profile=azure_nextgen.compute.CloudServiceOsProfileArgs(
+            secrets=[azure_nextgen.compute.CloudServiceVaultSecretGroupArgs(
+                source_vault=azure_nextgen.compute.SubResourceArgs(
                     id="/subscriptions/{subscription-id}/resourceGroups/ConstosoRG/providers/Microsoft.KeyVault/vaults/{keyvault-name}",
                 ),
-                vault_certificates=[azure_nextgen.compute.v20201001preview.CloudServiceVaultCertificateArgs(
+                vault_certificates=[azure_nextgen.compute.CloudServiceVaultCertificateArgs(
                     certificate_url="https://{keyvault-name}.vault.azure.net:443/secrets/ContosoCertificate/{secret-id}",
                 )],
             )],
         ),
         package_url="{PackageUrl}",
-        role_profile=azure_nextgen.compute.v20201001preview.CloudServiceRoleProfileArgs(
-            roles=[azure_nextgen.compute.v20201001preview.CloudServiceRoleProfilePropertiesArgs(
+        role_profile=azure_nextgen.compute.CloudServiceRoleProfileArgs(
+            roles=[azure_nextgen.compute.CloudServiceRoleProfilePropertiesArgs(
                 name="ContosoFrontend",
-                sku=azure_nextgen.compute.v20201001preview.CloudServiceRoleSkuArgs(
+                sku=azure_nextgen.compute.CloudServiceRoleSkuArgs(
                     capacity=1,
                     name="Standard_D1_v2",
                     tier="Standard",
@@ -742,7 +743,7 @@ cloud_service = azure_nextgen.compute.v20201001preview.CloudService("cloudServic
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const cloudService = new azure_nextgen.compute.v20201001preview.CloudService("cloudService", {
+const cloudService = new azure_nextgen.compute.CloudService("cloudService", {
     cloudServiceName: "{cs-name}",
     location: "westus",
     properties: {
@@ -802,21 +803,21 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var cloudService = new AzureNextGen.Compute.V20201001Preview.CloudService("cloudService", new AzureNextGen.Compute.V20201001Preview.CloudServiceArgs
+        var cloudService = new AzureNextGen.Compute..CloudService("cloudService", new AzureNextGen.Compute..CloudServiceArgs
         {
             CloudServiceName = "{cs-name}",
             Location = "westus",
-            Properties = new AzureNextGen.Compute.V20201001Preview.Inputs.CloudServicePropertiesArgs
+            Properties = new AzureNextGen.Compute..Inputs.CloudServicePropertiesArgs
             {
                 Configuration = "{ServiceConfiguration}",
-                ExtensionProfile = new AzureNextGen.Compute.V20201001Preview.Inputs.CloudServiceExtensionProfileArgs
+                ExtensionProfile = new AzureNextGen.Compute..Inputs.CloudServiceExtensionProfileArgs
                 {
                     Extensions = 
                     {
-                        new AzureNextGen.Compute.V20201001Preview.Inputs.ExtensionArgs
+                        new AzureNextGen.Compute..Inputs.ExtensionArgs
                         {
                             Name = "RDPExtension",
-                            Properties = new AzureNextGen.Compute.V20201001Preview.Inputs.CloudServiceExtensionPropertiesArgs
+                            Properties = new AzureNextGen.Compute..Inputs.CloudServiceExtensionPropertiesArgs
                             {
                                 AutoUpgradeMinorVersion = false,
                                 ProtectedSettings = "<PrivateConfig><Password>{password}</Password></PrivateConfig>",
@@ -828,23 +829,23 @@ class MyStack : Stack
                         },
                     },
                 },
-                NetworkProfile = new AzureNextGen.Compute.V20201001Preview.Inputs.CloudServiceNetworkProfileArgs
+                NetworkProfile = new AzureNextGen.Compute..Inputs.CloudServiceNetworkProfileArgs
                 {
                     LoadBalancerConfigurations = 
                     {
-                        new AzureNextGen.Compute.V20201001Preview.Inputs.LoadBalancerConfigurationArgs
+                        new AzureNextGen.Compute..Inputs.LoadBalancerConfigurationArgs
                         {
                             Name = "contosolb",
-                            Properties = new AzureNextGen.Compute.V20201001Preview.Inputs.LoadBalancerConfigurationPropertiesArgs
+                            Properties = new AzureNextGen.Compute..Inputs.LoadBalancerConfigurationPropertiesArgs
                             {
                                 FrontendIPConfigurations = 
                                 {
-                                    new AzureNextGen.Compute.V20201001Preview.Inputs.LoadBalancerFrontendIPConfigurationArgs
+                                    new AzureNextGen.Compute..Inputs.LoadBalancerFrontendIPConfigurationArgs
                                     {
                                         Name = "contosofe",
-                                        Properties = new AzureNextGen.Compute.V20201001Preview.Inputs.LoadBalancerFrontendIPConfigurationPropertiesArgs
+                                        Properties = new AzureNextGen.Compute..Inputs.LoadBalancerFrontendIPConfigurationPropertiesArgs
                                         {
-                                            PublicIPAddress = new AzureNextGen.Compute.V20201001Preview.Inputs.SubResourceArgs
+                                            PublicIPAddress = new AzureNextGen.Compute..Inputs.SubResourceArgs
                                             {
                                                 Id = "/subscriptions/{subscription-id}/resourceGroups/ConstosoRG/providers/Microsoft.Network/publicIPAddresses/contosopublicip",
                                             },
@@ -856,14 +857,14 @@ class MyStack : Stack
                     },
                 },
                 PackageUrl = "{PackageUrl}",
-                RoleProfile = new AzureNextGen.Compute.V20201001Preview.Inputs.CloudServiceRoleProfileArgs
+                RoleProfile = new AzureNextGen.Compute..Inputs.CloudServiceRoleProfileArgs
                 {
                     Roles = 
                     {
-                        new AzureNextGen.Compute.V20201001Preview.Inputs.CloudServiceRoleProfilePropertiesArgs
+                        new AzureNextGen.Compute..Inputs.CloudServiceRoleProfilePropertiesArgs
                         {
                             Name = "ContosoFrontend",
-                            Sku = new AzureNextGen.Compute.V20201001Preview.Inputs.CloudServiceRoleSkuArgs
+                            Sku = new AzureNextGen.Compute..Inputs.CloudServiceRoleSkuArgs
                             {
                                 Capacity = 1,
                                 Name = "Standard_D1_v2",
@@ -890,7 +891,7 @@ class MyStack : Stack
 package main
 
 import (
-	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute/v20201001preview"
+	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -969,15 +970,15 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-cloud_service = azure_nextgen.compute.v20201001preview.CloudService("cloudService",
+cloud_service = azure_nextgen.compute.CloudService("cloudService",
     cloud_service_name="{cs-name}",
     location="westus",
-    properties=azure_nextgen.compute.v20201001preview.CloudServicePropertiesArgs(
+    properties=azure_nextgen.compute.CloudServicePropertiesArgs(
         configuration="{ServiceConfiguration}",
-        extension_profile=azure_nextgen.compute.v20201001preview.CloudServiceExtensionProfileArgs(
-            extensions=[azure_nextgen.compute.v20201001preview.ExtensionArgs(
+        extension_profile=azure_nextgen.compute.CloudServiceExtensionProfileArgs(
+            extensions=[azure_nextgen.compute.ExtensionArgs(
                 name="RDPExtension",
-                properties=azure_nextgen.compute.v20201001preview.CloudServiceExtensionPropertiesArgs(
+                properties=azure_nextgen.compute.CloudServiceExtensionPropertiesArgs(
                     auto_upgrade_minor_version=False,
                     protected_settings="<PrivateConfig><Password>{password}</Password></PrivateConfig>",
                     publisher="Microsoft.Windows.Azure.Extensions",
@@ -987,14 +988,14 @@ cloud_service = azure_nextgen.compute.v20201001preview.CloudService("cloudServic
                 ),
             )],
         ),
-        network_profile=azure_nextgen.compute.v20201001preview.CloudServiceNetworkProfileArgs(
-            load_balancer_configurations=[azure_nextgen.compute.v20201001preview.LoadBalancerConfigurationArgs(
+        network_profile=azure_nextgen.compute.CloudServiceNetworkProfileArgs(
+            load_balancer_configurations=[azure_nextgen.compute.LoadBalancerConfigurationArgs(
                 name="contosolb",
-                properties=azure_nextgen.compute.v20201001preview.LoadBalancerConfigurationPropertiesArgs(
-                    frontend_ip_configurations=[azure_nextgen.compute.v20201001preview.LoadBalancerFrontendIPConfigurationArgs(
+                properties=azure_nextgen.compute.LoadBalancerConfigurationPropertiesArgs(
+                    frontend_ip_configurations=[azure_nextgen.compute.LoadBalancerFrontendIPConfigurationArgs(
                         name="contosofe",
-                        properties=azure_nextgen.compute.v20201001preview.LoadBalancerFrontendIPConfigurationPropertiesArgs(
-                            public_ip_address=azure_nextgen.compute.v20201001preview.SubResourceArgs(
+                        properties=azure_nextgen.compute.LoadBalancerFrontendIPConfigurationPropertiesArgs(
+                            public_ip_address=azure_nextgen.compute.SubResourceArgs(
                                 id="/subscriptions/{subscription-id}/resourceGroups/ConstosoRG/providers/Microsoft.Network/publicIPAddresses/contosopublicip",
                             ),
                         ),
@@ -1003,10 +1004,10 @@ cloud_service = azure_nextgen.compute.v20201001preview.CloudService("cloudServic
             )],
         ),
         package_url="{PackageUrl}",
-        role_profile=azure_nextgen.compute.v20201001preview.CloudServiceRoleProfileArgs(
-            roles=[azure_nextgen.compute.v20201001preview.CloudServiceRoleProfilePropertiesArgs(
+        role_profile=azure_nextgen.compute.CloudServiceRoleProfileArgs(
+            roles=[azure_nextgen.compute.CloudServiceRoleProfilePropertiesArgs(
                 name="ContosoFrontend",
-                sku=azure_nextgen.compute.v20201001preview.CloudServiceRoleSkuArgs(
+                sku=azure_nextgen.compute.CloudServiceRoleSkuArgs(
                     capacity=1,
                     name="Standard_D1_v2",
                     tier="Standard",
@@ -1027,7 +1028,7 @@ cloud_service = azure_nextgen.compute.v20201001preview.CloudService("cloudServic
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const cloudService = new azure_nextgen.compute.v20201001preview.CloudService("cloudService", {
+const cloudService = new azure_nextgen.compute.CloudService("cloudService", {
     cloudServiceName: "{cs-name}",
     location: "westus",
     properties: {
@@ -1296,7 +1297,7 @@ The CloudService resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudserviceproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Cloud<wbr>Service<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#cloudserviceproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Inputs.<wbr>Cloud<wbr>Service<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Cloud service properties{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1624,7 +1625,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extensions_csharp" style="color: inherit; text-decoration: inherit;">Extensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#extension">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Extension<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#extension">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Inputs.<wbr>Extension<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of extensions for the cloud service.{{% /md %}}</dd>
 </dl>
@@ -1686,7 +1687,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extensions_csharp" style="color: inherit; text-decoration: inherit;">Extensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#extensionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Extension<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#extensionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Inputs.<wbr>Extension<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of extensions for the cloud service.{{% /md %}}</dd>
 </dl>
@@ -1779,7 +1780,7 @@ it is up to handler implementation whether to re-run it or not{{% /md %}}</dd>
 <a href="#protectedsettingsfromkeyvault_csharp" style="color: inherit; text-decoration: inherit;">Protected<wbr>Settings<wbr>From<wbr>Key<wbr>Vault</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudservicevaultandsecretreference">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Cloud<wbr>Service<wbr>Vault<wbr>And<wbr>Secret<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#cloudservicevaultandsecretreference">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Inputs.<wbr>Cloud<wbr>Service<wbr>Vault<wbr>And<wbr>Secret<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2154,7 +2155,7 @@ it is up to handler implementation whether to re-run it or not{{% /md %}}</dd>
 <a href="#protectedsettingsfromkeyvault_csharp" style="color: inherit; text-decoration: inherit;">Protected<wbr>Settings<wbr>From<wbr>Key<wbr>Vault</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudservicevaultandsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Cloud<wbr>Service<wbr>Vault<wbr>And<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#cloudservicevaultandsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Inputs.<wbr>Cloud<wbr>Service<wbr>Vault<wbr>And<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2516,7 +2517,7 @@ it is up to handler implementation whether to re-run it or not{{% /md %}}</dd>
 <a href="#loadbalancerconfigurations_csharp" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalancerconfiguration">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Load<wbr>Balancer<wbr>Configuration<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#loadbalancerconfiguration">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Inputs.<wbr>Load<wbr>Balancer<wbr>Configuration<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of load balancer configurations for the cloud service.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2525,7 +2526,7 @@ it is up to handler implementation whether to re-run it or not{{% /md %}}</dd>
 <a href="#swappablecloudservice_csharp" style="color: inherit; text-decoration: inherit;">Swappable<wbr>Cloud<wbr>Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 </dl>
@@ -2614,7 +2615,7 @@ it is up to handler implementation whether to re-run it or not{{% /md %}}</dd>
 <a href="#loadbalancerconfigurations_csharp" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalancerconfigurationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Load<wbr>Balancer<wbr>Configuration<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#loadbalancerconfigurationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Inputs.<wbr>Load<wbr>Balancer<wbr>Configuration<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of load balancer configurations for the cloud service.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2623,7 +2624,7 @@ it is up to handler implementation whether to re-run it or not{{% /md %}}</dd>
 <a href="#swappablecloudservice_csharp" style="color: inherit; text-decoration: inherit;">Swappable<wbr>Cloud<wbr>Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 </dl>
@@ -2712,7 +2713,7 @@ it is up to handler implementation whether to re-run it or not{{% /md %}}</dd>
 <a href="#secrets_csharp" style="color: inherit; text-decoration: inherit;">Secrets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudservicevaultsecretgroup">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Cloud<wbr>Service<wbr>Vault<wbr>Secret<wbr>Group<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#cloudservicevaultsecretgroup">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Inputs.<wbr>Cloud<wbr>Service<wbr>Vault<wbr>Secret<wbr>Group<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies set of certificates that should be installed onto the role instances.{{% /md %}}</dd>
 </dl>
@@ -2774,7 +2775,7 @@ it is up to handler implementation whether to re-run it or not{{% /md %}}</dd>
 <a href="#secrets_csharp" style="color: inherit; text-decoration: inherit;">Secrets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudservicevaultsecretgroupresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Cloud<wbr>Service<wbr>Vault<wbr>Secret<wbr>Group<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#cloudservicevaultsecretgroupresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Inputs.<wbr>Cloud<wbr>Service<wbr>Vault<wbr>Secret<wbr>Group<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies set of certificates that should be installed onto the role instances.{{% /md %}}</dd>
 </dl>
@@ -2855,7 +2856,7 @@ This is a write-only property and is not returned in GET calls.{{% /md %}}</dd>
 <a href="#extensionprofile_csharp" style="color: inherit; text-decoration: inherit;">Extension<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudserviceextensionprofile">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Cloud<wbr>Service<wbr>Extension<wbr>Profile<wbr>Args</a></span>
+        <span class="property-type"><a href="#cloudserviceextensionprofile">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Inputs.<wbr>Cloud<wbr>Service<wbr>Extension<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes a cloud service extension profile.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2864,7 +2865,7 @@ This is a write-only property and is not returned in GET calls.{{% /md %}}</dd>
 <a href="#networkprofile_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudservicenetworkprofile">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Cloud<wbr>Service<wbr>Network<wbr>Profile<wbr>Args</a></span>
+        <span class="property-type"><a href="#cloudservicenetworkprofile">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Inputs.<wbr>Cloud<wbr>Service<wbr>Network<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Network Profile for the cloud service.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2873,7 +2874,7 @@ This is a write-only property and is not returned in GET calls.{{% /md %}}</dd>
 <a href="#osprofile_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudserviceosprofile">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Cloud<wbr>Service<wbr>Os<wbr>Profile<wbr>Args</a></span>
+        <span class="property-type"><a href="#cloudserviceosprofile">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Inputs.<wbr>Cloud<wbr>Service<wbr>Os<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the OS profile for the cloud service.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2892,7 +2893,7 @@ This is a write-only property and is not returned in GET calls.{{% /md %}}</dd>
 <a href="#roleprofile_csharp" style="color: inherit; text-decoration: inherit;">Role<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudserviceroleprofile">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Cloud<wbr>Service<wbr>Role<wbr>Profile<wbr>Args</a></span>
+        <span class="property-type"><a href="#cloudserviceroleprofile">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Inputs.<wbr>Cloud<wbr>Service<wbr>Role<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the role profile for the cloud service.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2911,7 +2912,7 @@ If false, the service model is still deployed, but the code is not run immediate
 <a href="#upgrademode_csharp" style="color: inherit; text-decoration: inherit;">Upgrade<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#cloudserviceupgrademode">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Cloud<wbr>Service<wbr>Upgrade<wbr>Mode</a></span>
+        <span class="property-type">string | <a href="#cloudserviceupgrademode">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Cloud<wbr>Service<wbr>Upgrade<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}Update mode for the cloud service. Role instances are allocated to update domains when the service is deployed. Updates can be initiated manually in each update domain or initiated automatically in all update domains.
 Possible Values are <br /><br />**Auto**<br /><br />**Manual** <br /><br />**Simultaneous**<br /><br />
@@ -3243,7 +3244,7 @@ This is a write-only property and is not returned in GET calls.{{% /md %}}</dd>
 <a href="#extensionprofile_csharp" style="color: inherit; text-decoration: inherit;">Extension<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudserviceextensionprofileresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Cloud<wbr>Service<wbr>Extension<wbr>Profile<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#cloudserviceextensionprofileresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Inputs.<wbr>Cloud<wbr>Service<wbr>Extension<wbr>Profile<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes a cloud service extension profile.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3252,7 +3253,7 @@ This is a write-only property and is not returned in GET calls.{{% /md %}}</dd>
 <a href="#networkprofile_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudservicenetworkprofileresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Cloud<wbr>Service<wbr>Network<wbr>Profile<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#cloudservicenetworkprofileresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Inputs.<wbr>Cloud<wbr>Service<wbr>Network<wbr>Profile<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Network Profile for the cloud service.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3261,7 +3262,7 @@ This is a write-only property and is not returned in GET calls.{{% /md %}}</dd>
 <a href="#osprofile_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudserviceosprofileresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Cloud<wbr>Service<wbr>Os<wbr>Profile<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#cloudserviceosprofileresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Inputs.<wbr>Cloud<wbr>Service<wbr>Os<wbr>Profile<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the OS profile for the cloud service.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3280,7 +3281,7 @@ This is a write-only property and is not returned in GET calls.{{% /md %}}</dd>
 <a href="#roleprofile_csharp" style="color: inherit; text-decoration: inherit;">Role<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudserviceroleprofileresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Cloud<wbr>Service<wbr>Role<wbr>Profile<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#cloudserviceroleprofileresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Inputs.<wbr>Cloud<wbr>Service<wbr>Role<wbr>Profile<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the role profile for the cloud service.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3648,7 +3649,7 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
 <a href="#roles_csharp" style="color: inherit; text-decoration: inherit;">Roles</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudserviceroleprofileproperties">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Cloud<wbr>Service<wbr>Role<wbr>Profile<wbr>Properties<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#cloudserviceroleprofileproperties">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Inputs.<wbr>Cloud<wbr>Service<wbr>Role<wbr>Profile<wbr>Properties<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of roles for the cloud service.{{% /md %}}</dd>
 </dl>
@@ -3719,7 +3720,7 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudservicerolesku">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Cloud<wbr>Service<wbr>Role<wbr>Sku<wbr>Args</a></span>
+        <span class="property-type"><a href="#cloudservicerolesku">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Inputs.<wbr>Cloud<wbr>Service<wbr>Role<wbr>Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the cloud service role sku.{{% /md %}}</dd>
 </dl>
@@ -3817,7 +3818,7 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudserviceroleskuresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Cloud<wbr>Service<wbr>Role<wbr>Sku<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#cloudserviceroleskuresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Inputs.<wbr>Cloud<wbr>Service<wbr>Role<wbr>Sku<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the cloud service role sku.{{% /md %}}</dd>
 </dl>
@@ -3906,7 +3907,7 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
 <a href="#roles_csharp" style="color: inherit; text-decoration: inherit;">Roles</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudserviceroleprofilepropertiesresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Cloud<wbr>Service<wbr>Role<wbr>Profile<wbr>Properties<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#cloudserviceroleprofilepropertiesresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Inputs.<wbr>Cloud<wbr>Service<wbr>Role<wbr>Profile<wbr>Properties<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of roles for the cloud service.{{% /md %}}</dd>
 </dl>
@@ -4291,7 +4292,7 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
 <a href="#sourcevault_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Vault</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 </dl>
@@ -4389,7 +4390,7 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
 <a href="#sourcevault_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Vault</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 </dl>
@@ -4602,7 +4603,7 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
 <a href="#sourcevault_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Vault</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The relative URL of the Key Vault containing all of the certificates in VaultCertificates.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4611,7 +4612,7 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
 <a href="#vaultcertificates_csharp" style="color: inherit; text-decoration: inherit;">Vault<wbr>Certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudservicevaultcertificate">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Cloud<wbr>Service<wbr>Vault<wbr>Certificate<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#cloudservicevaultcertificate">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Inputs.<wbr>Cloud<wbr>Service<wbr>Vault<wbr>Certificate<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of key vault references in SourceVault which contain certificates.{{% /md %}}</dd>
 </dl>
@@ -4700,7 +4701,7 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
 <a href="#sourcevault_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Vault</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The relative URL of the Key Vault containing all of the certificates in VaultCertificates.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4709,7 +4710,7 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
 <a href="#vaultcertificates_csharp" style="color: inherit; text-decoration: inherit;">Vault<wbr>Certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudservicevaultcertificateresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Cloud<wbr>Service<wbr>Vault<wbr>Certificate<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#cloudservicevaultcertificateresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Inputs.<wbr>Cloud<wbr>Service<wbr>Vault<wbr>Certificate<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of key vault references in SourceVault which contain certificates.{{% /md %}}</dd>
 </dl>
@@ -4807,7 +4808,7 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudserviceextensionproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Cloud<wbr>Service<wbr>Extension<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#cloudserviceextensionproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Inputs.<wbr>Cloud<wbr>Service<wbr>Extension<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Extension Properties.{{% /md %}}</dd>
 </dl>
@@ -4905,7 +4906,7 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudserviceextensionpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Cloud<wbr>Service<wbr>Extension<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#cloudserviceextensionpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Inputs.<wbr>Cloud<wbr>Service<wbr>Extension<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Extension Properties.{{% /md %}}</dd>
 </dl>
@@ -5003,7 +5004,7 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalancerconfigurationproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Load<wbr>Balancer<wbr>Configuration<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#loadbalancerconfigurationproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Inputs.<wbr>Load<wbr>Balancer<wbr>Configuration<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 </dl>
@@ -5092,7 +5093,7 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
 <a href="#frontendipconfigurations_csharp" style="color: inherit; text-decoration: inherit;">Frontend<wbr>IPConfigurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalancerfrontendipconfiguration">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Load<wbr>Balancer<wbr>Frontend<wbr>IPConfiguration<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#loadbalancerfrontendipconfiguration">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Inputs.<wbr>Load<wbr>Balancer<wbr>Frontend<wbr>IPConfiguration<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of IP{{% /md %}}</dd>
 </dl>
@@ -5154,7 +5155,7 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
 <a href="#frontendipconfigurations_csharp" style="color: inherit; text-decoration: inherit;">Frontend<wbr>IPConfigurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalancerfrontendipconfigurationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Load<wbr>Balancer<wbr>Frontend<wbr>IPConfiguration<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#loadbalancerfrontendipconfigurationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Inputs.<wbr>Load<wbr>Balancer<wbr>Frontend<wbr>IPConfiguration<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of IP{{% /md %}}</dd>
 </dl>
@@ -5225,7 +5226,7 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalancerconfigurationpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Load<wbr>Balancer<wbr>Configuration<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#loadbalancerconfigurationpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Inputs.<wbr>Load<wbr>Balancer<wbr>Configuration<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 </dl>
@@ -5323,7 +5324,7 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalancerfrontendipconfigurationproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Load<wbr>Balancer<wbr>Frontend<wbr>IPConfiguration<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#loadbalancerfrontendipconfigurationproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Inputs.<wbr>Load<wbr>Balancer<wbr>Frontend<wbr>IPConfiguration<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes a cloud service IP Configuration{{% /md %}}</dd>
 </dl>
@@ -5421,7 +5422,7 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
 <a href="#publicipaddress_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>IPAddress</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -5430,7 +5431,7 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
 <a href="#subnet_csharp" style="color: inherit; text-decoration: inherit;">Subnet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 </dl>
@@ -5555,7 +5556,7 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
 <a href="#publicipaddress_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>IPAddress</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -5564,7 +5565,7 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
 <a href="#subnet_csharp" style="color: inherit; text-decoration: inherit;">Subnet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 </dl>
@@ -5689,7 +5690,7 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalancerfrontendipconfigurationpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Load<wbr>Balancer<wbr>Frontend<wbr>IPConfiguration<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#loadbalancerfrontendipconfigurationpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Inputs.<wbr>Load<wbr>Balancer<wbr>Frontend<wbr>IPConfiguration<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes a cloud service IP Configuration{{% /md %}}</dd>
 </dl>
@@ -5896,7 +5897,7 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:compute/v20201001preview:CloudService {cs-name} /subscriptions/{subscription-id}/resourceGroups/ConstosoRG/providers/Microsoft.Compute/cloudServices/{cs-name} 
+$ pulumi import azure-nextgen:compute:CloudService {cs-name} /subscriptions/{subscription-id}/resourceGroups/ConstosoRG/providers/Microsoft.Compute/cloudServices/{cs-name} 
 ```
 
 

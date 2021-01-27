@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.documentdb.SqlResourceSqlStoredP
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 An Azure Cosmos DB storedProcedure.
-Latest API Version: 2020-09-01.
+API Version: 2020-09-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,13 +27,13 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var sqlResourceSqlStoredProcedure = new AzureNextGen.DocumentDB.Latest.SqlResourceSqlStoredProcedure("sqlResourceSqlStoredProcedure", new AzureNextGen.DocumentDB.Latest.SqlResourceSqlStoredProcedureArgs
+        var sqlResourceSqlStoredProcedure = new AzureNextGen.DocumentDB..SqlResourceSqlStoredProcedure("sqlResourceSqlStoredProcedure", new AzureNextGen.DocumentDB..SqlResourceSqlStoredProcedureArgs
         {
             AccountName = "ddb1",
             ContainerName = "containerName",
             DatabaseName = "databaseName",
             Options = ,
-            Resource = new AzureNextGen.DocumentDB.Latest.Inputs.SqlStoredProcedureResourceArgs
+            Resource = new AzureNextGen.DocumentDB..Inputs.SqlStoredProcedureResourceArgs
             {
                 Body = "body",
                 Id = "storedProcedureName",
@@ -55,7 +55,7 @@ class MyStack : Stack
 package main
 
 import (
-	documentdb "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/documentdb/latest"
+	documentdb "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/documentdb"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -90,12 +90,12 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-sql_resource_sql_stored_procedure = azure_nextgen.documentdb.latest.SqlResourceSqlStoredProcedure("sqlResourceSqlStoredProcedure",
+sql_resource_sql_stored_procedure = azure_nextgen.documentdb.SqlResourceSqlStoredProcedure("sqlResourceSqlStoredProcedure",
     account_name="ddb1",
     container_name="containerName",
     database_name="databaseName",
-    options=azure_nextgen.documentdb.latest.CreateUpdateOptionsArgs(),
-    resource=azure_nextgen.documentdb.latest.SqlStoredProcedureResourceArgs(
+    options=azure_nextgen.documentdb.CreateUpdateOptionsArgs(),
+    resource=azure_nextgen.documentdb.SqlStoredProcedureResourceArgs(
         body="body",
         id="storedProcedureName",
     ),
@@ -112,7 +112,7 @@ sql_resource_sql_stored_procedure = azure_nextgen.documentdb.latest.SqlResourceS
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const sqlResourceSqlStoredProcedure = new azure_nextgen.documentdb.latest.SqlResourceSqlStoredProcedure("sqlResourceSqlStoredProcedure", {
+const sqlResourceSqlStoredProcedure = new azure_nextgen.documentdb.SqlResourceSqlStoredProcedure("sqlResourceSqlStoredProcedure", {
     accountName: "ddb1",
     containerName: "containerName",
     databaseName: "databaseName",
@@ -345,7 +345,7 @@ The SqlResourceSqlStoredProcedure resource accepts the following [input]({{< rel
 <a href="#resource_csharp" style="color: inherit; text-decoration: inherit;">Resource</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlstoredprocedureresource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Sql<wbr>Stored<wbr>Procedure<wbr>Resource<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlstoredprocedureresource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB..<wbr>Inputs.<wbr>Sql<wbr>Stored<wbr>Procedure<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The standard JSON format of a storedProcedure{{% /md %}}</dd>
     <dt class="property-required"
@@ -381,7 +381,7 @@ The SqlResourceSqlStoredProcedure resource accepts the following [input]({{< rel
 <a href="#options_csharp" style="color: inherit; text-decoration: inherit;">Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#createupdateoptions">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Create<wbr>Update<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#createupdateoptions">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB..<wbr>Inputs.<wbr>Create<wbr>Update<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A key-value pair of options to be applied for the request. This corresponds to the headers sent with the request.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -879,7 +879,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#autoscalesettings_csharp" style="color: inherit; text-decoration: inherit;">Autoscale<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalesettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Autoscale<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#autoscalesettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB..<wbr>Inputs.<wbr>Autoscale<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the Autoscale settings.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1275,7 +1275,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:documentdb/latest:SqlResourceSqlStoredProcedure storedProcedureName /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.DocumentDB/databaseAccounts/ddb1/sqlDatabases/databaseName/sqlContainers/containerName/sqlStoredProcedures/storedProcedureName 
+$ pulumi import azure-nextgen:documentdb:SqlResourceSqlStoredProcedure storedProcedureName /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.DocumentDB/databaseAccounts/ddb1/sqlDatabases/databaseName/sqlContainers/containerName/sqlStoredProcedures/storedProcedureName 
 ```
 
 

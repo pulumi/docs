@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.documentdb.SqlResourceSqlRoleAss
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 An Azure Cosmos DB Role Assignment
+API Version: 2020-06-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var sqlResourceSqlRoleAssignment = new AzureNextGen.DocumentDB.V20200601Preview.SqlResourceSqlRoleAssignment("sqlResourceSqlRoleAssignment", new AzureNextGen.DocumentDB.V20200601Preview.SqlResourceSqlRoleAssignmentArgs
+        var sqlResourceSqlRoleAssignment = new AzureNextGen.DocumentDB..SqlResourceSqlRoleAssignment("sqlResourceSqlRoleAssignment", new AzureNextGen.DocumentDB..SqlResourceSqlRoleAssignmentArgs
         {
             AccountName = "myAccountName",
             PrincipalId = "myPrincipalId",
@@ -49,7 +50,7 @@ class MyStack : Stack
 package main
 
 import (
-	documentdb "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/documentdb/v20200601preview"
+	documentdb "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/documentdb"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -80,7 +81,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-sql_resource_sql_role_assignment = azure_nextgen.documentdb.v20200601preview.SqlResourceSqlRoleAssignment("sqlResourceSqlRoleAssignment",
+sql_resource_sql_role_assignment = azure_nextgen.documentdb.SqlResourceSqlRoleAssignment("sqlResourceSqlRoleAssignment",
     account_name="myAccountName",
     principal_id="myPrincipalId",
     resource_group_name="myResourceGroupName",
@@ -98,7 +99,7 @@ sql_resource_sql_role_assignment = azure_nextgen.documentdb.v20200601preview.Sql
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const sqlResourceSqlRoleAssignment = new azure_nextgen.documentdb.v20200601preview.SqlResourceSqlRoleAssignment("sqlResourceSqlRoleAssignment", {
+const sqlResourceSqlRoleAssignment = new azure_nextgen.documentdb.SqlResourceSqlRoleAssignment("sqlResourceSqlRoleAssignment", {
     accountName: "myAccountName",
     principalId: "myPrincipalId",
     resourceGroupName: "myResourceGroupName",
@@ -681,7 +682,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:documentdb/v20200601preview:SqlResourceSqlRoleAssignment myRoleAssignmentId /subscriptions/mySubscriptionId/resourceGroups/myResourceGroupName/providers/Microsoft.DocumentDB/databaseAccounts/myAccountName/sqlRoleAssignments/myRoleAssignmentId 
+$ pulumi import azure-nextgen:documentdb:SqlResourceSqlRoleAssignment myRoleAssignmentId /subscriptions/mySubscriptionId/resourceGroups/myResourceGroupName/providers/Microsoft.DocumentDB/databaseAccounts/myAccountName/sqlRoleAssignments/myRoleAssignmentId 
 ```
 
 

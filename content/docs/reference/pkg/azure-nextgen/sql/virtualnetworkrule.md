@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.sql.VirtualNetworkRule resource 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 A virtual network rule.
+API Version: 2020-08-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var virtualNetworkRule = new AzureNextGen.Sql.V20200801Preview.VirtualNetworkRule("virtualNetworkRule", new AzureNextGen.Sql.V20200801Preview.VirtualNetworkRuleArgs
+        var virtualNetworkRule = new AzureNextGen.Sql..VirtualNetworkRule("virtualNetworkRule", new AzureNextGen.Sql..VirtualNetworkRuleArgs
         {
             IgnoreMissingVnetServiceEndpoint = false,
             ResourceGroupName = "Default",
@@ -48,7 +49,7 @@ class MyStack : Stack
 package main
 
 import (
-	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql/v20200801preview"
+	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -78,7 +79,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-virtual_network_rule = azure_nextgen.sql.v20200801preview.VirtualNetworkRule("virtualNetworkRule",
+virtual_network_rule = azure_nextgen.sql.VirtualNetworkRule("virtualNetworkRule",
     ignore_missing_vnet_service_endpoint=False,
     resource_group_name="Default",
     server_name="vnet-test-svr",
@@ -95,7 +96,7 @@ virtual_network_rule = azure_nextgen.sql.v20200801preview.VirtualNetworkRule("vi
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const virtualNetworkRule = new azure_nextgen.sql.v20200801preview.VirtualNetworkRule("virtualNetworkRule", {
+const virtualNetworkRule = new azure_nextgen.sql.VirtualNetworkRule("virtualNetworkRule", {
     ignoreMissingVnetServiceEndpoint: false,
     resourceGroupName: "Default",
     serverName: "vnet-test-svr",
@@ -677,7 +678,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:sql/v20200801preview:VirtualNetworkRule vnet-firewall-rule /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default/providers/Microsoft.Sql/servers/vnet-test-svr/virtualNetworkRules/vnet-firewall-rule 
+$ pulumi import azure-nextgen:sql:VirtualNetworkRule vnet-firewall-rule /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default/providers/Microsoft.Sql/servers/vnet-test-svr/virtualNetworkRules/vnet-firewall-rule 
 ```
 
 

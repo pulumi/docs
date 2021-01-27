@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.apimanagement.Product resource w
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Product details.
-Latest API Version: 2019-12-01.
+API Version: 2019-12-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var product = new AzureNextGen.ApiManagement.Latest.Product("product", new AzureNextGen.ApiManagement.Latest.ProductArgs
+        var product = new AzureNextGen.ApiManagement..Product("product", new AzureNextGen.ApiManagement..ProductArgs
         {
             DisplayName = "Test Template ProductName 4",
             ProductId = "testproduct",
@@ -48,7 +48,7 @@ class MyStack : Stack
 package main
 
 import (
-	apimanagement "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/apimanagement/latest"
+	apimanagement "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/apimanagement"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -77,7 +77,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-product = azure_nextgen.apimanagement.latest.Product("product",
+product = azure_nextgen.apimanagement.Product("product",
     display_name="Test Template ProductName 4",
     product_id="testproduct",
     resource_group_name="rg1",
@@ -93,7 +93,7 @@ product = azure_nextgen.apimanagement.latest.Product("product",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const product = new azure_nextgen.apimanagement.latest.Product("product", {
+const product = new azure_nextgen.apimanagement.Product("product", {
     displayName: "Test Template ProductName 4",
     productId: "testproduct",
     resourceGroupName: "rg1",
@@ -347,7 +347,7 @@ The Product resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#productstate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management.<wbr>Product<wbr>State</a></span>
+        <span class="property-type"><a href="#productstate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management..<wbr>Product<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}whether product is published or not. Published products are discoverable by users of developer portal. Non published products are visible only to administrators. Default state of Product is notPublished.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -860,7 +860,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:apimanagement/latest:Product testproduct /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/products/testproduct 
+$ pulumi import azure-nextgen:apimanagement:Product testproduct /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/products/testproduct 
 ```
 
 

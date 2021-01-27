@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.purview.Account resource with ex
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Account resource
+API Version: 2020-12-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,12 +27,12 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var account = new AzureNextGen.Purview.V20201201Preview.Account("account", new AzureNextGen.Purview.V20201201Preview.AccountArgs
+        var account = new AzureNextGen.Purview..Account("account", new AzureNextGen.Purview..AccountArgs
         {
             AccountName = "account1",
             Location = "West US 2",
             ResourceGroupName = "SampleResourceGroup",
-            Sku = new AzureNextGen.Purview.V20201201Preview.Inputs.AccountSkuArgs
+            Sku = new AzureNextGen.Purview..Inputs.AccountSkuArgs
             {
                 Capacity = 4,
                 Name = "Standard",
@@ -51,7 +52,7 @@ class MyStack : Stack
 package main
 
 import (
-	purview "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/purview/v20201201preview"
+	purview "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/purview"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -83,11 +84,11 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-account = azure_nextgen.purview.v20201201preview.Account("account",
+account = azure_nextgen.purview.Account("account",
     account_name="account1",
     location="West US 2",
     resource_group_name="SampleResourceGroup",
-    sku=azure_nextgen.purview.v20201201preview.AccountSkuArgs(
+    sku=azure_nextgen.purview.AccountSkuArgs(
         capacity=4,
         name="Standard",
     ))
@@ -102,7 +103,7 @@ account = azure_nextgen.purview.v20201201preview.Account("account",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const account = new azure_nextgen.purview.v20201201preview.Account("account", {
+const account = new azure_nextgen.purview.Account("account", {
     accountName: "account1",
     location: "West US 2",
     resourceGroupName: "SampleResourceGroup",
@@ -323,7 +324,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identity">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Purview.<wbr>Inputs.<wbr>Identity<wbr>Args</a></span>
+        <span class="property-type"><a href="#identity">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Purview..<wbr>Inputs.<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Identity Info on the tracked resource{{% /md %}}</dd>
     <dt class="property-optional"
@@ -341,7 +342,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#publicnetworkaccess_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Network<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#publicnetworkaccess">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Purview.<wbr>Public<wbr>Network<wbr>Access</a></span>
+        <span class="property-type">string | <a href="#publicnetworkaccess">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Purview..<wbr>Public<wbr>Network<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the public network access.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -350,7 +351,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accountsku">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Purview.<wbr>Inputs.<wbr>Account<wbr>Sku<wbr>Args</a></span>
+        <span class="property-type"><a href="#accountsku">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Purview..<wbr>Inputs.<wbr>Account<wbr>Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the Sku.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -615,7 +616,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpoints_csharp" style="color: inherit; text-decoration: inherit;">Endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accountpropertiesresponseendpoints">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Purview.<wbr>Outputs.<wbr>Account<wbr>Properties<wbr>Response<wbr>Endpoints</a></span>
+        <span class="property-type"><a href="#accountpropertiesresponseendpoints">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Purview..<wbr>Outputs.<wbr>Account<wbr>Properties<wbr>Response<wbr>Endpoints</a></span>
     </dt>
     <dd>{{% md %}}The URIs that are the public endpoints of the account.{{% /md %}}</dd>
     <dt class="property-"
@@ -642,7 +643,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#managedresources_csharp" style="color: inherit; text-decoration: inherit;">Managed<wbr>Resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accountpropertiesresponsemanagedresources">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Purview.<wbr>Outputs.<wbr>Account<wbr>Properties<wbr>Response<wbr>Managed<wbr>Resources</a></span>
+        <span class="property-type"><a href="#accountpropertiesresponsemanagedresources">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Purview..<wbr>Outputs.<wbr>Account<wbr>Properties<wbr>Response<wbr>Managed<wbr>Resources</a></span>
     </dt>
     <dd>{{% md %}}Gets the resource identifiers of the managed resources.{{% /md %}}</dd>
     <dt class="property-"
@@ -660,7 +661,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privateendpointconnections_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint<wbr>Connections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointconnectionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Purview.<wbr>Outputs.<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#privateendpointconnectionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Purview..<wbr>Outputs.<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Gets the private endpoint connections information.{{% /md %}}</dd>
     <dt class="property-"
@@ -687,7 +688,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cloudconnectors_csharp" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Connectors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudconnectorsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Purview.<wbr>Outputs.<wbr>Cloud<wbr>Connectors<wbr>Response</a></span>
+        <span class="property-type"><a href="#cloudconnectorsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Purview..<wbr>Outputs.<wbr>Cloud<wbr>Connectors<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Cloud connectors.
 External cloud identifier used as part of scanning configuration.{{% /md %}}</dd>
@@ -1337,7 +1338,7 @@ External cloud identifier used as part of scanning configuration.{{% /md %}}</dd
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#name">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Purview.<wbr>Name</a></span>
+        <span class="property-type">string | <a href="#name">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Purview..<wbr>Name</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the sku name.{{% /md %}}</dd>
 </dl>
@@ -1590,7 +1591,7 @@ Configured in AWS to allow use of the role arn used for scanning{{% /md %}}</dd>
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Purview.<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Purview..<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Identity Type{{% /md %}}</dd>
 </dl>
@@ -1852,7 +1853,7 @@ Configured in AWS to allow use of the role arn used for scanning{{% /md %}}</dd>
 <a href="#privateendpoint_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Purview.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#privateendpointresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Purview..<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The private endpoint information.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1861,7 +1862,7 @@ Configured in AWS to allow use of the role arn used for scanning{{% /md %}}</dd>
 <a href="#privatelinkserviceconnectionstate_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Purview.<wbr>Inputs.<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Purview..<wbr>Inputs.<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The private link service connection state.{{% /md %}}</dd>
 </dl>
@@ -2324,7 +2325,7 @@ Configured in AWS to allow use of the role arn used for scanning{{% /md %}}</dd>
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:purview/v20201201preview:Account account1 /subscriptions/34adfa4f-cedf-4dc0-ba29-b6d1a69ab345/resourceGroups/SampleResourceGroup/providers/Microsoft.Purview/accounts/account1 
+$ pulumi import azure-nextgen:purview:Account account1 /subscriptions/34adfa4f-cedf-4dc0-ba29-b6d1a69ab345/resourceGroups/SampleResourceGroup/providers/Microsoft.Purview/accounts/account1 
 ```
 
 

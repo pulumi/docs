@@ -233,7 +233,7 @@ The following output properties are available:
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#statusresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry.<wbr>Outputs.<wbr>Status<wbr>Response</a></span>
+        <span class="property-type"><a href="#statusresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry..<wbr>Outputs.<wbr>Status<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The status of the replication at the time the operation was called.{{% /md %}}</dd>
     <dt class="property-"

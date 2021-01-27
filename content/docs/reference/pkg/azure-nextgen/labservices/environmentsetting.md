@@ -11,13 +11,13 @@ meta_desc: "Documentation for the azure-nextgen.labservices.EnvironmentSetting r
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Represents settings of an environment, from which environment instances would be created
-Latest API Version: 2018-10-15.
+API Version: 2018-10-15.
 ## Import
 
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:labservices/latest:EnvironmentSetting myresource1 /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.LabServices/labaccounts/{labAccountName}/labs/{labName}/environmentsettings/{environmentSettingName} 
+$ pulumi import azure-nextgen:labservices:EnvironmentSetting myresource1 /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.LabServices/labaccounts/{labAccountName}/labs/{labName}/environmentsettings/{environmentSettingName} 
 ```
 
 
@@ -245,7 +245,7 @@ The EnvironmentSetting resource accepts the following [input]({{< relref "/docs/
 <a href="#resourcesettings_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcesettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Lab<wbr>Services.<wbr>Inputs.<wbr>Resource<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcesettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Lab<wbr>Services..<wbr>Inputs.<wbr>Resource<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The resource specific settings{{% /md %}}</dd>
     <dt class="property-optional"
@@ -254,7 +254,7 @@ The EnvironmentSetting resource accepts the following [input]({{< relref "/docs/
 <a href="#configurationstate_csharp" style="color: inherit; text-decoration: inherit;">Configuration<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#configurationstate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Lab<wbr>Services.<wbr>Configuration<wbr>State</a></span>
+        <span class="property-type">string | <a href="#configurationstate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Lab<wbr>Services..<wbr>Configuration<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}Describes the user's progress in configuring their environment setting{{% /md %}}</dd>
     <dt class="property-optional"
@@ -699,7 +699,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#latestoperationresult_csharp" style="color: inherit; text-decoration: inherit;">Latest<wbr>Operation<wbr>Result</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#latestoperationresultresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Lab<wbr>Services.<wbr>Outputs.<wbr>Latest<wbr>Operation<wbr>Result<wbr>Response</a></span>
+        <span class="property-type"><a href="#latestoperationresultresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Lab<wbr>Services..<wbr>Outputs.<wbr>Latest<wbr>Operation<wbr>Result<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The details of the latest operation. ex: status, error{{% /md %}}</dd>
     <dt class="property-"
@@ -1406,7 +1406,7 @@ or they haven't started the configuration process.{{% /md %}}</dd>
 <a href="#vmstatedetails_csharp" style="color: inherit; text-decoration: inherit;">Vm<wbr>State<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vmstatedetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Lab<wbr>Services.<wbr>Inputs.<wbr>Vm<wbr>State<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#vmstatedetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Lab<wbr>Services..<wbr>Inputs.<wbr>Vm<wbr>State<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The state details for the reference virtual machine.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1558,7 +1558,7 @@ or they haven't started the configuration process.{{% /md %}}</dd>
 <a href="#referencevm_csharp" style="color: inherit; text-decoration: inherit;">Reference<wbr>Vm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#referencevm">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Lab<wbr>Services.<wbr>Inputs.<wbr>Reference<wbr>Vm<wbr>Args</a></span>
+        <span class="property-type"><a href="#referencevm">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Lab<wbr>Services..<wbr>Inputs.<wbr>Reference<wbr>Vm<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Details specific to Reference Vm{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1576,7 +1576,7 @@ or they haven't started the configuration process.{{% /md %}}</dd>
 <a href="#size_csharp" style="color: inherit; text-decoration: inherit;">Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#managedlabvmsize">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Lab<wbr>Services.<wbr>Managed<wbr>Lab<wbr>Vm<wbr>Size</a></span>
+        <span class="property-type">string | <a href="#managedlabvmsize">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Lab<wbr>Services..<wbr>Managed<wbr>Lab<wbr>Vm<wbr>Size</a></span>
     </dt>
     <dd>{{% md %}}The size of the virtual machine{{% /md %}}</dd>
 </dl>
@@ -1719,7 +1719,7 @@ or they haven't started the configuration process.{{% /md %}}</dd>
 <a href="#referencevm_csharp" style="color: inherit; text-decoration: inherit;">Reference<wbr>Vm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#referencevmresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Lab<wbr>Services.<wbr>Inputs.<wbr>Reference<wbr>Vm<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#referencevmresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Lab<wbr>Services..<wbr>Inputs.<wbr>Reference<wbr>Vm<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Details specific to Reference Vm{{% /md %}}</dd>
     <dt class="property-optional"

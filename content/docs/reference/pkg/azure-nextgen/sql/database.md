@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.sql.Database resource with examp
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Represents a database.
-Latest API Version: 2014-04-01.
+API Version: 2014-04-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var database = new AzureNextGen.Sql.Latest.Database("database", new AzureNextGen.Sql.Latest.DatabaseArgs
+        var database = new AzureNextGen.Sql..Database("database", new AzureNextGen.Sql..DatabaseArgs
         {
             CreateMode = "Copy",
             DatabaseName = "testdb",
@@ -50,7 +50,7 @@ class MyStack : Stack
 package main
 
 import (
-	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql/latest"
+	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -81,7 +81,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-database = azure_nextgen.sql.latest.Database("database",
+database = azure_nextgen.sql.Database("database",
     create_mode="Copy",
     database_name="testdb",
     location="Japan East",
@@ -99,7 +99,7 @@ database = azure_nextgen.sql.latest.Database("database",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const database = new azure_nextgen.sql.latest.Database("database", {
+const database = new azure_nextgen.sql.Database("database", {
     createMode: "Copy",
     databaseName: "testdb",
     location: "Japan East",
@@ -122,7 +122,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var database = new AzureNextGen.Sql.Latest.Database("database", new AzureNextGen.Sql.Latest.DatabaseArgs
+        var database = new AzureNextGen.Sql..Database("database", new AzureNextGen.Sql..DatabaseArgs
         {
             CreateMode = "Restore",
             DatabaseName = "testdb",
@@ -146,7 +146,7 @@ class MyStack : Stack
 package main
 
 import (
-	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql/latest"
+	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -178,7 +178,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-database = azure_nextgen.sql.latest.Database("database",
+database = azure_nextgen.sql.Database("database",
     create_mode="Restore",
     database_name="testdb",
     location="Japan East",
@@ -197,7 +197,7 @@ database = azure_nextgen.sql.latest.Database("database",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const database = new azure_nextgen.sql.latest.Database("database", {
+const database = new azure_nextgen.sql.Database("database", {
     createMode: "Restore",
     databaseName: "testdb",
     location: "Japan East",
@@ -221,7 +221,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var database = new AzureNextGen.Sql.Latest.Database("database", new AzureNextGen.Sql.Latest.DatabaseArgs
+        var database = new AzureNextGen.Sql..Database("database", new AzureNextGen.Sql..DatabaseArgs
         {
             CreateMode = "Restore",
             DatabaseName = "testdb",
@@ -245,7 +245,7 @@ class MyStack : Stack
 package main
 
 import (
-	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql/latest"
+	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -277,7 +277,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-database = azure_nextgen.sql.latest.Database("database",
+database = azure_nextgen.sql.Database("database",
     create_mode="Restore",
     database_name="testdb",
     location="Japan East",
@@ -296,7 +296,7 @@ database = azure_nextgen.sql.latest.Database("database",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const database = new azure_nextgen.sql.latest.Database("database", {
+const database = new azure_nextgen.sql.Database("database", {
     createMode: "Restore",
     databaseName: "testdb",
     location: "Japan East",
@@ -320,7 +320,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var database = new AzureNextGen.Sql.Latest.Database("database", new AzureNextGen.Sql.Latest.DatabaseArgs
+        var database = new AzureNextGen.Sql..Database("database", new AzureNextGen.Sql..DatabaseArgs
         {
             CreateMode = "Recovery",
             DatabaseName = "testdb",
@@ -343,7 +343,7 @@ class MyStack : Stack
 package main
 
 import (
-	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql/latest"
+	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -374,7 +374,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-database = azure_nextgen.sql.latest.Database("database",
+database = azure_nextgen.sql.Database("database",
     create_mode="Recovery",
     database_name="testdb",
     location="Japan East",
@@ -392,7 +392,7 @@ database = azure_nextgen.sql.latest.Database("database",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const database = new azure_nextgen.sql.latest.Database("database", {
+const database = new azure_nextgen.sql.Database("database", {
     createMode: "Recovery",
     databaseName: "testdb",
     location: "Japan East",
@@ -415,7 +415,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var database = new AzureNextGen.Sql.Latest.Database("database", new AzureNextGen.Sql.Latest.DatabaseArgs
+        var database = new AzureNextGen.Sql..Database("database", new AzureNextGen.Sql..DatabaseArgs
         {
             CreateMode = "NonReadableSecondary",
             DatabaseName = "testdb",
@@ -438,7 +438,7 @@ class MyStack : Stack
 package main
 
 import (
-	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql/latest"
+	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -469,7 +469,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-database = azure_nextgen.sql.latest.Database("database",
+database = azure_nextgen.sql.Database("database",
     create_mode="NonReadableSecondary",
     database_name="testdb",
     location="Japan East",
@@ -487,7 +487,7 @@ database = azure_nextgen.sql.latest.Database("database",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const database = new azure_nextgen.sql.latest.Database("database", {
+const database = new azure_nextgen.sql.Database("database", {
     createMode: "NonReadableSecondary",
     databaseName: "testdb",
     location: "Japan East",
@@ -510,7 +510,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var database = new AzureNextGen.Sql.Latest.Database("database", new AzureNextGen.Sql.Latest.DatabaseArgs
+        var database = new AzureNextGen.Sql..Database("database", new AzureNextGen.Sql..DatabaseArgs
         {
             CreateMode = "PointInTimeRestore",
             DatabaseName = "testdb",
@@ -534,7 +534,7 @@ class MyStack : Stack
 package main
 
 import (
-	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql/latest"
+	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -566,7 +566,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-database = azure_nextgen.sql.latest.Database("database",
+database = azure_nextgen.sql.Database("database",
     create_mode="PointInTimeRestore",
     database_name="testdb",
     location="Japan East",
@@ -585,7 +585,7 @@ database = azure_nextgen.sql.latest.Database("database",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const database = new azure_nextgen.sql.latest.Database("database", {
+const database = new azure_nextgen.sql.Database("database", {
     createMode: "PointInTimeRestore",
     databaseName: "testdb",
     location: "Japan East",
@@ -609,7 +609,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var database = new AzureNextGen.Sql.Latest.Database("database", new AzureNextGen.Sql.Latest.DatabaseArgs
+        var database = new AzureNextGen.Sql..Database("database", new AzureNextGen.Sql..DatabaseArgs
         {
             CreateMode = "OnlineSecondary",
             DatabaseName = "testdb",
@@ -632,7 +632,7 @@ class MyStack : Stack
 package main
 
 import (
-	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql/latest"
+	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -663,7 +663,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-database = azure_nextgen.sql.latest.Database("database",
+database = azure_nextgen.sql.Database("database",
     create_mode="OnlineSecondary",
     database_name="testdb",
     location="Japan East",
@@ -681,7 +681,7 @@ database = azure_nextgen.sql.latest.Database("database",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const database = new azure_nextgen.sql.latest.Database("database", {
+const database = new azure_nextgen.sql.Database("database", {
     createMode: "OnlineSecondary",
     databaseName: "testdb",
     location: "Japan East",
@@ -704,7 +704,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var database = new AzureNextGen.Sql.Latest.Database("database", new AzureNextGen.Sql.Latest.DatabaseArgs
+        var database = new AzureNextGen.Sql..Database("database", new AzureNextGen.Sql..DatabaseArgs
         {
             CreateMode = "RestoreLongTermRetentionBackup",
             DatabaseName = "testdb",
@@ -727,7 +727,7 @@ class MyStack : Stack
 package main
 
 import (
-	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql/latest"
+	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -758,7 +758,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-database = azure_nextgen.sql.latest.Database("database",
+database = azure_nextgen.sql.Database("database",
     create_mode="RestoreLongTermRetentionBackup",
     database_name="testdb",
     location="Japan East",
@@ -776,7 +776,7 @@ database = azure_nextgen.sql.latest.Database("database",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const database = new azure_nextgen.sql.latest.Database("database", {
+const database = new azure_nextgen.sql.Database("database", {
     createMode: "RestoreLongTermRetentionBackup",
     databaseName: "testdb",
     location: "Japan East",
@@ -799,7 +799,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var database = new AzureNextGen.Sql.Latest.Database("database", new AzureNextGen.Sql.Latest.DatabaseArgs
+        var database = new AzureNextGen.Sql..Database("database", new AzureNextGen.Sql..DatabaseArgs
         {
             Collation = "SQL_Latin1_General_CP1_CI_AS",
             CreateMode = "Default",
@@ -828,7 +828,7 @@ class MyStack : Stack
 package main
 
 import (
-	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql/latest"
+	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -865,7 +865,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-database = azure_nextgen.sql.latest.Database("database",
+database = azure_nextgen.sql.Database("database",
     collation="SQL_Latin1_General_CP1_CI_AS",
     create_mode="Default",
     database_name="testdb",
@@ -889,7 +889,7 @@ database = azure_nextgen.sql.latest.Database("database",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const database = new azure_nextgen.sql.latest.Database("database", {
+const database = new azure_nextgen.sql.Database("database", {
     collation: "SQL_Latin1_General_CP1_CI_AS",
     createMode: "Default",
     databaseName: "testdb",
@@ -918,7 +918,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var database = new AzureNextGen.Sql.Latest.Database("database", new AzureNextGen.Sql.Latest.DatabaseArgs
+        var database = new AzureNextGen.Sql..Database("database", new AzureNextGen.Sql..DatabaseArgs
         {
             DatabaseName = "testdb",
             Location = "Japan East",
@@ -939,7 +939,7 @@ class MyStack : Stack
 package main
 
 import (
-	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql/latest"
+	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -968,7 +968,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-database = azure_nextgen.sql.latest.Database("database",
+database = azure_nextgen.sql.Database("database",
     database_name="testdb",
     location="Japan East",
     resource_group_name="sqlcrudtest-4799",
@@ -984,7 +984,7 @@ database = azure_nextgen.sql.latest.Database("database",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const database = new azure_nextgen.sql.latest.Database("database", {
+const database = new azure_nextgen.sql.Database("database", {
     databaseName: "testdb",
     location: "Japan East",
     resourceGroupName: "sqlcrudtest-4799",
@@ -1005,7 +1005,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var database = new AzureNextGen.Sql.Latest.Database("database", new AzureNextGen.Sql.Latest.DatabaseArgs
+        var database = new AzureNextGen.Sql..Database("database", new AzureNextGen.Sql..DatabaseArgs
         {
             Collation = "SQL_Latin1_General_CP1_CI_AS",
             CreateMode = "Default",
@@ -1033,7 +1033,7 @@ class MyStack : Stack
 package main
 
 import (
-	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql/latest"
+	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -1069,7 +1069,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-database = azure_nextgen.sql.latest.Database("database",
+database = azure_nextgen.sql.Database("database",
     collation="SQL_Latin1_General_CP1_CI_AS",
     create_mode="Default",
     database_name="testdb",
@@ -1092,7 +1092,7 @@ database = azure_nextgen.sql.latest.Database("database",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const database = new azure_nextgen.sql.latest.Database("database", {
+const database = new azure_nextgen.sql.Database("database", {
     collation: "SQL_Latin1_General_CP1_CI_AS",
     createMode: "Default",
     databaseName: "testdb",
@@ -1120,7 +1120,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var database = new AzureNextGen.Sql.Latest.Database("database", new AzureNextGen.Sql.Latest.DatabaseArgs
+        var database = new AzureNextGen.Sql..Database("database", new AzureNextGen.Sql..DatabaseArgs
         {
             DatabaseName = "testdb",
             ElasticPoolName = "7537",
@@ -1142,7 +1142,7 @@ class MyStack : Stack
 package main
 
 import (
-	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql/latest"
+	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -1172,7 +1172,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-database = azure_nextgen.sql.latest.Database("database",
+database = azure_nextgen.sql.Database("database",
     database_name="testdb",
     elastic_pool_name="7537",
     location="Japan East",
@@ -1189,7 +1189,7 @@ database = azure_nextgen.sql.latest.Database("database",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const database = new azure_nextgen.sql.latest.Database("database", {
+const database = new azure_nextgen.sql.Database("database", {
     databaseName: "testdb",
     elasticPoolName: "7537",
     location: "Japan East",
@@ -1435,7 +1435,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#createmode_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#createmode">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql.<wbr>Create<wbr>Mode</a></span>
+        <span class="property-type">string | <a href="#createmode">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql..<wbr>Create<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}Specifies the mode of database creation.
 
@@ -1460,7 +1460,7 @@ Copy, NonReadableSecondary, OnlineSecondary and RestoreLongTermRetentionBackup a
 <a href="#edition_csharp" style="color: inherit; text-decoration: inherit;">Edition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#databaseedition">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql.<wbr>Database<wbr>Edition</a></span>
+        <span class="property-type">string | <a href="#databaseedition">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql..<wbr>Database<wbr>Edition</a></span>
     </dt>
     <dd>{{% md %}}The edition of the database. The DatabaseEditions enumeration contains all the valid editions. If createMode is NonReadableSecondary or OnlineSecondary, this value is ignored.
 
@@ -1498,7 +1498,7 @@ Get-AzSqlServerServiceObjective -Location <location>
 <a href="#readscale_csharp" style="color: inherit; text-decoration: inherit;">Read<wbr>Scale</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#readscale">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql.<wbr>Read<wbr>Scale</a></span>
+        <span class="property-type">string | <a href="#readscale">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql..<wbr>Read<wbr>Scale</a></span>
     </dt>
     <dd>{{% md %}}Conditional. If the database is a geo-secondary, readScale indicates whether read-only connections are allowed to this database or not. Not supported for DataWarehouse edition.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1527,7 +1527,7 @@ The list of SKUs may vary by region and support offer. To determine the service 
 <a href="#requestedserviceobjectivename_csharp" style="color: inherit; text-decoration: inherit;">Requested<wbr>Service<wbr>Objective<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#serviceobjectivename">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql.<wbr>Service<wbr>Objective<wbr>Name</a></span>
+        <span class="property-type">string | <a href="#serviceobjectivename">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql..<wbr>Service<wbr>Objective<wbr>Name</a></span>
     </dt>
     <dd>{{% md %}}The name of the configured service level objective of the database. This is the service level objective that is in the process of being applied to the database. Once successfully updated, it will match the value of serviceLevelObjective property. 
 
@@ -1556,7 +1556,7 @@ Get-AzSqlServerServiceObjective -Location <location>
 <a href="#samplename_csharp" style="color: inherit; text-decoration: inherit;">Sample<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#samplename">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql.<wbr>Sample<wbr>Name</a></span>
+        <span class="property-type">string | <a href="#samplename">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql..<wbr>Sample<wbr>Name</a></span>
     </dt>
     <dd>{{% md %}}Indicates the name of the sample schema to apply when creating this database. If createMode is not Default, this value is ignored. Not supported for DataWarehouse edition.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2355,7 +2355,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recommendedindex_csharp" style="color: inherit; text-decoration: inherit;">Recommended<wbr>Index</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recommendedindexresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql.<wbr>Outputs.<wbr>Recommended<wbr>Index<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#recommendedindexresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql..<wbr>Outputs.<wbr>Recommended<wbr>Index<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The recommended indices for this database.{{% /md %}}</dd>
     <dt class="property-"
@@ -2373,7 +2373,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#servicetieradvisors_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Tier<wbr>Advisors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetieradvisorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql.<wbr>Outputs.<wbr>Service<wbr>Tier<wbr>Advisor<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#servicetieradvisorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql..<wbr>Outputs.<wbr>Service<wbr>Tier<wbr>Advisor<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of service tier advisors for this database. Expanded property{{% /md %}}</dd>
     <dt class="property-"
@@ -2391,7 +2391,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transparentdataencryption_csharp" style="color: inherit; text-decoration: inherit;">Transparent<wbr>Data<wbr>Encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transparentdataencryptionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql.<wbr>Outputs.<wbr>Transparent<wbr>Data<wbr>Encryption<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#transparentdataencryptionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql..<wbr>Outputs.<wbr>Transparent<wbr>Data<wbr>Encryption<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The transparent data encryption info for this database.{{% /md %}}</dd>
     <dt class="property-"
@@ -3332,7 +3332,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#estimatedimpact_csharp" style="color: inherit; text-decoration: inherit;">Estimated<wbr>Impact</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#operationimpactresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql.<wbr>Inputs.<wbr>Operation<wbr>Impact<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#operationimpactresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql..<wbr>Inputs.<wbr>Operation<wbr>Impact<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The estimated impact of doing recommended index action.{{% /md %}}</dd>
     <dt class="property-required"
@@ -3395,7 +3395,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#reportedimpact_csharp" style="color: inherit; text-decoration: inherit;">Reported<wbr>Impact</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#operationimpactresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql.<wbr>Inputs.<wbr>Operation<wbr>Impact<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#operationimpactresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql..<wbr>Inputs.<wbr>Operation<wbr>Impact<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The values reported after index action is complete.{{% /md %}}</dd>
     <dt class="property-required"
@@ -4605,7 +4605,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#servicelevelobjectiveusagemetrics_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Level<wbr>Objective<wbr>Usage<wbr>Metrics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slousagemetricresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql.<wbr>Inputs.<wbr>Slo<wbr>Usage<wbr>Metric<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#slousagemetricresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql..<wbr>Inputs.<wbr>Slo<wbr>Usage<wbr>Metric<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets serviceLevelObjectiveUsageMetrics for the service tier advisor.{{% /md %}}</dd>
     <dt class="property-required"
@@ -5595,7 +5595,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:sql/latest:Database testdb /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/sqlcrudtest-4799/providers/Microsoft.Sql/servers/sqlcrudtest-6440/databases/testdb 
+$ pulumi import azure-nextgen:sql:Database testdb /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/sqlcrudtest-4799/providers/Microsoft.Sql/servers/sqlcrudtest-6440/databases/testdb 
 ```
 
 

@@ -12,6 +12,7 @@ meta_desc: "Documentation for the azure-nextgen.containerregistry.AgentPool reso
 
 The agentpool that has the ARM resource and properties.
 The agentpool will have all information to create an agent pool.
+API Version: 2019-06-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +28,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var agentPool = new AzureNextGen.ContainerRegistry.V20190601Preview.AgentPool("agentPool", new AzureNextGen.ContainerRegistry.V20190601Preview.AgentPoolArgs
+        var agentPool = new AzureNextGen.ContainerRegistry..AgentPool("agentPool", new AzureNextGen.ContainerRegistry..AgentPoolArgs
         {
             AgentPoolName = "myAgentPool",
             Count = 1,
@@ -55,7 +56,7 @@ class MyStack : Stack
 package main
 
 import (
-	containerregistry "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/containerregistry/v20190601preview"
+	containerregistry "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/containerregistry"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -90,7 +91,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-agent_pool = azure_nextgen.containerregistry.v20190601preview.AgentPool("agentPool",
+agent_pool = azure_nextgen.containerregistry.AgentPool("agentPool",
     agent_pool_name="myAgentPool",
     count=1,
     location="WESTUS",
@@ -112,7 +113,7 @@ agent_pool = azure_nextgen.containerregistry.v20190601preview.AgentPool("agentPo
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const agentPool = new azure_nextgen.containerregistry.v20190601preview.AgentPool("agentPool", {
+const agentPool = new azure_nextgen.containerregistry.AgentPool("agentPool", {
     agentPoolName: "myAgentPool",
     count: 1,
     location: "WESTUS",
@@ -363,7 +364,7 @@ The AgentPool resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#os_csharp" style="color: inherit; text-decoration: inherit;">Os</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#os">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry.<wbr>OS</a></span>
+        <span class="property-type">string | <a href="#os">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry..<wbr>OS</a></span>
     </dt>
     <dd>{{% md %}}The OS of agent machine{{% /md %}}</dd>
     <dt class="property-optional"
@@ -700,7 +701,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#systemdata_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry.<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
+        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry..<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Metadata pertaining to creation and last modification of the resource.{{% /md %}}</dd>
     <dt class="property-"
@@ -1163,7 +1164,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:containerregistry/v20190601preview:AgentPool myAgentPool /subscriptions/f9d7ebed-adbd-4cb4-b973-aaf82c136138/resourceGroups/huanwudfwestgroup/providers/Microsoft.ContainerRegistry/registries/huanglidfwest01/agentPools/testagent26 
+$ pulumi import azure-nextgen:containerregistry:AgentPool myAgentPool /subscriptions/f9d7ebed-adbd-4cb4-b973-aaf82c136138/resourceGroups/huanwudfwestgroup/providers/Microsoft.ContainerRegistry/registries/huanglidfwest01/agentPools/testagent26 
 ```
 
 

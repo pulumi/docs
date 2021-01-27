@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.datamigration.Service resource w
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 A Database Migration Service resource
-Latest API Version: 2018-04-19.
+API Version: 2018-04-19.
 
 {{% examples %}}
 ## Example Usage
@@ -27,12 +27,12 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var service = new AzureNextGen.DataMigration.Latest.Service("service", new AzureNextGen.DataMigration.Latest.ServiceArgs
+        var service = new AzureNextGen.DataMigration..Service("service", new AzureNextGen.DataMigration..ServiceArgs
         {
             GroupName = "DmsSdkRg",
             Location = "southcentralus",
             ServiceName = "DmsSdkService",
-            Sku = new AzureNextGen.DataMigration.Latest.Inputs.ServiceSkuArgs
+            Sku = new AzureNextGen.DataMigration..Inputs.ServiceSkuArgs
             {
                 Name = "Basic_1vCore",
             },
@@ -52,7 +52,7 @@ class MyStack : Stack
 package main
 
 import (
-	datamigration "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datamigration/latest"
+	datamigration "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datamigration"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -84,11 +84,11 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-service = azure_nextgen.datamigration.latest.Service("service",
+service = azure_nextgen.datamigration.Service("service",
     group_name="DmsSdkRg",
     location="southcentralus",
     service_name="DmsSdkService",
-    sku=azure_nextgen.datamigration.latest.ServiceSkuArgs(
+    sku=azure_nextgen.datamigration.ServiceSkuArgs(
         name="Basic_1vCore",
     ),
     virtual_subnet_id="/subscriptions/fc04246f-04c5-437e-ac5e-206a19e7193f/resourceGroups/DmsSdkTestNetwork/providers/Microsoft.Network/virtualNetworks/DmsSdkTestNetwork/subnets/default")
@@ -103,7 +103,7 @@ service = azure_nextgen.datamigration.latest.Service("service",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const service = new azure_nextgen.datamigration.latest.Service("service", {
+const service = new azure_nextgen.datamigration.Service("service", {
     groupName: "DmsSdkRg",
     location: "southcentralus",
     serviceName: "DmsSdkService",
@@ -369,7 +369,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicesku">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Service<wbr>Sku<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicesku">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Service<wbr>Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Service SKU{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1247,7 +1247,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:datamigration/latest:Service DmsSdkService /subscriptions/fc04246f-04c5-437e-ac5e-206a19e7193f/resourceGroups/DmsSdkRg/providers/Microsoft.DataMigration/services/DmsSdkService 
+$ pulumi import azure-nextgen:datamigration:Service DmsSdkService /subscriptions/fc04246f-04c5-437e-ac5e-206a19e7193f/resourceGroups/DmsSdkRg/providers/Microsoft.DataMigration/services/DmsSdkService 
 ```
 
 

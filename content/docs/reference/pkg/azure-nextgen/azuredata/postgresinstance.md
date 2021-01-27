@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.azuredata.PostgresInstance resou
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 A Postgres Instance.
+API Version: 2020-09-08-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var postgresInstance = new AzureNextGen.AzureData.V20200908Preview.PostgresInstance("postgresInstance", new AzureNextGen.AzureData.V20200908Preview.PostgresInstanceArgs
+        var postgresInstance = new AzureNextGen.AzureData..PostgresInstance("postgresInstance", new AzureNextGen.AzureData..PostgresInstanceArgs
         {
             Admin = "admin",
             DataControllerId = "dataControllerId",
@@ -147,7 +148,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-postgres_instance = azure_nextgen.azuredata.v20200908preview.PostgresInstance("postgresInstance",
+postgres_instance = azure_nextgen.azuredata.PostgresInstance("postgresInstance",
     admin="admin",
     data_controller_id="dataControllerId",
     k8s_raw={
@@ -230,7 +231,7 @@ postgres_instance = azure_nextgen.azuredata.v20200908preview.PostgresInstance("p
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const postgresInstance = new azure_nextgen.azuredata.v20200908preview.PostgresInstance("postgresInstance", {
+const postgresInstance = new azure_nextgen.azuredata.PostgresInstance("postgresInstance", {
     admin: "admin",
     dataControllerId: "dataControllerId",
     k8sRaw: {
@@ -834,7 +835,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#systemdata_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Azure<wbr>Data.<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
+        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Azure<wbr>Data..<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Read only system data{{% /md %}}</dd>
     <dt class="property-"
@@ -1232,7 +1233,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:azuredata/v20200908preview:PostgresInstance testsqlregistration /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg/providers/Microsoft.AzureData/PostgresInstance/testpostgresInstance 
+$ pulumi import azure-nextgen:azuredata:PostgresInstance testsqlregistration /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg/providers/Microsoft.AzureData/PostgresInstance/testpostgresInstance 
 ```
 
 

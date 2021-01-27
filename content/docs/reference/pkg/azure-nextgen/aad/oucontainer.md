@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.aad.OuContainer resource with ex
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Resource for OuContainer.
-Latest API Version: 2020-01-01.
+API Version: 2020-01-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var ouContainer = new AzureNextGen.Aad.Latest.OuContainer("ouContainer", new AzureNextGen.Aad.Latest.OuContainerArgs
+        var ouContainer = new AzureNextGen.Aad..OuContainer("ouContainer", new AzureNextGen.Aad..OuContainerArgs
         {
             AccountName = "AccountName1",
             DomainServiceName = "OuContainer.com",
@@ -50,7 +50,7 @@ class MyStack : Stack
 package main
 
 import (
-	aad "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/aad/latest"
+	aad "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/aad"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -81,7 +81,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-ou_container = azure_nextgen.aad.latest.OuContainer("ouContainer",
+ou_container = azure_nextgen.aad.OuContainer("ouContainer",
     account_name="AccountName1",
     domain_service_name="OuContainer.com",
     ou_container_name="OuContainer1",
@@ -99,7 +99,7 @@ ou_container = azure_nextgen.aad.latest.OuContainer("ouContainer",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const ouContainer = new azure_nextgen.aad.latest.OuContainer("ouContainer", {
+const ouContainer = new azure_nextgen.aad.OuContainer("ouContainer", {
     accountName: "AccountName1",
     domainServiceName: "OuContainer.com",
     ouContainerName: "OuContainer1",
@@ -638,7 +638,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accounts_csharp" style="color: inherit; text-decoration: inherit;">Accounts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containeraccountresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Aad.<wbr>Outputs.<wbr>Container<wbr>Account<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#containeraccountresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Aad..<wbr>Outputs.<wbr>Container<wbr>Account<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of container accounts{{% /md %}}</dd>
     <dt class="property-"
@@ -1216,7 +1216,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:aad/latest:OuContainer OuContainer.com/OuContainer1 /subscriptions/1639790a-76a2-4ac4-98d9-8562f5dfcb4d/resourceGroups/ouContainerResourceGroup/providers/Microsoft.AAD/domainServices/ouContainer.com/ouContainer/ouContainer1 
+$ pulumi import azure-nextgen:aad:OuContainer OuContainer.com/OuContainer1 /subscriptions/1639790a-76a2-4ac4-98d9-8562f5dfcb4d/resourceGroups/ouContainerResourceGroup/providers/Microsoft.AAD/domainServices/ouContainer.com/ouContainer/ouContainer1 
 ```
 
 

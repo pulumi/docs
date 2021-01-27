@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.apimanagement.EmailTemplate reso
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Email Template details.
-Latest API Version: 2019-12-01.
+API Version: 2019-12-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var emailTemplate = new AzureNextGen.ApiManagement.Latest.EmailTemplate("emailTemplate", new AzureNextGen.ApiManagement.Latest.EmailTemplateArgs
+        var emailTemplate = new AzureNextGen.ApiManagement..EmailTemplate("emailTemplate", new AzureNextGen.ApiManagement..EmailTemplateArgs
         {
             ResourceGroupName = "rg1",
             ServiceName = "apimService1",
@@ -50,7 +50,7 @@ package main
 import (
 	"fmt"
 
-	apimanagement "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/apimanagement/latest"
+	apimanagement "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/apimanagement"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -79,7 +79,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-email_template = azure_nextgen.apimanagement.latest.EmailTemplate("emailTemplate",
+email_template = azure_nextgen.apimanagement.EmailTemplate("emailTemplate",
     resource_group_name="rg1",
     service_name="apimService1",
     subject="Your request for $IssueName was successfully received.",
@@ -95,7 +95,7 @@ email_template = azure_nextgen.apimanagement.latest.EmailTemplate("emailTemplate
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const emailTemplate = new azure_nextgen.apimanagement.latest.EmailTemplate("emailTemplate", {
+const emailTemplate = new azure_nextgen.apimanagement.EmailTemplate("emailTemplate", {
     resourceGroupName: "rg1",
     serviceName: "apimService1",
     subject: `Your request for $IssueName was successfully received.`,
@@ -340,7 +340,7 @@ The EmailTemplate resource accepts the following [input]({{< relref "/docs/intro
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#emailtemplateparameterscontractproperties">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Email<wbr>Template<wbr>Parameters<wbr>Contract<wbr>Properties<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#emailtemplateparameterscontractproperties">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management..<wbr>Inputs.<wbr>Email<wbr>Template<wbr>Parameters<wbr>Contract<wbr>Properties<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Email Template Parameter values.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1056,7 +1056,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:apimanagement/latest:EmailTemplate NewIssueNotificationMessage /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/templates/NewIssueNotificationMessage 
+$ pulumi import azure-nextgen:apimanagement:EmailTemplate NewIssueNotificationMessage /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/templates/NewIssueNotificationMessage 
 ```
 
 

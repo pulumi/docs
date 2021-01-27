@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.dbformysql.Database resource wit
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Represents a Database.
-Latest API Version: 2017-12-01.
+API Version: 2017-12-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var database = new AzureNextGen.DBforMySQL.Latest.Database("database", new AzureNextGen.DBforMySQL.Latest.DatabaseArgs
+        var database = new AzureNextGen.DBforMySQL..Database("database", new AzureNextGen.DBforMySQL..DatabaseArgs
         {
             Charset = "utf8",
             Collation = "utf8_general_ci",
@@ -49,7 +49,7 @@ class MyStack : Stack
 package main
 
 import (
-	dbformysql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/dbformysql/latest"
+	dbformysql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/dbformysql"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -79,7 +79,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-database = azure_nextgen.dbformysql.latest.Database("database",
+database = azure_nextgen.dbformysql.Database("database",
     charset="utf8",
     collation="utf8_general_ci",
     database_name="db1",
@@ -96,7 +96,7 @@ database = azure_nextgen.dbformysql.latest.Database("database",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const database = new azure_nextgen.dbformysql.latest.Database("database", {
+const database = new azure_nextgen.dbformysql.Database("database", {
     charset: "utf8",
     collation: "utf8_general_ci",
     databaseName: "db1",
@@ -642,7 +642,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:dbformysql/latest:Database db1 /subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/TestGroup/providers/Microsoft.DBforMySQL/servers/testserver/databases/db1 
+$ pulumi import azure-nextgen:dbformysql:Database db1 /subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/TestGroup/providers/Microsoft.DBforMySQL/servers/testserver/databases/db1 
 ```
 
 

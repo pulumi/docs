@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.batch.ApplicationPackage resourc
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 An application package which represents a particular version of an application.
-Latest API Version: 2021-01-01.
+API Version: 2021-01-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var applicationPackage = new AzureNextGen.Batch.Latest.ApplicationPackage("applicationPackage", new AzureNextGen.Batch.Latest.ApplicationPackageArgs
+        var applicationPackage = new AzureNextGen.Batch..ApplicationPackage("applicationPackage", new AzureNextGen.Batch..ApplicationPackageArgs
         {
             AccountName = "sampleacct",
             ApplicationName = "app1",
@@ -48,7 +48,7 @@ class MyStack : Stack
 package main
 
 import (
-	batch "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/batch/latest"
+	batch "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/batch"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -77,7 +77,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-application_package = azure_nextgen.batch.latest.ApplicationPackage("applicationPackage",
+application_package = azure_nextgen.batch.ApplicationPackage("applicationPackage",
     account_name="sampleacct",
     application_name="app1",
     resource_group_name="default-azurebatch-japaneast",
@@ -93,7 +93,7 @@ application_package = azure_nextgen.batch.latest.ApplicationPackage("application
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const applicationPackage = new azure_nextgen.batch.latest.ApplicationPackage("applicationPackage", {
+const applicationPackage = new azure_nextgen.batch.ApplicationPackage("applicationPackage", {
     accountName: "sampleacct",
     applicationName: "app1",
     resourceGroupName: "default-azurebatch-japaneast",
@@ -818,7 +818,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:batch/latest:ApplicationPackage 1 /subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.Batch/batchAccounts/sampleacct/applications/app1/versions/1 
+$ pulumi import azure-nextgen:batch:ApplicationPackage 1 /subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.Batch/batchAccounts/sampleacct/applications/app1/versions/1 
 ```
 
 

@@ -170,7 +170,7 @@ The following output properties are available:
 <a href="#datavolumecap_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Volume<wbr>Cap</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationinsightscomponentdatavolumecapresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Outputs.<wbr>Application<wbr>Insights<wbr>Component<wbr>Data<wbr>Volume<wbr>Cap<wbr>Response</a></span>
+        <span class="property-type"><a href="#applicationinsightscomponentdatavolumecapresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Outputs.<wbr>Application<wbr>Insights<wbr>Component<wbr>Data<wbr>Volume<wbr>Cap<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}An Application Insights component daily data volume cap{{% /md %}}</dd>
 </dl>

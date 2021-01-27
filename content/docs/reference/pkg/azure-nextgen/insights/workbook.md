@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.insights.Workbook resource with 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 An Application Insights workbook definition.
-Latest API Version: 2020-10-20.
+API Version: 2020-10-20.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var workbook = new AzureNextGen.Insights.Latest.Workbook("workbook", new AzureNextGen.Insights.Latest.WorkbookArgs
+        var workbook = new AzureNextGen.Insights..Workbook("workbook", new AzureNextGen.Insights..WorkbookArgs
         {
             Category = "workbook",
             DisplayName = "tttt",
@@ -63,7 +63,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-workbook = azure_nextgen.insights.latest.Workbook("workbook",
+workbook = azure_nextgen.insights.Workbook("workbook",
     category="workbook",
     display_name="tttt",
     id="c0deea5e-3344-40f2-96f8-6f8e1c3b5722",
@@ -89,7 +89,7 @@ workbook = azure_nextgen.insights.latest.Workbook("workbook",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const workbook = new azure_nextgen.insights.latest.Workbook("workbook", {
+const workbook = new azure_nextgen.insights.Workbook("workbook", {
     category: "workbook",
     displayName: "tttt",
     id: "c0deea5e-3344-40f2-96f8-6f8e1c3b5722",
@@ -120,13 +120,13 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var workbook = new AzureNextGen.Insights.Latest.Workbook("workbook", new AzureNextGen.Insights.Latest.WorkbookArgs
+        var workbook = new AzureNextGen.Insights..Workbook("workbook", new AzureNextGen.Insights..WorkbookArgs
         {
             Category = "workbook",
             DisplayName = "tttt",
             Etag = "\"4a00f78d-0000-0700-0000-5f8f616c1000\"",
             Id = "/subscriptions/00000000-0000-0000-0000-00000000/resourcegroups/MyGroup/providers/Microsoft.Insights/workbooks/e378d137-1243-4256-b5c4-ad2a937cae79",
-            Identity = new AzureNextGen.Insights.Latest.Inputs.ManagedIdentityArgs
+            Identity = new AzureNextGen.Insights..Inputs.ManagedIdentityArgs
             {
                 Type = "UserAssigned",
             },
@@ -158,7 +158,7 @@ class MyStack : Stack
 package main
 
 import (
-	insights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/insights/latest"
+	insights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/insights"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -202,12 +202,12 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-workbook = azure_nextgen.insights.latest.Workbook("workbook",
+workbook = azure_nextgen.insights.Workbook("workbook",
     category="workbook",
     display_name="tttt",
     etag="\"4a00f78d-0000-0700-0000-5f8f616c1000\"",
     id="/subscriptions/00000000-0000-0000-0000-00000000/resourcegroups/MyGroup/providers/Microsoft.Insights/workbooks/e378d137-1243-4256-b5c4-ad2a937cae79",
-    identity=azure_nextgen.insights.latest.ManagedIdentityArgs(
+    identity=azure_nextgen.insights.ManagedIdentityArgs(
         type="UserAssigned",
     ),
     kind="shared",
@@ -233,7 +233,7 @@ workbook = azure_nextgen.insights.latest.Workbook("workbook",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const workbook = new azure_nextgen.insights.latest.Workbook("workbook", {
+const workbook = new azure_nextgen.insights.Workbook("workbook", {
     category: "workbook",
     displayName: "tttt",
     etag: "\"4a00f78d-0000-0700-0000-5f8f616c1000\"",
@@ -511,7 +511,7 @@ The Workbook resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedidentity">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Inputs.<wbr>Managed<wbr>Identity<wbr>Args</a></span>
+        <span class="property-type"><a href="#managedidentity">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Inputs.<wbr>Managed<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Identity used for BYOS{{% /md %}}</dd>
     <dt class="property-optional"
@@ -520,7 +520,7 @@ The Workbook resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#kind">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Kind</a></span>
+        <span class="property-type">string | <a href="#kind">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Kind</a></span>
     </dt>
     <dd>{{% md %}}The kind of workbook. Choices are user and shared.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1308,7 +1308,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userassignedidentities_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userassignedidentitiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Inputs.<wbr>User<wbr>Assigned<wbr>Identities<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#userassignedidentitiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Inputs.<wbr>User<wbr>Assigned<wbr>Identities<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Customer Managed Identity{{% /md %}}</dd>
 </dl>
@@ -1489,7 +1489,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:insights/latest:Workbook e378d137-1243-4256-b5c4-ad2a937cae79 /subscriptions/00000000-0000-0000-0000-00000000/resourcegroups/MyGroup/providers/Microsoft.Insights/workbooks/72377f0c-b7e7-4044-a882-471bcbd9696e 
+$ pulumi import azure-nextgen:insights:Workbook e378d137-1243-4256-b5c4-ad2a937cae79 /subscriptions/00000000-0000-0000-0000-00000000/resourcegroups/MyGroup/providers/Microsoft.Insights/workbooks/72377f0c-b7e7-4044-a882-471bcbd9696e 
 ```
 
 

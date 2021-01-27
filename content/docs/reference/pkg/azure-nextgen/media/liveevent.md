@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.media.LiveEvent resource with ex
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The live event.
-Latest API Version: 2020-05-01.
+API Version: 2020-05-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,26 +27,26 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var liveEvent = new AzureNextGen.Media.Latest.LiveEvent("liveEvent", new AzureNextGen.Media.Latest.LiveEventArgs
+        var liveEvent = new AzureNextGen.Media..LiveEvent("liveEvent", new AzureNextGen.Media..LiveEventArgs
         {
             AccountName = "slitestmedia10",
             Description = "test event 1",
-            Input = new AzureNextGen.Media.Latest.Inputs.LiveEventInputArgs
+            Input = new AzureNextGen.Media..Inputs.LiveEventInputArgs
             {
                 KeyFrameIntervalDuration = "PT6S",
                 StreamingProtocol = "RTMP",
             },
             LiveEventName = "myLiveEvent1",
             Location = "West US",
-            Preview = new AzureNextGen.Media.Latest.Inputs.LiveEventPreviewArgs
+            Preview = new AzureNextGen.Media..Inputs.LiveEventPreviewArgs
             {
-                AccessControl = new AzureNextGen.Media.Latest.Inputs.LiveEventPreviewAccessControlArgs
+                AccessControl = new AzureNextGen.Media..Inputs.LiveEventPreviewAccessControlArgs
                 {
-                    Ip = new AzureNextGen.Media.Latest.Inputs.IPAccessControlArgs
+                    Ip = new AzureNextGen.Media..Inputs.IPAccessControlArgs
                     {
                         Allow = 
                         {
-                            new AzureNextGen.Media.Latest.Inputs.IPRangeArgs
+                            new AzureNextGen.Media..Inputs.IPRangeArgs
                             {
                                 Address = "0.0.0.0",
                                 Name = "AllowAll",
@@ -77,7 +77,7 @@ class MyStack : Stack
 package main
 
 import (
-	media "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/media/latest"
+	media "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/media"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -128,19 +128,19 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-live_event = azure_nextgen.media.latest.LiveEvent("liveEvent",
+live_event = azure_nextgen.media.LiveEvent("liveEvent",
     account_name="slitestmedia10",
     description="test event 1",
-    input=azure_nextgen.media.latest.LiveEventInputArgs(
+    input=azure_nextgen.media.LiveEventInputArgs(
         key_frame_interval_duration="PT6S",
         streaming_protocol="RTMP",
     ),
     live_event_name="myLiveEvent1",
     location="West US",
-    preview=azure_nextgen.media.latest.LiveEventPreviewArgs(
-        access_control=azure_nextgen.media.latest.LiveEventPreviewAccessControlArgs(
-            ip=azure_nextgen.media.latest.IPAccessControlArgs(
-                allow=[azure_nextgen.media.latest.IPRangeArgs(
+    preview=azure_nextgen.media.LiveEventPreviewArgs(
+        access_control=azure_nextgen.media.LiveEventPreviewAccessControlArgs(
+            ip=azure_nextgen.media.IPAccessControlArgs(
+                allow=[azure_nextgen.media.IPRangeArgs(
                     address="0.0.0.0",
                     name="AllowAll",
                     subnet_prefix_length=0,
@@ -164,7 +164,7 @@ live_event = azure_nextgen.media.latest.LiveEvent("liveEvent",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const liveEvent = new azure_nextgen.media.latest.LiveEvent("liveEvent", {
+const liveEvent = new azure_nextgen.media.LiveEvent("liveEvent", {
     accountName: "slitestmedia10",
     description: "test event 1",
     input: {
@@ -393,7 +393,7 @@ The LiveEvent resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#input_csharp" style="color: inherit; text-decoration: inherit;">Input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#liveeventinput">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Live<wbr>Event<wbr>Input<wbr>Args</a></span>
+        <span class="property-type"><a href="#liveeventinput">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Live<wbr>Event<wbr>Input<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Live event input settings. It defines how the live event receives input from a contribution encoder.{{% /md %}}</dd>
     <dt class="property-required"
@@ -438,7 +438,7 @@ The LiveEvent resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#crosssiteaccesspolicies_csharp" style="color: inherit; text-decoration: inherit;">Cross<wbr>Site<wbr>Access<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#crosssiteaccesspolicies">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Cross<wbr>Site<wbr>Access<wbr>Policies<wbr>Args</a></span>
+        <span class="property-type"><a href="#crosssiteaccesspolicies">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Cross<wbr>Site<wbr>Access<wbr>Policies<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Live event cross site access policies.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -456,7 +456,7 @@ The LiveEvent resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#encoding_csharp" style="color: inherit; text-decoration: inherit;">Encoding</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#liveeventencoding">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Live<wbr>Event<wbr>Encoding<wbr>Args</a></span>
+        <span class="property-type"><a href="#liveeventencoding">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Live<wbr>Event<wbr>Encoding<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Encoding settings for the live event. It configures whether a live encoder is used for the live event and settings for the live encoder if it is used.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -474,7 +474,7 @@ The LiveEvent resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#preview_csharp" style="color: inherit; text-decoration: inherit;">Preview</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#liveeventpreview">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Live<wbr>Event<wbr>Preview<wbr>Args</a></span>
+        <span class="property-type"><a href="#liveeventpreview">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Live<wbr>Event<wbr>Preview<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Live event preview settings. Preview allows live event producers to preview the live streaming content without creating any live output.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -483,7 +483,7 @@ The LiveEvent resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#streamoptions_csharp" style="color: inherit; text-decoration: inherit;">Stream<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Union&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Stream<wbr>Options<wbr>Flag&gt;&gt;</span>
+        <span class="property-type">List&lt;Union&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Stream<wbr>Options<wbr>Flag&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}The options to use for the LiveEvent. This value is specified at creation time and cannot be updated. The valid values for the array entry values are 'Default' and 'LowLatency'.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -501,7 +501,7 @@ The LiveEvent resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#transcriptions_csharp" style="color: inherit; text-decoration: inherit;">Transcriptions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#liveeventtranscription">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Live<wbr>Event<wbr>Transcription<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#liveeventtranscription">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Live<wbr>Event<wbr>Transcription<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Live transcription settings for the live event. See https://go.microsoft.com/fwlink/?linkid=2133742 for more information about the live transcription feature.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1439,7 +1439,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allow_csharp" style="color: inherit; text-decoration: inherit;">Allow</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iprange">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>IPRange<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#iprange">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>IPRange<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The IP allow list.{{% /md %}}</dd>
 </dl>
@@ -1501,7 +1501,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allow_csharp" style="color: inherit; text-decoration: inherit;">Allow</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iprangeresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>IPRange<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#iprangeresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>IPRange<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The IP allow list.{{% /md %}}</dd>
 </dl>
@@ -1831,7 +1831,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encodingtype_csharp" style="color: inherit; text-decoration: inherit;">Encoding<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#liveeventencodingtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Live<wbr>Event<wbr>Encoding<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#liveeventencodingtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Live<wbr>Event<wbr>Encoding<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Live event type. When encodingType is set to None, the service simply passes through the incoming video and audio layer(s) to the output. When encodingType is set to Standard or Premium1080p, a live encoder transcodes the incoming stream into multiple bitrates or layers. See https://go.microsoft.com/fwlink/?linkid=2095101 for more information. This property cannot be modified after the live event is created.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1858,7 +1858,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#stretchmode_csharp" style="color: inherit; text-decoration: inherit;">Stretch<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#stretchmode">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Stretch<wbr>Mode</a></span>
+        <span class="property-type">string | <a href="#stretchmode">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Stretch<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}Specifies how the input video will be resized to fit the desired output resolution(s). Default is None{{% /md %}}</dd>
 </dl>
@@ -2413,7 +2413,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#streamingprotocol_csharp" style="color: inherit; text-decoration: inherit;">Streaming<wbr>Protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#liveeventinputprotocol">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Live<wbr>Event<wbr>Input<wbr>Protocol</a></span>
+        <span class="property-type">string | <a href="#liveeventinputprotocol">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Live<wbr>Event<wbr>Input<wbr>Protocol</a></span>
     </dt>
     <dd>{{% md %}}The input protocol for the live event. This is specified at creation time and cannot be updated.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2422,7 +2422,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accesscontrol_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Control</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#liveeventinputaccesscontrol">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Live<wbr>Event<wbr>Input<wbr>Access<wbr>Control<wbr>Args</a></span>
+        <span class="property-type"><a href="#liveeventinputaccesscontrol">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Live<wbr>Event<wbr>Input<wbr>Access<wbr>Control<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Access control for live event input.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2440,7 +2440,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpoints_csharp" style="color: inherit; text-decoration: inherit;">Endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#liveeventendpoint">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Live<wbr>Event<wbr>Endpoint<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#liveeventendpoint">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Live<wbr>Event<wbr>Endpoint<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The input endpoints for the live event.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2619,7 +2619,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ip_csharp" style="color: inherit; text-decoration: inherit;">Ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipaccesscontrol">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>IPAccess<wbr>Control<wbr>Args</a></span>
+        <span class="property-type"><a href="#ipaccesscontrol">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>IPAccess<wbr>Control<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The IP access control properties.{{% /md %}}</dd>
 </dl>
@@ -2681,7 +2681,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ip_csharp" style="color: inherit; text-decoration: inherit;">Ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipaccesscontrolresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>IPAccess<wbr>Control<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#ipaccesscontrolresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>IPAccess<wbr>Control<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The IP access control properties.{{% /md %}}</dd>
 </dl>
@@ -2790,7 +2790,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accesscontrol_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Control</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#liveeventinputaccesscontrolresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Live<wbr>Event<wbr>Input<wbr>Access<wbr>Control<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#liveeventinputaccesscontrolresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Live<wbr>Event<wbr>Input<wbr>Access<wbr>Control<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Access control for live event input.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2808,7 +2808,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpoints_csharp" style="color: inherit; text-decoration: inherit;">Endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#liveeventendpointresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Live<wbr>Event<wbr>Endpoint<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#liveeventendpointresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Live<wbr>Event<wbr>Endpoint<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The input endpoints for the live event.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3379,7 +3379,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accesscontrol_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Control</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#liveeventpreviewaccesscontrol">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Live<wbr>Event<wbr>Preview<wbr>Access<wbr>Control<wbr>Args</a></span>
+        <span class="property-type"><a href="#liveeventpreviewaccesscontrol">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Live<wbr>Event<wbr>Preview<wbr>Access<wbr>Control<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The access control for live event preview.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3397,7 +3397,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpoints_csharp" style="color: inherit; text-decoration: inherit;">Endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#liveeventendpoint">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Live<wbr>Event<wbr>Endpoint<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#liveeventendpoint">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Live<wbr>Event<wbr>Endpoint<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The endpoints for preview. Do not share the preview URL with the live event audience.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3585,7 +3585,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ip_csharp" style="color: inherit; text-decoration: inherit;">Ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipaccesscontrol">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>IPAccess<wbr>Control<wbr>Args</a></span>
+        <span class="property-type"><a href="#ipaccesscontrol">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>IPAccess<wbr>Control<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The IP access control properties.{{% /md %}}</dd>
 </dl>
@@ -3647,7 +3647,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ip_csharp" style="color: inherit; text-decoration: inherit;">Ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipaccesscontrolresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>IPAccess<wbr>Control<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#ipaccesscontrolresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>IPAccess<wbr>Control<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The IP access control properties.{{% /md %}}</dd>
 </dl>
@@ -3709,7 +3709,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accesscontrol_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Control</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#liveeventpreviewaccesscontrolresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Live<wbr>Event<wbr>Preview<wbr>Access<wbr>Control<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#liveeventpreviewaccesscontrolresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Live<wbr>Event<wbr>Preview<wbr>Access<wbr>Control<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The access control for live event preview.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3727,7 +3727,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpoints_csharp" style="color: inherit; text-decoration: inherit;">Endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#liveeventendpointresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Live<wbr>Event<wbr>Endpoint<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#liveeventendpointresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Live<wbr>Event<wbr>Endpoint<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The endpoints for preview. Do not share the preview URL with the live event audience.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3915,7 +3915,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inputtrackselection_csharp" style="color: inherit; text-decoration: inherit;">Input<wbr>Track<wbr>Selection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#liveeventinputtrackselection">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Live<wbr>Event<wbr>Input<wbr>Track<wbr>Selection<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#liveeventinputtrackselection">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Live<wbr>Event<wbr>Input<wbr>Track<wbr>Selection<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Provides a mechanism to select the audio track in the input live feed, to which speech-to-text transcription is applied. This property is reserved for future use, any value set on this property will be ignored.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3933,7 +3933,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#outputtranscriptiontrack_csharp" style="color: inherit; text-decoration: inherit;">Output<wbr>Transcription<wbr>Track</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#liveeventoutputtranscriptiontrack">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Live<wbr>Event<wbr>Output<wbr>Transcription<wbr>Track<wbr>Args</a></span>
+        <span class="property-type"><a href="#liveeventoutputtranscriptiontrack">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Live<wbr>Event<wbr>Output<wbr>Transcription<wbr>Track<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes a transcription track in the output of a live event, generated using speech-to-text transcription. This property is reserved for future use, any value set on this property will be ignored.{{% /md %}}</dd>
 </dl>
@@ -4049,7 +4049,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inputtrackselection_csharp" style="color: inherit; text-decoration: inherit;">Input<wbr>Track<wbr>Selection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#liveeventinputtrackselectionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Live<wbr>Event<wbr>Input<wbr>Track<wbr>Selection<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#liveeventinputtrackselectionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Live<wbr>Event<wbr>Input<wbr>Track<wbr>Selection<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Provides a mechanism to select the audio track in the input live feed, to which speech-to-text transcription is applied. This property is reserved for future use, any value set on this property will be ignored.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4067,7 +4067,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#outputtranscriptiontrack_csharp" style="color: inherit; text-decoration: inherit;">Output<wbr>Transcription<wbr>Track</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#liveeventoutputtranscriptiontrackresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Live<wbr>Event<wbr>Output<wbr>Transcription<wbr>Track<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#liveeventoutputtranscriptiontrackresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Live<wbr>Event<wbr>Output<wbr>Transcription<wbr>Track<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes a transcription track in the output of a live event, generated using speech-to-text transcription. This property is reserved for future use, any value set on this property will be ignored.{{% /md %}}</dd>
 </dl>
@@ -4261,7 +4261,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:media/latest:LiveEvent myLiveEvent1 /subscriptions/0a6ec948-5a62-437d-b9df-934dc7c1b722/resourceGroups/mediaresources/providers/Microsoft.Media/mediaservices/slitestmedia10/liveevents/myLiveEvent1 
+$ pulumi import azure-nextgen:media:LiveEvent myLiveEvent1 /subscriptions/0a6ec948-5a62-437d-b9df-934dc7c1b722/resourceGroups/mediaresources/providers/Microsoft.Media/mediaservices/slitestmedia10/liveevents/myLiveEvent1 
 ```
 
 

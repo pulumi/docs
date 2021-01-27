@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.network.VirtualRouter resource w
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 VirtualRouter Resource.
-Latest API Version: 2020-08-01.
+API Version: 2020-08-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,9 +27,9 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var virtualRouter = new AzureNextGen.Network.Latest.VirtualRouter("virtualRouter", new AzureNextGen.Network.Latest.VirtualRouterArgs
+        var virtualRouter = new AzureNextGen.Network..VirtualRouter("virtualRouter", new AzureNextGen.Network..VirtualRouterArgs
         {
-            HostedGateway = new AzureNextGen.Network.Latest.Inputs.SubResourceArgs
+            HostedGateway = new AzureNextGen.Network..Inputs.SubResourceArgs
             {
                 Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworkGateways/vnetGateway",
             },
@@ -55,7 +55,7 @@ class MyStack : Stack
 package main
 
 import (
-	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network/latest"
+	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -89,8 +89,8 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-virtual_router = azure_nextgen.network.latest.VirtualRouter("virtualRouter",
-    hosted_gateway=azure_nextgen.network.latest.SubResourceArgs(
+virtual_router = azure_nextgen.network.VirtualRouter("virtualRouter",
+    hosted_gateway=azure_nextgen.network.SubResourceArgs(
         id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworkGateways/vnetGateway",
     ),
     location="West US",
@@ -110,7 +110,7 @@ virtual_router = azure_nextgen.network.latest.VirtualRouter("virtualRouter",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const virtualRouter = new azure_nextgen.network.latest.VirtualRouter("virtualRouter", {
+const virtualRouter = new azure_nextgen.network.VirtualRouter("virtualRouter", {
     hostedGateway: {
         id: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworkGateways/vnetGateway",
     },
@@ -333,7 +333,7 @@ The VirtualRouter resource accepts the following [input]({{< relref "/docs/intro
 <a href="#hostedgateway_csharp" style="color: inherit; text-decoration: inherit;">Hosted<wbr>Gateway</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Gateway on which VirtualRouter is hosted.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -342,7 +342,7 @@ The VirtualRouter resource accepts the following [input]({{< relref "/docs/intro
 <a href="#hostedsubnet_csharp" style="color: inherit; text-decoration: inherit;">Hosted<wbr>Subnet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Subnet on which VirtualRouter is hosted.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -697,7 +697,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#peerings_csharp" style="color: inherit; text-decoration: inherit;">Peerings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Outputs.<wbr>Sub<wbr>Resource<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#subresourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Outputs.<wbr>Sub<wbr>Resource<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of references to VirtualRouterPeerings.{{% /md %}}</dd>
     <dt class="property-"
@@ -1040,7 +1040,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:network/latest:VirtualRouter virtualRouter /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualRouters/virtualRouter 
+$ pulumi import azure-nextgen:network:VirtualRouter virtualRouter /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualRouters/virtualRouter 
 ```
 
 

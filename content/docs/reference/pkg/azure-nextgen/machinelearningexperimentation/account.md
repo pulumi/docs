@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.machinelearningexperimentation.A
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 An object that represents a machine learning team account.
+API Version: 2017-05-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,13 +27,13 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var account = new AzureNextGen.MachineLearningExperimentation.V20170501Preview.Account("account", new AzureNextGen.MachineLearningExperimentation.V20170501Preview.AccountArgs
+        var account = new AzureNextGen.MachineLearningExperimentation..Account("account", new AzureNextGen.MachineLearningExperimentation..AccountArgs
         {
             AccountName = "accountcrud5678",
             KeyVaultId = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/accountcrud-1234/providers/Microsoft.KeyVault/vaults/testkv",
             Location = "East US",
             ResourceGroupName = "accountcrud-1234",
-            StorageAccount = new AzureNextGen.MachineLearningExperimentation.V20170501Preview.Inputs.StorageAccountPropertiesArgs
+            StorageAccount = new AzureNextGen.MachineLearningExperimentation..Inputs.StorageAccountPropertiesArgs
             {
                 AccessKey = "key",
                 StorageAccountId = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/accountcrud-1234/providers/Microsoft.Storage/storageAccounts/testStorageAccount",
@@ -57,7 +58,7 @@ class MyStack : Stack
 package main
 
 import (
-	machinelearningexperimentation "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/machinelearningexperimentation/v20170501preview"
+	machinelearningexperimentation "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/machinelearningexperimentation"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -94,12 +95,12 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-account = azure_nextgen.machinelearningexperimentation.v20170501preview.Account("account",
+account = azure_nextgen.machinelearningexperimentation.Account("account",
     account_name="accountcrud5678",
     key_vault_id="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/accountcrud-1234/providers/Microsoft.KeyVault/vaults/testkv",
     location="East US",
     resource_group_name="accountcrud-1234",
-    storage_account=azure_nextgen.machinelearningexperimentation.v20170501preview.StorageAccountPropertiesArgs(
+    storage_account=azure_nextgen.machinelearningexperimentation.StorageAccountPropertiesArgs(
         access_key="key",
         storage_account_id="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/accountcrud-1234/providers/Microsoft.Storage/storageAccounts/testStorageAccount",
     ),
@@ -118,7 +119,7 @@ account = azure_nextgen.machinelearningexperimentation.v20170501preview.Account(
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const account = new azure_nextgen.machinelearningexperimentation.v20170501preview.Account("account", {
+const account = new azure_nextgen.machinelearningexperimentation.Account("account", {
     accountName: "accountcrud5678",
     keyVaultId: "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/accountcrud-1234/providers/Microsoft.KeyVault/vaults/testkv",
     location: "East US",
@@ -362,7 +363,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#storageaccount_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageaccountproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Experimentation.<wbr>Inputs.<wbr>Storage<wbr>Account<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#storageaccountproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Experimentation..<wbr>Inputs.<wbr>Storage<wbr>Account<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The properties of the storage account for the machine learning team account.{{% /md %}}</dd>
     <dt class="property-required"
@@ -1195,7 +1196,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:machinelearningexperimentation/v20170501preview:Account accountcrud5678 /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/accountcrud-1234/providers/Microsoft.MachineLearningExperimentation/accounts/accountcrud5678 
+$ pulumi import azure-nextgen:machinelearningexperimentation:Account accountcrud5678 /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/accountcrud-1234/providers/Microsoft.MachineLearningExperimentation/accounts/accountcrud5678 
 ```
 
 

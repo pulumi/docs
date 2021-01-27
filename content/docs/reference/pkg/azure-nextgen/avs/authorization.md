@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.avs.Authorization resource with 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 ExpressRoute Circuit Authorization
-Latest API Version: 2020-03-20.
+API Version: 2020-03-20.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var authorization = new AzureNextGen.AVS.Latest.Authorization("authorization", new AzureNextGen.AVS.Latest.AuthorizationArgs
+        var authorization = new AzureNextGen.AVS..Authorization("authorization", new AzureNextGen.AVS..AuthorizationArgs
         {
             AuthorizationName = "authorization1",
             PrivateCloudName = "cloud1",
@@ -47,7 +47,7 @@ class MyStack : Stack
 package main
 
 import (
-	avs "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/avs/latest"
+	avs "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/avs"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -75,7 +75,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-authorization = azure_nextgen.avs.latest.Authorization("authorization",
+authorization = azure_nextgen.avs.Authorization("authorization",
     authorization_name="authorization1",
     private_cloud_name="cloud1",
     resource_group_name="group1")
@@ -90,7 +90,7 @@ authorization = azure_nextgen.avs.latest.Authorization("authorization",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const authorization = new azure_nextgen.avs.latest.Authorization("authorization", {
+const authorization = new azure_nextgen.avs.Authorization("authorization", {
     authorizationName: "authorization1",
     privateCloudName: "cloud1",
     resourceGroupName: "group1",
@@ -670,7 +670,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:avs/latest:Authorization authorization1 /subscriptions/{subscription-id}/resourceGroups/group1/providers/Microsoft.AVS/privateClouds/cloud1/authorizations/authorization1 
+$ pulumi import azure-nextgen:avs:Authorization authorization1 /subscriptions/{subscription-id}/resourceGroups/group1/providers/Microsoft.AVS/privateClouds/cloud1/authorizations/authorization1 
 ```
 
 

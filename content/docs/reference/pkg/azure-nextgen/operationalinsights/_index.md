@@ -11,14 +11,9 @@ Explore the resources and functions of the operationalinsights module in the Azu
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="action" title="Action"><span class="symbol resource"></span>Action</a></li>
-    <li><a href="alertrule" title="AlertRule"><span class="symbol resource"></span>AlertRule</a></li>
-    <li><a href="bookmark" title="Bookmark"><span class="symbol resource"></span>Bookmark</a></li>
     <li><a href="cluster" title="Cluster"><span class="symbol resource"></span>Cluster</a></li>
-    <li><a href="dataconnector" title="DataConnector"><span class="symbol resource"></span>DataConnector</a></li>
     <li><a href="dataexport" title="DataExport"><span class="symbol resource"></span>DataExport</a></li>
     <li><a href="datasource" title="DataSource"><span class="symbol resource"></span>DataSource</a></li>
-    <li><a href="incident" title="Incident"><span class="symbol resource"></span>Incident</a></li>
     <li><a href="linkedservice" title="LinkedService"><span class="symbol resource"></span>LinkedService</a></li>
     <li><a href="linkedstorageaccount" title="LinkedStorageAccount"><span class="symbol resource"></span>LinkedStorageAccount</a></li>
     <li><a href="machinegroup" title="MachineGroup"><span class="symbol resource"></span>MachineGroup</a></li>
@@ -31,14 +26,9 @@ Explore the resources and functions of the operationalinsights module in the Azu
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getaction" title="GetAction"><span class="symbol function"></span>GetAction</a></li>
-    <li><a href="getalertrule" title="GetAlertRule"><span class="symbol function"></span>GetAlertRule</a></li>
-    <li><a href="getbookmark" title="GetBookmark"><span class="symbol function"></span>GetBookmark</a></li>
     <li><a href="getcluster" title="GetCluster"><span class="symbol function"></span>GetCluster</a></li>
-    <li><a href="getdataconnector" title="GetDataConnector"><span class="symbol function"></span>GetDataConnector</a></li>
     <li><a href="getdataexport" title="GetDataExport"><span class="symbol function"></span>GetDataExport</a></li>
     <li><a href="getdatasource" title="GetDataSource"><span class="symbol function"></span>GetDataSource</a></li>
-    <li><a href="getincident" title="GetIncident"><span class="symbol function"></span>GetIncident</a></li>
     <li><a href="getlinkedservice" title="GetLinkedService"><span class="symbol function"></span>GetLinkedService</a></li>
     <li><a href="getlinkedstorageaccount" title="GetLinkedStorageAccount"><span class="symbol function"></span>GetLinkedStorageAccount</a></li>
     <li><a href="getmachinegroup" title="GetMachineGroup"><span class="symbol function"></span>GetMachineGroup</a></li>
@@ -57,7 +47,7 @@ Explore the resources and functions of the operationalinsights module in the Azu
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.5.0</dd>
+	<dd>0.6.0</dd>
 </dl>
 
 

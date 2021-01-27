@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.edgeorder.AddressByName resource
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Address Resource.
+API Version: 2020-12-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,10 +27,10 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var addressByName = new AzureNextGen.EdgeOrder.V20201201Preview.AddressByName("addressByName", new AzureNextGen.EdgeOrder.V20201201Preview.AddressByNameArgs
+        var addressByName = new AzureNextGen.EdgeOrder..AddressByName("addressByName", new AzureNextGen.EdgeOrder..AddressByNameArgs
         {
             AddressName = "TestMSAddressName",
-            ContactDetails = new AzureNextGen.EdgeOrder.V20201201Preview.Inputs.ContactDetailsArgs
+            ContactDetails = new AzureNextGen.EdgeOrder..Inputs.ContactDetailsArgs
             {
                 ContactName = "Petr Cech",
                 Phone = "123344334",
@@ -37,7 +38,7 @@ class MyStack : Stack
             },
             Location = "westus",
             ResourceGroupName = "TestRG",
-            ShippingAddress = new AzureNextGen.EdgeOrder.V20201201Preview.Inputs.ShippingAddressArgs
+            ShippingAddress = new AzureNextGen.EdgeOrder..Inputs.ShippingAddressArgs
             {
                 AddressType = "None",
                 City = "San Francisco",
@@ -63,7 +64,7 @@ class MyStack : Stack
 package main
 
 import (
-	edgeorder "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/edgeorder/v20201201preview"
+	edgeorder "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/edgeorder"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -106,16 +107,16 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-address_by_name = azure_nextgen.edgeorder.v20201201preview.AddressByName("addressByName",
+address_by_name = azure_nextgen.edgeorder.AddressByName("addressByName",
     address_name="TestMSAddressName",
-    contact_details=azure_nextgen.edgeorder.v20201201preview.ContactDetailsArgs(
+    contact_details=azure_nextgen.edgeorder.ContactDetailsArgs(
         contact_name="Petr Cech",
         phone="123344334",
         phone_extension="",
     ),
     location="westus",
     resource_group_name="TestRG",
-    shipping_address=azure_nextgen.edgeorder.v20201201preview.ShippingAddressArgs(
+    shipping_address=azure_nextgen.edgeorder.ShippingAddressArgs(
         address_type="None",
         city="San Francisco",
         company_name="Microsoft",
@@ -136,7 +137,7 @@ address_by_name = azure_nextgen.edgeorder.v20201201preview.AddressByName("addres
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const addressByName = new azure_nextgen.edgeorder.v20201201preview.AddressByName("addressByName", {
+const addressByName = new azure_nextgen.edgeorder.AddressByName("addressByName", {
     addressName: "TestMSAddressName",
     contactDetails: {
         contactName: "Petr Cech",
@@ -359,7 +360,7 @@ The AddressByName resource accepts the following [input]({{< relref "/docs/intro
 <a href="#contactdetails_csharp" style="color: inherit; text-decoration: inherit;">Contact<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contactdetails">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Edge<wbr>Order.<wbr>Inputs.<wbr>Contact<wbr>Details<wbr>Args</a></span>
+        <span class="property-type"><a href="#contactdetails">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Edge<wbr>Order..<wbr>Inputs.<wbr>Contact<wbr>Details<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Contact details for the address{{% /md %}}</dd>
     <dt class="property-required"
@@ -386,7 +387,7 @@ The AddressByName resource accepts the following [input]({{< relref "/docs/intro
 <a href="#shippingaddress_csharp" style="color: inherit; text-decoration: inherit;">Shipping<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#shippingaddress">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Edge<wbr>Order.<wbr>Inputs.<wbr>Shipping<wbr>Address<wbr>Args</a></span>
+        <span class="property-type"><a href="#shippingaddress">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Edge<wbr>Order..<wbr>Inputs.<wbr>Shipping<wbr>Address<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Shipping details for the address{{% /md %}}</dd>
     <dt class="property-optional"
@@ -615,7 +616,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#systemdata_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Edge<wbr>Order.<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
+        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Edge<wbr>Order..<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Represents resource creation and update time{{% /md %}}</dd>
     <dt class="property-"
@@ -1181,7 +1182,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#addresstype_csharp" style="color: inherit; text-decoration: inherit;">Address<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#addresstype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Edge<wbr>Order.<wbr>Address<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#addresstype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Edge<wbr>Order..<wbr>Address<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of address.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2171,7 +2172,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:edgeorder/v20201201preview:AddressByName TestMSAddressName /subscriptions/fa68082f-8ff7-4a25-95c7-ce9da541242f/resourceGroups/TestRG/providers/Microsoft.EdgeOrder/addresses/TestMSAddressName 
+$ pulumi import azure-nextgen:edgeorder:AddressByName TestMSAddressName /subscriptions/fa68082f-8ff7-4a25-95c7-ce9da541242f/resourceGroups/TestRG/providers/Microsoft.EdgeOrder/addresses/TestMSAddressName 
 ```
 
 

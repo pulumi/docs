@@ -242,7 +242,7 @@ The following output properties are available:
 <a href="#autobackupsettings_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Backup<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autobackupsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql<wbr>Virtual<wbr>Machine.<wbr>Outputs.<wbr>Auto<wbr>Backup<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#autobackupsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql<wbr>Virtual<wbr>Machine..<wbr>Outputs.<wbr>Auto<wbr>Backup<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Auto backup settings for SQL Server.{{% /md %}}</dd>
     <dt class="property-"
@@ -251,7 +251,7 @@ The following output properties are available:
 <a href="#autopatchingsettings_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Patching<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autopatchingsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql<wbr>Virtual<wbr>Machine.<wbr>Outputs.<wbr>Auto<wbr>Patching<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#autopatchingsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql<wbr>Virtual<wbr>Machine..<wbr>Outputs.<wbr>Auto<wbr>Patching<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Auto patching settings for applying critical security updates to SQL virtual machine.{{% /md %}}</dd>
     <dt class="property-"
@@ -260,7 +260,7 @@ The following output properties are available:
 <a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidentityresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql<wbr>Virtual<wbr>Machine.<wbr>Outputs.<wbr>Resource<wbr>Identity<wbr>Response</a></span>
+        <span class="property-type"><a href="#resourceidentityresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql<wbr>Virtual<wbr>Machine..<wbr>Outputs.<wbr>Resource<wbr>Identity<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Azure Active Directory identity of the server.{{% /md %}}</dd>
     <dt class="property-"
@@ -269,7 +269,7 @@ The following output properties are available:
 <a href="#keyvaultcredentialsettings_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Credential<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultcredentialsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql<wbr>Virtual<wbr>Machine.<wbr>Outputs.<wbr>Key<wbr>Vault<wbr>Credential<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#keyvaultcredentialsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql<wbr>Virtual<wbr>Machine..<wbr>Outputs.<wbr>Key<wbr>Vault<wbr>Credential<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Key vault credential settings.{{% /md %}}</dd>
     <dt class="property-"
@@ -278,7 +278,7 @@ The following output properties are available:
 <a href="#serverconfigurationsmanagementsettings_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>Configurations<wbr>Management<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serverconfigurationsmanagementsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql<wbr>Virtual<wbr>Machine.<wbr>Outputs.<wbr>Server<wbr>Configurations<wbr>Management<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#serverconfigurationsmanagementsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql<wbr>Virtual<wbr>Machine..<wbr>Outputs.<wbr>Server<wbr>Configurations<wbr>Management<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}SQL Server configuration management settings.{{% /md %}}</dd>
     <dt class="property-"
@@ -332,7 +332,7 @@ The following output properties are available:
 <a href="#storageconfigurationsettings_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Configuration<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageconfigurationsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql<wbr>Virtual<wbr>Machine.<wbr>Outputs.<wbr>Storage<wbr>Configuration<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#storageconfigurationsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql<wbr>Virtual<wbr>Machine..<wbr>Outputs.<wbr>Storage<wbr>Configuration<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Storage Configuration Settings.{{% /md %}}</dd>
     <dt class="property-"
@@ -359,7 +359,7 @@ The following output properties are available:
 <a href="#wsfcdomaincredentials_csharp" style="color: inherit; text-decoration: inherit;">Wsfc<wbr>Domain<wbr>Credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#wsfcdomaincredentialsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql<wbr>Virtual<wbr>Machine.<wbr>Outputs.<wbr>Wsfc<wbr>Domain<wbr>Credentials<wbr>Response</a></span>
+        <span class="property-type"><a href="#wsfcdomaincredentialsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql<wbr>Virtual<wbr>Machine..<wbr>Outputs.<wbr>Wsfc<wbr>Domain<wbr>Credentials<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Domain credentials for setting up Windows Server Failover Cluster for SQL availability group.{{% /md %}}</dd>
 </dl>
@@ -2076,7 +2076,7 @@ The following output properties are available:
 <a href="#additionalfeaturesserverconfigurations_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Features<wbr>Server<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalfeaturesserverconfigurationsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql<wbr>Virtual<wbr>Machine.<wbr>Inputs.<wbr>Additional<wbr>Features<wbr>Server<wbr>Configurations<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#additionalfeaturesserverconfigurationsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql<wbr>Virtual<wbr>Machine..<wbr>Inputs.<wbr>Additional<wbr>Features<wbr>Server<wbr>Configurations<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Additional SQL feature settings.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2085,7 +2085,7 @@ The following output properties are available:
 <a href="#sqlconnectivityupdatesettings_csharp" style="color: inherit; text-decoration: inherit;">Sql<wbr>Connectivity<wbr>Update<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectivityupdatesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql<wbr>Virtual<wbr>Machine.<wbr>Inputs.<wbr>Sql<wbr>Connectivity<wbr>Update<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlconnectivityupdatesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql<wbr>Virtual<wbr>Machine..<wbr>Inputs.<wbr>Sql<wbr>Connectivity<wbr>Update<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}SQL connectivity type settings.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2094,7 +2094,7 @@ The following output properties are available:
 <a href="#sqlstorageupdatesettings_csharp" style="color: inherit; text-decoration: inherit;">Sql<wbr>Storage<wbr>Update<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlstorageupdatesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql<wbr>Virtual<wbr>Machine.<wbr>Inputs.<wbr>Sql<wbr>Storage<wbr>Update<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlstorageupdatesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql<wbr>Virtual<wbr>Machine..<wbr>Inputs.<wbr>Sql<wbr>Storage<wbr>Update<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}SQL storage update settings.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2103,7 +2103,7 @@ The following output properties are available:
 <a href="#sqlworkloadtypeupdatesettings_csharp" style="color: inherit; text-decoration: inherit;">Sql<wbr>Workload<wbr>Type<wbr>Update<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlworkloadtypeupdatesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql<wbr>Virtual<wbr>Machine.<wbr>Inputs.<wbr>Sql<wbr>Workload<wbr>Type<wbr>Update<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlworkloadtypeupdatesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql<wbr>Virtual<wbr>Machine..<wbr>Inputs.<wbr>Sql<wbr>Workload<wbr>Type<wbr>Update<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}SQL workload type settings.{{% /md %}}</dd>
 </dl>
@@ -2641,7 +2641,7 @@ The following output properties are available:
 <a href="#sqldatasettings_csharp" style="color: inherit; text-decoration: inherit;">Sql<wbr>Data<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlstoragesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql<wbr>Virtual<wbr>Machine.<wbr>Inputs.<wbr>SQLStorage<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlstoragesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql<wbr>Virtual<wbr>Machine..<wbr>Inputs.<wbr>SQLStorage<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}SQL Server Data Storage Settings.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2650,7 +2650,7 @@ The following output properties are available:
 <a href="#sqllogsettings_csharp" style="color: inherit; text-decoration: inherit;">Sql<wbr>Log<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlstoragesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql<wbr>Virtual<wbr>Machine.<wbr>Inputs.<wbr>SQLStorage<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlstoragesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql<wbr>Virtual<wbr>Machine..<wbr>Inputs.<wbr>SQLStorage<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}SQL Server Log Storage Settings.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2659,7 +2659,7 @@ The following output properties are available:
 <a href="#sqltempdbsettings_csharp" style="color: inherit; text-decoration: inherit;">Sql<wbr>Temp<wbr>Db<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlstoragesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql<wbr>Virtual<wbr>Machine.<wbr>Inputs.<wbr>SQLStorage<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlstoragesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql<wbr>Virtual<wbr>Machine..<wbr>Inputs.<wbr>SQLStorage<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}SQL Server TempDb Storage Settings.{{% /md %}}</dd>
     <dt class="property-optional"

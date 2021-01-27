@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.compute.Disk resource with examp
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Disk resource.
-Latest API Version: 2020-09-30.
+API Version: 2020-09-30.
 
 {{% examples %}}
 ## Example Usage
@@ -27,9 +27,9 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var disk = new AzureNextGen.Compute.Latest.Disk("disk", new AzureNextGen.Compute.Latest.DiskArgs
+        var disk = new AzureNextGen.Compute..Disk("disk", new AzureNextGen.Compute..DiskArgs
         {
-            CreationData = new AzureNextGen.Compute.Latest.Inputs.CreationDataArgs
+            CreationData = new AzureNextGen.Compute..Inputs.CreationDataArgs
             {
                 CreateOption = "Empty",
             },
@@ -54,7 +54,7 @@ class MyStack : Stack
 package main
 
 import (
-	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute/latest"
+	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -88,8 +88,8 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-disk = azure_nextgen.compute.latest.Disk("disk",
-    creation_data=azure_nextgen.compute.latest.CreationDataArgs(
+disk = azure_nextgen.compute.Disk("disk",
+    creation_data=azure_nextgen.compute.CreationDataArgs(
         create_option="Empty",
     ),
     disk_access_id="/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskAccesses/{existing-diskAccess-name}",
@@ -109,7 +109,7 @@ disk = azure_nextgen.compute.latest.Disk("disk",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const disk = new azure_nextgen.compute.latest.Disk("disk", {
+const disk = new azure_nextgen.compute.Disk("disk", {
     creationData: {
         createOption: "Empty",
     },
@@ -135,15 +135,15 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var disk = new AzureNextGen.Compute.Latest.Disk("disk", new AzureNextGen.Compute.Latest.DiskArgs
+        var disk = new AzureNextGen.Compute..Disk("disk", new AzureNextGen.Compute..DiskArgs
         {
-            CreationData = new AzureNextGen.Compute.Latest.Inputs.CreationDataArgs
+            CreationData = new AzureNextGen.Compute..Inputs.CreationDataArgs
             {
                 CreateOption = "Empty",
             },
             DiskName = "myDisk",
             DiskSizeGB = 200,
-            Encryption = new AzureNextGen.Compute.Latest.Inputs.EncryptionArgs
+            Encryption = new AzureNextGen.Compute..Inputs.EncryptionArgs
             {
                 DiskEncryptionSetId = "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSets/{existing-diskEncryptionSet-name}",
             },
@@ -164,7 +164,7 @@ class MyStack : Stack
 package main
 
 import (
-	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute/latest"
+	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -199,13 +199,13 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-disk = azure_nextgen.compute.latest.Disk("disk",
-    creation_data=azure_nextgen.compute.latest.CreationDataArgs(
+disk = azure_nextgen.compute.Disk("disk",
+    creation_data=azure_nextgen.compute.CreationDataArgs(
         create_option="Empty",
     ),
     disk_name="myDisk",
     disk_size_gb=200,
-    encryption=azure_nextgen.compute.latest.EncryptionArgs(
+    encryption=azure_nextgen.compute.EncryptionArgs(
         disk_encryption_set_id="/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSets/{existing-diskEncryptionSet-name}",
     ),
     location="West US",
@@ -221,7 +221,7 @@ disk = azure_nextgen.compute.latest.Disk("disk",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const disk = new azure_nextgen.compute.latest.Disk("disk", {
+const disk = new azure_nextgen.compute.Disk("disk", {
     creationData: {
         createOption: "Empty",
     },
@@ -248,9 +248,9 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var disk = new AzureNextGen.Compute.Latest.Disk("disk", new AzureNextGen.Compute.Latest.DiskArgs
+        var disk = new AzureNextGen.Compute..Disk("disk", new AzureNextGen.Compute..DiskArgs
         {
-            CreationData = new AzureNextGen.Compute.Latest.Inputs.CreationDataArgs
+            CreationData = new AzureNextGen.Compute..Inputs.CreationDataArgs
             {
                 CreateOption = "Copy",
                 SourceResourceId = "subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/snapshots/mySnapshot",
@@ -273,7 +273,7 @@ class MyStack : Stack
 package main
 
 import (
-	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute/latest"
+	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -305,8 +305,8 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-disk = azure_nextgen.compute.latest.Disk("disk",
-    creation_data=azure_nextgen.compute.latest.CreationDataArgs(
+disk = azure_nextgen.compute.Disk("disk",
+    creation_data=azure_nextgen.compute.CreationDataArgs(
         create_option="Copy",
         source_resource_id="subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/snapshots/mySnapshot",
     ),
@@ -324,7 +324,7 @@ disk = azure_nextgen.compute.latest.Disk("disk",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const disk = new azure_nextgen.compute.latest.Disk("disk", {
+const disk = new azure_nextgen.compute.Disk("disk", {
     creationData: {
         createOption: "Copy",
         sourceResourceId: "subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/snapshots/mySnapshot",
@@ -348,9 +348,9 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var disk = new AzureNextGen.Compute.Latest.Disk("disk", new AzureNextGen.Compute.Latest.DiskArgs
+        var disk = new AzureNextGen.Compute..Disk("disk", new AzureNextGen.Compute..DiskArgs
         {
-            CreationData = new AzureNextGen.Compute.Latest.Inputs.CreationDataArgs
+            CreationData = new AzureNextGen.Compute..Inputs.CreationDataArgs
             {
                 CreateOption = "Import",
                 SourceUri = "https://mystorageaccount.blob.core.windows.net/osimages/osimage.vhd",
@@ -374,7 +374,7 @@ class MyStack : Stack
 package main
 
 import (
-	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute/latest"
+	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -407,8 +407,8 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-disk = azure_nextgen.compute.latest.Disk("disk",
-    creation_data=azure_nextgen.compute.latest.CreationDataArgs(
+disk = azure_nextgen.compute.Disk("disk",
+    creation_data=azure_nextgen.compute.CreationDataArgs(
         create_option="Import",
         source_uri="https://mystorageaccount.blob.core.windows.net/osimages/osimage.vhd",
         storage_account_id="subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Storage/storageAccounts/myStorageAccount",
@@ -427,7 +427,7 @@ disk = azure_nextgen.compute.latest.Disk("disk",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const disk = new azure_nextgen.compute.latest.Disk("disk", {
+const disk = new azure_nextgen.compute.Disk("disk", {
     creationData: {
         createOption: "Import",
         sourceUri: "https://mystorageaccount.blob.core.windows.net/osimages/osimage.vhd",
@@ -452,9 +452,9 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var disk = new AzureNextGen.Compute.Latest.Disk("disk", new AzureNextGen.Compute.Latest.DiskArgs
+        var disk = new AzureNextGen.Compute..Disk("disk", new AzureNextGen.Compute..DiskArgs
         {
-            CreationData = new AzureNextGen.Compute.Latest.Inputs.CreationDataArgs
+            CreationData = new AzureNextGen.Compute..Inputs.CreationDataArgs
             {
                 CreateOption = "Import",
                 SourceUri = "https://mystorageaccount.blob.core.windows.net/osimages/osimage.vhd",
@@ -477,7 +477,7 @@ class MyStack : Stack
 package main
 
 import (
-	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute/latest"
+	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -509,8 +509,8 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-disk = azure_nextgen.compute.latest.Disk("disk",
-    creation_data=azure_nextgen.compute.latest.CreationDataArgs(
+disk = azure_nextgen.compute.Disk("disk",
+    creation_data=azure_nextgen.compute.CreationDataArgs(
         create_option="Import",
         source_uri="https://mystorageaccount.blob.core.windows.net/osimages/osimage.vhd",
     ),
@@ -528,7 +528,7 @@ disk = azure_nextgen.compute.latest.Disk("disk",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const disk = new azure_nextgen.compute.latest.Disk("disk", {
+const disk = new azure_nextgen.compute.Disk("disk", {
     creationData: {
         createOption: "Import",
         sourceUri: "https://mystorageaccount.blob.core.windows.net/osimages/osimage.vhd",
@@ -552,12 +552,12 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var disk = new AzureNextGen.Compute.Latest.Disk("disk", new AzureNextGen.Compute.Latest.DiskArgs
+        var disk = new AzureNextGen.Compute..Disk("disk", new AzureNextGen.Compute..DiskArgs
         {
-            CreationData = new AzureNextGen.Compute.Latest.Inputs.CreationDataArgs
+            CreationData = new AzureNextGen.Compute..Inputs.CreationDataArgs
             {
                 CreateOption = "FromImage",
-                ImageReference = new AzureNextGen.Compute.Latest.Inputs.ImageDiskReferenceArgs
+                ImageReference = new AzureNextGen.Compute..Inputs.ImageDiskReferenceArgs
                 {
                     Id = "/Subscriptions/{subscriptionId}/Providers/Microsoft.Compute/Locations/westus/Publishers/{publisher}/ArtifactTypes/VMImage/Offers/{offer}/Skus/{sku}/Versions/1.0.0",
                 },
@@ -581,7 +581,7 @@ class MyStack : Stack
 package main
 
 import (
-	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute/latest"
+	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -616,10 +616,10 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-disk = azure_nextgen.compute.latest.Disk("disk",
-    creation_data=azure_nextgen.compute.latest.CreationDataArgs(
+disk = azure_nextgen.compute.Disk("disk",
+    creation_data=azure_nextgen.compute.CreationDataArgs(
         create_option="FromImage",
-        image_reference=azure_nextgen.compute.latest.ImageDiskReferenceArgs(
+        image_reference=azure_nextgen.compute.ImageDiskReferenceArgs(
             id="/Subscriptions/{subscriptionId}/Providers/Microsoft.Compute/Locations/westus/Publishers/{publisher}/ArtifactTypes/VMImage/Offers/{offer}/Skus/{sku}/Versions/1.0.0",
         ),
     ),
@@ -638,7 +638,7 @@ disk = azure_nextgen.compute.latest.Disk("disk",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const disk = new azure_nextgen.compute.latest.Disk("disk", {
+const disk = new azure_nextgen.compute.Disk("disk", {
     creationData: {
         createOption: "FromImage",
         imageReference: {
@@ -665,9 +665,9 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var disk = new AzureNextGen.Compute.Latest.Disk("disk", new AzureNextGen.Compute.Latest.DiskArgs
+        var disk = new AzureNextGen.Compute..Disk("disk", new AzureNextGen.Compute..DiskArgs
         {
-            CreationData = new AzureNextGen.Compute.Latest.Inputs.CreationDataArgs
+            CreationData = new AzureNextGen.Compute..Inputs.CreationDataArgs
             {
                 CreateOption = "Copy",
                 SourceResourceId = "subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/disks/myDisk1",
@@ -690,7 +690,7 @@ class MyStack : Stack
 package main
 
 import (
-	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute/latest"
+	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -722,8 +722,8 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-disk = azure_nextgen.compute.latest.Disk("disk",
-    creation_data=azure_nextgen.compute.latest.CreationDataArgs(
+disk = azure_nextgen.compute.Disk("disk",
+    creation_data=azure_nextgen.compute.CreationDataArgs(
         create_option="Copy",
         source_resource_id="subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/disks/myDisk1",
     ),
@@ -741,7 +741,7 @@ disk = azure_nextgen.compute.latest.Disk("disk",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const disk = new azure_nextgen.compute.latest.Disk("disk", {
+const disk = new azure_nextgen.compute.Disk("disk", {
     creationData: {
         createOption: "Copy",
         sourceResourceId: "subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/disks/myDisk1",
@@ -765,9 +765,9 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var disk = new AzureNextGen.Compute.Latest.Disk("disk", new AzureNextGen.Compute.Latest.DiskArgs
+        var disk = new AzureNextGen.Compute..Disk("disk", new AzureNextGen.Compute..DiskArgs
         {
-            CreationData = new AzureNextGen.Compute.Latest.Inputs.CreationDataArgs
+            CreationData = new AzureNextGen.Compute..Inputs.CreationDataArgs
             {
                 CreateOption = "Upload",
                 UploadSizeBytes = 10737418752,
@@ -790,7 +790,7 @@ class MyStack : Stack
 package main
 
 import (
-	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute/latest"
+	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -822,8 +822,8 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-disk = azure_nextgen.compute.latest.Disk("disk",
-    creation_data=azure_nextgen.compute.latest.CreationDataArgs(
+disk = azure_nextgen.compute.Disk("disk",
+    creation_data=azure_nextgen.compute.CreationDataArgs(
         create_option="Upload",
         upload_size_bytes=10737418752,
     ),
@@ -841,7 +841,7 @@ disk = azure_nextgen.compute.latest.Disk("disk",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const disk = new azure_nextgen.compute.latest.Disk("disk", {
+const disk = new azure_nextgen.compute.Disk("disk", {
     creationData: {
         createOption: "Upload",
         uploadSizeBytes: 10737418752,
@@ -865,15 +865,15 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var disk = new AzureNextGen.Compute.Latest.Disk("disk", new AzureNextGen.Compute.Latest.DiskArgs
+        var disk = new AzureNextGen.Compute..Disk("disk", new AzureNextGen.Compute..DiskArgs
         {
-            CreationData = new AzureNextGen.Compute.Latest.Inputs.CreationDataArgs
+            CreationData = new AzureNextGen.Compute..Inputs.CreationDataArgs
             {
                 CreateOption = "Empty",
             },
             DiskName = "myDisk",
             DiskSizeGB = 200,
-            ExtendedLocation = new AzureNextGen.Compute.Latest.Inputs.ExtendedLocationArgs
+            ExtendedLocation = new AzureNextGen.Compute..Inputs.ExtendedLocationArgs
             {
                 Name = "{edge-zone-id}",
                 Type = "EdgeZone",
@@ -895,7 +895,7 @@ class MyStack : Stack
 package main
 
 import (
-	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute/latest"
+	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -931,13 +931,13 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-disk = azure_nextgen.compute.latest.Disk("disk",
-    creation_data=azure_nextgen.compute.latest.CreationDataArgs(
+disk = azure_nextgen.compute.Disk("disk",
+    creation_data=azure_nextgen.compute.CreationDataArgs(
         create_option="Empty",
     ),
     disk_name="myDisk",
     disk_size_gb=200,
-    extended_location=azure_nextgen.compute.latest.ExtendedLocationArgs(
+    extended_location=azure_nextgen.compute.ExtendedLocationArgs(
         name="{edge-zone-id}",
         type="EdgeZone",
     ),
@@ -954,7 +954,7 @@ disk = azure_nextgen.compute.latest.Disk("disk",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const disk = new azure_nextgen.compute.latest.Disk("disk", {
+const disk = new azure_nextgen.compute.Disk("disk", {
     creationData: {
         createOption: "Empty",
     },
@@ -982,9 +982,9 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var disk = new AzureNextGen.Compute.Latest.Disk("disk", new AzureNextGen.Compute.Latest.DiskArgs
+        var disk = new AzureNextGen.Compute..Disk("disk", new AzureNextGen.Compute..DiskArgs
         {
-            CreationData = new AzureNextGen.Compute.Latest.Inputs.CreationDataArgs
+            CreationData = new AzureNextGen.Compute..Inputs.CreationDataArgs
             {
                 CreateOption = "Empty",
             },
@@ -1007,7 +1007,7 @@ class MyStack : Stack
 package main
 
 import (
-	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute/latest"
+	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -1039,8 +1039,8 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-disk = azure_nextgen.compute.latest.Disk("disk",
-    creation_data=azure_nextgen.compute.latest.CreationDataArgs(
+disk = azure_nextgen.compute.Disk("disk",
+    creation_data=azure_nextgen.compute.CreationDataArgs(
         create_option="Empty",
     ),
     disk_name="myDisk",
@@ -1058,7 +1058,7 @@ disk = azure_nextgen.compute.latest.Disk("disk",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const disk = new azure_nextgen.compute.latest.Disk("disk", {
+const disk = new azure_nextgen.compute.Disk("disk", {
     creationData: {
         createOption: "Empty",
     },
@@ -1082,9 +1082,9 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var disk = new AzureNextGen.Compute.Latest.Disk("disk", new AzureNextGen.Compute.Latest.DiskArgs
+        var disk = new AzureNextGen.Compute..Disk("disk", new AzureNextGen.Compute..DiskArgs
         {
-            CreationData = new AzureNextGen.Compute.Latest.Inputs.CreationDataArgs
+            CreationData = new AzureNextGen.Compute..Inputs.CreationDataArgs
             {
                 CreateOption = "Empty",
                 LogicalSectorSize = 512,
@@ -1093,7 +1093,7 @@ class MyStack : Stack
             DiskSizeGB = 200,
             Location = "West US",
             ResourceGroupName = "myResourceGroup",
-            Sku = new AzureNextGen.Compute.Latest.Inputs.DiskSkuArgs
+            Sku = new AzureNextGen.Compute..Inputs.DiskSkuArgs
             {
                 Name = "UltraSSD_LRS",
             },
@@ -1112,7 +1112,7 @@ class MyStack : Stack
 package main
 
 import (
-	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute/latest"
+	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -1148,8 +1148,8 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-disk = azure_nextgen.compute.latest.Disk("disk",
-    creation_data=azure_nextgen.compute.latest.CreationDataArgs(
+disk = azure_nextgen.compute.Disk("disk",
+    creation_data=azure_nextgen.compute.CreationDataArgs(
         create_option="Empty",
         logical_sector_size=512,
     ),
@@ -1157,7 +1157,7 @@ disk = azure_nextgen.compute.latest.Disk("disk",
     disk_size_gb=200,
     location="West US",
     resource_group_name="myResourceGroup",
-    sku=azure_nextgen.compute.latest.DiskSkuArgs(
+    sku=azure_nextgen.compute.DiskSkuArgs(
         name="UltraSSD_LRS",
     ))
 
@@ -1171,7 +1171,7 @@ disk = azure_nextgen.compute.latest.Disk("disk",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const disk = new azure_nextgen.compute.latest.Disk("disk", {
+const disk = new azure_nextgen.compute.Disk("disk", {
     creationData: {
         createOption: "Empty",
         logicalSectorSize: 512,
@@ -1378,7 +1378,7 @@ The Disk resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#creationdata_csharp" style="color: inherit; text-decoration: inherit;">Creation<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#creationdata">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Creation<wbr>Data<wbr>Args</a></span>
+        <span class="property-type"><a href="#creationdata">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Inputs.<wbr>Creation<wbr>Data<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Disk source information. CreationData information cannot be changed after the disk has been created.{{% /md %}}</dd>
     <dt class="property-required"
@@ -1477,7 +1477,7 @@ The Disk resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#encryption_csharp" style="color: inherit; text-decoration: inherit;">Encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryption">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Encryption<wbr>Args</a></span>
+        <span class="property-type"><a href="#encryption">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Inputs.<wbr>Encryption<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Encryption property can be used to encrypt data at rest with customer managed keys or platform managed keys.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1486,7 +1486,7 @@ The Disk resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#encryptionsettingscollection_csharp" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Settings<wbr>Collection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionsettingscollection">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Encryption<wbr>Settings<wbr>Collection<wbr>Args</a></span>
+        <span class="property-type"><a href="#encryptionsettingscollection">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Inputs.<wbr>Encryption<wbr>Settings<wbr>Collection<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Encryption settings collection used for Azure Disk Encryption, can contain multiple encryption settings per disk or snapshot.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1495,7 +1495,7 @@ The Disk resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#extendedlocation_csharp" style="color: inherit; text-decoration: inherit;">Extended<wbr>Location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#extendedlocation">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Extended<wbr>Location<wbr>Args</a></span>
+        <span class="property-type"><a href="#extendedlocation">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Inputs.<wbr>Extended<wbr>Location<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The extended location where the disk will be created. Extended location cannot be changed.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1504,7 +1504,7 @@ The Disk resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#hypervgeneration_csharp" style="color: inherit; text-decoration: inherit;">Hyper<wbr>VGeneration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#hypervgeneration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Hyper<wbr>VGeneration</a></span>
+        <span class="property-type">string | <a href="#hypervgeneration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Hyper<wbr>VGeneration</a></span>
     </dt>
     <dd>{{% md %}}The hypervisor generation of the Virtual Machine. Applicable to OS disks only.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1522,7 +1522,7 @@ The Disk resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#networkaccesspolicy_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Access<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#networkaccesspolicy">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Network<wbr>Access<wbr>Policy</a></span>
+        <span class="property-type">string | <a href="#networkaccesspolicy">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Network<wbr>Access<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Policy for accessing the disk via network.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1531,7 +1531,7 @@ The Disk resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#ostype_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#operatingsystemtypes">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Operating<wbr>System<wbr>Types</a></span>
+        <span class="property-type"><a href="#operatingsystemtypes">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Operating<wbr>System<wbr>Types</a></span>
     </dt>
     <dd>{{% md %}}The Operating System type.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1540,7 +1540,7 @@ The Disk resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#purchaseplan_csharp" style="color: inherit; text-decoration: inherit;">Purchase<wbr>Plan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#purchaseplan">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Purchase<wbr>Plan<wbr>Args</a></span>
+        <span class="property-type"><a href="#purchaseplan">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Inputs.<wbr>Purchase<wbr>Plan<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Purchase plan information for the the image from which the OS disk was created. E.g. - {name: 2019-Datacenter, publisher: MicrosoftWindowsServer, product: WindowsServer}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1549,7 +1549,7 @@ The Disk resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#disksku">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Disk<wbr>Sku<wbr>Args</a></span>
+        <span class="property-type"><a href="#disksku">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Inputs.<wbr>Disk<wbr>Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The disks sku name. Can be Standard_LRS, Premium_LRS, StandardSSD_LRS, or UltraSSD_LRS.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2300,7 +2300,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#shareinfo_csharp" style="color: inherit; text-decoration: inherit;">Share<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#shareinfoelementresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Outputs.<wbr>Share<wbr>Info<wbr>Element<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#shareinfoelementresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Outputs.<wbr>Share<wbr>Info<wbr>Element<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Details of the list of all VMs that have the disk attached. maxShares should be set to a value greater than one for disks to allow attaching them to multiple VMs.{{% /md %}}</dd>
     <dt class="property-"
@@ -2669,7 +2669,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#createoption_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Option</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#diskcreateoption">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Disk<wbr>Create<wbr>Option</a></span>
+        <span class="property-type">string | <a href="#diskcreateoption">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Disk<wbr>Create<wbr>Option</a></span>
     </dt>
     <dd>{{% md %}}This enumerates the possible sources of a disk's creation.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2678,7 +2678,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#galleryimagereference_csharp" style="color: inherit; text-decoration: inherit;">Gallery<wbr>Image<wbr>Reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imagediskreference">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Image<wbr>Disk<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#imagediskreference">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Inputs.<wbr>Image<wbr>Disk<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required if creating from a Gallery Image. The id of the ImageDiskReference will be the ARM id of the shared galley image version from which to create a disk.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2687,7 +2687,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#imagereference_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imagediskreference">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Image<wbr>Disk<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#imagediskreference">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Inputs.<wbr>Image<wbr>Disk<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Disk source information.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3001,7 +3001,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#galleryimagereference_csharp" style="color: inherit; text-decoration: inherit;">Gallery<wbr>Image<wbr>Reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imagediskreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Image<wbr>Disk<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#imagediskreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Inputs.<wbr>Image<wbr>Disk<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required if creating from a Gallery Image. The id of the ImageDiskReference will be the ARM id of the shared galley image version from which to create a disk.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3010,7 +3010,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#imagereference_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imagediskreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Image<wbr>Disk<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#imagediskreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Inputs.<wbr>Image<wbr>Disk<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Disk source information.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3411,7 +3411,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#diskstorageaccounttypes">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Disk<wbr>Storage<wbr>Account<wbr>Types</a></span>
+        <span class="property-type">string | <a href="#diskstorageaccounttypes">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Disk<wbr>Storage<wbr>Account<wbr>Types</a></span>
     </dt>
     <dd>{{% md %}}The sku name.{{% /md %}}</dd>
 </dl>
@@ -3634,7 +3634,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#encryptiontype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Encryption<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#encryptiontype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Encryption<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of key used to encrypt the data of the disk.{{% /md %}}</dd>
 </dl>
@@ -3830,7 +3830,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryptionsettings_csharp" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionsettingselement">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Encryption<wbr>Settings<wbr>Element<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#encryptionsettingselement">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Inputs.<wbr>Encryption<wbr>Settings<wbr>Element<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A collection of encryption settings, one for each disk volume.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3964,7 +3964,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryptionsettings_csharp" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionsettingselementresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Encryption<wbr>Settings<wbr>Element<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#encryptionsettingselementresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Inputs.<wbr>Encryption<wbr>Settings<wbr>Element<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A collection of encryption settings, one for each disk volume.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4089,7 +4089,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#diskencryptionkey_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Encryption<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultandsecretreference">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>And<wbr>Secret<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#keyvaultandsecretreference">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>And<wbr>Secret<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Key Vault Secret Url and vault id of the disk encryption key{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4098,7 +4098,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keyencryptionkey_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Encryption<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultandkeyreference">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>And<wbr>Key<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#keyvaultandkeyreference">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>And<wbr>Key<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Key Vault Key Url and vault id of the key encryption key. KeyEncryptionKey is optional and when provided is used to unwrap the disk encryption key.{{% /md %}}</dd>
 </dl>
@@ -4187,7 +4187,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#diskencryptionkey_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Encryption<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultandsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>And<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#keyvaultandsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>And<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Key Vault Secret Url and vault id of the disk encryption key{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4196,7 +4196,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keyencryptionkey_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Encryption<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultandkeyreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>And<wbr>Key<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#keyvaultandkeyreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>And<wbr>Key<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Key Vault Key Url and vault id of the key encryption key. KeyEncryptionKey is optional and when provided is used to unwrap the disk encryption key.{{% /md %}}</dd>
 </dl>
@@ -4340,7 +4340,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#extendedlocationtypes">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Extended<wbr>Location<wbr>Types</a></span>
+        <span class="property-type">string | <a href="#extendedlocationtypes">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Extended<wbr>Location<wbr>Types</a></span>
     </dt>
     <dd>{{% md %}}The type of the extended location.{{% /md %}}</dd>
 </dl>
@@ -4800,7 +4800,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourcevault_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Vault</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sourcevault">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Source<wbr>Vault<wbr>Args</a></span>
+        <span class="property-type"><a href="#sourcevault">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Inputs.<wbr>Source<wbr>Vault<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Resource id of the KeyVault containing the key or secret{{% /md %}}</dd>
 </dl>
@@ -4898,7 +4898,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourcevault_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Vault</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sourcevaultresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Source<wbr>Vault<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sourcevaultresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Inputs.<wbr>Source<wbr>Vault<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Resource id of the KeyVault containing the key or secret{{% /md %}}</dd>
 </dl>
@@ -4996,7 +4996,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourcevault_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Vault</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sourcevault">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Source<wbr>Vault<wbr>Args</a></span>
+        <span class="property-type"><a href="#sourcevault">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Inputs.<wbr>Source<wbr>Vault<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Resource id of the KeyVault containing the key or secret{{% /md %}}</dd>
 </dl>
@@ -5094,7 +5094,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourcevault_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Vault</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sourcevaultresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Source<wbr>Vault<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sourcevaultresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Inputs.<wbr>Source<wbr>Vault<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Resource id of the KeyVault containing the key or secret{{% /md %}}</dd>
 </dl>
@@ -5787,7 +5787,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:compute/latest:Disk myDisk /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/disks/{diskName} 
+$ pulumi import azure-nextgen:compute:Disk myDisk /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/disks/{diskName} 
 ```
 
 

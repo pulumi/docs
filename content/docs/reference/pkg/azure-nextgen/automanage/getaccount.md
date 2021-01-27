@@ -197,7 +197,7 @@ The following output properties are available:
 <a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accountidentityresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automanage.<wbr>Outputs.<wbr>Account<wbr>Identity<wbr>Response</a></span>
+        <span class="property-type"><a href="#accountidentityresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automanage..<wbr>Outputs.<wbr>Account<wbr>Identity<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The identity of the Automanage account.{{% /md %}}</dd>
     <dt class="property-"

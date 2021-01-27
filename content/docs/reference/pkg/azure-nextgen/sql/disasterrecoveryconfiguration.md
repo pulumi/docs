@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.sql.DisasterRecoveryConfiguratio
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Represents a disaster recovery configuration.
-Latest API Version: 2014-04-01.
+API Version: 2014-04-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var disasterRecoveryConfiguration = new AzureNextGen.Sql.Latest.DisasterRecoveryConfiguration("disasterRecoveryConfiguration", new AzureNextGen.Sql.Latest.DisasterRecoveryConfigurationArgs
+        var disasterRecoveryConfiguration = new AzureNextGen.Sql..DisasterRecoveryConfiguration("disasterRecoveryConfiguration", new AzureNextGen.Sql..DisasterRecoveryConfigurationArgs
         {
             DisasterRecoveryConfigurationName = "Default",
             ResourceGroupName = "sqlcrudtest-4799",
@@ -47,7 +47,7 @@ class MyStack : Stack
 package main
 
 import (
-	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql/latest"
+	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -75,7 +75,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-disaster_recovery_configuration = azure_nextgen.sql.latest.DisasterRecoveryConfiguration("disasterRecoveryConfiguration",
+disaster_recovery_configuration = azure_nextgen.sql.DisasterRecoveryConfiguration("disasterRecoveryConfiguration",
     disaster_recovery_configuration_name="Default",
     resource_group_name="sqlcrudtest-4799",
     server_name="sqlcrudtest-5961")
@@ -90,7 +90,7 @@ disaster_recovery_configuration = azure_nextgen.sql.latest.DisasterRecoveryConfi
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const disasterRecoveryConfiguration = new azure_nextgen.sql.latest.DisasterRecoveryConfiguration("disasterRecoveryConfiguration", {
+const disasterRecoveryConfiguration = new azure_nextgen.sql.DisasterRecoveryConfiguration("disasterRecoveryConfiguration", {
     disasterRecoveryConfigurationName: "Default",
     resourceGroupName: "sqlcrudtest-4799",
     serverName: "sqlcrudtest-5961",
@@ -850,7 +850,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:sql/latest:DisasterRecoveryConfiguration Default /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/sqlcrudtest-4799/providers/Microsoft.Sql/servers/sqlcrudtest-5961/databases/testdw/geoBackupPolicies/Default 
+$ pulumi import azure-nextgen:sql:DisasterRecoveryConfiguration Default /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/sqlcrudtest-4799/providers/Microsoft.Sql/servers/sqlcrudtest-5961/databases/testdw/geoBackupPolicies/Default 
 ```
 
 

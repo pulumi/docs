@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.kusto.Database resource with exa
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Class representing a Kusto database.
-Latest API Version: 2020-09-18.
+API Version: 2020-09-18.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var database = new AzureNextGen.Kusto.Latest.Database("database", new AzureNextGen.Kusto.Latest.DatabaseArgs
+        var database = new AzureNextGen.Kusto..Database("database", new AzureNextGen.Kusto..DatabaseArgs
         {
             ClusterName = "kustoclusterrptest4",
             DatabaseName = "KustoDatabase8",
@@ -48,7 +48,7 @@ class MyStack : Stack
 package main
 
 import (
-	kusto "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/kusto/latest"
+	kusto "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/kusto"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -77,7 +77,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-database = azure_nextgen.kusto.latest.Database("database",
+database = azure_nextgen.kusto.Database("database",
     cluster_name="kustoclusterrptest4",
     database_name="KustoDatabase8",
     location="westus",
@@ -93,7 +93,7 @@ database = azure_nextgen.kusto.latest.Database("database",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const database = new azure_nextgen.kusto.latest.Database("database", {
+const database = new azure_nextgen.kusto.Database("database", {
     clusterName: "kustoclusterrptest4",
     databaseName: "KustoDatabase8",
     location: "westus",
@@ -311,7 +311,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#kind">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Kusto.<wbr>Kind</a></span>
+        <span class="property-type">string | <a href="#kind">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Kusto..<wbr>Kind</a></span>
     </dt>
     <dd>{{% md %}}Kind of the database{{% /md %}}</dd>
     <dt class="property-required"
@@ -680,7 +680,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:kusto/latest:Database KustoClusterRPTest4/KustoDatabase8 /subscriptions/12345678-1234-1234-1234-123456789098/resourceGroups/kustorptest/providers/Microsoft.Kusto/Clusters/KustoClusterRPTest4/Databases/KustoDatabase8 
+$ pulumi import azure-nextgen:kusto:Database KustoClusterRPTest4/KustoDatabase8 /subscriptions/12345678-1234-1234-1234-123456789098/resourceGroups/kustorptest/providers/Microsoft.Kusto/Clusters/KustoClusterRPTest4/Databases/KustoDatabase8 
 ```
 
 

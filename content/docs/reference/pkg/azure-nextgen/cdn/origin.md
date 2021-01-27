@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.cdn.Origin resource with example
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 CDN origin is the source of the content being delivered via CDN. When the edge nodes represented by an endpoint do not have the requested content cached, they attempt to fetch it from one or more of the configured origins.
-Latest API Version: 2020-09-01.
+API Version: 2020-09-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var origin = new AzureNextGen.Cdn.Latest.Origin("origin", new AzureNextGen.Cdn.Latest.OriginArgs
+        var origin = new AzureNextGen.Cdn..Origin("origin", new AzureNextGen.Cdn..OriginArgs
         {
             Enabled = true,
             EndpointName = "endpoint1",
@@ -58,7 +58,7 @@ class MyStack : Stack
 package main
 
 import (
-	cdn "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/cdn/latest"
+	cdn "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/cdn"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -97,7 +97,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-origin = azure_nextgen.cdn.latest.Origin("origin",
+origin = azure_nextgen.cdn.Origin("origin",
     enabled=True,
     endpoint_name="endpoint1",
     host_name="www.someDomain.net",
@@ -123,7 +123,7 @@ origin = azure_nextgen.cdn.latest.Origin("origin",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const origin = new azure_nextgen.cdn.latest.Origin("origin", {
+const origin = new azure_nextgen.cdn.Origin("origin", {
     enabled: true,
     endpointName: "endpoint1",
     hostName: "www.someDomain.net",
@@ -949,7 +949,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#systemdata_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn.<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
+        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn..<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Read only system data{{% /md %}}</dd>
     <dt class="property-"
@@ -1428,7 +1428,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:cdn/latest:Origin www-someDomain-net /subscriptions/subid/resourcegroups/RG/providers/Microsoft.Cdn/profiles/profile1/endpoints/endpoint1/origins/www-someDomain-net 
+$ pulumi import azure-nextgen:cdn:Origin www-someDomain-net /subscriptions/subid/resourcegroups/RG/providers/Microsoft.Cdn/profiles/profile1/endpoints/endpoint1/origins/www-someDomain-net 
 ```
 
 

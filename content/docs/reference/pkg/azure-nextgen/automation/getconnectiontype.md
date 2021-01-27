@@ -206,7 +206,7 @@ The following output properties are available:
 <a href="#fielddefinitions_csharp" style="color: inherit; text-decoration: inherit;">Field<wbr>Definitions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automation.<wbr>Outputs.<wbr>Field<wbr>Definition<wbr>Response&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automation..<wbr>Outputs.<wbr>Field<wbr>Definition<wbr>Response&gt;</span>
     </dt>
     <dd>{{% md %}}Gets the field definitions of the connection type.{{% /md %}}</dd>
     <dt class="property-"

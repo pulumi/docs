@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.sql.SyncGroup resource with exam
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 An Azure SQL Database sync group.
+API Version: 2020-08-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var syncGroup = new AzureNextGen.Sql.V20200801Preview.SyncGroup("syncGroup", new AzureNextGen.Sql.V20200801Preview.SyncGroupArgs
+        var syncGroup = new AzureNextGen.Sql..SyncGroup("syncGroup", new AzureNextGen.Sql..SyncGroupArgs
         {
             ConflictResolutionPolicy = "HubWin",
             DatabaseName = "syncgroupcrud-4328",
@@ -52,7 +53,7 @@ class MyStack : Stack
 package main
 
 import (
-	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql/v20200801preview"
+	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -86,7 +87,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-sync_group = azure_nextgen.sql.v20200801preview.SyncGroup("syncGroup",
+sync_group = azure_nextgen.sql.SyncGroup("syncGroup",
     conflict_resolution_policy="HubWin",
     database_name="syncgroupcrud-4328",
     hub_database_user_name="hubUser",
@@ -107,7 +108,7 @@ sync_group = azure_nextgen.sql.v20200801preview.SyncGroup("syncGroup",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const syncGroup = new azure_nextgen.sql.v20200801preview.SyncGroup("syncGroup", {
+const syncGroup = new azure_nextgen.sql.SyncGroup("syncGroup", {
     conflictResolutionPolicy: "HubWin",
     databaseName: "syncgroupcrud-4328",
     hubDatabaseUserName: "hubUser",
@@ -133,7 +134,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var syncGroup = new AzureNextGen.Sql.V20200801Preview.SyncGroup("syncGroup", new AzureNextGen.Sql.V20200801Preview.SyncGroupArgs
+        var syncGroup = new AzureNextGen.Sql..SyncGroup("syncGroup", new AzureNextGen.Sql..SyncGroupArgs
         {
             ConflictResolutionPolicy = "HubWin",
             DatabaseName = "syncgroupcrud-4328",
@@ -159,7 +160,7 @@ class MyStack : Stack
 package main
 
 import (
-	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql/v20200801preview"
+	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -193,7 +194,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-sync_group = azure_nextgen.sql.v20200801preview.SyncGroup("syncGroup",
+sync_group = azure_nextgen.sql.SyncGroup("syncGroup",
     conflict_resolution_policy="HubWin",
     database_name="syncgroupcrud-4328",
     hub_database_user_name="hubUser",
@@ -214,7 +215,7 @@ sync_group = azure_nextgen.sql.v20200801preview.SyncGroup("syncGroup",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const syncGroup = new azure_nextgen.sql.v20200801preview.SyncGroup("syncGroup", {
+const syncGroup = new azure_nextgen.sql.SyncGroup("syncGroup", {
     conflictResolutionPolicy: "HubWin",
     databaseName: "syncgroupcrud-4328",
     hubDatabaseUserName: "hubUser",
@@ -464,7 +465,7 @@ The SyncGroup resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#conflictresolutionpolicy_csharp" style="color: inherit; text-decoration: inherit;">Conflict<wbr>Resolution<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#syncconflictresolutionpolicy">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql.<wbr>Sync<wbr>Conflict<wbr>Resolution<wbr>Policy</a></span>
+        <span class="property-type">string | <a href="#syncconflictresolutionpolicy">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql..<wbr>Sync<wbr>Conflict<wbr>Resolution<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Conflict resolution policy of the sync group.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -509,7 +510,7 @@ The SyncGroup resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#schema_csharp" style="color: inherit; text-decoration: inherit;">Schema</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#syncgroupschema">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql.<wbr>Inputs.<wbr>Sync<wbr>Group<wbr>Schema<wbr>Args</a></span>
+        <span class="property-type"><a href="#syncgroupschema">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql..<wbr>Inputs.<wbr>Sync<wbr>Group<wbr>Schema<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Sync schema of the sync group.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -518,7 +519,7 @@ The SyncGroup resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sku">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql.<wbr>Inputs.<wbr>Sku<wbr>Args</a></span>
+        <span class="property-type"><a href="#sku">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql..<wbr>Inputs.<wbr>Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The name and capacity of the SKU.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1665,7 +1666,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tables_csharp" style="color: inherit; text-decoration: inherit;">Tables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#syncgroupschematable">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql.<wbr>Inputs.<wbr>Sync<wbr>Group<wbr>Schema<wbr>Table<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#syncgroupschematable">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql..<wbr>Inputs.<wbr>Sync<wbr>Group<wbr>Schema<wbr>Table<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of tables in sync group schema.{{% /md %}}</dd>
 </dl>
@@ -1763,7 +1764,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tables_csharp" style="color: inherit; text-decoration: inherit;">Tables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#syncgroupschematableresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql.<wbr>Inputs.<wbr>Sync<wbr>Group<wbr>Schema<wbr>Table<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#syncgroupschematableresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql..<wbr>Inputs.<wbr>Sync<wbr>Group<wbr>Schema<wbr>Table<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of tables in sync group schema.{{% /md %}}</dd>
 </dl>
@@ -1852,7 +1853,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#columns_csharp" style="color: inherit; text-decoration: inherit;">Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#syncgroupschematablecolumn">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql.<wbr>Inputs.<wbr>Sync<wbr>Group<wbr>Schema<wbr>Table<wbr>Column<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#syncgroupschematablecolumn">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql..<wbr>Inputs.<wbr>Sync<wbr>Group<wbr>Schema<wbr>Table<wbr>Column<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of columns in sync group schema.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2218,7 +2219,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#columns_csharp" style="color: inherit; text-decoration: inherit;">Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#syncgroupschematablecolumnresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql.<wbr>Inputs.<wbr>Sync<wbr>Group<wbr>Schema<wbr>Table<wbr>Column<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#syncgroupschematablecolumnresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql..<wbr>Inputs.<wbr>Sync<wbr>Group<wbr>Schema<wbr>Table<wbr>Column<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of columns in sync group schema.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2310,7 +2311,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:sql/v20200801preview:SyncGroup syncgroupcrud-3187 /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/syncgroupcrud-3521/providers/Microsoft.Sql/servers/syncgroupcrud-8475/databases/syncgroupcrud-4328/syncGroups/syncgroupcrud-3187 
+$ pulumi import azure-nextgen:sql:SyncGroup syncgroupcrud-3187 /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/syncgroupcrud-3521/providers/Microsoft.Sql/servers/syncgroupcrud-8475/databases/syncgroupcrud-4328/syncGroups/syncgroupcrud-3187 
 ```
 
 

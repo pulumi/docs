@@ -233,7 +233,7 @@ The following output properties are available:
 <a href="#sharemappings_csharp" style="color: inherit; text-decoration: inherit;">Share<wbr>Mappings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mountpointmapresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Outputs.<wbr>Mount<wbr>Point<wbr>Map<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#mountpointmapresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge..<wbr>Outputs.<wbr>Mount<wbr>Point<wbr>Map<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Share mount point to the role.{{% /md %}}</dd>
     <dt class="property-"
@@ -251,7 +251,7 @@ The following output properties are available:
 <a href="#systemdata_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
+        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge..<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Share on ASE device{{% /md %}}</dd>
     <dt class="property-"
@@ -269,7 +269,7 @@ The following output properties are available:
 <a href="#azurecontainerinfo_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Container<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurecontainerinforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Outputs.<wbr>Azure<wbr>Container<wbr>Info<wbr>Response</a></span>
+        <span class="property-type"><a href="#azurecontainerinforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge..<wbr>Outputs.<wbr>Azure<wbr>Container<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Azure container mapping for the share.{{% /md %}}</dd>
     <dt class="property-"
@@ -278,7 +278,7 @@ The following output properties are available:
 <a href="#clientaccessrights_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Access<wbr>Rights</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clientaccessrightresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Outputs.<wbr>Client<wbr>Access<wbr>Right<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#clientaccessrightresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge..<wbr>Outputs.<wbr>Client<wbr>Access<wbr>Right<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of IP addresses and corresponding access rights on the share(required for NFS protocol).{{% /md %}}</dd>
     <dt class="property-"
@@ -305,7 +305,7 @@ The following output properties are available:
 <a href="#refreshdetails_csharp" style="color: inherit; text-decoration: inherit;">Refresh<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#refreshdetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Outputs.<wbr>Refresh<wbr>Details<wbr>Response</a></span>
+        <span class="property-type"><a href="#refreshdetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge..<wbr>Outputs.<wbr>Refresh<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Details of the refresh job on this share.{{% /md %}}</dd>
     <dt class="property-"
@@ -314,7 +314,7 @@ The following output properties are available:
 <a href="#useraccessrights_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Access<wbr>Rights</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#useraccessrightresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Outputs.<wbr>User<wbr>Access<wbr>Right<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#useraccessrightresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge..<wbr>Outputs.<wbr>User<wbr>Access<wbr>Right<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Mapping of users and corresponding access rights on the share (required for SMB protocol).{{% /md %}}</dd>
 </dl>

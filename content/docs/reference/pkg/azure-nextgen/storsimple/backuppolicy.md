@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.storsimple.BackupPolicy resource
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The backup policy.
-Latest API Version: 2017-06-01.
+API Version: 2017-06-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var backupPolicy = new AzureNextGen.StorSimple.Latest.BackupPolicy("backupPolicy", new AzureNextGen.StorSimple.Latest.BackupPolicyArgs
+        var backupPolicy = new AzureNextGen.StorSimple..BackupPolicy("backupPolicy", new AzureNextGen.StorSimple..BackupPolicyArgs
         {
             BackupPolicyName = "BkUpPolicy01ForSDKTest",
             DeviceName = "Device05ForSDKTest",
@@ -54,7 +54,7 @@ class MyStack : Stack
 package main
 
 import (
-	storsimple "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/storsimple/latest"
+	storsimple "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/storsimple"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -88,7 +88,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-backup_policy = azure_nextgen.storsimple.latest.BackupPolicy("backupPolicy",
+backup_policy = azure_nextgen.storsimple.BackupPolicy("backupPolicy",
     backup_policy_name="BkUpPolicy01ForSDKTest",
     device_name="Device05ForSDKTest",
     kind="Series8000",
@@ -109,7 +109,7 @@ backup_policy = azure_nextgen.storsimple.latest.BackupPolicy("backupPolicy",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const backupPolicy = new azure_nextgen.storsimple.latest.BackupPolicy("backupPolicy", {
+const backupPolicy = new azure_nextgen.storsimple.BackupPolicy("backupPolicy", {
     backupPolicyName: "BkUpPolicy01ForSDKTest",
     deviceName: "Device05ForSDKTest",
     kind: "Series8000",
@@ -359,7 +359,7 @@ The BackupPolicy resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kind">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stor<wbr>Simple.<wbr>Kind</a></span>
+        <span class="property-type"><a href="#kind">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stor<wbr>Simple..<wbr>Kind</a></span>
     </dt>
     <dd>{{% md %}}The Kind of the object. Currently only Series8000 is supported{{% /md %}}</dd>
 </dl>
@@ -945,7 +945,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:storsimple/latest:BackupPolicy BkUpPolicy01ForSDKTest /subscriptions/4385cf00-2d3a-425a-832f-f4285b1c9dce/resourceGroups/ResourceGroupForSDKTest/providers/Microsoft.StorSimple/managers/ManagerForSDKTest1/devices/Device05ForSDKTest/backupPolicies/BkUpPolicy01ForSDKTest 
+$ pulumi import azure-nextgen:storsimple:BackupPolicy BkUpPolicy01ForSDKTest /subscriptions/4385cf00-2d3a-425a-832f-f4285b1c9dce/resourceGroups/ResourceGroupForSDKTest/providers/Microsoft.StorSimple/managers/ManagerForSDKTest1/devices/Device05ForSDKTest/backupPolicies/BkUpPolicy01ForSDKTest 
 ```
 
 

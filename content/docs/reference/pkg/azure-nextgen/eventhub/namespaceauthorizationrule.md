@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.eventhub.NamespaceAuthorizationR
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Single item in a List or Get AuthorizationRule operation
-Latest API Version: 2017-04-01.
+API Version: 2017-04-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var namespaceAuthorizationRule = new AzureNextGen.EventHub.Latest.NamespaceAuthorizationRule("namespaceAuthorizationRule", new AzureNextGen.EventHub.Latest.NamespaceAuthorizationRuleArgs
+        var namespaceAuthorizationRule = new AzureNextGen.EventHub..NamespaceAuthorizationRule("namespaceAuthorizationRule", new AzureNextGen.EventHub..NamespaceAuthorizationRuleArgs
         {
             AuthorizationRuleName = "sdk-Authrules-1746",
             NamespaceName = "sdk-Namespace-2702",
@@ -52,7 +52,7 @@ class MyStack : Stack
 package main
 
 import (
-	eventhub "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/eventhub/latest"
+	eventhub "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/eventhub"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -84,7 +84,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-namespace_authorization_rule = azure_nextgen.eventhub.latest.NamespaceAuthorizationRule("namespaceAuthorizationRule",
+namespace_authorization_rule = azure_nextgen.eventhub.NamespaceAuthorizationRule("namespaceAuthorizationRule",
     authorization_rule_name="sdk-Authrules-1746",
     namespace_name="sdk-Namespace-2702",
     resource_group_name="ArunMonocle",
@@ -103,7 +103,7 @@ namespace_authorization_rule = azure_nextgen.eventhub.latest.NamespaceAuthorizat
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const namespaceAuthorizationRule = new azure_nextgen.eventhub.latest.NamespaceAuthorizationRule("namespaceAuthorizationRule", {
+const namespaceAuthorizationRule = new azure_nextgen.eventhub.NamespaceAuthorizationRule("namespaceAuthorizationRule", {
     authorizationRuleName: "sdk-Authrules-1746",
     namespaceName: "sdk-Namespace-2702",
     resourceGroupName: "ArunMonocle",
@@ -333,7 +333,7 @@ The NamespaceAuthorizationRule resource accepts the following [input]({{< relref
 <a href="#rights_csharp" style="color: inherit; text-decoration: inherit;">Rights</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Union&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Hub.<wbr>Access<wbr>Rights&gt;&gt;</span>
+        <span class="property-type">List&lt;Union&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Hub..<wbr>Access<wbr>Rights&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}The rights associated with the rule.{{% /md %}}</dd>
 </dl>
@@ -665,7 +665,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:eventhub/latest:NamespaceAuthorizationRule sdk-Authrules-1746 /subscriptions/5f750a97-50d9-4e36-8081-c9ee4c0210d4/resourceGroups/ArunMonocle/providers/Microsoft.EventHub/namespaces/sdk-Namespace-2702/AuthorizationRules/sdk-Authrules-1746 
+$ pulumi import azure-nextgen:eventhub:NamespaceAuthorizationRule sdk-Authrules-1746 /subscriptions/5f750a97-50d9-4e36-8081-c9ee4c0210d4/resourceGroups/ArunMonocle/providers/Microsoft.EventHub/namespaces/sdk-Namespace-2702/AuthorizationRules/sdk-Authrules-1746 
 ```
 
 

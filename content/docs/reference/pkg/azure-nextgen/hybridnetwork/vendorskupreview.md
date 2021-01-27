@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.hybridnetwork.VendorSkuPreview r
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Customer subscription which can use a sku.
+API Version: 2020-01-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var vendorSkuPreview = new AzureNextGen.HybridNetwork.V20200101Preview.VendorSkuPreview("vendorSkuPreview", new AzureNextGen.HybridNetwork.V20200101Preview.VendorSkuPreviewArgs
+        var vendorSkuPreview = new AzureNextGen.HybridNetwork..VendorSkuPreview("vendorSkuPreview", new AzureNextGen.HybridNetwork..VendorSkuPreviewArgs
         {
             PreviewSubscription = "previewSub",
             SkuName = "TestSku",
@@ -46,7 +47,7 @@ class MyStack : Stack
 package main
 
 import (
-	hybridnetwork "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/hybridnetwork/v20200101preview"
+	hybridnetwork "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/hybridnetwork"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -74,7 +75,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-vendor_sku_preview = azure_nextgen.hybridnetwork.v20200101preview.VendorSkuPreview("vendorSkuPreview",
+vendor_sku_preview = azure_nextgen.hybridnetwork.VendorSkuPreview("vendorSkuPreview",
     preview_subscription="previewSub",
     sku_name="TestSku",
     vendor_name="TestVendor")
@@ -89,7 +90,7 @@ vendor_sku_preview = azure_nextgen.hybridnetwork.v20200101preview.VendorSkuPrevi
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const vendorSkuPreview = new azure_nextgen.hybridnetwork.v20200101preview.VendorSkuPreview("vendorSkuPreview", {
+const vendorSkuPreview = new azure_nextgen.hybridnetwork.VendorSkuPreview("vendorSkuPreview", {
     previewSubscription: "previewSub",
     skuName: "TestSku",
     vendorName: "TestVendor",
@@ -561,7 +562,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:hybridnetwork/v20200101preview:VendorSkuPreview previewSub /subscriptions/subid/providers/Microsoft.HybridNetwork/vendors/TestVendor/vendorskus/TestSku/previewsubscriptions/previewSub 
+$ pulumi import azure-nextgen:hybridnetwork:VendorSkuPreview previewSub /subscriptions/subid/providers/Microsoft.HybridNetwork/vendors/TestVendor/vendorskus/TestSku/previewsubscriptions/previewSub 
 ```
 
 

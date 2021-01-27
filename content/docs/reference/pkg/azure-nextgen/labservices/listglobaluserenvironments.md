@@ -159,7 +159,7 @@ The following output properties are available:
 <a href="#environments_csharp" style="color: inherit; text-decoration: inherit;">Environments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentdetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Lab<wbr>Services.<wbr>Outputs.<wbr>Environment<wbr>Details<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#environmentdetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Lab<wbr>Services..<wbr>Outputs.<wbr>Environment<wbr>Details<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of all the environments{{% /md %}}</dd>
 </dl>
@@ -259,7 +259,7 @@ The following output properties are available:
 <a href="#latestoperationresult_csharp" style="color: inherit; text-decoration: inherit;">Latest<wbr>Operation<wbr>Result</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#latestoperationresultresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Lab<wbr>Services.<wbr>Inputs.<wbr>Latest<wbr>Operation<wbr>Result<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#latestoperationresultresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Lab<wbr>Services..<wbr>Inputs.<wbr>Latest<wbr>Operation<wbr>Result<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The details of the latest operation. ex: status, error{{% /md %}}</dd>
     <dt class="property-required"
@@ -304,7 +304,7 @@ The following output properties are available:
 <a href="#virtualmachinedetails_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Machine<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinedetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Lab<wbr>Services.<wbr>Inputs.<wbr>Virtual<wbr>Machine<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualmachinedetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Lab<wbr>Services..<wbr>Inputs.<wbr>Virtual<wbr>Machine<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Details of backing DTL virtual machine with compute and network details.{{% /md %}}</dd>
 </dl>

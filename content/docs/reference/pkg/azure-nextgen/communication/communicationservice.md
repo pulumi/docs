@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.communication.CommunicationServi
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 A class representing a CommunicationService resource.
+API Version: 2020-08-20-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var communicationService = new AzureNextGen.Communication.V20200820Preview.CommunicationService("communicationService", new AzureNextGen.Communication.V20200820Preview.CommunicationServiceArgs
+        var communicationService = new AzureNextGen.Communication..CommunicationService("communicationService", new AzureNextGen.Communication..CommunicationServiceArgs
         {
             CommunicationServiceName = "MyCommunicationResource",
             DataLocation = "United States",
@@ -47,7 +48,7 @@ class MyStack : Stack
 package main
 
 import (
-	communication "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/communication/v20200820preview"
+	communication "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/communication"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -76,7 +77,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-communication_service = azure_nextgen.communication.v20200820preview.CommunicationService("communicationService",
+communication_service = azure_nextgen.communication.CommunicationService("communicationService",
     communication_service_name="MyCommunicationResource",
     data_location="United States",
     location="Global",
@@ -92,7 +93,7 @@ communication_service = azure_nextgen.communication.v20200820preview.Communicati
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const communicationService = new azure_nextgen.communication.v20200820preview.CommunicationService("communicationService", {
+const communicationService = new azure_nextgen.communication.CommunicationService("communicationService", {
     communicationServiceName: "MyCommunicationResource",
     dataLocation: "United States",
     location: "Global",
@@ -817,7 +818,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:communication/v20200820preview:CommunicationService MyCommunicationResource /subscriptions/12345/resourceGroups/MyResourceGroup/providers/Microsoft.Communication/CommunicationServices/MyCommunicationResource 
+$ pulumi import azure-nextgen:communication:CommunicationService MyCommunicationResource /subscriptions/12345/resourceGroups/MyResourceGroup/providers/Microsoft.Communication/CommunicationServices/MyCommunicationResource 
 ```
 
 

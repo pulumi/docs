@@ -260,7 +260,7 @@ The following output properties are available:
 <a href="#attributes_csharp" style="color: inherit; text-decoration: inherit;">Attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyattributesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Key<wbr>Vault.<wbr>Outputs.<wbr>Key<wbr>Attributes<wbr>Response</a></span>
+        <span class="property-type"><a href="#keyattributesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Key<wbr>Vault..<wbr>Outputs.<wbr>Key<wbr>Attributes<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The attributes of the key.{{% /md %}}</dd>
     <dt class="property-"

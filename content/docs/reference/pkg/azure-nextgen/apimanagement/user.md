@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.apimanagement.User resource with
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 User details.
-Latest API Version: 2019-12-01.
+API Version: 2019-12-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var user = new AzureNextGen.ApiManagement.Latest.User("user", new AzureNextGen.ApiManagement.Latest.UserArgs
+        var user = new AzureNextGen.ApiManagement..User("user", new AzureNextGen.ApiManagement..UserArgs
         {
             Confirmation = "signup",
             Email = "foobar@outlook.com",
@@ -51,7 +51,7 @@ class MyStack : Stack
 package main
 
 import (
-	apimanagement "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/apimanagement/latest"
+	apimanagement "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/apimanagement"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -83,7 +83,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-user = azure_nextgen.apimanagement.latest.User("user",
+user = azure_nextgen.apimanagement.User("user",
     confirmation="signup",
     email="foobar@outlook.com",
     first_name="foo",
@@ -102,7 +102,7 @@ user = azure_nextgen.apimanagement.latest.User("user",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const user = new azure_nextgen.apimanagement.latest.User("user", {
+const user = new azure_nextgen.apimanagement.User("user", {
     confirmation: "signup",
     email: "foobar@outlook.com",
     firstName: "foo",
@@ -359,7 +359,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#apptype_csharp" style="color: inherit; text-decoration: inherit;">App<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#apptype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management.<wbr>App<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#apptype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management..<wbr>App<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Determines the type of application which send the create user request. Default is legacy portal.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -368,7 +368,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#confirmation_csharp" style="color: inherit; text-decoration: inherit;">Confirmation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#confirmation">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management.<wbr>Confirmation</a></span>
+        <span class="property-type">string | <a href="#confirmation">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management..<wbr>Confirmation</a></span>
     </dt>
     <dd>{{% md %}}Determines the type of confirmation e-mail that will be sent to the newly created user.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -377,7 +377,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#identities_csharp" style="color: inherit; text-decoration: inherit;">Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#useridentitycontract">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>User<wbr>Identity<wbr>Contract<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#useridentitycontract">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management..<wbr>Inputs.<wbr>User<wbr>Identity<wbr>Contract<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Collection of user identities.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -413,7 +413,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#userstate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management.<wbr>User<wbr>State</a></span>
+        <span class="property-type">string | <a href="#userstate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management..<wbr>User<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}Account state. Specifies whether the user is active or not. Blocked users are unable to sign into the developer portal or call any APIs of subscribed products. Default state is Active.{{% /md %}}</dd>
 </dl>
@@ -804,7 +804,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#groups_csharp" style="color: inherit; text-decoration: inherit;">Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupcontractpropertiesresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management.<wbr>Outputs.<wbr>Group<wbr>Contract<wbr>Properties<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#groupcontractpropertiesresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management..<wbr>Outputs.<wbr>Group<wbr>Contract<wbr>Properties<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Collection of groups user is part of.{{% /md %}}</dd>
     <dt class="property-"
@@ -1550,7 +1550,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:apimanagement/latest:User 5931a75ae4bbd512288c680b /subscriptions/subid/resourcegroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/users/5931a75ae4bbd512288c680b 
+$ pulumi import azure-nextgen:apimanagement:User 5931a75ae4bbd512288c680b /subscriptions/subid/resourcegroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/users/5931a75ae4bbd512288c680b 
 ```
 
 

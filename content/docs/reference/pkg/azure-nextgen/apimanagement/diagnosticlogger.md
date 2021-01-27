@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.apimanagement.DiagnosticLogger r
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Logger details.
-Latest API Version: 2018-01-01.
+API Version: 2018-01-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var diagnosticLogger = new AzureNextGen.ApiManagement.Latest.DiagnosticLogger("diagnosticLogger", new AzureNextGen.ApiManagement.Latest.DiagnosticLoggerArgs
+        var diagnosticLogger = new AzureNextGen.ApiManagement..DiagnosticLogger("diagnosticLogger", new AzureNextGen.ApiManagement..DiagnosticLoggerArgs
         {
             DiagnosticId = "default",
             Loggerid = "applicationinsights",
@@ -48,7 +48,7 @@ class MyStack : Stack
 package main
 
 import (
-	apimanagement "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/apimanagement/latest"
+	apimanagement "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/apimanagement"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -77,7 +77,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-diagnostic_logger = azure_nextgen.apimanagement.latest.DiagnosticLogger("diagnosticLogger",
+diagnostic_logger = azure_nextgen.apimanagement.DiagnosticLogger("diagnosticLogger",
     diagnostic_id="default",
     loggerid="applicationinsights",
     resource_group_name="rg1",
@@ -93,7 +93,7 @@ diagnostic_logger = azure_nextgen.apimanagement.latest.DiagnosticLogger("diagnos
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const diagnosticLogger = new azure_nextgen.apimanagement.latest.DiagnosticLogger("diagnosticLogger", {
+const diagnosticLogger = new azure_nextgen.apimanagement.DiagnosticLogger("diagnosticLogger", {
     diagnosticId: "default",
     loggerid: "applicationinsights",
     resourceGroupName: "rg1",
@@ -750,7 +750,7 @@ Instrumentation key for applicationInsights logger.{{% /md %}}</dd>
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:apimanagement/latest:DiagnosticLogger applicationinsights /subscriptions/subid/resourcegroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/diagnostics/default/loggers/applicationinsights 
+$ pulumi import azure-nextgen:apimanagement:DiagnosticLogger applicationinsights /subscriptions/subid/resourcegroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/diagnostics/default/loggers/applicationinsights 
 ```
 
 

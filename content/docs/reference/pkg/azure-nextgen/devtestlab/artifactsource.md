@@ -11,13 +11,13 @@ meta_desc: "Documentation for the azure-nextgen.devtestlab.ArtifactSource resour
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Properties of an artifact source.
-Latest API Version: 2018-09-15.
+API Version: 2018-09-15.
 ## Import
 
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:devtestlab/latest:ArtifactSource myresource1 /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DevTestLab/labs/{labName}/artifactsources/{name} 
+$ pulumi import azure-nextgen:devtestlab:ArtifactSource myresource1 /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DevTestLab/labs/{labName}/artifactsources/{name} 
 ```
 
 
@@ -290,7 +290,7 @@ The ArtifactSource resource accepts the following [input]({{< relref "/docs/intr
 <a href="#sourcetype_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#sourcecontroltype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Source<wbr>Control<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#sourcecontroltype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab..<wbr>Source<wbr>Control<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The artifact source's type.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -299,7 +299,7 @@ The ArtifactSource resource accepts the following [input]({{< relref "/docs/intr
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#enablestatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Enable<wbr>Status</a></span>
+        <span class="property-type">string | <a href="#enablestatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab..<wbr>Enable<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}Indicates if the artifact source is enabled (values: Enabled, Disabled).{{% /md %}}</dd>
     <dt class="property-optional"

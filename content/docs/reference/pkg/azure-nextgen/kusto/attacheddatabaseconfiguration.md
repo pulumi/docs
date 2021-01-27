@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.kusto.AttachedDatabaseConfigurat
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Class representing an attached database configuration.
-Latest API Version: 2020-09-18.
+API Version: 2020-09-18.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var attachedDatabaseConfiguration = new AzureNextGen.Kusto.Latest.AttachedDatabaseConfiguration("attachedDatabaseConfiguration", new AzureNextGen.Kusto.Latest.AttachedDatabaseConfigurationArgs
+        var attachedDatabaseConfiguration = new AzureNextGen.Kusto..AttachedDatabaseConfiguration("attachedDatabaseConfiguration", new AzureNextGen.Kusto..AttachedDatabaseConfigurationArgs
         {
             AttachedDatabaseConfigurationName = "attachedDatabaseConfigurations1",
             ClusterName = "kustoclusterrptest4",
@@ -51,7 +51,7 @@ class MyStack : Stack
 package main
 
 import (
-	kusto "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/kusto/latest"
+	kusto "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/kusto"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -83,7 +83,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-attached_database_configuration = azure_nextgen.kusto.latest.AttachedDatabaseConfiguration("attachedDatabaseConfiguration",
+attached_database_configuration = azure_nextgen.kusto.AttachedDatabaseConfiguration("attachedDatabaseConfiguration",
     attached_database_configuration_name="attachedDatabaseConfigurations1",
     cluster_name="kustoclusterrptest4",
     cluster_resource_id="/subscriptions/12345678-1234-1234-1234-123456789098/resourceGroups/kustorptest/providers/Microsoft.Kusto/Clusters/KustoClusterLeader",
@@ -102,7 +102,7 @@ attached_database_configuration = azure_nextgen.kusto.latest.AttachedDatabaseCon
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const attachedDatabaseConfiguration = new azure_nextgen.kusto.latest.AttachedDatabaseConfiguration("attachedDatabaseConfiguration", {
+const attachedDatabaseConfiguration = new azure_nextgen.kusto.AttachedDatabaseConfiguration("attachedDatabaseConfiguration", {
     attachedDatabaseConfigurationName: "attachedDatabaseConfigurations1",
     clusterName: "kustoclusterrptest4",
     clusterResourceId: "/subscriptions/12345678-1234-1234-1234-123456789098/resourceGroups/kustorptest/providers/Microsoft.Kusto/Clusters/KustoClusterLeader",
@@ -341,7 +341,7 @@ The AttachedDatabaseConfiguration resource accepts the following [input]({{< rel
 <a href="#defaultprincipalsmodificationkind_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Principals<wbr>Modification<wbr>Kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#defaultprincipalsmodificationkind">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Kusto.<wbr>Default<wbr>Principals<wbr>Modification<wbr>Kind</a></span>
+        <span class="property-type">string | <a href="#defaultprincipalsmodificationkind">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Kusto..<wbr>Default<wbr>Principals<wbr>Modification<wbr>Kind</a></span>
     </dt>
     <dd>{{% md %}}The default principals modification kind{{% /md %}}</dd>
     <dt class="property-required"
@@ -844,7 +844,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:kusto/latest:AttachedDatabaseConfiguration KustoClusterRPTest4/attachedDatabaseConfigurations1 /subscriptions/12345678-1234-1234-1234-123456789098/resourceGroups/kustorptest/providers/Microsoft.Kusto/Clusters/KustoClusterRPTest4/attachedDatabaseConfigurations/attachedDatabaseConfigurations1 
+$ pulumi import azure-nextgen:kusto:AttachedDatabaseConfiguration KustoClusterRPTest4/attachedDatabaseConfigurations1 /subscriptions/12345678-1234-1234-1234-123456789098/resourceGroups/kustorptest/providers/Microsoft.Kusto/Clusters/KustoClusterRPTest4/attachedDatabaseConfigurations/attachedDatabaseConfigurations1 
 ```
 
 

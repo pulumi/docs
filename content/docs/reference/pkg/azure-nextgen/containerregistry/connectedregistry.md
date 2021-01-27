@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.containerregistry.ConnectedRegis
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 An object that represents a connected registry for a container registry.
+API Version: 2020-11-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var connectedRegistry = new AzureNextGen.ContainerRegistry.V20201101Preview.ConnectedRegistry("connectedRegistry", new AzureNextGen.ContainerRegistry.V20201101Preview.ConnectedRegistryArgs
+        var connectedRegistry = new AzureNextGen.ContainerRegistry..ConnectedRegistry("connectedRegistry", new AzureNextGen.ContainerRegistry..ConnectedRegistryArgs
         {
             ClientTokenIds = 
             {
@@ -34,9 +35,9 @@ class MyStack : Stack
             },
             ConnectedRegistryName = "myConnectedRegistry",
             Mode = "Registry",
-            Parent = new AzureNextGen.ContainerRegistry.V20201101Preview.Inputs.ParentPropertiesArgs
+            Parent = new AzureNextGen.ContainerRegistry..Inputs.ParentPropertiesArgs
             {
-                SyncProperties = new AzureNextGen.ContainerRegistry.V20201101Preview.Inputs.SyncPropertiesArgs
+                SyncProperties = new AzureNextGen.ContainerRegistry..Inputs.SyncPropertiesArgs
                 {
                     MessageTtl = "P2D",
                     Schedule = "0 9 * * *",
@@ -61,7 +62,7 @@ class MyStack : Stack
 package main
 
 import (
-	containerregistry "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/containerregistry/v20201101preview"
+	containerregistry "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/containerregistry"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -101,12 +102,12 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-connected_registry = azure_nextgen.containerregistry.v20201101preview.ConnectedRegistry("connectedRegistry",
+connected_registry = azure_nextgen.containerregistry.ConnectedRegistry("connectedRegistry",
     client_token_ids=["/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.ContainerRegistry/registries/myRegistry/tokens/client1Token"],
     connected_registry_name="myConnectedRegistry",
     mode="Registry",
-    parent=azure_nextgen.containerregistry.v20201101preview.ParentPropertiesArgs(
-        sync_properties=azure_nextgen.containerregistry.v20201101preview.SyncPropertiesArgs(
+    parent=azure_nextgen.containerregistry.ParentPropertiesArgs(
+        sync_properties=azure_nextgen.containerregistry.SyncPropertiesArgs(
             message_ttl="P2D",
             schedule="0 9 * * *",
             sync_window="PT3H",
@@ -126,7 +127,7 @@ connected_registry = azure_nextgen.containerregistry.v20201101preview.ConnectedR
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const connectedRegistry = new azure_nextgen.containerregistry.v20201101preview.ConnectedRegistry("connectedRegistry", {
+const connectedRegistry = new azure_nextgen.containerregistry.ConnectedRegistry("connectedRegistry", {
     clientTokenIds: ["/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.ContainerRegistry/registries/myRegistry/tokens/client1Token"],
     connectedRegistryName: "myConnectedRegistry",
     mode: "Registry",
@@ -344,7 +345,7 @@ The ConnectedRegistry resource accepts the following [input]({{< relref "/docs/i
 <a href="#mode_csharp" style="color: inherit; text-decoration: inherit;">Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#connectedregistrymode">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry.<wbr>Connected<wbr>Registry<wbr>Mode</a></span>
+        <span class="property-type">string | <a href="#connectedregistrymode">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry..<wbr>Connected<wbr>Registry<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}The mode of the connected registry resource that indicates the permissions of the registry.{{% /md %}}</dd>
     <dt class="property-required"
@@ -353,7 +354,7 @@ The ConnectedRegistry resource accepts the following [input]({{< relref "/docs/i
 <a href="#parent_csharp" style="color: inherit; text-decoration: inherit;">Parent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#parentproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Parent<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#parentproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry..<wbr>Inputs.<wbr>Parent<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The parent of the connected registry.{{% /md %}}</dd>
     <dt class="property-required"
@@ -389,7 +390,7 @@ The ConnectedRegistry resource accepts the following [input]({{< relref "/docs/i
 <a href="#logging_csharp" style="color: inherit; text-decoration: inherit;">Logging</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loggingproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Logging<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#loggingproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry..<wbr>Inputs.<wbr>Logging<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The logging properties of the connected registry.{{% /md %}}</dd>
 </dl>
@@ -618,7 +619,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#activation_csharp" style="color: inherit; text-decoration: inherit;">Activation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activationpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry.<wbr>Outputs.<wbr>Activation<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#activationpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry..<wbr>Outputs.<wbr>Activation<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The activation properties of the connected registry.{{% /md %}}</dd>
     <dt class="property-"
@@ -672,7 +673,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#statusdetails_csharp" style="color: inherit; text-decoration: inherit;">Status<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#statusdetailpropertiesresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry.<wbr>Outputs.<wbr>Status<wbr>Detail<wbr>Properties<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#statusdetailpropertiesresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry..<wbr>Outputs.<wbr>Status<wbr>Detail<wbr>Properties<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of current statuses of the connected registry.{{% /md %}}</dd>
     <dt class="property-"
@@ -681,7 +682,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#systemdata_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry.<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
+        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry..<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Metadata pertaining to creation and last modification of the resource.{{% /md %}}</dd>
     <dt class="property-"
@@ -708,7 +709,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#loginserver_csharp" style="color: inherit; text-decoration: inherit;">Login<wbr>Server</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loginserverpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry.<wbr>Outputs.<wbr>Login<wbr>Server<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#loginserverpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry..<wbr>Outputs.<wbr>Login<wbr>Server<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The login server properties of the connected registry.{{% /md %}}</dd>
 </dl>
@@ -1250,7 +1251,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#auditlogstatus_csharp" style="color: inherit; text-decoration: inherit;">Audit<wbr>Log<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#auditlogstatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry.<wbr>Audit<wbr>Log<wbr>Status</a></span>
+        <span class="property-type">string | <a href="#auditlogstatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry..<wbr>Audit<wbr>Log<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether audit logs are enabled on the connected registry.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1259,7 +1260,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#loglevel_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#loglevel">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry.<wbr>Log<wbr>Level</a></span>
+        <span class="property-type">string | <a href="#loglevel">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry..<wbr>Log<wbr>Level</a></span>
     </dt>
     <dd>{{% md %}}The verbosity of logs persisted on the connected registry.{{% /md %}}</dd>
 </dl>
@@ -1455,7 +1456,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tls_csharp" style="color: inherit; text-decoration: inherit;">Tls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tlspropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Tls<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#tlspropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry..<wbr>Inputs.<wbr>Tls<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The TLS properties of the connected registry login server.{{% /md %}}</dd>
 </dl>
@@ -1544,7 +1545,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#syncproperties_csharp" style="color: inherit; text-decoration: inherit;">Sync<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#syncproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Sync<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#syncproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry..<wbr>Inputs.<wbr>Sync<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The sync properties of the connected registry with its parent.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1642,7 +1643,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#syncproperties_csharp" style="color: inherit; text-decoration: inherit;">Sync<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#syncpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Sync<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#syncpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry..<wbr>Inputs.<wbr>Sync<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The sync properties of the connected registry with its parent.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2698,7 +2699,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#certificate_csharp" style="color: inherit; text-decoration: inherit;">Certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tlscertificatepropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Tls<wbr>Certificate<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#tlscertificatepropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry..<wbr>Inputs.<wbr>Tls<wbr>Certificate<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The certificate used to configure HTTPS for the login server.{{% /md %}}</dd>
     <dt class="property-required"
@@ -2790,7 +2791,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:containerregistry/v20201101preview:ConnectedRegistry myConnectedRegistry /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.ContainerRegistry/registries/myRegistry/connectedRegistries/myConnectedRegistry 
+$ pulumi import azure-nextgen:containerregistry:ConnectedRegistry myConnectedRegistry /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.ContainerRegistry/registries/myRegistry/connectedRegistries/myConnectedRegistry 
 ```
 
 

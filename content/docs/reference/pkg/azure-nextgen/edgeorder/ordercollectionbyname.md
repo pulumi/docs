@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.edgeorder.OrderCollectionByName 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Specifies the properties or parameters for an order collection. Order collection is a grouping of one or more orders.
+API Version: 2020-12-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var orderCollectionByName = new AzureNextGen.EdgeOrder.V20201201Preview.OrderCollectionByName("orderCollectionByName", new AzureNextGen.EdgeOrder.V20201201Preview.OrderCollectionByNameArgs
+        var orderCollectionByName = new AzureNextGen.EdgeOrder..OrderCollectionByName("orderCollectionByName", new AzureNextGen.EdgeOrder..OrderCollectionByNameArgs
         {
             Location = "westus",
             OrderCollectionName = "TestOrderCollectionName1",
@@ -56,7 +57,7 @@ class MyStack : Stack
 package main
 
 import (
-	edgeorder "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/edgeorder/v20201201preview"
+	edgeorder "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/edgeorder"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -92,7 +93,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-order_collection_by_name = azure_nextgen.edgeorder.v20201201preview.OrderCollectionByName("orderCollectionByName",
+order_collection_by_name = azure_nextgen.edgeorder.OrderCollectionByName("orderCollectionByName",
     location="westus",
     order_collection_name="TestOrderCollectionName1",
     order_ids=[
@@ -115,7 +116,7 @@ order_collection_by_name = azure_nextgen.edgeorder.v20201201preview.OrderCollect
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const orderCollectionByName = new azure_nextgen.edgeorder.v20201201preview.OrderCollectionByName("orderCollectionByName", {
+const orderCollectionByName = new azure_nextgen.edgeorder.OrderCollectionByName("orderCollectionByName", {
     location: "westus",
     orderCollectionName: "TestOrderCollectionName1",
     orderIds: [
@@ -551,7 +552,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#systemdata_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Edge<wbr>Order.<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
+        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Edge<wbr>Order..<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Represents resource creation and update time{{% /md %}}</dd>
     <dt class="property-"
@@ -949,7 +950,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:edgeorder/v20201201preview:OrderCollectionByName TestOrderCollectionName1 /subscriptions/fa68082f-8ff7-4a25-95c7-ce9da541242f/resourceGroups/TestRG/providers/Microsoft.EdgeOrder/orderCollections/TestOrderCollectionName1 
+$ pulumi import azure-nextgen:edgeorder:OrderCollectionByName TestOrderCollectionName1 /subscriptions/fa68082f-8ff7-4a25-95c7-ce9da541242f/resourceGroups/TestRG/providers/Microsoft.EdgeOrder/orderCollections/TestOrderCollectionName1 
 ```
 
 

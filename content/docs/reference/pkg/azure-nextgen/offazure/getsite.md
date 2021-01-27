@@ -170,7 +170,7 @@ The following output properties are available:
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sitepropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Off<wbr>Azure.<wbr>Outputs.<wbr>Site<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#sitepropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Off<wbr>Azure..<wbr>Outputs.<wbr>Site<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Nested properties of VMWare site.{{% /md %}}</dd>
     <dt class="property-"
@@ -670,7 +670,7 @@ The following output properties are available:
 <a href="#agentdetails_csharp" style="color: inherit; text-decoration: inherit;">Agent<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#siteagentpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Off<wbr>Azure.<wbr>Inputs.<wbr>Site<wbr>Agent<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#siteagentpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Off<wbr>Azure..<wbr>Inputs.<wbr>Site<wbr>Agent<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}On-premises agent details.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -697,7 +697,7 @@ The following output properties are available:
 <a href="#serviceprincipalidentitydetails_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Principal<wbr>Identity<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sitespnpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Off<wbr>Azure.<wbr>Inputs.<wbr>Site<wbr>Spn<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sitespnpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Off<wbr>Azure..<wbr>Inputs.<wbr>Site<wbr>Spn<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Service principal identity details used by agent for communication to the service.{{% /md %}}</dd>
 </dl>

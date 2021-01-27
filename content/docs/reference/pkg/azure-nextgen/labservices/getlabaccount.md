@@ -206,7 +206,7 @@ The following output properties are available:
 <a href="#latestoperationresult_csharp" style="color: inherit; text-decoration: inherit;">Latest<wbr>Operation<wbr>Result</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#latestoperationresultresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Lab<wbr>Services.<wbr>Outputs.<wbr>Latest<wbr>Operation<wbr>Result<wbr>Response</a></span>
+        <span class="property-type"><a href="#latestoperationresultresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Lab<wbr>Services..<wbr>Outputs.<wbr>Latest<wbr>Operation<wbr>Result<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The details of the latest operation. ex: status, error{{% /md %}}</dd>
     <dt class="property-"
@@ -224,7 +224,7 @@ The following output properties are available:
 <a href="#sizeconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Size<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sizeconfigurationpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Lab<wbr>Services.<wbr>Outputs.<wbr>Size<wbr>Configuration<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#sizeconfigurationpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Lab<wbr>Services..<wbr>Outputs.<wbr>Size<wbr>Configuration<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Represents the size configuration under the lab account{{% /md %}}</dd>
     <dt class="property-"
@@ -630,7 +630,7 @@ The following output properties are available:
 <a href="#vmsizes_csharp" style="color: inherit; text-decoration: inherit;">Vm<wbr>Sizes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sizeinforesponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Lab<wbr>Services.<wbr>Inputs.<wbr>Size<wbr>Info<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#sizeinforesponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Lab<wbr>Services..<wbr>Inputs.<wbr>Size<wbr>Info<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Represents a set of compute sizes that can serve this given size type{{% /md %}}</dd>
 </dl>
@@ -1052,7 +1052,7 @@ The following output properties are available:
 <a href="#environmentsizes_csharp" style="color: inherit; text-decoration: inherit;">Environment<wbr>Sizes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentsizeresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Lab<wbr>Services.<wbr>Inputs.<wbr>Environment<wbr>Size<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#environmentsizeresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Lab<wbr>Services..<wbr>Inputs.<wbr>Environment<wbr>Size<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Represents a list of size categories supported by this Lab Account (Small, Medium, Large){{% /md %}}</dd>
 </dl>

@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.compute.Image resource with exam
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The source user image virtual hard disk. The virtual hard disk will be copied before being attached to the virtual machine. If SourceImage is provided, the destination virtual hard drive must not exist.
-Latest API Version: 2020-06-01.
+API Version: 2020-06-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,17 +27,17 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var image = new AzureNextGen.Compute.Latest.Image("image", new AzureNextGen.Compute.Latest.ImageArgs
+        var image = new AzureNextGen.Compute..Image("image", new AzureNextGen.Compute..ImageArgs
         {
             ImageName = "myImage",
             Location = "West US",
             ResourceGroupName = "myResourceGroup",
-            StorageProfile = new AzureNextGen.Compute.Latest.Inputs.ImageStorageProfileArgs
+            StorageProfile = new AzureNextGen.Compute..Inputs.ImageStorageProfileArgs
             {
-                OsDisk = new AzureNextGen.Compute.Latest.Inputs.ImageOSDiskArgs
+                OsDisk = new AzureNextGen.Compute..Inputs.ImageOSDiskArgs
                 {
                     BlobUri = "https://mystorageaccount.blob.core.windows.net/osimages/osimage.vhd",
-                    DiskEncryptionSet = new AzureNextGen.Compute.Latest.Inputs.DiskEncryptionSetParametersArgs
+                    DiskEncryptionSet = new AzureNextGen.Compute..Inputs.DiskEncryptionSetParametersArgs
                     {
                         Id = "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSets/{existing-diskEncryptionSet-name}",
                     },
@@ -60,7 +60,7 @@ class MyStack : Stack
 package main
 
 import (
-	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute/latest"
+	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -98,14 +98,14 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-image = azure_nextgen.compute.latest.Image("image",
+image = azure_nextgen.compute.Image("image",
     image_name="myImage",
     location="West US",
     resource_group_name="myResourceGroup",
-    storage_profile=azure_nextgen.compute.latest.ImageStorageProfileArgs(
-        os_disk=azure_nextgen.compute.latest.ImageOSDiskArgs(
+    storage_profile=azure_nextgen.compute.ImageStorageProfileArgs(
+        os_disk=azure_nextgen.compute.ImageOSDiskArgs(
             blob_uri="https://mystorageaccount.blob.core.windows.net/osimages/osimage.vhd",
-            disk_encryption_set=azure_nextgen.compute.latest.DiskEncryptionSetParametersArgs(
+            disk_encryption_set=azure_nextgen.compute.DiskEncryptionSetParametersArgs(
                 id="/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSets/{existing-diskEncryptionSet-name}",
             ),
             os_state="Generalized",
@@ -123,7 +123,7 @@ image = azure_nextgen.compute.latest.Image("image",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const image = new azure_nextgen.compute.latest.Image("image", {
+const image = new azure_nextgen.compute.Image("image", {
     imageName: "myImage",
     location: "West US",
     resourceGroupName: "myResourceGroup",
@@ -153,14 +153,14 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var image = new AzureNextGen.Compute.Latest.Image("image", new AzureNextGen.Compute.Latest.ImageArgs
+        var image = new AzureNextGen.Compute..Image("image", new AzureNextGen.Compute..ImageArgs
         {
             ImageName = "myImage",
             Location = "West US",
             ResourceGroupName = "myResourceGroup",
-            StorageProfile = new AzureNextGen.Compute.Latest.Inputs.ImageStorageProfileArgs
+            StorageProfile = new AzureNextGen.Compute..Inputs.ImageStorageProfileArgs
             {
-                OsDisk = new AzureNextGen.Compute.Latest.Inputs.ImageOSDiskArgs
+                OsDisk = new AzureNextGen.Compute..Inputs.ImageOSDiskArgs
                 {
                     BlobUri = "https://mystorageaccount.blob.core.windows.net/osimages/osimage.vhd",
                     OsState = "Generalized",
@@ -183,7 +183,7 @@ class MyStack : Stack
 package main
 
 import (
-	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute/latest"
+	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -219,12 +219,12 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-image = azure_nextgen.compute.latest.Image("image",
+image = azure_nextgen.compute.Image("image",
     image_name="myImage",
     location="West US",
     resource_group_name="myResourceGroup",
-    storage_profile=azure_nextgen.compute.latest.ImageStorageProfileArgs(
-        os_disk=azure_nextgen.compute.latest.ImageOSDiskArgs(
+    storage_profile=azure_nextgen.compute.ImageStorageProfileArgs(
+        os_disk=azure_nextgen.compute.ImageOSDiskArgs(
             blob_uri="https://mystorageaccount.blob.core.windows.net/osimages/osimage.vhd",
             os_state="Generalized",
             os_type="Linux",
@@ -242,7 +242,7 @@ image = azure_nextgen.compute.latest.Image("image",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const image = new azure_nextgen.compute.latest.Image("image", {
+const image = new azure_nextgen.compute.Image("image", {
     imageName: "myImage",
     location: "West US",
     resourceGroupName: "myResourceGroup",
@@ -270,20 +270,20 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var image = new AzureNextGen.Compute.Latest.Image("image", new AzureNextGen.Compute.Latest.ImageArgs
+        var image = new AzureNextGen.Compute..Image("image", new AzureNextGen.Compute..ImageArgs
         {
             ImageName = "myImage",
             Location = "West US",
             ResourceGroupName = "myResourceGroup",
-            StorageProfile = new AzureNextGen.Compute.Latest.Inputs.ImageStorageProfileArgs
+            StorageProfile = new AzureNextGen.Compute..Inputs.ImageStorageProfileArgs
             {
-                OsDisk = new AzureNextGen.Compute.Latest.Inputs.ImageOSDiskArgs
+                OsDisk = new AzureNextGen.Compute..Inputs.ImageOSDiskArgs
                 {
-                    DiskEncryptionSet = new AzureNextGen.Compute.Latest.Inputs.DiskEncryptionSetParametersArgs
+                    DiskEncryptionSet = new AzureNextGen.Compute..Inputs.DiskEncryptionSetParametersArgs
                     {
                         Id = "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSets/{existing-diskEncryptionSet-name}",
                     },
-                    ManagedDisk = new AzureNextGen.Compute.Latest.Inputs.SubResourceArgs
+                    ManagedDisk = new AzureNextGen.Compute..Inputs.SubResourceArgs
                     {
                         Id = "subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/disks/myManagedDisk",
                     },
@@ -306,7 +306,7 @@ class MyStack : Stack
 package main
 
 import (
-	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute/latest"
+	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -346,16 +346,16 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-image = azure_nextgen.compute.latest.Image("image",
+image = azure_nextgen.compute.Image("image",
     image_name="myImage",
     location="West US",
     resource_group_name="myResourceGroup",
-    storage_profile=azure_nextgen.compute.latest.ImageStorageProfileArgs(
-        os_disk=azure_nextgen.compute.latest.ImageOSDiskArgs(
-            disk_encryption_set=azure_nextgen.compute.latest.DiskEncryptionSetParametersArgs(
+    storage_profile=azure_nextgen.compute.ImageStorageProfileArgs(
+        os_disk=azure_nextgen.compute.ImageOSDiskArgs(
+            disk_encryption_set=azure_nextgen.compute.DiskEncryptionSetParametersArgs(
                 id="/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSets/{existing-diskEncryptionSet-name}",
             ),
-            managed_disk=azure_nextgen.compute.latest.SubResourceArgs(
+            managed_disk=azure_nextgen.compute.SubResourceArgs(
                 id="subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/disks/myManagedDisk",
             ),
             os_state="Generalized",
@@ -373,7 +373,7 @@ image = azure_nextgen.compute.latest.Image("image",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const image = new azure_nextgen.compute.latest.Image("image", {
+const image = new azure_nextgen.compute.Image("image", {
     imageName: "myImage",
     location: "West US",
     resourceGroupName: "myResourceGroup",
@@ -405,16 +405,16 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var image = new AzureNextGen.Compute.Latest.Image("image", new AzureNextGen.Compute.Latest.ImageArgs
+        var image = new AzureNextGen.Compute..Image("image", new AzureNextGen.Compute..ImageArgs
         {
             ImageName = "myImage",
             Location = "West US",
             ResourceGroupName = "myResourceGroup",
-            StorageProfile = new AzureNextGen.Compute.Latest.Inputs.ImageStorageProfileArgs
+            StorageProfile = new AzureNextGen.Compute..Inputs.ImageStorageProfileArgs
             {
-                OsDisk = new AzureNextGen.Compute.Latest.Inputs.ImageOSDiskArgs
+                OsDisk = new AzureNextGen.Compute..Inputs.ImageOSDiskArgs
                 {
-                    ManagedDisk = new AzureNextGen.Compute.Latest.Inputs.SubResourceArgs
+                    ManagedDisk = new AzureNextGen.Compute..Inputs.SubResourceArgs
                     {
                         Id = "subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/disks/myManagedDisk",
                     },
@@ -438,7 +438,7 @@ class MyStack : Stack
 package main
 
 import (
-	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute/latest"
+	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -476,13 +476,13 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-image = azure_nextgen.compute.latest.Image("image",
+image = azure_nextgen.compute.Image("image",
     image_name="myImage",
     location="West US",
     resource_group_name="myResourceGroup",
-    storage_profile=azure_nextgen.compute.latest.ImageStorageProfileArgs(
-        os_disk=azure_nextgen.compute.latest.ImageOSDiskArgs(
-            managed_disk=azure_nextgen.compute.latest.SubResourceArgs(
+    storage_profile=azure_nextgen.compute.ImageStorageProfileArgs(
+        os_disk=azure_nextgen.compute.ImageOSDiskArgs(
+            managed_disk=azure_nextgen.compute.SubResourceArgs(
                 id="subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/disks/myManagedDisk",
             ),
             os_state="Generalized",
@@ -501,7 +501,7 @@ image = azure_nextgen.compute.latest.Image("image",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const image = new azure_nextgen.compute.latest.Image("image", {
+const image = new azure_nextgen.compute.Image("image", {
     imageName: "myImage",
     location: "West US",
     resourceGroupName: "myResourceGroup",
@@ -531,22 +531,22 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var image = new AzureNextGen.Compute.Latest.Image("image", new AzureNextGen.Compute.Latest.ImageArgs
+        var image = new AzureNextGen.Compute..Image("image", new AzureNextGen.Compute..ImageArgs
         {
             ImageName = "myImage",
             Location = "West US",
             ResourceGroupName = "myResourceGroup",
-            StorageProfile = new AzureNextGen.Compute.Latest.Inputs.ImageStorageProfileArgs
+            StorageProfile = new AzureNextGen.Compute..Inputs.ImageStorageProfileArgs
             {
-                OsDisk = new AzureNextGen.Compute.Latest.Inputs.ImageOSDiskArgs
+                OsDisk = new AzureNextGen.Compute..Inputs.ImageOSDiskArgs
                 {
-                    DiskEncryptionSet = new AzureNextGen.Compute.Latest.Inputs.DiskEncryptionSetParametersArgs
+                    DiskEncryptionSet = new AzureNextGen.Compute..Inputs.DiskEncryptionSetParametersArgs
                     {
                         Id = "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSets/{existing-diskEncryptionSet-name}",
                     },
                     OsState = "Generalized",
                     OsType = "Linux",
-                    Snapshot = new AzureNextGen.Compute.Latest.Inputs.SubResourceArgs
+                    Snapshot = new AzureNextGen.Compute..Inputs.SubResourceArgs
                     {
                         Id = "subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/snapshots/mySnapshot",
                     },
@@ -567,7 +567,7 @@ class MyStack : Stack
 package main
 
 import (
-	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute/latest"
+	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -607,18 +607,18 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-image = azure_nextgen.compute.latest.Image("image",
+image = azure_nextgen.compute.Image("image",
     image_name="myImage",
     location="West US",
     resource_group_name="myResourceGroup",
-    storage_profile=azure_nextgen.compute.latest.ImageStorageProfileArgs(
-        os_disk=azure_nextgen.compute.latest.ImageOSDiskArgs(
-            disk_encryption_set=azure_nextgen.compute.latest.DiskEncryptionSetParametersArgs(
+    storage_profile=azure_nextgen.compute.ImageStorageProfileArgs(
+        os_disk=azure_nextgen.compute.ImageOSDiskArgs(
+            disk_encryption_set=azure_nextgen.compute.DiskEncryptionSetParametersArgs(
                 id="/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSets/{existing-diskEncryptionSet-name}",
             ),
             os_state="Generalized",
             os_type="Linux",
-            snapshot=azure_nextgen.compute.latest.SubResourceArgs(
+            snapshot=azure_nextgen.compute.SubResourceArgs(
                 id="subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/snapshots/mySnapshot",
             ),
         ),
@@ -634,7 +634,7 @@ image = azure_nextgen.compute.latest.Image("image",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const image = new azure_nextgen.compute.latest.Image("image", {
+const image = new azure_nextgen.compute.Image("image", {
     imageName: "myImage",
     location: "West US",
     resourceGroupName: "myResourceGroup",
@@ -666,18 +666,18 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var image = new AzureNextGen.Compute.Latest.Image("image", new AzureNextGen.Compute.Latest.ImageArgs
+        var image = new AzureNextGen.Compute..Image("image", new AzureNextGen.Compute..ImageArgs
         {
             ImageName = "myImage",
             Location = "West US",
             ResourceGroupName = "myResourceGroup",
-            StorageProfile = new AzureNextGen.Compute.Latest.Inputs.ImageStorageProfileArgs
+            StorageProfile = new AzureNextGen.Compute..Inputs.ImageStorageProfileArgs
             {
-                OsDisk = new AzureNextGen.Compute.Latest.Inputs.ImageOSDiskArgs
+                OsDisk = new AzureNextGen.Compute..Inputs.ImageOSDiskArgs
                 {
                     OsState = "Generalized",
                     OsType = "Linux",
-                    Snapshot = new AzureNextGen.Compute.Latest.Inputs.SubResourceArgs
+                    Snapshot = new AzureNextGen.Compute..Inputs.SubResourceArgs
                     {
                         Id = "subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/snapshots/mySnapshot",
                     },
@@ -699,7 +699,7 @@ class MyStack : Stack
 package main
 
 import (
-	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute/latest"
+	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -737,15 +737,15 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-image = azure_nextgen.compute.latest.Image("image",
+image = azure_nextgen.compute.Image("image",
     image_name="myImage",
     location="West US",
     resource_group_name="myResourceGroup",
-    storage_profile=azure_nextgen.compute.latest.ImageStorageProfileArgs(
-        os_disk=azure_nextgen.compute.latest.ImageOSDiskArgs(
+    storage_profile=azure_nextgen.compute.ImageStorageProfileArgs(
+        os_disk=azure_nextgen.compute.ImageOSDiskArgs(
             os_state="Generalized",
             os_type="Linux",
-            snapshot=azure_nextgen.compute.latest.SubResourceArgs(
+            snapshot=azure_nextgen.compute.SubResourceArgs(
                 id="subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/snapshots/mySnapshot",
             ),
         ),
@@ -762,7 +762,7 @@ image = azure_nextgen.compute.latest.Image("image",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const image = new azure_nextgen.compute.latest.Image("image", {
+const image = new azure_nextgen.compute.Image("image", {
     imageName: "myImage",
     location: "West US",
     resourceGroupName: "myResourceGroup",
@@ -792,12 +792,12 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var image = new AzureNextGen.Compute.Latest.Image("image", new AzureNextGen.Compute.Latest.ImageArgs
+        var image = new AzureNextGen.Compute..Image("image", new AzureNextGen.Compute..ImageArgs
         {
             ImageName = "myImage",
             Location = "West US",
             ResourceGroupName = "myResourceGroup",
-            SourceVirtualMachine = new AzureNextGen.Compute.Latest.Inputs.SubResourceArgs
+            SourceVirtualMachine = new AzureNextGen.Compute..Inputs.SubResourceArgs
             {
                 Id = "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/virtualMachines/myVM",
             },
@@ -816,7 +816,7 @@ class MyStack : Stack
 package main
 
 import (
-	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute/latest"
+	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -847,11 +847,11 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-image = azure_nextgen.compute.latest.Image("image",
+image = azure_nextgen.compute.Image("image",
     image_name="myImage",
     location="West US",
     resource_group_name="myResourceGroup",
-    source_virtual_machine=azure_nextgen.compute.latest.SubResourceArgs(
+    source_virtual_machine=azure_nextgen.compute.SubResourceArgs(
         id="/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/virtualMachines/myVM",
     ))
 
@@ -865,7 +865,7 @@ image = azure_nextgen.compute.latest.Image("image",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const image = new azure_nextgen.compute.latest.Image("image", {
+const image = new azure_nextgen.compute.Image("image", {
     imageName: "myImage",
     location: "West US",
     resourceGroupName: "myResourceGroup",
@@ -888,22 +888,22 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var image = new AzureNextGen.Compute.Latest.Image("image", new AzureNextGen.Compute.Latest.ImageArgs
+        var image = new AzureNextGen.Compute..Image("image", new AzureNextGen.Compute..ImageArgs
         {
             ImageName = "myImage",
             Location = "West US",
             ResourceGroupName = "myResourceGroup",
-            StorageProfile = new AzureNextGen.Compute.Latest.Inputs.ImageStorageProfileArgs
+            StorageProfile = new AzureNextGen.Compute..Inputs.ImageStorageProfileArgs
             {
                 DataDisks = 
                 {
-                    new AzureNextGen.Compute.Latest.Inputs.ImageDataDiskArgs
+                    new AzureNextGen.Compute..Inputs.ImageDataDiskArgs
                     {
                         BlobUri = "https://mystorageaccount.blob.core.windows.net/dataimages/dataimage.vhd",
                         Lun = 1,
                     },
                 },
-                OsDisk = new AzureNextGen.Compute.Latest.Inputs.ImageOSDiskArgs
+                OsDisk = new AzureNextGen.Compute..Inputs.ImageOSDiskArgs
                 {
                     BlobUri = "https://mystorageaccount.blob.core.windows.net/osimages/osimage.vhd",
                     OsState = "Generalized",
@@ -926,7 +926,7 @@ class MyStack : Stack
 package main
 
 import (
-	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute/latest"
+	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -968,16 +968,16 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-image = azure_nextgen.compute.latest.Image("image",
+image = azure_nextgen.compute.Image("image",
     image_name="myImage",
     location="West US",
     resource_group_name="myResourceGroup",
-    storage_profile=azure_nextgen.compute.latest.ImageStorageProfileArgs(
-        data_disks=[azure_nextgen.compute.latest.ImageDataDiskArgs(
+    storage_profile=azure_nextgen.compute.ImageStorageProfileArgs(
+        data_disks=[azure_nextgen.compute.ImageDataDiskArgs(
             blob_uri="https://mystorageaccount.blob.core.windows.net/dataimages/dataimage.vhd",
             lun=1,
         )],
-        os_disk=azure_nextgen.compute.latest.ImageOSDiskArgs(
+        os_disk=azure_nextgen.compute.ImageOSDiskArgs(
             blob_uri="https://mystorageaccount.blob.core.windows.net/osimages/osimage.vhd",
             os_state="Generalized",
             os_type="Linux",
@@ -995,7 +995,7 @@ image = azure_nextgen.compute.latest.Image("image",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const image = new azure_nextgen.compute.latest.Image("image", {
+const image = new azure_nextgen.compute.Image("image", {
     imageName: "myImage",
     location: "West US",
     resourceGroupName: "myResourceGroup",
@@ -1027,27 +1027,27 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var image = new AzureNextGen.Compute.Latest.Image("image", new AzureNextGen.Compute.Latest.ImageArgs
+        var image = new AzureNextGen.Compute..Image("image", new AzureNextGen.Compute..ImageArgs
         {
             ImageName = "myImage",
             Location = "West US",
             ResourceGroupName = "myResourceGroup",
-            StorageProfile = new AzureNextGen.Compute.Latest.Inputs.ImageStorageProfileArgs
+            StorageProfile = new AzureNextGen.Compute..Inputs.ImageStorageProfileArgs
             {
                 DataDisks = 
                 {
-                    new AzureNextGen.Compute.Latest.Inputs.ImageDataDiskArgs
+                    new AzureNextGen.Compute..Inputs.ImageDataDiskArgs
                     {
                         Lun = 1,
-                        ManagedDisk = new AzureNextGen.Compute.Latest.Inputs.SubResourceArgs
+                        ManagedDisk = new AzureNextGen.Compute..Inputs.SubResourceArgs
                         {
                             Id = "subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/disks/myManagedDisk2",
                         },
                     },
                 },
-                OsDisk = new AzureNextGen.Compute.Latest.Inputs.ImageOSDiskArgs
+                OsDisk = new AzureNextGen.Compute..Inputs.ImageOSDiskArgs
                 {
-                    ManagedDisk = new AzureNextGen.Compute.Latest.Inputs.SubResourceArgs
+                    ManagedDisk = new AzureNextGen.Compute..Inputs.SubResourceArgs
                     {
                         Id = "subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/disks/myManagedDisk",
                     },
@@ -1071,7 +1071,7 @@ class MyStack : Stack
 package main
 
 import (
-	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute/latest"
+	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -1117,19 +1117,19 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-image = azure_nextgen.compute.latest.Image("image",
+image = azure_nextgen.compute.Image("image",
     image_name="myImage",
     location="West US",
     resource_group_name="myResourceGroup",
-    storage_profile=azure_nextgen.compute.latest.ImageStorageProfileArgs(
-        data_disks=[azure_nextgen.compute.latest.ImageDataDiskArgs(
+    storage_profile=azure_nextgen.compute.ImageStorageProfileArgs(
+        data_disks=[azure_nextgen.compute.ImageDataDiskArgs(
             lun=1,
-            managed_disk=azure_nextgen.compute.latest.SubResourceArgs(
+            managed_disk=azure_nextgen.compute.SubResourceArgs(
                 id="subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/disks/myManagedDisk2",
             ),
         )],
-        os_disk=azure_nextgen.compute.latest.ImageOSDiskArgs(
-            managed_disk=azure_nextgen.compute.latest.SubResourceArgs(
+        os_disk=azure_nextgen.compute.ImageOSDiskArgs(
+            managed_disk=azure_nextgen.compute.SubResourceArgs(
                 id="subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/disks/myManagedDisk",
             ),
             os_state="Generalized",
@@ -1148,7 +1148,7 @@ image = azure_nextgen.compute.latest.Image("image",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const image = new azure_nextgen.compute.latest.Image("image", {
+const image = new azure_nextgen.compute.Image("image", {
     imageName: "myImage",
     location: "West US",
     resourceGroupName: "myResourceGroup",
@@ -1184,29 +1184,29 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var image = new AzureNextGen.Compute.Latest.Image("image", new AzureNextGen.Compute.Latest.ImageArgs
+        var image = new AzureNextGen.Compute..Image("image", new AzureNextGen.Compute..ImageArgs
         {
             ImageName = "myImage",
             Location = "West US",
             ResourceGroupName = "myResourceGroup",
-            StorageProfile = new AzureNextGen.Compute.Latest.Inputs.ImageStorageProfileArgs
+            StorageProfile = new AzureNextGen.Compute..Inputs.ImageStorageProfileArgs
             {
                 DataDisks = 
                 {
-                    new AzureNextGen.Compute.Latest.Inputs.ImageDataDiskArgs
+                    new AzureNextGen.Compute..Inputs.ImageDataDiskArgs
                     {
                         Lun = 1,
-                        Snapshot = new AzureNextGen.Compute.Latest.Inputs.SubResourceArgs
+                        Snapshot = new AzureNextGen.Compute..Inputs.SubResourceArgs
                         {
                             Id = "subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/snapshots/mySnapshot2",
                         },
                     },
                 },
-                OsDisk = new AzureNextGen.Compute.Latest.Inputs.ImageOSDiskArgs
+                OsDisk = new AzureNextGen.Compute..Inputs.ImageOSDiskArgs
                 {
                     OsState = "Generalized",
                     OsType = "Linux",
-                    Snapshot = new AzureNextGen.Compute.Latest.Inputs.SubResourceArgs
+                    Snapshot = new AzureNextGen.Compute..Inputs.SubResourceArgs
                     {
                         Id = "subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/snapshots/mySnapshot",
                     },
@@ -1228,7 +1228,7 @@ class MyStack : Stack
 package main
 
 import (
-	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute/latest"
+	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -1274,21 +1274,21 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-image = azure_nextgen.compute.latest.Image("image",
+image = azure_nextgen.compute.Image("image",
     image_name="myImage",
     location="West US",
     resource_group_name="myResourceGroup",
-    storage_profile=azure_nextgen.compute.latest.ImageStorageProfileArgs(
-        data_disks=[azure_nextgen.compute.latest.ImageDataDiskArgs(
+    storage_profile=azure_nextgen.compute.ImageStorageProfileArgs(
+        data_disks=[azure_nextgen.compute.ImageDataDiskArgs(
             lun=1,
-            snapshot=azure_nextgen.compute.latest.SubResourceArgs(
+            snapshot=azure_nextgen.compute.SubResourceArgs(
                 id="subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/snapshots/mySnapshot2",
             ),
         )],
-        os_disk=azure_nextgen.compute.latest.ImageOSDiskArgs(
+        os_disk=azure_nextgen.compute.ImageOSDiskArgs(
             os_state="Generalized",
             os_type="Linux",
-            snapshot=azure_nextgen.compute.latest.SubResourceArgs(
+            snapshot=azure_nextgen.compute.SubResourceArgs(
                 id="subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/snapshots/mySnapshot",
             ),
         ),
@@ -1305,7 +1305,7 @@ image = azure_nextgen.compute.latest.Image("image",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const image = new azure_nextgen.compute.latest.Image("image", {
+const image = new azure_nextgen.compute.Image("image", {
     imageName: "myImage",
     location: "West US",
     resourceGroupName: "myResourceGroup",
@@ -1547,7 +1547,7 @@ The Image resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#hypervgeneration_csharp" style="color: inherit; text-decoration: inherit;">Hyper<wbr>VGeneration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#hypervgenerationtypes">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Hyper<wbr>VGeneration<wbr>Types</a></span>
+        <span class="property-type">string | <a href="#hypervgenerationtypes">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Hyper<wbr>VGeneration<wbr>Types</a></span>
     </dt>
     <dd>{{% md %}}Gets the HyperVGenerationType of the VirtualMachine created from the image{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1556,7 +1556,7 @@ The Image resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#sourcevirtualmachine_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Virtual<wbr>Machine</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The source virtual machine from which Image is created.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1565,7 +1565,7 @@ The Image resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#storageprofile_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imagestorageprofile">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Image<wbr>Storage<wbr>Profile<wbr>Args</a></span>
+        <span class="property-type"><a href="#imagestorageprofile">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Inputs.<wbr>Image<wbr>Storage<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the storage settings for the virtual machine disks.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2209,7 +2209,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#caching_csharp" style="color: inherit; text-decoration: inherit;">Caching</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cachingtypes">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Caching<wbr>Types</a></span>
+        <span class="property-type"><a href="#cachingtypes">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Caching<wbr>Types</a></span>
     </dt>
     <dd>{{% md %}}Specifies the caching requirements. <br><br> Possible values are: <br><br> **None** <br><br> **ReadOnly** <br><br> **ReadWrite** <br><br> Default: **None for Standard storage. ReadOnly for Premium storage**{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2218,7 +2218,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#diskencryptionset_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Encryption<wbr>Set</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diskencryptionsetparameters">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Disk<wbr>Encryption<wbr>Set<wbr>Parameters<wbr>Args</a></span>
+        <span class="property-type"><a href="#diskencryptionsetparameters">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Inputs.<wbr>Disk<wbr>Encryption<wbr>Set<wbr>Parameters<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the customer managed disk encryption set resource id for the managed image disk.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2236,7 +2236,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#manageddisk_csharp" style="color: inherit; text-decoration: inherit;">Managed<wbr>Disk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The managedDisk.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2245,7 +2245,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#snapshot_csharp" style="color: inherit; text-decoration: inherit;">Snapshot</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The snapshot.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2254,7 +2254,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storageaccounttype_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#storageaccounttypes">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Storage<wbr>Account<wbr>Types</a></span>
+        <span class="property-type">string | <a href="#storageaccounttypes">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Storage<wbr>Account<wbr>Types</a></span>
     </dt>
     <dd>{{% md %}}Specifies the storage account type for the managed disk. NOTE: UltraSSD_LRS can only be used with data disks, it cannot be used with OS Disk.{{% /md %}}</dd>
 </dl>
@@ -2532,7 +2532,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#diskencryptionset_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Encryption<wbr>Set</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diskencryptionsetparametersresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Disk<wbr>Encryption<wbr>Set<wbr>Parameters<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#diskencryptionsetparametersresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Inputs.<wbr>Disk<wbr>Encryption<wbr>Set<wbr>Parameters<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the customer managed disk encryption set resource id for the managed image disk.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2550,7 +2550,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#manageddisk_csharp" style="color: inherit; text-decoration: inherit;">Managed<wbr>Disk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The managedDisk.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2559,7 +2559,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#snapshot_csharp" style="color: inherit; text-decoration: inherit;">Snapshot</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The snapshot.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2819,7 +2819,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#osstate_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#operatingsystemstatetypes">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Operating<wbr>System<wbr>State<wbr>Types</a></span>
+        <span class="property-type"><a href="#operatingsystemstatetypes">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Operating<wbr>System<wbr>State<wbr>Types</a></span>
     </dt>
     <dd>{{% md %}}The OS State.{{% /md %}}</dd>
     <dt class="property-required"
@@ -2828,7 +2828,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ostype_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#operatingsystemtypes">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Operating<wbr>System<wbr>Types</a></span>
+        <span class="property-type"><a href="#operatingsystemtypes">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Operating<wbr>System<wbr>Types</a></span>
     </dt>
     <dd>{{% md %}}This property allows you to specify the type of the OS that is included in the disk if creating a VM from a custom image. <br><br> Possible values are: <br><br> **Windows** <br><br> **Linux**{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2846,7 +2846,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#caching_csharp" style="color: inherit; text-decoration: inherit;">Caching</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cachingtypes">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Caching<wbr>Types</a></span>
+        <span class="property-type"><a href="#cachingtypes">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Caching<wbr>Types</a></span>
     </dt>
     <dd>{{% md %}}Specifies the caching requirements. <br><br> Possible values are: <br><br> **None** <br><br> **ReadOnly** <br><br> **ReadWrite** <br><br> Default: **None for Standard storage. ReadOnly for Premium storage**{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2855,7 +2855,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#diskencryptionset_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Encryption<wbr>Set</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diskencryptionsetparameters">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Disk<wbr>Encryption<wbr>Set<wbr>Parameters<wbr>Args</a></span>
+        <span class="property-type"><a href="#diskencryptionsetparameters">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Inputs.<wbr>Disk<wbr>Encryption<wbr>Set<wbr>Parameters<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the customer managed disk encryption set resource id for the managed image disk.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2873,7 +2873,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#manageddisk_csharp" style="color: inherit; text-decoration: inherit;">Managed<wbr>Disk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The managedDisk.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2882,7 +2882,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#snapshot_csharp" style="color: inherit; text-decoration: inherit;">Snapshot</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The snapshot.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2891,7 +2891,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storageaccounttype_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#storageaccounttypes">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Storage<wbr>Account<wbr>Types</a></span>
+        <span class="property-type">string | <a href="#storageaccounttypes">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Storage<wbr>Account<wbr>Types</a></span>
     </dt>
     <dd>{{% md %}}Specifies the storage account type for the managed disk. NOTE: UltraSSD_LRS can only be used with data disks, it cannot be used with OS Disk.{{% /md %}}</dd>
 </dl>
@@ -3205,7 +3205,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#diskencryptionset_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Encryption<wbr>Set</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diskencryptionsetparametersresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Disk<wbr>Encryption<wbr>Set<wbr>Parameters<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#diskencryptionsetparametersresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Inputs.<wbr>Disk<wbr>Encryption<wbr>Set<wbr>Parameters<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the customer managed disk encryption set resource id for the managed image disk.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3223,7 +3223,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#manageddisk_csharp" style="color: inherit; text-decoration: inherit;">Managed<wbr>Disk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The managedDisk.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3232,7 +3232,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#snapshot_csharp" style="color: inherit; text-decoration: inherit;">Snapshot</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The snapshot.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3519,7 +3519,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datadisks_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imagedatadisk">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Image<wbr>Data<wbr>Disk<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#imagedatadisk">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Inputs.<wbr>Image<wbr>Data<wbr>Disk<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the parameters that are used to add a data disk to a virtual machine. <br><br> For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-about-disks-vhds?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json).{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3528,7 +3528,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#osdisk_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Disk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imageosdisk">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Image<wbr>OSDisk<wbr>Args</a></span>
+        <span class="property-type"><a href="#imageosdisk">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Inputs.<wbr>Image<wbr>OSDisk<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies information about the operating system disk used by the virtual machine. <br><br> For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-about-disks-vhds?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json).{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3653,7 +3653,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datadisks_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imagedatadiskresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Image<wbr>Data<wbr>Disk<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#imagedatadiskresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Inputs.<wbr>Image<wbr>Data<wbr>Disk<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the parameters that are used to add a data disk to a virtual machine. <br><br> For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-about-disks-vhds?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json).{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3662,7 +3662,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#osdisk_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Disk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imageosdiskresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Image<wbr>OSDisk<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#imageosdiskresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Inputs.<wbr>Image<wbr>OSDisk<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies information about the operating system disk used by the virtual machine. <br><br> For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-about-disks-vhds?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json).{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4035,7 +4035,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:compute/latest:Image myImage /subscriptions/{subscription-id}/resourceGroups/disk/providers/Microsoft.Compute/images/myImage 
+$ pulumi import azure-nextgen:compute:Image myImage /subscriptions/{subscription-id}/resourceGroups/disk/providers/Microsoft.Compute/images/myImage 
 ```
 
 

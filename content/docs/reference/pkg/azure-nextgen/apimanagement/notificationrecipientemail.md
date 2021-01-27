@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.apimanagement.NotificationRecipi
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Recipient Email details.
-Latest API Version: 2019-12-01.
+API Version: 2019-12-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var notificationRecipientEmail = new AzureNextGen.ApiManagement.Latest.NotificationRecipientEmail("notificationRecipientEmail", new AzureNextGen.ApiManagement.Latest.NotificationRecipientEmailArgs
+        var notificationRecipientEmail = new AzureNextGen.ApiManagement..NotificationRecipientEmail("notificationRecipientEmail", new AzureNextGen.ApiManagement..NotificationRecipientEmailArgs
         {
             Email = "foobar@live.com",
             NotificationName = "RequestPublisherNotificationMessage",
@@ -48,7 +48,7 @@ class MyStack : Stack
 package main
 
 import (
-	apimanagement "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/apimanagement/latest"
+	apimanagement "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/apimanagement"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -77,7 +77,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-notification_recipient_email = azure_nextgen.apimanagement.latest.NotificationRecipientEmail("notificationRecipientEmail",
+notification_recipient_email = azure_nextgen.apimanagement.NotificationRecipientEmail("notificationRecipientEmail",
     email="foobar@live.com",
     notification_name="RequestPublisherNotificationMessage",
     resource_group_name="rg1",
@@ -93,7 +93,7 @@ notification_recipient_email = azure_nextgen.apimanagement.latest.NotificationRe
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const notificationRecipientEmail = new azure_nextgen.apimanagement.latest.NotificationRecipientEmail("notificationRecipientEmail", {
+const notificationRecipientEmail = new azure_nextgen.apimanagement.NotificationRecipientEmail("notificationRecipientEmail", {
     email: "foobar@live.com",
     notificationName: "RequestPublisherNotificationMessage",
     resourceGroupName: "rg1",
@@ -602,7 +602,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:apimanagement/latest:NotificationRecipientEmail foobar@live.com /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/notifications/RequestPublisherNotificationMessage/recipientEmails/foobar@live.com 
+$ pulumi import azure-nextgen:apimanagement:NotificationRecipientEmail foobar@live.com /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/notifications/RequestPublisherNotificationMessage/recipientEmails/foobar@live.com 
 ```
 
 

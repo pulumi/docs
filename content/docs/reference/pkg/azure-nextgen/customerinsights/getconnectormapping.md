@@ -305,7 +305,7 @@ The following output properties are available:
 <a href="#mappingproperties_csharp" style="color: inherit; text-decoration: inherit;">Mapping<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectormappingpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights.<wbr>Outputs.<wbr>Connector<wbr>Mapping<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#connectormappingpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights..<wbr>Outputs.<wbr>Connector<wbr>Mapping<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The properties of the mapping.{{% /md %}}</dd>
     <dt class="property-"
@@ -1474,7 +1474,7 @@ The following output properties are available:
 <a href="#availability_csharp" style="color: inherit; text-decoration: inherit;">Availability</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectormappingavailabilityresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights.<wbr>Inputs.<wbr>Connector<wbr>Mapping<wbr>Availability<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#connectormappingavailabilityresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights..<wbr>Inputs.<wbr>Connector<wbr>Mapping<wbr>Availability<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The availability of mapping property.{{% /md %}}</dd>
     <dt class="property-required"
@@ -1483,7 +1483,7 @@ The following output properties are available:
 <a href="#completeoperation_csharp" style="color: inherit; text-decoration: inherit;">Complete<wbr>Operation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectormappingcompleteoperationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights.<wbr>Inputs.<wbr>Connector<wbr>Mapping<wbr>Complete<wbr>Operation<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#connectormappingcompleteoperationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights..<wbr>Inputs.<wbr>Connector<wbr>Mapping<wbr>Complete<wbr>Operation<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The operation after import is done.{{% /md %}}</dd>
     <dt class="property-required"
@@ -1492,7 +1492,7 @@ The following output properties are available:
 <a href="#errormanagement_csharp" style="color: inherit; text-decoration: inherit;">Error<wbr>Management</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectormappingerrormanagementresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights.<wbr>Inputs.<wbr>Connector<wbr>Mapping<wbr>Error<wbr>Management<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#connectormappingerrormanagementresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights..<wbr>Inputs.<wbr>Connector<wbr>Mapping<wbr>Error<wbr>Management<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The error management setting for the mapping.{{% /md %}}</dd>
     <dt class="property-required"
@@ -1501,7 +1501,7 @@ The following output properties are available:
 <a href="#format_csharp" style="color: inherit; text-decoration: inherit;">Format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectormappingformatresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights.<wbr>Inputs.<wbr>Connector<wbr>Mapping<wbr>Format<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#connectormappingformatresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights..<wbr>Inputs.<wbr>Connector<wbr>Mapping<wbr>Format<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The format of mapping property.{{% /md %}}</dd>
     <dt class="property-required"
@@ -1510,7 +1510,7 @@ The following output properties are available:
 <a href="#structure_csharp" style="color: inherit; text-decoration: inherit;">Structure</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectormappingstructureresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights.<wbr>Inputs.<wbr>Connector<wbr>Mapping<wbr>Structure<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#connectormappingstructureresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights..<wbr>Inputs.<wbr>Connector<wbr>Mapping<wbr>Structure<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Ingestion mapping information at property level.{{% /md %}}</dd>
     <dt class="property-optional"

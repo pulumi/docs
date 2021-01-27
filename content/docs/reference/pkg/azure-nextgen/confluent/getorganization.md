@@ -224,7 +224,7 @@ The following output properties are available:
 <a href="#offerdetail_csharp" style="color: inherit; text-decoration: inherit;">Offer<wbr>Detail</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#organizationresourcepropertiesresponseofferdetail">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Confluent.<wbr>Outputs.<wbr>Organization<wbr>Resource<wbr>Properties<wbr>Response<wbr>Offer<wbr>Detail</a></span>
+        <span class="property-type"><a href="#organizationresourcepropertiesresponseofferdetail">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Confluent..<wbr>Outputs.<wbr>Organization<wbr>Resource<wbr>Properties<wbr>Response<wbr>Offer<wbr>Detail</a></span>
     </dt>
     <dd>{{% md %}}Confluent offer detail{{% /md %}}</dd>
     <dt class="property-"
@@ -251,7 +251,7 @@ The following output properties are available:
 <a href="#userdetail_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Detail</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#organizationresourcepropertiesresponseuserdetail">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Confluent.<wbr>Outputs.<wbr>Organization<wbr>Resource<wbr>Properties<wbr>Response<wbr>User<wbr>Detail</a></span>
+        <span class="property-type"><a href="#organizationresourcepropertiesresponseuserdetail">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Confluent..<wbr>Outputs.<wbr>Organization<wbr>Resource<wbr>Properties<wbr>Response<wbr>User<wbr>Detail</a></span>
     </dt>
     <dd>{{% md %}}Subscriber detail{{% /md %}}</dd>
 </dl>

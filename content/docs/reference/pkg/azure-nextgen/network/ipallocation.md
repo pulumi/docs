@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.network.IpAllocation resource wi
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 IpAllocation resource.
-Latest API Version: 2020-08-01.
+API Version: 2020-08-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var ipAllocation = new AzureNextGen.Network.Latest.IpAllocation("ipAllocation", new AzureNextGen.Network.Latest.IpAllocationArgs
+        var ipAllocation = new AzureNextGen.Network..IpAllocation("ipAllocation", new AzureNextGen.Network..IpAllocationArgs
         {
             AllocationTags = 
             {
@@ -53,7 +53,7 @@ class MyStack : Stack
 package main
 
 import (
-	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network/latest"
+	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -86,7 +86,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-ip_allocation = azure_nextgen.network.latest.IpAllocation("ipAllocation",
+ip_allocation = azure_nextgen.network.IpAllocation("ipAllocation",
     allocation_tags={
         "VNetID": "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/HypernetVnet1",
     },
@@ -106,7 +106,7 @@ ip_allocation = azure_nextgen.network.latest.IpAllocation("ipAllocation",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const ipAllocation = new azure_nextgen.network.latest.IpAllocation("ipAllocation", {
+const ipAllocation = new azure_nextgen.network.IpAllocation("ipAllocation", {
     allocationTags: {
         VNetID: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/HypernetVnet1",
     },
@@ -382,7 +382,7 @@ The IpAllocation resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#prefixtype_csharp" style="color: inherit; text-decoration: inherit;">Prefix<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#ipversion">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>IPVersion</a></span>
+        <span class="property-type">string | <a href="#ipversion">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>IPVersion</a></span>
     </dt>
     <dd>{{% md %}}The address prefix Type for the IpAllocation.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -400,7 +400,7 @@ The IpAllocation resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#ipallocationtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Ip<wbr>Allocation<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#ipallocationtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Ip<wbr>Allocation<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type for the IpAllocation.{{% /md %}}</dd>
 </dl>
@@ -764,7 +764,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subnet_csharp" style="color: inherit; text-decoration: inherit;">Subnet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Outputs.<wbr>Sub<wbr>Resource<wbr>Response</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Outputs.<wbr>Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The Subnet that using the prefix of this IpAllocation resource.{{% /md %}}</dd>
     <dt class="property-"
@@ -773,7 +773,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#virtualnetwork_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Outputs.<wbr>Sub<wbr>Resource<wbr>Response</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Outputs.<wbr>Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The VirtualNetwork that using the prefix of this IpAllocation resource.{{% /md %}}</dd>
 </dl>
@@ -1085,7 +1085,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:network/latest:IpAllocation test-ipallocation /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/IpAllocations/test-ipallocation 
+$ pulumi import azure-nextgen:network:IpAllocation test-ipallocation /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/IpAllocations/test-ipallocation 
 ```
 
 

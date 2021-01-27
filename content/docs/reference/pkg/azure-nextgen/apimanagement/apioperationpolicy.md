@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.apimanagement.ApiOperationPolicy
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Policy Contract details.
-Latest API Version: 2019-12-01.
+API Version: 2019-12-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var apiOperationPolicy = new AzureNextGen.ApiManagement.Latest.ApiOperationPolicy("apiOperationPolicy", new AzureNextGen.ApiManagement.Latest.ApiOperationPolicyArgs
+        var apiOperationPolicy = new AzureNextGen.ApiManagement..ApiOperationPolicy("apiOperationPolicy", new AzureNextGen.ApiManagement..ApiOperationPolicyArgs
         {
             ApiId = "5600b57e7e8880006a040001",
             Format = "xml",
@@ -51,7 +51,7 @@ class MyStack : Stack
 package main
 
 import (
-	apimanagement "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/apimanagement/latest"
+	apimanagement "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/apimanagement"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -83,7 +83,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-api_operation_policy = azure_nextgen.apimanagement.latest.ApiOperationPolicy("apiOperationPolicy",
+api_operation_policy = azure_nextgen.apimanagement.ApiOperationPolicy("apiOperationPolicy",
     api_id="5600b57e7e8880006a040001",
     format="xml",
     operation_id="5600b57e7e8880006a080001",
@@ -102,7 +102,7 @@ api_operation_policy = azure_nextgen.apimanagement.latest.ApiOperationPolicy("ap
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const apiOperationPolicy = new azure_nextgen.apimanagement.latest.ApiOperationPolicy("apiOperationPolicy", {
+const apiOperationPolicy = new azure_nextgen.apimanagement.ApiOperationPolicy("apiOperationPolicy", {
     apiId: "5600b57e7e8880006a040001",
     format: "xml",
     operationId: "5600b57e7e8880006a080001",
@@ -359,7 +359,7 @@ The ApiOperationPolicy resource accepts the following [input]({{< relref "/docs/
 <a href="#format_csharp" style="color: inherit; text-decoration: inherit;">Format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#policycontentformat">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management.<wbr>Policy<wbr>Content<wbr>Format</a></span>
+        <span class="property-type">string | <a href="#policycontentformat">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management..<wbr>Policy<wbr>Content<wbr>Format</a></span>
     </dt>
     <dd>{{% md %}}Format of the policyContent.{{% /md %}}</dd>
 </dl>
@@ -780,7 +780,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:apimanagement/latest:ApiOperationPolicy policy /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/apis/5600b57e7e8880006a040001/operations/5600b57e7e8880006a080001/policies/policy 
+$ pulumi import azure-nextgen:apimanagement:ApiOperationPolicy policy /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/apis/5600b57e7e8880006a040001/operations/5600b57e7e8880006a080001/policies/policy 
 ```
 
 

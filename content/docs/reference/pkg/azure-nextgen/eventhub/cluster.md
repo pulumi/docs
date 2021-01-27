@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.eventhub.Cluster resource with e
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Single Event Hubs Cluster resource in List or Get operations.
+API Version: 2018-01-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,12 +27,12 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var cluster = new AzureNextGen.EventHub.V20180101Preview.Cluster("cluster", new AzureNextGen.EventHub.V20180101Preview.ClusterArgs
+        var cluster = new AzureNextGen.EventHub..Cluster("cluster", new AzureNextGen.EventHub..ClusterArgs
         {
             ClusterName = "testCluster",
             Location = "South Central US",
             ResourceGroupName = "myResourceGroup",
-            Sku = new AzureNextGen.EventHub.V20180101Preview.Inputs.ClusterSkuArgs
+            Sku = new AzureNextGen.EventHub..Inputs.ClusterSkuArgs
             {
                 Capacity = 1,
                 Name = "Dedicated",
@@ -56,7 +57,7 @@ class MyStack : Stack
 package main
 
 import (
-	eventhub "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/eventhub/v20180101preview"
+	eventhub "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/eventhub"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -92,11 +93,11 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-cluster = azure_nextgen.eventhub.v20180101preview.Cluster("cluster",
+cluster = azure_nextgen.eventhub.Cluster("cluster",
     cluster_name="testCluster",
     location="South Central US",
     resource_group_name="myResourceGroup",
-    sku=azure_nextgen.eventhub.v20180101preview.ClusterSkuArgs(
+    sku=azure_nextgen.eventhub.ClusterSkuArgs(
         capacity=1,
         name="Dedicated",
     ),
@@ -115,7 +116,7 @@ cluster = azure_nextgen.eventhub.v20180101preview.Cluster("cluster",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const cluster = new azure_nextgen.eventhub.v20180101preview.Cluster("cluster", {
+const cluster = new azure_nextgen.eventhub.Cluster("cluster", {
     clusterName: "testCluster",
     location: "South Central US",
     resourceGroupName: "myResourceGroup",
@@ -349,7 +350,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustersku">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Hub.<wbr>Inputs.<wbr>Cluster<wbr>Sku<wbr>Args</a></span>
+        <span class="property-type"><a href="#clustersku">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Hub..<wbr>Inputs.<wbr>Cluster<wbr>Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties of the cluster SKU.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -821,7 +822,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#clusterskuname">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Hub.<wbr>Cluster<wbr>Sku<wbr>Name</a></span>
+        <span class="property-type">string | <a href="#clusterskuname">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Hub..<wbr>Cluster<wbr>Sku<wbr>Name</a></span>
     </dt>
     <dd>{{% md %}}Name of this SKU.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1041,7 +1042,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:eventhub/v20180101preview:Cluster testCluster /subscriptions/5f750a97-50d9-4e36-8081-c9ee4c0210d4/resourceGroups/myResourceGroup/providers/Microsoft.EventHub/clusters/testCluster 
+$ pulumi import azure-nextgen:eventhub:Cluster testCluster /subscriptions/5f750a97-50d9-4e36-8081-c9ee4c0210d4/resourceGroups/myResourceGroup/providers/Microsoft.EventHub/clusters/testCluster 
 ```
 
 

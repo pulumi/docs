@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.databoxedge.Share resource with 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Represents a share on the  Data Box Edge/Gateway device.
-Latest API Version: 2020-09-01.
+API Version: 2020-09-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,10 +27,10 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var share = new AzureNextGen.DataBoxEdge.Latest.Share("share", new AzureNextGen.DataBoxEdge.Latest.ShareArgs
+        var share = new AzureNextGen.DataBoxEdge..Share("share", new AzureNextGen.DataBoxEdge..ShareArgs
         {
             AccessProtocol = "SMB",
-            AzureContainerInfo = new AzureNextGen.DataBoxEdge.Latest.Inputs.AzureContainerInfoArgs
+            AzureContainerInfo = new AzureNextGen.DataBoxEdge..Inputs.AzureContainerInfoArgs
             {
                 ContainerName = "testContainerSMB",
                 DataFormat = "BlockBlob",
@@ -45,7 +45,7 @@ class MyStack : Stack
             ShareStatus = "Online",
             UserAccessRights = 
             {
-                new AzureNextGen.DataBoxEdge.Latest.Inputs.UserAccessRightArgs
+                new AzureNextGen.DataBoxEdge..Inputs.UserAccessRightArgs
                 {
                     AccessType = "Change",
                     UserId = "/subscriptions/4385cf00-2d3a-425a-832f-f4285b1c9dce/resourceGroups/GroupForEdgeAutomation/providers/Microsoft.DataBoxEdge/dataBoxEdgeDevices/testedgedevice/users/user2",
@@ -66,7 +66,7 @@ class MyStack : Stack
 package main
 
 import (
-	databoxedge "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/databoxedge/latest"
+	databoxedge "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/databoxedge"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -110,9 +110,9 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-share = azure_nextgen.databoxedge.latest.Share("share",
+share = azure_nextgen.databoxedge.Share("share",
     access_protocol="SMB",
-    azure_container_info=azure_nextgen.databoxedge.latest.AzureContainerInfoArgs(
+    azure_container_info=azure_nextgen.databoxedge.AzureContainerInfoArgs(
         container_name="testContainerSMB",
         data_format="BlockBlob",
         storage_account_credential_id="/subscriptions/4385cf00-2d3a-425a-832f-f4285b1c9dce/resourceGroups/GroupForEdgeAutomation/providers/Microsoft.DataBoxEdge/dataBoxEdgeDevices/testedgedevice/storageAccountCredentials/sac1",
@@ -124,7 +124,7 @@ share = azure_nextgen.databoxedge.latest.Share("share",
     name="smbshare",
     resource_group_name="GroupForEdgeAutomation",
     share_status="Online",
-    user_access_rights=[azure_nextgen.databoxedge.latest.UserAccessRightArgs(
+    user_access_rights=[azure_nextgen.databoxedge.UserAccessRightArgs(
         access_type="Change",
         user_id="/subscriptions/4385cf00-2d3a-425a-832f-f4285b1c9dce/resourceGroups/GroupForEdgeAutomation/providers/Microsoft.DataBoxEdge/dataBoxEdgeDevices/testedgedevice/users/user2",
     )])
@@ -139,7 +139,7 @@ share = azure_nextgen.databoxedge.latest.Share("share",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const share = new azure_nextgen.databoxedge.latest.Share("share", {
+const share = new azure_nextgen.databoxedge.Share("share", {
     accessProtocol: "SMB",
     azureContainerInfo: {
         containerName: "testContainerSMB",
@@ -352,7 +352,7 @@ The Share resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#accessprotocol_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#shareaccessprotocol">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Share<wbr>Access<wbr>Protocol</a></span>
+        <span class="property-type">string | <a href="#shareaccessprotocol">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge..<wbr>Share<wbr>Access<wbr>Protocol</a></span>
     </dt>
     <dd>{{% md %}}Access protocol to be used by the share.{{% /md %}}</dd>
     <dt class="property-required"
@@ -370,7 +370,7 @@ The Share resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#monitoringstatus_csharp" style="color: inherit; text-decoration: inherit;">Monitoring<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#monitoringstatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Monitoring<wbr>Status</a></span>
+        <span class="property-type">string | <a href="#monitoringstatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge..<wbr>Monitoring<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}Current monitoring status of the share.{{% /md %}}</dd>
     <dt class="property-required"
@@ -397,7 +397,7 @@ The Share resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#sharestatus_csharp" style="color: inherit; text-decoration: inherit;">Share<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#sharestatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Share<wbr>Status</a></span>
+        <span class="property-type">string | <a href="#sharestatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge..<wbr>Share<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}Current status of the share.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -406,7 +406,7 @@ The Share resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#azurecontainerinfo_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Container<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurecontainerinfo">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Inputs.<wbr>Azure<wbr>Container<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurecontainerinfo">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge..<wbr>Inputs.<wbr>Azure<wbr>Container<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Azure container mapping for the share.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -415,7 +415,7 @@ The Share resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#clientaccessrights_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Access<wbr>Rights</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clientaccessright">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Inputs.<wbr>Client<wbr>Access<wbr>Right<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#clientaccessright">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge..<wbr>Inputs.<wbr>Client<wbr>Access<wbr>Right<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of IP addresses and corresponding access rights on the share(required for NFS protocol).{{% /md %}}</dd>
     <dt class="property-optional"
@@ -424,7 +424,7 @@ The Share resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#datapolicy_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#datapolicy">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Data<wbr>Policy</a></span>
+        <span class="property-type">string | <a href="#datapolicy">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge..<wbr>Data<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Data policy of the share.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -442,7 +442,7 @@ The Share resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#refreshdetails_csharp" style="color: inherit; text-decoration: inherit;">Refresh<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#refreshdetails">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Inputs.<wbr>Refresh<wbr>Details<wbr>Args</a></span>
+        <span class="property-type"><a href="#refreshdetails">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge..<wbr>Inputs.<wbr>Refresh<wbr>Details<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Details of the refresh job on this share.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -451,7 +451,7 @@ The Share resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#useraccessrights_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Access<wbr>Rights</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#useraccessright">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Inputs.<wbr>User<wbr>Access<wbr>Right<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#useraccessright">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge..<wbr>Inputs.<wbr>User<wbr>Access<wbr>Right<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Mapping of users and corresponding access rights on the share (required for SMB protocol).{{% /md %}}</dd>
 </dl>
@@ -824,7 +824,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sharemappings_csharp" style="color: inherit; text-decoration: inherit;">Share<wbr>Mappings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mountpointmapresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Outputs.<wbr>Mount<wbr>Point<wbr>Map<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#mountpointmapresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge..<wbr>Outputs.<wbr>Mount<wbr>Point<wbr>Map<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Share mount point to the role.{{% /md %}}</dd>
     <dt class="property-"
@@ -833,7 +833,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#systemdata_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
+        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge..<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Share on ASE device{{% /md %}}</dd>
     <dt class="property-"
@@ -1050,7 +1050,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dataformat_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#azurecontainerdataformat">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Azure<wbr>Container<wbr>Data<wbr>Format</a></span>
+        <span class="property-type">string | <a href="#azurecontainerdataformat">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge..<wbr>Azure<wbr>Container<wbr>Data<wbr>Format</a></span>
     </dt>
     <dd>{{% md %}}Storage format used for the file represented by the share.{{% /md %}}</dd>
     <dt class="property-required"
@@ -1309,7 +1309,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accesspermission_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Permission</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#clientpermissiontype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Client<wbr>Permission<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#clientpermissiontype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge..<wbr>Client<wbr>Permission<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of access to be allowed for the client.{{% /md %}}</dd>
     <dt class="property-required"
@@ -2561,7 +2561,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accesstype_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#shareaccesstype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Share<wbr>Access<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#shareaccesstype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge..<wbr>Share<wbr>Access<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of access to be allowed for the user.{{% /md %}}</dd>
     <dt class="property-required"
@@ -2751,7 +2751,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:databoxedge/latest:Share smbshare /subscriptions/4385cf00-2d3a-425a-832f-f4285b1c9dce/resourceGroups/GroupForEdgeAutomation/providers/Microsoft.DataBoxEdge/dataBoxEdgeDevices/testedgedevice/shares/smbshare 
+$ pulumi import azure-nextgen:databoxedge:Share smbshare /subscriptions/4385cf00-2d3a-425a-832f-f4285b1c9dce/resourceGroups/GroupForEdgeAutomation/providers/Microsoft.DataBoxEdge/dataBoxEdgeDevices/testedgedevice/shares/smbshare 
 ```
 
 

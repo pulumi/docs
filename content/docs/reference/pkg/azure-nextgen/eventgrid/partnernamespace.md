@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.eventgrid.PartnerNamespace resou
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 EventGrid Partner Namespace.
+API Version: 2020-04-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var partnerNamespace = new AzureNextGen.EventGrid.V20200401Preview.PartnerNamespace("partnerNamespace", new AzureNextGen.EventGrid.V20200401Preview.PartnerNamespaceArgs
+        var partnerNamespace = new AzureNextGen.EventGrid..PartnerNamespace("partnerNamespace", new AzureNextGen.EventGrid..PartnerNamespaceArgs
         {
             Location = "westus",
             PartnerNamespaceName = "examplePartnerNamespaceName1",
@@ -52,7 +53,7 @@ class MyStack : Stack
 package main
 
 import (
-	eventgrid "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/eventgrid/v20200401preview"
+	eventgrid "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/eventgrid"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -85,7 +86,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-partner_namespace = azure_nextgen.eventgrid.v20200401preview.PartnerNamespace("partnerNamespace",
+partner_namespace = azure_nextgen.eventgrid.PartnerNamespace("partnerNamespace",
     location="westus",
     partner_namespace_name="examplePartnerNamespaceName1",
     partner_registration_fully_qualified_id="/subscriptions/5b4b650e-28b9-4790-b3ab-ddbd88d727c4/resourceGroups/examplerg/providers/Microsoft.EventGrid/partnerRegistrations/ContosoCorpAccount1",
@@ -105,7 +106,7 @@ partner_namespace = azure_nextgen.eventgrid.v20200401preview.PartnerNamespace("p
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const partnerNamespace = new azure_nextgen.eventgrid.v20200401preview.PartnerNamespace("partnerNamespace", {
+const partnerNamespace = new azure_nextgen.eventgrid.PartnerNamespace("partnerNamespace", {
     location: "westus",
     partnerNamespaceName: "examplePartnerNamespaceName1",
     partnerRegistrationFullyQualifiedId: "/subscriptions/5b4b650e-28b9-4790-b3ab-ddbd88d727c4/resourceGroups/examplerg/providers/Microsoft.EventGrid/partnerRegistrations/ContosoCorpAccount1",
@@ -730,7 +731,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:eventgrid/v20200401preview:PartnerNamespace examplePartnerNamespaceName1 /subscriptions/5b4b650e-28b9-4790-b3ab-ddbd88d727c4/resourceGroups/examplerg/providers/Microsoft.EventGrid/partnerNamespaces/examplePartnerNamespaceName1 
+$ pulumi import azure-nextgen:eventgrid:PartnerNamespace examplePartnerNamespaceName1 /subscriptions/5b4b650e-28b9-4790-b3ab-ddbd88d727c4/resourceGroups/examplerg/providers/Microsoft.EventGrid/partnerNamespaces/examplePartnerNamespaceName1 
 ```
 
 

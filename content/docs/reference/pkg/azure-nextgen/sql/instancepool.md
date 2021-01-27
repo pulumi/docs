@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.sql.InstancePool resource with e
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 An Azure SQL instance pool.
+API Version: 2020-08-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,13 +27,13 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var instancePool = new AzureNextGen.Sql.V20200801Preview.InstancePool("instancePool", new AzureNextGen.Sql.V20200801Preview.InstancePoolArgs
+        var instancePool = new AzureNextGen.Sql..InstancePool("instancePool", new AzureNextGen.Sql..InstancePoolArgs
         {
             InstancePoolName = "testIP",
             LicenseType = "LicenseIncluded",
             Location = "japaneast",
             ResourceGroupName = "group1",
-            Sku = new AzureNextGen.Sql.V20200801Preview.Inputs.SkuArgs
+            Sku = new AzureNextGen.Sql..Inputs.SkuArgs
             {
                 Family = "Gen5",
                 Name = "GP_Gen5",
@@ -59,7 +60,7 @@ class MyStack : Stack
 package main
 
 import (
-	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql/v20200801preview"
+	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -98,12 +99,12 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-instance_pool = azure_nextgen.sql.v20200801preview.InstancePool("instancePool",
+instance_pool = azure_nextgen.sql.InstancePool("instancePool",
     instance_pool_name="testIP",
     license_type="LicenseIncluded",
     location="japaneast",
     resource_group_name="group1",
-    sku=azure_nextgen.sql.v20200801preview.SkuArgs(
+    sku=azure_nextgen.sql.SkuArgs(
         family="Gen5",
         name="GP_Gen5",
         tier="GeneralPurpose",
@@ -124,7 +125,7 @@ instance_pool = azure_nextgen.sql.v20200801preview.InstancePool("instancePool",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const instancePool = new azure_nextgen.sql.v20200801preview.InstancePool("instancePool", {
+const instancePool = new azure_nextgen.sql.InstancePool("instancePool", {
     instancePoolName: "testIP",
     licenseType: "LicenseIncluded",
     location: "japaneast",
@@ -155,13 +156,13 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var instancePool = new AzureNextGen.Sql.V20200801Preview.InstancePool("instancePool", new AzureNextGen.Sql.V20200801Preview.InstancePoolArgs
+        var instancePool = new AzureNextGen.Sql..InstancePool("instancePool", new AzureNextGen.Sql..InstancePoolArgs
         {
             InstancePoolName = "testIP",
             LicenseType = "LicenseIncluded",
             Location = "japaneast",
             ResourceGroupName = "group1",
-            Sku = new AzureNextGen.Sql.V20200801Preview.Inputs.SkuArgs
+            Sku = new AzureNextGen.Sql..Inputs.SkuArgs
             {
                 Family = "Gen5",
                 Name = "GP_Gen5",
@@ -184,7 +185,7 @@ class MyStack : Stack
 package main
 
 import (
-	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql/v20200801preview"
+	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -220,12 +221,12 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-instance_pool = azure_nextgen.sql.v20200801preview.InstancePool("instancePool",
+instance_pool = azure_nextgen.sql.InstancePool("instancePool",
     instance_pool_name="testIP",
     license_type="LicenseIncluded",
     location="japaneast",
     resource_group_name="group1",
-    sku=azure_nextgen.sql.v20200801preview.SkuArgs(
+    sku=azure_nextgen.sql.SkuArgs(
         family="Gen5",
         name="GP_Gen5",
         tier="GeneralPurpose",
@@ -243,7 +244,7 @@ instance_pool = azure_nextgen.sql.v20200801preview.InstancePool("instancePool",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const instancePool = new azure_nextgen.sql.v20200801preview.InstancePool("instancePool", {
+const instancePool = new azure_nextgen.sql.InstancePool("instancePool", {
     instancePoolName: "testIP",
     licenseType: "LicenseIncluded",
     location: "japaneast",
@@ -459,7 +460,7 @@ The InstancePool resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#licensetype_csharp" style="color: inherit; text-decoration: inherit;">License<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#instancepoollicensetype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql.<wbr>Instance<wbr>Pool<wbr>License<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#instancepoollicensetype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql..<wbr>Instance<wbr>Pool<wbr>License<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The license type. Possible values are 'LicenseIncluded' (price for SQL license is included) and 'BasePrice' (without SQL license price).{{% /md %}}</dd>
     <dt class="property-required"
@@ -504,7 +505,7 @@ The InstancePool resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sku">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql.<wbr>Inputs.<wbr>Sku<wbr>Args</a></span>
+        <span class="property-type"><a href="#sku">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql..<wbr>Inputs.<wbr>Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The name and tier of the SKU.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1357,7 +1358,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:sql/v20200801preview:InstancePool testIP /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/group1/providers/Microsoft.Sql/instancePools/testIP 
+$ pulumi import azure-nextgen:sql:InstancePool testIP /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/group1/providers/Microsoft.Sql/instancePools/testIP 
 ```
 
 

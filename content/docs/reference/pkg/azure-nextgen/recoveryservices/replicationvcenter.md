@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.recoveryservices.ReplicationvCen
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 vCenter definition.
-Latest API Version: 2018-07-10.
+API Version: 2018-07-10.
 
 {{% examples %}}
 ## Example Usage
@@ -27,10 +27,10 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var replicationvCenter = new AzureNextGen.RecoveryServices.Latest.ReplicationvCenter("replicationvCenter", new AzureNextGen.RecoveryServices.Latest.ReplicationvCenterArgs
+        var replicationvCenter = new AzureNextGen.RecoveryServices..ReplicationvCenter("replicationvCenter", new AzureNextGen.RecoveryServices..ReplicationvCenterArgs
         {
             FabricName = "MadhaviFabric",
-            Properties = new AzureNextGen.RecoveryServices.Latest.Inputs.AddVCenterRequestPropertiesArgs
+            Properties = new AzureNextGen.RecoveryServices..Inputs.AddVCenterRequestPropertiesArgs
             {
                 FriendlyName = "esx-78",
                 IpAddress = "inmtest78",
@@ -56,7 +56,7 @@ class MyStack : Stack
 package main
 
 import (
-	recoveryservices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/recoveryservices/latest"
+	recoveryservices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/recoveryservices"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -92,9 +92,9 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-replicationv_center = azure_nextgen.recoveryservices.latest.ReplicationvCenter("replicationvCenter",
+replicationv_center = azure_nextgen.recoveryservices.ReplicationvCenter("replicationvCenter",
     fabric_name="MadhaviFabric",
-    properties=azure_nextgen.recoveryservices.latest.AddVCenterRequestPropertiesArgs(
+    properties=azure_nextgen.recoveryservices.AddVCenterRequestPropertiesArgs(
         friendly_name="esx-78",
         ip_address="inmtest78",
         port="443",
@@ -115,7 +115,7 @@ replicationv_center = azure_nextgen.recoveryservices.latest.ReplicationvCenter("
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const replicationvCenter = new azure_nextgen.recoveryservices.latest.ReplicationvCenter("replicationvCenter", {
+const replicationvCenter = new azure_nextgen.recoveryservices.ReplicationvCenter("replicationvCenter", {
     fabricName: "MadhaviFabric",
     properties: {
         friendlyName: "esx-78",
@@ -358,7 +358,7 @@ The ReplicationvCenter resource accepts the following [input]({{< relref "/docs/
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#addvcenterrequestproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Add<wbr>VCenter<wbr>Request<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#addvcenterrequestproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Add<wbr>VCenter<wbr>Request<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The properties of an add vCenter request.{{% /md %}}</dd>
 </dl>
@@ -1009,7 +1009,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#innerhealtherrors_csharp" style="color: inherit; text-decoration: inherit;">Inner<wbr>Health<wbr>Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#innerhealtherrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Inner<wbr>Health<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#innerhealtherrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Inner<wbr>Health<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The inner health errors. HealthError having a list of HealthError as child errors is problematic. InnerHealthError is used because this will prevent an infinite loop of structures when Hydra tries to auto-generate the contract. We are exposing the related health errors as inner health errors and all API consumers can utilize this in the same fashion as Exception -&gt; InnerException.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1970,7 +1970,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#healtherrors_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healtherrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Health<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#healtherrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Health<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The health errors for this VCenter.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2359,7 +2359,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:recoveryservices/latest:ReplicationvCenter esx-78 /Subscriptions/7c943c1b-5122-4097-90c8-861411bdd574/resourceGroups/MadhaviVRG/providers/Microsoft.RecoveryServices/vaults/MadhaviVault/replicationFabrics/239f778f368e34f78216d81f030725cdf2033174b47879b9f2eeede06fdd9c4d/replicationvCenters/esx-78 
+$ pulumi import azure-nextgen:recoveryservices:ReplicationvCenter esx-78 /Subscriptions/7c943c1b-5122-4097-90c8-861411bdd574/resourceGroups/MadhaviVRG/providers/Microsoft.RecoveryServices/vaults/MadhaviVault/replicationFabrics/239f778f368e34f78216d81f030725cdf2033174b47879b9f2eeede06fdd9c4d/replicationvCenters/esx-78 
 ```
 
 

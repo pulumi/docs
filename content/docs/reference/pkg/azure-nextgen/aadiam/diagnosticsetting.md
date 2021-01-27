@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.aadiam.DiagnosticSetting resourc
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The diagnostic setting resource.
-Latest API Version: 2017-04-01.
+API Version: 2017-04-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,17 +27,17 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var diagnosticSetting = new AzureNextGen.AadIam.Latest.DiagnosticSetting("diagnosticSetting", new AzureNextGen.AadIam.Latest.DiagnosticSettingArgs
+        var diagnosticSetting = new AzureNextGen.AadIam..DiagnosticSetting("diagnosticSetting", new AzureNextGen.AadIam..DiagnosticSettingArgs
         {
             EventHubAuthorizationRuleId = "/subscriptions/1a66ce04-b633-4a0b-b2bc-a912ec8986a6/resourceGroups/montest/providers/microsoft.eventhub/namespaces/mynamespace/eventhubs/myeventhub/authorizationrules/myrule",
             EventHubName = "myeventhub",
             Logs = 
             {
-                new AzureNextGen.AadIam.Latest.Inputs.LogSettingsArgs
+                new AzureNextGen.AadIam..Inputs.LogSettingsArgs
                 {
                     Category = "AuditLogs",
                     Enabled = true,
-                    RetentionPolicy = new AzureNextGen.AadIam.Latest.Inputs.RetentionPolicyArgs
+                    RetentionPolicy = new AzureNextGen.AadIam..Inputs.RetentionPolicyArgs
                     {
                         Days = 0,
                         Enabled = false,
@@ -62,7 +62,7 @@ class MyStack : Stack
 package main
 
 import (
-	aadiam "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/aadiam/latest"
+	aadiam "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/aadiam"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -102,13 +102,13 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-diagnostic_setting = azure_nextgen.aadiam.latest.DiagnosticSetting("diagnosticSetting",
+diagnostic_setting = azure_nextgen.aadiam.DiagnosticSetting("diagnosticSetting",
     event_hub_authorization_rule_id="/subscriptions/1a66ce04-b633-4a0b-b2bc-a912ec8986a6/resourceGroups/montest/providers/microsoft.eventhub/namespaces/mynamespace/eventhubs/myeventhub/authorizationrules/myrule",
     event_hub_name="myeventhub",
-    logs=[azure_nextgen.aadiam.latest.LogSettingsArgs(
+    logs=[azure_nextgen.aadiam.LogSettingsArgs(
         category="AuditLogs",
         enabled=True,
-        retention_policy=azure_nextgen.aadiam.latest.RetentionPolicyArgs(
+        retention_policy=azure_nextgen.aadiam.RetentionPolicyArgs(
             days=0,
             enabled=False,
         ),
@@ -127,7 +127,7 @@ diagnostic_setting = azure_nextgen.aadiam.latest.DiagnosticSetting("diagnosticSe
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const diagnosticSetting = new azure_nextgen.aadiam.latest.DiagnosticSetting("diagnosticSetting", {
+const diagnosticSetting = new azure_nextgen.aadiam.DiagnosticSetting("diagnosticSetting", {
     eventHubAuthorizationRuleId: "/subscriptions/1a66ce04-b633-4a0b-b2bc-a912ec8986a6/resourceGroups/montest/providers/microsoft.eventhub/namespaces/mynamespace/eventhubs/myeventhub/authorizationrules/myrule",
     eventHubName: "myeventhub",
     logs: [{
@@ -363,7 +363,7 @@ The DiagnosticSetting resource accepts the following [input]({{< relref "/docs/i
 <a href="#logs_csharp" style="color: inherit; text-decoration: inherit;">Logs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#logsettings">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Aad<wbr>Iam.<wbr>Inputs.<wbr>Log<wbr>Settings<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#logsettings">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Aad<wbr>Iam..<wbr>Inputs.<wbr>Log<wbr>Settings<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of logs settings.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -774,7 +774,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#category_csharp" style="color: inherit; text-decoration: inherit;">Category</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#category">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Aad<wbr>Iam.<wbr>Category</a></span>
+        <span class="property-type">string | <a href="#category">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Aad<wbr>Iam..<wbr>Category</a></span>
     </dt>
     <dd>{{% md %}}Name of a Diagnostic Log category for a resource type this setting is applied to. To obtain the list of Diagnostic Log categories for a resource, first perform a GET diagnostic settings operation.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -783,7 +783,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retentionpolicy_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#retentionpolicy">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Aad<wbr>Iam.<wbr>Inputs.<wbr>Retention<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#retentionpolicy">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Aad<wbr>Iam..<wbr>Inputs.<wbr>Retention<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The retention policy for this log.{{% /md %}}</dd>
 </dl>
@@ -917,7 +917,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retentionpolicy_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#retentionpolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Aad<wbr>Iam.<wbr>Inputs.<wbr>Retention<wbr>Policy<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#retentionpolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Aad<wbr>Iam..<wbr>Inputs.<wbr>Retention<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The retention policy for this log.{{% /md %}}</dd>
 </dl>
@@ -1223,7 +1223,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:aadiam/latest:DiagnosticSetting mysetting providers/microsoft.aadiam/diagnosticSettings/mysetting 
+$ pulumi import azure-nextgen:aadiam:DiagnosticSetting mysetting providers/microsoft.aadiam/diagnosticSettings/mysetting 
 ```
 
 

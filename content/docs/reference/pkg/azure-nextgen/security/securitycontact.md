@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.security.SecurityContact resourc
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Contact details and configurations for notifications coming from Azure Security Center.
+API Version: 2020-01-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var securityContact = new AzureNextGen.Security.V20200101Preview.SecurityContact("securityContact", new AzureNextGen.Security.V20200101Preview.SecurityContactArgs
+        var securityContact = new AzureNextGen.Security..SecurityContact("securityContact", new AzureNextGen.Security..SecurityContactArgs
         {
             SecurityContactName = "default",
         });
@@ -44,7 +45,7 @@ class MyStack : Stack
 package main
 
 import (
-	security "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/security/v20200101preview"
+	security "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/security"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -70,7 +71,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-security_contact = azure_nextgen.security.v20200101preview.SecurityContact("securityContact", security_contact_name="default")
+security_contact = azure_nextgen.security.SecurityContact("securityContact", security_contact_name="default")
 
 ```
 
@@ -82,7 +83,7 @@ security_contact = azure_nextgen.security.v20200101preview.SecurityContact("secu
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const securityContact = new azure_nextgen.security.v20200101preview.SecurityContact("securityContact", {securityContactName: "default"});
+const securityContact = new azure_nextgen.security.SecurityContact("securityContact", {securityContactName: "default"});
 
 ```
 
@@ -371,7 +372,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#alertnotifications_csharp" style="color: inherit; text-decoration: inherit;">Alert<wbr>Notifications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securitycontactpropertiesresponsealertnotifications">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security.<wbr>Outputs.<wbr>Security<wbr>Contact<wbr>Properties<wbr>Response<wbr>Alert<wbr>Notifications</a></span>
+        <span class="property-type"><a href="#securitycontactpropertiesresponsealertnotifications">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security..<wbr>Outputs.<wbr>Security<wbr>Contact<wbr>Properties<wbr>Response<wbr>Alert<wbr>Notifications</a></span>
     </dt>
     <dd>{{% md %}}Defines whether to send email notifications about new security alerts{{% /md %}}</dd>
     <dt class="property-"
@@ -389,7 +390,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#notificationsbyrole_csharp" style="color: inherit; text-decoration: inherit;">Notifications<wbr>By<wbr>Role</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securitycontactpropertiesresponsenotificationsbyrole">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security.<wbr>Outputs.<wbr>Security<wbr>Contact<wbr>Properties<wbr>Response<wbr>Notifications<wbr>By<wbr>Role</a></span>
+        <span class="property-type"><a href="#securitycontactpropertiesresponsenotificationsbyrole">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security..<wbr>Outputs.<wbr>Security<wbr>Contact<wbr>Properties<wbr>Response<wbr>Notifications<wbr>By<wbr>Role</a></span>
     </dt>
     <dd>{{% md %}}Defines whether to send email notifications from Azure Security Center to persons with specific RBAC roles on the subscription.{{% /md %}}</dd>
     <dt class="property-"
@@ -822,7 +823,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:security/v20200101preview:SecurityContact default /subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23/providers/Microsoft.Security/securityContacts/default 
+$ pulumi import azure-nextgen:security:SecurityContact default /subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23/providers/Microsoft.Security/securityContacts/default 
 ```
 
 

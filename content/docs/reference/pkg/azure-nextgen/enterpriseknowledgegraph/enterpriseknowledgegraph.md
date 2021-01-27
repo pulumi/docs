@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.enterpriseknowledgegraph.Enterpr
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 EnterpriseKnowledgeGraph resource definition
-Latest API Version: 2018-12-03.
+API Version: 2018-12-03.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var enterpriseKnowledgeGraph = new AzureNextGen.EnterpriseKnowledgeGraph.Latest.EnterpriseKnowledgeGraph("enterpriseKnowledgeGraph", new AzureNextGen.EnterpriseKnowledgeGraph.Latest.EnterpriseKnowledgeGraphArgs
+        var enterpriseKnowledgeGraph = new AzureNextGen.EnterpriseKnowledgeGraph..EnterpriseKnowledgeGraph("enterpriseKnowledgeGraph", new AzureNextGen.EnterpriseKnowledgeGraph..EnterpriseKnowledgeGraphArgs
         {
             Location = "West US",
             Properties = ,
@@ -53,7 +53,7 @@ class MyStack : Stack
 package main
 
 import (
-	enterpriseknowledgegraph "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/enterpriseknowledgegraph/latest"
+	enterpriseknowledgegraph "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/enterpriseknowledgegraph"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -86,9 +86,9 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-enterprise_knowledge_graph = azure_nextgen.enterpriseknowledgegraph.latest.EnterpriseKnowledgeGraph("enterpriseKnowledgeGraph",
+enterprise_knowledge_graph = azure_nextgen.enterpriseknowledgegraph.EnterpriseKnowledgeGraph("enterpriseKnowledgeGraph",
     location="West US",
-    properties=azure_nextgen.enterpriseknowledgegraph.latest.EnterpriseKnowledgeGraphPropertiesArgs(),
+    properties=azure_nextgen.enterpriseknowledgegraph.EnterpriseKnowledgeGraphPropertiesArgs(),
     resource_group_name="OneResourceGroupName",
     resource_name="sampleekgname",
     tags={
@@ -106,7 +106,7 @@ enterprise_knowledge_graph = azure_nextgen.enterpriseknowledgegraph.latest.Enter
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const enterpriseKnowledgeGraph = new azure_nextgen.enterpriseknowledgegraph.latest.EnterpriseKnowledgeGraph("enterpriseKnowledgeGraph", {
+const enterpriseKnowledgeGraph = new azure_nextgen.enterpriseknowledgegraph.EnterpriseKnowledgeGraph("enterpriseKnowledgeGraph", {
     location: "West US",
     properties: {},
     resourceGroupName: "OneResourceGroupName",
@@ -337,7 +337,7 @@ The EnterpriseKnowledgeGraph resource accepts the following [input]({{< relref "
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#enterpriseknowledgegraphproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Enterprise<wbr>Knowledge<wbr>Graph.<wbr>Inputs.<wbr>Enterprise<wbr>Knowledge<wbr>Graph<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#enterpriseknowledgegraphproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Enterprise<wbr>Knowledge<wbr>Graph..<wbr>Inputs.<wbr>Enterprise<wbr>Knowledge<wbr>Graph<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to EnterpriseKnowledgeGraph resource{{% /md %}}</dd>
     <dt class="property-optional"
@@ -346,7 +346,7 @@ The EnterpriseKnowledgeGraph resource accepts the following [input]({{< relref "
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sku">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Enterprise<wbr>Knowledge<wbr>Graph.<wbr>Inputs.<wbr>Sku<wbr>Args</a></span>
+        <span class="property-type"><a href="#sku">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Enterprise<wbr>Knowledge<wbr>Graph..<wbr>Inputs.<wbr>Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the SKU of the resource.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -969,7 +969,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#skuname">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Enterprise<wbr>Knowledge<wbr>Graph.<wbr>Sku<wbr>Name</a></span>
+        <span class="property-type">string | <a href="#skuname">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Enterprise<wbr>Knowledge<wbr>Graph..<wbr>Sku<wbr>Name</a></span>
     </dt>
     <dd>{{% md %}}The sku name{{% /md %}}</dd>
 </dl>
@@ -1125,7 +1125,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:enterpriseknowledgegraph/latest:EnterpriseKnowledgeGraph samplename someid 
+$ pulumi import azure-nextgen:enterpriseknowledgegraph:EnterpriseKnowledgeGraph samplename someid 
 ```
 
 

@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.machinelearningcompute.Operation
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Instance of an Azure ML Operationalization Cluster resource.
+API Version: 2017-08-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,15 +27,15 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var operationalizationCluster = new AzureNextGen.MachineLearningCompute.V20170801Preview.OperationalizationCluster("operationalizationCluster", new AzureNextGen.MachineLearningCompute.V20170801Preview.OperationalizationClusterArgs
+        var operationalizationCluster = new AzureNextGen.MachineLearningCompute..OperationalizationCluster("operationalizationCluster", new AzureNextGen.MachineLearningCompute..OperationalizationClusterArgs
         {
             ClusterName = "myCluster",
             ClusterType = "ACS",
-            ContainerService = new AzureNextGen.MachineLearningCompute.V20170801Preview.Inputs.AcsClusterPropertiesArgs
+            ContainerService = new AzureNextGen.MachineLearningCompute..Inputs.AcsClusterPropertiesArgs
             {
-                OrchestratorProperties = new AzureNextGen.MachineLearningCompute.V20170801Preview.Inputs.KubernetesClusterPropertiesArgs
+                OrchestratorProperties = new AzureNextGen.MachineLearningCompute..Inputs.KubernetesClusterPropertiesArgs
                 {
-                    ServicePrincipal = new AzureNextGen.MachineLearningCompute.V20170801Preview.Inputs.ServicePrincipalPropertiesArgs
+                    ServicePrincipal = new AzureNextGen.MachineLearningCompute..Inputs.ServicePrincipalPropertiesArgs
                     {
                         ClientId = "abcdefghijklmnopqrt",
                         Secret = "<secret>",
@@ -43,9 +44,9 @@ class MyStack : Stack
                 OrchestratorType = "Kubernetes",
             },
             Description = "My Operationalization Cluster",
-            GlobalServiceConfiguration = new AzureNextGen.MachineLearningCompute.V20170801Preview.Inputs.GlobalServiceConfigurationArgs
+            GlobalServiceConfiguration = new AzureNextGen.MachineLearningCompute..Inputs.GlobalServiceConfigurationArgs
             {
-                Ssl = new AzureNextGen.MachineLearningCompute.V20170801Preview.Inputs.SslConfigurationArgs
+                Ssl = new AzureNextGen.MachineLearningCompute..Inputs.SslConfigurationArgs
                 {
                     Cert = "afjdklq2131casfakld=",
                     Cname = "foo.bar.com",
@@ -75,7 +76,7 @@ class MyStack : Stack
 package main
 
 import (
-	machinelearningcompute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/machinelearningcompute/v20170801preview"
+	machinelearningcompute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/machinelearningcompute"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -126,12 +127,12 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-operationalization_cluster = azure_nextgen.machinelearningcompute.v20170801preview.OperationalizationCluster("operationalizationCluster",
+operationalization_cluster = azure_nextgen.machinelearningcompute.OperationalizationCluster("operationalizationCluster",
     cluster_name="myCluster",
     cluster_type="ACS",
-    container_service=azure_nextgen.machinelearningcompute.v20170801preview.AcsClusterPropertiesArgs(
-        orchestrator_properties=azure_nextgen.machinelearningcompute.v20170801preview.KubernetesClusterPropertiesArgs(
-            service_principal=azure_nextgen.machinelearningcompute.v20170801preview.ServicePrincipalPropertiesArgs(
+    container_service=azure_nextgen.machinelearningcompute.AcsClusterPropertiesArgs(
+        orchestrator_properties=azure_nextgen.machinelearningcompute.KubernetesClusterPropertiesArgs(
+            service_principal=azure_nextgen.machinelearningcompute.ServicePrincipalPropertiesArgs(
                 client_id="abcdefghijklmnopqrt",
                 secret="<secret>",
             ),
@@ -139,8 +140,8 @@ operationalization_cluster = azure_nextgen.machinelearningcompute.v20170801previ
         orchestrator_type="Kubernetes",
     ),
     description="My Operationalization Cluster",
-    global_service_configuration=azure_nextgen.machinelearningcompute.v20170801preview.GlobalServiceConfigurationArgs(
-        ssl=azure_nextgen.machinelearningcompute.v20170801preview.SslConfigurationArgs(
+    global_service_configuration=azure_nextgen.machinelearningcompute.GlobalServiceConfigurationArgs(
+        ssl=azure_nextgen.machinelearningcompute.SslConfigurationArgs(
             cert="afjdklq2131casfakld=",
             cname="foo.bar.com",
             key="flksdafkldsajf=",
@@ -164,7 +165,7 @@ operationalization_cluster = azure_nextgen.machinelearningcompute.v20170801previ
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const operationalizationCluster = new azure_nextgen.machinelearningcompute.v20170801preview.OperationalizationCluster("operationalizationCluster", {
+const operationalizationCluster = new azure_nextgen.machinelearningcompute.OperationalizationCluster("operationalizationCluster", {
     clusterName: "myCluster",
     clusterType: "ACS",
     containerService: {
@@ -395,7 +396,7 @@ The OperationalizationCluster resource accepts the following [input]({{< relref 
 <a href="#clustertype_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#clustertype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Compute.<wbr>Cluster<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#clustertype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Compute..<wbr>Cluster<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The cluster type.{{% /md %}}</dd>
     <dt class="property-required"
@@ -422,7 +423,7 @@ The OperationalizationCluster resource accepts the following [input]({{< relref 
 <a href="#appinsights_csharp" style="color: inherit; text-decoration: inherit;">App<wbr>Insights</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appinsightsproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Compute.<wbr>Inputs.<wbr>App<wbr>Insights<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#appinsightsproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Compute..<wbr>Inputs.<wbr>App<wbr>Insights<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}AppInsights configuration.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -431,7 +432,7 @@ The OperationalizationCluster resource accepts the following [input]({{< relref 
 <a href="#containerregistry_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Registry</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerregistryproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Compute.<wbr>Inputs.<wbr>Container<wbr>Registry<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#containerregistryproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Compute..<wbr>Inputs.<wbr>Container<wbr>Registry<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Container Registry properties.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -440,7 +441,7 @@ The OperationalizationCluster resource accepts the following [input]({{< relref 
 <a href="#containerservice_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#acsclusterproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Compute.<wbr>Inputs.<wbr>Acs<wbr>Cluster<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#acsclusterproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Compute..<wbr>Inputs.<wbr>Acs<wbr>Cluster<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Parameters for the Azure Container Service cluster.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -458,7 +459,7 @@ The OperationalizationCluster resource accepts the following [input]({{< relref 
 <a href="#globalserviceconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Global<wbr>Service<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#globalserviceconfiguration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Compute.<wbr>Inputs.<wbr>Global<wbr>Service<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#globalserviceconfiguration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Compute..<wbr>Inputs.<wbr>Global<wbr>Service<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Contains global configuration for the web services in the cluster.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -467,7 +468,7 @@ The OperationalizationCluster resource accepts the following [input]({{< relref 
 <a href="#storageaccount_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageaccountproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Compute.<wbr>Inputs.<wbr>Storage<wbr>Account<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#storageaccountproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Compute..<wbr>Inputs.<wbr>Storage<wbr>Account<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Storage Account properties.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -849,7 +850,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provisioningerrors_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#errorresponsewrapperresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Compute.<wbr>Outputs.<wbr>Error<wbr>Response<wbr>Wrapper<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#errorresponsewrapperresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Compute..<wbr>Outputs.<wbr>Error<wbr>Response<wbr>Wrapper<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of provisioning errors reported by the resource provider.{{% /md %}}</dd>
     <dt class="property-"
@@ -1101,7 +1102,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#orchestratortype_csharp" style="color: inherit; text-decoration: inherit;">Orchestrator<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#orchestratortype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Compute.<wbr>Orchestrator<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#orchestratortype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Compute..<wbr>Orchestrator<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of orchestrator. It cannot be changed once the cluster is created.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1119,7 +1120,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#agentvmsize_csharp" style="color: inherit; text-decoration: inherit;">Agent<wbr>Vm<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#agentvmsizetypes">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Compute.<wbr>Agent<wbr>VMSize<wbr>Types</a></span>
+        <span class="property-type">string | <a href="#agentvmsizetypes">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Compute..<wbr>Agent<wbr>VMSize<wbr>Types</a></span>
     </dt>
     <dd>{{% md %}}The Azure VM size of the agent VM nodes. This cannot be changed once the cluster is created. This list is non exhaustive; refer to https://docs.microsoft.com/en-us/azure/virtual-machines/windows/sizes for the possible VM sizes.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1137,7 +1138,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#orchestratorproperties_csharp" style="color: inherit; text-decoration: inherit;">Orchestrator<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesclusterproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Compute.<wbr>Inputs.<wbr>Kubernetes<wbr>Cluster<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#kubernetesclusterproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Compute..<wbr>Inputs.<wbr>Kubernetes<wbr>Cluster<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Orchestrator specific properties{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1146,7 +1147,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#systemservices_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemservice">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Compute.<wbr>Inputs.<wbr>System<wbr>Service<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#systemservice">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Compute..<wbr>Inputs.<wbr>System<wbr>Service<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The system services deployed to the cluster{{% /md %}}</dd>
 </dl>
@@ -1388,7 +1389,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#orchestratorproperties_csharp" style="color: inherit; text-decoration: inherit;">Orchestrator<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesclusterpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Compute.<wbr>Inputs.<wbr>Kubernetes<wbr>Cluster<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#kubernetesclusterpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Compute..<wbr>Inputs.<wbr>Kubernetes<wbr>Cluster<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Orchestrator specific properties{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1397,7 +1398,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#systemservices_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemserviceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Compute.<wbr>Inputs.<wbr>System<wbr>Service<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#systemserviceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Compute..<wbr>Inputs.<wbr>System<wbr>Service<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The system services deployed to the cluster{{% /md %}}</dd>
 </dl>
@@ -2170,7 +2171,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#status">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Compute.<wbr>Status</a></span>
+        <span class="property-type">string | <a href="#status">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Compute..<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}If auto-scale is enabled for all services. Each service can turn it off individually.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2833,7 +2834,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#details_csharp" style="color: inherit; text-decoration: inherit;">Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#errordetailresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Compute.<wbr>Inputs.<wbr>Error<wbr>Detail<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#errordetailresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Compute..<wbr>Inputs.<wbr>Error<wbr>Detail<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}An array of error detail objects.{{% /md %}}</dd>
 </dl>
@@ -2949,7 +2950,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#error_csharp" style="color: inherit; text-decoration: inherit;">Error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#errorresponseresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Compute.<wbr>Inputs.<wbr>Error<wbr>Response<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#errorresponseresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Compute..<wbr>Inputs.<wbr>Error<wbr>Response<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The error response.{{% /md %}}</dd>
 </dl>
@@ -3011,7 +3012,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#autoscale_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Scale</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscaleconfiguration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Compute.<wbr>Inputs.<wbr>Auto<wbr>Scale<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#autoscaleconfiguration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Compute..<wbr>Inputs.<wbr>Auto<wbr>Scale<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The auto-scale configuration{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3029,7 +3030,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#serviceauth_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Auth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceauthconfiguration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Compute.<wbr>Inputs.<wbr>Service<wbr>Auth<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceauthconfiguration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Compute..<wbr>Inputs.<wbr>Service<wbr>Auth<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional global authorization keys for all user services deployed in cluster. These are used if the service does not have auth keys.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3038,7 +3039,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ssl_csharp" style="color: inherit; text-decoration: inherit;">Ssl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sslconfiguration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Compute.<wbr>Inputs.<wbr>Ssl<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#sslconfiguration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Compute..<wbr>Inputs.<wbr>Ssl<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The SSL configuration properties{{% /md %}}</dd>
 </dl>
@@ -3181,7 +3182,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#autoscale_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Scale</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscaleconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Compute.<wbr>Inputs.<wbr>Auto<wbr>Scale<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#autoscaleconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Compute..<wbr>Inputs.<wbr>Auto<wbr>Scale<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The auto-scale configuration{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3199,7 +3200,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#serviceauth_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Auth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceauthconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Compute.<wbr>Inputs.<wbr>Service<wbr>Auth<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceauthconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Compute..<wbr>Inputs.<wbr>Service<wbr>Auth<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional global authorization keys for all user services deployed in cluster. These are used if the service does not have auth keys.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3208,7 +3209,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ssl_csharp" style="color: inherit; text-decoration: inherit;">Ssl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sslconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Compute.<wbr>Inputs.<wbr>Ssl<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sslconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Compute..<wbr>Inputs.<wbr>Ssl<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The SSL configuration properties{{% /md %}}</dd>
 </dl>
@@ -3351,7 +3352,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#serviceprincipal_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Principal</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceprincipalproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Compute.<wbr>Inputs.<wbr>Service<wbr>Principal<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceprincipalproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Compute..<wbr>Inputs.<wbr>Service<wbr>Principal<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Azure Service Principal used by Kubernetes{{% /md %}}</dd>
 </dl>
@@ -3413,7 +3414,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#serviceprincipal_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Principal</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceprincipalpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Compute.<wbr>Inputs.<wbr>Service<wbr>Principal<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceprincipalpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Compute..<wbr>Inputs.<wbr>Service<wbr>Principal<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Azure Service Principal used by Kubernetes{{% /md %}}</dd>
 </dl>
@@ -3932,7 +3933,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#status">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Compute.<wbr>Status</a></span>
+        <span class="property-type">string | <a href="#status">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Compute..<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}SSL status. Allowed values are Enabled and Disabled.{{% /md %}}</dd>
 </dl>
@@ -4407,7 +4408,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#systemservicetype_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Service<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#systemservicetype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Compute.<wbr>System<wbr>Service<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#systemservicetype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Compute..<wbr>System<wbr>Service<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The system service type{{% /md %}}</dd>
 </dl>
@@ -4643,7 +4644,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:machinelearningcompute/v20170801preview:OperationalizationCluster MyCluster /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.MachineLearningCompute/operationalizationClusters/MyCluster 
+$ pulumi import azure-nextgen:machinelearningcompute:OperationalizationCluster MyCluster /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.MachineLearningCompute/operationalizationClusters/MyCluster 
 ```
 
 

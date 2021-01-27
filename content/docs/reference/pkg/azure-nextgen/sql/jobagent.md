@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.sql.JobAgent resource with examp
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 An Azure SQL job agent.
+API Version: 2020-08-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var jobAgent = new AzureNextGen.Sql.V20200801Preview.JobAgent("jobAgent", new AzureNextGen.Sql.V20200801Preview.JobAgentArgs
+        var jobAgent = new AzureNextGen.Sql..JobAgent("jobAgent", new AzureNextGen.Sql..JobAgentArgs
         {
             DatabaseId = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/group1/providers/Microsoft.Sql/servers/server1/databases/db1",
             JobAgentName = "agent1",
@@ -48,7 +49,7 @@ class MyStack : Stack
 package main
 
 import (
-	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql/v20200801preview"
+	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -78,7 +79,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-job_agent = azure_nextgen.sql.v20200801preview.JobAgent("jobAgent",
+job_agent = azure_nextgen.sql.JobAgent("jobAgent",
     database_id="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/group1/providers/Microsoft.Sql/servers/server1/databases/db1",
     job_agent_name="agent1",
     location="southeastasia",
@@ -95,7 +96,7 @@ job_agent = azure_nextgen.sql.v20200801preview.JobAgent("jobAgent",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const jobAgent = new azure_nextgen.sql.v20200801preview.JobAgent("jobAgent", {
+const jobAgent = new azure_nextgen.sql.JobAgent("jobAgent", {
     databaseId: "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/group1/providers/Microsoft.Sql/servers/server1/databases/db1",
     jobAgentName: "agent1",
     location: "southeastasia",
@@ -341,7 +342,7 @@ The JobAgent resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sku">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql.<wbr>Inputs.<wbr>Sku<wbr>Args</a></span>
+        <span class="property-type"><a href="#sku">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql..<wbr>Inputs.<wbr>Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The name and tier of the SKU.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1165,7 +1166,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:sql/v20200801preview:JobAgent agent1 /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/group1/providers/Microsoft.Sql/servers/server1/jobAgents/agent1 
+$ pulumi import azure-nextgen:sql:JobAgent agent1 /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/group1/providers/Microsoft.Sql/servers/server1/jobAgents/agent1 
 ```
 
 

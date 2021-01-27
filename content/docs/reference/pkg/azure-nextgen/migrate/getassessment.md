@@ -251,7 +251,7 @@ The following output properties are available:
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#assessmentpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Outputs.<wbr>Assessment<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#assessmentpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate..<wbr>Outputs.<wbr>Assessment<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Properties of the assessment.{{% /md %}}</dd>
     <dt class="property-"
@@ -711,7 +711,7 @@ The following output properties are available:
 <a href="#vmuptime_csharp" style="color: inherit; text-decoration: inherit;">Vm<wbr>Uptime</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vmuptimeresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Inputs.<wbr>Vm<wbr>Uptime<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#vmuptimeresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate..<wbr>Inputs.<wbr>Vm<wbr>Uptime<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specify the duration for which the VMs are up in the on-premises environment.{{% /md %}}</dd>
 </dl>

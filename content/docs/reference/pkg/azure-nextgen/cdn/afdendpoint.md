@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.cdn.AFDEndpoint resource with ex
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 CDN endpoint is the entity within a CDN profile containing configuration information such as origin, protocol, content caching and delivery behavior. The AzureFrontDoor endpoint uses the URL format <endpointname>.azureedge.net.
-Latest API Version: 2020-09-01.
+API Version: 2020-09-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var afdEndpoint = new AzureNextGen.Cdn.Latest.AFDEndpoint("afdEndpoint", new AzureNextGen.Cdn.Latest.AFDEndpointArgs
+        var afdEndpoint = new AzureNextGen.Cdn..AFDEndpoint("afdEndpoint", new AzureNextGen.Cdn..AFDEndpointArgs
         {
             EnabledState = "Enabled",
             EndpointName = "endpoint1",
@@ -51,7 +51,7 @@ class MyStack : Stack
 package main
 
 import (
-	cdn "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/cdn/latest"
+	cdn "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/cdn"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -83,7 +83,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-afd_endpoint = azure_nextgen.cdn.latest.AFDEndpoint("afdEndpoint",
+afd_endpoint = azure_nextgen.cdn.AFDEndpoint("afdEndpoint",
     enabled_state="Enabled",
     endpoint_name="endpoint1",
     location="CentralUs",
@@ -102,7 +102,7 @@ afd_endpoint = azure_nextgen.cdn.latest.AFDEndpoint("afdEndpoint",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const afdEndpoint = new azure_nextgen.cdn.latest.AFDEndpoint("afdEndpoint", {
+const afdEndpoint = new azure_nextgen.cdn.AFDEndpoint("afdEndpoint", {
     enabledState: "Enabled",
     endpointName: "endpoint1",
     location: "CentralUs",
@@ -341,7 +341,7 @@ The AFDEndpoint resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#enabledstate_csharp" style="color: inherit; text-decoration: inherit;">Enabled<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#enabledstate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn.<wbr>Enabled<wbr>State</a></span>
+        <span class="property-type">string | <a href="#enabledstate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn..<wbr>Enabled<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}Whether to enable use of this rule. Permitted values are 'Enabled' or 'Disabled'{{% /md %}}</dd>
     <dt class="property-optional"
@@ -633,7 +633,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#systemdata_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn.<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
+        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn..<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Read only system data{{% /md %}}</dd>
     <dt class="property-"
@@ -1150,7 +1150,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:cdn/latest:AFDEndpoint endpoint1 /subscriptions/subid/resourcegroups/RG/providers/Microsoft.Cdn/profiles/profile1/afdEndpoints/endpoint1 
+$ pulumi import azure-nextgen:cdn:AFDEndpoint endpoint1 /subscriptions/subid/resourcegroups/RG/providers/Microsoft.Cdn/profiles/profile1/afdEndpoints/endpoint1 
 ```
 
 

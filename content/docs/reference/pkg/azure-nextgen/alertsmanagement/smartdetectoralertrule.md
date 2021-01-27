@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.alertsmanagement.SmartDetectorAl
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The alert rule information
-Latest API Version: 2019-06-01.
+API Version: 2019-06-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,9 +27,9 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var smartDetectorAlertRule = new AzureNextGen.AlertsManagement.Latest.SmartDetectorAlertRule("smartDetectorAlertRule", new AzureNextGen.AlertsManagement.Latest.SmartDetectorAlertRuleArgs
+        var smartDetectorAlertRule = new AzureNextGen.AlertsManagement..SmartDetectorAlertRule("smartDetectorAlertRule", new AzureNextGen.AlertsManagement..SmartDetectorAlertRuleArgs
         {
-            ActionGroups = new AzureNextGen.AlertsManagement.Latest.Inputs.ActionGroupsInformationArgs
+            ActionGroups = new AzureNextGen.AlertsManagement..Inputs.ActionGroupsInformationArgs
             {
                 CustomEmailSubject = "My custom email subject",
                 CustomWebhookPayload = "{\"AlertRuleName\":\"#alertrulename\"}",
@@ -40,7 +40,7 @@ class MyStack : Stack
             },
             AlertRuleName = "MyAlertRule",
             Description = "Sample smart detector alert rule description",
-            Detector = new AzureNextGen.AlertsManagement.Latest.Inputs.DetectorArgs
+            Detector = new AzureNextGen.AlertsManagement..Inputs.DetectorArgs
             {
                 Id = "VMMemoryLeak",
             },
@@ -52,7 +52,7 @@ class MyStack : Stack
             },
             Severity = "Sev3",
             State = "Enabled",
-            Throttling = new AzureNextGen.AlertsManagement.Latest.Inputs.ThrottlingInformationArgs
+            Throttling = new AzureNextGen.AlertsManagement..Inputs.ThrottlingInformationArgs
             {
                 Duration = "PT20M",
             },
@@ -71,7 +71,7 @@ class MyStack : Stack
 package main
 
 import (
-	alertsmanagement "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/alertsmanagement/latest"
+	alertsmanagement "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/alertsmanagement"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -118,15 +118,15 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-smart_detector_alert_rule = azure_nextgen.alertsmanagement.latest.SmartDetectorAlertRule("smartDetectorAlertRule",
-    action_groups=azure_nextgen.alertsmanagement.latest.ActionGroupsInformationArgs(
+smart_detector_alert_rule = azure_nextgen.alertsmanagement.SmartDetectorAlertRule("smartDetectorAlertRule",
+    action_groups=azure_nextgen.alertsmanagement.ActionGroupsInformationArgs(
         custom_email_subject="My custom email subject",
         custom_webhook_payload="{\"AlertRuleName\":\"#alertrulename\"}",
         group_ids=["/subscriptions/b368ca2f-e298-46b7-b0ab-012281956afa/resourcegroups/actionGroups/providers/microsoft.insights/actiongroups/MyActionGroup"],
     ),
     alert_rule_name="MyAlertRule",
     description="Sample smart detector alert rule description",
-    detector=azure_nextgen.alertsmanagement.latest.DetectorArgs(
+    detector=azure_nextgen.alertsmanagement.DetectorArgs(
         id="VMMemoryLeak",
     ),
     frequency="PT5M",
@@ -134,7 +134,7 @@ smart_detector_alert_rule = azure_nextgen.alertsmanagement.latest.SmartDetectorA
     scope=["/subscriptions/b368ca2f-e298-46b7-b0ab-012281956afa/resourceGroups/MyVms/providers/Microsoft.Compute/virtualMachines/vm1"],
     severity="Sev3",
     state="Enabled",
-    throttling=azure_nextgen.alertsmanagement.latest.ThrottlingInformationArgs(
+    throttling=azure_nextgen.alertsmanagement.ThrottlingInformationArgs(
         duration="PT20M",
     ))
 
@@ -148,7 +148,7 @@ smart_detector_alert_rule = azure_nextgen.alertsmanagement.latest.SmartDetectorA
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const smartDetectorAlertRule = new azure_nextgen.alertsmanagement.latest.SmartDetectorAlertRule("smartDetectorAlertRule", {
+const smartDetectorAlertRule = new azure_nextgen.alertsmanagement.SmartDetectorAlertRule("smartDetectorAlertRule", {
     actionGroups: {
         customEmailSubject: "My custom email subject",
         customWebhookPayload: "{\"AlertRuleName\":\"#alertrulename\"}",
@@ -362,7 +362,7 @@ The SmartDetectorAlertRule resource accepts the following [input]({{< relref "/d
 <a href="#actiongroups_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongroupsinformation">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Alerts<wbr>Management.<wbr>Inputs.<wbr>Action<wbr>Groups<wbr>Information<wbr>Args</a></span>
+        <span class="property-type"><a href="#actiongroupsinformation">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Alerts<wbr>Management..<wbr>Inputs.<wbr>Action<wbr>Groups<wbr>Information<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The alert rule actions.{{% /md %}}</dd>
     <dt class="property-required"
@@ -380,7 +380,7 @@ The SmartDetectorAlertRule resource accepts the following [input]({{< relref "/d
 <a href="#detector_csharp" style="color: inherit; text-decoration: inherit;">Detector</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#detector">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Alerts<wbr>Management.<wbr>Inputs.<wbr>Detector<wbr>Args</a></span>
+        <span class="property-type"><a href="#detector">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Alerts<wbr>Management..<wbr>Inputs.<wbr>Detector<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The alert rule's detector.{{% /md %}}</dd>
     <dt class="property-required"
@@ -416,7 +416,7 @@ The SmartDetectorAlertRule resource accepts the following [input]({{< relref "/d
 <a href="#severity_csharp" style="color: inherit; text-decoration: inherit;">Severity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#severity">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Alerts<wbr>Management.<wbr>Severity</a></span>
+        <span class="property-type">string | <a href="#severity">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Alerts<wbr>Management..<wbr>Severity</a></span>
     </dt>
     <dd>{{% md %}}The alert rule severity.{{% /md %}}</dd>
     <dt class="property-required"
@@ -425,7 +425,7 @@ The SmartDetectorAlertRule resource accepts the following [input]({{< relref "/d
 <a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#alertrulestate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Alerts<wbr>Management.<wbr>Alert<wbr>Rule<wbr>State</a></span>
+        <span class="property-type">string | <a href="#alertrulestate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Alerts<wbr>Management..<wbr>Alert<wbr>Rule<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}The alert rule state.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -461,7 +461,7 @@ The SmartDetectorAlertRule resource accepts the following [input]({{< relref "/d
 <a href="#throttling_csharp" style="color: inherit; text-decoration: inherit;">Throttling</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#throttlinginformation">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Alerts<wbr>Management.<wbr>Inputs.<wbr>Throttling<wbr>Information<wbr>Args</a></span>
+        <span class="property-type"><a href="#throttlinginformation">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Alerts<wbr>Management..<wbr>Inputs.<wbr>Throttling<wbr>Information<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The alert rule throttling information.{{% /md %}}</dd>
 </dl>
@@ -1939,7 +1939,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:alertsmanagement/latest:SmartDetectorAlertRule MyAlertRule /subscriptions/b368ca2f-e298-46b7-b0ab-012281956afa/resourceGroups/MyAlertRules/providers/microsoft.alertsManagement/smartDetectorAlertRules/MyAlertRule 
+$ pulumi import azure-nextgen:alertsmanagement:SmartDetectorAlertRule MyAlertRule /subscriptions/b368ca2f-e298-46b7-b0ab-012281956afa/resourceGroups/MyAlertRules/providers/microsoft.alertsManagement/smartDetectorAlertRules/MyAlertRule 
 ```
 
 

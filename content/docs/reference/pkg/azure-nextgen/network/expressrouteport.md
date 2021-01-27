@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.network.ExpressRoutePort resourc
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 ExpressRoutePort resource definition.
-Latest API Version: 2020-08-01.
+API Version: 2020-08-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var expressRoutePort = new AzureNextGen.Network.Latest.ExpressRoutePort("expressRoutePort", new AzureNextGen.Network.Latest.ExpressRoutePortArgs
+        var expressRoutePort = new AzureNextGen.Network..ExpressRoutePort("expressRoutePort", new AzureNextGen.Network..ExpressRoutePortArgs
         {
             BandwidthInGbps = 100,
             Encapsulation = "QinQ",
@@ -50,7 +50,7 @@ class MyStack : Stack
 package main
 
 import (
-	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network/latest"
+	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -81,7 +81,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-express_route_port = azure_nextgen.network.latest.ExpressRoutePort("expressRoutePort",
+express_route_port = azure_nextgen.network.ExpressRoutePort("expressRoutePort",
     bandwidth_in_gbps=100,
     encapsulation="QinQ",
     express_route_port_name="portName",
@@ -99,7 +99,7 @@ express_route_port = azure_nextgen.network.latest.ExpressRoutePort("expressRoute
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const expressRoutePort = new azure_nextgen.network.latest.ExpressRoutePort("expressRoutePort", {
+const expressRoutePort = new azure_nextgen.network.ExpressRoutePort("expressRoutePort", {
     bandwidthInGbps: 100,
     encapsulation: "QinQ",
     expressRoutePortName: "portName",
@@ -122,14 +122,14 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var expressRoutePort = new AzureNextGen.Network.Latest.ExpressRoutePort("expressRoutePort", new AzureNextGen.Network.Latest.ExpressRoutePortArgs
+        var expressRoutePort = new AzureNextGen.Network..ExpressRoutePort("expressRoutePort", new AzureNextGen.Network..ExpressRoutePortArgs
         {
             BandwidthInGbps = 100,
             Encapsulation = "QinQ",
             ExpressRoutePortName = "portName",
             Links = 
             {
-                new AzureNextGen.Network.Latest.Inputs.ExpressRouteLinkArgs
+                new AzureNextGen.Network..Inputs.ExpressRouteLinkArgs
                 {
                     AdminState = "Enabled",
                     Name = "link1",
@@ -153,7 +153,7 @@ class MyStack : Stack
 package main
 
 import (
-	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network/latest"
+	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -190,11 +190,11 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-express_route_port = azure_nextgen.network.latest.ExpressRoutePort("expressRoutePort",
+express_route_port = azure_nextgen.network.ExpressRoutePort("expressRoutePort",
     bandwidth_in_gbps=100,
     encapsulation="QinQ",
     express_route_port_name="portName",
-    links=[azure_nextgen.network.latest.ExpressRouteLinkArgs(
+    links=[azure_nextgen.network.ExpressRouteLinkArgs(
         admin_state="Enabled",
         name="link1",
     )],
@@ -212,7 +212,7 @@ express_route_port = azure_nextgen.network.latest.ExpressRoutePort("expressRoute
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const expressRoutePort = new azure_nextgen.network.latest.ExpressRoutePort("expressRoutePort", {
+const expressRoutePort = new azure_nextgen.network.ExpressRoutePort("expressRoutePort", {
     bandwidthInGbps: 100,
     encapsulation: "QinQ",
     expressRoutePortName: "portName",
@@ -445,7 +445,7 @@ The ExpressRoutePort resource accepts the following [input]({{< relref "/docs/in
 <a href="#encapsulation_csharp" style="color: inherit; text-decoration: inherit;">Encapsulation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#expressrouteportsencapsulation">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Express<wbr>Route<wbr>Ports<wbr>Encapsulation</a></span>
+        <span class="property-type">string | <a href="#expressrouteportsencapsulation">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Express<wbr>Route<wbr>Ports<wbr>Encapsulation</a></span>
     </dt>
     <dd>{{% md %}}Encapsulation method on physical ports.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -463,7 +463,7 @@ The ExpressRoutePort resource accepts the following [input]({{< relref "/docs/in
 <a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedserviceidentity">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Managed<wbr>Service<wbr>Identity<wbr>Args</a></span>
+        <span class="property-type"><a href="#managedserviceidentity">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Managed<wbr>Service<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The identity of ExpressRoutePort, if configured.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -472,7 +472,7 @@ The ExpressRoutePort resource accepts the following [input]({{< relref "/docs/in
 <a href="#links_csharp" style="color: inherit; text-decoration: inherit;">Links</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#expressroutelink">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Express<wbr>Route<wbr>Link<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#expressroutelink">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Express<wbr>Route<wbr>Link<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The set of physical links of the ExpressRoutePort resource.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -818,7 +818,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#circuits_csharp" style="color: inherit; text-decoration: inherit;">Circuits</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Outputs.<wbr>Sub<wbr>Resource<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#subresourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Outputs.<wbr>Sub<wbr>Resource<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Reference the ExpressRoute circuit(s) that are provisioned on this ExpressRoutePort resource.{{% /md %}}</dd>
     <dt class="property-"
@@ -1241,7 +1241,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#adminstate_csharp" style="color: inherit; text-decoration: inherit;">Admin<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#expressroutelinkadminstate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Express<wbr>Route<wbr>Link<wbr>Admin<wbr>State</a></span>
+        <span class="property-type">string | <a href="#expressroutelinkadminstate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Express<wbr>Route<wbr>Link<wbr>Admin<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}Administrative state of the physical port.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1259,7 +1259,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#macsecconfig_csharp" style="color: inherit; text-decoration: inherit;">Mac<wbr>Sec<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#expressroutelinkmacsecconfig">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Express<wbr>Route<wbr>Link<wbr>Mac<wbr>Sec<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#expressroutelinkmacsecconfig">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Express<wbr>Route<wbr>Link<wbr>Mac<wbr>Sec<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}MacSec configuration.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1512,7 +1512,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cipher_csharp" style="color: inherit; text-decoration: inherit;">Cipher</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#expressroutelinkmacseccipher">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Express<wbr>Route<wbr>Link<wbr>Mac<wbr>Sec<wbr>Cipher</a></span>
+        <span class="property-type">string | <a href="#expressroutelinkmacseccipher">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Express<wbr>Route<wbr>Link<wbr>Mac<wbr>Sec<wbr>Cipher</a></span>
     </dt>
     <dd>{{% md %}}Mac security cipher.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1530,7 +1530,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scistate_csharp" style="color: inherit; text-decoration: inherit;">Sci<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#expressroutelinkmacsecscistate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Express<wbr>Route<wbr>Link<wbr>Mac<wbr>Sec<wbr>Sci<wbr>State</a></span>
+        <span class="property-type">string | <a href="#expressroutelinkmacsecscistate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Express<wbr>Route<wbr>Link<wbr>Mac<wbr>Sec<wbr>Sci<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}Sci mode enabled/disabled.{{% /md %}}</dd>
 </dl>
@@ -1962,7 +1962,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#macsecconfig_csharp" style="color: inherit; text-decoration: inherit;">Mac<wbr>Sec<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#expressroutelinkmacsecconfigresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Express<wbr>Route<wbr>Link<wbr>Mac<wbr>Sec<wbr>Config<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#expressroutelinkmacsecconfigresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Express<wbr>Route<wbr>Link<wbr>Mac<wbr>Sec<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}MacSec configuration.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2341,7 +2341,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidentitytype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Resource<wbr>Identity<wbr>Type</a></span>
+        <span class="property-type"><a href="#resourceidentitytype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Resource<wbr>Identity<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of identity used for the resource. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user assigned identities. The type 'None' will remove any identities from the virtual machine.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2466,7 +2466,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userassignedidentities_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Managed<wbr>Service<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Managed<wbr>Service<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}The list of user identities associated with resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd>
 </dl>
@@ -2817,7 +2817,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:network/latest:ExpressRoutePort portName /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/expressRoutePorts/portName 
+$ pulumi import azure-nextgen:network:ExpressRoutePort portName /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/expressRoutePorts/portName 
 ```
 
 

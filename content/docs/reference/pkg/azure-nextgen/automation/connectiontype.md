@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.automation.ConnectionType resour
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Definition of the connection type.
-Latest API Version: 2019-06-01.
+API Version: 2019-06-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,25 +27,25 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var connectionType = new AzureNextGen.Automation.Latest.ConnectionType("connectionType", new AzureNextGen.Automation.Latest.ConnectionTypeArgs
+        var connectionType = new AzureNextGen.Automation..ConnectionType("connectionType", new AzureNextGen.Automation..ConnectionTypeArgs
         {
             AutomationAccountName = "myAutomationAccount22",
             ConnectionTypeName = "myCT",
             FieldDefinitions = 
             {
-                { "myBoolField", new AzureNextGen.Automation.Latest.Inputs.FieldDefinitionArgs
+                { "myBoolField", new AzureNextGen.Automation..Inputs.FieldDefinitionArgs
                 {
                     IsEncrypted = false,
                     IsOptional = false,
                     Type = "bool",
                 } },
-                { "myStringField", new AzureNextGen.Automation.Latest.Inputs.FieldDefinitionArgs
+                { "myStringField", new AzureNextGen.Automation..Inputs.FieldDefinitionArgs
                 {
                     IsEncrypted = false,
                     IsOptional = false,
                     Type = "string",
                 } },
-                { "myStringFieldEncrypted", new AzureNextGen.Automation.Latest.Inputs.FieldDefinitionArgs
+                { "myStringFieldEncrypted", new AzureNextGen.Automation..Inputs.FieldDefinitionArgs
                 {
                     IsEncrypted = true,
                     IsOptional = false,
@@ -70,7 +70,7 @@ class MyStack : Stack
 package main
 
 import (
-	automation "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/automation/latest"
+	automation "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/automation"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -117,21 +117,21 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-connection_type = azure_nextgen.automation.latest.ConnectionType("connectionType",
+connection_type = azure_nextgen.automation.ConnectionType("connectionType",
     automation_account_name="myAutomationAccount22",
     connection_type_name="myCT",
     field_definitions={
-        "myBoolField": azure_nextgen.automation.latest.FieldDefinitionArgs(
+        "myBoolField": azure_nextgen.automation.FieldDefinitionArgs(
             is_encrypted=False,
             is_optional=False,
             type="bool",
         ),
-        "myStringField": azure_nextgen.automation.latest.FieldDefinitionArgs(
+        "myStringField": azure_nextgen.automation.FieldDefinitionArgs(
             is_encrypted=False,
             is_optional=False,
             type="string",
         ),
-        "myStringFieldEncrypted": azure_nextgen.automation.latest.FieldDefinitionArgs(
+        "myStringFieldEncrypted": azure_nextgen.automation.FieldDefinitionArgs(
             is_encrypted=True,
             is_optional=False,
             type="string",
@@ -151,7 +151,7 @@ connection_type = azure_nextgen.automation.latest.ConnectionType("connectionType
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const connectionType = new azure_nextgen.automation.latest.ConnectionType("connectionType", {
+const connectionType = new azure_nextgen.automation.ConnectionType("connectionType", {
     automationAccountName: "myAutomationAccount22",
     connectionTypeName: "myCT",
     fieldDefinitions: {
@@ -387,7 +387,7 @@ The ConnectionType resource accepts the following [input]({{< relref "/docs/intr
 <a href="#fielddefinitions_csharp" style="color: inherit; text-decoration: inherit;">Field<wbr>Definitions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automation.<wbr>Inputs.<wbr>Field<wbr>Definition<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automation..<wbr>Inputs.<wbr>Field<wbr>Definition<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}Gets or sets the field definitions of the connection type.{{% /md %}}</dd>
     <dt class="property-required"
@@ -1094,7 +1094,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:automation/latest:ConnectionType myCT /subscriptions/subid/resourceGroups/rg/providers/Microsoft.Automation/automationAccounts/myAutomationAccount22/connectionTypes/myCT 
+$ pulumi import azure-nextgen:automation:ConnectionType myCT /subscriptions/subid/resourceGroups/rg/providers/Microsoft.Automation/automationAccounts/myAutomationAccount22/connectionTypes/myCT 
 ```
 
 

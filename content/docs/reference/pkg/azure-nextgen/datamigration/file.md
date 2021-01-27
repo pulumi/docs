@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.datamigration.File resource with
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 A file resource
+API Version: 2018-07-15-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,12 +27,12 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var file = new AzureNextGen.DataMigration.V20180715Preview.File("file", new AzureNextGen.DataMigration.V20180715Preview.FileArgs
+        var file = new AzureNextGen.DataMigration..File("file", new AzureNextGen.DataMigration..FileArgs
         {
             FileName = "x114d023d8",
             GroupName = "DmsSdkRg",
             ProjectName = "DmsSdkProject",
-            Properties = new AzureNextGen.DataMigration.V20180715Preview.Inputs.ProjectFilePropertiesArgs
+            Properties = new AzureNextGen.DataMigration..Inputs.ProjectFilePropertiesArgs
             {
                 FilePath = "DmsSdkFilePath/DmsSdkFile.sql",
             },
@@ -51,7 +52,7 @@ class MyStack : Stack
 package main
 
 import (
-	datamigration "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datamigration/v20180715preview"
+	datamigration "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datamigration"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -83,11 +84,11 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-file = azure_nextgen.datamigration.v20180715preview.File("file",
+file = azure_nextgen.datamigration.File("file",
     file_name="x114d023d8",
     group_name="DmsSdkRg",
     project_name="DmsSdkProject",
-    properties=azure_nextgen.datamigration.v20180715preview.ProjectFilePropertiesArgs(
+    properties=azure_nextgen.datamigration.ProjectFilePropertiesArgs(
         file_path="DmsSdkFilePath/DmsSdkFile.sql",
     ),
     service_name="DmsSdkService")
@@ -102,7 +103,7 @@ file = azure_nextgen.datamigration.v20180715preview.File("file",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const file = new azure_nextgen.datamigration.v20180715preview.File("file", {
+const file = new azure_nextgen.datamigration.File("file", {
     fileName: "x114d023d8",
     groupName: "DmsSdkRg",
     projectName: "DmsSdkProject",
@@ -350,7 +351,7 @@ The File resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectfileproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Project<wbr>File<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#projectfileproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration..<wbr>Inputs.<wbr>Project<wbr>File<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Custom file properties{{% /md %}}</dd>
 </dl>
@@ -1030,7 +1031,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:datamigration/v20180715preview:File x114d023d8 /subscriptions/fc04246f-04c5-437e-ac5e-206a19e7193f/resourceGroups/DmsSdkRg/providers/Microsoft.DataMigration/services/DmsSdkService/projects/DmsSdkProject/files/x114d023d8 
+$ pulumi import azure-nextgen:datamigration:File x114d023d8 /subscriptions/fc04246f-04c5-437e-ac5e-206a19e7193f/resourceGroups/DmsSdkRg/providers/Microsoft.DataMigration/services/DmsSdkService/projects/DmsSdkProject/files/x114d023d8 
 ```
 
 

@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.media.Transform resource with ex
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 A Transform encapsulates the rules or instructions for generating desired outputs from input media, such as by transcoding or by extracting insights. After the Transform is created, it can be applied to input media by creating Jobs.
-Latest API Version: 2020-05-01.
+API Version: 2020-05-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,13 +27,13 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var transform = new AzureNextGen.Media.Latest.Transform("transform", new AzureNextGen.Media.Latest.TransformArgs
+        var transform = new AzureNextGen.Media..Transform("transform", new AzureNextGen.Media..TransformArgs
         {
             AccountName = "contosomedia",
             Description = "Example Transform to illustrate create and update.",
             Outputs = 
             {
-                new AzureNextGen.Media.Latest.Inputs.TransformOutputArgs
+                new AzureNextGen.Media..Inputs.TransformOutputArgs
                 {
                     Preset = 
                     {
@@ -63,10 +63,10 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-transform = azure_nextgen.media.latest.Transform("transform",
+transform = azure_nextgen.media.Transform("transform",
     account_name="contosomedia",
     description="Example Transform to illustrate create and update.",
-    outputs=[azure_nextgen.media.latest.TransformOutputArgs(
+    outputs=[azure_nextgen.media.TransformOutputArgs(
         preset={
             "odataType": "#Microsoft.Media.BuiltInStandardEncoderPreset",
             "presetName": "AdaptiveStreaming",
@@ -85,7 +85,7 @@ transform = azure_nextgen.media.latest.Transform("transform",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const transform = new azure_nextgen.media.latest.Transform("transform", {
+const transform = new azure_nextgen.media.Transform("transform", {
     accountName: "contosomedia",
     description: "Example Transform to illustrate create and update.",
     outputs: [{
@@ -300,7 +300,7 @@ The Transform resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#outputs_csharp" style="color: inherit; text-decoration: inherit;">Outputs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transformoutput">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Transform<wbr>Output<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#transformoutput">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Transform<wbr>Output<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}An array of one or more TransformOutputs that the Transform should generate.{{% /md %}}</dd>
     <dt class="property-required"
@@ -745,7 +745,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#profile_csharp" style="color: inherit; text-decoration: inherit;">Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#aacaudioprofile">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Aac<wbr>Audio<wbr>Profile</a></span>
+        <span class="property-type">string | <a href="#aacaudioprofile">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Aac<wbr>Audio<wbr>Profile</a></span>
     </dt>
     <dd>{{% md %}}The encoding profile to be used when encoding audio with AAC.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1440,7 +1440,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mode_csharp" style="color: inherit; text-decoration: inherit;">Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#audioanalysismode">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Audio<wbr>Analysis<wbr>Mode</a></span>
+        <span class="property-type">string | <a href="#audioanalysismode">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Audio<wbr>Analysis<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}Determines the set of audio analysis operations to be performed. If unspecified, the Standard AudioAnalysisMode would be chosen.{{% /md %}}</dd>
 </dl>
@@ -2344,7 +2344,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#presetname_csharp" style="color: inherit; text-decoration: inherit;">Preset<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#encodernamedpreset">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Encoder<wbr>Named<wbr>Preset</a></span>
+        <span class="property-type">string | <a href="#encodernamedpreset">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Encoder<wbr>Named<wbr>Preset</a></span>
     </dt>
     <dd>{{% md %}}The built-in preset to be used for encoding videos.{{% /md %}}</dd>
 </dl>
@@ -2716,7 +2716,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mode_csharp" style="color: inherit; text-decoration: inherit;">Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#deinterlacemode">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Deinterlace<wbr>Mode</a></span>
+        <span class="property-type">string | <a href="#deinterlacemode">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Deinterlace<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}The deinterlacing mode. Defaults to AutoPixelAdaptive.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2725,7 +2725,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parity_csharp" style="color: inherit; text-decoration: inherit;">Parity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#deinterlaceparity">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Deinterlace<wbr>Parity</a></span>
+        <span class="property-type">string | <a href="#deinterlaceparity">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Deinterlace<wbr>Parity</a></span>
     </dt>
     <dd>{{% md %}}The field parity for de-interlacing, defaults to Auto.{{% /md %}}</dd>
 </dl>
@@ -3153,7 +3153,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resolution_csharp" style="color: inherit; text-decoration: inherit;">Resolution</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#analysisresolution">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Analysis<wbr>Resolution</a></span>
+        <span class="property-type">string | <a href="#analysisresolution">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Analysis<wbr>Resolution</a></span>
     </dt>
     <dd>{{% md %}}Specifies the maximum resolution at which your video is analyzed. The default behavior is "SourceResolution," which will keep the input video at its original resolution when analyzed. Using "StandardDefinition" will resize input videos to standard definition while preserving the appropriate aspect ratio. It will only resize if the video is of higher resolution. For example, a 1920x1080 input would be scaled to 640x360 before processing. Switching to "StandardDefinition" will reduce the time it takes to process high resolution video. It may also reduce the cost of using this component (see https://azure.microsoft.com/en-us/pricing/details/media-services/#analytics for details). However, faces that end up being too small in the resized video may not be detected.{{% /md %}}</dd>
 </dl>
@@ -3340,7 +3340,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#crop_csharp" style="color: inherit; text-decoration: inherit;">Crop</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rectangle">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Rectangle<wbr>Args</a></span>
+        <span class="property-type"><a href="#rectangle">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Rectangle<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The parameters for the rectangular window with which to crop the input video.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3349,7 +3349,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deinterlace_csharp" style="color: inherit; text-decoration: inherit;">Deinterlace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deinterlace">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Deinterlace<wbr>Args</a></span>
+        <span class="property-type"><a href="#deinterlace">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Deinterlace<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The de-interlacing settings.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3358,7 +3358,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#overlays_csharp" style="color: inherit; text-decoration: inherit;">Overlays</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Audio<wbr>Overlay<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Video<wbr>Overlay<wbr>Args&gt;&gt;</span>
+        <span class="property-type">List&lt;Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Audio<wbr>Overlay<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Video<wbr>Overlay<wbr>Args&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}The properties of overlays to be applied to the input video. These could be audio, image or video overlays.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3367,7 +3367,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rotation_csharp" style="color: inherit; text-decoration: inherit;">Rotation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#rotation">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Rotation</a></span>
+        <span class="property-type">string | <a href="#rotation">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Rotation</a></span>
     </dt>
     <dd>{{% md %}}The rotation, if any, to be applied to the input video, before it is encoded. Default is Auto{{% /md %}}</dd>
 </dl>
@@ -3510,7 +3510,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#crop_csharp" style="color: inherit; text-decoration: inherit;">Crop</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rectangleresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Rectangle<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#rectangleresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Rectangle<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The parameters for the rectangular window with which to crop the input video.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3519,7 +3519,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deinterlace_csharp" style="color: inherit; text-decoration: inherit;">Deinterlace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deinterlaceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Deinterlace<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#deinterlaceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Deinterlace<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The de-interlacing settings.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3528,7 +3528,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#overlays_csharp" style="color: inherit; text-decoration: inherit;">Overlays</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Audio<wbr>Overlay<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Video<wbr>Overlay<wbr>Response<wbr>Args&gt;&gt;</span>
+        <span class="property-type">List&lt;Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Audio<wbr>Overlay<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Video<wbr>Overlay<wbr>Response<wbr>Args&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}The properties of overlays to be applied to the input video. These could be audio, image or video overlays.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3762,7 +3762,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#entropymode_csharp" style="color: inherit; text-decoration: inherit;">Entropy<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#entropymode">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Entropy<wbr>Mode</a></span>
+        <span class="property-type">string | <a href="#entropymode">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Entropy<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}The entropy mode to be used for this layer. If not specified, the encoder chooses the mode that is appropriate for the profile and level.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3816,7 +3816,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#profile_csharp" style="color: inherit; text-decoration: inherit;">Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#h264videoprofile">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>H264Video<wbr>Profile</a></span>
+        <span class="property-type">string | <a href="#h264videoprofile">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>H264Video<wbr>Profile</a></span>
     </dt>
     <dd>{{% md %}}We currently support Baseline, Main, High, High422, High444. Default is Auto.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4786,7 +4786,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#complexity_csharp" style="color: inherit; text-decoration: inherit;">Complexity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#h264complexity">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>H264Complexity</a></span>
+        <span class="property-type">string | <a href="#h264complexity">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>H264Complexity</a></span>
     </dt>
     <dd>{{% md %}}Tells the encoder how to choose its encoding settings. The default value is Balanced.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4813,7 +4813,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#layers_csharp" style="color: inherit; text-decoration: inherit;">Layers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#h264layer">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>H264Layer<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#h264layer">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>H264Layer<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The collection of output H.264 layers to be produced by the encoder.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4831,7 +4831,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#stretchmode_csharp" style="color: inherit; text-decoration: inherit;">Stretch<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#stretchmode">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Stretch<wbr>Mode</a></span>
+        <span class="property-type">string | <a href="#stretchmode">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Stretch<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}The resizing mode - how the input video will be resized to fit the desired output resolution(s). Default is AutoSize{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4840,7 +4840,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#syncmode_csharp" style="color: inherit; text-decoration: inherit;">Sync<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#videosyncmode">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Video<wbr>Sync<wbr>Mode</a></span>
+        <span class="property-type">string | <a href="#videosyncmode">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Video<wbr>Sync<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}The Video Sync Mode{{% /md %}}</dd>
 </dl>
@@ -5161,7 +5161,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#layers_csharp" style="color: inherit; text-decoration: inherit;">Layers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#h264layerresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>H264Layer<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#h264layerresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>H264Layer<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The collection of output H.264 layers to be produced by the encoder.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -5457,7 +5457,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#stretchmode_csharp" style="color: inherit; text-decoration: inherit;">Stretch<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#stretchmode">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Stretch<wbr>Mode</a></span>
+        <span class="property-type">string | <a href="#stretchmode">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Stretch<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}The resizing mode - how the input video will be resized to fit the desired output resolution(s). Default is AutoSize{{% /md %}}</dd>
     <dt class="property-optional"
@@ -5466,7 +5466,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#syncmode_csharp" style="color: inherit; text-decoration: inherit;">Sync<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#videosyncmode">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Video<wbr>Sync<wbr>Mode</a></span>
+        <span class="property-type">string | <a href="#videosyncmode">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Video<wbr>Sync<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}The Video Sync Mode{{% /md %}}</dd>
 </dl>
@@ -6289,7 +6289,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#layers_csharp" style="color: inherit; text-decoration: inherit;">Layers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jpglayer">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Jpg<wbr>Layer<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#jpglayer">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Jpg<wbr>Layer<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A collection of output JPEG image layers to be produced by the encoder.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -6325,7 +6325,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#stretchmode_csharp" style="color: inherit; text-decoration: inherit;">Stretch<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#stretchmode">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Stretch<wbr>Mode</a></span>
+        <span class="property-type">string | <a href="#stretchmode">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Stretch<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}The resizing mode - how the input video will be resized to fit the desired output resolution(s). Default is AutoSize{{% /md %}}</dd>
     <dt class="property-optional"
@@ -6334,7 +6334,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#syncmode_csharp" style="color: inherit; text-decoration: inherit;">Sync<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#videosyncmode">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Video<wbr>Sync<wbr>Mode</a></span>
+        <span class="property-type">string | <a href="#videosyncmode">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Video<wbr>Sync<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}The Video Sync Mode{{% /md %}}</dd>
 </dl>
@@ -6639,7 +6639,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#layers_csharp" style="color: inherit; text-decoration: inherit;">Layers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jpglayerresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Jpg<wbr>Layer<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#jpglayerresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Jpg<wbr>Layer<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A collection of output JPEG image layers to be produced by the encoder.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -7311,7 +7311,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#outputfiles_csharp" style="color: inherit; text-decoration: inherit;">Output<wbr>Files</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#outputfile">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Output<wbr>File<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#outputfile">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Output<wbr>File<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of output files to produce.  Each entry in the list is a set of audio and video layer labels to be muxed together .{{% /md %}}</dd>
 </dl>
@@ -7409,7 +7409,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#outputfiles_csharp" style="color: inherit; text-decoration: inherit;">Output<wbr>Files</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#outputfileresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Output<wbr>File<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#outputfileresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Output<wbr>File<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of output files to produce.  Each entry in the list is a set of audio and video layer labels to be muxed together .{{% /md %}}</dd>
 </dl>
@@ -7507,7 +7507,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#outputfiles_csharp" style="color: inherit; text-decoration: inherit;">Output<wbr>Files</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#outputfile">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Output<wbr>File<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#outputfile">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Output<wbr>File<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of output files to produce.  Each entry in the list is a set of audio and video layer labels to be muxed together .{{% /md %}}</dd>
 </dl>
@@ -7605,7 +7605,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#outputfiles_csharp" style="color: inherit; text-decoration: inherit;">Output<wbr>Files</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#outputfileresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Output<wbr>File<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#outputfileresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Output<wbr>File<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of output files to produce.  Each entry in the list is a set of audio and video layer labels to be muxed together .{{% /md %}}</dd>
 </dl>
@@ -8007,7 +8007,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#layers_csharp" style="color: inherit; text-decoration: inherit;">Layers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pnglayer">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Png<wbr>Layer<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#pnglayer">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Png<wbr>Layer<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A collection of output PNG image layers to be produced by the encoder.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -8034,7 +8034,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#stretchmode_csharp" style="color: inherit; text-decoration: inherit;">Stretch<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#stretchmode">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Stretch<wbr>Mode</a></span>
+        <span class="property-type">string | <a href="#stretchmode">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Stretch<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}The resizing mode - how the input video will be resized to fit the desired output resolution(s). Default is AutoSize{{% /md %}}</dd>
     <dt class="property-optional"
@@ -8043,7 +8043,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#syncmode_csharp" style="color: inherit; text-decoration: inherit;">Sync<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#videosyncmode">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Video<wbr>Sync<wbr>Mode</a></span>
+        <span class="property-type">string | <a href="#videosyncmode">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Video<wbr>Sync<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}The Video Sync Mode{{% /md %}}</dd>
 </dl>
@@ -8321,7 +8321,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#layers_csharp" style="color: inherit; text-decoration: inherit;">Layers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pnglayerresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Png<wbr>Layer<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#pnglayerresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Png<wbr>Layer<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A collection of output PNG image layers to be produced by the encoder.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -9350,7 +9350,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filters_csharp" style="color: inherit; text-decoration: inherit;">Filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#filters">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Filters<wbr>Args</a></span>
+        <span class="property-type"><a href="#filters">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Filters<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more filtering operations that are applied to the input media before encoding.{{% /md %}}</dd>
 </dl>
@@ -9484,7 +9484,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filters_csharp" style="color: inherit; text-decoration: inherit;">Filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#filtersresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Filters<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#filtersresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Filters<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more filtering operations that are applied to the input media before encoding.{{% /md %}}</dd>
 </dl>
@@ -9646,7 +9646,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#preset_csharp" style="color: inherit; text-decoration: inherit;">Preset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#audioanalyzerpreset">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Audio<wbr>Analyzer<wbr>Preset<wbr>Args</a> | <a href="#builtinstandardencoderpreset">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Built<wbr>In<wbr>Standard<wbr>Encoder<wbr>Preset<wbr>Args</a> | <a href="#facedetectorpreset">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Face<wbr>Detector<wbr>Preset<wbr>Args</a> | <a href="#standardencoderpreset">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Standard<wbr>Encoder<wbr>Preset<wbr>Args</a> | <a href="#videoanalyzerpreset">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Video<wbr>Analyzer<wbr>Preset<wbr>Args</a></span>
+        <span class="property-type"><a href="#audioanalyzerpreset">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Audio<wbr>Analyzer<wbr>Preset<wbr>Args</a> | <a href="#builtinstandardencoderpreset">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Built<wbr>In<wbr>Standard<wbr>Encoder<wbr>Preset<wbr>Args</a> | <a href="#facedetectorpreset">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Face<wbr>Detector<wbr>Preset<wbr>Args</a> | <a href="#standardencoderpreset">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Standard<wbr>Encoder<wbr>Preset<wbr>Args</a> | <a href="#videoanalyzerpreset">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Video<wbr>Analyzer<wbr>Preset<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Preset that describes the operations that will be used to modify, transcode, or extract insights from the source file to generate the output.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -9655,7 +9655,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#onerror_csharp" style="color: inherit; text-decoration: inherit;">On<wbr>Error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#onerrortype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>On<wbr>Error<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#onerrortype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>On<wbr>Error<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}A Transform can define more than one outputs. This property defines what the service should do when one output fails - either continue to produce other outputs, or, stop the other outputs. The overall Job state will not reflect failures of outputs that are specified with 'ContinueJob'. The default is 'StopProcessingJob'.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -9664,7 +9664,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#relativepriority_csharp" style="color: inherit; text-decoration: inherit;">Relative<wbr>Priority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#priority">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Priority</a></span>
+        <span class="property-type">string | <a href="#priority">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Priority</a></span>
     </dt>
     <dd>{{% md %}}Sets the relative priority of the TransformOutputs within a Transform. This sets the priority that the service uses for processing TransformOutputs. The default priority is Normal.{{% /md %}}</dd>
 </dl>
@@ -9780,7 +9780,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#preset_csharp" style="color: inherit; text-decoration: inherit;">Preset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#audioanalyzerpresetresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Audio<wbr>Analyzer<wbr>Preset<wbr>Response<wbr>Args</a> | <a href="#builtinstandardencoderpresetresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Built<wbr>In<wbr>Standard<wbr>Encoder<wbr>Preset<wbr>Response<wbr>Args</a> | <a href="#facedetectorpresetresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Face<wbr>Detector<wbr>Preset<wbr>Response<wbr>Args</a> | <a href="#standardencoderpresetresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Standard<wbr>Encoder<wbr>Preset<wbr>Response<wbr>Args</a> | <a href="#videoanalyzerpresetresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Video<wbr>Analyzer<wbr>Preset<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#audioanalyzerpresetresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Audio<wbr>Analyzer<wbr>Preset<wbr>Response<wbr>Args</a> | <a href="#builtinstandardencoderpresetresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Built<wbr>In<wbr>Standard<wbr>Encoder<wbr>Preset<wbr>Response<wbr>Args</a> | <a href="#facedetectorpresetresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Face<wbr>Detector<wbr>Preset<wbr>Response<wbr>Args</a> | <a href="#standardencoderpresetresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Standard<wbr>Encoder<wbr>Preset<wbr>Response<wbr>Args</a> | <a href="#videoanalyzerpresetresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Video<wbr>Analyzer<wbr>Preset<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Preset that describes the operations that will be used to modify, transcode, or extract insights from the source file to generate the output.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -9923,7 +9923,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#outputfiles_csharp" style="color: inherit; text-decoration: inherit;">Output<wbr>Files</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#outputfile">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Output<wbr>File<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#outputfile">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Output<wbr>File<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of output files to produce.  Each entry in the list is a set of audio and video layer labels to be muxed together .{{% /md %}}</dd>
 </dl>
@@ -10021,7 +10021,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#outputfiles_csharp" style="color: inherit; text-decoration: inherit;">Output<wbr>Files</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#outputfileresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Output<wbr>File<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#outputfileresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Output<wbr>File<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of output files to produce.  Each entry in the list is a set of audio and video layer labels to be muxed together .{{% /md %}}</dd>
 </dl>
@@ -10128,7 +10128,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#stretchmode_csharp" style="color: inherit; text-decoration: inherit;">Stretch<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#stretchmode">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Stretch<wbr>Mode</a></span>
+        <span class="property-type">string | <a href="#stretchmode">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Stretch<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}The resizing mode - how the input video will be resized to fit the desired output resolution(s). Default is AutoSize{{% /md %}}</dd>
     <dt class="property-optional"
@@ -10137,7 +10137,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#syncmode_csharp" style="color: inherit; text-decoration: inherit;">Sync<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#videosyncmode">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Video<wbr>Sync<wbr>Mode</a></span>
+        <span class="property-type">string | <a href="#videosyncmode">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Video<wbr>Sync<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}The Video Sync Mode{{% /md %}}</dd>
 </dl>
@@ -10298,7 +10298,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#insightstoextract_csharp" style="color: inherit; text-decoration: inherit;">Insights<wbr>To<wbr>Extract</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#insightstype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Insights<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#insightstype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Insights<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Defines the type of insights that you want the service to generate. The allowed values are 'AudioInsightsOnly', 'VideoInsightsOnly', and 'AllInsights'. The default is AllInsights. If you set this to AllInsights and the input is audio only, then only audio insights are generated. Similarly if the input is video only, then only video insights are generated. It is recommended that you not use AudioInsightsOnly if you expect some of your inputs to be video only; or use VideoInsightsOnly if you expect some of your inputs to be audio only. Your Jobs in such conditions would error out.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -10307,7 +10307,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mode_csharp" style="color: inherit; text-decoration: inherit;">Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#audioanalysismode">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Audio<wbr>Analysis<wbr>Mode</a></span>
+        <span class="property-type">string | <a href="#audioanalysismode">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Audio<wbr>Analysis<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}Determines the set of audio analysis operations to be performed. If unspecified, the Standard AudioAnalysisMode would be chosen.{{% /md %}}</dd>
 </dl>
@@ -10638,7 +10638,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#croprectangle_csharp" style="color: inherit; text-decoration: inherit;">Crop<wbr>Rectangle</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rectangle">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Rectangle<wbr>Args</a></span>
+        <span class="property-type"><a href="#rectangle">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Rectangle<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An optional rectangular window used to crop the overlay image or video.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -10683,7 +10683,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#position_csharp" style="color: inherit; text-decoration: inherit;">Position</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rectangle">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Rectangle<wbr>Args</a></span>
+        <span class="property-type"><a href="#rectangle">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Rectangle<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The location in the input video where the overlay is applied.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -10988,7 +10988,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#croprectangle_csharp" style="color: inherit; text-decoration: inherit;">Crop<wbr>Rectangle</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rectangleresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Rectangle<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#rectangleresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Rectangle<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An optional rectangular window used to crop the overlay image or video.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -11033,7 +11033,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#position_csharp" style="color: inherit; text-decoration: inherit;">Position</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rectangleresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Rectangle<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#rectangleresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Rectangle<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The location in the input video where the overlay is applied.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -11538,7 +11538,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:media/latest:Transform createdTransform /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/contosoresources/providers/Microsoft.Media/mediaservices/contosomedia/transforms/createdTransform 
+$ pulumi import azure-nextgen:media:Transform createdTransform /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/contosoresources/providers/Microsoft.Media/mediaservices/contosomedia/transforms/createdTransform 
 ```
 
 

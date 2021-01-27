@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.hardwaresecuritymodules.Dedicate
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Resource information with extended details.
+API Version: 2018-10-31-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,26 +27,26 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var dedicatedHsm = new AzureNextGen.HardwareSecurityModules.V20181031Preview.DedicatedHsm("dedicatedHsm", new AzureNextGen.HardwareSecurityModules.V20181031Preview.DedicatedHsmArgs
+        var dedicatedHsm = new AzureNextGen.HardwareSecurityModules..DedicatedHsm("dedicatedHsm", new AzureNextGen.HardwareSecurityModules..DedicatedHsmArgs
         {
             Location = "westus",
             Name = "hsm1",
-            NetworkProfile = new AzureNextGen.HardwareSecurityModules.V20181031Preview.Inputs.NetworkProfileArgs
+            NetworkProfile = new AzureNextGen.HardwareSecurityModules..Inputs.NetworkProfileArgs
             {
                 NetworkInterfaces = 
                 {
-                    new AzureNextGen.HardwareSecurityModules.V20181031Preview.Inputs.NetworkInterfaceArgs
+                    new AzureNextGen.HardwareSecurityModules..Inputs.NetworkInterfaceArgs
                     {
                         PrivateIpAddress = "1.0.0.1",
                     },
                 },
-                Subnet = new AzureNextGen.HardwareSecurityModules.V20181031Preview.Inputs.ApiEntityReferenceArgs
+                Subnet = new AzureNextGen.HardwareSecurityModules..Inputs.ApiEntityReferenceArgs
                 {
                     Id = "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/hsm-group/providers/Microsoft.Network/virtualNetworks/stamp01/subnets/stamp01",
                 },
             },
             ResourceGroupName = "hsm-group",
-            Sku = new AzureNextGen.HardwareSecurityModules.V20181031Preview.Inputs.SkuArgs
+            Sku = new AzureNextGen.HardwareSecurityModules..Inputs.SkuArgs
             {
                 Name = "SafeNet Luna Network HSM A790",
             },
@@ -70,7 +71,7 @@ class MyStack : Stack
 package main
 
 import (
-	hardwaresecuritymodules "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/hardwaresecuritymodules/v20181031preview"
+	hardwaresecuritymodules "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/hardwaresecuritymodules"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -116,19 +117,19 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-dedicated_hsm = azure_nextgen.hardwaresecuritymodules.v20181031preview.DedicatedHsm("dedicatedHsm",
+dedicated_hsm = azure_nextgen.hardwaresecuritymodules.DedicatedHsm("dedicatedHsm",
     location="westus",
     name="hsm1",
-    network_profile=azure_nextgen.hardwaresecuritymodules.v20181031preview.NetworkProfileArgs(
-        network_interfaces=[azure_nextgen.hardwaresecuritymodules.v20181031preview.NetworkInterfaceArgs(
+    network_profile=azure_nextgen.hardwaresecuritymodules.NetworkProfileArgs(
+        network_interfaces=[azure_nextgen.hardwaresecuritymodules.NetworkInterfaceArgs(
             private_ip_address="1.0.0.1",
         )],
-        subnet=azure_nextgen.hardwaresecuritymodules.v20181031preview.ApiEntityReferenceArgs(
+        subnet=azure_nextgen.hardwaresecuritymodules.ApiEntityReferenceArgs(
             id="/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/hsm-group/providers/Microsoft.Network/virtualNetworks/stamp01/subnets/stamp01",
         ),
     ),
     resource_group_name="hsm-group",
-    sku=azure_nextgen.hardwaresecuritymodules.v20181031preview.SkuArgs(
+    sku=azure_nextgen.hardwaresecuritymodules.SkuArgs(
         name="SafeNet Luna Network HSM A790",
     ),
     stamp_id="stamp01",
@@ -147,7 +148,7 @@ dedicated_hsm = azure_nextgen.hardwaresecuritymodules.v20181031preview.Dedicated
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const dedicatedHsm = new azure_nextgen.hardwaresecuritymodules.v20181031preview.DedicatedHsm("dedicatedHsm", {
+const dedicatedHsm = new azure_nextgen.hardwaresecuritymodules.DedicatedHsm("dedicatedHsm", {
     location: "westus",
     name: "hsm1",
     networkProfile: {
@@ -389,7 +390,7 @@ The DedicatedHsm resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sku">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hardware<wbr>Security<wbr>Modules.<wbr>Inputs.<wbr>Sku<wbr>Args</a></span>
+        <span class="property-type"><a href="#sku">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hardware<wbr>Security<wbr>Modules..<wbr>Inputs.<wbr>Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}SKU details{{% /md %}}</dd>
     <dt class="property-optional"
@@ -398,7 +399,7 @@ The DedicatedHsm resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#networkprofile_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkprofile">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hardware<wbr>Security<wbr>Modules.<wbr>Inputs.<wbr>Network<wbr>Profile<wbr>Args</a></span>
+        <span class="property-type"><a href="#networkprofile">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hardware<wbr>Security<wbr>Modules..<wbr>Inputs.<wbr>Network<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the network interfaces of the dedicated hsm.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1145,7 +1146,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#networkinterfaces_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Interfaces</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkinterface">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hardware<wbr>Security<wbr>Modules.<wbr>Inputs.<wbr>Network<wbr>Interface<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#networkinterface">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hardware<wbr>Security<wbr>Modules..<wbr>Inputs.<wbr>Network<wbr>Interface<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the list of resource Ids for the network interfaces associated with the dedicated HSM.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1154,7 +1155,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subnet_csharp" style="color: inherit; text-decoration: inherit;">Subnet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apientityreference">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hardware<wbr>Security<wbr>Modules.<wbr>Inputs.<wbr>Api<wbr>Entity<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#apientityreference">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hardware<wbr>Security<wbr>Modules..<wbr>Inputs.<wbr>Api<wbr>Entity<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the identifier of the subnet.{{% /md %}}</dd>
 </dl>
@@ -1243,7 +1244,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#networkinterfaces_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Interfaces</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkinterfaceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hardware<wbr>Security<wbr>Modules.<wbr>Inputs.<wbr>Network<wbr>Interface<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#networkinterfaceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hardware<wbr>Security<wbr>Modules..<wbr>Inputs.<wbr>Network<wbr>Interface<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the list of resource Ids for the network interfaces associated with the dedicated HSM.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1252,7 +1253,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subnet_csharp" style="color: inherit; text-decoration: inherit;">Subnet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apientityreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hardware<wbr>Security<wbr>Modules.<wbr>Inputs.<wbr>Api<wbr>Entity<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#apientityreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hardware<wbr>Security<wbr>Modules..<wbr>Inputs.<wbr>Api<wbr>Entity<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the identifier of the subnet.{{% /md %}}</dd>
 </dl>
@@ -1459,7 +1460,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:hardwaresecuritymodules/v20181031preview:DedicatedHsm hsm1 /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/hsm-group/providers/Microsoft.HardwareSecurityModules/dedicatedHSMs/hsm1 
+$ pulumi import azure-nextgen:hardwaresecuritymodules:DedicatedHsm hsm1 /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/hsm-group/providers/Microsoft.HardwareSecurityModules/dedicatedHSMs/hsm1 
 ```
 
 

@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.storage.ManagementPolicy resourc
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The Get Storage Account ManagementPolicies operation response.
-Latest API Version: 2019-06-01.
+API Version: 2019-06-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,44 +27,44 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var managementPolicy = new AzureNextGen.Storage.Latest.ManagementPolicy("managementPolicy", new AzureNextGen.Storage.Latest.ManagementPolicyArgs
+        var managementPolicy = new AzureNextGen.Storage..ManagementPolicy("managementPolicy", new AzureNextGen.Storage..ManagementPolicyArgs
         {
             AccountName = "sto9699",
             ManagementPolicyName = "default",
-            Policy = new AzureNextGen.Storage.Latest.Inputs.ManagementPolicySchemaArgs
+            Policy = new AzureNextGen.Storage..Inputs.ManagementPolicySchemaArgs
             {
                 Rules = 
                 {
-                    new AzureNextGen.Storage.Latest.Inputs.ManagementPolicyRuleArgs
+                    new AzureNextGen.Storage..Inputs.ManagementPolicyRuleArgs
                     {
-                        Definition = new AzureNextGen.Storage.Latest.Inputs.ManagementPolicyDefinitionArgs
+                        Definition = new AzureNextGen.Storage..Inputs.ManagementPolicyDefinitionArgs
                         {
-                            Actions = new AzureNextGen.Storage.Latest.Inputs.ManagementPolicyActionArgs
+                            Actions = new AzureNextGen.Storage..Inputs.ManagementPolicyActionArgs
                             {
-                                BaseBlob = new AzureNextGen.Storage.Latest.Inputs.ManagementPolicyBaseBlobArgs
+                                BaseBlob = new AzureNextGen.Storage..Inputs.ManagementPolicyBaseBlobArgs
                                 {
-                                    Delete = new AzureNextGen.Storage.Latest.Inputs.DateAfterModificationArgs
+                                    Delete = new AzureNextGen.Storage..Inputs.DateAfterModificationArgs
                                     {
                                         DaysAfterModificationGreaterThan = 1000,
                                     },
-                                    TierToArchive = new AzureNextGen.Storage.Latest.Inputs.DateAfterModificationArgs
+                                    TierToArchive = new AzureNextGen.Storage..Inputs.DateAfterModificationArgs
                                     {
                                         DaysAfterModificationGreaterThan = 90,
                                     },
-                                    TierToCool = new AzureNextGen.Storage.Latest.Inputs.DateAfterModificationArgs
+                                    TierToCool = new AzureNextGen.Storage..Inputs.DateAfterModificationArgs
                                     {
                                         DaysAfterModificationGreaterThan = 30,
                                     },
                                 },
-                                Snapshot = new AzureNextGen.Storage.Latest.Inputs.ManagementPolicySnapShotArgs
+                                Snapshot = new AzureNextGen.Storage..Inputs.ManagementPolicySnapShotArgs
                                 {
-                                    Delete = new AzureNextGen.Storage.Latest.Inputs.DateAfterCreationArgs
+                                    Delete = new AzureNextGen.Storage..Inputs.DateAfterCreationArgs
                                     {
                                         DaysAfterCreationGreaterThan = 30,
                                     },
                                 },
                             },
-                            Filters = new AzureNextGen.Storage.Latest.Inputs.ManagementPolicyFilterArgs
+                            Filters = new AzureNextGen.Storage..Inputs.ManagementPolicyFilterArgs
                             {
                                 BlobTypes = 
                                 {
@@ -80,39 +80,39 @@ class MyStack : Stack
                         Name = "olcmtest1",
                         Type = "Lifecycle",
                     },
-                    new AzureNextGen.Storage.Latest.Inputs.ManagementPolicyRuleArgs
+                    new AzureNextGen.Storage..Inputs.ManagementPolicyRuleArgs
                     {
-                        Definition = new AzureNextGen.Storage.Latest.Inputs.ManagementPolicyDefinitionArgs
+                        Definition = new AzureNextGen.Storage..Inputs.ManagementPolicyDefinitionArgs
                         {
-                            Actions = new AzureNextGen.Storage.Latest.Inputs.ManagementPolicyActionArgs
+                            Actions = new AzureNextGen.Storage..Inputs.ManagementPolicyActionArgs
                             {
-                                BaseBlob = new AzureNextGen.Storage.Latest.Inputs.ManagementPolicyBaseBlobArgs
+                                BaseBlob = new AzureNextGen.Storage..Inputs.ManagementPolicyBaseBlobArgs
                                 {
-                                    Delete = new AzureNextGen.Storage.Latest.Inputs.DateAfterModificationArgs
+                                    Delete = new AzureNextGen.Storage..Inputs.DateAfterModificationArgs
                                     {
                                         DaysAfterModificationGreaterThan = 1000,
                                     },
-                                    TierToArchive = new AzureNextGen.Storage.Latest.Inputs.DateAfterModificationArgs
+                                    TierToArchive = new AzureNextGen.Storage..Inputs.DateAfterModificationArgs
                                     {
                                         DaysAfterModificationGreaterThan = 90,
                                     },
-                                    TierToCool = new AzureNextGen.Storage.Latest.Inputs.DateAfterModificationArgs
+                                    TierToCool = new AzureNextGen.Storage..Inputs.DateAfterModificationArgs
                                     {
                                         DaysAfterModificationGreaterThan = 30,
                                     },
                                 },
                             },
-                            Filters = new AzureNextGen.Storage.Latest.Inputs.ManagementPolicyFilterArgs
+                            Filters = new AzureNextGen.Storage..Inputs.ManagementPolicyFilterArgs
                             {
                                 BlobIndexMatch = 
                                 {
-                                    new AzureNextGen.Storage.Latest.Inputs.TagFilterArgs
+                                    new AzureNextGen.Storage..Inputs.TagFilterArgs
                                     {
                                         Name = "tag1",
                                         Op = "==",
                                         Value = "val1",
                                     },
-                                    new AzureNextGen.Storage.Latest.Inputs.TagFilterArgs
+                                    new AzureNextGen.Storage..Inputs.TagFilterArgs
                                     {
                                         Name = "tag2",
                                         Op = "==",
@@ -151,7 +151,7 @@ class MyStack : Stack
 package main
 
 import (
-	storage "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/storage/latest"
+	storage "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/storage"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -256,32 +256,32 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-management_policy = azure_nextgen.storage.latest.ManagementPolicy("managementPolicy",
+management_policy = azure_nextgen.storage.ManagementPolicy("managementPolicy",
     account_name="sto9699",
     management_policy_name="default",
-    policy=azure_nextgen.storage.latest.ManagementPolicySchemaArgs(
+    policy=azure_nextgen.storage.ManagementPolicySchemaArgs(
         rules=[
-            azure_nextgen.storage.latest.ManagementPolicyRuleArgs(
-                definition=azure_nextgen.storage.latest.ManagementPolicyDefinitionArgs(
-                    actions=azure_nextgen.storage.latest.ManagementPolicyActionArgs(
-                        base_blob=azure_nextgen.storage.latest.ManagementPolicyBaseBlobArgs(
-                            delete=azure_nextgen.storage.latest.DateAfterModificationArgs(
+            azure_nextgen.storage.ManagementPolicyRuleArgs(
+                definition=azure_nextgen.storage.ManagementPolicyDefinitionArgs(
+                    actions=azure_nextgen.storage.ManagementPolicyActionArgs(
+                        base_blob=azure_nextgen.storage.ManagementPolicyBaseBlobArgs(
+                            delete=azure_nextgen.storage.DateAfterModificationArgs(
                                 days_after_modification_greater_than=1000,
                             ),
-                            tier_to_archive=azure_nextgen.storage.latest.DateAfterModificationArgs(
+                            tier_to_archive=azure_nextgen.storage.DateAfterModificationArgs(
                                 days_after_modification_greater_than=90,
                             ),
-                            tier_to_cool=azure_nextgen.storage.latest.DateAfterModificationArgs(
+                            tier_to_cool=azure_nextgen.storage.DateAfterModificationArgs(
                                 days_after_modification_greater_than=30,
                             ),
                         ),
-                        snapshot=azure_nextgen.storage.latest.ManagementPolicySnapShotArgs(
-                            delete=azure_nextgen.storage.latest.DateAfterCreationArgs(
+                        snapshot=azure_nextgen.storage.ManagementPolicySnapShotArgs(
+                            delete=azure_nextgen.storage.DateAfterCreationArgs(
                                 days_after_creation_greater_than=30,
                             ),
                         ),
                     ),
-                    filters=azure_nextgen.storage.latest.ManagementPolicyFilterArgs(
+                    filters=azure_nextgen.storage.ManagementPolicyFilterArgs(
                         blob_types=["blockBlob"],
                         prefix_match=["olcmtestcontainer1"],
                     ),
@@ -290,29 +290,29 @@ management_policy = azure_nextgen.storage.latest.ManagementPolicy("managementPol
                 name="olcmtest1",
                 type="Lifecycle",
             ),
-            azure_nextgen.storage.latest.ManagementPolicyRuleArgs(
-                definition=azure_nextgen.storage.latest.ManagementPolicyDefinitionArgs(
-                    actions=azure_nextgen.storage.latest.ManagementPolicyActionArgs(
-                        base_blob=azure_nextgen.storage.latest.ManagementPolicyBaseBlobArgs(
-                            delete=azure_nextgen.storage.latest.DateAfterModificationArgs(
+            azure_nextgen.storage.ManagementPolicyRuleArgs(
+                definition=azure_nextgen.storage.ManagementPolicyDefinitionArgs(
+                    actions=azure_nextgen.storage.ManagementPolicyActionArgs(
+                        base_blob=azure_nextgen.storage.ManagementPolicyBaseBlobArgs(
+                            delete=azure_nextgen.storage.DateAfterModificationArgs(
                                 days_after_modification_greater_than=1000,
                             ),
-                            tier_to_archive=azure_nextgen.storage.latest.DateAfterModificationArgs(
+                            tier_to_archive=azure_nextgen.storage.DateAfterModificationArgs(
                                 days_after_modification_greater_than=90,
                             ),
-                            tier_to_cool=azure_nextgen.storage.latest.DateAfterModificationArgs(
+                            tier_to_cool=azure_nextgen.storage.DateAfterModificationArgs(
                                 days_after_modification_greater_than=30,
                             ),
                         ),
                     ),
-                    filters=azure_nextgen.storage.latest.ManagementPolicyFilterArgs(
+                    filters=azure_nextgen.storage.ManagementPolicyFilterArgs(
                         blob_index_match=[
-                            azure_nextgen.storage.latest.TagFilterArgs(
+                            azure_nextgen.storage.TagFilterArgs(
                                 name="tag1",
                                 op="==",
                                 value="val1",
                             ),
-                            azure_nextgen.storage.latest.TagFilterArgs(
+                            azure_nextgen.storage.TagFilterArgs(
                                 name="tag2",
                                 op="==",
                                 value="val2",
@@ -340,7 +340,7 @@ management_policy = azure_nextgen.storage.latest.ManagementPolicy("managementPol
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const managementPolicy = new azure_nextgen.storage.latest.ManagementPolicy("managementPolicy", {
+const managementPolicy = new azure_nextgen.storage.ManagementPolicy("managementPolicy", {
     accountName: "sto9699",
     managementPolicyName: "default",
     policy: {
@@ -626,7 +626,7 @@ The ManagementPolicy resource accepts the following [input]({{< relref "/docs/in
 <a href="#policy_csharp" style="color: inherit; text-decoration: inherit;">Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementpolicyschema">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Inputs.<wbr>Management<wbr>Policy<wbr>Schema<wbr>Args</a></span>
+        <span class="property-type"><a href="#managementpolicyschema">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage..<wbr>Inputs.<wbr>Management<wbr>Policy<wbr>Schema<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Storage Account ManagementPolicy, in JSON format. See more details in: https://docs.microsoft.com/en-us/azure/storage/common/storage-lifecycle-managment-concepts.{{% /md %}}</dd>
     <dt class="property-required"
@@ -1211,7 +1211,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#baseblob_csharp" style="color: inherit; text-decoration: inherit;">Base<wbr>Blob</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementpolicybaseblob">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Inputs.<wbr>Management<wbr>Policy<wbr>Base<wbr>Blob<wbr>Args</a></span>
+        <span class="property-type"><a href="#managementpolicybaseblob">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage..<wbr>Inputs.<wbr>Management<wbr>Policy<wbr>Base<wbr>Blob<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The management policy action for base blob{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1220,7 +1220,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#snapshot_csharp" style="color: inherit; text-decoration: inherit;">Snapshot</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementpolicysnapshot">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Inputs.<wbr>Management<wbr>Policy<wbr>Snap<wbr>Shot<wbr>Args</a></span>
+        <span class="property-type"><a href="#managementpolicysnapshot">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage..<wbr>Inputs.<wbr>Management<wbr>Policy<wbr>Snap<wbr>Shot<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The management policy action for snapshot{{% /md %}}</dd>
 </dl>
@@ -1309,7 +1309,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#baseblob_csharp" style="color: inherit; text-decoration: inherit;">Base<wbr>Blob</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementpolicybaseblobresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Inputs.<wbr>Management<wbr>Policy<wbr>Base<wbr>Blob<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#managementpolicybaseblobresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage..<wbr>Inputs.<wbr>Management<wbr>Policy<wbr>Base<wbr>Blob<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The management policy action for base blob{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1318,7 +1318,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#snapshot_csharp" style="color: inherit; text-decoration: inherit;">Snapshot</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementpolicysnapshotresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Inputs.<wbr>Management<wbr>Policy<wbr>Snap<wbr>Shot<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#managementpolicysnapshotresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage..<wbr>Inputs.<wbr>Management<wbr>Policy<wbr>Snap<wbr>Shot<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The management policy action for snapshot{{% /md %}}</dd>
 </dl>
@@ -1407,7 +1407,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#delete_csharp" style="color: inherit; text-decoration: inherit;">Delete</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dateaftermodification">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Inputs.<wbr>Date<wbr>After<wbr>Modification<wbr>Args</a></span>
+        <span class="property-type"><a href="#dateaftermodification">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage..<wbr>Inputs.<wbr>Date<wbr>After<wbr>Modification<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The function to delete the blob{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1416,7 +1416,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tiertoarchive_csharp" style="color: inherit; text-decoration: inherit;">Tier<wbr>To<wbr>Archive</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dateaftermodification">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Inputs.<wbr>Date<wbr>After<wbr>Modification<wbr>Args</a></span>
+        <span class="property-type"><a href="#dateaftermodification">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage..<wbr>Inputs.<wbr>Date<wbr>After<wbr>Modification<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The function to tier blobs to archive storage. Support blobs currently at Hot or Cool tier{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1425,7 +1425,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tiertocool_csharp" style="color: inherit; text-decoration: inherit;">Tier<wbr>To<wbr>Cool</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dateaftermodification">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Inputs.<wbr>Date<wbr>After<wbr>Modification<wbr>Args</a></span>
+        <span class="property-type"><a href="#dateaftermodification">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage..<wbr>Inputs.<wbr>Date<wbr>After<wbr>Modification<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The function to tier blobs to cool storage. Support blobs currently at Hot tier{{% /md %}}</dd>
 </dl>
@@ -1541,7 +1541,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#delete_csharp" style="color: inherit; text-decoration: inherit;">Delete</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dateaftermodificationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Inputs.<wbr>Date<wbr>After<wbr>Modification<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#dateaftermodificationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage..<wbr>Inputs.<wbr>Date<wbr>After<wbr>Modification<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The function to delete the blob{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1550,7 +1550,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tiertoarchive_csharp" style="color: inherit; text-decoration: inherit;">Tier<wbr>To<wbr>Archive</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dateaftermodificationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Inputs.<wbr>Date<wbr>After<wbr>Modification<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#dateaftermodificationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage..<wbr>Inputs.<wbr>Date<wbr>After<wbr>Modification<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The function to tier blobs to archive storage. Support blobs currently at Hot or Cool tier{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1559,7 +1559,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tiertocool_csharp" style="color: inherit; text-decoration: inherit;">Tier<wbr>To<wbr>Cool</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dateaftermodificationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Inputs.<wbr>Date<wbr>After<wbr>Modification<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#dateaftermodificationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage..<wbr>Inputs.<wbr>Date<wbr>After<wbr>Modification<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The function to tier blobs to cool storage. Support blobs currently at Hot tier{{% /md %}}</dd>
 </dl>
@@ -1675,7 +1675,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#actions_csharp" style="color: inherit; text-decoration: inherit;">Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementpolicyaction">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Inputs.<wbr>Management<wbr>Policy<wbr>Action<wbr>Args</a></span>
+        <span class="property-type"><a href="#managementpolicyaction">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage..<wbr>Inputs.<wbr>Management<wbr>Policy<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An object that defines the action set.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1684,7 +1684,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filters_csharp" style="color: inherit; text-decoration: inherit;">Filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementpolicyfilter">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Inputs.<wbr>Management<wbr>Policy<wbr>Filter<wbr>Args</a></span>
+        <span class="property-type"><a href="#managementpolicyfilter">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage..<wbr>Inputs.<wbr>Management<wbr>Policy<wbr>Filter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An object that defines the filter set.{{% /md %}}</dd>
 </dl>
@@ -1773,7 +1773,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#actions_csharp" style="color: inherit; text-decoration: inherit;">Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementpolicyactionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Inputs.<wbr>Management<wbr>Policy<wbr>Action<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#managementpolicyactionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage..<wbr>Inputs.<wbr>Management<wbr>Policy<wbr>Action<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An object that defines the action set.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1782,7 +1782,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filters_csharp" style="color: inherit; text-decoration: inherit;">Filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementpolicyfilterresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Inputs.<wbr>Management<wbr>Policy<wbr>Filter<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#managementpolicyfilterresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage..<wbr>Inputs.<wbr>Management<wbr>Policy<wbr>Filter<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An object that defines the filter set.{{% /md %}}</dd>
 </dl>
@@ -1880,7 +1880,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#blobindexmatch_csharp" style="color: inherit; text-decoration: inherit;">Blob<wbr>Index<wbr>Match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tagfilter">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Inputs.<wbr>Tag<wbr>Filter<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#tagfilter">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage..<wbr>Inputs.<wbr>Tag<wbr>Filter<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}An array of blob index tag based filters, there can be at most 10 tag filters{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2014,7 +2014,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#blobindexmatch_csharp" style="color: inherit; text-decoration: inherit;">Blob<wbr>Index<wbr>Match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tagfilterresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Inputs.<wbr>Tag<wbr>Filter<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#tagfilterresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage..<wbr>Inputs.<wbr>Tag<wbr>Filter<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}An array of blob index tag based filters, there can be at most 10 tag filters{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2139,7 +2139,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#definition_csharp" style="color: inherit; text-decoration: inherit;">Definition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementpolicydefinition">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Inputs.<wbr>Management<wbr>Policy<wbr>Definition<wbr>Args</a></span>
+        <span class="property-type"><a href="#managementpolicydefinition">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage..<wbr>Inputs.<wbr>Management<wbr>Policy<wbr>Definition<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An object that defines the Lifecycle rule.{{% /md %}}</dd>
     <dt class="property-required"
@@ -2157,7 +2157,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#ruletype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Rule<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#ruletype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage..<wbr>Rule<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The valid value is Lifecycle{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2309,7 +2309,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#definition_csharp" style="color: inherit; text-decoration: inherit;">Definition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementpolicydefinitionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Inputs.<wbr>Management<wbr>Policy<wbr>Definition<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#managementpolicydefinitionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage..<wbr>Inputs.<wbr>Management<wbr>Policy<wbr>Definition<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An object that defines the Lifecycle rule.{{% /md %}}</dd>
     <dt class="property-required"
@@ -2479,7 +2479,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rules_csharp" style="color: inherit; text-decoration: inherit;">Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementpolicyrule">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Inputs.<wbr>Management<wbr>Policy<wbr>Rule<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#managementpolicyrule">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage..<wbr>Inputs.<wbr>Management<wbr>Policy<wbr>Rule<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The Storage Account ManagementPolicies Rules. See more details in: https://docs.microsoft.com/en-us/azure/storage/common/storage-lifecycle-managment-concepts.{{% /md %}}</dd>
 </dl>
@@ -2541,7 +2541,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rules_csharp" style="color: inherit; text-decoration: inherit;">Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementpolicyruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Inputs.<wbr>Management<wbr>Policy<wbr>Rule<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#managementpolicyruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage..<wbr>Inputs.<wbr>Management<wbr>Policy<wbr>Rule<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The Storage Account ManagementPolicies Rules. See more details in: https://docs.microsoft.com/en-us/azure/storage/common/storage-lifecycle-managment-concepts.{{% /md %}}</dd>
 </dl>
@@ -2603,7 +2603,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#delete_csharp" style="color: inherit; text-decoration: inherit;">Delete</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dateaftercreation">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Inputs.<wbr>Date<wbr>After<wbr>Creation<wbr>Args</a></span>
+        <span class="property-type"><a href="#dateaftercreation">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage..<wbr>Inputs.<wbr>Date<wbr>After<wbr>Creation<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The function to delete the blob snapshot{{% /md %}}</dd>
 </dl>
@@ -2665,7 +2665,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#delete_csharp" style="color: inherit; text-decoration: inherit;">Delete</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dateaftercreationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Inputs.<wbr>Date<wbr>After<wbr>Creation<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#dateaftercreationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage..<wbr>Inputs.<wbr>Date<wbr>After<wbr>Creation<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The function to delete the blob snapshot{{% /md %}}</dd>
 </dl>
@@ -3019,7 +3019,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:storage/latest:ManagementPolicy DefaultManagementPolicy /subscriptions/{subscription-id}/resourceGroups/res7231/providers/Microsoft.Storage/storageAccounts/sto288/managementPolicies/default 
+$ pulumi import azure-nextgen:storage:ManagementPolicy DefaultManagementPolicy /subscriptions/{subscription-id}/resourceGroups/res7231/providers/Microsoft.Storage/storageAccounts/sto288/managementPolicies/default 
 ```
 
 

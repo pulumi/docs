@@ -231,7 +231,7 @@ The following output properties are available:
 <a href="#remotevirtualnetwork_csharp" style="color: inherit; text-decoration: inherit;">Remote<wbr>Virtual<wbr>Network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkpeeringpropertiesformatresponseremotevirtualnetwork">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Databricks.<wbr>Outputs.<wbr>Virtual<wbr>Network<wbr>Peering<wbr>Properties<wbr>Format<wbr>Response<wbr>Remote<wbr>Virtual<wbr>Network</a></span>
+        <span class="property-type"><a href="#virtualnetworkpeeringpropertiesformatresponseremotevirtualnetwork">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Databricks..<wbr>Outputs.<wbr>Virtual<wbr>Network<wbr>Peering<wbr>Properties<wbr>Format<wbr>Response<wbr>Remote<wbr>Virtual<wbr>Network</a></span>
     </dt>
     <dd>{{% md %}} The remote virtual network should be in the same region. See here to learn more (https://docs.microsoft.com/en-us/azure/databricks/administration-guide/cloud-configurations/azure/vnet-peering).{{% /md %}}</dd>
     <dt class="property-"
@@ -276,7 +276,7 @@ The following output properties are available:
 <a href="#databricksaddressspace_csharp" style="color: inherit; text-decoration: inherit;">Databricks<wbr>Address<wbr>Space</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#addressspaceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Databricks.<wbr>Outputs.<wbr>Address<wbr>Space<wbr>Response</a></span>
+        <span class="property-type"><a href="#addressspaceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Databricks..<wbr>Outputs.<wbr>Address<wbr>Space<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The reference to the databricks virtual network address space.{{% /md %}}</dd>
     <dt class="property-"
@@ -285,7 +285,7 @@ The following output properties are available:
 <a href="#databricksvirtualnetwork_csharp" style="color: inherit; text-decoration: inherit;">Databricks<wbr>Virtual<wbr>Network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkpeeringpropertiesformatresponsedatabricksvirtualnetwork">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Databricks.<wbr>Outputs.<wbr>Virtual<wbr>Network<wbr>Peering<wbr>Properties<wbr>Format<wbr>Response<wbr>Databricks<wbr>Virtual<wbr>Network</a></span>
+        <span class="property-type"><a href="#virtualnetworkpeeringpropertiesformatresponsedatabricksvirtualnetwork">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Databricks..<wbr>Outputs.<wbr>Virtual<wbr>Network<wbr>Peering<wbr>Properties<wbr>Format<wbr>Response<wbr>Databricks<wbr>Virtual<wbr>Network</a></span>
     </dt>
     <dd>{{% md %}} The remote virtual network should be in the same region. See here to learn more (https://docs.microsoft.com/en-us/azure/databricks/administration-guide/cloud-configurations/azure/vnet-peering).{{% /md %}}</dd>
     <dt class="property-"
@@ -294,7 +294,7 @@ The following output properties are available:
 <a href="#remoteaddressspace_csharp" style="color: inherit; text-decoration: inherit;">Remote<wbr>Address<wbr>Space</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#addressspaceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Databricks.<wbr>Outputs.<wbr>Address<wbr>Space<wbr>Response</a></span>
+        <span class="property-type"><a href="#addressspaceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Databricks..<wbr>Outputs.<wbr>Address<wbr>Space<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The reference to the remote virtual network address space.{{% /md %}}</dd>
     <dt class="property-"

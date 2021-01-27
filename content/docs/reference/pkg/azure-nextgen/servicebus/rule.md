@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.servicebus.Rule resource with ex
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Description of Rule Resource.
-Latest API Version: 2017-04-01.
+API Version: 2017-04-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,9 +27,9 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var rule = new AzureNextGen.ServiceBus.Latest.Rule("rule", new AzureNextGen.ServiceBus.Latest.RuleArgs
+        var rule = new AzureNextGen.ServiceBus..Rule("rule", new AzureNextGen.ServiceBus..RuleArgs
         {
-            CorrelationFilter = new AzureNextGen.ServiceBus.Latest.Inputs.CorrelationFilterArgs
+            CorrelationFilter = new AzureNextGen.ServiceBus..Inputs.CorrelationFilterArgs
             {
                 Properties = 
                 {
@@ -57,7 +57,7 @@ class MyStack : Stack
 package main
 
 import (
-	servicebus "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/servicebus/latest"
+	servicebus "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/servicebus"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -93,8 +93,8 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-rule = azure_nextgen.servicebus.latest.Rule("rule",
-    correlation_filter=azure_nextgen.servicebus.latest.CorrelationFilterArgs(
+rule = azure_nextgen.servicebus.Rule("rule",
+    correlation_filter=azure_nextgen.servicebus.CorrelationFilterArgs(
         properties={
             "topicHint": "Crop",
         },
@@ -116,7 +116,7 @@ rule = azure_nextgen.servicebus.latest.Rule("rule",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const rule = new azure_nextgen.servicebus.latest.Rule("rule", {
+const rule = new azure_nextgen.servicebus.Rule("rule", {
     correlationFilter: {
         properties: {
             topicHint: "Crop",
@@ -144,7 +144,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var rule = new AzureNextGen.ServiceBus.Latest.Rule("rule", new AzureNextGen.ServiceBus.Latest.RuleArgs
+        var rule = new AzureNextGen.ServiceBus..Rule("rule", new AzureNextGen.ServiceBus..RuleArgs
         {
             NamespaceName = "sdk-Namespace-1319",
             ResourceGroupName = "resourceGroupName",
@@ -166,7 +166,7 @@ class MyStack : Stack
 package main
 
 import (
-	servicebus "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/servicebus/latest"
+	servicebus "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/servicebus"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -196,7 +196,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-rule = azure_nextgen.servicebus.latest.Rule("rule",
+rule = azure_nextgen.servicebus.Rule("rule",
     namespace_name="sdk-Namespace-1319",
     resource_group_name="resourceGroupName",
     rule_name="sdk-Rules-6571",
@@ -213,7 +213,7 @@ rule = azure_nextgen.servicebus.latest.Rule("rule",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const rule = new azure_nextgen.servicebus.latest.Rule("rule", {
+const rule = new azure_nextgen.servicebus.Rule("rule", {
     namespaceName: "sdk-Namespace-1319",
     resourceGroupName: "resourceGroupName",
     ruleName: "sdk-Rules-6571",
@@ -235,13 +235,13 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var rule = new AzureNextGen.ServiceBus.Latest.Rule("rule", new AzureNextGen.ServiceBus.Latest.RuleArgs
+        var rule = new AzureNextGen.ServiceBus..Rule("rule", new AzureNextGen.ServiceBus..RuleArgs
         {
             FilterType = "SqlFilter",
             NamespaceName = "sdk-Namespace-1319",
             ResourceGroupName = "resourceGroupName",
             RuleName = "sdk-Rules-6571",
-            SqlFilter = new AzureNextGen.ServiceBus.Latest.Inputs.SqlFilterArgs
+            SqlFilter = new AzureNextGen.ServiceBus..Inputs.SqlFilterArgs
             {
                 SqlExpression = "myproperty=test",
             },
@@ -262,7 +262,7 @@ class MyStack : Stack
 package main
 
 import (
-	servicebus "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/servicebus/latest"
+	servicebus "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/servicebus"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -296,12 +296,12 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-rule = azure_nextgen.servicebus.latest.Rule("rule",
+rule = azure_nextgen.servicebus.Rule("rule",
     filter_type="SqlFilter",
     namespace_name="sdk-Namespace-1319",
     resource_group_name="resourceGroupName",
     rule_name="sdk-Rules-6571",
-    sql_filter=azure_nextgen.servicebus.latest.SqlFilterArgs(
+    sql_filter=azure_nextgen.servicebus.SqlFilterArgs(
         sql_expression="myproperty=test",
     ),
     subscription_name="sdk-Subscriptions-8691",
@@ -317,7 +317,7 @@ rule = azure_nextgen.servicebus.latest.Rule("rule",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const rule = new azure_nextgen.servicebus.latest.Rule("rule", {
+const rule = new azure_nextgen.servicebus.Rule("rule", {
     filterType: "SqlFilter",
     namespaceName: "sdk-Namespace-1319",
     resourceGroupName: "resourceGroupName",
@@ -567,7 +567,7 @@ The Rule resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#action_csharp" style="color: inherit; text-decoration: inherit;">Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#action">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Bus.<wbr>Inputs.<wbr>Action<wbr>Args</a></span>
+        <span class="property-type"><a href="#action">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Bus..<wbr>Inputs.<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Represents the filter actions which are allowed for the transformation of a message that have been matched by a filter expression.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -576,7 +576,7 @@ The Rule resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#correlationfilter_csharp" style="color: inherit; text-decoration: inherit;">Correlation<wbr>Filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#correlationfilter">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Bus.<wbr>Inputs.<wbr>Correlation<wbr>Filter<wbr>Args</a></span>
+        <span class="property-type"><a href="#correlationfilter">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Bus..<wbr>Inputs.<wbr>Correlation<wbr>Filter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties of correlationFilter{{% /md %}}</dd>
     <dt class="property-optional"
@@ -585,7 +585,7 @@ The Rule resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#filtertype_csharp" style="color: inherit; text-decoration: inherit;">Filter<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#filtertype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Bus.<wbr>Filter<wbr>Type</a></span>
+        <span class="property-type"><a href="#filtertype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Bus..<wbr>Filter<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Filter type that is evaluated against a BrokeredMessage.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -594,7 +594,7 @@ The Rule resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#sqlfilter_csharp" style="color: inherit; text-decoration: inherit;">Sql<wbr>Filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlfilter">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Bus.<wbr>Inputs.<wbr>Sql<wbr>Filter<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlfilter">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Bus..<wbr>Inputs.<wbr>Sql<wbr>Filter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties of sqlFilter{{% /md %}}</dd>
 </dl>
@@ -2361,7 +2361,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:servicebus/latest:Rule sdk-Rules-6571 /subscriptions/subscriptionId/resourceGroups/resourceGroupName/providers/Microsoft.ServiceBus/namespaces/sdk-Namespace-1319/topics/sdk-Topics-2081/subscriptions/sdk-Subscriptions-8691/rules/sdk-Rules-6571 
+$ pulumi import azure-nextgen:servicebus:Rule sdk-Rules-6571 /subscriptions/subscriptionId/resourceGroups/resourceGroupName/providers/Microsoft.ServiceBus/namespaces/sdk-Namespace-1319/topics/sdk-Topics-2081/subscriptions/sdk-Subscriptions-8691/rules/sdk-Rules-6571 
 ```
 
 

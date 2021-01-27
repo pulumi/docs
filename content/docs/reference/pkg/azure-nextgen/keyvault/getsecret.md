@@ -224,7 +224,7 @@ The following output properties are available:
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Key<wbr>Vault.<wbr>Outputs.<wbr>Secret<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#secretpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Key<wbr>Vault..<wbr>Outputs.<wbr>Secret<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Properties of the secret{{% /md %}}</dd>
     <dt class="property-"
@@ -679,7 +679,7 @@ The following output properties are available:
 <a href="#attributes_csharp" style="color: inherit; text-decoration: inherit;">Attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretattributesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Key<wbr>Vault.<wbr>Inputs.<wbr>Secret<wbr>Attributes<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#secretattributesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Key<wbr>Vault..<wbr>Inputs.<wbr>Secret<wbr>Attributes<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The attributes of the secret.{{% /md %}}</dd>
     <dt class="property-optional"

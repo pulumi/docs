@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.authorization.RoleAssignment res
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Role Assignments
-Latest API Version: 2015-07-01.
+API Version: 2015-07-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,9 +27,9 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var roleAssignment = new AzureNextGen.Authorization.Latest.RoleAssignment("roleAssignment", new AzureNextGen.Authorization.Latest.RoleAssignmentArgs
+        var roleAssignment = new AzureNextGen.Authorization..RoleAssignment("roleAssignment", new AzureNextGen.Authorization..RoleAssignmentArgs
         {
-            Properties = new AzureNextGen.Authorization.Latest.Inputs.RoleAssignmentPropertiesArgs
+            Properties = new AzureNextGen.Authorization..Inputs.RoleAssignmentPropertiesArgs
             {
                 PrincipalId = "d93a38bc-d029-4160-bfb0-fbda779ac214",
                 RoleDefinitionId = "/subscriptions/4004a9fd-d58e-48dc-aeb2-4a4aec58606f/providers/Microsoft.Authorization/roleDefinitions/de139f84-1756-47ae-9be6-808fbbe84772",
@@ -51,7 +51,7 @@ class MyStack : Stack
 package main
 
 import (
-	authorization "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/authorization/latest"
+	authorization "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/authorization"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -82,8 +82,8 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-role_assignment = azure_nextgen.authorization.latest.RoleAssignment("roleAssignment",
-    properties=azure_nextgen.authorization.latest.RoleAssignmentPropertiesArgs(
+role_assignment = azure_nextgen.authorization.RoleAssignment("roleAssignment",
+    properties=azure_nextgen.authorization.RoleAssignmentPropertiesArgs(
         principal_id="d93a38bc-d029-4160-bfb0-fbda779ac214",
         role_definition_id="/subscriptions/4004a9fd-d58e-48dc-aeb2-4a4aec58606f/providers/Microsoft.Authorization/roleDefinitions/de139f84-1756-47ae-9be6-808fbbe84772",
     ),
@@ -100,7 +100,7 @@ role_assignment = azure_nextgen.authorization.latest.RoleAssignment("roleAssignm
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const roleAssignment = new azure_nextgen.authorization.latest.RoleAssignment("roleAssignment", {
+const roleAssignment = new azure_nextgen.authorization.RoleAssignment("roleAssignment", {
     properties: {
         principalId: "d93a38bc-d029-4160-bfb0-fbda779ac214",
         roleDefinitionId: "/subscriptions/4004a9fd-d58e-48dc-aeb2-4a4aec58606f/providers/Microsoft.Authorization/roleDefinitions/de139f84-1756-47ae-9be6-808fbbe84772",
@@ -302,7 +302,7 @@ The RoleAssignment resource accepts the following [input]({{< relref "/docs/intr
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#roleassignmentproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Authorization.<wbr>Inputs.<wbr>Role<wbr>Assignment<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#roleassignmentproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Authorization..<wbr>Inputs.<wbr>Role<wbr>Assignment<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Role assignment properties.{{% /md %}}</dd>
     <dt class="property-required"
@@ -811,7 +811,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:authorization/latest:RoleAssignment roleassignmentId /subscriptions/subId/resourcegroups/rgname/providers/Microsoft.Authorization/roleAssignments/roleassignmentId 
+$ pulumi import azure-nextgen:authorization:RoleAssignment roleassignmentId /subscriptions/subId/resourcegroups/rgname/providers/Microsoft.Authorization/roleAssignments/roleassignmentId 
 ```
 
 

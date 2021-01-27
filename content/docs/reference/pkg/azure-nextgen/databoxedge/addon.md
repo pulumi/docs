@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.databoxedge.Addon resource with 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Role Addon
-Latest API Version: 2020-09-01.
+API Version: 2020-09-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var addon = new AzureNextGen.DataBoxEdge.Latest.Addon("addon", new AzureNextGen.DataBoxEdge.Latest.AddonArgs
+        var addon = new AzureNextGen.DataBoxEdge..Addon("addon", new AzureNextGen.DataBoxEdge..AddonArgs
         {
             AddonName = "arcName",
             DeviceName = "testedgedevice",
@@ -49,7 +49,7 @@ class MyStack : Stack
 package main
 
 import (
-	databoxedge "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/databoxedge/latest"
+	databoxedge "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/databoxedge"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -79,7 +79,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-addon = azure_nextgen.databoxedge.latest.Addon("addon",
+addon = azure_nextgen.databoxedge.Addon("addon",
     addon_name="arcName",
     device_name="testedgedevice",
     kind="ArcForKubernetes",
@@ -96,7 +96,7 @@ addon = azure_nextgen.databoxedge.latest.Addon("addon",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const addon = new azure_nextgen.databoxedge.latest.Addon("addon", {
+const addon = new azure_nextgen.databoxedge.Addon("addon", {
     addonName: "arcName",
     deviceName: "testedgedevice",
     kind: "ArcForKubernetes",
@@ -315,7 +315,7 @@ The Addon resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#addontype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Addon<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#addontype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge..<wbr>Addon<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Addon type.{{% /md %}}</dd>
     <dt class="property-required"
@@ -526,7 +526,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#systemdata_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
+        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge..<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Addon type{{% /md %}}</dd>
     <dt class="property-"
@@ -962,7 +962,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:databoxedge/latest:Addon arcName /subscriptions/4385cf00-2d3a-425a-832f-f4285b1c9dce/resourcegroups/GroupForEdgeAutomation/providers/Microsoft.DataBoxEdge/dataBoxEdgeDevices/addonExamples/roles/kubernetesRole/addons/arcName 
+$ pulumi import azure-nextgen:databoxedge:Addon arcName /subscriptions/4385cf00-2d3a-425a-832f-f4285b1c9dce/resourcegroups/GroupForEdgeAutomation/providers/Microsoft.DataBoxEdge/dataBoxEdgeDevices/addonExamples/roles/kubernetesRole/addons/arcName 
 ```
 
 

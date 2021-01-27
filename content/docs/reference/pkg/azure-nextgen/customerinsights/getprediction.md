@@ -215,7 +215,7 @@ The following output properties are available:
 <a href="#mappings_csharp" style="color: inherit; text-decoration: inherit;">Mappings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#predictionresponsemappings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights.<wbr>Outputs.<wbr>Prediction<wbr>Response<wbr>Mappings</a></span>
+        <span class="property-type"><a href="#predictionresponsemappings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights..<wbr>Outputs.<wbr>Prediction<wbr>Response<wbr>Mappings</a></span>
     </dt>
     <dd>{{% md %}}Definition of the link mapping of prediction.{{% /md %}}</dd>
     <dt class="property-"
@@ -287,7 +287,7 @@ The following output properties are available:
 <a href="#systemgeneratedentities_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Generated<wbr>Entities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#predictionresponsesystemgeneratedentities">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights.<wbr>Outputs.<wbr>Prediction<wbr>Response<wbr>System<wbr>Generated<wbr>Entities</a></span>
+        <span class="property-type"><a href="#predictionresponsesystemgeneratedentities">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights..<wbr>Outputs.<wbr>Prediction<wbr>Response<wbr>System<wbr>Generated<wbr>Entities</a></span>
     </dt>
     <dd>{{% md %}}System generated entities.{{% /md %}}</dd>
     <dt class="property-"
@@ -332,7 +332,7 @@ The following output properties are available:
 <a href="#grades_csharp" style="color: inherit; text-decoration: inherit;">Grades</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#predictionresponsegrades">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights.<wbr>Outputs.<wbr>Prediction<wbr>Response<wbr>Grades&gt;</a></span>
+        <span class="property-type"><a href="#predictionresponsegrades">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights..<wbr>Outputs.<wbr>Prediction<wbr>Response<wbr>Grades&gt;</a></span>
     </dt>
     <dd>{{% md %}}The prediction grades.{{% /md %}}</dd>
     <dt class="property-"

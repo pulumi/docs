@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.documentdb.DatabaseAccountTable 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 An Azure Cosmos DB Table.
-Latest API Version: 2016-03-31.
+API Version: 2016-03-31.
 
 {{% examples %}}
 ## Example Usage
@@ -27,11 +27,11 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var databaseAccountTable = new AzureNextGen.DocumentDB.Latest.DatabaseAccountTable("databaseAccountTable", new AzureNextGen.DocumentDB.Latest.DatabaseAccountTableArgs
+        var databaseAccountTable = new AzureNextGen.DocumentDB..DatabaseAccountTable("databaseAccountTable", new AzureNextGen.DocumentDB..DatabaseAccountTableArgs
         {
             AccountName = "ddb1",
             Options = ,
-            Resource = new AzureNextGen.DocumentDB.Latest.Inputs.TableResourceArgs
+            Resource = new AzureNextGen.DocumentDB..Inputs.TableResourceArgs
             {
                 Id = "tableName",
             },
@@ -52,7 +52,7 @@ class MyStack : Stack
 package main
 
 import (
-	documentdb "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/documentdb/latest"
+	documentdb "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/documentdb"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -84,10 +84,10 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-database_account_table = azure_nextgen.documentdb.latest.DatabaseAccountTable("databaseAccountTable",
+database_account_table = azure_nextgen.documentdb.DatabaseAccountTable("databaseAccountTable",
     account_name="ddb1",
     options={},
-    resource=azure_nextgen.documentdb.latest.TableResourceArgs(
+    resource=azure_nextgen.documentdb.TableResourceArgs(
         id="tableName",
     ),
     resource_group_name="rg1",
@@ -103,7 +103,7 @@ database_account_table = azure_nextgen.documentdb.latest.DatabaseAccountTable("d
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const databaseAccountTable = new azure_nextgen.documentdb.latest.DatabaseAccountTable("databaseAccountTable", {
+const databaseAccountTable = new azure_nextgen.documentdb.DatabaseAccountTable("databaseAccountTable", {
     accountName: "ddb1",
     options: {},
     resource: {
@@ -324,7 +324,7 @@ The DatabaseAccountTable resource accepts the following [input]({{< relref "/doc
 <a href="#resource_csharp" style="color: inherit; text-decoration: inherit;">Resource</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tableresource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Table<wbr>Resource<wbr>Args</a></span>
+        <span class="property-type"><a href="#tableresource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB..<wbr>Inputs.<wbr>Table<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The standard JSON format of a Table{{% /md %}}</dd>
     <dt class="property-required"
@@ -789,7 +789,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:documentdb/latest:DatabaseAccountTable tableName tableName 
+$ pulumi import azure-nextgen:documentdb:DatabaseAccountTable tableName tableName 
 ```
 
 

@@ -161,7 +161,7 @@ The following output properties are available:
 <a href="#authentication_csharp" style="color: inherit; text-decoration: inherit;">Authentication</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sasauthenticationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Deployment<wbr>Manager.<wbr>Outputs.<wbr>Sas<wbr>Authentication<wbr>Response</a></span>
+        <span class="property-type"><a href="#sasauthenticationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Deployment<wbr>Manager..<wbr>Outputs.<wbr>Sas<wbr>Authentication<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The authentication method to use to access the artifact source.{{% /md %}}</dd>
     <dt class="property-"

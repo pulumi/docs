@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.kubernetesconfiguration.SourceCo
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The SourceControl Configuration object returned in Get & Put response.
+API Version: 2020-10-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var sourceControlConfiguration = new AzureNextGen.KubernetesConfiguration.V20201001Preview.SourceControlConfiguration("sourceControlConfiguration", new AzureNextGen.KubernetesConfiguration.V20201001Preview.SourceControlConfigurationArgs
+        var sourceControlConfiguration = new AzureNextGen.KubernetesConfiguration..SourceControlConfiguration("sourceControlConfiguration", new AzureNextGen.KubernetesConfiguration..SourceControlConfigurationArgs
         {
             ClusterName = "clusterName1",
             ClusterResourceName = "connectedClusters",
@@ -36,7 +37,7 @@ class MyStack : Stack
                 { "protectedSetting1Key", "protectedSetting1Value" },
             },
             EnableHelmOperator = true,
-            HelmOperatorProperties = new AzureNextGen.KubernetesConfiguration.V20201001Preview.Inputs.HelmOperatorPropertiesArgs
+            HelmOperatorProperties = new AzureNextGen.KubernetesConfiguration..Inputs.HelmOperatorPropertiesArgs
             {
                 ChartValues = "--set git.ssh.secretName=flux-git-deploy --set tillerNamespace=kube-system",
                 ChartVersion = "0.3.0",
@@ -65,7 +66,7 @@ class MyStack : Stack
 package main
 
 import (
-	kubernetesconfiguration "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/kubernetesconfiguration/v20201001preview"
+	kubernetesconfiguration "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/kubernetesconfiguration"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -110,7 +111,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-source_control_configuration = azure_nextgen.kubernetesconfiguration.v20201001preview.SourceControlConfiguration("sourceControlConfiguration",
+source_control_configuration = azure_nextgen.kubernetesconfiguration.SourceControlConfiguration("sourceControlConfiguration",
     cluster_name="clusterName1",
     cluster_resource_name="connectedClusters",
     cluster_rp="Microsoft.Kubernetes",
@@ -118,7 +119,7 @@ source_control_configuration = azure_nextgen.kubernetesconfiguration.v20201001pr
         "protectedSetting1Key": "protectedSetting1Value",
     },
     enable_helm_operator=True,
-    helm_operator_properties=azure_nextgen.kubernetesconfiguration.v20201001preview.HelmOperatorPropertiesArgs(
+    helm_operator_properties=azure_nextgen.kubernetesconfiguration.HelmOperatorPropertiesArgs(
         chart_values="--set git.ssh.secretName=flux-git-deploy --set tillerNamespace=kube-system",
         chart_version="0.3.0",
     ),
@@ -142,7 +143,7 @@ source_control_configuration = azure_nextgen.kubernetesconfiguration.v20201001pr
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const sourceControlConfiguration = new azure_nextgen.kubernetesconfiguration.v20201001preview.SourceControlConfiguration("sourceControlConfiguration", {
+const sourceControlConfiguration = new azure_nextgen.kubernetesconfiguration.SourceControlConfiguration("sourceControlConfiguration", {
     clusterName: "clusterName1",
     clusterResourceName: "connectedClusters",
     clusterRp: "Microsoft.Kubernetes",
@@ -421,7 +422,7 @@ The SourceControlConfiguration resource accepts the following [input]({{< relref
 <a href="#helmoperatorproperties_csharp" style="color: inherit; text-decoration: inherit;">Helm<wbr>Operator<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#helmoperatorproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Kubernetes<wbr>Configuration.<wbr>Inputs.<wbr>Helm<wbr>Operator<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#helmoperatorproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Kubernetes<wbr>Configuration..<wbr>Inputs.<wbr>Helm<wbr>Operator<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties for Helm operator.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -457,7 +458,7 @@ The SourceControlConfiguration resource accepts the following [input]({{< relref
 <a href="#operatorscope_csharp" style="color: inherit; text-decoration: inherit;">Operator<wbr>Scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#operatorscopetype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Kubernetes<wbr>Configuration.<wbr>Operator<wbr>Scope<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#operatorscopetype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Kubernetes<wbr>Configuration..<wbr>Operator<wbr>Scope<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Scope at which the operator will be installed.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -466,7 +467,7 @@ The SourceControlConfiguration resource accepts the following [input]({{< relref
 <a href="#operatortype_csharp" style="color: inherit; text-decoration: inherit;">Operator<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#operatortype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Kubernetes<wbr>Configuration.<wbr>Operator<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#operatortype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Kubernetes<wbr>Configuration..<wbr>Operator<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of the operator{{% /md %}}</dd>
     <dt class="property-optional"
@@ -929,7 +930,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#compliancestatus_csharp" style="color: inherit; text-decoration: inherit;">Compliance<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#compliancestatusresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Kubernetes<wbr>Configuration.<wbr>Outputs.<wbr>Compliance<wbr>Status<wbr>Response</a></span>
+        <span class="property-type"><a href="#compliancestatusresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Kubernetes<wbr>Configuration..<wbr>Outputs.<wbr>Compliance<wbr>Status<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Compliance Status of the Configuration{{% /md %}}</dd>
     <dt class="property-"
@@ -983,7 +984,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#systemdata_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Kubernetes<wbr>Configuration.<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
+        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Kubernetes<wbr>Configuration..<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Top level metadata https://github.com/Azure/azure-resource-manager-rpc/blob/master/v1.0/common-api-contracts.md#system-metadata-for-all-azure-resources{{% /md %}}</dd>
 </dl>
@@ -1887,7 +1888,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:kubernetesconfiguration/v20201001preview:SourceControlConfiguration SRS_GitHubConfig /subscriptions/subId1/resourceGroups/rg1/providers/Microsoft.Kubernetes/connectedClusters/clusterName1/providers/Microsoft.KubernetesConfiguration/sourceControlConfigurations/SRS_GitHubConfig 
+$ pulumi import azure-nextgen:kubernetesconfiguration:SourceControlConfiguration SRS_GitHubConfig /subscriptions/subId1/resourceGroups/rg1/providers/Microsoft.Kubernetes/connectedClusters/clusterName1/providers/Microsoft.KubernetesConfiguration/sourceControlConfigurations/SRS_GitHubConfig 
 ```
 
 

@@ -195,7 +195,7 @@ The following output properties are available:
 <a href="#keys_csharp" style="color: inherit; text-decoration: inherit;">Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageaccountkeyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Outputs.<wbr>Storage<wbr>Account<wbr>Key<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#storageaccountkeyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage..<wbr>Outputs.<wbr>Storage<wbr>Account<wbr>Key<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Gets the list of storage account keys and their properties for the specified storage account.{{% /md %}}</dd>
 </dl>

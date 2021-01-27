@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.azureactivedirectory.GuestUsage 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Guest Usages Resource
+API Version: 2020-05-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var guestUsage = new AzureNextGen.AzureActiveDirectory.V20200501Preview.GuestUsage("guestUsage", new AzureNextGen.AzureActiveDirectory.V20200501Preview.GuestUsageArgs
+        var guestUsage = new AzureNextGen.AzureActiveDirectory..GuestUsage("guestUsage", new AzureNextGen.AzureActiveDirectory..GuestUsageArgs
         {
             ResourceGroupName = "contosoResourceGroup",
             ResourceName = "contoso.onmicrosoft.com",
@@ -45,7 +46,7 @@ class MyStack : Stack
 package main
 
 import (
-	azureactivedirectory "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/azureactivedirectory/v20200501preview"
+	azureactivedirectory "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/azureactivedirectory"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -72,7 +73,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-guest_usage = azure_nextgen.azureactivedirectory.v20200501preview.GuestUsage("guestUsage",
+guest_usage = azure_nextgen.azureactivedirectory.GuestUsage("guestUsage",
     resource_group_name="contosoResourceGroup",
     resource_name="contoso.onmicrosoft.com")
 
@@ -86,7 +87,7 @@ guest_usage = azure_nextgen.azureactivedirectory.v20200501preview.GuestUsage("gu
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const guestUsage = new azure_nextgen.azureactivedirectory.v20200501preview.GuestUsage("guestUsage", {
+const guestUsage = new azure_nextgen.azureactivedirectory.GuestUsage("guestUsage", {
     resourceGroupName: "contosoResourceGroup",
     resourceName: "contoso.onmicrosoft.com",
 });
@@ -629,7 +630,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:azureactivedirectory/v20200501preview:GuestUsage contoso.onmicrosoft.com /subscriptions/c80fb759-c965-4c6a-9110-9b2b2d038882/resourceGroups/contosoResourceGroup/providers/Microsoft.AzureActiveDirectory/guestUsages/contoso.onmicrosoft.com 
+$ pulumi import azure-nextgen:azureactivedirectory:GuestUsage contoso.onmicrosoft.com /subscriptions/c80fb759-c965-4c6a-9110-9b2b2d038882/resourceGroups/contosoResourceGroup/providers/Microsoft.AzureActiveDirectory/guestUsages/contoso.onmicrosoft.com 
 ```
 
 

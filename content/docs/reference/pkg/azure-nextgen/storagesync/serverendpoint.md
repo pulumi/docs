@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.storagesync.ServerEndpoint resou
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Server Endpoint object.
-Latest API Version: 2020-09-01.
+API Version: 2020-09-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var serverEndpoint = new AzureNextGen.StorageSync.Latest.ServerEndpoint("serverEndpoint", new AzureNextGen.StorageSync.Latest.ServerEndpointArgs
+        var serverEndpoint = new AzureNextGen.StorageSync..ServerEndpoint("serverEndpoint", new AzureNextGen.StorageSync..ServerEndpointArgs
         {
             CloudTiering = "off",
             InitialDownloadPolicy = "NamespaceThenModifiedFiles",
@@ -57,7 +57,7 @@ class MyStack : Stack
 package main
 
 import (
-	storagesync "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/storagesync/latest"
+	storagesync "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/storagesync"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -95,7 +95,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-server_endpoint = azure_nextgen.storagesync.latest.ServerEndpoint("serverEndpoint",
+server_endpoint = azure_nextgen.storagesync.ServerEndpoint("serverEndpoint",
     cloud_tiering="off",
     initial_download_policy="NamespaceThenModifiedFiles",
     local_cache_mode="UpdateLocallyCachedFiles",
@@ -120,7 +120,7 @@ server_endpoint = azure_nextgen.storagesync.latest.ServerEndpoint("serverEndpoin
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const serverEndpoint = new azure_nextgen.storagesync.latest.ServerEndpoint("serverEndpoint", {
+const serverEndpoint = new azure_nextgen.storagesync.ServerEndpoint("serverEndpoint", {
     cloudTiering: "off",
     initialDownloadPolicy: "NamespaceThenModifiedFiles",
     localCacheMode: "UpdateLocallyCachedFiles",
@@ -365,7 +365,7 @@ The ServerEndpoint resource accepts the following [input]({{< relref "/docs/intr
 <a href="#cloudtiering_csharp" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Tiering</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#featurestatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Sync.<wbr>Feature<wbr>Status</a></span>
+        <span class="property-type">string | <a href="#featurestatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Sync..<wbr>Feature<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}Cloud Tiering.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -383,7 +383,7 @@ The ServerEndpoint resource accepts the following [input]({{< relref "/docs/intr
 <a href="#initialdownloadpolicy_csharp" style="color: inherit; text-decoration: inherit;">Initial<wbr>Download<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#initialdownloadpolicy">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Sync.<wbr>Initial<wbr>Download<wbr>Policy</a></span>
+        <span class="property-type">string | <a href="#initialdownloadpolicy">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Sync..<wbr>Initial<wbr>Download<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Policy for how namespace and files are recalled during FastDr.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -392,7 +392,7 @@ The ServerEndpoint resource accepts the following [input]({{< relref "/docs/intr
 <a href="#localcachemode_csharp" style="color: inherit; text-decoration: inherit;">Local<wbr>Cache<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#localcachemode">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Sync.<wbr>Local<wbr>Cache<wbr>Mode</a></span>
+        <span class="property-type">string | <a href="#localcachemode">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Sync..<wbr>Local<wbr>Cache<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}Policy for enabling follow-the-sun business models: link local cache to cloud behavior to pre-populate before local access.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -401,7 +401,7 @@ The ServerEndpoint resource accepts the following [input]({{< relref "/docs/intr
 <a href="#offlinedatatransfer_csharp" style="color: inherit; text-decoration: inherit;">Offline<wbr>Data<wbr>Transfer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#featurestatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Sync.<wbr>Feature<wbr>Status</a></span>
+        <span class="property-type">string | <a href="#featurestatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Sync..<wbr>Feature<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}Offline data transfer{{% /md %}}</dd>
     <dt class="property-optional"
@@ -864,7 +864,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cloudtieringstatus_csharp" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Tiering<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serverendpointcloudtieringstatusresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Sync.<wbr>Outputs.<wbr>Server<wbr>Endpoint<wbr>Cloud<wbr>Tiering<wbr>Status<wbr>Response</a></span>
+        <span class="property-type"><a href="#serverendpointcloudtieringstatusresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Sync..<wbr>Outputs.<wbr>Server<wbr>Endpoint<wbr>Cloud<wbr>Tiering<wbr>Status<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Cloud tiering status. Only populated if cloud tiering is enabled.{{% /md %}}</dd>
     <dt class="property-"
@@ -936,7 +936,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recallstatus_csharp" style="color: inherit; text-decoration: inherit;">Recall<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serverendpointrecallstatusresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Sync.<wbr>Outputs.<wbr>Server<wbr>Endpoint<wbr>Recall<wbr>Status<wbr>Response</a></span>
+        <span class="property-type"><a href="#serverendpointrecallstatusresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Sync..<wbr>Outputs.<wbr>Server<wbr>Endpoint<wbr>Recall<wbr>Status<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Recall status. Only populated if cloud tiering is enabled.{{% /md %}}</dd>
     <dt class="property-"
@@ -954,7 +954,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#syncstatus_csharp" style="color: inherit; text-decoration: inherit;">Sync<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serverendpointsyncstatusresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Sync.<wbr>Outputs.<wbr>Server<wbr>Endpoint<wbr>Sync<wbr>Status<wbr>Response</a></span>
+        <span class="property-type"><a href="#serverendpointsyncstatusresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Sync..<wbr>Outputs.<wbr>Server<wbr>Endpoint<wbr>Sync<wbr>Status<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Server Endpoint sync status{{% /md %}}</dd>
     <dt class="property-"
@@ -1600,7 +1600,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errors_csharp" style="color: inherit; text-decoration: inherit;">Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#filesnottieringerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Sync.<wbr>Inputs.<wbr>Files<wbr>Not<wbr>Tiering<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#filesnottieringerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Sync..<wbr>Inputs.<wbr>Files<wbr>Not<wbr>Tiering<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Array of tiering errors{{% /md %}}</dd>
     <dt class="property-required"
@@ -2464,7 +2464,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cacheperformance_csharp" style="color: inherit; text-decoration: inherit;">Cache<wbr>Performance</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudtieringcacheperformanceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Sync.<wbr>Inputs.<wbr>Cloud<wbr>Tiering<wbr>Cache<wbr>Performance<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#cloudtieringcacheperformanceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Sync..<wbr>Inputs.<wbr>Cloud<wbr>Tiering<wbr>Cache<wbr>Performance<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information regarding how well the local cache on the server is performing.{{% /md %}}</dd>
     <dt class="property-required"
@@ -2473,7 +2473,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datepolicystatus_csharp" style="color: inherit; text-decoration: inherit;">Date<wbr>Policy<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudtieringdatepolicystatusresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Sync.<wbr>Inputs.<wbr>Cloud<wbr>Tiering<wbr>Date<wbr>Policy<wbr>Status<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#cloudtieringdatepolicystatusresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Sync..<wbr>Inputs.<wbr>Cloud<wbr>Tiering<wbr>Date<wbr>Policy<wbr>Status<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Status of the date policy{{% /md %}}</dd>
     <dt class="property-required"
@@ -2482,7 +2482,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filesnottiering_csharp" style="color: inherit; text-decoration: inherit;">Files<wbr>Not<wbr>Tiering</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudtieringfilesnottieringresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Sync.<wbr>Inputs.<wbr>Cloud<wbr>Tiering<wbr>Files<wbr>Not<wbr>Tiering<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#cloudtieringfilesnottieringresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Sync..<wbr>Inputs.<wbr>Cloud<wbr>Tiering<wbr>Files<wbr>Not<wbr>Tiering<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information regarding files that failed to be tiered{{% /md %}}</dd>
     <dt class="property-required"
@@ -2536,7 +2536,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#spacesavings_csharp" style="color: inherit; text-decoration: inherit;">Space<wbr>Savings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudtieringspacesavingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Sync.<wbr>Inputs.<wbr>Cloud<wbr>Tiering<wbr>Space<wbr>Savings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#cloudtieringspacesavingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Sync..<wbr>Inputs.<wbr>Cloud<wbr>Tiering<wbr>Space<wbr>Savings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information regarding how much local space cloud tiering is saving.{{% /md %}}</dd>
     <dt class="property-required"
@@ -2545,7 +2545,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#volumefreespacepolicystatus_csharp" style="color: inherit; text-decoration: inherit;">Volume<wbr>Free<wbr>Space<wbr>Policy<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudtieringvolumefreespacepolicystatusresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Sync.<wbr>Inputs.<wbr>Cloud<wbr>Tiering<wbr>Volume<wbr>Free<wbr>Space<wbr>Policy<wbr>Status<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#cloudtieringvolumefreespacepolicystatusresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Sync..<wbr>Inputs.<wbr>Cloud<wbr>Tiering<wbr>Volume<wbr>Free<wbr>Space<wbr>Policy<wbr>Status<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Status of the volume free space policy{{% /md %}}</dd>
 </dl>
@@ -3091,7 +3091,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recallerrors_csharp" style="color: inherit; text-decoration: inherit;">Recall<wbr>Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serverendpointrecallerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Sync.<wbr>Inputs.<wbr>Server<wbr>Endpoint<wbr>Recall<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#serverendpointrecallerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Sync..<wbr>Inputs.<wbr>Server<wbr>Endpoint<wbr>Recall<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Array of recall errors{{% /md %}}</dd>
     <dt class="property-required"
@@ -3494,7 +3494,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filesnotsyncingerrors_csharp" style="color: inherit; text-decoration: inherit;">Files<wbr>Not<wbr>Syncing<wbr>Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serverendpointfilesnotsyncingerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Sync.<wbr>Inputs.<wbr>Server<wbr>Endpoint<wbr>Files<wbr>Not<wbr>Syncing<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#serverendpointfilesnotsyncingerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Sync..<wbr>Inputs.<wbr>Server<wbr>Endpoint<wbr>Files<wbr>Not<wbr>Syncing<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Array of per-item errors coming from the last sync session.{{% /md %}}</dd>
     <dt class="property-required"
@@ -3808,7 +3808,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backgrounddatadownloadactivity_csharp" style="color: inherit; text-decoration: inherit;">Background<wbr>Data<wbr>Download<wbr>Activity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serverendpointbackgrounddatadownloadactivityresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Sync.<wbr>Inputs.<wbr>Server<wbr>Endpoint<wbr>Background<wbr>Data<wbr>Download<wbr>Activity<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#serverendpointbackgrounddatadownloadactivityresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Sync..<wbr>Inputs.<wbr>Server<wbr>Endpoint<wbr>Background<wbr>Data<wbr>Download<wbr>Activity<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Background data download activity{{% /md %}}</dd>
     <dt class="property-required"
@@ -3826,7 +3826,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#downloadactivity_csharp" style="color: inherit; text-decoration: inherit;">Download<wbr>Activity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serverendpointsyncactivitystatusresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Sync.<wbr>Inputs.<wbr>Server<wbr>Endpoint<wbr>Sync<wbr>Activity<wbr>Status<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#serverendpointsyncactivitystatusresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Sync..<wbr>Inputs.<wbr>Server<wbr>Endpoint<wbr>Sync<wbr>Activity<wbr>Status<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Download sync activity{{% /md %}}</dd>
     <dt class="property-required"
@@ -3844,7 +3844,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#downloadstatus_csharp" style="color: inherit; text-decoration: inherit;">Download<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serverendpointsyncsessionstatusresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Sync.<wbr>Inputs.<wbr>Server<wbr>Endpoint<wbr>Sync<wbr>Session<wbr>Status<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#serverendpointsyncsessionstatusresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Sync..<wbr>Inputs.<wbr>Server<wbr>Endpoint<wbr>Sync<wbr>Session<wbr>Status<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Download Status{{% /md %}}</dd>
     <dt class="property-required"
@@ -3889,7 +3889,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uploadactivity_csharp" style="color: inherit; text-decoration: inherit;">Upload<wbr>Activity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serverendpointsyncactivitystatusresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Sync.<wbr>Inputs.<wbr>Server<wbr>Endpoint<wbr>Sync<wbr>Activity<wbr>Status<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#serverendpointsyncactivitystatusresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Sync..<wbr>Inputs.<wbr>Server<wbr>Endpoint<wbr>Sync<wbr>Activity<wbr>Status<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Upload sync activity{{% /md %}}</dd>
     <dt class="property-required"
@@ -3907,7 +3907,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uploadstatus_csharp" style="color: inherit; text-decoration: inherit;">Upload<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serverendpointsyncsessionstatusresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Sync.<wbr>Inputs.<wbr>Server<wbr>Endpoint<wbr>Sync<wbr>Session<wbr>Status<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#serverendpointsyncsessionstatusresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Sync..<wbr>Inputs.<wbr>Server<wbr>Endpoint<wbr>Sync<wbr>Session<wbr>Status<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Upload Status{{% /md %}}</dd>
 </dl>
@@ -4260,7 +4260,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:storagesync/latest:ServerEndpoint SampleServerEndpoint_1 /subscriptions/52b8da2f-61e0-4a1f-8dde-336911f367fb/resourceGroups/SampleResourceGroup_1/providers/Microsoft.StorageSync/storageSyncServices/SampleStorageSyncService_1/syncGroups/SampleSyncGroup_1/serverEndpoints/SampleServerEndpoint_1 
+$ pulumi import azure-nextgen:storagesync:ServerEndpoint SampleServerEndpoint_1 /subscriptions/52b8da2f-61e0-4a1f-8dde-336911f367fb/resourceGroups/SampleResourceGroup_1/providers/Microsoft.StorageSync/storageSyncServices/SampleStorageSyncService_1/syncGroups/SampleSyncGroup_1/serverEndpoints/SampleServerEndpoint_1 
 ```
 
 

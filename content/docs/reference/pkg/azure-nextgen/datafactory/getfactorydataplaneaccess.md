@@ -357,7 +357,7 @@ The following output properties are available:
 <a href="#policy_csharp" style="color: inherit; text-decoration: inherit;">Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#useraccesspolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>User<wbr>Access<wbr>Policy<wbr>Response</a></span>
+        <span class="property-type"><a href="#useraccesspolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Outputs.<wbr>User<wbr>Access<wbr>Policy<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The user access policy.{{% /md %}}</dd>
 </dl>

@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.advisor.Suppression resource wit
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The details of the snoozed or dismissed rule; for example, the duration, name, and GUID associated with the rule.
-Latest API Version: 2020-01-01.
+API Version: 2020-01-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var suppression = new AzureNextGen.Advisor.Latest.Suppression("suppression", new AzureNextGen.Advisor.Latest.SuppressionArgs
+        var suppression = new AzureNextGen.Advisor..Suppression("suppression", new AzureNextGen.Advisor..SuppressionArgs
         {
             Name = "suppressionName1",
             RecommendationId = "recommendationId",
@@ -48,7 +48,7 @@ class MyStack : Stack
 package main
 
 import (
-	advisor "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/advisor/latest"
+	advisor "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/advisor"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -77,7 +77,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-suppression = azure_nextgen.advisor.latest.Suppression("suppression",
+suppression = azure_nextgen.advisor.Suppression("suppression",
     name="suppressionName1",
     recommendation_id="recommendationId",
     resource_uri="resourceUri",
@@ -93,7 +93,7 @@ suppression = azure_nextgen.advisor.latest.Suppression("suppression",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const suppression = new azure_nextgen.advisor.latest.Suppression("suppression", {
+const suppression = new azure_nextgen.advisor.Suppression("suppression", {
     name: "suppressionName1",
     recommendationId: "recommendationId",
     resourceUri: "resourceUri",
@@ -638,7 +638,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:advisor/latest:Suppression suppressionName1 /resourceUri/providers/Microsoft.Advisor/recommendations/recommendationId/suppressions/suppressionName1 
+$ pulumi import azure-nextgen:advisor:Suppression suppressionName1 /resourceUri/providers/Microsoft.Advisor/recommendations/recommendationId/suppressions/suppressionName1 
 ```
 
 

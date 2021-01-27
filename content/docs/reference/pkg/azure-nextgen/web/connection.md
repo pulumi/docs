@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.web.Connection resource with exa
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 API connection
-Latest API Version: 2016-06-01.
+API Version: 2016-06-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,12 +27,12 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var connection = new AzureNextGen.Web.Latest.Connection("connection", new AzureNextGen.Web.Latest.ConnectionArgs
+        var connection = new AzureNextGen.Web..Connection("connection", new AzureNextGen.Web..ConnectionArgs
         {
             ConnectionName = "testManagedApi",
-            Properties = new AzureNextGen.Web.Latest.Inputs.ApiConnectionDefinitionPropertiesArgs
+            Properties = new AzureNextGen.Web..Inputs.ApiConnectionDefinitionPropertiesArgs
             {
-                Api = new AzureNextGen.Web.Latest.Inputs.ApiReferenceArgs
+                Api = new AzureNextGen.Web..Inputs.ApiReferenceArgs
                 {
                     Id = "/subscriptions/f34b22a3-2202-4fb1-b040-1332bd928c84/providers/Microsoft.Web/locations/centralus/managedApis/testManagedApi",
                 },
@@ -56,7 +56,7 @@ class MyStack : Stack
 package main
 
 import (
-	web "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/web/latest"
+	web "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/web"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -91,10 +91,10 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-connection = azure_nextgen.web.latest.Connection("connection",
+connection = azure_nextgen.web.Connection("connection",
     connection_name="testManagedApi",
-    properties=azure_nextgen.web.latest.ApiConnectionDefinitionPropertiesArgs(
-        api=azure_nextgen.web.latest.ApiReferenceArgs(
+    properties=azure_nextgen.web.ApiConnectionDefinitionPropertiesArgs(
+        api=azure_nextgen.web.ApiReferenceArgs(
             id="/subscriptions/f34b22a3-2202-4fb1-b040-1332bd928c84/providers/Microsoft.Web/locations/centralus/managedApis/testManagedApi",
         ),
         custom_parameter_values={},
@@ -113,7 +113,7 @@ connection = azure_nextgen.web.latest.Connection("connection",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const connection = new azure_nextgen.web.latest.Connection("connection", {
+const connection = new azure_nextgen.web.Connection("connection", {
     connectionName: "testManagedApi",
     properties: {
         api: {
@@ -355,7 +355,7 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apiconnectiondefinitionproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web.<wbr>Inputs.<wbr>Api<wbr>Connection<wbr>Definition<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#apiconnectiondefinitionproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web..<wbr>Inputs.<wbr>Api<wbr>Connection<wbr>Definition<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -746,7 +746,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#api_csharp" style="color: inherit; text-decoration: inherit;">Api</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apireference">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web.<wbr>Inputs.<wbr>Api<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#apireference">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web..<wbr>Inputs.<wbr>Api<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -809,7 +809,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#statuses_csharp" style="color: inherit; text-decoration: inherit;">Statuses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionstatusdefinition">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web.<wbr>Inputs.<wbr>Connection<wbr>Status<wbr>Definition<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#connectionstatusdefinition">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web..<wbr>Inputs.<wbr>Connection<wbr>Status<wbr>Definition<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Status of the connection{{% /md %}}</dd>
     <dt class="property-optional"
@@ -818,7 +818,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#testlinks_csharp" style="color: inherit; text-decoration: inherit;">Test<wbr>Links</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apiconnectiontestlink">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web.<wbr>Inputs.<wbr>Api<wbr>Connection<wbr>Test<wbr>Link<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#apiconnectiontestlink">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web..<wbr>Inputs.<wbr>Api<wbr>Connection<wbr>Test<wbr>Link<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Links to test the API connection{{% /md %}}</dd>
 </dl>
@@ -1096,7 +1096,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#api_csharp" style="color: inherit; text-decoration: inherit;">Api</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apireferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web.<wbr>Inputs.<wbr>Api<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#apireferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web..<wbr>Inputs.<wbr>Api<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1159,7 +1159,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#statuses_csharp" style="color: inherit; text-decoration: inherit;">Statuses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionstatusdefinitionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web.<wbr>Inputs.<wbr>Connection<wbr>Status<wbr>Definition<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#connectionstatusdefinitionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web..<wbr>Inputs.<wbr>Connection<wbr>Status<wbr>Definition<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Status of the connection{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1168,7 +1168,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#testlinks_csharp" style="color: inherit; text-decoration: inherit;">Test<wbr>Links</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apiconnectiontestlinkresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web.<wbr>Inputs.<wbr>Api<wbr>Connection<wbr>Test<wbr>Link<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#apiconnectiontestlinkresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web..<wbr>Inputs.<wbr>Api<wbr>Connection<wbr>Test<wbr>Link<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Links to test the API connection{{% /md %}}</dd>
 </dl>
@@ -2790,7 +2790,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#error_csharp" style="color: inherit; text-decoration: inherit;">Error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionerror">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web.<wbr>Inputs.<wbr>Connection<wbr>Error<wbr>Args</a></span>
+        <span class="property-type"><a href="#connectionerror">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web..<wbr>Inputs.<wbr>Connection<wbr>Error<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Connection error{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2924,7 +2924,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#error_csharp" style="color: inherit; text-decoration: inherit;">Error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionerrorresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web.<wbr>Inputs.<wbr>Connection<wbr>Error<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#connectionerrorresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web..<wbr>Inputs.<wbr>Connection<wbr>Error<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Connection error{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3052,7 +3052,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:web/latest:Connection testManagedApi-1 /subscriptions/f34b22a3-2202-4fb1-b040-1332bd928c84/resourceGroups/testResourceGroup/providers/Microsoft.Web/connections/testManagedApi-1 
+$ pulumi import azure-nextgen:web:Connection testManagedApi-1 /subscriptions/f34b22a3-2202-4fb1-b040-1332bd928c84/resourceGroups/testResourceGroup/providers/Microsoft.Web/connections/testManagedApi-1 
 ```
 
 

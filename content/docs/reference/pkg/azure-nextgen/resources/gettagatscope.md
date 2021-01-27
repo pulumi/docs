@@ -143,7 +143,7 @@ The following output properties are available:
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tagsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Resources.<wbr>Outputs.<wbr>Tags<wbr>Response</a></span>
+        <span class="property-type"><a href="#tagsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Resources..<wbr>Outputs.<wbr>Tags<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The set of tags.{{% /md %}}</dd>
     <dt class="property-"

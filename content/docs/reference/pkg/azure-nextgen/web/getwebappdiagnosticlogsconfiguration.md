@@ -179,7 +179,7 @@ The following output properties are available:
 <a href="#systemdata_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web.<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
+        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web..<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The system metadata relating to this resource.{{% /md %}}</dd>
     <dt class="property-"
@@ -197,7 +197,7 @@ The following output properties are available:
 <a href="#applicationlogs_csharp" style="color: inherit; text-decoration: inherit;">Application<wbr>Logs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationlogsconfigresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web.<wbr>Outputs.<wbr>Application<wbr>Logs<wbr>Config<wbr>Response</a></span>
+        <span class="property-type"><a href="#applicationlogsconfigresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web..<wbr>Outputs.<wbr>Application<wbr>Logs<wbr>Config<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Application logs configuration.{{% /md %}}</dd>
     <dt class="property-"
@@ -206,7 +206,7 @@ The following output properties are available:
 <a href="#detailederrormessages_csharp" style="color: inherit; text-decoration: inherit;">Detailed<wbr>Error<wbr>Messages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#enabledconfigresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web.<wbr>Outputs.<wbr>Enabled<wbr>Config<wbr>Response</a></span>
+        <span class="property-type"><a href="#enabledconfigresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web..<wbr>Outputs.<wbr>Enabled<wbr>Config<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Detailed error messages configuration.{{% /md %}}</dd>
     <dt class="property-"
@@ -215,7 +215,7 @@ The following output properties are available:
 <a href="#failedrequeststracing_csharp" style="color: inherit; text-decoration: inherit;">Failed<wbr>Requests<wbr>Tracing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#enabledconfigresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web.<wbr>Outputs.<wbr>Enabled<wbr>Config<wbr>Response</a></span>
+        <span class="property-type"><a href="#enabledconfigresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web..<wbr>Outputs.<wbr>Enabled<wbr>Config<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Failed requests tracing configuration.{{% /md %}}</dd>
     <dt class="property-"
@@ -224,7 +224,7 @@ The following output properties are available:
 <a href="#httplogs_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Logs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httplogsconfigresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web.<wbr>Outputs.<wbr>Http<wbr>Logs<wbr>Config<wbr>Response</a></span>
+        <span class="property-type"><a href="#httplogsconfigresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web..<wbr>Outputs.<wbr>Http<wbr>Logs<wbr>Config<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}HTTP logs configuration.{{% /md %}}</dd>
     <dt class="property-"
@@ -522,7 +522,7 @@ The following output properties are available:
 <a href="#azureblobstorage_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Blob<wbr>Storage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureblobstorageapplicationlogsconfigresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Application<wbr>Logs<wbr>Config<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azureblobstorageapplicationlogsconfigresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web..<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Application<wbr>Logs<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Application logs to blob storage configuration.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -531,7 +531,7 @@ The following output properties are available:
 <a href="#azuretablestorage_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Table<wbr>Storage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azuretablestorageapplicationlogsconfigresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web.<wbr>Inputs.<wbr>Azure<wbr>Table<wbr>Storage<wbr>Application<wbr>Logs<wbr>Config<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azuretablestorageapplicationlogsconfigresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web..<wbr>Inputs.<wbr>Azure<wbr>Table<wbr>Storage<wbr>Application<wbr>Logs<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Application logs to azure table storage configuration.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -540,7 +540,7 @@ The following output properties are available:
 <a href="#filesystem_csharp" style="color: inherit; text-decoration: inherit;">File<wbr>System</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#filesystemapplicationlogsconfigresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web.<wbr>Inputs.<wbr>File<wbr>System<wbr>Application<wbr>Logs<wbr>Config<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#filesystemapplicationlogsconfigresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web..<wbr>Inputs.<wbr>File<wbr>System<wbr>Application<wbr>Logs<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Application logs to file system configuration.{{% /md %}}</dd>
 </dl>
@@ -1347,7 +1347,7 @@ Value can range between 25 and 100.{{% /md %}}</dd>
 <a href="#azureblobstorage_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Blob<wbr>Storage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureblobstoragehttplogsconfigresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Http<wbr>Logs<wbr>Config<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azureblobstoragehttplogsconfigresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web..<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Http<wbr>Logs<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Http logs to azure blob storage configuration.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1356,7 +1356,7 @@ Value can range between 25 and 100.{{% /md %}}</dd>
 <a href="#filesystem_csharp" style="color: inherit; text-decoration: inherit;">File<wbr>System</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#filesystemhttplogsconfigresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web.<wbr>Inputs.<wbr>File<wbr>System<wbr>Http<wbr>Logs<wbr>Config<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#filesystemhttplogsconfigresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web..<wbr>Inputs.<wbr>File<wbr>System<wbr>Http<wbr>Logs<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Http logs to file system configuration.{{% /md %}}</dd>
 </dl>

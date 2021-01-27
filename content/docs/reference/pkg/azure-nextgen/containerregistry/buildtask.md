@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.containerregistry.BuildTask reso
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The build task that has the resource properties and all build items. The build task will have all information to schedule a build against it.
+API Version: 2018-02-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,23 +27,19 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var buildTask = new AzureNextGen.ContainerRegistry.V20180201Preview.BuildTask("buildTask", new AzureNextGen.ContainerRegistry.V20180201Preview.BuildTaskArgs
+        var buildTask = new AzureNextGen.ContainerRegistry..BuildTask("buildTask", new AzureNextGen.ContainerRegistry..BuildTaskArgs
         {
             Alias = "myalias",
             BuildTaskName = "myBuildTask",
             Location = "eastus",
-            Platform = new AzureNextGen.ContainerRegistry.V20180201Preview.Inputs.PlatformPropertiesArgs
-            {
-                Cpu = 2,
-                OsType = "Linux",
-            },
+            Platform = ,
             RegistryName = "myRegistry",
             ResourceGroupName = "myResourceGroup",
-            SourceRepository = new AzureNextGen.ContainerRegistry.V20180201Preview.Inputs.SourceRepositoryPropertiesArgs
+            SourceRepository = new AzureNextGen.ContainerRegistry..Inputs.SourceRepositoryPropertiesArgs
             {
                 IsCommitTriggerEnabled = true,
                 RepositoryUrl = "https://github.com/Azure/azure-rest-api-specs",
-                SourceControlAuthProperties = new AzureNextGen.ContainerRegistry.V20180201Preview.Inputs.SourceControlAuthInfoArgs
+                SourceControlAuthProperties = new AzureNextGen.ContainerRegistry..Inputs.SourceControlAuthInfoArgs
                 {
                     Scope = "repo",
                     Token = "xxxxxx",
@@ -70,20 +67,17 @@ class MyStack : Stack
 package main
 
 import (
-	containerregistry "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/containerregistry/v20180201preview"
+	containerregistry "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/containerregistry"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := containerregistry.NewBuildTask(ctx, "buildTask", &containerregistry.BuildTaskArgs{
-			Alias:         pulumi.String("myalias"),
-			BuildTaskName: pulumi.String("myBuildTask"),
-			Location:      pulumi.String("eastus"),
-			Platform: &containerregistry.PlatformPropertiesArgs{
-				Cpu:    pulumi.Int(2),
-				OsType: pulumi.String("Linux"),
-			},
+			Alias:             pulumi.String("myalias"),
+			BuildTaskName:     pulumi.String("myBuildTask"),
+			Location:          pulumi.String("eastus"),
+			Platform:          nil,
 			RegistryName:      pulumi.String("myRegistry"),
 			ResourceGroupName: pulumi.String("myResourceGroup"),
 			SourceRepository: &containerregistry.SourceRepositoryPropertiesArgs{
@@ -118,20 +112,17 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-build_task = azure_nextgen.containerregistry.v20180201preview.BuildTask("buildTask",
+build_task = azure_nextgen.containerregistry.BuildTask("buildTask",
     alias="myalias",
     build_task_name="myBuildTask",
     location="eastus",
-    platform=azure_nextgen.containerregistry.v20180201preview.PlatformPropertiesArgs(
-        cpu=2,
-        os_type="Linux",
-    ),
+    platform=azure_nextgen.containerregistry.PlatformPropertiesArgs(),
     registry_name="myRegistry",
     resource_group_name="myResourceGroup",
-    source_repository=azure_nextgen.containerregistry.v20180201preview.SourceRepositoryPropertiesArgs(
+    source_repository=azure_nextgen.containerregistry.SourceRepositoryPropertiesArgs(
         is_commit_trigger_enabled=True,
         repository_url="https://github.com/Azure/azure-rest-api-specs",
-        source_control_auth_properties=azure_nextgen.containerregistry.v20180201preview.SourceControlAuthInfoArgs(
+        source_control_auth_properties=azure_nextgen.containerregistry.SourceControlAuthInfoArgs(
             scope="repo",
             token="xxxxxx",
             token_type="OAuth",
@@ -153,14 +144,11 @@ build_task = azure_nextgen.containerregistry.v20180201preview.BuildTask("buildTa
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const buildTask = new azure_nextgen.containerregistry.v20180201preview.BuildTask("buildTask", {
+const buildTask = new azure_nextgen.containerregistry.BuildTask("buildTask", {
     alias: "myalias",
     buildTaskName: "myBuildTask",
     location: "eastus",
-    platform: {
-        cpu: 2,
-        osType: "Linux",
-    },
+    platform: {},
     registryName: "myRegistry",
     resourceGroupName: "myResourceGroup",
     sourceRepository: {
@@ -399,7 +387,7 @@ The BuildTask resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#platform_csharp" style="color: inherit; text-decoration: inherit;">Platform</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#platformproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Platform<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#platformproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry..<wbr>Inputs.<wbr>Platform<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The platform properties against which the build has to happen.{{% /md %}}</dd>
     <dt class="property-required"
@@ -426,7 +414,7 @@ The BuildTask resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#sourcerepository_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Repository</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sourcerepositoryproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Source<wbr>Repository<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#sourcerepositoryproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry..<wbr>Inputs.<wbr>Source<wbr>Repository<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The properties that describes the source(code) for the build task.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -435,7 +423,7 @@ The BuildTask resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#buildtaskstatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry.<wbr>Build<wbr>Task<wbr>Status</a></span>
+        <span class="property-type">string | <a href="#buildtaskstatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry..<wbr>Build<wbr>Task<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}The current status of build task.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -968,6 +956,68 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+<h4 id="architecture">Architecture</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular">
+    <dt>Amd64</dt>
+    <dd>amd64</dd>
+    <dt>X86</dt>
+    <dd>x86</dd>
+    <dt>Architecture_386</dt>
+    <dd>386</dd>
+    <dt>Arm</dt>
+    <dd>arm</dd>
+    <dt>Arm64</dt>
+    <dd>arm64</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular">
+    <dt>Architecture<wbr>Amd64</dt>
+    <dd>amd64</dd>
+    <dt>Architecture<wbr>X86</dt>
+    <dd>x86</dd>
+    <dt>Architecture_386</dt>
+    <dd>386</dd>
+    <dt>Architecture<wbr>Arm</dt>
+    <dd>arm</dd>
+    <dt>Architecture<wbr>Arm64</dt>
+    <dd>arm64</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular">
+    <dt>Amd64</dt>
+    <dd>amd64</dd>
+    <dt>X86</dt>
+    <dd>x86</dd>
+    <dt>Architecture_386</dt>
+    <dd>386</dd>
+    <dt>Arm</dt>
+    <dd>arm</dd>
+    <dt>Arm64</dt>
+    <dd>arm64</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular">
+    <dt>AMD64</dt>
+    <dd>amd64</dd>
+    <dt>X86</dt>
+    <dd>x86</dd>
+    <dt>ARCHITECTURE_386</dt>
+    <dd>386</dd>
+    <dt>ARM</dt>
+    <dd>arm</dd>
+    <dt>ARM64</dt>
+    <dd>arm64</dd>
+</dl>
+{{% /choosable %}}
+
 <h4 id="buildtaskstatus">Build<wbr>Task<wbr>Status</h4>
 
 {{% choosable language csharp %}}
@@ -1006,7 +1056,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 </dl>
 {{% /choosable %}}
 
-<h4 id="ostype">Os<wbr>Type</h4>
+<h4 id="os">OS</h4>
 
 {{% choosable language csharp %}}
 <dl class="tabular">
@@ -1019,9 +1069,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language go %}}
 <dl class="tabular">
-    <dt>Os<wbr>Type<wbr>Windows</dt>
+    <dt>OSWindows</dt>
     <dd>Windows</dd>
-    <dt>Os<wbr>Type<wbr>Linux</dt>
+    <dt>OSLinux</dt>
     <dd>Linux</dd>
 </dl>
 {{% /choosable %}}
@@ -1051,22 +1101,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="ostype_csharp">
-<a href="#ostype_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Type</a>
+        <span id="os_csharp">
+<a href="#os_csharp" style="color: inherit; text-decoration: inherit;">Os</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#ostype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry.<wbr>Os<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#os">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry..<wbr>OS</a></span>
     </dt>
-    <dd>{{% md %}}The operating system type required for the build.{{% /md %}}</dd>
+    <dd>{{% md %}}The operating system type required for the run.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="cpu_csharp">
-<a href="#cpu_csharp" style="color: inherit; text-decoration: inherit;">Cpu</a>
+        <span id="architecture_csharp">
+<a href="#architecture_csharp" style="color: inherit; text-decoration: inherit;">Architecture</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">string | <a href="#architecture">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry..<wbr>Architecture</a></span>
     </dt>
-    <dd>{{% md %}}The CPU configuration in terms of number of cores required for the build.{{% /md %}}</dd>
+    <dd>{{% md %}}The OS architecture.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="variant_csharp">
+<a href="#variant_csharp" style="color: inherit; text-decoration: inherit;">Variant</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#variant">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry..<wbr>Variant</a></span>
+    </dt>
+    <dd>{{% md %}}Variant of the CPU.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -1075,22 +1134,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="ostype_go">
-<a href="#ostype_go" style="color: inherit; text-decoration: inherit;">Os<wbr>Type</a>
+        <span id="os_go">
+<a href="#os_go" style="color: inherit; text-decoration: inherit;">Os</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#ostype">Os<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#os">OS</a></span>
     </dt>
-    <dd>{{% md %}}The operating system type required for the build.{{% /md %}}</dd>
+    <dd>{{% md %}}The operating system type required for the run.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="cpu_go">
-<a href="#cpu_go" style="color: inherit; text-decoration: inherit;">Cpu</a>
+        <span id="architecture_go">
+<a href="#architecture_go" style="color: inherit; text-decoration: inherit;">Architecture</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">string | <a href="#architecture">Architecture</a></span>
     </dt>
-    <dd>{{% md %}}The CPU configuration in terms of number of cores required for the build.{{% /md %}}</dd>
+    <dd>{{% md %}}The OS architecture.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="variant_go">
+<a href="#variant_go" style="color: inherit; text-decoration: inherit;">Variant</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#variant">Variant</a></span>
+    </dt>
+    <dd>{{% md %}}Variant of the CPU.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -1099,22 +1167,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="ostype_nodejs">
-<a href="#ostype_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Type</a>
+        <span id="os_nodejs">
+<a href="#os_nodejs" style="color: inherit; text-decoration: inherit;">os</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#ostype">Os<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#os">OS</a></span>
     </dt>
-    <dd>{{% md %}}The operating system type required for the build.{{% /md %}}</dd>
+    <dd>{{% md %}}The operating system type required for the run.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="cpu_nodejs">
-<a href="#cpu_nodejs" style="color: inherit; text-decoration: inherit;">cpu</a>
+        <span id="architecture_nodejs">
+<a href="#architecture_nodejs" style="color: inherit; text-decoration: inherit;">architecture</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">string | <a href="#architecture">Architecture</a></span>
     </dt>
-    <dd>{{% md %}}The CPU configuration in terms of number of cores required for the build.{{% /md %}}</dd>
+    <dd>{{% md %}}The OS architecture.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="variant_nodejs">
+<a href="#variant_nodejs" style="color: inherit; text-decoration: inherit;">variant</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#variant">Variant</a></span>
+    </dt>
+    <dd>{{% md %}}Variant of the CPU.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -1123,22 +1200,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="os_type_python">
-<a href="#os_type_python" style="color: inherit; text-decoration: inherit;">os_<wbr>type</a>
+        <span id="os_python">
+<a href="#os_python" style="color: inherit; text-decoration: inherit;">os</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#ostype">Os<wbr>Type</a></span>
+        <span class="property-type">str | <a href="#os">OS</a></span>
     </dt>
-    <dd>{{% md %}}The operating system type required for the build.{{% /md %}}</dd>
+    <dd>{{% md %}}The operating system type required for the run.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="cpu_python">
-<a href="#cpu_python" style="color: inherit; text-decoration: inherit;">cpu</a>
+        <span id="architecture_python">
+<a href="#architecture_python" style="color: inherit; text-decoration: inherit;">architecture</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">str | <a href="#architecture">Architecture</a></span>
     </dt>
-    <dd>{{% md %}}The CPU configuration in terms of number of cores required for the build.{{% /md %}}</dd>
+    <dd>{{% md %}}The OS architecture.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="variant_python">
+<a href="#variant_python" style="color: inherit; text-decoration: inherit;">variant</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str | <a href="#variant">Variant</a></span>
+    </dt>
+    <dd>{{% md %}}Variant of the CPU.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -1149,22 +1235,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="ostype_csharp">
-<a href="#ostype_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Type</a>
+        <span id="os_csharp">
+<a href="#os_csharp" style="color: inherit; text-decoration: inherit;">Os</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The operating system type required for the build.{{% /md %}}</dd>
+    <dd>{{% md %}}The operating system type required for the run.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="cpu_csharp">
-<a href="#cpu_csharp" style="color: inherit; text-decoration: inherit;">Cpu</a>
+        <span id="architecture_csharp">
+<a href="#architecture_csharp" style="color: inherit; text-decoration: inherit;">Architecture</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The CPU configuration in terms of number of cores required for the build.{{% /md %}}</dd>
+    <dd>{{% md %}}The OS architecture.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="variant_csharp">
+<a href="#variant_csharp" style="color: inherit; text-decoration: inherit;">Variant</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Variant of the CPU.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -1173,22 +1268,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="ostype_go">
-<a href="#ostype_go" style="color: inherit; text-decoration: inherit;">Os<wbr>Type</a>
+        <span id="os_go">
+<a href="#os_go" style="color: inherit; text-decoration: inherit;">Os</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The operating system type required for the build.{{% /md %}}</dd>
+    <dd>{{% md %}}The operating system type required for the run.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="cpu_go">
-<a href="#cpu_go" style="color: inherit; text-decoration: inherit;">Cpu</a>
+        <span id="architecture_go">
+<a href="#architecture_go" style="color: inherit; text-decoration: inherit;">Architecture</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The CPU configuration in terms of number of cores required for the build.{{% /md %}}</dd>
+    <dd>{{% md %}}The OS architecture.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="variant_go">
+<a href="#variant_go" style="color: inherit; text-decoration: inherit;">Variant</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Variant of the CPU.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -1197,22 +1301,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="ostype_nodejs">
-<a href="#ostype_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Type</a>
+        <span id="os_nodejs">
+<a href="#os_nodejs" style="color: inherit; text-decoration: inherit;">os</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The operating system type required for the build.{{% /md %}}</dd>
+    <dd>{{% md %}}The operating system type required for the run.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="cpu_nodejs">
-<a href="#cpu_nodejs" style="color: inherit; text-decoration: inherit;">cpu</a>
+        <span id="architecture_nodejs">
+<a href="#architecture_nodejs" style="color: inherit; text-decoration: inherit;">architecture</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The CPU configuration in terms of number of cores required for the build.{{% /md %}}</dd>
+    <dd>{{% md %}}The OS architecture.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="variant_nodejs">
+<a href="#variant_nodejs" style="color: inherit; text-decoration: inherit;">variant</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Variant of the CPU.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -1221,22 +1334,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="os_type_python">
-<a href="#os_type_python" style="color: inherit; text-decoration: inherit;">os_<wbr>type</a>
+        <span id="os_python">
+<a href="#os_python" style="color: inherit; text-decoration: inherit;">os</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The operating system type required for the build.{{% /md %}}</dd>
+    <dd>{{% md %}}The operating system type required for the run.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="cpu_python">
-<a href="#cpu_python" style="color: inherit; text-decoration: inherit;">cpu</a>
+        <span id="architecture_python">
+<a href="#architecture_python" style="color: inherit; text-decoration: inherit;">architecture</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The CPU configuration in terms of number of cores required for the build.{{% /md %}}</dd>
+    <dd>{{% md %}}The OS architecture.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="variant_python">
+<a href="#variant_python" style="color: inherit; text-decoration: inherit;">variant</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Variant of the CPU.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -1287,7 +1409,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tokentype_csharp" style="color: inherit; text-decoration: inherit;">Token<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#tokentype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry.<wbr>Token<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#tokentype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry..<wbr>Token<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of Auth token.{{% /md %}}</dd>
 </dl>
@@ -1710,7 +1832,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourcecontroltype_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Control<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#sourcecontroltype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry.<wbr>Source<wbr>Control<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#sourcecontroltype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry..<wbr>Source<wbr>Control<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of source control service.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1728,7 +1850,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourcecontrolauthproperties_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Control<wbr>Auth<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sourcecontrolauthinfo">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Source<wbr>Control<wbr>Auth<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#sourcecontrolauthinfo">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry..<wbr>Inputs.<wbr>Source<wbr>Control<wbr>Auth<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The authorization properties for accessing the source code repository.{{% /md %}}</dd>
 </dl>
@@ -1898,7 +2020,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourcecontrolauthproperties_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Control<wbr>Auth<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sourcecontrolauthinforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Source<wbr>Control<wbr>Auth<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sourcecontrolauthinforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry..<wbr>Inputs.<wbr>Source<wbr>Control<wbr>Auth<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The authorization properties for accessing the source code repository.{{% /md %}}</dd>
 </dl>
@@ -2067,13 +2189,59 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>OAuth</dd>
 </dl>
 {{% /choosable %}}
+
+<h4 id="variant">Variant</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular">
+    <dt>V6</dt>
+    <dd>v6</dd>
+    <dt>V7</dt>
+    <dd>v7</dd>
+    <dt>V8</dt>
+    <dd>v8</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular">
+    <dt>Variant<wbr>V6</dt>
+    <dd>v6</dd>
+    <dt>Variant<wbr>V7</dt>
+    <dd>v7</dd>
+    <dt>Variant<wbr>V8</dt>
+    <dd>v8</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular">
+    <dt>V6</dt>
+    <dd>v6</dd>
+    <dt>V7</dt>
+    <dd>v7</dd>
+    <dt>V8</dt>
+    <dd>v8</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular">
+    <dt>V6</dt>
+    <dd>v6</dd>
+    <dt>V7</dt>
+    <dd>v7</dd>
+    <dt>V8</dt>
+    <dd>v8</dd>
+</dl>
+{{% /choosable %}}
 ## Import
 
 
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:containerregistry/v20180201preview:BuildTask myBuildTask /subscriptions/4385cf00-2d3a-425a-832f-f4285b1c9dce/resourceGroups/myResourceGroup/providers/Microsoft.ContainerRegistry/registries/myRegistry/buildTasks/myBuildTask 
+$ pulumi import azure-nextgen:containerregistry:BuildTask myBuildTask /subscriptions/4385cf00-2d3a-425a-832f-f4285b1c9dce/resourceGroups/myResourceGroup/providers/Microsoft.ContainerRegistry/registries/myRegistry/buildTasks/myBuildTask 
 ```
 
 

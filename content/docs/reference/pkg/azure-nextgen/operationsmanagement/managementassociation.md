@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.operationsmanagement.ManagementA
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The container for solution.
+API Version: 2015-11-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,11 +27,11 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var managementAssociation = new AzureNextGen.OperationsManagement.V20151101Preview.ManagementAssociation("managementAssociation", new AzureNextGen.OperationsManagement.V20151101Preview.ManagementAssociationArgs
+        var managementAssociation = new AzureNextGen.OperationsManagement..ManagementAssociation("managementAssociation", new AzureNextGen.OperationsManagement..ManagementAssociationArgs
         {
             Location = "East US",
             ManagementAssociationName = "managementAssociation1",
-            Properties = new AzureNextGen.OperationsManagement.V20151101Preview.Inputs.ManagementAssociationPropertiesArgs
+            Properties = new AzureNextGen.OperationsManagement..Inputs.ManagementAssociationPropertiesArgs
             {
                 ApplicationId = "/subscriptions/sub1/resourcegroups/rg1/providers/Microsoft.Appliance/Appliances/appliance1",
             },
@@ -53,7 +54,7 @@ class MyStack : Stack
 package main
 
 import (
-	operationsmanagement "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/operationsmanagement/v20151101preview"
+	operationsmanagement "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/operationsmanagement"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -87,10 +88,10 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-management_association = azure_nextgen.operationsmanagement.v20151101preview.ManagementAssociation("managementAssociation",
+management_association = azure_nextgen.operationsmanagement.ManagementAssociation("managementAssociation",
     location="East US",
     management_association_name="managementAssociation1",
-    properties=azure_nextgen.operationsmanagement.v20151101preview.ManagementAssociationPropertiesArgs(
+    properties=azure_nextgen.operationsmanagement.ManagementAssociationPropertiesArgs(
         application_id="/subscriptions/sub1/resourcegroups/rg1/providers/Microsoft.Appliance/Appliances/appliance1",
     ),
     provider_name="providerName",
@@ -108,7 +109,7 @@ management_association = azure_nextgen.operationsmanagement.v20151101preview.Man
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const managementAssociation = new azure_nextgen.operationsmanagement.v20151101preview.ManagementAssociation("managementAssociation", {
+const managementAssociation = new azure_nextgen.operationsmanagement.ManagementAssociation("managementAssociation", {
     location: "East US",
     managementAssociationName: "managementAssociation1",
     properties: {
@@ -367,7 +368,7 @@ The ManagementAssociation resource accepts the following [input]({{< relref "/do
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementassociationproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Operations<wbr>Management.<wbr>Inputs.<wbr>Management<wbr>Association<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#managementassociationproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Operations<wbr>Management..<wbr>Inputs.<wbr>Management<wbr>Association<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties for ManagementAssociation object supported by the OperationsManagement resource provider.{{% /md %}}</dd>
 </dl>
@@ -858,7 +859,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:operationsmanagement/v20151101preview:ManagementAssociation managementAssociation1 /subscriptions/subid/resourcegroups/rg1/providers/Microsoft.OperationalInsights/workspaces/ws1/Microsoft.OperationsManagement/ManagementAssociations/managementAssociation1 
+$ pulumi import azure-nextgen:operationsmanagement:ManagementAssociation managementAssociation1 /subscriptions/subid/resourcegroups/rg1/providers/Microsoft.OperationalInsights/workspaces/ws1/Microsoft.OperationsManagement/ManagementAssociations/managementAssociation1 
 ```
 
 

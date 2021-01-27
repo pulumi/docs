@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.securityinsights.AlertRule resou
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Alert rule.
+API Version: 2020-01-01.
 
 {{% examples %}}
 ## Example Usage
@@ -26,11 +27,10 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var alertRule = new AzureNextGen.SecurityInsights.V20190101Preview.AlertRule("alertRule", new AzureNextGen.SecurityInsights.V20190101Preview.AlertRuleArgs
+        var alertRule = new AzureNextGen.SecurityInsights..AlertRule("alertRule", new AzureNextGen.SecurityInsights..AlertRuleArgs
         {
             Etag = "3d00c3ca-0000-0100-0000-5d42d5010000",
             Kind = "Fusion",
-            OperationalInsightsResourceProvider = "Microsoft.OperationalInsights",
             ResourceGroupName = "myRg",
             RuleId = "myFirstFusionRule",
             WorkspaceName = "myWorkspace",
@@ -49,19 +49,18 @@ class MyStack : Stack
 package main
 
 import (
-	securityinsights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/securityinsights/v20190101preview"
+	securityinsights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/securityinsights"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := securityinsights.NewAlertRule(ctx, "alertRule", &securityinsights.AlertRuleArgs{
-			Etag:                                pulumi.String("3d00c3ca-0000-0100-0000-5d42d5010000"),
-			Kind:                                pulumi.String("Fusion"),
-			OperationalInsightsResourceProvider: pulumi.String("Microsoft.OperationalInsights"),
-			ResourceGroupName:                   pulumi.String("myRg"),
-			RuleId:                              pulumi.String("myFirstFusionRule"),
-			WorkspaceName:                       pulumi.String("myWorkspace"),
+			Etag:              pulumi.String("3d00c3ca-0000-0100-0000-5d42d5010000"),
+			Kind:              pulumi.String("Fusion"),
+			ResourceGroupName: pulumi.String("myRg"),
+			RuleId:            pulumi.String("myFirstFusionRule"),
+			WorkspaceName:     pulumi.String("myWorkspace"),
 		})
 		if err != nil {
 			return err
@@ -80,10 +79,9 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-alert_rule = azure_nextgen.securityinsights.v20190101preview.AlertRule("alertRule",
+alert_rule = azure_nextgen.securityinsights.AlertRule("alertRule",
     etag="3d00c3ca-0000-0100-0000-5d42d5010000",
     kind="Fusion",
-    operational_insights_resource_provider="Microsoft.OperationalInsights",
     resource_group_name="myRg",
     rule_id="myFirstFusionRule",
     workspace_name="myWorkspace")
@@ -98,10 +96,9 @@ alert_rule = azure_nextgen.securityinsights.v20190101preview.AlertRule("alertRul
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const alertRule = new azure_nextgen.securityinsights.v20190101preview.AlertRule("alertRule", {
+const alertRule = new azure_nextgen.securityinsights.AlertRule("alertRule", {
     etag: "3d00c3ca-0000-0100-0000-5d42d5010000",
     kind: "Fusion",
-    operationalInsightsResourceProvider: "Microsoft.OperationalInsights",
     resourceGroupName: "myRg",
     ruleId: "myFirstFusionRule",
     workspaceName: "myWorkspace",
@@ -121,11 +118,10 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var alertRule = new AzureNextGen.SecurityInsights.V20190101Preview.AlertRule("alertRule", new AzureNextGen.SecurityInsights.V20190101Preview.AlertRuleArgs
+        var alertRule = new AzureNextGen.SecurityInsights..AlertRule("alertRule", new AzureNextGen.SecurityInsights..AlertRuleArgs
         {
             Etag = "\"260097e0-0000-0d00-0000-5d6fa88f0000\"",
             Kind = "MicrosoftSecurityIncidentCreation",
-            OperationalInsightsResourceProvider = "Microsoft.OperationalInsights",
             ResourceGroupName = "myRg",
             RuleId = "microsoftSecurityIncidentCreationRuleExample",
             WorkspaceName = "myWorkspace",
@@ -144,19 +140,18 @@ class MyStack : Stack
 package main
 
 import (
-	securityinsights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/securityinsights/v20190101preview"
+	securityinsights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/securityinsights"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := securityinsights.NewAlertRule(ctx, "alertRule", &securityinsights.AlertRuleArgs{
-			Etag:                                pulumi.String("\"260097e0-0000-0d00-0000-5d6fa88f0000\""),
-			Kind:                                pulumi.String("MicrosoftSecurityIncidentCreation"),
-			OperationalInsightsResourceProvider: pulumi.String("Microsoft.OperationalInsights"),
-			ResourceGroupName:                   pulumi.String("myRg"),
-			RuleId:                              pulumi.String("microsoftSecurityIncidentCreationRuleExample"),
-			WorkspaceName:                       pulumi.String("myWorkspace"),
+			Etag:              pulumi.String("\"260097e0-0000-0d00-0000-5d6fa88f0000\""),
+			Kind:              pulumi.String("MicrosoftSecurityIncidentCreation"),
+			ResourceGroupName: pulumi.String("myRg"),
+			RuleId:            pulumi.String("microsoftSecurityIncidentCreationRuleExample"),
+			WorkspaceName:     pulumi.String("myWorkspace"),
 		})
 		if err != nil {
 			return err
@@ -175,10 +170,9 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-alert_rule = azure_nextgen.securityinsights.v20190101preview.AlertRule("alertRule",
+alert_rule = azure_nextgen.securityinsights.AlertRule("alertRule",
     etag="\"260097e0-0000-0d00-0000-5d6fa88f0000\"",
     kind="MicrosoftSecurityIncidentCreation",
-    operational_insights_resource_provider="Microsoft.OperationalInsights",
     resource_group_name="myRg",
     rule_id="microsoftSecurityIncidentCreationRuleExample",
     workspace_name="myWorkspace")
@@ -193,10 +187,9 @@ alert_rule = azure_nextgen.securityinsights.v20190101preview.AlertRule("alertRul
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const alertRule = new azure_nextgen.securityinsights.v20190101preview.AlertRule("alertRule", {
+const alertRule = new azure_nextgen.securityinsights.AlertRule("alertRule", {
     etag: "\"260097e0-0000-0d00-0000-5d6fa88f0000\"",
     kind: "MicrosoftSecurityIncidentCreation",
-    operationalInsightsResourceProvider: "Microsoft.OperationalInsights",
     resourceGroupName: "myRg",
     ruleId: "microsoftSecurityIncidentCreationRuleExample",
     workspaceName: "myWorkspace",
@@ -216,11 +209,10 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var alertRule = new AzureNextGen.SecurityInsights.V20190101Preview.AlertRule("alertRule", new AzureNextGen.SecurityInsights.V20190101Preview.AlertRuleArgs
+        var alertRule = new AzureNextGen.SecurityInsights..AlertRule("alertRule", new AzureNextGen.SecurityInsights..AlertRuleArgs
         {
             Etag = "\"0300bf09-0000-0000-0000-5c37296e0000\"",
             Kind = "Scheduled",
-            OperationalInsightsResourceProvider = "Microsoft.OperationalInsights",
             ResourceGroupName = "myRg",
             RuleId = "73e01a99-5cd7-4139-a149-9f2736ff2ab5",
             WorkspaceName = "myWorkspace",
@@ -239,19 +231,18 @@ class MyStack : Stack
 package main
 
 import (
-	securityinsights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/securityinsights/v20190101preview"
+	securityinsights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/securityinsights"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := securityinsights.NewAlertRule(ctx, "alertRule", &securityinsights.AlertRuleArgs{
-			Etag:                                pulumi.String("\"0300bf09-0000-0000-0000-5c37296e0000\""),
-			Kind:                                pulumi.String("Scheduled"),
-			OperationalInsightsResourceProvider: pulumi.String("Microsoft.OperationalInsights"),
-			ResourceGroupName:                   pulumi.String("myRg"),
-			RuleId:                              pulumi.String("73e01a99-5cd7-4139-a149-9f2736ff2ab5"),
-			WorkspaceName:                       pulumi.String("myWorkspace"),
+			Etag:              pulumi.String("\"0300bf09-0000-0000-0000-5c37296e0000\""),
+			Kind:              pulumi.String("Scheduled"),
+			ResourceGroupName: pulumi.String("myRg"),
+			RuleId:            pulumi.String("73e01a99-5cd7-4139-a149-9f2736ff2ab5"),
+			WorkspaceName:     pulumi.String("myWorkspace"),
 		})
 		if err != nil {
 			return err
@@ -270,10 +261,9 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-alert_rule = azure_nextgen.securityinsights.v20190101preview.AlertRule("alertRule",
+alert_rule = azure_nextgen.securityinsights.AlertRule("alertRule",
     etag="\"0300bf09-0000-0000-0000-5c37296e0000\"",
     kind="Scheduled",
-    operational_insights_resource_provider="Microsoft.OperationalInsights",
     resource_group_name="myRg",
     rule_id="73e01a99-5cd7-4139-a149-9f2736ff2ab5",
     workspace_name="myWorkspace")
@@ -288,10 +278,9 @@ alert_rule = azure_nextgen.securityinsights.v20190101preview.AlertRule("alertRul
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const alertRule = new azure_nextgen.securityinsights.v20190101preview.AlertRule("alertRule", {
+const alertRule = new azure_nextgen.securityinsights.AlertRule("alertRule", {
     etag: "\"0300bf09-0000-0000-0000-5c37296e0000\"",
     kind: "Scheduled",
-    operationalInsightsResourceProvider: "Microsoft.OperationalInsights",
     resourceGroupName: "myRg",
     ruleId: "73e01a99-5cd7-4139-a149-9f2736ff2ab5",
     workspaceName: "myWorkspace",
@@ -313,7 +302,7 @@ const alertRule = new azure_nextgen.securityinsights.v20190101preview.AlertRule(
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">AlertRule</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[Union[str, AlertRuleKind]]</span> = None<span class="p">, </span><span class="nx">operational_insights_resource_provider</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rule_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">workspace_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">AlertRule</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[Union[str, AlertRuleKind]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rule_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">workspace_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -490,18 +479,9 @@ The AlertRule resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#alertrulekind">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security<wbr>Insights.<wbr>Alert<wbr>Rule<wbr>Kind</a></span>
+        <span class="property-type">string | <a href="#alertrulekind">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security<wbr>Insights..<wbr>Alert<wbr>Rule<wbr>Kind</a></span>
     </dt>
-    <dd>{{% md %}}The kind of the alert rule{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="operationalinsightsresourceprovider_csharp">
-<a href="#operationalinsightsresourceprovider_csharp" style="color: inherit; text-decoration: inherit;">Operational<wbr>Insights<wbr>Resource<wbr>Provider</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The namespace of workspaces resource provider- Microsoft.OperationalInsights.{{% /md %}}</dd>
+    <dd>{{% md %}}The alert rule kind{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
@@ -552,16 +532,7 @@ The AlertRule resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#alertrulekind">Alert<wbr>Rule<wbr>Kind</a></span>
     </dt>
-    <dd>{{% md %}}The kind of the alert rule{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="operationalinsightsresourceprovider_go">
-<a href="#operationalinsightsresourceprovider_go" style="color: inherit; text-decoration: inherit;">Operational<wbr>Insights<wbr>Resource<wbr>Provider</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The namespace of workspaces resource provider- Microsoft.OperationalInsights.{{% /md %}}</dd>
+    <dd>{{% md %}}The alert rule kind{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
@@ -612,16 +583,7 @@ The AlertRule resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#alertrulekind">Alert<wbr>Rule<wbr>Kind</a></span>
     </dt>
-    <dd>{{% md %}}The kind of the alert rule{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="operationalinsightsresourceprovider_nodejs">
-<a href="#operationalinsightsresourceprovider_nodejs" style="color: inherit; text-decoration: inherit;">operational<wbr>Insights<wbr>Resource<wbr>Provider</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The namespace of workspaces resource provider- Microsoft.OperationalInsights.{{% /md %}}</dd>
+    <dd>{{% md %}}The alert rule kind{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
@@ -672,16 +634,7 @@ The AlertRule resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#alertrulekind">Alert<wbr>Rule<wbr>Kind</a></span>
     </dt>
-    <dd>{{% md %}}The kind of the alert rule{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="operational_insights_resource_provider_python">
-<a href="#operational_insights_resource_provider_python" style="color: inherit; text-decoration: inherit;">operational_<wbr>insights_<wbr>resource_<wbr>provider</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The namespace of workspaces resource provider- Microsoft.OperationalInsights.{{% /md %}}</dd>
+    <dd>{{% md %}}The alert rule kind{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
@@ -880,12 +833,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>MicrosoftSecurityIncidentCreation</dd>
     <dt>Fusion</dt>
     <dd>Fusion</dd>
-    <dt>MLBehavior<wbr>Analytics</dt>
-    <dd>MLBehaviorAnalytics</dd>
-    <dt>Threat<wbr>Intelligence</dt>
-    <dd>ThreatIntelligence</dd>
-    <dt>Anomaly</dt>
-    <dd>Anomaly</dd>
 </dl>
 {{% /choosable %}}
 
@@ -897,12 +844,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>MicrosoftSecurityIncidentCreation</dd>
     <dt>Alert<wbr>Rule<wbr>Kind<wbr>Fusion</dt>
     <dd>Fusion</dd>
-    <dt>Alert<wbr>Rule<wbr>Kind<wbr>MLBehavior<wbr>Analytics</dt>
-    <dd>MLBehaviorAnalytics</dd>
-    <dt>Alert<wbr>Rule<wbr>Kind<wbr>Threat<wbr>Intelligence</dt>
-    <dd>ThreatIntelligence</dd>
-    <dt>Alert<wbr>Rule<wbr>Kind<wbr>Anomaly</dt>
-    <dd>Anomaly</dd>
 </dl>
 {{% /choosable %}}
 
@@ -914,12 +855,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>MicrosoftSecurityIncidentCreation</dd>
     <dt>Fusion</dt>
     <dd>Fusion</dd>
-    <dt>MLBehavior<wbr>Analytics</dt>
-    <dd>MLBehaviorAnalytics</dd>
-    <dt>Threat<wbr>Intelligence</dt>
-    <dd>ThreatIntelligence</dd>
-    <dt>Anomaly</dt>
-    <dd>Anomaly</dd>
 </dl>
 {{% /choosable %}}
 
@@ -931,12 +866,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>MicrosoftSecurityIncidentCreation</dd>
     <dt>FUSION</dt>
     <dd>Fusion</dd>
-    <dt>ML_BEHAVIOR_ANALYTICS</dt>
-    <dd>MLBehaviorAnalytics</dd>
-    <dt>THREAT_INTELLIGENCE</dt>
-    <dd>ThreatIntelligence</dd>
-    <dt>ANOMALY</dt>
-    <dd>Anomaly</dd>
 </dl>
 {{% /choosable %}}
 ## Import
@@ -945,7 +874,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:securityinsights/v20190101preview:AlertRule 73e01a99-5cd7-4139-a149-9f2736ff2ab5 /subscriptions/d0cfe6b2-9ac0-4464-9919-dccaee2e48c0/resourceGroups/myRg/providers/Microsoft.OperationalIinsights/workspaces/myWorkspace/providers/Microsoft.SecurityInsights/alertRules/73e01a99-5cd7-4139-a149-9f2736ff2ab5 
+$ pulumi import azure-nextgen:securityinsights:AlertRule 73e01a99-5cd7-4139-a149-9f2736ff2ab5 /subscriptions/d0cfe6b2-9ac0-4464-9919-dccaee2e48c0/resourceGroups/myRg/providers/Microsoft.OperationalIinsights/workspaces/myWorkspace/providers/Microsoft.SecurityInsights/alertRules/73e01a99-5cd7-4139-a149-9f2736ff2ab5 
 ```
 
 

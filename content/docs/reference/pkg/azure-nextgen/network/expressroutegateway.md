@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.network.ExpressRouteGateway reso
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 ExpressRoute gateway resource.
-Latest API Version: 2020-08-01.
+API Version: 2020-08-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,11 +27,11 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var expressRouteGateway = new AzureNextGen.Network.Latest.ExpressRouteGateway("expressRouteGateway", new AzureNextGen.Network.Latest.ExpressRouteGatewayArgs
+        var expressRouteGateway = new AzureNextGen.Network..ExpressRouteGateway("expressRouteGateway", new AzureNextGen.Network..ExpressRouteGatewayArgs
         {
-            AutoScaleConfiguration = new AzureNextGen.Network.Latest.Inputs.ExpressRouteGatewayPropertiesAutoScaleConfigurationArgs
+            AutoScaleConfiguration = new AzureNextGen.Network..Inputs.ExpressRouteGatewayPropertiesAutoScaleConfigurationArgs
             {
-                Bounds = new AzureNextGen.Network.Latest.Inputs.ExpressRouteGatewayPropertiesBoundsArgs
+                Bounds = new AzureNextGen.Network..Inputs.ExpressRouteGatewayPropertiesBoundsArgs
                 {
                     Min = 3,
                 },
@@ -39,7 +39,7 @@ class MyStack : Stack
             ExpressRouteGatewayName = "gateway-2",
             Location = "westus",
             ResourceGroupName = "resourceGroupName",
-            VirtualHub = new AzureNextGen.Network.Latest.Inputs.VirtualHubIdArgs
+            VirtualHub = new AzureNextGen.Network..Inputs.VirtualHubIdArgs
             {
                 Id = "/subscriptions/subid/resourceGroups/resourceGroupId/providers/Microsoft.Network/virtualHubs/virtualHubName",
             },
@@ -58,7 +58,7 @@ class MyStack : Stack
 package main
 
 import (
-	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network/latest"
+	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -94,16 +94,16 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-express_route_gateway = azure_nextgen.network.latest.ExpressRouteGateway("expressRouteGateway",
-    auto_scale_configuration=azure_nextgen.network.latest.ExpressRouteGatewayPropertiesAutoScaleConfigurationArgs(
-        bounds=azure_nextgen.network.latest.ExpressRouteGatewayPropertiesBoundsArgs(
+express_route_gateway = azure_nextgen.network.ExpressRouteGateway("expressRouteGateway",
+    auto_scale_configuration=azure_nextgen.network.ExpressRouteGatewayPropertiesAutoScaleConfigurationArgs(
+        bounds=azure_nextgen.network.ExpressRouteGatewayPropertiesBoundsArgs(
             min=3,
         ),
     ),
     express_route_gateway_name="gateway-2",
     location="westus",
     resource_group_name="resourceGroupName",
-    virtual_hub=azure_nextgen.network.latest.VirtualHubIdArgs(
+    virtual_hub=azure_nextgen.network.VirtualHubIdArgs(
         id="/subscriptions/subid/resourceGroups/resourceGroupId/providers/Microsoft.Network/virtualHubs/virtualHubName",
     ))
 
@@ -117,7 +117,7 @@ express_route_gateway = azure_nextgen.network.latest.ExpressRouteGateway("expres
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const expressRouteGateway = new azure_nextgen.network.latest.ExpressRouteGateway("expressRouteGateway", {
+const expressRouteGateway = new azure_nextgen.network.ExpressRouteGateway("expressRouteGateway", {
     autoScaleConfiguration: {
         bounds: {
             min: 3,
@@ -342,7 +342,7 @@ The ExpressRouteGateway resource accepts the following [input]({{< relref "/docs
 <a href="#virtualhub_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Hub</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualhubid">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Virtual<wbr>Hub<wbr>Id<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualhubid">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Virtual<wbr>Hub<wbr>Id<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Virtual Hub where the ExpressRoute gateway is or will be deployed.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -351,7 +351,7 @@ The ExpressRouteGateway resource accepts the following [input]({{< relref "/docs
 <a href="#autoscaleconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Scale<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#expressroutegatewaypropertiesautoscaleconfiguration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Express<wbr>Route<wbr>Gateway<wbr>Properties<wbr>Auto<wbr>Scale<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#expressroutegatewaypropertiesautoscaleconfiguration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Express<wbr>Route<wbr>Gateway<wbr>Properties<wbr>Auto<wbr>Scale<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration for auto scaling.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -616,7 +616,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expressrouteconnections_csharp" style="color: inherit; text-decoration: inherit;">Express<wbr>Route<wbr>Connections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#expressrouteconnectionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Outputs.<wbr>Express<wbr>Route<wbr>Connection<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#expressrouteconnectionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Outputs.<wbr>Express<wbr>Route<wbr>Connection<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of ExpressRoute connections to the ExpressRoute gateway.{{% /md %}}</dd>
     <dt class="property-"
@@ -921,7 +921,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expressroutecircuitpeering_csharp" style="color: inherit; text-decoration: inherit;">Express<wbr>Route<wbr>Circuit<wbr>Peering</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#expressroutecircuitpeeringidresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Express<wbr>Route<wbr>Circuit<wbr>Peering<wbr>Id<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#expressroutecircuitpeeringidresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Express<wbr>Route<wbr>Circuit<wbr>Peering<wbr>Id<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The ExpressRoute circuit peering.{{% /md %}}</dd>
     <dt class="property-required"
@@ -984,7 +984,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#routingconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Routing<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routingconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Routing<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#routingconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Routing<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Routing Configuration indicating the associated and propagated route tables on this connection.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1271,7 +1271,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bounds_csharp" style="color: inherit; text-decoration: inherit;">Bounds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#expressroutegatewaypropertiesbounds">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Express<wbr>Route<wbr>Gateway<wbr>Properties<wbr>Bounds<wbr>Args</a></span>
+        <span class="property-type"><a href="#expressroutegatewaypropertiesbounds">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Express<wbr>Route<wbr>Gateway<wbr>Properties<wbr>Bounds<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Minimum and maximum number of scale units to deploy.{{% /md %}}</dd>
 </dl>
@@ -1431,7 +1431,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bounds_csharp" style="color: inherit; text-decoration: inherit;">Bounds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#expressroutegatewaypropertiesresponsebounds">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Express<wbr>Route<wbr>Gateway<wbr>Properties<wbr>Response<wbr>Bounds<wbr>Args</a></span>
+        <span class="property-type"><a href="#expressroutegatewaypropertiesresponsebounds">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Express<wbr>Route<wbr>Gateway<wbr>Properties<wbr>Response<wbr>Bounds<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Minimum and maximum number of scale units to deploy.{{% /md %}}</dd>
 </dl>
@@ -1591,7 +1591,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ids_csharp" style="color: inherit; text-decoration: inherit;">Ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#subresourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of resource ids of all the RouteTables.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1689,7 +1689,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#associatedroutetable_csharp" style="color: inherit; text-decoration: inherit;">Associated<wbr>Route<wbr>Table</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The resource id RouteTable associated with this RoutingConfiguration.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1698,7 +1698,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#propagatedroutetables_csharp" style="color: inherit; text-decoration: inherit;">Propagated<wbr>Route<wbr>Tables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#propagatedroutetableresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Propagated<wbr>Route<wbr>Table<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#propagatedroutetableresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Propagated<wbr>Route<wbr>Table<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The list of RouteTables to advertise the routes to.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1707,7 +1707,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vnetroutes_csharp" style="color: inherit; text-decoration: inherit;">Vnet<wbr>Routes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vnetrouteresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Vnet<wbr>Route<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#vnetrouteresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Vnet<wbr>Route<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List of routes that control routing from VirtualHub into a virtual network connection.{{% /md %}}</dd>
 </dl>
@@ -2143,7 +2143,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#staticroutes_csharp" style="color: inherit; text-decoration: inherit;">Static<wbr>Routes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#staticrouteresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Static<wbr>Route<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#staticrouteresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Static<wbr>Route<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of all Static Routes.{{% /md %}}</dd>
 </dl>
@@ -2199,7 +2199,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:network/latest:ExpressRouteGateway gateway-2 /subscriptions/subid/resourceGroups/resourceGroupName/providers/Microsoft.Network/expressRouteGateways/gateway-2 
+$ pulumi import azure-nextgen:network:ExpressRouteGateway gateway-2 /subscriptions/subid/resourceGroups/resourceGroupName/providers/Microsoft.Network/expressRouteGateways/gateway-2 
 ```
 
 

@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.avs.WorkloadNetworkDnsZone resou
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 NSX DNS Zone
+API Version: 2020-07-17-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var workloadNetworkDnsZone = new AzureNextGen.AVS.V20200717Preview.WorkloadNetworkDnsZone("workloadNetworkDnsZone", new AzureNextGen.AVS.V20200717Preview.WorkloadNetworkDnsZoneArgs
+        var workloadNetworkDnsZone = new AzureNextGen.AVS..WorkloadNetworkDnsZone("workloadNetworkDnsZone", new AzureNextGen.AVS..WorkloadNetworkDnsZoneArgs
         {
             DisplayName = "dnsZone1",
             DnsServerIps = 
@@ -54,7 +55,7 @@ class MyStack : Stack
 package main
 
 import (
-	avs "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/avs/v20200717preview"
+	avs "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/avs"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -89,7 +90,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-workload_network_dns_zone = azure_nextgen.avs.v20200717preview.WorkloadNetworkDnsZone("workloadNetworkDnsZone",
+workload_network_dns_zone = azure_nextgen.avs.WorkloadNetworkDnsZone("workloadNetworkDnsZone",
     display_name="dnsZone1",
     dns_server_ips=["1.1.1.1"],
     dns_zone_id="dnsZone1",
@@ -109,7 +110,7 @@ workload_network_dns_zone = azure_nextgen.avs.v20200717preview.WorkloadNetworkDn
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const workloadNetworkDnsZone = new azure_nextgen.avs.v20200717preview.WorkloadNetworkDnsZone("workloadNetworkDnsZone", {
+const workloadNetworkDnsZone = new azure_nextgen.avs.WorkloadNetworkDnsZone("workloadNetworkDnsZone", {
     displayName: "dnsZone1",
     dnsServerIps: ["1.1.1.1"],
     dnsZoneId: "dnsZone1",
@@ -838,7 +839,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:avs/v20200717preview:WorkloadNetworkDnsZone dnsZone1 /subscriptions/{subscription-id}/resourceGroups/group1/providers/Microsoft.AVS/privateClouds/cloud1/workloadNetworks/default/dnsZones/dnsZone1 
+$ pulumi import azure-nextgen:avs:WorkloadNetworkDnsZone dnsZone1 /subscriptions/{subscription-id}/resourceGroups/group1/providers/Microsoft.AVS/privateClouds/cloud1/workloadNetworks/default/dnsZones/dnsZone1 
 ```
 
 

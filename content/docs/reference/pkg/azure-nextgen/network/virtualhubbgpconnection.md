@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.network.VirtualHubBgpConnection 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Virtual Appliance Site resource.
-Latest API Version: 2020-08-01.
+API Version: 2020-08-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var virtualHubBgpConnection = new AzureNextGen.Network.Latest.VirtualHubBgpConnection("virtualHubBgpConnection", new AzureNextGen.Network.Latest.VirtualHubBgpConnectionArgs
+        var virtualHubBgpConnection = new AzureNextGen.Network..VirtualHubBgpConnection("virtualHubBgpConnection", new AzureNextGen.Network..VirtualHubBgpConnectionArgs
         {
             ConnectionName = "conn1",
             PeerAsn = 20000,
@@ -49,7 +49,7 @@ class MyStack : Stack
 package main
 
 import (
-	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network/latest"
+	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -79,7 +79,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-virtual_hub_bgp_connection = azure_nextgen.network.latest.VirtualHubBgpConnection("virtualHubBgpConnection",
+virtual_hub_bgp_connection = azure_nextgen.network.VirtualHubBgpConnection("virtualHubBgpConnection",
     connection_name="conn1",
     peer_asn=20000,
     peer_ip="192.168.1.5",
@@ -96,7 +96,7 @@ virtual_hub_bgp_connection = azure_nextgen.network.latest.VirtualHubBgpConnectio
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const virtualHubBgpConnection = new azure_nextgen.network.latest.VirtualHubBgpConnection("virtualHubBgpConnection", {
+const virtualHubBgpConnection = new azure_nextgen.network.VirtualHubBgpConnection("virtualHubBgpConnection", {
     connectionName: "conn1",
     peerAsn: 20000,
     peerIp: "192.168.1.5",
@@ -786,7 +786,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:network/latest:VirtualHubBgpConnection conn1 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualHubs/hub1/bgpConnections/conn1 
+$ pulumi import azure-nextgen:network:VirtualHubBgpConnection conn1 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualHubs/hub1/bgpConnections/conn1 
 ```
 
 

@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.desktopvirtualization.Workspace 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Represents a Workspace definition.
+API Version: 2021-01-14-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var workspace = new AzureNextGen.DesktopVirtualization.V20201110Preview.Workspace("workspace", new AzureNextGen.DesktopVirtualization.V20201110Preview.WorkspaceArgs
+        var workspace = new AzureNextGen.DesktopVirtualization..Workspace("workspace", new AzureNextGen.DesktopVirtualization..WorkspaceArgs
         {
             Description = "des1",
             FriendlyName = "friendly",
@@ -53,7 +54,7 @@ class MyStack : Stack
 package main
 
 import (
-	desktopvirtualization "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/desktopvirtualization/v20201110preview"
+	desktopvirtualization "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/desktopvirtualization"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -87,7 +88,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-workspace = azure_nextgen.desktopvirtualization.v20201110preview.Workspace("workspace",
+workspace = azure_nextgen.desktopvirtualization.Workspace("workspace",
     description="des1",
     friendly_name="friendly",
     location="centralus",
@@ -108,7 +109,7 @@ workspace = azure_nextgen.desktopvirtualization.v20201110preview.Workspace("work
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const workspace = new azure_nextgen.desktopvirtualization.v20201110preview.Workspace("workspace", {
+const workspace = new azure_nextgen.desktopvirtualization.Workspace("workspace", {
     description: "des1",
     friendlyName: "friendly",
     location: "centralus",
@@ -730,7 +731,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:desktopvirtualization/v20201110preview:Workspace workspace1 /subscriptions/daefabc0-95b4-48b3-b645-8a753a63c4fa/resourceGroups/resourceGroup1/providers/Microsoft.DesktopVirtualization/workspaces/workspace1 
+$ pulumi import azure-nextgen:desktopvirtualization:Workspace workspace1 /subscriptions/daefabc0-95b4-48b3-b645-8a753a63c4fa/resourceGroups/resourceGroup1/providers/Microsoft.DesktopVirtualization/workspaces/workspace1 
 ```
 
 

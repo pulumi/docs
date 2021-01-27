@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.aadiam.PrivateLinkForAzureAd res
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 PrivateLink Policy configuration object.
+API Version: 2020-03-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var privateLinkForAzureAd = new AzureNextGen.AadIam.V20200301Preview.PrivateLinkForAzureAd("privateLinkForAzureAd", new AzureNextGen.AadIam.V20200301Preview.PrivateLinkForAzureAdArgs
+        var privateLinkForAzureAd = new AzureNextGen.AadIam..PrivateLinkForAzureAd("privateLinkForAzureAd", new AzureNextGen.AadIam..PrivateLinkForAzureAdArgs
         {
             AllTenants = false,
             Name = "myOrgPrivateLinkPolicy",
@@ -56,7 +57,7 @@ class MyStack : Stack
 package main
 
 import (
-	aadiam "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/aadiam/v20200301preview"
+	aadiam "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/aadiam"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -93,7 +94,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-private_link_for_azure_ad = azure_nextgen.aadiam.v20200301preview.PrivateLinkForAzureAd("privateLinkForAzureAd",
+private_link_for_azure_ad = azure_nextgen.aadiam.PrivateLinkForAzureAd("privateLinkForAzureAd",
     all_tenants=False,
     name="myOrgPrivateLinkPolicy",
     owner_tenant_id="950f8bca-bf4d-4a41-ad10-034e792a243d",
@@ -117,7 +118,7 @@ private_link_for_azure_ad = azure_nextgen.aadiam.v20200301preview.PrivateLinkFor
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const privateLinkForAzureAd = new azure_nextgen.aadiam.v20200301preview.PrivateLinkForAzureAd("privateLinkForAzureAd", {
+const privateLinkForAzureAd = new azure_nextgen.aadiam.PrivateLinkForAzureAd("privateLinkForAzureAd", {
     allTenants: false,
     name: "myOrgPrivateLinkPolicy",
     ownerTenantId: "950f8bca-bf4d-4a41-ad10-034e792a243d",
@@ -146,7 +147,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var privateLinkForAzureAd = new AzureNextGen.AadIam.V20200301Preview.PrivateLinkForAzureAd("privateLinkForAzureAd", new AzureNextGen.AadIam.V20200301Preview.PrivateLinkForAzureAdArgs
+        var privateLinkForAzureAd = new AzureNextGen.AadIam..PrivateLinkForAzureAd("privateLinkForAzureAd", new AzureNextGen.AadIam..PrivateLinkForAzureAdArgs
         {
             AllTenants = false,
             Name = "myOrgPrivateLinkPolicy",
@@ -176,7 +177,7 @@ class MyStack : Stack
 package main
 
 import (
-	aadiam "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/aadiam/v20200301preview"
+	aadiam "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/aadiam"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -213,7 +214,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-private_link_for_azure_ad = azure_nextgen.aadiam.v20200301preview.PrivateLinkForAzureAd("privateLinkForAzureAd",
+private_link_for_azure_ad = azure_nextgen.aadiam.PrivateLinkForAzureAd("privateLinkForAzureAd",
     all_tenants=False,
     name="myOrgPrivateLinkPolicy",
     owner_tenant_id="950f8bca-bf4d-4a41-ad10-034e792a243d",
@@ -237,7 +238,7 @@ private_link_for_azure_ad = azure_nextgen.aadiam.v20200301preview.PrivateLinkFor
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const privateLinkForAzureAd = new azure_nextgen.aadiam.v20200301preview.PrivateLinkForAzureAd("privateLinkForAzureAd", {
+const privateLinkForAzureAd = new azure_nextgen.aadiam.PrivateLinkForAzureAd("privateLinkForAzureAd", {
     allTenants: false,
     name: "myOrgPrivateLinkPolicy",
     ownerTenantId: "950f8bca-bf4d-4a41-ad10-034e792a243d",
@@ -934,7 +935,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:aadiam/v20200301preview:privateLinkForAzureAd myOrgPrivateLinkPolicy /subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/microsoft.aadiam/privateLinkForAzureAd/{policyName} 
+$ pulumi import azure-nextgen:aadiam:privateLinkForAzureAd myOrgPrivateLinkPolicy /subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/microsoft.aadiam/privateLinkForAzureAd/{policyName} 
 ```
 
 

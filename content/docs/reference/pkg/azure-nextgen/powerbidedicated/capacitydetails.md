@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.powerbidedicated.CapacityDetails
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Represents an instance of a Dedicated Capacity resource.
-Latest API Version: 2017-10-01.
+API Version: 2017-10-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,9 +27,9 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var capacityDetails = new AzureNextGen.PowerBIDedicated.Latest.CapacityDetails("capacityDetails", new AzureNextGen.PowerBIDedicated.Latest.CapacityDetailsArgs
+        var capacityDetails = new AzureNextGen.PowerBIDedicated..CapacityDetails("capacityDetails", new AzureNextGen.PowerBIDedicated..CapacityDetailsArgs
         {
-            Administration = new AzureNextGen.PowerBIDedicated.Latest.Inputs.DedicatedCapacityAdministratorsArgs
+            Administration = new AzureNextGen.PowerBIDedicated..Inputs.DedicatedCapacityAdministratorsArgs
             {
                 Members = 
                 {
@@ -40,7 +40,7 @@ class MyStack : Stack
             DedicatedCapacityName = "azsdktest",
             Location = "West US",
             ResourceGroupName = "TestRG",
-            Sku = new AzureNextGen.PowerBIDedicated.Latest.Inputs.ResourceSkuArgs
+            Sku = new AzureNextGen.PowerBIDedicated..Inputs.ResourceSkuArgs
             {
                 Name = "A1",
                 Tier = "PBIE_Azure",
@@ -64,7 +64,7 @@ class MyStack : Stack
 package main
 
 import (
-	powerbidedicated "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/powerbidedicated/latest"
+	powerbidedicated "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/powerbidedicated"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -105,8 +105,8 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-capacity_details = azure_nextgen.powerbidedicated.latest.CapacityDetails("capacityDetails",
-    administration=azure_nextgen.powerbidedicated.latest.DedicatedCapacityAdministratorsArgs(
+capacity_details = azure_nextgen.powerbidedicated.CapacityDetails("capacityDetails",
+    administration=azure_nextgen.powerbidedicated.DedicatedCapacityAdministratorsArgs(
         members=[
             "azsdktest@microsoft.com",
             "azsdktest2@microsoft.com",
@@ -115,7 +115,7 @@ capacity_details = azure_nextgen.powerbidedicated.latest.CapacityDetails("capaci
     dedicated_capacity_name="azsdktest",
     location="West US",
     resource_group_name="TestRG",
-    sku=azure_nextgen.powerbidedicated.latest.ResourceSkuArgs(
+    sku=azure_nextgen.powerbidedicated.ResourceSkuArgs(
         name="A1",
         tier="PBIE_Azure",
     ),
@@ -133,7 +133,7 @@ capacity_details = azure_nextgen.powerbidedicated.latest.CapacityDetails("capaci
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const capacityDetails = new azure_nextgen.powerbidedicated.latest.CapacityDetails("capacityDetails", {
+const capacityDetails = new azure_nextgen.powerbidedicated.CapacityDetails("capacityDetails", {
     administration: {
         members: [
             "azsdktest@microsoft.com",
@@ -372,7 +372,7 @@ The CapacityDetails resource accepts the following [input]({{< relref "/docs/int
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcesku">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Power<wbr>BIDedicated.<wbr>Inputs.<wbr>Resource<wbr>Sku<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcesku">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Power<wbr>BIDedicated..<wbr>Inputs.<wbr>Resource<wbr>Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The SKU of the PowerBI Dedicated resource.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -381,7 +381,7 @@ The CapacityDetails resource accepts the following [input]({{< relref "/docs/int
 <a href="#administration_csharp" style="color: inherit; text-decoration: inherit;">Administration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dedicatedcapacityadministrators">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Power<wbr>BIDedicated.<wbr>Inputs.<wbr>Dedicated<wbr>Capacity<wbr>Administrators<wbr>Args</a></span>
+        <span class="property-type"><a href="#dedicatedcapacityadministrators">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Power<wbr>BIDedicated..<wbr>Inputs.<wbr>Dedicated<wbr>Capacity<wbr>Administrators<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A collection of Dedicated capacity administrators{{% /md %}}</dd>
     <dt class="property-optional"
@@ -941,7 +941,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tier_csharp" style="color: inherit; text-decoration: inherit;">Tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#skutier">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Power<wbr>BIDedicated.<wbr>Sku<wbr>Tier</a></span>
+        <span class="property-type">string | <a href="#skutier">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Power<wbr>BIDedicated..<wbr>Sku<wbr>Tier</a></span>
     </dt>
     <dd>{{% md %}}The name of the Azure pricing tier to which the SKU applies.{{% /md %}}</dd>
 </dl>
@@ -1152,7 +1152,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:powerbidedicated/latest:CapacityDetails azsdktest /subscriptions/613192d7-503f-477a-9cfe-4efc3ee2bd60/resourceGroups/TestRG/providers/Microsoft.PowerBIDedicated/servers/azsdktest 
+$ pulumi import azure-nextgen:powerbidedicated:CapacityDetails azsdktest /subscriptions/613192d7-503f-477a-9cfe-4efc3ee2bd60/resourceGroups/TestRG/providers/Microsoft.PowerBIDedicated/servers/azsdktest 
 ```
 
 

@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.recoveryservices.ReplicationPoli
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Protection profile details.
-Latest API Version: 2018-07-10.
+API Version: 2018-07-10.
 
 {{% examples %}}
 ## Example Usage
@@ -27,10 +27,10 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var replicationPolicy = new AzureNextGen.RecoveryServices.Latest.ReplicationPolicy("replicationPolicy", new AzureNextGen.RecoveryServices.Latest.ReplicationPolicyArgs
+        var replicationPolicy = new AzureNextGen.RecoveryServices..ReplicationPolicy("replicationPolicy", new AzureNextGen.RecoveryServices..ReplicationPolicyArgs
         {
             PolicyName = "protectionprofile1",
-            Properties = new AzureNextGen.RecoveryServices.Latest.Inputs.CreatePolicyInputPropertiesArgs
+            Properties = new AzureNextGen.RecoveryServices..Inputs.CreatePolicyInputPropertiesArgs
             {
                 ProviderSpecificInput = 
                 {
@@ -58,9 +58,9 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-replication_policy = azure_nextgen.recoveryservices.latest.ReplicationPolicy("replicationPolicy",
+replication_policy = azure_nextgen.recoveryservices.ReplicationPolicy("replicationPolicy",
     policy_name="protectionprofile1",
-    properties=azure_nextgen.recoveryservices.latest.CreatePolicyInputPropertiesArgs(
+    properties=azure_nextgen.recoveryservices.CreatePolicyInputPropertiesArgs(
         provider_specific_input={
             "instanceType": "HyperVReplicaAzure",
         },
@@ -78,7 +78,7 @@ replication_policy = azure_nextgen.recoveryservices.latest.ReplicationPolicy("re
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const replicationPolicy = new azure_nextgen.recoveryservices.latest.ReplicationPolicy("replicationPolicy", {
+const replicationPolicy = new azure_nextgen.recoveryservices.ReplicationPolicy("replicationPolicy", {
     policyName: "protectionprofile1",
     properties: {
         providerSpecificInput: {
@@ -309,7 +309,7 @@ The ReplicationPolicy resource accepts the following [input]({{< relref "/docs/i
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#createpolicyinputproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Create<wbr>Policy<wbr>Input<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#createpolicyinputproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Create<wbr>Policy<wbr>Input<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Policy creation properties.{{% /md %}}</dd>
 </dl>
@@ -637,7 +637,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#multivmsyncstatus_csharp" style="color: inherit; text-decoration: inherit;">Multi<wbr>Vm<wbr>Sync<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#setmultivmsyncstatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Set<wbr>Multi<wbr>Vm<wbr>Sync<wbr>Status</a></span>
+        <span class="property-type">string | <a href="#setmultivmsyncstatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Set<wbr>Multi<wbr>Vm<wbr>Sync<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}A value indicating whether multi-VM sync has to be enabled. Value should be 'Enabled' or 'Disabled'.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1013,7 +1013,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#providerspecificinput_csharp" style="color: inherit; text-decoration: inherit;">Provider<wbr>Specific<wbr>Input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#a2apolicycreationinput">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>A2APolicy<wbr>Creation<wbr>Input<wbr>Args</a> | <a href="#hypervreplicaazurepolicyinput">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Hyper<wbr>VReplica<wbr>Azure<wbr>Policy<wbr>Input<wbr>Args</a> | <a href="#hypervreplicabluepolicyinput">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Hyper<wbr>VReplica<wbr>Blue<wbr>Policy<wbr>Input<wbr>Args</a> | <a href="#hypervreplicapolicyinput">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Hyper<wbr>VReplica<wbr>Policy<wbr>Input<wbr>Args</a> | <a href="#inmageazurev2policyinput">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>In<wbr>Mage<wbr>Azure<wbr>V2Policy<wbr>Input<wbr>Args</a> | <a href="#inmagepolicyinput">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>In<wbr>Mage<wbr>Policy<wbr>Input<wbr>Args</a> | <a href="#inmagercmpolicycreationinput">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>In<wbr>Mage<wbr>Rcm<wbr>Policy<wbr>Creation<wbr>Input<wbr>Args</a> | <a href="#vmwarecbtpolicycreationinput">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>VMware<wbr>Cbt<wbr>Policy<wbr>Creation<wbr>Input<wbr>Args</a></span>
+        <span class="property-type"><a href="#a2apolicycreationinput">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>A2APolicy<wbr>Creation<wbr>Input<wbr>Args</a> | <a href="#hypervreplicaazurepolicyinput">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Hyper<wbr>VReplica<wbr>Azure<wbr>Policy<wbr>Input<wbr>Args</a> | <a href="#hypervreplicabluepolicyinput">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Hyper<wbr>VReplica<wbr>Blue<wbr>Policy<wbr>Input<wbr>Args</a> | <a href="#hypervreplicapolicyinput">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Hyper<wbr>VReplica<wbr>Policy<wbr>Input<wbr>Args</a> | <a href="#inmageazurev2policyinput">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>In<wbr>Mage<wbr>Azure<wbr>V2Policy<wbr>Input<wbr>Args</a> | <a href="#inmagepolicyinput">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>In<wbr>Mage<wbr>Policy<wbr>Input<wbr>Args</a> | <a href="#inmagercmpolicycreationinput">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>In<wbr>Mage<wbr>Rcm<wbr>Policy<wbr>Creation<wbr>Input<wbr>Args</a> | <a href="#vmwarecbtpolicycreationinput">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>VMware<wbr>Cbt<wbr>Policy<wbr>Creation<wbr>Input<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The ReplicationProviderSettings.{{% /md %}}</dd>
 </dl>
@@ -3731,7 +3731,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#multivmsyncstatus_csharp" style="color: inherit; text-decoration: inherit;">Multi<wbr>Vm<wbr>Sync<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#setmultivmsyncstatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Set<wbr>Multi<wbr>Vm<wbr>Sync<wbr>Status</a></span>
+        <span class="property-type">string | <a href="#setmultivmsyncstatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Set<wbr>Multi<wbr>Vm<wbr>Sync<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}A value indicating whether multi-VM sync has to be enabled. Value should be 'Enabled' or 'Disabled'.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4277,7 +4277,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#multivmsyncstatus_csharp" style="color: inherit; text-decoration: inherit;">Multi<wbr>Vm<wbr>Sync<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#setmultivmsyncstatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Set<wbr>Multi<wbr>Vm<wbr>Sync<wbr>Status</a></span>
+        <span class="property-type">string | <a href="#setmultivmsyncstatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Set<wbr>Multi<wbr>Vm<wbr>Sync<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}A value indicating whether multi-VM sync has to be enabled. Value should be 'Enabled' or 'Disabled'.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4796,7 +4796,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#providerspecificdetails_csharp" style="color: inherit; text-decoration: inherit;">Provider<wbr>Specific<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#a2apolicydetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>A2APolicy<wbr>Details<wbr>Response<wbr>Args</a> | <a href="#hypervreplicaazurepolicydetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Hyper<wbr>VReplica<wbr>Azure<wbr>Policy<wbr>Details<wbr>Response<wbr>Args</a> | <a href="#hypervreplicabasepolicydetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Hyper<wbr>VReplica<wbr>Base<wbr>Policy<wbr>Details<wbr>Response<wbr>Args</a> | <a href="#hypervreplicabluepolicydetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Hyper<wbr>VReplica<wbr>Blue<wbr>Policy<wbr>Details<wbr>Response<wbr>Args</a> | <a href="#hypervreplicapolicydetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Hyper<wbr>VReplica<wbr>Policy<wbr>Details<wbr>Response<wbr>Args</a> | <a href="#inmageazurev2policydetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>In<wbr>Mage<wbr>Azure<wbr>V2Policy<wbr>Details<wbr>Response<wbr>Args</a> | <a href="#inmagebasepolicydetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>In<wbr>Mage<wbr>Base<wbr>Policy<wbr>Details<wbr>Response<wbr>Args</a> | <a href="#inmagepolicydetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>In<wbr>Mage<wbr>Policy<wbr>Details<wbr>Response<wbr>Args</a> | <a href="#inmagercmpolicydetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>In<wbr>Mage<wbr>Rcm<wbr>Policy<wbr>Details<wbr>Response<wbr>Args</a> | <a href="#rcmazuremigrationpolicydetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Rcm<wbr>Azure<wbr>Migration<wbr>Policy<wbr>Details<wbr>Response<wbr>Args</a> | <a href="#vmwarecbtpolicydetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Vmware<wbr>Cbt<wbr>Policy<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#a2apolicydetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>A2APolicy<wbr>Details<wbr>Response<wbr>Args</a> | <a href="#hypervreplicaazurepolicydetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Hyper<wbr>VReplica<wbr>Azure<wbr>Policy<wbr>Details<wbr>Response<wbr>Args</a> | <a href="#hypervreplicabasepolicydetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Hyper<wbr>VReplica<wbr>Base<wbr>Policy<wbr>Details<wbr>Response<wbr>Args</a> | <a href="#hypervreplicabluepolicydetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Hyper<wbr>VReplica<wbr>Blue<wbr>Policy<wbr>Details<wbr>Response<wbr>Args</a> | <a href="#hypervreplicapolicydetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Hyper<wbr>VReplica<wbr>Policy<wbr>Details<wbr>Response<wbr>Args</a> | <a href="#inmageazurev2policydetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>In<wbr>Mage<wbr>Azure<wbr>V2Policy<wbr>Details<wbr>Response<wbr>Args</a> | <a href="#inmagebasepolicydetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>In<wbr>Mage<wbr>Base<wbr>Policy<wbr>Details<wbr>Response<wbr>Args</a> | <a href="#inmagepolicydetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>In<wbr>Mage<wbr>Policy<wbr>Details<wbr>Response<wbr>Args</a> | <a href="#inmagercmpolicydetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>In<wbr>Mage<wbr>Rcm<wbr>Policy<wbr>Details<wbr>Response<wbr>Args</a> | <a href="#rcmazuremigrationpolicydetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Rcm<wbr>Azure<wbr>Migration<wbr>Policy<wbr>Details<wbr>Response<wbr>Args</a> | <a href="#vmwarecbtpolicydetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Vmware<wbr>Cbt<wbr>Policy<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The ReplicationChannelSetting.{{% /md %}}</dd>
 </dl>
@@ -5391,7 +5391,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:recoveryservices/latest:ReplicationPolicy protectionprofile1 /Subscriptions/c183865e-6077-46f2-a3b1-deb0f4f4650a/resourceGroups/resourceGroupPS1/providers/Microsoft.RecoveryServices/vaults/vault1/replicationPolicies/protectionprofile1 
+$ pulumi import azure-nextgen:recoveryservices:ReplicationPolicy protectionprofile1 /Subscriptions/c183865e-6077-46f2-a3b1-deb0f4f4650a/resourceGroups/resourceGroupPS1/providers/Microsoft.RecoveryServices/vaults/vault1/replicationPolicies/protectionprofile1 
 ```
 
 

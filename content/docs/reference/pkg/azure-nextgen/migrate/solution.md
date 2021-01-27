@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.migrate.Solution resource with e
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Solution REST Resource.
+API Version: 2018-09-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,10 +27,10 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var solution = new AzureNextGen.Migrate.V20180901Preview.Solution("solution", new AzureNextGen.Migrate.V20180901Preview.SolutionArgs
+        var solution = new AzureNextGen.Migrate..Solution("solution", new AzureNextGen.Migrate..SolutionArgs
         {
             MigrateProjectName = "project01",
-            Properties = new AzureNextGen.Migrate.V20180901Preview.Inputs.SolutionPropertiesArgs
+            Properties = new AzureNextGen.Migrate..Inputs.SolutionPropertiesArgs
             {
                 Goal = "Databases",
                 Purpose = "Assessment",
@@ -52,7 +53,7 @@ class MyStack : Stack
 package main
 
 import (
-	migrate "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/migrate/v20180901preview"
+	migrate "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/migrate"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -85,9 +86,9 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-solution = azure_nextgen.migrate.v20180901preview.Solution("solution",
+solution = azure_nextgen.migrate.Solution("solution",
     migrate_project_name="project01",
-    properties=azure_nextgen.migrate.v20180901preview.SolutionPropertiesArgs(
+    properties=azure_nextgen.migrate.SolutionPropertiesArgs(
         goal="Databases",
         purpose="Assessment",
         tool="DataMigrationAssistant",
@@ -105,7 +106,7 @@ solution = azure_nextgen.migrate.v20180901preview.Solution("solution",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const solution = new azure_nextgen.migrate.v20180901preview.Solution("solution", {
+const solution = new azure_nextgen.migrate.Solution("solution", {
     migrateProjectName: "project01",
     properties: {
         goal: "Databases",
@@ -345,7 +346,7 @@ The Solution resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#solutionproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Inputs.<wbr>Solution<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#solutionproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate..<wbr>Inputs.<wbr>Solution<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the properties of the solution.{{% /md %}}</dd>
 </dl>
@@ -1281,7 +1282,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#details_csharp" style="color: inherit; text-decoration: inherit;">Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#solutiondetails">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Inputs.<wbr>Solution<wbr>Details<wbr>Args</a></span>
+        <span class="property-type"><a href="#solutiondetails">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate..<wbr>Inputs.<wbr>Solution<wbr>Details<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the details of the solution.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1523,7 +1524,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#details_csharp" style="color: inherit; text-decoration: inherit;">Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#solutiondetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Inputs.<wbr>Solution<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#solutiondetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate..<wbr>Inputs.<wbr>Solution<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the details of the solution.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1559,7 +1560,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#summary_csharp" style="color: inherit; text-decoration: inherit;">Summary</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databasessolutionsummaryresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Inputs.<wbr>Databases<wbr>Solution<wbr>Summary<wbr>Response<wbr>Args</a> | <a href="#serverssolutionsummaryresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Inputs.<wbr>Servers<wbr>Solution<wbr>Summary<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#databasessolutionsummaryresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate..<wbr>Inputs.<wbr>Databases<wbr>Solution<wbr>Summary<wbr>Response<wbr>Args</a> | <a href="#serverssolutionsummaryresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate..<wbr>Inputs.<wbr>Servers<wbr>Solution<wbr>Summary<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the summary of the solution.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1786,7 +1787,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:migrate/v20180901preview:Solution dbsolution /subscriptions/75dd7e42-4fd1-4512-af04-83ad9864335b/resourceGroups/myResourceGroup/providers/Microsoft.Migrate/MigrateProjects/project01/Solutions/dbsolution 
+$ pulumi import azure-nextgen:migrate:Solution dbsolution /subscriptions/75dd7e42-4fd1-4512-af04-83ad9864335b/resourceGroups/myResourceGroup/providers/Microsoft.Migrate/MigrateProjects/project01/Solutions/dbsolution 
 ```
 
 

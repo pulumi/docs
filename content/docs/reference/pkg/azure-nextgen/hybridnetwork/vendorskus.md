@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.hybridnetwork.VendorSkus resourc
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Sku sub resource.
+API Version: 2020-01-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,27 +27,27 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var vendorSkus = new AzureNextGen.HybridNetwork.V20200101Preview.VendorSkus("vendorSkus", new AzureNextGen.HybridNetwork.V20200101Preview.VendorSkusArgs
+        var vendorSkus = new AzureNextGen.HybridNetwork..VendorSkus("vendorSkus", new AzureNextGen.HybridNetwork..VendorSkusArgs
         {
             DeploymentMode = "PrivateEdgeZone",
             ManagedApplicationTemplate = ,
-            NetworkFunctionTemplate = new AzureNextGen.HybridNetwork.V20200101Preview.Inputs.NetworkFunctionTemplateArgs
+            NetworkFunctionTemplate = new AzureNextGen.HybridNetwork..Inputs.NetworkFunctionTemplateArgs
             {
                 NetworkFunctionRoleConfigurations = 
                 {
-                    new AzureNextGen.HybridNetwork.V20200101Preview.Inputs.NetworkFunctionRoleConfigurationArgs
+                    new AzureNextGen.HybridNetwork..Inputs.NetworkFunctionRoleConfigurationArgs
                     {
-                        CustomProfile = new AzureNextGen.HybridNetwork.V20200101Preview.Inputs.CustomProfileArgs
+                        CustomProfile = new AzureNextGen.HybridNetwork..Inputs.CustomProfileArgs
                         {
                             MetadataConfigurationPath = "/var/logs/network.cfg",
                         },
                         NetworkInterfaces = 
                         {
-                            new AzureNextGen.HybridNetwork.V20200101Preview.Inputs.NetworkInterfaceArgs
+                            new AzureNextGen.HybridNetwork..Inputs.NetworkInterfaceArgs
                             {
                                 IpConfigurations = 
                                 {
-                                    new AzureNextGen.HybridNetwork.V20200101Preview.Inputs.NetworkInterfaceIPConfigurationArgs
+                                    new AzureNextGen.HybridNetwork..Inputs.NetworkInterfaceIPConfigurationArgs
                                     {
                                         Gateway = "",
                                         IpAddress = "",
@@ -59,11 +60,11 @@ class MyStack : Stack
                                 NetworkInterfaceName = "nic1",
                                 VmSwitchType = "Wan",
                             },
-                            new AzureNextGen.HybridNetwork.V20200101Preview.Inputs.NetworkInterfaceArgs
+                            new AzureNextGen.HybridNetwork..Inputs.NetworkInterfaceArgs
                             {
                                 IpConfigurations = 
                                 {
-                                    new AzureNextGen.HybridNetwork.V20200101Preview.Inputs.NetworkInterfaceIPConfigurationArgs
+                                    new AzureNextGen.HybridNetwork..Inputs.NetworkInterfaceIPConfigurationArgs
                                     {
                                         Gateway = "",
                                         IpAddress = "",
@@ -77,17 +78,17 @@ class MyStack : Stack
                                 VmSwitchType = "Management",
                             },
                         },
-                        OsProfile = new AzureNextGen.HybridNetwork.V20200101Preview.Inputs.OsProfileArgs
+                        OsProfile = new AzureNextGen.HybridNetwork..Inputs.OsProfileArgs
                         {
                             AdminUsername = "dummyuser",
                             CustomData = "base-64 encoded string of custom data",
-                            LinuxConfiguration = new AzureNextGen.HybridNetwork.V20200101Preview.Inputs.LinuxConfigurationArgs
+                            LinuxConfiguration = new AzureNextGen.HybridNetwork..Inputs.LinuxConfigurationArgs
                             {
-                                Ssh = new AzureNextGen.HybridNetwork.V20200101Preview.Inputs.SshConfigurationArgs
+                                Ssh = new AzureNextGen.HybridNetwork..Inputs.SshConfigurationArgs
                                 {
                                     PublicKeys = 
                                     {
-                                        new AzureNextGen.HybridNetwork.V20200101Preview.Inputs.SshPublicKeyArgs
+                                        new AzureNextGen.HybridNetwork..Inputs.SshPublicKeyArgs
                                         {
                                             KeyData = "ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAgEAwrr66r8n6B8Y0zMF3dOpXEapIQD9DiYQ6D6/zwor9o39jSkHNiMMER/GETBbzP83LOcekm02aRjo55ArO7gPPVvCXbrirJu9pkm4AC4BBre5xSLS= user@constoso-DSH",
                                             Path = "home/user/.ssh/authorized_keys",
@@ -98,30 +99,30 @@ class MyStack : Stack
                         },
                         RoleName = "test",
                         RoleType = "VirtualMachine",
-                        StorageProfile = new AzureNextGen.HybridNetwork.V20200101Preview.Inputs.StorageProfileArgs
+                        StorageProfile = new AzureNextGen.HybridNetwork..Inputs.StorageProfileArgs
                         {
                             DataDisks = 
                             {
-                                new AzureNextGen.HybridNetwork.V20200101Preview.Inputs.DataDiskArgs
+                                new AzureNextGen.HybridNetwork..Inputs.DataDiskArgs
                                 {
                                     CreateOption = "Empty",
                                     DiskSizeGB = 10,
                                     Name = "DataDisk1",
                                 },
                             },
-                            ImageReference = new AzureNextGen.HybridNetwork.V20200101Preview.Inputs.ImageReferenceArgs
+                            ImageReference = new AzureNextGen.HybridNetwork..Inputs.ImageReferenceArgs
                             {
                                 Offer = "UbuntuServer",
                                 Publisher = "Canonical",
                                 Sku = "18.04-LTS",
                                 Version = "18.04.201804262",
                             },
-                            OsDisk = new AzureNextGen.HybridNetwork.V20200101Preview.Inputs.OsDiskArgs
+                            OsDisk = new AzureNextGen.HybridNetwork..Inputs.OsDiskArgs
                             {
                                 DiskSizeGB = 30,
                                 Name = "vhdName",
                                 OsType = "Linux",
-                                Vhd = new AzureNextGen.HybridNetwork.V20200101Preview.Inputs.VirtualHardDiskArgs
+                                Vhd = new AzureNextGen.HybridNetwork..Inputs.VirtualHardDiskArgs
                                 {
                                     Uri = "https://contoso.net/link/vnd.vhd?sp=rl&st=2020-10-08T20:38:19Z&se=2020-12-09T19:38:00Z&sv=2019-12-12&sr=b&sig=7BM2f4yOw%3D",
                                 },
@@ -151,7 +152,7 @@ package main
 import (
 	"fmt"
 
-	hybridnetwork "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/hybridnetwork/v20200101preview"
+	hybridnetwork "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/hybridnetwork"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -260,17 +261,17 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-vendor_skus = azure_nextgen.hybridnetwork.v20200101preview.VendorSkus("vendorSkus",
+vendor_skus = azure_nextgen.hybridnetwork.VendorSkus("vendorSkus",
     deployment_mode="PrivateEdgeZone",
     managed_application_template={},
-    network_function_template=azure_nextgen.hybridnetwork.v20200101preview.NetworkFunctionTemplateArgs(
-        network_function_role_configurations=[azure_nextgen.hybridnetwork.v20200101preview.NetworkFunctionRoleConfigurationArgs(
-            custom_profile=azure_nextgen.hybridnetwork.v20200101preview.CustomProfileArgs(
+    network_function_template=azure_nextgen.hybridnetwork.NetworkFunctionTemplateArgs(
+        network_function_role_configurations=[azure_nextgen.hybridnetwork.NetworkFunctionRoleConfigurationArgs(
+            custom_profile=azure_nextgen.hybridnetwork.CustomProfileArgs(
                 metadata_configuration_path="/var/logs/network.cfg",
             ),
             network_interfaces=[
-                azure_nextgen.hybridnetwork.v20200101preview.NetworkInterfaceArgs(
-                    ip_configurations=[azure_nextgen.hybridnetwork.v20200101preview.NetworkInterfaceIPConfigurationArgs(
+                azure_nextgen.hybridnetwork.NetworkInterfaceArgs(
+                    ip_configurations=[azure_nextgen.hybridnetwork.NetworkInterfaceIPConfigurationArgs(
                         gateway="",
                         ip_address="",
                         ip_allocation_method="Dynamic",
@@ -281,8 +282,8 @@ vendor_skus = azure_nextgen.hybridnetwork.v20200101preview.VendorSkus("vendorSku
                     network_interface_name="nic1",
                     vm_switch_type="Wan",
                 ),
-                azure_nextgen.hybridnetwork.v20200101preview.NetworkInterfaceArgs(
-                    ip_configurations=[azure_nextgen.hybridnetwork.v20200101preview.NetworkInterfaceIPConfigurationArgs(
+                azure_nextgen.hybridnetwork.NetworkInterfaceArgs(
+                    ip_configurations=[azure_nextgen.hybridnetwork.NetworkInterfaceIPConfigurationArgs(
                         gateway="",
                         ip_address="",
                         ip_allocation_method="Dynamic",
@@ -294,12 +295,12 @@ vendor_skus = azure_nextgen.hybridnetwork.v20200101preview.VendorSkus("vendorSku
                     vm_switch_type="Management",
                 ),
             ],
-            os_profile=azure_nextgen.hybridnetwork.v20200101preview.OsProfileArgs(
+            os_profile=azure_nextgen.hybridnetwork.OsProfileArgs(
                 admin_username="dummyuser",
                 custom_data="base-64 encoded string of custom data",
-                linux_configuration=azure_nextgen.hybridnetwork.v20200101preview.LinuxConfigurationArgs(
-                    ssh=azure_nextgen.hybridnetwork.v20200101preview.SshConfigurationArgs(
-                        public_keys=[azure_nextgen.hybridnetwork.v20200101preview.SshPublicKeyArgs(
+                linux_configuration=azure_nextgen.hybridnetwork.LinuxConfigurationArgs(
+                    ssh=azure_nextgen.hybridnetwork.SshConfigurationArgs(
+                        public_keys=[azure_nextgen.hybridnetwork.SshPublicKeyArgs(
                             key_data="ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAgEAwrr66r8n6B8Y0zMF3dOpXEapIQD9DiYQ6D6/zwor9o39jSkHNiMMER/GETBbzP83LOcekm02aRjo55ArO7gPPVvCXbrirJu9pkm4AC4BBre5xSLS= user@constoso-DSH",
                             path="home/user/.ssh/authorized_keys",
                         )],
@@ -308,23 +309,23 @@ vendor_skus = azure_nextgen.hybridnetwork.v20200101preview.VendorSkus("vendorSku
             ),
             role_name="test",
             role_type="VirtualMachine",
-            storage_profile=azure_nextgen.hybridnetwork.v20200101preview.StorageProfileArgs(
-                data_disks=[azure_nextgen.hybridnetwork.v20200101preview.DataDiskArgs(
+            storage_profile=azure_nextgen.hybridnetwork.StorageProfileArgs(
+                data_disks=[azure_nextgen.hybridnetwork.DataDiskArgs(
                     create_option="Empty",
                     disk_size_gb=10,
                     name="DataDisk1",
                 )],
-                image_reference=azure_nextgen.hybridnetwork.v20200101preview.ImageReferenceArgs(
+                image_reference=azure_nextgen.hybridnetwork.ImageReferenceArgs(
                     offer="UbuntuServer",
                     publisher="Canonical",
                     sku="18.04-LTS",
                     version="18.04.201804262",
                 ),
-                os_disk=azure_nextgen.hybridnetwork.v20200101preview.OsDiskArgs(
+                os_disk=azure_nextgen.hybridnetwork.OsDiskArgs(
                     disk_size_gb=30,
                     name="vhdName",
                     os_type="Linux",
-                    vhd=azure_nextgen.hybridnetwork.v20200101preview.VirtualHardDiskArgs(
+                    vhd=azure_nextgen.hybridnetwork.VirtualHardDiskArgs(
                         uri="https://contoso.net/link/vnd.vhd?sp=rl&st=2020-10-08T20:38:19Z&se=2020-12-09T19:38:00Z&sv=2019-12-12&sr=b&sig=7BM2f4yOw%3D",
                     ),
                 ),
@@ -346,7 +347,7 @@ vendor_skus = azure_nextgen.hybridnetwork.v20200101preview.VendorSkus("vendorSku
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const vendorSkus = new azure_nextgen.hybridnetwork.v20200101preview.VendorSkus("vendorSkus", {
+const vendorSkus = new azure_nextgen.hybridnetwork.VendorSkus("vendorSkus", {
     deploymentMode: "PrivateEdgeZone",
     managedApplicationTemplate: {},
     networkFunctionTemplate: {
@@ -634,7 +635,7 @@ The VendorSkus resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#deploymentmode_csharp" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#skudeploymentmode">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Network.<wbr>Sku<wbr>Deployment<wbr>Mode</a></span>
+        <span class="property-type">string | <a href="#skudeploymentmode">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Network..<wbr>Sku<wbr>Deployment<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}The sku deployment mode.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -661,7 +662,7 @@ The VendorSkus resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#networkfunctiontemplate_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Function<wbr>Template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkfunctiontemplate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Network.<wbr>Inputs.<wbr>Network<wbr>Function<wbr>Template<wbr>Args</a></span>
+        <span class="property-type"><a href="#networkfunctiontemplate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Network..<wbr>Inputs.<wbr>Network<wbr>Function<wbr>Template<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The template definition of the network function.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -679,7 +680,7 @@ The VendorSkus resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#skutype_csharp" style="color: inherit; text-decoration: inherit;">Sku<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#skutype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Network.<wbr>Sku<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#skutype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Network..<wbr>Sku<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The sku type.{{% /md %}}</dd>
 </dl>
@@ -1239,7 +1240,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#createoption_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Option</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#diskcreateoptiontypes">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Network.<wbr>Disk<wbr>Create<wbr>Option<wbr>Types</a></span>
+        <span class="property-type">string | <a href="#diskcreateoptiontypes">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Network..<wbr>Disk<wbr>Create<wbr>Option<wbr>Types</a></span>
     </dt>
     <dd>{{% md %}}Specifies how the virtual machine should be created.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2041,7 +2042,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ssh_csharp" style="color: inherit; text-decoration: inherit;">Ssh</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sshconfiguration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Network.<wbr>Inputs.<wbr>Ssh<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#sshconfiguration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Network..<wbr>Inputs.<wbr>Ssh<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the ssh key configuration for a Linux OS.{{% /md %}}</dd>
 </dl>
@@ -2103,7 +2104,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ssh_csharp" style="color: inherit; text-decoration: inherit;">Ssh</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sshconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Network.<wbr>Inputs.<wbr>Ssh<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sshconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Network..<wbr>Inputs.<wbr>Ssh<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the ssh key configuration for a Linux OS.{{% /md %}}</dd>
 </dl>
@@ -2165,7 +2166,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#customprofile_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customprofile">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Network.<wbr>Inputs.<wbr>Custom<wbr>Profile<wbr>Args</a></span>
+        <span class="property-type"><a href="#customprofile">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Network..<wbr>Inputs.<wbr>Custom<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the custom settings for the virtual machine.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2174,7 +2175,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#networkinterfaces_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Interfaces</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkinterface">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Network.<wbr>Inputs.<wbr>Network<wbr>Interface<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#networkinterface">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Network..<wbr>Inputs.<wbr>Network<wbr>Interface<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The network interface configurations.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2183,7 +2184,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#osprofile_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#osprofile">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Network.<wbr>Inputs.<wbr>Os<wbr>Profile<wbr>Args</a></span>
+        <span class="property-type"><a href="#osprofile">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Network..<wbr>Inputs.<wbr>Os<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the operating system settings for the role instance. This value can be updated during the deployment of network function.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2201,7 +2202,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#roletype_csharp" style="color: inherit; text-decoration: inherit;">Role<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#networkfunctionroleconfigurationtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Network.<wbr>Network<wbr>Function<wbr>Role<wbr>Configuration<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#networkfunctionroleconfigurationtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Network..<wbr>Network<wbr>Function<wbr>Role<wbr>Configuration<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Role type.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2210,7 +2211,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storageprofile_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageprofile">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Network.<wbr>Inputs.<wbr>Storage<wbr>Profile<wbr>Args</a></span>
+        <span class="property-type"><a href="#storageprofile">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Network..<wbr>Inputs.<wbr>Storage<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the storage settings for the virtual machine disks.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2237,7 +2238,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#virtualmachinesize_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Machine<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#virtualmachinesizetypes">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Network.<wbr>Virtual<wbr>Machine<wbr>Size<wbr>Types</a></span>
+        <span class="property-type">string | <a href="#virtualmachinesizetypes">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Network..<wbr>Virtual<wbr>Machine<wbr>Size<wbr>Types</a></span>
     </dt>
     <dd>{{% md %}}The size of the virtual machine.{{% /md %}}</dd>
 </dl>
@@ -2515,7 +2516,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#customprofile_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customprofileresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Network.<wbr>Inputs.<wbr>Custom<wbr>Profile<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#customprofileresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Network..<wbr>Inputs.<wbr>Custom<wbr>Profile<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the custom settings for the virtual machine.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2524,7 +2525,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#networkinterfaces_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Interfaces</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkinterfaceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Network.<wbr>Inputs.<wbr>Network<wbr>Interface<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#networkinterfaceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Network..<wbr>Inputs.<wbr>Network<wbr>Interface<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The network interface configurations.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2533,7 +2534,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#osprofile_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#osprofileresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Network.<wbr>Inputs.<wbr>Os<wbr>Profile<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#osprofileresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Network..<wbr>Inputs.<wbr>Os<wbr>Profile<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the operating system settings for the role instance. This value can be updated during the deployment of network function.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2560,7 +2561,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storageprofile_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageprofileresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Network.<wbr>Inputs.<wbr>Storage<wbr>Profile<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#storageprofileresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Network..<wbr>Inputs.<wbr>Storage<wbr>Profile<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the storage settings for the virtual machine disks.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2903,7 +2904,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#networkfunctionroleconfigurations_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Function<wbr>Role<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkfunctionroleconfiguration">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Network.<wbr>Inputs.<wbr>Network<wbr>Function<wbr>Role<wbr>Configuration<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#networkfunctionroleconfiguration">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Network..<wbr>Inputs.<wbr>Network<wbr>Function<wbr>Role<wbr>Configuration<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}An array of network function role definitions.{{% /md %}}</dd>
 </dl>
@@ -2965,7 +2966,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#networkfunctionroleconfigurations_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Function<wbr>Role<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkfunctionroleconfigurationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Network.<wbr>Inputs.<wbr>Network<wbr>Function<wbr>Role<wbr>Configuration<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#networkfunctionroleconfigurationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Network..<wbr>Inputs.<wbr>Network<wbr>Function<wbr>Role<wbr>Configuration<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}An array of network function role definitions.{{% /md %}}</dd>
 </dl>
@@ -3027,7 +3028,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipconfigurations_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkinterfaceipconfiguration">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Network.<wbr>Inputs.<wbr>Network<wbr>Interface<wbr>IPConfiguration<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#networkinterfaceipconfiguration">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Network..<wbr>Inputs.<wbr>Network<wbr>Interface<wbr>IPConfiguration<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of IP configurations of the network interface.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3054,7 +3055,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vmswitchtype_csharp" style="color: inherit; text-decoration: inherit;">Vm<wbr>Switch<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#vmswitchtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Network.<wbr>VMSwitch<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#vmswitchtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Network..<wbr>VMSwitch<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of the VM switch.{{% /md %}}</dd>
 </dl>
@@ -3224,7 +3225,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipallocationmethod_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Allocation<wbr>Method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#ipallocationmethod">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Network.<wbr>IPAllocation<wbr>Method</a></span>
+        <span class="property-type">string | <a href="#ipallocationmethod">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Network..<wbr>IPAllocation<wbr>Method</a></span>
     </dt>
     <dd>{{% md %}}IP address allocation method.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3233,7 +3234,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipversion_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#ipversion">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Network.<wbr>IPVersion</a></span>
+        <span class="property-type">string | <a href="#ipversion">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Network..<wbr>IPVersion</a></span>
     </dt>
     <dd>{{% md %}}IP address version.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3681,7 +3682,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipconfigurations_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkinterfaceipconfigurationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Network.<wbr>Inputs.<wbr>Network<wbr>Interface<wbr>IPConfiguration<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#networkinterfaceipconfigurationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Network..<wbr>Inputs.<wbr>Network<wbr>Interface<wbr>IPConfiguration<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of IP configurations of the network interface.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3915,7 +3916,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ostype_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#operatingsystemtypes">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Network.<wbr>Operating<wbr>System<wbr>Types</a></span>
+        <span class="property-type">string | <a href="#operatingsystemtypes">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Network..<wbr>Operating<wbr>System<wbr>Types</a></span>
     </dt>
     <dd>{{% md %}}The OS type.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3924,7 +3925,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vhd_csharp" style="color: inherit; text-decoration: inherit;">Vhd</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualharddisk">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Network.<wbr>Inputs.<wbr>Virtual<wbr>Hard<wbr>Disk<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualharddisk">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Network..<wbr>Inputs.<wbr>Virtual<wbr>Hard<wbr>Disk<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The virtual hard disk.{{% /md %}}</dd>
 </dl>
@@ -4094,7 +4095,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vhd_csharp" style="color: inherit; text-decoration: inherit;">Vhd</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualharddiskresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Network.<wbr>Inputs.<wbr>Virtual<wbr>Hard<wbr>Disk<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualharddiskresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Network..<wbr>Inputs.<wbr>Virtual<wbr>Hard<wbr>Disk<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The virtual hard disk.{{% /md %}}</dd>
 </dl>
@@ -4264,7 +4265,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linuxconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Linux<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linuxconfiguration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Network.<wbr>Inputs.<wbr>Linux<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#linuxconfiguration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Network..<wbr>Inputs.<wbr>Linux<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the Linux operating system settings on the virtual machine. <br><br>For a list of supported Linux distributions, see [Linux on Azure-Endorsed Distributions](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-endorsed-distros?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json) <br><br> For running non-endorsed distributions, see [Information for Non-Endorsed Distributions](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-create-upload-generic?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json).{{% /md %}}</dd>
 </dl>
@@ -4434,7 +4435,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linuxconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Linux<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linuxconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Network.<wbr>Inputs.<wbr>Linux<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#linuxconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Network..<wbr>Inputs.<wbr>Linux<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the Linux operating system settings on the virtual machine. <br><br>For a list of supported Linux distributions, see [Linux on Azure-Endorsed Distributions](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-endorsed-distros?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json) <br><br> For running non-endorsed distributions, see [Information for Non-Endorsed Distributions](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-create-upload-generic?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json).{{% /md %}}</dd>
 </dl>
@@ -4677,7 +4678,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publickeys_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sshpublickey">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Network.<wbr>Inputs.<wbr>Ssh<wbr>Public<wbr>Key<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#sshpublickey">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Network..<wbr>Inputs.<wbr>Ssh<wbr>Public<wbr>Key<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of SSH public keys used to authenticate with linux based VMs.{{% /md %}}</dd>
 </dl>
@@ -4739,7 +4740,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publickeys_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sshpublickeyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Network.<wbr>Inputs.<wbr>Ssh<wbr>Public<wbr>Key<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#sshpublickeyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Network..<wbr>Inputs.<wbr>Ssh<wbr>Public<wbr>Key<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of SSH public keys used to authenticate with linux based VMs.{{% /md %}}</dd>
 </dl>
@@ -4997,7 +4998,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datadisks_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datadisk">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Network.<wbr>Inputs.<wbr>Data<wbr>Disk<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#datadisk">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Network..<wbr>Inputs.<wbr>Data<wbr>Disk<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the parameters that are used to add a data disk to a virtual machine.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -5006,7 +5007,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#imagereference_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imagereference">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Network.<wbr>Inputs.<wbr>Image<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#imagereference">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Network..<wbr>Inputs.<wbr>Image<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The image reference properties.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -5015,7 +5016,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#osdisk_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Disk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#osdisk">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Network.<wbr>Inputs.<wbr>Os<wbr>Disk<wbr>Args</a></span>
+        <span class="property-type"><a href="#osdisk">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Network..<wbr>Inputs.<wbr>Os<wbr>Disk<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies information about the operating system disk used by the virtual machine.{{% /md %}}</dd>
 </dl>
@@ -5131,7 +5132,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datadisks_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datadiskresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Network.<wbr>Inputs.<wbr>Data<wbr>Disk<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#datadiskresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Network..<wbr>Inputs.<wbr>Data<wbr>Disk<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the parameters that are used to add a data disk to a virtual machine.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -5140,7 +5141,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#imagereference_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imagereferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Network.<wbr>Inputs.<wbr>Image<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#imagereferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Network..<wbr>Inputs.<wbr>Image<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The image reference properties.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -5149,7 +5150,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#osdisk_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Disk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#osdiskresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Network.<wbr>Inputs.<wbr>Os<wbr>Disk<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#osdiskresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Network..<wbr>Inputs.<wbr>Os<wbr>Disk<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies information about the operating system disk used by the virtual machine.{{% /md %}}</dd>
 </dl>
@@ -5675,7 +5676,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:hybridnetwork/v20200101preview:VendorSkus TestSku /subscriptions/subid/providers/Microsoft.HybridNetwork/vendors/TestVendor/vendorskus/TestSku 
+$ pulumi import azure-nextgen:hybridnetwork:VendorSkus TestSku /subscriptions/subid/providers/Microsoft.HybridNetwork/vendors/TestVendor/vendorskus/TestSku 
 ```
 
 

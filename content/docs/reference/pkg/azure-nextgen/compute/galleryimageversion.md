@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.compute.GalleryImageVersion reso
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Specifies information about the gallery image version that you want to create or update.
-Latest API Version: 2020-09-30.
+API Version: 2020-09-30.
 
 {{% examples %}}
 ## Example Usage
@@ -27,34 +27,34 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var galleryImageVersion = new AzureNextGen.Compute.Latest.GalleryImageVersion("galleryImageVersion", new AzureNextGen.Compute.Latest.GalleryImageVersionArgs
+        var galleryImageVersion = new AzureNextGen.Compute..GalleryImageVersion("galleryImageVersion", new AzureNextGen.Compute..GalleryImageVersionArgs
         {
             GalleryImageName = "myGalleryImageName",
             GalleryImageVersionName = "1.0.0",
             GalleryName = "myGalleryName",
             Location = "West US",
-            PublishingProfile = new AzureNextGen.Compute.Latest.Inputs.GalleryImageVersionPublishingProfileArgs
+            PublishingProfile = new AzureNextGen.Compute..Inputs.GalleryImageVersionPublishingProfileArgs
             {
                 TargetRegions = 
                 {
-                    new AzureNextGen.Compute.Latest.Inputs.TargetRegionArgs
+                    new AzureNextGen.Compute..Inputs.TargetRegionArgs
                     {
-                        Encryption = new AzureNextGen.Compute.Latest.Inputs.EncryptionImagesArgs
+                        Encryption = new AzureNextGen.Compute..Inputs.EncryptionImagesArgs
                         {
                             DataDiskImages = 
                             {
-                                new AzureNextGen.Compute.Latest.Inputs.DataDiskImageEncryptionArgs
+                                new AzureNextGen.Compute..Inputs.DataDiskImageEncryptionArgs
                                 {
                                     DiskEncryptionSetId = "/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myOtherDiskEncryptionSet",
                                     Lun = 0,
                                 },
-                                new AzureNextGen.Compute.Latest.Inputs.DataDiskImageEncryptionArgs
+                                new AzureNextGen.Compute..Inputs.DataDiskImageEncryptionArgs
                                 {
                                     DiskEncryptionSetId = "/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myDiskEncryptionSet",
                                     Lun = 1,
                                 },
                             },
-                            OsDiskImage = new AzureNextGen.Compute.Latest.Inputs.OSDiskImageEncryptionArgs
+                            OsDiskImage = new AzureNextGen.Compute..Inputs.OSDiskImageEncryptionArgs
                             {
                                 DiskEncryptionSetId = "/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myDiskEncryptionSet",
                             },
@@ -62,7 +62,7 @@ class MyStack : Stack
                         Name = "West US",
                         RegionalReplicaCount = 1,
                     },
-                    new AzureNextGen.Compute.Latest.Inputs.TargetRegionArgs
+                    new AzureNextGen.Compute..Inputs.TargetRegionArgs
                     {
                         Name = "East US",
                         RegionalReplicaCount = 2,
@@ -71,9 +71,9 @@ class MyStack : Stack
                 },
             },
             ResourceGroupName = "myResourceGroup",
-            StorageProfile = new AzureNextGen.Compute.Latest.Inputs.GalleryImageVersionStorageProfileArgs
+            StorageProfile = new AzureNextGen.Compute..Inputs.GalleryImageVersionStorageProfileArgs
             {
-                Source = new AzureNextGen.Compute.Latest.Inputs.GalleryArtifactVersionSourceArgs
+                Source = new AzureNextGen.Compute..Inputs.GalleryArtifactVersionSourceArgs
                 {
                     Id = "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.Compute/images/{imageName}",
                 },
@@ -93,7 +93,7 @@ class MyStack : Stack
 package main
 
 import (
-	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute/latest"
+	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -156,33 +156,33 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-gallery_image_version = azure_nextgen.compute.latest.GalleryImageVersion("galleryImageVersion",
+gallery_image_version = azure_nextgen.compute.GalleryImageVersion("galleryImageVersion",
     gallery_image_name="myGalleryImageName",
     gallery_image_version_name="1.0.0",
     gallery_name="myGalleryName",
     location="West US",
-    publishing_profile=azure_nextgen.compute.latest.GalleryImageVersionPublishingProfileArgs(
+    publishing_profile=azure_nextgen.compute.GalleryImageVersionPublishingProfileArgs(
         target_regions=[
-            azure_nextgen.compute.latest.TargetRegionArgs(
-                encryption=azure_nextgen.compute.latest.EncryptionImagesArgs(
+            azure_nextgen.compute.TargetRegionArgs(
+                encryption=azure_nextgen.compute.EncryptionImagesArgs(
                     data_disk_images=[
-                        azure_nextgen.compute.latest.DataDiskImageEncryptionArgs(
+                        azure_nextgen.compute.DataDiskImageEncryptionArgs(
                             disk_encryption_set_id="/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myOtherDiskEncryptionSet",
                             lun=0,
                         ),
-                        azure_nextgen.compute.latest.DataDiskImageEncryptionArgs(
+                        azure_nextgen.compute.DataDiskImageEncryptionArgs(
                             disk_encryption_set_id="/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myDiskEncryptionSet",
                             lun=1,
                         ),
                     ],
-                    os_disk_image=azure_nextgen.compute.latest.OSDiskImageEncryptionArgs(
+                    os_disk_image=azure_nextgen.compute.OSDiskImageEncryptionArgs(
                         disk_encryption_set_id="/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myDiskEncryptionSet",
                     ),
                 ),
                 name="West US",
                 regional_replica_count=1,
             ),
-            azure_nextgen.compute.latest.TargetRegionArgs(
+            azure_nextgen.compute.TargetRegionArgs(
                 name="East US",
                 regional_replica_count=2,
                 storage_account_type="Standard_ZRS",
@@ -190,8 +190,8 @@ gallery_image_version = azure_nextgen.compute.latest.GalleryImageVersion("galler
         ],
     ),
     resource_group_name="myResourceGroup",
-    storage_profile=azure_nextgen.compute.latest.GalleryImageVersionStorageProfileArgs(
-        source=azure_nextgen.compute.latest.GalleryArtifactVersionSourceArgs(
+    storage_profile=azure_nextgen.compute.GalleryImageVersionStorageProfileArgs(
+        source=azure_nextgen.compute.GalleryArtifactVersionSourceArgs(
             id="/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.Compute/images/{imageName}",
         ),
     ))
@@ -206,7 +206,7 @@ gallery_image_version = azure_nextgen.compute.latest.GalleryImageVersion("galler
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const galleryImageVersion = new azure_nextgen.compute.latest.GalleryImageVersion("galleryImageVersion", {
+const galleryImageVersion = new azure_nextgen.compute.GalleryImageVersion("galleryImageVersion", {
     galleryImageName: "myGalleryImageName",
     galleryImageVersionName: "1.0.0",
     galleryName: "myGalleryName",
@@ -261,29 +261,29 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var galleryImageVersion = new AzureNextGen.Compute.Latest.GalleryImageVersion("galleryImageVersion", new AzureNextGen.Compute.Latest.GalleryImageVersionArgs
+        var galleryImageVersion = new AzureNextGen.Compute..GalleryImageVersion("galleryImageVersion", new AzureNextGen.Compute..GalleryImageVersionArgs
         {
             GalleryImageName = "myGalleryImageName",
             GalleryImageVersionName = "1.0.0",
             GalleryName = "myGalleryName",
             Location = "West US",
-            PublishingProfile = new AzureNextGen.Compute.Latest.Inputs.GalleryImageVersionPublishingProfileArgs
+            PublishingProfile = new AzureNextGen.Compute..Inputs.GalleryImageVersionPublishingProfileArgs
             {
                 TargetRegions = 
                 {
-                    new AzureNextGen.Compute.Latest.Inputs.TargetRegionArgs
+                    new AzureNextGen.Compute..Inputs.TargetRegionArgs
                     {
-                        Encryption = new AzureNextGen.Compute.Latest.Inputs.EncryptionImagesArgs
+                        Encryption = new AzureNextGen.Compute..Inputs.EncryptionImagesArgs
                         {
                             DataDiskImages = 
                             {
-                                new AzureNextGen.Compute.Latest.Inputs.DataDiskImageEncryptionArgs
+                                new AzureNextGen.Compute..Inputs.DataDiskImageEncryptionArgs
                                 {
                                     DiskEncryptionSetId = "/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myOtherDiskEncryptionSet",
                                     Lun = 1,
                                 },
                             },
-                            OsDiskImage = new AzureNextGen.Compute.Latest.Inputs.OSDiskImageEncryptionArgs
+                            OsDiskImage = new AzureNextGen.Compute..Inputs.OSDiskImageEncryptionArgs
                             {
                                 DiskEncryptionSetId = "/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myDiskEncryptionSet",
                             },
@@ -291,7 +291,7 @@ class MyStack : Stack
                         Name = "West US",
                         RegionalReplicaCount = 1,
                     },
-                    new AzureNextGen.Compute.Latest.Inputs.TargetRegionArgs
+                    new AzureNextGen.Compute..Inputs.TargetRegionArgs
                     {
                         Name = "East US",
                         RegionalReplicaCount = 2,
@@ -300,24 +300,24 @@ class MyStack : Stack
                 },
             },
             ResourceGroupName = "myResourceGroup",
-            StorageProfile = new AzureNextGen.Compute.Latest.Inputs.GalleryImageVersionStorageProfileArgs
+            StorageProfile = new AzureNextGen.Compute..Inputs.GalleryImageVersionStorageProfileArgs
             {
                 DataDiskImages = 
                 {
-                    new AzureNextGen.Compute.Latest.Inputs.GalleryDataDiskImageArgs
+                    new AzureNextGen.Compute..Inputs.GalleryDataDiskImageArgs
                     {
                         HostCaching = "None",
                         Lun = 1,
-                        Source = new AzureNextGen.Compute.Latest.Inputs.GalleryArtifactVersionSourceArgs
+                        Source = new AzureNextGen.Compute..Inputs.GalleryArtifactVersionSourceArgs
                         {
                             Id = "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.Compute/snapshots/{diskSnapshotName}",
                         },
                     },
                 },
-                OsDiskImage = new AzureNextGen.Compute.Latest.Inputs.GalleryOSDiskImageArgs
+                OsDiskImage = new AzureNextGen.Compute..Inputs.GalleryOSDiskImageArgs
                 {
                     HostCaching = "ReadOnly",
-                    Source = new AzureNextGen.Compute.Latest.Inputs.GalleryArtifactVersionSourceArgs
+                    Source = new AzureNextGen.Compute..Inputs.GalleryArtifactVersionSourceArgs
                     {
                         Id = "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.Compute/snapshots/{snapshotName}",
                     },
@@ -338,7 +338,7 @@ class MyStack : Stack
 package main
 
 import (
-	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute/latest"
+	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -409,27 +409,27 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-gallery_image_version = azure_nextgen.compute.latest.GalleryImageVersion("galleryImageVersion",
+gallery_image_version = azure_nextgen.compute.GalleryImageVersion("galleryImageVersion",
     gallery_image_name="myGalleryImageName",
     gallery_image_version_name="1.0.0",
     gallery_name="myGalleryName",
     location="West US",
-    publishing_profile=azure_nextgen.compute.latest.GalleryImageVersionPublishingProfileArgs(
+    publishing_profile=azure_nextgen.compute.GalleryImageVersionPublishingProfileArgs(
         target_regions=[
-            azure_nextgen.compute.latest.TargetRegionArgs(
-                encryption=azure_nextgen.compute.latest.EncryptionImagesArgs(
-                    data_disk_images=[azure_nextgen.compute.latest.DataDiskImageEncryptionArgs(
+            azure_nextgen.compute.TargetRegionArgs(
+                encryption=azure_nextgen.compute.EncryptionImagesArgs(
+                    data_disk_images=[azure_nextgen.compute.DataDiskImageEncryptionArgs(
                         disk_encryption_set_id="/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myOtherDiskEncryptionSet",
                         lun=1,
                     )],
-                    os_disk_image=azure_nextgen.compute.latest.OSDiskImageEncryptionArgs(
+                    os_disk_image=azure_nextgen.compute.OSDiskImageEncryptionArgs(
                         disk_encryption_set_id="/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myDiskEncryptionSet",
                     ),
                 ),
                 name="West US",
                 regional_replica_count=1,
             ),
-            azure_nextgen.compute.latest.TargetRegionArgs(
+            azure_nextgen.compute.TargetRegionArgs(
                 name="East US",
                 regional_replica_count=2,
                 storage_account_type="Standard_ZRS",
@@ -437,17 +437,17 @@ gallery_image_version = azure_nextgen.compute.latest.GalleryImageVersion("galler
         ],
     ),
     resource_group_name="myResourceGroup",
-    storage_profile=azure_nextgen.compute.latest.GalleryImageVersionStorageProfileArgs(
-        data_disk_images=[azure_nextgen.compute.latest.GalleryDataDiskImageArgs(
+    storage_profile=azure_nextgen.compute.GalleryImageVersionStorageProfileArgs(
+        data_disk_images=[azure_nextgen.compute.GalleryDataDiskImageArgs(
             host_caching="None",
             lun=1,
-            source=azure_nextgen.compute.latest.GalleryArtifactVersionSourceArgs(
+            source=azure_nextgen.compute.GalleryArtifactVersionSourceArgs(
                 id="/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.Compute/snapshots/{diskSnapshotName}",
             ),
         )],
-        os_disk_image=azure_nextgen.compute.latest.GalleryOSDiskImageArgs(
+        os_disk_image=azure_nextgen.compute.GalleryOSDiskImageArgs(
             host_caching="ReadOnly",
-            source=azure_nextgen.compute.latest.GalleryArtifactVersionSourceArgs(
+            source=azure_nextgen.compute.GalleryArtifactVersionSourceArgs(
                 id="/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.Compute/snapshots/{snapshotName}",
             ),
         ),
@@ -463,7 +463,7 @@ gallery_image_version = azure_nextgen.compute.latest.GalleryImageVersion("galler
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const galleryImageVersion = new azure_nextgen.compute.latest.GalleryImageVersion("galleryImageVersion", {
+const galleryImageVersion = new azure_nextgen.compute.GalleryImageVersion("galleryImageVersion", {
     galleryImageName: "myGalleryImageName",
     galleryImageVersionName: "1.0.0",
     galleryName: "myGalleryName",
@@ -522,29 +522,29 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var galleryImageVersion = new AzureNextGen.Compute.Latest.GalleryImageVersion("galleryImageVersion", new AzureNextGen.Compute.Latest.GalleryImageVersionArgs
+        var galleryImageVersion = new AzureNextGen.Compute..GalleryImageVersion("galleryImageVersion", new AzureNextGen.Compute..GalleryImageVersionArgs
         {
             GalleryImageName = "myGalleryImageName",
             GalleryImageVersionName = "1.0.0",
             GalleryName = "myGalleryName",
             Location = "West US",
-            PublishingProfile = new AzureNextGen.Compute.Latest.Inputs.GalleryImageVersionPublishingProfileArgs
+            PublishingProfile = new AzureNextGen.Compute..Inputs.GalleryImageVersionPublishingProfileArgs
             {
                 TargetRegions = 
                 {
-                    new AzureNextGen.Compute.Latest.Inputs.TargetRegionArgs
+                    new AzureNextGen.Compute..Inputs.TargetRegionArgs
                     {
-                        Encryption = new AzureNextGen.Compute.Latest.Inputs.EncryptionImagesArgs
+                        Encryption = new AzureNextGen.Compute..Inputs.EncryptionImagesArgs
                         {
                             DataDiskImages = 
                             {
-                                new AzureNextGen.Compute.Latest.Inputs.DataDiskImageEncryptionArgs
+                                new AzureNextGen.Compute..Inputs.DataDiskImageEncryptionArgs
                                 {
                                     DiskEncryptionSetId = "/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myOtherDiskEncryptionSet",
                                     Lun = 1,
                                 },
                             },
-                            OsDiskImage = new AzureNextGen.Compute.Latest.Inputs.OSDiskImageEncryptionArgs
+                            OsDiskImage = new AzureNextGen.Compute..Inputs.OSDiskImageEncryptionArgs
                             {
                                 DiskEncryptionSetId = "/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myDiskEncryptionSet",
                             },
@@ -552,7 +552,7 @@ class MyStack : Stack
                         Name = "West US",
                         RegionalReplicaCount = 1,
                     },
-                    new AzureNextGen.Compute.Latest.Inputs.TargetRegionArgs
+                    new AzureNextGen.Compute..Inputs.TargetRegionArgs
                     {
                         Name = "East US",
                         RegionalReplicaCount = 2,
@@ -561,9 +561,9 @@ class MyStack : Stack
                 },
             },
             ResourceGroupName = "myResourceGroup",
-            StorageProfile = new AzureNextGen.Compute.Latest.Inputs.GalleryImageVersionStorageProfileArgs
+            StorageProfile = new AzureNextGen.Compute..Inputs.GalleryImageVersionStorageProfileArgs
             {
-                Source = new AzureNextGen.Compute.Latest.Inputs.GalleryArtifactVersionSourceArgs
+                Source = new AzureNextGen.Compute..Inputs.GalleryArtifactVersionSourceArgs
                 {
                     Id = "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.Storage/storageAccounts/{storageAccount}",
                     Uri = "https://gallerysourcencus.blob.core.windows.net/myvhds/Windows-Server-2012-R2-20171216-en.us-128GB.vhd",
@@ -584,7 +584,7 @@ class MyStack : Stack
 package main
 
 import (
-	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute/latest"
+	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -644,27 +644,27 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-gallery_image_version = azure_nextgen.compute.latest.GalleryImageVersion("galleryImageVersion",
+gallery_image_version = azure_nextgen.compute.GalleryImageVersion("galleryImageVersion",
     gallery_image_name="myGalleryImageName",
     gallery_image_version_name="1.0.0",
     gallery_name="myGalleryName",
     location="West US",
-    publishing_profile=azure_nextgen.compute.latest.GalleryImageVersionPublishingProfileArgs(
+    publishing_profile=azure_nextgen.compute.GalleryImageVersionPublishingProfileArgs(
         target_regions=[
-            azure_nextgen.compute.latest.TargetRegionArgs(
-                encryption=azure_nextgen.compute.latest.EncryptionImagesArgs(
-                    data_disk_images=[azure_nextgen.compute.latest.DataDiskImageEncryptionArgs(
+            azure_nextgen.compute.TargetRegionArgs(
+                encryption=azure_nextgen.compute.EncryptionImagesArgs(
+                    data_disk_images=[azure_nextgen.compute.DataDiskImageEncryptionArgs(
                         disk_encryption_set_id="/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myOtherDiskEncryptionSet",
                         lun=1,
                     )],
-                    os_disk_image=azure_nextgen.compute.latest.OSDiskImageEncryptionArgs(
+                    os_disk_image=azure_nextgen.compute.OSDiskImageEncryptionArgs(
                         disk_encryption_set_id="/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myDiskEncryptionSet",
                     ),
                 ),
                 name="West US",
                 regional_replica_count=1,
             ),
-            azure_nextgen.compute.latest.TargetRegionArgs(
+            azure_nextgen.compute.TargetRegionArgs(
                 name="East US",
                 regional_replica_count=2,
                 storage_account_type="Standard_ZRS",
@@ -672,8 +672,8 @@ gallery_image_version = azure_nextgen.compute.latest.GalleryImageVersion("galler
         ],
     ),
     resource_group_name="myResourceGroup",
-    storage_profile=azure_nextgen.compute.latest.GalleryImageVersionStorageProfileArgs(
-        source=azure_nextgen.compute.latest.GalleryArtifactVersionSourceArgs(
+    storage_profile=azure_nextgen.compute.GalleryImageVersionStorageProfileArgs(
+        source=azure_nextgen.compute.GalleryArtifactVersionSourceArgs(
             id="/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.Storage/storageAccounts/{storageAccount}",
             uri="https://gallerysourcencus.blob.core.windows.net/myvhds/Windows-Server-2012-R2-20171216-en.us-128GB.vhd",
         ),
@@ -689,7 +689,7 @@ gallery_image_version = azure_nextgen.compute.latest.GalleryImageVersion("galler
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const galleryImageVersion = new azure_nextgen.compute.latest.GalleryImageVersion("galleryImageVersion", {
+const galleryImageVersion = new azure_nextgen.compute.GalleryImageVersion("galleryImageVersion", {
     galleryImageName: "myGalleryImageName",
     galleryImageVersionName: "1.0.0",
     galleryName: "myGalleryName",
@@ -963,7 +963,7 @@ The GalleryImageVersion resource accepts the following [input]({{< relref "/docs
 <a href="#storageprofile_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#galleryimageversionstorageprofile">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Gallery<wbr>Image<wbr>Version<wbr>Storage<wbr>Profile<wbr>Args</a></span>
+        <span class="property-type"><a href="#galleryimageversionstorageprofile">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Inputs.<wbr>Gallery<wbr>Image<wbr>Version<wbr>Storage<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This is the storage profile of a Gallery Image Version.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -972,7 +972,7 @@ The GalleryImageVersion resource accepts the following [input]({{< relref "/docs
 <a href="#publishingprofile_csharp" style="color: inherit; text-decoration: inherit;">Publishing<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#galleryimageversionpublishingprofile">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Gallery<wbr>Image<wbr>Version<wbr>Publishing<wbr>Profile<wbr>Args</a></span>
+        <span class="property-type"><a href="#galleryimageversionpublishingprofile">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Inputs.<wbr>Gallery<wbr>Image<wbr>Version<wbr>Publishing<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The publishing profile of a gallery image Version.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1264,7 +1264,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#replicationstatus_csharp" style="color: inherit; text-decoration: inherit;">Replication<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#replicationstatusresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Outputs.<wbr>Replication<wbr>Status<wbr>Response</a></span>
+        <span class="property-type"><a href="#replicationstatusresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Outputs.<wbr>Replication<wbr>Status<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}This is the replication status of the gallery image version.{{% /md %}}</dd>
     <dt class="property-"
@@ -1649,7 +1649,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datadiskimages_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Disk<wbr>Images</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datadiskimageencryption">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Data<wbr>Disk<wbr>Image<wbr>Encryption<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#datadiskimageencryption">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Inputs.<wbr>Data<wbr>Disk<wbr>Image<wbr>Encryption<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of encryption specifications for data disk images.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1658,7 +1658,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#osdiskimage_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Disk<wbr>Image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#osdiskimageencryption">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>OSDisk<wbr>Image<wbr>Encryption<wbr>Args</a></span>
+        <span class="property-type"><a href="#osdiskimageencryption">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Inputs.<wbr>OSDisk<wbr>Image<wbr>Encryption<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Contains encryption settings for an OS disk image.{{% /md %}}</dd>
 </dl>
@@ -1747,7 +1747,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datadiskimages_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Disk<wbr>Images</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datadiskimageencryptionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Data<wbr>Disk<wbr>Image<wbr>Encryption<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#datadiskimageencryptionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Inputs.<wbr>Data<wbr>Disk<wbr>Image<wbr>Encryption<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of encryption specifications for data disk images.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1756,7 +1756,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#osdiskimage_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Disk<wbr>Image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#osdiskimageencryptionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>OSDisk<wbr>Image<wbr>Encryption<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#osdiskimageencryptionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Inputs.<wbr>OSDisk<wbr>Image<wbr>Encryption<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Contains encryption settings for an OS disk image.{{% /md %}}</dd>
 </dl>
@@ -2050,7 +2050,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hostcaching_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Caching</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hostcaching">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Host<wbr>Caching</a></span>
+        <span class="property-type"><a href="#hostcaching">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Host<wbr>Caching</a></span>
     </dt>
     <dd>{{% md %}}The host caching of the disk. Valid values are 'None', 'ReadOnly', and 'ReadWrite'{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2059,7 +2059,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_csharp" style="color: inherit; text-decoration: inherit;">Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#galleryartifactversionsource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Gallery<wbr>Artifact<wbr>Version<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#galleryartifactversionsource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Inputs.<wbr>Gallery<wbr>Artifact<wbr>Version<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The gallery artifact version source.{{% /md %}}</dd>
 </dl>
@@ -2202,7 +2202,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_csharp" style="color: inherit; text-decoration: inherit;">Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#galleryartifactversionsourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Gallery<wbr>Artifact<wbr>Version<wbr>Source<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#galleryartifactversionsourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Inputs.<wbr>Gallery<wbr>Artifact<wbr>Version<wbr>Source<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The gallery artifact version source.{{% /md %}}</dd>
 </dl>
@@ -2372,7 +2372,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storageaccounttype_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#storageaccounttype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Storage<wbr>Account<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#storageaccounttype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Storage<wbr>Account<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Specifies the storage account type to be used to store the image. This property is not updatable.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2381,7 +2381,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#targetregions_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Regions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#targetregion">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Target<wbr>Region<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#targetregion">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Inputs.<wbr>Target<wbr>Region<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The target regions where the Image Version is going to be replicated to. This property is updatable.{{% /md %}}</dd>
 </dl>
@@ -2596,7 +2596,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#targetregions_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Regions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#targetregionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Target<wbr>Region<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#targetregionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Inputs.<wbr>Target<wbr>Region<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The target regions where the Image Version is going to be replicated to. This property is updatable.{{% /md %}}</dd>
 </dl>
@@ -2793,7 +2793,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datadiskimages_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Disk<wbr>Images</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gallerydatadiskimage">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Gallery<wbr>Data<wbr>Disk<wbr>Image<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#gallerydatadiskimage">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Inputs.<wbr>Gallery<wbr>Data<wbr>Disk<wbr>Image<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of data disk images.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2802,7 +2802,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#osdiskimage_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Disk<wbr>Image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#galleryosdiskimage">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Gallery<wbr>OSDisk<wbr>Image<wbr>Args</a></span>
+        <span class="property-type"><a href="#galleryosdiskimage">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Inputs.<wbr>Gallery<wbr>OSDisk<wbr>Image<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This is the OS disk image.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2811,7 +2811,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_csharp" style="color: inherit; text-decoration: inherit;">Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#galleryartifactversionsource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Gallery<wbr>Artifact<wbr>Version<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#galleryartifactversionsource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Inputs.<wbr>Gallery<wbr>Artifact<wbr>Version<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The gallery artifact version source.{{% /md %}}</dd>
 </dl>
@@ -2927,7 +2927,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datadiskimages_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Disk<wbr>Images</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gallerydatadiskimageresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Gallery<wbr>Data<wbr>Disk<wbr>Image<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#gallerydatadiskimageresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Inputs.<wbr>Gallery<wbr>Data<wbr>Disk<wbr>Image<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of data disk images.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2936,7 +2936,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#osdiskimage_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Disk<wbr>Image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#galleryosdiskimageresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Gallery<wbr>OSDisk<wbr>Image<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#galleryosdiskimageresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Inputs.<wbr>Gallery<wbr>OSDisk<wbr>Image<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This is the OS disk image.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2945,7 +2945,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_csharp" style="color: inherit; text-decoration: inherit;">Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#galleryartifactversionsourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Gallery<wbr>Artifact<wbr>Version<wbr>Source<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#galleryartifactversionsourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Inputs.<wbr>Gallery<wbr>Artifact<wbr>Version<wbr>Source<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The gallery artifact version source.{{% /md %}}</dd>
 </dl>
@@ -3061,7 +3061,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hostcaching_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Caching</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hostcaching">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Host<wbr>Caching</a></span>
+        <span class="property-type"><a href="#hostcaching">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Host<wbr>Caching</a></span>
     </dt>
     <dd>{{% md %}}The host caching of the disk. Valid values are 'None', 'ReadOnly', and 'ReadWrite'{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3070,7 +3070,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_csharp" style="color: inherit; text-decoration: inherit;">Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#galleryartifactversionsource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Gallery<wbr>Artifact<wbr>Version<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#galleryartifactversionsource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Inputs.<wbr>Gallery<wbr>Artifact<wbr>Version<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The gallery artifact version source.{{% /md %}}</dd>
 </dl>
@@ -3177,7 +3177,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_csharp" style="color: inherit; text-decoration: inherit;">Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#galleryartifactversionsourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Gallery<wbr>Artifact<wbr>Version<wbr>Source<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#galleryartifactversionsourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Inputs.<wbr>Gallery<wbr>Artifact<wbr>Version<wbr>Source<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The gallery artifact version source.{{% /md %}}</dd>
 </dl>
@@ -3642,7 +3642,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#summary_csharp" style="color: inherit; text-decoration: inherit;">Summary</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionalreplicationstatusresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Regional<wbr>Replication<wbr>Status<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#regionalreplicationstatusresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Inputs.<wbr>Regional<wbr>Replication<wbr>Status<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}This is a summary of replication status for each region.{{% /md %}}</dd>
 </dl>
@@ -3786,7 +3786,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryption_csharp" style="color: inherit; text-decoration: inherit;">Encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionimages">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Encryption<wbr>Images<wbr>Args</a></span>
+        <span class="property-type"><a href="#encryptionimages">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Inputs.<wbr>Encryption<wbr>Images<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Allows users to provide customer managed keys for encrypting the OS and data disks in the gallery artifact.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3804,7 +3804,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storageaccounttype_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#storageaccounttype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Storage<wbr>Account<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#storageaccounttype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Storage<wbr>Account<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Specifies the storage account type to be used to store the image. This property is not updatable.{{% /md %}}</dd>
 </dl>
@@ -3956,7 +3956,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryption_csharp" style="color: inherit; text-decoration: inherit;">Encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionimagesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Encryption<wbr>Images<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#encryptionimagesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Inputs.<wbr>Encryption<wbr>Images<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Allows users to provide customer managed keys for encrypting the OS and data disks in the gallery artifact.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4111,7 +4111,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:compute/latest:GalleryImageVersion 1.0.0 /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/galleries/{galleryName}/images/{galleryImageName}/versions/{galleryImageVersionName} 
+$ pulumi import azure-nextgen:compute:GalleryImageVersion 1.0.0 /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/galleries/{galleryName}/images/{galleryImageName}/versions/{galleryImageVersionName} 
 ```
 
 

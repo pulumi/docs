@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.azuredata.SqlServerRegistration 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 A SQL server registration.
+API Version: 2019-07-24-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var sqlServerRegistration = new AzureNextGen.AzureData.V20190724Preview.SqlServerRegistration("sqlServerRegistration", new AzureNextGen.AzureData.V20190724Preview.SqlServerRegistrationArgs
+        var sqlServerRegistration = new AzureNextGen.AzureData..SqlServerRegistration("sqlServerRegistration", new AzureNextGen.AzureData..SqlServerRegistrationArgs
         {
             Location = "northeurope",
             ResourceGroupName = "testrg",
@@ -50,7 +51,7 @@ class MyStack : Stack
 package main
 
 import (
-	azuredata "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/azuredata/v20190724preview"
+	azuredata "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/azuredata"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -81,7 +82,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-sql_server_registration = azure_nextgen.azuredata.v20190724preview.SqlServerRegistration("sqlServerRegistration",
+sql_server_registration = azure_nextgen.azuredata.SqlServerRegistration("sqlServerRegistration",
     location="northeurope",
     resource_group_name="testrg",
     sql_server_registration_name="testsqlregistration",
@@ -99,7 +100,7 @@ sql_server_registration = azure_nextgen.azuredata.v20190724preview.SqlServerRegi
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const sqlServerRegistration = new azure_nextgen.azuredata.v20190724preview.SqlServerRegistration("sqlServerRegistration", {
+const sqlServerRegistration = new azure_nextgen.azuredata.SqlServerRegistration("sqlServerRegistration", {
     location: "northeurope",
     resourceGroupName: "testrg",
     sqlServerRegistrationName: "testsqlregistration",
@@ -602,7 +603,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#systemdata_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Azure<wbr>Data.<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
+        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Azure<wbr>Data..<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Read only system data{{% /md %}}</dd>
     <dt class="property-"
@@ -1000,7 +1001,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:azuredata/v20190724preview:SqlServerRegistration testsqlregistration /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg/providers/Microsoft.AzureData/SqlServerRegistrations/testsqlregistration 
+$ pulumi import azure-nextgen:azuredata:SqlServerRegistration testsqlregistration /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg/providers/Microsoft.AzureData/SqlServerRegistrations/testsqlregistration 
 ```
 
 

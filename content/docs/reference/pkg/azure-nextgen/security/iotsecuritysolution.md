@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.security.IotSecuritySolution res
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 IoT Security solution configuration and resource information.
-Latest API Version: 2019-08-01.
+API Version: 2019-08-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var iotSecuritySolution = new AzureNextGen.Security.Latest.IotSecuritySolution("iotSecuritySolution", new AzureNextGen.Security.Latest.IotSecuritySolutionArgs
+        var iotSecuritySolution = new AzureNextGen.Security..IotSecuritySolution("iotSecuritySolution", new AzureNextGen.Security..IotSecuritySolutionArgs
         {
             DisabledDataSources = {},
             DisplayName = "Solution Default",
@@ -39,12 +39,12 @@ class MyStack : Stack
             Location = "East Us",
             RecommendationsConfiguration = 
             {
-                new AzureNextGen.Security.Latest.Inputs.RecommendationConfigurationPropertiesArgs
+                new AzureNextGen.Security..Inputs.RecommendationConfigurationPropertiesArgs
                 {
                     RecommendationType = "IoT_OpenPorts",
                     Status = "Disabled",
                 },
-                new AzureNextGen.Security.Latest.Inputs.RecommendationConfigurationPropertiesArgs
+                new AzureNextGen.Security..Inputs.RecommendationConfigurationPropertiesArgs
                 {
                     RecommendationType = "IoT_SharedCredentials",
                     Status = "Disabled",
@@ -55,7 +55,7 @@ class MyStack : Stack
             Status = "Enabled",
             Tags = ,
             UnmaskedIpLoggingStatus = "Enabled",
-            UserDefinedResources = new AzureNextGen.Security.Latest.Inputs.UserDefinedResourcesPropertiesArgs
+            UserDefinedResources = new AzureNextGen.Security..Inputs.UserDefinedResourcesPropertiesArgs
             {
                 Query = "where type != \"microsoft.devices/iothubs\" | where name contains \"iot\"",
                 QuerySubscriptions = 
@@ -79,7 +79,7 @@ class MyStack : Stack
 package main
 
 import (
-	security "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/security/latest"
+	security "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/security"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -133,18 +133,18 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-iot_security_solution = azure_nextgen.security.latest.IotSecuritySolution("iotSecuritySolution",
+iot_security_solution = azure_nextgen.security.IotSecuritySolution("iotSecuritySolution",
     disabled_data_sources=[],
     display_name="Solution Default",
     export=[],
     iot_hubs=["/subscriptions/075423e9-7d33-4166-8bdf-3920b04e3735/resourceGroups/myRg/providers/Microsoft.Devices/IotHubs/FirstIotHub"],
     location="East Us",
     recommendations_configuration=[
-        azure_nextgen.security.latest.RecommendationConfigurationPropertiesArgs(
+        azure_nextgen.security.RecommendationConfigurationPropertiesArgs(
             recommendation_type="IoT_OpenPorts",
             status="Disabled",
         ),
-        azure_nextgen.security.latest.RecommendationConfigurationPropertiesArgs(
+        azure_nextgen.security.RecommendationConfigurationPropertiesArgs(
             recommendation_type="IoT_SharedCredentials",
             status="Disabled",
         ),
@@ -154,7 +154,7 @@ iot_security_solution = azure_nextgen.security.latest.IotSecuritySolution("iotSe
     status="Enabled",
     tags={},
     unmasked_ip_logging_status="Enabled",
-    user_defined_resources=azure_nextgen.security.latest.UserDefinedResourcesPropertiesArgs(
+    user_defined_resources=azure_nextgen.security.UserDefinedResourcesPropertiesArgs(
         query="where type != \"microsoft.devices/iothubs\" | where name contains \"iot\"",
         query_subscriptions=["075423e9-7d33-4166-8bdf-3920b04e3735"],
     ),
@@ -170,7 +170,7 @@ iot_security_solution = azure_nextgen.security.latest.IotSecuritySolution("iotSe
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const iotSecuritySolution = new azure_nextgen.security.latest.IotSecuritySolution("iotSecuritySolution", {
+const iotSecuritySolution = new azure_nextgen.security.IotSecuritySolution("iotSecuritySolution", {
     disabledDataSources: [],
     displayName: "Solution Default",
     "export": [],
@@ -427,7 +427,7 @@ The IotSecuritySolution resource accepts the following [input]({{< relref "/docs
 <a href="#additionalworkspaces_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Workspaces</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalworkspacesproperties">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security.<wbr>Inputs.<wbr>Additional<wbr>Workspaces<wbr>Properties<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#additionalworkspacesproperties">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security..<wbr>Inputs.<wbr>Additional<wbr>Workspaces<wbr>Properties<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of additional workspaces{{% /md %}}</dd>
     <dt class="property-optional"
@@ -436,7 +436,7 @@ The IotSecuritySolution resource accepts the following [input]({{< relref "/docs
 <a href="#disableddatasources_csharp" style="color: inherit; text-decoration: inherit;">Disabled<wbr>Data<wbr>Sources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Union&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security.<wbr>Data<wbr>Source&gt;&gt;</span>
+        <span class="property-type">List&lt;Union&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security..<wbr>Data<wbr>Source&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}Disabled data sources. Disabling these data sources compromises the system.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -445,7 +445,7 @@ The IotSecuritySolution resource accepts the following [input]({{< relref "/docs
 <a href="#export_csharp" style="color: inherit; text-decoration: inherit;">Export</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Union&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security.<wbr>Export<wbr>Data&gt;&gt;</span>
+        <span class="property-type">List&lt;Union&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security..<wbr>Export<wbr>Data&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}List of additional options for exporting to workspace data.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -463,7 +463,7 @@ The IotSecuritySolution resource accepts the following [input]({{< relref "/docs
 <a href="#recommendationsconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Recommendations<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recommendationconfigurationproperties">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security.<wbr>Inputs.<wbr>Recommendation<wbr>Configuration<wbr>Properties<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#recommendationconfigurationproperties">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security..<wbr>Inputs.<wbr>Recommendation<wbr>Configuration<wbr>Properties<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of the configuration status for each recommendation type.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -472,7 +472,7 @@ The IotSecuritySolution resource accepts the following [input]({{< relref "/docs
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#securitysolutionstatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security.<wbr>Security<wbr>Solution<wbr>Status</a></span>
+        <span class="property-type">string | <a href="#securitysolutionstatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security..<wbr>Security<wbr>Solution<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}Status of the IoT Security solution.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -490,7 +490,7 @@ The IotSecuritySolution resource accepts the following [input]({{< relref "/docs
 <a href="#unmaskediploggingstatus_csharp" style="color: inherit; text-decoration: inherit;">Unmasked<wbr>Ip<wbr>Logging<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#unmaskediploggingstatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security.<wbr>Unmasked<wbr>Ip<wbr>Logging<wbr>Status</a></span>
+        <span class="property-type">string | <a href="#unmaskediploggingstatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security..<wbr>Unmasked<wbr>Ip<wbr>Logging<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}Unmasked IP address logging status{{% /md %}}</dd>
     <dt class="property-optional"
@@ -499,7 +499,7 @@ The IotSecuritySolution resource accepts the following [input]({{< relref "/docs
 <a href="#userdefinedresources_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Defined<wbr>Resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userdefinedresourcesproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security.<wbr>Inputs.<wbr>User<wbr>Defined<wbr>Resources<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#userdefinedresourcesproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security..<wbr>Inputs.<wbr>User<wbr>Defined<wbr>Resources<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties of the IoT Security solution's user defined resources.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -953,7 +953,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#systemdata_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security.<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
+        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security..<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Azure Resource Manager metadata containing createdBy and modifiedBy information.{{% /md %}}</dd>
     <dt class="property-"
@@ -1210,7 +1210,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datatypes_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Union&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security.<wbr>Additional<wbr>Workspace<wbr>Data<wbr>Type&gt;&gt;</span>
+        <span class="property-type">List&lt;Union&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security..<wbr>Additional<wbr>Workspace<wbr>Data<wbr>Type&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}List of data types sent to workspace{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1219,7 +1219,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#additionalworkspacetype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security.<wbr>Additional<wbr>Workspace<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#additionalworkspacetype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security..<wbr>Additional<wbr>Workspace<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Workspace type.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1576,7 +1576,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recommendationtype_csharp" style="color: inherit; text-decoration: inherit;">Recommendation<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#recommendationtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security.<wbr>Recommendation<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#recommendationtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security..<wbr>Recommendation<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of IoT Security recommendation.{{% /md %}}</dd>
     <dt class="property-required"
@@ -1585,7 +1585,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#recommendationconfigstatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security.<wbr>Recommendation<wbr>Config<wbr>Status</a></span>
+        <span class="property-type">string | <a href="#recommendationconfigstatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security..<wbr>Recommendation<wbr>Config<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}Recommendation status. When the recommendation status is disabled recommendations are not generated.{{% /md %}}</dd>
 </dl>
@@ -2466,7 +2466,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:security/latest:IotSecuritySolution default /subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23/resourceGroups/MyGroup/providers/Microsoft.Security/Locations/eastus/IoTSecuritySolutions/default 
+$ pulumi import azure-nextgen:security:IotSecuritySolution default /subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23/resourceGroups/MyGroup/providers/Microsoft.Security/Locations/eastus/IoTSecuritySolutions/default 
 ```
 
 

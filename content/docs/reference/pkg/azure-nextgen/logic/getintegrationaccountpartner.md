@@ -206,7 +206,7 @@ The following output properties are available:
 <a href="#content_csharp" style="color: inherit; text-decoration: inherit;">Content</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#partnercontentresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Outputs.<wbr>Partner<wbr>Content<wbr>Response</a></span>
+        <span class="property-type"><a href="#partnercontentresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Outputs.<wbr>Partner<wbr>Content<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The partner content.{{% /md %}}</dd>
     <dt class="property-"
@@ -594,7 +594,7 @@ The following output properties are available:
 <a href="#businessidentities_csharp" style="color: inherit; text-decoration: inherit;">Business<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#businessidentityresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>Business<wbr>Identity<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#businessidentityresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>Business<wbr>Identity<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of partner business identities.{{% /md %}}</dd>
 </dl>
@@ -764,7 +764,7 @@ The following output properties are available:
 <a href="#b2b_csharp" style="color: inherit; text-decoration: inherit;">B2b</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#b2bpartnercontentresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Inputs.<wbr>B2BPartner<wbr>Content<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#b2bpartnercontentresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic..<wbr>Inputs.<wbr>B2BPartner<wbr>Content<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The B2B partner content.{{% /md %}}</dd>
 </dl>

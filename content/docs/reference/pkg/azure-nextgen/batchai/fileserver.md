@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.batchai.FileServer resource with
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 File Server information.
-Latest API Version: 2018-05-01.
+API Version: 2018-05-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,9 +27,9 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var fileServer = new AzureNextGen.BatchAI.Latest.FileServer("fileServer", new AzureNextGen.BatchAI.Latest.FileServerArgs
+        var fileServer = new AzureNextGen.BatchAI..FileServer("fileServer", new AzureNextGen.BatchAI..FileServerArgs
         {
-            DataDisks = new AzureNextGen.BatchAI.Latest.Inputs.DataDisksArgs
+            DataDisks = new AzureNextGen.BatchAI..Inputs.DataDisksArgs
             {
                 DiskCount = 2,
                 DiskSizeInGB = 10,
@@ -37,9 +37,9 @@ class MyStack : Stack
             },
             FileServerName = "demo_nfs",
             ResourceGroupName = "demo_resource_group",
-            SshConfiguration = new AzureNextGen.BatchAI.Latest.Inputs.SshConfigurationArgs
+            SshConfiguration = new AzureNextGen.BatchAI..Inputs.SshConfigurationArgs
             {
-                UserAccountSettings = new AzureNextGen.BatchAI.Latest.Inputs.UserAccountSettingsArgs
+                UserAccountSettings = new AzureNextGen.BatchAI..Inputs.UserAccountSettingsArgs
                 {
                     AdminUserName = "admin_user_name",
                     AdminUserPassword = "admin_user_password",
@@ -62,7 +62,7 @@ class MyStack : Stack
 package main
 
 import (
-	batchai "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/batchai/latest"
+	batchai "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/batchai"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -102,16 +102,16 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-file_server = azure_nextgen.batchai.latest.FileServer("fileServer",
-    data_disks=azure_nextgen.batchai.latest.DataDisksArgs(
+file_server = azure_nextgen.batchai.FileServer("fileServer",
+    data_disks=azure_nextgen.batchai.DataDisksArgs(
         disk_count=2,
         disk_size_in_gb=10,
         storage_account_type="Standard_LRS",
     ),
     file_server_name="demo_nfs",
     resource_group_name="demo_resource_group",
-    ssh_configuration=azure_nextgen.batchai.latest.SshConfigurationArgs(
-        user_account_settings=azure_nextgen.batchai.latest.UserAccountSettingsArgs(
+    ssh_configuration=azure_nextgen.batchai.SshConfigurationArgs(
+        user_account_settings=azure_nextgen.batchai.UserAccountSettingsArgs(
             admin_user_name="admin_user_name",
             admin_user_password="admin_user_password",
         ),
@@ -129,7 +129,7 @@ file_server = azure_nextgen.batchai.latest.FileServer("fileServer",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const fileServer = new azure_nextgen.batchai.latest.FileServer("fileServer", {
+const fileServer = new azure_nextgen.batchai.FileServer("fileServer", {
     dataDisks: {
         diskCount: 2,
         diskSizeInGB: 10,
@@ -340,7 +340,7 @@ The FileServer resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#datadisks_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datadisks">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI.<wbr>Inputs.<wbr>Data<wbr>Disks<wbr>Args</a></span>
+        <span class="property-type"><a href="#datadisks">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI..<wbr>Inputs.<wbr>Data<wbr>Disks<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings for the data disks which will be created for the File Server.{{% /md %}}</dd>
     <dt class="property-required"
@@ -367,7 +367,7 @@ The FileServer resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#sshconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Ssh<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sshconfiguration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI.<wbr>Inputs.<wbr>Ssh<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#sshconfiguration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI..<wbr>Inputs.<wbr>Ssh<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}SSH configuration for the File Server node.{{% /md %}}</dd>
     <dt class="property-required"
@@ -394,7 +394,7 @@ The FileServer resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#subnet_csharp" style="color: inherit; text-decoration: inherit;">Subnet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceid">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI.<wbr>Inputs.<wbr>Resource<wbr>Id<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourceid">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI..<wbr>Inputs.<wbr>Resource<wbr>Id<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Identifier of an existing virtual network subnet to put the File Server in. If not provided, a new virtual network and subnet will be created.{{% /md %}}</dd>
 </dl>
@@ -641,7 +641,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mountsettings_csharp" style="color: inherit; text-decoration: inherit;">Mount<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mountsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI.<wbr>Outputs.<wbr>Mount<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#mountsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI..<wbr>Outputs.<wbr>Mount<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}File Server mount settings.{{% /md %}}</dd>
     <dt class="property-"
@@ -975,7 +975,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storageaccounttype_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#storageaccounttype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI.<wbr>Storage<wbr>Account<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#storageaccounttype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI..<wbr>Storage<wbr>Account<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of storage account to be used on the disk. Possible values are: Standard_LRS or Premium_LRS. Premium storage account type can only be used with VM sizes supporting premium storage.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -984,7 +984,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cachingtype_csharp" style="color: inherit; text-decoration: inherit;">Caching<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cachingtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI.<wbr>Caching<wbr>Type</a></span>
+        <span class="property-type"><a href="#cachingtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI..<wbr>Caching<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Caching type for the disks. Available values are none (default), readonly, readwrite. Caching type can be set only for VM sizes supporting premium storage.{{% /md %}}</dd>
 </dl>
@@ -1555,7 +1555,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#useraccountsettings_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Account<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#useraccountsettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI.<wbr>Inputs.<wbr>User<wbr>Account<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#useraccountsettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI..<wbr>Inputs.<wbr>User<wbr>Account<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings for administrator user account to be created on a node. The account can be used to establish SSH connection to the node.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1653,7 +1653,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#useraccountsettings_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Account<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#useraccountsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI.<wbr>Inputs.<wbr>User<wbr>Account<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#useraccountsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI..<wbr>Inputs.<wbr>User<wbr>Account<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings for administrator user account to be created on a node. The account can be used to establish SSH connection to the node.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2051,7 +2051,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:batchai/latest:FileServer demo_nfs /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/demo_resource_group/providers/Microsoft.BatchAI/workspaces/demo_workspace/fileservers/fileservercedd134b 
+$ pulumi import azure-nextgen:batchai:FileServer demo_nfs /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/demo_resource_group/providers/Microsoft.BatchAI/workspaces/demo_workspace/fileservers/fileservercedd134b 
 ```
 
 

@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.desktopvirtualization.Applicatio
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Represents a ApplicationGroup definition.
+API Version: 2021-01-14-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var applicationGroup = new AzureNextGen.DesktopVirtualization.V20201110Preview.ApplicationGroup("applicationGroup", new AzureNextGen.DesktopVirtualization.V20201110Preview.ApplicationGroupArgs
+        var applicationGroup = new AzureNextGen.DesktopVirtualization..ApplicationGroup("applicationGroup", new AzureNextGen.DesktopVirtualization..ApplicationGroupArgs
         {
             ApplicationGroupName = "applicationGroup1",
             ApplicationGroupType = "RemoteApp",
@@ -55,7 +56,7 @@ class MyStack : Stack
 package main
 
 import (
-	desktopvirtualization "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/desktopvirtualization/v20201110preview"
+	desktopvirtualization "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/desktopvirtualization"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -91,7 +92,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-application_group = azure_nextgen.desktopvirtualization.v20201110preview.ApplicationGroup("applicationGroup",
+application_group = azure_nextgen.desktopvirtualization.ApplicationGroup("applicationGroup",
     application_group_name="applicationGroup1",
     application_group_type="RemoteApp",
     description="des1",
@@ -114,7 +115,7 @@ application_group = azure_nextgen.desktopvirtualization.v20201110preview.Applica
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const applicationGroup = new azure_nextgen.desktopvirtualization.v20201110preview.ApplicationGroup("applicationGroup", {
+const applicationGroup = new azure_nextgen.desktopvirtualization.ApplicationGroup("applicationGroup", {
     applicationGroupName: "applicationGroup1",
     applicationGroupType: "RemoteApp",
     description: "des1",
@@ -330,7 +331,7 @@ The ApplicationGroup resource accepts the following [input]({{< relref "/docs/in
 <a href="#applicationgrouptype_csharp" style="color: inherit; text-decoration: inherit;">Application<wbr>Group<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#applicationgrouptype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Desktop<wbr>Virtualization.<wbr>Application<wbr>Group<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#applicationgrouptype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Desktop<wbr>Virtualization..<wbr>Application<wbr>Group<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Resource Type of ApplicationGroup.{{% /md %}}</dd>
     <dt class="property-required"
@@ -852,7 +853,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:desktopvirtualization/v20201110preview:ApplicationGroup applicationGroup1 /subscriptions/daefabc0-95b4-48b3-b645-8a753a63c4fa/resourceGroups/resourceGroup1/providers/Microsoft.DesktopVirtualization/applicationGroups/applicationGroup1 
+$ pulumi import azure-nextgen:desktopvirtualization:ApplicationGroup applicationGroup1 /subscriptions/daefabc0-95b4-48b3-b645-8a753a63c4fa/resourceGroups/resourceGroup1/providers/Microsoft.DesktopVirtualization/applicationGroups/applicationGroup1 
 ```
 
 

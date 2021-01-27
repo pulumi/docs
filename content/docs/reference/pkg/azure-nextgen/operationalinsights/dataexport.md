@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.operationalinsights.DataExport r
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The top level data export resource container.
-Latest API Version: 2020-08-01.
+API Version: 2020-08-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var dataExport = new AzureNextGen.OperationalInsights.Latest.DataExport("dataExport", new AzureNextGen.OperationalInsights.Latest.DataExportArgs
+        var dataExport = new AzureNextGen.OperationalInsights..DataExport("dataExport", new AzureNextGen.OperationalInsights..DataExportArgs
         {
             DataExportName = "export1",
             ResourceGroupName = "RgTest1",
@@ -52,7 +52,7 @@ class MyStack : Stack
 package main
 
 import (
-	operationalinsights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/operationalinsights/latest"
+	operationalinsights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/operationalinsights"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -84,7 +84,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-data_export = azure_nextgen.operationalinsights.latest.DataExport("dataExport",
+data_export = azure_nextgen.operationalinsights.DataExport("dataExport",
     data_export_name="export1",
     resource_group_name="RgTest1",
     resource_id="/subscriptions/192b9f85-a39a-4276-b96d-d5cd351703f9/resourceGroups/OIAutoRest1234/providers/Microsoft.EventHub/namespaces/test",
@@ -101,7 +101,7 @@ data_export = azure_nextgen.operationalinsights.latest.DataExport("dataExport",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const dataExport = new azure_nextgen.operationalinsights.latest.DataExport("dataExport", {
+const dataExport = new azure_nextgen.operationalinsights.DataExport("dataExport", {
     dataExportName: "export1",
     resourceGroupName: "RgTest1",
     resourceId: "/subscriptions/192b9f85-a39a-4276-b96d-d5cd351703f9/resourceGroups/OIAutoRest1234/providers/Microsoft.EventHub/namespaces/test",
@@ -827,7 +827,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:operationalinsights/latest:DataExport export1 /subscriptions/00000000-0000-0000-0000-00000000000/resourcegroups/RgTest1/providers/microsoft.operationalinsights/workspaces/DeWnTest1234/export/export1 
+$ pulumi import azure-nextgen:operationalinsights:DataExport export1 /subscriptions/00000000-0000-0000-0000-00000000000/resourcegroups/RgTest1/providers/microsoft.operationalinsights/workspaces/DeWnTest1234/export/export1 
 ```
 
 

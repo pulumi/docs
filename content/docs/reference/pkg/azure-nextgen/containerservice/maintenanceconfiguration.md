@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.containerservice.MaintenanceConf
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 maintenance configuration.
-Latest API Version: 2020-12-01.
+API Version: 2020-12-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,12 +27,12 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var maintenanceConfiguration = new AzureNextGen.ContainerService.Latest.MaintenanceConfiguration("maintenanceConfiguration", new AzureNextGen.ContainerService.Latest.MaintenanceConfigurationArgs
+        var maintenanceConfiguration = new AzureNextGen.ContainerService..MaintenanceConfiguration("maintenanceConfiguration", new AzureNextGen.ContainerService..MaintenanceConfigurationArgs
         {
             ConfigName = "default",
             NotAllowedTime = 
             {
-                new AzureNextGen.ContainerService.Latest.Inputs.TimeSpanArgs
+                new AzureNextGen.ContainerService..Inputs.TimeSpanArgs
                 {
                     End = "2020-11-30T12:00:00Z",
                     Start = "2020-11-26T03:00:00Z",
@@ -42,7 +42,7 @@ class MyStack : Stack
             ResourceName = "clustername1",
             TimeInWeek = 
             {
-                new AzureNextGen.ContainerService.Latest.Inputs.TimeInWeekArgs
+                new AzureNextGen.ContainerService..Inputs.TimeInWeekArgs
                 {
                     Day = "Monday",
                     HourSlots = 
@@ -71,15 +71,15 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-maintenance_configuration = azure_nextgen.containerservice.latest.MaintenanceConfiguration("maintenanceConfiguration",
+maintenance_configuration = azure_nextgen.containerservice.MaintenanceConfiguration("maintenanceConfiguration",
     config_name="default",
-    not_allowed_time=[azure_nextgen.containerservice.latest.TimeSpanArgs(
+    not_allowed_time=[azure_nextgen.containerservice.TimeSpanArgs(
         end="2020-11-30T12:00:00Z",
         start="2020-11-26T03:00:00Z",
     )],
     resource_group_name="rg1",
     resource_name="clustername1",
-    time_in_week=[azure_nextgen.containerservice.latest.TimeInWeekArgs(
+    time_in_week=[azure_nextgen.containerservice.TimeInWeekArgs(
         day="Monday",
         hour_slots=[
             1,
@@ -97,7 +97,7 @@ maintenance_configuration = azure_nextgen.containerservice.latest.MaintenanceCon
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const maintenanceConfiguration = new azure_nextgen.containerservice.latest.MaintenanceConfiguration("maintenanceConfiguration", {
+const maintenanceConfiguration = new azure_nextgen.containerservice.MaintenanceConfiguration("maintenanceConfiguration", {
     configName: "default",
     notAllowedTime: [{
         end: "2020-11-30T12:00:00Z",
@@ -334,7 +334,7 @@ The MaintenanceConfiguration resource accepts the following [input]({{< relref "
 <a href="#notallowedtime_csharp" style="color: inherit; text-decoration: inherit;">Not<wbr>Allowed<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timespan">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Time<wbr>Span<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#timespan">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service..<wbr>Inputs.<wbr>Time<wbr>Span<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Time slots on which upgrade is not allowed.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -343,7 +343,7 @@ The MaintenanceConfiguration resource accepts the following [input]({{< relref "
 <a href="#timeinweek_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>In<wbr>Week</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timeinweek">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Time<wbr>In<wbr>Week<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#timeinweek">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service..<wbr>Inputs.<wbr>Time<wbr>In<wbr>Week<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Weekday time slots allowed to upgrade.{{% /md %}}</dd>
 </dl>
@@ -536,7 +536,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#systemdata_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
+        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service..<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The system meta data relating to this resource.{{% /md %}}</dd>
     <dt class="property-"
@@ -940,7 +940,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#day_csharp" style="color: inherit; text-decoration: inherit;">Day</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#weekday">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Week<wbr>Day</a></span>
+        <span class="property-type">string | <a href="#weekday">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service..<wbr>Week<wbr>Day</a></span>
     </dt>
     <dd>{{% md %}}A day in a week.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1404,7 +1404,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:containerservice/latest:MaintenanceConfiguration default /subscriptions/subid1/resourcegroups/rg1/providers/Microsoft.ContainerService/managedClusters/clustername1/maintenanceConfigurations/default 
+$ pulumi import azure-nextgen:containerservice:MaintenanceConfiguration default /subscriptions/subid1/resourcegroups/rg1/providers/Microsoft.ContainerService/managedClusters/clustername1/maintenanceConfigurations/default 
 ```
 
 

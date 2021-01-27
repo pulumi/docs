@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.containerregistry.ExportPipeline
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 An object that represents an export pipeline for a container registry.
+API Version: 2020-11-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,10 +27,10 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var exportPipeline = new AzureNextGen.ContainerRegistry.V20201101Preview.ExportPipeline("exportPipeline", new AzureNextGen.ContainerRegistry.V20201101Preview.ExportPipelineArgs
+        var exportPipeline = new AzureNextGen.ContainerRegistry..ExportPipeline("exportPipeline", new AzureNextGen.ContainerRegistry..ExportPipelineArgs
         {
             ExportPipelineName = "myExportPipeline",
-            Identity = new AzureNextGen.ContainerRegistry.V20201101Preview.Inputs.IdentityPropertiesArgs
+            Identity = new AzureNextGen.ContainerRegistry..Inputs.IdentityPropertiesArgs
             {
                 Type = "SystemAssigned",
             },
@@ -40,7 +41,7 @@ class MyStack : Stack
             },
             RegistryName = "myRegistry",
             ResourceGroupName = "myResourceGroup",
-            Target = new AzureNextGen.ContainerRegistry.V20201101Preview.Inputs.ExportPipelineTargetPropertiesArgs
+            Target = new AzureNextGen.ContainerRegistry..Inputs.ExportPipelineTargetPropertiesArgs
             {
                 KeyVaultUri = "https://myvault.vault.azure.net/secrets/acrexportsas",
                 Type = "AzureStorageBlobContainer",
@@ -61,7 +62,7 @@ class MyStack : Stack
 package main
 
 import (
-	containerregistry "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/containerregistry/v20201101preview"
+	containerregistry "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/containerregistry"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -101,16 +102,16 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-export_pipeline = azure_nextgen.containerregistry.v20201101preview.ExportPipeline("exportPipeline",
+export_pipeline = azure_nextgen.containerregistry.ExportPipeline("exportPipeline",
     export_pipeline_name="myExportPipeline",
-    identity=azure_nextgen.containerregistry.v20201101preview.IdentityPropertiesArgs(
+    identity=azure_nextgen.containerregistry.IdentityPropertiesArgs(
         type="SystemAssigned",
     ),
     location="westus",
     options=["OverwriteBlobs"],
     registry_name="myRegistry",
     resource_group_name="myResourceGroup",
-    target=azure_nextgen.containerregistry.v20201101preview.ExportPipelineTargetPropertiesArgs(
+    target=azure_nextgen.containerregistry.ExportPipelineTargetPropertiesArgs(
         key_vault_uri="https://myvault.vault.azure.net/secrets/acrexportsas",
         type="AzureStorageBlobContainer",
         uri="https://accountname.blob.core.windows.net/containername",
@@ -126,7 +127,7 @@ export_pipeline = azure_nextgen.containerregistry.v20201101preview.ExportPipelin
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const exportPipeline = new azure_nextgen.containerregistry.v20201101preview.ExportPipeline("exportPipeline", {
+const exportPipeline = new azure_nextgen.containerregistry.ExportPipeline("exportPipeline", {
     exportPipelineName: "myExportPipeline",
     identity: {
         type: "SystemAssigned",
@@ -362,7 +363,7 @@ The ExportPipeline resource accepts the following [input]({{< relref "/docs/intr
 <a href="#target_csharp" style="color: inherit; text-decoration: inherit;">Target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#exportpipelinetargetproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Export<wbr>Pipeline<wbr>Target<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#exportpipelinetargetproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry..<wbr>Inputs.<wbr>Export<wbr>Pipeline<wbr>Target<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The target properties of the export pipeline.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -371,7 +372,7 @@ The ExportPipeline resource accepts the following [input]({{< relref "/docs/intr
 <a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identityproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Identity<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#identityproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry..<wbr>Inputs.<wbr>Identity<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The identity of the export pipeline.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -389,7 +390,7 @@ The ExportPipeline resource accepts the following [input]({{< relref "/docs/intr
 <a href="#options_csharp" style="color: inherit; text-decoration: inherit;">Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Union&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry.<wbr>Pipeline<wbr>Options&gt;&gt;</span>
+        <span class="property-type">List&lt;Union&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry..<wbr>Pipeline<wbr>Options&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}The list of all options configured for the pipeline.{{% /md %}}</dd>
 </dl>
@@ -645,7 +646,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#systemdata_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry.<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
+        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry..<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Metadata pertaining to creation and last modification of the resource.{{% /md %}}</dd>
     <dt class="property-"
@@ -1136,7 +1137,7 @@ When 'AzureStorageBlobContainer':  "https://accountName.blob.core.windows.net/co
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidentitytype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry.<wbr>Resource<wbr>Identity<wbr>Type</a></span>
+        <span class="property-type"><a href="#resourceidentitytype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry..<wbr>Resource<wbr>Identity<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The identity type.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1145,7 +1146,7 @@ When 'AzureStorageBlobContainer':  "https://accountName.blob.core.windows.net/co
 <a href="#userassignedidentities_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>User<wbr>Identity<wbr>Properties<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry..<wbr>Inputs.<wbr>User<wbr>Identity<wbr>Properties<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}The list of user identities associated with the resource. The user identity 
 dictionary key references will be ARM resource ids in the form: 
@@ -1327,7 +1328,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#userassignedidentities_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>User<wbr>Identity<wbr>Properties<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry..<wbr>Inputs.<wbr>User<wbr>Identity<wbr>Properties<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}The list of user identities associated with the resource. The user identity 
 dictionary key references will be ARM resource ids in the form: 
@@ -2022,7 +2023,7 @@ dictionary key references will be ARM resource ids in the form:
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:containerregistry/v20201101preview:ExportPipeline myExportPipeline /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.ContainerRegistry/registries/myRegistry/exportPipelines/myExportPipeline 
+$ pulumi import azure-nextgen:containerregistry:ExportPipeline myExportPipeline /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.ContainerRegistry/registries/myRegistry/exportPipelines/myExportPipeline 
 ```
 
 

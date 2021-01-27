@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.media.Job resource with examples
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 A Job resource type. The progress and state can be obtained by polling a Job or subscribing to events using EventGrid.
-Latest API Version: 2020-05-01.
+API Version: 2020-05-01.
 
 
 
@@ -211,7 +211,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#input_csharp" style="color: inherit; text-decoration: inherit;">Input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobinputasset">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Job<wbr>Input<wbr>Asset<wbr>Args</a> | <a href="#jobinputclip">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Job<wbr>Input<wbr>Clip<wbr>Args</a> | <a href="#jobinputhttp">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Job<wbr>Input<wbr>Http<wbr>Args</a> | <a href="#jobinputs">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Job<wbr>Inputs<wbr>Args</a></span>
+        <span class="property-type"><a href="#jobinputasset">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Job<wbr>Input<wbr>Asset<wbr>Args</a> | <a href="#jobinputclip">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Job<wbr>Input<wbr>Clip<wbr>Args</a> | <a href="#jobinputhttp">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Job<wbr>Input<wbr>Http<wbr>Args</a> | <a href="#jobinputs">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Job<wbr>Inputs<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The inputs for the Job.{{% /md %}}</dd>
     <dt class="property-required"
@@ -229,7 +229,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#outputs_csharp" style="color: inherit; text-decoration: inherit;">Outputs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#joboutputasset">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Job<wbr>Output<wbr>Asset<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#joboutputasset">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Job<wbr>Output<wbr>Asset<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The outputs for the Job.{{% /md %}}</dd>
     <dt class="property-required"
@@ -274,7 +274,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#priority_csharp" style="color: inherit; text-decoration: inherit;">Priority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#priority">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Priority</a></span>
+        <span class="property-type">string | <a href="#priority">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Priority</a></span>
     </dt>
     <dd>{{% md %}}Priority with which the job should be processed. Higher priority jobs are processed before lower priority jobs. If not set, the default is normal.{{% /md %}}</dd>
 </dl>
@@ -1121,7 +1121,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#details_csharp" style="color: inherit; text-decoration: inherit;">Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#joberrordetailresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Job<wbr>Error<wbr>Detail<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#joberrordetailresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Job<wbr>Error<wbr>Detail<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}An array of details about specific errors that led to this reported error.{{% /md %}}</dd>
     <dt class="property-required"
@@ -1318,7 +1318,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#end_csharp" style="color: inherit; text-decoration: inherit;">End</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#absolutecliptime">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Absolute<wbr>Clip<wbr>Time<wbr>Args</a> | <a href="#utccliptime">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Utc<wbr>Clip<wbr>Time<wbr>Args</a></span>
+        <span class="property-type"><a href="#absolutecliptime">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Absolute<wbr>Clip<wbr>Time<wbr>Args</a> | <a href="#utccliptime">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Utc<wbr>Clip<wbr>Time<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines a point on the timeline of the input media at which processing will end. Defaults to the end of the input media.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1345,7 +1345,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#start_csharp" style="color: inherit; text-decoration: inherit;">Start</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#absolutecliptime">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Absolute<wbr>Clip<wbr>Time<wbr>Args</a> | <a href="#utccliptime">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Utc<wbr>Clip<wbr>Time<wbr>Args</a></span>
+        <span class="property-type"><a href="#absolutecliptime">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Absolute<wbr>Clip<wbr>Time<wbr>Args</a> | <a href="#utccliptime">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Utc<wbr>Clip<wbr>Time<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines a point on the timeline of the input media at which processing will start. Defaults to the beginning of the input media.{{% /md %}}</dd>
 </dl>
@@ -1524,7 +1524,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#end_csharp" style="color: inherit; text-decoration: inherit;">End</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#absolutecliptimeresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Absolute<wbr>Clip<wbr>Time<wbr>Response<wbr>Args</a> | <a href="#utccliptimeresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Utc<wbr>Clip<wbr>Time<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#absolutecliptimeresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Absolute<wbr>Clip<wbr>Time<wbr>Response<wbr>Args</a> | <a href="#utccliptimeresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Utc<wbr>Clip<wbr>Time<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines a point on the timeline of the input media at which processing will end. Defaults to the end of the input media.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1551,7 +1551,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#start_csharp" style="color: inherit; text-decoration: inherit;">Start</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#absolutecliptimeresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Absolute<wbr>Clip<wbr>Time<wbr>Response<wbr>Args</a> | <a href="#utccliptimeresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Utc<wbr>Clip<wbr>Time<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#absolutecliptimeresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Absolute<wbr>Clip<wbr>Time<wbr>Response<wbr>Args</a> | <a href="#utccliptimeresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Utc<wbr>Clip<wbr>Time<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines a point on the timeline of the input media at which processing will start. Defaults to the beginning of the input media.{{% /md %}}</dd>
 </dl>
@@ -1721,7 +1721,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#end_csharp" style="color: inherit; text-decoration: inherit;">End</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#absolutecliptime">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Absolute<wbr>Clip<wbr>Time<wbr>Args</a> | <a href="#utccliptime">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Utc<wbr>Clip<wbr>Time<wbr>Args</a></span>
+        <span class="property-type"><a href="#absolutecliptime">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Absolute<wbr>Clip<wbr>Time<wbr>Args</a> | <a href="#utccliptime">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Utc<wbr>Clip<wbr>Time<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines a point on the timeline of the input media at which processing will end. Defaults to the end of the input media.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1748,7 +1748,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#start_csharp" style="color: inherit; text-decoration: inherit;">Start</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#absolutecliptime">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Absolute<wbr>Clip<wbr>Time<wbr>Args</a> | <a href="#utccliptime">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Utc<wbr>Clip<wbr>Time<wbr>Args</a></span>
+        <span class="property-type"><a href="#absolutecliptime">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Absolute<wbr>Clip<wbr>Time<wbr>Args</a> | <a href="#utccliptime">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Utc<wbr>Clip<wbr>Time<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines a point on the timeline of the input media at which processing will start. Defaults to the beginning of the input media.{{% /md %}}</dd>
 </dl>
@@ -1891,7 +1891,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#end_csharp" style="color: inherit; text-decoration: inherit;">End</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#absolutecliptimeresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Absolute<wbr>Clip<wbr>Time<wbr>Response<wbr>Args</a> | <a href="#utccliptimeresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Utc<wbr>Clip<wbr>Time<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#absolutecliptimeresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Absolute<wbr>Clip<wbr>Time<wbr>Response<wbr>Args</a> | <a href="#utccliptimeresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Utc<wbr>Clip<wbr>Time<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines a point on the timeline of the input media at which processing will end. Defaults to the end of the input media.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1918,7 +1918,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#start_csharp" style="color: inherit; text-decoration: inherit;">Start</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#absolutecliptimeresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Absolute<wbr>Clip<wbr>Time<wbr>Response<wbr>Args</a> | <a href="#utccliptimeresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Utc<wbr>Clip<wbr>Time<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#absolutecliptimeresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Absolute<wbr>Clip<wbr>Time<wbr>Response<wbr>Args</a> | <a href="#utccliptimeresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Utc<wbr>Clip<wbr>Time<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines a point on the timeline of the input media at which processing will start. Defaults to the beginning of the input media.{{% /md %}}</dd>
 </dl>
@@ -2070,7 +2070,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#end_csharp" style="color: inherit; text-decoration: inherit;">End</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#absolutecliptime">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Absolute<wbr>Clip<wbr>Time<wbr>Args</a> | <a href="#utccliptime">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Utc<wbr>Clip<wbr>Time<wbr>Args</a></span>
+        <span class="property-type"><a href="#absolutecliptime">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Absolute<wbr>Clip<wbr>Time<wbr>Args</a> | <a href="#utccliptime">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Utc<wbr>Clip<wbr>Time<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines a point on the timeline of the input media at which processing will end. Defaults to the end of the input media.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2097,7 +2097,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#start_csharp" style="color: inherit; text-decoration: inherit;">Start</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#absolutecliptime">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Absolute<wbr>Clip<wbr>Time<wbr>Args</a> | <a href="#utccliptime">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Utc<wbr>Clip<wbr>Time<wbr>Args</a></span>
+        <span class="property-type"><a href="#absolutecliptime">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Absolute<wbr>Clip<wbr>Time<wbr>Args</a> | <a href="#utccliptime">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Utc<wbr>Clip<wbr>Time<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines a point on the timeline of the input media at which processing will start. Defaults to the beginning of the input media.{{% /md %}}</dd>
 </dl>
@@ -2276,7 +2276,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#end_csharp" style="color: inherit; text-decoration: inherit;">End</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#absolutecliptimeresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Absolute<wbr>Clip<wbr>Time<wbr>Response<wbr>Args</a> | <a href="#utccliptimeresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Utc<wbr>Clip<wbr>Time<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#absolutecliptimeresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Absolute<wbr>Clip<wbr>Time<wbr>Response<wbr>Args</a> | <a href="#utccliptimeresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Utc<wbr>Clip<wbr>Time<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines a point on the timeline of the input media at which processing will end. Defaults to the end of the input media.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2303,7 +2303,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#start_csharp" style="color: inherit; text-decoration: inherit;">Start</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#absolutecliptimeresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Absolute<wbr>Clip<wbr>Time<wbr>Response<wbr>Args</a> | <a href="#utccliptimeresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Utc<wbr>Clip<wbr>Time<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#absolutecliptimeresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Absolute<wbr>Clip<wbr>Time<wbr>Response<wbr>Args</a> | <a href="#utccliptimeresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Utc<wbr>Clip<wbr>Time<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines a point on the timeline of the input media at which processing will start. Defaults to the beginning of the input media.{{% /md %}}</dd>
 </dl>
@@ -2713,7 +2713,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#error_csharp" style="color: inherit; text-decoration: inherit;">Error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#joberrorresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Job<wbr>Error<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#joberrorresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Job<wbr>Error<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}If the JobOutput is in the Error state, it contains the details of the error.{{% /md %}}</dd>
     <dt class="property-required"

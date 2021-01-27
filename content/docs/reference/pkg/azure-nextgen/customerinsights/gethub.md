@@ -215,7 +215,7 @@ The following output properties are available:
 <a href="#hubbillinginfo_csharp" style="color: inherit; text-decoration: inherit;">Hub<wbr>Billing<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hubbillinginfoformatresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights.<wbr>Outputs.<wbr>Hub<wbr>Billing<wbr>Info<wbr>Format<wbr>Response</a></span>
+        <span class="property-type"><a href="#hubbillinginfoformatresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights..<wbr>Outputs.<wbr>Hub<wbr>Billing<wbr>Info<wbr>Format<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Billing settings of the hub.{{% /md %}}</dd>
     <dt class="property-"

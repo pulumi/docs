@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.automation.DscConfiguration reso
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Definition of the configuration type.
-Latest API Version: 2019-06-01.
+API Version: 2019-06-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var dscConfiguration = new AzureNextGen.Automation.Latest.DscConfiguration("dscConfiguration", new AzureNextGen.Automation.Latest.DscConfigurationArgs
+        var dscConfiguration = new AzureNextGen.Automation..DscConfiguration("dscConfiguration", new AzureNextGen.Automation..DscConfigurationArgs
         {
             AutomationAccountName = "myAutomationAccount18",
             ConfigurationName = "SetupServer",
@@ -35,9 +35,9 @@ class MyStack : Stack
             Location = "East US 2",
             Name = "SetupServer",
             ResourceGroupName = "rg",
-            Source = new AzureNextGen.Automation.Latest.Inputs.ContentSourceArgs
+            Source = new AzureNextGen.Automation..Inputs.ContentSourceArgs
             {
-                Hash = new AzureNextGen.Automation.Latest.Inputs.ContentHashArgs
+                Hash = new AzureNextGen.Automation..Inputs.ContentHashArgs
                 {
                     Algorithm = "sha256",
                     Value = "A9E5DB56BA21513F61E0B3868816FDC6D4DF5131F5617D7FF0D769674BD5072F",
@@ -67,7 +67,7 @@ class MyStack : Stack
 package main
 
 import (
-	automation "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/automation/latest"
+	automation "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/automation"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -106,15 +106,15 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-dsc_configuration = azure_nextgen.automation.latest.DscConfiguration("dscConfiguration",
+dsc_configuration = azure_nextgen.automation.DscConfiguration("dscConfiguration",
     automation_account_name="myAutomationAccount18",
     configuration_name="SetupServer",
     description="sample configuration",
     location="East US 2",
     name="SetupServer",
     resource_group_name="rg",
-    source=azure_nextgen.automation.latest.ContentSourceArgs(
-        hash=azure_nextgen.automation.latest.ContentHashArgs(
+    source=azure_nextgen.automation.ContentSourceArgs(
+        hash=azure_nextgen.automation.ContentHashArgs(
             algorithm="sha256",
             value="A9E5DB56BA21513F61E0B3868816FDC6D4DF5131F5617D7FF0D769674BD5072F",
         ),
@@ -139,7 +139,7 @@ dsc_configuration = azure_nextgen.automation.latest.DscConfiguration("dscConfigu
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const dscConfiguration = new azure_nextgen.automation.latest.DscConfiguration("dscConfiguration", {
+const dscConfiguration = new azure_nextgen.automation.DscConfiguration("dscConfiguration", {
     automationAccountName: "myAutomationAccount18",
     configurationName: "SetupServer",
     description: "sample configuration",
@@ -383,7 +383,7 @@ The DscConfiguration resource accepts the following [input]({{< relref "/docs/in
 <a href="#source_csharp" style="color: inherit; text-decoration: inherit;">Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentsource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automation.<wbr>Inputs.<wbr>Content<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#contentsource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automation..<wbr>Inputs.<wbr>Content<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the source.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -437,7 +437,7 @@ The DscConfiguration resource accepts the following [input]({{< relref "/docs/in
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automation.<wbr>Inputs.<wbr>Dsc<wbr>Configuration<wbr>Parameter<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automation..<wbr>Inputs.<wbr>Dsc<wbr>Configuration<wbr>Parameter<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}Gets or sets the configuration parameters.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1339,7 +1339,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hash_csharp" style="color: inherit; text-decoration: inherit;">Hash</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contenthash">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automation.<wbr>Inputs.<wbr>Content<wbr>Hash<wbr>Args</a></span>
+        <span class="property-type"><a href="#contenthash">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automation..<wbr>Inputs.<wbr>Content<wbr>Hash<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the hash.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1348,7 +1348,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#contentsourcetype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automation.<wbr>Content<wbr>Source<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#contentsourcetype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automation..<wbr>Content<wbr>Source<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the content source type.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1509,7 +1509,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hash_csharp" style="color: inherit; text-decoration: inherit;">Hash</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contenthashresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automation.<wbr>Inputs.<wbr>Content<wbr>Hash<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#contenthashresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automation..<wbr>Inputs.<wbr>Content<wbr>Hash<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the hash.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2051,7 +2051,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:automation/latest:DscConfiguration SetupServer /subscriptions/subid/resourceGroups/rg/providers/Microsoft.Automation/automationAccounts/myAutomationAccount33/configurations/SetupServer 
+$ pulumi import azure-nextgen:automation:DscConfiguration SetupServer /subscriptions/subid/resourceGroups/rg/providers/Microsoft.Automation/automationAccounts/myAutomationAccount33/configurations/SetupServer 
 ```
 
 

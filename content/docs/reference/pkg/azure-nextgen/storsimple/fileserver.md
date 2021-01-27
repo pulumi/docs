@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.storsimple.FileServer resource w
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The file server.
-Latest API Version: 2016-10-01.
+API Version: 2016-10-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var fileServer = new AzureNextGen.StorSimple.Latest.FileServer("fileServer", new AzureNextGen.StorSimple.Latest.FileServerArgs
+        var fileServer = new AzureNextGen.StorSimple..FileServer("fileServer", new AzureNextGen.StorSimple..FileServerArgs
         {
             BackupScheduleGroupId = "/subscriptions/9eb689cd-7243-43b4-b6f6-5c65cb296641/resourceGroups/ResourceGroupForSDKTest/providers/Microsoft.StorSimple/managers/hAzureSDKOperations/devices/hsdk-4xy4fi2ivg/backupScheduleGroups/BackupSchGroupForSDKTest",
             Description = "Demo FileServer for SDK Test",
@@ -52,7 +52,7 @@ class MyStack : Stack
 package main
 
 import (
-	storsimple "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/storsimple/latest"
+	storsimple "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/storsimple"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -85,7 +85,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-file_server = azure_nextgen.storsimple.latest.FileServer("fileServer",
+file_server = azure_nextgen.storsimple.FileServer("fileServer",
     backup_schedule_group_id="/subscriptions/9eb689cd-7243-43b4-b6f6-5c65cb296641/resourceGroups/ResourceGroupForSDKTest/providers/Microsoft.StorSimple/managers/hAzureSDKOperations/devices/hsdk-4xy4fi2ivg/backupScheduleGroups/BackupSchGroupForSDKTest",
     description="Demo FileServer for SDK Test",
     device_name="HSDK-4XY4FI2IVG",
@@ -105,7 +105,7 @@ file_server = azure_nextgen.storsimple.latest.FileServer("fileServer",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const fileServer = new azure_nextgen.storsimple.latest.FileServer("fileServer", {
+const fileServer = new azure_nextgen.storsimple.FileServer("fileServer", {
     backupScheduleGroupId: "/subscriptions/9eb689cd-7243-43b4-b6f6-5c65cb296641/resourceGroups/ResourceGroupForSDKTest/providers/Microsoft.StorSimple/managers/hAzureSDKOperations/devices/hsdk-4xy4fi2ivg/backupScheduleGroups/BackupSchGroupForSDKTest",
     description: "Demo FileServer for SDK Test",
     deviceName: "HSDK-4XY4FI2IVG",
@@ -762,7 +762,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:storsimple/latest:FileServer HSDK-4XY4FI2IVG /subscriptions/9eb689cd-7243-43b4-b6f6-5c65cb296641/resourceGroups/ResourceGroupForSDKTest/providers/Microsoft.StorSimple/managers/hAzureSDKOperations/devices/hsdk-4xy4fi2ivg/fileServers/HSDK-4XY4FI2IVG 
+$ pulumi import azure-nextgen:storsimple:FileServer HSDK-4XY4FI2IVG /subscriptions/9eb689cd-7243-43b4-b6f6-5c65cb296641/resourceGroups/ResourceGroupForSDKTest/providers/Microsoft.StorSimple/managers/hAzureSDKOperations/devices/hsdk-4xy4fi2ivg/fileServers/HSDK-4XY4FI2IVG 
 ```
 
 

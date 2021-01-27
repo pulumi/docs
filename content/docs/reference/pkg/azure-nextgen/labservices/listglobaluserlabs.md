@@ -123,7 +123,7 @@ The following output properties are available:
 <a href="#labs_csharp" style="color: inherit; text-decoration: inherit;">Labs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#labdetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Lab<wbr>Services.<wbr>Outputs.<wbr>Lab<wbr>Details<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#labdetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Lab<wbr>Services..<wbr>Outputs.<wbr>Lab<wbr>Details<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of all the labs{{% /md %}}</dd>
 </dl>

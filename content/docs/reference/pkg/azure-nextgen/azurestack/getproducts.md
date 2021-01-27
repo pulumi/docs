@@ -204,7 +204,7 @@ The following output properties are available:
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#productresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Azure<wbr>Stack.<wbr>Outputs.<wbr>Product<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#productresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Azure<wbr>Stack..<wbr>Outputs.<wbr>Product<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of products.{{% /md %}}</dd>
 </dl>
@@ -896,7 +896,7 @@ The following output properties are available:
 <a href="#compatibility_csharp" style="color: inherit; text-decoration: inherit;">Compatibility</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#compatibilityresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Azure<wbr>Stack.<wbr>Inputs.<wbr>Compatibility<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#compatibilityresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Azure<wbr>Stack..<wbr>Inputs.<wbr>Compatibility<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Product compatibility with current device.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -941,7 +941,7 @@ The following output properties are available:
 <a href="#iconuris_csharp" style="color: inherit; text-decoration: inherit;">Icon<wbr>Uris</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iconurisresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Azure<wbr>Stack.<wbr>Inputs.<wbr>Icon<wbr>Uris<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#iconurisresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Azure<wbr>Stack..<wbr>Inputs.<wbr>Icon<wbr>Uris<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Additional links available for this product.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -959,7 +959,7 @@ The following output properties are available:
 <a href="#links_csharp" style="color: inherit; text-decoration: inherit;">Links</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#productlinkresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Azure<wbr>Stack.<wbr>Inputs.<wbr>Product<wbr>Link<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#productlinkresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Azure<wbr>Stack..<wbr>Inputs.<wbr>Product<wbr>Link<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Additional links available for this product.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1013,7 +1013,7 @@ The following output properties are available:
 <a href="#productproperties_csharp" style="color: inherit; text-decoration: inherit;">Product<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#productpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Azure<wbr>Stack.<wbr>Inputs.<wbr>Product<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#productpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Azure<wbr>Stack..<wbr>Inputs.<wbr>Product<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Additional properties for the product.{{% /md %}}</dd>
     <dt class="property-optional"

@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.deploymentmanager.Service resour
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The resource representation of a service in a service topology.
+API Version: 2019-11-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var service = new AzureNextGen.DeploymentManager.V20191101Preview.Service("service", new AzureNextGen.DeploymentManager.V20191101Preview.ServiceArgs
+        var service = new AzureNextGen.DeploymentManager..Service("service", new AzureNextGen.DeploymentManager..ServiceArgs
         {
             Location = "centralus",
             ResourceGroupName = "myResourceGroup",
@@ -50,7 +51,7 @@ class MyStack : Stack
 package main
 
 import (
-	deploymentmanager "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/deploymentmanager/v20191101preview"
+	deploymentmanager "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/deploymentmanager"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -82,7 +83,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-service = azure_nextgen.deploymentmanager.v20191101preview.Service("service",
+service = azure_nextgen.deploymentmanager.Service("service",
     location="centralus",
     resource_group_name="myResourceGroup",
     service_name="myService",
@@ -101,7 +102,7 @@ service = azure_nextgen.deploymentmanager.v20191101preview.Service("service",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const service = new azure_nextgen.deploymentmanager.v20191101preview.Service("service", {
+const service = new azure_nextgen.deploymentmanager.Service("service", {
     location: "centralus",
     resourceGroupName: "myResourceGroup",
     serviceName: "myService",
@@ -721,7 +722,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:deploymentmanager/v20191101preview:Service myService /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DeploymentManager/serviceTopologies/{serviceTopologyName}/services/{serviceName} 
+$ pulumi import azure-nextgen:deploymentmanager:Service myService /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DeploymentManager/serviceTopologies/{serviceTopologyName}/services/{serviceName} 
 ```
 
 

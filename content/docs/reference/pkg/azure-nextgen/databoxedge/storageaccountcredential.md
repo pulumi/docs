@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.databoxedge.StorageAccountCreden
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The storage account credential.
-Latest API Version: 2020-09-01.
+API Version: 2020-09-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,9 +27,9 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var storageAccountCredential = new AzureNextGen.DataBoxEdge.Latest.StorageAccountCredential("storageAccountCredential", new AzureNextGen.DataBoxEdge.Latest.StorageAccountCredentialArgs
+        var storageAccountCredential = new AzureNextGen.DataBoxEdge..StorageAccountCredential("storageAccountCredential", new AzureNextGen.DataBoxEdge..StorageAccountCredentialArgs
         {
-            AccountKey = new AzureNextGen.DataBoxEdge.Latest.Inputs.AsymmetricEncryptedSecretArgs
+            AccountKey = new AzureNextGen.DataBoxEdge..Inputs.AsymmetricEncryptedSecretArgs
             {
                 EncryptionAlgorithm = "AES256",
                 EncryptionCertThumbprint = "2A9D8D6BE51574B5461230AEF02F162C5F01AD31",
@@ -57,7 +57,7 @@ class MyStack : Stack
 package main
 
 import (
-	databoxedge "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/databoxedge/latest"
+	databoxedge "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/databoxedge"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -94,8 +94,8 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-storage_account_credential = azure_nextgen.databoxedge.latest.StorageAccountCredential("storageAccountCredential",
-    account_key=azure_nextgen.databoxedge.latest.AsymmetricEncryptedSecretArgs(
+storage_account_credential = azure_nextgen.databoxedge.StorageAccountCredential("storageAccountCredential",
+    account_key=azure_nextgen.databoxedge.AsymmetricEncryptedSecretArgs(
         encryption_algorithm="AES256",
         encryption_cert_thumbprint="2A9D8D6BE51574B5461230AEF02F162C5F01AD31",
         value="lAeZEYi6rNP1/EyNaVUYmTSZEYyaIaWmwUsGwek0+xiZj54GM9Ue9/UA2ed/ClC03wuSit2XzM/cLRU5eYiFBwks23rGwiQOr3sruEL2a74EjPD050xYjA6M1I2hu/w2yjVHhn5j+DbXS4Xzi+rHHNZK3DgfDO3PkbECjPck+PbpSBjy9+6Mrjcld5DIZhUAeMlMHrFlg+WKRKB14o/og56u5/xX6WKlrMLEQ+y6E18dUwvWs2elTNoVO8PBE8SM/CfooX4AMNvaNdSObNBPdP+F6Lzc556nFNWXrBLRt0vC7s9qTiVRO4x/qCNaK/B4y7IqXMllwQFf4Np9UQ2ECA==",
@@ -118,7 +118,7 @@ storage_account_credential = azure_nextgen.databoxedge.latest.StorageAccountCred
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const storageAccountCredential = new azure_nextgen.databoxedge.latest.StorageAccountCredential("storageAccountCredential", {
+const storageAccountCredential = new azure_nextgen.databoxedge.StorageAccountCredential("storageAccountCredential", {
     accountKey: {
         encryptionAlgorithm: "AES256",
         encryptionCertThumbprint: "2A9D8D6BE51574B5461230AEF02F162C5F01AD31",
@@ -326,7 +326,7 @@ The StorageAccountCredential resource accepts the following [input]({{< relref "
 <a href="#accounttype_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#accounttype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Account<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#accounttype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge..<wbr>Account<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of storage accessed on the storage account.{{% /md %}}</dd>
     <dt class="property-required"
@@ -371,7 +371,7 @@ The StorageAccountCredential resource accepts the following [input]({{< relref "
 <a href="#sslstatus_csharp" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#sslstatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge.<wbr>SSLStatus</a></span>
+        <span class="property-type">string | <a href="#sslstatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge..<wbr>SSLStatus</a></span>
     </dt>
     <dd>{{% md %}}Signifies whether SSL needs to be enabled or not.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -380,7 +380,7 @@ The StorageAccountCredential resource accepts the following [input]({{< relref "
 <a href="#accountkey_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#asymmetricencryptedsecret">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Inputs.<wbr>Asymmetric<wbr>Encrypted<wbr>Secret<wbr>Args</a></span>
+        <span class="property-type"><a href="#asymmetricencryptedsecret">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge..<wbr>Inputs.<wbr>Asymmetric<wbr>Encrypted<wbr>Secret<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Encrypted storage key.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -762,7 +762,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#systemdata_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
+        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge..<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}StorageAccountCredential object{{% /md %}}</dd>
     <dt class="property-"
@@ -935,7 +935,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryptionalgorithm_csharp" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#encryptionalgorithm">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Encryption<wbr>Algorithm</a></span>
+        <span class="property-type">string | <a href="#encryptionalgorithm">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge..<wbr>Encryption<wbr>Algorithm</a></span>
     </dt>
     <dd>{{% md %}}The algorithm used to encrypt "Value".{{% /md %}}</dd>
     <dt class="property-required"
@@ -1523,7 +1523,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:databoxedge/latest:StorageAccountCredential sac1 /subscriptions/4385cf00-2d3a-425a-832f-f4285b1c9dce/resourceGroups/GroupForEdgeAutomation/providers/Microsoft.DataBoxEdge/dataBoxEdgeDevices/testedgedevice/storageAccountCredentials/sac1 
+$ pulumi import azure-nextgen:databoxedge:StorageAccountCredential sac1 /subscriptions/4385cf00-2d3a-425a-832f-f4285b1c9dce/resourceGroups/GroupForEdgeAutomation/providers/Microsoft.DataBoxEdge/dataBoxEdgeDevices/testedgedevice/storageAccountCredentials/sac1 
 ```
 
 

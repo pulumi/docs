@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.datashare.Share resource with ex
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 A share data transfer object.
-Latest API Version: 2019-11-01.
+API Version: 2019-11-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var share = new AzureNextGen.DataShare.Latest.Share("share", new AzureNextGen.DataShare.Latest.ShareArgs
+        var share = new AzureNextGen.DataShare..Share("share", new AzureNextGen.DataShare..ShareArgs
         {
             AccountName = "Account1",
             Description = "share description",
@@ -50,7 +50,7 @@ class MyStack : Stack
 package main
 
 import (
-	datashare "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datashare/latest"
+	datashare "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datashare"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -81,7 +81,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-share = azure_nextgen.datashare.latest.Share("share",
+share = azure_nextgen.datashare.Share("share",
     account_name="Account1",
     description="share description",
     resource_group_name="SampleResourceGroup",
@@ -99,7 +99,7 @@ share = azure_nextgen.datashare.latest.Share("share",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const share = new azure_nextgen.datashare.latest.Share("share", {
+const share = new azure_nextgen.datashare.Share("share", {
     accountName: "Account1",
     description: "share description",
     resourceGroupName: "SampleResourceGroup",
@@ -337,7 +337,7 @@ The Share resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#sharekind_csharp" style="color: inherit; text-decoration: inherit;">Share<wbr>Kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#sharekind">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Share.<wbr>Share<wbr>Kind</a></span>
+        <span class="property-type">string | <a href="#sharekind">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Share..<wbr>Share<wbr>Kind</a></span>
     </dt>
     <dd>{{% md %}}Share kind.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -868,7 +868,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:datashare/latest:Share Share1 /subscriptions/433a8dfd-e5d5-4e77-ad86-90acdc75eb1a/resourceGroups/SampleResourceGroup/providers/Microsoft.DataShare/accounts/Account1/shares/Share1 
+$ pulumi import azure-nextgen:datashare:Share Share1 /subscriptions/433a8dfd-e5d5-4e77-ad86-90acdc75eb1a/resourceGroups/SampleResourceGroup/providers/Microsoft.DataShare/accounts/Account1/shares/Share1 
 ```
 
 

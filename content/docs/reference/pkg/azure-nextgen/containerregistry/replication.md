@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.containerregistry.Replication re
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 An object that represents a replication for a container registry.
-Latest API Version: 2019-05-01.
+API Version: 2019-05-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var replication = new AzureNextGen.ContainerRegistry.Latest.Replication("replication", new AzureNextGen.ContainerRegistry.Latest.ReplicationArgs
+        var replication = new AzureNextGen.ContainerRegistry..Replication("replication", new AzureNextGen.ContainerRegistry..ReplicationArgs
         {
             Location = "eastus",
             RegistryName = "myRegistry",
@@ -52,7 +52,7 @@ class MyStack : Stack
 package main
 
 import (
-	containerregistry "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/containerregistry/latest"
+	containerregistry "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/containerregistry"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -84,7 +84,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-replication = azure_nextgen.containerregistry.latest.Replication("replication",
+replication = azure_nextgen.containerregistry.Replication("replication",
     location="eastus",
     registry_name="myRegistry",
     replication_name="myReplication",
@@ -103,7 +103,7 @@ replication = azure_nextgen.containerregistry.latest.Replication("replication",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const replication = new azure_nextgen.containerregistry.latest.Replication("replication", {
+const replication = new azure_nextgen.containerregistry.Replication("replication", {
     location: "eastus",
     registryName: "myRegistry",
     replicationName: "myReplication",
@@ -544,7 +544,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#statusresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry.<wbr>Outputs.<wbr>Status<wbr>Response</a></span>
+        <span class="property-type"><a href="#statusresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry..<wbr>Outputs.<wbr>Status<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The status of the replication at the time the operation was called.{{% /md %}}</dd>
     <dt class="property-"
@@ -861,7 +861,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:containerregistry/latest:Replication myReplication /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.ContainerRegistry/registries/myRegistry/replications/myReplication 
+$ pulumi import azure-nextgen:containerregistry:Replication myReplication /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.ContainerRegistry/registries/myRegistry/replications/myReplication 
 ```
 
 

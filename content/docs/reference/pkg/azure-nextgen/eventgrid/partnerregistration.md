@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.eventgrid.PartnerRegistration re
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Information about a partner registration.
+API Version: 2020-04-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var partnerRegistration = new AzureNextGen.EventGrid.V20200401Preview.PartnerRegistration("partnerRegistration", new AzureNextGen.EventGrid.V20200401Preview.PartnerRegistrationArgs
+        var partnerRegistration = new AzureNextGen.EventGrid..PartnerRegistration("partnerRegistration", new AzureNextGen.EventGrid..PartnerRegistrationArgs
         {
             AuthorizedAzureSubscriptionIds = 
             {
@@ -62,7 +63,7 @@ class MyStack : Stack
 package main
 
 import (
-	eventgrid "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/eventgrid/v20200401preview"
+	eventgrid "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/eventgrid"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -104,7 +105,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-partner_registration = azure_nextgen.eventgrid.v20200401preview.PartnerRegistration("partnerRegistration",
+partner_registration = azure_nextgen.eventgrid.PartnerRegistration("partnerRegistration",
     authorized_azure_subscription_ids=["d48566a8-2428-4a6c-8347-9675d09fb851"],
     location="global",
     logo_uri="https://www.example.com/logo.png",
@@ -131,7 +132,7 @@ partner_registration = azure_nextgen.eventgrid.v20200401preview.PartnerRegistrat
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const partnerRegistration = new azure_nextgen.eventgrid.v20200401preview.PartnerRegistration("partnerRegistration", {
+const partnerRegistration = new azure_nextgen.eventgrid.PartnerRegistration("partnerRegistration", {
     authorizedAzureSubscriptionIds: ["d48566a8-2428-4a6c-8347-9675d09fb851"],
     location: "global",
     logoUri: "https://www.example.com/logo.png",
@@ -485,7 +486,7 @@ integration on an event source.{{% /md %}}</dd>
 <a href="#visibilitystate_csharp" style="color: inherit; text-decoration: inherit;">Visibility<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#partnerregistrationvisibilitystate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid.<wbr>Partner<wbr>Registration<wbr>Visibility<wbr>State</a></span>
+        <span class="property-type">string | <a href="#partnerregistrationvisibilitystate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid..<wbr>Partner<wbr>Registration<wbr>Visibility<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}Visibility state of the partner registration.{{% /md %}}</dd>
 </dl>
@@ -1201,7 +1202,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:eventgrid/v20200401preview:PartnerRegistration examplePartnerRegistrationName1 /subscriptions/5b4b650e-28b9-4790-b3ab-ddbd88d727c4/resourceGroups/examplerg/providers/Microsoft.EventGrid/partnerRegistrations/examplePartnerRegistrationName1 
+$ pulumi import azure-nextgen:eventgrid:PartnerRegistration examplePartnerRegistrationName1 /subscriptions/5b4b650e-28b9-4790-b3ab-ddbd88d727c4/resourceGroups/examplerg/providers/Microsoft.EventGrid/partnerRegistrations/examplePartnerRegistrationName1 
 ```
 
 

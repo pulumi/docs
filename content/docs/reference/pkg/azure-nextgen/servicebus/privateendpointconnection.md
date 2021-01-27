@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.servicebus.PrivateEndpointConnec
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Properties of the PrivateEndpointConnection.
+API Version: 2018-01-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,15 +27,15 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var privateEndpointConnection = new AzureNextGen.ServiceBus.V20180101Preview.PrivateEndpointConnection("privateEndpointConnection", new AzureNextGen.ServiceBus.V20180101Preview.PrivateEndpointConnectionArgs
+        var privateEndpointConnection = new AzureNextGen.ServiceBus..PrivateEndpointConnection("privateEndpointConnection", new AzureNextGen.ServiceBus..PrivateEndpointConnectionArgs
         {
             NamespaceName = "sdk-Namespace-2924",
-            PrivateEndpoint = new AzureNextGen.ServiceBus.V20180101Preview.Inputs.PrivateEndpointArgs
+            PrivateEndpoint = new AzureNextGen.ServiceBus..Inputs.PrivateEndpointArgs
             {
                 Id = "/subscriptions/dbedb4e0-40e6-4145-81f3-f1314c150774/resourceGroups/SDK-ServiceBus-8396/providers/Microsoft.Network/privateEndpoints/sdk-Namespace-2847",
             },
             PrivateEndpointConnectionName = "privateEndpointConnectionName",
-            PrivateLinkServiceConnectionState = new AzureNextGen.ServiceBus.V20180101Preview.Inputs.ConnectionStateArgs
+            PrivateLinkServiceConnectionState = new AzureNextGen.ServiceBus..Inputs.ConnectionStateArgs
             {
                 Description = "testing",
                 Status = "Rejected",
@@ -56,7 +57,7 @@ class MyStack : Stack
 package main
 
 import (
-	servicebus "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/servicebus/v20180101preview"
+	servicebus "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/servicebus"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -92,13 +93,13 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-private_endpoint_connection = azure_nextgen.servicebus.v20180101preview.PrivateEndpointConnection("privateEndpointConnection",
+private_endpoint_connection = azure_nextgen.servicebus.PrivateEndpointConnection("privateEndpointConnection",
     namespace_name="sdk-Namespace-2924",
-    private_endpoint=azure_nextgen.servicebus.v20180101preview.PrivateEndpointArgs(
+    private_endpoint=azure_nextgen.servicebus.PrivateEndpointArgs(
         id="/subscriptions/dbedb4e0-40e6-4145-81f3-f1314c150774/resourceGroups/SDK-ServiceBus-8396/providers/Microsoft.Network/privateEndpoints/sdk-Namespace-2847",
     ),
     private_endpoint_connection_name="privateEndpointConnectionName",
-    private_link_service_connection_state=azure_nextgen.servicebus.v20180101preview.ConnectionStateArgs(
+    private_link_service_connection_state=azure_nextgen.servicebus.ConnectionStateArgs(
         description="testing",
         status="Rejected",
     ),
@@ -115,7 +116,7 @@ private_endpoint_connection = azure_nextgen.servicebus.v20180101preview.PrivateE
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const privateEndpointConnection = new azure_nextgen.servicebus.v20180101preview.PrivateEndpointConnection("privateEndpointConnection", {
+const privateEndpointConnection = new azure_nextgen.servicebus.PrivateEndpointConnection("privateEndpointConnection", {
     namespaceName: "sdk-Namespace-2924",
     privateEndpoint: {
         id: "/subscriptions/dbedb4e0-40e6-4145-81f3-f1314c150774/resourceGroups/SDK-ServiceBus-8396/providers/Microsoft.Network/privateEndpoints/sdk-Namespace-2847",
@@ -349,7 +350,7 @@ The PrivateEndpointConnection resource accepts the following [input]({{< relref 
 <a href="#privateendpoint_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpoint">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Bus.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Args</a></span>
+        <span class="property-type"><a href="#privateendpoint">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Bus..<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Private Endpoint resource for this Connection.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -358,7 +359,7 @@ The PrivateEndpointConnection resource accepts the following [input]({{< relref 
 <a href="#privatelinkserviceconnectionstate_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionstate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Bus.<wbr>Inputs.<wbr>Connection<wbr>State<wbr>Args</a></span>
+        <span class="property-type"><a href="#connectionstate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Bus..<wbr>Inputs.<wbr>Connection<wbr>State<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Details about the state of the connection.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -367,7 +368,7 @@ The PrivateEndpointConnection resource accepts the following [input]({{< relref 
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#endpointprovisioningstate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Bus.<wbr>End<wbr>Point<wbr>Provisioning<wbr>State</a></span>
+        <span class="property-type">string | <a href="#endpointprovisioningstate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Bus..<wbr>End<wbr>Point<wbr>Provisioning<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}Provisioning state of the Private Endpoint Connection.{{% /md %}}</dd>
 </dl>
@@ -722,7 +723,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#privatelinkconnectionstatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Bus.<wbr>Private<wbr>Link<wbr>Connection<wbr>Status</a></span>
+        <span class="property-type">string | <a href="#privatelinkconnectionstatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Bus..<wbr>Private<wbr>Link<wbr>Connection<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}Status of the connection.{{% /md %}}</dd>
 </dl>
@@ -1151,7 +1152,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:servicebus/v20180101preview:PrivateEndpointConnection 928c44d5-b7c6-423b-b6fa-811e0c27b3e0 /subscriptions/dbedb4e0-40e6-4145-81f3-f1314c150774/resourceGroups/SDK-ServiceBus-4794/providers/Microsoft.ServiceBus/namespaces/sdk-Namespace-5828/privateEndpointConnections/928c44d5-b7c6-423b-b6fa-811e0c27b3e0 
+$ pulumi import azure-nextgen:servicebus:PrivateEndpointConnection 928c44d5-b7c6-423b-b6fa-811e0c27b3e0 /subscriptions/dbedb4e0-40e6-4145-81f3-f1314c150774/resourceGroups/SDK-ServiceBus-4794/providers/Microsoft.ServiceBus/namespaces/sdk-Namespace-5828/privateEndpointConnections/928c44d5-b7c6-423b-b6fa-811e0c27b3e0 
 ```
 
 

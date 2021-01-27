@@ -197,7 +197,7 @@ The following output properties are available:
 <a href="#iprules_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nwrulesetiprulesresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Bus.<wbr>Outputs.<wbr>NWRule<wbr>Set<wbr>Ip<wbr>Rules<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#nwrulesetiprulesresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Bus..<wbr>Outputs.<wbr>NWRule<wbr>Set<wbr>Ip<wbr>Rules<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of IpRules{{% /md %}}</dd>
     <dt class="property-"
@@ -206,7 +206,7 @@ The following output properties are available:
 <a href="#virtualnetworkrules_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nwrulesetvirtualnetworkrulesresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Bus.<wbr>Outputs.<wbr>NWRule<wbr>Set<wbr>Virtual<wbr>Network<wbr>Rules<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#nwrulesetvirtualnetworkrulesresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Bus..<wbr>Outputs.<wbr>NWRule<wbr>Set<wbr>Virtual<wbr>Network<wbr>Rules<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}List VirtualNetwork Rules{{% /md %}}</dd>
 </dl>
@@ -526,7 +526,7 @@ The following output properties are available:
 <a href="#subnet_csharp" style="color: inherit; text-decoration: inherit;">Subnet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subnetresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Bus.<wbr>Inputs.<wbr>Subnet<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subnetresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Service<wbr>Bus..<wbr>Inputs.<wbr>Subnet<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Subnet properties{{% /md %}}</dd>
 </dl>

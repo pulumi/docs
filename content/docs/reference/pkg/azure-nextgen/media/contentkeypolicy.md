@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.media.ContentKeyPolicy resource 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 A Content Key Policy resource.
-Latest API Version: 2020-05-01.
+API Version: 2020-05-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,14 +27,14 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var contentKeyPolicy = new AzureNextGen.Media.Latest.ContentKeyPolicy("contentKeyPolicy", new AzureNextGen.Media.Latest.ContentKeyPolicyArgs
+        var contentKeyPolicy = new AzureNextGen.Media..ContentKeyPolicy("contentKeyPolicy", new AzureNextGen.Media..ContentKeyPolicyArgs
         {
             AccountName = "contosomedia",
             ContentKeyPolicyName = "PolicyWithClearKeyOptionAndSwtTokenRestriction",
             Description = "ArmPolicyDescription",
             Options = 
             {
-                new AzureNextGen.Media.Latest.Inputs.ContentKeyPolicyOptionArgs
+                new AzureNextGen.Media..Inputs.ContentKeyPolicyOptionArgs
                 {
                     Configuration = 
                     {
@@ -75,11 +75,11 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-content_key_policy = azure_nextgen.media.latest.ContentKeyPolicy("contentKeyPolicy",
+content_key_policy = azure_nextgen.media.ContentKeyPolicy("contentKeyPolicy",
     account_name="contosomedia",
     content_key_policy_name="PolicyWithClearKeyOptionAndSwtTokenRestriction",
     description="ArmPolicyDescription",
-    options=[azure_nextgen.media.latest.ContentKeyPolicyOptionArgs(
+    options=[azure_nextgen.media.ContentKeyPolicyOptionArgs(
         configuration={
             "odataType": "#Microsoft.Media.ContentKeyPolicyClearKeyConfiguration",
         },
@@ -107,7 +107,7 @@ content_key_policy = azure_nextgen.media.latest.ContentKeyPolicy("contentKeyPoli
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const contentKeyPolicy = new azure_nextgen.media.latest.ContentKeyPolicy("contentKeyPolicy", {
+const contentKeyPolicy = new azure_nextgen.media.ContentKeyPolicy("contentKeyPolicy", {
     accountName: "contosomedia",
     contentKeyPolicyName: "PolicyWithClearKeyOptionAndSwtTokenRestriction",
     description: "ArmPolicyDescription",
@@ -144,20 +144,20 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var contentKeyPolicy = new AzureNextGen.Media.Latest.ContentKeyPolicy("contentKeyPolicy", new AzureNextGen.Media.Latest.ContentKeyPolicyArgs
+        var contentKeyPolicy = new AzureNextGen.Media..ContentKeyPolicy("contentKeyPolicy", new AzureNextGen.Media..ContentKeyPolicyArgs
         {
             AccountName = "contosomedia",
             ContentKeyPolicyName = "PolicyWithPlayReadyOptionAndOpenRestriction",
             Description = "ArmPolicyDescription",
             Options = 
             {
-                new AzureNextGen.Media.Latest.Inputs.ContentKeyPolicyOptionArgs
+                new AzureNextGen.Media..Inputs.ContentKeyPolicyOptionArgs
                 {
                     Configuration = 
                     {
                         { "licenses", 
                         {
-                            new AzureNextGen.Media.Latest.Inputs.ContentKeyPolicyPlayReadyLicenseArgs
+                            new AzureNextGen.Media..Inputs.ContentKeyPolicyPlayReadyLicenseArgs
                             {
                                 AllowTestDevices = true,
                                 BeginDate = "2017-10-16T18:22:53.46Z",
@@ -167,7 +167,7 @@ class MyStack : Stack
                                 },
                                 ContentType = "UltraVioletDownload",
                                 LicenseType = "Persistent",
-                                PlayRight = new AzureNextGen.Media.Latest.Inputs.ContentKeyPolicyPlayReadyPlayRightArgs
+                                PlayRight = new AzureNextGen.Media..Inputs.ContentKeyPolicyPlayReadyPlayRightArgs
                                 {
                                     AllowPassingVideoContentToUnknownOutput = "NotAllowed",
                                     DigitalVideoOnlyContentRestriction = false,
@@ -206,13 +206,13 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-content_key_policy = azure_nextgen.media.latest.ContentKeyPolicy("contentKeyPolicy",
+content_key_policy = azure_nextgen.media.ContentKeyPolicy("contentKeyPolicy",
     account_name="contosomedia",
     content_key_policy_name="PolicyWithPlayReadyOptionAndOpenRestriction",
     description="ArmPolicyDescription",
-    options=[azure_nextgen.media.latest.ContentKeyPolicyOptionArgs(
+    options=[azure_nextgen.media.ContentKeyPolicyOptionArgs(
         configuration={
-            "licenses": [azure_nextgen.media.latest.ContentKeyPolicyPlayReadyLicenseArgs(
+            "licenses": [azure_nextgen.media.ContentKeyPolicyPlayReadyLicenseArgs(
                 allow_test_devices=True,
                 begin_date="2017-10-16T18:22:53.46Z",
                 content_key_location={
@@ -220,7 +220,7 @@ content_key_policy = azure_nextgen.media.latest.ContentKeyPolicy("contentKeyPoli
                 },
                 content_type="UltraVioletDownload",
                 license_type="Persistent",
-                play_right=azure_nextgen.media.latest.ContentKeyPolicyPlayReadyPlayRightArgs(
+                play_right=azure_nextgen.media.ContentKeyPolicyPlayReadyPlayRightArgs(
                     allow_passing_video_content_to_unknown_output="NotAllowed",
                     digital_video_only_content_restriction=False,
                     image_constraint_for_analog_component_video_restriction=True,
@@ -247,7 +247,7 @@ content_key_policy = azure_nextgen.media.latest.ContentKeyPolicy("contentKeyPoli
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const contentKeyPolicy = new azure_nextgen.media.latest.ContentKeyPolicy("contentKeyPolicy", {
+const contentKeyPolicy = new azure_nextgen.media.ContentKeyPolicy("contentKeyPolicy", {
     accountName: "contosomedia",
     contentKeyPolicyName: "PolicyWithPlayReadyOptionAndOpenRestriction",
     description: "ArmPolicyDescription",
@@ -293,14 +293,14 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var contentKeyPolicy = new AzureNextGen.Media.Latest.ContentKeyPolicy("contentKeyPolicy", new AzureNextGen.Media.Latest.ContentKeyPolicyArgs
+        var contentKeyPolicy = new AzureNextGen.Media..ContentKeyPolicy("contentKeyPolicy", new AzureNextGen.Media..ContentKeyPolicyArgs
         {
             AccountName = "contosomedia",
             ContentKeyPolicyName = "PolicyWithWidevineOptionAndJwtTokenRestriction",
             Description = "ArmPolicyDescription",
             Options = 
             {
-                new AzureNextGen.Media.Latest.Inputs.ContentKeyPolicyOptionArgs
+                new AzureNextGen.Media..Inputs.ContentKeyPolicyOptionArgs
                 {
                     Configuration = 
                     {
@@ -351,11 +351,11 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-content_key_policy = azure_nextgen.media.latest.ContentKeyPolicy("contentKeyPolicy",
+content_key_policy = azure_nextgen.media.ContentKeyPolicy("contentKeyPolicy",
     account_name="contosomedia",
     content_key_policy_name="PolicyWithWidevineOptionAndJwtTokenRestriction",
     description="ArmPolicyDescription",
-    options=[azure_nextgen.media.latest.ContentKeyPolicyOptionArgs(
+    options=[azure_nextgen.media.ContentKeyPolicyOptionArgs(
         configuration={
             "odataType": "#Microsoft.Media.ContentKeyPolicyWidevineConfiguration",
             "widevineTemplate": "{\"allowed_track_types\":\"SD_HD\",\"content_key_specs\":[{\"track_type\":\"SD\",\"security_level\":1,\"required_output_protection\":{\"hdcp\":\"HDCP_V2\"}}],\"policy_overrides\":{\"can_play\":true,\"can_persist\":true,\"can_renew\":false}}",
@@ -389,7 +389,7 @@ content_key_policy = azure_nextgen.media.latest.ContentKeyPolicy("contentKeyPoli
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const contentKeyPolicy = new azure_nextgen.media.latest.ContentKeyPolicy("contentKeyPolicy", {
+const contentKeyPolicy = new azure_nextgen.media.ContentKeyPolicy("contentKeyPolicy", {
     accountName: "contosomedia",
     contentKeyPolicyName: "PolicyWithWidevineOptionAndJwtTokenRestriction",
     description: "ArmPolicyDescription",
@@ -432,14 +432,14 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var contentKeyPolicy = new AzureNextGen.Media.Latest.ContentKeyPolicy("contentKeyPolicy", new AzureNextGen.Media.Latest.ContentKeyPolicyArgs
+        var contentKeyPolicy = new AzureNextGen.Media..ContentKeyPolicy("contentKeyPolicy", new AzureNextGen.Media..ContentKeyPolicyArgs
         {
             AccountName = "contosomedia",
             ContentKeyPolicyName = "PolicyCreatedWithMultipleOptions",
             Description = "ArmPolicyDescription",
             Options = 
             {
-                new AzureNextGen.Media.Latest.Inputs.ContentKeyPolicyOptionArgs
+                new AzureNextGen.Media..Inputs.ContentKeyPolicyOptionArgs
                 {
                     Configuration = 
                     {
@@ -459,7 +459,7 @@ class MyStack : Stack
                         { "restrictionTokenType", "Swt" },
                     },
                 },
-                new AzureNextGen.Media.Latest.Inputs.ContentKeyPolicyOptionArgs
+                new AzureNextGen.Media..Inputs.ContentKeyPolicyOptionArgs
                 {
                     Configuration = 
                     {
@@ -493,12 +493,12 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-content_key_policy = azure_nextgen.media.latest.ContentKeyPolicy("contentKeyPolicy",
+content_key_policy = azure_nextgen.media.ContentKeyPolicy("contentKeyPolicy",
     account_name="contosomedia",
     content_key_policy_name="PolicyCreatedWithMultipleOptions",
     description="ArmPolicyDescription",
     options=[
-        azure_nextgen.media.latest.ContentKeyPolicyOptionArgs(
+        azure_nextgen.media.ContentKeyPolicyOptionArgs(
             configuration={
                 "odataType": "#Microsoft.Media.ContentKeyPolicyClearKeyConfiguration",
             },
@@ -514,7 +514,7 @@ content_key_policy = azure_nextgen.media.latest.ContentKeyPolicy("contentKeyPoli
                 "restrictionTokenType": "Swt",
             },
         ),
-        azure_nextgen.media.latest.ContentKeyPolicyOptionArgs(
+        azure_nextgen.media.ContentKeyPolicyOptionArgs(
             configuration={
                 "odataType": "#Microsoft.Media.ContentKeyPolicyWidevineConfiguration",
                 "widevineTemplate": "{\"allowed_track_types\":\"SD_HD\",\"content_key_specs\":[{\"track_type\":\"SD\",\"security_level\":1,\"required_output_protection\":{\"hdcp\":\"HDCP_V2\"}}],\"policy_overrides\":{\"can_play\":true,\"can_persist\":true,\"can_renew\":false}}",
@@ -537,7 +537,7 @@ content_key_policy = azure_nextgen.media.latest.ContentKeyPolicy("contentKeyPoli
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const contentKeyPolicy = new azure_nextgen.media.latest.ContentKeyPolicy("contentKeyPolicy", {
+const contentKeyPolicy = new azure_nextgen.media.ContentKeyPolicy("contentKeyPolicy", {
     accountName: "contosomedia",
     contentKeyPolicyName: "PolicyCreatedWithMultipleOptions",
     description: "ArmPolicyDescription",
@@ -783,7 +783,7 @@ The ContentKeyPolicy resource accepts the following [input]({{< relref "/docs/in
 <a href="#options_csharp" style="color: inherit; text-decoration: inherit;">Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentkeypolicyoption">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Content<wbr>Key<wbr>Policy<wbr>Option<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#contentkeypolicyoption">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Content<wbr>Key<wbr>Policy<wbr>Option<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The Key Policy options.{{% /md %}}</dd>
     <dt class="property-required"
@@ -1307,7 +1307,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rentalandleasekeytype_csharp" style="color: inherit; text-decoration: inherit;">Rental<wbr>And<wbr>Lease<wbr>Key<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#contentkeypolicyfairplayrentalandleasekeytype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Content<wbr>Key<wbr>Policy<wbr>Fair<wbr>Play<wbr>Rental<wbr>And<wbr>Lease<wbr>Key<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#contentkeypolicyfairplayrentalandleasekeytype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Content<wbr>Key<wbr>Policy<wbr>Fair<wbr>Play<wbr>Rental<wbr>And<wbr>Lease<wbr>Key<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The rental and lease key type.{{% /md %}}</dd>
     <dt class="property-required"
@@ -1325,7 +1325,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#offlinerentalconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Offline<wbr>Rental<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentkeypolicyfairplayofflinerentalconfiguration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Content<wbr>Key<wbr>Policy<wbr>Fair<wbr>Play<wbr>Offline<wbr>Rental<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#contentkeypolicyfairplayofflinerentalconfiguration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Content<wbr>Key<wbr>Policy<wbr>Fair<wbr>Play<wbr>Offline<wbr>Rental<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Offline rental policy{{% /md %}}</dd>
 </dl>
@@ -1567,7 +1567,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#offlinerentalconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Offline<wbr>Rental<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentkeypolicyfairplayofflinerentalconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Content<wbr>Key<wbr>Policy<wbr>Fair<wbr>Play<wbr>Offline<wbr>Rental<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#contentkeypolicyfairplayofflinerentalconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Content<wbr>Key<wbr>Policy<wbr>Fair<wbr>Play<wbr>Offline<wbr>Rental<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Offline rental policy{{% /md %}}</dd>
 </dl>
@@ -2074,7 +2074,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#configuration_csharp" style="color: inherit; text-decoration: inherit;">Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentkeypolicyclearkeyconfiguration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Content<wbr>Key<wbr>Policy<wbr>Clear<wbr>Key<wbr>Configuration<wbr>Args</a> | <a href="#contentkeypolicyfairplayconfiguration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Content<wbr>Key<wbr>Policy<wbr>Fair<wbr>Play<wbr>Configuration<wbr>Args</a> | <a href="#contentkeypolicyplayreadyconfiguration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>Configuration<wbr>Args</a> | <a href="#contentkeypolicyunknownconfiguration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Content<wbr>Key<wbr>Policy<wbr>Unknown<wbr>Configuration<wbr>Args</a> | <a href="#contentkeypolicywidevineconfiguration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Content<wbr>Key<wbr>Policy<wbr>Widevine<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#contentkeypolicyclearkeyconfiguration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Content<wbr>Key<wbr>Policy<wbr>Clear<wbr>Key<wbr>Configuration<wbr>Args</a> | <a href="#contentkeypolicyfairplayconfiguration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Content<wbr>Key<wbr>Policy<wbr>Fair<wbr>Play<wbr>Configuration<wbr>Args</a> | <a href="#contentkeypolicyplayreadyconfiguration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>Configuration<wbr>Args</a> | <a href="#contentkeypolicyunknownconfiguration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Content<wbr>Key<wbr>Policy<wbr>Unknown<wbr>Configuration<wbr>Args</a> | <a href="#contentkeypolicywidevineconfiguration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Content<wbr>Key<wbr>Policy<wbr>Widevine<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The key delivery configuration.{{% /md %}}</dd>
     <dt class="property-required"
@@ -2083,7 +2083,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#restriction_csharp" style="color: inherit; text-decoration: inherit;">Restriction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentkeypolicyopenrestriction">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Content<wbr>Key<wbr>Policy<wbr>Open<wbr>Restriction<wbr>Args</a> | <a href="#contentkeypolicytokenrestriction">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Content<wbr>Key<wbr>Policy<wbr>Token<wbr>Restriction<wbr>Args</a> | <a href="#contentkeypolicyunknownrestriction">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Content<wbr>Key<wbr>Policy<wbr>Unknown<wbr>Restriction<wbr>Args</a></span>
+        <span class="property-type"><a href="#contentkeypolicyopenrestriction">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Content<wbr>Key<wbr>Policy<wbr>Open<wbr>Restriction<wbr>Args</a> | <a href="#contentkeypolicytokenrestriction">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Content<wbr>Key<wbr>Policy<wbr>Token<wbr>Restriction<wbr>Args</a> | <a href="#contentkeypolicyunknownrestriction">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Content<wbr>Key<wbr>Policy<wbr>Unknown<wbr>Restriction<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The requirements that must be met to deliver keys with this configuration{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2208,7 +2208,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#configuration_csharp" style="color: inherit; text-decoration: inherit;">Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentkeypolicyclearkeyconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Content<wbr>Key<wbr>Policy<wbr>Clear<wbr>Key<wbr>Configuration<wbr>Response<wbr>Args</a> | <a href="#contentkeypolicyfairplayconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Content<wbr>Key<wbr>Policy<wbr>Fair<wbr>Play<wbr>Configuration<wbr>Response<wbr>Args</a> | <a href="#contentkeypolicyplayreadyconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>Configuration<wbr>Response<wbr>Args</a> | <a href="#contentkeypolicyunknownconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Content<wbr>Key<wbr>Policy<wbr>Unknown<wbr>Configuration<wbr>Response<wbr>Args</a> | <a href="#contentkeypolicywidevineconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Content<wbr>Key<wbr>Policy<wbr>Widevine<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#contentkeypolicyclearkeyconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Content<wbr>Key<wbr>Policy<wbr>Clear<wbr>Key<wbr>Configuration<wbr>Response<wbr>Args</a> | <a href="#contentkeypolicyfairplayconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Content<wbr>Key<wbr>Policy<wbr>Fair<wbr>Play<wbr>Configuration<wbr>Response<wbr>Args</a> | <a href="#contentkeypolicyplayreadyconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>Configuration<wbr>Response<wbr>Args</a> | <a href="#contentkeypolicyunknownconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Content<wbr>Key<wbr>Policy<wbr>Unknown<wbr>Configuration<wbr>Response<wbr>Args</a> | <a href="#contentkeypolicywidevineconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Content<wbr>Key<wbr>Policy<wbr>Widevine<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The key delivery configuration.{{% /md %}}</dd>
     <dt class="property-required"
@@ -2226,7 +2226,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#restriction_csharp" style="color: inherit; text-decoration: inherit;">Restriction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentkeypolicyopenrestrictionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Content<wbr>Key<wbr>Policy<wbr>Open<wbr>Restriction<wbr>Response<wbr>Args</a> | <a href="#contentkeypolicytokenrestrictionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Content<wbr>Key<wbr>Policy<wbr>Token<wbr>Restriction<wbr>Response<wbr>Args</a> | <a href="#contentkeypolicyunknownrestrictionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Content<wbr>Key<wbr>Policy<wbr>Unknown<wbr>Restriction<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#contentkeypolicyopenrestrictionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Content<wbr>Key<wbr>Policy<wbr>Open<wbr>Restriction<wbr>Response<wbr>Args</a> | <a href="#contentkeypolicytokenrestrictionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Content<wbr>Key<wbr>Policy<wbr>Token<wbr>Restriction<wbr>Response<wbr>Args</a> | <a href="#contentkeypolicyunknownrestrictionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Content<wbr>Key<wbr>Policy<wbr>Unknown<wbr>Restriction<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The requirements that must be met to deliver keys with this configuration{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2378,7 +2378,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#licenses_csharp" style="color: inherit; text-decoration: inherit;">Licenses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentkeypolicyplayreadylicense">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>License<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#contentkeypolicyplayreadylicense">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>License<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The PlayReady licenses.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2476,7 +2476,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#licenses_csharp" style="color: inherit; text-decoration: inherit;">Licenses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentkeypolicyplayreadylicenseresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>License<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#contentkeypolicyplayreadylicenseresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>License<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The PlayReady licenses.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3009,7 +3009,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#contentkeylocation_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Key<wbr>Location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentkeypolicyplayreadycontentencryptionkeyfromheader">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>Content<wbr>Encryption<wbr>Key<wbr>From<wbr>Header<wbr>Args</a> | <a href="#contentkeypolicyplayreadycontentencryptionkeyfromkeyidentifier">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>Content<wbr>Encryption<wbr>Key<wbr>From<wbr>Key<wbr>Identifier<wbr>Args</a></span>
+        <span class="property-type"><a href="#contentkeypolicyplayreadycontentencryptionkeyfromheader">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>Content<wbr>Encryption<wbr>Key<wbr>From<wbr>Header<wbr>Args</a> | <a href="#contentkeypolicyplayreadycontentencryptionkeyfromkeyidentifier">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>Content<wbr>Encryption<wbr>Key<wbr>From<wbr>Key<wbr>Identifier<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The content key location.{{% /md %}}</dd>
     <dt class="property-required"
@@ -3018,7 +3018,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#contenttype_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#contentkeypolicyplayreadycontenttype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>Content<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#contentkeypolicyplayreadycontenttype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>Content<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The PlayReady content type.{{% /md %}}</dd>
     <dt class="property-required"
@@ -3027,7 +3027,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#licensetype_csharp" style="color: inherit; text-decoration: inherit;">License<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#contentkeypolicyplayreadylicensetype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>License<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#contentkeypolicyplayreadylicensetype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>License<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The license type.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3063,7 +3063,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#playright_csharp" style="color: inherit; text-decoration: inherit;">Play<wbr>Right</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentkeypolicyplayreadyplayright">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>Play<wbr>Right<wbr>Args</a></span>
+        <span class="property-type"><a href="#contentkeypolicyplayreadyplayright">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>Play<wbr>Right<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The license PlayRight{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3395,7 +3395,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#contentkeylocation_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Key<wbr>Location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentkeypolicyplayreadycontentencryptionkeyfromheaderresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>Content<wbr>Encryption<wbr>Key<wbr>From<wbr>Header<wbr>Response<wbr>Args</a> | <a href="#contentkeypolicyplayreadycontentencryptionkeyfromkeyidentifierresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>Content<wbr>Encryption<wbr>Key<wbr>From<wbr>Key<wbr>Identifier<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#contentkeypolicyplayreadycontentencryptionkeyfromheaderresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>Content<wbr>Encryption<wbr>Key<wbr>From<wbr>Header<wbr>Response<wbr>Args</a> | <a href="#contentkeypolicyplayreadycontentencryptionkeyfromkeyidentifierresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>Content<wbr>Encryption<wbr>Key<wbr>From<wbr>Key<wbr>Identifier<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The content key location.{{% /md %}}</dd>
     <dt class="property-required"
@@ -3449,7 +3449,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#playright_csharp" style="color: inherit; text-decoration: inherit;">Play<wbr>Right</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentkeypolicyplayreadyplayrightresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>Play<wbr>Right<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#contentkeypolicyplayreadyplayrightresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>Play<wbr>Right<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The license PlayRight{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3818,7 +3818,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowpassingvideocontenttounknownoutput_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Passing<wbr>Video<wbr>Content<wbr>To<wbr>Unknown<wbr>Output</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#contentkeypolicyplayreadyunknownoutputpassingoption">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>Unknown<wbr>Output<wbr>Passing<wbr>Option</a></span>
+        <span class="property-type">string | <a href="#contentkeypolicyplayreadyunknownoutputpassingoption">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>Unknown<wbr>Output<wbr>Passing<wbr>Option</a></span>
     </dt>
     <dd>{{% md %}}Configures Unknown output handling settings of the license.{{% /md %}}</dd>
     <dt class="property-required"
@@ -3890,7 +3890,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#explicitanalogtelevisionoutputrestriction_csharp" style="color: inherit; text-decoration: inherit;">Explicit<wbr>Analog<wbr>Television<wbr>Output<wbr>Restriction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentkeypolicyplayreadyexplicitanalogtelevisionrestriction">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>Explicit<wbr>Analog<wbr>Television<wbr>Restriction<wbr>Args</a></span>
+        <span class="property-type"><a href="#contentkeypolicyplayreadyexplicitanalogtelevisionrestriction">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>Explicit<wbr>Analog<wbr>Television<wbr>Restriction<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configures the Explicit Analog Television Output Restriction in the license. Configuration data must be between 0 and 3 inclusive.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4384,7 +4384,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#explicitanalogtelevisionoutputrestriction_csharp" style="color: inherit; text-decoration: inherit;">Explicit<wbr>Analog<wbr>Television<wbr>Output<wbr>Restriction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentkeypolicyplayreadyexplicitanalogtelevisionrestrictionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>Explicit<wbr>Analog<wbr>Television<wbr>Restriction<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#contentkeypolicyplayreadyexplicitanalogtelevisionrestrictionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>Explicit<wbr>Analog<wbr>Television<wbr>Restriction<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configures the Explicit Analog Television Output Restriction in the license. Configuration data must be between 0 and 3 inclusive.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -5440,7 +5440,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#primaryverificationkey_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Verification<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentkeypolicyrsatokenkey">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Content<wbr>Key<wbr>Policy<wbr>Rsa<wbr>Token<wbr>Key<wbr>Args</a> | <a href="#contentkeypolicysymmetrictokenkey">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Content<wbr>Key<wbr>Policy<wbr>Symmetric<wbr>Token<wbr>Key<wbr>Args</a> | <a href="#contentkeypolicyx509certificatetokenkey">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Content<wbr>Key<wbr>Policy<wbr>X509Certificate<wbr>Token<wbr>Key<wbr>Args</a></span>
+        <span class="property-type"><a href="#contentkeypolicyrsatokenkey">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Content<wbr>Key<wbr>Policy<wbr>Rsa<wbr>Token<wbr>Key<wbr>Args</a> | <a href="#contentkeypolicysymmetrictokenkey">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Content<wbr>Key<wbr>Policy<wbr>Symmetric<wbr>Token<wbr>Key<wbr>Args</a> | <a href="#contentkeypolicyx509certificatetokenkey">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Content<wbr>Key<wbr>Policy<wbr>X509Certificate<wbr>Token<wbr>Key<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The primary verification key.{{% /md %}}</dd>
     <dt class="property-required"
@@ -5449,7 +5449,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#restrictiontokentype_csharp" style="color: inherit; text-decoration: inherit;">Restriction<wbr>Token<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#contentkeypolicyrestrictiontokentype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Content<wbr>Key<wbr>Policy<wbr>Restriction<wbr>Token<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#contentkeypolicyrestrictiontokentype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Content<wbr>Key<wbr>Policy<wbr>Restriction<wbr>Token<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of token.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -5476,7 +5476,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#requiredclaims_csharp" style="color: inherit; text-decoration: inherit;">Required<wbr>Claims</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentkeypolicytokenclaim">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Content<wbr>Key<wbr>Policy<wbr>Token<wbr>Claim<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#contentkeypolicytokenclaim">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Content<wbr>Key<wbr>Policy<wbr>Token<wbr>Claim<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of required token claims.{{% /md %}}</dd>
 </dl>
@@ -5718,7 +5718,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#primaryverificationkey_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Verification<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentkeypolicyrsatokenkeyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Content<wbr>Key<wbr>Policy<wbr>Rsa<wbr>Token<wbr>Key<wbr>Response<wbr>Args</a> | <a href="#contentkeypolicysymmetrictokenkeyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Content<wbr>Key<wbr>Policy<wbr>Symmetric<wbr>Token<wbr>Key<wbr>Response<wbr>Args</a> | <a href="#contentkeypolicyx509certificatetokenkeyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Content<wbr>Key<wbr>Policy<wbr>X509Certificate<wbr>Token<wbr>Key<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#contentkeypolicyrsatokenkeyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Content<wbr>Key<wbr>Policy<wbr>Rsa<wbr>Token<wbr>Key<wbr>Response<wbr>Args</a> | <a href="#contentkeypolicysymmetrictokenkeyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Content<wbr>Key<wbr>Policy<wbr>Symmetric<wbr>Token<wbr>Key<wbr>Response<wbr>Args</a> | <a href="#contentkeypolicyx509certificatetokenkeyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Content<wbr>Key<wbr>Policy<wbr>X509Certificate<wbr>Token<wbr>Key<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The primary verification key.{{% /md %}}</dd>
     <dt class="property-required"
@@ -5754,7 +5754,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#requiredclaims_csharp" style="color: inherit; text-decoration: inherit;">Required<wbr>Claims</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentkeypolicytokenclaimresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Content<wbr>Key<wbr>Policy<wbr>Token<wbr>Claim<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#contentkeypolicytokenclaimresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Content<wbr>Key<wbr>Policy<wbr>Token<wbr>Claim<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of required token claims.{{% /md %}}</dd>
 </dl>
@@ -6324,7 +6324,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:media/latest:ContentKeyPolicy PolicyCreatedWithMultipleOptions /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/contoso/providers/Microsoft.Media/mediaservices/contosomedia/contentKeyPolicies/PolicyCreatedWithMultipleOptions 
+$ pulumi import azure-nextgen:media:ContentKeyPolicy PolicyCreatedWithMultipleOptions /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/contoso/providers/Microsoft.Media/mediaservices/contosomedia/contentKeyPolicies/PolicyCreatedWithMultipleOptions 
 ```
 
 

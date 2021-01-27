@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.recoveryservices.Vault resource 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Resource information, as returned by the resource provider.
-Latest API Version: 2020-02-02.
+API Version: 2020-02-02.
 
 {{% examples %}}
 ## Example Usage
@@ -27,16 +27,16 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var vault = new AzureNextGen.RecoveryServices.Latest.Vault("vault", new AzureNextGen.RecoveryServices.Latest.VaultArgs
+        var vault = new AzureNextGen.RecoveryServices..Vault("vault", new AzureNextGen.RecoveryServices..VaultArgs
         {
-            Identity = new AzureNextGen.RecoveryServices.Latest.Inputs.IdentityDataArgs
+            Identity = new AzureNextGen.RecoveryServices..Inputs.IdentityDataArgs
             {
                 Type = "SystemAssigned",
             },
             Location = "West US",
             Properties = ,
             ResourceGroupName = "Default-RecoveryServices-ResourceGroup",
-            Sku = new AzureNextGen.RecoveryServices.Latest.Inputs.SkuArgs
+            Sku = new AzureNextGen.RecoveryServices..Inputs.SkuArgs
             {
                 Name = "Standard",
             },
@@ -56,7 +56,7 @@ class MyStack : Stack
 package main
 
 import (
-	recoveryservices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/recoveryservices/latest"
+	recoveryservices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/recoveryservices"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -91,14 +91,14 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-vault = azure_nextgen.recoveryservices.latest.Vault("vault",
-    identity=azure_nextgen.recoveryservices.latest.IdentityDataArgs(
+vault = azure_nextgen.recoveryservices.Vault("vault",
+    identity=azure_nextgen.recoveryservices.IdentityDataArgs(
         type="SystemAssigned",
     ),
     location="West US",
-    properties=azure_nextgen.recoveryservices.latest.VaultPropertiesArgs(),
+    properties=azure_nextgen.recoveryservices.VaultPropertiesArgs(),
     resource_group_name="Default-RecoveryServices-ResourceGroup",
-    sku=azure_nextgen.recoveryservices.latest.SkuArgs(
+    sku=azure_nextgen.recoveryservices.SkuArgs(
         name="Standard",
     ),
     vault_name="swaggerExample")
@@ -113,7 +113,7 @@ vault = azure_nextgen.recoveryservices.latest.Vault("vault",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const vault = new azure_nextgen.recoveryservices.latest.Vault("vault", {
+const vault = new azure_nextgen.recoveryservices.Vault("vault", {
     identity: {
         type: "SystemAssigned",
     },
@@ -140,9 +140,9 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var vault = new AzureNextGen.RecoveryServices.Latest.Vault("vault", new AzureNextGen.RecoveryServices.Latest.VaultArgs
+        var vault = new AzureNextGen.RecoveryServices..Vault("vault", new AzureNextGen.RecoveryServices..VaultArgs
         {
-            Identity = new AzureNextGen.RecoveryServices.Latest.Inputs.IdentityDataArgs
+            Identity = new AzureNextGen.RecoveryServices..Inputs.IdentityDataArgs
             {
                 Type = "UserAssigned",
                 UserAssignedIdentities = 
@@ -151,23 +151,23 @@ class MyStack : Stack
                 },
             },
             Location = "West US",
-            Properties = new AzureNextGen.RecoveryServices.Latest.Inputs.VaultPropertiesArgs
+            Properties = new AzureNextGen.RecoveryServices..Inputs.VaultPropertiesArgs
             {
-                Encryption = new AzureNextGen.RecoveryServices.Latest.Inputs.VaultPropertiesEncryptionArgs
+                Encryption = new AzureNextGen.RecoveryServices..Inputs.VaultPropertiesEncryptionArgs
                 {
                     InfrastructureEncryption = "Enabled",
-                    KekIdentity = new AzureNextGen.RecoveryServices.Latest.Inputs.CmkKekIdentityArgs
+                    KekIdentity = new AzureNextGen.RecoveryServices..Inputs.CmkKekIdentityArgs
                     {
                         UserAssignedIdentity = "/subscriptions/85bf5e8c-3084-4f42-add2-746ebb7e97b2/resourcegroups/defaultrg/providers/Microsoft.ManagedIdentity/userAssignedIdentities/examplemsi",
                     },
-                    KeyVaultProperties = new AzureNextGen.RecoveryServices.Latest.Inputs.CmkKeyVaultPropertiesArgs
+                    KeyVaultProperties = new AzureNextGen.RecoveryServices..Inputs.CmkKeyVaultPropertiesArgs
                     {
                         KeyUri = "https://cmk2xkv.vault.azure.net/keys/Key1/0767b348bb1a4c07baa6c4ec0055d2b3",
                     },
                 },
             },
             ResourceGroupName = "Default-RecoveryServices-ResourceGroup",
-            Sku = new AzureNextGen.RecoveryServices.Latest.Inputs.SkuArgs
+            Sku = new AzureNextGen.RecoveryServices..Inputs.SkuArgs
             {
                 Name = "Standard",
             },
@@ -187,7 +187,7 @@ class MyStack : Stack
 package main
 
 import (
-	recoveryservices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/recoveryservices/latest"
+	recoveryservices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/recoveryservices"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -235,27 +235,27 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-vault = azure_nextgen.recoveryservices.latest.Vault("vault",
-    identity=azure_nextgen.recoveryservices.latest.IdentityDataArgs(
+vault = azure_nextgen.recoveryservices.Vault("vault",
+    identity=azure_nextgen.recoveryservices.IdentityDataArgs(
         type="UserAssigned",
         user_assigned_identities={
             "/subscriptions/85bf5e8c-3084-4f42-add2-746ebb7e97b2/resourcegroups/defaultrg/providers/Microsoft.ManagedIdentity/userAssignedIdentities/examplemsi": {},
         },
     ),
     location="West US",
-    properties=azure_nextgen.recoveryservices.latest.VaultPropertiesArgs(
-        encryption=azure_nextgen.recoveryservices.latest.VaultPropertiesEncryptionArgs(
+    properties=azure_nextgen.recoveryservices.VaultPropertiesArgs(
+        encryption=azure_nextgen.recoveryservices.VaultPropertiesEncryptionArgs(
             infrastructure_encryption="Enabled",
-            kek_identity=azure_nextgen.recoveryservices.latest.CmkKekIdentityArgs(
+            kek_identity=azure_nextgen.recoveryservices.CmkKekIdentityArgs(
                 user_assigned_identity="/subscriptions/85bf5e8c-3084-4f42-add2-746ebb7e97b2/resourcegroups/defaultrg/providers/Microsoft.ManagedIdentity/userAssignedIdentities/examplemsi",
             ),
-            key_vault_properties=azure_nextgen.recoveryservices.latest.CmkKeyVaultPropertiesArgs(
+            key_vault_properties=azure_nextgen.recoveryservices.CmkKeyVaultPropertiesArgs(
                 key_uri="https://cmk2xkv.vault.azure.net/keys/Key1/0767b348bb1a4c07baa6c4ec0055d2b3",
             ),
         ),
     ),
     resource_group_name="Default-RecoveryServices-ResourceGroup",
-    sku=azure_nextgen.recoveryservices.latest.SkuArgs(
+    sku=azure_nextgen.recoveryservices.SkuArgs(
         name="Standard",
     ),
     vault_name="swaggerExample")
@@ -270,7 +270,7 @@ vault = azure_nextgen.recoveryservices.latest.Vault("vault",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const vault = new azure_nextgen.recoveryservices.latest.Vault("vault", {
+const vault = new azure_nextgen.recoveryservices.Vault("vault", {
     identity: {
         type: "UserAssigned",
         userAssignedIdentities: {
@@ -310,9 +310,9 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var vault = new AzureNextGen.RecoveryServices.Latest.Vault("vault", new AzureNextGen.RecoveryServices.Latest.VaultArgs
+        var vault = new AzureNextGen.RecoveryServices..Vault("vault", new AzureNextGen.RecoveryServices..VaultArgs
         {
-            Identity = new AzureNextGen.RecoveryServices.Latest.Inputs.IdentityDataArgs
+            Identity = new AzureNextGen.RecoveryServices..Inputs.IdentityDataArgs
             {
                 Type = "UserAssigned",
                 UserAssignedIdentities = 
@@ -323,7 +323,7 @@ class MyStack : Stack
             Location = "West US",
             Properties = ,
             ResourceGroupName = "Default-RecoveryServices-ResourceGroup",
-            Sku = new AzureNextGen.RecoveryServices.Latest.Inputs.SkuArgs
+            Sku = new AzureNextGen.RecoveryServices..Inputs.SkuArgs
             {
                 Name = "Standard",
             },
@@ -343,7 +343,7 @@ class MyStack : Stack
 package main
 
 import (
-	recoveryservices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/recoveryservices/latest"
+	recoveryservices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/recoveryservices"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -381,17 +381,17 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-vault = azure_nextgen.recoveryservices.latest.Vault("vault",
-    identity=azure_nextgen.recoveryservices.latest.IdentityDataArgs(
+vault = azure_nextgen.recoveryservices.Vault("vault",
+    identity=azure_nextgen.recoveryservices.IdentityDataArgs(
         type="UserAssigned",
         user_assigned_identities={
             "/subscriptions/85bf5e8c-3084-4f42-add2-746ebb7e97b2/resourcegroups/defaultrg/providers/Microsoft.ManagedIdentity/userAssignedIdentities/examplemsi": {},
         },
     ),
     location="West US",
-    properties=azure_nextgen.recoveryservices.latest.VaultPropertiesArgs(),
+    properties=azure_nextgen.recoveryservices.VaultPropertiesArgs(),
     resource_group_name="Default-RecoveryServices-ResourceGroup",
-    sku=azure_nextgen.recoveryservices.latest.SkuArgs(
+    sku=azure_nextgen.recoveryservices.SkuArgs(
         name="Standard",
     ),
     vault_name="swaggerExample")
@@ -406,7 +406,7 @@ vault = azure_nextgen.recoveryservices.latest.Vault("vault",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const vault = new azure_nextgen.recoveryservices.latest.Vault("vault", {
+const vault = new azure_nextgen.recoveryservices.Vault("vault", {
     identity: {
         type: "UserAssigned",
         userAssignedIdentities: {
@@ -651,7 +651,7 @@ The Vault resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identitydata">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Identity<wbr>Data<wbr>Args</a></span>
+        <span class="property-type"><a href="#identitydata">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Identity<wbr>Data<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Identity for the resource.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -660,7 +660,7 @@ The Vault resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vaultproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Vault<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#vaultproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Vault<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties of the vault.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -669,7 +669,7 @@ The Vault resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sku">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Sku<wbr>Args</a></span>
+        <span class="property-type"><a href="#sku">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Identifies the unique system identifier for each Azure resource.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1398,7 +1398,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#resourceidentitytype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Resource<wbr>Identity<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#resourceidentitytype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Resource<wbr>Identity<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of managed identity used. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user-assigned identities. The type 'None' will remove any identities.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1523,7 +1523,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userassignedidentities_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>User<wbr>Identity<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>User<wbr>Identity<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}The list of user-assigned identities associated with the resource. The user-assigned identity dictionary keys will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd>
 </dl>
@@ -1704,7 +1704,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privateendpoint_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#privateendpointresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Private Endpoint network resource that is linked to the Private Endpoint connection.{{% /md %}}</dd>
     <dt class="property-required"
@@ -1713,7 +1713,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privatelinkserviceconnectionstate_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets private link service connection state.{{% /md %}}</dd>
     <dt class="property-required"
@@ -1847,7 +1847,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointconnectionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#privateendpointconnectionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Private Endpoint Connection Response Properties.{{% /md %}}</dd>
 </dl>
@@ -2186,7 +2186,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#skuname">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Sku<wbr>Name</a></span>
+        <span class="property-type">string | <a href="#skuname">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Sku<wbr>Name</a></span>
     </dt>
     <dd>{{% md %}}The Sku name.{{% /md %}}</dd>
 </dl>
@@ -2796,7 +2796,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryption_csharp" style="color: inherit; text-decoration: inherit;">Encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vaultpropertiesencryption">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Vault<wbr>Properties<wbr>Encryption<wbr>Args</a></span>
+        <span class="property-type"><a href="#vaultpropertiesencryption">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Vault<wbr>Properties<wbr>Encryption<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Customer Managed Key details of the resource.{{% /md %}}</dd>
 </dl>
@@ -2858,7 +2858,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#infrastructureencryption_csharp" style="color: inherit; text-decoration: inherit;">Infrastructure<wbr>Encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#infrastructureencryptionstate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Infrastructure<wbr>Encryption<wbr>State</a></span>
+        <span class="property-type">string | <a href="#infrastructureencryptionstate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Infrastructure<wbr>Encryption<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}Enabling/Disabling the Double Encryption state{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2867,7 +2867,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kekidentity_csharp" style="color: inherit; text-decoration: inherit;">Kek<wbr>Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cmkkekidentity">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Cmk<wbr>Kek<wbr>Identity<wbr>Args</a></span>
+        <span class="property-type"><a href="#cmkkekidentity">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Cmk<wbr>Kek<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The details of the identity used for CMK{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2876,7 +2876,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keyvaultproperties_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cmkkeyvaultproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Cmk<wbr>Key<wbr>Vault<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#cmkkeyvaultproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Cmk<wbr>Key<wbr>Vault<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The properties of the Key Vault which hosts CMK{{% /md %}}</dd>
 </dl>
@@ -2992,7 +2992,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privateendpointconnections_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint<wbr>Connections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointconnectionvaultpropertiesresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Vault<wbr>Properties<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#privateendpointconnectionvaultpropertiesresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Vault<wbr>Properties<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of private endpoint connection.{{% /md %}}</dd>
     <dt class="property-required"
@@ -3028,7 +3028,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryption_csharp" style="color: inherit; text-decoration: inherit;">Encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vaultpropertiesresponseencryption">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Vault<wbr>Properties<wbr>Response<wbr>Encryption<wbr>Args</a></span>
+        <span class="property-type"><a href="#vaultpropertiesresponseencryption">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Vault<wbr>Properties<wbr>Response<wbr>Encryption<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Customer Managed Key details of the resource.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3037,7 +3037,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#upgradedetails_csharp" style="color: inherit; text-decoration: inherit;">Upgrade<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#upgradedetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Upgrade<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#upgradedetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Upgrade<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Details for upgrading vault.{{% /md %}}</dd>
 </dl>
@@ -3243,7 +3243,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kekidentity_csharp" style="color: inherit; text-decoration: inherit;">Kek<wbr>Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cmkkekidentityresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Cmk<wbr>Kek<wbr>Identity<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#cmkkekidentityresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Cmk<wbr>Kek<wbr>Identity<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The details of the identity used for CMK{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3252,7 +3252,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keyvaultproperties_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cmkkeyvaultpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Cmk<wbr>Key<wbr>Vault<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#cmkkeyvaultpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services..<wbr>Inputs.<wbr>Cmk<wbr>Key<wbr>Vault<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The properties of the Key Vault which hosts CMK{{% /md %}}</dd>
 </dl>
@@ -3362,7 +3362,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:recoveryservices/latest:Vault swaggerExample /subscriptions/77777777-b0c6-47a2-b37c-d8e65a629c18/resourceGroups/Default-RecoveryServices-ResourceGroup/providers/Microsoft.RecoveryServices/vaults/swaggerExample 
+$ pulumi import azure-nextgen:recoveryservices:Vault swaggerExample /subscriptions/77777777-b0c6-47a2-b37c-d8e65a629c18/resourceGroups/Default-RecoveryServices-ResourceGroup/providers/Microsoft.RecoveryServices/vaults/swaggerExample 
 ```
 
 

@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.migrate.Assessment resource with
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 An assessment created for a group in the Migration project.
-Latest API Version: 2019-10-01.
+API Version: 2019-10-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,13 +27,13 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var assessment = new AzureNextGen.Migrate.Latest.Assessment("assessment", new AzureNextGen.Migrate.Latest.AssessmentArgs
+        var assessment = new AzureNextGen.Migrate..Assessment("assessment", new AzureNextGen.Migrate..AssessmentArgs
         {
             AssessmentName = "assessment_5_14_2019_16_48_47",
             ETag = "\"1e000c2c-0000-0d00-0000-5cdaa4190000\"",
             GroupName = "Group2",
             ProjectName = "abgoyalWEselfhostb72bproject",
-            Properties = new AzureNextGen.Migrate.Latest.Inputs.AssessmentPropertiesArgs
+            Properties = new AzureNextGen.Migrate..Inputs.AssessmentPropertiesArgs
             {
                 AzureDiskType = "StandardOrPremium",
                 AzureHybridUseBenefit = "Yes",
@@ -65,7 +65,7 @@ class MyStack : Stack
                 SizingCriterion = "PerformanceBased",
                 Stage = "InProgress",
                 TimeRange = "Day",
-                VmUptime = new AzureNextGen.Migrate.Latest.Inputs.VmUptimeArgs
+                VmUptime = new AzureNextGen.Migrate..Inputs.VmUptimeArgs
                 {
                     DaysPerMonth = 31,
                     HoursPerDay = 24,
@@ -87,7 +87,7 @@ class MyStack : Stack
 package main
 
 import (
-	migrate "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/migrate/latest"
+	migrate "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/migrate"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -152,12 +152,12 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-assessment = azure_nextgen.migrate.latest.Assessment("assessment",
+assessment = azure_nextgen.migrate.Assessment("assessment",
     assessment_name="assessment_5_14_2019_16_48_47",
     e_tag="\"1e000c2c-0000-0d00-0000-5cdaa4190000\"",
     group_name="Group2",
     project_name="abgoyalWEselfhostb72bproject",
-    properties=azure_nextgen.migrate.latest.AssessmentPropertiesArgs(
+    properties=azure_nextgen.migrate.AssessmentPropertiesArgs(
         azure_disk_type="StandardOrPremium",
         azure_hybrid_use_benefit="Yes",
         azure_location="NorthEurope",
@@ -187,7 +187,7 @@ assessment = azure_nextgen.migrate.latest.Assessment("assessment",
         sizing_criterion="PerformanceBased",
         stage="InProgress",
         time_range="Day",
-        vm_uptime=azure_nextgen.migrate.latest.VmUptimeArgs(
+        vm_uptime=azure_nextgen.migrate.VmUptimeArgs(
             days_per_month=31,
             hours_per_day=24,
         ),
@@ -204,7 +204,7 @@ assessment = azure_nextgen.migrate.latest.Assessment("assessment",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const assessment = new azure_nextgen.migrate.latest.Assessment("assessment", {
+const assessment = new azure_nextgen.migrate.Assessment("assessment", {
     assessmentName: "assessment_5_14_2019_16_48_47",
     eTag: "\"1e000c2c-0000-0d00-0000-5cdaa4190000\"",
     groupName: "Group2",
@@ -467,7 +467,7 @@ The Assessment resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#assessmentproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Inputs.<wbr>Assessment<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#assessmentproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate..<wbr>Inputs.<wbr>Assessment<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties of the assessment.{{% /md %}}</dd>
     <dt class="property-required"
@@ -831,7 +831,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azuredisktype_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Disk<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#azuredisktype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Azure<wbr>Disk<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#azuredisktype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate..<wbr>Azure<wbr>Disk<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Storage type selected for this disk.{{% /md %}}</dd>
     <dt class="property-required"
@@ -840,7 +840,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azurehybridusebenefit_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Hybrid<wbr>Use<wbr>Benefit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#azurehybridusebenefit">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Azure<wbr>Hybrid<wbr>Use<wbr>Benefit</a></span>
+        <span class="property-type">string | <a href="#azurehybridusebenefit">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate..<wbr>Azure<wbr>Hybrid<wbr>Use<wbr>Benefit</a></span>
     </dt>
     <dd>{{% md %}}AHUB discount on windows virtual machines.{{% /md %}}</dd>
     <dt class="property-required"
@@ -849,7 +849,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azurelocation_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#azurelocation">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Azure<wbr>Location</a></span>
+        <span class="property-type">string | <a href="#azurelocation">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate..<wbr>Azure<wbr>Location</a></span>
     </dt>
     <dd>{{% md %}}Target Azure location for which the machines should be assessed. These enums are the same as used by Compute API.{{% /md %}}</dd>
     <dt class="property-required"
@@ -858,7 +858,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azureoffercode_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Offer<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#azureoffercode">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Azure<wbr>Offer<wbr>Code</a></span>
+        <span class="property-type">string | <a href="#azureoffercode">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate..<wbr>Azure<wbr>Offer<wbr>Code</a></span>
     </dt>
     <dd>{{% md %}}Offer code according to which cost estimation is done.{{% /md %}}</dd>
     <dt class="property-required"
@@ -867,7 +867,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azurepricingtier_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Pricing<wbr>Tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#azurepricingtier">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Azure<wbr>Pricing<wbr>Tier</a></span>
+        <span class="property-type">string | <a href="#azurepricingtier">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate..<wbr>Azure<wbr>Pricing<wbr>Tier</a></span>
     </dt>
     <dd>{{% md %}}Pricing tier for Size evaluation.{{% /md %}}</dd>
     <dt class="property-required"
@@ -876,7 +876,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azurestorageredundancy_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Storage<wbr>Redundancy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#azurestorageredundancy">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Azure<wbr>Storage<wbr>Redundancy</a></span>
+        <span class="property-type">string | <a href="#azurestorageredundancy">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate..<wbr>Azure<wbr>Storage<wbr>Redundancy</a></span>
     </dt>
     <dd>{{% md %}}Storage Redundancy type offered by Azure.{{% /md %}}</dd>
     <dt class="property-required"
@@ -885,7 +885,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azurevmfamilies_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Vm<wbr>Families</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Union&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Azure<wbr>Vm<wbr>Family&gt;&gt;</span>
+        <span class="property-type">List&lt;Union&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate..<wbr>Azure<wbr>Vm<wbr>Family&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}List of azure VM families.{{% /md %}}</dd>
     <dt class="property-required"
@@ -894,7 +894,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#currency_csharp" style="color: inherit; text-decoration: inherit;">Currency</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#currency">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Currency</a></span>
+        <span class="property-type">string | <a href="#currency">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate..<wbr>Currency</a></span>
     </dt>
     <dd>{{% md %}}Currency to report prices in.{{% /md %}}</dd>
     <dt class="property-required"
@@ -912,7 +912,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#percentile_csharp" style="color: inherit; text-decoration: inherit;">Percentile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#percentile">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Percentile</a></span>
+        <span class="property-type">string | <a href="#percentile">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate..<wbr>Percentile</a></span>
     </dt>
     <dd>{{% md %}}Percentile of performance data used to recommend Azure size.{{% /md %}}</dd>
     <dt class="property-required"
@@ -921,7 +921,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#reservedinstance_csharp" style="color: inherit; text-decoration: inherit;">Reserved<wbr>Instance</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#reservedinstance">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Reserved<wbr>Instance</a></span>
+        <span class="property-type">string | <a href="#reservedinstance">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate..<wbr>Reserved<wbr>Instance</a></span>
     </dt>
     <dd>{{% md %}}Azure reserved instance.{{% /md %}}</dd>
     <dt class="property-required"
@@ -939,7 +939,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sizingcriterion_csharp" style="color: inherit; text-decoration: inherit;">Sizing<wbr>Criterion</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#assessmentsizingcriterion">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Assessment<wbr>Sizing<wbr>Criterion</a></span>
+        <span class="property-type">string | <a href="#assessmentsizingcriterion">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate..<wbr>Assessment<wbr>Sizing<wbr>Criterion</a></span>
     </dt>
     <dd>{{% md %}}Assessment sizing criterion.{{% /md %}}</dd>
     <dt class="property-required"
@@ -948,7 +948,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#stage_csharp" style="color: inherit; text-decoration: inherit;">Stage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#assessmentstage">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Assessment<wbr>Stage</a></span>
+        <span class="property-type">string | <a href="#assessmentstage">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate..<wbr>Assessment<wbr>Stage</a></span>
     </dt>
     <dd>{{% md %}}User configurable setting that describes the status of the assessment.{{% /md %}}</dd>
     <dt class="property-required"
@@ -957,7 +957,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timerange_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#timerange">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Time<wbr>Range</a></span>
+        <span class="property-type">string | <a href="#timerange">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate..<wbr>Time<wbr>Range</a></span>
     </dt>
     <dd>{{% md %}}Time range of performance data used to recommend a size.{{% /md %}}</dd>
     <dt class="property-required"
@@ -966,7 +966,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vmuptime_csharp" style="color: inherit; text-decoration: inherit;">Vm<wbr>Uptime</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vmuptime">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Inputs.<wbr>Vm<wbr>Uptime<wbr>Args</a></span>
+        <span class="property-type"><a href="#vmuptime">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate..<wbr>Inputs.<wbr>Vm<wbr>Uptime<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specify the duration for which the VMs are up in the on-premises environment.{{% /md %}}</dd>
 </dl>
@@ -1694,7 +1694,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vmuptime_csharp" style="color: inherit; text-decoration: inherit;">Vm<wbr>Uptime</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vmuptimeresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Inputs.<wbr>Vm<wbr>Uptime<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#vmuptimeresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate..<wbr>Inputs.<wbr>Vm<wbr>Uptime<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specify the duration for which the VMs are up in the on-premises environment.{{% /md %}}</dd>
 </dl>
@@ -4263,7 +4263,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:migrate/latest:Assessment assessment_5_14_2019_16_48_47 /subscriptions/6393a73f-8d55-47ef-b6dd-179b3e0c7910/resourceGroups/abgoyal-westeurope/providers/Microsoft.Migrate/assessmentprojects/abgoyalWEselfhostb72bproject/groups/Group2/assessments/assessment_5_14_2019_16_48_47 
+$ pulumi import azure-nextgen:migrate:Assessment assessment_5_14_2019_16_48_47 /subscriptions/6393a73f-8d55-47ef-b6dd-179b3e0c7910/resourceGroups/abgoyal-westeurope/providers/Microsoft.Migrate/assessmentprojects/abgoyalWEselfhostb72bproject/groups/Group2/assessments/assessment_5_14_2019_16_48_47 
 ```
 
 

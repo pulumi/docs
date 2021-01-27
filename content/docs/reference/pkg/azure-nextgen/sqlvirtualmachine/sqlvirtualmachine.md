@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.sqlvirtualmachine.SqlVirtualMach
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 A SQL virtual machine.
+API Version: 2017-03-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,14 +27,14 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var sqlVirtualMachine = new AzureNextGen.SqlVirtualMachine.V20170301Preview.SqlVirtualMachine("sqlVirtualMachine", new AzureNextGen.SqlVirtualMachine.V20170301Preview.SqlVirtualMachineArgs
+        var sqlVirtualMachine = new AzureNextGen.SqlVirtualMachine..SqlVirtualMachine("sqlVirtualMachine", new AzureNextGen.SqlVirtualMachine..SqlVirtualMachineArgs
         {
             Location = "northeurope",
             ResourceGroupName = "testrg",
             SqlVirtualMachineGroupResourceId = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg/providers/Microsoft.SqlVirtualMachine/sqlVirtualMachineGroups/testvmgroup",
             SqlVirtualMachineName = "testvm",
             VirtualMachineResourceId = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg/providers/Microsoft.Compute/virtualMachines/testvm2",
-            WsfcDomainCredentials = new AzureNextGen.SqlVirtualMachine.V20170301Preview.Inputs.WsfcDomainCredentialsArgs
+            WsfcDomainCredentials = new AzureNextGen.SqlVirtualMachine..Inputs.WsfcDomainCredentialsArgs
             {
                 ClusterBootstrapAccountPassword = "<Password>",
                 ClusterOperatorAccountPassword = "<Password>",
@@ -54,7 +55,7 @@ class MyStack : Stack
 package main
 
 import (
-	sqlvirtualmachine "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sqlvirtualmachine/v20170301preview"
+	sqlvirtualmachine "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sqlvirtualmachine"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -89,13 +90,13 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-sql_virtual_machine = azure_nextgen.sqlvirtualmachine.v20170301preview.SqlVirtualMachine("sqlVirtualMachine",
+sql_virtual_machine = azure_nextgen.sqlvirtualmachine.SqlVirtualMachine("sqlVirtualMachine",
     location="northeurope",
     resource_group_name="testrg",
     sql_virtual_machine_group_resource_id="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg/providers/Microsoft.SqlVirtualMachine/sqlVirtualMachineGroups/testvmgroup",
     sql_virtual_machine_name="testvm",
     virtual_machine_resource_id="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg/providers/Microsoft.Compute/virtualMachines/testvm2",
-    wsfc_domain_credentials=azure_nextgen.sqlvirtualmachine.v20170301preview.WsfcDomainCredentialsArgs(
+    wsfc_domain_credentials=azure_nextgen.sqlvirtualmachine.WsfcDomainCredentialsArgs(
         cluster_bootstrap_account_password="<Password>",
         cluster_operator_account_password="<Password>",
         sql_service_account_password="<Password>",
@@ -111,7 +112,7 @@ sql_virtual_machine = azure_nextgen.sqlvirtualmachine.v20170301preview.SqlVirtua
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const sqlVirtualMachine = new azure_nextgen.sqlvirtualmachine.v20170301preview.SqlVirtualMachine("sqlVirtualMachine", {
+const sqlVirtualMachine = new azure_nextgen.sqlvirtualmachine.SqlVirtualMachine("sqlVirtualMachine", {
     location: "northeurope",
     resourceGroupName: "testrg",
     sqlVirtualMachineGroupResourceId: "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg/providers/Microsoft.SqlVirtualMachine/sqlVirtualMachineGroups/testvmgroup",
@@ -138,15 +139,15 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var sqlVirtualMachine = new AzureNextGen.SqlVirtualMachine.V20170301Preview.SqlVirtualMachine("sqlVirtualMachine", new AzureNextGen.SqlVirtualMachine.V20170301Preview.SqlVirtualMachineArgs
+        var sqlVirtualMachine = new AzureNextGen.SqlVirtualMachine..SqlVirtualMachine("sqlVirtualMachine", new AzureNextGen.SqlVirtualMachine..SqlVirtualMachineArgs
         {
             Location = "northeurope",
             ResourceGroupName = "testrg",
             SqlVirtualMachineName = "testvm",
-            StorageConfigurationSettings = new AzureNextGen.SqlVirtualMachine.V20170301Preview.Inputs.StorageConfigurationSettingsArgs
+            StorageConfigurationSettings = new AzureNextGen.SqlVirtualMachine..Inputs.StorageConfigurationSettingsArgs
             {
                 DiskConfigurationType = "EXTEND",
-                SqlDataSettings = new AzureNextGen.SqlVirtualMachine.V20170301Preview.Inputs.SQLStorageSettingsArgs
+                SqlDataSettings = new AzureNextGen.SqlVirtualMachine..Inputs.SQLStorageSettingsArgs
                 {
                     Luns = 
                     {
@@ -174,13 +175,13 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-sql_virtual_machine = azure_nextgen.sqlvirtualmachine.v20170301preview.SqlVirtualMachine("sqlVirtualMachine",
+sql_virtual_machine = azure_nextgen.sqlvirtualmachine.SqlVirtualMachine("sqlVirtualMachine",
     location="northeurope",
     resource_group_name="testrg",
     sql_virtual_machine_name="testvm",
-    storage_configuration_settings=azure_nextgen.sqlvirtualmachine.v20170301preview.StorageConfigurationSettingsArgs(
+    storage_configuration_settings=azure_nextgen.sqlvirtualmachine.StorageConfigurationSettingsArgs(
         disk_configuration_type="EXTEND",
-        sql_data_settings=azure_nextgen.sqlvirtualmachine.v20170301preview.SQLStorageSettingsArgs(
+        sql_data_settings=azure_nextgen.sqlvirtualmachine.SQLStorageSettingsArgs(
             luns=[2],
         ),
     ),
@@ -196,7 +197,7 @@ sql_virtual_machine = azure_nextgen.sqlvirtualmachine.v20170301preview.SqlVirtua
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const sqlVirtualMachine = new azure_nextgen.sqlvirtualmachine.v20170301preview.SqlVirtualMachine("sqlVirtualMachine", {
+const sqlVirtualMachine = new azure_nextgen.sqlvirtualmachine.SqlVirtualMachine("sqlVirtualMachine", {
     location: "northeurope",
     resourceGroupName: "testrg",
     sqlVirtualMachineName: "testvm",
@@ -223,15 +224,15 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var sqlVirtualMachine = new AzureNextGen.SqlVirtualMachine.V20170301Preview.SqlVirtualMachine("sqlVirtualMachine", new AzureNextGen.SqlVirtualMachine.V20170301Preview.SqlVirtualMachineArgs
+        var sqlVirtualMachine = new AzureNextGen.SqlVirtualMachine..SqlVirtualMachine("sqlVirtualMachine", new AzureNextGen.SqlVirtualMachine..SqlVirtualMachineArgs
         {
             Location = "northeurope",
             ResourceGroupName = "testrg",
             SqlVirtualMachineName = "testvm",
-            StorageConfigurationSettings = new AzureNextGen.SqlVirtualMachine.V20170301Preview.Inputs.StorageConfigurationSettingsArgs
+            StorageConfigurationSettings = new AzureNextGen.SqlVirtualMachine..Inputs.StorageConfigurationSettingsArgs
             {
                 DiskConfigurationType = "NEW",
-                SqlDataSettings = new AzureNextGen.SqlVirtualMachine.V20170301Preview.Inputs.SQLStorageSettingsArgs
+                SqlDataSettings = new AzureNextGen.SqlVirtualMachine..Inputs.SQLStorageSettingsArgs
                 {
                     DefaultFilePath = "F:\\folderpath\\",
                     Luns = 
@@ -239,7 +240,7 @@ class MyStack : Stack
                         0,
                     },
                 },
-                SqlLogSettings = new AzureNextGen.SqlVirtualMachine.V20170301Preview.Inputs.SQLStorageSettingsArgs
+                SqlLogSettings = new AzureNextGen.SqlVirtualMachine..Inputs.SQLStorageSettingsArgs
                 {
                     DefaultFilePath = "G:\\folderpath\\",
                     Luns = 
@@ -247,7 +248,7 @@ class MyStack : Stack
                         1,
                     },
                 },
-                SqlTempDbSettings = new AzureNextGen.SqlVirtualMachine.V20170301Preview.Inputs.SQLStorageSettingsArgs
+                SqlTempDbSettings = new AzureNextGen.SqlVirtualMachine..Inputs.SQLStorageSettingsArgs
                 {
                     DefaultFilePath = "D:\\TEMP",
                 },
@@ -273,21 +274,21 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-sql_virtual_machine = azure_nextgen.sqlvirtualmachine.v20170301preview.SqlVirtualMachine("sqlVirtualMachine",
+sql_virtual_machine = azure_nextgen.sqlvirtualmachine.SqlVirtualMachine("sqlVirtualMachine",
     location="northeurope",
     resource_group_name="testrg",
     sql_virtual_machine_name="testvm",
-    storage_configuration_settings=azure_nextgen.sqlvirtualmachine.v20170301preview.StorageConfigurationSettingsArgs(
+    storage_configuration_settings=azure_nextgen.sqlvirtualmachine.StorageConfigurationSettingsArgs(
         disk_configuration_type="NEW",
-        sql_data_settings=azure_nextgen.sqlvirtualmachine.v20170301preview.SQLStorageSettingsArgs(
+        sql_data_settings=azure_nextgen.sqlvirtualmachine.SQLStorageSettingsArgs(
             default_file_path="F:\\folderpath\\",
             luns=[0],
         ),
-        sql_log_settings=azure_nextgen.sqlvirtualmachine.v20170301preview.SQLStorageSettingsArgs(
+        sql_log_settings=azure_nextgen.sqlvirtualmachine.SQLStorageSettingsArgs(
             default_file_path="G:\\folderpath\\",
             luns=[1],
         ),
-        sql_temp_db_settings=azure_nextgen.sqlvirtualmachine.v20170301preview.SQLStorageSettingsArgs(
+        sql_temp_db_settings=azure_nextgen.sqlvirtualmachine.SQLStorageSettingsArgs(
             default_file_path="D:\\TEMP",
         ),
         storage_workload_type="OLTP",
@@ -304,7 +305,7 @@ sql_virtual_machine = azure_nextgen.sqlvirtualmachine.v20170301preview.SqlVirtua
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const sqlVirtualMachine = new azure_nextgen.sqlvirtualmachine.v20170301preview.SqlVirtualMachine("sqlVirtualMachine", {
+const sqlVirtualMachine = new azure_nextgen.sqlvirtualmachine.SqlVirtualMachine("sqlVirtualMachine", {
     location: "northeurope",
     resourceGroupName: "testrg",
     sqlVirtualMachineName: "testvm",
@@ -340,9 +341,9 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var sqlVirtualMachine = new AzureNextGen.SqlVirtualMachine.V20170301Preview.SqlVirtualMachine("sqlVirtualMachine", new AzureNextGen.SqlVirtualMachine.V20170301Preview.SqlVirtualMachineArgs
+        var sqlVirtualMachine = new AzureNextGen.SqlVirtualMachine..SqlVirtualMachine("sqlVirtualMachine", new AzureNextGen.SqlVirtualMachine..SqlVirtualMachineArgs
         {
-            AutoBackupSettings = new AzureNextGen.SqlVirtualMachine.V20170301Preview.Inputs.AutoBackupSettingsArgs
+            AutoBackupSettings = new AzureNextGen.SqlVirtualMachine..Inputs.AutoBackupSettingsArgs
             {
                 BackupScheduleType = "Manual",
                 BackupSystemDbs = true,
@@ -357,39 +358,39 @@ class MyStack : Stack
                 StorageAccessKey = "<primary storage access key>",
                 StorageAccountUrl = "https://teststorage.blob.core.windows.net/",
             },
-            AutoPatchingSettings = new AzureNextGen.SqlVirtualMachine.V20170301Preview.Inputs.AutoPatchingSettingsArgs
+            AutoPatchingSettings = new AzureNextGen.SqlVirtualMachine..Inputs.AutoPatchingSettingsArgs
             {
                 DayOfWeek = "Sunday",
                 Enable = true,
                 MaintenanceWindowDuration = 60,
                 MaintenanceWindowStartingHour = 2,
             },
-            KeyVaultCredentialSettings = new AzureNextGen.SqlVirtualMachine.V20170301Preview.Inputs.KeyVaultCredentialSettingsArgs
+            KeyVaultCredentialSettings = new AzureNextGen.SqlVirtualMachine..Inputs.KeyVaultCredentialSettingsArgs
             {
                 Enable = false,
             },
             Location = "northeurope",
             ResourceGroupName = "testrg",
-            ServerConfigurationsManagementSettings = new AzureNextGen.SqlVirtualMachine.V20170301Preview.Inputs.ServerConfigurationsManagementSettingsArgs
+            ServerConfigurationsManagementSettings = new AzureNextGen.SqlVirtualMachine..Inputs.ServerConfigurationsManagementSettingsArgs
             {
-                AdditionalFeaturesServerConfigurations = new AzureNextGen.SqlVirtualMachine.V20170301Preview.Inputs.AdditionalFeaturesServerConfigurationsArgs
+                AdditionalFeaturesServerConfigurations = new AzureNextGen.SqlVirtualMachine..Inputs.AdditionalFeaturesServerConfigurationsArgs
                 {
                     IsRServicesEnabled = false,
                 },
-                SqlConnectivityUpdateSettings = new AzureNextGen.SqlVirtualMachine.V20170301Preview.Inputs.SqlConnectivityUpdateSettingsArgs
+                SqlConnectivityUpdateSettings = new AzureNextGen.SqlVirtualMachine..Inputs.SqlConnectivityUpdateSettingsArgs
                 {
                     ConnectivityType = "PRIVATE",
                     Port = 1433,
                     SqlAuthUpdatePassword = "<password>",
                     SqlAuthUpdateUserName = "sqllogin",
                 },
-                SqlStorageUpdateSettings = new AzureNextGen.SqlVirtualMachine.V20170301Preview.Inputs.SqlStorageUpdateSettingsArgs
+                SqlStorageUpdateSettings = new AzureNextGen.SqlVirtualMachine..Inputs.SqlStorageUpdateSettingsArgs
                 {
                     DiskConfigurationType = "NEW",
                     DiskCount = 1,
                     StartingDeviceId = 2,
                 },
-                SqlWorkloadTypeUpdateSettings = new AzureNextGen.SqlVirtualMachine.V20170301Preview.Inputs.SqlWorkloadTypeUpdateSettingsArgs
+                SqlWorkloadTypeUpdateSettings = new AzureNextGen.SqlVirtualMachine..Inputs.SqlWorkloadTypeUpdateSettingsArgs
                 {
                     SqlWorkloadType = "OLTP",
                 },
@@ -414,7 +415,7 @@ class MyStack : Stack
 package main
 
 import (
-	sqlvirtualmachine "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sqlvirtualmachine/v20170301preview"
+	sqlvirtualmachine "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sqlvirtualmachine"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -488,8 +489,8 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-sql_virtual_machine = azure_nextgen.sqlvirtualmachine.v20170301preview.SqlVirtualMachine("sqlVirtualMachine",
-    auto_backup_settings=azure_nextgen.sqlvirtualmachine.v20170301preview.AutoBackupSettingsArgs(
+sql_virtual_machine = azure_nextgen.sqlvirtualmachine.SqlVirtualMachine("sqlVirtualMachine",
+    auto_backup_settings=azure_nextgen.sqlvirtualmachine.AutoBackupSettingsArgs(
         backup_schedule_type="Manual",
         backup_system_dbs=True,
         enable=True,
@@ -503,33 +504,33 @@ sql_virtual_machine = azure_nextgen.sqlvirtualmachine.v20170301preview.SqlVirtua
         storage_access_key="<primary storage access key>",
         storage_account_url="https://teststorage.blob.core.windows.net/",
     ),
-    auto_patching_settings=azure_nextgen.sqlvirtualmachine.v20170301preview.AutoPatchingSettingsArgs(
+    auto_patching_settings=azure_nextgen.sqlvirtualmachine.AutoPatchingSettingsArgs(
         day_of_week="Sunday",
         enable=True,
         maintenance_window_duration=60,
         maintenance_window_starting_hour=2,
     ),
-    key_vault_credential_settings=azure_nextgen.sqlvirtualmachine.v20170301preview.KeyVaultCredentialSettingsArgs(
+    key_vault_credential_settings=azure_nextgen.sqlvirtualmachine.KeyVaultCredentialSettingsArgs(
         enable=False,
     ),
     location="northeurope",
     resource_group_name="testrg",
-    server_configurations_management_settings=azure_nextgen.sqlvirtualmachine.v20170301preview.ServerConfigurationsManagementSettingsArgs(
-        additional_features_server_configurations=azure_nextgen.sqlvirtualmachine.v20170301preview.AdditionalFeaturesServerConfigurationsArgs(
+    server_configurations_management_settings=azure_nextgen.sqlvirtualmachine.ServerConfigurationsManagementSettingsArgs(
+        additional_features_server_configurations=azure_nextgen.sqlvirtualmachine.AdditionalFeaturesServerConfigurationsArgs(
             is_r_services_enabled=False,
         ),
-        sql_connectivity_update_settings=azure_nextgen.sqlvirtualmachine.v20170301preview.SqlConnectivityUpdateSettingsArgs(
+        sql_connectivity_update_settings=azure_nextgen.sqlvirtualmachine.SqlConnectivityUpdateSettingsArgs(
             connectivity_type="PRIVATE",
             port=1433,
             sql_auth_update_password="<password>",
             sql_auth_update_user_name="sqllogin",
         ),
-        sql_storage_update_settings=azure_nextgen.sqlvirtualmachine.v20170301preview.SqlStorageUpdateSettingsArgs(
+        sql_storage_update_settings=azure_nextgen.sqlvirtualmachine.SqlStorageUpdateSettingsArgs(
             disk_configuration_type="NEW",
             disk_count=1,
             starting_device_id=2,
         ),
-        sql_workload_type_update_settings=azure_nextgen.sqlvirtualmachine.v20170301preview.SqlWorkloadTypeUpdateSettingsArgs(
+        sql_workload_type_update_settings=azure_nextgen.sqlvirtualmachine.SqlWorkloadTypeUpdateSettingsArgs(
             sql_workload_type="OLTP",
         ),
     ),
@@ -549,7 +550,7 @@ sql_virtual_machine = azure_nextgen.sqlvirtualmachine.v20170301preview.SqlVirtua
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const sqlVirtualMachine = new azure_nextgen.sqlvirtualmachine.v20170301preview.SqlVirtualMachine("sqlVirtualMachine", {
+const sqlVirtualMachine = new azure_nextgen.sqlvirtualmachine.SqlVirtualMachine("sqlVirtualMachine", {
     autoBackupSettings: {
         backupScheduleType: "Manual",
         backupSystemDbs: true,
@@ -615,7 +616,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var sqlVirtualMachine = new AzureNextGen.SqlVirtualMachine.V20170301Preview.SqlVirtualMachine("sqlVirtualMachine", new AzureNextGen.SqlVirtualMachine.V20170301Preview.SqlVirtualMachineArgs
+        var sqlVirtualMachine = new AzureNextGen.SqlVirtualMachine..SqlVirtualMachine("sqlVirtualMachine", new AzureNextGen.SqlVirtualMachine..SqlVirtualMachineArgs
         {
             Location = "northeurope",
             ResourceGroupName = "testrg",
@@ -636,7 +637,7 @@ class MyStack : Stack
 package main
 
 import (
-	sqlvirtualmachine "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sqlvirtualmachine/v20170301preview"
+	sqlvirtualmachine "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sqlvirtualmachine"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -665,7 +666,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-sql_virtual_machine = azure_nextgen.sqlvirtualmachine.v20170301preview.SqlVirtualMachine("sqlVirtualMachine",
+sql_virtual_machine = azure_nextgen.sqlvirtualmachine.SqlVirtualMachine("sqlVirtualMachine",
     location="northeurope",
     resource_group_name="testrg",
     sql_virtual_machine_name="testvm",
@@ -681,7 +682,7 @@ sql_virtual_machine = azure_nextgen.sqlvirtualmachine.v20170301preview.SqlVirtua
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const sqlVirtualMachine = new azure_nextgen.sqlvirtualmachine.v20170301preview.SqlVirtualMachine("sqlVirtualMachine", {
+const sqlVirtualMachine = new azure_nextgen.sqlvirtualmachine.SqlVirtualMachine("sqlVirtualMachine", {
     location: "northeurope",
     resourceGroupName: "testrg",
     sqlVirtualMachineName: "testvm",
@@ -908,7 +909,7 @@ The SqlVirtualMachine resource accepts the following [input]({{< relref "/docs/i
 <a href="#autobackupsettings_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Backup<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autobackupsettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql<wbr>Virtual<wbr>Machine.<wbr>Inputs.<wbr>Auto<wbr>Backup<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#autobackupsettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql<wbr>Virtual<wbr>Machine..<wbr>Inputs.<wbr>Auto<wbr>Backup<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Auto backup settings for SQL Server.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -917,7 +918,7 @@ The SqlVirtualMachine resource accepts the following [input]({{< relref "/docs/i
 <a href="#autopatchingsettings_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Patching<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autopatchingsettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql<wbr>Virtual<wbr>Machine.<wbr>Inputs.<wbr>Auto<wbr>Patching<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#autopatchingsettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql<wbr>Virtual<wbr>Machine..<wbr>Inputs.<wbr>Auto<wbr>Patching<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Auto patching settings for applying critical security updates to SQL virtual machine.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -926,7 +927,7 @@ The SqlVirtualMachine resource accepts the following [input]({{< relref "/docs/i
 <a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidentity">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql<wbr>Virtual<wbr>Machine.<wbr>Inputs.<wbr>Resource<wbr>Identity<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourceidentity">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql<wbr>Virtual<wbr>Machine..<wbr>Inputs.<wbr>Resource<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Azure Active Directory identity of the server.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -935,7 +936,7 @@ The SqlVirtualMachine resource accepts the following [input]({{< relref "/docs/i
 <a href="#keyvaultcredentialsettings_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Credential<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultcredentialsettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql<wbr>Virtual<wbr>Machine.<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>Credential<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#keyvaultcredentialsettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql<wbr>Virtual<wbr>Machine..<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>Credential<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Key vault credential settings.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -944,7 +945,7 @@ The SqlVirtualMachine resource accepts the following [input]({{< relref "/docs/i
 <a href="#serverconfigurationsmanagementsettings_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>Configurations<wbr>Management<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serverconfigurationsmanagementsettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql<wbr>Virtual<wbr>Machine.<wbr>Inputs.<wbr>Server<wbr>Configurations<wbr>Management<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#serverconfigurationsmanagementsettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql<wbr>Virtual<wbr>Machine..<wbr>Inputs.<wbr>Server<wbr>Configurations<wbr>Management<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}SQL Server configuration management settings.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -962,7 +963,7 @@ The SqlVirtualMachine resource accepts the following [input]({{< relref "/docs/i
 <a href="#sqlimagesku_csharp" style="color: inherit; text-decoration: inherit;">Sql<wbr>Image<wbr>Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#sqlimagesku">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql<wbr>Virtual<wbr>Machine.<wbr>Sql<wbr>Image<wbr>Sku</a></span>
+        <span class="property-type">string | <a href="#sqlimagesku">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql<wbr>Virtual<wbr>Machine..<wbr>Sql<wbr>Image<wbr>Sku</a></span>
     </dt>
     <dd>{{% md %}}SQL Server edition type.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -971,7 +972,7 @@ The SqlVirtualMachine resource accepts the following [input]({{< relref "/docs/i
 <a href="#sqlmanagement_csharp" style="color: inherit; text-decoration: inherit;">Sql<wbr>Management</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#sqlmanagementmode">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql<wbr>Virtual<wbr>Machine.<wbr>Sql<wbr>Management<wbr>Mode</a></span>
+        <span class="property-type">string | <a href="#sqlmanagementmode">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql<wbr>Virtual<wbr>Machine..<wbr>Sql<wbr>Management<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}SQL Server Management type.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -980,7 +981,7 @@ The SqlVirtualMachine resource accepts the following [input]({{< relref "/docs/i
 <a href="#sqlserverlicensetype_csharp" style="color: inherit; text-decoration: inherit;">Sql<wbr>Server<wbr>License<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#sqlserverlicensetype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql<wbr>Virtual<wbr>Machine.<wbr>Sql<wbr>Server<wbr>License<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#sqlserverlicensetype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql<wbr>Virtual<wbr>Machine..<wbr>Sql<wbr>Server<wbr>License<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}SQL Server license type.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -998,7 +999,7 @@ The SqlVirtualMachine resource accepts the following [input]({{< relref "/docs/i
 <a href="#storageconfigurationsettings_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Configuration<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageconfigurationsettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql<wbr>Virtual<wbr>Machine.<wbr>Inputs.<wbr>Storage<wbr>Configuration<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#storageconfigurationsettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql<wbr>Virtual<wbr>Machine..<wbr>Inputs.<wbr>Storage<wbr>Configuration<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Storage Configuration Settings.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1025,7 +1026,7 @@ The SqlVirtualMachine resource accepts the following [input]({{< relref "/docs/i
 <a href="#wsfcdomaincredentials_csharp" style="color: inherit; text-decoration: inherit;">Wsfc<wbr>Domain<wbr>Credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#wsfcdomaincredentials">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql<wbr>Virtual<wbr>Machine.<wbr>Inputs.<wbr>Wsfc<wbr>Domain<wbr>Credentials<wbr>Args</a></span>
+        <span class="property-type"><a href="#wsfcdomaincredentials">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql<wbr>Virtual<wbr>Machine..<wbr>Inputs.<wbr>Wsfc<wbr>Domain<wbr>Credentials<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Domain credentials for setting up Windows Server Failover Cluster for SQL availability group.{{% /md %}}</dd>
 </dl>
@@ -1828,7 +1829,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupscheduletype_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Schedule<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#backupscheduletype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql<wbr>Virtual<wbr>Machine.<wbr>Backup<wbr>Schedule<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#backupscheduletype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql<wbr>Virtual<wbr>Machine..<wbr>Backup<wbr>Schedule<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Backup schedule type.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1864,7 +1865,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fullbackupfrequency_csharp" style="color: inherit; text-decoration: inherit;">Full<wbr>Backup<wbr>Frequency</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#fullbackupfrequencytype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql<wbr>Virtual<wbr>Machine.<wbr>Full<wbr>Backup<wbr>Frequency<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#fullbackupfrequencytype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql<wbr>Virtual<wbr>Machine..<wbr>Full<wbr>Backup<wbr>Frequency<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Frequency of full backups. In both cases, full backups begin during the next scheduled time window.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2744,7 +2745,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dayofweek_csharp" style="color: inherit; text-decoration: inherit;">Day<wbr>Of<wbr>Week</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dayofweek">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql<wbr>Virtual<wbr>Machine.<wbr>Day<wbr>Of<wbr>Week</a></span>
+        <span class="property-type"><a href="#dayofweek">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql<wbr>Virtual<wbr>Machine..<wbr>Day<wbr>Of<wbr>Week</a></span>
     </dt>
     <dd>{{% md %}}Day of week to apply the patch on.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3772,7 +3773,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#identitytype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql<wbr>Virtual<wbr>Machine.<wbr>Identity<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#identitytype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql<wbr>Virtual<wbr>Machine..<wbr>Identity<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The identity type. Set this to 'SystemAssigned' in order to automatically create and assign an Azure Active Directory principal for the resource.{{% /md %}}</dd>
 </dl>
@@ -4164,7 +4165,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#additionalfeaturesserverconfigurations_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Features<wbr>Server<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalfeaturesserverconfigurations">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql<wbr>Virtual<wbr>Machine.<wbr>Inputs.<wbr>Additional<wbr>Features<wbr>Server<wbr>Configurations<wbr>Args</a></span>
+        <span class="property-type"><a href="#additionalfeaturesserverconfigurations">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql<wbr>Virtual<wbr>Machine..<wbr>Inputs.<wbr>Additional<wbr>Features<wbr>Server<wbr>Configurations<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Additional SQL feature settings.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4173,7 +4174,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sqlconnectivityupdatesettings_csharp" style="color: inherit; text-decoration: inherit;">Sql<wbr>Connectivity<wbr>Update<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectivityupdatesettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql<wbr>Virtual<wbr>Machine.<wbr>Inputs.<wbr>Sql<wbr>Connectivity<wbr>Update<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlconnectivityupdatesettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql<wbr>Virtual<wbr>Machine..<wbr>Inputs.<wbr>Sql<wbr>Connectivity<wbr>Update<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}SQL connectivity type settings.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4182,7 +4183,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sqlstorageupdatesettings_csharp" style="color: inherit; text-decoration: inherit;">Sql<wbr>Storage<wbr>Update<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlstorageupdatesettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql<wbr>Virtual<wbr>Machine.<wbr>Inputs.<wbr>Sql<wbr>Storage<wbr>Update<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlstorageupdatesettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql<wbr>Virtual<wbr>Machine..<wbr>Inputs.<wbr>Sql<wbr>Storage<wbr>Update<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}SQL storage update settings.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4191,7 +4192,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sqlworkloadtypeupdatesettings_csharp" style="color: inherit; text-decoration: inherit;">Sql<wbr>Workload<wbr>Type<wbr>Update<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlworkloadtypeupdatesettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql<wbr>Virtual<wbr>Machine.<wbr>Inputs.<wbr>Sql<wbr>Workload<wbr>Type<wbr>Update<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlworkloadtypeupdatesettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql<wbr>Virtual<wbr>Machine..<wbr>Inputs.<wbr>Sql<wbr>Workload<wbr>Type<wbr>Update<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}SQL workload type settings.{{% /md %}}</dd>
 </dl>
@@ -4334,7 +4335,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#additionalfeaturesserverconfigurations_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Features<wbr>Server<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalfeaturesserverconfigurationsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql<wbr>Virtual<wbr>Machine.<wbr>Inputs.<wbr>Additional<wbr>Features<wbr>Server<wbr>Configurations<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#additionalfeaturesserverconfigurationsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql<wbr>Virtual<wbr>Machine..<wbr>Inputs.<wbr>Additional<wbr>Features<wbr>Server<wbr>Configurations<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Additional SQL feature settings.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4343,7 +4344,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sqlconnectivityupdatesettings_csharp" style="color: inherit; text-decoration: inherit;">Sql<wbr>Connectivity<wbr>Update<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectivityupdatesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql<wbr>Virtual<wbr>Machine.<wbr>Inputs.<wbr>Sql<wbr>Connectivity<wbr>Update<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlconnectivityupdatesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql<wbr>Virtual<wbr>Machine..<wbr>Inputs.<wbr>Sql<wbr>Connectivity<wbr>Update<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}SQL connectivity type settings.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4352,7 +4353,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sqlstorageupdatesettings_csharp" style="color: inherit; text-decoration: inherit;">Sql<wbr>Storage<wbr>Update<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlstorageupdatesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql<wbr>Virtual<wbr>Machine.<wbr>Inputs.<wbr>Sql<wbr>Storage<wbr>Update<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlstorageupdatesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql<wbr>Virtual<wbr>Machine..<wbr>Inputs.<wbr>Sql<wbr>Storage<wbr>Update<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}SQL storage update settings.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4361,7 +4362,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sqlworkloadtypeupdatesettings_csharp" style="color: inherit; text-decoration: inherit;">Sql<wbr>Workload<wbr>Type<wbr>Update<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlworkloadtypeupdatesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql<wbr>Virtual<wbr>Machine.<wbr>Inputs.<wbr>Sql<wbr>Workload<wbr>Type<wbr>Update<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlworkloadtypeupdatesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql<wbr>Virtual<wbr>Machine..<wbr>Inputs.<wbr>Sql<wbr>Workload<wbr>Type<wbr>Update<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}SQL workload type settings.{{% /md %}}</dd>
 </dl>
@@ -4504,7 +4505,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#connectivitytype_csharp" style="color: inherit; text-decoration: inherit;">Connectivity<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#connectivitytype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql<wbr>Virtual<wbr>Machine.<wbr>Connectivity<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#connectivitytype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql<wbr>Virtual<wbr>Machine..<wbr>Connectivity<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}SQL Server connectivity option.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4998,7 +4999,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#diskconfigurationtype_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Configuration<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#diskconfigurationtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql<wbr>Virtual<wbr>Machine.<wbr>Disk<wbr>Configuration<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#diskconfigurationtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql<wbr>Virtual<wbr>Machine..<wbr>Disk<wbr>Configuration<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Disk configuration to apply to SQL Server.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -5312,7 +5313,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sqlworkloadtype_csharp" style="color: inherit; text-decoration: inherit;">Sql<wbr>Workload<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#sqlworkloadtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql<wbr>Virtual<wbr>Machine.<wbr>Sql<wbr>Workload<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#sqlworkloadtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql<wbr>Virtual<wbr>Machine..<wbr>Sql<wbr>Workload<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}SQL Server workload type.{{% /md %}}</dd>
 </dl>
@@ -5436,7 +5437,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#diskconfigurationtype_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Configuration<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#diskconfigurationtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql<wbr>Virtual<wbr>Machine.<wbr>Disk<wbr>Configuration<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#diskconfigurationtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql<wbr>Virtual<wbr>Machine..<wbr>Disk<wbr>Configuration<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Disk configuration to apply to SQL Server.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -5445,7 +5446,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sqldatasettings_csharp" style="color: inherit; text-decoration: inherit;">Sql<wbr>Data<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlstoragesettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql<wbr>Virtual<wbr>Machine.<wbr>Inputs.<wbr>SQLStorage<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlstoragesettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql<wbr>Virtual<wbr>Machine..<wbr>Inputs.<wbr>SQLStorage<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}SQL Server Data Storage Settings.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -5454,7 +5455,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sqllogsettings_csharp" style="color: inherit; text-decoration: inherit;">Sql<wbr>Log<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlstoragesettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql<wbr>Virtual<wbr>Machine.<wbr>Inputs.<wbr>SQLStorage<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlstoragesettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql<wbr>Virtual<wbr>Machine..<wbr>Inputs.<wbr>SQLStorage<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}SQL Server Log Storage Settings.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -5463,7 +5464,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sqltempdbsettings_csharp" style="color: inherit; text-decoration: inherit;">Sql<wbr>Temp<wbr>Db<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlstoragesettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql<wbr>Virtual<wbr>Machine.<wbr>Inputs.<wbr>SQLStorage<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlstoragesettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql<wbr>Virtual<wbr>Machine..<wbr>Inputs.<wbr>SQLStorage<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}SQL Server TempDb Storage Settings.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -5472,7 +5473,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storageworkloadtype_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Workload<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#storageworkloadtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql<wbr>Virtual<wbr>Machine.<wbr>Storage<wbr>Workload<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#storageworkloadtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql<wbr>Virtual<wbr>Machine..<wbr>Storage<wbr>Workload<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Storage workload type.{{% /md %}}</dd>
 </dl>
@@ -5651,7 +5652,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sqldatasettings_csharp" style="color: inherit; text-decoration: inherit;">Sql<wbr>Data<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlstoragesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql<wbr>Virtual<wbr>Machine.<wbr>Inputs.<wbr>SQLStorage<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlstoragesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql<wbr>Virtual<wbr>Machine..<wbr>Inputs.<wbr>SQLStorage<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}SQL Server Data Storage Settings.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -5660,7 +5661,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sqllogsettings_csharp" style="color: inherit; text-decoration: inherit;">Sql<wbr>Log<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlstoragesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql<wbr>Virtual<wbr>Machine.<wbr>Inputs.<wbr>SQLStorage<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlstoragesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql<wbr>Virtual<wbr>Machine..<wbr>Inputs.<wbr>SQLStorage<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}SQL Server Log Storage Settings.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -5669,7 +5670,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sqltempdbsettings_csharp" style="color: inherit; text-decoration: inherit;">Sql<wbr>Temp<wbr>Db<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlstoragesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql<wbr>Virtual<wbr>Machine.<wbr>Inputs.<wbr>SQLStorage<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlstoragesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql<wbr>Virtual<wbr>Machine..<wbr>Inputs.<wbr>SQLStorage<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}SQL Server TempDb Storage Settings.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -6156,7 +6157,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:sqlvirtualmachine/v20170301preview:SqlVirtualMachine testvm /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg/providers/Microsoft.SqlVirtualMachine/sqlVirtualMachines/testvm 
+$ pulumi import azure-nextgen:sqlvirtualmachine:SqlVirtualMachine testvm /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg/providers/Microsoft.SqlVirtualMachine/sqlVirtualMachines/testvm 
 ```
 
 

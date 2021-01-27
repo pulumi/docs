@@ -269,7 +269,7 @@ The following output properties are available:
 <a href="#folder_csharp" style="color: inherit; text-decoration: inherit;">Folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelineresponsefolder">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Pipeline<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#pipelineresponsefolder">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Outputs.<wbr>Pipeline<wbr>Response<wbr>Folder</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Pipeline is in. If not specified, Pipeline will appear at the root level.{{% /md %}}</dd>
     <dt class="property-"
@@ -278,7 +278,7 @@ The following output properties are available:
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Outputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
     </dt>
     <dd>{{% md %}}List of parameters for pipeline.{{% /md %}}</dd>
     <dt class="property-"
@@ -296,7 +296,7 @@ The following output properties are available:
 <a href="#variables_csharp" style="color: inherit; text-decoration: inherit;">Variables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Variable<wbr>Specification<wbr>Response&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Outputs.<wbr>Variable<wbr>Specification<wbr>Response&gt;</span>
     </dt>
     <dd>{{% md %}}List of variables for pipeline.{{% /md %}}</dd>
 </dl>
@@ -1083,7 +1083,7 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1330,7 +1330,7 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1366,7 +1366,7 @@ The following output properties are available:
 <a href="#redshiftunloadsettings_csharp" style="color: inherit; text-decoration: inherit;">Redshift<wbr>Unload<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#redshiftunloadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Redshift<wbr>Unload<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#redshiftunloadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Redshift<wbr>Unload<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Amazon S3 settings needed for the interim Amazon S3 when copying from Amazon Redshift with unload. With this, data from Amazon Redshift source will be unloaded into S3 first and then copied into the targeted sink from the interim S3.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2049,7 +2049,7 @@ The following output properties are available:
 <a href="#dependson_csharp" style="color: inherit; text-decoration: inherit;">Depends<wbr>On</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitydependencyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Activity<wbr>Dependency<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#activitydependencyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Activity<wbr>Dependency<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Activity depends on condition.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2067,7 +2067,7 @@ The following output properties are available:
 <a href="#userproperties_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpropertyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>User<wbr>Property<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#userpropertyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>User<wbr>Property<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Activity user properties.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2287,7 +2287,7 @@ The following output properties are available:
 <a href="#formatsettings_csharp" style="color: inherit; text-decoration: inherit;">Format<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#avrowritesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Avro<wbr>Write<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#avrowritesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Avro<wbr>Write<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Avro format settings.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2323,7 +2323,7 @@ The following output properties are available:
 <a href="#storesettings_csharp" style="color: inherit; text-decoration: inherit;">Store<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureblobfswritesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>FSWrite<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azureblobstoragewritesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Write<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azuredatalakestorewritesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Write<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azurefilestoragewritesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>File<wbr>Storage<wbr>Write<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#fileserverwritesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>File<wbr>Server<wbr>Write<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#sftpwritesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sftp<wbr>Write<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azureblobfswritesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>FSWrite<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azureblobstoragewritesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Write<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azuredatalakestorewritesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Write<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azurefilestoragewritesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Azure<wbr>File<wbr>Storage<wbr>Write<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#fileserverwritesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>File<wbr>Server<wbr>Write<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#sftpwritesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Sftp<wbr>Write<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Avro store settings.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2570,7 +2570,7 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2606,7 +2606,7 @@ The following output properties are available:
 <a href="#storesettings_csharp" style="color: inherit; text-decoration: inherit;">Store<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amazons3readsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>S3Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azureblobfsreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>FSRead<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azureblobstoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azuredatalakestorereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azurefilestoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>File<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#fileserverreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>File<wbr>Server<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#ftpreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Ftp<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#googlecloudstoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Google<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#hdfsreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Hdfs<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#httpreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Http<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#sftpreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sftp<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#amazons3readsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Amazon<wbr>S3Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azureblobfsreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>FSRead<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azureblobstoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azuredatalakestorereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azurefilestoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Azure<wbr>File<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#fileserverreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>File<wbr>Server<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#ftpreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Ftp<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#googlecloudstoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Google<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#hdfsreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Hdfs<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#httpreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Http<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#sftpreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Sftp<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Avro store settings.{{% /md %}}</dd>
 </dl>
@@ -4573,7 +4573,7 @@ The following output properties are available:
 <a href="#dependson_csharp" style="color: inherit; text-decoration: inherit;">Depends<wbr>On</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitydependencyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Activity<wbr>Dependency<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#activitydependencyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Activity<wbr>Dependency<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Activity depends on condition.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4591,7 +4591,7 @@ The following output properties are available:
 <a href="#linkedservicename_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4600,7 +4600,7 @@ The following output properties are available:
 <a href="#policy_csharp" style="color: inherit; text-decoration: inherit;">Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitypolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Activity<wbr>Policy<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#activitypolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Activity<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Activity policy.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4609,7 +4609,7 @@ The following output properties are available:
 <a href="#userproperties_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpropertyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>User<wbr>Property<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#userpropertyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>User<wbr>Property<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Activity user properties.{{% /md %}}</dd>
 </dl>
@@ -5193,7 +5193,7 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd>
     <dt class="property-optional"
@@ -6733,7 +6733,7 @@ The following output properties are available:
 <a href="#importsettings_csharp" style="color: inherit; text-decoration: inherit;">Import<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azuredatabricksdeltalakeimportcommandresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Databricks<wbr>Delta<wbr>Lake<wbr>Import<wbr>Command<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azuredatabricksdeltalakeimportcommandresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Azure<wbr>Databricks<wbr>Delta<wbr>Lake<wbr>Import<wbr>Command<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Azure Databricks Delta Lake import settings.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -7016,7 +7016,7 @@ The following output properties are available:
 <a href="#exportsettings_csharp" style="color: inherit; text-decoration: inherit;">Export<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azuredatabricksdeltalakeexportcommandresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Databricks<wbr>Delta<wbr>Lake<wbr>Export<wbr>Command<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azuredatabricksdeltalakeexportcommandresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Azure<wbr>Databricks<wbr>Delta<wbr>Lake<wbr>Export<wbr>Command<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Azure Databricks Delta Lake export settings.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -7793,7 +7793,7 @@ The following output properties are available:
 <a href="#dependson_csharp" style="color: inherit; text-decoration: inherit;">Depends<wbr>On</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitydependencyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Activity<wbr>Dependency<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#activitydependencyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Activity<wbr>Dependency<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Activity depends on condition.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -7820,7 +7820,7 @@ The following output properties are available:
 <a href="#linkedservicename_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -7829,7 +7829,7 @@ The following output properties are available:
 <a href="#policy_csharp" style="color: inherit; text-decoration: inherit;">Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitypolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Activity<wbr>Policy<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#activitypolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Activity<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Activity policy.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -7838,7 +7838,7 @@ The following output properties are available:
 <a href="#userproperties_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpropertyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>User<wbr>Property<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#userpropertyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>User<wbr>Property<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Activity user properties.{{% /md %}}</dd>
 </dl>
@@ -8157,7 +8157,7 @@ The following output properties are available:
 <a href="#store_csharp" style="color: inherit; text-decoration: inherit;">Store</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Azure Key Vault linked service reference.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -8296,7 +8296,7 @@ The following output properties are available:
 <a href="#dependson_csharp" style="color: inherit; text-decoration: inherit;">Depends<wbr>On</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitydependencyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Activity<wbr>Dependency<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#activitydependencyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Activity<wbr>Dependency<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Activity depends on condition.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -8323,7 +8323,7 @@ The following output properties are available:
 <a href="#linkedservicename_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -8332,7 +8332,7 @@ The following output properties are available:
 <a href="#policy_csharp" style="color: inherit; text-decoration: inherit;">Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitypolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Activity<wbr>Policy<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#activitypolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Activity<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Activity policy.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -8341,7 +8341,7 @@ The following output properties are available:
 <a href="#userproperties_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpropertyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>User<wbr>Property<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#userpropertyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>User<wbr>Property<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Activity user properties.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -8350,7 +8350,7 @@ The following output properties are available:
 <a href="#webserviceinputs_csharp" style="color: inherit; text-decoration: inherit;">Web<wbr>Service<wbr>Inputs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>MLWeb<wbr>Service<wbr>File<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Azure<wbr>MLWeb<wbr>Service<wbr>File<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}Key,Value pairs, mapping the names of Azure ML endpoint's Web Service Inputs to AzureMLWebServiceFile objects specifying the input Blob locations.. This information will be passed in the WebServiceInputs property of the Azure ML batch execution request.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -8359,7 +8359,7 @@ The following output properties are available:
 <a href="#webserviceoutputs_csharp" style="color: inherit; text-decoration: inherit;">Web<wbr>Service<wbr>Outputs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>MLWeb<wbr>Service<wbr>File<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Azure<wbr>MLWeb<wbr>Service<wbr>File<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}Key,Value pairs, mapping the names of Azure ML endpoint's Web Service Outputs to AzureMLWebServiceFile objects specifying the output Blob locations. This information will be passed in the WebServiceOutputs property of the Azure ML batch execution request.{{% /md %}}</dd>
 </dl>
@@ -8669,7 +8669,7 @@ The following output properties are available:
 <a href="#dependson_csharp" style="color: inherit; text-decoration: inherit;">Depends<wbr>On</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitydependencyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Activity<wbr>Dependency<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#activitydependencyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Activity<wbr>Dependency<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Activity depends on condition.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -8696,7 +8696,7 @@ The following output properties are available:
 <a href="#linkedservicename_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -8723,7 +8723,7 @@ The following output properties are available:
 <a href="#policy_csharp" style="color: inherit; text-decoration: inherit;">Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitypolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Activity<wbr>Policy<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#activitypolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Activity<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Activity policy.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -8732,7 +8732,7 @@ The following output properties are available:
 <a href="#userproperties_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpropertyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>User<wbr>Property<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#userpropertyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>User<wbr>Property<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Activity user properties.{{% /md %}}</dd>
 </dl>
@@ -9087,7 +9087,7 @@ The following output properties are available:
 <a href="#trainedmodellinkedservicename_csharp" style="color: inherit; text-decoration: inherit;">Trained<wbr>Model<wbr>Linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Name of Azure Storage linked service holding the .ilearner file that will be uploaded by the update operation.{{% /md %}}</dd>
     <dt class="property-required"
@@ -9105,7 +9105,7 @@ The following output properties are available:
 <a href="#dependson_csharp" style="color: inherit; text-decoration: inherit;">Depends<wbr>On</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitydependencyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Activity<wbr>Dependency<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#activitydependencyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Activity<wbr>Dependency<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Activity depends on condition.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -9123,7 +9123,7 @@ The following output properties are available:
 <a href="#linkedservicename_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -9132,7 +9132,7 @@ The following output properties are available:
 <a href="#policy_csharp" style="color: inherit; text-decoration: inherit;">Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitypolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Activity<wbr>Policy<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#activitypolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Activity<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Activity policy.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -9141,7 +9141,7 @@ The following output properties are available:
 <a href="#userproperties_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpropertyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>User<wbr>Property<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#userpropertyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>User<wbr>Property<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Activity user properties.{{% /md %}}</dd>
 </dl>
@@ -9433,7 +9433,7 @@ The following output properties are available:
 <a href="#linkedservicename_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Reference to an Azure Storage LinkedService, where Azure ML WebService Input/Output file located.{{% /md %}}</dd>
 </dl>
@@ -9527,7 +9527,7 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd>
     <dt class="property-optional"
@@ -10021,7 +10021,7 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd>
     <dt class="property-optional"
@@ -10515,7 +10515,7 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd>
     <dt class="property-optional"
@@ -11274,7 +11274,7 @@ The following output properties are available:
 <a href="#storedprocedureparameters_csharp" style="color: inherit; text-decoration: inherit;">Stored<wbr>Procedure<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Stored<wbr>Procedure<wbr>Parameter<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Stored<wbr>Procedure<wbr>Parameter<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}SQL stored procedure parameters.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -11647,7 +11647,7 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd>
     <dt class="property-optional"
@@ -11674,7 +11674,7 @@ The following output properties are available:
 <a href="#partitionsettings_csharp" style="color: inherit; text-decoration: inherit;">Partition<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlpartitionsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sql<wbr>Partition<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlpartitionsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Sql<wbr>Partition<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The settings that will be leveraged for Sql source partitioning.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -11737,7 +11737,7 @@ The following output properties are available:
 <a href="#storedprocedureparameters_csharp" style="color: inherit; text-decoration: inherit;">Stored<wbr>Procedure<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Stored<wbr>Procedure<wbr>Parameter<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Stored<wbr>Procedure<wbr>Parameter<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}Value and type setting for stored procedure parameters. Example: "{Parameter1: {value: "1", type: "int"}}".{{% /md %}}</dd>
 </dl>
@@ -12429,7 +12429,7 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd>
     <dt class="property-optional"
@@ -12712,7 +12712,7 @@ The following output properties are available:
 <a href="#compressionproperties_csharp" style="color: inherit; text-decoration: inherit;">Compression<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#targzipreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Tar<wbr>GZip<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#tarreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Tar<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#zipdeflatereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Zip<wbr>Deflate<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#targzipreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Tar<wbr>GZip<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#tarreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Tar<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#zipdeflatereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Zip<wbr>Deflate<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Compression settings.{{% /md %}}</dd>
 </dl>
@@ -12806,7 +12806,7 @@ The following output properties are available:
 <a href="#storesettings_csharp" style="color: inherit; text-decoration: inherit;">Store<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureblobfswritesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>FSWrite<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azureblobstoragewritesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Write<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azuredatalakestorewritesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Write<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azurefilestoragewritesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>File<wbr>Storage<wbr>Write<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#fileserverwritesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>File<wbr>Server<wbr>Write<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#sftpwritesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sftp<wbr>Write<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azureblobfswritesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>FSWrite<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azureblobstoragewritesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Write<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azuredatalakestorewritesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Write<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azurefilestoragewritesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Azure<wbr>File<wbr>Storage<wbr>Write<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#fileserverwritesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>File<wbr>Server<wbr>Write<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#sftpwritesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Sftp<wbr>Write<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Binary store settings.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -13026,7 +13026,7 @@ The following output properties are available:
 <a href="#formatsettings_csharp" style="color: inherit; text-decoration: inherit;">Format<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#binaryreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Binary<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#binaryreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Binary<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Binary format settings.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -13062,7 +13062,7 @@ The following output properties are available:
 <a href="#storesettings_csharp" style="color: inherit; text-decoration: inherit;">Store<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amazons3readsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>S3Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azureblobfsreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>FSRead<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azureblobstoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azuredatalakestorereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azurefilestoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>File<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#fileserverreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>File<wbr>Server<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#ftpreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Ftp<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#googlecloudstoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Google<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#hdfsreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Hdfs<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#httpreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Http<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#sftpreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sftp<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#amazons3readsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Amazon<wbr>S3Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azureblobfsreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>FSRead<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azureblobstoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azuredatalakestorereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azurefilestoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Azure<wbr>File<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#fileserverreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>File<wbr>Server<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#ftpreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Ftp<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#googlecloudstoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Google<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#hdfsreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Hdfs<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#httpreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Http<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#sftpreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Sftp<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Binary store settings.{{% /md %}}</dd>
 </dl>
@@ -13839,7 +13839,7 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd>
     <dt class="property-optional"
@@ -14441,7 +14441,7 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd>
     <dt class="property-optional"
@@ -14652,7 +14652,7 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd>
     <dt class="property-optional"
@@ -14908,7 +14908,7 @@ The following output properties are available:
 <a href="#dependson_csharp" style="color: inherit; text-decoration: inherit;">Depends<wbr>On</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitydependencyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Activity<wbr>Dependency<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#activitydependencyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Activity<wbr>Dependency<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Activity depends on condition.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -14926,7 +14926,7 @@ The following output properties are available:
 <a href="#userproperties_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpropertyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>User<wbr>Property<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#userpropertyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>User<wbr>Property<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Activity user properties.{{% /md %}}</dd>
 </dl>
@@ -15186,7 +15186,7 @@ The following output properties are available:
 <a href="#sink_csharp" style="color: inherit; text-decoration: inherit;">Sink</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#avrosinkresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Avro<wbr>Sink<wbr>Response<wbr>Args</a> | <a href="#azureblobfssinkresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>FSSink<wbr>Response<wbr>Args</a> | <a href="#azuredataexplorersinkresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Data<wbr>Explorer<wbr>Sink<wbr>Response<wbr>Args</a> | <a href="#azuredatalakestoresinkresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Sink<wbr>Response<wbr>Args</a> | <a href="#azuredatabricksdeltalakesinkresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Databricks<wbr>Delta<wbr>Lake<wbr>Sink<wbr>Response<wbr>Args</a> | <a href="#azuremysqlsinkresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>My<wbr>Sql<wbr>Sink<wbr>Response<wbr>Args</a> | <a href="#azurepostgresqlsinkresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Postgre<wbr>Sql<wbr>Sink<wbr>Response<wbr>Args</a> | <a href="#azurequeuesinkresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Queue<wbr>Sink<wbr>Response<wbr>Args</a> | <a href="#azuresearchindexsinkresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Search<wbr>Index<wbr>Sink<wbr>Response<wbr>Args</a> | <a href="#azuresqlsinkresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Sql<wbr>Sink<wbr>Response<wbr>Args</a> | <a href="#azuretablesinkresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Table<wbr>Sink<wbr>Response<wbr>Args</a> | <a href="#binarysinkresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Binary<wbr>Sink<wbr>Response<wbr>Args</a> | <a href="#blobsinkresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Blob<wbr>Sink<wbr>Response<wbr>Args</a> | <a href="#commondataserviceforappssinkresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Common<wbr>Data<wbr>Service<wbr>For<wbr>Apps<wbr>Sink<wbr>Response<wbr>Args</a> | <a href="#cosmosdbmongodbapisinkresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Cosmos<wbr>Db<wbr>Mongo<wbr>Db<wbr>Api<wbr>Sink<wbr>Response<wbr>Args</a> | <a href="#cosmosdbsqlapisinkresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Cosmos<wbr>Db<wbr>Sql<wbr>Api<wbr>Sink<wbr>Response<wbr>Args</a> | <a href="#delimitedtextsinkresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Delimited<wbr>Text<wbr>Sink<wbr>Response<wbr>Args</a> | <a href="#documentdbcollectionsinkresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Document<wbr>Db<wbr>Collection<wbr>Sink<wbr>Response<wbr>Args</a> | <a href="#dynamicscrmsinkresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dynamics<wbr>Crm<wbr>Sink<wbr>Response<wbr>Args</a> | <a href="#dynamicssinkresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dynamics<wbr>Sink<wbr>Response<wbr>Args</a> | <a href="#filesystemsinkresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>File<wbr>System<wbr>Sink<wbr>Response<wbr>Args</a> | <a href="#informixsinkresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Informix<wbr>Sink<wbr>Response<wbr>Args</a> | <a href="#jsonsinkresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Json<wbr>Sink<wbr>Response<wbr>Args</a> | <a href="#microsoftaccesssinkresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Microsoft<wbr>Access<wbr>Sink<wbr>Response<wbr>Args</a> | <a href="#odbcsinkresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Odbc<wbr>Sink<wbr>Response<wbr>Args</a> | <a href="#oraclesinkresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Oracle<wbr>Sink<wbr>Response<wbr>Args</a> | <a href="#orcsinkresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Orc<wbr>Sink<wbr>Response<wbr>Args</a> | <a href="#parquetsinkresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parquet<wbr>Sink<wbr>Response<wbr>Args</a> | <a href="#restsinkresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Rest<wbr>Sink<wbr>Response<wbr>Args</a> | <a href="#salesforceservicecloudsinkresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Salesforce<wbr>Service<wbr>Cloud<wbr>Sink<wbr>Response<wbr>Args</a> | <a href="#salesforcesinkresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Salesforce<wbr>Sink<wbr>Response<wbr>Args</a> | <a href="#sapcloudforcustomersinkresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sap<wbr>Cloud<wbr>For<wbr>Customer<wbr>Sink<wbr>Response<wbr>Args</a> | <a href="#snowflakesinkresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Snowflake<wbr>Sink<wbr>Response<wbr>Args</a> | <a href="#sqldwsinkresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sql<wbr>DWSink<wbr>Response<wbr>Args</a> | <a href="#sqlmisinkresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sql<wbr>MISink<wbr>Response<wbr>Args</a> | <a href="#sqlserversinkresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sql<wbr>Server<wbr>Sink<wbr>Response<wbr>Args</a> | <a href="#sqlsinkresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sql<wbr>Sink<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#avrosinkresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Avro<wbr>Sink<wbr>Response<wbr>Args</a> | <a href="#azureblobfssinkresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>FSSink<wbr>Response<wbr>Args</a> | <a href="#azuredataexplorersinkresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Azure<wbr>Data<wbr>Explorer<wbr>Sink<wbr>Response<wbr>Args</a> | <a href="#azuredatalakestoresinkresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Sink<wbr>Response<wbr>Args</a> | <a href="#azuredatabricksdeltalakesinkresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Azure<wbr>Databricks<wbr>Delta<wbr>Lake<wbr>Sink<wbr>Response<wbr>Args</a> | <a href="#azuremysqlsinkresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Azure<wbr>My<wbr>Sql<wbr>Sink<wbr>Response<wbr>Args</a> | <a href="#azurepostgresqlsinkresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Azure<wbr>Postgre<wbr>Sql<wbr>Sink<wbr>Response<wbr>Args</a> | <a href="#azurequeuesinkresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Azure<wbr>Queue<wbr>Sink<wbr>Response<wbr>Args</a> | <a href="#azuresearchindexsinkresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Azure<wbr>Search<wbr>Index<wbr>Sink<wbr>Response<wbr>Args</a> | <a href="#azuresqlsinkresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Azure<wbr>Sql<wbr>Sink<wbr>Response<wbr>Args</a> | <a href="#azuretablesinkresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Azure<wbr>Table<wbr>Sink<wbr>Response<wbr>Args</a> | <a href="#binarysinkresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Binary<wbr>Sink<wbr>Response<wbr>Args</a> | <a href="#blobsinkresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Blob<wbr>Sink<wbr>Response<wbr>Args</a> | <a href="#commondataserviceforappssinkresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Common<wbr>Data<wbr>Service<wbr>For<wbr>Apps<wbr>Sink<wbr>Response<wbr>Args</a> | <a href="#cosmosdbmongodbapisinkresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Cosmos<wbr>Db<wbr>Mongo<wbr>Db<wbr>Api<wbr>Sink<wbr>Response<wbr>Args</a> | <a href="#cosmosdbsqlapisinkresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Cosmos<wbr>Db<wbr>Sql<wbr>Api<wbr>Sink<wbr>Response<wbr>Args</a> | <a href="#delimitedtextsinkresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Delimited<wbr>Text<wbr>Sink<wbr>Response<wbr>Args</a> | <a href="#documentdbcollectionsinkresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Document<wbr>Db<wbr>Collection<wbr>Sink<wbr>Response<wbr>Args</a> | <a href="#dynamicscrmsinkresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Dynamics<wbr>Crm<wbr>Sink<wbr>Response<wbr>Args</a> | <a href="#dynamicssinkresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Dynamics<wbr>Sink<wbr>Response<wbr>Args</a> | <a href="#filesystemsinkresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>File<wbr>System<wbr>Sink<wbr>Response<wbr>Args</a> | <a href="#informixsinkresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Informix<wbr>Sink<wbr>Response<wbr>Args</a> | <a href="#jsonsinkresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Json<wbr>Sink<wbr>Response<wbr>Args</a> | <a href="#microsoftaccesssinkresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Microsoft<wbr>Access<wbr>Sink<wbr>Response<wbr>Args</a> | <a href="#odbcsinkresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Odbc<wbr>Sink<wbr>Response<wbr>Args</a> | <a href="#oraclesinkresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Oracle<wbr>Sink<wbr>Response<wbr>Args</a> | <a href="#orcsinkresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Orc<wbr>Sink<wbr>Response<wbr>Args</a> | <a href="#parquetsinkresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Parquet<wbr>Sink<wbr>Response<wbr>Args</a> | <a href="#restsinkresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Rest<wbr>Sink<wbr>Response<wbr>Args</a> | <a href="#salesforceservicecloudsinkresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Salesforce<wbr>Service<wbr>Cloud<wbr>Sink<wbr>Response<wbr>Args</a> | <a href="#salesforcesinkresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Salesforce<wbr>Sink<wbr>Response<wbr>Args</a> | <a href="#sapcloudforcustomersinkresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Sap<wbr>Cloud<wbr>For<wbr>Customer<wbr>Sink<wbr>Response<wbr>Args</a> | <a href="#snowflakesinkresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Snowflake<wbr>Sink<wbr>Response<wbr>Args</a> | <a href="#sqldwsinkresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Sql<wbr>DWSink<wbr>Response<wbr>Args</a> | <a href="#sqlmisinkresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Sql<wbr>MISink<wbr>Response<wbr>Args</a> | <a href="#sqlserversinkresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Sql<wbr>Server<wbr>Sink<wbr>Response<wbr>Args</a> | <a href="#sqlsinkresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Sql<wbr>Sink<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Copy activity sink.{{% /md %}}</dd>
     <dt class="property-required"
@@ -15195,7 +15195,7 @@ The following output properties are available:
 <a href="#source_csharp" style="color: inherit; text-decoration: inherit;">Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amazonmwssourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>MWSSource<wbr>Response<wbr>Args</a> | <a href="#amazonredshiftsourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>Redshift<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#avrosourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Avro<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#azureblobfssourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>FSSource<wbr>Response<wbr>Args</a> | <a href="#azuredataexplorersourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Data<wbr>Explorer<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#azuredatalakestoresourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#azuredatabricksdeltalakesourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Databricks<wbr>Delta<wbr>Lake<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#azuremariadbsourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Maria<wbr>DBSource<wbr>Response<wbr>Args</a> | <a href="#azuremysqlsourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>My<wbr>Sql<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#azurepostgresqlsourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Postgre<wbr>Sql<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#azuresqlsourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Sql<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#azuretablesourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Table<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#binarysourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Binary<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#blobsourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Blob<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#cassandrasourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Cassandra<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#commondataserviceforappssourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Common<wbr>Data<wbr>Service<wbr>For<wbr>Apps<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#concursourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Concur<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#cosmosdbmongodbapisourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Cosmos<wbr>Db<wbr>Mongo<wbr>Db<wbr>Api<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#cosmosdbsqlapisourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Cosmos<wbr>Db<wbr>Sql<wbr>Api<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#couchbasesourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Couchbase<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#db2sourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Db2Source<wbr>Response<wbr>Args</a> | <a href="#delimitedtextsourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Delimited<wbr>Text<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#documentdbcollectionsourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Document<wbr>Db<wbr>Collection<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#drillsourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Drill<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#dynamicsaxsourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dynamics<wbr>AXSource<wbr>Response<wbr>Args</a> | <a href="#dynamicscrmsourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dynamics<wbr>Crm<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#dynamicssourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dynamics<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#eloquasourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Eloqua<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#excelsourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Excel<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#filesystemsourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>File<wbr>System<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#googleadwordssourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Google<wbr>Ad<wbr>Words<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#googlebigquerysourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Google<wbr>Big<wbr>Query<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#greenplumsourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Greenplum<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#hbasesourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>HBase<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#hdfssourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Hdfs<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#hivesourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Hive<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#httpsourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Http<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#hubspotsourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Hubspot<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#impalasourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Impala<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#informixsourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Informix<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#jirasourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Jira<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#jsonsourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Json<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#magentosourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Magento<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#mariadbsourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Maria<wbr>DBSource<wbr>Response<wbr>Args</a> | <a href="#marketosourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Marketo<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#microsoftaccesssourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Microsoft<wbr>Access<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#mongodbatlassourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Mongo<wbr>Db<wbr>Atlas<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#mongodbsourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Mongo<wbr>Db<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#mongodbv2sourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Mongo<wbr>Db<wbr>V2Source<wbr>Response<wbr>Args</a> | <a href="#mysqlsourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>My<wbr>Sql<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#netezzasourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Netezza<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#odatasourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>OData<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#odbcsourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Odbc<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#office365sourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Office365Source<wbr>Response<wbr>Args</a> | <a href="#oracleservicecloudsourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Oracle<wbr>Service<wbr>Cloud<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#oraclesourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Oracle<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#orcsourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Orc<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#parquetsourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parquet<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#paypalsourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Paypal<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#phoenixsourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Phoenix<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#postgresqlsourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Postgre<wbr>Sql<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#prestosourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Presto<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#quickbookssourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Quick<wbr>Books<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#relationalsourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Relational<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#responsyssourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Responsys<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#restsourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Rest<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#salesforcemarketingcloudsourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Salesforce<wbr>Marketing<wbr>Cloud<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#salesforceservicecloudsourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Salesforce<wbr>Service<wbr>Cloud<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#salesforcesourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Salesforce<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#sapbwsourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sap<wbr>Bw<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#sapcloudforcustomersourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sap<wbr>Cloud<wbr>For<wbr>Customer<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#sapeccsourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sap<wbr>Ecc<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#saphanasourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sap<wbr>Hana<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#sapopenhubsourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sap<wbr>Open<wbr>Hub<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#saptablesourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sap<wbr>Table<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#servicenowsourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Service<wbr>Now<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#sharepointonlinelistsourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Share<wbr>Point<wbr>Online<wbr>List<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#shopifysourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Shopify<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#snowflakesourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Snowflake<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#sparksourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Spark<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#sqldwsourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sql<wbr>DWSource<wbr>Response<wbr>Args</a> | <a href="#sqlmisourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sql<wbr>MISource<wbr>Response<wbr>Args</a> | <a href="#sqlserversourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sql<wbr>Server<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#sqlsourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sql<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#squaresourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Square<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#sybasesourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sybase<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#tabularsourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Tabular<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#teradatasourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Teradata<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#verticasourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Vertica<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#websourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Web<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#xerosourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Xero<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#xmlsourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Xml<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#zohosourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Zoho<wbr>Source<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#amazonmwssourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Amazon<wbr>MWSSource<wbr>Response<wbr>Args</a> | <a href="#amazonredshiftsourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Amazon<wbr>Redshift<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#avrosourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Avro<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#azureblobfssourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>FSSource<wbr>Response<wbr>Args</a> | <a href="#azuredataexplorersourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Azure<wbr>Data<wbr>Explorer<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#azuredatalakestoresourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#azuredatabricksdeltalakesourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Azure<wbr>Databricks<wbr>Delta<wbr>Lake<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#azuremariadbsourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Azure<wbr>Maria<wbr>DBSource<wbr>Response<wbr>Args</a> | <a href="#azuremysqlsourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Azure<wbr>My<wbr>Sql<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#azurepostgresqlsourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Azure<wbr>Postgre<wbr>Sql<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#azuresqlsourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Azure<wbr>Sql<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#azuretablesourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Azure<wbr>Table<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#binarysourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Binary<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#blobsourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Blob<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#cassandrasourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Cassandra<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#commondataserviceforappssourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Common<wbr>Data<wbr>Service<wbr>For<wbr>Apps<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#concursourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Concur<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#cosmosdbmongodbapisourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Cosmos<wbr>Db<wbr>Mongo<wbr>Db<wbr>Api<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#cosmosdbsqlapisourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Cosmos<wbr>Db<wbr>Sql<wbr>Api<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#couchbasesourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Couchbase<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#db2sourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Db2Source<wbr>Response<wbr>Args</a> | <a href="#delimitedtextsourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Delimited<wbr>Text<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#documentdbcollectionsourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Document<wbr>Db<wbr>Collection<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#drillsourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Drill<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#dynamicsaxsourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Dynamics<wbr>AXSource<wbr>Response<wbr>Args</a> | <a href="#dynamicscrmsourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Dynamics<wbr>Crm<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#dynamicssourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Dynamics<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#eloquasourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Eloqua<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#excelsourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Excel<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#filesystemsourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>File<wbr>System<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#googleadwordssourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Google<wbr>Ad<wbr>Words<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#googlebigquerysourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Google<wbr>Big<wbr>Query<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#greenplumsourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Greenplum<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#hbasesourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>HBase<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#hdfssourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Hdfs<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#hivesourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Hive<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#httpsourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Http<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#hubspotsourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Hubspot<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#impalasourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Impala<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#informixsourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Informix<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#jirasourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Jira<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#jsonsourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Json<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#magentosourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Magento<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#mariadbsourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Maria<wbr>DBSource<wbr>Response<wbr>Args</a> | <a href="#marketosourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Marketo<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#microsoftaccesssourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Microsoft<wbr>Access<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#mongodbatlassourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Mongo<wbr>Db<wbr>Atlas<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#mongodbsourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Mongo<wbr>Db<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#mongodbv2sourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Mongo<wbr>Db<wbr>V2Source<wbr>Response<wbr>Args</a> | <a href="#mysqlsourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>My<wbr>Sql<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#netezzasourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Netezza<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#odatasourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>OData<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#odbcsourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Odbc<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#office365sourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Office365Source<wbr>Response<wbr>Args</a> | <a href="#oracleservicecloudsourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Oracle<wbr>Service<wbr>Cloud<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#oraclesourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Oracle<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#orcsourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Orc<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#parquetsourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Parquet<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#paypalsourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Paypal<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#phoenixsourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Phoenix<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#postgresqlsourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Postgre<wbr>Sql<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#prestosourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Presto<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#quickbookssourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Quick<wbr>Books<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#relationalsourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Relational<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#responsyssourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Responsys<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#restsourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Rest<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#salesforcemarketingcloudsourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Salesforce<wbr>Marketing<wbr>Cloud<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#salesforceservicecloudsourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Salesforce<wbr>Service<wbr>Cloud<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#salesforcesourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Salesforce<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#sapbwsourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Sap<wbr>Bw<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#sapcloudforcustomersourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Sap<wbr>Cloud<wbr>For<wbr>Customer<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#sapeccsourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Sap<wbr>Ecc<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#saphanasourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Sap<wbr>Hana<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#sapopenhubsourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Sap<wbr>Open<wbr>Hub<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#saptablesourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Sap<wbr>Table<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#servicenowsourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Service<wbr>Now<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#sharepointonlinelistsourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Share<wbr>Point<wbr>Online<wbr>List<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#shopifysourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Shopify<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#snowflakesourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Snowflake<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#sparksourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Spark<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#sqldwsourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Sql<wbr>DWSource<wbr>Response<wbr>Args</a> | <a href="#sqlmisourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Sql<wbr>MISource<wbr>Response<wbr>Args</a> | <a href="#sqlserversourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Sql<wbr>Server<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#sqlsourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Sql<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#squaresourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Square<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#sybasesourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Sybase<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#tabularsourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Tabular<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#teradatasourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Teradata<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#verticasourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Vertica<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#websourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Web<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#xerosourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Xero<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#xmlsourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Xml<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#zohosourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Zoho<wbr>Source<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Copy activity source.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -15213,7 +15213,7 @@ The following output properties are available:
 <a href="#dependson_csharp" style="color: inherit; text-decoration: inherit;">Depends<wbr>On</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitydependencyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Activity<wbr>Dependency<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#activitydependencyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Activity<wbr>Dependency<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Activity depends on condition.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -15249,7 +15249,7 @@ The following output properties are available:
 <a href="#inputs_csharp" style="color: inherit; text-decoration: inherit;">Inputs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetreferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Reference<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#datasetreferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Dataset<wbr>Reference<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of inputs for the activity.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -15258,7 +15258,7 @@ The following output properties are available:
 <a href="#linkedservicename_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -15267,7 +15267,7 @@ The following output properties are available:
 <a href="#logsettings_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#logsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Log<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#logsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Log<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Log settings customer needs provide when enabling log.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -15276,7 +15276,7 @@ The following output properties are available:
 <a href="#logstoragesettings_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Storage<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#logstoragesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Log<wbr>Storage<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#logstoragesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Log<wbr>Storage<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}(Deprecated. Please use LogSettings) Log storage settings customer need to provide when enabling session log.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -15285,7 +15285,7 @@ The following output properties are available:
 <a href="#outputs_csharp" style="color: inherit; text-decoration: inherit;">Outputs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetreferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Reference<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#datasetreferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Dataset<wbr>Reference<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of outputs for the activity.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -15303,7 +15303,7 @@ The following output properties are available:
 <a href="#policy_csharp" style="color: inherit; text-decoration: inherit;">Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitypolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Activity<wbr>Policy<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#activitypolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Activity<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Activity policy.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -15330,7 +15330,7 @@ The following output properties are available:
 <a href="#redirectincompatiblerowsettings_csharp" style="color: inherit; text-decoration: inherit;">Redirect<wbr>Incompatible<wbr>Row<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#redirectincompatiblerowsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Redirect<wbr>Incompatible<wbr>Row<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#redirectincompatiblerowsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Redirect<wbr>Incompatible<wbr>Row<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Redirect incompatible row settings when EnableSkipIncompatibleRow is true.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -15339,7 +15339,7 @@ The following output properties are available:
 <a href="#skiperrorfile_csharp" style="color: inherit; text-decoration: inherit;">Skip<wbr>Error<wbr>File</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skiperrorfileresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Skip<wbr>Error<wbr>File<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#skiperrorfileresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Skip<wbr>Error<wbr>File<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specify the fault tolerance for data consistency.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -15348,7 +15348,7 @@ The following output properties are available:
 <a href="#stagingsettings_csharp" style="color: inherit; text-decoration: inherit;">Staging<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#stagingsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Staging<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#stagingsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Staging<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies interim staging settings when EnableStaging is true.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -15366,7 +15366,7 @@ The following output properties are available:
 <a href="#userproperties_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpropertyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>User<wbr>Property<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#userpropertyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>User<wbr>Property<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Activity user properties.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -16283,7 +16283,7 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd>
     <dt class="property-optional"
@@ -16301,7 +16301,7 @@ The following output properties are available:
 <a href="#cursormethods_csharp" style="color: inherit; text-decoration: inherit;">Cursor<wbr>Methods</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mongodbcursormethodspropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Mongo<wbr>Db<wbr>Cursor<wbr>Methods<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#mongodbcursormethodspropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Mongo<wbr>Db<wbr>Cursor<wbr>Methods<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Cursor methods for Mongodb query.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -16849,7 +16849,7 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd>
     <dt class="property-optional"
@@ -17168,7 +17168,7 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd>
     <dt class="property-optional"
@@ -17415,7 +17415,7 @@ The following output properties are available:
 <a href="#datasets_csharp" style="color: inherit; text-decoration: inherit;">Datasets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetreferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Reference<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#datasetreferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Dataset<wbr>Reference<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Dataset references.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -17424,7 +17424,7 @@ The following output properties are available:
 <a href="#linkedservices_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Linked service references.{{% /md %}}</dd>
 </dl>
@@ -17532,11 +17532,20 @@ The following output properties are available:
     <dd>{{% md %}}Activity name.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="autouserspecification_csharp">
+<a href="#autouserspecification_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>User<wbr>Specification</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}Elevation level and scope for the user, default is nonadmin task. Type: string (or Expression with resultType double).{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="dependson_csharp">
 <a href="#dependson_csharp" style="color: inherit; text-decoration: inherit;">Depends<wbr>On</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitydependencyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Activity<wbr>Dependency<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#activitydependencyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Activity<wbr>Dependency<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Activity depends on condition.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -17572,7 +17581,7 @@ The following output properties are available:
 <a href="#linkedservicename_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -17581,7 +17590,7 @@ The following output properties are available:
 <a href="#policy_csharp" style="color: inherit; text-decoration: inherit;">Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitypolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Activity<wbr>Policy<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#activitypolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Activity<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Activity policy.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -17590,7 +17599,7 @@ The following output properties are available:
 <a href="#referenceobjects_csharp" style="color: inherit; text-decoration: inherit;">Reference<wbr>Objects</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customactivityreferenceobjectresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Custom<wbr>Activity<wbr>Reference<wbr>Object<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#customactivityreferenceobjectresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Custom<wbr>Activity<wbr>Reference<wbr>Object<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Reference objects{{% /md %}}</dd>
     <dt class="property-optional"
@@ -17599,7 +17608,7 @@ The following output properties are available:
 <a href="#resourcelinkedservice_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Linked<wbr>Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Resource linked service reference.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -17617,7 +17626,7 @@ The following output properties are available:
 <a href="#userproperties_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpropertyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>User<wbr>Property<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#userpropertyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>User<wbr>Property<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Activity user properties.{{% /md %}}</dd>
 </dl>
@@ -17644,6 +17653,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Activity name.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="autouserspecification_go">
+<a href="#autouserspecification_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>User<wbr>Specification</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}Elevation level and scope for the user, default is nonadmin task. Type: string (or Expression with resultType double).{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="dependson_go">
@@ -17760,6 +17778,15 @@ The following output properties are available:
     <dd>{{% md %}}Activity name.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="autouserspecification_nodejs">
+<a href="#autouserspecification_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>User<wbr>Specification</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}Elevation level and scope for the user, default is nonadmin task. Type: string (or Expression with resultType double).{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="dependson_nodejs">
 <a href="#dependson_nodejs" style="color: inherit; text-decoration: inherit;">depends<wbr>On</a>
 </span>
@@ -17872,6 +17899,15 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Activity name.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="auto_user_specification_python">
+<a href="#auto_user_specification_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>user_<wbr>specification</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}Elevation level and scope for the user, default is nonadmin task. Type: string (or Expression with resultType double).{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="depends_on_python">
@@ -18093,7 +18129,7 @@ The following output properties are available:
 <a href="#defaultvalues_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dwcopycommanddefaultvalueresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>DWCopy<wbr>Command<wbr>Default<wbr>Value<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#dwcopycommanddefaultvalueresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>DWCopy<wbr>Command<wbr>Default<wbr>Value<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the default values for each target column in SQL DW. The default values in the property overwrite the DEFAULT constraint set in the DB, and identity column cannot have a default value. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd>
 </dl>
@@ -18335,7 +18371,7 @@ The following output properties are available:
 <a href="#linkedservice_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Staging linked service reference.{{% /md %}}</dd>
 </dl>
@@ -18438,7 +18474,7 @@ The following output properties are available:
 <a href="#scriptlinkedservice_csharp" style="color: inherit; text-decoration: inherit;">Script<wbr>Linked<wbr>Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Script linked service reference.{{% /md %}}</dd>
     <dt class="property-required"
@@ -18474,7 +18510,7 @@ The following output properties are available:
 <a href="#dependson_csharp" style="color: inherit; text-decoration: inherit;">Depends<wbr>On</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitydependencyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Activity<wbr>Dependency<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#activitydependencyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Activity<wbr>Dependency<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Activity depends on condition.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -18492,7 +18528,7 @@ The following output properties are available:
 <a href="#linkedservicename_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -18510,7 +18546,7 @@ The following output properties are available:
 <a href="#policy_csharp" style="color: inherit; text-decoration: inherit;">Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitypolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Activity<wbr>Policy<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#activitypolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Activity<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Activity policy.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -18537,7 +18573,7 @@ The following output properties are available:
 <a href="#userproperties_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpropertyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>User<wbr>Property<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#userpropertyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>User<wbr>Property<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Activity user properties.{{% /md %}}</dd>
 </dl>
@@ -18955,7 +18991,7 @@ The following output properties are available:
 <a href="#dependson_csharp" style="color: inherit; text-decoration: inherit;">Depends<wbr>On</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitydependencyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Activity<wbr>Dependency<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#activitydependencyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Activity<wbr>Dependency<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Activity depends on condition.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -18982,7 +19018,7 @@ The following output properties are available:
 <a href="#linkedservicename_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -18991,7 +19027,7 @@ The following output properties are available:
 <a href="#policy_csharp" style="color: inherit; text-decoration: inherit;">Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitypolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Activity<wbr>Policy<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#activitypolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Activity<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Activity policy.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -19000,7 +19036,7 @@ The following output properties are available:
 <a href="#userproperties_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpropertyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>User<wbr>Property<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#userpropertyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>User<wbr>Property<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Activity user properties.{{% /md %}}</dd>
 </dl>
@@ -19301,7 +19337,7 @@ The following output properties are available:
 <a href="#dependson_csharp" style="color: inherit; text-decoration: inherit;">Depends<wbr>On</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitydependencyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Activity<wbr>Dependency<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#activitydependencyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Activity<wbr>Dependency<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Activity depends on condition.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -19328,7 +19364,7 @@ The following output properties are available:
 <a href="#linkedservicename_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -19346,7 +19382,7 @@ The following output properties are available:
 <a href="#policy_csharp" style="color: inherit; text-decoration: inherit;">Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitypolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Activity<wbr>Policy<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#activitypolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Activity<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Activity policy.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -19355,7 +19391,7 @@ The following output properties are available:
 <a href="#userproperties_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpropertyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>User<wbr>Property<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#userpropertyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>User<wbr>Property<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Activity user properties.{{% /md %}}</dd>
 </dl>
@@ -19656,7 +19692,7 @@ The following output properties are available:
 <a href="#dependson_csharp" style="color: inherit; text-decoration: inherit;">Depends<wbr>On</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitydependencyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Activity<wbr>Dependency<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#activitydependencyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Activity<wbr>Dependency<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Activity depends on condition.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -19683,7 +19719,7 @@ The following output properties are available:
 <a href="#linkedservicename_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -19701,7 +19737,7 @@ The following output properties are available:
 <a href="#policy_csharp" style="color: inherit; text-decoration: inherit;">Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitypolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Activity<wbr>Policy<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#activitypolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Activity<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Activity policy.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -19710,7 +19746,7 @@ The following output properties are available:
 <a href="#userproperties_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpropertyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>User<wbr>Property<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#userpropertyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>User<wbr>Property<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Activity user properties.{{% /md %}}</dd>
 </dl>
@@ -20132,7 +20168,7 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd>
     <dt class="property-optional"
@@ -20379,7 +20415,7 @@ The following output properties are available:
 <a href="#dataset_csharp" style="color: inherit; text-decoration: inherit;">Dataset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#datasetreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Dataset<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Delete activity dataset reference.{{% /md %}}</dd>
     <dt class="property-required"
@@ -20397,7 +20433,7 @@ The following output properties are available:
 <a href="#dependson_csharp" style="color: inherit; text-decoration: inherit;">Depends<wbr>On</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitydependencyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Activity<wbr>Dependency<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#activitydependencyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Activity<wbr>Dependency<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Activity depends on condition.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -20424,7 +20460,7 @@ The following output properties are available:
 <a href="#linkedservicename_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -20433,7 +20469,7 @@ The following output properties are available:
 <a href="#logstoragesettings_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Storage<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#logstoragesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Log<wbr>Storage<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#logstoragesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Log<wbr>Storage<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Log storage settings customer need to provide when enableLogging is true.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -20451,7 +20487,7 @@ The following output properties are available:
 <a href="#policy_csharp" style="color: inherit; text-decoration: inherit;">Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitypolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Activity<wbr>Policy<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#activitypolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Activity<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Activity policy.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -20469,7 +20505,7 @@ The following output properties are available:
 <a href="#storesettings_csharp" style="color: inherit; text-decoration: inherit;">Store<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amazons3readsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>S3Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azureblobfsreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>FSRead<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azureblobstoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azuredatalakestorereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azurefilestoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>File<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#fileserverreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>File<wbr>Server<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#ftpreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Ftp<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#googlecloudstoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Google<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#hdfsreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Hdfs<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#httpreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Http<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#sftpreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sftp<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#amazons3readsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Amazon<wbr>S3Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azureblobfsreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>FSRead<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azureblobstoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azuredatalakestorereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azurefilestoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Azure<wbr>File<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#fileserverreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>File<wbr>Server<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#ftpreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Ftp<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#googlecloudstoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Google<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#hdfsreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Hdfs<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#httpreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Http<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#sftpreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Sftp<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Delete activity store settings.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -20478,7 +20514,7 @@ The following output properties are available:
 <a href="#userproperties_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpropertyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>User<wbr>Property<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#userpropertyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>User<wbr>Property<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Activity user properties.{{% /md %}}</dd>
 </dl>
@@ -20842,7 +20878,7 @@ The following output properties are available:
 <a href="#compressionproperties_csharp" style="color: inherit; text-decoration: inherit;">Compression<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#targzipreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Tar<wbr>GZip<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#tarreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Tar<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#zipdeflatereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Zip<wbr>Deflate<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#targzipreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Tar<wbr>GZip<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#tarreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Tar<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#zipdeflatereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Zip<wbr>Deflate<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Compression settings.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -20945,7 +20981,7 @@ The following output properties are available:
 <a href="#formatsettings_csharp" style="color: inherit; text-decoration: inherit;">Format<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#delimitedtextwritesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Delimited<wbr>Text<wbr>Write<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#delimitedtextwritesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Delimited<wbr>Text<wbr>Write<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}DelimitedText format settings.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -20981,7 +21017,7 @@ The following output properties are available:
 <a href="#storesettings_csharp" style="color: inherit; text-decoration: inherit;">Store<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureblobfswritesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>FSWrite<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azureblobstoragewritesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Write<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azuredatalakestorewritesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Write<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azurefilestoragewritesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>File<wbr>Storage<wbr>Write<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#fileserverwritesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>File<wbr>Server<wbr>Write<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#sftpwritesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sftp<wbr>Write<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azureblobfswritesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>FSWrite<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azureblobstoragewritesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Write<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azuredatalakestorewritesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Write<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azurefilestoragewritesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Azure<wbr>File<wbr>Storage<wbr>Write<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#fileserverwritesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>File<wbr>Server<wbr>Write<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#sftpwritesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Sftp<wbr>Write<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}DelimitedText store settings.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -21228,7 +21264,7 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd>
     <dt class="property-optional"
@@ -21237,7 +21273,7 @@ The following output properties are available:
 <a href="#formatsettings_csharp" style="color: inherit; text-decoration: inherit;">Format<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#delimitedtextreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Delimited<wbr>Text<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#delimitedtextreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Delimited<wbr>Text<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}DelimitedText format settings.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -21273,7 +21309,7 @@ The following output properties are available:
 <a href="#storesettings_csharp" style="color: inherit; text-decoration: inherit;">Store<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amazons3readsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>S3Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azureblobfsreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>FSRead<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azureblobstoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azuredatalakestorereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azurefilestoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>File<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#fileserverreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>File<wbr>Server<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#ftpreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Ftp<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#googlecloudstoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Google<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#hdfsreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Hdfs<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#httpreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Http<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#sftpreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sftp<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#amazons3readsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Amazon<wbr>S3Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azureblobfsreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>FSRead<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azureblobstoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azuredatalakestorereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azurefilestoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Azure<wbr>File<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#fileserverreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>File<wbr>Server<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#ftpreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Ftp<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#googlecloudstoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Google<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#hdfsreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Hdfs<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#httpreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Http<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#sftpreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Sftp<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}DelimitedText store settings.{{% /md %}}</dd>
 </dl>
@@ -22072,7 +22108,7 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd>
     <dt class="property-optional"
@@ -22355,7 +22391,7 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd>
     <dt class="property-optional"
@@ -22602,7 +22638,7 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd>
     <dt class="property-optional"
@@ -23204,7 +23240,7 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd>
     <dt class="property-optional"
@@ -23734,7 +23770,7 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd>
     <dt class="property-optional"
@@ -23945,7 +23981,7 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd>
     <dt class="property-optional"
@@ -24192,7 +24228,7 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd>
     <dt class="property-optional"
@@ -24228,7 +24264,7 @@ The following output properties are available:
 <a href="#storesettings_csharp" style="color: inherit; text-decoration: inherit;">Store<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amazons3readsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>S3Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azureblobfsreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>FSRead<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azureblobstoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azuredatalakestorereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azurefilestoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>File<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#fileserverreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>File<wbr>Server<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#ftpreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Ftp<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#googlecloudstoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Google<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#hdfsreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Hdfs<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#httpreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Http<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#sftpreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sftp<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#amazons3readsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Amazon<wbr>S3Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azureblobfsreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>FSRead<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azureblobstoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azuredatalakestorereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azurefilestoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Azure<wbr>File<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#fileserverreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>File<wbr>Server<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#ftpreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Ftp<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#googlecloudstoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Google<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#hdfsreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Hdfs<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#httpreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Http<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#sftpreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Sftp<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Excel store settings.{{% /md %}}</dd>
 </dl>
@@ -24403,7 +24439,7 @@ The following output properties are available:
 <a href="#dataflow_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Flow</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dataflowreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Data<wbr>Flow<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#dataflowreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Data<wbr>Flow<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Data flow reference.{{% /md %}}</dd>
     <dt class="property-required"
@@ -24421,7 +24457,7 @@ The following output properties are available:
 <a href="#compute_csharp" style="color: inherit; text-decoration: inherit;">Compute</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#executedataflowactivitytypepropertiesresponsecompute">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Execute<wbr>Data<wbr>Flow<wbr>Activity<wbr>Type<wbr>Properties<wbr>Response<wbr>Compute<wbr>Args</a></span>
+        <span class="property-type"><a href="#executedataflowactivitytypepropertiesresponsecompute">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Execute<wbr>Data<wbr>Flow<wbr>Activity<wbr>Type<wbr>Properties<wbr>Response<wbr>Compute<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Compute properties for data flow activity.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -24439,7 +24475,7 @@ The following output properties are available:
 <a href="#dependson_csharp" style="color: inherit; text-decoration: inherit;">Depends<wbr>On</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitydependencyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Activity<wbr>Dependency<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#activitydependencyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Activity<wbr>Dependency<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Activity depends on condition.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -24457,7 +24493,7 @@ The following output properties are available:
 <a href="#integrationruntime_csharp" style="color: inherit; text-decoration: inherit;">Integration<wbr>Runtime</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -24466,7 +24502,7 @@ The following output properties are available:
 <a href="#linkedservicename_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -24475,7 +24511,7 @@ The following output properties are available:
 <a href="#policy_csharp" style="color: inherit; text-decoration: inherit;">Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitypolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Activity<wbr>Policy<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#activitypolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Activity<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Activity policy.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -24493,7 +24529,7 @@ The following output properties are available:
 <a href="#staging_csharp" style="color: inherit; text-decoration: inherit;">Staging</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dataflowstaginginforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Data<wbr>Flow<wbr>Staging<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#dataflowstaginginforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Data<wbr>Flow<wbr>Staging<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Staging info for execute data flow activity.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -24511,7 +24547,7 @@ The following output properties are available:
 <a href="#userproperties_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpropertyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>User<wbr>Property<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#userpropertyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>User<wbr>Property<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Activity user properties.{{% /md %}}</dd>
 </dl>
@@ -25014,7 +25050,7 @@ The following output properties are available:
 <a href="#pipeline_csharp" style="color: inherit; text-decoration: inherit;">Pipeline</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinereferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Pipeline<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#pipelinereferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Pipeline<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Pipeline reference.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -25023,7 +25059,7 @@ The following output properties are available:
 <a href="#dependson_csharp" style="color: inherit; text-decoration: inherit;">Depends<wbr>On</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitydependencyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Activity<wbr>Dependency<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#activitydependencyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Activity<wbr>Dependency<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Activity depends on condition.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -25050,7 +25086,7 @@ The following output properties are available:
 <a href="#userproperties_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpropertyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>User<wbr>Property<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#userpropertyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>User<wbr>Property<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Activity user properties.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -25288,7 +25324,7 @@ The following output properties are available:
 <a href="#connectvia_csharp" style="color: inherit; text-decoration: inherit;">Connect<wbr>Via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd>
     <dt class="property-required"
@@ -25306,7 +25342,7 @@ The following output properties are available:
 <a href="#packagelocation_csharp" style="color: inherit; text-decoration: inherit;">Package<wbr>Location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ssispackagelocationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>SSISPackage<wbr>Location<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#ssispackagelocationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>SSISPackage<wbr>Location<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}SSIS package location.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -25315,7 +25351,7 @@ The following output properties are available:
 <a href="#dependson_csharp" style="color: inherit; text-decoration: inherit;">Depends<wbr>On</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitydependencyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Activity<wbr>Dependency<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#activitydependencyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Activity<wbr>Dependency<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Activity depends on condition.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -25342,7 +25378,7 @@ The following output properties are available:
 <a href="#executioncredential_csharp" style="color: inherit; text-decoration: inherit;">Execution<wbr>Credential</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ssisexecutioncredentialresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>SSISExecution<wbr>Credential<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#ssisexecutioncredentialresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>SSISExecution<wbr>Credential<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The package execution credential.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -25351,7 +25387,7 @@ The following output properties are available:
 <a href="#linkedservicename_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -25360,7 +25396,7 @@ The following output properties are available:
 <a href="#loglocation_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ssisloglocationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>SSISLog<wbr>Location<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#ssisloglocationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>SSISLog<wbr>Location<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}SSIS package execution log location.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -25378,7 +25414,7 @@ The following output properties are available:
 <a href="#packageconnectionmanagers_csharp" style="color: inherit; text-decoration: inherit;">Package<wbr>Connection<wbr>Managers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Immutable<wbr>Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>SSISExecution<wbr>Parameter<wbr>Response<wbr>Args&gt;&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Immutable<wbr>Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>SSISExecution<wbr>Parameter<wbr>Response<wbr>Args&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}The package level connection managers to execute the SSIS package.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -25387,7 +25423,7 @@ The following output properties are available:
 <a href="#packageparameters_csharp" style="color: inherit; text-decoration: inherit;">Package<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>SSISExecution<wbr>Parameter<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>SSISExecution<wbr>Parameter<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}The package level parameters to execute the SSIS package.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -25396,7 +25432,7 @@ The following output properties are available:
 <a href="#policy_csharp" style="color: inherit; text-decoration: inherit;">Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitypolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Activity<wbr>Policy<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#activitypolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Activity<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Activity policy.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -25405,7 +25441,7 @@ The following output properties are available:
 <a href="#projectconnectionmanagers_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Connection<wbr>Managers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Immutable<wbr>Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>SSISExecution<wbr>Parameter<wbr>Response<wbr>Args&gt;&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Immutable<wbr>Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>SSISExecution<wbr>Parameter<wbr>Response<wbr>Args&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}The project level connection managers to execute the SSIS package.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -25414,7 +25450,7 @@ The following output properties are available:
 <a href="#projectparameters_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>SSISExecution<wbr>Parameter<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>SSISExecution<wbr>Parameter<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}The project level parameters to execute the SSIS package.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -25423,7 +25459,7 @@ The following output properties are available:
 <a href="#propertyoverrides_csharp" style="color: inherit; text-decoration: inherit;">Property<wbr>Overrides</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>SSISProperty<wbr>Override<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>SSISProperty<wbr>Override<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}The property overrides to execute the SSIS package.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -25441,7 +25477,7 @@ The following output properties are available:
 <a href="#userproperties_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpropertyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>User<wbr>Property<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#userpropertyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>User<wbr>Property<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Activity user properties.{{% /md %}}</dd>
 </dl>
@@ -25976,7 +26012,7 @@ The following output properties are available:
 <a href="#dependson_csharp" style="color: inherit; text-decoration: inherit;">Depends<wbr>On</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitydependencyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Activity<wbr>Dependency<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#activitydependencyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Activity<wbr>Dependency<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Activity depends on condition.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -25994,7 +26030,7 @@ The following output properties are available:
 <a href="#linkedservicename_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -26003,7 +26039,7 @@ The following output properties are available:
 <a href="#policy_csharp" style="color: inherit; text-decoration: inherit;">Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitypolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Activity<wbr>Policy<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#activitypolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Activity<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Activity policy.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -26012,7 +26048,7 @@ The following output properties are available:
 <a href="#userproperties_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpropertyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>User<wbr>Property<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#userpropertyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>User<wbr>Property<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Activity user properties.{{% /md %}}</dd>
 </dl>
@@ -27094,7 +27130,7 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd>
     <dt class="property-optional"
@@ -27305,7 +27341,7 @@ The following output properties are available:
 <a href="#condition_csharp" style="color: inherit; text-decoration: inherit;">Condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#expressionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Expression<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#expressionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Expression<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Condition to be used for filtering the input.{{% /md %}}</dd>
     <dt class="property-required"
@@ -27314,7 +27350,7 @@ The following output properties are available:
 <a href="#items_csharp" style="color: inherit; text-decoration: inherit;">Items</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#expressionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Expression<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#expressionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Expression<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Input array on which filter should be applied.{{% /md %}}</dd>
     <dt class="property-required"
@@ -27332,7 +27368,7 @@ The following output properties are available:
 <a href="#dependson_csharp" style="color: inherit; text-decoration: inherit;">Depends<wbr>On</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitydependencyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Activity<wbr>Dependency<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#activitydependencyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Activity<wbr>Dependency<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Activity depends on condition.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -27350,7 +27386,7 @@ The following output properties are available:
 <a href="#userproperties_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpropertyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>User<wbr>Property<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#userpropertyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>User<wbr>Property<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Activity user properties.{{% /md %}}</dd>
 </dl>
@@ -27561,7 +27597,7 @@ The following output properties are available:
 <a href="#items_csharp" style="color: inherit; text-decoration: inherit;">Items</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#expressionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Expression<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#expressionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Expression<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Collection to iterate.{{% /md %}}</dd>
     <dt class="property-required"
@@ -27588,7 +27624,7 @@ The following output properties are available:
 <a href="#dependson_csharp" style="color: inherit; text-decoration: inherit;">Depends<wbr>On</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitydependencyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Activity<wbr>Dependency<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#activitydependencyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Activity<wbr>Dependency<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Activity depends on condition.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -27615,7 +27651,7 @@ The following output properties are available:
 <a href="#userproperties_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpropertyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>User<wbr>Property<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#userpropertyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>User<wbr>Property<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Activity user properties.{{% /md %}}</dd>
 </dl>
@@ -28226,7 +28262,7 @@ The following output properties are available:
 <a href="#dataset_csharp" style="color: inherit; text-decoration: inherit;">Dataset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#datasetreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Dataset<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}GetMetadata activity dataset reference.{{% /md %}}</dd>
     <dt class="property-required"
@@ -28244,7 +28280,7 @@ The following output properties are available:
 <a href="#dependson_csharp" style="color: inherit; text-decoration: inherit;">Depends<wbr>On</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitydependencyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Activity<wbr>Dependency<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#activitydependencyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Activity<wbr>Dependency<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Activity depends on condition.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -28271,7 +28307,7 @@ The following output properties are available:
 <a href="#formatsettings_csharp" style="color: inherit; text-decoration: inherit;">Format<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#binaryreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Binary<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#delimitedtextreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Delimited<wbr>Text<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#jsonreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Json<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#xmlreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Xml<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#binaryreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Binary<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#delimitedtextreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Delimited<wbr>Text<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#jsonreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Json<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#xmlreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Xml<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}GetMetadata activity format settings.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -28280,7 +28316,7 @@ The following output properties are available:
 <a href="#linkedservicename_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -28289,7 +28325,7 @@ The following output properties are available:
 <a href="#policy_csharp" style="color: inherit; text-decoration: inherit;">Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitypolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Activity<wbr>Policy<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#activitypolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Activity<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Activity policy.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -28298,7 +28334,7 @@ The following output properties are available:
 <a href="#storesettings_csharp" style="color: inherit; text-decoration: inherit;">Store<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amazons3readsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>S3Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azureblobfsreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>FSRead<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azureblobstoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azuredatalakestorereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azurefilestoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>File<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#fileserverreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>File<wbr>Server<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#ftpreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Ftp<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#googlecloudstoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Google<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#hdfsreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Hdfs<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#httpreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Http<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#sftpreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sftp<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#amazons3readsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Amazon<wbr>S3Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azureblobfsreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>FSRead<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azureblobstoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azuredatalakestorereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azurefilestoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Azure<wbr>File<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#fileserverreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>File<wbr>Server<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#ftpreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Ftp<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#googlecloudstoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Google<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#hdfsreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Hdfs<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#httpreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Http<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#sftpreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Sftp<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}GetMetadata activity store settings.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -28307,7 +28343,7 @@ The following output properties are available:
 <a href="#userproperties_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpropertyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>User<wbr>Property<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#userpropertyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>User<wbr>Property<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Activity user properties.{{% /md %}}</dd>
 </dl>
@@ -28617,7 +28653,7 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd>
     <dt class="property-optional"
@@ -28864,7 +28900,7 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd>
     <dt class="property-optional"
@@ -29538,7 +29574,7 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd>
     <dt class="property-optional"
@@ -29785,7 +29821,7 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd>
     <dt class="property-optional"
@@ -30059,7 +30095,7 @@ The following output properties are available:
 <a href="#dependson_csharp" style="color: inherit; text-decoration: inherit;">Depends<wbr>On</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitydependencyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Activity<wbr>Dependency<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#activitydependencyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Activity<wbr>Dependency<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Activity depends on condition.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -30086,7 +30122,7 @@ The following output properties are available:
 <a href="#linkedservicename_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -30095,7 +30131,7 @@ The following output properties are available:
 <a href="#policy_csharp" style="color: inherit; text-decoration: inherit;">Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitypolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Activity<wbr>Policy<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#activitypolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Activity<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Activity policy.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -30113,7 +30149,7 @@ The following output properties are available:
 <a href="#scriptlinkedservice_csharp" style="color: inherit; text-decoration: inherit;">Script<wbr>Linked<wbr>Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Script linked service reference.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -30131,7 +30167,7 @@ The following output properties are available:
 <a href="#storagelinkedservices_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Linked<wbr>Services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Storage linked service references.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -30140,7 +30176,7 @@ The following output properties are available:
 <a href="#userproperties_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpropertyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>User<wbr>Property<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#userpropertyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>User<wbr>Property<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Activity user properties.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -30612,7 +30648,7 @@ The following output properties are available:
 <a href="#dependson_csharp" style="color: inherit; text-decoration: inherit;">Depends<wbr>On</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitydependencyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Activity<wbr>Dependency<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#activitydependencyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Activity<wbr>Dependency<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Activity depends on condition.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -30648,7 +30684,7 @@ The following output properties are available:
 <a href="#jarlinkedservice_csharp" style="color: inherit; text-decoration: inherit;">Jar<wbr>Linked<wbr>Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Jar linked service reference.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -30657,7 +30693,7 @@ The following output properties are available:
 <a href="#linkedservicename_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -30666,7 +30702,7 @@ The following output properties are available:
 <a href="#policy_csharp" style="color: inherit; text-decoration: inherit;">Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitypolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Activity<wbr>Policy<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#activitypolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Activity<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Activity policy.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -30675,7 +30711,7 @@ The following output properties are available:
 <a href="#storagelinkedservices_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Linked<wbr>Services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Storage linked service references.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -30684,7 +30720,7 @@ The following output properties are available:
 <a href="#userproperties_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpropertyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>User<wbr>Property<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#userpropertyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>User<wbr>Property<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Activity user properties.{{% /md %}}</dd>
 </dl>
@@ -31129,7 +31165,7 @@ The following output properties are available:
 <a href="#dependson_csharp" style="color: inherit; text-decoration: inherit;">Depends<wbr>On</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitydependencyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Activity<wbr>Dependency<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#activitydependencyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Activity<wbr>Dependency<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Activity depends on condition.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -31156,7 +31192,7 @@ The following output properties are available:
 <a href="#linkedservicename_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -31165,7 +31201,7 @@ The following output properties are available:
 <a href="#policy_csharp" style="color: inherit; text-decoration: inherit;">Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitypolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Activity<wbr>Policy<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#activitypolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Activity<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Activity policy.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -31174,7 +31210,7 @@ The following output properties are available:
 <a href="#scriptlinkedservice_csharp" style="color: inherit; text-decoration: inherit;">Script<wbr>Linked<wbr>Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Script linked service reference.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -31192,7 +31228,7 @@ The following output properties are available:
 <a href="#storagelinkedservices_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Linked<wbr>Services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Storage linked service references.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -31201,7 +31237,7 @@ The following output properties are available:
 <a href="#userproperties_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpropertyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>User<wbr>Property<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#userpropertyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>User<wbr>Property<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Activity user properties.{{% /md %}}</dd>
 </dl>
@@ -31610,7 +31646,7 @@ The following output properties are available:
 <a href="#dependson_csharp" style="color: inherit; text-decoration: inherit;">Depends<wbr>On</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitydependencyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Activity<wbr>Dependency<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#activitydependencyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Activity<wbr>Dependency<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Activity depends on condition.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -31637,7 +31673,7 @@ The following output properties are available:
 <a href="#linkedservicename_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -31646,7 +31682,7 @@ The following output properties are available:
 <a href="#policy_csharp" style="color: inherit; text-decoration: inherit;">Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitypolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Activity<wbr>Policy<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#activitypolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Activity<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Activity policy.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -31673,7 +31709,7 @@ The following output properties are available:
 <a href="#sparkjoblinkedservice_csharp" style="color: inherit; text-decoration: inherit;">Spark<wbr>Job<wbr>Linked<wbr>Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The storage linked service for uploading the entry file and dependencies, and for receiving logs.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -31682,7 +31718,7 @@ The following output properties are available:
 <a href="#userproperties_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpropertyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>User<wbr>Property<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#userpropertyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>User<wbr>Property<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Activity user properties.{{% /md %}}</dd>
 </dl>
@@ -32190,7 +32226,7 @@ The following output properties are available:
 <a href="#dependson_csharp" style="color: inherit; text-decoration: inherit;">Depends<wbr>On</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitydependencyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Activity<wbr>Dependency<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#activitydependencyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Activity<wbr>Dependency<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Activity depends on condition.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -32208,7 +32244,7 @@ The following output properties are available:
 <a href="#filelinkedservice_csharp" style="color: inherit; text-decoration: inherit;">File<wbr>Linked<wbr>Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference where the files are located.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -32226,7 +32262,7 @@ The following output properties are available:
 <a href="#linkedservicename_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -32235,7 +32271,7 @@ The following output properties are available:
 <a href="#policy_csharp" style="color: inherit; text-decoration: inherit;">Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitypolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Activity<wbr>Policy<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#activitypolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Activity<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Activity policy.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -32244,7 +32280,7 @@ The following output properties are available:
 <a href="#storagelinkedservices_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Linked<wbr>Services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Storage linked service references.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -32253,7 +32289,7 @@ The following output properties are available:
 <a href="#userproperties_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpropertyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>User<wbr>Property<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#userpropertyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>User<wbr>Property<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Activity user properties.{{% /md %}}</dd>
 </dl>
@@ -32788,7 +32824,7 @@ The following output properties are available:
 <a href="#distcpsettings_csharp" style="color: inherit; text-decoration: inherit;">Distcp<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distcpsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Distcp<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#distcpsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Distcp<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies Distcp-related settings.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -33206,7 +33242,7 @@ The following output properties are available:
 <a href="#distcpsettings_csharp" style="color: inherit; text-decoration: inherit;">Distcp<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distcpsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Distcp<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#distcpsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Distcp<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies Distcp-related settings.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -33417,7 +33453,7 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd>
     <dt class="property-optional"
@@ -34122,7 +34158,7 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd>
     <dt class="property-optional"
@@ -34369,7 +34405,7 @@ The following output properties are available:
 <a href="#expression_csharp" style="color: inherit; text-decoration: inherit;">Expression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#expressionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Expression<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#expressionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Expression<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An expression that would evaluate to Boolean. This is used to determine the block of activities (ifTrueActivities or ifFalseActivities) that will be executed.{{% /md %}}</dd>
     <dt class="property-required"
@@ -34387,7 +34423,7 @@ The following output properties are available:
 <a href="#dependson_csharp" style="color: inherit; text-decoration: inherit;">Depends<wbr>On</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitydependencyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Activity<wbr>Dependency<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#activitydependencyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Activity<wbr>Dependency<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Activity depends on condition.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -34423,7 +34459,7 @@ The following output properties are available:
 <a href="#userproperties_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpropertyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>User<wbr>Property<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#userpropertyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>User<wbr>Property<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Activity user properties.{{% /md %}}</dd>
 </dl>
@@ -34652,7 +34688,7 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd>
     <dt class="property-optional"
@@ -35146,7 +35182,7 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd>
     <dt class="property-optional"
@@ -35532,7 +35568,7 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd>
     <dt class="property-optional"
@@ -35779,7 +35815,7 @@ The following output properties are available:
 <a href="#compressionproperties_csharp" style="color: inherit; text-decoration: inherit;">Compression<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#targzipreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Tar<wbr>GZip<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#tarreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Tar<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#zipdeflatereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Zip<wbr>Deflate<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#targzipreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Tar<wbr>GZip<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#tarreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Tar<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#zipdeflatereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Zip<wbr>Deflate<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Compression settings.{{% /md %}}</dd>
 </dl>
@@ -35846,7 +35882,7 @@ The following output properties are available:
 <a href="#formatsettings_csharp" style="color: inherit; text-decoration: inherit;">Format<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jsonwritesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Json<wbr>Write<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#jsonwritesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Json<wbr>Write<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Json format settings.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -35882,7 +35918,7 @@ The following output properties are available:
 <a href="#storesettings_csharp" style="color: inherit; text-decoration: inherit;">Store<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureblobfswritesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>FSWrite<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azureblobstoragewritesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Write<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azuredatalakestorewritesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Write<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azurefilestoragewritesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>File<wbr>Storage<wbr>Write<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#fileserverwritesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>File<wbr>Server<wbr>Write<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#sftpwritesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sftp<wbr>Write<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azureblobfswritesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>FSWrite<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azureblobstoragewritesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Write<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azuredatalakestorewritesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Write<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azurefilestoragewritesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Azure<wbr>File<wbr>Storage<wbr>Write<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#fileserverwritesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>File<wbr>Server<wbr>Write<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#sftpwritesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Sftp<wbr>Write<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Json store settings.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -36129,7 +36165,7 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd>
     <dt class="property-optional"
@@ -36138,7 +36174,7 @@ The following output properties are available:
 <a href="#formatsettings_csharp" style="color: inherit; text-decoration: inherit;">Format<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jsonreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Json<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#jsonreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Json<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Json format settings.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -36174,7 +36210,7 @@ The following output properties are available:
 <a href="#storesettings_csharp" style="color: inherit; text-decoration: inherit;">Store<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amazons3readsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>S3Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azureblobfsreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>FSRead<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azureblobstoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azuredatalakestorereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azurefilestoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>File<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#fileserverreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>File<wbr>Server<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#ftpreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Ftp<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#googlecloudstoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Google<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#hdfsreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Hdfs<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#httpreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Http<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#sftpreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sftp<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#amazons3readsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Amazon<wbr>S3Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azureblobfsreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>FSRead<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azureblobstoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azuredatalakestorereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azurefilestoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Azure<wbr>File<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#fileserverreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>File<wbr>Server<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#ftpreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Ftp<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#googlecloudstoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Google<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#hdfsreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Hdfs<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#httpreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Http<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#sftpreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Sftp<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Json store settings.{{% /md %}}</dd>
 </dl>
@@ -36582,7 +36618,7 @@ The following output properties are available:
 <a href="#linkedservicename_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Log storage linked service reference.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -36685,7 +36721,7 @@ The following output properties are available:
 <a href="#loglocationsettings_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Location<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loglocationsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Log<wbr>Location<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#loglocationsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Log<wbr>Location<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Log location settings customer needs to provide when enabling log.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -36694,7 +36730,7 @@ The following output properties are available:
 <a href="#copyactivitylogsettings_csharp" style="color: inherit; text-decoration: inherit;">Copy<wbr>Activity<wbr>Log<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#copyactivitylogsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Copy<wbr>Activity<wbr>Log<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#copyactivitylogsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Copy<wbr>Activity<wbr>Log<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies settings for copy activity log.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -36824,7 +36860,7 @@ The following output properties are available:
 <a href="#linkedservicename_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Log storage linked service reference.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -36999,7 +37035,7 @@ The following output properties are available:
 <a href="#dataset_csharp" style="color: inherit; text-decoration: inherit;">Dataset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#datasetreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Dataset<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Lookup activity dataset reference.{{% /md %}}</dd>
     <dt class="property-required"
@@ -37017,7 +37053,7 @@ The following output properties are available:
 <a href="#source_csharp" style="color: inherit; text-decoration: inherit;">Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amazonmwssourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>MWSSource<wbr>Response<wbr>Args</a> | <a href="#amazonredshiftsourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>Redshift<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#avrosourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Avro<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#azureblobfssourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>FSSource<wbr>Response<wbr>Args</a> | <a href="#azuredataexplorersourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Data<wbr>Explorer<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#azuredatalakestoresourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#azuredatabricksdeltalakesourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Databricks<wbr>Delta<wbr>Lake<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#azuremariadbsourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Maria<wbr>DBSource<wbr>Response<wbr>Args</a> | <a href="#azuremysqlsourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>My<wbr>Sql<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#azurepostgresqlsourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Postgre<wbr>Sql<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#azuresqlsourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Sql<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#azuretablesourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Table<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#binarysourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Binary<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#blobsourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Blob<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#cassandrasourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Cassandra<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#commondataserviceforappssourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Common<wbr>Data<wbr>Service<wbr>For<wbr>Apps<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#concursourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Concur<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#cosmosdbmongodbapisourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Cosmos<wbr>Db<wbr>Mongo<wbr>Db<wbr>Api<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#cosmosdbsqlapisourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Cosmos<wbr>Db<wbr>Sql<wbr>Api<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#couchbasesourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Couchbase<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#db2sourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Db2Source<wbr>Response<wbr>Args</a> | <a href="#delimitedtextsourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Delimited<wbr>Text<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#documentdbcollectionsourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Document<wbr>Db<wbr>Collection<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#drillsourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Drill<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#dynamicsaxsourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dynamics<wbr>AXSource<wbr>Response<wbr>Args</a> | <a href="#dynamicscrmsourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dynamics<wbr>Crm<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#dynamicssourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dynamics<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#eloquasourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Eloqua<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#excelsourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Excel<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#filesystemsourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>File<wbr>System<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#googleadwordssourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Google<wbr>Ad<wbr>Words<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#googlebigquerysourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Google<wbr>Big<wbr>Query<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#greenplumsourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Greenplum<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#hbasesourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>HBase<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#hdfssourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Hdfs<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#hivesourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Hive<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#httpsourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Http<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#hubspotsourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Hubspot<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#impalasourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Impala<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#informixsourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Informix<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#jirasourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Jira<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#jsonsourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Json<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#magentosourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Magento<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#mariadbsourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Maria<wbr>DBSource<wbr>Response<wbr>Args</a> | <a href="#marketosourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Marketo<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#microsoftaccesssourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Microsoft<wbr>Access<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#mongodbatlassourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Mongo<wbr>Db<wbr>Atlas<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#mongodbsourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Mongo<wbr>Db<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#mongodbv2sourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Mongo<wbr>Db<wbr>V2Source<wbr>Response<wbr>Args</a> | <a href="#mysqlsourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>My<wbr>Sql<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#netezzasourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Netezza<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#odatasourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>OData<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#odbcsourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Odbc<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#office365sourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Office365Source<wbr>Response<wbr>Args</a> | <a href="#oracleservicecloudsourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Oracle<wbr>Service<wbr>Cloud<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#oraclesourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Oracle<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#orcsourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Orc<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#parquetsourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parquet<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#paypalsourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Paypal<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#phoenixsourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Phoenix<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#postgresqlsourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Postgre<wbr>Sql<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#prestosourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Presto<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#quickbookssourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Quick<wbr>Books<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#relationalsourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Relational<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#responsyssourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Responsys<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#restsourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Rest<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#salesforcemarketingcloudsourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Salesforce<wbr>Marketing<wbr>Cloud<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#salesforceservicecloudsourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Salesforce<wbr>Service<wbr>Cloud<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#salesforcesourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Salesforce<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#sapbwsourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sap<wbr>Bw<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#sapcloudforcustomersourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sap<wbr>Cloud<wbr>For<wbr>Customer<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#sapeccsourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sap<wbr>Ecc<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#saphanasourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sap<wbr>Hana<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#sapopenhubsourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sap<wbr>Open<wbr>Hub<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#saptablesourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sap<wbr>Table<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#servicenowsourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Service<wbr>Now<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#sharepointonlinelistsourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Share<wbr>Point<wbr>Online<wbr>List<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#shopifysourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Shopify<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#snowflakesourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Snowflake<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#sparksourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Spark<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#sqldwsourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sql<wbr>DWSource<wbr>Response<wbr>Args</a> | <a href="#sqlmisourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sql<wbr>MISource<wbr>Response<wbr>Args</a> | <a href="#sqlserversourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sql<wbr>Server<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#sqlsourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sql<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#squaresourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Square<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#sybasesourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sybase<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#tabularsourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Tabular<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#teradatasourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Teradata<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#verticasourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Vertica<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#websourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Web<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#xerosourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Xero<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#xmlsourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Xml<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#zohosourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Zoho<wbr>Source<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#amazonmwssourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Amazon<wbr>MWSSource<wbr>Response<wbr>Args</a> | <a href="#amazonredshiftsourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Amazon<wbr>Redshift<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#avrosourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Avro<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#azureblobfssourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>FSSource<wbr>Response<wbr>Args</a> | <a href="#azuredataexplorersourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Azure<wbr>Data<wbr>Explorer<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#azuredatalakestoresourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#azuredatabricksdeltalakesourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Azure<wbr>Databricks<wbr>Delta<wbr>Lake<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#azuremariadbsourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Azure<wbr>Maria<wbr>DBSource<wbr>Response<wbr>Args</a> | <a href="#azuremysqlsourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Azure<wbr>My<wbr>Sql<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#azurepostgresqlsourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Azure<wbr>Postgre<wbr>Sql<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#azuresqlsourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Azure<wbr>Sql<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#azuretablesourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Azure<wbr>Table<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#binarysourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Binary<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#blobsourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Blob<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#cassandrasourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Cassandra<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#commondataserviceforappssourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Common<wbr>Data<wbr>Service<wbr>For<wbr>Apps<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#concursourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Concur<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#cosmosdbmongodbapisourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Cosmos<wbr>Db<wbr>Mongo<wbr>Db<wbr>Api<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#cosmosdbsqlapisourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Cosmos<wbr>Db<wbr>Sql<wbr>Api<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#couchbasesourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Couchbase<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#db2sourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Db2Source<wbr>Response<wbr>Args</a> | <a href="#delimitedtextsourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Delimited<wbr>Text<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#documentdbcollectionsourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Document<wbr>Db<wbr>Collection<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#drillsourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Drill<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#dynamicsaxsourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Dynamics<wbr>AXSource<wbr>Response<wbr>Args</a> | <a href="#dynamicscrmsourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Dynamics<wbr>Crm<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#dynamicssourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Dynamics<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#eloquasourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Eloqua<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#excelsourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Excel<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#filesystemsourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>File<wbr>System<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#googleadwordssourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Google<wbr>Ad<wbr>Words<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#googlebigquerysourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Google<wbr>Big<wbr>Query<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#greenplumsourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Greenplum<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#hbasesourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>HBase<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#hdfssourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Hdfs<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#hivesourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Hive<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#httpsourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Http<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#hubspotsourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Hubspot<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#impalasourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Impala<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#informixsourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Informix<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#jirasourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Jira<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#jsonsourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Json<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#magentosourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Magento<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#mariadbsourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Maria<wbr>DBSource<wbr>Response<wbr>Args</a> | <a href="#marketosourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Marketo<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#microsoftaccesssourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Microsoft<wbr>Access<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#mongodbatlassourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Mongo<wbr>Db<wbr>Atlas<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#mongodbsourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Mongo<wbr>Db<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#mongodbv2sourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Mongo<wbr>Db<wbr>V2Source<wbr>Response<wbr>Args</a> | <a href="#mysqlsourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>My<wbr>Sql<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#netezzasourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Netezza<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#odatasourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>OData<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#odbcsourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Odbc<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#office365sourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Office365Source<wbr>Response<wbr>Args</a> | <a href="#oracleservicecloudsourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Oracle<wbr>Service<wbr>Cloud<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#oraclesourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Oracle<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#orcsourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Orc<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#parquetsourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Parquet<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#paypalsourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Paypal<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#phoenixsourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Phoenix<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#postgresqlsourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Postgre<wbr>Sql<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#prestosourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Presto<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#quickbookssourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Quick<wbr>Books<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#relationalsourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Relational<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#responsyssourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Responsys<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#restsourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Rest<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#salesforcemarketingcloudsourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Salesforce<wbr>Marketing<wbr>Cloud<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#salesforceservicecloudsourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Salesforce<wbr>Service<wbr>Cloud<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#salesforcesourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Salesforce<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#sapbwsourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Sap<wbr>Bw<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#sapcloudforcustomersourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Sap<wbr>Cloud<wbr>For<wbr>Customer<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#sapeccsourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Sap<wbr>Ecc<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#saphanasourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Sap<wbr>Hana<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#sapopenhubsourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Sap<wbr>Open<wbr>Hub<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#saptablesourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Sap<wbr>Table<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#servicenowsourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Service<wbr>Now<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#sharepointonlinelistsourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Share<wbr>Point<wbr>Online<wbr>List<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#shopifysourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Shopify<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#snowflakesourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Snowflake<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#sparksourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Spark<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#sqldwsourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Sql<wbr>DWSource<wbr>Response<wbr>Args</a> | <a href="#sqlmisourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Sql<wbr>MISource<wbr>Response<wbr>Args</a> | <a href="#sqlserversourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Sql<wbr>Server<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#sqlsourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Sql<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#squaresourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Square<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#sybasesourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Sybase<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#tabularsourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Tabular<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#teradatasourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Teradata<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#verticasourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Vertica<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#websourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Web<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#xerosourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Xero<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#xmlsourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Xml<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#zohosourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Zoho<wbr>Source<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Dataset-specific source properties, same as copy activity source.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -37026,7 +37062,7 @@ The following output properties are available:
 <a href="#dependson_csharp" style="color: inherit; text-decoration: inherit;">Depends<wbr>On</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitydependencyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Activity<wbr>Dependency<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#activitydependencyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Activity<wbr>Dependency<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Activity depends on condition.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -37053,7 +37089,7 @@ The following output properties are available:
 <a href="#linkedservicename_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -37062,7 +37098,7 @@ The following output properties are available:
 <a href="#policy_csharp" style="color: inherit; text-decoration: inherit;">Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitypolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Activity<wbr>Policy<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#activitypolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Activity<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Activity policy.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -37071,7 +37107,7 @@ The following output properties are available:
 <a href="#userproperties_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpropertyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>User<wbr>Property<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#userpropertyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>User<wbr>Property<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Activity user properties.{{% /md %}}</dd>
 </dl>
@@ -37354,7 +37390,7 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd>
     <dt class="property-optional"
@@ -37601,7 +37637,7 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd>
     <dt class="property-optional"
@@ -37848,7 +37884,7 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd>
     <dt class="property-optional"
@@ -38342,7 +38378,7 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd>
     <dt class="property-optional"
@@ -38553,7 +38589,7 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd>
     <dt class="property-optional"
@@ -38571,7 +38607,7 @@ The following output properties are available:
 <a href="#cursormethods_csharp" style="color: inherit; text-decoration: inherit;">Cursor<wbr>Methods</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mongodbcursormethodspropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Mongo<wbr>Db<wbr>Cursor<wbr>Methods<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#mongodbcursormethodspropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Mongo<wbr>Db<wbr>Cursor<wbr>Methods<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Cursor methods for Mongodb query{{% /md %}}</dd>
     <dt class="property-optional"
@@ -39047,7 +39083,7 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd>
     <dt class="property-optional"
@@ -39258,7 +39294,7 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd>
     <dt class="property-optional"
@@ -39276,7 +39312,7 @@ The following output properties are available:
 <a href="#cursormethods_csharp" style="color: inherit; text-decoration: inherit;">Cursor<wbr>Methods</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mongodbcursormethodspropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Mongo<wbr>Db<wbr>Cursor<wbr>Methods<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#mongodbcursormethodspropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Mongo<wbr>Db<wbr>Cursor<wbr>Methods<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Cursor methods for Mongodb query{{% /md %}}</dd>
     <dt class="property-optional"
@@ -39577,7 +39613,7 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd>
     <dt class="property-optional"
@@ -39963,7 +39999,7 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd>
     <dt class="property-optional"
@@ -39990,7 +40026,7 @@ The following output properties are available:
 <a href="#partitionsettings_csharp" style="color: inherit; text-decoration: inherit;">Partition<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#netezzapartitionsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Netezza<wbr>Partition<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#netezzapartitionsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Netezza<wbr>Partition<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The settings that will be leveraged for Netezza source partitioning.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -40282,7 +40318,7 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd>
     <dt class="property-optional"
@@ -40776,7 +40812,7 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd>
     <dt class="property-optional"
@@ -41553,7 +41589,7 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd>
     <dt class="property-optional"
@@ -42047,7 +42083,7 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd>
     <dt class="property-optional"
@@ -42083,7 +42119,7 @@ The following output properties are available:
 <a href="#partitionsettings_csharp" style="color: inherit; text-decoration: inherit;">Partition<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oraclepartitionsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Oracle<wbr>Partition<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#oraclepartitionsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Oracle<wbr>Partition<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The settings that will be leveraged for Oracle source partitioning.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -42366,7 +42402,7 @@ The following output properties are available:
 <a href="#formatsettings_csharp" style="color: inherit; text-decoration: inherit;">Format<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#orcwritesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Orc<wbr>Write<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#orcwritesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Orc<wbr>Write<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}ORC format settings.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -42402,7 +42438,7 @@ The following output properties are available:
 <a href="#storesettings_csharp" style="color: inherit; text-decoration: inherit;">Store<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureblobfswritesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>FSWrite<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azureblobstoragewritesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Write<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azuredatalakestorewritesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Write<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azurefilestoragewritesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>File<wbr>Storage<wbr>Write<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#fileserverwritesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>File<wbr>Server<wbr>Write<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#sftpwritesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sftp<wbr>Write<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azureblobfswritesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>FSWrite<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azureblobstoragewritesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Write<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azuredatalakestorewritesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Write<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azurefilestoragewritesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Azure<wbr>File<wbr>Storage<wbr>Write<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#fileserverwritesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>File<wbr>Server<wbr>Write<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#sftpwritesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Sftp<wbr>Write<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}ORC store settings.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -42649,7 +42685,7 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd>
     <dt class="property-optional"
@@ -42685,7 +42721,7 @@ The following output properties are available:
 <a href="#storesettings_csharp" style="color: inherit; text-decoration: inherit;">Store<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amazons3readsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>S3Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azureblobfsreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>FSRead<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azureblobstoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azuredatalakestorereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azurefilestoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>File<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#fileserverreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>File<wbr>Server<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#ftpreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Ftp<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#googlecloudstoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Google<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#hdfsreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Hdfs<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#httpreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Http<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#sftpreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sftp<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#amazons3readsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Amazon<wbr>S3Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azureblobfsreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>FSRead<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azureblobstoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azuredatalakestorereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azurefilestoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Azure<wbr>File<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#fileserverreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>File<wbr>Server<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#ftpreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Ftp<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#googlecloudstoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Google<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#hdfsreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Hdfs<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#httpreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Http<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#sftpreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Sftp<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}ORC store settings.{{% /md %}}</dd>
 </dl>
@@ -43066,7 +43102,7 @@ The following output properties are available:
 <a href="#formatsettings_csharp" style="color: inherit; text-decoration: inherit;">Format<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#parquetwritesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parquet<wbr>Write<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#parquetwritesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Parquet<wbr>Write<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Parquet format settings.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -43102,7 +43138,7 @@ The following output properties are available:
 <a href="#storesettings_csharp" style="color: inherit; text-decoration: inherit;">Store<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureblobfswritesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>FSWrite<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azureblobstoragewritesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Write<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azuredatalakestorewritesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Write<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azurefilestoragewritesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>File<wbr>Storage<wbr>Write<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#fileserverwritesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>File<wbr>Server<wbr>Write<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#sftpwritesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sftp<wbr>Write<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azureblobfswritesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>FSWrite<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azureblobstoragewritesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Write<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azuredatalakestorewritesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Write<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azurefilestoragewritesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Azure<wbr>File<wbr>Storage<wbr>Write<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#fileserverwritesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>File<wbr>Server<wbr>Write<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#sftpwritesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Sftp<wbr>Write<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Parquet store settings.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -43349,7 +43385,7 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd>
     <dt class="property-optional"
@@ -43385,7 +43421,7 @@ The following output properties are available:
 <a href="#storesettings_csharp" style="color: inherit; text-decoration: inherit;">Store<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amazons3readsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>S3Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azureblobfsreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>FSRead<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azureblobstoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azuredatalakestorereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azurefilestoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>File<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#fileserverreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>File<wbr>Server<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#ftpreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Ftp<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#googlecloudstoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Google<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#hdfsreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Hdfs<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#httpreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Http<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#sftpreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sftp<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#amazons3readsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Amazon<wbr>S3Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azureblobfsreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>FSRead<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azureblobstoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azuredatalakestorereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azurefilestoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Azure<wbr>File<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#fileserverreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>File<wbr>Server<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#ftpreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Ftp<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#googlecloudstoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Google<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#hdfsreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Hdfs<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#httpreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Http<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#sftpreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Sftp<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Parquet store settings.{{% /md %}}</dd>
 </dl>
@@ -43663,7 +43699,7 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd>
     <dt class="property-optional"
@@ -43910,7 +43946,7 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd>
     <dt class="property-optional"
@@ -44538,7 +44574,7 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd>
     <dt class="property-optional"
@@ -44785,7 +44821,7 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd>
     <dt class="property-optional"
@@ -45032,7 +45068,7 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd>
     <dt class="property-optional"
@@ -45391,7 +45427,7 @@ The following output properties are available:
 <a href="#s3linkedservicename_csharp" style="color: inherit; text-decoration: inherit;">S3Linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The name of the Amazon S3 linked service which will be used for the unload operation when copying from the Amazon Redshift source.{{% /md %}}</dd>
 </dl>
@@ -45485,7 +45521,7 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd>
     <dt class="property-optional"
@@ -45696,7 +45732,7 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd>
     <dt class="property-optional"
@@ -46334,7 +46370,7 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd>
     <dt class="property-optional"
@@ -46734,7 +46770,7 @@ The following output properties are available:
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Password for windows authentication.{{% /md %}}</dd>
     <dt class="property-required"
@@ -47048,7 +47084,7 @@ The following output properties are available:
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Password for windows authentication.{{% /md %}}</dd>
     <dt class="property-required"
@@ -47263,7 +47299,7 @@ The following output properties are available:
 <a href="#accesscredential_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Credential</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ssisaccesscredentialresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>SSISAccess<wbr>Credential<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#ssisaccesscredentialresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>SSISAccess<wbr>Credential<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The package execution log access credential.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -47420,7 +47456,7 @@ The following output properties are available:
 <a href="#accesscredential_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Credential</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ssisaccesscredentialresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>SSISAccess<wbr>Credential<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#ssisaccesscredentialresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>SSISAccess<wbr>Credential<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The package access credential.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -47429,7 +47465,7 @@ The following output properties are available:
 <a href="#childpackages_csharp" style="color: inherit; text-decoration: inherit;">Child<wbr>Packages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ssischildpackageresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>SSISChild<wbr>Package<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#ssischildpackageresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>SSISChild<wbr>Package<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The embedded child package list.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -47438,7 +47474,7 @@ The following output properties are available:
 <a href="#configurationaccesscredential_csharp" style="color: inherit; text-decoration: inherit;">Configuration<wbr>Access<wbr>Credential</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ssisaccesscredentialresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>SSISAccess<wbr>Credential<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#ssisaccesscredentialresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>SSISAccess<wbr>Credential<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration file access credential.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -47483,7 +47519,7 @@ The following output properties are available:
 <a href="#packagepassword_csharp" style="color: inherit; text-decoration: inherit;">Package<wbr>Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Password of the package.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -47914,7 +47950,7 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd>
     <dt class="property-optional"
@@ -48480,7 +48516,7 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd>
     <dt class="property-optional"
@@ -49046,7 +49082,7 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd>
     <dt class="property-optional"
@@ -49329,7 +49365,7 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd>
     <dt class="property-optional"
@@ -49859,7 +49895,7 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd>
     <dt class="property-optional"
@@ -50142,7 +50178,7 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd>
     <dt class="property-optional"
@@ -50492,7 +50528,7 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd>
     <dt class="property-optional"
@@ -50528,7 +50564,7 @@ The following output properties are available:
 <a href="#partitionsettings_csharp" style="color: inherit; text-decoration: inherit;">Partition<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#saphanapartitionsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sap<wbr>Hana<wbr>Partition<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#saphanapartitionsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Sap<wbr>Hana<wbr>Partition<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The settings that will be leveraged for SAP HANA source partitioning.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -50847,7 +50883,7 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd>
     <dt class="property-optional"
@@ -51377,7 +51413,7 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd>
     <dt class="property-optional"
@@ -51422,7 +51458,7 @@ The following output properties are available:
 <a href="#partitionsettings_csharp" style="color: inherit; text-decoration: inherit;">Partition<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#saptablepartitionsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sap<wbr>Table<wbr>Partition<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#saptablepartitionsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Sap<wbr>Table<wbr>Partition<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The settings that will be leveraged for SAP table source partitioning.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -51979,7 +52015,7 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd>
     <dt class="property-optional"
@@ -52235,7 +52271,7 @@ The following output properties are available:
 <a href="#dependson_csharp" style="color: inherit; text-decoration: inherit;">Depends<wbr>On</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitydependencyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Activity<wbr>Dependency<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#activitydependencyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Activity<wbr>Dependency<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Activity depends on condition.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -52253,7 +52289,7 @@ The following output properties are available:
 <a href="#userproperties_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpropertyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>User<wbr>Property<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#userpropertyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>User<wbr>Property<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Activity user properties.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -53250,7 +53286,7 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd>
     <dt class="property-optional"
@@ -53806,7 +53842,7 @@ The following output properties are available:
 <a href="#importsettings_csharp" style="color: inherit; text-decoration: inherit;">Import<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#snowflakeimportcopycommandresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Snowflake<wbr>Import<wbr>Copy<wbr>Command<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#snowflakeimportcopycommandresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Snowflake<wbr>Import<wbr>Copy<wbr>Command<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Snowflake import settings.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -54089,7 +54125,7 @@ The following output properties are available:
 <a href="#exportsettings_csharp" style="color: inherit; text-decoration: inherit;">Export<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#snowflakeexportcopycommandresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Snowflake<wbr>Export<wbr>Copy<wbr>Command<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#snowflakeexportcopycommandresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Snowflake<wbr>Export<wbr>Copy<wbr>Command<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Snowflake export settings.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -54300,7 +54336,7 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd>
     <dt class="property-optional"
@@ -54565,7 +54601,7 @@ The following output properties are available:
 <a href="#copycommandsettings_csharp" style="color: inherit; text-decoration: inherit;">Copy<wbr>Command<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dwcopycommandsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>DWCopy<wbr>Command<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#dwcopycommandsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>DWCopy<wbr>Command<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies Copy Command related settings when allowCopyCommand is true.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -54583,7 +54619,7 @@ The following output properties are available:
 <a href="#polybasesettings_csharp" style="color: inherit; text-decoration: inherit;">Poly<wbr>Base<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#polybasesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Polybase<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#polybasesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Polybase<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies PolyBase-related settings when allowPolyBase is true.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -54974,7 +55010,7 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd>
     <dt class="property-optional"
@@ -55001,7 +55037,7 @@ The following output properties are available:
 <a href="#partitionsettings_csharp" style="color: inherit; text-decoration: inherit;">Partition<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlpartitionsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sql<wbr>Partition<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlpartitionsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Sql<wbr>Partition<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The settings that will be leveraged for Sql source partitioning.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -55419,7 +55455,7 @@ The following output properties are available:
 <a href="#storedprocedureparameters_csharp" style="color: inherit; text-decoration: inherit;">Stored<wbr>Procedure<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Stored<wbr>Procedure<wbr>Parameter<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Stored<wbr>Procedure<wbr>Parameter<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}SQL stored procedure parameters.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -55792,7 +55828,7 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd>
     <dt class="property-optional"
@@ -55819,7 +55855,7 @@ The following output properties are available:
 <a href="#partitionsettings_csharp" style="color: inherit; text-decoration: inherit;">Partition<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlpartitionsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sql<wbr>Partition<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlpartitionsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Sql<wbr>Partition<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The settings that will be leveraged for Sql source partitioning.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -55882,7 +55918,7 @@ The following output properties are available:
 <a href="#storedprocedureparameters_csharp" style="color: inherit; text-decoration: inherit;">Stored<wbr>Procedure<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Stored<wbr>Procedure<wbr>Parameter<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Stored<wbr>Procedure<wbr>Parameter<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}Value and type setting for stored procedure parameters. Example: "{Parameter1: {value: "1", type: "int"}}".{{% /md %}}</dd>
 </dl>
@@ -56412,7 +56448,7 @@ The following output properties are available:
 <a href="#storedprocedureparameters_csharp" style="color: inherit; text-decoration: inherit;">Stored<wbr>Procedure<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Stored<wbr>Procedure<wbr>Parameter<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Stored<wbr>Procedure<wbr>Parameter<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}SQL stored procedure parameters.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -56785,7 +56821,7 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd>
     <dt class="property-optional"
@@ -56812,7 +56848,7 @@ The following output properties are available:
 <a href="#partitionsettings_csharp" style="color: inherit; text-decoration: inherit;">Partition<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlpartitionsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sql<wbr>Partition<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlpartitionsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Sql<wbr>Partition<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The settings that will be leveraged for Sql source partitioning.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -56875,7 +56911,7 @@ The following output properties are available:
 <a href="#storedprocedureparameters_csharp" style="color: inherit; text-decoration: inherit;">Stored<wbr>Procedure<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Stored<wbr>Procedure<wbr>Parameter<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Stored<wbr>Procedure<wbr>Parameter<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}Value and type setting for stored procedure parameters. Example: "{Parameter1: {value: "1", type: "int"}}".{{% /md %}}</dd>
 </dl>
@@ -57212,7 +57248,7 @@ The following output properties are available:
 <a href="#linkedservicename_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd>
     <dt class="property-required"
@@ -57239,7 +57275,7 @@ The following output properties are available:
 <a href="#dependson_csharp" style="color: inherit; text-decoration: inherit;">Depends<wbr>On</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitydependencyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Activity<wbr>Dependency<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#activitydependencyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Activity<wbr>Dependency<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Activity depends on condition.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -57257,7 +57293,7 @@ The following output properties are available:
 <a href="#policy_csharp" style="color: inherit; text-decoration: inherit;">Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitypolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Activity<wbr>Policy<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#activitypolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Activity<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Activity policy.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -57266,7 +57302,7 @@ The following output properties are available:
 <a href="#storedprocedureparameters_csharp" style="color: inherit; text-decoration: inherit;">Stored<wbr>Procedure<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Stored<wbr>Procedure<wbr>Parameter<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Stored<wbr>Procedure<wbr>Parameter<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}Value and type setting for stored procedure parameters. Example: "{Parameter1: {value: "1", type: "int"}}".{{% /md %}}</dd>
     <dt class="property-optional"
@@ -57275,7 +57311,7 @@ The following output properties are available:
 <a href="#userproperties_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpropertyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>User<wbr>Property<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#userpropertyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>User<wbr>Property<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Activity user properties.{{% /md %}}</dd>
 </dl>
@@ -57585,7 +57621,7 @@ The following output properties are available:
 <a href="#storedprocedureparameters_csharp" style="color: inherit; text-decoration: inherit;">Stored<wbr>Procedure<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Stored<wbr>Procedure<wbr>Parameter<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Stored<wbr>Procedure<wbr>Parameter<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}SQL stored procedure parameters.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -57958,7 +57994,7 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd>
     <dt class="property-optional"
@@ -57994,7 +58030,7 @@ The following output properties are available:
 <a href="#partitionsettings_csharp" style="color: inherit; text-decoration: inherit;">Partition<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlpartitionsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sql<wbr>Partition<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlpartitionsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Sql<wbr>Partition<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The settings that will be leveraged for Sql source partitioning.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -58048,7 +58084,7 @@ The following output properties are available:
 <a href="#storedprocedureparameters_csharp" style="color: inherit; text-decoration: inherit;">Stored<wbr>Procedure<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Stored<wbr>Procedure<wbr>Parameter<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Stored<wbr>Procedure<wbr>Parameter<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}Value and type setting for stored procedure parameters. Example: "{Parameter1: {value: "1", type: "int"}}".{{% /md %}}</dd>
 </dl>
@@ -58385,7 +58421,7 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd>
     <dt class="property-optional"
@@ -58632,7 +58668,7 @@ The following output properties are available:
 <a href="#linkedservicename_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Staging linked service reference.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -58883,7 +58919,7 @@ The following output properties are available:
 <a href="#on_csharp" style="color: inherit; text-decoration: inherit;">On</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#expressionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Expression<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#expressionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Expression<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An expression that would evaluate to a string or integer. This is used to determine the block of activities in cases that will be executed.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -58892,7 +58928,7 @@ The following output properties are available:
 <a href="#cases_csharp" style="color: inherit; text-decoration: inherit;">Cases</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#switchcaseresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Switch<wbr>Case<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#switchcaseresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Switch<wbr>Case<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of cases that correspond to expected values of the 'on' property. This is an optional property and if not provided, the activity will execute activities provided in defaultActivities.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -58910,7 +58946,7 @@ The following output properties are available:
 <a href="#dependson_csharp" style="color: inherit; text-decoration: inherit;">Depends<wbr>On</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitydependencyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Activity<wbr>Dependency<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#activitydependencyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Activity<wbr>Dependency<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Activity depends on condition.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -58928,7 +58964,7 @@ The following output properties are available:
 <a href="#userproperties_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpropertyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>User<wbr>Property<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#userpropertyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>User<wbr>Property<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Activity user properties.{{% /md %}}</dd>
 </dl>
@@ -59260,7 +59296,7 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd>
     <dt class="property-optional"
@@ -59507,7 +59543,7 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd>
     <dt class="property-optional"
@@ -59991,7 +60027,7 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd>
     <dt class="property-optional"
@@ -60018,7 +60054,7 @@ The following output properties are available:
 <a href="#partitionsettings_csharp" style="color: inherit; text-decoration: inherit;">Partition<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#teradatapartitionsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Teradata<wbr>Partition<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#teradatapartitionsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Teradata<wbr>Partition<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The settings that will be leveraged for teradata source partitioning.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -60319,7 +60355,7 @@ The following output properties are available:
 <a href="#expression_csharp" style="color: inherit; text-decoration: inherit;">Expression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#expressionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Expression<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#expressionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Expression<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An expression that would evaluate to Boolean. The loop will continue until this expression evaluates to true{{% /md %}}</dd>
     <dt class="property-required"
@@ -60337,7 +60373,7 @@ The following output properties are available:
 <a href="#dependson_csharp" style="color: inherit; text-decoration: inherit;">Depends<wbr>On</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitydependencyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Activity<wbr>Dependency<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#activitydependencyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Activity<wbr>Dependency<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Activity depends on condition.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -60364,7 +60400,7 @@ The following output properties are available:
 <a href="#userproperties_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpropertyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>User<wbr>Property<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#userpropertyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>User<wbr>Property<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Activity user properties.{{% /md %}}</dd>
 </dl>
@@ -60696,7 +60732,7 @@ The following output properties are available:
 <a href="#dataset_csharp" style="color: inherit; text-decoration: inherit;">Dataset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#datasetreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Dataset<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Validation activity dataset reference.{{% /md %}}</dd>
     <dt class="property-required"
@@ -60723,7 +60759,7 @@ The following output properties are available:
 <a href="#dependson_csharp" style="color: inherit; text-decoration: inherit;">Depends<wbr>On</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitydependencyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Activity<wbr>Dependency<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#activitydependencyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Activity<wbr>Dependency<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Activity depends on condition.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -60768,7 +60804,7 @@ The following output properties are available:
 <a href="#userproperties_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpropertyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>User<wbr>Property<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#userpropertyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>User<wbr>Property<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Activity user properties.{{% /md %}}</dd>
 </dl>
@@ -61154,7 +61190,7 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd>
     <dt class="property-optional"
@@ -61419,7 +61455,7 @@ The following output properties are available:
 <a href="#dependson_csharp" style="color: inherit; text-decoration: inherit;">Depends<wbr>On</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitydependencyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Activity<wbr>Dependency<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#activitydependencyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Activity<wbr>Dependency<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Activity depends on condition.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -61437,7 +61473,7 @@ The following output properties are available:
 <a href="#userproperties_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpropertyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>User<wbr>Property<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#userpropertyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>User<wbr>Property<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Activity user properties.{{% /md %}}</dd>
 </dl>
@@ -61621,7 +61657,7 @@ The following output properties are available:
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Password for the PFX file or basic authentication.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -61630,7 +61666,7 @@ The following output properties are available:
 <a href="#pfx_csharp" style="color: inherit; text-decoration: inherit;">Pfx</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Base64-encoded contents of a PFX file.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -61850,7 +61886,7 @@ The following output properties are available:
 <a href="#authentication_csharp" style="color: inherit; text-decoration: inherit;">Authentication</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webactivityauthenticationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Web<wbr>Activity<wbr>Authentication<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#webactivityauthenticationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Web<wbr>Activity<wbr>Authentication<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Authentication method used for calling the endpoint.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -61868,7 +61904,7 @@ The following output properties are available:
 <a href="#connectvia_csharp" style="color: inherit; text-decoration: inherit;">Connect<wbr>Via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -61877,7 +61913,7 @@ The following output properties are available:
 <a href="#datasets_csharp" style="color: inherit; text-decoration: inherit;">Datasets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetreferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Reference<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#datasetreferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Dataset<wbr>Reference<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of datasets passed to web endpoint.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -61886,7 +61922,7 @@ The following output properties are available:
 <a href="#dependson_csharp" style="color: inherit; text-decoration: inherit;">Depends<wbr>On</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitydependencyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Activity<wbr>Dependency<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#activitydependencyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Activity<wbr>Dependency<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Activity depends on condition.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -61913,7 +61949,7 @@ The following output properties are available:
 <a href="#linkedservicename_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -61922,7 +61958,7 @@ The following output properties are available:
 <a href="#linkedservices_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of linked services passed to web endpoint.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -61931,7 +61967,7 @@ The following output properties are available:
 <a href="#policy_csharp" style="color: inherit; text-decoration: inherit;">Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitypolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Activity<wbr>Policy<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#activitypolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Activity<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Activity policy.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -61940,7 +61976,7 @@ The following output properties are available:
 <a href="#userproperties_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpropertyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>User<wbr>Property<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#userpropertyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>User<wbr>Property<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Activity user properties.{{% /md %}}</dd>
 </dl>
@@ -62385,7 +62421,7 @@ The following output properties are available:
 <a href="#authentication_csharp" style="color: inherit; text-decoration: inherit;">Authentication</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webactivityauthenticationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Web<wbr>Activity<wbr>Authentication<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#webactivityauthenticationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Web<wbr>Activity<wbr>Authentication<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Authentication method used for calling the endpoint.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -62403,7 +62439,7 @@ The following output properties are available:
 <a href="#dependson_csharp" style="color: inherit; text-decoration: inherit;">Depends<wbr>On</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitydependencyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Activity<wbr>Dependency<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#activitydependencyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Activity<wbr>Dependency<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Activity depends on condition.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -62448,7 +62484,7 @@ The following output properties are available:
 <a href="#userproperties_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpropertyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>User<wbr>Property<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#userpropertyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>User<wbr>Property<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Activity user properties.{{% /md %}}</dd>
 </dl>
@@ -62785,7 +62821,7 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd>
     <dt class="property-optional"
@@ -62960,7 +62996,7 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd>
     <dt class="property-optional"
@@ -63207,7 +63243,7 @@ The following output properties are available:
 <a href="#compressionproperties_csharp" style="color: inherit; text-decoration: inherit;">Compression<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#targzipreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Tar<wbr>GZip<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#tarreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Tar<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#zipdeflatereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Zip<wbr>Deflate<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#targzipreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Tar<wbr>GZip<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#tarreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Tar<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#zipdeflatereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Zip<wbr>Deflate<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Compression settings.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -63418,7 +63454,7 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd>
     <dt class="property-optional"
@@ -63427,7 +63463,7 @@ The following output properties are available:
 <a href="#formatsettings_csharp" style="color: inherit; text-decoration: inherit;">Format<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#xmlreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Xml<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#xmlreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Xml<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Xml format settings.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -63463,7 +63499,7 @@ The following output properties are available:
 <a href="#storesettings_csharp" style="color: inherit; text-decoration: inherit;">Store<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amazons3readsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>S3Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azureblobfsreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>FSRead<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azureblobstoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azuredatalakestorereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azurefilestoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>File<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#fileserverreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>File<wbr>Server<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#ftpreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Ftp<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#googlecloudstoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Google<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#hdfsreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Hdfs<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#httpreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Http<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#sftpreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sftp<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#amazons3readsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Amazon<wbr>S3Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azureblobfsreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>FSRead<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azureblobstoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azuredatalakestorereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azurefilestoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Azure<wbr>File<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#fileserverreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>File<wbr>Server<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#ftpreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Ftp<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#googlecloudstoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Google<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#hdfsreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Hdfs<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#httpreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Http<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#sftpreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Sftp<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Xml store settings.{{% /md %}}</dd>
 </dl>
@@ -63732,7 +63768,7 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory..<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd>
     <dt class="property-optional"

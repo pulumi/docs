@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.solutions.ApplicationDefinition 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Information about managed application definition.
-Latest API Version: 2019-07-01.
+API Version: 2019-07-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,12 +27,12 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var applicationDefinition = new AzureNextGen.Solutions.Latest.ApplicationDefinition("applicationDefinition", new AzureNextGen.Solutions.Latest.ApplicationDefinitionArgs
+        var applicationDefinition = new AzureNextGen.Solutions..ApplicationDefinition("applicationDefinition", new AzureNextGen.Solutions..ApplicationDefinitionArgs
         {
             ApplicationDefinitionName = "myManagedApplicationDef",
             Authorizations = 
             {
-                new AzureNextGen.Solutions.Latest.Inputs.ApplicationAuthorizationArgs
+                new AzureNextGen.Solutions..Inputs.ApplicationAuthorizationArgs
                 {
                     PrincipalId = "validprincipalguid",
                     RoleDefinitionId = "validroleguid",
@@ -59,7 +59,7 @@ class MyStack : Stack
 package main
 
 import (
-	solutions "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/solutions/latest"
+	solutions "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/solutions"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -97,9 +97,9 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-application_definition = azure_nextgen.solutions.latest.ApplicationDefinition("applicationDefinition",
+application_definition = azure_nextgen.solutions.ApplicationDefinition("applicationDefinition",
     application_definition_name="myManagedApplicationDef",
-    authorizations=[azure_nextgen.solutions.latest.ApplicationAuthorizationArgs(
+    authorizations=[azure_nextgen.solutions.ApplicationAuthorizationArgs(
         principal_id="validprincipalguid",
         role_definition_id="validroleguid",
     )],
@@ -120,7 +120,7 @@ application_definition = azure_nextgen.solutions.latest.ApplicationDefinition("a
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const applicationDefinition = new azure_nextgen.solutions.latest.ApplicationDefinition("applicationDefinition", {
+const applicationDefinition = new azure_nextgen.solutions.ApplicationDefinition("applicationDefinition", {
     applicationDefinitionName: "myManagedApplicationDef",
     authorizations: [{
         principalId: "validprincipalguid",
@@ -336,7 +336,7 @@ The ApplicationDefinition resource accepts the following [input]({{< relref "/do
 <a href="#locklevel_csharp" style="color: inherit; text-decoration: inherit;">Lock<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationlocklevel">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Solutions.<wbr>Application<wbr>Lock<wbr>Level</a></span>
+        <span class="property-type"><a href="#applicationlocklevel">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Solutions..<wbr>Application<wbr>Lock<wbr>Level</a></span>
     </dt>
     <dd>{{% md %}}The managed application lock level.{{% /md %}}</dd>
     <dt class="property-required"
@@ -354,7 +354,7 @@ The ApplicationDefinition resource accepts the following [input]({{< relref "/do
 <a href="#artifacts_csharp" style="color: inherit; text-decoration: inherit;">Artifacts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationdefinitionartifact">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Solutions.<wbr>Inputs.<wbr>Application<wbr>Definition<wbr>Artifact<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#applicationdefinitionartifact">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Solutions..<wbr>Inputs.<wbr>Application<wbr>Definition<wbr>Artifact<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The collection of managed application artifacts. The portal will use the files specified as artifacts to construct the user experience of creating a managed application from a managed application definition.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -363,7 +363,7 @@ The ApplicationDefinition resource accepts the following [input]({{< relref "/do
 <a href="#authorizations_csharp" style="color: inherit; text-decoration: inherit;">Authorizations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationauthorization">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Solutions.<wbr>Inputs.<wbr>Application<wbr>Authorization<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#applicationauthorization">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Solutions..<wbr>Inputs.<wbr>Application<wbr>Authorization<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The managed application provider authorizations.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -381,7 +381,7 @@ The ApplicationDefinition resource accepts the following [input]({{< relref "/do
 <a href="#deploymentpolicy_csharp" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationdeploymentpolicy">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Solutions.<wbr>Inputs.<wbr>Application<wbr>Deployment<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationdeploymentpolicy">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Solutions..<wbr>Inputs.<wbr>Application<wbr>Deployment<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The managed application deployment policy.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -426,7 +426,7 @@ The ApplicationDefinition resource accepts the following [input]({{< relref "/do
 <a href="#lockingpolicy_csharp" style="color: inherit; text-decoration: inherit;">Locking<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationpackagelockingpolicydefinition">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Solutions.<wbr>Inputs.<wbr>Application<wbr>Package<wbr>Locking<wbr>Policy<wbr>Definition<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationpackagelockingpolicydefinition">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Solutions..<wbr>Inputs.<wbr>Application<wbr>Package<wbr>Locking<wbr>Policy<wbr>Definition<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The managed application locking policy.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -453,7 +453,7 @@ The ApplicationDefinition resource accepts the following [input]({{< relref "/do
 <a href="#managementpolicy_csharp" style="color: inherit; text-decoration: inherit;">Management<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationmanagementpolicy">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Solutions.<wbr>Inputs.<wbr>Application<wbr>Management<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationmanagementpolicy">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Solutions..<wbr>Inputs.<wbr>Application<wbr>Management<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The managed application management policy that determines publisher's access to the managed resource group.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -462,7 +462,7 @@ The ApplicationDefinition resource accepts the following [input]({{< relref "/do
 <a href="#notificationpolicy_csharp" style="color: inherit; text-decoration: inherit;">Notification<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationnotificationpolicy">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Solutions.<wbr>Inputs.<wbr>Application<wbr>Notification<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationnotificationpolicy">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Solutions..<wbr>Inputs.<wbr>Application<wbr>Notification<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The managed application notification policy.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -480,7 +480,7 @@ The ApplicationDefinition resource accepts the following [input]({{< relref "/do
 <a href="#policies_csharp" style="color: inherit; text-decoration: inherit;">Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationpolicy">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Solutions.<wbr>Inputs.<wbr>Application<wbr>Policy<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#applicationpolicy">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Solutions..<wbr>Inputs.<wbr>Application<wbr>Policy<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The managed application provider policies.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -489,7 +489,7 @@ The ApplicationDefinition resource accepts the following [input]({{< relref "/do
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sku">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Solutions.<wbr>Inputs.<wbr>Sku<wbr>Args</a></span>
+        <span class="property-type"><a href="#sku">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Solutions..<wbr>Inputs.<wbr>Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The SKU of the resource.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1464,7 +1464,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#applicationdefinitionartifactname">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Solutions.<wbr>Application<wbr>Definition<wbr>Artifact<wbr>Name</a></span>
+        <span class="property-type">string | <a href="#applicationdefinitionartifactname">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Solutions..<wbr>Application<wbr>Definition<wbr>Artifact<wbr>Name</a></span>
     </dt>
     <dd>{{% md %}}The managed application definition artifact name.{{% /md %}}</dd>
     <dt class="property-required"
@@ -1473,7 +1473,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationartifacttype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Solutions.<wbr>Application<wbr>Artifact<wbr>Type</a></span>
+        <span class="property-type"><a href="#applicationartifacttype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Solutions..<wbr>Application<wbr>Artifact<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The managed application definition artifact type.{{% /md %}}</dd>
     <dt class="property-required"
@@ -1786,7 +1786,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deploymentmode_csharp" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#deploymentmode">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Solutions.<wbr>Deployment<wbr>Mode</a></span>
+        <span class="property-type">string | <a href="#deploymentmode">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Solutions..<wbr>Deployment<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}The managed application deployment mode.{{% /md %}}</dd>
 </dl>
@@ -2002,7 +2002,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mode_csharp" style="color: inherit; text-decoration: inherit;">Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#applicationmanagementmode">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Solutions.<wbr>Application<wbr>Management<wbr>Mode</a></span>
+        <span class="property-type">string | <a href="#applicationmanagementmode">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Solutions..<wbr>Application<wbr>Management<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}The managed application management mode.{{% /md %}}</dd>
 </dl>
@@ -2250,7 +2250,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#notificationendpoints_csharp" style="color: inherit; text-decoration: inherit;">Notification<wbr>Endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationnotificationendpoint">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Solutions.<wbr>Inputs.<wbr>Application<wbr>Notification<wbr>Endpoint<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#applicationnotificationendpoint">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Solutions..<wbr>Inputs.<wbr>Application<wbr>Notification<wbr>Endpoint<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The managed application notification endpoint.{{% /md %}}</dd>
 </dl>
@@ -2312,7 +2312,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#notificationendpoints_csharp" style="color: inherit; text-decoration: inherit;">Notification<wbr>Endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationnotificationendpointresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Solutions.<wbr>Inputs.<wbr>Application<wbr>Notification<wbr>Endpoint<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#applicationnotificationendpointresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Solutions..<wbr>Inputs.<wbr>Application<wbr>Notification<wbr>Endpoint<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The managed application notification endpoint.{{% /md %}}</dd>
 </dl>
@@ -3290,7 +3290,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:solutions/latest:ApplicationDefinition myManagedApplicationDef /subscriptions/subid/resourceGroups/rg/providers/Microsoft.Solutions/applicationDefinitions/myManagedApplicationDef 
+$ pulumi import azure-nextgen:solutions:ApplicationDefinition myManagedApplicationDef /subscriptions/subid/resourceGroups/rg/providers/Microsoft.Solutions/applicationDefinitions/myManagedApplicationDef 
 ```
 
 

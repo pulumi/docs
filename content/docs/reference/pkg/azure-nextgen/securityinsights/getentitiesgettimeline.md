@@ -108,7 +108,7 @@ The following arguments are supported:
 <a href="#kinds_csharp" style="color: inherit; text-decoration: inherit;">Kinds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Union&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security<wbr>Insights.<wbr>Entity<wbr>Timeline<wbr>Kind&gt;&gt;</span>
+        <span class="property-type">List&lt;Union&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security<wbr>Insights..<wbr>Entity<wbr>Timeline<wbr>Kind&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}Array of timeline Item kinds.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -375,7 +375,7 @@ The following output properties are available:
 <a href="#metadata_csharp" style="color: inherit; text-decoration: inherit;">Meta<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timelineresultsmetadataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security<wbr>Insights.<wbr>Outputs.<wbr>Timeline<wbr>Results<wbr>Metadata<wbr>Response</a></span>
+        <span class="property-type"><a href="#timelineresultsmetadataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security<wbr>Insights..<wbr>Outputs.<wbr>Timeline<wbr>Results<wbr>Metadata<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The metadata from the timeline operation results.{{% /md %}}</dd>
     <dt class="property-"
@@ -776,7 +776,7 @@ The following output properties are available:
 <a href="#createdby_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>By</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userinforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security<wbr>Insights.<wbr>Inputs.<wbr>User<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#userinforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security<wbr>Insights..<wbr>Inputs.<wbr>User<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes a user that created the bookmark{{% /md %}}</dd>
     <dt class="property-required"
@@ -1654,7 +1654,7 @@ The following output properties are available:
 <a href="#aggregations_csharp" style="color: inherit; text-decoration: inherit;">Aggregations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timelineaggregationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security<wbr>Insights.<wbr>Inputs.<wbr>Timeline<wbr>Aggregation<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#timelineaggregationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security<wbr>Insights..<wbr>Inputs.<wbr>Timeline<wbr>Aggregation<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}timeline aggregation per kind{{% /md %}}</dd>
     <dt class="property-required"
@@ -1672,7 +1672,7 @@ The following output properties are available:
 <a href="#errors_csharp" style="color: inherit; text-decoration: inherit;">Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timelineerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security<wbr>Insights.<wbr>Inputs.<wbr>Timeline<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#timelineerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security<wbr>Insights..<wbr>Inputs.<wbr>Timeline<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}information about the failure queries{{% /md %}}</dd>
 </dl>

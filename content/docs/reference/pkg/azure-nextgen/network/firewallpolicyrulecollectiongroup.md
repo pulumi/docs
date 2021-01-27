@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.network.FirewallPolicyRuleCollec
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Rule Collection Group resource.
-Latest API Version: 2020-08-01.
+API Version: 2020-08-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var firewallPolicyRuleCollectionGroup = new AzureNextGen.Network.Latest.FirewallPolicyRuleCollectionGroup("firewallPolicyRuleCollectionGroup", new AzureNextGen.Network.Latest.FirewallPolicyRuleCollectionGroupArgs
+        var firewallPolicyRuleCollectionGroup = new AzureNextGen.Network..FirewallPolicyRuleCollectionGroup("firewallPolicyRuleCollectionGroup", new AzureNextGen.Network..FirewallPolicyRuleCollectionGroupArgs
         {
             FirewallPolicyName = "firewallPolicy",
             Priority = 100,
@@ -35,9 +35,9 @@ class MyStack : Stack
             RuleCollectionGroupName = "ruleCollectionGroup1",
             RuleCollections = 
             {
-                new AzureNextGen.Network.Latest.Inputs.FirewallPolicyFilterRuleCollectionArgs
+                new AzureNextGen.Network..Inputs.FirewallPolicyFilterRuleCollectionArgs
                 {
-                    Action = new AzureNextGen.Network.Latest.Inputs.FirewallPolicyFilterRuleCollectionActionArgs
+                    Action = new AzureNextGen.Network..Inputs.FirewallPolicyFilterRuleCollectionActionArgs
                     {
                         Type = "DNAT",
                     },
@@ -93,13 +93,13 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-firewall_policy_rule_collection_group = azure_nextgen.network.latest.FirewallPolicyRuleCollectionGroup("firewallPolicyRuleCollectionGroup",
+firewall_policy_rule_collection_group = azure_nextgen.network.FirewallPolicyRuleCollectionGroup("firewallPolicyRuleCollectionGroup",
     firewall_policy_name="firewallPolicy",
     priority=100,
     resource_group_name="rg1",
     rule_collection_group_name="ruleCollectionGroup1",
-    rule_collections=[azure_nextgen.network.latest.FirewallPolicyFilterRuleCollectionArgs(
-        action=azure_nextgen.network.latest.FirewallPolicyFilterRuleCollectionActionArgs(
+    rule_collections=[azure_nextgen.network.FirewallPolicyFilterRuleCollectionArgs(
+        action=azure_nextgen.network.FirewallPolicyFilterRuleCollectionActionArgs(
             type="DNAT",
         ),
         name="Example-Nat-Rule-Collection",
@@ -131,7 +131,7 @@ firewall_policy_rule_collection_group = azure_nextgen.network.latest.FirewallPol
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const firewallPolicyRuleCollectionGroup = new azure_nextgen.network.latest.FirewallPolicyRuleCollectionGroup("firewallPolicyRuleCollectionGroup", {
+const firewallPolicyRuleCollectionGroup = new azure_nextgen.network.FirewallPolicyRuleCollectionGroup("firewallPolicyRuleCollectionGroup", {
     firewallPolicyName: "firewallPolicy",
     priority: 100,
     resourceGroupName: "rg1",
@@ -174,7 +174,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var firewallPolicyRuleCollectionGroup = new AzureNextGen.Network.Latest.FirewallPolicyRuleCollectionGroup("firewallPolicyRuleCollectionGroup", new AzureNextGen.Network.Latest.FirewallPolicyRuleCollectionGroupArgs
+        var firewallPolicyRuleCollectionGroup = new AzureNextGen.Network..FirewallPolicyRuleCollectionGroup("firewallPolicyRuleCollectionGroup", new AzureNextGen.Network..FirewallPolicyRuleCollectionGroupArgs
         {
             FirewallPolicyName = "firewallPolicy",
             Priority = 100,
@@ -182,9 +182,9 @@ class MyStack : Stack
             RuleCollectionGroupName = "ruleCollectionGroup1",
             RuleCollections = 
             {
-                new AzureNextGen.Network.Latest.Inputs.FirewallPolicyFilterRuleCollectionArgs
+                new AzureNextGen.Network..Inputs.FirewallPolicyFilterRuleCollectionArgs
                 {
-                    Action = new AzureNextGen.Network.Latest.Inputs.FirewallPolicyFilterRuleCollectionActionArgs
+                    Action = new AzureNextGen.Network..Inputs.FirewallPolicyFilterRuleCollectionActionArgs
                     {
                         Type = "Deny",
                     },
@@ -236,13 +236,13 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-firewall_policy_rule_collection_group = azure_nextgen.network.latest.FirewallPolicyRuleCollectionGroup("firewallPolicyRuleCollectionGroup",
+firewall_policy_rule_collection_group = azure_nextgen.network.FirewallPolicyRuleCollectionGroup("firewallPolicyRuleCollectionGroup",
     firewall_policy_name="firewallPolicy",
     priority=100,
     resource_group_name="rg1",
     rule_collection_group_name="ruleCollectionGroup1",
-    rule_collections=[azure_nextgen.network.latest.FirewallPolicyFilterRuleCollectionArgs(
-        action=azure_nextgen.network.latest.FirewallPolicyFilterRuleCollectionActionArgs(
+    rule_collections=[azure_nextgen.network.FirewallPolicyFilterRuleCollectionArgs(
+        action=azure_nextgen.network.FirewallPolicyFilterRuleCollectionActionArgs(
             type="Deny",
         ),
         name="Example-Filter-Rule-Collection",
@@ -268,7 +268,7 @@ firewall_policy_rule_collection_group = azure_nextgen.network.latest.FirewallPol
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const firewallPolicyRuleCollectionGroup = new azure_nextgen.network.latest.FirewallPolicyRuleCollectionGroup("firewallPolicyRuleCollectionGroup", {
+const firewallPolicyRuleCollectionGroup = new azure_nextgen.network.FirewallPolicyRuleCollectionGroup("firewallPolicyRuleCollectionGroup", {
     firewallPolicyName: "firewallPolicy",
     priority: 100,
     resourceGroupName: "rg1",
@@ -305,7 +305,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var firewallPolicyRuleCollectionGroup = new AzureNextGen.Network.Latest.FirewallPolicyRuleCollectionGroup("firewallPolicyRuleCollectionGroup", new AzureNextGen.Network.Latest.FirewallPolicyRuleCollectionGroupArgs
+        var firewallPolicyRuleCollectionGroup = new AzureNextGen.Network..FirewallPolicyRuleCollectionGroup("firewallPolicyRuleCollectionGroup", new AzureNextGen.Network..FirewallPolicyRuleCollectionGroupArgs
         {
             FirewallPolicyName = "firewallPolicy",
             Priority = 110,
@@ -313,9 +313,9 @@ class MyStack : Stack
             RuleCollectionGroupName = "ruleCollectionGroup1",
             RuleCollections = 
             {
-                new AzureNextGen.Network.Latest.Inputs.FirewallPolicyFilterRuleCollectionArgs
+                new AzureNextGen.Network..Inputs.FirewallPolicyFilterRuleCollectionArgs
                 {
-                    Action = new AzureNextGen.Network.Latest.Inputs.FirewallPolicyFilterRuleCollectionActionArgs
+                    Action = new AzureNextGen.Network..Inputs.FirewallPolicyFilterRuleCollectionActionArgs
                     {
                         Type = "Deny",
                     },
@@ -366,13 +366,13 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-firewall_policy_rule_collection_group = azure_nextgen.network.latest.FirewallPolicyRuleCollectionGroup("firewallPolicyRuleCollectionGroup",
+firewall_policy_rule_collection_group = azure_nextgen.network.FirewallPolicyRuleCollectionGroup("firewallPolicyRuleCollectionGroup",
     firewall_policy_name="firewallPolicy",
     priority=110,
     resource_group_name="rg1",
     rule_collection_group_name="ruleCollectionGroup1",
-    rule_collections=[azure_nextgen.network.latest.FirewallPolicyFilterRuleCollectionArgs(
-        action=azure_nextgen.network.latest.FirewallPolicyFilterRuleCollectionActionArgs(
+    rule_collections=[azure_nextgen.network.FirewallPolicyFilterRuleCollectionArgs(
+        action=azure_nextgen.network.FirewallPolicyFilterRuleCollectionActionArgs(
             type="Deny",
         ),
         name="Example-Filter-Rule-Collection",
@@ -397,7 +397,7 @@ firewall_policy_rule_collection_group = azure_nextgen.network.latest.FirewallPol
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const firewallPolicyRuleCollectionGroup = new azure_nextgen.network.latest.FirewallPolicyRuleCollectionGroup("firewallPolicyRuleCollectionGroup", {
+const firewallPolicyRuleCollectionGroup = new azure_nextgen.network.FirewallPolicyRuleCollectionGroup("firewallPolicyRuleCollectionGroup", {
     firewallPolicyName: "firewallPolicy",
     priority: 110,
     resourceGroupName: "rg1",
@@ -433,7 +433,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var firewallPolicyRuleCollectionGroup = new AzureNextGen.Network.Latest.FirewallPolicyRuleCollectionGroup("firewallPolicyRuleCollectionGroup", new AzureNextGen.Network.Latest.FirewallPolicyRuleCollectionGroupArgs
+        var firewallPolicyRuleCollectionGroup = new AzureNextGen.Network..FirewallPolicyRuleCollectionGroup("firewallPolicyRuleCollectionGroup", new AzureNextGen.Network..FirewallPolicyRuleCollectionGroupArgs
         {
             FirewallPolicyName = "firewallPolicy",
             Priority = 110,
@@ -441,9 +441,9 @@ class MyStack : Stack
             RuleCollectionGroupName = "ruleCollectionGroup1",
             RuleCollections = 
             {
-                new AzureNextGen.Network.Latest.Inputs.FirewallPolicyFilterRuleCollectionArgs
+                new AzureNextGen.Network..Inputs.FirewallPolicyFilterRuleCollectionArgs
                 {
-                    Action = new AzureNextGen.Network.Latest.Inputs.FirewallPolicyFilterRuleCollectionActionArgs
+                    Action = new AzureNextGen.Network..Inputs.FirewallPolicyFilterRuleCollectionActionArgs
                     {
                         Type = "Deny",
                     },
@@ -457,7 +457,7 @@ class MyStack : Stack
                             { "name", "rule1" },
                             { "protocols", 
                             {
-                                new AzureNextGen.Network.Latest.Inputs.FirewallPolicyRuleApplicationProtocolArgs
+                                new AzureNextGen.Network..Inputs.FirewallPolicyRuleApplicationProtocolArgs
                                 {
                                     Port = 443,
                                     ProtocolType = "Https",
@@ -496,13 +496,13 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-firewall_policy_rule_collection_group = azure_nextgen.network.latest.FirewallPolicyRuleCollectionGroup("firewallPolicyRuleCollectionGroup",
+firewall_policy_rule_collection_group = azure_nextgen.network.FirewallPolicyRuleCollectionGroup("firewallPolicyRuleCollectionGroup",
     firewall_policy_name="firewallPolicy",
     priority=110,
     resource_group_name="rg1",
     rule_collection_group_name="ruleCollectionGroup1",
-    rule_collections=[azure_nextgen.network.latest.FirewallPolicyFilterRuleCollectionArgs(
-        action=azure_nextgen.network.latest.FirewallPolicyFilterRuleCollectionActionArgs(
+    rule_collections=[azure_nextgen.network.FirewallPolicyFilterRuleCollectionArgs(
+        action=azure_nextgen.network.FirewallPolicyFilterRuleCollectionActionArgs(
             type="Deny",
         ),
         name="Example-Filter-Rule-Collection",
@@ -510,7 +510,7 @@ firewall_policy_rule_collection_group = azure_nextgen.network.latest.FirewallPol
         rules=[{
             "description": "Deny inbound rule",
             "name": "rule1",
-            "protocols": [azure_nextgen.network.latest.FirewallPolicyRuleApplicationProtocolArgs(
+            "protocols": [azure_nextgen.network.FirewallPolicyRuleApplicationProtocolArgs(
                 port=443,
                 protocol_type="Https",
             )],
@@ -533,7 +533,7 @@ firewall_policy_rule_collection_group = azure_nextgen.network.latest.FirewallPol
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const firewallPolicyRuleCollectionGroup = new azure_nextgen.network.latest.FirewallPolicyRuleCollectionGroup("firewallPolicyRuleCollectionGroup", {
+const firewallPolicyRuleCollectionGroup = new azure_nextgen.network.FirewallPolicyRuleCollectionGroup("firewallPolicyRuleCollectionGroup", {
     firewallPolicyName: "firewallPolicy",
     priority: 110,
     resourceGroupName: "rg1",
@@ -808,7 +808,7 @@ The FirewallPolicyRuleCollectionGroup resource accepts the following [input]({{<
 <a href="#rulecollections_csharp" style="color: inherit; text-decoration: inherit;">Rule<wbr>Collections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Firewall<wbr>Policy<wbr>Filter<wbr>Rule<wbr>Collection<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Firewall<wbr>Policy<wbr>Nat<wbr>Rule<wbr>Collection<wbr>Args&gt;&gt;</span>
+        <span class="property-type">List&lt;Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Firewall<wbr>Policy<wbr>Filter<wbr>Rule<wbr>Collection<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Firewall<wbr>Policy<wbr>Nat<wbr>Rule<wbr>Collection<wbr>Args&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}Group of Firewall Policy rule collections.{{% /md %}}</dd>
 </dl>
@@ -1253,7 +1253,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protocols_csharp" style="color: inherit; text-decoration: inherit;">Protocols</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicyruleapplicationprotocol">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Firewall<wbr>Policy<wbr>Rule<wbr>Application<wbr>Protocol<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#firewallpolicyruleapplicationprotocol">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Firewall<wbr>Policy<wbr>Rule<wbr>Application<wbr>Protocol<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Array of Application Protocols.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1675,7 +1675,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protocols_csharp" style="color: inherit; text-decoration: inherit;">Protocols</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicyruleapplicationprotocolresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Firewall<wbr>Policy<wbr>Rule<wbr>Application<wbr>Protocol<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#firewallpolicyruleapplicationprotocolresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Firewall<wbr>Policy<wbr>Rule<wbr>Application<wbr>Protocol<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Array of Application Protocols.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2061,7 +2061,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#action_csharp" style="color: inherit; text-decoration: inherit;">Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicyfilterrulecollectionaction">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Firewall<wbr>Policy<wbr>Filter<wbr>Rule<wbr>Collection<wbr>Action<wbr>Args</a></span>
+        <span class="property-type"><a href="#firewallpolicyfilterrulecollectionaction">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Firewall<wbr>Policy<wbr>Filter<wbr>Rule<wbr>Collection<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The action type of a Filter rule collection.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2231,7 +2231,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#firewallpolicyfilterrulecollectionactiontype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Firewall<wbr>Policy<wbr>Filter<wbr>Rule<wbr>Collection<wbr>Action<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#firewallpolicyfilterrulecollectionactiontype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Firewall<wbr>Policy<wbr>Filter<wbr>Rule<wbr>Collection<wbr>Action<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of action.{{% /md %}}</dd>
 </dl>
@@ -2393,7 +2393,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#action_csharp" style="color: inherit; text-decoration: inherit;">Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicyfilterrulecollectionactionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Firewall<wbr>Policy<wbr>Filter<wbr>Rule<wbr>Collection<wbr>Action<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#firewallpolicyfilterrulecollectionactionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Firewall<wbr>Policy<wbr>Filter<wbr>Rule<wbr>Collection<wbr>Action<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The action type of a Filter rule collection.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2563,7 +2563,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#action_csharp" style="color: inherit; text-decoration: inherit;">Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicynatrulecollectionaction">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Firewall<wbr>Policy<wbr>Nat<wbr>Rule<wbr>Collection<wbr>Action<wbr>Args</a></span>
+        <span class="property-type"><a href="#firewallpolicynatrulecollectionaction">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Firewall<wbr>Policy<wbr>Nat<wbr>Rule<wbr>Collection<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The action type of a Nat rule collection.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2733,7 +2733,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#firewallpolicynatrulecollectionactiontype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Firewall<wbr>Policy<wbr>Nat<wbr>Rule<wbr>Collection<wbr>Action<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#firewallpolicynatrulecollectionactiontype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Firewall<wbr>Policy<wbr>Nat<wbr>Rule<wbr>Collection<wbr>Action<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of action.{{% /md %}}</dd>
 </dl>
@@ -2887,7 +2887,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#action_csharp" style="color: inherit; text-decoration: inherit;">Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicynatrulecollectionactionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Firewall<wbr>Policy<wbr>Nat<wbr>Rule<wbr>Collection<wbr>Action<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#firewallpolicynatrulecollectionactionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Firewall<wbr>Policy<wbr>Nat<wbr>Rule<wbr>Collection<wbr>Action<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The action type of a Nat rule collection.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3066,7 +3066,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protocoltype_csharp" style="color: inherit; text-decoration: inherit;">Protocol<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#firewallpolicyruleapplicationprotocoltype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Firewall<wbr>Policy<wbr>Rule<wbr>Application<wbr>Protocol<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#firewallpolicyruleapplicationprotocoltype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Firewall<wbr>Policy<wbr>Rule<wbr>Application<wbr>Protocol<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Protocol type.{{% /md %}}</dd>
 </dl>
@@ -3372,7 +3372,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipprotocols_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Protocols</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Union&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Firewall<wbr>Policy<wbr>Rule<wbr>Network<wbr>Protocol&gt;&gt;</span>
+        <span class="property-type">List&lt;Union&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Firewall<wbr>Policy<wbr>Rule<wbr>Network<wbr>Protocol&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}Array of FirewallPolicyRuleNetworkProtocols.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4162,7 +4162,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipprotocols_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Protocols</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Union&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Firewall<wbr>Policy<wbr>Rule<wbr>Network<wbr>Protocol&gt;&gt;</span>
+        <span class="property-type">List&lt;Union&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Firewall<wbr>Policy<wbr>Rule<wbr>Network<wbr>Protocol&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}Array of FirewallPolicyRuleNetworkProtocols.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4811,7 +4811,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:network/latest:FirewallPolicyRuleCollectionGroup ruleCollectionGroup1 /subscriptions/e747cc13-97d4-4a79-b463-42d7f4e558f2/resourceGroups/rg1/providers/Microsoft.Network/firewallPolicies/firewallPolicy/ruleCollectionGroups/ruleCollectionGroup1 
+$ pulumi import azure-nextgen:network:FirewallPolicyRuleCollectionGroup firewallPolicy /subscriptions/e747cc13-97d4-4a79-b463-42d7f4e558f2/resourceGroups/rg1/providers/Microsoft.Network/firewallPolicies/firewallPolicy 
 ```
 
 

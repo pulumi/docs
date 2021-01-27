@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.devices.Certificate resource wit
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The X509 Certificate.
-Latest API Version: 2020-08-31.
+API Version: 2020-08-31.
 
 {{% examples %}}
 ## Example Usage
@@ -27,10 +27,10 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var certificate = new AzureNextGen.Devices.Latest.Certificate("certificate", new AzureNextGen.Devices.Latest.CertificateArgs
+        var certificate = new AzureNextGen.Devices..Certificate("certificate", new AzureNextGen.Devices..CertificateArgs
         {
             CertificateName = "cert",
-            Properties = new AzureNextGen.Devices.Latest.Inputs.CertificatePropertiesArgs
+            Properties = new AzureNextGen.Devices..Inputs.CertificatePropertiesArgs
             {
                 Certificate = "############################################",
             },
@@ -51,7 +51,7 @@ class MyStack : Stack
 package main
 
 import (
-	devices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/devices/latest"
+	devices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/devices"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -82,9 +82,9 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-certificate = azure_nextgen.devices.latest.Certificate("certificate",
+certificate = azure_nextgen.devices.Certificate("certificate",
     certificate_name="cert",
-    properties=azure_nextgen.devices.latest.CertificatePropertiesArgs(
+    properties=azure_nextgen.devices.CertificatePropertiesArgs(
         certificate="############################################",
     ),
     resource_group_name="myResourceGroup",
@@ -100,7 +100,7 @@ certificate = azure_nextgen.devices.latest.Certificate("certificate",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const certificate = new azure_nextgen.devices.latest.Certificate("certificate", {
+const certificate = new azure_nextgen.devices.Certificate("certificate", {
     certificateName: "cert",
     properties: {
         certificate: "############################################",
@@ -329,7 +329,7 @@ The Certificate resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificateproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Devices.<wbr>Inputs.<wbr>Certificate<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#certificateproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Devices..<wbr>Inputs.<wbr>Certificate<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The description of an X509 CA Certificate.{{% /md %}}</dd>
 </dl>
@@ -955,7 +955,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:devices/latest:Certificate cert /subscriptions/91d12660-3dec-467a-be2a-213b5544ddc0/resourceGroups/myResourceGroup/providers/Microsoft.Devices/ProvisioningServives/myFirstProvisioningService/certificates/cert 
+$ pulumi import azure-nextgen:devices:Certificate cert /subscriptions/91d12660-3dec-467a-be2a-213b5544ddc0/resourceGroups/myResourceGroup/providers/Microsoft.Devices/ProvisioningServives/myFirstProvisioningService/certificates/cert 
 ```
 
 

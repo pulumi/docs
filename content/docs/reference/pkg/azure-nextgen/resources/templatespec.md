@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.resources.TemplateSpec resource 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Template Spec object.
+API Version: 2019-06-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var templateSpec = new AzureNextGen.Resources.V20190601Preview.TemplateSpec("templateSpec", new AzureNextGen.Resources.V20190601Preview.TemplateSpecArgs
+        var templateSpec = new AzureNextGen.Resources..TemplateSpec("templateSpec", new AzureNextGen.Resources..TemplateSpecArgs
         {
             Description = "A very simple Template Spec",
             Location = "eastus",
@@ -47,7 +48,7 @@ class MyStack : Stack
 package main
 
 import (
-	resources "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/resources/v20190601preview"
+	resources "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/resources"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -76,7 +77,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-template_spec = azure_nextgen.resources.v20190601preview.TemplateSpec("templateSpec",
+template_spec = azure_nextgen.resources.TemplateSpec("templateSpec",
     description="A very simple Template Spec",
     location="eastus",
     resource_group_name="templateSpecRG",
@@ -92,7 +93,7 @@ template_spec = azure_nextgen.resources.v20190601preview.TemplateSpec("templateS
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const templateSpec = new azure_nextgen.resources.v20190601preview.TemplateSpec("templateSpec", {
+const templateSpec = new azure_nextgen.resources.TemplateSpec("templateSpec", {
     description: "A very simple Template Spec",
     location: "eastus",
     resourceGroupName: "templateSpecRG",
@@ -557,7 +558,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#systemdata_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Resources.<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
+        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Resources..<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Azure Resource Manager metadata containing createdBy and modifiedBy information.{{% /md %}}</dd>
     <dt class="property-"
@@ -575,7 +576,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#versions_csharp" style="color: inherit; text-decoration: inherit;">Versions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Resources.<wbr>Outputs.<wbr>Template<wbr>Spec<wbr>Version<wbr>Info<wbr>Response&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Resources..<wbr>Outputs.<wbr>Template<wbr>Spec<wbr>Version<wbr>Info<wbr>Response&gt;</span>
     </dt>
     <dd>{{% md %}}High-level information about the versions within this Template Spec. The keys are the version names. Only populated if the $expand query parameter is set to 'versions'.{{% /md %}}</dd>
 </dl>
@@ -1125,7 +1126,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:resources/v20190601preview:TemplateSpec simpleTemplateSpec /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/templateSpecRG/providers/Microsoft.Resources/templateSpecs/simpleTemplateSpec 
+$ pulumi import azure-nextgen:resources:TemplateSpec simpleTemplateSpec /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/templateSpecRG/providers/Microsoft.Resources/templateSpecs/simpleTemplateSpec 
 ```
 
 

@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.cdn.AFDCustomDomain resource wit
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Friendly domain name mapping to the endpoint hostname that the customer provides for branding purposes, e.g. www.contoso.com.
-Latest API Version: 2020-09-01.
+API Version: 2020-09-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,9 +27,9 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var afdCustomDomain = new AzureNextGen.Cdn.Latest.AFDCustomDomain("afdCustomDomain", new AzureNextGen.Cdn.Latest.AFDCustomDomainArgs
+        var afdCustomDomain = new AzureNextGen.Cdn..AFDCustomDomain("afdCustomDomain", new AzureNextGen.Cdn..AFDCustomDomainArgs
         {
-            AzureDnsZone = new AzureNextGen.Cdn.Latest.Inputs.ResourceReferenceArgs
+            AzureDnsZone = new AzureNextGen.Cdn..Inputs.ResourceReferenceArgs
             {
                 Id = "",
             },
@@ -37,7 +37,7 @@ class MyStack : Stack
             HostName = "www.someDomain.net",
             ProfileName = "profile1",
             ResourceGroupName = "RG",
-            TlsSettings = new AzureNextGen.Cdn.Latest.Inputs.AFDDomainHttpsParametersArgs
+            TlsSettings = new AzureNextGen.Cdn..Inputs.AFDDomainHttpsParametersArgs
             {
                 CertificateType = "ManagedCertificate",
                 MinimumTlsVersion = "TLS12",
@@ -57,7 +57,7 @@ class MyStack : Stack
 package main
 
 import (
-	cdn "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/cdn/latest"
+	cdn "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/cdn"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -93,15 +93,15 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-afd_custom_domain = azure_nextgen.cdn.latest.AFDCustomDomain("afdCustomDomain",
-    azure_dns_zone=azure_nextgen.cdn.latest.ResourceReferenceArgs(
+afd_custom_domain = azure_nextgen.cdn.AFDCustomDomain("afdCustomDomain",
+    azure_dns_zone=azure_nextgen.cdn.ResourceReferenceArgs(
         id="",
     ),
     custom_domain_name="domain1",
     host_name="www.someDomain.net",
     profile_name="profile1",
     resource_group_name="RG",
-    tls_settings=azure_nextgen.cdn.latest.AFDDomainHttpsParametersArgs(
+    tls_settings=azure_nextgen.cdn.AFDDomainHttpsParametersArgs(
         certificate_type="ManagedCertificate",
         minimum_tls_version="TLS12",
     ))
@@ -116,7 +116,7 @@ afd_custom_domain = azure_nextgen.cdn.latest.AFDCustomDomain("afdCustomDomain",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const afdCustomDomain = new azure_nextgen.cdn.latest.AFDCustomDomain("afdCustomDomain", {
+const afdCustomDomain = new azure_nextgen.cdn.AFDCustomDomain("afdCustomDomain", {
     azureDnsZone: {
         id: "",
     },
@@ -359,7 +359,7 @@ The AFDCustomDomain resource accepts the following [input]({{< relref "/docs/int
 <a href="#azurednszone_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Dns<wbr>Zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcereference">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn.<wbr>Inputs.<wbr>Resource<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcereference">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn..<wbr>Inputs.<wbr>Resource<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Resource reference to the Azure DNS zone{{% /md %}}</dd>
     <dt class="property-optional"
@@ -368,7 +368,7 @@ The AFDCustomDomain resource accepts the following [input]({{< relref "/docs/int
 <a href="#tlssettings_csharp" style="color: inherit; text-decoration: inherit;">Tls<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#afddomainhttpsparameters">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn.<wbr>Inputs.<wbr>AFDDomain<wbr>Https<wbr>Parameters<wbr>Args</a></span>
+        <span class="property-type"><a href="#afddomainhttpsparameters">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn..<wbr>Inputs.<wbr>AFDDomain<wbr>Https<wbr>Parameters<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration specifying how to enable HTTPS for the domain - using AzureFrontDoor managed certificate or user's own certificate. If not specified, enabling ssl uses AzureFrontDoor managed certificate by default.{{% /md %}}</dd>
 </dl>
@@ -615,7 +615,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#systemdata_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn.<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
+        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn..<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Read only system data{{% /md %}}</dd>
     <dt class="property-"
@@ -633,7 +633,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validationproperties_csharp" style="color: inherit; text-decoration: inherit;">Validation<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainvalidationpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn.<wbr>Outputs.<wbr>Domain<wbr>Validation<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#domainvalidationpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn..<wbr>Outputs.<wbr>Domain<wbr>Validation<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Values the customer needs to validate domain ownership{{% /md %}}</dd>
 </dl>
@@ -894,7 +894,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#certificatetype_csharp" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#afdcertificatetype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn.<wbr>Afd<wbr>Certificate<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#afdcertificatetype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn..<wbr>Afd<wbr>Certificate<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Defines the source of the SSL certificate.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -903,7 +903,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#minimumtlsversion_csharp" style="color: inherit; text-decoration: inherit;">Minimum<wbr>Tls<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#afdminimumtlsversion">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn.<wbr>Afd<wbr>Minimum<wbr>Tls<wbr>Version</a></span>
+        <span class="property-type"><a href="#afdminimumtlsversion">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn..<wbr>Afd<wbr>Minimum<wbr>Tls<wbr>Version</a></span>
     </dt>
     <dd>{{% md %}}TLS protocol version that will be used for Https{{% /md %}}</dd>
     <dt class="property-optional"
@@ -912,7 +912,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secret_csharp" style="color: inherit; text-decoration: inherit;">Secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcereference">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn.<wbr>Inputs.<wbr>Resource<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcereference">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn..<wbr>Inputs.<wbr>Resource<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Resource reference to the secret. ie. subs/rg/profile/secret{{% /md %}}</dd>
 </dl>
@@ -1046,7 +1046,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secret_csharp" style="color: inherit; text-decoration: inherit;">Secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcereferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn.<wbr>Inputs.<wbr>Resource<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcereferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn..<wbr>Inputs.<wbr>Resource<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Resource reference to the secret. ie. subs/rg/profile/secret{{% /md %}}</dd>
 </dl>
@@ -1696,7 +1696,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:cdn/latest:AFDCustomDomain domain1 /subscriptions/subid/resourcegroups/RG/providers/Microsoft.Cdn/profiles/profile1/domains/domain1 
+$ pulumi import azure-nextgen:cdn:AFDCustomDomain domain1 /subscriptions/subid/resourcegroups/RG/providers/Microsoft.Cdn/profiles/profile1/domains/domain1 
 ```
 
 

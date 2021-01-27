@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.healthcareapis.Service resource 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The description of the service.
-Latest API Version: 2021-01-11.
+API Version: 2021-01-11.
 
 {{% examples %}}
 ## Example Usage
@@ -27,34 +27,34 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var service = new AzureNextGen.HealthcareApis.Latest.Service("service", new AzureNextGen.HealthcareApis.Latest.ServiceArgs
+        var service = new AzureNextGen.HealthcareApis..Service("service", new AzureNextGen.HealthcareApis..ServiceArgs
         {
-            Identity = new AzureNextGen.HealthcareApis.Latest.Inputs.ServicesResourceIdentityArgs
+            Identity = new AzureNextGen.HealthcareApis..Inputs.ServicesResourceIdentityArgs
             {
                 Type = "SystemAssigned",
             },
             Kind = "fhir-R4",
             Location = "westus2",
-            Properties = new AzureNextGen.HealthcareApis.Latest.Inputs.ServicesPropertiesArgs
+            Properties = new AzureNextGen.HealthcareApis..Inputs.ServicesPropertiesArgs
             {
                 AccessPolicies = 
                 {
-                    new AzureNextGen.HealthcareApis.Latest.Inputs.ServiceAccessPolicyEntryArgs
+                    new AzureNextGen.HealthcareApis..Inputs.ServiceAccessPolicyEntryArgs
                     {
                         ObjectId = "c487e7d1-3210-41a3-8ccc-e9372b78da47",
                     },
-                    new AzureNextGen.HealthcareApis.Latest.Inputs.ServiceAccessPolicyEntryArgs
+                    new AzureNextGen.HealthcareApis..Inputs.ServiceAccessPolicyEntryArgs
                     {
                         ObjectId = "5b307da8-43d4-492b-8b66-b0294ade872f",
                     },
                 },
-                AuthenticationConfiguration = new AzureNextGen.HealthcareApis.Latest.Inputs.ServiceAuthenticationConfigurationInfoArgs
+                AuthenticationConfiguration = new AzureNextGen.HealthcareApis..Inputs.ServiceAuthenticationConfigurationInfoArgs
                 {
                     Audience = "https://azurehealthcareapis.com",
                     Authority = "https://login.microsoftonline.com/abfde7b2-df0f-47e6-aabf-2462b07508dc",
                     SmartProxyEnabled = true,
                 },
-                CorsConfiguration = new AzureNextGen.HealthcareApis.Latest.Inputs.ServiceCorsConfigurationInfoArgs
+                CorsConfiguration = new AzureNextGen.HealthcareApis..Inputs.ServiceCorsConfigurationInfoArgs
                 {
                     AllowCredentials = false,
                     Headers = 
@@ -76,12 +76,12 @@ class MyStack : Stack
                         "*",
                     },
                 },
-                CosmosDbConfiguration = new AzureNextGen.HealthcareApis.Latest.Inputs.ServiceCosmosDbConfigurationInfoArgs
+                CosmosDbConfiguration = new AzureNextGen.HealthcareApis..Inputs.ServiceCosmosDbConfigurationInfoArgs
                 {
                     KeyVaultKeyUri = "https://my-vault.vault.azure.net/keys/my-key",
                     OfferThroughput = 1000,
                 },
-                ExportConfiguration = new AzureNextGen.HealthcareApis.Latest.Inputs.ServiceExportConfigurationInfoArgs
+                ExportConfiguration = new AzureNextGen.HealthcareApis..Inputs.ServiceExportConfigurationInfoArgs
                 {
                     StorageAccountName = "existingStorageAccount",
                 },
@@ -106,7 +106,7 @@ class MyStack : Stack
 package main
 
 import (
-	healthcareapis "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/healthcareapis/latest"
+	healthcareapis "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/healthcareapis"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -181,27 +181,27 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-service = azure_nextgen.healthcareapis.latest.Service("service",
-    identity=azure_nextgen.healthcareapis.latest.ServicesResourceIdentityArgs(
+service = azure_nextgen.healthcareapis.Service("service",
+    identity=azure_nextgen.healthcareapis.ServicesResourceIdentityArgs(
         type="SystemAssigned",
     ),
     kind="fhir-R4",
     location="westus2",
-    properties=azure_nextgen.healthcareapis.latest.ServicesPropertiesArgs(
+    properties=azure_nextgen.healthcareapis.ServicesPropertiesArgs(
         access_policies=[
-            azure_nextgen.healthcareapis.latest.ServiceAccessPolicyEntryArgs(
+            azure_nextgen.healthcareapis.ServiceAccessPolicyEntryArgs(
                 object_id="c487e7d1-3210-41a3-8ccc-e9372b78da47",
             ),
-            azure_nextgen.healthcareapis.latest.ServiceAccessPolicyEntryArgs(
+            azure_nextgen.healthcareapis.ServiceAccessPolicyEntryArgs(
                 object_id="5b307da8-43d4-492b-8b66-b0294ade872f",
             ),
         ],
-        authentication_configuration=azure_nextgen.healthcareapis.latest.ServiceAuthenticationConfigurationInfoArgs(
+        authentication_configuration=azure_nextgen.healthcareapis.ServiceAuthenticationConfigurationInfoArgs(
             audience="https://azurehealthcareapis.com",
             authority="https://login.microsoftonline.com/abfde7b2-df0f-47e6-aabf-2462b07508dc",
             smart_proxy_enabled=True,
         ),
-        cors_configuration=azure_nextgen.healthcareapis.latest.ServiceCorsConfigurationInfoArgs(
+        cors_configuration=azure_nextgen.healthcareapis.ServiceCorsConfigurationInfoArgs(
             allow_credentials=False,
             headers=["*"],
             max_age=1440,
@@ -215,11 +215,11 @@ service = azure_nextgen.healthcareapis.latest.Service("service",
             ],
             origins=["*"],
         ),
-        cosmos_db_configuration=azure_nextgen.healthcareapis.latest.ServiceCosmosDbConfigurationInfoArgs(
+        cosmos_db_configuration=azure_nextgen.healthcareapis.ServiceCosmosDbConfigurationInfoArgs(
             key_vault_key_uri="https://my-vault.vault.azure.net/keys/my-key",
             offer_throughput=1000,
         ),
-        export_configuration=azure_nextgen.healthcareapis.latest.ServiceExportConfigurationInfoArgs(
+        export_configuration=azure_nextgen.healthcareapis.ServiceExportConfigurationInfoArgs(
             storage_account_name="existingStorageAccount",
         ),
         private_endpoint_connections=[],
@@ -239,7 +239,7 @@ service = azure_nextgen.healthcareapis.latest.Service("service",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const service = new azure_nextgen.healthcareapis.latest.Service("service", {
+const service = new azure_nextgen.healthcareapis.Service("service", {
     identity: {
         type: "SystemAssigned",
     },
@@ -302,15 +302,15 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var service = new AzureNextGen.HealthcareApis.Latest.Service("service", new AzureNextGen.HealthcareApis.Latest.ServiceArgs
+        var service = new AzureNextGen.HealthcareApis..Service("service", new AzureNextGen.HealthcareApis..ServiceArgs
         {
             Kind = "fhir-R4",
             Location = "westus2",
-            Properties = new AzureNextGen.HealthcareApis.Latest.Inputs.ServicesPropertiesArgs
+            Properties = new AzureNextGen.HealthcareApis..Inputs.ServicesPropertiesArgs
             {
                 AccessPolicies = 
                 {
-                    new AzureNextGen.HealthcareApis.Latest.Inputs.ServiceAccessPolicyEntryArgs
+                    new AzureNextGen.HealthcareApis..Inputs.ServiceAccessPolicyEntryArgs
                     {
                         ObjectId = "c487e7d1-3210-41a3-8ccc-e9372b78da47",
                     },
@@ -334,7 +334,7 @@ class MyStack : Stack
 package main
 
 import (
-	healthcareapis "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/healthcareapis/latest"
+	healthcareapis "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/healthcareapis"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -371,11 +371,11 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-service = azure_nextgen.healthcareapis.latest.Service("service",
+service = azure_nextgen.healthcareapis.Service("service",
     kind="fhir-R4",
     location="westus2",
-    properties=azure_nextgen.healthcareapis.latest.ServicesPropertiesArgs(
-        access_policies=[azure_nextgen.healthcareapis.latest.ServiceAccessPolicyEntryArgs(
+    properties=azure_nextgen.healthcareapis.ServicesPropertiesArgs(
+        access_policies=[azure_nextgen.healthcareapis.ServiceAccessPolicyEntryArgs(
             object_id="c487e7d1-3210-41a3-8ccc-e9372b78da47",
         )],
     ),
@@ -393,7 +393,7 @@ service = azure_nextgen.healthcareapis.latest.Service("service",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const service = new azure_nextgen.healthcareapis.latest.Service("service", {
+const service = new azure_nextgen.healthcareapis.Service("service", {
     kind: "fhir-R4",
     location: "westus2",
     properties: {
@@ -599,7 +599,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kind">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Healthcare<wbr>Apis.<wbr>Kind</a></span>
+        <span class="property-type"><a href="#kind">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Healthcare<wbr>Apis..<wbr>Kind</a></span>
     </dt>
     <dd>{{% md %}}The kind of the service.{{% /md %}}</dd>
     <dt class="property-required"
@@ -644,7 +644,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicesresourceidentity">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Healthcare<wbr>Apis.<wbr>Inputs.<wbr>Services<wbr>Resource<wbr>Identity<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicesresourceidentity">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Healthcare<wbr>Apis..<wbr>Inputs.<wbr>Services<wbr>Resource<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Setting indicating whether the service has a managed identity associated with it.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -653,7 +653,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicesproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Healthcare<wbr>Apis.<wbr>Inputs.<wbr>Services<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicesproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Healthcare<wbr>Apis..<wbr>Inputs.<wbr>Services<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The common properties of a service.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -936,7 +936,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#systemdata_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Healthcare<wbr>Apis.<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
+        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Healthcare<wbr>Apis..<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Metadata pertaining to creation and last modification of the resource.{{% /md %}}</dd>
     <dt class="property-"
@@ -1182,7 +1182,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privatelinkserviceconnectionstate_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkserviceconnectionstate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Healthcare<wbr>Apis.<wbr>Inputs.<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Args</a></span>
+        <span class="property-type"><a href="#privatelinkserviceconnectionstate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Healthcare<wbr>Apis..<wbr>Inputs.<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A collection of information about the state of the connection between service consumer and provider.{{% /md %}}</dd>
 </dl>
@@ -1262,7 +1262,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privatelinkserviceconnectionstate_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Healthcare<wbr>Apis.<wbr>Inputs.<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Healthcare<wbr>Apis..<wbr>Inputs.<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A collection of information about the state of the connection between service consumer and provider.{{% /md %}}</dd>
     <dt class="property-required"
@@ -1289,7 +1289,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privateendpoint_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Healthcare<wbr>Apis.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#privateendpointresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Healthcare<wbr>Apis..<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The resource of private end point.{{% /md %}}</dd>
 </dl>
@@ -1612,7 +1612,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#privateendpointserviceconnectionstatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Healthcare<wbr>Apis.<wbr>Private<wbr>Endpoint<wbr>Service<wbr>Connection<wbr>Status</a></span>
+        <span class="property-type">string | <a href="#privateendpointserviceconnectionstatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Healthcare<wbr>Apis..<wbr>Private<wbr>Endpoint<wbr>Service<wbr>Connection<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether the connection has been Approved/Rejected/Removed by the owner of the service.{{% /md %}}</dd>
 </dl>
@@ -3148,7 +3148,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accesspolicies_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceaccesspolicyentry">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Healthcare<wbr>Apis.<wbr>Inputs.<wbr>Service<wbr>Access<wbr>Policy<wbr>Entry<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#serviceaccesspolicyentry">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Healthcare<wbr>Apis..<wbr>Inputs.<wbr>Service<wbr>Access<wbr>Policy<wbr>Entry<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The access policies of the service instance.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3157,7 +3157,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#acrconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Acr<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceacrconfigurationinfo">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Healthcare<wbr>Apis.<wbr>Inputs.<wbr>Service<wbr>Acr<wbr>Configuration<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceacrconfigurationinfo">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Healthcare<wbr>Apis..<wbr>Inputs.<wbr>Service<wbr>Acr<wbr>Configuration<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The azure container registry settings used for convert data operation of the service instance.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3166,7 +3166,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authenticationconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Authentication<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceauthenticationconfigurationinfo">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Healthcare<wbr>Apis.<wbr>Inputs.<wbr>Service<wbr>Authentication<wbr>Configuration<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceauthenticationconfigurationinfo">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Healthcare<wbr>Apis..<wbr>Inputs.<wbr>Service<wbr>Authentication<wbr>Configuration<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The authentication configuration for the service instance.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3175,7 +3175,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#corsconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Cors<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecorsconfigurationinfo">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Healthcare<wbr>Apis.<wbr>Inputs.<wbr>Service<wbr>Cors<wbr>Configuration<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicecorsconfigurationinfo">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Healthcare<wbr>Apis..<wbr>Inputs.<wbr>Service<wbr>Cors<wbr>Configuration<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The settings for the CORS configuration of the service instance.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3184,7 +3184,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cosmosdbconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Cosmos<wbr>Db<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecosmosdbconfigurationinfo">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Healthcare<wbr>Apis.<wbr>Inputs.<wbr>Service<wbr>Cosmos<wbr>Db<wbr>Configuration<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicecosmosdbconfigurationinfo">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Healthcare<wbr>Apis..<wbr>Inputs.<wbr>Service<wbr>Cosmos<wbr>Db<wbr>Configuration<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The settings for the Cosmos DB database backing the service.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3193,7 +3193,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#exportconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Export<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceexportconfigurationinfo">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Healthcare<wbr>Apis.<wbr>Inputs.<wbr>Service<wbr>Export<wbr>Configuration<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceexportconfigurationinfo">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Healthcare<wbr>Apis..<wbr>Inputs.<wbr>Service<wbr>Export<wbr>Configuration<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The settings for the export operation of the service instance.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3202,7 +3202,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privateendpointconnections_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint<wbr>Connections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointconnection">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Healthcare<wbr>Apis.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#privateendpointconnection">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Healthcare<wbr>Apis..<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of private endpoint connections that are set up for this resource.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3211,7 +3211,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publicnetworkaccess_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Network<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#publicnetworkaccess">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Healthcare<wbr>Apis.<wbr>Public<wbr>Network<wbr>Access</a></span>
+        <span class="property-type">string | <a href="#publicnetworkaccess">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Healthcare<wbr>Apis..<wbr>Public<wbr>Network<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}Control permission for data plane traffic coming from public networks while private endpoint is enabled.{{% /md %}}</dd>
 </dl>
@@ -3471,7 +3471,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accesspolicies_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceaccesspolicyentryresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Healthcare<wbr>Apis.<wbr>Inputs.<wbr>Service<wbr>Access<wbr>Policy<wbr>Entry<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#serviceaccesspolicyentryresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Healthcare<wbr>Apis..<wbr>Inputs.<wbr>Service<wbr>Access<wbr>Policy<wbr>Entry<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The access policies of the service instance.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3480,7 +3480,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#acrconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Acr<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceacrconfigurationinforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Healthcare<wbr>Apis.<wbr>Inputs.<wbr>Service<wbr>Acr<wbr>Configuration<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceacrconfigurationinforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Healthcare<wbr>Apis..<wbr>Inputs.<wbr>Service<wbr>Acr<wbr>Configuration<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The azure container registry settings used for convert data operation of the service instance.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3489,7 +3489,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authenticationconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Authentication<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceauthenticationconfigurationinforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Healthcare<wbr>Apis.<wbr>Inputs.<wbr>Service<wbr>Authentication<wbr>Configuration<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceauthenticationconfigurationinforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Healthcare<wbr>Apis..<wbr>Inputs.<wbr>Service<wbr>Authentication<wbr>Configuration<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The authentication configuration for the service instance.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3498,7 +3498,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#corsconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Cors<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecorsconfigurationinforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Healthcare<wbr>Apis.<wbr>Inputs.<wbr>Service<wbr>Cors<wbr>Configuration<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicecorsconfigurationinforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Healthcare<wbr>Apis..<wbr>Inputs.<wbr>Service<wbr>Cors<wbr>Configuration<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The settings for the CORS configuration of the service instance.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3507,7 +3507,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cosmosdbconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Cosmos<wbr>Db<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecosmosdbconfigurationinforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Healthcare<wbr>Apis.<wbr>Inputs.<wbr>Service<wbr>Cosmos<wbr>Db<wbr>Configuration<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicecosmosdbconfigurationinforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Healthcare<wbr>Apis..<wbr>Inputs.<wbr>Service<wbr>Cosmos<wbr>Db<wbr>Configuration<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The settings for the Cosmos DB database backing the service.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3516,7 +3516,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#exportconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Export<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceexportconfigurationinforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Healthcare<wbr>Apis.<wbr>Inputs.<wbr>Service<wbr>Export<wbr>Configuration<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceexportconfigurationinforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Healthcare<wbr>Apis..<wbr>Inputs.<wbr>Service<wbr>Export<wbr>Configuration<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The settings for the export operation of the service instance.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3525,7 +3525,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privateendpointconnections_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint<wbr>Connections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointconnectionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Healthcare<wbr>Apis.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#privateendpointconnectionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Healthcare<wbr>Apis..<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of private endpoint connections that are set up for this resource.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3812,7 +3812,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#managedserviceidentitytype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Healthcare<wbr>Apis.<wbr>Managed<wbr>Service<wbr>Identity<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#managedserviceidentitytype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Healthcare<wbr>Apis..<wbr>Managed<wbr>Service<wbr>Identity<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of identity being specified, currently SystemAssigned and None are allowed.{{% /md %}}</dd>
 </dl>
@@ -4244,7 +4244,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:healthcareapis/latest:Service service2 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.HealthcareApis/services/service2 
+$ pulumi import azure-nextgen:healthcareapis:Service service2 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.HealthcareApis/services/service2 
 ```
 
 

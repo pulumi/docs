@@ -215,7 +215,7 @@ The following output properties are available:
 <a href="#schedules_csharp" style="color: inherit; text-decoration: inherit;">Schedules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bandwidthscheduleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stor<wbr>Simple.<wbr>Outputs.<wbr>Bandwidth<wbr>Schedule<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#bandwidthscheduleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stor<wbr>Simple..<wbr>Outputs.<wbr>Bandwidth<wbr>Schedule<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The schedules.{{% /md %}}</dd>
     <dt class="property-"
@@ -468,7 +468,7 @@ The following output properties are available:
 <a href="#start_csharp" style="color: inherit; text-decoration: inherit;">Start</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timeresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stor<wbr>Simple.<wbr>Inputs.<wbr>Time<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#timeresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stor<wbr>Simple..<wbr>Inputs.<wbr>Time<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The start time of the schedule.{{% /md %}}</dd>
     <dt class="property-required"
@@ -477,7 +477,7 @@ The following output properties are available:
 <a href="#stop_csharp" style="color: inherit; text-decoration: inherit;">Stop</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timeresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stor<wbr>Simple.<wbr>Inputs.<wbr>Time<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#timeresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stor<wbr>Simple..<wbr>Inputs.<wbr>Time<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The stop time of the schedule.{{% /md %}}</dd>
 </dl>

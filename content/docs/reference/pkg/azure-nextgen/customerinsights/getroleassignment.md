@@ -224,7 +224,7 @@ The following output properties are available:
 <a href="#principals_csharp" style="color: inherit; text-decoration: inherit;">Principals</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#assignmentprincipalresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights.<wbr>Outputs.<wbr>Assignment<wbr>Principal<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#assignmentprincipalresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights..<wbr>Outputs.<wbr>Assignment<wbr>Principal<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The principals being assigned to.{{% /md %}}</dd>
     <dt class="property-"
@@ -269,7 +269,7 @@ The following output properties are available:
 <a href="#conflationpolicies_csharp" style="color: inherit; text-decoration: inherit;">Conflation<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcesetdescriptionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights.<wbr>Outputs.<wbr>Resource<wbr>Set<wbr>Description<wbr>Response</a></span>
+        <span class="property-type"><a href="#resourcesetdescriptionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights..<wbr>Outputs.<wbr>Resource<wbr>Set<wbr>Description<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Widget types set for the assignment.{{% /md %}}</dd>
     <dt class="property-"
@@ -278,7 +278,7 @@ The following output properties are available:
 <a href="#connectors_csharp" style="color: inherit; text-decoration: inherit;">Connectors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcesetdescriptionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights.<wbr>Outputs.<wbr>Resource<wbr>Set<wbr>Description<wbr>Response</a></span>
+        <span class="property-type"><a href="#resourcesetdescriptionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights..<wbr>Outputs.<wbr>Resource<wbr>Set<wbr>Description<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Connectors set for the assignment.{{% /md %}}</dd>
     <dt class="property-"
@@ -305,7 +305,7 @@ The following output properties are available:
 <a href="#interactions_csharp" style="color: inherit; text-decoration: inherit;">Interactions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcesetdescriptionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights.<wbr>Outputs.<wbr>Resource<wbr>Set<wbr>Description<wbr>Response</a></span>
+        <span class="property-type"><a href="#resourcesetdescriptionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights..<wbr>Outputs.<wbr>Resource<wbr>Set<wbr>Description<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Interactions set for the assignment.{{% /md %}}</dd>
     <dt class="property-"
@@ -314,7 +314,7 @@ The following output properties are available:
 <a href="#kpis_csharp" style="color: inherit; text-decoration: inherit;">Kpis</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcesetdescriptionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights.<wbr>Outputs.<wbr>Resource<wbr>Set<wbr>Description<wbr>Response</a></span>
+        <span class="property-type"><a href="#resourcesetdescriptionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights..<wbr>Outputs.<wbr>Resource<wbr>Set<wbr>Description<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Kpis set for the assignment.{{% /md %}}</dd>
     <dt class="property-"
@@ -323,7 +323,7 @@ The following output properties are available:
 <a href="#links_csharp" style="color: inherit; text-decoration: inherit;">Links</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcesetdescriptionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights.<wbr>Outputs.<wbr>Resource<wbr>Set<wbr>Description<wbr>Response</a></span>
+        <span class="property-type"><a href="#resourcesetdescriptionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights..<wbr>Outputs.<wbr>Resource<wbr>Set<wbr>Description<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Links set for the assignment.{{% /md %}}</dd>
     <dt class="property-"
@@ -332,7 +332,7 @@ The following output properties are available:
 <a href="#profiles_csharp" style="color: inherit; text-decoration: inherit;">Profiles</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcesetdescriptionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights.<wbr>Outputs.<wbr>Resource<wbr>Set<wbr>Description<wbr>Response</a></span>
+        <span class="property-type"><a href="#resourcesetdescriptionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights..<wbr>Outputs.<wbr>Resource<wbr>Set<wbr>Description<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Profiles set for the assignment.{{% /md %}}</dd>
     <dt class="property-"
@@ -341,7 +341,7 @@ The following output properties are available:
 <a href="#relationshiplinks_csharp" style="color: inherit; text-decoration: inherit;">Relationship<wbr>Links</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcesetdescriptionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights.<wbr>Outputs.<wbr>Resource<wbr>Set<wbr>Description<wbr>Response</a></span>
+        <span class="property-type"><a href="#resourcesetdescriptionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights..<wbr>Outputs.<wbr>Resource<wbr>Set<wbr>Description<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The Role assignments set for the relationship links.{{% /md %}}</dd>
     <dt class="property-"
@@ -350,7 +350,7 @@ The following output properties are available:
 <a href="#relationships_csharp" style="color: inherit; text-decoration: inherit;">Relationships</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcesetdescriptionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights.<wbr>Outputs.<wbr>Resource<wbr>Set<wbr>Description<wbr>Response</a></span>
+        <span class="property-type"><a href="#resourcesetdescriptionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights..<wbr>Outputs.<wbr>Resource<wbr>Set<wbr>Description<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The Role assignments set for the relationships.{{% /md %}}</dd>
     <dt class="property-"
@@ -359,7 +359,7 @@ The following output properties are available:
 <a href="#roleassignments_csharp" style="color: inherit; text-decoration: inherit;">Role<wbr>Assignments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcesetdescriptionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights.<wbr>Outputs.<wbr>Resource<wbr>Set<wbr>Description<wbr>Response</a></span>
+        <span class="property-type"><a href="#resourcesetdescriptionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights..<wbr>Outputs.<wbr>Resource<wbr>Set<wbr>Description<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The Role assignments set for the assignment.{{% /md %}}</dd>
     <dt class="property-"
@@ -368,7 +368,7 @@ The following output properties are available:
 <a href="#saspolicies_csharp" style="color: inherit; text-decoration: inherit;">Sas<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcesetdescriptionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights.<wbr>Outputs.<wbr>Resource<wbr>Set<wbr>Description<wbr>Response</a></span>
+        <span class="property-type"><a href="#resourcesetdescriptionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights..<wbr>Outputs.<wbr>Resource<wbr>Set<wbr>Description<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Sas Policies set for the assignment.{{% /md %}}</dd>
     <dt class="property-"
@@ -377,7 +377,7 @@ The following output properties are available:
 <a href="#segments_csharp" style="color: inherit; text-decoration: inherit;">Segments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcesetdescriptionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights.<wbr>Outputs.<wbr>Resource<wbr>Set<wbr>Description<wbr>Response</a></span>
+        <span class="property-type"><a href="#resourcesetdescriptionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights..<wbr>Outputs.<wbr>Resource<wbr>Set<wbr>Description<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The Role assignments set for the assignment.{{% /md %}}</dd>
     <dt class="property-"
@@ -386,7 +386,7 @@ The following output properties are available:
 <a href="#views_csharp" style="color: inherit; text-decoration: inherit;">Views</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcesetdescriptionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights.<wbr>Outputs.<wbr>Resource<wbr>Set<wbr>Description<wbr>Response</a></span>
+        <span class="property-type"><a href="#resourcesetdescriptionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights..<wbr>Outputs.<wbr>Resource<wbr>Set<wbr>Description<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Views set for the assignment.{{% /md %}}</dd>
     <dt class="property-"
@@ -395,7 +395,7 @@ The following output properties are available:
 <a href="#widgettypes_csharp" style="color: inherit; text-decoration: inherit;">Widget<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcesetdescriptionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights.<wbr>Outputs.<wbr>Resource<wbr>Set<wbr>Description<wbr>Response</a></span>
+        <span class="property-type"><a href="#resourcesetdescriptionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights..<wbr>Outputs.<wbr>Resource<wbr>Set<wbr>Description<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Widget types set for the assignment.{{% /md %}}</dd>
 </dl>

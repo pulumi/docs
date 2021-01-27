@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.timeseriesinsights.Environment r
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 An environment is a set of time-series data available for query, and is the top level Azure Time Series Insights resource.
-Latest API Version: 2020-05-15.
+API Version: 2020-05-15.
 
 {{% examples %}}
 ## Example Usage
@@ -27,13 +27,13 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var environment = new AzureNextGen.TimeSeriesInsights.Latest.Environment("environment", new AzureNextGen.TimeSeriesInsights.Latest.EnvironmentArgs
+        var environment = new AzureNextGen.TimeSeriesInsights..Environment("environment", new AzureNextGen.TimeSeriesInsights..EnvironmentArgs
         {
             EnvironmentName = "env1",
             Kind = "Gen1",
             Location = "West US",
             ResourceGroupName = "rg1",
-            Sku = new AzureNextGen.TimeSeriesInsights.Latest.Inputs.SkuArgs
+            Sku = new AzureNextGen.TimeSeriesInsights..Inputs.SkuArgs
             {
                 Capacity = 1,
                 Name = "S1",
@@ -53,7 +53,7 @@ class MyStack : Stack
 package main
 
 import (
-	timeseriesinsights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/timeseriesinsights/latest"
+	timeseriesinsights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/timeseriesinsights"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -86,12 +86,12 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-environment = azure_nextgen.timeseriesinsights.latest.Environment("environment",
+environment = azure_nextgen.timeseriesinsights.Environment("environment",
     environment_name="env1",
     kind="Gen1",
     location="West US",
     resource_group_name="rg1",
-    sku=azure_nextgen.timeseriesinsights.latest.SkuArgs(
+    sku=azure_nextgen.timeseriesinsights.SkuArgs(
         capacity=1,
         name="S1",
     ))
@@ -106,7 +106,7 @@ environment = azure_nextgen.timeseriesinsights.latest.Environment("environment",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const environment = new azure_nextgen.timeseriesinsights.latest.Environment("environment", {
+const environment = new azure_nextgen.timeseriesinsights.Environment("environment", {
     environmentName: "env1",
     kind: "Gen1",
     location: "West US",
@@ -319,7 +319,7 @@ The Environment resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#environmentkind">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Time<wbr>Series<wbr>Insights.<wbr>Environment<wbr>Kind</a></span>
+        <span class="property-type">string | <a href="#environmentkind">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Time<wbr>Series<wbr>Insights..<wbr>Environment<wbr>Kind</a></span>
     </dt>
     <dd>{{% md %}}The kind of the environment.{{% /md %}}</dd>
     <dt class="property-required"
@@ -346,7 +346,7 @@ The Environment resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sku">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Time<wbr>Series<wbr>Insights.<wbr>Inputs.<wbr>Sku<wbr>Args</a></span>
+        <span class="property-type"><a href="#sku">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Time<wbr>Series<wbr>Insights..<wbr>Inputs.<wbr>Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The sku determines the type of environment, either Gen1 (S1 or S2) or Gen2 (L1). For Gen1 environments the sku determines the capacity of the environment, the ingress rate, and the billing rate.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -748,7 +748,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#skuname">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Time<wbr>Series<wbr>Insights.<wbr>Sku<wbr>Name</a></span>
+        <span class="property-type">string | <a href="#skuname">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Time<wbr>Series<wbr>Insights..<wbr>Sku<wbr>Name</a></span>
     </dt>
     <dd>{{% md %}}The name of this SKU.{{% /md %}}</dd>
 </dl>
@@ -983,7 +983,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:timeseriesinsights/latest:Environment env1 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.TimeSeriesInsights/Environments/env1 
+$ pulumi import azure-nextgen:timeseriesinsights:Environment env1 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.TimeSeriesInsights/Environments/env1 
 ```
 
 

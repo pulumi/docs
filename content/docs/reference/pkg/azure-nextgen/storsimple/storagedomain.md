@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.storsimple.StorageDomain resourc
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The storage domain.
-Latest API Version: 2016-10-01.
+API Version: 2016-10-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var storageDomain = new AzureNextGen.StorSimple.Latest.StorageDomain("storageDomain", new AzureNextGen.StorSimple.Latest.StorageDomainArgs
+        var storageDomain = new AzureNextGen.StorSimple..StorageDomain("storageDomain", new AzureNextGen.StorSimple..StorageDomainArgs
         {
             EncryptionStatus = "Disabled",
             ManagerName = "hAzureSDKOperations",
@@ -52,7 +52,7 @@ class MyStack : Stack
 package main
 
 import (
-	storsimple "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/storsimple/latest"
+	storsimple "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/storsimple"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -84,7 +84,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-storage_domain = azure_nextgen.storsimple.latest.StorageDomain("storageDomain",
+storage_domain = azure_nextgen.storsimple.StorageDomain("storageDomain",
     encryption_status="Disabled",
     manager_name="hAzureSDKOperations",
     resource_group_name="ResourceGroupForSDKTest",
@@ -101,7 +101,7 @@ storage_domain = azure_nextgen.storsimple.latest.StorageDomain("storageDomain",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const storageDomain = new azure_nextgen.storsimple.latest.StorageDomain("storageDomain", {
+const storageDomain = new azure_nextgen.storsimple.StorageDomain("storageDomain", {
     encryptionStatus: "Disabled",
     managerName: "hAzureSDKOperations",
     resourceGroupName: "ResourceGroupForSDKTest",
@@ -302,7 +302,7 @@ The StorageDomain resource accepts the following [input]({{< relref "/docs/intro
 <a href="#encryptionstatus_csharp" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionstatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stor<wbr>Simple.<wbr>Encryption<wbr>Status</a></span>
+        <span class="property-type"><a href="#encryptionstatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stor<wbr>Simple..<wbr>Encryption<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}The encryption status "Enabled | Disabled".{{% /md %}}</dd>
     <dt class="property-required"
@@ -347,7 +347,7 @@ The StorageDomain resource accepts the following [input]({{< relref "/docs/intro
 <a href="#encryptionkey_csharp" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#asymmetricencryptedsecret">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stor<wbr>Simple.<wbr>Inputs.<wbr>Asymmetric<wbr>Encrypted<wbr>Secret<wbr>Args</a></span>
+        <span class="property-type"><a href="#asymmetricencryptedsecret">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stor<wbr>Simple..<wbr>Inputs.<wbr>Asymmetric<wbr>Encrypted<wbr>Secret<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The encryption key used to encrypt the data. This is a user secret.{{% /md %}}</dd>
 </dl>
@@ -693,7 +693,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryptionalgorithm_csharp" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionalgorithm">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stor<wbr>Simple.<wbr>Encryption<wbr>Algorithm</a></span>
+        <span class="property-type"><a href="#encryptionalgorithm">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stor<wbr>Simple..<wbr>Encryption<wbr>Algorithm</a></span>
     </dt>
     <dd>{{% md %}}The algorithm used to encrypt "Value".{{% /md %}}</dd>
     <dt class="property-required"
@@ -1039,7 +1039,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:storsimple/latest:StorageDomain sd-fs-HSDK-4XY4FI2IVG /subscriptions/9eb689cd-7243-43b4-b6f6-5c65cb296641/resourceGroups/ResourceGroupForSDKTest/providers/Microsoft.StorSimple/managers/hAzureSDKOperations/storageDomains/sd-fs-HSDK-4XY4FI2IVG 
+$ pulumi import azure-nextgen:storsimple:StorageDomain sd-fs-HSDK-4XY4FI2IVG /subscriptions/9eb689cd-7243-43b4-b6f6-5c65cb296641/resourceGroups/ResourceGroupForSDKTest/providers/Microsoft.StorSimple/managers/hAzureSDKOperations/storageDomains/sd-fs-HSDK-4XY4FI2IVG 
 ```
 
 

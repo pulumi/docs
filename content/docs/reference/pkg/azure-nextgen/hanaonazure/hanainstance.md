@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.hanaonazure.HanaInstance resourc
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 HANA instance info on Azure (ARM properties and HANA properties)
+API Version: 2017-11-03-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,29 +27,29 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var hanaInstance = new AzureNextGen.HanaOnAzure.V20171103Preview.HanaInstance("hanaInstance", new AzureNextGen.HanaOnAzure.V20171103Preview.HanaInstanceArgs
+        var hanaInstance = new AzureNextGen.HanaOnAzure..HanaInstance("hanaInstance", new AzureNextGen.HanaOnAzure..HanaInstanceArgs
         {
             HanaInstanceId = "00000000-0000-0000-0000-000000000000",
             HanaInstanceName = "myHanaInstance",
-            HardwareProfile = new AzureNextGen.HanaOnAzure.V20171103Preview.Inputs.HardwareProfileArgs
+            HardwareProfile = new AzureNextGen.HanaOnAzure..Inputs.HardwareProfileArgs
             {
                 HanaInstanceSize = "S72",
                 HardwareType = "Cisco_UCS",
             },
             HwRevision = "Rev 3",
             Location = "westus",
-            NetworkProfile = new AzureNextGen.HanaOnAzure.V20171103Preview.Inputs.NetworkProfileArgs
+            NetworkProfile = new AzureNextGen.HanaOnAzure..Inputs.NetworkProfileArgs
             {
                 CircuitId = "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.Network/expressRouteCircuit",
                 NetworkInterfaces = 
                 {
-                    new AzureNextGen.HanaOnAzure.V20171103Preview.Inputs.IpAddressArgs
+                    new AzureNextGen.HanaOnAzure..Inputs.IpAddressArgs
                     {
                         IpAddress = "100.100.100.100",
                     },
                 },
             },
-            OsProfile = new AzureNextGen.HanaOnAzure.V20171103Preview.Inputs.OSProfileArgs
+            OsProfile = new AzureNextGen.HanaOnAzure..Inputs.OSProfileArgs
             {
                 ComputerName = "myComputerName",
                 OsType = "SUSE",
@@ -60,7 +61,7 @@ class MyStack : Stack
             ProvisioningState = "Succeeded",
             ProximityPlacementGroup = "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.Compute/proximityPlacementGroups/myplacementgroup",
             ResourceGroupName = "myResourceGroup",
-            StorageProfile = new AzureNextGen.HanaOnAzure.V20171103Preview.Inputs.StorageProfileArgs
+            StorageProfile = new AzureNextGen.HanaOnAzure..Inputs.StorageProfileArgs
             {
                 NfsIpAddress = "200.200.200.200",
             },
@@ -83,7 +84,7 @@ class MyStack : Stack
 package main
 
 import (
-	hanaonazure "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/hanaonazure/v20171103preview"
+	hanaonazure "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/hanaonazure"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -141,22 +142,22 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-hana_instance = azure_nextgen.hanaonazure.v20171103preview.HanaInstance("hanaInstance",
+hana_instance = azure_nextgen.hanaonazure.HanaInstance("hanaInstance",
     hana_instance_id="00000000-0000-0000-0000-000000000000",
     hana_instance_name="myHanaInstance",
-    hardware_profile=azure_nextgen.hanaonazure.v20171103preview.HardwareProfileArgs(
+    hardware_profile=azure_nextgen.hanaonazure.HardwareProfileArgs(
         hana_instance_size="S72",
         hardware_type="Cisco_UCS",
     ),
     hw_revision="Rev 3",
     location="westus",
-    network_profile=azure_nextgen.hanaonazure.v20171103preview.NetworkProfileArgs(
+    network_profile=azure_nextgen.hanaonazure.NetworkProfileArgs(
         circuit_id="/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.Network/expressRouteCircuit",
-        network_interfaces=[azure_nextgen.hanaonazure.v20171103preview.IpAddressArgs(
+        network_interfaces=[azure_nextgen.hanaonazure.IpAddressArgs(
             ip_address="100.100.100.100",
         )],
     ),
-    os_profile=azure_nextgen.hanaonazure.v20171103preview.OSProfileArgs(
+    os_profile=azure_nextgen.hanaonazure.OSProfileArgs(
         computer_name="myComputerName",
         os_type="SUSE",
         ssh_public_key="AAAAB3NzaC1yc2EAAAABJQAAAQB/nAmOjTmezNUDKYvEeIRf2YnwM9/uUG1d0BYsc8/tRtx+RGi7N2lUbp728MXGwdnL9od4cItzky/zVdLZE2cycOa18xBK9cOWmcKS0A8FYBxEQWJ/q9YVUgZbFKfYGaGQxsER+A0w/fX8ALuk78ktP31K69LcQgxIsl7rNzxsoOQKJ/CIxOGMMxczYTiEoLvQhapFQMs3FL96didKr/QbrfB1WT6s3838SEaXfgZvLef1YB2xmfhbT9OXFE3FXvh2UPBfN+ffE7iiayQf/2XR+8j4N4bW30DiPtOQLGUrH1y5X/rpNZNlWW2+jGIxqZtgWg7lTy3mXy5x836Sj/6L",
@@ -167,7 +168,7 @@ hana_instance = azure_nextgen.hanaonazure.v20171103preview.HanaInstance("hanaIns
     provisioning_state="Succeeded",
     proximity_placement_group="/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.Compute/proximityPlacementGroups/myplacementgroup",
     resource_group_name="myResourceGroup",
-    storage_profile=azure_nextgen.hanaonazure.v20171103preview.StorageProfileArgs(
+    storage_profile=azure_nextgen.hanaonazure.StorageProfileArgs(
         nfs_ip_address="200.200.200.200",
     ),
     tags={
@@ -184,7 +185,7 @@ hana_instance = azure_nextgen.hanaonazure.v20171103preview.HanaInstance("hanaIns
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const hanaInstance = new azure_nextgen.hanaonazure.v20171103preview.HanaInstance("hanaInstance", {
+const hanaInstance = new azure_nextgen.hanaonazure.HanaInstance("hanaInstance", {
     hanaInstanceId: "00000000-0000-0000-0000-000000000000",
     hanaInstanceName: "myHanaInstance",
     hardwareProfile: {
@@ -438,7 +439,7 @@ The HanaInstance resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#hardwareprofile_csharp" style="color: inherit; text-decoration: inherit;">Hardware<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hardwareprofile">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hana<wbr>On<wbr>Azure.<wbr>Inputs.<wbr>Hardware<wbr>Profile<wbr>Args</a></span>
+        <span class="property-type"><a href="#hardwareprofile">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hana<wbr>On<wbr>Azure..<wbr>Inputs.<wbr>Hardware<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the hardware settings for the HANA instance.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -465,7 +466,7 @@ The HanaInstance resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#networkprofile_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkprofile">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hana<wbr>On<wbr>Azure.<wbr>Inputs.<wbr>Network<wbr>Profile<wbr>Args</a></span>
+        <span class="property-type"><a href="#networkprofile">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hana<wbr>On<wbr>Azure..<wbr>Inputs.<wbr>Network<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the network settings for the HANA instance.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -474,7 +475,7 @@ The HanaInstance resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#osprofile_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#osprofile">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hana<wbr>On<wbr>Azure.<wbr>Inputs.<wbr>OSProfile<wbr>Args</a></span>
+        <span class="property-type"><a href="#osprofile">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hana<wbr>On<wbr>Azure..<wbr>Inputs.<wbr>OSProfile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the operating system settings for the HANA instance.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -492,7 +493,7 @@ The HanaInstance resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#powerstate_csharp" style="color: inherit; text-decoration: inherit;">Power<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#hanainstancepowerstateenum">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hana<wbr>On<wbr>Azure.<wbr>Hana<wbr>Instance<wbr>Power<wbr>State<wbr>Enum</a></span>
+        <span class="property-type">string | <a href="#hanainstancepowerstateenum">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hana<wbr>On<wbr>Azure..<wbr>Hana<wbr>Instance<wbr>Power<wbr>State<wbr>Enum</a></span>
     </dt>
     <dd>{{% md %}}Resource power state{{% /md %}}</dd>
     <dt class="property-optional"
@@ -501,7 +502,7 @@ The HanaInstance resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#hanaprovisioningstatesenum">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hana<wbr>On<wbr>Azure.<wbr>Hana<wbr>Provisioning<wbr>States<wbr>Enum</a></span>
+        <span class="property-type">string | <a href="#hanaprovisioningstatesenum">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hana<wbr>On<wbr>Azure..<wbr>Hana<wbr>Provisioning<wbr>States<wbr>Enum</a></span>
     </dt>
     <dd>{{% md %}}State of provisioning of the HanaInstance{{% /md %}}</dd>
     <dt class="property-optional"
@@ -519,7 +520,7 @@ The HanaInstance resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#storageprofile_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageprofile">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hana<wbr>On<wbr>Azure.<wbr>Inputs.<wbr>Storage<wbr>Profile<wbr>Args</a></span>
+        <span class="property-type"><a href="#storageprofile">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hana<wbr>On<wbr>Azure..<wbr>Inputs.<wbr>Storage<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the storage settings for the HANA instance disks.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1874,7 +1875,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hanainstancesize_csharp" style="color: inherit; text-decoration: inherit;">Hana<wbr>Instance<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#hanainstancesizenamesenum">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hana<wbr>On<wbr>Azure.<wbr>Hana<wbr>Instance<wbr>Size<wbr>Names<wbr>Enum</a></span>
+        <span class="property-type">string | <a href="#hanainstancesizenamesenum">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hana<wbr>On<wbr>Azure..<wbr>Hana<wbr>Instance<wbr>Size<wbr>Names<wbr>Enum</a></span>
     </dt>
     <dd>{{% md %}}Specifies the HANA instance SKU.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1883,7 +1884,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hardwaretype_csharp" style="color: inherit; text-decoration: inherit;">Hardware<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#hanahardwaretypenamesenum">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hana<wbr>On<wbr>Azure.<wbr>Hana<wbr>Hardware<wbr>Type<wbr>Names<wbr>Enum</a></span>
+        <span class="property-type">string | <a href="#hanahardwaretypenamesenum">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hana<wbr>On<wbr>Azure..<wbr>Hana<wbr>Hardware<wbr>Type<wbr>Names<wbr>Enum</a></span>
     </dt>
     <dd>{{% md %}}Name of the hardware type (vendor and/or their product name){{% /md %}}</dd>
 </dl>
@@ -2203,7 +2204,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#networkinterfaces_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Interfaces</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipaddress">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hana<wbr>On<wbr>Azure.<wbr>Inputs.<wbr>Ip<wbr>Address<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#ipaddress">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hana<wbr>On<wbr>Azure..<wbr>Inputs.<wbr>Ip<wbr>Address<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the network interfaces for the HANA instance.{{% /md %}}</dd>
 </dl>
@@ -2301,7 +2302,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#networkinterfaces_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Interfaces</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipaddressresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hana<wbr>On<wbr>Azure.<wbr>Inputs.<wbr>Ip<wbr>Address<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#ipaddressresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hana<wbr>On<wbr>Azure..<wbr>Inputs.<wbr>Ip<wbr>Address<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the network interfaces for the HANA instance.{{% /md %}}</dd>
 </dl>
@@ -2739,7 +2740,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#osdisks_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#disk">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hana<wbr>On<wbr>Azure.<wbr>Inputs.<wbr>Disk<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#disk">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hana<wbr>On<wbr>Azure..<wbr>Inputs.<wbr>Disk<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies information about the operating system disk used by the hana instance.{{% /md %}}</dd>
 </dl>
@@ -2837,7 +2838,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#osdisks_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diskresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hana<wbr>On<wbr>Azure.<wbr>Inputs.<wbr>Disk<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#diskresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hana<wbr>On<wbr>Azure..<wbr>Inputs.<wbr>Disk<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies information about the operating system disk used by the hana instance.{{% /md %}}</dd>
 </dl>
@@ -2920,7 +2921,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:hanaonazure/v20171103preview:HanaInstance myHanaInstance /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.HanaOnAzure/hanaInstances/myHanaInstance 
+$ pulumi import azure-nextgen:hanaonazure:HanaInstance myHanaInstance /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.HanaOnAzure/hanaInstances/myHanaInstance 
 ```
 
 

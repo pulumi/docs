@@ -206,7 +206,7 @@ The following output properties are available:
 <a href="#suppressionalertsscope_csharp" style="color: inherit; text-decoration: inherit;">Suppression<wbr>Alerts<wbr>Scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#suppressionalertsscoperesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security.<wbr>Outputs.<wbr>Suppression<wbr>Alerts<wbr>Scope<wbr>Response</a></span>
+        <span class="property-type"><a href="#suppressionalertsscoperesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security..<wbr>Outputs.<wbr>Suppression<wbr>Alerts<wbr>Scope<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The suppression conditions{{% /md %}}</dd>
 </dl>
@@ -589,7 +589,7 @@ The following output properties are available:
 <a href="#allof_csharp" style="color: inherit; text-decoration: inherit;">All<wbr>Of</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scopeelementresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security.<wbr>Inputs.<wbr>Scope<wbr>Element<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#scopeelementresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security..<wbr>Inputs.<wbr>Scope<wbr>Element<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}All the conditions inside need to be true in order to suppress the alert{{% /md %}}</dd>
 </dl>

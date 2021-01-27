@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.serialconsole.SerialPort resourc
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Represents the serial port of the parent resource.
-Latest API Version: 2018-05-01.
+API Version: 2018-05-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var serialPort = new AzureNextGen.SerialConsole.Latest.SerialPort("serialPort", new AzureNextGen.SerialConsole.Latest.SerialPortArgs
+        var serialPort = new AzureNextGen.SerialConsole..SerialPort("serialPort", new AzureNextGen.SerialConsole..SerialPortArgs
         {
             ParentResource = "myVM",
             ParentResourceType = "virtualMachines",
@@ -50,7 +50,7 @@ class MyStack : Stack
 package main
 
 import (
-	serialconsole "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/serialconsole/latest"
+	serialconsole "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/serialconsole"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -81,7 +81,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-serial_port = azure_nextgen.serialconsole.latest.SerialPort("serialPort",
+serial_port = azure_nextgen.serialconsole.SerialPort("serialPort",
     parent_resource="myVM",
     parent_resource_type="virtualMachines",
     resource_group_name="myResourceGroup",
@@ -99,7 +99,7 @@ serial_port = azure_nextgen.serialconsole.latest.SerialPort("serialPort",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const serialPort = new azure_nextgen.serialconsole.latest.SerialPort("serialPort", {
+const serialPort = new azure_nextgen.serialconsole.SerialPort("serialPort", {
     parentResource: "myVM",
     parentResourceType: "virtualMachines",
     resourceGroupName: "myResourceGroup",
@@ -346,7 +346,7 @@ The SerialPort resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serialportstate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Serial<wbr>Console.<wbr>Serial<wbr>Port<wbr>State</a></span>
+        <span class="property-type"><a href="#serialportstate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Serial<wbr>Console..<wbr>Serial<wbr>Port<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether the port is enabled for a serial console connection.{{% /md %}}</dd>
 </dl>
@@ -724,7 +724,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:serialconsole/latest:SerialPort 0 /subscriptions/00000000-00000-0000-0000-000000000000/resourcegroups/myResourceGroup/providers/Microsoft.Compute/virtualMachines/myVM/providers/Microsoft.SerialConsole/serialPorts/0 
+$ pulumi import azure-nextgen:serialconsole:SerialPort 0 /subscriptions/00000000-00000-0000-0000-000000000000/resourcegroups/myResourceGroup/providers/Microsoft.Compute/virtualMachines/myVM/providers/Microsoft.SerialConsole/serialPorts/0 
 ```
 
 

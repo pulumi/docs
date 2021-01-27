@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.avs.PrivateCloud resource with e
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 A private cloud resource
-Latest API Version: 2020-03-20.
+API Version: 2020-03-20.
 
 {{% examples %}}
 ## Example Usage
@@ -27,17 +27,17 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var privateCloud = new AzureNextGen.AVS.Latest.PrivateCloud("privateCloud", new AzureNextGen.AVS.Latest.PrivateCloudArgs
+        var privateCloud = new AzureNextGen.AVS..PrivateCloud("privateCloud", new AzureNextGen.AVS..PrivateCloudArgs
         {
             Location = "eastus2",
-            ManagementCluster = new AzureNextGen.AVS.Latest.Inputs.ManagementClusterArgs
+            ManagementCluster = new AzureNextGen.AVS..Inputs.ManagementClusterArgs
             {
                 ClusterSize = 4,
             },
             NetworkBlock = "192.168.48.0/22",
             PrivateCloudName = "cloud1",
             ResourceGroupName = "group1",
-            Sku = new AzureNextGen.AVS.Latest.Inputs.SkuArgs
+            Sku = new AzureNextGen.AVS..Inputs.SkuArgs
             {
                 Name = "AV36",
             },
@@ -57,7 +57,7 @@ class MyStack : Stack
 package main
 
 import (
-	avs "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/avs/latest"
+	avs "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/avs"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -93,15 +93,15 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-private_cloud = azure_nextgen.avs.latest.PrivateCloud("privateCloud",
+private_cloud = azure_nextgen.avs.PrivateCloud("privateCloud",
     location="eastus2",
-    management_cluster=azure_nextgen.avs.latest.ManagementClusterArgs(
+    management_cluster=azure_nextgen.avs.ManagementClusterArgs(
         cluster_size=4,
     ),
     network_block="192.168.48.0/22",
     private_cloud_name="cloud1",
     resource_group_name="group1",
-    sku=azure_nextgen.avs.latest.SkuArgs(
+    sku=azure_nextgen.avs.SkuArgs(
         name="AV36",
     ),
     tags={})
@@ -116,7 +116,7 @@ private_cloud = azure_nextgen.avs.latest.PrivateCloud("privateCloud",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const privateCloud = new azure_nextgen.avs.latest.PrivateCloud("privateCloud", {
+const privateCloud = new azure_nextgen.avs.PrivateCloud("privateCloud", {
     location: "eastus2",
     managementCluster: {
         clusterSize: 4,
@@ -332,7 +332,7 @@ The PrivateCloud resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#managementcluster_csharp" style="color: inherit; text-decoration: inherit;">Management<wbr>Cluster</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementcluster">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>AVS.<wbr>Inputs.<wbr>Management<wbr>Cluster<wbr>Args</a></span>
+        <span class="property-type"><a href="#managementcluster">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>AVS..<wbr>Inputs.<wbr>Management<wbr>Cluster<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The default cluster used for management{{% /md %}}</dd>
     <dt class="property-required"
@@ -368,7 +368,7 @@ The PrivateCloud resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sku">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>AVS.<wbr>Inputs.<wbr>Sku<wbr>Args</a></span>
+        <span class="property-type"><a href="#sku">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>AVS..<wbr>Inputs.<wbr>Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The private cloud SKU{{% /md %}}</dd>
     <dt class="property-optional"
@@ -377,7 +377,7 @@ The PrivateCloud resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#identitysources_csharp" style="color: inherit; text-decoration: inherit;">Identity<wbr>Sources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identitysource">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>AVS.<wbr>Inputs.<wbr>Identity<wbr>Source<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#identitysource">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>AVS..<wbr>Inputs.<wbr>Identity<wbr>Source<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}vCenter Single Sign On Identity Sources{{% /md %}}</dd>
     <dt class="property-optional"
@@ -386,7 +386,7 @@ The PrivateCloud resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#internet_csharp" style="color: inherit; text-decoration: inherit;">Internet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#internetenum">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>AVS.<wbr>Internet<wbr>Enum</a></span>
+        <span class="property-type">string | <a href="#internetenum">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>AVS..<wbr>Internet<wbr>Enum</a></span>
     </dt>
     <dd>{{% md %}}Connectivity to internet is enabled or disabled{{% /md %}}</dd>
     <dt class="property-optional"
@@ -750,7 +750,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpoints_csharp" style="color: inherit; text-decoration: inherit;">Endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>AVS.<wbr>Outputs.<wbr>Endpoints<wbr>Response</a></span>
+        <span class="property-type"><a href="#endpointsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>AVS..<wbr>Outputs.<wbr>Endpoints<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The endpoints{{% /md %}}</dd>
     <dt class="property-"
@@ -840,7 +840,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#circuit_csharp" style="color: inherit; text-decoration: inherit;">Circuit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#circuitresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>AVS.<wbr>Outputs.<wbr>Circuit<wbr>Response</a></span>
+        <span class="property-type"><a href="#circuitresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>AVS..<wbr>Outputs.<wbr>Circuit<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}An ExpressRoute Circuit{{% /md %}}</dd>
 </dl>
@@ -1558,7 +1558,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ssl_csharp" style="color: inherit; text-decoration: inherit;">Ssl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#sslenum">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>AVS.<wbr>Ssl<wbr>Enum</a></span>
+        <span class="property-type">string | <a href="#sslenum">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>AVS..<wbr>Ssl<wbr>Enum</a></span>
     </dt>
     <dd>{{% md %}}Protect LDAP communication using SSL certificate (LDAPS){{% /md %}}</dd>
     <dt class="property-optional"
@@ -2684,7 +2684,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:avs/latest:PrivateCloud cloud1 /subscriptions/{subscription-id}/resourceGroups/group1/providers/Microsoft.AVS/privateClouds/cloud1 
+$ pulumi import azure-nextgen:avs:PrivateCloud cloud1 /subscriptions/{subscription-id}/resourceGroups/group1/providers/Microsoft.AVS/privateClouds/cloud1 
 ```
 
 

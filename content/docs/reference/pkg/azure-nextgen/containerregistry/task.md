@@ -12,7 +12,7 @@ meta_desc: "Documentation for the azure-nextgen.containerregistry.Task resource 
 
 The task that has the ARM resource and task properties.
 The task will have all information to schedule a run against it.
-Latest API Version: 2019-04-01.
+API Version: 2019-04-01.
 
 {{% examples %}}
 ## Example Usage
@@ -28,18 +28,18 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var task = new AzureNextGen.ContainerRegistry.Latest.Task("task", new AzureNextGen.ContainerRegistry.Latest.TaskArgs
+        var task = new AzureNextGen.ContainerRegistry..Task("task", new AzureNextGen.ContainerRegistry..TaskArgs
         {
-            AgentConfiguration = new AzureNextGen.ContainerRegistry.Latest.Inputs.AgentPropertiesArgs
+            AgentConfiguration = new AzureNextGen.ContainerRegistry..Inputs.AgentPropertiesArgs
             {
                 Cpu = 2,
             },
-            Identity = new AzureNextGen.ContainerRegistry.Latest.Inputs.IdentityPropertiesArgs
+            Identity = new AzureNextGen.ContainerRegistry..Inputs.IdentityPropertiesArgs
             {
                 Type = "SystemAssigned",
             },
             Location = "eastus",
-            Platform = new AzureNextGen.ContainerRegistry.Latest.Inputs.PlatformPropertiesArgs
+            Platform = new AzureNextGen.ContainerRegistry..Inputs.PlatformPropertiesArgs
             {
                 Architecture = "amd64",
                 Os = "Linux",
@@ -47,7 +47,7 @@ class MyStack : Stack
             RegistryName = "myRegistry",
             ResourceGroupName = "myResourceGroup",
             Status = "Enabled",
-            Step = new AzureNextGen.ContainerRegistry.Latest.Inputs.TaskStepPropertiesArgs
+            Step = new AzureNextGen.ContainerRegistry..Inputs.TaskStepPropertiesArgs
             {
                 ContextPath = "src",
             },
@@ -56,23 +56,23 @@ class MyStack : Stack
                 { "testkey", "value" },
             },
             TaskName = "mytTask",
-            Trigger = new AzureNextGen.ContainerRegistry.Latest.Inputs.TriggerPropertiesArgs
+            Trigger = new AzureNextGen.ContainerRegistry..Inputs.TriggerPropertiesArgs
             {
-                BaseImageTrigger = new AzureNextGen.ContainerRegistry.Latest.Inputs.BaseImageTriggerArgs
+                BaseImageTrigger = new AzureNextGen.ContainerRegistry..Inputs.BaseImageTriggerArgs
                 {
                     BaseImageTriggerType = "Runtime",
                     Name = "myBaseImageTrigger",
                 },
                 SourceTriggers = 
                 {
-                    new AzureNextGen.ContainerRegistry.Latest.Inputs.SourceTriggerArgs
+                    new AzureNextGen.ContainerRegistry..Inputs.SourceTriggerArgs
                     {
                         Name = "mySourceTrigger",
-                        SourceRepository = new AzureNextGen.ContainerRegistry.Latest.Inputs.SourcePropertiesArgs
+                        SourceRepository = new AzureNextGen.ContainerRegistry..Inputs.SourcePropertiesArgs
                         {
                             Branch = "master",
                             RepositoryUrl = "https://github.com/Azure/azure-rest-api-specs",
-                            SourceControlAuthProperties = new AzureNextGen.ContainerRegistry.Latest.Inputs.AuthInfoArgs
+                            SourceControlAuthProperties = new AzureNextGen.ContainerRegistry..Inputs.AuthInfoArgs
                             {
                                 Token = "xxxxx",
                                 TokenType = "PAT",
@@ -87,7 +87,7 @@ class MyStack : Stack
                 },
                 TimerTriggers = 
                 {
-                    new AzureNextGen.ContainerRegistry.Latest.Inputs.TimerTriggerArgs
+                    new AzureNextGen.ContainerRegistry..Inputs.TimerTriggerArgs
                     {
                         Name = "myTimerTrigger",
                         Schedule = "30 9 * * 1-5",
@@ -109,7 +109,7 @@ class MyStack : Stack
 package main
 
 import (
-	containerregistry "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/containerregistry/latest"
+	containerregistry "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/containerregistry"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -184,39 +184,39 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-task = azure_nextgen.containerregistry.latest.Task("task",
-    agent_configuration=azure_nextgen.containerregistry.latest.AgentPropertiesArgs(
+task = azure_nextgen.containerregistry.Task("task",
+    agent_configuration=azure_nextgen.containerregistry.AgentPropertiesArgs(
         cpu=2,
     ),
-    identity=azure_nextgen.containerregistry.latest.IdentityPropertiesArgs(
+    identity=azure_nextgen.containerregistry.IdentityPropertiesArgs(
         type="SystemAssigned",
     ),
     location="eastus",
-    platform=azure_nextgen.containerregistry.latest.PlatformPropertiesArgs(
+    platform=azure_nextgen.containerregistry.PlatformPropertiesArgs(
         architecture="amd64",
         os="Linux",
     ),
     registry_name="myRegistry",
     resource_group_name="myResourceGroup",
     status="Enabled",
-    step=azure_nextgen.containerregistry.latest.TaskStepPropertiesArgs(
+    step=azure_nextgen.containerregistry.TaskStepPropertiesArgs(
         context_path="src",
     ),
     tags={
         "testkey": "value",
     },
     task_name="mytTask",
-    trigger=azure_nextgen.containerregistry.latest.TriggerPropertiesArgs(
-        base_image_trigger=azure_nextgen.containerregistry.latest.BaseImageTriggerArgs(
+    trigger=azure_nextgen.containerregistry.TriggerPropertiesArgs(
+        base_image_trigger=azure_nextgen.containerregistry.BaseImageTriggerArgs(
             base_image_trigger_type="Runtime",
             name="myBaseImageTrigger",
         ),
-        source_triggers=[azure_nextgen.containerregistry.latest.SourceTriggerArgs(
+        source_triggers=[azure_nextgen.containerregistry.SourceTriggerArgs(
             name="mySourceTrigger",
-            source_repository=azure_nextgen.containerregistry.latest.SourcePropertiesArgs(
+            source_repository=azure_nextgen.containerregistry.SourcePropertiesArgs(
                 branch="master",
                 repository_url="https://github.com/Azure/azure-rest-api-specs",
-                source_control_auth_properties=azure_nextgen.containerregistry.latest.AuthInfoArgs(
+                source_control_auth_properties=azure_nextgen.containerregistry.AuthInfoArgs(
                     token="xxxxx",
                     token_type="PAT",
                 ),
@@ -224,7 +224,7 @@ task = azure_nextgen.containerregistry.latest.Task("task",
             ),
             source_trigger_events=["commit"],
         )],
-        timer_triggers=[azure_nextgen.containerregistry.latest.TimerTriggerArgs(
+        timer_triggers=[azure_nextgen.containerregistry.TimerTriggerArgs(
             name="myTimerTrigger",
             schedule="30 9 * * 1-5",
         )],
@@ -240,7 +240,7 @@ task = azure_nextgen.containerregistry.latest.Task("task",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const task = new azure_nextgen.containerregistry.latest.Task("task", {
+const task = new azure_nextgen.containerregistry.Task("task", {
     agentConfiguration: {
         cpu: 2,
     },
@@ -301,13 +301,13 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var task = new AzureNextGen.ContainerRegistry.Latest.Task("task", new AzureNextGen.ContainerRegistry.Latest.TaskArgs
+        var task = new AzureNextGen.ContainerRegistry..Task("task", new AzureNextGen.ContainerRegistry..TaskArgs
         {
-            AgentConfiguration = new AzureNextGen.ContainerRegistry.Latest.Inputs.AgentPropertiesArgs
+            AgentConfiguration = new AzureNextGen.ContainerRegistry..Inputs.AgentPropertiesArgs
             {
                 Cpu = 2,
             },
-            Identity = new AzureNextGen.ContainerRegistry.Latest.Inputs.IdentityPropertiesArgs
+            Identity = new AzureNextGen.ContainerRegistry..Inputs.IdentityPropertiesArgs
             {
                 Type = "SystemAssigned, UserAssigned",
                 UserAssignedIdentities = 
@@ -316,7 +316,7 @@ class MyStack : Stack
                 },
             },
             Location = "eastus",
-            Platform = new AzureNextGen.ContainerRegistry.Latest.Inputs.PlatformPropertiesArgs
+            Platform = new AzureNextGen.ContainerRegistry..Inputs.PlatformPropertiesArgs
             {
                 Architecture = "amd64",
                 Os = "Linux",
@@ -324,7 +324,7 @@ class MyStack : Stack
             RegistryName = "myRegistry",
             ResourceGroupName = "myResourceGroup",
             Status = "Enabled",
-            Step = new AzureNextGen.ContainerRegistry.Latest.Inputs.TaskStepPropertiesArgs
+            Step = new AzureNextGen.ContainerRegistry..Inputs.TaskStepPropertiesArgs
             {
                 ContextPath = "src",
             },
@@ -333,23 +333,23 @@ class MyStack : Stack
                 { "testkey", "value" },
             },
             TaskName = "mytTask",
-            Trigger = new AzureNextGen.ContainerRegistry.Latest.Inputs.TriggerPropertiesArgs
+            Trigger = new AzureNextGen.ContainerRegistry..Inputs.TriggerPropertiesArgs
             {
-                BaseImageTrigger = new AzureNextGen.ContainerRegistry.Latest.Inputs.BaseImageTriggerArgs
+                BaseImageTrigger = new AzureNextGen.ContainerRegistry..Inputs.BaseImageTriggerArgs
                 {
                     BaseImageTriggerType = "Runtime",
                     Name = "myBaseImageTrigger",
                 },
                 SourceTriggers = 
                 {
-                    new AzureNextGen.ContainerRegistry.Latest.Inputs.SourceTriggerArgs
+                    new AzureNextGen.ContainerRegistry..Inputs.SourceTriggerArgs
                     {
                         Name = "mySourceTrigger",
-                        SourceRepository = new AzureNextGen.ContainerRegistry.Latest.Inputs.SourcePropertiesArgs
+                        SourceRepository = new AzureNextGen.ContainerRegistry..Inputs.SourcePropertiesArgs
                         {
                             Branch = "master",
                             RepositoryUrl = "https://github.com/Azure/azure-rest-api-specs",
-                            SourceControlAuthProperties = new AzureNextGen.ContainerRegistry.Latest.Inputs.AuthInfoArgs
+                            SourceControlAuthProperties = new AzureNextGen.ContainerRegistry..Inputs.AuthInfoArgs
                             {
                                 Token = "xxxxx",
                                 TokenType = "PAT",
@@ -364,7 +364,7 @@ class MyStack : Stack
                 },
                 TimerTriggers = 
                 {
-                    new AzureNextGen.ContainerRegistry.Latest.Inputs.TimerTriggerArgs
+                    new AzureNextGen.ContainerRegistry..Inputs.TimerTriggerArgs
                     {
                         Name = "myTimerTrigger",
                         Schedule = "30 9 * * 1-5",
@@ -390,42 +390,42 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-task = azure_nextgen.containerregistry.latest.Task("task",
-    agent_configuration=azure_nextgen.containerregistry.latest.AgentPropertiesArgs(
+task = azure_nextgen.containerregistry.Task("task",
+    agent_configuration=azure_nextgen.containerregistry.AgentPropertiesArgs(
         cpu=2,
     ),
-    identity=azure_nextgen.containerregistry.latest.IdentityPropertiesArgs(
+    identity=azure_nextgen.containerregistry.IdentityPropertiesArgs(
         type="SystemAssigned, UserAssigned",
         user_assigned_identities={
-            "/subscriptions/f9d7ebed-adbd-4cb4-b973-aaf82c136138/resourcegroups/myResourceGroup1/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity2": azure_nextgen.containerregistry.latest.UserIdentityPropertiesArgs(),
+            "/subscriptions/f9d7ebed-adbd-4cb4-b973-aaf82c136138/resourcegroups/myResourceGroup1/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity2": azure_nextgen.containerregistry.UserIdentityPropertiesArgs(),
         },
     ),
     location="eastus",
-    platform=azure_nextgen.containerregistry.latest.PlatformPropertiesArgs(
+    platform=azure_nextgen.containerregistry.PlatformPropertiesArgs(
         architecture="amd64",
         os="Linux",
     ),
     registry_name="myRegistry",
     resource_group_name="myResourceGroup",
     status="Enabled",
-    step=azure_nextgen.containerregistry.latest.TaskStepPropertiesArgs(
+    step=azure_nextgen.containerregistry.TaskStepPropertiesArgs(
         context_path="src",
     ),
     tags={
         "testkey": "value",
     },
     task_name="mytTask",
-    trigger=azure_nextgen.containerregistry.latest.TriggerPropertiesArgs(
-        base_image_trigger=azure_nextgen.containerregistry.latest.BaseImageTriggerArgs(
+    trigger=azure_nextgen.containerregistry.TriggerPropertiesArgs(
+        base_image_trigger=azure_nextgen.containerregistry.BaseImageTriggerArgs(
             base_image_trigger_type="Runtime",
             name="myBaseImageTrigger",
         ),
-        source_triggers=[azure_nextgen.containerregistry.latest.SourceTriggerArgs(
+        source_triggers=[azure_nextgen.containerregistry.SourceTriggerArgs(
             name="mySourceTrigger",
-            source_repository=azure_nextgen.containerregistry.latest.SourcePropertiesArgs(
+            source_repository=azure_nextgen.containerregistry.SourcePropertiesArgs(
                 branch="master",
                 repository_url="https://github.com/Azure/azure-rest-api-specs",
-                source_control_auth_properties=azure_nextgen.containerregistry.latest.AuthInfoArgs(
+                source_control_auth_properties=azure_nextgen.containerregistry.AuthInfoArgs(
                     token="xxxxx",
                     token_type="PAT",
                 ),
@@ -433,7 +433,7 @@ task = azure_nextgen.containerregistry.latest.Task("task",
             ),
             source_trigger_events=["commit"],
         )],
-        timer_triggers=[azure_nextgen.containerregistry.latest.TimerTriggerArgs(
+        timer_triggers=[azure_nextgen.containerregistry.TimerTriggerArgs(
             name="myTimerTrigger",
             schedule="30 9 * * 1-5",
         )],
@@ -449,7 +449,7 @@ task = azure_nextgen.containerregistry.latest.Task("task",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const task = new azure_nextgen.containerregistry.latest.Task("task", {
+const task = new azure_nextgen.containerregistry.Task("task", {
     agentConfiguration: {
         cpu: 2,
     },
@@ -513,13 +513,13 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var task = new AzureNextGen.ContainerRegistry.Latest.Task("task", new AzureNextGen.ContainerRegistry.Latest.TaskArgs
+        var task = new AzureNextGen.ContainerRegistry..Task("task", new AzureNextGen.ContainerRegistry..TaskArgs
         {
-            AgentConfiguration = new AzureNextGen.ContainerRegistry.Latest.Inputs.AgentPropertiesArgs
+            AgentConfiguration = new AzureNextGen.ContainerRegistry..Inputs.AgentPropertiesArgs
             {
                 Cpu = 2,
             },
-            Identity = new AzureNextGen.ContainerRegistry.Latest.Inputs.IdentityPropertiesArgs
+            Identity = new AzureNextGen.ContainerRegistry..Inputs.IdentityPropertiesArgs
             {
                 Type = "UserAssigned",
                 UserAssignedIdentities = 
@@ -529,7 +529,7 @@ class MyStack : Stack
                 },
             },
             Location = "eastus",
-            Platform = new AzureNextGen.ContainerRegistry.Latest.Inputs.PlatformPropertiesArgs
+            Platform = new AzureNextGen.ContainerRegistry..Inputs.PlatformPropertiesArgs
             {
                 Architecture = "amd64",
                 Os = "Linux",
@@ -537,7 +537,7 @@ class MyStack : Stack
             RegistryName = "myRegistry",
             ResourceGroupName = "myResourceGroup",
             Status = "Enabled",
-            Step = new AzureNextGen.ContainerRegistry.Latest.Inputs.TaskStepPropertiesArgs
+            Step = new AzureNextGen.ContainerRegistry..Inputs.TaskStepPropertiesArgs
             {
                 ContextPath = "src",
             },
@@ -546,23 +546,23 @@ class MyStack : Stack
                 { "testkey", "value" },
             },
             TaskName = "mytTask",
-            Trigger = new AzureNextGen.ContainerRegistry.Latest.Inputs.TriggerPropertiesArgs
+            Trigger = new AzureNextGen.ContainerRegistry..Inputs.TriggerPropertiesArgs
             {
-                BaseImageTrigger = new AzureNextGen.ContainerRegistry.Latest.Inputs.BaseImageTriggerArgs
+                BaseImageTrigger = new AzureNextGen.ContainerRegistry..Inputs.BaseImageTriggerArgs
                 {
                     BaseImageTriggerType = "Runtime",
                     Name = "myBaseImageTrigger",
                 },
                 SourceTriggers = 
                 {
-                    new AzureNextGen.ContainerRegistry.Latest.Inputs.SourceTriggerArgs
+                    new AzureNextGen.ContainerRegistry..Inputs.SourceTriggerArgs
                     {
                         Name = "mySourceTrigger",
-                        SourceRepository = new AzureNextGen.ContainerRegistry.Latest.Inputs.SourcePropertiesArgs
+                        SourceRepository = new AzureNextGen.ContainerRegistry..Inputs.SourcePropertiesArgs
                         {
                             Branch = "master",
                             RepositoryUrl = "https://github.com/Azure/azure-rest-api-specs",
-                            SourceControlAuthProperties = new AzureNextGen.ContainerRegistry.Latest.Inputs.AuthInfoArgs
+                            SourceControlAuthProperties = new AzureNextGen.ContainerRegistry..Inputs.AuthInfoArgs
                             {
                                 Token = "xxxxx",
                                 TokenType = "PAT",
@@ -577,7 +577,7 @@ class MyStack : Stack
                 },
                 TimerTriggers = 
                 {
-                    new AzureNextGen.ContainerRegistry.Latest.Inputs.TimerTriggerArgs
+                    new AzureNextGen.ContainerRegistry..Inputs.TimerTriggerArgs
                     {
                         Name = "myTimerTrigger",
                         Schedule = "30 9 * * 1-5",
@@ -603,43 +603,43 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-task = azure_nextgen.containerregistry.latest.Task("task",
-    agent_configuration=azure_nextgen.containerregistry.latest.AgentPropertiesArgs(
+task = azure_nextgen.containerregistry.Task("task",
+    agent_configuration=azure_nextgen.containerregistry.AgentPropertiesArgs(
         cpu=2,
     ),
-    identity=azure_nextgen.containerregistry.latest.IdentityPropertiesArgs(
+    identity=azure_nextgen.containerregistry.IdentityPropertiesArgs(
         type="UserAssigned",
         user_assigned_identities={
-            "/subscriptions/f9d7ebed-adbd-4cb4-b973-aaf82c136138/resourcegroups/myResourceGroup/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity1": azure_nextgen.containerregistry.latest.UserIdentityPropertiesArgs(),
-            "/subscriptions/f9d7ebed-adbd-4cb4-b973-aaf82c136138/resourcegroups/myResourceGroup1/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity2": azure_nextgen.containerregistry.latest.UserIdentityPropertiesArgs(),
+            "/subscriptions/f9d7ebed-adbd-4cb4-b973-aaf82c136138/resourcegroups/myResourceGroup/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity1": azure_nextgen.containerregistry.UserIdentityPropertiesArgs(),
+            "/subscriptions/f9d7ebed-adbd-4cb4-b973-aaf82c136138/resourcegroups/myResourceGroup1/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity2": azure_nextgen.containerregistry.UserIdentityPropertiesArgs(),
         },
     ),
     location="eastus",
-    platform=azure_nextgen.containerregistry.latest.PlatformPropertiesArgs(
+    platform=azure_nextgen.containerregistry.PlatformPropertiesArgs(
         architecture="amd64",
         os="Linux",
     ),
     registry_name="myRegistry",
     resource_group_name="myResourceGroup",
     status="Enabled",
-    step=azure_nextgen.containerregistry.latest.TaskStepPropertiesArgs(
+    step=azure_nextgen.containerregistry.TaskStepPropertiesArgs(
         context_path="src",
     ),
     tags={
         "testkey": "value",
     },
     task_name="mytTask",
-    trigger=azure_nextgen.containerregistry.latest.TriggerPropertiesArgs(
-        base_image_trigger=azure_nextgen.containerregistry.latest.BaseImageTriggerArgs(
+    trigger=azure_nextgen.containerregistry.TriggerPropertiesArgs(
+        base_image_trigger=azure_nextgen.containerregistry.BaseImageTriggerArgs(
             base_image_trigger_type="Runtime",
             name="myBaseImageTrigger",
         ),
-        source_triggers=[azure_nextgen.containerregistry.latest.SourceTriggerArgs(
+        source_triggers=[azure_nextgen.containerregistry.SourceTriggerArgs(
             name="mySourceTrigger",
-            source_repository=azure_nextgen.containerregistry.latest.SourcePropertiesArgs(
+            source_repository=azure_nextgen.containerregistry.SourcePropertiesArgs(
                 branch="master",
                 repository_url="https://github.com/Azure/azure-rest-api-specs",
-                source_control_auth_properties=azure_nextgen.containerregistry.latest.AuthInfoArgs(
+                source_control_auth_properties=azure_nextgen.containerregistry.AuthInfoArgs(
                     token="xxxxx",
                     token_type="PAT",
                 ),
@@ -647,7 +647,7 @@ task = azure_nextgen.containerregistry.latest.Task("task",
             ),
             source_trigger_events=["commit"],
         )],
-        timer_triggers=[azure_nextgen.containerregistry.latest.TimerTriggerArgs(
+        timer_triggers=[azure_nextgen.containerregistry.TimerTriggerArgs(
             name="myTimerTrigger",
             schedule="30 9 * * 1-5",
         )],
@@ -663,7 +663,7 @@ task = azure_nextgen.containerregistry.latest.Task("task",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const task = new azure_nextgen.containerregistry.latest.Task("task", {
+const task = new azure_nextgen.containerregistry.Task("task", {
     agentConfiguration: {
         cpu: 2,
     },
@@ -728,18 +728,18 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var task = new AzureNextGen.ContainerRegistry.Latest.Task("task", new AzureNextGen.ContainerRegistry.Latest.TaskArgs
+        var task = new AzureNextGen.ContainerRegistry..Task("task", new AzureNextGen.ContainerRegistry..TaskArgs
         {
-            AgentConfiguration = new AzureNextGen.ContainerRegistry.Latest.Inputs.AgentPropertiesArgs
+            AgentConfiguration = new AzureNextGen.ContainerRegistry..Inputs.AgentPropertiesArgs
             {
                 Cpu = 2,
             },
-            Identity = new AzureNextGen.ContainerRegistry.Latest.Inputs.IdentityPropertiesArgs
+            Identity = new AzureNextGen.ContainerRegistry..Inputs.IdentityPropertiesArgs
             {
                 Type = "SystemAssigned",
             },
             Location = "eastus",
-            Platform = new AzureNextGen.ContainerRegistry.Latest.Inputs.PlatformPropertiesArgs
+            Platform = new AzureNextGen.ContainerRegistry..Inputs.PlatformPropertiesArgs
             {
                 Architecture = "amd64",
                 Os = "Linux",
@@ -747,7 +747,7 @@ class MyStack : Stack
             RegistryName = "myRegistry",
             ResourceGroupName = "myResourceGroup",
             Status = "Enabled",
-            Step = new AzureNextGen.ContainerRegistry.Latest.Inputs.TaskStepPropertiesArgs
+            Step = new AzureNextGen.ContainerRegistry..Inputs.TaskStepPropertiesArgs
             {
                 ContextPath = "src",
             },
@@ -756,23 +756,23 @@ class MyStack : Stack
                 { "testkey", "value" },
             },
             TaskName = "mytTask",
-            Trigger = new AzureNextGen.ContainerRegistry.Latest.Inputs.TriggerPropertiesArgs
+            Trigger = new AzureNextGen.ContainerRegistry..Inputs.TriggerPropertiesArgs
             {
-                BaseImageTrigger = new AzureNextGen.ContainerRegistry.Latest.Inputs.BaseImageTriggerArgs
+                BaseImageTrigger = new AzureNextGen.ContainerRegistry..Inputs.BaseImageTriggerArgs
                 {
                     BaseImageTriggerType = "Runtime",
                     Name = "myBaseImageTrigger",
                 },
                 SourceTriggers = 
                 {
-                    new AzureNextGen.ContainerRegistry.Latest.Inputs.SourceTriggerArgs
+                    new AzureNextGen.ContainerRegistry..Inputs.SourceTriggerArgs
                     {
                         Name = "mySourceTrigger",
-                        SourceRepository = new AzureNextGen.ContainerRegistry.Latest.Inputs.SourcePropertiesArgs
+                        SourceRepository = new AzureNextGen.ContainerRegistry..Inputs.SourcePropertiesArgs
                         {
                             Branch = "master",
                             RepositoryUrl = "https://github.com/Azure/azure-rest-api-specs",
-                            SourceControlAuthProperties = new AzureNextGen.ContainerRegistry.Latest.Inputs.AuthInfoArgs
+                            SourceControlAuthProperties = new AzureNextGen.ContainerRegistry..Inputs.AuthInfoArgs
                             {
                                 Token = "xxxxx",
                                 TokenType = "PAT",
@@ -787,7 +787,7 @@ class MyStack : Stack
                 },
                 TimerTriggers = 
                 {
-                    new AzureNextGen.ContainerRegistry.Latest.Inputs.TimerTriggerArgs
+                    new AzureNextGen.ContainerRegistry..Inputs.TimerTriggerArgs
                     {
                         Name = "myTimerTrigger",
                         Schedule = "30 9 * * 1-5",
@@ -809,7 +809,7 @@ class MyStack : Stack
 package main
 
 import (
-	containerregistry "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/containerregistry/latest"
+	containerregistry "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/containerregistry"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -884,39 +884,39 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-task = azure_nextgen.containerregistry.latest.Task("task",
-    agent_configuration=azure_nextgen.containerregistry.latest.AgentPropertiesArgs(
+task = azure_nextgen.containerregistry.Task("task",
+    agent_configuration=azure_nextgen.containerregistry.AgentPropertiesArgs(
         cpu=2,
     ),
-    identity=azure_nextgen.containerregistry.latest.IdentityPropertiesArgs(
+    identity=azure_nextgen.containerregistry.IdentityPropertiesArgs(
         type="SystemAssigned",
     ),
     location="eastus",
-    platform=azure_nextgen.containerregistry.latest.PlatformPropertiesArgs(
+    platform=azure_nextgen.containerregistry.PlatformPropertiesArgs(
         architecture="amd64",
         os="Linux",
     ),
     registry_name="myRegistry",
     resource_group_name="myResourceGroup",
     status="Enabled",
-    step=azure_nextgen.containerregistry.latest.TaskStepPropertiesArgs(
+    step=azure_nextgen.containerregistry.TaskStepPropertiesArgs(
         context_path="src",
     ),
     tags={
         "testkey": "value",
     },
     task_name="mytTask",
-    trigger=azure_nextgen.containerregistry.latest.TriggerPropertiesArgs(
-        base_image_trigger=azure_nextgen.containerregistry.latest.BaseImageTriggerArgs(
+    trigger=azure_nextgen.containerregistry.TriggerPropertiesArgs(
+        base_image_trigger=azure_nextgen.containerregistry.BaseImageTriggerArgs(
             base_image_trigger_type="Runtime",
             name="myBaseImageTrigger",
         ),
-        source_triggers=[azure_nextgen.containerregistry.latest.SourceTriggerArgs(
+        source_triggers=[azure_nextgen.containerregistry.SourceTriggerArgs(
             name="mySourceTrigger",
-            source_repository=azure_nextgen.containerregistry.latest.SourcePropertiesArgs(
+            source_repository=azure_nextgen.containerregistry.SourcePropertiesArgs(
                 branch="master",
                 repository_url="https://github.com/Azure/azure-rest-api-specs",
-                source_control_auth_properties=azure_nextgen.containerregistry.latest.AuthInfoArgs(
+                source_control_auth_properties=azure_nextgen.containerregistry.AuthInfoArgs(
                     token="xxxxx",
                     token_type="PAT",
                 ),
@@ -924,7 +924,7 @@ task = azure_nextgen.containerregistry.latest.Task("task",
             ),
             source_trigger_events=["commit"],
         )],
-        timer_triggers=[azure_nextgen.containerregistry.latest.TimerTriggerArgs(
+        timer_triggers=[azure_nextgen.containerregistry.TimerTriggerArgs(
             name="myTimerTrigger",
             schedule="30 9 * * 1-5",
         )],
@@ -940,7 +940,7 @@ task = azure_nextgen.containerregistry.latest.Task("task",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const task = new azure_nextgen.containerregistry.latest.Task("task", {
+const task = new azure_nextgen.containerregistry.Task("task", {
     agentConfiguration: {
         cpu: 2,
     },
@@ -1189,7 +1189,7 @@ The Task resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#platform_csharp" style="color: inherit; text-decoration: inherit;">Platform</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#platformproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Platform<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#platformproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry..<wbr>Inputs.<wbr>Platform<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The platform properties against which the run has to happen.{{% /md %}}</dd>
     <dt class="property-required"
@@ -1216,7 +1216,7 @@ The Task resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#step_csharp" style="color: inherit; text-decoration: inherit;">Step</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#taskstepproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Task<wbr>Step<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#taskstepproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry..<wbr>Inputs.<wbr>Task<wbr>Step<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The properties of a task step.{{% /md %}}</dd>
     <dt class="property-required"
@@ -1234,7 +1234,7 @@ The Task resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#agentconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Agent<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#agentproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Agent<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#agentproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry..<wbr>Inputs.<wbr>Agent<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The machine configuration of the run agent.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1243,7 +1243,7 @@ The Task resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#credentials_csharp" style="color: inherit; text-decoration: inherit;">Credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#credentials">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Credentials<wbr>Args</a></span>
+        <span class="property-type"><a href="#credentials">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry..<wbr>Inputs.<wbr>Credentials<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The properties that describes a set of credentials that will be used when this run is invoked.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1252,7 +1252,7 @@ The Task resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identityproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Identity<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#identityproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry..<wbr>Inputs.<wbr>Identity<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Identity for the resource.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1261,7 +1261,7 @@ The Task resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#taskstatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry.<wbr>Task<wbr>Status</a></span>
+        <span class="property-type">string | <a href="#taskstatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry..<wbr>Task<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}The current status of task.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1288,7 +1288,7 @@ The Task resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#trigger_csharp" style="color: inherit; text-decoration: inherit;">Trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Trigger<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#triggerproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry..<wbr>Inputs.<wbr>Trigger<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The properties that describe all triggers for the task.{{% /md %}}</dd>
 </dl>
@@ -2016,8 +2016,12 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>amd64</dd>
     <dt>X86</dt>
     <dd>x86</dd>
+    <dt>Architecture_386</dt>
+    <dd>386</dd>
     <dt>Arm</dt>
     <dd>arm</dd>
+    <dt>Arm64</dt>
+    <dd>arm64</dd>
 </dl>
 {{% /choosable %}}
 
@@ -2027,8 +2031,12 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>amd64</dd>
     <dt>Architecture<wbr>X86</dt>
     <dd>x86</dd>
+    <dt>Architecture_386</dt>
+    <dd>386</dd>
     <dt>Architecture<wbr>Arm</dt>
     <dd>arm</dd>
+    <dt>Architecture<wbr>Arm64</dt>
+    <dd>arm64</dd>
 </dl>
 {{% /choosable %}}
 
@@ -2038,8 +2046,12 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>amd64</dd>
     <dt>X86</dt>
     <dd>x86</dd>
+    <dt>Architecture_386</dt>
+    <dd>386</dd>
     <dt>Arm</dt>
     <dd>arm</dd>
+    <dt>Arm64</dt>
+    <dd>arm64</dd>
 </dl>
 {{% /choosable %}}
 
@@ -2049,8 +2061,12 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>amd64</dd>
     <dt>X86</dt>
     <dd>x86</dd>
+    <dt>ARCHITECTURE_386</dt>
+    <dd>386</dd>
     <dt>ARM</dt>
     <dd>arm</dd>
+    <dt>ARM64</dt>
+    <dd>arm64</dd>
 </dl>
 {{% /choosable %}}
 
@@ -2208,7 +2224,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tokentype_csharp" style="color: inherit; text-decoration: inherit;">Token<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#tokentype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry.<wbr>Token<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#tokentype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry..<wbr>Token<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of Auth token.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2817,7 +2833,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#baseimagetriggertype_csharp" style="color: inherit; text-decoration: inherit;">Base<wbr>Image<wbr>Trigger<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#baseimagetriggertype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry.<wbr>Base<wbr>Image<wbr>Trigger<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#baseimagetriggertype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry..<wbr>Base<wbr>Image<wbr>Trigger<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of the auto trigger for base image dependency updates.{{% /md %}}</dd>
     <dt class="property-required"
@@ -2835,7 +2851,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#triggerstatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry.<wbr>Trigger<wbr>Status</a></span>
+        <span class="property-type">string | <a href="#triggerstatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry..<wbr>Trigger<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}The current status of trigger.{{% /md %}}</dd>
 </dl>
@@ -3123,7 +3139,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#customregistries_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Registries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Custom<wbr>Registry<wbr>Credentials<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry..<wbr>Inputs.<wbr>Custom<wbr>Registry<wbr>Credentials<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}Describes the credential parameters for accessing other custom registries. The key
 for the dictionary item will be the registry login server (myregistry.azurecr.io) and
@@ -3134,7 +3150,7 @@ the value of the item will be the registry credentials for accessing the registr
 <a href="#sourceregistry_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Registry</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sourceregistrycredentials">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Source<wbr>Registry<wbr>Credentials<wbr>Args</a></span>
+        <span class="property-type"><a href="#sourceregistrycredentials">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry..<wbr>Inputs.<wbr>Source<wbr>Registry<wbr>Credentials<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the credential parameters for accessing the source registry.{{% /md %}}</dd>
 </dl>
@@ -3229,7 +3245,7 @@ the value of the item will be the registry credentials for accessing the registr
 <a href="#customregistries_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Registries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Custom<wbr>Registry<wbr>Credentials<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry..<wbr>Inputs.<wbr>Custom<wbr>Registry<wbr>Credentials<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}Describes the credential parameters for accessing other custom registries. The key
 for the dictionary item will be the registry login server (myregistry.azurecr.io) and
@@ -3240,7 +3256,7 @@ the value of the item will be the registry credentials for accessing the registr
 <a href="#sourceregistry_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Registry</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sourceregistrycredentialsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Source<wbr>Registry<wbr>Credentials<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sourceregistrycredentialsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry..<wbr>Inputs.<wbr>Source<wbr>Registry<wbr>Credentials<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the credential parameters for accessing the source registry.{{% /md %}}</dd>
 </dl>
@@ -3348,7 +3364,7 @@ source of authentication used for accessing the registry.{{% /md %}}</dd>
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretobject">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Secret<wbr>Object<wbr>Args</a></span>
+        <span class="property-type"><a href="#secretobject">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry..<wbr>Inputs.<wbr>Secret<wbr>Object<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The password for logging into the custom registry. The password is a secret 
 object that allows multiple ways of providing the value for it.{{% /md %}}</dd>
@@ -3358,7 +3374,7 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd>
 <a href="#username_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretobject">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Secret<wbr>Object<wbr>Args</a></span>
+        <span class="property-type"><a href="#secretobject">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry..<wbr>Inputs.<wbr>Secret<wbr>Object<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The username for logging into the custom registry.{{% /md %}}</dd>
 </dl>
@@ -3502,7 +3518,7 @@ source of authentication used for accessing the registry.{{% /md %}}</dd>
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretobjectresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Secret<wbr>Object<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#secretobjectresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry..<wbr>Inputs.<wbr>Secret<wbr>Object<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The password for logging into the custom registry. The password is a secret 
 object that allows multiple ways of providing the value for it.{{% /md %}}</dd>
@@ -3512,7 +3528,7 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd>
 <a href="#username_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretobjectresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Secret<wbr>Object<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#secretobjectresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry..<wbr>Inputs.<wbr>Secret<wbr>Object<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The username for logging into the custom registry.{{% /md %}}</dd>
 </dl>
@@ -3643,7 +3659,7 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd>
 <a href="#baseimagedependencies_csharp" style="color: inherit; text-decoration: inherit;">Base<wbr>Image<wbr>Dependencies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#baseimagedependencyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Base<wbr>Image<wbr>Dependency<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#baseimagedependencyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry..<wbr>Inputs.<wbr>Base<wbr>Image<wbr>Dependency<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of base image dependencies for a step.{{% /md %}}</dd>
     <dt class="property-required"
@@ -3661,7 +3677,7 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd>
 <a href="#arguments_csharp" style="color: inherit; text-decoration: inherit;">Arguments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#argumentresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Argument<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#argumentresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry..<wbr>Inputs.<wbr>Argument<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The collection of override arguments to be used when executing this build step.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3993,7 +4009,7 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd>
 <a href="#baseimagedependencies_csharp" style="color: inherit; text-decoration: inherit;">Base<wbr>Image<wbr>Dependencies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#baseimagedependencyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Base<wbr>Image<wbr>Dependency<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#baseimagedependencyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry..<wbr>Inputs.<wbr>Base<wbr>Image<wbr>Dependency<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of base image dependencies for a step.{{% /md %}}</dd>
     <dt class="property-required"
@@ -4038,7 +4054,7 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd>
 <a href="#values_csharp" style="color: inherit; text-decoration: inherit;">Values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#setvalueresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Set<wbr>Value<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#setvalueresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry..<wbr>Inputs.<wbr>Set<wbr>Value<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The collection of overridable values that can be passed when running a task.{{% /md %}}</dd>
 </dl>
@@ -4235,7 +4251,7 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd>
 <a href="#baseimagedependencies_csharp" style="color: inherit; text-decoration: inherit;">Base<wbr>Image<wbr>Dependencies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#baseimagedependencyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Base<wbr>Image<wbr>Dependency<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#baseimagedependencyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry..<wbr>Inputs.<wbr>Base<wbr>Image<wbr>Dependency<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of base image dependencies for a step.{{% /md %}}</dd>
     <dt class="property-required"
@@ -4271,7 +4287,7 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd>
 <a href="#values_csharp" style="color: inherit; text-decoration: inherit;">Values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#setvalueresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Set<wbr>Value<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#setvalueresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry..<wbr>Inputs.<wbr>Set<wbr>Value<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The collection of overridable values that can be passed when running a task.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4495,7 +4511,7 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd>
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidentitytype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry.<wbr>Resource<wbr>Identity<wbr>Type</a></span>
+        <span class="property-type"><a href="#resourceidentitytype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry..<wbr>Resource<wbr>Identity<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The identity type.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4504,7 +4520,7 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd>
 <a href="#userassignedidentities_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>User<wbr>Identity<wbr>Properties<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry..<wbr>Inputs.<wbr>User<wbr>Identity<wbr>Properties<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}The list of user identities associated with the resource. The user identity 
 dictionary key references will be ARM resource ids in the form: 
@@ -4686,7 +4702,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#userassignedidentities_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>User<wbr>Identity<wbr>Properties<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry..<wbr>Inputs.<wbr>User<wbr>Identity<wbr>Properties<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}The list of user identities associated with the resource. The user identity 
 dictionary key references will be ARM resource ids in the form: 
@@ -4879,7 +4895,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#os_csharp" style="color: inherit; text-decoration: inherit;">Os</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#os">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry.<wbr>OS</a></span>
+        <span class="property-type">string | <a href="#os">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry..<wbr>OS</a></span>
     </dt>
     <dd>{{% md %}}The operating system type required for the run.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4888,7 +4904,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#architecture_csharp" style="color: inherit; text-decoration: inherit;">Architecture</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#architecture">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry.<wbr>Architecture</a></span>
+        <span class="property-type">string | <a href="#architecture">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry..<wbr>Architecture</a></span>
     </dt>
     <dd>{{% md %}}The OS architecture.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4897,7 +4913,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#variant_csharp" style="color: inherit; text-decoration: inherit;">Variant</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#variant">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry.<wbr>Variant</a></span>
+        <span class="property-type">string | <a href="#variant">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry..<wbr>Variant</a></span>
     </dt>
     <dd>{{% md %}}Variant of the CPU.{{% /md %}}</dd>
 </dl>
@@ -5201,7 +5217,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#secretobjecttype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry.<wbr>Secret<wbr>Object<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#secretobjecttype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry..<wbr>Secret<wbr>Object<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of the secret object which determines how the value of the secret object has to be
 interpreted.{{% /md %}}</dd>
@@ -5640,7 +5656,7 @@ used as is without any modification.{{% /md %}}</dd>
 <a href="#sourcecontroltype_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Control<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#sourcecontroltype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry.<wbr>Source<wbr>Control<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#sourcecontroltype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry..<wbr>Source<wbr>Control<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of source control service.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -5658,7 +5674,7 @@ used as is without any modification.{{% /md %}}</dd>
 <a href="#sourcecontrolauthproperties_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Control<wbr>Auth<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authinfo">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Auth<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#authinfo">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry..<wbr>Inputs.<wbr>Auth<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The authorization properties for accessing the source code repository and to set up
 webhooks for notifications.{{% /md %}}</dd>
@@ -5832,7 +5848,7 @@ webhooks for notifications.{{% /md %}}</dd>
 <a href="#sourcecontrolauthproperties_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Control<wbr>Auth<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authinforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Auth<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#authinforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry..<wbr>Inputs.<wbr>Auth<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The authorization properties for accessing the source code repository and to set up
 webhooks for notifications.{{% /md %}}</dd>
@@ -5979,7 +5995,7 @@ webhooks for notifications.{{% /md %}}</dd>
 <a href="#loginmode_csharp" style="color: inherit; text-decoration: inherit;">Login<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#sourceregistryloginmode">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry.<wbr>Source<wbr>Registry<wbr>Login<wbr>Mode</a></span>
+        <span class="property-type">string | <a href="#sourceregistryloginmode">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry..<wbr>Source<wbr>Registry<wbr>Login<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}The authentication mode which determines the source registry login scope. The credentials for the source registry
 will be generated using the given scope. These credentials will be used to login to
@@ -6166,7 +6182,7 @@ the source registry during the run.{{% /md %}}</dd>
 <a href="#sourcerepository_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Repository</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sourceproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Source<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#sourceproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry..<wbr>Inputs.<wbr>Source<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The properties that describes the source(code) for the task.{{% /md %}}</dd>
     <dt class="property-required"
@@ -6175,7 +6191,7 @@ the source registry during the run.{{% /md %}}</dd>
 <a href="#sourcetriggerevents_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Trigger<wbr>Events</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Union&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry.<wbr>Source<wbr>Trigger<wbr>Event&gt;&gt;</span>
+        <span class="property-type">List&lt;Union&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry..<wbr>Source<wbr>Trigger<wbr>Event&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}The source event corresponding to the trigger.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -6184,7 +6200,7 @@ the source registry during the run.{{% /md %}}</dd>
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#triggerstatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry.<wbr>Trigger<wbr>Status</a></span>
+        <span class="property-type">string | <a href="#triggerstatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry..<wbr>Trigger<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}The current status of trigger.{{% /md %}}</dd>
 </dl>
@@ -6374,7 +6390,7 @@ the source registry during the run.{{% /md %}}</dd>
 <a href="#sourcerepository_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Repository</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sourcepropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Source<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sourcepropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry..<wbr>Inputs.<wbr>Source<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The properties that describes the source(code) for the task.{{% /md %}}</dd>
     <dt class="property-required"
@@ -6689,7 +6705,7 @@ the source registry during the run.{{% /md %}}</dd>
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#triggerstatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry.<wbr>Trigger<wbr>Status</a></span>
+        <span class="property-type">string | <a href="#triggerstatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry..<wbr>Trigger<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}The current status of trigger.{{% /md %}}</dd>
 </dl>
@@ -6977,7 +6993,7 @@ the source registry during the run.{{% /md %}}</dd>
 <a href="#baseimagetrigger_csharp" style="color: inherit; text-decoration: inherit;">Base<wbr>Image<wbr>Trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#baseimagetrigger">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Base<wbr>Image<wbr>Trigger<wbr>Args</a></span>
+        <span class="property-type"><a href="#baseimagetrigger">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry..<wbr>Inputs.<wbr>Base<wbr>Image<wbr>Trigger<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The trigger based on base image dependencies.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -6986,7 +7002,7 @@ the source registry during the run.{{% /md %}}</dd>
 <a href="#sourcetriggers_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Triggers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sourcetrigger">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Source<wbr>Trigger<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#sourcetrigger">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry..<wbr>Inputs.<wbr>Source<wbr>Trigger<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The collection of triggers based on source code repository.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -6995,7 +7011,7 @@ the source registry during the run.{{% /md %}}</dd>
 <a href="#timertriggers_csharp" style="color: inherit; text-decoration: inherit;">Timer<wbr>Triggers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timertrigger">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Timer<wbr>Trigger<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#timertrigger">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry..<wbr>Inputs.<wbr>Timer<wbr>Trigger<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The collection of timer triggers.{{% /md %}}</dd>
 </dl>
@@ -7111,7 +7127,7 @@ the source registry during the run.{{% /md %}}</dd>
 <a href="#baseimagetrigger_csharp" style="color: inherit; text-decoration: inherit;">Base<wbr>Image<wbr>Trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#baseimagetriggerresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Base<wbr>Image<wbr>Trigger<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#baseimagetriggerresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry..<wbr>Inputs.<wbr>Base<wbr>Image<wbr>Trigger<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The trigger based on base image dependencies.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -7120,7 +7136,7 @@ the source registry during the run.{{% /md %}}</dd>
 <a href="#sourcetriggers_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Triggers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sourcetriggerresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Source<wbr>Trigger<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#sourcetriggerresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry..<wbr>Inputs.<wbr>Source<wbr>Trigger<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The collection of triggers based on source code repository.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -7129,7 +7145,7 @@ the source registry during the run.{{% /md %}}</dd>
 <a href="#timertriggers_csharp" style="color: inherit; text-decoration: inherit;">Timer<wbr>Triggers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timertriggerresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Timer<wbr>Trigger<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#timertriggerresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry..<wbr>Inputs.<wbr>Timer<wbr>Trigger<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The collection of timer triggers.{{% /md %}}</dd>
 </dl>
@@ -7519,7 +7535,7 @@ the source registry during the run.{{% /md %}}</dd>
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:containerregistry/latest:Task myTask /subscriptions/4385cf00-2d3a-425a-832f-f4285b1c9dce/resourceGroups/myResourceGroup/providers/Microsoft.ContainerRegistry/registries/myRegistry/tasks/myTask 
+$ pulumi import azure-nextgen:containerregistry:Task myTask /subscriptions/4385cf00-2d3a-425a-832f-f4285b1c9dce/resourceGroups/myResourceGroup/providers/Microsoft.ContainerRegistry/registries/myRegistry/tasks/myTask 
 ```
 
 

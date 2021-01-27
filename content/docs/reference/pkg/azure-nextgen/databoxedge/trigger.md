@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.databoxedge.Trigger resource wit
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Trigger details.
-Latest API Version: 2020-09-01.
+API Version: 2020-09-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var trigger = new AzureNextGen.DataBoxEdge.Latest.Trigger("trigger", new AzureNextGen.DataBoxEdge.Latest.TriggerArgs
+        var trigger = new AzureNextGen.DataBoxEdge..Trigger("trigger", new AzureNextGen.DataBoxEdge..TriggerArgs
         {
             DeviceName = "testedgedevice",
             Kind = "FileEvent",
@@ -48,7 +48,7 @@ class MyStack : Stack
 package main
 
 import (
-	databoxedge "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/databoxedge/latest"
+	databoxedge "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/databoxedge"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -77,7 +77,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-trigger = azure_nextgen.databoxedge.latest.Trigger("trigger",
+trigger = azure_nextgen.databoxedge.Trigger("trigger",
     device_name="testedgedevice",
     kind="FileEvent",
     name="trigger1",
@@ -93,7 +93,7 @@ trigger = azure_nextgen.databoxedge.latest.Trigger("trigger",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const trigger = new azure_nextgen.databoxedge.latest.Trigger("trigger", {
+const trigger = new azure_nextgen.databoxedge.Trigger("trigger", {
     deviceName: "testedgedevice",
     kind: "FileEvent",
     name: "trigger1",
@@ -302,7 +302,7 @@ The Trigger resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#triggereventtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Trigger<wbr>Event<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#triggereventtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge..<wbr>Trigger<wbr>Event<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Trigger Kind.{{% /md %}}</dd>
     <dt class="property-required"
@@ -477,7 +477,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#systemdata_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
+        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge..<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Trigger in DataBoxEdge Resource{{% /md %}}</dd>
     <dt class="property-"
@@ -886,7 +886,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:databoxedge/latest:Trigger trigger1 /subscriptions/4385cf00-2d3a-425a-832f-f4285b1c9dce/resourceGroups/GroupForEdgeAutomation/providers/Microsoft.DataBoxEdge/dataBoxEdgeDevices/testedgedevice/triggers/trigger1 
+$ pulumi import azure-nextgen:databoxedge:Trigger trigger1 /subscriptions/4385cf00-2d3a-425a-832f-f4285b1c9dce/resourceGroups/GroupForEdgeAutomation/providers/Microsoft.DataBoxEdge/dataBoxEdgeDevices/testedgedevice/triggers/trigger1 
 ```
 
 

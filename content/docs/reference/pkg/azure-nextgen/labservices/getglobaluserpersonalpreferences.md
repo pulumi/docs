@@ -63,7 +63,7 @@ The following arguments are supported:
 <a href="#addremove_csharp" style="color: inherit; text-decoration: inherit;">Add<wbr>Remove</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#addremove">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Lab<wbr>Services.<wbr>Add<wbr>Remove</a></span>
+        <span class="property-type">string | <a href="#addremove">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Lab<wbr>Services..<wbr>Add<wbr>Remove</a></span>
     </dt>
     <dd>{{% md %}}Enum indicating if user is adding or removing a favorite lab{{% /md %}}</dd>
     <dt class="property-optional"

@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.apimanagement.ApiSchema resource
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Schema Contract details.
-Latest API Version: 2019-12-01.
+API Version: 2019-12-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var apiSchema = new AzureNextGen.ApiManagement.Latest.ApiSchema("apiSchema", new AzureNextGen.ApiManagement.Latest.ApiSchemaArgs
+        var apiSchema = new AzureNextGen.ApiManagement..ApiSchema("apiSchema", new AzureNextGen.ApiManagement..ApiSchemaArgs
         {
             ApiId = "59d6bb8f1f7fab13dc67ec9b",
             ContentType = "application/vnd.ms-azure-apim.xsd+xml",
@@ -158,7 +158,7 @@ class MyStack : Stack
 package main
 
 import (
-	apimanagement "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/apimanagement/latest"
+	apimanagement "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/apimanagement"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -189,7 +189,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-api_schema = azure_nextgen.apimanagement.latest.ApiSchema("apiSchema",
+api_schema = azure_nextgen.apimanagement.ApiSchema("apiSchema",
     api_id="59d6bb8f1f7fab13dc67ec9b",
     content_type="application/vnd.ms-azure-apim.xsd+xml",
     resource_group_name="rg1",
@@ -315,7 +315,7 @@ api_schema = azure_nextgen.apimanagement.latest.ApiSchema("apiSchema",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const apiSchema = new azure_nextgen.apimanagement.latest.ApiSchema("apiSchema", {
+const apiSchema = new azure_nextgen.apimanagement.ApiSchema("apiSchema", {
     apiId: "59d6bb8f1f7fab13dc67ec9b",
     contentType: "application/vnd.ms-azure-apim.xsd+xml",
     resourceGroupName: "rg1",
@@ -1042,7 +1042,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:apimanagement/latest:ApiSchema ec12520d-9d48-4e7b-8f39-698ca2ac63f1 /subscriptions/subid/resourcegroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/apis/59d6bb8f1f7fab13dc67ec9b/schemas/ec12520d-9d48-4e7b-8f39-698ca2ac63f1 
+$ pulumi import azure-nextgen:apimanagement:ApiSchema ec12520d-9d48-4e7b-8f39-698ca2ac63f1 /subscriptions/subid/resourcegroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/apis/59d6bb8f1f7fab13dc67ec9b/schemas/ec12520d-9d48-4e7b-8f39-698ca2ac63f1 
 ```
 
 

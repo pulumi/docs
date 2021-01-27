@@ -188,7 +188,7 @@ The following output properties are available:
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healthchecksteppropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Deployment<wbr>Manager.<wbr>Outputs.<wbr>Health<wbr>Check<wbr>Step<wbr>Properties<wbr>Response</a> | <a href="#waitsteppropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Deployment<wbr>Manager.<wbr>Outputs.<wbr>Wait<wbr>Step<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#healthchecksteppropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Deployment<wbr>Manager..<wbr>Outputs.<wbr>Health<wbr>Check<wbr>Step<wbr>Properties<wbr>Response</a> | <a href="#waitsteppropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Deployment<wbr>Manager..<wbr>Outputs.<wbr>Wait<wbr>Step<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The properties that define the step.{{% /md %}}</dd>
     <dt class="property-"
@@ -553,7 +553,7 @@ The following output properties are available:
 <a href="#attributes_csharp" style="color: inherit; text-decoration: inherit;">Attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resthealthcheckstepattributesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Deployment<wbr>Manager.<wbr>Inputs.<wbr>Rest<wbr>Health<wbr>Check<wbr>Step<wbr>Attributes<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#resthealthcheckstepattributesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Deployment<wbr>Manager..<wbr>Inputs.<wbr>Rest<wbr>Health<wbr>Check<wbr>Step<wbr>Attributes<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The health check step attributes{{% /md %}}</dd>
 </dl>
@@ -629,7 +629,7 @@ The following output properties are available:
 <a href="#request_csharp" style="color: inherit; text-decoration: inherit;">Request</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#restrequestresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Deployment<wbr>Manager.<wbr>Inputs.<wbr>Rest<wbr>Request<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#restrequestresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Deployment<wbr>Manager..<wbr>Inputs.<wbr>Rest<wbr>Request<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The request to the health provider.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -638,7 +638,7 @@ The following output properties are available:
 <a href="#response_csharp" style="color: inherit; text-decoration: inherit;">Response</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#restresponseresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Deployment<wbr>Manager.<wbr>Inputs.<wbr>Rest<wbr>Response<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#restresponseresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Deployment<wbr>Manager..<wbr>Inputs.<wbr>Rest<wbr>Response<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The expected response from the health provider. If no expected response is provided, the default is to expect the received response to have an HTTP status code of 200 OK.{{% /md %}}</dd>
 </dl>
@@ -759,7 +759,7 @@ The following output properties are available:
 <a href="#healthchecks_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>Checks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resthealthcheckresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Deployment<wbr>Manager.<wbr>Inputs.<wbr>Rest<wbr>Health<wbr>Check<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#resthealthcheckresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Deployment<wbr>Manager..<wbr>Inputs.<wbr>Rest<wbr>Health<wbr>Check<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of checks that form the health check step.{{% /md %}}</dd>
     <dt class="property-required"
@@ -934,7 +934,7 @@ The following output properties are available:
 <a href="#authentication_csharp" style="color: inherit; text-decoration: inherit;">Authentication</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apikeyauthenticationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Deployment<wbr>Manager.<wbr>Inputs.<wbr>Api<wbr>Key<wbr>Authentication<wbr>Response<wbr>Args</a> | <a href="#rolloutidentityauthenticationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Deployment<wbr>Manager.<wbr>Inputs.<wbr>Rollout<wbr>Identity<wbr>Authentication<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#apikeyauthenticationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Deployment<wbr>Manager..<wbr>Inputs.<wbr>Api<wbr>Key<wbr>Authentication<wbr>Response<wbr>Args</a> | <a href="#rolloutidentityauthenticationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Deployment<wbr>Manager..<wbr>Inputs.<wbr>Rollout<wbr>Identity<wbr>Authentication<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The authentication information required in the request to the health provider.{{% /md %}}</dd>
     <dt class="property-required"
@@ -1073,7 +1073,7 @@ The following output properties are available:
 <a href="#regex_csharp" style="color: inherit; text-decoration: inherit;">Regex</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#restresponseresponseregex">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Deployment<wbr>Manager.<wbr>Inputs.<wbr>Rest<wbr>Response<wbr>Response<wbr>Regex<wbr>Args</a></span>
+        <span class="property-type"><a href="#restresponseresponseregex">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Deployment<wbr>Manager..<wbr>Inputs.<wbr>Rest<wbr>Response<wbr>Response<wbr>Regex<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The regular expressions to match the response content with.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1377,7 +1377,7 @@ The following output properties are available:
 <a href="#attributes_csharp" style="color: inherit; text-decoration: inherit;">Attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#waitstepattributesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Deployment<wbr>Manager.<wbr>Inputs.<wbr>Wait<wbr>Step<wbr>Attributes<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#waitstepattributesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Deployment<wbr>Manager..<wbr>Inputs.<wbr>Wait<wbr>Step<wbr>Attributes<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Wait attributes{{% /md %}}</dd>
 </dl>

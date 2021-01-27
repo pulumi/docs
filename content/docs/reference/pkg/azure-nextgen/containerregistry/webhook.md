@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.containerregistry.Webhook resour
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 An object that represents a webhook for a container registry.
-Latest API Version: 2019-05-01.
+API Version: 2019-05-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var webhook = new AzureNextGen.ContainerRegistry.Latest.Webhook("webhook", new AzureNextGen.ContainerRegistry.Latest.WebhookArgs
+        var webhook = new AzureNextGen.ContainerRegistry..Webhook("webhook", new AzureNextGen.ContainerRegistry..WebhookArgs
         {
             Actions = 
             {
@@ -63,7 +63,7 @@ class MyStack : Stack
 package main
 
 import (
-	containerregistry "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/containerregistry/latest"
+	containerregistry "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/containerregistry"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -104,7 +104,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-webhook = azure_nextgen.containerregistry.latest.Webhook("webhook",
+webhook = azure_nextgen.containerregistry.Webhook("webhook",
     actions=["push"],
     custom_headers={
         "Authorization": "Basic 000000000000000000000000000000000000000000000000000",
@@ -130,7 +130,7 @@ webhook = azure_nextgen.containerregistry.latest.Webhook("webhook",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const webhook = new azure_nextgen.containerregistry.latest.Webhook("webhook", {
+const webhook = new azure_nextgen.containerregistry.Webhook("webhook", {
     actions: ["push"],
     customHeaders: {
         Authorization: "Basic 000000000000000000000000000000000000000000000000000",
@@ -340,7 +340,7 @@ The Webhook resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#actions_csharp" style="color: inherit; text-decoration: inherit;">Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Union&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry.<wbr>Webhook<wbr>Action&gt;&gt;</span>
+        <span class="property-type">List&lt;Union&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry..<wbr>Webhook<wbr>Action&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}The list of actions that trigger the webhook to post notifications.{{% /md %}}</dd>
     <dt class="property-required"
@@ -412,7 +412,7 @@ The Webhook resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#webhookstatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry.<wbr>Webhook<wbr>Status</a></span>
+        <span class="property-type">string | <a href="#webhookstatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry..<wbr>Webhook<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}The status of the webhook at the time the operation was called.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1005,7 +1005,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:containerregistry/latest:Webhook myWebhook /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.ContainerRegistry/registries/myRegistry/webhooks/myWebhook 
+$ pulumi import azure-nextgen:containerregistry:Webhook myWebhook /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.ContainerRegistry/registries/myRegistry/webhooks/myWebhook 
 ```
 
 

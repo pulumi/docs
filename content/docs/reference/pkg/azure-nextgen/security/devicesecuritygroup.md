@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.security.DeviceSecurityGroup res
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The device security group resource
-Latest API Version: 2019-08-01.
+API Version: 2019-08-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var deviceSecurityGroup = new AzureNextGen.Security.Latest.DeviceSecurityGroup("deviceSecurityGroup", new AzureNextGen.Security.Latest.DeviceSecurityGroupArgs
+        var deviceSecurityGroup = new AzureNextGen.Security..DeviceSecurityGroup("deviceSecurityGroup", new AzureNextGen.Security..DeviceSecurityGroupArgs
         {
             DeviceSecurityGroupName = "samplesecuritygroup",
             ResourceId = "subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23/resourceGroups/SampleRG/providers/Microsoft.Devices/iotHubs/sampleiothub",
@@ -50,7 +50,7 @@ class MyStack : Stack
 package main
 
 import (
-	security "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/security/latest"
+	security "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/security"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -80,10 +80,10 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-device_security_group = azure_nextgen.security.latest.DeviceSecurityGroup("deviceSecurityGroup",
+device_security_group = azure_nextgen.security.DeviceSecurityGroup("deviceSecurityGroup",
     device_security_group_name="samplesecuritygroup",
     resource_id="subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23/resourceGroups/SampleRG/providers/Microsoft.Devices/iotHubs/sampleiothub",
-    time_window_rules=[azure_nextgen.security.latest.TimeWindowCustomAlertRuleArgs()])
+    time_window_rules=[azure_nextgen.security.TimeWindowCustomAlertRuleArgs()])
 
 ```
 
@@ -95,7 +95,7 @@ device_security_group = azure_nextgen.security.latest.DeviceSecurityGroup("devic
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const deviceSecurityGroup = new azure_nextgen.security.latest.DeviceSecurityGroup("deviceSecurityGroup", {
+const deviceSecurityGroup = new azure_nextgen.security.DeviceSecurityGroup("deviceSecurityGroup", {
     deviceSecurityGroupName: "samplesecuritygroup",
     resourceId: "subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23/resourceGroups/SampleRG/providers/Microsoft.Devices/iotHubs/sampleiothub",
     timeWindowRules: [{}],
@@ -312,7 +312,7 @@ The DeviceSecurityGroup resource accepts the following [input]({{< relref "/docs
 <a href="#allowlistrules_csharp" style="color: inherit; text-decoration: inherit;">Allowlist<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#allowlistcustomalertrule">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security.<wbr>Inputs.<wbr>Allowlist<wbr>Custom<wbr>Alert<wbr>Rule<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#allowlistcustomalertrule">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security..<wbr>Inputs.<wbr>Allowlist<wbr>Custom<wbr>Alert<wbr>Rule<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The allow-list custom alert rules.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -321,7 +321,7 @@ The DeviceSecurityGroup resource accepts the following [input]({{< relref "/docs
 <a href="#denylistrules_csharp" style="color: inherit; text-decoration: inherit;">Denylist<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#denylistcustomalertrule">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security.<wbr>Inputs.<wbr>Denylist<wbr>Custom<wbr>Alert<wbr>Rule<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#denylistcustomalertrule">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security..<wbr>Inputs.<wbr>Denylist<wbr>Custom<wbr>Alert<wbr>Rule<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The deny-list custom alert rules.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -330,7 +330,7 @@ The DeviceSecurityGroup resource accepts the following [input]({{< relref "/docs
 <a href="#thresholdrules_csharp" style="color: inherit; text-decoration: inherit;">Threshold<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#thresholdcustomalertrule">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security.<wbr>Inputs.<wbr>Threshold<wbr>Custom<wbr>Alert<wbr>Rule<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#thresholdcustomalertrule">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security..<wbr>Inputs.<wbr>Threshold<wbr>Custom<wbr>Alert<wbr>Rule<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of custom alert threshold rules.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -339,7 +339,7 @@ The DeviceSecurityGroup resource accepts the following [input]({{< relref "/docs
 <a href="#timewindowrules_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Window<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timewindowcustomalertrule">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security.<wbr>Inputs.<wbr>Time<wbr>Window<wbr>Custom<wbr>Alert<wbr>Rule<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#timewindowcustomalertrule">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security..<wbr>Inputs.<wbr>Time<wbr>Window<wbr>Custom<wbr>Alert<wbr>Rule<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of custom alert time-window rules.{{% /md %}}</dd>
 </dl>
@@ -2039,7 +2039,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:security/latest:DeviceSecurityGroup samplesecuritygroup /subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23/resourceGroups/SampleRG/providers/Microsoft.Devices/iotHubs/sampleiothub/providers/Microsoft.Security/deviceSecurityGroups/samplesecuritygroup 
+$ pulumi import azure-nextgen:security:DeviceSecurityGroup samplesecuritygroup /subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23/resourceGroups/SampleRG/providers/Microsoft.Devices/iotHubs/sampleiothub/providers/Microsoft.Security/deviceSecurityGroups/samplesecuritygroup 
 ```
 
 

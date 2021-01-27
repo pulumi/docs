@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.automation.Connection resource w
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Definition of the connection.
-Latest API Version: 2019-06-01.
+API Version: 2019-06-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,11 +27,11 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var connection = new AzureNextGen.Automation.Latest.Connection("connection", new AzureNextGen.Automation.Latest.ConnectionArgs
+        var connection = new AzureNextGen.Automation..Connection("connection", new AzureNextGen.Automation..ConnectionArgs
         {
             AutomationAccountName = "myAutomationAccount28",
             ConnectionName = "mysConnection",
-            ConnectionType = new AzureNextGen.Automation.Latest.Inputs.ConnectionTypeAssociationPropertyArgs
+            ConnectionType = new AzureNextGen.Automation..Inputs.ConnectionTypeAssociationPropertyArgs
             {
                 Name = "Azure",
             },
@@ -58,7 +58,7 @@ class MyStack : Stack
 package main
 
 import (
-	automation "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/automation/latest"
+	automation "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/automation"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -95,10 +95,10 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-connection = azure_nextgen.automation.latest.Connection("connection",
+connection = azure_nextgen.automation.Connection("connection",
     automation_account_name="myAutomationAccount28",
     connection_name="mysConnection",
-    connection_type=azure_nextgen.automation.latest.ConnectionTypeAssociationPropertyArgs(
+    connection_type=azure_nextgen.automation.ConnectionTypeAssociationPropertyArgs(
         name="Azure",
     ),
     description="my description goes here",
@@ -119,7 +119,7 @@ connection = azure_nextgen.automation.latest.Connection("connection",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const connection = new azure_nextgen.automation.latest.Connection("connection", {
+const connection = new azure_nextgen.automation.Connection("connection", {
     automationAccountName: "myAutomationAccount28",
     connectionName: "mysConnection",
     connectionType: {
@@ -345,7 +345,7 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#connectiontype_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectiontypeassociationproperty">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automation.<wbr>Inputs.<wbr>Connection<wbr>Type<wbr>Association<wbr>Property<wbr>Args</a></span>
+        <span class="property-type"><a href="#connectiontypeassociationproperty">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automation..<wbr>Inputs.<wbr>Connection<wbr>Type<wbr>Association<wbr>Property<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the connectionType of the connection.{{% /md %}}</dd>
     <dt class="property-required"
@@ -908,7 +908,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:automation/latest:Connection mysConnection /subscriptions/subid/resourceGroups/rg/providers/Microsoft.Automation/automationAccounts/myAutomationAccount28/connections/mysConnection 
+$ pulumi import azure-nextgen:automation:Connection mysConnection /subscriptions/subid/resourceGroups/rg/providers/Microsoft.Automation/automationAccounts/myAutomationAccount28/connections/mysConnection 
 ```
 
 

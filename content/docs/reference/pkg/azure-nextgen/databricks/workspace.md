@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.databricks.Workspace resource wi
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Information about workspace.
-Latest API Version: 2018-04-01.
+API Version: 2018-04-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,13 +27,13 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var workspace = new AzureNextGen.Databricks.Latest.Workspace("workspace", new AzureNextGen.Databricks.Latest.WorkspaceArgs
+        var workspace = new AzureNextGen.Databricks..Workspace("workspace", new AzureNextGen.Databricks..WorkspaceArgs
         {
             Location = "westus",
             ManagedResourceGroupId = "/subscriptions/subid/resourceGroups/myManagedRG",
-            Parameters = new AzureNextGen.Databricks.Latest.Inputs.WorkspaceCustomParametersArgs
+            Parameters = new AzureNextGen.Databricks..Inputs.WorkspaceCustomParametersArgs
             {
-                PrepareEncryption = new AzureNextGen.Databricks.Latest.Inputs.WorkspaceCustomBooleanParameterArgs
+                PrepareEncryption = new AzureNextGen.Databricks..Inputs.WorkspaceCustomBooleanParameterArgs
                 {
                     Value = true,
                 },
@@ -55,7 +55,7 @@ class MyStack : Stack
 package main
 
 import (
-	databricks "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/databricks/latest"
+	databricks "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/databricks"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -89,11 +89,11 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-workspace = azure_nextgen.databricks.latest.Workspace("workspace",
+workspace = azure_nextgen.databricks.Workspace("workspace",
     location="westus",
     managed_resource_group_id="/subscriptions/subid/resourceGroups/myManagedRG",
-    parameters=azure_nextgen.databricks.latest.WorkspaceCustomParametersArgs(
-        prepare_encryption=azure_nextgen.databricks.latest.WorkspaceCustomBooleanParameterArgs(
+    parameters=azure_nextgen.databricks.WorkspaceCustomParametersArgs(
+        prepare_encryption=azure_nextgen.databricks.WorkspaceCustomBooleanParameterArgs(
             value=True,
         ),
     ),
@@ -110,7 +110,7 @@ workspace = azure_nextgen.databricks.latest.Workspace("workspace",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const workspace = new azure_nextgen.databricks.latest.Workspace("workspace", {
+const workspace = new azure_nextgen.databricks.Workspace("workspace", {
     location: "westus",
     managedResourceGroupId: "/subscriptions/subid/resourceGroups/myManagedRG",
     parameters: {
@@ -136,7 +136,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var workspace = new AzureNextGen.Databricks.Latest.Workspace("workspace", new AzureNextGen.Databricks.Latest.WorkspaceArgs
+        var workspace = new AzureNextGen.Databricks..Workspace("workspace", new AzureNextGen.Databricks..WorkspaceArgs
         {
             Location = "westus",
             ManagedResourceGroupId = "/subscriptions/subid/resourceGroups/myManagedRG",
@@ -157,7 +157,7 @@ class MyStack : Stack
 package main
 
 import (
-	databricks "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/databricks/latest"
+	databricks "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/databricks"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -186,7 +186,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-workspace = azure_nextgen.databricks.latest.Workspace("workspace",
+workspace = azure_nextgen.databricks.Workspace("workspace",
     location="westus",
     managed_resource_group_id="/subscriptions/subid/resourceGroups/myManagedRG",
     resource_group_name="rg",
@@ -202,7 +202,7 @@ workspace = azure_nextgen.databricks.latest.Workspace("workspace",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const workspace = new azure_nextgen.databricks.latest.Workspace("workspace", {
+const workspace = new azure_nextgen.databricks.Workspace("workspace", {
     location: "westus",
     managedResourceGroupId: "/subscriptions/subid/resourceGroups/myManagedRG",
     resourceGroupName: "rg",
@@ -223,21 +223,21 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var workspace = new AzureNextGen.Databricks.Latest.Workspace("workspace", new AzureNextGen.Databricks.Latest.WorkspaceArgs
+        var workspace = new AzureNextGen.Databricks..Workspace("workspace", new AzureNextGen.Databricks..WorkspaceArgs
         {
             Location = "westus",
             ManagedResourceGroupId = "/subscriptions/subid/resourceGroups/myManagedRG",
-            Parameters = new AzureNextGen.Databricks.Latest.Inputs.WorkspaceCustomParametersArgs
+            Parameters = new AzureNextGen.Databricks..Inputs.WorkspaceCustomParametersArgs
             {
-                CustomPrivateSubnetName = new AzureNextGen.Databricks.Latest.Inputs.WorkspaceCustomStringParameterArgs
+                CustomPrivateSubnetName = new AzureNextGen.Databricks..Inputs.WorkspaceCustomStringParameterArgs
                 {
                     Value = "myPrivateSubnet",
                 },
-                CustomPublicSubnetName = new AzureNextGen.Databricks.Latest.Inputs.WorkspaceCustomStringParameterArgs
+                CustomPublicSubnetName = new AzureNextGen.Databricks..Inputs.WorkspaceCustomStringParameterArgs
                 {
                     Value = "myPublicSubnet",
                 },
-                CustomVirtualNetworkId = new AzureNextGen.Databricks.Latest.Inputs.WorkspaceCustomStringParameterArgs
+                CustomVirtualNetworkId = new AzureNextGen.Databricks..Inputs.WorkspaceCustomStringParameterArgs
                 {
                     Value = "/subscriptions/subid/resourceGroups/rg/providers/Microsoft.Network/virtualNetworks/myNetwork",
                 },
@@ -259,7 +259,7 @@ class MyStack : Stack
 package main
 
 import (
-	databricks "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/databricks/latest"
+	databricks "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/databricks"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -299,17 +299,17 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-workspace = azure_nextgen.databricks.latest.Workspace("workspace",
+workspace = azure_nextgen.databricks.Workspace("workspace",
     location="westus",
     managed_resource_group_id="/subscriptions/subid/resourceGroups/myManagedRG",
-    parameters=azure_nextgen.databricks.latest.WorkspaceCustomParametersArgs(
-        custom_private_subnet_name=azure_nextgen.databricks.latest.WorkspaceCustomStringParameterArgs(
+    parameters=azure_nextgen.databricks.WorkspaceCustomParametersArgs(
+        custom_private_subnet_name=azure_nextgen.databricks.WorkspaceCustomStringParameterArgs(
             value="myPrivateSubnet",
         ),
-        custom_public_subnet_name=azure_nextgen.databricks.latest.WorkspaceCustomStringParameterArgs(
+        custom_public_subnet_name=azure_nextgen.databricks.WorkspaceCustomStringParameterArgs(
             value="myPublicSubnet",
         ),
-        custom_virtual_network_id=azure_nextgen.databricks.latest.WorkspaceCustomStringParameterArgs(
+        custom_virtual_network_id=azure_nextgen.databricks.WorkspaceCustomStringParameterArgs(
             value="/subscriptions/subid/resourceGroups/rg/providers/Microsoft.Network/virtualNetworks/myNetwork",
         ),
     ),
@@ -326,7 +326,7 @@ workspace = azure_nextgen.databricks.latest.Workspace("workspace",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const workspace = new azure_nextgen.databricks.latest.Workspace("workspace", {
+const workspace = new azure_nextgen.databricks.Workspace("workspace", {
     location: "westus",
     managedResourceGroupId: "/subscriptions/subid/resourceGroups/myManagedRG",
     parameters: {
@@ -358,15 +358,15 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var workspace = new AzureNextGen.Databricks.Latest.Workspace("workspace", new AzureNextGen.Databricks.Latest.WorkspaceArgs
+        var workspace = new AzureNextGen.Databricks..Workspace("workspace", new AzureNextGen.Databricks..WorkspaceArgs
         {
             Location = "westus",
             ManagedResourceGroupId = "/subscriptions/subid/resourceGroups/myManagedRG",
-            Parameters = new AzureNextGen.Databricks.Latest.Inputs.WorkspaceCustomParametersArgs
+            Parameters = new AzureNextGen.Databricks..Inputs.WorkspaceCustomParametersArgs
             {
-                Encryption = new AzureNextGen.Databricks.Latest.Inputs.WorkspaceEncryptionParameterArgs
+                Encryption = new AzureNextGen.Databricks..Inputs.WorkspaceEncryptionParameterArgs
                 {
-                    Value = new AzureNextGen.Databricks.Latest.Inputs.EncryptionArgs
+                    Value = new AzureNextGen.Databricks..Inputs.EncryptionArgs
                     {
                         KeyName = "myKeyName",
                         KeySource = "Microsoft.Keyvault",
@@ -374,7 +374,7 @@ class MyStack : Stack
                         KeyVersion = "00000000000000000000000000000000",
                     },
                 },
-                PrepareEncryption = new AzureNextGen.Databricks.Latest.Inputs.WorkspaceCustomBooleanParameterArgs
+                PrepareEncryption = new AzureNextGen.Databricks..Inputs.WorkspaceCustomBooleanParameterArgs
                 {
                     Value = true,
                 },
@@ -396,7 +396,7 @@ class MyStack : Stack
 package main
 
 import (
-	databricks "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/databricks/latest"
+	databricks "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/databricks"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -438,19 +438,19 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-workspace = azure_nextgen.databricks.latest.Workspace("workspace",
+workspace = azure_nextgen.databricks.Workspace("workspace",
     location="westus",
     managed_resource_group_id="/subscriptions/subid/resourceGroups/myManagedRG",
-    parameters=azure_nextgen.databricks.latest.WorkspaceCustomParametersArgs(
-        encryption=azure_nextgen.databricks.latest.WorkspaceEncryptionParameterArgs(
-            value=azure_nextgen.databricks.latest.EncryptionArgs(
+    parameters=azure_nextgen.databricks.WorkspaceCustomParametersArgs(
+        encryption=azure_nextgen.databricks.WorkspaceEncryptionParameterArgs(
+            value=azure_nextgen.databricks.EncryptionArgs(
                 key_name="myKeyName",
                 key_source="Microsoft.Keyvault",
                 key_vault_uri="https://myKeyVault.vault.azure.net/",
                 key_version="00000000000000000000000000000000",
             ),
         ),
-        prepare_encryption=azure_nextgen.databricks.latest.WorkspaceCustomBooleanParameterArgs(
+        prepare_encryption=azure_nextgen.databricks.WorkspaceCustomBooleanParameterArgs(
             value=True,
         ),
     ),
@@ -467,7 +467,7 @@ workspace = azure_nextgen.databricks.latest.Workspace("workspace",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const workspace = new azure_nextgen.databricks.latest.Workspace("workspace", {
+const workspace = new azure_nextgen.databricks.Workspace("workspace", {
     location: "westus",
     managedResourceGroupId: "/subscriptions/subid/resourceGroups/myManagedRG",
     parameters: {
@@ -501,15 +501,15 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var workspace = new AzureNextGen.Databricks.Latest.Workspace("workspace", new AzureNextGen.Databricks.Latest.WorkspaceArgs
+        var workspace = new AzureNextGen.Databricks..Workspace("workspace", new AzureNextGen.Databricks..WorkspaceArgs
         {
             Location = "westus",
             ManagedResourceGroupId = "/subscriptions/subid/resourceGroups/myManagedRG",
-            Parameters = new AzureNextGen.Databricks.Latest.Inputs.WorkspaceCustomParametersArgs
+            Parameters = new AzureNextGen.Databricks..Inputs.WorkspaceCustomParametersArgs
             {
-                Encryption = new AzureNextGen.Databricks.Latest.Inputs.WorkspaceEncryptionParameterArgs
+                Encryption = new AzureNextGen.Databricks..Inputs.WorkspaceEncryptionParameterArgs
                 {
-                    Value = new AzureNextGen.Databricks.Latest.Inputs.EncryptionArgs
+                    Value = new AzureNextGen.Databricks..Inputs.EncryptionArgs
                     {
                         KeySource = "Default",
                     },
@@ -532,7 +532,7 @@ class MyStack : Stack
 package main
 
 import (
-	databricks "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/databricks/latest"
+	databricks "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/databricks"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -568,12 +568,12 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-workspace = azure_nextgen.databricks.latest.Workspace("workspace",
+workspace = azure_nextgen.databricks.Workspace("workspace",
     location="westus",
     managed_resource_group_id="/subscriptions/subid/resourceGroups/myManagedRG",
-    parameters=azure_nextgen.databricks.latest.WorkspaceCustomParametersArgs(
-        encryption=azure_nextgen.databricks.latest.WorkspaceEncryptionParameterArgs(
-            value=azure_nextgen.databricks.latest.EncryptionArgs(
+    parameters=azure_nextgen.databricks.WorkspaceCustomParametersArgs(
+        encryption=azure_nextgen.databricks.WorkspaceEncryptionParameterArgs(
+            value=azure_nextgen.databricks.EncryptionArgs(
                 key_source="Default",
             ),
         ),
@@ -591,7 +591,7 @@ workspace = azure_nextgen.databricks.latest.Workspace("workspace",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const workspace = new azure_nextgen.databricks.latest.Workspace("workspace", {
+const workspace = new azure_nextgen.databricks.Workspace("workspace", {
     location: "westus",
     managedResourceGroupId: "/subscriptions/subid/resourceGroups/myManagedRG",
     parameters: {
@@ -834,7 +834,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#authorizations_csharp" style="color: inherit; text-decoration: inherit;">Authorizations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspaceproviderauthorization">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Databricks.<wbr>Inputs.<wbr>Workspace<wbr>Provider<wbr>Authorization<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#workspaceproviderauthorization">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Databricks..<wbr>Inputs.<wbr>Workspace<wbr>Provider<wbr>Authorization<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The workspace provider authorizations.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -843,7 +843,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspacecustomparameters">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Databricks.<wbr>Inputs.<wbr>Workspace<wbr>Custom<wbr>Parameters<wbr>Args</a></span>
+        <span class="property-type"><a href="#workspacecustomparameters">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Databricks..<wbr>Inputs.<wbr>Workspace<wbr>Custom<wbr>Parameters<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The workspace's custom parameters.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -852,7 +852,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sku">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Databricks.<wbr>Inputs.<wbr>Sku<wbr>Args</a></span>
+        <span class="property-type"><a href="#sku">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Databricks..<wbr>Inputs.<wbr>Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The SKU of the resource.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1216,7 +1216,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#createdby_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>By</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#createdbyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Databricks.<wbr>Outputs.<wbr>Created<wbr>By<wbr>Response</a></span>
+        <span class="property-type"><a href="#createdbyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Databricks..<wbr>Outputs.<wbr>Created<wbr>By<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Indicates the Object ID, PUID and Application ID of entity that created the workspace.{{% /md %}}</dd>
     <dt class="property-"
@@ -1225,7 +1225,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storageaccountidentity_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedidentityconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Databricks.<wbr>Outputs.<wbr>Managed<wbr>Identity<wbr>Configuration<wbr>Response</a></span>
+        <span class="property-type"><a href="#managedidentityconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Databricks..<wbr>Outputs.<wbr>Managed<wbr>Identity<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The details of Managed Identity of Storage Account{{% /md %}}</dd>
     <dt class="property-"
@@ -1234,7 +1234,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#updatedby_csharp" style="color: inherit; text-decoration: inherit;">Updated<wbr>By</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#createdbyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Databricks.<wbr>Outputs.<wbr>Created<wbr>By<wbr>Response</a></span>
+        <span class="property-type"><a href="#createdbyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Databricks..<wbr>Outputs.<wbr>Created<wbr>By<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Indicates the Object ID, PUID and Application ID of entity that last updated the workspace.{{% /md %}}</dd>
 </dl>
@@ -1692,7 +1692,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keysource_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#keysource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Databricks.<wbr>Key<wbr>Source</a></span>
+        <span class="property-type">string | <a href="#keysource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Databricks..<wbr>Key<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}The encryption keySource (provider). Possible values (case-insensitive):  Default, Microsoft.Keyvault{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2551,7 +2551,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#amlworkspaceid_csharp" style="color: inherit; text-decoration: inherit;">Aml<wbr>Workspace<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspacecustomstringparameter">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Databricks.<wbr>Inputs.<wbr>Workspace<wbr>Custom<wbr>String<wbr>Parameter<wbr>Args</a></span>
+        <span class="property-type"><a href="#workspacecustomstringparameter">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Databricks..<wbr>Inputs.<wbr>Workspace<wbr>Custom<wbr>String<wbr>Parameter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The ID of a Azure Machine Learning workspace to link with Databricks workspace{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2560,7 +2560,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#customprivatesubnetname_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Private<wbr>Subnet<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspacecustomstringparameter">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Databricks.<wbr>Inputs.<wbr>Workspace<wbr>Custom<wbr>String<wbr>Parameter<wbr>Args</a></span>
+        <span class="property-type"><a href="#workspacecustomstringparameter">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Databricks..<wbr>Inputs.<wbr>Workspace<wbr>Custom<wbr>String<wbr>Parameter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The name of the Private Subnet within the Virtual Network{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2569,7 +2569,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#custompublicsubnetname_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Public<wbr>Subnet<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspacecustomstringparameter">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Databricks.<wbr>Inputs.<wbr>Workspace<wbr>Custom<wbr>String<wbr>Parameter<wbr>Args</a></span>
+        <span class="property-type"><a href="#workspacecustomstringparameter">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Databricks..<wbr>Inputs.<wbr>Workspace<wbr>Custom<wbr>String<wbr>Parameter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The name of a Public Subnet within the Virtual Network{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2578,7 +2578,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#customvirtualnetworkid_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Virtual<wbr>Network<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspacecustomstringparameter">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Databricks.<wbr>Inputs.<wbr>Workspace<wbr>Custom<wbr>String<wbr>Parameter<wbr>Args</a></span>
+        <span class="property-type"><a href="#workspacecustomstringparameter">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Databricks..<wbr>Inputs.<wbr>Workspace<wbr>Custom<wbr>String<wbr>Parameter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The ID of a Virtual Network where this Databricks Cluster should be created{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2587,7 +2587,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enablenopublicip_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>No<wbr>Public<wbr>Ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspacecustombooleanparameter">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Databricks.<wbr>Inputs.<wbr>Workspace<wbr>Custom<wbr>Boolean<wbr>Parameter<wbr>Args</a></span>
+        <span class="property-type"><a href="#workspacecustombooleanparameter">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Databricks..<wbr>Inputs.<wbr>Workspace<wbr>Custom<wbr>Boolean<wbr>Parameter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Should the Public IP be Disabled?{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2596,7 +2596,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryption_csharp" style="color: inherit; text-decoration: inherit;">Encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspaceencryptionparameter">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Databricks.<wbr>Inputs.<wbr>Workspace<wbr>Encryption<wbr>Parameter<wbr>Args</a></span>
+        <span class="property-type"><a href="#workspaceencryptionparameter">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Databricks..<wbr>Inputs.<wbr>Workspace<wbr>Encryption<wbr>Parameter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Contains the encryption details for Customer-Managed Key (CMK) enabled workspace.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2605,7 +2605,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#prepareencryption_csharp" style="color: inherit; text-decoration: inherit;">Prepare<wbr>Encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspacecustombooleanparameter">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Databricks.<wbr>Inputs.<wbr>Workspace<wbr>Custom<wbr>Boolean<wbr>Parameter<wbr>Args</a></span>
+        <span class="property-type"><a href="#workspacecustombooleanparameter">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Databricks..<wbr>Inputs.<wbr>Workspace<wbr>Custom<wbr>Boolean<wbr>Parameter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Prepare the workspace for encryption. Enables the Managed Identity for managed storage account.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2614,7 +2614,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#requireinfrastructureencryption_csharp" style="color: inherit; text-decoration: inherit;">Require<wbr>Infrastructure<wbr>Encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspacecustombooleanparameter">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Databricks.<wbr>Inputs.<wbr>Workspace<wbr>Custom<wbr>Boolean<wbr>Parameter<wbr>Args</a></span>
+        <span class="property-type"><a href="#workspacecustombooleanparameter">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Databricks..<wbr>Inputs.<wbr>Workspace<wbr>Custom<wbr>Boolean<wbr>Parameter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A boolean indicating whether or not the DBFS root file system will be enabled with secondary layer of encryption with platform managed keys for data at rest.{{% /md %}}</dd>
 </dl>
@@ -2865,7 +2865,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#amlworkspaceid_csharp" style="color: inherit; text-decoration: inherit;">Aml<wbr>Workspace<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspacecustomstringparameterresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Databricks.<wbr>Inputs.<wbr>Workspace<wbr>Custom<wbr>String<wbr>Parameter<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#workspacecustomstringparameterresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Databricks..<wbr>Inputs.<wbr>Workspace<wbr>Custom<wbr>String<wbr>Parameter<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The ID of a Azure Machine Learning workspace to link with Databricks workspace{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2874,7 +2874,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#customprivatesubnetname_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Private<wbr>Subnet<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspacecustomstringparameterresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Databricks.<wbr>Inputs.<wbr>Workspace<wbr>Custom<wbr>String<wbr>Parameter<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#workspacecustomstringparameterresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Databricks..<wbr>Inputs.<wbr>Workspace<wbr>Custom<wbr>String<wbr>Parameter<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The name of the Private Subnet within the Virtual Network{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2883,7 +2883,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#custompublicsubnetname_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Public<wbr>Subnet<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspacecustomstringparameterresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Databricks.<wbr>Inputs.<wbr>Workspace<wbr>Custom<wbr>String<wbr>Parameter<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#workspacecustomstringparameterresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Databricks..<wbr>Inputs.<wbr>Workspace<wbr>Custom<wbr>String<wbr>Parameter<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The name of a Public Subnet within the Virtual Network{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2892,7 +2892,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#customvirtualnetworkid_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Virtual<wbr>Network<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspacecustomstringparameterresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Databricks.<wbr>Inputs.<wbr>Workspace<wbr>Custom<wbr>String<wbr>Parameter<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#workspacecustomstringparameterresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Databricks..<wbr>Inputs.<wbr>Workspace<wbr>Custom<wbr>String<wbr>Parameter<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The ID of a Virtual Network where this Databricks Cluster should be created{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2901,7 +2901,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enablenopublicip_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>No<wbr>Public<wbr>Ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspacecustombooleanparameterresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Databricks.<wbr>Inputs.<wbr>Workspace<wbr>Custom<wbr>Boolean<wbr>Parameter<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#workspacecustombooleanparameterresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Databricks..<wbr>Inputs.<wbr>Workspace<wbr>Custom<wbr>Boolean<wbr>Parameter<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Should the Public IP be Disabled?{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2910,7 +2910,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryption_csharp" style="color: inherit; text-decoration: inherit;">Encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspaceencryptionparameterresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Databricks.<wbr>Inputs.<wbr>Workspace<wbr>Encryption<wbr>Parameter<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#workspaceencryptionparameterresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Databricks..<wbr>Inputs.<wbr>Workspace<wbr>Encryption<wbr>Parameter<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Contains the encryption details for Customer-Managed Key (CMK) enabled workspace.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2919,7 +2919,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#prepareencryption_csharp" style="color: inherit; text-decoration: inherit;">Prepare<wbr>Encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspacecustombooleanparameterresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Databricks.<wbr>Inputs.<wbr>Workspace<wbr>Custom<wbr>Boolean<wbr>Parameter<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#workspacecustombooleanparameterresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Databricks..<wbr>Inputs.<wbr>Workspace<wbr>Custom<wbr>Boolean<wbr>Parameter<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Prepare the workspace for encryption. Enables the Managed Identity for managed storage account.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2928,7 +2928,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#requireinfrastructureencryption_csharp" style="color: inherit; text-decoration: inherit;">Require<wbr>Infrastructure<wbr>Encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspacecustombooleanparameterresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Databricks.<wbr>Inputs.<wbr>Workspace<wbr>Custom<wbr>Boolean<wbr>Parameter<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#workspacecustombooleanparameterresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Databricks..<wbr>Inputs.<wbr>Workspace<wbr>Custom<wbr>Boolean<wbr>Parameter<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A boolean indicating whether or not the DBFS root file system will be enabled with secondary layer of encryption with platform managed keys for data at rest.{{% /md %}}</dd>
 </dl>
@@ -3339,7 +3339,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryption">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Databricks.<wbr>Inputs.<wbr>Encryption<wbr>Args</a></span>
+        <span class="property-type"><a href="#encryption">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Databricks..<wbr>Inputs.<wbr>Encryption<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The value which should be used for this field.{{% /md %}}</dd>
 </dl>
@@ -3410,7 +3410,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Databricks.<wbr>Inputs.<wbr>Encryption<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#encryptionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Databricks..<wbr>Inputs.<wbr>Encryption<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The value which should be used for this field.{{% /md %}}</dd>
 </dl>
@@ -3689,7 +3689,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:databricks/latest:Workspace myWorkspace /subscriptions/subid/resourceGroups/rg/providers/Microsoft.Databricks/workspaces/myWorkspace 
+$ pulumi import azure-nextgen:databricks:Workspace myWorkspace /subscriptions/subid/resourceGroups/rg/providers/Microsoft.Databricks/workspaces/myWorkspace 
 ```
 
 

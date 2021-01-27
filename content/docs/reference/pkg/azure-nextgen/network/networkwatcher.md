@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.network.NetworkWatcher resource 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Network watcher in a resource group.
-Latest API Version: 2020-08-01.
+API Version: 2020-08-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var networkWatcher = new AzureNextGen.Network.Latest.NetworkWatcher("networkWatcher", new AzureNextGen.Network.Latest.NetworkWatcherArgs
+        var networkWatcher = new AzureNextGen.Network..NetworkWatcher("networkWatcher", new AzureNextGen.Network..NetworkWatcherArgs
         {
             Location = "eastus",
             NetworkWatcherName = "nw1",
@@ -47,7 +47,7 @@ class MyStack : Stack
 package main
 
 import (
-	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network/latest"
+	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -75,7 +75,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-network_watcher = azure_nextgen.network.latest.NetworkWatcher("networkWatcher",
+network_watcher = azure_nextgen.network.NetworkWatcher("networkWatcher",
     location="eastus",
     network_watcher_name="nw1",
     resource_group_name="rg1")
@@ -90,7 +90,7 @@ network_watcher = azure_nextgen.network.latest.NetworkWatcher("networkWatcher",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const networkWatcher = new azure_nextgen.network.latest.NetworkWatcher("networkWatcher", {
+const networkWatcher = new azure_nextgen.network.NetworkWatcher("networkWatcher", {
     location: "eastus",
     networkWatcherName: "nw1",
     resourceGroupName: "rg1",
@@ -706,7 +706,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:network/latest:NetworkWatcher nw1 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/networkWatchers/nw1 
+$ pulumi import azure-nextgen:network:NetworkWatcher nw1 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/networkWatchers/nw1 
 ```
 
 

@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.addons.SupportPlanType resource 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The status of the Canonical support plan.
-Latest API Version: 2018-03-01.
+API Version: 2018-03-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var supportPlanType = new AzureNextGen.Addons.Latest.SupportPlanType("supportPlanType", new AzureNextGen.Addons.Latest.SupportPlanTypeArgs
+        var supportPlanType = new AzureNextGen.Addons..SupportPlanType("supportPlanType", new AzureNextGen.Addons..SupportPlanTypeArgs
         {
             PlanTypeName = "Standard",
             ProviderName = "Canonical",
@@ -46,7 +46,7 @@ class MyStack : Stack
 package main
 
 import (
-	addons "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/addons/latest"
+	addons "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/addons"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -73,7 +73,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-support_plan_type = azure_nextgen.addons.latest.SupportPlanType("supportPlanType",
+support_plan_type = azure_nextgen.addons.SupportPlanType("supportPlanType",
     plan_type_name="Standard",
     provider_name="Canonical")
 
@@ -87,7 +87,7 @@ support_plan_type = azure_nextgen.addons.latest.SupportPlanType("supportPlanType
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const supportPlanType = new azure_nextgen.addons.latest.SupportPlanType("supportPlanType", {
+const supportPlanType = new azure_nextgen.addons.SupportPlanType("supportPlanType", {
     planTypeName: "Standard",
     providerName: "Canonical",
 });
@@ -558,7 +558,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:addons/latest:SupportPlanType Standard subscriptions/d18d258f-bdba-4de1-8b51-e79d6c181d5e/providers/Microsoft.Addons/supportProviders/canonical/supportPlanTypes/Standard 
+$ pulumi import azure-nextgen:addons:SupportPlanType Standard subscriptions/d18d258f-bdba-4de1-8b51-e79d6c181d5e/providers/Microsoft.Addons/supportProviders/canonical/supportPlanTypes/Standard 
 ```
 
 

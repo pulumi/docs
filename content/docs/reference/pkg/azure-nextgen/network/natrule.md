@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.network.NatRule resource with ex
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 VpnGatewayNatRule Resource.
-Latest API Version: 2020-08-01.
+API Version: 2020-08-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,11 +27,11 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var natRule = new AzureNextGen.Network.Latest.NatRule("natRule", new AzureNextGen.Network.Latest.NatRuleArgs
+        var natRule = new AzureNextGen.Network..NatRule("natRule", new AzureNextGen.Network..NatRuleArgs
         {
             ExternalMappings = 
             {
-                new AzureNextGen.Network.Latest.Inputs.VpnNatRuleMappingArgs
+                new AzureNextGen.Network..Inputs.VpnNatRuleMappingArgs
                 {
                     AddressSpace = "192.168.21.0/24",
                 },
@@ -39,7 +39,7 @@ class MyStack : Stack
             GatewayName = "gateway1",
             InternalMappings = 
             {
-                new AzureNextGen.Network.Latest.Inputs.VpnNatRuleMappingArgs
+                new AzureNextGen.Network..Inputs.VpnNatRuleMappingArgs
                 {
                     AddressSpace = "10.4.0.0/24",
                 },
@@ -64,7 +64,7 @@ class MyStack : Stack
 package main
 
 import (
-	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network/latest"
+	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -105,12 +105,12 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-nat_rule = azure_nextgen.network.latest.NatRule("natRule",
-    external_mappings=[azure_nextgen.network.latest.VpnNatRuleMappingArgs(
+nat_rule = azure_nextgen.network.NatRule("natRule",
+    external_mappings=[azure_nextgen.network.VpnNatRuleMappingArgs(
         address_space="192.168.21.0/24",
     )],
     gateway_name="gateway1",
-    internal_mappings=[azure_nextgen.network.latest.VpnNatRuleMappingArgs(
+    internal_mappings=[azure_nextgen.network.VpnNatRuleMappingArgs(
         address_space="10.4.0.0/24",
     )],
     ip_configuration_id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworkGateways/cloudnet1-VNG/ipConfigurations/default",
@@ -129,7 +129,7 @@ nat_rule = azure_nextgen.network.latest.NatRule("natRule",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const natRule = new azure_nextgen.network.latest.NatRule("natRule", {
+const natRule = new azure_nextgen.network.NatRule("natRule", {
     externalMappings: [{
         addressSpace: "192.168.21.0/24",
     }],
@@ -364,7 +364,7 @@ The NatRule resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#externalmappings_csharp" style="color: inherit; text-decoration: inherit;">External<wbr>Mappings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnnatrulemapping">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Vpn<wbr>Nat<wbr>Rule<wbr>Mapping<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#vpnnatrulemapping">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Vpn<wbr>Nat<wbr>Rule<wbr>Mapping<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The private IP address external mapping for NAT.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -382,7 +382,7 @@ The NatRule resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#internalmappings_csharp" style="color: inherit; text-decoration: inherit;">Internal<wbr>Mappings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnnatrulemapping">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Vpn<wbr>Nat<wbr>Rule<wbr>Mapping<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#vpnnatrulemapping">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Vpn<wbr>Nat<wbr>Rule<wbr>Mapping<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The private IP address internal mapping for NAT.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -400,7 +400,7 @@ The NatRule resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#mode_csharp" style="color: inherit; text-decoration: inherit;">Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#vpnnatrulemode">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Vpn<wbr>Nat<wbr>Rule<wbr>Mode</a></span>
+        <span class="property-type">string | <a href="#vpnnatrulemode">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Vpn<wbr>Nat<wbr>Rule<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}The Source NAT direction of a VPN NAT.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -418,7 +418,7 @@ The NatRule resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#vpnnatruletype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Vpn<wbr>Nat<wbr>Rule<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#vpnnatruletype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Vpn<wbr>Nat<wbr>Rule<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of NAT rule for VPN NAT.{{% /md %}}</dd>
 </dl>
@@ -728,7 +728,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#egressvpnsitelinkconnections_csharp" style="color: inherit; text-decoration: inherit;">Egress<wbr>Vpn<wbr>Site<wbr>Link<wbr>Connections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Outputs.<wbr>Sub<wbr>Resource<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#subresourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Outputs.<wbr>Sub<wbr>Resource<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of egress VpnSiteLinkConnections.{{% /md %}}</dd>
     <dt class="property-"
@@ -755,7 +755,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ingressvpnsitelinkconnections_csharp" style="color: inherit; text-decoration: inherit;">Ingress<wbr>Vpn<wbr>Site<wbr>Link<wbr>Connections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Outputs.<wbr>Sub<wbr>Resource<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#subresourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Outputs.<wbr>Sub<wbr>Resource<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of ingress VpnSiteLinkConnections.{{% /md %}}</dd>
     <dt class="property-"
@@ -1200,7 +1200,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:network/latest:NatRule natRule1 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/vpnGateways/gateway1/natRules/natRule1 
+$ pulumi import azure-nextgen:network:NatRule natRule1 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/vpnGateways/gateway1/natRules/natRule1 
 ```
 
 

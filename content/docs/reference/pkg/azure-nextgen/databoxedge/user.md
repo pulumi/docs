@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.databoxedge.User resource with e
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Represents a user who has access to one or more shares on the Data Box Edge/Gateway device.
-Latest API Version: 2020-09-01.
+API Version: 2020-09-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,10 +27,10 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var user = new AzureNextGen.DataBoxEdge.Latest.User("user", new AzureNextGen.DataBoxEdge.Latest.UserArgs
+        var user = new AzureNextGen.DataBoxEdge..User("user", new AzureNextGen.DataBoxEdge..UserArgs
         {
             DeviceName = "testedgedevice",
-            EncryptedPassword = new AzureNextGen.DataBoxEdge.Latest.Inputs.AsymmetricEncryptedSecretArgs
+            EncryptedPassword = new AzureNextGen.DataBoxEdge..Inputs.AsymmetricEncryptedSecretArgs
             {
                 EncryptionAlgorithm = "None",
                 EncryptionCertThumbprint = "blah",
@@ -54,7 +54,7 @@ class MyStack : Stack
 package main
 
 import (
-	databoxedge "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/databoxedge/latest"
+	databoxedge "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/databoxedge"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -88,9 +88,9 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-user = azure_nextgen.databoxedge.latest.User("user",
+user = azure_nextgen.databoxedge.User("user",
     device_name="testedgedevice",
-    encrypted_password=azure_nextgen.databoxedge.latest.AsymmetricEncryptedSecretArgs(
+    encrypted_password=azure_nextgen.databoxedge.AsymmetricEncryptedSecretArgs(
         encryption_algorithm="None",
         encryption_cert_thumbprint="blah",
         value="<value>",
@@ -109,7 +109,7 @@ user = azure_nextgen.databoxedge.latest.User("user",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const user = new azure_nextgen.databoxedge.latest.User("user", {
+const user = new azure_nextgen.databoxedge.User("user", {
     deviceName: "testedgedevice",
     encryptedPassword: {
         encryptionAlgorithm: "None",
@@ -341,7 +341,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#encryptedpassword_csharp" style="color: inherit; text-decoration: inherit;">Encrypted<wbr>Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#asymmetricencryptedsecret">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Inputs.<wbr>Asymmetric<wbr>Encrypted<wbr>Secret<wbr>Args</a></span>
+        <span class="property-type"><a href="#asymmetricencryptedsecret">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge..<wbr>Inputs.<wbr>Asymmetric<wbr>Encrypted<wbr>Secret<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The password details.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -350,7 +350,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#usertype_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#usertype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge.<wbr>User<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#usertype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge..<wbr>User<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of the user.{{% /md %}}</dd>
 </dl>
@@ -534,7 +534,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#shareaccessrights_csharp" style="color: inherit; text-decoration: inherit;">Share<wbr>Access<wbr>Rights</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#shareaccessrightresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Outputs.<wbr>Share<wbr>Access<wbr>Right<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#shareaccessrightresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge..<wbr>Outputs.<wbr>Share<wbr>Access<wbr>Right<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of shares that the user has rights on. This field should not be specified during user creation.{{% /md %}}</dd>
     <dt class="property-"
@@ -543,7 +543,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#systemdata_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
+        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge..<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}User in DataBoxEdge Resource{{% /md %}}</dd>
     <dt class="property-"
@@ -705,7 +705,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryptionalgorithm_csharp" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#encryptionalgorithm">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Encryption<wbr>Algorithm</a></span>
+        <span class="property-type">string | <a href="#encryptionalgorithm">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge..<wbr>Encryption<wbr>Algorithm</a></span>
     </dt>
     <dd>{{% md %}}The algorithm used to encrypt "Value".{{% /md %}}</dd>
     <dt class="property-required"
@@ -1399,7 +1399,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:databoxedge/latest:User user1 /subscriptions/4385cf00-2d3a-425a-832f-f4285b1c9dce/resourceGroups/GroupForEdgeAutomation/providers/Microsoft.DataBoxEdge/dataBoxEdgeDevices/testedgedevice/users/user1 
+$ pulumi import azure-nextgen:databoxedge:User user1 /subscriptions/4385cf00-2d3a-425a-832f-f4285b1c9dce/resourceGroups/GroupForEdgeAutomation/providers/Microsoft.DataBoxEdge/dataBoxEdgeDevices/testedgedevice/users/user1 
 ```
 
 

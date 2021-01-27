@@ -305,7 +305,7 @@ The following output properties are available:
 <a href="#resource_csharp" style="color: inherit; text-decoration: inherit;">Resource</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqltriggergetpropertiesresponseresource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB.<wbr>Outputs.<wbr>Sql<wbr>Trigger<wbr>Get<wbr>Properties<wbr>Response<wbr>Resource</a></span>
+        <span class="property-type"><a href="#sqltriggergetpropertiesresponseresource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB..<wbr>Outputs.<wbr>Sql<wbr>Trigger<wbr>Get<wbr>Properties<wbr>Response<wbr>Resource</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-"

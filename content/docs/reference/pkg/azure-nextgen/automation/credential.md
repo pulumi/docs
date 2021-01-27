@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.automation.Credential resource w
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Definition of the credential.
-Latest API Version: 2019-06-01.
+API Version: 2019-06-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var credential = new AzureNextGen.Automation.Latest.Credential("credential", new AzureNextGen.Automation.Latest.CredentialArgs
+        var credential = new AzureNextGen.Automation..Credential("credential", new AzureNextGen.Automation..CredentialArgs
         {
             AutomationAccountName = "myAutomationAccount18",
             CredentialName = "myCredential",
@@ -51,7 +51,7 @@ class MyStack : Stack
 package main
 
 import (
-	automation "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/automation/latest"
+	automation "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/automation"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -83,7 +83,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-credential = azure_nextgen.automation.latest.Credential("credential",
+credential = azure_nextgen.automation.Credential("credential",
     automation_account_name="myAutomationAccount18",
     credential_name="myCredential",
     description="my description goes here",
@@ -102,7 +102,7 @@ credential = azure_nextgen.automation.latest.Credential("credential",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const credential = new azure_nextgen.automation.latest.Credential("credential", {
+const credential = new azure_nextgen.automation.Credential("credential", {
     automationAccountName: "myAutomationAccount18",
     credentialName: "myCredential",
     description: "my description goes here",
@@ -758,7 +758,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:automation/latest:Credential myCredential /subscriptions/subid/resourceGroups/rg/providers/Microsoft.Automation/automationAccounts/myAutomationAccount18/credentials/myCredential 
+$ pulumi import azure-nextgen:automation:Credential myCredential /subscriptions/subid/resourceGroups/rg/providers/Microsoft.Automation/automationAccounts/myAutomationAccount18/credentials/myCredential 
 ```
 
 

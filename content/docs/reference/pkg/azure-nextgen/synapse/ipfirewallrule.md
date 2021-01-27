@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.synapse.IpFirewallRule resource 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 IP firewall rule
-Latest API Version: 2020-12-01.
+API Version: 2020-12-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var ipFirewallRule = new AzureNextGen.Synapse.Latest.IpFirewallRule("ipFirewallRule", new AzureNextGen.Synapse.Latest.IpFirewallRuleArgs
+        var ipFirewallRule = new AzureNextGen.Synapse..IpFirewallRule("ipFirewallRule", new AzureNextGen.Synapse..IpFirewallRuleArgs
         {
             EndIpAddress = "10.0.0.254",
             ResourceGroupName = "ExampleResourceGroup",
@@ -49,7 +49,7 @@ class MyStack : Stack
 package main
 
 import (
-	synapse "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/synapse/latest"
+	synapse "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/synapse"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -79,7 +79,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-ip_firewall_rule = azure_nextgen.synapse.latest.IpFirewallRule("ipFirewallRule",
+ip_firewall_rule = azure_nextgen.synapse.IpFirewallRule("ipFirewallRule",
     end_ip_address="10.0.0.254",
     resource_group_name="ExampleResourceGroup",
     rule_name="ExampleIpFirewallRule",
@@ -96,7 +96,7 @@ ip_firewall_rule = azure_nextgen.synapse.latest.IpFirewallRule("ipFirewallRule",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const ipFirewallRule = new azure_nextgen.synapse.latest.IpFirewallRule("ipFirewallRule", {
+const ipFirewallRule = new azure_nextgen.synapse.IpFirewallRule("ipFirewallRule", {
     endIpAddress: "10.0.0.254",
     resourceGroupName: "ExampleResourceGroup",
     ruleName: "ExampleIpFirewallRule",
@@ -678,7 +678,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:synapse/latest:IpFirewallRule ExampleIpFirewallRule /subscriptions/01234567-89ab-4def-0123-456789abcdef/resourceGroups/ExampleResourceGroup/providers/Microsoft.Synapse/workspaces/ExampleWorkspace/firewallRules/ExampleIpFirewallRule 
+$ pulumi import azure-nextgen:synapse:IpFirewallRule ExampleIpFirewallRule /subscriptions/01234567-89ab-4def-0123-456789abcdef/resourceGroups/ExampleResourceGroup/providers/Microsoft.Synapse/workspaces/ExampleWorkspace/firewallRules/ExampleIpFirewallRule 
 ```
 
 

@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.storage.BlobContainer resource w
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Properties of the blob container, including Id, resource name, resource type, Etag.
-Latest API Version: 2019-06-01.
+API Version: 2019-06-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var blobContainer = new AzureNextGen.Storage.Latest.BlobContainer("blobContainer", new AzureNextGen.Storage.Latest.BlobContainerArgs
+        var blobContainer = new AzureNextGen.Storage..BlobContainer("blobContainer", new AzureNextGen.Storage..BlobContainerArgs
         {
             AccountName = "sto328",
             ContainerName = "container6185",
@@ -49,7 +49,7 @@ class MyStack : Stack
 package main
 
 import (
-	storage "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/storage/latest"
+	storage "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/storage"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -79,7 +79,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-blob_container = azure_nextgen.storage.latest.BlobContainer("blobContainer",
+blob_container = azure_nextgen.storage.BlobContainer("blobContainer",
     account_name="sto328",
     container_name="container6185",
     default_encryption_scope="encryptionscope185",
@@ -96,7 +96,7 @@ blob_container = azure_nextgen.storage.latest.BlobContainer("blobContainer",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const blobContainer = new azure_nextgen.storage.latest.BlobContainer("blobContainer", {
+const blobContainer = new azure_nextgen.storage.BlobContainer("blobContainer", {
     accountName: "sto328",
     containerName: "container6185",
     defaultEncryptionScope: "encryptionscope185",
@@ -118,7 +118,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var blobContainer = new AzureNextGen.Storage.Latest.BlobContainer("blobContainer", new AzureNextGen.Storage.Latest.BlobContainerArgs
+        var blobContainer = new AzureNextGen.Storage..BlobContainer("blobContainer", new AzureNextGen.Storage..BlobContainerArgs
         {
             AccountName = "sto328",
             ContainerName = "container6185",
@@ -138,7 +138,7 @@ class MyStack : Stack
 package main
 
 import (
-	storage "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/storage/latest"
+	storage "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/storage"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -166,7 +166,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-blob_container = azure_nextgen.storage.latest.BlobContainer("blobContainer",
+blob_container = azure_nextgen.storage.BlobContainer("blobContainer",
     account_name="sto328",
     container_name="container6185",
     resource_group_name="res3376")
@@ -181,7 +181,7 @@ blob_container = azure_nextgen.storage.latest.BlobContainer("blobContainer",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const blobContainer = new azure_nextgen.storage.latest.BlobContainer("blobContainer", {
+const blobContainer = new azure_nextgen.storage.BlobContainer("blobContainer", {
     accountName: "sto328",
     containerName: "container6185",
     resourceGroupName: "res3376",
@@ -434,7 +434,7 @@ The BlobContainer resource accepts the following [input]({{< relref "/docs/intro
 <a href="#publicaccess_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#publicaccess">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Public<wbr>Access</a></span>
+        <span class="property-type"><a href="#publicaccess">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage..<wbr>Public<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether data in the container may be accessed publicly and the level of access.{{% /md %}}</dd>
 </dl>
@@ -717,7 +717,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#immutabilitypolicy_csharp" style="color: inherit; text-decoration: inherit;">Immutability<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#immutabilitypolicypropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Outputs.<wbr>Immutability<wbr>Policy<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#immutabilitypolicypropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage..<wbr>Outputs.<wbr>Immutability<wbr>Policy<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The ImmutabilityPolicy property of the container.{{% /md %}}</dd>
     <dt class="property-"
@@ -762,7 +762,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#legalhold_csharp" style="color: inherit; text-decoration: inherit;">Legal<wbr>Hold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#legalholdpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Outputs.<wbr>Legal<wbr>Hold<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#legalholdpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage..<wbr>Outputs.<wbr>Legal<wbr>Hold<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The LegalHold property of the container.{{% /md %}}</dd>
     <dt class="property-"
@@ -1293,7 +1293,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#updatehistory_csharp" style="color: inherit; text-decoration: inherit;">Update<wbr>History</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#updatehistorypropertyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Inputs.<wbr>Update<wbr>History<wbr>Property<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#updatehistorypropertyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage..<wbr>Inputs.<wbr>Update<wbr>History<wbr>Property<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The ImmutabilityPolicy update history of the blob container.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1490,7 +1490,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tagpropertyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Inputs.<wbr>Tag<wbr>Property<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#tagpropertyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage..<wbr>Inputs.<wbr>Tag<wbr>Property<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of LegalHold tags of a blob container.{{% /md %}}</dd>
 </dl>
@@ -2067,7 +2067,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:storage/latest:BlobContainer container6185 /subscriptions/{subscription-id}/resourceGroups/res3376/providers/Microsoft.Storage/storageAccounts/sto328/blobServices/default/containers/container6185 
+$ pulumi import azure-nextgen:storage:BlobContainer container6185 /subscriptions/{subscription-id}/resourceGroups/res3376/providers/Microsoft.Storage/storageAccounts/sto328/blobServices/default/containers/container6185 
 ```
 
 

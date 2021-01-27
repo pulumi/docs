@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.securityinsights.ThreatIntellige
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Threat intelligence information object.
+API Version: 2019-01-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var threatIntelligenceIndicator = new AzureNextGen.SecurityInsights.V20190101Preview.ThreatIntelligenceIndicator("threatIntelligenceIndicator", new AzureNextGen.SecurityInsights.V20190101Preview.ThreatIntelligenceIndicatorArgs
+        var threatIntelligenceIndicator = new AzureNextGen.SecurityInsights..ThreatIntelligenceIndicator("threatIntelligenceIndicator", new AzureNextGen.SecurityInsights..ThreatIntelligenceIndicatorArgs
         {
             Confidence = 78,
             CreatedByRef = "contoso@contoso.com",
@@ -71,7 +72,7 @@ class MyStack : Stack
 package main
 
 import (
-	securityinsights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/securityinsights/v20190101preview"
+	securityinsights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/securityinsights"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -122,7 +123,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-threat_intelligence_indicator = azure_nextgen.securityinsights.v20190101preview.ThreatIntelligenceIndicator("threatIntelligenceIndicator",
+threat_intelligence_indicator = azure_nextgen.securityinsights.ThreatIntelligenceIndicator("threatIntelligenceIndicator",
     confidence=78,
     created_by_ref="contoso@contoso.com",
     description="debugging indicators",
@@ -156,7 +157,7 @@ threat_intelligence_indicator = azure_nextgen.securityinsights.v20190101preview.
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const threatIntelligenceIndicator = new azure_nextgen.securityinsights.v20190101preview.ThreatIntelligenceIndicator("threatIntelligenceIndicator", {
+const threatIntelligenceIndicator = new azure_nextgen.securityinsights.ThreatIntelligenceIndicator("threatIntelligenceIndicator", {
     confidence: 78,
     createdByRef: "contoso@contoso.com",
     description: "debugging indicators",
@@ -374,7 +375,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
 <a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#threatintelligenceresourcekind">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security<wbr>Insights.<wbr>Threat<wbr>Intelligence<wbr>Resource<wbr>Kind</a></span>
+        <span class="property-type">string | <a href="#threatintelligenceresourcekind">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security<wbr>Insights..<wbr>Threat<wbr>Intelligence<wbr>Resource<wbr>Kind</a></span>
     </dt>
     <dd>{{% md %}}The kind of the entity.{{% /md %}}</dd>
     <dt class="property-required"
@@ -491,7 +492,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
 <a href="#granularmarkings_csharp" style="color: inherit; text-decoration: inherit;">Granular<wbr>Markings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#threatintelligencegranularmarkingmodel">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security<wbr>Insights.<wbr>Inputs.<wbr>Threat<wbr>Intelligence<wbr>Granular<wbr>Marking<wbr>Model<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#threatintelligencegranularmarkingmodel">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security<wbr>Insights..<wbr>Inputs.<wbr>Threat<wbr>Intelligence<wbr>Granular<wbr>Marking<wbr>Model<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Granular Markings{{% /md %}}</dd>
     <dt class="property-optional"
@@ -509,7 +510,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
 <a href="#killchainphases_csharp" style="color: inherit; text-decoration: inherit;">Kill<wbr>Chain<wbr>Phases</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#threatintelligencekillchainphase">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security<wbr>Insights.<wbr>Inputs.<wbr>Threat<wbr>Intelligence<wbr>Kill<wbr>Chain<wbr>Phase<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#threatintelligencekillchainphase">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security<wbr>Insights..<wbr>Inputs.<wbr>Threat<wbr>Intelligence<wbr>Kill<wbr>Chain<wbr>Phase<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Kill chain phases{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1741,7 +1742,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:securityinsights/v20190101preview:ThreatIntelligenceIndicator 180105c7-a28d-b1a2-4a78-234f6ec80fd6 /subscriptions/bd794837-4d29-4647-9105-6339bfdb4e6a/resourceGroups/myRg/providers/Microsoft.OperationalInsights/workspaces/myWorkspace/providers/Microsoft.SecurityInsights/ThreatIntelligence/180105c7-a28d-b1a2-4a78-234f6ec80fd6 
+$ pulumi import azure-nextgen:securityinsights:ThreatIntelligenceIndicator 180105c7-a28d-b1a2-4a78-234f6ec80fd6 /subscriptions/bd794837-4d29-4647-9105-6339bfdb4e6a/resourceGroups/myRg/providers/Microsoft.OperationalInsights/workspaces/myWorkspace/providers/Microsoft.SecurityInsights/ThreatIntelligence/180105c7-a28d-b1a2-4a78-234f6ec80fd6 
 ```
 
 

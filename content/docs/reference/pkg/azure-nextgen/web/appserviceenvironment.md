@@ -11,13 +11,13 @@ meta_desc: "Documentation for the azure-nextgen.web.AppServiceEnvironment resour
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 App Service Environment ARM resource.
-Latest API Version: 2020-09-01.
+API Version: 2020-09-01.
 ## Import
 
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:web/latest:AppServiceEnvironment myresource1 /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/hostingEnvironments/{name} 
+$ pulumi import azure-nextgen:web:AppServiceEnvironment myresource1 /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/hostingEnvironments/{name} 
 ```
 
 
@@ -236,7 +236,7 @@ The AppServiceEnvironment resource accepts the following [input]({{< relref "/do
 <a href="#virtualnetwork_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkprofile">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web.<wbr>Inputs.<wbr>Virtual<wbr>Network<wbr>Profile<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnetworkprofile">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web..<wbr>Inputs.<wbr>Virtual<wbr>Network<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Description of the Virtual Network.{{% /md %}}</dd>
     <dt class="property-required"
@@ -245,7 +245,7 @@ The AppServiceEnvironment resource accepts the following [input]({{< relref "/do
 <a href="#workerpools_csharp" style="color: inherit; text-decoration: inherit;">Worker<wbr>Pools</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workerpool">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web.<wbr>Inputs.<wbr>Worker<wbr>Pool<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#workerpool">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web..<wbr>Inputs.<wbr>Worker<wbr>Pool<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Description of worker pools with worker size IDs, VM sizes, and number of workers in each pool.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -263,7 +263,7 @@ The AppServiceEnvironment resource accepts the following [input]({{< relref "/do
 <a href="#clustersettings_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#namevaluepair">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web.<wbr>Inputs.<wbr>Name<wbr>Value<wbr>Pair<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#namevaluepair">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web..<wbr>Inputs.<wbr>Name<wbr>Value<wbr>Pair<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Custom settings for changing the behavior of the App Service Environment.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -309,7 +309,7 @@ The AppServiceEnvironment resource accepts the following [input]({{< relref "/do
 <a href="#internalloadbalancingmode_csharp" style="color: inherit; text-decoration: inherit;">Internal<wbr>Load<wbr>Balancing<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#loadbalancingmode">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web.<wbr>Load<wbr>Balancing<wbr>Mode</a></span>
+        <span class="property-type">string | <a href="#loadbalancingmode">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web..<wbr>Load<wbr>Balancing<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}Specifies which endpoints to serve internally in the Virtual Network for the App Service Environment.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -354,7 +354,7 @@ The AppServiceEnvironment resource accepts the following [input]({{< relref "/do
 <a href="#networkaccesscontrollist_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Access<wbr>Control<wbr>List</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkaccesscontrolentry">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web.<wbr>Inputs.<wbr>Network<wbr>Access<wbr>Control<wbr>Entry<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#networkaccesscontrolentry">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web..<wbr>Inputs.<wbr>Network<wbr>Access<wbr>Control<wbr>Entry<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Access control list for controlling traffic to the App Service Environment.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1193,7 +1193,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#environmentcapacities_csharp" style="color: inherit; text-decoration: inherit;">Environment<wbr>Capacities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#stampcapacityresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web.<wbr>Outputs.<wbr>Stamp<wbr>Capacity<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#stampcapacityresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web..<wbr>Outputs.<wbr>Stamp<wbr>Capacity<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Current total, used, and available worker capacities.{{% /md %}}</dd>
     <dt class="property-"
@@ -1292,7 +1292,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#systemdata_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web.<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
+        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web..<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The system metadata relating to this resource.{{% /md %}}</dd>
     <dt class="property-"
@@ -1319,7 +1319,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vipmappings_csharp" style="color: inherit; text-decoration: inherit;">Vip<wbr>Mappings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualipmappingresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web.<wbr>Outputs.<wbr>Virtual<wbr>IPMapping<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#virtualipmappingresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web..<wbr>Outputs.<wbr>Virtual<wbr>IPMapping<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Description of IP SSL mapping for the App Service Environment.{{% /md %}}</dd>
 </dl>
@@ -2506,7 +2506,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#action_csharp" style="color: inherit; text-decoration: inherit;">Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accesscontrolentryaction">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web.<wbr>Access<wbr>Control<wbr>Entry<wbr>Action</a></span>
+        <span class="property-type"><a href="#accesscontrolentryaction">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web..<wbr>Access<wbr>Control<wbr>Entry<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3186,7 +3186,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capabilities_csharp" style="color: inherit; text-decoration: inherit;">Capabilities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#capability">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web.<wbr>Inputs.<wbr>Capability<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#capability">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web..<wbr>Inputs.<wbr>Capability<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Capabilities of the SKU, e.g., is traffic manager enabled?{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3240,7 +3240,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#skucapacity_csharp" style="color: inherit; text-decoration: inherit;">Sku<wbr>Capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skucapacity">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web.<wbr>Inputs.<wbr>Sku<wbr>Capacity<wbr>Args</a></span>
+        <span class="property-type"><a href="#skucapacity">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web..<wbr>Inputs.<wbr>Sku<wbr>Capacity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Min, max, and default scale values of the SKU.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3500,7 +3500,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capabilities_csharp" style="color: inherit; text-decoration: inherit;">Capabilities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#capabilityresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web.<wbr>Inputs.<wbr>Capability<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#capabilityresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web..<wbr>Inputs.<wbr>Capability<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Capabilities of the SKU, e.g., is traffic manager enabled?{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3554,7 +3554,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#skucapacity_csharp" style="color: inherit; text-decoration: inherit;">Sku<wbr>Capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skucapacityresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web.<wbr>Inputs.<wbr>Sku<wbr>Capacity<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#skucapacityresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web..<wbr>Inputs.<wbr>Sku<wbr>Capacity<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Min, max, and default scale values of the SKU.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4977,7 +4977,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#computemode_csharp" style="color: inherit; text-decoration: inherit;">Compute<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#computemodeoptions">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web.<wbr>Compute<wbr>Mode<wbr>Options</a></span>
+        <span class="property-type"><a href="#computemodeoptions">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web..<wbr>Compute<wbr>Mode<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}Shared or dedicated web app hosting{{% /md %}}</dd>
     <dt class="property-optional"
@@ -5022,7 +5022,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skudescription">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web.<wbr>Inputs.<wbr>Sku<wbr>Description<wbr>Args</a></span>
+        <span class="property-type"><a href="#skudescription">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web..<wbr>Inputs.<wbr>Sku<wbr>Description<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes a sku for a scalable resource{{% /md %}}</dd>
     <dt class="property-optional"
@@ -5480,7 +5480,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skudescriptionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web.<wbr>Inputs.<wbr>Sku<wbr>Description<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#skudescriptionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Web..<wbr>Inputs.<wbr>Sku<wbr>Description<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes a sku for a scalable resource{{% /md %}}</dd>
     <dt class="property-optional"

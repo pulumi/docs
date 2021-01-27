@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.apimanagement.IdentityProvider r
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Identity Provider details.
-Latest API Version: 2019-12-01.
+API Version: 2019-12-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var identityProvider = new AzureNextGen.ApiManagement.Latest.IdentityProvider("identityProvider", new AzureNextGen.ApiManagement.Latest.IdentityProviderArgs
+        var identityProvider = new AzureNextGen.ApiManagement..IdentityProvider("identityProvider", new AzureNextGen.ApiManagement..IdentityProviderArgs
         {
             ClientId = "facebookid",
             ClientSecret = "facebookapplicationsecret",
@@ -49,7 +49,7 @@ class MyStack : Stack
 package main
 
 import (
-	apimanagement "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/apimanagement/latest"
+	apimanagement "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/apimanagement"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -79,7 +79,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-identity_provider = azure_nextgen.apimanagement.latest.IdentityProvider("identityProvider",
+identity_provider = azure_nextgen.apimanagement.IdentityProvider("identityProvider",
     client_id="facebookid",
     client_secret="facebookapplicationsecret",
     identity_provider_name="facebook",
@@ -96,7 +96,7 @@ identity_provider = azure_nextgen.apimanagement.latest.IdentityProvider("identit
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const identityProvider = new azure_nextgen.apimanagement.latest.IdentityProvider("identityProvider", {
+const identityProvider = new azure_nextgen.apimanagement.IdentityProvider("identityProvider", {
     clientId: "facebookid",
     clientSecret: "facebookapplicationsecret",
     identityProviderName: "facebook",
@@ -405,7 +405,7 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#identityprovidertype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management.<wbr>Identity<wbr>Provider<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#identityprovidertype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management..<wbr>Identity<wbr>Provider<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Identity Provider Type identifier.{{% /md %}}</dd>
 </dl>
@@ -968,7 +968,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:apimanagement/latest:IdentityProvider Facebook /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/identityProviders/Facebook 
+$ pulumi import azure-nextgen:apimanagement:IdentityProvider Facebook /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/identityProviders/Facebook 
 ```
 
 

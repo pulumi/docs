@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.operationalinsights.LinkedServic
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The top level Linked service resource container.
-Latest API Version: 2020-08-01.
+API Version: 2020-08-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var linkedService = new AzureNextGen.OperationalInsights.Latest.LinkedService("linkedService", new AzureNextGen.OperationalInsights.Latest.LinkedServiceArgs
+        var linkedService = new AzureNextGen.OperationalInsights..LinkedService("linkedService", new AzureNextGen.OperationalInsights..LinkedServiceArgs
         {
             LinkedServiceName = "Cluster",
             ResourceGroupName = "mms-eus",
@@ -48,7 +48,7 @@ class MyStack : Stack
 package main
 
 import (
-	operationalinsights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/operationalinsights/latest"
+	operationalinsights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/operationalinsights"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -77,7 +77,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-linked_service = azure_nextgen.operationalinsights.latest.LinkedService("linkedService",
+linked_service = azure_nextgen.operationalinsights.LinkedService("linkedService",
     linked_service_name="Cluster",
     resource_group_name="mms-eus",
     workspace_name="TestLinkWS",
@@ -93,7 +93,7 @@ linked_service = azure_nextgen.operationalinsights.latest.LinkedService("linkedS
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const linkedService = new azure_nextgen.operationalinsights.latest.LinkedService("linkedService", {
+const linkedService = new azure_nextgen.operationalinsights.LinkedService("linkedService", {
     linkedServiceName: "Cluster",
     resourceGroupName: "mms-eus",
     workspaceName: "TestLinkWS",
@@ -320,7 +320,7 @@ The LinkedService resource accepts the following [input]({{< relref "/docs/intro
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#linkedserviceentitystatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Operational<wbr>Insights.<wbr>Linked<wbr>Service<wbr>Entity<wbr>Status</a></span>
+        <span class="property-type">string | <a href="#linkedserviceentitystatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Operational<wbr>Insights..<wbr>Linked<wbr>Service<wbr>Entity<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}The provisioning state of the linked service.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -768,7 +768,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:operationalinsights/latest:LinkedService TestLinkWS/Cluster /subscriptions/00000000-0000-0000-0000-00000000000/resourcegroups/mms-eus/providers/microsoft.operationalinsights/workspaces/testlinkws/linkedservices/cluster 
+$ pulumi import azure-nextgen:operationalinsights:LinkedService TestLinkWS/Cluster /subscriptions/00000000-0000-0000-0000-00000000000/resourcegroups/mms-eus/providers/microsoft.operationalinsights/workspaces/testlinkws/linkedservices/cluster 
 ```
 
 

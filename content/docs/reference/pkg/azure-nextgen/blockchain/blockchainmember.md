@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.blockchain.BlockchainMember reso
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Payload of the blockchain member which is exposed in the request/response of the resource provider.
+API Version: 2018-06-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var blockchainMember = new AzureNextGen.Blockchain.V20180601Preview.BlockchainMember("blockchainMember", new AzureNextGen.Blockchain.V20180601Preview.BlockchainMemberArgs
+        var blockchainMember = new AzureNextGen.Blockchain..BlockchainMember("blockchainMember", new AzureNextGen.Blockchain..BlockchainMemberArgs
         {
             BlockchainMemberName = "contosemember1",
             Consortium = "ContoseConsortium",
@@ -35,7 +36,7 @@ class MyStack : Stack
             Password = "<password>",
             Protocol = "Quorum",
             ResourceGroupName = "mygroup",
-            ValidatorNodesSku = new AzureNextGen.Blockchain.V20180601Preview.Inputs.BlockchainMemberNodesSkuArgs
+            ValidatorNodesSku = new AzureNextGen.Blockchain..Inputs.BlockchainMemberNodesSkuArgs
             {
                 Capacity = 2,
             },
@@ -54,7 +55,7 @@ class MyStack : Stack
 package main
 
 import (
-	blockchain "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/blockchain/v20180601preview"
+	blockchain "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/blockchain"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -89,7 +90,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-blockchain_member = azure_nextgen.blockchain.v20180601preview.BlockchainMember("blockchainMember",
+blockchain_member = azure_nextgen.blockchain.BlockchainMember("blockchainMember",
     blockchain_member_name="contosemember1",
     consortium="ContoseConsortium",
     consortium_management_account_password="<consortiumManagementAccountPassword>",
@@ -97,7 +98,7 @@ blockchain_member = azure_nextgen.blockchain.v20180601preview.BlockchainMember("
     password="<password>",
     protocol="Quorum",
     resource_group_name="mygroup",
-    validator_nodes_sku=azure_nextgen.blockchain.v20180601preview.BlockchainMemberNodesSkuArgs(
+    validator_nodes_sku=azure_nextgen.blockchain.BlockchainMemberNodesSkuArgs(
         capacity=2,
     ))
 
@@ -111,7 +112,7 @@ blockchain_member = azure_nextgen.blockchain.v20180601preview.BlockchainMember("
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const blockchainMember = new azure_nextgen.blockchain.v20180601preview.BlockchainMember("blockchainMember", {
+const blockchainMember = new azure_nextgen.blockchain.BlockchainMember("blockchainMember", {
     blockchainMemberName: "contosemember1",
     consortium: "ContoseConsortium",
     consortiumManagementAccountPassword: "<consortiumManagementAccountPassword>",
@@ -371,7 +372,7 @@ The BlockchainMember resource accepts the following [input]({{< relref "/docs/in
 <a href="#firewallrules_csharp" style="color: inherit; text-decoration: inherit;">Firewall<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallrule">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Blockchain.<wbr>Inputs.<wbr>Firewall<wbr>Rule<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#firewallrule">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Blockchain..<wbr>Inputs.<wbr>Firewall<wbr>Rule<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets firewall rules{{% /md %}}</dd>
     <dt class="property-optional"
@@ -398,7 +399,7 @@ The BlockchainMember resource accepts the following [input]({{< relref "/docs/in
 <a href="#protocol_csharp" style="color: inherit; text-decoration: inherit;">Protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#blockchainprotocol">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Blockchain.<wbr>Blockchain<wbr>Protocol</a></span>
+        <span class="property-type">string | <a href="#blockchainprotocol">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Blockchain..<wbr>Blockchain<wbr>Protocol</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the blockchain protocol.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -407,7 +408,7 @@ The BlockchainMember resource accepts the following [input]({{< relref "/docs/in
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sku">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Blockchain.<wbr>Inputs.<wbr>Sku<wbr>Args</a></span>
+        <span class="property-type"><a href="#sku">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Blockchain..<wbr>Inputs.<wbr>Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the blockchain member Sku.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -425,7 +426,7 @@ The BlockchainMember resource accepts the following [input]({{< relref "/docs/in
 <a href="#validatornodessku_csharp" style="color: inherit; text-decoration: inherit;">Validator<wbr>Nodes<wbr>Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#blockchainmembernodessku">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Blockchain.<wbr>Inputs.<wbr>Blockchain<wbr>Member<wbr>Nodes<wbr>Sku<wbr>Args</a></span>
+        <span class="property-type"><a href="#blockchainmembernodessku">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Blockchain..<wbr>Inputs.<wbr>Blockchain<wbr>Member<wbr>Nodes<wbr>Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the blockchain validator nodes Sku.{{% /md %}}</dd>
 </dl>
@@ -1812,7 +1813,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:blockchain/v20180601preview:BlockchainMember contosemember1 /subscriptions/51766542-3ed7-4a72-a187-0c8ab644ddab/resourceGroups/mygroup/providers/Microsoft.Blockchain/blockchainMembers/contosemember1 
+$ pulumi import azure-nextgen:blockchain:BlockchainMember contosemember1 /subscriptions/51766542-3ed7-4a72-a187-0c8ab644ddab/resourceGroups/mygroup/providers/Microsoft.Blockchain/blockchainMembers/contosemember1 
 ```
 
 

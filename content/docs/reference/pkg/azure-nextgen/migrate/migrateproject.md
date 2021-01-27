@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.migrate.MigrateProject resource 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Migrate Project REST Resource.
+API Version: 2018-09-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var migrateProject = new AzureNextGen.Migrate.V20180901Preview.MigrateProject("migrateProject", new AzureNextGen.Migrate.V20180901Preview.MigrateProjectArgs
+        var migrateProject = new AzureNextGen.Migrate..MigrateProject("migrateProject", new AzureNextGen.Migrate..MigrateProjectArgs
         {
             ETag = "\"b701c73a-0000-0000-0000-59c12ff00000\"",
             Location = "Southeast Asia",
@@ -49,7 +50,7 @@ class MyStack : Stack
 package main
 
 import (
-	migrate "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/migrate/v20180901preview"
+	migrate "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/migrate"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -80,13 +81,13 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-migrate_project = azure_nextgen.migrate.v20180901preview.MigrateProject("migrateProject",
+migrate_project = azure_nextgen.migrate.MigrateProject("migrateProject",
     e_tag="\"b701c73a-0000-0000-0000-59c12ff00000\"",
     location="Southeast Asia",
     migrate_project_name="project01",
-    properties=azure_nextgen.migrate.v20180901preview.MigrateProjectPropertiesArgs(),
+    properties=azure_nextgen.migrate.MigrateProjectPropertiesArgs(),
     resource_group_name="myResourceGroup",
-    tags=azure_nextgen.migrate.v20180901preview.MigrateProjectTagsArgs())
+    tags=azure_nextgen.migrate.MigrateProjectTagsArgs())
 
 ```
 
@@ -98,7 +99,7 @@ migrate_project = azure_nextgen.migrate.v20180901preview.MigrateProject("migrate
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const migrateProject = new azure_nextgen.migrate.v20180901preview.MigrateProject("migrateProject", {
+const migrateProject = new azure_nextgen.migrate.MigrateProject("migrateProject", {
     eTag: "\"b701c73a-0000-0000-0000-59c12ff00000\"",
     location: "Southeast Asia",
     migrateProjectName: "project01",
@@ -336,7 +337,7 @@ The MigrateProject resource accepts the following [input]({{< relref "/docs/intr
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migrateprojectproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Inputs.<wbr>Migrate<wbr>Project<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#migrateprojectproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate..<wbr>Inputs.<wbr>Migrate<wbr>Project<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the nested properties.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -345,7 +346,7 @@ The MigrateProject resource accepts the following [input]({{< relref "/docs/intr
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migrateprojecttags">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Inputs.<wbr>Migrate<wbr>Project<wbr>Tags<wbr>Args</a></span>
+        <span class="property-type"><a href="#migrateprojecttags">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate..<wbr>Inputs.<wbr>Migrate<wbr>Project<wbr>Tags<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the tags.{{% /md %}}</dd>
 </dl>
@@ -825,7 +826,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#provisioningstate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Provisioning<wbr>State</a></span>
+        <span class="property-type">string | <a href="#provisioningstate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate..<wbr>Provisioning<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}Provisioning state of the migrate project.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -941,7 +942,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#summary_csharp" style="color: inherit; text-decoration: inherit;">Summary</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Inputs.<wbr>Database<wbr>Project<wbr>Summary<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Inputs.<wbr>Servers<wbr>Project<wbr>Summary<wbr>Response<wbr>Args&gt;&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate..<wbr>Inputs.<wbr>Database<wbr>Project<wbr>Summary<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate..<wbr>Inputs.<wbr>Servers<wbr>Project<wbr>Summary<wbr>Response<wbr>Args&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}Gets the summary of the migrate project.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1631,7 +1632,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:migrate/v20180901preview:MigrateProject project01 /subscriptions/75dd7e42-4fd1-4512-af04-83ad9864335b/resourceGroups/myResourceGroup/providers/Microsoft.Migrate/MigrateProjects/project01 
+$ pulumi import azure-nextgen:migrate:MigrateProject project01 /subscriptions/75dd7e42-4fd1-4512-af04-83ad9864335b/resourceGroups/myResourceGroup/providers/Microsoft.Migrate/MigrateProjects/project01 
 ```
 
 

@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.apimanagement.ProductPolicy reso
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Policy Contract details.
-Latest API Version: 2019-12-01.
+API Version: 2019-12-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var productPolicy = new AzureNextGen.ApiManagement.Latest.ProductPolicy("productPolicy", new AzureNextGen.ApiManagement.Latest.ProductPolicyArgs
+        var productPolicy = new AzureNextGen.ApiManagement..ProductPolicy("productPolicy", new AzureNextGen.ApiManagement..ProductPolicyArgs
         {
             Format = "xml",
             PolicyId = "policy",
@@ -65,7 +65,7 @@ class MyStack : Stack
 package main
 
 import (
-	apimanagement "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/apimanagement/latest"
+	apimanagement "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/apimanagement"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -96,7 +96,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-product_policy = azure_nextgen.apimanagement.latest.ProductPolicy("productPolicy",
+product_policy = azure_nextgen.apimanagement.ProductPolicy("productPolicy",
     format="xml",
     policy_id="policy",
     product_id="5702e97e5157a50f48dce801",
@@ -129,7 +129,7 @@ product_policy = azure_nextgen.apimanagement.latest.ProductPolicy("productPolicy
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const productPolicy = new azure_nextgen.apimanagement.latest.ProductPolicy("productPolicy", {
+const productPolicy = new azure_nextgen.apimanagement.ProductPolicy("productPolicy", {
     format: "xml",
     policyId: "policy",
     productId: "5702e97e5157a50f48dce801",
@@ -391,7 +391,7 @@ The ProductPolicy resource accepts the following [input]({{< relref "/docs/intro
 <a href="#format_csharp" style="color: inherit; text-decoration: inherit;">Format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#policycontentformat">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management.<wbr>Policy<wbr>Content<wbr>Format</a></span>
+        <span class="property-type">string | <a href="#policycontentformat">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management..<wbr>Policy<wbr>Content<wbr>Format</a></span>
     </dt>
     <dd>{{% md %}}Format of the policyContent.{{% /md %}}</dd>
 </dl>
@@ -785,7 +785,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:apimanagement/latest:ProductPolicy policy /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/products/5702e97e5157a50f48dce801/policies/policy 
+$ pulumi import azure-nextgen:apimanagement:ProductPolicy policy /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/products/5702e97e5157a50f48dce801/policies/policy 
 ```
 
 

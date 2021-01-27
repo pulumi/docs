@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.synapse.Workspace resource with 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 A workspace
-Latest API Version: 2020-12-01.
+API Version: 2020-12-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,32 +27,32 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var workspace = new AzureNextGen.Synapse.Latest.Workspace("workspace", new AzureNextGen.Synapse.Latest.WorkspaceArgs
+        var workspace = new AzureNextGen.Synapse..Workspace("workspace", new AzureNextGen.Synapse..WorkspaceArgs
         {
-            DefaultDataLakeStorage = new AzureNextGen.Synapse.Latest.Inputs.DataLakeStorageAccountDetailsArgs
+            DefaultDataLakeStorage = new AzureNextGen.Synapse..Inputs.DataLakeStorageAccountDetailsArgs
             {
                 AccountUrl = "https://accountname.dfs.core.windows.net",
                 Filesystem = "default",
             },
-            Encryption = new AzureNextGen.Synapse.Latest.Inputs.EncryptionDetailsArgs
+            Encryption = new AzureNextGen.Synapse..Inputs.EncryptionDetailsArgs
             {
-                Cmk = new AzureNextGen.Synapse.Latest.Inputs.CustomerManagedKeyDetailsArgs
+                Cmk = new AzureNextGen.Synapse..Inputs.CustomerManagedKeyDetailsArgs
                 {
-                    Key = new AzureNextGen.Synapse.Latest.Inputs.WorkspaceKeyDetailsArgs
+                    Key = new AzureNextGen.Synapse..Inputs.WorkspaceKeyDetailsArgs
                     {
                         KeyVaultUrl = "https://vault.azure.net/keys/key1",
                         Name = "default",
                     },
                 },
             },
-            Identity = new AzureNextGen.Synapse.Latest.Inputs.ManagedIdentityArgs
+            Identity = new AzureNextGen.Synapse..Inputs.ManagedIdentityArgs
             {
                 Type = "SystemAssigned",
             },
             Location = "East US",
             ManagedResourceGroupName = "workspaceManagedResourceGroupUnique",
             ManagedVirtualNetwork = "default",
-            ManagedVirtualNetworkSettings = new AzureNextGen.Synapse.Latest.Inputs.ManagedVirtualNetworkSettingsArgs
+            ManagedVirtualNetworkSettings = new AzureNextGen.Synapse..Inputs.ManagedVirtualNetworkSettingsArgs
             {
                 AllowedAadTenantIdsForLinking = 
                 {
@@ -61,7 +61,7 @@ class MyStack : Stack
                 LinkedAccessCheckOnTargetResource = false,
                 PreventDataExfiltration = false,
             },
-            PurviewConfiguration = new AzureNextGen.Synapse.Latest.Inputs.PurviewConfigurationArgs
+            PurviewConfiguration = new AzureNextGen.Synapse..Inputs.PurviewConfigurationArgs
             {
                 PurviewResourceId = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup1/providers/Microsoft.ProjectPurview/accounts/accountname1",
             },
@@ -73,7 +73,7 @@ class MyStack : Stack
                 { "key", "value" },
             },
             WorkspaceName = "workspace1",
-            WorkspaceRepositoryConfiguration = new AzureNextGen.Synapse.Latest.Inputs.WorkspaceRepositoryConfigurationArgs
+            WorkspaceRepositoryConfiguration = new AzureNextGen.Synapse..Inputs.WorkspaceRepositoryConfigurationArgs
             {
                 AccountName = "mygithubaccount",
                 CollaborationBranch = "master",
@@ -98,7 +98,7 @@ class MyStack : Stack
 package main
 
 import (
-	synapse "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/synapse/latest"
+	synapse "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/synapse"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -167,31 +167,31 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-workspace = azure_nextgen.synapse.latest.Workspace("workspace",
-    default_data_lake_storage=azure_nextgen.synapse.latest.DataLakeStorageAccountDetailsArgs(
+workspace = azure_nextgen.synapse.Workspace("workspace",
+    default_data_lake_storage=azure_nextgen.synapse.DataLakeStorageAccountDetailsArgs(
         account_url="https://accountname.dfs.core.windows.net",
         filesystem="default",
     ),
-    encryption=azure_nextgen.synapse.latest.EncryptionDetailsArgs(
-        cmk=azure_nextgen.synapse.latest.CustomerManagedKeyDetailsArgs(
-            key=azure_nextgen.synapse.latest.WorkspaceKeyDetailsArgs(
+    encryption=azure_nextgen.synapse.EncryptionDetailsArgs(
+        cmk=azure_nextgen.synapse.CustomerManagedKeyDetailsArgs(
+            key=azure_nextgen.synapse.WorkspaceKeyDetailsArgs(
                 key_vault_url="https://vault.azure.net/keys/key1",
                 name="default",
             ),
         ),
     ),
-    identity=azure_nextgen.synapse.latest.ManagedIdentityArgs(
+    identity=azure_nextgen.synapse.ManagedIdentityArgs(
         type="SystemAssigned",
     ),
     location="East US",
     managed_resource_group_name="workspaceManagedResourceGroupUnique",
     managed_virtual_network="default",
-    managed_virtual_network_settings=azure_nextgen.synapse.latest.ManagedVirtualNetworkSettingsArgs(
+    managed_virtual_network_settings=azure_nextgen.synapse.ManagedVirtualNetworkSettingsArgs(
         allowed_aad_tenant_ids_for_linking=["740239CE-A25B-485B-86A0-262F29F6EBDB"],
         linked_access_check_on_target_resource=False,
         prevent_data_exfiltration=False,
     ),
-    purview_configuration=azure_nextgen.synapse.latest.PurviewConfigurationArgs(
+    purview_configuration=azure_nextgen.synapse.PurviewConfigurationArgs(
         purview_resource_id="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup1/providers/Microsoft.ProjectPurview/accounts/accountname1",
     ),
     resource_group_name="resourceGroup1",
@@ -201,7 +201,7 @@ workspace = azure_nextgen.synapse.latest.Workspace("workspace",
         "key": "value",
     },
     workspace_name="workspace1",
-    workspace_repository_configuration=azure_nextgen.synapse.latest.WorkspaceRepositoryConfigurationArgs(
+    workspace_repository_configuration=azure_nextgen.synapse.WorkspaceRepositoryConfigurationArgs(
         account_name="mygithubaccount",
         collaboration_branch="master",
         host_name="",
@@ -221,7 +221,7 @@ workspace = azure_nextgen.synapse.latest.Workspace("workspace",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const workspace = new azure_nextgen.synapse.latest.Workspace("workspace", {
+const workspace = new azure_nextgen.synapse.Workspace("workspace", {
     defaultDataLakeStorage: {
         accountUrl: "https://accountname.dfs.core.windows.net",
         filesystem: "default",
@@ -495,7 +495,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#defaultdatalakestorage_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Data<wbr>Lake<wbr>Storage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datalakestorageaccountdetails">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Synapse.<wbr>Inputs.<wbr>Data<wbr>Lake<wbr>Storage<wbr>Account<wbr>Details<wbr>Args</a></span>
+        <span class="property-type"><a href="#datalakestorageaccountdetails">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Synapse..<wbr>Inputs.<wbr>Data<wbr>Lake<wbr>Storage<wbr>Account<wbr>Details<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Workspace default data lake storage account details{{% /md %}}</dd>
     <dt class="property-optional"
@@ -504,7 +504,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#encryption_csharp" style="color: inherit; text-decoration: inherit;">Encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptiondetails">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Synapse.<wbr>Inputs.<wbr>Encryption<wbr>Details<wbr>Args</a></span>
+        <span class="property-type"><a href="#encryptiondetails">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Synapse..<wbr>Inputs.<wbr>Encryption<wbr>Details<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The encryption details of the workspace{{% /md %}}</dd>
     <dt class="property-optional"
@@ -513,7 +513,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedidentity">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Synapse.<wbr>Inputs.<wbr>Managed<wbr>Identity<wbr>Args</a></span>
+        <span class="property-type"><a href="#managedidentity">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Synapse..<wbr>Inputs.<wbr>Managed<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Identity of the workspace{{% /md %}}</dd>
     <dt class="property-optional"
@@ -540,7 +540,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#managedvirtualnetworksettings_csharp" style="color: inherit; text-decoration: inherit;">Managed<wbr>Virtual<wbr>Network<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedvirtualnetworksettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Synapse.<wbr>Inputs.<wbr>Managed<wbr>Virtual<wbr>Network<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#managedvirtualnetworksettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Synapse..<wbr>Inputs.<wbr>Managed<wbr>Virtual<wbr>Network<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Managed Virtual Network Settings{{% /md %}}</dd>
     <dt class="property-optional"
@@ -549,7 +549,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#privateendpointconnections_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint<wbr>Connections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointconnection">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Synapse.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#privateendpointconnection">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Synapse..<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Private endpoint connections to the workspace{{% /md %}}</dd>
     <dt class="property-optional"
@@ -558,7 +558,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#purviewconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Purview<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#purviewconfiguration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Synapse.<wbr>Inputs.<wbr>Purview<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#purviewconfiguration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Synapse..<wbr>Inputs.<wbr>Purview<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Purview Configuration{{% /md %}}</dd>
     <dt class="property-optional"
@@ -594,7 +594,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#virtualnetworkprofile_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkprofile">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Synapse.<wbr>Inputs.<wbr>Virtual<wbr>Network<wbr>Profile<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnetworkprofile">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Synapse..<wbr>Inputs.<wbr>Virtual<wbr>Network<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Virtual Network profile{{% /md %}}</dd>
     <dt class="property-optional"
@@ -603,7 +603,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#workspacerepositoryconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Repository<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspacerepositoryconfiguration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Synapse.<wbr>Inputs.<wbr>Workspace<wbr>Repository<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#workspacerepositoryconfiguration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Synapse..<wbr>Inputs.<wbr>Workspace<wbr>Repository<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Git integration settings{{% /md %}}</dd>
 </dl>
@@ -1390,7 +1390,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspacekeydetails">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Synapse.<wbr>Inputs.<wbr>Workspace<wbr>Key<wbr>Details<wbr>Args</a></span>
+        <span class="property-type"><a href="#workspacekeydetails">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Synapse..<wbr>Inputs.<wbr>Workspace<wbr>Key<wbr>Details<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The key object of the workspace{{% /md %}}</dd>
 </dl>
@@ -1461,7 +1461,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspacekeydetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Synapse.<wbr>Inputs.<wbr>Workspace<wbr>Key<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#workspacekeydetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Synapse..<wbr>Inputs.<wbr>Workspace<wbr>Key<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The key object of the workspace{{% /md %}}</dd>
 </dl>
@@ -1746,7 +1746,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cmk_csharp" style="color: inherit; text-decoration: inherit;">Cmk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customermanagedkeydetails">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Synapse.<wbr>Inputs.<wbr>Customer<wbr>Managed<wbr>Key<wbr>Details<wbr>Args</a></span>
+        <span class="property-type"><a href="#customermanagedkeydetails">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Synapse..<wbr>Inputs.<wbr>Customer<wbr>Managed<wbr>Key<wbr>Details<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Customer Managed Key Details{{% /md %}}</dd>
 </dl>
@@ -1817,7 +1817,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cmk_csharp" style="color: inherit; text-decoration: inherit;">Cmk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customermanagedkeydetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Synapse.<wbr>Inputs.<wbr>Customer<wbr>Managed<wbr>Key<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#customermanagedkeydetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Synapse..<wbr>Inputs.<wbr>Customer<wbr>Managed<wbr>Key<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Customer Managed Key Details{{% /md %}}</dd>
 </dl>
@@ -1906,7 +1906,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidentitytype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Synapse.<wbr>Resource<wbr>Identity<wbr>Type</a></span>
+        <span class="property-type"><a href="#resourceidentitytype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Synapse..<wbr>Resource<wbr>Identity<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of managed identity for the workspace{{% /md %}}</dd>
 </dl>
@@ -2370,7 +2370,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privatelinkserviceconnectionstate_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkserviceconnectionstate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Synapse.<wbr>Inputs.<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Args</a></span>
+        <span class="property-type"><a href="#privatelinkserviceconnectionstate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Synapse..<wbr>Inputs.<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Connection state of the private endpoint connection.{{% /md %}}</dd>
 </dl>
@@ -2468,7 +2468,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privateendpoint_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Synapse.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#privateendpointresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Synapse..<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The private endpoint which the connection belongs to.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2477,7 +2477,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privatelinkserviceconnectionstate_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Synapse.<wbr>Inputs.<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Synapse..<wbr>Inputs.<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Connection state of the private endpoint connection.{{% /md %}}</dd>
 </dl>
@@ -4144,7 +4144,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:synapse/latest:Workspace workspace1 /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup1/providers/Microsoft.Synapse/workspaces/workspace1 
+$ pulumi import azure-nextgen:synapse:Workspace workspace1 /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup1/providers/Microsoft.Synapse/workspaces/workspace1 
 ```
 
 

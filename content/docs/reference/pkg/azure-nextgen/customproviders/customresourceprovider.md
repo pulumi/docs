@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.customproviders.CustomResourcePr
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 A manifest file that defines the custom resource provider resources.
+API Version: 2018-09-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,11 +27,11 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var customResourceProvider = new AzureNextGen.CustomProviders.V20180901Preview.CustomResourceProvider("customResourceProvider", new AzureNextGen.CustomProviders.V20180901Preview.CustomResourceProviderArgs
+        var customResourceProvider = new AzureNextGen.CustomProviders..CustomResourceProvider("customResourceProvider", new AzureNextGen.CustomProviders..CustomResourceProviderArgs
         {
             Actions = 
             {
-                new AzureNextGen.CustomProviders.V20180901Preview.Inputs.CustomRPActionRouteDefinitionArgs
+                new AzureNextGen.CustomProviders..Inputs.CustomRPActionRouteDefinitionArgs
                 {
                     Endpoint = "https://mytestendpoint/",
                     Name = "TestAction",
@@ -42,7 +43,7 @@ class MyStack : Stack
             ResourceProviderName = "newrp",
             ResourceTypes = 
             {
-                new AzureNextGen.CustomProviders.V20180901Preview.Inputs.CustomRPResourceTypeRouteDefinitionArgs
+                new AzureNextGen.CustomProviders..Inputs.CustomRPResourceTypeRouteDefinitionArgs
                 {
                     Endpoint = "https://mytestendpoint2/",
                     Name = "TestResource",
@@ -64,7 +65,7 @@ class MyStack : Stack
 package main
 
 import (
-	customproviders "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/customproviders/v20180901preview"
+	customproviders "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/customproviders"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -106,8 +107,8 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-custom_resource_provider = azure_nextgen.customproviders.v20180901preview.CustomResourceProvider("customResourceProvider",
-    actions=[azure_nextgen.customproviders.v20180901preview.CustomRPActionRouteDefinitionArgs(
+custom_resource_provider = azure_nextgen.customproviders.CustomResourceProvider("customResourceProvider",
+    actions=[azure_nextgen.customproviders.CustomRPActionRouteDefinitionArgs(
         endpoint="https://mytestendpoint/",
         name="TestAction",
         routing_type="Proxy",
@@ -115,7 +116,7 @@ custom_resource_provider = azure_nextgen.customproviders.v20180901preview.Custom
     location="eastus",
     resource_group_name="testRG",
     resource_provider_name="newrp",
-    resource_types=[azure_nextgen.customproviders.v20180901preview.CustomRPResourceTypeRouteDefinitionArgs(
+    resource_types=[azure_nextgen.customproviders.CustomRPResourceTypeRouteDefinitionArgs(
         endpoint="https://mytestendpoint2/",
         name="TestResource",
         routing_type="Proxy,Cache",
@@ -131,7 +132,7 @@ custom_resource_provider = azure_nextgen.customproviders.v20180901preview.Custom
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const customResourceProvider = new azure_nextgen.customproviders.v20180901preview.CustomResourceProvider("customResourceProvider", {
+const customResourceProvider = new azure_nextgen.customproviders.CustomResourceProvider("customResourceProvider", {
     actions: [{
         endpoint: "https://mytestendpoint/",
         name: "TestAction",
@@ -367,7 +368,7 @@ The CustomResourceProvider resource accepts the following [input]({{< relref "/d
 <a href="#actions_csharp" style="color: inherit; text-decoration: inherit;">Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customrpactionroutedefinition">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Custom<wbr>Providers.<wbr>Inputs.<wbr>Custom<wbr>RPAction<wbr>Route<wbr>Definition<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#customrpactionroutedefinition">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Custom<wbr>Providers..<wbr>Inputs.<wbr>Custom<wbr>RPAction<wbr>Route<wbr>Definition<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of actions that the custom resource provider implements.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -376,7 +377,7 @@ The CustomResourceProvider resource accepts the following [input]({{< relref "/d
 <a href="#resourcetypes_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customrpresourcetyperoutedefinition">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Custom<wbr>Providers.<wbr>Inputs.<wbr>Custom<wbr>RPResource<wbr>Type<wbr>Route<wbr>Definition<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#customrpresourcetyperoutedefinition">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Custom<wbr>Providers..<wbr>Inputs.<wbr>Custom<wbr>RPResource<wbr>Type<wbr>Route<wbr>Definition<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of resource types that the custom resource provider implements.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -394,7 +395,7 @@ The CustomResourceProvider resource accepts the following [input]({{< relref "/d
 <a href="#validations_csharp" style="color: inherit; text-decoration: inherit;">Validations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customrpvalidations">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Custom<wbr>Providers.<wbr>Inputs.<wbr>Custom<wbr>RPValidations<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#customrpvalidations">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Custom<wbr>Providers..<wbr>Inputs.<wbr>Custom<wbr>RPValidations<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of validations to run on the custom resource provider's requests.{{% /md %}}</dd>
 </dl>
@@ -851,7 +852,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#routingtype_csharp" style="color: inherit; text-decoration: inherit;">Routing<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#actionrouting">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Custom<wbr>Providers.<wbr>Action<wbr>Routing</a></span>
+        <span class="property-type">string | <a href="#actionrouting">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Custom<wbr>Providers..<wbr>Action<wbr>Routing</a></span>
     </dt>
     <dd>{{% md %}}The routing types that are supported for action requests.{{% /md %}}</dd>
 </dl>
@@ -1119,7 +1120,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#routingtype_csharp" style="color: inherit; text-decoration: inherit;">Routing<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#resourcetyperouting">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Custom<wbr>Providers.<wbr>Resource<wbr>Type<wbr>Routing</a></span>
+        <span class="property-type">string | <a href="#resourcetyperouting">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Custom<wbr>Providers..<wbr>Resource<wbr>Type<wbr>Routing</a></span>
     </dt>
     <dd>{{% md %}}The routing types that are supported for resource requests.{{% /md %}}</dd>
 </dl>
@@ -1378,7 +1379,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validationtype_csharp" style="color: inherit; text-decoration: inherit;">Validation<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#validationtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Custom<wbr>Providers.<wbr>Validation<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#validationtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Custom<wbr>Providers..<wbr>Validation<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of validation to run against a matching request.{{% /md %}}</dd>
 </dl>
@@ -1627,7 +1628,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:customproviders/v20180901preview:CustomResourceProvider newrp /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/testRG/providers/Microsoft.CustomProviders/resourceProviders/newrp 
+$ pulumi import azure-nextgen:customproviders:CustomResourceProvider newrp /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/testRG/providers/Microsoft.CustomProviders/resourceProviders/newrp 
 ```
 
 

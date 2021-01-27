@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.insights.ActionGroup resource wi
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 An action group resource.
-Latest API Version: 2019-06-01.
+API Version: 2019-06-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,12 +27,12 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var actionGroup = new AzureNextGen.Insights.Latest.ActionGroup("actionGroup", new AzureNextGen.Insights.Latest.ActionGroupArgs
+        var actionGroup = new AzureNextGen.Insights..ActionGroup("actionGroup", new AzureNextGen.Insights..ActionGroupArgs
         {
             ActionGroupName = "SampleActionGroup",
             ArmRoleReceivers = 
             {
-                new AzureNextGen.Insights.Latest.Inputs.ArmRoleReceiverArgs
+                new AzureNextGen.Insights..Inputs.ArmRoleReceiverArgs
                 {
                     Name = "Sample armRole",
                     RoleId = "8e3af657-a8ff-443c-a75c-2fe8c4bcb635",
@@ -41,7 +41,7 @@ class MyStack : Stack
             },
             AutomationRunbookReceivers = 
             {
-                new AzureNextGen.Insights.Latest.Inputs.AutomationRunbookReceiverArgs
+                new AzureNextGen.Insights..Inputs.AutomationRunbookReceiverArgs
                 {
                     AutomationAccountId = "/subscriptions/187f412d-1758-44d9-b052-169e2564721d/resourceGroups/runbookTest/providers/Microsoft.Automation/automationAccounts/runbooktest",
                     IsGlobalRunbook = false,
@@ -54,7 +54,7 @@ class MyStack : Stack
             },
             AzureAppPushReceivers = 
             {
-                new AzureNextGen.Insights.Latest.Inputs.AzureAppPushReceiverArgs
+                new AzureNextGen.Insights..Inputs.AzureAppPushReceiverArgs
                 {
                     EmailAddress = "johndoe@email.com",
                     Name = "Sample azureAppPush",
@@ -62,7 +62,7 @@ class MyStack : Stack
             },
             AzureFunctionReceivers = 
             {
-                new AzureNextGen.Insights.Latest.Inputs.AzureFunctionReceiverArgs
+                new AzureNextGen.Insights..Inputs.AzureFunctionReceiverArgs
                 {
                     FunctionAppResourceId = "/subscriptions/5def922a-3ed4-49c1-b9fd-05ec533819a3/resourceGroups/aznsTest/providers/Microsoft.Web/sites/testFunctionApp",
                     FunctionName = "HttpTriggerCSharp1",
@@ -73,13 +73,13 @@ class MyStack : Stack
             },
             EmailReceivers = 
             {
-                new AzureNextGen.Insights.Latest.Inputs.EmailReceiverArgs
+                new AzureNextGen.Insights..Inputs.EmailReceiverArgs
                 {
                     EmailAddress = "johndoe@email.com",
                     Name = "John Doe's email",
                     UseCommonAlertSchema = false,
                 },
-                new AzureNextGen.Insights.Latest.Inputs.EmailReceiverArgs
+                new AzureNextGen.Insights..Inputs.EmailReceiverArgs
                 {
                     EmailAddress = "janesmith@email.com",
                     Name = "Jane Smith's email",
@@ -90,7 +90,7 @@ class MyStack : Stack
             GroupShortName = "sample",
             ItsmReceivers = 
             {
-                new AzureNextGen.Insights.Latest.Inputs.ItsmReceiverArgs
+                new AzureNextGen.Insights..Inputs.ItsmReceiverArgs
                 {
                     ConnectionId = "a3b9076c-ce8e-434e-85b4-aff10cb3c8f1",
                     Name = "Sample itsm",
@@ -102,7 +102,7 @@ class MyStack : Stack
             Location = "Global",
             LogicAppReceivers = 
             {
-                new AzureNextGen.Insights.Latest.Inputs.LogicAppReceiverArgs
+                new AzureNextGen.Insights..Inputs.LogicAppReceiverArgs
                 {
                     CallbackUrl = "https://prod-27.northcentralus.logic.azure.com/workflows/68e572e818e5457ba898763b7db90877/triggers/manual/paths/invoke/azns/test?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=Abpsb72UYJxPPvmDo937uzofupO5r_vIeWEx7KVHo7w",
                     Name = "Sample logicApp",
@@ -113,13 +113,13 @@ class MyStack : Stack
             ResourceGroupName = "Default-NotificationRules",
             SmsReceivers = 
             {
-                new AzureNextGen.Insights.Latest.Inputs.SmsReceiverArgs
+                new AzureNextGen.Insights..Inputs.SmsReceiverArgs
                 {
                     CountryCode = "1",
                     Name = "John Doe's mobile",
                     PhoneNumber = "1234567890",
                 },
-                new AzureNextGen.Insights.Latest.Inputs.SmsReceiverArgs
+                new AzureNextGen.Insights..Inputs.SmsReceiverArgs
                 {
                     CountryCode = "1",
                     Name = "Jane Smith's mobile",
@@ -129,7 +129,7 @@ class MyStack : Stack
             Tags = ,
             VoiceReceivers = 
             {
-                new AzureNextGen.Insights.Latest.Inputs.VoiceReceiverArgs
+                new AzureNextGen.Insights..Inputs.VoiceReceiverArgs
                 {
                     CountryCode = "1",
                     Name = "Sample voice",
@@ -138,13 +138,13 @@ class MyStack : Stack
             },
             WebhookReceivers = 
             {
-                new AzureNextGen.Insights.Latest.Inputs.WebhookReceiverArgs
+                new AzureNextGen.Insights..Inputs.WebhookReceiverArgs
                 {
                     Name = "Sample webhook 1",
                     ServiceUri = "http://www.example.com/webhook1",
                     UseCommonAlertSchema = true,
                 },
-                new AzureNextGen.Insights.Latest.Inputs.WebhookReceiverArgs
+                new AzureNextGen.Insights..Inputs.WebhookReceiverArgs
                 {
                     IdentifierUri = "http://someidentifier/d7811ba3-7996-4a93-99b6-6b2f3f355f8a",
                     Name = "Sample webhook 2",
@@ -172,7 +172,7 @@ package main
 import (
 	"fmt"
 
-	insights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/insights/latest"
+	insights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/insights"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -300,14 +300,14 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-action_group = azure_nextgen.insights.latest.ActionGroup("actionGroup",
+action_group = azure_nextgen.insights.ActionGroup("actionGroup",
     action_group_name="SampleActionGroup",
-    arm_role_receivers=[azure_nextgen.insights.latest.ArmRoleReceiverArgs(
+    arm_role_receivers=[azure_nextgen.insights.ArmRoleReceiverArgs(
         name="Sample armRole",
         role_id="8e3af657-a8ff-443c-a75c-2fe8c4bcb635",
         use_common_alert_schema=True,
     )],
-    automation_runbook_receivers=[azure_nextgen.insights.latest.AutomationRunbookReceiverArgs(
+    automation_runbook_receivers=[azure_nextgen.insights.AutomationRunbookReceiverArgs(
         automation_account_id="/subscriptions/187f412d-1758-44d9-b052-169e2564721d/resourceGroups/runbookTest/providers/Microsoft.Automation/automationAccounts/runbooktest",
         is_global_runbook=False,
         name="testRunbook",
@@ -316,11 +316,11 @@ action_group = azure_nextgen.insights.latest.ActionGroup("actionGroup",
         use_common_alert_schema=True,
         webhook_resource_id="/subscriptions/187f412d-1758-44d9-b052-169e2564721d/resourceGroups/runbookTest/providers/Microsoft.Automation/automationAccounts/runbooktest/webhooks/Alert1510184037084",
     )],
-    azure_app_push_receivers=[azure_nextgen.insights.latest.AzureAppPushReceiverArgs(
+    azure_app_push_receivers=[azure_nextgen.insights.AzureAppPushReceiverArgs(
         email_address="johndoe@email.com",
         name="Sample azureAppPush",
     )],
-    azure_function_receivers=[azure_nextgen.insights.latest.AzureFunctionReceiverArgs(
+    azure_function_receivers=[azure_nextgen.insights.AzureFunctionReceiverArgs(
         function_app_resource_id="/subscriptions/5def922a-3ed4-49c1-b9fd-05ec533819a3/resourceGroups/aznsTest/providers/Microsoft.Web/sites/testFunctionApp",
         function_name="HttpTriggerCSharp1",
         http_trigger_url="<httpTriggerUrl>",
@@ -328,12 +328,12 @@ action_group = azure_nextgen.insights.latest.ActionGroup("actionGroup",
         use_common_alert_schema=True,
     )],
     email_receivers=[
-        azure_nextgen.insights.latest.EmailReceiverArgs(
+        azure_nextgen.insights.EmailReceiverArgs(
             email_address="johndoe@email.com",
             name="John Doe's email",
             use_common_alert_schema=False,
         ),
-        azure_nextgen.insights.latest.EmailReceiverArgs(
+        azure_nextgen.insights.EmailReceiverArgs(
             email_address="janesmith@email.com",
             name="Jane Smith's email",
             use_common_alert_schema=True,
@@ -341,7 +341,7 @@ action_group = azure_nextgen.insights.latest.ActionGroup("actionGroup",
     ],
     enabled=True,
     group_short_name="sample",
-    itsm_receivers=[azure_nextgen.insights.latest.ItsmReceiverArgs(
+    itsm_receivers=[azure_nextgen.insights.ItsmReceiverArgs(
         connection_id="a3b9076c-ce8e-434e-85b4-aff10cb3c8f1",
         name="Sample itsm",
         region="westcentralus",
@@ -349,7 +349,7 @@ action_group = azure_nextgen.insights.latest.ActionGroup("actionGroup",
         workspace_id="5def922a-3ed4-49c1-b9fd-05ec533819a3|55dfd1f8-7e59-4f89-bf56-4c82f5ace23c",
     )],
     location="Global",
-    logic_app_receivers=[azure_nextgen.insights.latest.LogicAppReceiverArgs(
+    logic_app_receivers=[azure_nextgen.insights.LogicAppReceiverArgs(
         callback_url="https://prod-27.northcentralus.logic.azure.com/workflows/68e572e818e5457ba898763b7db90877/triggers/manual/paths/invoke/azns/test?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=Abpsb72UYJxPPvmDo937uzofupO5r_vIeWEx7KVHo7w",
         name="Sample logicApp",
         resource_id="/subscriptions/187f412d-1758-44d9-b052-169e2564721d/resourceGroups/LogicApp/providers/Microsoft.Logic/workflows/testLogicApp",
@@ -357,30 +357,30 @@ action_group = azure_nextgen.insights.latest.ActionGroup("actionGroup",
     )],
     resource_group_name="Default-NotificationRules",
     sms_receivers=[
-        azure_nextgen.insights.latest.SmsReceiverArgs(
+        azure_nextgen.insights.SmsReceiverArgs(
             country_code="1",
             name="John Doe's mobile",
             phone_number="1234567890",
         ),
-        azure_nextgen.insights.latest.SmsReceiverArgs(
+        azure_nextgen.insights.SmsReceiverArgs(
             country_code="1",
             name="Jane Smith's mobile",
             phone_number="0987654321",
         ),
     ],
     tags={},
-    voice_receivers=[azure_nextgen.insights.latest.VoiceReceiverArgs(
+    voice_receivers=[azure_nextgen.insights.VoiceReceiverArgs(
         country_code="1",
         name="Sample voice",
         phone_number="1234567890",
     )],
     webhook_receivers=[
-        azure_nextgen.insights.latest.WebhookReceiverArgs(
+        azure_nextgen.insights.WebhookReceiverArgs(
             name="Sample webhook 1",
             service_uri="http://www.example.com/webhook1",
             use_common_alert_schema=True,
         ),
-        azure_nextgen.insights.latest.WebhookReceiverArgs(
+        azure_nextgen.insights.WebhookReceiverArgs(
             identifier_uri="http://someidentifier/d7811ba3-7996-4a93-99b6-6b2f3f355f8a",
             name="Sample webhook 2",
             object_id="d3bb868c-fe44-452c-aa26-769a6538c808",
@@ -401,7 +401,7 @@ action_group = azure_nextgen.insights.latest.ActionGroup("actionGroup",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const actionGroup = new azure_nextgen.insights.latest.ActionGroup("actionGroup", {
+const actionGroup = new azure_nextgen.insights.ActionGroup("actionGroup", {
     actionGroupName: "SampleActionGroup",
     armRoleReceivers: [{
         name: "Sample armRole",
@@ -731,7 +731,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#armrolereceivers_csharp" style="color: inherit; text-decoration: inherit;">Arm<wbr>Role<wbr>Receivers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#armrolereceiver">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Inputs.<wbr>Arm<wbr>Role<wbr>Receiver<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#armrolereceiver">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Inputs.<wbr>Arm<wbr>Role<wbr>Receiver<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of ARM role receivers that are part of this action group. Roles are Azure RBAC roles and only built-in roles are supported.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -740,7 +740,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#automationrunbookreceivers_csharp" style="color: inherit; text-decoration: inherit;">Automation<wbr>Runbook<wbr>Receivers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#automationrunbookreceiver">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Inputs.<wbr>Automation<wbr>Runbook<wbr>Receiver<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#automationrunbookreceiver">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Inputs.<wbr>Automation<wbr>Runbook<wbr>Receiver<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of AutomationRunbook receivers that are part of this action group.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -749,7 +749,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#azureapppushreceivers_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>App<wbr>Push<wbr>Receivers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureapppushreceiver">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Inputs.<wbr>Azure<wbr>App<wbr>Push<wbr>Receiver<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#azureapppushreceiver">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Inputs.<wbr>Azure<wbr>App<wbr>Push<wbr>Receiver<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of AzureAppPush receivers that are part of this action group.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -758,7 +758,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#azurefunctionreceivers_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Function<wbr>Receivers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefunctionreceiver">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Inputs.<wbr>Azure<wbr>Function<wbr>Receiver<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#azurefunctionreceiver">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Inputs.<wbr>Azure<wbr>Function<wbr>Receiver<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of azure function receivers that are part of this action group.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -767,7 +767,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#emailreceivers_csharp" style="color: inherit; text-decoration: inherit;">Email<wbr>Receivers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#emailreceiver">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Inputs.<wbr>Email<wbr>Receiver<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#emailreceiver">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Inputs.<wbr>Email<wbr>Receiver<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of email receivers that are part of this action group.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -776,7 +776,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#itsmreceivers_csharp" style="color: inherit; text-decoration: inherit;">Itsm<wbr>Receivers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#itsmreceiver">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Inputs.<wbr>Itsm<wbr>Receiver<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#itsmreceiver">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Inputs.<wbr>Itsm<wbr>Receiver<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of ITSM receivers that are part of this action group.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -785,7 +785,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#logicappreceivers_csharp" style="color: inherit; text-decoration: inherit;">Logic<wbr>App<wbr>Receivers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#logicappreceiver">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Inputs.<wbr>Logic<wbr>App<wbr>Receiver<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#logicappreceiver">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Inputs.<wbr>Logic<wbr>App<wbr>Receiver<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of logic app receivers that are part of this action group.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -794,7 +794,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#smsreceivers_csharp" style="color: inherit; text-decoration: inherit;">Sms<wbr>Receivers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#smsreceiver">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Inputs.<wbr>Sms<wbr>Receiver<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#smsreceiver">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Inputs.<wbr>Sms<wbr>Receiver<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of SMS receivers that are part of this action group.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -812,7 +812,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#voicereceivers_csharp" style="color: inherit; text-decoration: inherit;">Voice<wbr>Receivers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#voicereceiver">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Inputs.<wbr>Voice<wbr>Receiver<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#voicereceiver">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Inputs.<wbr>Voice<wbr>Receiver<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of voice receivers that are part of this action group.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -821,7 +821,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#webhookreceivers_csharp" style="color: inherit; text-decoration: inherit;">Webhook<wbr>Receivers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webhookreceiver">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Inputs.<wbr>Webhook<wbr>Receiver<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#webhookreceiver">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights..<wbr>Inputs.<wbr>Webhook<wbr>Receiver<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of webhook receivers that are part of this action group.{{% /md %}}</dd>
 </dl>
@@ -5047,7 +5047,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:insights/latest:ActionGroup SampleActionGroup /subscriptions/187f412d-1758-44d9-b052-169e2564721d/resourceGroups/Default-NotificationRules/providers/microsoft.insights/actionGroups/SampleActionGroup 
+$ pulumi import azure-nextgen:insights:ActionGroup SampleActionGroup /subscriptions/187f412d-1758-44d9-b052-169e2564721d/resourceGroups/Default-NotificationRules/providers/microsoft.insights/actionGroups/SampleActionGroup 
 ```
 
 

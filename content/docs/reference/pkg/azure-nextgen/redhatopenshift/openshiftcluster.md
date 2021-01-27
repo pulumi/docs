@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.redhatopenshift.OpenShiftCluster
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 OpenShiftCluster represents an Azure Red Hat OpenShift cluster.
-Latest API Version: 2020-04-30.
+API Version: 2020-04-30.
 
 {{% examples %}}
 ## Example Usage
@@ -27,13 +27,13 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var openShiftCluster = new AzureNextGen.RedHatOpenShift.Latest.OpenShiftCluster("openShiftCluster", new AzureNextGen.RedHatOpenShift.Latest.OpenShiftClusterArgs
+        var openShiftCluster = new AzureNextGen.RedHatOpenShift..OpenShiftCluster("openShiftCluster", new AzureNextGen.RedHatOpenShift..OpenShiftClusterArgs
         {
-            ApiserverProfile = new AzureNextGen.RedHatOpenShift.Latest.Inputs.APIServerProfileArgs
+            ApiserverProfile = new AzureNextGen.RedHatOpenShift..Inputs.APIServerProfileArgs
             {
                 Visibility = "Public",
             },
-            ClusterProfile = new AzureNextGen.RedHatOpenShift.Latest.Inputs.ClusterProfileArgs
+            ClusterProfile = new AzureNextGen.RedHatOpenShift..Inputs.ClusterProfileArgs
             {
                 Domain = "cluster.location.aroapp.io",
                 PullSecret = "{\"auths\":{\"registry.connect.redhat.com\":{\"auth\":\"\"},\"registry.redhat.io\":{\"auth\":\"\"}}}",
@@ -42,26 +42,26 @@ class MyStack : Stack
             ConsoleProfile = ,
             IngressProfiles = 
             {
-                new AzureNextGen.RedHatOpenShift.Latest.Inputs.IngressProfileArgs
+                new AzureNextGen.RedHatOpenShift..Inputs.IngressProfileArgs
                 {
                     Name = "default",
                     Visibility = "Public",
                 },
             },
             Location = "location",
-            MasterProfile = new AzureNextGen.RedHatOpenShift.Latest.Inputs.MasterProfileArgs
+            MasterProfile = new AzureNextGen.RedHatOpenShift..Inputs.MasterProfileArgs
             {
                 SubnetId = "/subscriptions/subscriptionId/resourceGroups/vnetResourceGroup/providers/Microsoft.Network/virtualNetworks/vnet/subnets/master",
                 VmSize = "Standard_D8s_v3",
             },
-            NetworkProfile = new AzureNextGen.RedHatOpenShift.Latest.Inputs.NetworkProfileArgs
+            NetworkProfile = new AzureNextGen.RedHatOpenShift..Inputs.NetworkProfileArgs
             {
                 PodCidr = "10.128.0.0/14",
                 ServiceCidr = "172.30.0.0/16",
             },
             ResourceGroupName = "resourceGroup",
             ResourceName = "resourceName",
-            ServicePrincipalProfile = new AzureNextGen.RedHatOpenShift.Latest.Inputs.ServicePrincipalProfileArgs
+            ServicePrincipalProfile = new AzureNextGen.RedHatOpenShift..Inputs.ServicePrincipalProfileArgs
             {
                 ClientId = "clientId",
                 ClientSecret = "clientSecret",
@@ -72,7 +72,7 @@ class MyStack : Stack
             },
             WorkerProfiles = 
             {
-                new AzureNextGen.RedHatOpenShift.Latest.Inputs.WorkerProfileArgs
+                new AzureNextGen.RedHatOpenShift..Inputs.WorkerProfileArgs
                 {
                     Count = 3,
                     DiskSizeGB = 128,
@@ -96,7 +96,7 @@ class MyStack : Stack
 package main
 
 import (
-	redhatopenshift "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/redhatopenshift/latest"
+	redhatopenshift "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/redhatopenshift"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -163,39 +163,39 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-open_shift_cluster = azure_nextgen.redhatopenshift.latest.OpenShiftCluster("openShiftCluster",
-    apiserver_profile=azure_nextgen.redhatopenshift.latest.APIServerProfileArgs(
+open_shift_cluster = azure_nextgen.redhatopenshift.OpenShiftCluster("openShiftCluster",
+    apiserver_profile=azure_nextgen.redhatopenshift.APIServerProfileArgs(
         visibility="Public",
     ),
-    cluster_profile=azure_nextgen.redhatopenshift.latest.ClusterProfileArgs(
+    cluster_profile=azure_nextgen.redhatopenshift.ClusterProfileArgs(
         domain="cluster.location.aroapp.io",
         pull_secret="{\"auths\":{\"registry.connect.redhat.com\":{\"auth\":\"\"},\"registry.redhat.io\":{\"auth\":\"\"}}}",
         resource_group_id="/subscriptions/subscriptionId/resourceGroups/clusterResourceGroup",
     ),
-    console_profile=azure_nextgen.redhatopenshift.latest.ConsoleProfileArgs(),
-    ingress_profiles=[azure_nextgen.redhatopenshift.latest.IngressProfileArgs(
+    console_profile=azure_nextgen.redhatopenshift.ConsoleProfileArgs(),
+    ingress_profiles=[azure_nextgen.redhatopenshift.IngressProfileArgs(
         name="default",
         visibility="Public",
     )],
     location="location",
-    master_profile=azure_nextgen.redhatopenshift.latest.MasterProfileArgs(
+    master_profile=azure_nextgen.redhatopenshift.MasterProfileArgs(
         subnet_id="/subscriptions/subscriptionId/resourceGroups/vnetResourceGroup/providers/Microsoft.Network/virtualNetworks/vnet/subnets/master",
         vm_size="Standard_D8s_v3",
     ),
-    network_profile=azure_nextgen.redhatopenshift.latest.NetworkProfileArgs(
+    network_profile=azure_nextgen.redhatopenshift.NetworkProfileArgs(
         pod_cidr="10.128.0.0/14",
         service_cidr="172.30.0.0/16",
     ),
     resource_group_name="resourceGroup",
     resource_name="resourceName",
-    service_principal_profile=azure_nextgen.redhatopenshift.latest.ServicePrincipalProfileArgs(
+    service_principal_profile=azure_nextgen.redhatopenshift.ServicePrincipalProfileArgs(
         client_id="clientId",
         client_secret="clientSecret",
     ),
     tags={
         "key": "value",
     },
-    worker_profiles=[azure_nextgen.redhatopenshift.latest.WorkerProfileArgs(
+    worker_profiles=[azure_nextgen.redhatopenshift.WorkerProfileArgs(
         count=3,
         disk_size_gb=128,
         name="worker",
@@ -213,7 +213,7 @@ open_shift_cluster = azure_nextgen.redhatopenshift.latest.OpenShiftCluster("open
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const openShiftCluster = new azure_nextgen.redhatopenshift.latest.OpenShiftCluster("openShiftCluster", {
+const openShiftCluster = new azure_nextgen.redhatopenshift.OpenShiftCluster("openShiftCluster", {
     apiserverProfile: {
         visibility: "Public",
     },
@@ -474,7 +474,7 @@ The OpenShiftCluster resource accepts the following [input]({{< relref "/docs/in
 <a href="#apiserverprofile_csharp" style="color: inherit; text-decoration: inherit;">Apiserver<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apiserverprofile">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Red<wbr>Hat<wbr>Open<wbr>Shift.<wbr>Inputs.<wbr>APIServer<wbr>Profile<wbr>Args</a></span>
+        <span class="property-type"><a href="#apiserverprofile">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Red<wbr>Hat<wbr>Open<wbr>Shift..<wbr>Inputs.<wbr>APIServer<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The cluster API server profile.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -483,7 +483,7 @@ The OpenShiftCluster resource accepts the following [input]({{< relref "/docs/in
 <a href="#clusterprofile_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterprofile">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Red<wbr>Hat<wbr>Open<wbr>Shift.<wbr>Inputs.<wbr>Cluster<wbr>Profile<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusterprofile">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Red<wbr>Hat<wbr>Open<wbr>Shift..<wbr>Inputs.<wbr>Cluster<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The cluster profile.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -492,7 +492,7 @@ The OpenShiftCluster resource accepts the following [input]({{< relref "/docs/in
 <a href="#consoleprofile_csharp" style="color: inherit; text-decoration: inherit;">Console<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#consoleprofile">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Red<wbr>Hat<wbr>Open<wbr>Shift.<wbr>Inputs.<wbr>Console<wbr>Profile<wbr>Args</a></span>
+        <span class="property-type"><a href="#consoleprofile">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Red<wbr>Hat<wbr>Open<wbr>Shift..<wbr>Inputs.<wbr>Console<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The console profile.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -501,7 +501,7 @@ The OpenShiftCluster resource accepts the following [input]({{< relref "/docs/in
 <a href="#ingressprofiles_csharp" style="color: inherit; text-decoration: inherit;">Ingress<wbr>Profiles</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ingressprofile">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Red<wbr>Hat<wbr>Open<wbr>Shift.<wbr>Inputs.<wbr>Ingress<wbr>Profile<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#ingressprofile">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Red<wbr>Hat<wbr>Open<wbr>Shift..<wbr>Inputs.<wbr>Ingress<wbr>Profile<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The cluster ingress profiles.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -510,7 +510,7 @@ The OpenShiftCluster resource accepts the following [input]({{< relref "/docs/in
 <a href="#masterprofile_csharp" style="color: inherit; text-decoration: inherit;">Master<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#masterprofile">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Red<wbr>Hat<wbr>Open<wbr>Shift.<wbr>Inputs.<wbr>Master<wbr>Profile<wbr>Args</a></span>
+        <span class="property-type"><a href="#masterprofile">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Red<wbr>Hat<wbr>Open<wbr>Shift..<wbr>Inputs.<wbr>Master<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The cluster master profile.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -519,7 +519,7 @@ The OpenShiftCluster resource accepts the following [input]({{< relref "/docs/in
 <a href="#networkprofile_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkprofile">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Red<wbr>Hat<wbr>Open<wbr>Shift.<wbr>Inputs.<wbr>Network<wbr>Profile<wbr>Args</a></span>
+        <span class="property-type"><a href="#networkprofile">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Red<wbr>Hat<wbr>Open<wbr>Shift..<wbr>Inputs.<wbr>Network<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The cluster network profile.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -537,7 +537,7 @@ The OpenShiftCluster resource accepts the following [input]({{< relref "/docs/in
 <a href="#serviceprincipalprofile_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Principal<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceprincipalprofile">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Red<wbr>Hat<wbr>Open<wbr>Shift.<wbr>Inputs.<wbr>Service<wbr>Principal<wbr>Profile<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceprincipalprofile">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Red<wbr>Hat<wbr>Open<wbr>Shift..<wbr>Inputs.<wbr>Service<wbr>Principal<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The cluster service principal profile.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -555,7 +555,7 @@ The OpenShiftCluster resource accepts the following [input]({{< relref "/docs/in
 <a href="#workerprofiles_csharp" style="color: inherit; text-decoration: inherit;">Worker<wbr>Profiles</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workerprofile">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Red<wbr>Hat<wbr>Open<wbr>Shift.<wbr>Inputs.<wbr>Worker<wbr>Profile<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#workerprofile">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Red<wbr>Hat<wbr>Open<wbr>Shift..<wbr>Inputs.<wbr>Worker<wbr>Profile<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The cluster worker profiles.{{% /md %}}</dd>
 </dl>
@@ -3084,7 +3084,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:redhatopenshift/latest:OpenShiftCluster resourceName /subscriptions/subscriptionId/resourceGroups/resourceGroup/providers/Microsoft.RedHatOpenShift/OpenShiftClusters/resourceName 
+$ pulumi import azure-nextgen:redhatopenshift:OpenShiftCluster resourceName /subscriptions/subscriptionId/resourceGroups/resourceGroup/providers/Microsoft.RedHatOpenShift/OpenShiftClusters/resourceName 
 ```
 
 

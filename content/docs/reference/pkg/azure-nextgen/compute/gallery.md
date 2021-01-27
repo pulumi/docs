@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.compute.Gallery resource with ex
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Specifies information about the Shared Image Gallery that you want to create or update.
-Latest API Version: 2020-09-30.
+API Version: 2020-09-30.
 
 {{% examples %}}
 ## Example Usage
@@ -27,13 +27,13 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var gallery = new AzureNextGen.Compute.Latest.Gallery("gallery", new AzureNextGen.Compute.Latest.GalleryArgs
+        var gallery = new AzureNextGen.Compute..Gallery("gallery", new AzureNextGen.Compute..GalleryArgs
         {
             Description = "This is the gallery description.",
             GalleryName = "myGalleryName",
             Location = "West US",
             ResourceGroupName = "myResourceGroup",
-            SharingProfile = new AzureNextGen.Compute.Latest.Inputs.SharingProfileArgs
+            SharingProfile = new AzureNextGen.Compute..Inputs.SharingProfileArgs
             {
                 Permissions = "Groups",
             },
@@ -52,7 +52,7 @@ class MyStack : Stack
 package main
 
 import (
-	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute/latest"
+	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -84,12 +84,12 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-gallery = azure_nextgen.compute.latest.Gallery("gallery",
+gallery = azure_nextgen.compute.Gallery("gallery",
     description="This is the gallery description.",
     gallery_name="myGalleryName",
     location="West US",
     resource_group_name="myResourceGroup",
-    sharing_profile=azure_nextgen.compute.latest.SharingProfileArgs(
+    sharing_profile=azure_nextgen.compute.SharingProfileArgs(
         permissions="Groups",
     ))
 
@@ -103,7 +103,7 @@ gallery = azure_nextgen.compute.latest.Gallery("gallery",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const gallery = new azure_nextgen.compute.latest.Gallery("gallery", {
+const gallery = new azure_nextgen.compute.Gallery("gallery", {
     description: "This is the gallery description.",
     galleryName: "myGalleryName",
     location: "West US",
@@ -127,7 +127,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var gallery = new AzureNextGen.Compute.Latest.Gallery("gallery", new AzureNextGen.Compute.Latest.GalleryArgs
+        var gallery = new AzureNextGen.Compute..Gallery("gallery", new AzureNextGen.Compute..GalleryArgs
         {
             Description = "This is the gallery description.",
             GalleryName = "myGalleryName",
@@ -148,7 +148,7 @@ class MyStack : Stack
 package main
 
 import (
-	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute/latest"
+	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -177,7 +177,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-gallery = azure_nextgen.compute.latest.Gallery("gallery",
+gallery = azure_nextgen.compute.Gallery("gallery",
     description="This is the gallery description.",
     gallery_name="myGalleryName",
     location="West US",
@@ -193,7 +193,7 @@ gallery = azure_nextgen.compute.latest.Gallery("gallery",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const gallery = new azure_nextgen.compute.latest.Gallery("gallery", {
+const gallery = new azure_nextgen.compute.Gallery("gallery", {
     description: "This is the gallery description.",
     galleryName: "myGalleryName",
     location: "West US",
@@ -429,7 +429,7 @@ The Gallery resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#sharingprofile_csharp" style="color: inherit; text-decoration: inherit;">Sharing<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sharingprofile">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Sharing<wbr>Profile<wbr>Args</a></span>
+        <span class="property-type"><a href="#sharingprofile">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Inputs.<wbr>Sharing<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Profile for gallery sharing to subscription or tenant{{% /md %}}</dd>
     <dt class="property-optional"
@@ -676,7 +676,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#identifier_csharp" style="color: inherit; text-decoration: inherit;">Identifier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#galleryidentifierresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Outputs.<wbr>Gallery<wbr>Identifier<wbr>Response</a></span>
+        <span class="property-type"><a href="#galleryidentifierresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Outputs.<wbr>Gallery<wbr>Identifier<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes the gallery unique name.{{% /md %}}</dd>
 </dl>
@@ -956,7 +956,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#permissions_csharp" style="color: inherit; text-decoration: inherit;">Permissions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#gallerysharingpermissiontypes">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Gallery<wbr>Sharing<wbr>Permission<wbr>Types</a></span>
+        <span class="property-type">string | <a href="#gallerysharingpermissiontypes">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Gallery<wbr>Sharing<wbr>Permission<wbr>Types</a></span>
     </dt>
     <dd>{{% md %}}This property allows you to specify the permission of sharing gallery. <br><br> Possible values are: <br><br> **Private** <br><br> **Groups**{{% /md %}}</dd>
 </dl>
@@ -1116,7 +1116,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#groups_csharp" style="color: inherit; text-decoration: inherit;">Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sharingprofilegroupresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Sharing<wbr>Profile<wbr>Group<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#sharingprofilegroupresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute..<wbr>Inputs.<wbr>Sharing<wbr>Profile<wbr>Group<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of sharing profile groups.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1208,7 +1208,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:compute/latest:Gallery myGalleryName /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/galleries/{galleryName} 
+$ pulumi import azure-nextgen:compute:Gallery myGalleryName /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/galleries/{galleryName} 
 ```
 
 

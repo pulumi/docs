@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.storage.StorageAccount resource 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The storage account.
-Latest API Version: 2019-06-01.
+API Version: 2019-06-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,22 +27,22 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var storageAccount = new AzureNextGen.Storage.Latest.StorageAccount("storageAccount", new AzureNextGen.Storage.Latest.StorageAccountArgs
+        var storageAccount = new AzureNextGen.Storage..StorageAccount("storageAccount", new AzureNextGen.Storage..StorageAccountArgs
         {
             AccountName = "sto4445",
             AllowBlobPublicAccess = false,
-            Encryption = new AzureNextGen.Storage.Latest.Inputs.EncryptionArgs
+            Encryption = new AzureNextGen.Storage..Inputs.EncryptionArgs
             {
                 KeySource = "Microsoft.Storage",
                 RequireInfrastructureEncryption = false,
-                Services = new AzureNextGen.Storage.Latest.Inputs.EncryptionServicesArgs
+                Services = new AzureNextGen.Storage..Inputs.EncryptionServicesArgs
                 {
-                    Blob = new AzureNextGen.Storage.Latest.Inputs.EncryptionServiceArgs
+                    Blob = new AzureNextGen.Storage..Inputs.EncryptionServiceArgs
                     {
                         Enabled = true,
                         KeyType = "Account",
                     },
-                    File = new AzureNextGen.Storage.Latest.Inputs.EncryptionServiceArgs
+                    File = new AzureNextGen.Storage..Inputs.EncryptionServiceArgs
                     {
                         Enabled = true,
                         KeyType = "Account",
@@ -54,13 +54,13 @@ class MyStack : Stack
             Location = "eastus",
             MinimumTlsVersion = "TLS1_2",
             ResourceGroupName = "res9101",
-            RoutingPreference = new AzureNextGen.Storage.Latest.Inputs.RoutingPreferenceArgs
+            RoutingPreference = new AzureNextGen.Storage..Inputs.RoutingPreferenceArgs
             {
                 PublishInternetEndpoints = true,
                 PublishMicrosoftEndpoints = true,
                 RoutingChoice = "MicrosoftRouting",
             },
-            Sku = new AzureNextGen.Storage.Latest.Inputs.SkuArgs
+            Sku = new AzureNextGen.Storage..Inputs.SkuArgs
             {
                 Name = "Standard_GRS",
             },
@@ -84,7 +84,7 @@ class MyStack : Stack
 package main
 
 import (
-	storage "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/storage/latest"
+	storage "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/storage"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -142,18 +142,18 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-storage_account = azure_nextgen.storage.latest.StorageAccount("storageAccount",
+storage_account = azure_nextgen.storage.StorageAccount("storageAccount",
     account_name="sto4445",
     allow_blob_public_access=False,
-    encryption=azure_nextgen.storage.latest.EncryptionArgs(
+    encryption=azure_nextgen.storage.EncryptionArgs(
         key_source="Microsoft.Storage",
         require_infrastructure_encryption=False,
-        services=azure_nextgen.storage.latest.EncryptionServicesArgs(
-            blob=azure_nextgen.storage.latest.EncryptionServiceArgs(
+        services=azure_nextgen.storage.EncryptionServicesArgs(
+            blob=azure_nextgen.storage.EncryptionServiceArgs(
                 enabled=True,
                 key_type="Account",
             ),
-            file=azure_nextgen.storage.latest.EncryptionServiceArgs(
+            file=azure_nextgen.storage.EncryptionServiceArgs(
                 enabled=True,
                 key_type="Account",
             ),
@@ -164,12 +164,12 @@ storage_account = azure_nextgen.storage.latest.StorageAccount("storageAccount",
     location="eastus",
     minimum_tls_version="TLS1_2",
     resource_group_name="res9101",
-    routing_preference=azure_nextgen.storage.latest.RoutingPreferenceArgs(
+    routing_preference=azure_nextgen.storage.RoutingPreferenceArgs(
         publish_internet_endpoints=True,
         publish_microsoft_endpoints=True,
         routing_choice="MicrosoftRouting",
     ),
-    sku=azure_nextgen.storage.latest.SkuArgs(
+    sku=azure_nextgen.storage.SkuArgs(
         name="Standard_GRS",
     ),
     tags={
@@ -187,7 +187,7 @@ storage_account = azure_nextgen.storage.latest.StorageAccount("storageAccount",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const storageAccount = new azure_nextgen.storage.latest.StorageAccount("storageAccount", {
+const storageAccount = new azure_nextgen.storage.StorageAccount("storageAccount", {
     accountName: "sto4445",
     allowBlobPublicAccess: false,
     encryption: {
@@ -425,7 +425,7 @@ The StorageAccount resource accepts the following [input]({{< relref "/docs/intr
 <a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#kind">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Kind</a></span>
+        <span class="property-type">string | <a href="#kind">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage..<wbr>Kind</a></span>
     </dt>
     <dd>{{% md %}}Required. Indicates the type of storage account.{{% /md %}}</dd>
     <dt class="property-required"
@@ -452,7 +452,7 @@ The StorageAccount resource accepts the following [input]({{< relref "/docs/intr
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sku">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Inputs.<wbr>Sku<wbr>Args</a></span>
+        <span class="property-type"><a href="#sku">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage..<wbr>Inputs.<wbr>Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. Gets or sets the SKU name.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -461,7 +461,7 @@ The StorageAccount resource accepts the following [input]({{< relref "/docs/intr
 <a href="#accesstier_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accesstier">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Access<wbr>Tier</a></span>
+        <span class="property-type"><a href="#accesstier">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage..<wbr>Access<wbr>Tier</a></span>
     </dt>
     <dd>{{% md %}}Required for storage accounts where kind = BlobStorage. The access tier used for billing.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -479,7 +479,7 @@ The StorageAccount resource accepts the following [input]({{< relref "/docs/intr
 <a href="#azurefilesidentitybasedauthentication_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Files<wbr>Identity<wbr>Based<wbr>Authentication</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefilesidentitybasedauthentication">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Inputs.<wbr>Azure<wbr>Files<wbr>Identity<wbr>Based<wbr>Authentication<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurefilesidentitybasedauthentication">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage..<wbr>Inputs.<wbr>Azure<wbr>Files<wbr>Identity<wbr>Based<wbr>Authentication<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Provides the identity based authentication settings for Azure Files.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -488,7 +488,7 @@ The StorageAccount resource accepts the following [input]({{< relref "/docs/intr
 <a href="#customdomain_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Domain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customdomain">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Inputs.<wbr>Custom<wbr>Domain<wbr>Args</a></span>
+        <span class="property-type"><a href="#customdomain">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage..<wbr>Inputs.<wbr>Custom<wbr>Domain<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}User domain assigned to the storage account. Name is the CNAME source. Only one custom domain is supported per storage account at this time. To clear the existing custom domain, use an empty string for the custom domain name property.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -506,7 +506,7 @@ The StorageAccount resource accepts the following [input]({{< relref "/docs/intr
 <a href="#encryption_csharp" style="color: inherit; text-decoration: inherit;">Encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryption">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Inputs.<wbr>Encryption<wbr>Args</a></span>
+        <span class="property-type"><a href="#encryption">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage..<wbr>Inputs.<wbr>Encryption<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Not applicable. Azure Storage encryption is enabled for all storage accounts and cannot be disabled.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -515,7 +515,7 @@ The StorageAccount resource accepts the following [input]({{< relref "/docs/intr
 <a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identity">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Inputs.<wbr>Identity<wbr>Args</a></span>
+        <span class="property-type"><a href="#identity">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage..<wbr>Inputs.<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The identity of the resource.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -533,7 +533,7 @@ The StorageAccount resource accepts the following [input]({{< relref "/docs/intr
 <a href="#largefilesharesstate_csharp" style="color: inherit; text-decoration: inherit;">Large<wbr>File<wbr>Shares<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#largefilesharesstate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Large<wbr>File<wbr>Shares<wbr>State</a></span>
+        <span class="property-type">string | <a href="#largefilesharesstate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage..<wbr>Large<wbr>File<wbr>Shares<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}Allow large file shares if sets to Enabled. It cannot be disabled once it is enabled.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -542,7 +542,7 @@ The StorageAccount resource accepts the following [input]({{< relref "/docs/intr
 <a href="#minimumtlsversion_csharp" style="color: inherit; text-decoration: inherit;">Minimum<wbr>Tls<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#minimumtlsversion">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Minimum<wbr>Tls<wbr>Version</a></span>
+        <span class="property-type">string | <a href="#minimumtlsversion">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage..<wbr>Minimum<wbr>Tls<wbr>Version</a></span>
     </dt>
     <dd>{{% md %}}Set the minimum TLS version to be permitted on requests to storage. The default interpretation is TLS 1.0 for this property.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -551,7 +551,7 @@ The StorageAccount resource accepts the following [input]({{< relref "/docs/intr
 <a href="#networkruleset_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Rule<wbr>Set</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkruleset">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Inputs.<wbr>Network<wbr>Rule<wbr>Set<wbr>Args</a></span>
+        <span class="property-type"><a href="#networkruleset">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage..<wbr>Inputs.<wbr>Network<wbr>Rule<wbr>Set<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Network rule set{{% /md %}}</dd>
     <dt class="property-optional"
@@ -560,7 +560,7 @@ The StorageAccount resource accepts the following [input]({{< relref "/docs/intr
 <a href="#routingpreference_csharp" style="color: inherit; text-decoration: inherit;">Routing<wbr>Preference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routingpreference">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Inputs.<wbr>Routing<wbr>Preference<wbr>Args</a></span>
+        <span class="property-type"><a href="#routingpreference">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage..<wbr>Inputs.<wbr>Routing<wbr>Preference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Maintains information about the network routing choice opted by the user for data transfer{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1095,7 +1095,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#blobrestorestatus_csharp" style="color: inherit; text-decoration: inherit;">Blob<wbr>Restore<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#blobrestorestatusresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Outputs.<wbr>Blob<wbr>Restore<wbr>Status<wbr>Response</a></span>
+        <span class="property-type"><a href="#blobrestorestatusresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage..<wbr>Outputs.<wbr>Blob<wbr>Restore<wbr>Status<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Blob restore status{{% /md %}}</dd>
     <dt class="property-"
@@ -1122,7 +1122,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#georeplicationstats_csharp" style="color: inherit; text-decoration: inherit;">Geo<wbr>Replication<wbr>Stats</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#georeplicationstatsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Outputs.<wbr>Geo<wbr>Replication<wbr>Stats<wbr>Response</a></span>
+        <span class="property-type"><a href="#georeplicationstatsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage..<wbr>Outputs.<wbr>Geo<wbr>Replication<wbr>Stats<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Geo Replication Stats{{% /md %}}</dd>
     <dt class="property-"
@@ -1158,7 +1158,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#primaryendpoints_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Outputs.<wbr>Endpoints<wbr>Response</a></span>
+        <span class="property-type"><a href="#endpointsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage..<wbr>Outputs.<wbr>Endpoints<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets the URLs that are used to perform a retrieval of a public blob, queue, or table object. Note that Standard_ZRS and Premium_LRS accounts only return the blob endpoint.{{% /md %}}</dd>
     <dt class="property-"
@@ -1176,7 +1176,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privateendpointconnections_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint<wbr>Connections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointconnectionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Outputs.<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#privateendpointconnectionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage..<wbr>Outputs.<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of private endpoint connection associated with the specified storage account{{% /md %}}</dd>
     <dt class="property-"
@@ -1194,7 +1194,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secondaryendpoints_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Outputs.<wbr>Endpoints<wbr>Response</a></span>
+        <span class="property-type"><a href="#endpointsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage..<wbr>Outputs.<wbr>Endpoints<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets the URLs that are used to perform a retrieval of a public blob, queue, or table object from the secondary location of the storage account. Only available if the SKU name is Standard_RAGRS.{{% /md %}}</dd>
     <dt class="property-"
@@ -2259,7 +2259,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#directoryserviceoptions_csharp" style="color: inherit; text-decoration: inherit;">Directory<wbr>Service<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#directoryserviceoptions">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Directory<wbr>Service<wbr>Options</a></span>
+        <span class="property-type">string | <a href="#directoryserviceoptions">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage..<wbr>Directory<wbr>Service<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}Indicates the directory service used.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2268,7 +2268,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#activedirectoryproperties_csharp" style="color: inherit; text-decoration: inherit;">Active<wbr>Directory<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activedirectoryproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Inputs.<wbr>Active<wbr>Directory<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#activedirectoryproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage..<wbr>Inputs.<wbr>Active<wbr>Directory<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required if choose AD.{{% /md %}}</dd>
 </dl>
@@ -2366,7 +2366,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#activedirectoryproperties_csharp" style="color: inherit; text-decoration: inherit;">Active<wbr>Directory<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activedirectorypropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Inputs.<wbr>Active<wbr>Directory<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#activedirectorypropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage..<wbr>Inputs.<wbr>Active<wbr>Directory<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required if choose AD.{{% /md %}}</dd>
 </dl>
@@ -2455,7 +2455,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#blobranges_csharp" style="color: inherit; text-decoration: inherit;">Blob<wbr>Ranges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#blobrestorerangeresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Inputs.<wbr>Blob<wbr>Restore<wbr>Range<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#blobrestorerangeresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage..<wbr>Inputs.<wbr>Blob<wbr>Restore<wbr>Range<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Blob ranges to restore.{{% /md %}}</dd>
     <dt class="property-required"
@@ -2660,7 +2660,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#blobrestoreparametersresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Inputs.<wbr>Blob<wbr>Restore<wbr>Parameters<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#blobrestoreparametersresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage..<wbr>Inputs.<wbr>Blob<wbr>Restore<wbr>Parameters<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Blob restore request parameters.{{% /md %}}</dd>
     <dt class="property-required"
@@ -3155,7 +3155,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keysource_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#keysource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Key<wbr>Source</a></span>
+        <span class="property-type">string | <a href="#keysource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage..<wbr>Key<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}The encryption keySource (provider). Possible values (case-insensitive):  Microsoft.Storage, Microsoft.Keyvault{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3164,7 +3164,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keyvaultproperties_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#keyvaultproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage..<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties provided by key vault.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3182,7 +3182,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#services_csharp" style="color: inherit; text-decoration: inherit;">Services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionservices">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Inputs.<wbr>Encryption<wbr>Services<wbr>Args</a></span>
+        <span class="property-type"><a href="#encryptionservices">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage..<wbr>Inputs.<wbr>Encryption<wbr>Services<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List of services which support encryption.{{% /md %}}</dd>
 </dl>
@@ -3334,7 +3334,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keyvaultproperties_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#keyvaultpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage..<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties provided by key vault.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3352,7 +3352,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#services_csharp" style="color: inherit; text-decoration: inherit;">Services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionservicesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Inputs.<wbr>Encryption<wbr>Services<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#encryptionservicesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage..<wbr>Inputs.<wbr>Encryption<wbr>Services<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List of services which support encryption.{{% /md %}}</dd>
 </dl>
@@ -3504,7 +3504,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keytype_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#keytype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Key<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#keytype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage..<wbr>Key<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Encryption key type to be used for the encryption service. 'Account' key type implies that an account-scoped encryption key will be used. 'Service' key type implies that a default service key is used.{{% /md %}}</dd>
 </dl>
@@ -3727,7 +3727,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#blob_csharp" style="color: inherit; text-decoration: inherit;">Blob</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionservice">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Inputs.<wbr>Encryption<wbr>Service<wbr>Args</a></span>
+        <span class="property-type"><a href="#encryptionservice">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage..<wbr>Inputs.<wbr>Encryption<wbr>Service<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The encryption function of the blob storage service.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3736,7 +3736,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#file_csharp" style="color: inherit; text-decoration: inherit;">File</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionservice">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Inputs.<wbr>Encryption<wbr>Service<wbr>Args</a></span>
+        <span class="property-type"><a href="#encryptionservice">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage..<wbr>Inputs.<wbr>Encryption<wbr>Service<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The encryption function of the file storage service.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3745,7 +3745,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#queue_csharp" style="color: inherit; text-decoration: inherit;">Queue</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionservice">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Inputs.<wbr>Encryption<wbr>Service<wbr>Args</a></span>
+        <span class="property-type"><a href="#encryptionservice">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage..<wbr>Inputs.<wbr>Encryption<wbr>Service<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The encryption function of the queue storage service.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3754,7 +3754,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#table_csharp" style="color: inherit; text-decoration: inherit;">Table</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionservice">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Inputs.<wbr>Encryption<wbr>Service<wbr>Args</a></span>
+        <span class="property-type"><a href="#encryptionservice">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage..<wbr>Inputs.<wbr>Encryption<wbr>Service<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The encryption function of the table storage service.{{% /md %}}</dd>
 </dl>
@@ -3897,7 +3897,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#blob_csharp" style="color: inherit; text-decoration: inherit;">Blob</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionserviceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Inputs.<wbr>Encryption<wbr>Service<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#encryptionserviceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage..<wbr>Inputs.<wbr>Encryption<wbr>Service<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The encryption function of the blob storage service.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3906,7 +3906,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#file_csharp" style="color: inherit; text-decoration: inherit;">File</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionserviceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Inputs.<wbr>Encryption<wbr>Service<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#encryptionserviceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage..<wbr>Inputs.<wbr>Encryption<wbr>Service<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The encryption function of the file storage service.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3915,7 +3915,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#queue_csharp" style="color: inherit; text-decoration: inherit;">Queue</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionserviceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Inputs.<wbr>Encryption<wbr>Service<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#encryptionserviceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage..<wbr>Inputs.<wbr>Encryption<wbr>Service<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The encryption function of the queue storage service.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3924,7 +3924,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#table_csharp" style="color: inherit; text-decoration: inherit;">Table</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionserviceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Inputs.<wbr>Encryption<wbr>Service<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#encryptionserviceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage..<wbr>Inputs.<wbr>Encryption<wbr>Service<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The encryption function of the table storage service.{{% /md %}}</dd>
 </dl>
@@ -4121,7 +4121,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#internetendpoints_csharp" style="color: inherit; text-decoration: inherit;">Internet<wbr>Endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageaccountinternetendpointsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Inputs.<wbr>Storage<wbr>Account<wbr>Internet<wbr>Endpoints<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#storageaccountinternetendpointsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage..<wbr>Inputs.<wbr>Storage<wbr>Account<wbr>Internet<wbr>Endpoints<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets the internet routing storage endpoints{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4130,7 +4130,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#microsoftendpoints_csharp" style="color: inherit; text-decoration: inherit;">Microsoft<wbr>Endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageaccountmicrosoftendpointsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Inputs.<wbr>Storage<wbr>Account<wbr>Microsoft<wbr>Endpoints<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#storageaccountmicrosoftendpointsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage..<wbr>Inputs.<wbr>Storage<wbr>Account<wbr>Microsoft<wbr>Endpoints<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets the microsoft routing storage endpoints.{{% /md %}}</dd>
 </dl>
@@ -4524,7 +4524,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#action_csharp" style="color: inherit; text-decoration: inherit;">Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#action">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Action</a></span>
+        <span class="property-type"><a href="#action">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage..<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}The action of IP ACL rule.{{% /md %}}</dd>
 </dl>
@@ -4711,7 +4711,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identitytype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Identity<wbr>Type</a></span>
+        <span class="property-type"><a href="#identitytype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage..<wbr>Identity<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The identity type.{{% /md %}}</dd>
 </dl>
@@ -5499,7 +5499,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#defaultaction_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#defaultaction">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Default<wbr>Action</a></span>
+        <span class="property-type"><a href="#defaultaction">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage..<wbr>Default<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}Specifies the default action of allow or deny when no other rules match.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -5508,7 +5508,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bypass_csharp" style="color: inherit; text-decoration: inherit;">Bypass</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#bypass">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Bypass</a></span>
+        <span class="property-type">string | <a href="#bypass">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage..<wbr>Bypass</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether traffic is bypassed for Logging/Metrics/AzureServices. Possible values are any combination of Logging|Metrics|AzureServices (For example, "Logging, Metrics"), or None to bypass none of those traffics.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -5517,7 +5517,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#iprules_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iprule">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Inputs.<wbr>IPRule<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#iprule">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage..<wbr>Inputs.<wbr>IPRule<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Sets the IP ACL rules{{% /md %}}</dd>
     <dt class="property-optional"
@@ -5526,7 +5526,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#virtualnetworkrules_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkrule">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Inputs.<wbr>Virtual<wbr>Network<wbr>Rule<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#virtualnetworkrule">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage..<wbr>Inputs.<wbr>Virtual<wbr>Network<wbr>Rule<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Sets the virtual network rules{{% /md %}}</dd>
 </dl>
@@ -5687,7 +5687,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#iprules_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Inputs.<wbr>IPRule<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#ipruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage..<wbr>Inputs.<wbr>IPRule<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Sets the IP ACL rules{{% /md %}}</dd>
     <dt class="property-optional"
@@ -5696,7 +5696,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#virtualnetworkrules_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Inputs.<wbr>Virtual<wbr>Network<wbr>Rule<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#virtualnetworkruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage..<wbr>Inputs.<wbr>Virtual<wbr>Network<wbr>Rule<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Sets the virtual network rules{{% /md %}}</dd>
 </dl>
@@ -5857,7 +5857,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privatelinkserviceconnectionstate_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Inputs.<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage..<wbr>Inputs.<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A collection of information about the state of the connection between service consumer and provider.{{% /md %}}</dd>
     <dt class="property-required"
@@ -5884,7 +5884,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privateendpoint_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#privateendpointresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage..<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The resource of private end point.{{% /md %}}</dd>
 </dl>
@@ -6333,7 +6333,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#routingchoice_csharp" style="color: inherit; text-decoration: inherit;">Routing<wbr>Choice</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#routingchoice">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Routing<wbr>Choice</a></span>
+        <span class="property-type">string | <a href="#routingchoice">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage..<wbr>Routing<wbr>Choice</a></span>
     </dt>
     <dd>{{% md %}}Routing Choice defines the kind of network routing opted by the user.{{% /md %}}</dd>
 </dl>
@@ -6583,7 +6583,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#skuname">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Sku<wbr>Name</a></span>
+        <span class="property-type">string | <a href="#skuname">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage..<wbr>Sku<wbr>Name</a></span>
     </dt>
     <dd>{{% md %}}The SKU name. Required for account creation; optional for update. Note that in older versions, SKU name was called accountType.{{% /md %}}</dd>
 </dl>
@@ -7312,7 +7312,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#action_csharp" style="color: inherit; text-decoration: inherit;">Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#action">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Action</a></span>
+        <span class="property-type"><a href="#action">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage..<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}The action of virtual network rule.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -7321,7 +7321,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#state">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>State</a></span>
+        <span class="property-type"><a href="#state">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage..<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}Gets the state of virtual network rule.{{% /md %}}</dd>
 </dl>
@@ -7565,7 +7565,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:storage/latest:StorageAccount sto4445 /subscriptions/{subscription-id}/resourceGroups/res9101/providers/Microsoft.Storage/storageAccounts/sto4445 
+$ pulumi import azure-nextgen:storage:StorageAccount sto4445 /subscriptions/{subscription-id}/resourceGroups/res9101/providers/Microsoft.Storage/storageAccounts/sto4445 
 ```
 
 

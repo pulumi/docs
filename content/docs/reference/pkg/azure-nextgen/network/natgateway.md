@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.network.NatGateway resource with
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Nat Gateway resource.
-Latest API Version: 2020-08-01.
+API Version: 2020-08-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,26 +27,26 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var natGateway = new AzureNextGen.Network.Latest.NatGateway("natGateway", new AzureNextGen.Network.Latest.NatGatewayArgs
+        var natGateway = new AzureNextGen.Network..NatGateway("natGateway", new AzureNextGen.Network..NatGatewayArgs
         {
             Location = "westus",
             NatGatewayName = "test-natgateway",
             PublicIpAddresses = 
             {
-                new AzureNextGen.Network.Latest.Inputs.SubResourceArgs
+                new AzureNextGen.Network..Inputs.SubResourceArgs
                 {
                     Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/publicIPAddresses/PublicIpAddress1",
                 },
             },
             PublicIpPrefixes = 
             {
-                new AzureNextGen.Network.Latest.Inputs.SubResourceArgs
+                new AzureNextGen.Network..Inputs.SubResourceArgs
                 {
                     Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/publicIPPrefixes/PublicIpPrefix1",
                 },
             },
             ResourceGroupName = "rg1",
-            Sku = new AzureNextGen.Network.Latest.Inputs.NatGatewaySkuArgs
+            Sku = new AzureNextGen.Network..Inputs.NatGatewaySkuArgs
             {
                 Name = "Standard",
             },
@@ -65,7 +65,7 @@ class MyStack : Stack
 package main
 
 import (
-	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network/latest"
+	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -106,17 +106,17 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-nat_gateway = azure_nextgen.network.latest.NatGateway("natGateway",
+nat_gateway = azure_nextgen.network.NatGateway("natGateway",
     location="westus",
     nat_gateway_name="test-natgateway",
-    public_ip_addresses=[azure_nextgen.network.latest.SubResourceArgs(
+    public_ip_addresses=[azure_nextgen.network.SubResourceArgs(
         id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/publicIPAddresses/PublicIpAddress1",
     )],
-    public_ip_prefixes=[azure_nextgen.network.latest.SubResourceArgs(
+    public_ip_prefixes=[azure_nextgen.network.SubResourceArgs(
         id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/publicIPPrefixes/PublicIpPrefix1",
     )],
     resource_group_name="rg1",
-    sku=azure_nextgen.network.latest.NatGatewaySkuArgs(
+    sku=azure_nextgen.network.NatGatewaySkuArgs(
         name="Standard",
     ))
 
@@ -130,7 +130,7 @@ nat_gateway = azure_nextgen.network.latest.NatGateway("natGateway",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const natGateway = new azure_nextgen.network.latest.NatGateway("natGateway", {
+const natGateway = new azure_nextgen.network.NatGateway("natGateway", {
     location: "westus",
     natGatewayName: "test-natgateway",
     publicIpAddresses: [{
@@ -383,7 +383,7 @@ The NatGateway resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#publicipaddresses_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Ip<wbr>Addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#subresource">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}An array of public ip addresses associated with the nat gateway resource.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -392,7 +392,7 @@ The NatGateway resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#publicipprefixes_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Ip<wbr>Prefixes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#subresource">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}An array of public ip prefixes associated with the nat gateway resource.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -401,7 +401,7 @@ The NatGateway resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#natgatewaysku">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Nat<wbr>Gateway<wbr>Sku<wbr>Args</a></span>
+        <span class="property-type"><a href="#natgatewaysku">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Inputs.<wbr>Nat<wbr>Gateway<wbr>Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The nat gateway SKU.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -774,7 +774,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subnets_csharp" style="color: inherit; text-decoration: inherit;">Subnets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Outputs.<wbr>Sub<wbr>Resource<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#subresourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Outputs.<wbr>Sub<wbr>Resource<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}An array of references to the subnets using this nat gateway resource.{{% /md %}}</dd>
     <dt class="property-"
@@ -1017,7 +1017,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#natgatewayskuname">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Nat<wbr>Gateway<wbr>Sku<wbr>Name</a></span>
+        <span class="property-type">string | <a href="#natgatewayskuname">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network..<wbr>Nat<wbr>Gateway<wbr>Sku<wbr>Name</a></span>
     </dt>
     <dd>{{% md %}}Name of Nat Gateway SKU.{{% /md %}}</dd>
 </dl>
@@ -1289,7 +1289,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:network/latest:NatGateway test-natGateway /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/natGateways/test-natGateway 
+$ pulumi import azure-nextgen:network:NatGateway test-natGateway /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/natGateways/test-natGateway 
 ```
 
 

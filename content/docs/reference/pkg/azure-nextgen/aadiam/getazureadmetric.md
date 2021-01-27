@@ -186,7 +186,7 @@ The following output properties are available:
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureadmetricspropertiesformatresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Aad<wbr>Iam.<wbr>Outputs.<wbr>Azure<wbr>ADMetrics<wbr>Properties<wbr>Format<wbr>Response</a></span>
+        <span class="property-type"><a href="#azureadmetricspropertiesformatresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Aad<wbr>Iam..<wbr>Outputs.<wbr>Azure<wbr>ADMetrics<wbr>Properties<wbr>Format<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-"

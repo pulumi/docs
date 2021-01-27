@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.timeseriesinsights.EventSource r
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 An environment receives data from one or more event sources. Each event source has associated connection info that allows the Time Series Insights ingress pipeline to connect to and pull data from the event source
-Latest API Version: 2020-05-15.
+API Version: 2020-05-15.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var eventSource = new AzureNextGen.TimeSeriesInsights.Latest.EventSource("eventSource", new AzureNextGen.TimeSeriesInsights.Latest.EventSourceArgs
+        var eventSource = new AzureNextGen.TimeSeriesInsights..EventSource("eventSource", new AzureNextGen.TimeSeriesInsights..EventSourceArgs
         {
             EnvironmentName = "env1",
             EventSourceName = "es1",
@@ -49,7 +49,7 @@ class MyStack : Stack
 package main
 
 import (
-	timeseriesinsights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/timeseriesinsights/latest"
+	timeseriesinsights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/timeseriesinsights"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -79,7 +79,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-event_source = azure_nextgen.timeseriesinsights.latest.EventSource("eventSource",
+event_source = azure_nextgen.timeseriesinsights.EventSource("eventSource",
     environment_name="env1",
     event_source_name="es1",
     kind="Microsoft.EventHub",
@@ -96,7 +96,7 @@ event_source = azure_nextgen.timeseriesinsights.latest.EventSource("eventSource"
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const eventSource = new azure_nextgen.timeseriesinsights.latest.EventSource("eventSource", {
+const eventSource = new azure_nextgen.timeseriesinsights.EventSource("eventSource", {
     environmentName: "env1",
     eventSourceName: "es1",
     kind: "Microsoft.EventHub",
@@ -315,7 +315,7 @@ The EventSource resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#eventsourcekind">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Time<wbr>Series<wbr>Insights.<wbr>Event<wbr>Source<wbr>Kind</a></span>
+        <span class="property-type">string | <a href="#eventsourcekind">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Time<wbr>Series<wbr>Insights..<wbr>Event<wbr>Source<wbr>Kind</a></span>
     </dt>
     <dd>{{% md %}}The kind of the event source.{{% /md %}}</dd>
     <dt class="property-required"
@@ -342,7 +342,7 @@ The EventSource resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#localtimestamp_csharp" style="color: inherit; text-decoration: inherit;">Local<wbr>Timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#localtimestamp">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Time<wbr>Series<wbr>Insights.<wbr>Inputs.<wbr>Local<wbr>Timestamp<wbr>Args</a></span>
+        <span class="property-type"><a href="#localtimestamp">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Time<wbr>Series<wbr>Insights..<wbr>Inputs.<wbr>Local<wbr>Timestamp<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An object that represents the local timestamp property. It contains the format of local timestamp that needs to be used and the corresponding timezone offset information. If a value isn't specified for localTimestamp, or if null, then the local timestamp will not be ingressed with the events.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -762,7 +762,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#format_csharp" style="color: inherit; text-decoration: inherit;">Format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#localtimestampformat">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Time<wbr>Series<wbr>Insights.<wbr>Local<wbr>Timestamp<wbr>Format</a></span>
+        <span class="property-type">string | <a href="#localtimestampformat">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Time<wbr>Series<wbr>Insights..<wbr>Local<wbr>Timestamp<wbr>Format</a></span>
     </dt>
     <dd>{{% md %}}An enum that represents the format of the local timestamp property that needs to be set.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -771,7 +771,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timezoneoffset_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Zone<wbr>Offset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#localtimestamptimezoneoffset">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Time<wbr>Series<wbr>Insights.<wbr>Inputs.<wbr>Local<wbr>Timestamp<wbr>Time<wbr>Zone<wbr>Offset<wbr>Args</a></span>
+        <span class="property-type"><a href="#localtimestamptimezoneoffset">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Time<wbr>Series<wbr>Insights..<wbr>Inputs.<wbr>Local<wbr>Timestamp<wbr>Time<wbr>Zone<wbr>Offset<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An object that represents the offset information for the local timestamp format specified. Should not be specified for LocalTimestampFormat - Embedded.{{% /md %}}</dd>
 </dl>
@@ -946,7 +946,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:timeseriesinsights/latest:EventSource es1 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.TimeSeriesInsights/Environments/env1/eventSources/es1 
+$ pulumi import azure-nextgen:timeseriesinsights:EventSource es1 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.TimeSeriesInsights/Environments/env1/eventSources/es1 
 ```
 
 

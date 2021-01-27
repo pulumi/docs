@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.customerinsights.Kpi resource wi
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The KPI resource format.
-Latest API Version: 2017-04-26.
+API Version: 2017-04-26.
 
 {{% examples %}}
 ## Example Usage
@@ -27,11 +27,11 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var kpi = new AzureNextGen.CustomerInsights.Latest.Kpi("kpi", new AzureNextGen.CustomerInsights.Latest.KpiArgs
+        var kpi = new AzureNextGen.CustomerInsights..Kpi("kpi", new AzureNextGen.CustomerInsights..KpiArgs
         {
             Aliases = 
             {
-                new AzureNextGen.CustomerInsights.Latest.Inputs.KpiAliasArgs
+                new AzureNextGen.CustomerInsights..Inputs.KpiAliasArgs
                 {
                     AliasName = "alias",
                     Expression = "Id+4",
@@ -57,7 +57,7 @@ class MyStack : Stack
             HubName = "sdkTestHub",
             KpiName = "kpiTest45453647",
             ResourceGroupName = "TestHubRG",
-            ThresHolds = new AzureNextGen.CustomerInsights.Latest.Inputs.KpiThresholdsArgs
+            ThresHolds = new AzureNextGen.CustomerInsights..Inputs.KpiThresholdsArgs
             {
                 IncreasingKpi = true,
                 LowerLimit = 5,
@@ -79,7 +79,7 @@ class MyStack : Stack
 package main
 
 import (
-	customerinsights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/customerinsights/latest"
+	customerinsights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/customerinsights"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -133,8 +133,8 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-kpi = azure_nextgen.customerinsights.latest.Kpi("kpi",
-    aliases=[azure_nextgen.customerinsights.latest.KpiAliasArgs(
+kpi = azure_nextgen.customerinsights.Kpi("kpi",
+    aliases=[azure_nextgen.customerinsights.KpiAliasArgs(
         alias_name="alias",
         expression="Id+4",
     )],
@@ -153,7 +153,7 @@ kpi = azure_nextgen.customerinsights.latest.Kpi("kpi",
     hub_name="sdkTestHub",
     kpi_name="kpiTest45453647",
     resource_group_name="TestHubRG",
-    thres_holds=azure_nextgen.customerinsights.latest.KpiThresholdsArgs(
+    thres_holds=azure_nextgen.customerinsights.KpiThresholdsArgs(
         increasing_kpi=True,
         lower_limit=5,
         upper_limit=50,
@@ -170,7 +170,7 @@ kpi = azure_nextgen.customerinsights.latest.Kpi("kpi",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const kpi = new azure_nextgen.customerinsights.latest.Kpi("kpi", {
+const kpi = new azure_nextgen.customerinsights.Kpi("kpi", {
     aliases: [{
         aliasName: "alias",
         expression: "Id+4",
@@ -391,7 +391,7 @@ The Kpi resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#calculationwindow_csharp" style="color: inherit; text-decoration: inherit;">Calculation<wbr>Window</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#calculationwindowtypes">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights.<wbr>Calculation<wbr>Window<wbr>Types</a></span>
+        <span class="property-type"><a href="#calculationwindowtypes">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights..<wbr>Calculation<wbr>Window<wbr>Types</a></span>
     </dt>
     <dd>{{% md %}}The calculation window.{{% /md %}}</dd>
     <dt class="property-required"
@@ -400,7 +400,7 @@ The Kpi resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#entitytype_csharp" style="color: inherit; text-decoration: inherit;">Entity<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#entitytypes">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights.<wbr>Entity<wbr>Types</a></span>
+        <span class="property-type"><a href="#entitytypes">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights..<wbr>Entity<wbr>Types</a></span>
     </dt>
     <dd>{{% md %}}The mapping entity type.{{% /md %}}</dd>
     <dt class="property-required"
@@ -427,7 +427,7 @@ The Kpi resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#function_csharp" style="color: inherit; text-decoration: inherit;">Function</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kpifunctions">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights.<wbr>Kpi<wbr>Functions</a></span>
+        <span class="property-type"><a href="#kpifunctions">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights..<wbr>Kpi<wbr>Functions</a></span>
     </dt>
     <dd>{{% md %}}The computation function for the KPI.{{% /md %}}</dd>
     <dt class="property-required"
@@ -463,7 +463,7 @@ The Kpi resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#aliases_csharp" style="color: inherit; text-decoration: inherit;">Aliases</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kpialias">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights.<wbr>Inputs.<wbr>Kpi<wbr>Alias<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#kpialias">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights..<wbr>Inputs.<wbr>Kpi<wbr>Alias<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The aliases.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -499,7 +499,7 @@ The Kpi resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#extracts_csharp" style="color: inherit; text-decoration: inherit;">Extracts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kpiextract">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights.<wbr>Inputs.<wbr>Kpi<wbr>Extract<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#kpiextract">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights..<wbr>Inputs.<wbr>Kpi<wbr>Extract<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The KPI extracts.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -526,7 +526,7 @@ The Kpi resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#thresholds_csharp" style="color: inherit; text-decoration: inherit;">Thres<wbr>Holds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kpithresholds">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights.<wbr>Inputs.<wbr>Kpi<wbr>Thresholds<wbr>Args</a></span>
+        <span class="property-type"><a href="#kpithresholds">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights..<wbr>Inputs.<wbr>Kpi<wbr>Thresholds<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The KPI thresholds.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1034,7 +1034,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#groupbymetadata_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>By<wbr>Metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kpigroupbymetadataresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights.<wbr>Outputs.<wbr>Kpi<wbr>Group<wbr>By<wbr>Metadata<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#kpigroupbymetadataresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights..<wbr>Outputs.<wbr>Kpi<wbr>Group<wbr>By<wbr>Metadata<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The KPI GroupByMetadata.{{% /md %}}</dd>
     <dt class="property-"
@@ -1061,7 +1061,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#participantprofilesmetadata_csharp" style="color: inherit; text-decoration: inherit;">Participant<wbr>Profiles<wbr>Metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kpiparticipantprofilesmetadataresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights.<wbr>Outputs.<wbr>Kpi<wbr>Participant<wbr>Profiles<wbr>Metadata<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#kpiparticipantprofilesmetadataresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights..<wbr>Outputs.<wbr>Kpi<wbr>Participant<wbr>Profiles<wbr>Metadata<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The participant profiles.{{% /md %}}</dd>
     <dt class="property-"
@@ -2374,7 +2374,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:customerinsights/latest:Kpi sdkTestHub/kpiTest45453647 /subscriptions/c909e979-ef71-4def-a970-bc7c154db8c5/resourceGroups/TestHubRG/providers/Microsoft.CustomerInsights/hubs/sdkTestHub/kpi/kpiTest45453647 
+$ pulumi import azure-nextgen:customerinsights:Kpi sdkTestHub/kpiTest45453647 /subscriptions/c909e979-ef71-4def-a970-bc7c154db8c5/resourceGroups/TestHubRG/providers/Microsoft.CustomerInsights/hubs/sdkTestHub/kpi/kpiTest45453647 
 ```
 
 

@@ -242,7 +242,7 @@ The following output properties are available:
 <a href="#autopause_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Pause</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autopausepropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Synapse.<wbr>Outputs.<wbr>Auto<wbr>Pause<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#autopausepropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Synapse..<wbr>Outputs.<wbr>Auto<wbr>Pause<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Auto-pausing properties{{% /md %}}</dd>
     <dt class="property-"
@@ -251,7 +251,7 @@ The following output properties are available:
 <a href="#autoscale_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Scale</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalepropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Synapse.<wbr>Outputs.<wbr>Auto<wbr>Scale<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#autoscalepropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Synapse..<wbr>Outputs.<wbr>Auto<wbr>Scale<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Auto-scaling properties{{% /md %}}</dd>
     <dt class="property-"
@@ -278,7 +278,7 @@ The following output properties are available:
 <a href="#customlibraries_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Libraries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#libraryinforesponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Synapse.<wbr>Outputs.<wbr>Library<wbr>Info<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#libraryinforesponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Synapse..<wbr>Outputs.<wbr>Library<wbr>Info<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of custom libraries/packages associated with the spark pool.{{% /md %}}</dd>
     <dt class="property-"
@@ -296,7 +296,7 @@ The following output properties are available:
 <a href="#dynamicexecutorallocation_csharp" style="color: inherit; text-decoration: inherit;">Dynamic<wbr>Executor<wbr>Allocation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dynamicexecutorallocationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Synapse.<wbr>Outputs.<wbr>Dynamic<wbr>Executor<wbr>Allocation<wbr>Response</a></span>
+        <span class="property-type"><a href="#dynamicexecutorallocationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Synapse..<wbr>Outputs.<wbr>Dynamic<wbr>Executor<wbr>Allocation<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Dynamic Executor Allocation{{% /md %}}</dd>
     <dt class="property-"
@@ -314,7 +314,7 @@ The following output properties are available:
 <a href="#libraryrequirements_csharp" style="color: inherit; text-decoration: inherit;">Library<wbr>Requirements</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#libraryrequirementsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Synapse.<wbr>Outputs.<wbr>Library<wbr>Requirements<wbr>Response</a></span>
+        <span class="property-type"><a href="#libraryrequirementsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Synapse..<wbr>Outputs.<wbr>Library<wbr>Requirements<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Library version requirements{{% /md %}}</dd>
     <dt class="property-"
@@ -368,7 +368,7 @@ The following output properties are available:
 <a href="#sparkconfigproperties_csharp" style="color: inherit; text-decoration: inherit;">Spark<wbr>Config<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#libraryrequirementsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Synapse.<wbr>Outputs.<wbr>Library<wbr>Requirements<wbr>Response</a></span>
+        <span class="property-type"><a href="#libraryrequirementsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Synapse..<wbr>Outputs.<wbr>Library<wbr>Requirements<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Spark configuration file to specify additional properties{{% /md %}}</dd>
     <dt class="property-"

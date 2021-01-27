@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.cache.PatchSchedule resource wit
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Response to put/get patch schedules for Redis cache.
-Latest API Version: 2020-06-01.
+API Version: 2020-06-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,20 +27,20 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var patchSchedule = new AzureNextGen.Cache.Latest.PatchSchedule("patchSchedule", new AzureNextGen.Cache.Latest.PatchScheduleArgs
+        var patchSchedule = new AzureNextGen.Cache..PatchSchedule("patchSchedule", new AzureNextGen.Cache..PatchScheduleArgs
         {
             Default = "default",
             Name = "cache1",
             ResourceGroupName = "rg1",
             ScheduleEntries = 
             {
-                new AzureNextGen.Cache.Latest.Inputs.ScheduleEntryArgs
+                new AzureNextGen.Cache..Inputs.ScheduleEntryArgs
                 {
                     DayOfWeek = "Monday",
                     MaintenanceWindow = "PT5H",
                     StartHourUtc = 12,
                 },
-                new AzureNextGen.Cache.Latest.Inputs.ScheduleEntryArgs
+                new AzureNextGen.Cache..Inputs.ScheduleEntryArgs
                 {
                     DayOfWeek = "Tuesday",
                     StartHourUtc = 12,
@@ -61,7 +61,7 @@ class MyStack : Stack
 package main
 
 import (
-	cache "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/cache/latest"
+	cache "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/cache"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -100,17 +100,17 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-patch_schedule = azure_nextgen.cache.latest.PatchSchedule("patchSchedule",
+patch_schedule = azure_nextgen.cache.PatchSchedule("patchSchedule",
     default="default",
     name="cache1",
     resource_group_name="rg1",
     schedule_entries=[
-        azure_nextgen.cache.latest.ScheduleEntryArgs(
+        azure_nextgen.cache.ScheduleEntryArgs(
             day_of_week="Monday",
             maintenance_window="PT5H",
             start_hour_utc=12,
         ),
-        azure_nextgen.cache.latest.ScheduleEntryArgs(
+        azure_nextgen.cache.ScheduleEntryArgs(
             day_of_week="Tuesday",
             start_hour_utc=12,
         ),
@@ -126,7 +126,7 @@ patch_schedule = azure_nextgen.cache.latest.PatchSchedule("patchSchedule",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const patchSchedule = new azure_nextgen.cache.latest.PatchSchedule("patchSchedule", {
+const patchSchedule = new azure_nextgen.cache.PatchSchedule("patchSchedule", {
     "default": "default",
     name: "cache1",
     resourceGroupName: "rg1",
@@ -363,7 +363,7 @@ The PatchSchedule resource accepts the following [input]({{< relref "/docs/intro
 <a href="#scheduleentries_csharp" style="color: inherit; text-decoration: inherit;">Schedule<wbr>Entries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scheduleentry">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cache.<wbr>Inputs.<wbr>Schedule<wbr>Entry<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#scheduleentry">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cache..<wbr>Inputs.<wbr>Schedule<wbr>Entry<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of patch schedules for a Redis cache.{{% /md %}}</dd>
 </dl>
@@ -713,7 +713,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dayofweek_csharp" style="color: inherit; text-decoration: inherit;">Day<wbr>Of<wbr>Week</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dayofweek">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cache.<wbr>Day<wbr>Of<wbr>Week</a></span>
+        <span class="property-type"><a href="#dayofweek">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cache..<wbr>Day<wbr>Of<wbr>Week</a></span>
     </dt>
     <dd>{{% md %}}Day of the week when a cache can be patched.{{% /md %}}</dd>
     <dt class="property-required"
@@ -975,7 +975,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:cache/latest:PatchSchedule default /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Cache/Redis/cache1/patchSchedules/default 
+$ pulumi import azure-nextgen:cache:PatchSchedule default /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Cache/Redis/cache1/patchSchedules/default 
 ```
 
 

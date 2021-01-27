@@ -314,7 +314,7 @@ The following output properties are available:
 <a href="#schedulerecurrence_csharp" style="color: inherit; text-decoration: inherit;">Schedule<wbr>Recurrence</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#schedulerecurrenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stor<wbr>Simple.<wbr>Outputs.<wbr>Schedule<wbr>Recurrence<wbr>Response</a></span>
+        <span class="property-type"><a href="#schedulerecurrenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stor<wbr>Simple..<wbr>Outputs.<wbr>Schedule<wbr>Recurrence<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The schedule recurrence.{{% /md %}}</dd>
     <dt class="property-"

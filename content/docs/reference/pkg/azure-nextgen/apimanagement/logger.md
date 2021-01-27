@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.apimanagement.Logger resource wi
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Logger details.
-Latest API Version: 2019-12-01.
+API Version: 2019-12-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var logger = new AzureNextGen.ApiManagement.Latest.Logger("logger", new AzureNextGen.ApiManagement.Latest.LoggerArgs
+        var logger = new AzureNextGen.ApiManagement..Logger("logger", new AzureNextGen.ApiManagement..LoggerArgs
         {
             Credentials = 
             {
@@ -53,7 +53,7 @@ class MyStack : Stack
 package main
 
 import (
-	apimanagement "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/apimanagement/latest"
+	apimanagement "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/apimanagement"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -86,7 +86,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-logger = azure_nextgen.apimanagement.latest.Logger("logger",
+logger = azure_nextgen.apimanagement.Logger("logger",
     credentials={
         "instrumentation_key": "11................a1",
     },
@@ -106,7 +106,7 @@ logger = azure_nextgen.apimanagement.latest.Logger("logger",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const logger = new azure_nextgen.apimanagement.latest.Logger("logger", {
+const logger = new azure_nextgen.apimanagement.Logger("logger", {
     credentials: {
         instrumentationKey: "11................a1",
     },
@@ -131,7 +131,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var logger = new AzureNextGen.ApiManagement.Latest.Logger("logger", new AzureNextGen.ApiManagement.Latest.LoggerArgs
+        var logger = new AzureNextGen.ApiManagement..Logger("logger", new AzureNextGen.ApiManagement..LoggerArgs
         {
             Credentials = 
             {
@@ -158,7 +158,7 @@ class MyStack : Stack
 package main
 
 import (
-	apimanagement "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/apimanagement/latest"
+	apimanagement "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/apimanagement"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -192,7 +192,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-logger = azure_nextgen.apimanagement.latest.Logger("logger",
+logger = azure_nextgen.apimanagement.Logger("logger",
     credentials={
         "connection_string": "Endpoint=sb://hydraeventhub-ns.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=********=",
         "name": "hydraeventhub",
@@ -213,7 +213,7 @@ logger = azure_nextgen.apimanagement.latest.Logger("logger",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const logger = new azure_nextgen.apimanagement.latest.Logger("logger", {
+const logger = new azure_nextgen.apimanagement.Logger("logger", {
     credentials: {
         connectionString: "Endpoint=sb://hydraeventhub-ns.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=********=",
         name: "hydraeventhub",
@@ -437,7 +437,7 @@ Instrumentation key for applicationInsights logger.{{% /md %}}</dd>
 <a href="#loggertype_csharp" style="color: inherit; text-decoration: inherit;">Logger<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#loggertype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management.<wbr>Logger<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#loggertype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management..<wbr>Logger<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Logger type.{{% /md %}}</dd>
     <dt class="property-required"
@@ -917,7 +917,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:apimanagement/latest:Logger loggerId /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/loggers/loggerId 
+$ pulumi import azure-nextgen:apimanagement:Logger loggerId /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/loggers/loggerId 
 ```
 
 

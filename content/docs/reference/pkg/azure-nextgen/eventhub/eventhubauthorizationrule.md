@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.eventhub.EventHubAuthorizationRu
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Single item in a List or Get AuthorizationRule operation
-Latest API Version: 2017-04-01.
+API Version: 2017-04-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var eventHubAuthorizationRule = new AzureNextGen.EventHub.Latest.EventHubAuthorizationRule("eventHubAuthorizationRule", new AzureNextGen.EventHub.Latest.EventHubAuthorizationRuleArgs
+        var eventHubAuthorizationRule = new AzureNextGen.EventHub..EventHubAuthorizationRule("eventHubAuthorizationRule", new AzureNextGen.EventHub..EventHubAuthorizationRuleArgs
         {
             AuthorizationRuleName = "sdk-Authrules-2513",
             EventHubName = "sdk-EventHub-532",
@@ -53,7 +53,7 @@ class MyStack : Stack
 package main
 
 import (
-	eventhub "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/eventhub/latest"
+	eventhub "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/eventhub"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -86,7 +86,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-event_hub_authorization_rule = azure_nextgen.eventhub.latest.EventHubAuthorizationRule("eventHubAuthorizationRule",
+event_hub_authorization_rule = azure_nextgen.eventhub.EventHubAuthorizationRule("eventHubAuthorizationRule",
     authorization_rule_name="sdk-Authrules-2513",
     event_hub_name="sdk-EventHub-532",
     namespace_name="sdk-Namespace-960",
@@ -106,7 +106,7 @@ event_hub_authorization_rule = azure_nextgen.eventhub.latest.EventHubAuthorizati
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const eventHubAuthorizationRule = new azure_nextgen.eventhub.latest.EventHubAuthorizationRule("eventHubAuthorizationRule", {
+const eventHubAuthorizationRule = new azure_nextgen.eventhub.EventHubAuthorizationRule("eventHubAuthorizationRule", {
     authorizationRuleName: "sdk-Authrules-2513",
     eventHubName: "sdk-EventHub-532",
     namespaceName: "sdk-Namespace-960",
@@ -346,7 +346,7 @@ The EventHubAuthorizationRule resource accepts the following [input]({{< relref 
 <a href="#rights_csharp" style="color: inherit; text-decoration: inherit;">Rights</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Union&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Hub.<wbr>Access<wbr>Rights&gt;&gt;</span>
+        <span class="property-type">List&lt;Union&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Hub..<wbr>Access<wbr>Rights&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}The rights associated with the rule.{{% /md %}}</dd>
 </dl>
@@ -705,7 +705,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:eventhub/latest:EventHubAuthorizationRule sdk-Authrules-2513 /subscriptions/5f750a97-50d9-4e36-8081-c9ee4c0210d4/resourceGroups/ArunMonocle/providers/Microsoft.EventHub/namespaces/sdk-Namespace-960/eventhubs/sdk-EventHub-532/authorizationRules/sdk-Authrules-2513 
+$ pulumi import azure-nextgen:eventhub:EventHubAuthorizationRule sdk-Authrules-2513 /subscriptions/5f750a97-50d9-4e36-8081-c9ee4c0210d4/resourceGroups/ArunMonocle/providers/Microsoft.EventHub/namespaces/sdk-Namespace-960/eventhubs/sdk-EventHub-532/authorizationRules/sdk-Authrules-2513 
 ```
 
 

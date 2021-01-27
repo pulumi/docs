@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.kusto.DataConnection resource wi
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Class representing an data connection.
-Latest API Version: 2020-09-18.
+API Version: 2020-09-18.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var dataConnection = new AzureNextGen.Kusto.Latest.DataConnection("dataConnection", new AzureNextGen.Kusto.Latest.DataConnectionArgs
+        var dataConnection = new AzureNextGen.Kusto..DataConnection("dataConnection", new AzureNextGen.Kusto..DataConnectionArgs
         {
             ClusterName = "kustoclusterrptest4",
             DataConnectionName = "DataConnections8",
@@ -50,7 +50,7 @@ class MyStack : Stack
 package main
 
 import (
-	kusto "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/kusto/latest"
+	kusto "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/kusto"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -81,7 +81,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-data_connection = azure_nextgen.kusto.latest.DataConnection("dataConnection",
+data_connection = azure_nextgen.kusto.DataConnection("dataConnection",
     cluster_name="kustoclusterrptest4",
     data_connection_name="DataConnections8",
     database_name="KustoDatabase8",
@@ -99,7 +99,7 @@ data_connection = azure_nextgen.kusto.latest.DataConnection("dataConnection",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const dataConnection = new azure_nextgen.kusto.latest.DataConnection("dataConnection", {
+const dataConnection = new azure_nextgen.kusto.DataConnection("dataConnection", {
     clusterName: "kustoclusterrptest4",
     dataConnectionName: "DataConnections8",
     databaseName: "KustoDatabase8",
@@ -328,7 +328,7 @@ The DataConnection resource accepts the following [input]({{< relref "/docs/intr
 <a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#dataconnectionkind">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Kusto.<wbr>Data<wbr>Connection<wbr>Kind</a></span>
+        <span class="property-type">string | <a href="#dataconnectionkind">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Kusto..<wbr>Data<wbr>Connection<wbr>Kind</a></span>
     </dt>
     <dd>{{% md %}}Kind of the endpoint for the data connection{{% /md %}}</dd>
     <dt class="property-required"
@@ -732,7 +732,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:kusto/latest:DataConnection KustoClusterRPTest4/KustoDatabase8/DataConnections8 /subscriptions/12345678-1234-1234-1234-123456789098/resourceGroups/kustorptest/providers/Microsoft.Kusto/Clusters/KustoClusterRPTest4/Databases/KustoDatabase8/DataConnections/DataConnections8 
+$ pulumi import azure-nextgen:kusto:DataConnection KustoClusterRPTest4/KustoDatabase8/DataConnections8 /subscriptions/12345678-1234-1234-1234-123456789098/resourceGroups/kustorptest/providers/Microsoft.Kusto/Clusters/KustoClusterRPTest4/Databases/KustoDatabase8/DataConnections/DataConnections8 
 ```
 
 

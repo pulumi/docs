@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.sql.FirewallRule resource with e
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Represents a server firewall rule.
-Latest API Version: 2014-04-01.
+API Version: 2014-04-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var firewallRule = new AzureNextGen.Sql.Latest.FirewallRule("firewallRule", new AzureNextGen.Sql.Latest.FirewallRuleArgs
+        var firewallRule = new AzureNextGen.Sql..FirewallRule("firewallRule", new AzureNextGen.Sql..FirewallRuleArgs
         {
             EndIpAddress = "0.0.0.3",
             FirewallRuleName = "firewallrulecrudtest-5370",
@@ -49,7 +49,7 @@ class MyStack : Stack
 package main
 
 import (
-	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql/latest"
+	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -79,7 +79,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-firewall_rule = azure_nextgen.sql.latest.FirewallRule("firewallRule",
+firewall_rule = azure_nextgen.sql.FirewallRule("firewallRule",
     end_ip_address="0.0.0.3",
     firewall_rule_name="firewallrulecrudtest-5370",
     resource_group_name="firewallrulecrudtest-12",
@@ -96,7 +96,7 @@ firewall_rule = azure_nextgen.sql.latest.FirewallRule("firewallRule",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const firewallRule = new azure_nextgen.sql.latest.FirewallRule("firewallRule", {
+const firewallRule = new azure_nextgen.sql.FirewallRule("firewallRule", {
     endIpAddress: "0.0.0.3",
     firewallRuleName: "firewallrulecrudtest-5370",
     resourceGroupName: "firewallrulecrudtest-12",
@@ -118,7 +118,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var firewallRule = new AzureNextGen.Sql.Latest.FirewallRule("firewallRule", new AzureNextGen.Sql.Latest.FirewallRuleArgs
+        var firewallRule = new AzureNextGen.Sql..FirewallRule("firewallRule", new AzureNextGen.Sql..FirewallRuleArgs
         {
             EndIpAddress = "0.0.0.1",
             FirewallRuleName = "firewallrulecrudtest-3927",
@@ -140,7 +140,7 @@ class MyStack : Stack
 package main
 
 import (
-	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql/latest"
+	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -170,7 +170,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-firewall_rule = azure_nextgen.sql.latest.FirewallRule("firewallRule",
+firewall_rule = azure_nextgen.sql.FirewallRule("firewallRule",
     end_ip_address="0.0.0.1",
     firewall_rule_name="firewallrulecrudtest-3927",
     resource_group_name="firewallrulecrudtest-12",
@@ -187,7 +187,7 @@ firewall_rule = azure_nextgen.sql.latest.FirewallRule("firewallRule",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const firewallRule = new azure_nextgen.sql.latest.FirewallRule("firewallRule", {
+const firewallRule = new azure_nextgen.sql.FirewallRule("firewallRule", {
     endIpAddress: "0.0.0.1",
     firewallRuleName: "firewallrulecrudtest-3927",
     resourceGroupName: "firewallrulecrudtest-12",
@@ -805,7 +805,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:sql/latest:FirewallRule firewallrulecrudtest-3927 /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/firewallrulecrudtest-12/providers/Microsoft.Sql/servers/firewallrulecrudtest-6285/firewallRules/firewallrulecrudtest-3927 
+$ pulumi import azure-nextgen:sql:FirewallRule firewallrulecrudtest-3927 /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/firewallrulecrudtest-12/providers/Microsoft.Sql/servers/firewallrulecrudtest-6285/firewallRules/firewallrulecrudtest-3927 
 ```
 
 

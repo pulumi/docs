@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.sql.ServerAzureADAdministrator r
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 An server Active Directory Administrator.
-Latest API Version: 2014-04-01.
+API Version: 2014-04-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var serverAzureADAdministrator = new AzureNextGen.Sql.Latest.ServerAzureADAdministrator("serverAzureADAdministrator", new AzureNextGen.Sql.Latest.ServerAzureADAdministratorArgs
+        var serverAzureADAdministrator = new AzureNextGen.Sql..ServerAzureADAdministrator("serverAzureADAdministrator", new AzureNextGen.Sql..ServerAzureADAdministratorArgs
         {
             AdministratorName = "activeDirectory",
             AdministratorType = "ActiveDirectory",
@@ -51,7 +51,7 @@ class MyStack : Stack
 package main
 
 import (
-	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql/latest"
+	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -83,7 +83,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-server_azure_ad_administrator = azure_nextgen.sql.latest.ServerAzureADAdministrator("serverAzureADAdministrator",
+server_azure_ad_administrator = azure_nextgen.sql.ServerAzureADAdministrator("serverAzureADAdministrator",
     administrator_name="activeDirectory",
     administrator_type="ActiveDirectory",
     login="bob@contoso.com",
@@ -102,7 +102,7 @@ server_azure_ad_administrator = azure_nextgen.sql.latest.ServerAzureADAdministra
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const serverAzureADAdministrator = new azure_nextgen.sql.latest.ServerAzureADAdministrator("serverAzureADAdministrator", {
+const serverAzureADAdministrator = new azure_nextgen.sql.ServerAzureADAdministrator("serverAzureADAdministrator", {
     administratorName: "activeDirectory",
     administratorType: "ActiveDirectory",
     login: "bob@contoso.com",
@@ -314,7 +314,7 @@ The ServerAzureADAdministrator resource accepts the following [input]({{< relref
 <a href="#administratortype_csharp" style="color: inherit; text-decoration: inherit;">Administrator<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#administratortype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql.<wbr>Administrator<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#administratortype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql..<wbr>Administrator<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of administrator.{{% /md %}}</dd>
     <dt class="property-required"
@@ -756,7 +756,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:sql/latest:ServerAzureADAdministrator activeDirectory /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/sqlcrudtest-4799/providers/Microsoft.Sql/servers/sqlcrudtest-6440/administrators/activeDirectory 
+$ pulumi import azure-nextgen:sql:ServerAzureADAdministrator activeDirectory /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/sqlcrudtest-4799/providers/Microsoft.Sql/servers/sqlcrudtest-6440/administrators/activeDirectory 
 ```
 
 

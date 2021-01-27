@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.deploymentmanager.ServiceUnit re
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Represents the response of a service unit resource.
+API Version: 2019-11-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,9 +27,9 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var serviceUnit = new AzureNextGen.DeploymentManager.V20191101Preview.ServiceUnit("serviceUnit", new AzureNextGen.DeploymentManager.V20191101Preview.ServiceUnitArgs
+        var serviceUnit = new AzureNextGen.DeploymentManager..ServiceUnit("serviceUnit", new AzureNextGen.DeploymentManager..ServiceUnitArgs
         {
-            Artifacts = new AzureNextGen.DeploymentManager.V20191101Preview.Inputs.ServiceUnitArtifactsArgs
+            Artifacts = new AzureNextGen.DeploymentManager..Inputs.ServiceUnitArtifactsArgs
             {
                 ParametersUri = "https://mystorageaccount.blob.core.windows.net/myartifactsource/parameter/myTopologyUnit.parameters.json?st=2018-07-07T14%3A10%3A00Z&se=2019-12-31T15%3A10%3A00Z&sp=rl&sv=2017-04-17&sr=c&sig=Yh2SoJ1NhhLRwCLln7de%2Fkabcdefghijklmno5sWEIk%3D",
                 TemplateUri = "https://mystorageaccount.blob.core.windows.net/myartifactsource/templates/myTopologyUnit.template.json?st=2018-07-07T14%3A10%3A00Z&se=2019-12-31T15%3A10%3A00Z&sp=rl&sv=2017-04-17&sr=c&sig=Yh2SoJ1NhhLRwCLln7de%2Fkabcdefghijklmno5sWEIk%3D",
@@ -58,7 +59,7 @@ package main
 import (
 	"fmt"
 
-	deploymentmanager "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/deploymentmanager/v20191101preview"
+	deploymentmanager "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/deploymentmanager"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -95,8 +96,8 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-service_unit = azure_nextgen.deploymentmanager.v20191101preview.ServiceUnit("serviceUnit",
-    artifacts=azure_nextgen.deploymentmanager.v20191101preview.ServiceUnitArtifactsArgs(
+service_unit = azure_nextgen.deploymentmanager.ServiceUnit("serviceUnit",
+    artifacts=azure_nextgen.deploymentmanager.ServiceUnitArtifactsArgs(
         parameters_uri="https://mystorageaccount.blob.core.windows.net/myartifactsource/parameter/myTopologyUnit.parameters.json?st=2018-07-07T14%3A10%3A00Z&se=2019-12-31T15%3A10%3A00Z&sp=rl&sv=2017-04-17&sr=c&sig=Yh2SoJ1NhhLRwCLln7de%2Fkabcdefghijklmno5sWEIk%3D",
         template_uri="https://mystorageaccount.blob.core.windows.net/myartifactsource/templates/myTopologyUnit.template.json?st=2018-07-07T14%3A10%3A00Z&se=2019-12-31T15%3A10%3A00Z&sp=rl&sv=2017-04-17&sr=c&sig=Yh2SoJ1NhhLRwCLln7de%2Fkabcdefghijklmno5sWEIk%3D",
     ),
@@ -119,7 +120,7 @@ service_unit = azure_nextgen.deploymentmanager.v20191101preview.ServiceUnit("ser
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const serviceUnit = new azure_nextgen.deploymentmanager.v20191101preview.ServiceUnit("serviceUnit", {
+const serviceUnit = new azure_nextgen.deploymentmanager.ServiceUnit("serviceUnit", {
     artifacts: {
         parametersUri: `https://mystorageaccount.blob.core.windows.net/myartifactsource/parameter/myTopologyUnit.parameters.json?st=2018-07-07T14%3A10%3A00Z&se=2019-12-31T15%3A10%3A00Z&sp=rl&sv=2017-04-17&sr=c&sig=Yh2SoJ1NhhLRwCLln7de%2Fkabcdefghijklmno5sWEIk%3D`,
         templateUri: `https://mystorageaccount.blob.core.windows.net/myartifactsource/templates/myTopologyUnit.template.json?st=2018-07-07T14%3A10%3A00Z&se=2019-12-31T15%3A10%3A00Z&sp=rl&sv=2017-04-17&sr=c&sig=Yh2SoJ1NhhLRwCLln7de%2Fkabcdefghijklmno5sWEIk%3D`,
@@ -148,9 +149,9 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var serviceUnit = new AzureNextGen.DeploymentManager.V20191101Preview.ServiceUnit("serviceUnit", new AzureNextGen.DeploymentManager.V20191101Preview.ServiceUnitArgs
+        var serviceUnit = new AzureNextGen.DeploymentManager..ServiceUnit("serviceUnit", new AzureNextGen.DeploymentManager..ServiceUnitArgs
         {
-            Artifacts = new AzureNextGen.DeploymentManager.V20191101Preview.Inputs.ServiceUnitArtifactsArgs
+            Artifacts = new AzureNextGen.DeploymentManager..Inputs.ServiceUnitArtifactsArgs
             {
                 ParametersArtifactSourceRelativePath = "parameter/myTopologyUnit.parameters.json",
                 TemplateArtifactSourceRelativePath = "templates/myTopologyUnit.template.json",
@@ -178,7 +179,7 @@ class MyStack : Stack
 package main
 
 import (
-	deploymentmanager "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/deploymentmanager/v20191101preview"
+	deploymentmanager "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/deploymentmanager"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -215,8 +216,8 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-service_unit = azure_nextgen.deploymentmanager.v20191101preview.ServiceUnit("serviceUnit",
-    artifacts=azure_nextgen.deploymentmanager.v20191101preview.ServiceUnitArtifactsArgs(
+service_unit = azure_nextgen.deploymentmanager.ServiceUnit("serviceUnit",
+    artifacts=azure_nextgen.deploymentmanager.ServiceUnitArtifactsArgs(
         parameters_artifact_source_relative_path="parameter/myTopologyUnit.parameters.json",
         template_artifact_source_relative_path="templates/myTopologyUnit.template.json",
     ),
@@ -239,7 +240,7 @@ service_unit = azure_nextgen.deploymentmanager.v20191101preview.ServiceUnit("ser
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const serviceUnit = new azure_nextgen.deploymentmanager.v20191101preview.ServiceUnit("serviceUnit", {
+const serviceUnit = new azure_nextgen.deploymentmanager.ServiceUnit("serviceUnit", {
     artifacts: {
         parametersArtifactSourceRelativePath: "parameter/myTopologyUnit.parameters.json",
         templateArtifactSourceRelativePath: "templates/myTopologyUnit.template.json",
@@ -447,7 +448,7 @@ The ServiceUnit resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#deploymentmode_csharp" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentmode">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Deployment<wbr>Manager.<wbr>Deployment<wbr>Mode</a></span>
+        <span class="property-type"><a href="#deploymentmode">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Deployment<wbr>Manager..<wbr>Deployment<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}Describes the type of ARM deployment to be performed on the resource.{{% /md %}}</dd>
     <dt class="property-required"
@@ -510,7 +511,7 @@ The ServiceUnit resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#artifacts_csharp" style="color: inherit; text-decoration: inherit;">Artifacts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceunitartifacts">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Deployment<wbr>Manager.<wbr>Inputs.<wbr>Service<wbr>Unit<wbr>Artifacts<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceunitartifacts">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Deployment<wbr>Manager..<wbr>Inputs.<wbr>Service<wbr>Unit<wbr>Artifacts<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The artifacts for the service unit.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1318,7 +1319,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:deploymentmanager/v20191101preview:ServiceUnit myServiceUnit /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DeploymentManager/serviceTopologies/{serviceTopologyName}/services/{serviceName}/serviceUnits/{serviceUnitName} 
+$ pulumi import azure-nextgen:deploymentmanager:ServiceUnit myServiceUnit /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DeploymentManager/serviceTopologies/{serviceTopologyName}/services/{serviceName}/serviceUnits/{serviceUnitName} 
 ```
 
 

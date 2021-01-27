@@ -305,7 +305,7 @@ The following output properties are available:
 <a href="#createdby_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>By</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userinforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security<wbr>Insights.<wbr>Outputs.<wbr>User<wbr>Info<wbr>Response</a></span>
+        <span class="property-type"><a href="#userinforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security<wbr>Insights..<wbr>Outputs.<wbr>User<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes a user that created the watchlist{{% /md %}}</dd>
     <dt class="property-"
@@ -395,9 +395,18 @@ The following output properties are available:
 <a href="#updatedby_csharp" style="color: inherit; text-decoration: inherit;">Updated<wbr>By</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userinforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security<wbr>Insights.<wbr>Outputs.<wbr>User<wbr>Info<wbr>Response</a></span>
+        <span class="property-type"><a href="#userinforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security<wbr>Insights..<wbr>Outputs.<wbr>User<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes a user that updated the watchlist{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="uploadstatus_csharp">
+<a href="#uploadstatus_csharp" style="color: inherit; text-decoration: inherit;">Upload<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The status of the Watchlist upload : New, InProgress or Complete. Pls note : When a Watchlist upload status is equal to InProgress, the Watchlist cannot be deleted{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="watchlistalias_csharp">
@@ -416,6 +425,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id (a Guid) of the watchlist{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="watchlistitemscount_csharp">
+<a href="#watchlistitemscount_csharp" style="color: inherit; text-decoration: inherit;">Watchlist<wbr>Items<wbr>Count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of Watchlist Items in the Watchlist{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="watchlisttype_csharp">
@@ -604,6 +622,15 @@ The following output properties are available:
     <dd>{{% md %}}Describes a user that updated the watchlist{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="uploadstatus_go">
+<a href="#uploadstatus_go" style="color: inherit; text-decoration: inherit;">Upload<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The status of the Watchlist upload : New, InProgress or Complete. Pls note : When a Watchlist upload status is equal to InProgress, the Watchlist cannot be deleted{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="watchlistalias_go">
 <a href="#watchlistalias_go" style="color: inherit; text-decoration: inherit;">Watchlist<wbr>Alias</a>
 </span>
@@ -620,6 +647,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id (a Guid) of the watchlist{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="watchlistitemscount_go">
+<a href="#watchlistitemscount_go" style="color: inherit; text-decoration: inherit;">Watchlist<wbr>Items<wbr>Count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of Watchlist Items in the Watchlist{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="watchlisttype_go">
@@ -808,6 +844,15 @@ The following output properties are available:
     <dd>{{% md %}}Describes a user that updated the watchlist{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="uploadstatus_nodejs">
+<a href="#uploadstatus_nodejs" style="color: inherit; text-decoration: inherit;">upload<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The status of the Watchlist upload : New, InProgress or Complete. Pls note : When a Watchlist upload status is equal to InProgress, the Watchlist cannot be deleted{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="watchlistalias_nodejs">
 <a href="#watchlistalias_nodejs" style="color: inherit; text-decoration: inherit;">watchlist<wbr>Alias</a>
 </span>
@@ -824,6 +869,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id (a Guid) of the watchlist{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="watchlistitemscount_nodejs">
+<a href="#watchlistitemscount_nodejs" style="color: inherit; text-decoration: inherit;">watchlist<wbr>Items<wbr>Count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The number of Watchlist Items in the Watchlist{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="watchlisttype_nodejs">
@@ -1012,6 +1066,15 @@ The following output properties are available:
     <dd>{{% md %}}Describes a user that updated the watchlist{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="upload_status_python">
+<a href="#upload_status_python" style="color: inherit; text-decoration: inherit;">upload_<wbr>status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The status of the Watchlist upload : New, InProgress or Complete. Pls note : When a Watchlist upload status is equal to InProgress, the Watchlist cannot be deleted{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="watchlist_alias_python">
 <a href="#watchlist_alias_python" style="color: inherit; text-decoration: inherit;">watchlist_<wbr>alias</a>
 </span>
@@ -1028,6 +1091,15 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The id (a Guid) of the watchlist{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="watchlist_items_count_python">
+<a href="#watchlist_items_count_python" style="color: inherit; text-decoration: inherit;">watchlist_<wbr>items_<wbr>count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of Watchlist Items in the Watchlist{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="watchlist_type_python">

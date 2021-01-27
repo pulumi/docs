@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.notebooks.NotebookProxy resource
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 A NotebookProxy resource.
+API Version: 2019-10-11-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var notebookProxy = new AzureNextGen.Notebooks.V20191011Preview.NotebookProxy("notebookProxy", new AzureNextGen.Notebooks.V20191011Preview.NotebookProxyArgs
+        var notebookProxy = new AzureNextGen.Notebooks..NotebookProxy("notebookProxy", new AzureNextGen.Notebooks..NotebookProxyArgs
         {
             Hostname = "Azure Notebooks",
             ResourceGroupName = "testRP",
@@ -46,7 +47,7 @@ class MyStack : Stack
 package main
 
 import (
-	notebooks "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/notebooks/v20191011preview"
+	notebooks "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/notebooks"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -74,7 +75,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-notebook_proxy = azure_nextgen.notebooks.v20191011preview.NotebookProxy("notebookProxy",
+notebook_proxy = azure_nextgen.notebooks.NotebookProxy("notebookProxy",
     hostname="Azure Notebooks",
     resource_group_name="testRP",
     resource_name="testResource")
@@ -89,7 +90,7 @@ notebook_proxy = azure_nextgen.notebooks.v20191011preview.NotebookProxy("noteboo
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const notebookProxy = new azure_nextgen.notebooks.v20191011preview.NotebookProxy("notebookProxy", {
+const notebookProxy = new azure_nextgen.notebooks.NotebookProxy("notebookProxy", {
     hostname: "Azure Notebooks",
     resourceGroupName: "testRP",
     resourceName: "testResource",
@@ -597,7 +598,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:notebooks/v20191011preview:NotebookProxy testResource subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/testRP/providers/Microsoft.Notebooks/NotebookProxies/testResource 
+$ pulumi import azure-nextgen:notebooks:NotebookProxy testResource subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/testRP/providers/Microsoft.Notebooks/NotebookProxies/testResource 
 ```
 
 

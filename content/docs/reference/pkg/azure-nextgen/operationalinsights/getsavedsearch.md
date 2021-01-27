@@ -278,7 +278,7 @@ The following output properties are available:
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tagresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Operational<wbr>Insights.<wbr>Outputs.<wbr>Tag<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#tagresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Operational<wbr>Insights..<wbr>Outputs.<wbr>Tag<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The tags attached to the saved search.{{% /md %}}</dd>
     <dt class="property-"

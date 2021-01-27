@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.databoxedge.Device resource with
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The Data Box Edge/Gateway device.
-Latest API Version: 2020-09-01.
+API Version: 2020-09-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,12 +27,12 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var device = new AzureNextGen.DataBoxEdge.Latest.Device("device", new AzureNextGen.DataBoxEdge.Latest.DeviceArgs
+        var device = new AzureNextGen.DataBoxEdge..Device("device", new AzureNextGen.DataBoxEdge..DeviceArgs
         {
             DeviceName = "testedgedevice",
             Location = "WUS",
             ResourceGroupName = "GroupForEdgeAutomation",
-            Sku = new AzureNextGen.DataBoxEdge.Latest.Inputs.SkuArgs
+            Sku = new AzureNextGen.DataBoxEdge..Inputs.SkuArgs
             {
                 Name = "Edge",
                 Tier = "Standard",
@@ -53,7 +53,7 @@ class MyStack : Stack
 package main
 
 import (
-	databoxedge "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/databoxedge/latest"
+	databoxedge "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/databoxedge"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -86,11 +86,11 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-device = azure_nextgen.databoxedge.latest.Device("device",
+device = azure_nextgen.databoxedge.Device("device",
     device_name="testedgedevice",
     location="WUS",
     resource_group_name="GroupForEdgeAutomation",
-    sku=azure_nextgen.databoxedge.latest.SkuArgs(
+    sku=azure_nextgen.databoxedge.SkuArgs(
         name="Edge",
         tier="Standard",
     ),
@@ -106,7 +106,7 @@ device = azure_nextgen.databoxedge.latest.Device("device",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const device = new azure_nextgen.databoxedge.latest.Device("device", {
+const device = new azure_nextgen.databoxedge.Device("device", {
     deviceName: "testedgedevice",
     location: "WUS",
     resourceGroupName: "GroupForEdgeAutomation",
@@ -337,7 +337,7 @@ The Device resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#databoxedgedevicestatus_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Box<wbr>Edge<wbr>Device<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#databoxedgedevicestatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Data<wbr>Box<wbr>Edge<wbr>Device<wbr>Status</a></span>
+        <span class="property-type">string | <a href="#databoxedgedevicestatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge..<wbr>Data<wbr>Box<wbr>Edge<wbr>Device<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}The status of the Data Box Edge/Gateway device.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -355,7 +355,7 @@ The Device resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#edgeprofile_csharp" style="color: inherit; text-decoration: inherit;">Edge<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edgeprofile">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Inputs.<wbr>Edge<wbr>Profile<wbr>Args</a></span>
+        <span class="property-type"><a href="#edgeprofile">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge..<wbr>Inputs.<wbr>Edge<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The details of Edge Profile for this resource{{% /md %}}</dd>
     <dt class="property-optional"
@@ -382,7 +382,7 @@ The Device resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidentity">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Inputs.<wbr>Resource<wbr>Identity<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourceidentity">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge..<wbr>Inputs.<wbr>Resource<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Msi identity of the resource{{% /md %}}</dd>
     <dt class="property-optional"
@@ -391,7 +391,7 @@ The Device resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#databoxedgedevicekind">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Data<wbr>Box<wbr>Edge<wbr>Device<wbr>Kind</a></span>
+        <span class="property-type">string | <a href="#databoxedgedevicekind">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge..<wbr>Data<wbr>Box<wbr>Edge<wbr>Device<wbr>Kind</a></span>
     </dt>
     <dd>{{% md %}}The etag for the devices.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -409,7 +409,7 @@ The Device resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#resourcemovedetails_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Move<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcemovedetails">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Inputs.<wbr>Resource<wbr>Move<wbr>Details<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcemovedetails">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge..<wbr>Inputs.<wbr>Resource<wbr>Move<wbr>Details<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The details of the move operation on this resource.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -418,7 +418,7 @@ The Device resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sku">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Inputs.<wbr>Sku<wbr>Args</a></span>
+        <span class="property-type"><a href="#sku">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge..<wbr>Inputs.<wbr>Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The SKU type.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -944,7 +944,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#systemdata_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
+        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge..<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}DataBoxEdge Resource{{% /md %}}</dd>
     <dt class="property-"
@@ -1517,7 +1517,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subscription_csharp" style="color: inherit; text-decoration: inherit;">Subscription</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edgeprofilesubscription">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Inputs.<wbr>Edge<wbr>Profile<wbr>Subscription<wbr>Args</a></span>
+        <span class="property-type"><a href="#edgeprofilesubscription">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge..<wbr>Inputs.<wbr>Edge<wbr>Profile<wbr>Subscription<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Edge Profile Subscription{{% /md %}}</dd>
 </dl>
@@ -1579,7 +1579,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subscription_csharp" style="color: inherit; text-decoration: inherit;">Subscription</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edgeprofilesubscriptionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Inputs.<wbr>Edge<wbr>Profile<wbr>Subscription<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#edgeprofilesubscriptionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge..<wbr>Inputs.<wbr>Edge<wbr>Profile<wbr>Subscription<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Edge Profile Subscription{{% /md %}}</dd>
 </dl>
@@ -1668,7 +1668,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#registeredfeatures_csharp" style="color: inherit; text-decoration: inherit;">Registered<wbr>Features</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subscriptionregisteredfeatures">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Inputs.<wbr>Subscription<wbr>Registered<wbr>Features<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#subscriptionregisteredfeatures">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge..<wbr>Inputs.<wbr>Subscription<wbr>Registered<wbr>Features<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1704,7 +1704,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#subscriptionstate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Subscription<wbr>State</a></span>
+        <span class="property-type">string | <a href="#subscriptionstate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge..<wbr>Subscription<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2054,7 +2054,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#registeredfeatures_csharp" style="color: inherit; text-decoration: inherit;">Registered<wbr>Features</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subscriptionregisteredfeaturesresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Inputs.<wbr>Subscription<wbr>Registered<wbr>Features<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#subscriptionregisteredfeaturesresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge..<wbr>Inputs.<wbr>Subscription<wbr>Registered<wbr>Features<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2459,7 +2459,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#msiidentitytype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Msi<wbr>Identity<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#msiidentitytype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge..<wbr>Msi<wbr>Identity<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Identity type{{% /md %}}</dd>
 </dl>
@@ -2655,7 +2655,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operationinprogress_csharp" style="color: inherit; text-decoration: inherit;">Operation<wbr>In<wbr>Progress</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#resourcemovestatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Resource<wbr>Move<wbr>Status</a></span>
+        <span class="property-type">string | <a href="#resourcemovestatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge..<wbr>Resource<wbr>Move<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}Denotes whether move operation is in progress{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2897,7 +2897,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#skuname">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Sku<wbr>Name</a></span>
+        <span class="property-type">string | <a href="#skuname">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge..<wbr>Sku<wbr>Name</a></span>
     </dt>
     <dd>{{% md %}}SKU name.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2906,7 +2906,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tier_csharp" style="color: inherit; text-decoration: inherit;">Tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#skutier">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Sku<wbr>Tier</a></span>
+        <span class="property-type">string | <a href="#skutier">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge..<wbr>Sku<wbr>Tier</a></span>
     </dt>
     <dd>{{% md %}}The SKU tier. This is based on the SKU name.{{% /md %}}</dd>
 </dl>
@@ -3807,7 +3807,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:databoxedge/latest:Device testedgedevice /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DataBoxEdge/dataBoxEdgeDevices/{deviceName} 
+$ pulumi import azure-nextgen:databoxedge:Device testedgedevice /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DataBoxEdge/dataBoxEdgeDevices/{deviceName} 
 ```
 
 

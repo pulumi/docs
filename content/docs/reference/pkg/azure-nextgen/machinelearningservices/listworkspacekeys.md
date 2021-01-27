@@ -168,7 +168,7 @@ The following output properties are available:
 <a href="#containerregistrycredentials_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Registry<wbr>Credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#registrylistcredentialsresultresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Outputs.<wbr>Registry<wbr>List<wbr>Credentials<wbr>Result<wbr>Response</a></span>
+        <span class="property-type"><a href="#registrylistcredentialsresultresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services..<wbr>Outputs.<wbr>Registry<wbr>List<wbr>Credentials<wbr>Result<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-"
@@ -195,7 +195,7 @@ The following output properties are available:
 <a href="#notebookaccesskeys_csharp" style="color: inherit; text-decoration: inherit;">Notebook<wbr>Access<wbr>Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#notebooklistcredentialsresultresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Outputs.<wbr>Notebook<wbr>List<wbr>Credentials<wbr>Result<wbr>Response</a></span>
+        <span class="property-type"><a href="#notebooklistcredentialsresultresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services..<wbr>Outputs.<wbr>Notebook<wbr>List<wbr>Credentials<wbr>Result<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 </dl>
@@ -600,7 +600,7 @@ The following output properties are available:
 <a href="#passwords_csharp" style="color: inherit; text-decoration: inherit;">Passwords</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#passwordresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Password<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#passwordresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services..<wbr>Inputs.<wbr>Password<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 </dl>

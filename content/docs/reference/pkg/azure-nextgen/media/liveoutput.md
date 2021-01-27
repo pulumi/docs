@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.media.LiveOutput resource with e
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The Live Output.
-Latest API Version: 2020-05-01.
+API Version: 2020-05-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,13 +27,13 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var liveOutput = new AzureNextGen.Media.Latest.LiveOutput("liveOutput", new AzureNextGen.Media.Latest.LiveOutputArgs
+        var liveOutput = new AzureNextGen.Media..LiveOutput("liveOutput", new AzureNextGen.Media..LiveOutputArgs
         {
             AccountName = "slitestmedia10",
             ArchiveWindowLength = "PT5M",
             AssetName = "6f3264f5-a189-48b4-a29a-a40f22575212",
             Description = "test live output 1",
-            Hls = new AzureNextGen.Media.Latest.Inputs.HlsArgs
+            Hls = new AzureNextGen.Media..Inputs.HlsArgs
             {
                 FragmentsPerTsSegment = 5,
             },
@@ -56,7 +56,7 @@ class MyStack : Stack
 package main
 
 import (
-	media "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/media/latest"
+	media "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/media"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -92,12 +92,12 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-live_output = azure_nextgen.media.latest.LiveOutput("liveOutput",
+live_output = azure_nextgen.media.LiveOutput("liveOutput",
     account_name="slitestmedia10",
     archive_window_length="PT5M",
     asset_name="6f3264f5-a189-48b4-a29a-a40f22575212",
     description="test live output 1",
-    hls=azure_nextgen.media.latest.HlsArgs(
+    hls=azure_nextgen.media.HlsArgs(
         fragments_per_ts_segment=5,
     ),
     live_event_name="myLiveEvent1",
@@ -115,7 +115,7 @@ live_output = azure_nextgen.media.latest.LiveOutput("liveOutput",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const liveOutput = new azure_nextgen.media.latest.LiveOutput("liveOutput", {
+const liveOutput = new azure_nextgen.media.LiveOutput("liveOutput", {
     accountName: "slitestmedia10",
     archiveWindowLength: "PT5M",
     assetName: "6f3264f5-a189-48b4-a29a-a40f22575212",
@@ -385,7 +385,7 @@ The LiveOutput resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#hls_csharp" style="color: inherit; text-decoration: inherit;">Hls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hls">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Hls<wbr>Args</a></span>
+        <span class="property-type"><a href="#hls">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media..<wbr>Inputs.<wbr>Hls<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}HTTP Live Streaming (HLS) packing setting for the live output.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1119,7 +1119,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:media/latest:LiveOutput myLiveOutput1 /subscriptions/0a6ec948-5a62-437d-b9df-934dc7c1b722/resourceGroups/mediaresources/providers/Microsoft.Media/mediaservices/slitestmedia10/liveevents/myLiveEvent1/liveoutputs/myLiveOutput1 
+$ pulumi import azure-nextgen:media:LiveOutput myLiveOutput1 /subscriptions/0a6ec948-5a62-437d-b9df-934dc7c1b722/resourceGroups/mediaresources/providers/Microsoft.Media/mediaservices/slitestmedia10/liveevents/myLiveEvent1/liveoutputs/myLiveOutput1 
 ```
 
 

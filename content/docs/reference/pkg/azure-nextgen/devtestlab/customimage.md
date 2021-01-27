@@ -11,13 +11,13 @@ meta_desc: "Documentation for the azure-nextgen.devtestlab.CustomImage resource 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 A custom image.
-Latest API Version: 2018-09-15.
+API Version: 2018-09-15.
 ## Import
 
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:devtestlab/latest:CustomImage myresource1 /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DevTestLab/labs/{labName}/customimages/{name} 
+$ pulumi import azure-nextgen:devtestlab:CustomImage myresource1 /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DevTestLab/labs/{labName}/customimages/{name} 
 ```
 
 
@@ -245,7 +245,7 @@ The CustomImage resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#customimageplan_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Image<wbr>Plan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customimagepropertiesfromplan">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Custom<wbr>Image<wbr>Properties<wbr>From<wbr>Plan<wbr>Args</a></span>
+        <span class="property-type"><a href="#customimagepropertiesfromplan">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab..<wbr>Inputs.<wbr>Custom<wbr>Image<wbr>Properties<wbr>From<wbr>Plan<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Storage information about the plan related to this custom image{{% /md %}}</dd>
     <dt class="property-optional"
@@ -254,7 +254,7 @@ The CustomImage resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#datadiskstorageinfo_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Disk<wbr>Storage<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datadiskstoragetypeinfo">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Data<wbr>Disk<wbr>Storage<wbr>Type<wbr>Info<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#datadiskstoragetypeinfo">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab..<wbr>Inputs.<wbr>Data<wbr>Disk<wbr>Storage<wbr>Type<wbr>Info<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Storage information about the data disks present in the custom image{{% /md %}}</dd>
     <dt class="property-optional"
@@ -317,7 +317,7 @@ The CustomImage resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#vhd_csharp" style="color: inherit; text-decoration: inherit;">Vhd</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customimagepropertiescustom">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Custom<wbr>Image<wbr>Properties<wbr>Custom<wbr>Args</a></span>
+        <span class="property-type"><a href="#customimagepropertiescustom">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab..<wbr>Inputs.<wbr>Custom<wbr>Image<wbr>Properties<wbr>Custom<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The VHD from which the image is to be created.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -326,7 +326,7 @@ The CustomImage resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#vm_csharp" style="color: inherit; text-decoration: inherit;">Vm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customimagepropertiesfromvm">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Custom<wbr>Image<wbr>Properties<wbr>From<wbr>Vm<wbr>Args</a></span>
+        <span class="property-type"><a href="#customimagepropertiesfromvm">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab..<wbr>Inputs.<wbr>Custom<wbr>Image<wbr>Properties<wbr>From<wbr>Vm<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The virtual machine from which the image is to be created.{{% /md %}}</dd>
 </dl>
@@ -1006,7 +1006,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ostype_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#customimageostype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Custom<wbr>Image<wbr>Os<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#customimageostype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab..<wbr>Custom<wbr>Image<wbr>Os<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The OS type of the custom image (i.e. Windows, Linux){{% /md %}}</dd>
     <dt class="property-optional"
@@ -1542,7 +1542,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linuxosinfo_csharp" style="color: inherit; text-decoration: inherit;">Linux<wbr>Os<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linuxosinfo">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Linux<wbr>Os<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#linuxosinfo">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab..<wbr>Inputs.<wbr>Linux<wbr>Os<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Linux OS information of the VM.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1560,7 +1560,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#windowsosinfo_csharp" style="color: inherit; text-decoration: inherit;">Windows<wbr>Os<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#windowsosinfo">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Windows<wbr>Os<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#windowsosinfo">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab..<wbr>Inputs.<wbr>Windows<wbr>Os<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Windows OS information of the VM.{{% /md %}}</dd>
 </dl>
@@ -1676,7 +1676,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linuxosinfo_csharp" style="color: inherit; text-decoration: inherit;">Linux<wbr>Os<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linuxosinforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Linux<wbr>Os<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#linuxosinforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab..<wbr>Inputs.<wbr>Linux<wbr>Os<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Linux OS information of the VM.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1694,7 +1694,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#windowsosinfo_csharp" style="color: inherit; text-decoration: inherit;">Windows<wbr>Os<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#windowsosinforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Windows<wbr>Os<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#windowsosinforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab..<wbr>Inputs.<wbr>Windows<wbr>Os<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Windows OS information of the VM.{{% /md %}}</dd>
 </dl>
@@ -1819,7 +1819,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storagetype_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#storagetype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Storage<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#storagetype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab..<wbr>Storage<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Disk Storage Type{{% /md %}}</dd>
 </dl>
@@ -2006,7 +2006,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linuxosstate_csharp" style="color: inherit; text-decoration: inherit;">Linux<wbr>Os<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#linuxosstate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Linux<wbr>Os<wbr>State</a></span>
+        <span class="property-type">string | <a href="#linuxosstate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab..<wbr>Linux<wbr>Os<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}The state of the Linux OS (i.e. NonDeprovisioned, DeprovisionRequested, DeprovisionApplied).{{% /md %}}</dd>
 </dl>
@@ -2222,7 +2222,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#windowsosstate_csharp" style="color: inherit; text-decoration: inherit;">Windows<wbr>Os<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#windowsosstate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Windows<wbr>Os<wbr>State</a></span>
+        <span class="property-type">string | <a href="#windowsosstate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab..<wbr>Windows<wbr>Os<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}The state of the Windows OS (i.e. NonSysprepped, SysprepRequested, SysprepApplied).{{% /md %}}</dd>
 </dl>

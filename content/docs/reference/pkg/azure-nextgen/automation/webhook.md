@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.automation.Webhook resource with
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Definition of the webhook type.
-Latest API Version: 2015-10-31.
+API Version: 2015-10-31.
 
 {{% examples %}}
 ## Example Usage
@@ -27,14 +27,14 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var webhook = new AzureNextGen.Automation.Latest.Webhook("webhook", new AzureNextGen.Automation.Latest.WebhookArgs
+        var webhook = new AzureNextGen.Automation..Webhook("webhook", new AzureNextGen.Automation..WebhookArgs
         {
             AutomationAccountName = "myAutomationAccount33",
             ExpiryTime = "2018-03-29T22:18:13.7002872Z",
             IsEnabled = true,
             Name = "TestWebhook",
             ResourceGroupName = "rg",
-            Runbook = new AzureNextGen.Automation.Latest.Inputs.RunbookAssociationPropertyArgs
+            Runbook = new AzureNextGen.Automation..Inputs.RunbookAssociationPropertyArgs
             {
                 Name = "TestRunbook",
             },
@@ -55,7 +55,7 @@ class MyStack : Stack
 package main
 
 import (
-	automation "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/automation/latest"
+	automation "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/automation"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -90,13 +90,13 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-webhook = azure_nextgen.automation.latest.Webhook("webhook",
+webhook = azure_nextgen.automation.Webhook("webhook",
     automation_account_name="myAutomationAccount33",
     expiry_time="2018-03-29T22:18:13.7002872Z",
     is_enabled=True,
     name="TestWebhook",
     resource_group_name="rg",
-    runbook=azure_nextgen.automation.latest.RunbookAssociationPropertyArgs(
+    runbook=azure_nextgen.automation.RunbookAssociationPropertyArgs(
         name="TestRunbook",
     ),
     uri="<uri>",
@@ -112,7 +112,7 @@ webhook = azure_nextgen.automation.latest.Webhook("webhook",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const webhook = new azure_nextgen.automation.latest.Webhook("webhook", {
+const webhook = new azure_nextgen.automation.Webhook("webhook", {
     automationAccountName: "myAutomationAccount33",
     expiryTime: "2018-03-29T22:18:13.7002872Z",
     isEnabled: true,
@@ -390,7 +390,7 @@ The Webhook resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#runbook_csharp" style="color: inherit; text-decoration: inherit;">Runbook</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#runbookassociationproperty">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automation.<wbr>Inputs.<wbr>Runbook<wbr>Association<wbr>Property<wbr>Args</a></span>
+        <span class="property-type"><a href="#runbookassociationproperty">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automation..<wbr>Inputs.<wbr>Runbook<wbr>Association<wbr>Property<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the runbook.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1115,7 +1115,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:automation/latest:Webhook TestWebhook /subscriptions/subid/resourceGroups/rg/providers/Microsoft.Automation/automationAccounts/myAutomationAccount33/webhooks/TestWebhook 
+$ pulumi import azure-nextgen:automation:Webhook TestWebhook /subscriptions/subid/resourceGroups/rg/providers/Microsoft.Automation/automationAccounts/myAutomationAccount33/webhooks/TestWebhook 
 ```
 
 
