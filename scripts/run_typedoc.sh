@@ -77,7 +77,6 @@ generate_docs() {
 
 REPOS=(
     "auth0,pulumi-auth0,sdk/nodejs"
-    "aws,pulumi-aws,sdk/nodejs"
     "awsx,pulumi-awsx/nodejs/awsx"
     "azure,pulumi-azure,sdk/nodejs"
     "azure-nextgen,pulumi-azure-nextgen,sdk/nodejs"
