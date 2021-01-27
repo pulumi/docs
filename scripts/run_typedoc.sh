@@ -82,7 +82,6 @@ REPOS=(
     "kubernetesx,pulumi-kubernetesx/nodejs/kubernetesx"
     "policy,pulumi-policy,sdk/nodejs/policy"
     "pulumi,pulumi/sdk/nodejs"
-    "random,pulumi-random,sdk/nodejs"
     "spotinst,pulumi-spotinst,sdk/nodejs"
     "terraform,pulumi-terraform,sdk/nodejs"
 )
