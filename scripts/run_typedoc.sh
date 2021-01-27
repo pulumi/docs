@@ -79,7 +79,6 @@ REPOS=(
     "awsx,pulumi-awsx/nodejs/awsx"
     "azure-nextgen,pulumi-azure-nextgen,sdk/nodejs"
     "cloud,pulumi-cloud/api"
-    "consul,pulumi-consul,sdk/nodejs"
     "datadog,pulumi-datadog,sdk/nodejs"
     "digitalocean,pulumi-digitalocean,sdk/nodejs"
     "dnsimple,pulumi-dnsimple,sdk/nodejs"
