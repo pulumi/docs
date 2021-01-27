@@ -1468,13 +1468,13 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="queries_csharp">
-<a href="#queries_csharp" style="color: inherit; text-decoration: inherit;">Queries</a>
+        <span id="nrqlqueries_csharp">
+<a href="#nrqlqueries_csharp" style="color: inherit; text-decoration: inherit;">Nrql<wbr>Queries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#onedashboardpagewidgetareaquery">List&lt;Pulumi.<wbr>New<wbr>Relic.<wbr>Inputs.<wbr>One<wbr>Dashboard<wbr>Page<wbr>Widget<wbr>Area<wbr>Query<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#onedashboardpagewidgetareanrqlquery">List&lt;Pulumi.<wbr>New<wbr>Relic.<wbr>Inputs.<wbr>One<wbr>Dashboard<wbr>Page<wbr>Widget<wbr>Area<wbr>Nrql<wbr>Query<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}(Required) A nested block that describes a NRQL Query. See Nested query blocks below for details.
+    <dd>{{% md %}}(Required) A nested block that describes a NRQL Query. See Nested nrql\_query blocks below for details.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -1543,13 +1543,13 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="queries_go">
-<a href="#queries_go" style="color: inherit; text-decoration: inherit;">Queries</a>
+        <span id="nrqlqueries_go">
+<a href="#nrqlqueries_go" style="color: inherit; text-decoration: inherit;">Nrql<wbr>Queries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#onedashboardpagewidgetareaquery">[]One<wbr>Dashboard<wbr>Page<wbr>Widget<wbr>Area<wbr>Query</a></span>
+        <span class="property-type"><a href="#onedashboardpagewidgetareanrqlquery">[]One<wbr>Dashboard<wbr>Page<wbr>Widget<wbr>Area<wbr>Nrql<wbr>Query</a></span>
     </dt>
-    <dd>{{% md %}}(Required) A nested block that describes a NRQL Query. See Nested query blocks below for details.
+    <dd>{{% md %}}(Required) A nested block that describes a NRQL Query. See Nested nrql\_query blocks below for details.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -1618,13 +1618,13 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="queries_nodejs">
-<a href="#queries_nodejs" style="color: inherit; text-decoration: inherit;">queries</a>
+        <span id="nrqlqueries_nodejs">
+<a href="#nrqlqueries_nodejs" style="color: inherit; text-decoration: inherit;">nrql<wbr>Queries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#onedashboardpagewidgetareaquery">One<wbr>Dashboard<wbr>Page<wbr>Widget<wbr>Area<wbr>Query[]</a></span>
+        <span class="property-type"><a href="#onedashboardpagewidgetareanrqlquery">One<wbr>Dashboard<wbr>Page<wbr>Widget<wbr>Area<wbr>Nrql<wbr>Query[]</a></span>
     </dt>
-    <dd>{{% md %}}(Required) A nested block that describes a NRQL Query. See Nested query blocks below for details.
+    <dd>{{% md %}}(Required) A nested block that describes a NRQL Query. See Nested nrql\_query blocks below for details.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -1693,13 +1693,13 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="queries_python">
-<a href="#queries_python" style="color: inherit; text-decoration: inherit;">queries</a>
+        <span id="nrql_queries_python">
+<a href="#nrql_queries_python" style="color: inherit; text-decoration: inherit;">nrql_<wbr>queries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#onedashboardpagewidgetareaquery">Sequence[One<wbr>Dashboard<wbr>Page<wbr>Widget<wbr>Area<wbr>Query<wbr>Args]</a></span>
+        <span class="property-type"><a href="#onedashboardpagewidgetareanrqlquery">Sequence[One<wbr>Dashboard<wbr>Page<wbr>Widget<wbr>Area<wbr>Nrql<wbr>Query<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}(Required) A nested block that describes a NRQL Query. See Nested query blocks below for details.
+    <dd>{{% md %}}(Required) A nested block that describes a NRQL Query. See Nested nrql\_query blocks below for details.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -1753,17 +1753,17 @@ The following state arguments are supported:
 </dl>
 {{% /choosable %}}
 
-<h4 id="onedashboardpagewidgetareaquery">One<wbr>Dashboard<wbr>Page<wbr>Widget<wbr>Area<wbr>Query</h4>
+<h4 id="onedashboardpagewidgetareanrqlquery">One<wbr>Dashboard<wbr>Page<wbr>Widget<wbr>Area<wbr>Nrql<wbr>Query</h4>
 {{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/newrelic/types/input/#OneDashboardPageWidgetAreaQuery">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/newrelic/types/output/#OneDashboardPageWidgetAreaQuery">output</a> API doc for this type.
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/newrelic/types/input/#OneDashboardPageWidgetAreaNrqlQuery">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/newrelic/types/output/#OneDashboardPageWidgetAreaNrqlQuery">output</a> API doc for this type.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-newrelic/sdk/v3/go/newrelic/?tab=doc#OneDashboardPageWidgetAreaQueryArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-newrelic/sdk/v3/go/newrelic/?tab=doc#OneDashboardPageWidgetAreaQueryOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-newrelic/sdk/v3/go/newrelic/?tab=doc#OneDashboardPageWidgetAreaNrqlQueryArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-newrelic/sdk/v3/go/newrelic/?tab=doc#OneDashboardPageWidgetAreaNrqlQueryOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.NewRelic/Pulumi.NewRelic.Inputs.OneDashboardPageWidgetAreaQueryArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.NewRelic/Pulumi.NewRelic.Outputs.OneDashboardPageWidgetAreaQuery.html">output</a> API doc for this type.
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.NewRelic/Pulumi.NewRelic.Inputs.OneDashboardPageWidgetAreaNrqlQueryArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.NewRelic/Pulumi.NewRelic.Outputs.OneDashboardPageWidgetAreaNrqlQuery.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1782,8 +1782,8 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="nrql_csharp">
-<a href="#nrql_csharp" style="color: inherit; text-decoration: inherit;">Nrql</a>
+        <span id="query_csharp">
+<a href="#query_csharp" style="color: inherit; text-decoration: inherit;">Query</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -1808,8 +1808,8 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="nrql_go">
-<a href="#nrql_go" style="color: inherit; text-decoration: inherit;">Nrql</a>
+        <span id="query_go">
+<a href="#query_go" style="color: inherit; text-decoration: inherit;">Query</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -1834,8 +1834,8 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="nrql_nodejs">
-<a href="#nrql_nodejs" style="color: inherit; text-decoration: inherit;">nrql</a>
+        <span id="query_nodejs">
+<a href="#query_nodejs" style="color: inherit; text-decoration: inherit;">query</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -1860,8 +1860,8 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="nrql_python">
-<a href="#nrql_python" style="color: inherit; text-decoration: inherit;">nrql</a>
+        <span id="query_python">
+<a href="#query_python" style="color: inherit; text-decoration: inherit;">query</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -1900,13 +1900,13 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="queries_csharp">
-<a href="#queries_csharp" style="color: inherit; text-decoration: inherit;">Queries</a>
+        <span id="nrqlqueries_csharp">
+<a href="#nrqlqueries_csharp" style="color: inherit; text-decoration: inherit;">Nrql<wbr>Queries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#onedashboardpagewidgetbarquery">List&lt;Pulumi.<wbr>New<wbr>Relic.<wbr>Inputs.<wbr>One<wbr>Dashboard<wbr>Page<wbr>Widget<wbr>Bar<wbr>Query<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#onedashboardpagewidgetbarnrqlquery">List&lt;Pulumi.<wbr>New<wbr>Relic.<wbr>Inputs.<wbr>One<wbr>Dashboard<wbr>Page<wbr>Widget<wbr>Bar<wbr>Nrql<wbr>Query<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}(Required) A nested block that describes a NRQL Query. See Nested query blocks below for details.
+    <dd>{{% md %}}(Required) A nested block that describes a NRQL Query. See Nested nrql\_query blocks below for details.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -1975,13 +1975,13 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="queries_go">
-<a href="#queries_go" style="color: inherit; text-decoration: inherit;">Queries</a>
+        <span id="nrqlqueries_go">
+<a href="#nrqlqueries_go" style="color: inherit; text-decoration: inherit;">Nrql<wbr>Queries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#onedashboardpagewidgetbarquery">[]One<wbr>Dashboard<wbr>Page<wbr>Widget<wbr>Bar<wbr>Query</a></span>
+        <span class="property-type"><a href="#onedashboardpagewidgetbarnrqlquery">[]One<wbr>Dashboard<wbr>Page<wbr>Widget<wbr>Bar<wbr>Nrql<wbr>Query</a></span>
     </dt>
-    <dd>{{% md %}}(Required) A nested block that describes a NRQL Query. See Nested query blocks below for details.
+    <dd>{{% md %}}(Required) A nested block that describes a NRQL Query. See Nested nrql\_query blocks below for details.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -2050,13 +2050,13 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="queries_nodejs">
-<a href="#queries_nodejs" style="color: inherit; text-decoration: inherit;">queries</a>
+        <span id="nrqlqueries_nodejs">
+<a href="#nrqlqueries_nodejs" style="color: inherit; text-decoration: inherit;">nrql<wbr>Queries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#onedashboardpagewidgetbarquery">One<wbr>Dashboard<wbr>Page<wbr>Widget<wbr>Bar<wbr>Query[]</a></span>
+        <span class="property-type"><a href="#onedashboardpagewidgetbarnrqlquery">One<wbr>Dashboard<wbr>Page<wbr>Widget<wbr>Bar<wbr>Nrql<wbr>Query[]</a></span>
     </dt>
-    <dd>{{% md %}}(Required) A nested block that describes a NRQL Query. See Nested query blocks below for details.
+    <dd>{{% md %}}(Required) A nested block that describes a NRQL Query. See Nested nrql\_query blocks below for details.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -2125,13 +2125,13 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="queries_python">
-<a href="#queries_python" style="color: inherit; text-decoration: inherit;">queries</a>
+        <span id="nrql_queries_python">
+<a href="#nrql_queries_python" style="color: inherit; text-decoration: inherit;">nrql_<wbr>queries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#onedashboardpagewidgetbarquery">Sequence[One<wbr>Dashboard<wbr>Page<wbr>Widget<wbr>Bar<wbr>Query<wbr>Args]</a></span>
+        <span class="property-type"><a href="#onedashboardpagewidgetbarnrqlquery">Sequence[One<wbr>Dashboard<wbr>Page<wbr>Widget<wbr>Bar<wbr>Nrql<wbr>Query<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}(Required) A nested block that describes a NRQL Query. See Nested query blocks below for details.
+    <dd>{{% md %}}(Required) A nested block that describes a NRQL Query. See Nested nrql\_query blocks below for details.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -2185,17 +2185,17 @@ The following state arguments are supported:
 </dl>
 {{% /choosable %}}
 
-<h4 id="onedashboardpagewidgetbarquery">One<wbr>Dashboard<wbr>Page<wbr>Widget<wbr>Bar<wbr>Query</h4>
+<h4 id="onedashboardpagewidgetbarnrqlquery">One<wbr>Dashboard<wbr>Page<wbr>Widget<wbr>Bar<wbr>Nrql<wbr>Query</h4>
 {{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/newrelic/types/input/#OneDashboardPageWidgetBarQuery">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/newrelic/types/output/#OneDashboardPageWidgetBarQuery">output</a> API doc for this type.
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/newrelic/types/input/#OneDashboardPageWidgetBarNrqlQuery">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/newrelic/types/output/#OneDashboardPageWidgetBarNrqlQuery">output</a> API doc for this type.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-newrelic/sdk/v3/go/newrelic/?tab=doc#OneDashboardPageWidgetBarQueryArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-newrelic/sdk/v3/go/newrelic/?tab=doc#OneDashboardPageWidgetBarQueryOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-newrelic/sdk/v3/go/newrelic/?tab=doc#OneDashboardPageWidgetBarNrqlQueryArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-newrelic/sdk/v3/go/newrelic/?tab=doc#OneDashboardPageWidgetBarNrqlQueryOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.NewRelic/Pulumi.NewRelic.Inputs.OneDashboardPageWidgetBarQueryArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.NewRelic/Pulumi.NewRelic.Outputs.OneDashboardPageWidgetBarQuery.html">output</a> API doc for this type.
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.NewRelic/Pulumi.NewRelic.Inputs.OneDashboardPageWidgetBarNrqlQueryArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.NewRelic/Pulumi.NewRelic.Outputs.OneDashboardPageWidgetBarNrqlQuery.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2214,8 +2214,8 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="nrql_csharp">
-<a href="#nrql_csharp" style="color: inherit; text-decoration: inherit;">Nrql</a>
+        <span id="query_csharp">
+<a href="#query_csharp" style="color: inherit; text-decoration: inherit;">Query</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -2240,8 +2240,8 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="nrql_go">
-<a href="#nrql_go" style="color: inherit; text-decoration: inherit;">Nrql</a>
+        <span id="query_go">
+<a href="#query_go" style="color: inherit; text-decoration: inherit;">Query</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -2266,8 +2266,8 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="nrql_nodejs">
-<a href="#nrql_nodejs" style="color: inherit; text-decoration: inherit;">nrql</a>
+        <span id="query_nodejs">
+<a href="#query_nodejs" style="color: inherit; text-decoration: inherit;">query</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -2292,8 +2292,8 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="nrql_python">
-<a href="#nrql_python" style="color: inherit; text-decoration: inherit;">nrql</a>
+        <span id="query_python">
+<a href="#query_python" style="color: inherit; text-decoration: inherit;">query</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -2332,13 +2332,13 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="queries_csharp">
-<a href="#queries_csharp" style="color: inherit; text-decoration: inherit;">Queries</a>
+        <span id="nrqlqueries_csharp">
+<a href="#nrqlqueries_csharp" style="color: inherit; text-decoration: inherit;">Nrql<wbr>Queries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#onedashboardpagewidgetbillboardquery">List&lt;Pulumi.<wbr>New<wbr>Relic.<wbr>Inputs.<wbr>One<wbr>Dashboard<wbr>Page<wbr>Widget<wbr>Billboard<wbr>Query<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#onedashboardpagewidgetbillboardnrqlquery">List&lt;Pulumi.<wbr>New<wbr>Relic.<wbr>Inputs.<wbr>One<wbr>Dashboard<wbr>Page<wbr>Widget<wbr>Billboard<wbr>Nrql<wbr>Query<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}(Required) A nested block that describes a NRQL Query. See Nested query blocks below for details.
+    <dd>{{% md %}}(Required) A nested block that describes a NRQL Query. See Nested nrql\_query blocks below for details.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -2428,13 +2428,13 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="queries_go">
-<a href="#queries_go" style="color: inherit; text-decoration: inherit;">Queries</a>
+        <span id="nrqlqueries_go">
+<a href="#nrqlqueries_go" style="color: inherit; text-decoration: inherit;">Nrql<wbr>Queries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#onedashboardpagewidgetbillboardquery">[]One<wbr>Dashboard<wbr>Page<wbr>Widget<wbr>Billboard<wbr>Query</a></span>
+        <span class="property-type"><a href="#onedashboardpagewidgetbillboardnrqlquery">[]One<wbr>Dashboard<wbr>Page<wbr>Widget<wbr>Billboard<wbr>Nrql<wbr>Query</a></span>
     </dt>
-    <dd>{{% md %}}(Required) A nested block that describes a NRQL Query. See Nested query blocks below for details.
+    <dd>{{% md %}}(Required) A nested block that describes a NRQL Query. See Nested nrql\_query blocks below for details.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -2524,13 +2524,13 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="queries_nodejs">
-<a href="#queries_nodejs" style="color: inherit; text-decoration: inherit;">queries</a>
+        <span id="nrqlqueries_nodejs">
+<a href="#nrqlqueries_nodejs" style="color: inherit; text-decoration: inherit;">nrql<wbr>Queries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#onedashboardpagewidgetbillboardquery">One<wbr>Dashboard<wbr>Page<wbr>Widget<wbr>Billboard<wbr>Query[]</a></span>
+        <span class="property-type"><a href="#onedashboardpagewidgetbillboardnrqlquery">One<wbr>Dashboard<wbr>Page<wbr>Widget<wbr>Billboard<wbr>Nrql<wbr>Query[]</a></span>
     </dt>
-    <dd>{{% md %}}(Required) A nested block that describes a NRQL Query. See Nested query blocks below for details.
+    <dd>{{% md %}}(Required) A nested block that describes a NRQL Query. See Nested nrql\_query blocks below for details.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -2620,13 +2620,13 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="queries_python">
-<a href="#queries_python" style="color: inherit; text-decoration: inherit;">queries</a>
+        <span id="nrql_queries_python">
+<a href="#nrql_queries_python" style="color: inherit; text-decoration: inherit;">nrql_<wbr>queries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#onedashboardpagewidgetbillboardquery">Sequence[One<wbr>Dashboard<wbr>Page<wbr>Widget<wbr>Billboard<wbr>Query<wbr>Args]</a></span>
+        <span class="property-type"><a href="#onedashboardpagewidgetbillboardnrqlquery">Sequence[One<wbr>Dashboard<wbr>Page<wbr>Widget<wbr>Billboard<wbr>Nrql<wbr>Query<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}(Required) A nested block that describes a NRQL Query. See Nested query blocks below for details.
+    <dd>{{% md %}}(Required) A nested block that describes a NRQL Query. See Nested nrql\_query blocks below for details.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -2701,17 +2701,17 @@ The following state arguments are supported:
 </dl>
 {{% /choosable %}}
 
-<h4 id="onedashboardpagewidgetbillboardquery">One<wbr>Dashboard<wbr>Page<wbr>Widget<wbr>Billboard<wbr>Query</h4>
+<h4 id="onedashboardpagewidgetbillboardnrqlquery">One<wbr>Dashboard<wbr>Page<wbr>Widget<wbr>Billboard<wbr>Nrql<wbr>Query</h4>
 {{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/newrelic/types/input/#OneDashboardPageWidgetBillboardQuery">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/newrelic/types/output/#OneDashboardPageWidgetBillboardQuery">output</a> API doc for this type.
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/newrelic/types/input/#OneDashboardPageWidgetBillboardNrqlQuery">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/newrelic/types/output/#OneDashboardPageWidgetBillboardNrqlQuery">output</a> API doc for this type.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-newrelic/sdk/v3/go/newrelic/?tab=doc#OneDashboardPageWidgetBillboardQueryArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-newrelic/sdk/v3/go/newrelic/?tab=doc#OneDashboardPageWidgetBillboardQueryOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-newrelic/sdk/v3/go/newrelic/?tab=doc#OneDashboardPageWidgetBillboardNrqlQueryArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-newrelic/sdk/v3/go/newrelic/?tab=doc#OneDashboardPageWidgetBillboardNrqlQueryOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.NewRelic/Pulumi.NewRelic.Inputs.OneDashboardPageWidgetBillboardQueryArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.NewRelic/Pulumi.NewRelic.Outputs.OneDashboardPageWidgetBillboardQuery.html">output</a> API doc for this type.
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.NewRelic/Pulumi.NewRelic.Inputs.OneDashboardPageWidgetBillboardNrqlQueryArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.NewRelic/Pulumi.NewRelic.Outputs.OneDashboardPageWidgetBillboardNrqlQuery.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2730,8 +2730,8 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="nrql_csharp">
-<a href="#nrql_csharp" style="color: inherit; text-decoration: inherit;">Nrql</a>
+        <span id="query_csharp">
+<a href="#query_csharp" style="color: inherit; text-decoration: inherit;">Query</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -2756,8 +2756,8 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="nrql_go">
-<a href="#nrql_go" style="color: inherit; text-decoration: inherit;">Nrql</a>
+        <span id="query_go">
+<a href="#query_go" style="color: inherit; text-decoration: inherit;">Query</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -2782,8 +2782,8 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="nrql_nodejs">
-<a href="#nrql_nodejs" style="color: inherit; text-decoration: inherit;">nrql</a>
+        <span id="query_nodejs">
+<a href="#query_nodejs" style="color: inherit; text-decoration: inherit;">query</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -2808,8 +2808,8 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="nrql_python">
-<a href="#nrql_python" style="color: inherit; text-decoration: inherit;">nrql</a>
+        <span id="query_python">
+<a href="#query_python" style="color: inherit; text-decoration: inherit;">query</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -2848,13 +2848,13 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="queries_csharp">
-<a href="#queries_csharp" style="color: inherit; text-decoration: inherit;">Queries</a>
+        <span id="nrqlqueries_csharp">
+<a href="#nrqlqueries_csharp" style="color: inherit; text-decoration: inherit;">Nrql<wbr>Queries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#onedashboardpagewidgetlinequery">List&lt;Pulumi.<wbr>New<wbr>Relic.<wbr>Inputs.<wbr>One<wbr>Dashboard<wbr>Page<wbr>Widget<wbr>Line<wbr>Query<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#onedashboardpagewidgetlinenrqlquery">List&lt;Pulumi.<wbr>New<wbr>Relic.<wbr>Inputs.<wbr>One<wbr>Dashboard<wbr>Page<wbr>Widget<wbr>Line<wbr>Nrql<wbr>Query<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}(Required) A nested block that describes a NRQL Query. See Nested query blocks below for details.
+    <dd>{{% md %}}(Required) A nested block that describes a NRQL Query. See Nested nrql\_query blocks below for details.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -2923,13 +2923,13 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="queries_go">
-<a href="#queries_go" style="color: inherit; text-decoration: inherit;">Queries</a>
+        <span id="nrqlqueries_go">
+<a href="#nrqlqueries_go" style="color: inherit; text-decoration: inherit;">Nrql<wbr>Queries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#onedashboardpagewidgetlinequery">[]One<wbr>Dashboard<wbr>Page<wbr>Widget<wbr>Line<wbr>Query</a></span>
+        <span class="property-type"><a href="#onedashboardpagewidgetlinenrqlquery">[]One<wbr>Dashboard<wbr>Page<wbr>Widget<wbr>Line<wbr>Nrql<wbr>Query</a></span>
     </dt>
-    <dd>{{% md %}}(Required) A nested block that describes a NRQL Query. See Nested query blocks below for details.
+    <dd>{{% md %}}(Required) A nested block that describes a NRQL Query. See Nested nrql\_query blocks below for details.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -2998,13 +2998,13 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="queries_nodejs">
-<a href="#queries_nodejs" style="color: inherit; text-decoration: inherit;">queries</a>
+        <span id="nrqlqueries_nodejs">
+<a href="#nrqlqueries_nodejs" style="color: inherit; text-decoration: inherit;">nrql<wbr>Queries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#onedashboardpagewidgetlinequery">One<wbr>Dashboard<wbr>Page<wbr>Widget<wbr>Line<wbr>Query[]</a></span>
+        <span class="property-type"><a href="#onedashboardpagewidgetlinenrqlquery">One<wbr>Dashboard<wbr>Page<wbr>Widget<wbr>Line<wbr>Nrql<wbr>Query[]</a></span>
     </dt>
-    <dd>{{% md %}}(Required) A nested block that describes a NRQL Query. See Nested query blocks below for details.
+    <dd>{{% md %}}(Required) A nested block that describes a NRQL Query. See Nested nrql\_query blocks below for details.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -3073,13 +3073,13 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="queries_python">
-<a href="#queries_python" style="color: inherit; text-decoration: inherit;">queries</a>
+        <span id="nrql_queries_python">
+<a href="#nrql_queries_python" style="color: inherit; text-decoration: inherit;">nrql_<wbr>queries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#onedashboardpagewidgetlinequery">Sequence[One<wbr>Dashboard<wbr>Page<wbr>Widget<wbr>Line<wbr>Query<wbr>Args]</a></span>
+        <span class="property-type"><a href="#onedashboardpagewidgetlinenrqlquery">Sequence[One<wbr>Dashboard<wbr>Page<wbr>Widget<wbr>Line<wbr>Nrql<wbr>Query<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}(Required) A nested block that describes a NRQL Query. See Nested query blocks below for details.
+    <dd>{{% md %}}(Required) A nested block that describes a NRQL Query. See Nested nrql\_query blocks below for details.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -3133,17 +3133,17 @@ The following state arguments are supported:
 </dl>
 {{% /choosable %}}
 
-<h4 id="onedashboardpagewidgetlinequery">One<wbr>Dashboard<wbr>Page<wbr>Widget<wbr>Line<wbr>Query</h4>
+<h4 id="onedashboardpagewidgetlinenrqlquery">One<wbr>Dashboard<wbr>Page<wbr>Widget<wbr>Line<wbr>Nrql<wbr>Query</h4>
 {{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/newrelic/types/input/#OneDashboardPageWidgetLineQuery">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/newrelic/types/output/#OneDashboardPageWidgetLineQuery">output</a> API doc for this type.
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/newrelic/types/input/#OneDashboardPageWidgetLineNrqlQuery">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/newrelic/types/output/#OneDashboardPageWidgetLineNrqlQuery">output</a> API doc for this type.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-newrelic/sdk/v3/go/newrelic/?tab=doc#OneDashboardPageWidgetLineQueryArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-newrelic/sdk/v3/go/newrelic/?tab=doc#OneDashboardPageWidgetLineQueryOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-newrelic/sdk/v3/go/newrelic/?tab=doc#OneDashboardPageWidgetLineNrqlQueryArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-newrelic/sdk/v3/go/newrelic/?tab=doc#OneDashboardPageWidgetLineNrqlQueryOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.NewRelic/Pulumi.NewRelic.Inputs.OneDashboardPageWidgetLineQueryArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.NewRelic/Pulumi.NewRelic.Outputs.OneDashboardPageWidgetLineQuery.html">output</a> API doc for this type.
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.NewRelic/Pulumi.NewRelic.Inputs.OneDashboardPageWidgetLineNrqlQueryArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.NewRelic/Pulumi.NewRelic.Outputs.OneDashboardPageWidgetLineNrqlQuery.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -3162,8 +3162,8 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="nrql_csharp">
-<a href="#nrql_csharp" style="color: inherit; text-decoration: inherit;">Nrql</a>
+        <span id="query_csharp">
+<a href="#query_csharp" style="color: inherit; text-decoration: inherit;">Query</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -3188,8 +3188,8 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="nrql_go">
-<a href="#nrql_go" style="color: inherit; text-decoration: inherit;">Nrql</a>
+        <span id="query_go">
+<a href="#query_go" style="color: inherit; text-decoration: inherit;">Query</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -3214,8 +3214,8 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="nrql_nodejs">
-<a href="#nrql_nodejs" style="color: inherit; text-decoration: inherit;">nrql</a>
+        <span id="query_nodejs">
+<a href="#query_nodejs" style="color: inherit; text-decoration: inherit;">query</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -3240,8 +3240,8 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="nrql_python">
-<a href="#nrql_python" style="color: inherit; text-decoration: inherit;">nrql</a>
+        <span id="query_python">
+<a href="#query_python" style="color: inherit; text-decoration: inherit;">query</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -3594,13 +3594,13 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="queries_csharp">
-<a href="#queries_csharp" style="color: inherit; text-decoration: inherit;">Queries</a>
+        <span id="nrqlqueries_csharp">
+<a href="#nrqlqueries_csharp" style="color: inherit; text-decoration: inherit;">Nrql<wbr>Queries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#onedashboardpagewidgetpyquery">List&lt;Pulumi.<wbr>New<wbr>Relic.<wbr>Inputs.<wbr>One<wbr>Dashboard<wbr>Page<wbr>Widget<wbr>Py<wbr>Query<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#onedashboardpagewidgetpynrqlquery">List&lt;Pulumi.<wbr>New<wbr>Relic.<wbr>Inputs.<wbr>One<wbr>Dashboard<wbr>Page<wbr>Widget<wbr>Py<wbr>Nrql<wbr>Query<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}(Required) A nested block that describes a NRQL Query. See Nested query blocks below for details.
+    <dd>{{% md %}}(Required) A nested block that describes a NRQL Query. See Nested nrql\_query blocks below for details.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -3669,13 +3669,13 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="queries_go">
-<a href="#queries_go" style="color: inherit; text-decoration: inherit;">Queries</a>
+        <span id="nrqlqueries_go">
+<a href="#nrqlqueries_go" style="color: inherit; text-decoration: inherit;">Nrql<wbr>Queries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#onedashboardpagewidgetpyquery">[]One<wbr>Dashboard<wbr>Page<wbr>Widget<wbr>Py<wbr>Query</a></span>
+        <span class="property-type"><a href="#onedashboardpagewidgetpynrqlquery">[]One<wbr>Dashboard<wbr>Page<wbr>Widget<wbr>Py<wbr>Nrql<wbr>Query</a></span>
     </dt>
-    <dd>{{% md %}}(Required) A nested block that describes a NRQL Query. See Nested query blocks below for details.
+    <dd>{{% md %}}(Required) A nested block that describes a NRQL Query. See Nested nrql\_query blocks below for details.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -3744,13 +3744,13 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="queries_nodejs">
-<a href="#queries_nodejs" style="color: inherit; text-decoration: inherit;">queries</a>
+        <span id="nrqlqueries_nodejs">
+<a href="#nrqlqueries_nodejs" style="color: inherit; text-decoration: inherit;">nrql<wbr>Queries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#onedashboardpagewidgetpyquery">One<wbr>Dashboard<wbr>Page<wbr>Widget<wbr>Py<wbr>Query[]</a></span>
+        <span class="property-type"><a href="#onedashboardpagewidgetpynrqlquery">One<wbr>Dashboard<wbr>Page<wbr>Widget<wbr>Py<wbr>Nrql<wbr>Query[]</a></span>
     </dt>
-    <dd>{{% md %}}(Required) A nested block that describes a NRQL Query. See Nested query blocks below for details.
+    <dd>{{% md %}}(Required) A nested block that describes a NRQL Query. See Nested nrql\_query blocks below for details.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -3819,13 +3819,13 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="queries_python">
-<a href="#queries_python" style="color: inherit; text-decoration: inherit;">queries</a>
+        <span id="nrql_queries_python">
+<a href="#nrql_queries_python" style="color: inherit; text-decoration: inherit;">nrql_<wbr>queries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#onedashboardpagewidgetpyquery">Sequence[One<wbr>Dashboard<wbr>Page<wbr>Widget<wbr>Py<wbr>Query<wbr>Args]</a></span>
+        <span class="property-type"><a href="#onedashboardpagewidgetpynrqlquery">Sequence[One<wbr>Dashboard<wbr>Page<wbr>Widget<wbr>Py<wbr>Nrql<wbr>Query<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}(Required) A nested block that describes a NRQL Query. See Nested query blocks below for details.
+    <dd>{{% md %}}(Required) A nested block that describes a NRQL Query. See Nested nrql\_query blocks below for details.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -3879,17 +3879,17 @@ The following state arguments are supported:
 </dl>
 {{% /choosable %}}
 
-<h4 id="onedashboardpagewidgetpyquery">One<wbr>Dashboard<wbr>Page<wbr>Widget<wbr>Py<wbr>Query</h4>
+<h4 id="onedashboardpagewidgetpynrqlquery">One<wbr>Dashboard<wbr>Page<wbr>Widget<wbr>Py<wbr>Nrql<wbr>Query</h4>
 {{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/newrelic/types/input/#OneDashboardPageWidgetPyQuery">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/newrelic/types/output/#OneDashboardPageWidgetPyQuery">output</a> API doc for this type.
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/newrelic/types/input/#OneDashboardPageWidgetPyNrqlQuery">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/newrelic/types/output/#OneDashboardPageWidgetPyNrqlQuery">output</a> API doc for this type.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-newrelic/sdk/v3/go/newrelic/?tab=doc#OneDashboardPageWidgetPyQueryArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-newrelic/sdk/v3/go/newrelic/?tab=doc#OneDashboardPageWidgetPyQueryOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-newrelic/sdk/v3/go/newrelic/?tab=doc#OneDashboardPageWidgetPyNrqlQueryArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-newrelic/sdk/v3/go/newrelic/?tab=doc#OneDashboardPageWidgetPyNrqlQueryOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.NewRelic/Pulumi.NewRelic.Inputs.OneDashboardPageWidgetPyQueryArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.NewRelic/Pulumi.NewRelic.Outputs.OneDashboardPageWidgetPyQuery.html">output</a> API doc for this type.
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.NewRelic/Pulumi.NewRelic.Inputs.OneDashboardPageWidgetPyNrqlQueryArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.NewRelic/Pulumi.NewRelic.Outputs.OneDashboardPageWidgetPyNrqlQuery.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -3908,8 +3908,8 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="nrql_csharp">
-<a href="#nrql_csharp" style="color: inherit; text-decoration: inherit;">Nrql</a>
+        <span id="query_csharp">
+<a href="#query_csharp" style="color: inherit; text-decoration: inherit;">Query</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -3934,8 +3934,8 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="nrql_go">
-<a href="#nrql_go" style="color: inherit; text-decoration: inherit;">Nrql</a>
+        <span id="query_go">
+<a href="#query_go" style="color: inherit; text-decoration: inherit;">Query</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -3960,8 +3960,8 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="nrql_nodejs">
-<a href="#nrql_nodejs" style="color: inherit; text-decoration: inherit;">nrql</a>
+        <span id="query_nodejs">
+<a href="#query_nodejs" style="color: inherit; text-decoration: inherit;">query</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -3986,8 +3986,8 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="nrql_python">
-<a href="#nrql_python" style="color: inherit; text-decoration: inherit;">nrql</a>
+        <span id="query_python">
+<a href="#query_python" style="color: inherit; text-decoration: inherit;">query</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -4026,13 +4026,13 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="queries_csharp">
-<a href="#queries_csharp" style="color: inherit; text-decoration: inherit;">Queries</a>
+        <span id="nrqlqueries_csharp">
+<a href="#nrqlqueries_csharp" style="color: inherit; text-decoration: inherit;">Nrql<wbr>Queries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#onedashboardpagewidgettablequery">List&lt;Pulumi.<wbr>New<wbr>Relic.<wbr>Inputs.<wbr>One<wbr>Dashboard<wbr>Page<wbr>Widget<wbr>Table<wbr>Query<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#onedashboardpagewidgettablenrqlquery">List&lt;Pulumi.<wbr>New<wbr>Relic.<wbr>Inputs.<wbr>One<wbr>Dashboard<wbr>Page<wbr>Widget<wbr>Table<wbr>Nrql<wbr>Query<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}(Required) A nested block that describes a NRQL Query. See Nested query blocks below for details.
+    <dd>{{% md %}}(Required) A nested block that describes a NRQL Query. See Nested nrql\_query blocks below for details.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -4101,13 +4101,13 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="queries_go">
-<a href="#queries_go" style="color: inherit; text-decoration: inherit;">Queries</a>
+        <span id="nrqlqueries_go">
+<a href="#nrqlqueries_go" style="color: inherit; text-decoration: inherit;">Nrql<wbr>Queries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#onedashboardpagewidgettablequery">[]One<wbr>Dashboard<wbr>Page<wbr>Widget<wbr>Table<wbr>Query</a></span>
+        <span class="property-type"><a href="#onedashboardpagewidgettablenrqlquery">[]One<wbr>Dashboard<wbr>Page<wbr>Widget<wbr>Table<wbr>Nrql<wbr>Query</a></span>
     </dt>
-    <dd>{{% md %}}(Required) A nested block that describes a NRQL Query. See Nested query blocks below for details.
+    <dd>{{% md %}}(Required) A nested block that describes a NRQL Query. See Nested nrql\_query blocks below for details.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -4176,13 +4176,13 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="queries_nodejs">
-<a href="#queries_nodejs" style="color: inherit; text-decoration: inherit;">queries</a>
+        <span id="nrqlqueries_nodejs">
+<a href="#nrqlqueries_nodejs" style="color: inherit; text-decoration: inherit;">nrql<wbr>Queries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#onedashboardpagewidgettablequery">One<wbr>Dashboard<wbr>Page<wbr>Widget<wbr>Table<wbr>Query[]</a></span>
+        <span class="property-type"><a href="#onedashboardpagewidgettablenrqlquery">One<wbr>Dashboard<wbr>Page<wbr>Widget<wbr>Table<wbr>Nrql<wbr>Query[]</a></span>
     </dt>
-    <dd>{{% md %}}(Required) A nested block that describes a NRQL Query. See Nested query blocks below for details.
+    <dd>{{% md %}}(Required) A nested block that describes a NRQL Query. See Nested nrql\_query blocks below for details.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -4251,13 +4251,13 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="queries_python">
-<a href="#queries_python" style="color: inherit; text-decoration: inherit;">queries</a>
+        <span id="nrql_queries_python">
+<a href="#nrql_queries_python" style="color: inherit; text-decoration: inherit;">nrql_<wbr>queries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#onedashboardpagewidgettablequery">Sequence[One<wbr>Dashboard<wbr>Page<wbr>Widget<wbr>Table<wbr>Query<wbr>Args]</a></span>
+        <span class="property-type"><a href="#onedashboardpagewidgettablenrqlquery">Sequence[One<wbr>Dashboard<wbr>Page<wbr>Widget<wbr>Table<wbr>Nrql<wbr>Query<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}(Required) A nested block that describes a NRQL Query. See Nested query blocks below for details.
+    <dd>{{% md %}}(Required) A nested block that describes a NRQL Query. See Nested nrql\_query blocks below for details.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -4311,17 +4311,17 @@ The following state arguments are supported:
 </dl>
 {{% /choosable %}}
 
-<h4 id="onedashboardpagewidgettablequery">One<wbr>Dashboard<wbr>Page<wbr>Widget<wbr>Table<wbr>Query</h4>
+<h4 id="onedashboardpagewidgettablenrqlquery">One<wbr>Dashboard<wbr>Page<wbr>Widget<wbr>Table<wbr>Nrql<wbr>Query</h4>
 {{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/newrelic/types/input/#OneDashboardPageWidgetTableQuery">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/newrelic/types/output/#OneDashboardPageWidgetTableQuery">output</a> API doc for this type.
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/newrelic/types/input/#OneDashboardPageWidgetTableNrqlQuery">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/newrelic/types/output/#OneDashboardPageWidgetTableNrqlQuery">output</a> API doc for this type.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-newrelic/sdk/v3/go/newrelic/?tab=doc#OneDashboardPageWidgetTableQueryArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-newrelic/sdk/v3/go/newrelic/?tab=doc#OneDashboardPageWidgetTableQueryOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-newrelic/sdk/v3/go/newrelic/?tab=doc#OneDashboardPageWidgetTableNrqlQueryArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-newrelic/sdk/v3/go/newrelic/?tab=doc#OneDashboardPageWidgetTableNrqlQueryOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.NewRelic/Pulumi.NewRelic.Inputs.OneDashboardPageWidgetTableQueryArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.NewRelic/Pulumi.NewRelic.Outputs.OneDashboardPageWidgetTableQuery.html">output</a> API doc for this type.
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.NewRelic/Pulumi.NewRelic.Inputs.OneDashboardPageWidgetTableNrqlQueryArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.NewRelic/Pulumi.NewRelic.Outputs.OneDashboardPageWidgetTableNrqlQuery.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -4340,8 +4340,8 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="nrql_csharp">
-<a href="#nrql_csharp" style="color: inherit; text-decoration: inherit;">Nrql</a>
+        <span id="query_csharp">
+<a href="#query_csharp" style="color: inherit; text-decoration: inherit;">Query</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -4366,8 +4366,8 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="nrql_go">
-<a href="#nrql_go" style="color: inherit; text-decoration: inherit;">Nrql</a>
+        <span id="query_go">
+<a href="#query_go" style="color: inherit; text-decoration: inherit;">Query</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -4392,8 +4392,8 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="nrql_nodejs">
-<a href="#nrql_nodejs" style="color: inherit; text-decoration: inherit;">nrql</a>
+        <span id="query_nodejs">
+<a href="#query_nodejs" style="color: inherit; text-decoration: inherit;">query</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -4418,8 +4418,8 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="nrql_python">
-<a href="#nrql_python" style="color: inherit; text-decoration: inherit;">nrql</a>
+        <span id="query_python">
+<a href="#query_python" style="color: inherit; text-decoration: inherit;">query</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
