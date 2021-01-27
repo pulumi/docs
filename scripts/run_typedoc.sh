@@ -76,7 +76,6 @@ generate_docs() {
 }
 
 REPOS=(
-    "aiven,pulumi-aiven,sdk/nodejs"
     "alicloud,pulumi-alicloud,sdk/nodejs"
     "akamai,pulumi-akamai,sdk/nodejs"
     "auth0,pulumi-auth0,sdk/nodejs"
