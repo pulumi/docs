@@ -27,7 +27,7 @@ construction to achieve fine-grained programmatic control over provider settings
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_linode/#pulumi_linode.Provider">Provider</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">api_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">skip_instance_ready_poll</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">token</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ua_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_linode/#pulumi_linode.Provider">Provider</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">api_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">max_retry_delay_ms</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">min_retry_delay_ms</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">skip_instance_ready_poll</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">token</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ua_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -210,6 +210,26 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="maxretrydelayms_csharp">
+<a href="#maxretrydelayms_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Retry<wbr>Delay<wbr>Ms</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Maximum delay in milliseconds before retrying a request.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="minretrydelayms_csharp">
+<a href="#minretrydelayms_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Retry<wbr>Delay<wbr>Ms</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Minimum delay in milliseconds before retrying a request.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="skipinstancereadypoll_csharp">
 <a href="#skipinstancereadypoll_csharp" style="color: inherit; text-decoration: inherit;">Skip<wbr>Instance<wbr>Ready<wbr>Poll</a>
 </span>
@@ -263,6 +283,26 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An HTTP User-Agent Prefix to prepend in API requests.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maxretrydelayms_go">
+<a href="#maxretrydelayms_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Retry<wbr>Delay<wbr>Ms</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Maximum delay in milliseconds before retrying a request.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="minretrydelayms_go">
+<a href="#minretrydelayms_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Retry<wbr>Delay<wbr>Ms</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Minimum delay in milliseconds before retrying a request.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -322,6 +362,26 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="maxretrydelayms_nodejs">
+<a href="#maxretrydelayms_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Retry<wbr>Delay<wbr>Ms</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Maximum delay in milliseconds before retrying a request.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="minretrydelayms_nodejs">
+<a href="#minretrydelayms_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Retry<wbr>Delay<wbr>Ms</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Minimum delay in milliseconds before retrying a request.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="skipinstancereadypoll_nodejs">
 <a href="#skipinstancereadypoll_nodejs" style="color: inherit; text-decoration: inherit;">skip<wbr>Instance<wbr>Ready<wbr>Poll</a>
 </span>
@@ -375,6 +435,26 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An HTTP User-Agent Prefix to prepend in API requests.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="max_retry_delay_ms_python">
+<a href="#max_retry_delay_ms_python" style="color: inherit; text-decoration: inherit;">max_<wbr>retry_<wbr>delay_<wbr>ms</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Maximum delay in milliseconds before retrying a request.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="min_retry_delay_ms_python">
+<a href="#min_retry_delay_ms_python" style="color: inherit; text-decoration: inherit;">min_<wbr>retry_<wbr>delay_<wbr>ms</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Minimum delay in milliseconds before retrying a request.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
