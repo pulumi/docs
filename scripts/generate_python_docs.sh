@@ -8,7 +8,6 @@ REPO_OVERRIDE="${1:-}"
 
 PACKAGES=(
   "pulumi"
-  "pulumi_cloudflare"
   "pulumi_consul"
   "pulumi_datadog"
   "pulumi_digitalocean"
