@@ -19,9 +19,6 @@ export REL_JS_BUNDLE="/js/bundle.min.${ASSET_BUNDLE_ID}.js"
 # URL to the Pulumi conversion service.
 export PULUMI_CONVERT_URL="${PULUMI_CONVERT_URL:-$(pulumi stack output --stack pulumi/tf2pulumi-service/production url)}"
 
-printf "Copying prebuilt docs...\n\n"
-make copy_static_prebuilt
-
 printf "Building web components...\n\n"
 make build_components
 

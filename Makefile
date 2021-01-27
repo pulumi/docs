@@ -59,10 +59,6 @@ generate:
 	pulumi gen-markdown ./content/docs/reference/cli
 	./scripts/mktutorial.sh
 
-.PHONY: copy_static_prebuilt
-copy_static_prebuilt:
-	mkdir -p public && cp -R static-prebuilt/* public/
-
 .PHONY: build
 build:
 	@echo -e "\033[0;32mBUILD:\033[0m"
