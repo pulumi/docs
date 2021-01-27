@@ -8,8 +8,6 @@ REPO_OVERRIDE="${1:-}"
 
 PACKAGES=(
   "pulumi"
-  "pulumi_linode"
-  "pulumi_mailgun"
   "pulumi_mongodbatlas"
   "pulumi_mysql"
   "pulumi_newrelic"
