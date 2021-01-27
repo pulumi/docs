@@ -85,7 +85,6 @@ REPOS=(
     "random,pulumi-random,sdk/nodejs"
     "spotinst,pulumi-spotinst,sdk/nodejs"
     "terraform,pulumi-terraform,sdk/nodejs"
-    "wavefront,pulumi-wavefront,sdk/nodejs"
 )
 
 PIDS=()
