@@ -21,6 +21,7 @@ Explore the resources and functions of the saml module in the Keycloak package.
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
+    <li><a href="getclient" title="GetClient"><span class="symbol function"></span>GetClient</a></li>
     <li><a href="getclientinstallationprovider" title="GetClientInstallationProvider"><span class="symbol function"></span>GetClientInstallationProvider</a></li>
 </ul>
 
@@ -33,7 +34,7 @@ Explore the resources and functions of the saml module in the Keycloak package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`keycloak` Terraform Provider](https://github.com/mrparkers/terraform-provider-keycloak).</dd>
 	<dt>Version</dt>
-	<dd>3.2.0</dd>
+	<dd>3.3.0</dd>
 </dl>
 
 

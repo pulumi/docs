@@ -112,7 +112,7 @@ const group = new keycloak.Role("group", {realmId: realm.then(realm => realm.id)
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_realm(</span><span class="nx">attributes</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">display_name_html</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">internationalizations</span><span class="p">:</span> <span class="nx">Optional[Sequence[GetRealmInternationalizationArgs]]</span> = None<span class="p">, </span><span class="nx">realm</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">security_defenses</span><span class="p">:</span> <span class="nx">Optional[Sequence[GetRealmSecurityDefenseArgs]]</span> = None<span class="p">, </span><span class="nx">smtp_servers</span><span class="p">:</span> <span class="nx">Optional[Sequence[GetRealmSmtpServerArgs]]</span> = None<span class="p">, </span><span class="nx">web_authn_passwordless_policy</span><span class="p">:</span> <span class="nx">Optional[GetRealmWebAuthnPasswordlessPolicyArgs]</span> = None<span class="p">, </span><span class="nx">web_authn_policy</span><span class="p">:</span> <span class="nx">Optional[GetRealmWebAuthnPolicyArgs]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetRealmResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_realm(</span><span class="nx">attributes</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">default_default_client_scopes</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">default_optional_client_scopes</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">display_name_html</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">internationalizations</span><span class="p">:</span> <span class="nx">Optional[Sequence[GetRealmInternationalizationArgs]]</span> = None<span class="p">, </span><span class="nx">realm</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">security_defenses</span><span class="p">:</span> <span class="nx">Optional[Sequence[GetRealmSecurityDefenseArgs]]</span> = None<span class="p">, </span><span class="nx">smtp_servers</span><span class="p">:</span> <span class="nx">Optional[Sequence[GetRealmSmtpServerArgs]]</span> = None<span class="p">, </span><span class="nx">web_authn_passwordless_policy</span><span class="p">:</span> <span class="nx">Optional[GetRealmWebAuthnPasswordlessPolicyArgs]</span> = None<span class="p">, </span><span class="nx">web_authn_policy</span><span class="p">:</span> <span class="nx">Optional[GetRealmWebAuthnPolicyArgs]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetRealmResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -155,6 +155,24 @@ The following arguments are supported:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="defaultdefaultclientscopes_csharp">
+<a href="#defaultdefaultclientscopes_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Default<wbr>Client<wbr>Scopes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="defaultoptionalclientscopes_csharp">
+<a href="#defaultoptionalclientscopes_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Optional<wbr>Client<wbr>Scopes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -238,6 +256,24 @@ The following arguments are supported:
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="defaultdefaultclientscopes_go">
+<a href="#defaultdefaultclientscopes_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Default<wbr>Client<wbr>Scopes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="defaultoptionalclientscopes_go">
+<a href="#defaultoptionalclientscopes_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Optional<wbr>Client<wbr>Scopes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="displaynamehtml_go">
 <a href="#displaynamehtml_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name<wbr>Html</a>
 </span>
@@ -317,6 +353,24 @@ The following arguments are supported:
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="defaultdefaultclientscopes_nodejs">
+<a href="#defaultdefaultclientscopes_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Default<wbr>Client<wbr>Scopes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="defaultoptionalclientscopes_nodejs">
+<a href="#defaultoptionalclientscopes_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Optional<wbr>Client<wbr>Scopes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="displaynamehtml_nodejs">
 <a href="#displaynamehtml_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name<wbr>Html</a>
 </span>
@@ -392,6 +446,24 @@ The following arguments are supported:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, Any]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="default_default_client_scopes_python">
+<a href="#default_default_client_scopes_python" style="color: inherit; text-decoration: inherit;">default_<wbr>default_<wbr>client_<wbr>scopes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="default_optional_client_scopes_python">
+<a href="#default_optional_client_scopes_python" style="color: inherit; text-decoration: inherit;">default_<wbr>optional_<wbr>client_<wbr>scopes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -569,6 +641,24 @@ The following output properties are available:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="defaultdefaultclientscopes_csharp">
+<a href="#defaultdefaultclientscopes_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Default<wbr>Client<wbr>Scopes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="defaultoptionalclientscopes_csharp">
+<a href="#defaultoptionalclientscopes_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Optional<wbr>Client<wbr>Scopes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-"
@@ -1030,6 +1120,24 @@ The following output properties are available:
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="defaultdefaultclientscopes_go">
+<a href="#defaultdefaultclientscopes_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Default<wbr>Client<wbr>Scopes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="defaultoptionalclientscopes_go">
+<a href="#defaultoptionalclientscopes_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Optional<wbr>Client<wbr>Scopes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="defaultsignaturealgorithm_go">
 <a href="#defaultsignaturealgorithm_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Signature<wbr>Algorithm</a>
 </span>
@@ -1487,6 +1595,24 @@ The following output properties are available:
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="defaultdefaultclientscopes_nodejs">
+<a href="#defaultdefaultclientscopes_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Default<wbr>Client<wbr>Scopes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="defaultoptionalclientscopes_nodejs">
+<a href="#defaultoptionalclientscopes_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Optional<wbr>Client<wbr>Scopes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="defaultsignaturealgorithm_nodejs">
 <a href="#defaultsignaturealgorithm_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Signature<wbr>Algorithm</a>
 </span>
@@ -1940,6 +2066,24 @@ The following output properties are available:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="default_default_client_scopes_python">
+<a href="#default_default_client_scopes_python" style="color: inherit; text-decoration: inherit;">default_<wbr>default_<wbr>client_<wbr>scopes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="default_optional_client_scopes_python">
+<a href="#default_optional_client_scopes_python" style="color: inherit; text-decoration: inherit;">default_<wbr>optional_<wbr>client_<wbr>scopes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-"
