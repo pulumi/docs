@@ -80,7 +80,6 @@ REPOS=(
     "cloud,pulumi-cloud/api"
     "eks,pulumi-eks/nodejs/eks"
     "kubernetesx,pulumi-kubernetesx/nodejs/kubernetesx"
-    "mysql,pulumi-mysql,sdk/nodejs"
     "newrelic,pulumi-newrelic,sdk/nodejs"
     "ns1,pulumi-ns1,sdk/nodejs"
     "okta,pulumi-okta,sdk/nodejs"
