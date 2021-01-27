@@ -8,7 +8,6 @@ REPO_OVERRIDE="${1:-}"
 
 PACKAGES=(
   "pulumi"
-  "pulumi_f5bigip"
   "pulumi_gcp"
   "pulumi_github"
   "pulumi_gitlab"
