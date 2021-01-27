@@ -1,3 +1,4 @@
 ---
-redirect_to: /docs/reference/pkg/nodejs/pulumi/kubernetes/discovery/v1beta1/
+redirect_to: /docs/reference/pkg/kubernetes/?language=nodejs
 ---
+

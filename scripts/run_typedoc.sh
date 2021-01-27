@@ -79,7 +79,6 @@ REPOS=(
     "awsx,pulumi-awsx/nodejs/awsx"
     "cloud,pulumi-cloud/api"
     "eks,pulumi-eks/nodejs/eks"
-    "kubernetes,pulumi-kubernetes,sdk/nodejs"
     "kubernetesx,pulumi-kubernetesx/nodejs/kubernetesx"
     "linode,pulumi-linode,sdk/nodejs"
     "mailgun,pulumi-mailgun,sdk/nodejs"
