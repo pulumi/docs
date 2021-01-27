@@ -461,7 +461,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Description of the rule. Will be added as a commend to rendered rule.
+    <dd>{{% md %}}Description of the rule. Will be added as a comment to rendered rule.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -547,7 +547,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Description of the rule. Will be added as a commend to rendered rule.
+    <dd>{{% md %}}Description of the rule. Will be added as a comment to rendered rule.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -633,7 +633,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Description of the rule. Will be added as a commend to rendered rule.
+    <dd>{{% md %}}Description of the rule. Will be added as a comment to rendered rule.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -719,7 +719,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Description of the rule. Will be added as a commend to rendered rule.
+    <dd>{{% md %}}Description of the rule. Will be added as a comment to rendered rule.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
