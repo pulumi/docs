@@ -204,16 +204,6 @@ The RegionPerInstanceConfig resource accepts the following [input]({{< relref "/
 
     <dt class="property-required"
             title="Required">
-        <span id="region_csharp">
-<a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Region where the containing instance group manager is located
-{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="regioninstancegroupmanager_csharp">
 <a href="#regioninstancegroupmanager_csharp" style="color: inherit; text-decoration: inherit;">Region<wbr>Instance<wbr>Group<wbr>Manager</a>
 </span>
@@ -286,6 +276,16 @@ If it is not provided, the provider project is used.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="region_csharp">
+<a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Region where the containing instance group manager is located
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="removeinstancestateondestroy_csharp">
 <a href="#removeinstancestateondestroy_csharp" style="color: inherit; text-decoration: inherit;">Remove<wbr>Instance<wbr>State<wbr>On<wbr>Destroy</a>
 </span>
@@ -302,16 +302,6 @@ State will be removed on the next instance recreation or update.
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
-        <span id="region_go">
-<a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Region where the containing instance group manager is located
-{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="regioninstancegroupmanager_go">
@@ -386,6 +376,16 @@ If it is not provided, the provider project is used.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="region_go">
+<a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Region where the containing instance group manager is located
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="removeinstancestateondestroy_go">
 <a href="#removeinstancestateondestroy_go" style="color: inherit; text-decoration: inherit;">Remove<wbr>Instance<wbr>State<wbr>On<wbr>Destroy</a>
 </span>
@@ -402,16 +402,6 @@ State will be removed on the next instance recreation or update.
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
-        <span id="region_nodejs">
-<a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Region where the containing instance group manager is located
-{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="regioninstancegroupmanager_nodejs">
@@ -486,6 +476,16 @@ If it is not provided, the provider project is used.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="region_nodejs">
+<a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Region where the containing instance group manager is located
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="removeinstancestateondestroy_nodejs">
 <a href="#removeinstancestateondestroy_nodejs" style="color: inherit; text-decoration: inherit;">remove<wbr>Instance<wbr>State<wbr>On<wbr>Destroy</a>
 </span>
@@ -502,16 +502,6 @@ State will be removed on the next instance recreation or update.
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
-        <span id="region_python">
-<a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Region where the containing instance group manager is located
-{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="region_instance_group_manager_python">
@@ -583,6 +573,16 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="region_python">
+<a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Region where the containing instance group manager is located
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">

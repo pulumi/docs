@@ -3,7 +3,7 @@ title: "Module servicenetworking"
 title_tag: "Module servicenetworking | Package @pulumi/gcp | Node.js SDK"
 linktitle: "servicenetworking"
 meta_desc: "Explore members of the servicenetworking module in the @pulumi/gcp package."
-git_sha: "c4a9d5b17d1d84373b0b6970394e0a36707ba8de"
+git_sha: "4f8e44f390377bd82bfb0f66dbdf6c0c289fb396"
 block_external_search_index: true
 ---
 
@@ -30,14 +30,14 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="Connection" data-link-title="Connection">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/c4a9d5b17d1d84373b0b6970394e0a36707ba8de/sdk/nodejs/servicenetworking/connection.ts#L7">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/servicenetworking/connection.ts#L7">
         Resource <strong>Connection</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>Connection</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></code></pre>
 <h4 class="pdoc-member-header" id="Connection-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c4a9d5b17d1d84373b0b6970394e0a36707ba8de/sdk/nodejs/servicenetworking/connection.ts#L51"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/servicenetworking/connection.ts#L51"> <b>constructor</b></a>
 </h4>
 
 
@@ -51,7 +51,7 @@ Create a Connection resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Connection-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c4a9d5b17d1d84373b0b6970394e0a36707ba8de/sdk/nodejs/servicenetworking/connection.ts#L17">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/servicenetworking/connection.ts#L17">method <b>get</b></a>
 </h4>
 
 
@@ -62,14 +62,14 @@ Get an existing Connection resource's state with the given name, ID, and optiona
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Connection-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c4a9d5b17d1d84373b0b6970394e0a36707ba8de/sdk/nodejs/servicenetworking/connection.ts#L7">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/servicenetworking/connection.ts#L7">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Connection-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c4a9d5b17d1d84373b0b6970394e0a36707ba8de/sdk/nodejs/servicenetworking/connection.ts#L28">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/servicenetworking/connection.ts#L28">method <b>isInstance</b></a>
 </h4>
 
 
@@ -80,7 +80,7 @@ Returns true if the given object is an instance of Connection.  This is designed
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Connection-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c4a9d5b17d1d84373b0b6970394e0a36707ba8de/sdk/nodejs/servicenetworking/connection.ts#L7">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/servicenetworking/connection.ts#L7">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -89,7 +89,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Connection-network">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c4a9d5b17d1d84373b0b6970394e0a36707ba8de/sdk/nodejs/servicenetworking/connection.ts#L38">property <b>network</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/servicenetworking/connection.ts#L38">property <b>network</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>network: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -97,12 +97,12 @@ deployments and may be missing (undefined) during planning phases.
 Name of VPC network connected with service producers using VPC peering.
 
 <h4 class="pdoc-member-header" id="Connection-peering">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c4a9d5b17d1d84373b0b6970394e0a36707ba8de/sdk/nodejs/servicenetworking/connection.ts#L39">property <b>peering</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/servicenetworking/connection.ts#L39">property <b>peering</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>peering: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Connection-reservedPeeringRanges">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c4a9d5b17d1d84373b0b6970394e0a36707ba8de/sdk/nodejs/servicenetworking/connection.ts#L45">property <b>reservedPeeringRanges</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/servicenetworking/connection.ts#L45">property <b>reservedPeeringRanges</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>reservedPeeringRanges: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -112,7 +112,7 @@ this service provider. Note that invoking this method with a different range whe
 is already established will not reallocate already provisioned service producer subnetworks.
 
 <h4 class="pdoc-member-header" id="Connection-service">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c4a9d5b17d1d84373b0b6970394e0a36707ba8de/sdk/nodejs/servicenetworking/connection.ts#L51">property <b>service</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/servicenetworking/connection.ts#L51">property <b>service</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>service: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -122,7 +122,7 @@ service provider organization. For Google services that support this functionali
 'servicenetworking.googleapis.com'.
 
 <h4 class="pdoc-member-header" id="Connection-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c4a9d5b17d1d84373b0b6970394e0a36707ba8de/sdk/nodejs/servicenetworking/connection.ts#L7">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/servicenetworking/connection.ts#L7">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -134,7 +134,7 @@ deployments.
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="ConnectionArgs" data-link-title="ConnectionArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/c4a9d5b17d1d84373b0b6970394e0a36707ba8de/sdk/nodejs/servicenetworking/connection.ts#L122">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/servicenetworking/connection.ts#L122">
         interface <strong>ConnectionArgs</strong>
     </a>
 </h3>
@@ -144,7 +144,7 @@ deployments.
 The set of arguments for constructing a Connection resource.
 
 <h4 class="pdoc-member-header" id="ConnectionArgs-network">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c4a9d5b17d1d84373b0b6970394e0a36707ba8de/sdk/nodejs/servicenetworking/connection.ts#L126">property <b>network</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/servicenetworking/connection.ts#L126">property <b>network</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>network: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -152,7 +152,7 @@ The set of arguments for constructing a Connection resource.
 Name of VPC network connected with service producers using VPC peering.
 
 <h4 class="pdoc-member-header" id="ConnectionArgs-reservedPeeringRanges">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c4a9d5b17d1d84373b0b6970394e0a36707ba8de/sdk/nodejs/servicenetworking/connection.ts#L132">property <b>reservedPeeringRanges</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/servicenetworking/connection.ts#L132">property <b>reservedPeeringRanges</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>reservedPeeringRanges: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -162,7 +162,7 @@ this service provider. Note that invoking this method with a different range whe
 is already established will not reallocate already provisioned service producer subnetworks.
 
 <h4 class="pdoc-member-header" id="ConnectionArgs-service">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c4a9d5b17d1d84373b0b6970394e0a36707ba8de/sdk/nodejs/servicenetworking/connection.ts#L138">property <b>service</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/servicenetworking/connection.ts#L138">property <b>service</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>service: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -172,7 +172,7 @@ service provider organization. For Google services that support this functionali
 'servicenetworking.googleapis.com'.
 
 <h3 class="pdoc-module-header" id="ConnectionState" data-link-title="ConnectionState">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/c4a9d5b17d1d84373b0b6970394e0a36707ba8de/sdk/nodejs/servicenetworking/connection.ts#L99">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/servicenetworking/connection.ts#L99">
         interface <strong>ConnectionState</strong>
     </a>
 </h3>
@@ -182,7 +182,7 @@ service provider organization. For Google services that support this functionali
 Input properties used for looking up and filtering Connection resources.
 
 <h4 class="pdoc-member-header" id="ConnectionState-network">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c4a9d5b17d1d84373b0b6970394e0a36707ba8de/sdk/nodejs/servicenetworking/connection.ts#L103">property <b>network</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/servicenetworking/connection.ts#L103">property <b>network</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>network?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -190,12 +190,12 @@ Input properties used for looking up and filtering Connection resources.
 Name of VPC network connected with service producers using VPC peering.
 
 <h4 class="pdoc-member-header" id="ConnectionState-peering">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c4a9d5b17d1d84373b0b6970394e0a36707ba8de/sdk/nodejs/servicenetworking/connection.ts#L104">property <b>peering</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/servicenetworking/connection.ts#L104">property <b>peering</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>peering?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ConnectionState-reservedPeeringRanges">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c4a9d5b17d1d84373b0b6970394e0a36707ba8de/sdk/nodejs/servicenetworking/connection.ts#L110">property <b>reservedPeeringRanges</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/servicenetworking/connection.ts#L110">property <b>reservedPeeringRanges</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>reservedPeeringRanges?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -205,7 +205,7 @@ this service provider. Note that invoking this method with a different range whe
 is already established will not reallocate already provisioned service producer subnetworks.
 
 <h4 class="pdoc-member-header" id="ConnectionState-service">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c4a9d5b17d1d84373b0b6970394e0a36707ba8de/sdk/nodejs/servicenetworking/connection.ts#L116">property <b>service</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/servicenetworking/connection.ts#L116">property <b>service</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>service?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>

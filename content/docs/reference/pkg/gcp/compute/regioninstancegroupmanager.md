@@ -492,16 +492,6 @@ name.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="region_csharp">
-<a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The region where the managed instance group resides.
-{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="versions_csharp">
 <a href="#versions_csharp" style="color: inherit; text-decoration: inherit;">Versions</a>
 </span>
@@ -579,6 +569,16 @@ is not provided, the provider project is used.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="region_csharp">
+<a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The region where the managed instance group resides. If not provided, the provider region is used.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="statefuldisks_csharp">
 <a href="#statefuldisks_csharp" style="color: inherit; text-decoration: inherit;">Stateful<wbr>Disks</a>
 </span>
@@ -651,16 +651,6 @@ instances in this group. The value must be a valid
 are lowercase letters, numbers, and hyphens (-). Instances are named by
 appending a hyphen and a random four-character string to the base instance
 name.
-{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="region_go">
-<a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The region where the managed instance group resides.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -741,6 +731,16 @@ is not provided, the provider project is used.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="region_go">
+<a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The region where the managed instance group resides. If not provided, the provider region is used.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="statefuldisks_go">
 <a href="#statefuldisks_go" style="color: inherit; text-decoration: inherit;">Stateful<wbr>Disks</a>
 </span>
@@ -813,16 +813,6 @@ instances in this group. The value must be a valid
 are lowercase letters, numbers, and hyphens (-). Instances are named by
 appending a hyphen and a random four-character string to the base instance
 name.
-{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="region_nodejs">
-<a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The region where the managed instance group resides.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -903,6 +893,16 @@ is not provided, the provider project is used.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="region_nodejs">
+<a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The region where the managed instance group resides. If not provided, the provider region is used.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="statefuldisks_nodejs">
 <a href="#statefuldisks_nodejs" style="color: inherit; text-decoration: inherit;">stateful<wbr>Disks</a>
 </span>
@@ -975,16 +975,6 @@ instances in this group. The value must be a valid
 are lowercase letters, numbers, and hyphens (-). Instances are named by
 appending a hyphen and a random four-character string to the base instance
 name.
-{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="region_python">
-<a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The region where the managed instance group resides.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -1062,6 +1052,16 @@ for details on configuration.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="region_python">
+<a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The region where the managed instance group resides. If not provided, the provider region is used.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1541,7 +1541,7 @@ is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The region where the managed instance group resides.
+    <dd>{{% md %}}The region where the managed instance group resides. If not provided, the provider region is used.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1733,7 +1733,7 @@ is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The region where the managed instance group resides.
+    <dd>{{% md %}}The region where the managed instance group resides. If not provided, the provider region is used.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1925,7 +1925,7 @@ is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The region where the managed instance group resides.
+    <dd>{{% md %}}The region where the managed instance group resides. If not provided, the provider region is used.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2117,7 +2117,7 @@ is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The region where the managed instance group resides.
+    <dd>{{% md %}}The region where the managed instance group resides. If not provided, the provider region is used.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">

@@ -20,40 +20,6 @@ Creates a Google Bigtable instance. For more information see
 {{< chooser language "typescript,python,go,csharp" / >}}
 ### Production Instance
 {{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const production_instance = new gcp.bigtable.Instance("production-instance", {
-    clusters: [{
-        clusterId: "tf-instance-cluster",
-        numNodes: 1,
-        storageType: "HDD",
-        zone: "us-central1-b",
-    }],
-    labels: {
-        "my-label": "prod-label",
-    },
-});
-```
-
-{{% /example %}}
-
-### Development Instance
-{{% example csharp %}}
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -62,21 +28,20 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var development_instance = new Gcp.BigTable.Instance("development-instance", new Gcp.BigTable.InstanceArgs
+        var production_instance = new Gcp.BigTable.Instance("production-instance", new Gcp.BigTable.InstanceArgs
         {
             Clusters = 
             {
                 new Gcp.BigTable.Inputs.InstanceClusterArgs
                 {
                     ClusterId = "tf-instance-cluster",
+                    NumNodes = 1,
                     StorageType = "HDD",
-                    Zone = "us-central1-b",
                 },
             },
-            InstanceType = "DEVELOPMENT",
             Labels = 
             {
-                { "my-label", "dev-label" },
+                { "my-label", "prod-label" },
             },
         });
     }
@@ -97,17 +62,16 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := bigtable.NewInstance(ctx, "development_instance", &bigtable.InstanceArgs{
+		_, err := bigtable.NewInstance(ctx, "production_instance", &bigtable.InstanceArgs{
 			Clusters: bigtable.InstanceClusterArray{
 				&bigtable.InstanceClusterArgs{
 					ClusterId:   pulumi.String("tf-instance-cluster"),
+					NumNodes:    pulumi.Int(1),
 					StorageType: pulumi.String("HDD"),
-					Zone:        pulumi.String("us-central1-b"),
 				},
 			},
-			InstanceType: pulumi.String("DEVELOPMENT"),
 			Labels: pulumi.StringMap{
-				"my-label": pulumi.String("dev-label"),
+				"my-label": pulumi.String("prod-label"),
 			},
 		})
 		if err != nil {
@@ -125,15 +89,14 @@ func main() {
 import pulumi
 import pulumi_gcp as gcp
 
-development_instance = gcp.bigtable.Instance("development-instance",
+production_instance = gcp.bigtable.Instance("production-instance",
     clusters=[gcp.bigtable.InstanceClusterArgs(
         cluster_id="tf-instance-cluster",
+        num_nodes=1,
         storage_type="HDD",
-        zone="us-central1-b",
     )],
-    instance_type="DEVELOPMENT",
     labels={
-        "my-label": "dev-label",
+        "my-label": "prod-label",
     })
 ```
 
@@ -145,15 +108,14 @@ development_instance = gcp.bigtable.Instance("development-instance",
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const development_instance = new gcp.bigtable.Instance("development-instance", {
+const production_instance = new gcp.bigtable.Instance("production-instance", {
     clusters: [{
         clusterId: "tf-instance-cluster",
+        numNodes: 1,
         storageType: "HDD",
-        zone: "us-central1-b",
     }],
-    instanceType: "DEVELOPMENT",
     labels: {
-        "my-label": "dev-label",
+        "my-label": "prod-label",
     },
 });
 ```
@@ -1230,18 +1192,6 @@ is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}The ID of the Cloud Bigtable cluster.
 {{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="zone_csharp">
-<a href="#zone_csharp" style="color: inherit; text-decoration: inherit;">Zone</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The zone to create the Cloud Bigtable cluster in. Each
-cluster must have a different zone in the same region. Zones that support
-Bigtable instances are noted on the [Cloud Bigtable locations page](https://cloud.google.com/bigtable/docs/locations).
-{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="numnodes_csharp">
@@ -1265,6 +1215,18 @@ for a `DEVELOPMENT` instance.
     <dd>{{% md %}}The storage type to use. One of `"SSD"` or
 `"HDD"`. Defaults to `"SSD"`.
 {{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="zone_csharp">
+<a href="#zone_csharp" style="color: inherit; text-decoration: inherit;">Zone</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The zone to create the Cloud Bigtable cluster in. If it not
+specified, the provider zone is used. Each cluster must have a different zone in the same region. Zones that support
+Bigtable instances are noted on the [Cloud Bigtable locations page](https://cloud.google.com/bigtable/docs/locations).
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -1280,18 +1242,6 @@ for a `DEVELOPMENT` instance.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Cloud Bigtable cluster.
-{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="zone_go">
-<a href="#zone_go" style="color: inherit; text-decoration: inherit;">Zone</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The zone to create the Cloud Bigtable cluster in. Each
-cluster must have a different zone in the same region. Zones that support
-Bigtable instances are noted on the [Cloud Bigtable locations page](https://cloud.google.com/bigtable/docs/locations).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1316,6 +1266,18 @@ for a `DEVELOPMENT` instance.
     <dd>{{% md %}}The storage type to use. One of `"SSD"` or
 `"HDD"`. Defaults to `"SSD"`.
 {{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="zone_go">
+<a href="#zone_go" style="color: inherit; text-decoration: inherit;">Zone</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The zone to create the Cloud Bigtable cluster in. If it not
+specified, the provider zone is used. Each cluster must have a different zone in the same region. Zones that support
+Bigtable instances are noted on the [Cloud Bigtable locations page](https://cloud.google.com/bigtable/docs/locations).
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -1331,18 +1293,6 @@ for a `DEVELOPMENT` instance.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Cloud Bigtable cluster.
-{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="zone_nodejs">
-<a href="#zone_nodejs" style="color: inherit; text-decoration: inherit;">zone</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The zone to create the Cloud Bigtable cluster in. Each
-cluster must have a different zone in the same region. Zones that support
-Bigtable instances are noted on the [Cloud Bigtable locations page](https://cloud.google.com/bigtable/docs/locations).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1367,6 +1317,18 @@ for a `DEVELOPMENT` instance.
     <dd>{{% md %}}The storage type to use. One of `"SSD"` or
 `"HDD"`. Defaults to `"SSD"`.
 {{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="zone_nodejs">
+<a href="#zone_nodejs" style="color: inherit; text-decoration: inherit;">zone</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The zone to create the Cloud Bigtable cluster in. If it not
+specified, the provider zone is used. Each cluster must have a different zone in the same region. Zones that support
+Bigtable instances are noted on the [Cloud Bigtable locations page](https://cloud.google.com/bigtable/docs/locations).
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -1382,18 +1344,6 @@ for a `DEVELOPMENT` instance.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Cloud Bigtable cluster.
-{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="zone_python">
-<a href="#zone_python" style="color: inherit; text-decoration: inherit;">zone</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The zone to create the Cloud Bigtable cluster in. Each
-cluster must have a different zone in the same region. Zones that support
-Bigtable instances are noted on the [Cloud Bigtable locations page](https://cloud.google.com/bigtable/docs/locations).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1417,6 +1367,18 @@ for a `DEVELOPMENT` instance.
     </dt>
     <dd>{{% md %}}The storage type to use. One of `"SSD"` or
 `"HDD"`. Defaults to `"SSD"`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="zone_python">
+<a href="#zone_python" style="color: inherit; text-decoration: inherit;">zone</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The zone to create the Cloud Bigtable cluster in. If it not
+specified, the provider zone is used. Each cluster must have a different zone in the same region. Zones that support
+Bigtable instances are noted on the [Cloud Bigtable locations page](https://cloud.google.com/bigtable/docs/locations).
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}

@@ -211,16 +211,6 @@ The PerInstanceConfig resource accepts the following [input]({{< relref "/docs/i
     </dt>
     <dd>{{% md %}}The instance group manager this instance config is part of.
 {{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="zone_csharp">
-<a href="#zone_csharp" style="color: inherit; text-decoration: inherit;">Zone</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Zone where the containing instance group manager is located
-{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="minimalaction_csharp">
@@ -295,6 +285,16 @@ If it is not provided, the provider project is used.
 When false, deleting this config will *not* immediately remove any state from the underlying instance.
 State will be removed on the next instance recreation or update.
 {{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="zone_csharp">
+<a href="#zone_csharp" style="color: inherit; text-decoration: inherit;">Zone</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Zone where the containing instance group manager is located
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -310,16 +310,6 @@ State will be removed on the next instance recreation or update.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The instance group manager this instance config is part of.
-{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="zone_go">
-<a href="#zone_go" style="color: inherit; text-decoration: inherit;">Zone</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Zone where the containing instance group manager is located
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -395,6 +385,16 @@ If it is not provided, the provider project is used.
 When false, deleting this config will *not* immediately remove any state from the underlying instance.
 State will be removed on the next instance recreation or update.
 {{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="zone_go">
+<a href="#zone_go" style="color: inherit; text-decoration: inherit;">Zone</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Zone where the containing instance group manager is located
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -410,16 +410,6 @@ State will be removed on the next instance recreation or update.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The instance group manager this instance config is part of.
-{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="zone_nodejs">
-<a href="#zone_nodejs" style="color: inherit; text-decoration: inherit;">zone</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Zone where the containing instance group manager is located
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -495,6 +485,16 @@ If it is not provided, the provider project is used.
 When false, deleting this config will *not* immediately remove any state from the underlying instance.
 State will be removed on the next instance recreation or update.
 {{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="zone_nodejs">
+<a href="#zone_nodejs" style="color: inherit; text-decoration: inherit;">zone</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Zone where the containing instance group manager is located
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -510,16 +510,6 @@ State will be removed on the next instance recreation or update.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The instance group manager this instance config is part of.
-{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="zone_python">
-<a href="#zone_python" style="color: inherit; text-decoration: inherit;">zone</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Zone where the containing instance group manager is located
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -594,6 +584,16 @@ If it is not provided, the provider project is used.
     <dd>{{% md %}}When true, deleting this config will immediately remove any specified state from the underlying instance.
 When false, deleting this config will *not* immediately remove any state from the underlying instance.
 State will be removed on the next instance recreation or update.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="zone_python">
+<a href="#zone_python" style="color: inherit; text-decoration: inherit;">zone</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Zone where the containing instance group manager is located
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
