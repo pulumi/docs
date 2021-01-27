@@ -2725,8 +2725,7 @@ This has effect only when a new service is being created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getpgpguserconfigpgbouncer">Get<wbr>Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Pgbouncer<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Allow clients to connect to pgbouncer from the public internet for 
-service nodes that are in a project VPC or another type of private network
+    <dd>{{% md %}}Enable pgbouncer.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2750,13 +2749,23 @@ service nodes that are in a project VPC or another type of private network
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="privatelinkaccess_csharp">
+<a href="#privatelinkaccess_csharp" style="color: inherit; text-decoration: inherit;">Privatelink<wbr>Access</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getpgpguserconfigprivatelinkaccess">Get<wbr>Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Allow access to selected service components through Privatelink.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="projecttoforkfrom_csharp">
 <a href="#projecttoforkfrom_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>To<wbr>Fork<wbr>From</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}(Optional) Name of another project to fork a service from. This has
+    <dd>{{% md %}}Name of another project to fork a service from. This has
 effect only when a new service is being created.
 {{% /md %}}</dd>
     <dt class="property-optional"
@@ -2966,8 +2975,7 @@ This has effect only when a new service is being created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getpgpguserconfigpgbouncer">Get<wbr>Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Pgbouncer</a></span>
     </dt>
-    <dd>{{% md %}}Allow clients to connect to pgbouncer from the public internet for 
-service nodes that are in a project VPC or another type of private network
+    <dd>{{% md %}}Enable pgbouncer.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2991,13 +2999,23 @@ service nodes that are in a project VPC or another type of private network
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="privatelinkaccess_go">
+<a href="#privatelinkaccess_go" style="color: inherit; text-decoration: inherit;">Privatelink<wbr>Access</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getpgpguserconfigprivatelinkaccess">Get<wbr>Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access</a></span>
+    </dt>
+    <dd>{{% md %}}Allow access to selected service components through Privatelink.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="projecttoforkfrom_go">
 <a href="#projecttoforkfrom_go" style="color: inherit; text-decoration: inherit;">Project<wbr>To<wbr>Fork<wbr>From</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}(Optional) Name of another project to fork a service from. This has
+    <dd>{{% md %}}Name of another project to fork a service from. This has
 effect only when a new service is being created.
 {{% /md %}}</dd>
     <dt class="property-optional"
@@ -3207,8 +3225,7 @@ This has effect only when a new service is being created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getpgpguserconfigpgbouncer">Get<wbr>Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Pgbouncer</a></span>
     </dt>
-    <dd>{{% md %}}Allow clients to connect to pgbouncer from the public internet for 
-service nodes that are in a project VPC or another type of private network
+    <dd>{{% md %}}Enable pgbouncer.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3232,13 +3249,23 @@ service nodes that are in a project VPC or another type of private network
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="privatelinkaccess_nodejs">
+<a href="#privatelinkaccess_nodejs" style="color: inherit; text-decoration: inherit;">privatelink<wbr>Access</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getpgpguserconfigprivatelinkaccess">Get<wbr>Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access</a></span>
+    </dt>
+    <dd>{{% md %}}Allow access to selected service components through Privatelink.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="projecttoforkfrom_nodejs">
 <a href="#projecttoforkfrom_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>To<wbr>Fork<wbr>From</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}(Optional) Name of another project to fork a service from. This has
+    <dd>{{% md %}}Name of another project to fork a service from. This has
 effect only when a new service is being created.
 {{% /md %}}</dd>
     <dt class="property-optional"
@@ -3448,8 +3475,7 @@ This has effect only when a new service is being created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getpgpguserconfigpgbouncer">Get<wbr>Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Pgbouncer<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Allow clients to connect to pgbouncer from the public internet for 
-service nodes that are in a project VPC or another type of private network
+    <dd>{{% md %}}Enable pgbouncer.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3473,13 +3499,23 @@ service nodes that are in a project VPC or another type of private network
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="privatelink_access_python">
+<a href="#privatelink_access_python" style="color: inherit; text-decoration: inherit;">privatelink_<wbr>access</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getpgpguserconfigprivatelinkaccess">Get<wbr>Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Allow access to selected service components through Privatelink.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="project_to_fork_from_python">
 <a href="#project_to_fork_from_python" style="color: inherit; text-decoration: inherit;">project_<wbr>to_<wbr>fork_<wbr>from</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}(Optional) Name of another project to fork a service from. This has
+    <dd>{{% md %}}Name of another project to fork a service from. This has
 effect only when a new service is being created.
 {{% /md %}}</dd>
     <dt class="property-optional"
@@ -6080,8 +6116,7 @@ triggering database failover to standby
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Allow clients to connect to pgbouncer from the public internet for 
-service nodes that are in a project VPC or another type of private network
+    <dd>{{% md %}}Enable pgbouncer.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -6118,8 +6153,7 @@ service nodes that are in a project VPC or another type of private network
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Allow clients to connect to pgbouncer from the public internet for 
-service nodes that are in a project VPC or another type of private network
+    <dd>{{% md %}}Enable pgbouncer.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -6156,8 +6190,7 @@ service nodes that are in a project VPC or another type of private network
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Allow clients to connect to pgbouncer from the public internet for 
-service nodes that are in a project VPC or another type of private network
+    <dd>{{% md %}}Enable pgbouncer.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -6194,8 +6227,7 @@ service nodes that are in a project VPC or another type of private network
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Allow clients to connect to pgbouncer from the public internet for 
-service nodes that are in a project VPC or another type of private network
+    <dd>{{% md %}}Enable pgbouncer.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -6207,6 +6239,124 @@ service nodes that are in a project VPC or another type of private network
     </dt>
     <dd>{{% md %}}Allow clients to connect to prometheus from the public internet for 
 service nodes that are in a project VPC or another type of private network
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="getpgpguserconfigprivatelinkaccess">Get<wbr>Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/input/#GetPgPgUserConfigPrivatelinkAccess">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/output/#GetPgPgUserConfigPrivatelinkAccess">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#GetPgPgUserConfigPrivatelinkAccessArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#GetPgPgUserConfigPrivatelinkAccess">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Inputs.GetPgPgUserConfigPrivatelinkAccessArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Outputs.GetPgPgUserConfigPrivatelinkAccess.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="pg_csharp">
+<a href="#pg_csharp" style="color: inherit; text-decoration: inherit;">Pg</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}PostgreSQL specific server provided values.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="pgbouncer_csharp">
+<a href="#pgbouncer_csharp" style="color: inherit; text-decoration: inherit;">Pgbouncer</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Enable pgbouncer.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="pg_go">
+<a href="#pg_go" style="color: inherit; text-decoration: inherit;">Pg</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}PostgreSQL specific server provided values.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="pgbouncer_go">
+<a href="#pgbouncer_go" style="color: inherit; text-decoration: inherit;">Pgbouncer</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Enable pgbouncer.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="pg_nodejs">
+<a href="#pg_nodejs" style="color: inherit; text-decoration: inherit;">pg</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}PostgreSQL specific server provided values.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="pgbouncer_nodejs">
+<a href="#pgbouncer_nodejs" style="color: inherit; text-decoration: inherit;">pgbouncer</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Enable pgbouncer.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="pg_python">
+<a href="#pg_python" style="color: inherit; text-decoration: inherit;">pg</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}PostgreSQL specific server provided values.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="pgbouncer_python">
+<a href="#pgbouncer_python" style="color: inherit; text-decoration: inherit;">pgbouncer</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Enable pgbouncer.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -6246,8 +6396,7 @@ service nodes that are in a project VPC or another type of private network
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Allow clients to connect to pgbouncer from the public internet for 
-service nodes that are in a project VPC or another type of private network
+    <dd>{{% md %}}Enable pgbouncer.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -6284,8 +6433,7 @@ service nodes that are in a project VPC or another type of private network
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Allow clients to connect to pgbouncer from the public internet for 
-service nodes that are in a project VPC or another type of private network
+    <dd>{{% md %}}Enable pgbouncer.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -6322,8 +6470,7 @@ service nodes that are in a project VPC or another type of private network
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Allow clients to connect to pgbouncer from the public internet for 
-service nodes that are in a project VPC or another type of private network
+    <dd>{{% md %}}Enable pgbouncer.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -6360,8 +6507,7 @@ service nodes that are in a project VPC or another type of private network
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Allow clients to connect to pgbouncer from the public internet for 
-service nodes that are in a project VPC or another type of private network
+    <dd>{{% md %}}Enable pgbouncer.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">

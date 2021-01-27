@@ -2600,8 +2600,7 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Allow clients to connect to kafka_connect from the public internet 
-for service nodes that are in a project VPC or another type of private network
+    <dd>{{% md %}}Enable kafka_connect
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2621,8 +2620,7 @@ for service nodes that are in a project VPC or another type of private network
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Allow clients to connect to kafka_rest from the public internet for 
-service nodes that are in a project VPC or another type of private network
+    <dd>{{% md %}}Enable kafka_rest
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2656,6 +2654,16 @@ service nodes that are in a project VPC or another type of private network
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="privatelinkaccess_csharp">
+<a href="#privatelinkaccess_csharp" style="color: inherit; text-decoration: inherit;">Privatelink<wbr>Access</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getkafkakafkauserconfigprivatelinkaccess">Get<wbr>Kafka<wbr>Kafka<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Allow access to selected service components through Privatelink
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="publicaccess_csharp">
 <a href="#publicaccess_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Access</a>
 </span>
@@ -2672,7 +2680,7 @@ service nodes that are in a project VPC or another type of private network
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Enable Schema-Registry service
+    <dd>{{% md %}}Enable schema_registry
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2738,8 +2746,7 @@ service nodes that are in a project VPC or another type of private network
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Allow clients to connect to kafka_connect from the public internet 
-for service nodes that are in a project VPC or another type of private network
+    <dd>{{% md %}}Enable kafka_connect
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2759,8 +2766,7 @@ for service nodes that are in a project VPC or another type of private network
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Allow clients to connect to kafka_rest from the public internet for 
-service nodes that are in a project VPC or another type of private network
+    <dd>{{% md %}}Enable kafka_rest
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2794,6 +2800,16 @@ service nodes that are in a project VPC or another type of private network
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="privatelinkaccess_go">
+<a href="#privatelinkaccess_go" style="color: inherit; text-decoration: inherit;">Privatelink<wbr>Access</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getkafkakafkauserconfigprivatelinkaccess">Get<wbr>Kafka<wbr>Kafka<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access</a></span>
+    </dt>
+    <dd>{{% md %}}Allow access to selected service components through Privatelink
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="publicaccess_go">
 <a href="#publicaccess_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Access</a>
 </span>
@@ -2810,7 +2826,7 @@ service nodes that are in a project VPC or another type of private network
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Enable Schema-Registry service
+    <dd>{{% md %}}Enable schema_registry
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2876,8 +2892,7 @@ service nodes that are in a project VPC or another type of private network
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Allow clients to connect to kafka_connect from the public internet 
-for service nodes that are in a project VPC or another type of private network
+    <dd>{{% md %}}Enable kafka_connect
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2897,8 +2912,7 @@ for service nodes that are in a project VPC or another type of private network
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Allow clients to connect to kafka_rest from the public internet for 
-service nodes that are in a project VPC or another type of private network
+    <dd>{{% md %}}Enable kafka_rest
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2932,6 +2946,16 @@ service nodes that are in a project VPC or another type of private network
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="privatelinkaccess_nodejs">
+<a href="#privatelinkaccess_nodejs" style="color: inherit; text-decoration: inherit;">privatelink<wbr>Access</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getkafkakafkauserconfigprivatelinkaccess">Get<wbr>Kafka<wbr>Kafka<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access</a></span>
+    </dt>
+    <dd>{{% md %}}Allow access to selected service components through Privatelink
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="publicaccess_nodejs">
 <a href="#publicaccess_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Access</a>
 </span>
@@ -2948,7 +2972,7 @@ service nodes that are in a project VPC or another type of private network
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Enable Schema-Registry service
+    <dd>{{% md %}}Enable schema_registry
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3014,8 +3038,7 @@ service nodes that are in a project VPC or another type of private network
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Allow clients to connect to kafka_connect from the public internet 
-for service nodes that are in a project VPC or another type of private network
+    <dd>{{% md %}}Enable kafka_connect
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3035,8 +3058,7 @@ for service nodes that are in a project VPC or another type of private network
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Allow clients to connect to kafka_rest from the public internet for 
-service nodes that are in a project VPC or another type of private network
+    <dd>{{% md %}}Enable kafka_rest
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3070,6 +3092,16 @@ service nodes that are in a project VPC or another type of private network
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="privatelink_access_python">
+<a href="#privatelink_access_python" style="color: inherit; text-decoration: inherit;">privatelink_<wbr>access</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getkafkakafkauserconfigprivatelinkaccess">Get<wbr>Kafka<wbr>Kafka<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Allow access to selected service components through Privatelink
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="public_access_python">
 <a href="#public_access_python" style="color: inherit; text-decoration: inherit;">public_<wbr>access</a>
 </span>
@@ -3086,7 +3118,7 @@ service nodes that are in a project VPC or another type of private network
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Enable Schema-Registry service
+    <dd>{{% md %}}Enable schema_registry
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -5847,6 +5879,204 @@ service nodes that are in a project VPC or another type of private network
 </dl>
 {{% /choosable %}}
 
+<h4 id="getkafkakafkauserconfigprivatelinkaccess">Get<wbr>Kafka<wbr>Kafka<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/input/#GetKafkaKafkaUserConfigPrivatelinkAccess">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/output/#GetKafkaKafkaUserConfigPrivatelinkAccess">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#GetKafkaKafkaUserConfigPrivatelinkAccessArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#GetKafkaKafkaUserConfigPrivatelinkAccess">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Inputs.GetKafkaKafkaUserConfigPrivatelinkAccessArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Outputs.GetKafkaKafkaUserConfigPrivatelinkAccess.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kafka_csharp">
+<a href="#kafka_csharp" style="color: inherit; text-decoration: inherit;">Kafka</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Kafka server provided values:
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kafkaconnect_csharp">
+<a href="#kafkaconnect_csharp" style="color: inherit; text-decoration: inherit;">Kafka<wbr>Connect</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Enable kafka_connect
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kafkarest_csharp">
+<a href="#kafkarest_csharp" style="color: inherit; text-decoration: inherit;">Kafka<wbr>Rest</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Enable kafka_rest
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="schemaregistry_csharp">
+<a href="#schemaregistry_csharp" style="color: inherit; text-decoration: inherit;">Schema<wbr>Registry</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Enable schema_registry
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kafka_go">
+<a href="#kafka_go" style="color: inherit; text-decoration: inherit;">Kafka</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Kafka server provided values:
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kafkaconnect_go">
+<a href="#kafkaconnect_go" style="color: inherit; text-decoration: inherit;">Kafka<wbr>Connect</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Enable kafka_connect
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kafkarest_go">
+<a href="#kafkarest_go" style="color: inherit; text-decoration: inherit;">Kafka<wbr>Rest</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Enable kafka_rest
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="schemaregistry_go">
+<a href="#schemaregistry_go" style="color: inherit; text-decoration: inherit;">Schema<wbr>Registry</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Enable schema_registry
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kafka_nodejs">
+<a href="#kafka_nodejs" style="color: inherit; text-decoration: inherit;">kafka</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Kafka server provided values:
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kafkaconnect_nodejs">
+<a href="#kafkaconnect_nodejs" style="color: inherit; text-decoration: inherit;">kafka<wbr>Connect</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Enable kafka_connect
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kafkarest_nodejs">
+<a href="#kafkarest_nodejs" style="color: inherit; text-decoration: inherit;">kafka<wbr>Rest</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Enable kafka_rest
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="schemaregistry_nodejs">
+<a href="#schemaregistry_nodejs" style="color: inherit; text-decoration: inherit;">schema<wbr>Registry</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Enable schema_registry
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kafka_python">
+<a href="#kafka_python" style="color: inherit; text-decoration: inherit;">kafka</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Kafka server provided values:
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kafka_connect_python">
+<a href="#kafka_connect_python" style="color: inherit; text-decoration: inherit;">kafka_<wbr>connect</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Enable kafka_connect
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kafka_rest_python">
+<a href="#kafka_rest_python" style="color: inherit; text-decoration: inherit;">kafka_<wbr>rest</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Enable kafka_rest
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="schema_registry_python">
+<a href="#schema_registry_python" style="color: inherit; text-decoration: inherit;">schema_<wbr>registry</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Enable schema_registry
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
 <h4 id="getkafkakafkauserconfigpublicaccess">Get<wbr>Kafka<wbr>Kafka<wbr>User<wbr>Config<wbr>Public<wbr>Access</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/input/#GetKafkaKafkaUserConfigPublicAccess">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/output/#GetKafkaKafkaUserConfigPublicAccess">output</a> API doc for this type.
@@ -5882,8 +6112,7 @@ service nodes that are in a project VPC or another type of private network
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Allow clients to connect to kafka_connect from the public internet 
-for service nodes that are in a project VPC or another type of private network
+    <dd>{{% md %}}Enable kafka_connect
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -5893,8 +6122,7 @@ for service nodes that are in a project VPC or another type of private network
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Allow clients to connect to kafka_rest from the public internet for 
-service nodes that are in a project VPC or another type of private network
+    <dd>{{% md %}}Enable kafka_rest
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -5915,7 +6143,7 @@ service nodes that are in a project VPC or another type of private network
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Enable Schema-Registry service
+    <dd>{{% md %}}Enable schema_registry
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -5941,8 +6169,7 @@ service nodes that are in a project VPC or another type of private network
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Allow clients to connect to kafka_connect from the public internet 
-for service nodes that are in a project VPC or another type of private network
+    <dd>{{% md %}}Enable kafka_connect
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -5952,8 +6179,7 @@ for service nodes that are in a project VPC or another type of private network
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Allow clients to connect to kafka_rest from the public internet for 
-service nodes that are in a project VPC or another type of private network
+    <dd>{{% md %}}Enable kafka_rest
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -5974,7 +6200,7 @@ service nodes that are in a project VPC or another type of private network
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Enable Schema-Registry service
+    <dd>{{% md %}}Enable schema_registry
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -6000,8 +6226,7 @@ service nodes that are in a project VPC or another type of private network
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Allow clients to connect to kafka_connect from the public internet 
-for service nodes that are in a project VPC or another type of private network
+    <dd>{{% md %}}Enable kafka_connect
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -6011,8 +6236,7 @@ for service nodes that are in a project VPC or another type of private network
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Allow clients to connect to kafka_rest from the public internet for 
-service nodes that are in a project VPC or another type of private network
+    <dd>{{% md %}}Enable kafka_rest
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -6033,7 +6257,7 @@ service nodes that are in a project VPC or another type of private network
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Enable Schema-Registry service
+    <dd>{{% md %}}Enable schema_registry
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -6059,8 +6283,7 @@ service nodes that are in a project VPC or another type of private network
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Allow clients to connect to kafka_connect from the public internet 
-for service nodes that are in a project VPC or another type of private network
+    <dd>{{% md %}}Enable kafka_connect
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -6070,8 +6293,7 @@ for service nodes that are in a project VPC or another type of private network
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Allow clients to connect to kafka_rest from the public internet for 
-service nodes that are in a project VPC or another type of private network
+    <dd>{{% md %}}Enable kafka_rest
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -6092,7 +6314,7 @@ service nodes that are in a project VPC or another type of private network
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Enable Schema-Registry service
+    <dd>{{% md %}}Enable schema_registry
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}

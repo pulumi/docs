@@ -39,7 +39,7 @@ class MyStack : Stack
             MaintenanceWindowTime = "10:00:00",
             M3dbUserConfig = new Aiven.Inputs.M3DbM3dbUserConfigArgs
             {
-                M3Version = "0.15",
+                M3dbVersion = "0.15",
                 Namespaces = 
                 {
                     new Aiven.Inputs.M3DbM3dbUserConfigNamespaceArgs
@@ -76,7 +76,7 @@ func main() {
 			MaintenanceWindowDow:  pulumi.String("monday"),
 			MaintenanceWindowTime: pulumi.String("10:00:00"),
 			M3dbUserConfig: &aiven.M3DbM3dbUserConfigArgs{
-				M3Version: pulumi.String("0.15"),
+				M3dbVersion: pulumi.String("0.15"),
 				Namespaces: aiven.M3DbM3dbUserConfigNamespaceArray{
 					&aiven.M3DbM3dbUserConfigNamespaceArgs{
 						Name: pulumi.String("my-ns1"),
@@ -108,7 +108,7 @@ m3 = aiven.M3Db("m3",
     maintenance_window_dow="monday",
     maintenance_window_time="10:00:00",
     m3db_user_config=aiven.M3DbM3dbUserConfigArgs(
-        m3_version="0.15",
+        m3db_version="0.15",
         namespaces=[aiven.M3DbM3dbUserConfigNamespaceArgs(
             name="my-ns1",
             type="unaggregated",
@@ -132,7 +132,7 @@ const m3 = new aiven.M3Db("m3", {
     maintenanceWindowDow: "monday",
     maintenanceWindowTime: "10:00:00",
     m3dbUserConfig: {
-        m3Version: 0.15,
+        m3dbVersion: 0.15,
         namespaces: [{
             name: "my-ns1",
             type: "unaggregated",
@@ -2667,8 +2667,7 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}M3 major version
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="m3coordinatorenablegraphitecarboningest_csharp">
@@ -2680,6 +2679,16 @@ deletion is done.
     <dd>{{% md %}}Enables access to Graphite Carbon 
 plaintext metrics ingestion. It can be enabled only for services inside VPCs. The
 metrics are written to aggregated namespaces only.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="m3dbversion_csharp">
+<a href="#m3dbversion_csharp" style="color: inherit; text-decoration: inherit;">M3db<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}M3 major version
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2777,8 +2786,7 @@ when a new service is being created.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}M3 major version
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="m3coordinatorenablegraphitecarboningest_go">
@@ -2790,6 +2798,16 @@ when a new service is being created.
     <dd>{{% md %}}Enables access to Graphite Carbon 
 plaintext metrics ingestion. It can be enabled only for services inside VPCs. The
 metrics are written to aggregated namespaces only.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="m3dbversion_go">
+<a href="#m3dbversion_go" style="color: inherit; text-decoration: inherit;">M3db<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}M3 major version
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2887,8 +2905,7 @@ when a new service is being created.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}M3 major version
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="m3coordinatorenablegraphitecarboningest_nodejs">
@@ -2900,6 +2917,16 @@ when a new service is being created.
     <dd>{{% md %}}Enables access to Graphite Carbon 
 plaintext metrics ingestion. It can be enabled only for services inside VPCs. The
 metrics are written to aggregated namespaces only.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="m3dbversion_nodejs">
+<a href="#m3dbversion_nodejs" style="color: inherit; text-decoration: inherit;">m3db<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}M3 major version
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2997,8 +3024,7 @@ when a new service is being created.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}M3 major version
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="m3coordinator_enable_graphite_carbon_ingest_python">
@@ -3010,6 +3036,16 @@ when a new service is being created.
     <dd>{{% md %}}Enables access to Graphite Carbon 
 plaintext metrics ingestion. It can be enabled only for services inside VPCs. The
 metrics are written to aggregated namespaces only.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="m3db_version_python">
+<a href="#m3db_version_python" style="color: inherit; text-decoration: inherit;">m3db_<wbr>version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}M3 major version
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">

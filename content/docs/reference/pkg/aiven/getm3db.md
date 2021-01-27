@@ -2280,8 +2280,7 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}M3 major version
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="m3coordinatorenablegraphitecarboningest_csharp">
@@ -2293,6 +2292,16 @@ deletion is done.
     <dd>{{% md %}}Enables access to Graphite Carbon 
 plaintext metrics ingestion. It can be enabled only for services inside VPCs. The
 metrics are written to aggregated namespaces only.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="m3dbversion_csharp">
+<a href="#m3dbversion_csharp" style="color: inherit; text-decoration: inherit;">M3db<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}M3 major version
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2390,8 +2399,7 @@ when a new service is being created.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}M3 major version
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="m3coordinatorenablegraphitecarboningest_go">
@@ -2403,6 +2411,16 @@ when a new service is being created.
     <dd>{{% md %}}Enables access to Graphite Carbon 
 plaintext metrics ingestion. It can be enabled only for services inside VPCs. The
 metrics are written to aggregated namespaces only.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="m3dbversion_go">
+<a href="#m3dbversion_go" style="color: inherit; text-decoration: inherit;">M3db<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}M3 major version
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2500,8 +2518,7 @@ when a new service is being created.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}M3 major version
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="m3coordinatorenablegraphitecarboningest_nodejs">
@@ -2513,6 +2530,16 @@ when a new service is being created.
     <dd>{{% md %}}Enables access to Graphite Carbon 
 plaintext metrics ingestion. It can be enabled only for services inside VPCs. The
 metrics are written to aggregated namespaces only.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="m3dbversion_nodejs">
+<a href="#m3dbversion_nodejs" style="color: inherit; text-decoration: inherit;">m3db<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}M3 major version
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2610,8 +2637,7 @@ when a new service is being created.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}M3 major version
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="m3coordinator_enable_graphite_carbon_ingest_python">
@@ -2623,6 +2649,16 @@ when a new service is being created.
     <dd>{{% md %}}Enables access to Graphite Carbon 
 plaintext metrics ingestion. It can be enabled only for services inside VPCs. The
 metrics are written to aggregated namespaces only.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="m3db_version_python">
+<a href="#m3db_version_python" style="color: inherit; text-decoration: inherit;">m3db_<wbr>version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}M3 major version
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
