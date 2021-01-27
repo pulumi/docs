@@ -9,7 +9,6 @@ REPO_OVERRIDE="${1:-}"
 PACKAGES=(
   "pulumi"
   "pulumi_policy"
-  "pulumi_postgresql"
   "pulumi_rabbitmq"
   "pulumi_rancher2"
   "pulumi_random"
