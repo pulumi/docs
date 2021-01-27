@@ -1,3 +1,4 @@
 ---
-redirect_to: /docs/reference/pkg/nodejs/pulumi/vault/tokenauth/
+redirect_to: /docs/reference/pkg/vault/?language=nodejs
 ---
+
