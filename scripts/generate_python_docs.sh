@@ -10,7 +10,6 @@ PACKAGES=(
   "pulumi"
   "pulumi_policy"
   "pulumi_terraform"
-  "pulumi_tls"
   "pulumi_vault"
   "pulumi_vsphere"
 )
