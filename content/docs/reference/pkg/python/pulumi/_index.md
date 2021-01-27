@@ -361,13 +361,22 @@ instance in it with the attributes of <code class="docutils literal notranslate"
 <code class="docutils literal notranslate"><span class="pre">opts2</span></code> can be <code class="docutils literal notranslate"><span class="pre">None</span></code>, in which case its attributes are ignored.</p>
 <p>Conceptually attributes merging follows these basic rules:</p>
 <ol class="arabic simple">
-<li><p>If the attributes is a collection, the final value will be a collection containing the
-values from each options object. Both original collections in each options object will
-be unchanged.</p></li>
-<li><p>Simple scalar values from <code class="docutils literal notranslate"><span class="pre">opts2</span></code> (i.e. strings, numbers, bools) will replace the values
-from <code class="docutils literal notranslate"><span class="pre">opts1</span></code>.</p></li>
-<li><p>For the purposes of merging <code class="docutils literal notranslate"><span class="pre">depends_on</span></code>, <code class="docutils literal notranslate"><span class="pre">provider</span></code> and <code class="docutils literal notranslate"><span class="pre">providers</span></code> are always treated
-as collections, even if only a single value was provided.</p></li>
+<li><dl class="simple">
+<dt>if the attributes is a collection, the final value will be a collection containing the</dt><dd><p>values from each options object. Both original collections in each options object will
+be unchanged.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Simple scalar values from <code class="docutils literal notranslate"><span class="pre">opts2</span></code> (i.e. strings, numbers, bools) will replace the values</dt><dd><p>from <code class="docutils literal notranslate"><span class="pre">opts1</span></code>.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>For the purposes of merging <code class="docutils literal notranslate"><span class="pre">depends_on</span></code>, <code class="docutils literal notranslate"><span class="pre">provider</span></code> and <code class="docutils literal notranslate"><span class="pre">providers</span></code> are always treated</dt><dd><p>as collections, even if only a single value was provided.</p>
+</dd>
+</dl>
+</li>
 <li><p>Attributes with value ‘None’ will not be copied over.</p></li>
 </ol>
 <p>This method can be called either as static-method like <code class="docutils literal notranslate"><span class="pre">ResourceOptions.merge(opts1,</span> <span class="pre">opts2)</span></code>
@@ -1182,77 +1191,6 @@ and stream_id if provided.</p>
 </div>
 <div class="section" id="module-pulumi.x.automation">
 <span id="automation-api"></span><h2>Automation API<a class="headerlink" href="#module-pulumi.x.automation" title="Permalink to this headline">¶</a></h2>
-<p>The automation module contains the Pulumi Automation API, the programmatic interface for driving Pulumi programs
-without the CLI.
-Generally this can be thought of as encapsulating the functionality of the CLI (<code class="docutils literal notranslate"><span class="pre">pulumi</span> <span class="pre">up</span></code>, <code class="docutils literal notranslate"><span class="pre">pulumi</span> <span class="pre">preview</span></code>,
-<code class="docutils literal notranslate"><span class="pre">pulumi</span> <span class="pre">destroy</span></code>, <code class="docutils literal notranslate"><span class="pre">pulumi</span> <span class="pre">stack</span> <span class="pre">init</span></code>, etc.) but with more flexibility. This still requires a
-CLI binary to be installed and available on your $PATH. The Automation API is in Alpha (experimental package/x)
-breaking changes (mostly additive) will be made.</p>
-<p>In addition to fine-grained building blocks, Automation API provides two out of the box ways to work with Stacks:</p>
-<ol class="arabic">
-<li><p>Programs locally available on-disk and addressed via a filepath (local source):</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">stack</span> <span class="o">=</span> <span class="n">create_stack</span><span class="p">(</span><span class="s2">&quot;myOrg/myProj/myStack&quot;</span><span class="p">,</span> <span class="n">work_dir</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s2">&quot;..&quot;</span><span class="p">,</span> <span class="s2">&quot;path&quot;</span><span class="p">,</span> <span class="s2">&quot;to&quot;</span><span class="p">,</span> <span class="s2">&quot;project&quot;</span><span class="p">))</span>
-</pre></div>
-</div>
-</li>
-<li><p>Programs defined as a function alongside your Automation API code (inline source):</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">pulumi_program</span><span class="p">():</span>
-    <span class="n">bucket</span> <span class="o">=</span> <span class="n">s3</span><span class="o">.</span><span class="n">Bucket</span><span class="p">(</span><span class="s2">&quot;bucket&quot;</span><span class="p">)</span>
-    <span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;bucket_name&quot;</span><span class="p">,</span> <span class="n">bucket</span><span class="o">.</span><span class="n">Bucket</span><span class="p">)</span>
-
-<span class="n">stack</span> <span class="o">=</span> <span class="n">create_stack</span><span class="p">(</span><span class="s2">&quot;myOrg/myProj/myStack&quot;</span><span class="p">,</span> <span class="n">program</span><span class="o">=</span><span class="n">pulumi_program</span><span class="p">)</span>
-</pre></div>
-</div>
-</li>
-</ol>
-<p>Each of these creates a stack with access to the full range of Pulumi lifecycle methods
-(up/preview/refresh/destroy), as well as methods for managing config, stack, and project settings:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">stack</span><span class="o">.</span><span class="n">set_config</span><span class="p">(</span><span class="s2">&quot;key&quot;</span><span class="p">,</span> <span class="n">ConfigValue</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="s2">&quot;value&quot;</span><span class="p">,</span> <span class="n">secret</span><span class="o">=</span><span class="kc">True</span><span class="p">))</span>
-<span class="n">preview_response</span> <span class="o">=</span> <span class="n">stack</span><span class="o">.</span><span class="n">preview</span><span class="p">()</span>
-</pre></div>
-</div>
-<p>The Automation API provides a natural way to orchestrate multiple stacks,
-feeding the output of one stack as an input to the next as shown in the package-level example below.
-The package can be used for a number of use cases:</p>
-<ul class="simple">
-<li><p>Driving pulumi deployments within CI/CD workflows</p></li>
-<li><p>Integration testing</p></li>
-<li><p>Multi-stage deployments such as blue-green deployment patterns</p></li>
-<li><p>Deployments involving application code like database migrations</p></li>
-<li><p>Building higher level tools, custom CLIs over pulumi, etc.</p></li>
-<li><p>Using pulumi behind a REST or GRPC API</p></li>
-<li><p>Debugging Pulumi programs (by using a single main entrypoint with “inline” programs)</p></li>
-</ul>
-<p>To enable a broad range of runtime customization the API defines a <code class="docutils literal notranslate"><span class="pre">Workspace</span></code> interface.
-A Workspace is the execution context containing a single Pulumi project, a program, and multiple stacks.
-Workspaces are used to manage the execution environment, providing various utilities such as plugin
-installation, environment configuration ($PULUMI_HOME), and creation, deletion, and listing of Stacks.
-Every Stack including those in the above examples are backed by a Workspace which can be accessed via:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ws</span> <span class="o">=</span> <span class="n">stack</span><span class="o">.</span><span class="n">workspace</span><span class="p">()</span>
-<span class="n">ws</span><span class="o">.</span><span class="n">install_plugin</span><span class="p">(</span><span class="s2">&quot;aws&quot;</span><span class="p">,</span> <span class="s2">&quot;v3.20.0&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-<p>Workspaces can be explicitly created and customized beyond the three Stack creation helpers noted above:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ws</span> <span class="o">=</span> <span class="n">LocalWorkspace</span><span class="p">(</span><span class="n">work_dir</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="p">,</span> <span class="s2">&quot;project&quot;</span><span class="p">,</span> <span class="s2">&quot;path&quot;</span><span class="p">),</span> <span class="n">pulumi_home</span><span class="o">=</span><span class="s2">&quot;~/.pulumi&quot;</span><span class="p">)</span>
-<span class="n">stack</span> <span class="o">=</span> <span class="n">create_stack</span><span class="p">(</span><span class="s2">&quot;org/proj/stack&quot;</span><span class="p">,</span> <span class="n">ws</span><span class="p">)</span>
-</pre></div>
-</div>
-<p>A default implementation of workspace is provided as <code class="docutils literal notranslate"><span class="pre">LocalWorkspace</span></code>. This implementation relies on Pulumi.yaml
-and Pulumi.[stack].yaml as the intermediate format for Project and Stack settings. Modifying ProjectSettings will
-alter the Workspace Pulumi.yaml file, and setting config on a Stack will modify the Pulumi.[stack].yaml file.
-This is identical to the behavior of Pulumi CLI driven workspaces. Custom Workspace
-implementations can be used to store Project and Stack settings as well as Config in a different format,
-such as an in-memory data structure, a shared persistent SQL database, or cloud object storage. Regardless of
-the backing Workspace implementation, the Pulumi SaaS Console will still be able to display configuration
-applied to updates as it does with the local version of the Workspace today.</p>
-<p>The Automation API also provides error handling utilities to detect common cases such as concurrent update
-conflicts:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
-    <span class="n">up_response</span> <span class="o">=</span> <span class="n">stack</span><span class="o">.</span><span class="n">up</span><span class="p">()</span>
-<span class="k">except</span> <span class="n">ConcurrentUpdateError</span><span class="p">:</span>
-    <span class="p">{</span> <span class="o">/*</span> <span class="n">retry</span> <span class="n">logic</span> <span class="n">here</span> <span class="o">*/</span> <span class="p">}</span>
-</pre></div>
-</div>
 <dl class="py function">
 <dt id="pulumi.x.automation.create_stack">
 <code class="sig-prename descclassname">pulumi.x.automation.</code><code class="sig-name descname">create_stack</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">stack_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">project_name</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">program</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Callable<span class="p">[</span><span class="p">]</span><span class="p">, </span>Any<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">work_dir</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.x.automation.local_workspace.LocalWorkspaceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi.x.automation.stack.Stack<a class="headerlink" href="#pulumi.x.automation.create_stack" title="Permalink to this definition">¶</a></dt>
@@ -1266,7 +1204,7 @@ default to a new temporary directory provided by the OS.</p>
 <p><strong>Local Programs</strong></p>
 <p>For local programs, the work_dir keyword argument must be provided.
 This is a way to create drivers on top of pre-existing Pulumi programs. This Workspace will pick up any
-available Settings files (Pulumi.yaml, Pulumi.[stack].yaml).</p>
+available Settings files (Pulumi.yaml, Pulumi.<span class="raw-html-m2r"><stack></span>.yaml).</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1297,7 +1235,7 @@ default to a new temporary directory provided by the OS.</p>
 <p><strong>Local Programs</strong></p>
 <p>For local programs, the work_dir keyword argument must be provided.
 This is a way to create drivers on top of pre-existing Pulumi programs. This Workspace will pick up any
-available Settings files (Pulumi.yaml, Pulumi.[stack].yaml).</p>
+available Settings files (Pulumi.yaml, Pulumi.<span class="raw-html-m2r"><stack></span>.yaml).</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1328,7 +1266,7 @@ default to a new temporary directory provided by the OS.</p>
 <p><strong>Local Programs</strong></p>
 <p>For local programs, the work_dir keyword argument must be provided.
 This is a way to create drivers on top of pre-existing Pulumi programs. This Workspace will pick up any
-available Settings files (Pulumi.yaml, Pulumi.[stack].yaml).</p>
+available Settings files (Pulumi.yaml, Pulumi.<span class="raw-html-m2r"><stack></span>.yaml).</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1354,9 +1292,9 @@ A Workspace is the execution context containing a single Pulumi project, a progr
 and multiple stacks. Workspaces are used to manage the execution environment,
 providing various utilities such as plugin installation, environment configuration
 ($PULUMI_HOME), and creation, deletion, and listing of Stacks.
-LocalWorkspace relies on Pulumi.yaml and Pulumi.[stack].yaml as the intermediate format
+LocalWorkspace relies on Pulumi.yaml and Pulumi.<span class="raw-html-m2r"><stack></span>.yaml as the intermediate format
 for Project and Stack settings. Modifying ProjectSettings will
-alter the Workspace Pulumi.yaml file, and setting config on a Stack will modify the Pulumi.[stack].yaml file.
+alter the Workspace Pulumi.yaml file, and setting config on a Stack will modify the Pulumi.<span class="raw-html-m2r"><stack></span>.yaml file.
 This is identical to the behavior of Pulumi CLI driven workspaces.</p>
 <dl class="py method">
 <dt id="pulumi.x.automation.LocalWorkspace.project_settings">
@@ -1687,11 +1625,7 @@ This can be combined with ExportStack to edit a stack’s state (such as recover
 <dl class="py class">
 <dt id="pulumi.x.automation.Stack">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi.x.automation.</code><code class="sig-name descname">Stack</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">workspace</span><span class="p">:</span> <span class="n">pulumi.x.automation.workspace.Workspace</span></em>, <em class="sig-param"><span class="n">mode</span><span class="p">:</span> <span class="n">pulumi.x.automation.stack.StackInitMode</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi.x.automation.Stack" title="Permalink to this definition">¶</a></dt>
-<dd><p>Stack is an isolated, independently configurable instance of a Pulumi program.
-Stack exposes methods for the full pulumi lifecycle (up/preview/refresh/destroy), as well as managing configuration.
-Multiple Stacks are commonly used to denote different phases of development
-(such as development, staging and production) or feature branches (such as feature-x-dev, jane-feature-x-dev).</p>
-<dl class="py method">
+<dd><dl class="py method">
 <dt id="pulumi.x.automation.Stack.create">
 <em class="property">classmethod </em><code class="sig-name descname">create</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">stack_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">workspace</span><span class="p">:</span> <span class="n">pulumi.x.automation.workspace.Workspace</span></em><span class="sig-paren">)</span> &#x2192; pulumi.x.automation.stack.Stack<a class="headerlink" href="#pulumi.x.automation.Stack.create" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a new stack using the given workspace, and stack name.
