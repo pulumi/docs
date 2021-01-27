@@ -221,7 +221,9 @@ The ActionsOrganizationSecret resource accepts the following [input]({{< relref 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Configures the access that repositories have to the organization secret.
+Must be one of `all`, `private`, `selected`. `selected_repository_ids` is required if set to `selected`.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="selectedrepositoryids_csharp">
@@ -266,7 +268,9 @@ The ActionsOrganizationSecret resource accepts the following [input]({{< relref 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Configures the access that repositories have to the organization secret.
+Must be one of `all`, `private`, `selected`. `selected_repository_ids` is required if set to `selected`.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="selectedrepositoryids_go">
@@ -311,7 +315,9 @@ The ActionsOrganizationSecret resource accepts the following [input]({{< relref 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Configures the access that repositories have to the organization secret.
+Must be one of `all`, `private`, `selected`. `selected_repository_ids` is required if set to `selected`.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="selectedrepositoryids_nodejs">
@@ -356,7 +362,9 @@ The ActionsOrganizationSecret resource accepts the following [input]({{< relref 
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Configures the access that repositories have to the organization secret.
+Must be one of `all`, `private`, `selected`. `selected_repository_ids` is required if set to `selected`.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="selected_repository_ids_python">
@@ -701,7 +709,9 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Configures the access that repositories have to the organization secret.
+Must be one of `all`, `private`, `selected`. `selected_repository_ids` is required if set to `selected`.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -766,7 +776,9 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Configures the access that repositories have to the organization secret.
+Must be one of `all`, `private`, `selected`. `selected_repository_ids` is required if set to `selected`.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -831,7 +843,9 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Configures the access that repositories have to the organization secret.
+Must be one of `all`, `private`, `selected`. `selected_repository_ids` is required if set to `selected`.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -896,7 +910,9 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Configures the access that repositories have to the organization secret.
+Must be one of `all`, `private`, `selected`. `selected_repository_ids` is required if set to `selected`.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 

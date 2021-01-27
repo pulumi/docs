@@ -14,6 +14,8 @@ Provides a GitHub branch default resource.
 
 This resource allows you to set the default branch for a given repository.
 
+Note that use of this resource is incompatible with the `default_branch` option of the `github.Repository` resource.  Using both will result in plans always showing a diff.
+
 {{% examples %}}
 ## Example Usage
 
@@ -31,12 +33,7 @@ class MyStack : Stack
         var example = new Github.Repository("example", new Github.RepositoryArgs
         {
             Description = "My awesome codebase",
-            Visibility = "private",
-            Template = new Github.Inputs.RepositoryTemplateArgs
-            {
-                Owner = "github",
-                Repository = "terraform-module-template",
-            },
+            AutoInit = true,
         });
         var development = new Github.Branch("development", new Github.BranchArgs
         {
@@ -68,11 +65,7 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		example, err := github.NewRepository(ctx, "example", &github.RepositoryArgs{
 			Description: pulumi.String("My awesome codebase"),
-			Visibility:  pulumi.String("private"),
-			Template: &github.RepositoryTemplateArgs{
-				Owner:      pulumi.String("github"),
-				Repository: pulumi.String("terraform-module-template"),
-			},
+			AutoInit:    pulumi.Bool(true),
 		})
 		if err != nil {
 			return err
@@ -105,11 +98,7 @@ import pulumi_github as github
 
 example = github.Repository("example",
     description="My awesome codebase",
-    visibility="private",
-    template=github.RepositoryTemplateArgs(
-        owner="github",
-        repository="terraform-module-template",
-    ))
+    auto_init=True)
 development = github.Branch("development",
     repository=example.name,
     branch="development")
@@ -128,11 +117,7 @@ import * as github from "@pulumi/github";
 
 const example = new github.Repository("example", {
     description: "My awesome codebase",
-    visibility: "private",
-    template: {
-        owner: "github",
-        repository: "terraform-module-template",
-    },
+    autoInit: true,
 });
 const development = new github.Branch("development", {
     repository: example.name,
