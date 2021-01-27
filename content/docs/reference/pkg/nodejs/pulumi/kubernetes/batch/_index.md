@@ -3,7 +3,7 @@ title: "Module batch"
 title_tag: "Module batch | Package @pulumi/kubernetes | Node.js SDK"
 linktitle: "batch"
 meta_desc: "Explore members of the batch module in the @pulumi/kubernetes package."
-git_sha: "63f6322ca9e33d39a2e52afc00dc343f1f4f3369"
+git_sha: "fe4bf57fb2aa9c06f0b85119ee05f2ccabfc4b0f"
 block_external_search_index: true
 ---
 
