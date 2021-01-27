@@ -8,7 +8,6 @@ REPO_OVERRIDE="${1:-}"
 
 PACKAGES=(
   "pulumi"
-  "pulumi_aiven"
   "pulumi_alicloud"
   "pulumi_auth0"
   "pulumi_aws"
