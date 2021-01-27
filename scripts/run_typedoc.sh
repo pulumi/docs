@@ -82,7 +82,6 @@ REPOS=(
     "kubernetesx,pulumi-kubernetesx/nodejs/kubernetesx"
     "policy,pulumi-policy,sdk/nodejs/policy"
     "pulumi,pulumi/sdk/nodejs"
-    "rabbitmq,pulumi-rabbitmq,sdk/nodejs"
     "rancher2,pulumi-rancher2,sdk/nodejs"
     "random,pulumi-random,sdk/nodejs"
     "signalfx,pulumi-signalfx,sdk/nodejs"
