@@ -100,7 +100,7 @@ const oneYear = oneWeek * 52;
 
 const lambdaFunctionAssociations = getLambdaFunctionAssociations(config.addSecurityHeaders);
 
-const baseCacheBehavior = {
+const baseCacheBehavior: aws.types.input.cloudfront.DistributionDefaultCacheBehavior = {
     targetOriginId: originBucket.arn,
     compress: true,
 
