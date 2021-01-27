@@ -101,12 +101,12 @@ ubuntu_remote_image = docker.RemoteImage("ubuntuRemoteImage",
 import * as pulumi from "@pulumi/pulumi";
 import * as docker from "@pulumi/docker";
 
-const ubuntuRegistryImage = pulumi.output(docker.getRegistryImage({
+const ubuntuRegistryImage = docker.getRegistryImage({
     name: "ubuntu:precise",
-}, { async: true }));
-const ubuntuRemoteImage = new docker.RemoteImage("ubuntu", {
-    name: ubuntuRegistryImage.name!,
-    pullTriggers: [ubuntuRegistryImage.sha256Digest],
+});
+const ubuntuRemoteImage = new docker.RemoteImage("ubuntuRemoteImage", {
+    name: ubuntuRegistryImage.then(ubuntuRegistryImage => ubuntuRegistryImage.name),
+    pullTriggers: [ubuntuRegistryImage.then(ubuntuRegistryImage => ubuntuRegistryImage.sha256Digest)],
 });
 ```
 
