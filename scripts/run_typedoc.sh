@@ -79,7 +79,6 @@ REPOS=(
     "awsx,pulumi-awsx/nodejs/awsx"
     "cloud,pulumi-cloud/api"
     "eks,pulumi-eks/nodejs/eks"
-    "hcloud,pulumi-hcloud,sdk/nodejs"
     "kafka,pulumi-kafka,sdk/nodejs"
     "keycloak,pulumi-keycloak,sdk/nodejs"
     "kong,pulumi-kong,sdk/nodejs"
