@@ -9,7 +9,6 @@ REPO_OVERRIDE="${1:-}"
 PACKAGES=(
   "pulumi"
   "pulumi_policy"
-  "pulumi_spotinst"
   "pulumi_terraform"
   "pulumi_tls"
   "pulumi_vault"
