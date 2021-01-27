@@ -83,7 +83,6 @@ REPOS=(
     "policy,pulumi-policy,sdk/nodejs/policy"
     "pulumi,pulumi/sdk/nodejs"
     "random,pulumi-random,sdk/nodejs"
-    "splunk,pulumi-splunk,sdk/nodejs"
     "spotinst,pulumi-spotinst,sdk/nodejs"
     "terraform,pulumi-terraform,sdk/nodejs"
     "tls,pulumi-tls,sdk/nodejs"
