@@ -8,7 +8,6 @@ REPO_OVERRIDE="${1:-}"
 
 PACKAGES=(
   "pulumi"
-  "pulumi_github"
   "pulumi_gitlab"
   "pulumi_kafka"
   "pulumi_keycloak"
