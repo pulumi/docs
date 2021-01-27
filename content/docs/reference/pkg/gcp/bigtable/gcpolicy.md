@@ -35,7 +35,6 @@ class MyStack : Stack
                 new Gcp.BigTable.Inputs.InstanceClusterArgs
                 {
                     ClusterId = "tf-instance-cluster",
-                    Zone = "us-central1-b",
                     NumNodes = 3,
                     StorageType = "HDD",
                 },
@@ -84,7 +83,6 @@ func main() {
 			Clusters: bigtable.InstanceClusterArray{
 				&bigtable.InstanceClusterArgs{
 					ClusterId:   pulumi.String("tf-instance-cluster"),
-					Zone:        pulumi.String("us-central1-b"),
 					NumNodes:    pulumi.Int(3),
 					StorageType: pulumi.String("HDD"),
 				},
@@ -129,7 +127,6 @@ import pulumi_gcp as gcp
 
 instance = gcp.bigtable.Instance("instance", clusters=[gcp.bigtable.InstanceClusterArgs(
     cluster_id="tf-instance-cluster",
-    zone="us-central1-b",
     num_nodes=3,
     storage_type="HDD",
 )])
@@ -157,7 +154,6 @@ import * as gcp from "@pulumi/gcp";
 
 const instance = new gcp.bigtable.Instance("instance", {clusters: [{
     clusterId: "tf-instance-cluster",
-    zone: "us-central1-b",
     numNodes: 3,
     storageType: "HDD",
 }]});

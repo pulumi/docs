@@ -24,6 +24,7 @@ A Pulumi package for creating and managing Google Cloud Platform resources.
     <li><a href="bigtable/" title="bigtable"><span class="symbol module"></span>bigtable</a></li>
     <li><a href="billing/" title="billing"><span class="symbol module"></span>billing</a></li>
     <li><a href="binaryauthorization/" title="binaryauthorization"><span class="symbol module"></span>binaryauthorization</a></li>
+    <li><a href="certificateauthority/" title="certificateauthority"><span class="symbol module"></span>certificateauthority</a></li>
     <li><a href="cloudasset/" title="cloudasset"><span class="symbol module"></span>cloudasset</a></li>
     <li><a href="cloudbuild/" title="cloudbuild"><span class="symbol module"></span>cloudbuild</a></li>
     <li><a href="cloudfunctions/" title="cloudfunctions"><span class="symbol module"></span>cloudfunctions</a></li>
@@ -98,7 +99,7 @@ A Pulumi package for creating and managing Google Cloud Platform resources.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 	<dt>Version</dt>
-	<dd>4.8.0</dd>
+	<dd>4.9.0</dd>
 </dl>
 
 

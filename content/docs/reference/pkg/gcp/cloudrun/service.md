@@ -55,7 +55,7 @@ class MyStack : Stack
                     {
                         new Gcp.CloudRun.Inputs.ServiceTemplateSpecContainerArgs
                         {
-                            Image = "gcr.io/cloudrun/hello",
+                            Image = "us-docker.pkg.dev/cloudrun/container/hello",
                         },
                     },
                 },
@@ -93,7 +93,7 @@ func main() {
 				Spec: &cloudrun.ServiceTemplateSpecArgs{
 					Containers: cloudrun.ServiceTemplateSpecContainerArray{
 						&cloudrun.ServiceTemplateSpecContainerArgs{
-							Image: pulumi.String("gcr.io/cloudrun/hello"),
+							Image: pulumi.String("us-docker.pkg.dev/cloudrun/container/hello"),
 						},
 					},
 				},
@@ -125,7 +125,7 @@ default = gcp.cloudrun.Service("default",
     template=gcp.cloudrun.ServiceTemplateArgs(
         spec=gcp.cloudrun.ServiceTemplateSpecArgs(
             containers=[gcp.cloudrun.ServiceTemplateSpecContainerArgs(
-                image="gcr.io/cloudrun/hello",
+                image="us-docker.pkg.dev/cloudrun/container/hello",
             )],
         ),
     ),
@@ -148,7 +148,7 @@ const defaultService = new gcp.cloudrun.Service("default", {
     template: {
         spec: {
             containers: [{
-                image: "gcr.io/cloudrun/hello",
+                image: "us-docker.pkg.dev/cloudrun/container/hello",
             }],
         },
     },
@@ -191,7 +191,7 @@ class MyStack : Stack
                     {
                         new Gcp.CloudRun.Inputs.ServiceTemplateSpecContainerArgs
                         {
-                            Image = "gcr.io/cloudrun/hello",
+                            Image = "us-docker.pkg.dev/cloudrun/container/hello",
                         },
                     },
                 },
@@ -242,7 +242,7 @@ func main() {
 				Spec: &cloudrun.ServiceTemplateSpecArgs{
 					Containers: cloudrun.ServiceTemplateSpecContainerArray{
 						&cloudrun.ServiceTemplateSpecContainerArgs{
-							Image: pulumi.String("gcr.io/cloudrun/hello"),
+							Image: pulumi.String("us-docker.pkg.dev/cloudrun/container/hello"),
 						},
 					},
 				},
@@ -282,7 +282,7 @@ default = gcp.cloudrun.Service("default",
     template=gcp.cloudrun.ServiceTemplateArgs(
         spec=gcp.cloudrun.ServiceTemplateSpecArgs(
             containers=[gcp.cloudrun.ServiceTemplateSpecContainerArgs(
-                image="gcr.io/cloudrun/hello",
+                image="us-docker.pkg.dev/cloudrun/container/hello",
             )],
         ),
         metadata=gcp.cloudrun.ServiceTemplateMetadataArgs(
@@ -316,7 +316,7 @@ const _default = new gcp.cloudrun.Service("default", {
     template: {
         spec: {
             containers: [{
-                image: "gcr.io/cloudrun/hello",
+                image: "us-docker.pkg.dev/cloudrun/container/hello",
             }],
         },
         metadata: {
@@ -375,7 +375,7 @@ class MyStack : Stack
                                     { "value", "home" },
                                 },
                             },
-                            Image = "gcr.io/cloudrun/hello",
+                            Image = "us-docker.pkg.dev/cloudrun/container/hello",
                         },
                     },
                 },
@@ -429,7 +429,7 @@ func main() {
 									"value": pulumi.String("home"),
 								},
 							},
-							Image: pulumi.String("gcr.io/cloudrun/hello"),
+							Image: pulumi.String("us-docker.pkg.dev/cloudrun/container/hello"),
 						},
 					},
 				},
@@ -477,7 +477,7 @@ default = gcp.cloudrun.Service("default",
                         "value": "home",
                     },
                 ],
-                image="gcr.io/cloudrun/hello",
+                image="us-docker.pkg.dev/cloudrun/container/hello",
             )],
         ),
     ),
@@ -516,7 +516,7 @@ const defaultService = new gcp.cloudrun.Service("default", {
                         value: "home",
                     },
                 ],
-                image: "gcr.io/cloudrun/hello",
+                image: "us-docker.pkg.dev/cloudrun/container/hello",
             }],
         },
     },
@@ -554,7 +554,7 @@ class MyStack : Stack
                     {
                         new Gcp.CloudRun.Inputs.ServiceTemplateSpecContainerArgs
                         {
-                            Image = "gcr.io/cloudrun/hello",
+                            Image = "us-docker.pkg.dev/cloudrun/container/hello",
                         },
                     },
                 },
@@ -600,7 +600,7 @@ func main() {
 				Spec: &cloudrun.ServiceTemplateSpecArgs{
 					Containers: cloudrun.ServiceTemplateSpecContainerArray{
 						&cloudrun.ServiceTemplateSpecContainerArgs{
-							Image: pulumi.String("gcr.io/cloudrun/hello"),
+							Image: pulumi.String("us-docker.pkg.dev/cloudrun/container/hello"),
 						},
 					},
 				},
@@ -639,7 +639,7 @@ default = gcp.cloudrun.Service("default",
         ),
         spec=gcp.cloudrun.ServiceTemplateSpecArgs(
             containers=[gcp.cloudrun.ServiceTemplateSpecContainerArgs(
-                image="gcr.io/cloudrun/hello",
+                image="us-docker.pkg.dev/cloudrun/container/hello",
             )],
         ),
     ),
@@ -671,7 +671,7 @@ const defaultService = new gcp.cloudrun.Service("default", {
         },
         spec: {
             containers: [{
-                image: "gcr.io/cloudrun/hello",
+                image: "us-docker.pkg.dev/cloudrun/container/hello",
             }],
         },
     },

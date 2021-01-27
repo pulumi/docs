@@ -20,6 +20,7 @@ Explore the resources and functions of the cloudrun module in the GCP package.
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
+    <li><a href="getlocations" title="GetLocations"><span class="symbol function"></span>GetLocations</a></li>
     <li><a href="getservice" title="GetService"><span class="symbol function"></span>GetService</a></li>
 </ul>
 
@@ -32,7 +33,7 @@ Explore the resources and functions of the cloudrun module in the GCP package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 	<dt>Version</dt>
-	<dd>4.8.0</dd>
+	<dd>4.9.0</dd>
 </dl>
 
 

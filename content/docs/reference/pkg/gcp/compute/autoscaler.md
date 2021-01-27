@@ -892,9 +892,7 @@ be a positive float value. If not defined, the default is 0.8.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identifier (type) of the Stackdriver Monitoring metric.
-The metric cannot have negative values.
-The metric must have a value type of INT64 or DOUBLE.
+    <dd>{{% md %}}The identifier for this object. Format specified above.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -968,9 +966,7 @@ be a positive float value. If not defined, the default is 0.8.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identifier (type) of the Stackdriver Monitoring metric.
-The metric cannot have negative values.
-The metric must have a value type of INT64 or DOUBLE.
+    <dd>{{% md %}}The identifier for this object. Format specified above.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1044,9 +1040,7 @@ be a positive float value. If not defined, the default is 0.8.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identifier (type) of the Stackdriver Monitoring metric.
-The metric cannot have negative values.
-The metric must have a value type of INT64 or DOUBLE.
+    <dd>{{% md %}}The identifier for this object. Format specified above.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1120,9 +1114,7 @@ be a positive float value. If not defined, the default is 0.8.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The identifier (type) of the Stackdriver Monitoring metric.
-The metric cannot have negative values.
-The metric must have a value type of INT64 or DOUBLE.
+    <dd>{{% md %}}The identifier for this object. Format specified above.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1464,9 +1456,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identifier (type) of the Stackdriver Monitoring metric.
-The metric cannot have negative values.
-The metric must have a value type of INT64 or DOUBLE.
+    <dd>{{% md %}}The identifier for this object. Format specified above.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1560,9 +1550,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identifier (type) of the Stackdriver Monitoring metric.
-The metric cannot have negative values.
-The metric must have a value type of INT64 or DOUBLE.
+    <dd>{{% md %}}The identifier for this object. Format specified above.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1656,9 +1644,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identifier (type) of the Stackdriver Monitoring metric.
-The metric cannot have negative values.
-The metric must have a value type of INT64 or DOUBLE.
+    <dd>{{% md %}}The identifier for this object. Format specified above.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1752,9 +1738,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The identifier (type) of the Stackdriver Monitoring metric.
-The metric cannot have negative values.
-The metric must have a value type of INT64 or DOUBLE.
+    <dd>{{% md %}}The identifier for this object. Format specified above.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1943,6 +1927,15 @@ Structure is documented below.
 and outages due to abrupt scale-in events
 Structure is documented below.
 {{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="scalingschedules_csharp">
+<a href="#scalingschedules_csharp" style="color: inherit; text-decoration: inherit;">Scaling<wbr>Schedules</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#autoscalerautoscalingpolicyscalingschedule">List&lt;Autoscaler<wbr>Autoscaling<wbr>Policy<wbr>Scaling<wbr>Schedule<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -2064,6 +2057,15 @@ Structure is documented below.
 and outages due to abrupt scale-in events
 Structure is documented below.
 {{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="scalingschedules_go">
+<a href="#scalingschedules_go" style="color: inherit; text-decoration: inherit;">Scaling<wbr>Schedules</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#autoscalerautoscalingpolicyscalingschedule">[]Autoscaler<wbr>Autoscaling<wbr>Policy<wbr>Scaling<wbr>Schedule</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -2185,6 +2187,15 @@ Structure is documented below.
 and outages due to abrupt scale-in events
 Structure is documented below.
 {{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="scalingschedules_nodejs">
+<a href="#scalingschedules_nodejs" style="color: inherit; text-decoration: inherit;">scaling<wbr>Schedules</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#autoscalerautoscalingpolicyscalingschedule">Autoscaler<wbr>Autoscaling<wbr>Policy<wbr>Scaling<wbr>Schedule[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -2306,6 +2317,15 @@ Structure is documented below.
 and outages due to abrupt scale-in events
 Structure is documented below.
 {{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="scaling_schedules_python">
+<a href="#scaling_schedules_python" style="color: inherit; text-decoration: inherit;">scaling_<wbr>schedules</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#autoscalerautoscalingpolicyscalingschedule">Sequence[Autoscaler<wbr>Autoscaling<wbr>Policy<wbr>Scaling<wbr>Schedule<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -2506,9 +2526,7 @@ be a positive float value. If not defined, the default is 0.8.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identifier (type) of the Stackdriver Monitoring metric.
-The metric cannot have negative values.
-The metric must have a value type of INT64 or DOUBLE.
+    <dd>{{% md %}}The identifier for this object. Format specified above.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2607,9 +2625,7 @@ Possible values are `GAUGE`, `DELTA_PER_SECOND`, and `DELTA_PER_MINUTE`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identifier (type) of the Stackdriver Monitoring metric.
-The metric cannot have negative values.
-The metric must have a value type of INT64 or DOUBLE.
+    <dd>{{% md %}}The identifier for this object. Format specified above.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2708,9 +2724,7 @@ Possible values are `GAUGE`, `DELTA_PER_SECOND`, and `DELTA_PER_MINUTE`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identifier (type) of the Stackdriver Monitoring metric.
-The metric cannot have negative values.
-The metric must have a value type of INT64 or DOUBLE.
+    <dd>{{% md %}}The identifier for this object. Format specified above.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2809,9 +2823,7 @@ Possible values are `GAUGE`, `DELTA_PER_SECOND`, and `DELTA_PER_MINUTE`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The identifier (type) of the Stackdriver Monitoring metric.
-The metric cannot have negative values.
-The metric must have a value type of INT64 or DOUBLE.
+    <dd>{{% md %}}The identifier for this object. Format specified above.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3399,6 +3411,324 @@ integer.
     </dt>
     <dd>{{% md %}}Specifies a percentage of instances between 0 to 100%, inclusive.
 For example, specify 80 for 80%.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="autoscalerautoscalingpolicyscalingschedule">Autoscaler<wbr>Autoscaling<wbr>Policy<wbr>Scaling<wbr>Schedule</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#AutoscalerAutoscalingPolicyScalingSchedule">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#AutoscalerAutoscalingPolicyScalingSchedule">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute?tab=doc#AutoscalerAutoscalingPolicyScalingScheduleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute?tab=doc#AutoscalerAutoscalingPolicyScalingScheduleOutput">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.AutoscalerAutoscalingPolicyScalingScheduleArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.AutoscalerAutoscalingPolicyScalingSchedule.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="durationsec_csharp">
+<a href="#durationsec_csharp" style="color: inherit; text-decoration: inherit;">Duration<wbr>Sec</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The duration of time intervals (in seconds) for which this scaling schedule will be running. The minimum allowed value is 300.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="minrequiredreplicas_csharp">
+<a href="#minrequiredreplicas_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Required<wbr>Replicas</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Minimum number of VM instances that autoscaler will recommend in time intervals starting according to schedule.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The identifier for this object. Format specified above.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="schedule_csharp">
+<a href="#schedule_csharp" style="color: inherit; text-decoration: inherit;">Schedule</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The start timestamps of time intervals when this scaling schedule should provide a scaling signal. This field uses the extended cron format (with an optional year field).
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="description_csharp">
+<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}An optional description of this resource.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="disabled_csharp">
+<a href="#disabled_csharp" style="color: inherit; text-decoration: inherit;">Disabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}A boolean value that specifies if a scaling schedule can influence autoscaler recommendations. If set to true, then a scaling schedule has no effect.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="timezone_csharp">
+<a href="#timezone_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Zone</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The time zone to be used when interpreting the schedule. The value of this field must be a time zone name from the tz database: http://en.wikipedia.org/wiki/Tz_database.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="durationsec_go">
+<a href="#durationsec_go" style="color: inherit; text-decoration: inherit;">Duration<wbr>Sec</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The duration of time intervals (in seconds) for which this scaling schedule will be running. The minimum allowed value is 300.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="minrequiredreplicas_go">
+<a href="#minrequiredreplicas_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Required<wbr>Replicas</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Minimum number of VM instances that autoscaler will recommend in time intervals starting according to schedule.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The identifier for this object. Format specified above.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="schedule_go">
+<a href="#schedule_go" style="color: inherit; text-decoration: inherit;">Schedule</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The start timestamps of time intervals when this scaling schedule should provide a scaling signal. This field uses the extended cron format (with an optional year field).
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="description_go">
+<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}An optional description of this resource.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="disabled_go">
+<a href="#disabled_go" style="color: inherit; text-decoration: inherit;">Disabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}A boolean value that specifies if a scaling schedule can influence autoscaler recommendations. If set to true, then a scaling schedule has no effect.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="timezone_go">
+<a href="#timezone_go" style="color: inherit; text-decoration: inherit;">Time<wbr>Zone</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The time zone to be used when interpreting the schedule. The value of this field must be a time zone name from the tz database: http://en.wikipedia.org/wiki/Tz_database.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="durationsec_nodejs">
+<a href="#durationsec_nodejs" style="color: inherit; text-decoration: inherit;">duration<wbr>Sec</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The duration of time intervals (in seconds) for which this scaling schedule will be running. The minimum allowed value is 300.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="minrequiredreplicas_nodejs">
+<a href="#minrequiredreplicas_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Required<wbr>Replicas</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Minimum number of VM instances that autoscaler will recommend in time intervals starting according to schedule.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The identifier for this object. Format specified above.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="schedule_nodejs">
+<a href="#schedule_nodejs" style="color: inherit; text-decoration: inherit;">schedule</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The start timestamps of time intervals when this scaling schedule should provide a scaling signal. This field uses the extended cron format (with an optional year field).
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="description_nodejs">
+<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}An optional description of this resource.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="disabled_nodejs">
+<a href="#disabled_nodejs" style="color: inherit; text-decoration: inherit;">disabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}A boolean value that specifies if a scaling schedule can influence autoscaler recommendations. If set to true, then a scaling schedule has no effect.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="timezone_nodejs">
+<a href="#timezone_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Zone</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The time zone to be used when interpreting the schedule. The value of this field must be a time zone name from the tz database: http://en.wikipedia.org/wiki/Tz_database.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="duration_sec_python">
+<a href="#duration_sec_python" style="color: inherit; text-decoration: inherit;">duration_<wbr>sec</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The duration of time intervals (in seconds) for which this scaling schedule will be running. The minimum allowed value is 300.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="min_required_replicas_python">
+<a href="#min_required_replicas_python" style="color: inherit; text-decoration: inherit;">min_<wbr>required_<wbr>replicas</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Minimum number of VM instances that autoscaler will recommend in time intervals starting according to schedule.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The identifier for this object. Format specified above.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="schedule_python">
+<a href="#schedule_python" style="color: inherit; text-decoration: inherit;">schedule</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The start timestamps of time intervals when this scaling schedule should provide a scaling signal. This field uses the extended cron format (with an optional year field).
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="description_python">
+<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}An optional description of this resource.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="disabled_python">
+<a href="#disabled_python" style="color: inherit; text-decoration: inherit;">disabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}A boolean value that specifies if a scaling schedule can influence autoscaler recommendations. If set to true, then a scaling schedule has no effect.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="time_zone_python">
+<a href="#time_zone_python" style="color: inherit; text-decoration: inherit;">time_<wbr>zone</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The time zone to be used when interpreting the schedule. The value of this field must be a time zone name from the tz database: http://en.wikipedia.org/wiki/Tz_database.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}

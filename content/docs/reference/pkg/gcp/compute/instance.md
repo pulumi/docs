@@ -709,7 +709,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The zone that the machine should be created in.
+    <dd>{{% md %}}The zone that the machine should be created in. If it is not provided, the provider zone is used.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -1008,7 +1008,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The zone that the machine should be created in.
+    <dd>{{% md %}}The zone that the machine should be created in. If it is not provided, the provider zone is used.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -1307,7 +1307,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The zone that the machine should be created in.
+    <dd>{{% md %}}The zone that the machine should be created in. If it is not provided, the provider zone is used.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -1606,7 +1606,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The zone that the machine should be created in.
+    <dd>{{% md %}}The zone that the machine should be created in. If it is not provided, the provider zone is used.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -2445,7 +2445,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The zone that the machine should be created in.
+    <dd>{{% md %}}The zone that the machine should be created in. If it is not provided, the provider zone is used.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -2814,7 +2814,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The zone that the machine should be created in.
+    <dd>{{% md %}}The zone that the machine should be created in. If it is not provided, the provider zone is used.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -3183,7 +3183,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The zone that the machine should be created in.
+    <dd>{{% md %}}The zone that the machine should be created in. If it is not provided, the provider zone is used.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -3552,7 +3552,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The zone that the machine should be created in.
+    <dd>{{% md %}}The zone that the machine should be created in. If it is not provided, the provider zone is used.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
