@@ -9,7 +9,6 @@ REPO_OVERRIDE="${1:-}"
 PACKAGES=(
   "pulumi"
   "pulumi_aws"
-  "pulumi_azuread"
   "pulumi_cloudamqp"
   "pulumi_cloudflare"
   "pulumi_consul"
