@@ -79,7 +79,6 @@ REPOS=(
     "awsx,pulumi-awsx/nodejs/awsx"
     "cloud,pulumi-cloud/api"
     "eks,pulumi-eks/nodejs/eks"
-    "equinix-metal,pulumi-equinix-metal,sdk/nodejs"
     "fastly,pulumi-fastly,sdk/nodejs"
     "f5bigip,pulumi-f5bigip,sdk/nodejs"
     "gcp,pulumi-gcp,sdk/nodejs"
