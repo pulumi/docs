@@ -85,7 +85,6 @@ REPOS=(
     "random,pulumi-random,sdk/nodejs"
     "spotinst,pulumi-spotinst,sdk/nodejs"
     "terraform,pulumi-terraform,sdk/nodejs"
-    "tls,pulumi-tls,sdk/nodejs"
     "vault,pulumi-vault,sdk/nodejs"
     "venafi,pulumi-venafi,sdk/nodejs"
     "vsphere,pulumi-vsphere,sdk/nodejs"
