@@ -8,7 +8,6 @@ REPO_OVERRIDE="${1:-}"
 
 PACKAGES=(
   "pulumi"
-  "pulumi_openstack"
   "pulumi_packet"
   "pulumi_pagerduty"
   "pulumi_policy"
