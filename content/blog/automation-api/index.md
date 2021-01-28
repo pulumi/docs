@@ -34,7 +34,7 @@ So far, our users have applied the Pulumi Automation API to these scenarios:
 
 The Automation API is a new subpackage in each of Pulumi’s language-specific SDKs that provides APIs to create and manage Stacks and perform lifecycle operations like update, refresh, preview, and destroy. It is a strongly typed and safe way to use Pulumi in embedded contexts such as web servers without having to shell out to a CLI.
 
-You can define a Pulumi program as a function inside of your codebase rather than in a separate project and use methods to get and set configuration parameters programmatically. The Automation API uses a gRPC interface to execute programs that control and communicate with the core Pulumi engine. It still requires a Pulumi CLI installation, as this is how we bundle and distribute the core engine. Today it’s available in preview for [TypeScript/JavaScript](https://www.pulumi.com/docs/reference/pkg/nodejs/pulumi/pulumi/x/automation) and [Go](https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/x/auto), with support for [Python](https://github.com/pulumi/pulumi/compare/auto/python) and [C#](https://github.com/pulumi/pulumi/compare/auto/dotnet) under active development.
+You can define a Pulumi program as a function within your codebase rather than in a separate project and use methods to get and set configuration parameters programmatically. The Automation API uses a gRPC interface to execute programs that control and communicate with the core Pulumi engine. It still requires a Pulumi CLI installation, as this is how we bundle and distribute the core engine. Today it’s available in preview for [TypeScript/JavaScript](https://www.pulumi.com/docs/reference/pkg/nodejs/pulumi/pulumi/x/automation), [Go](https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/x/auto) and [Python](https://github.com/pulumi/pulumi/tree/master/sdk/python/lib/pulumi/x/automation), with support for [C#](https://github.com/pulumi/pulumi/compare/auto/dotnet) under active development.
 
 ## Platform APIs
 
@@ -309,6 +309,20 @@ ctx.Export("dbPass", dbPass)
 {{% choosable language python %}}
 
 ```python
+cluster_instance = aws.rds.ClusterInstance(
+    "db_instance",
+    cluster_identifier=cluster.cluster_identifier,
+    instance_class=aws.rds.InstanceType.T3_SMALL,
+    engine=aws.rds.EngineType.AURORA_MYSQL,
+    engine_version="5.7.mysql_aurora.2.03.2",
+    publicly_accessible=True,
+    db_subnet_group_name=subnet_group.name
+)
+
+pulumi.export("host", cluster.endpoint)
+pulumi.export("db_name", db_name)
+pulumi.export("db_user", db_user)
+pulumi.export("db_pass", db_pass)
 ```
 
 {{% /choosable %}}
@@ -398,6 +412,32 @@ CREATE TABLE IF NOT EXISTS hello_pulumi(
 {{% choosable language python %}}
 
 ```python
+# create (or select if one already exists) a stack that uses our inline program
+stack = auto.create_or_select_stack(stack_name=stack_name,
+                                    project_name=project_name,
+                                    program=pulumi_program)
+
+up_res = stack.up(on_output=print)
+print(f"db host url: {up_res.outputs['host'].value}")
+
+print("configuring db...")
+with connect(
+        host=up_res.outputs['host'].value,
+        user=up_res.outputs['db_user'].value,
+        password=up_res.outputs['db_pass'].value,
+        database=up_res.outputs['db_name'].value) as connection:
+    print("db configured!")
+
+    # make sure the table exists
+    print("creating table...")
+    create_table_query = """CREATE TABLE IF NOT EXISTS hello_pulumi(
+        id int(9) NOT NULL PRIMARY KEY,
+        color varchar(14) NOT NULL);
+        """
+    with connection.cursor() as cursor:
+        cursor.execute(create_table_query)
+        connection.commit()
+
 ```
 
 {{% /choosable %}}
@@ -582,18 +622,18 @@ Our VM provisioner uses Automation API, backed by Pulumi’s desired state model
 
 ## Give it a Try Today!
 
-The Automation API is your tool to tame Cloud Engineering complexity and give your team the leverage to automate your cloud infrastructure. It is completely open source and available today for TypeScript/JavaScript and Go. Want to learn more? Come hang out with us in the [#automation-api community slack channel](https://pulumi-community.slack.com/archives/C019YSXN04B). Download the latest Pulumi release and check out these resources to get started:
+The Automation API is your tool to tame Cloud Engineering complexity and give your team the leverage to automate your cloud infrastructure. It is completely open source and available today for TypeScript/JavaScript, Go and Python. Want to learn more? Come hang out with us in the [#automation-api community slack channel](https://pulumi-community.slack.com/archives/C019YSXN04B). Download the latest Pulumi release and check out these resources to get started:
 
 - [Go documentation](https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/x/auto)
 - [JavaScript/TypeScript documentation](https://www.pulumi.com/docs/reference/pkg/nodejs/pulumi/pulumi/x/automation/)
-- [Python documentation]()  
+- [Python documentation](https://www.pulumi.com/docs/reference/pkg/python/pulumi/#module-pulumi.x.automation)  
 - [The Automation API examples repo](https://github.com/pulumi/automation-api-examples)
 - The list of [known issues](https://github.com/pulumi/pulumi/issues?q=is%3Aissue+is%3Aopen+label%3Aarea%2Fautomation-api). Please [file more](https://github.com/pulumi/pulumi/issues/new?assignees=&labels=needs-triage&template=bug_report.md&title=) as you find them!
 - [The Pulumi Kubernetes Operator](https://github.com/pulumi/pulumi-kubernetes-operator)
 - [aksctl](https://github.com/jaxxstorm/aksctl)
 - [Halloumi](https://github.com/pulumi/halloumi)
 
-Keep an eye out! [Python](https://github.com/pulumi/pulumi/compare/auto/python) and [C#](https://github.com/pulumi/pulumi/compare/auto/dotnet) support are under active development and coming soon.
+Keep an eye out! [C#](https://github.com/pulumi/pulumi/compare/auto/dotnet) support is under active development and coming soon.
 
 We'd like to give a special thank you to the community members who have consulted with us, chimed in on the [original GitHub issue](https://github.com/pulumi/pulumi/issues/3901), and have been there for the journey in [community slack](https://pulumi-community.slack.com/archives/C019YSXN04B).
 
