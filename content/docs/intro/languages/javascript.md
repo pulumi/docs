@@ -5,7 +5,7 @@ meta_desc: An overview of how to use Node.js languages like JavaScript and TypeS
 menu:
   intro:
     parent: languages
-    weight: 3
+    weight: 1
 
 aliases: ["/docs/reference/javascript/"]
 ---
