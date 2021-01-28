@@ -143,9 +143,11 @@ class EksStack : Stack
         });
 
         // Export the cluster's kubeconfig.
-        [Output] public Output<string> Kubeconfig { get; set; }
+        this.Kubeconfig = cluster.Kubeconfig;
     }
 
+    [Output("kubeconfig")]
+    public Output<string> Kubeconfig { get; set; }
 }
 
 class Program
