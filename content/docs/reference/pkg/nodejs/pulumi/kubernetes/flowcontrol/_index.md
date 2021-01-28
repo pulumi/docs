@@ -3,7 +3,7 @@ title: "Module flowcontrol"
 title_tag: "Module flowcontrol | Package @pulumi/kubernetes | Node.js SDK"
 linktitle: "flowcontrol"
 meta_desc: "Explore members of the flowcontrol module in the @pulumi/kubernetes package."
-git_sha: "63f6322ca9e33d39a2e52afc00dc343f1f4f3369"
+git_sha: "fe4bf57fb2aa9c06f0b85119ee05f2ccabfc4b0f"
 block_external_search_index: true
 ---
 
