@@ -332,6 +332,9 @@ def encode_hugo_shortcode_delimiter_lookalikes(body: str) -> str:
         (">}}", ">&#x7D;&#x7D;"),
         ("{{%", "&#x7B;&#x7B;%"),
         ("%}}", "%&#x7D;&#x7D;"),
+        # The sphinx HTML adds pilcrows in anchors, breaking the functionality of the anchors.
+        # Remove these pilcrows.
+        ("¶", "")
     ]
     for old, new in replacements:
         body = body.replace(old, new)

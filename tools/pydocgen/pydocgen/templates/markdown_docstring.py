@@ -7,6 +7,7 @@ this purpose.
 import os
 from m2r import convert
 
+
 def setup(app):
     """
     setup is called by Sphinx on startup. It gives this extension the opportunity to inject itself into the normal
@@ -17,6 +18,7 @@ def setup(app):
     # Autodoc fires this event whenever it processes a docstring - we're going to hook into it here in order to
     # translate docstrings as they come in.
     app.connect("autodoc-process-docstring", translate_docstring)
+
 
 def translate_docstring(app, what, name, obj, options, lines):
     """
