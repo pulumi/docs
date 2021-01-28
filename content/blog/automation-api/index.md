@@ -42,7 +42,7 @@ For SaaS scenarios like deploying infrastructure in response to user action, rel
 
 Automation API runs inside your favorite frameworks and interacts with your other packages exactly as you’d expect. We can define custom declarative infrastructure and expose it to end-users behind a familiar REST interface:
 
-{{< chooser language "typescript,go" >}}
+{{< chooser language "typescript,go,python" >}}
 
 {{% choosable language typescript %}}
 
@@ -122,11 +122,40 @@ func createHandler(w http.ResponseWriter, req *http.Request) {
 
 {{% /choosable %}}
 
+{{% choosable language python %}}
+
+```python
+# an HTTP handler to create instances of our declarative infra
+# each request creates an S3-backed static website with dynamic content from the POST body
+@app.route("/sites", methods=["POST"])
+def create_handler():
+    """creates new sites"""
+    stack_name = request.json.get('id')
+    content = request.json.get('content')
+    try:
+        def pulumi_program():
+            return create_pulumi_program(content)
+        # create a new stack, generating our pulumi program on the fly from the POST body
+        stack = auto.create_stack(stack_name=stack_name,
+                                  project_name=project_name,
+                                  program=pulumi_program)
+        stack.set_config("aws:region", auto.ConfigValue("us-west-2"))
+        # deploy the stack, tailing the logs to stdout
+        up_res = stack.up(on_output=print)
+        return jsonify(id=stack_name, url=up_res.outputs['website_url'].value)
+    except auto.StackAlreadyExistsError:
+        return make_response(f"stack '{stack_name}' already exists", 409)
+    except Exception as exn:
+        return make_response(str(exn), 500)
+```
+
+{{% /choosable %}}
+
 {{< /chooser >}}
 
-The handlers work with with your favorite HTTP frameworks like `mux` and `express`:
+The handlers work with your favorite HTTP frameworks like `mux`, `express` and `flask`:
 
-{{< chooser language "typescript,go" >}}
+{{< chooser language "typescript,go,python" >}}
 
 {{% choosable language typescript %}}
 
@@ -178,11 +207,46 @@ func main() {
 
 {{% /choosable %}}
 
+{{% choosable language python %}}
+
+```python
+import Flask
+
+# install necessary plugins once upon boot
+ensure_plugins()
+
+# initialize our Flask app
+app = Flask(__name__)
+
+# set up our routes
+@app.route("/sites", methods=["POST"])
+def create_handler():
+    ...
+
+@app.route("/sites", methods=["GET"])
+def list_handler():
+    ...
+
+@app.route("/sites/<string:id>", methods=["GET"])
+def get_handler(id: str):
+    ...
+
+@app.route("/sites/<string:id>", methods=["UPDATE"])
+def update_handler(id: str):
+    ...
+
+@app.route("/sites/<string:id>", methods=["DELETE"])
+def delete_handler(id: str):
+    ...
+```
+
+{{% /choosable %}}
+
 {{< /chooser >}}
 
 ![HTTP server demo](http.gif)
 
-Check out the full `Pulumi over HTTP` example in [TypeScript](https://github.com/pulumi/automation-api-examples/tree/main/nodejs/pulumiOverHttp-ts) and [Go](https://github.com/pulumi/automation-api-examples/tree/main/go/pulumi_over_http).
+Check out the full `Pulumi over HTTP` example in [TypeScript](https://github.com/pulumi/automation-api-examples/tree/main/nodejs/pulumiOverHttp-ts), [Go](https://github.com/pulumi/automation-api-examples/tree/main/go/pulumi_over_http) and [Python](https://github.com/pulumi/automation-api-examples/tree/main/python/pulumi_over_http).
 
 Here at Pulumi, we used Automation API as the foundation of our [Kubernetes Operator](https://github.com/pulumi/pulumi-kubernetes-operator/pull/86) that exposes Pulumi stacks as Custom Resources. See how your own platform's operators can [take advantage of the Automation API](https://github.com/pulumi/pulumi-kubernetes-operator/blob/master/pkg/controller/stack/stack_controller.go).
 
@@ -194,7 +258,7 @@ Choosing between small, decoupled units of infrastructure and a maintainable orc
 
 Like any other Pulumi program, we define our cloud resources. In this case, an AWS RDS database:
 
-{{< chooser language "typescript,go" >}}
+{{< chooser language "typescript,go,python" >}}
 
 {{% choosable language typescript %}}
 
@@ -242,11 +306,18 @@ ctx.Export("dbPass", dbPass)
 
 {{% /choosable %}}
 
+{{% choosable language python %}}
+
+```python
+```
+
+{{% /choosable %}}
+
 {{< /chooser >}}
 
 But with Automation API, we can perform database migrations and preload rows in the same program:
 
-{{< chooser language "typescript,go" >}}
+{{< chooser language "typescript,go,python" >}}
 
 {{% choosable language typescript %}}
 
@@ -324,11 +395,18 @@ CREATE TABLE IF NOT EXISTS hello_pulumi(
 
 {{% /choosable %}}
 
+{{% choosable language python %}}
+
+```python
+```
+
+{{% /choosable %}}
+
 {{< /chooser >}}
 
 ![Database migration demo](dbmigration.gif)
 
-See the full database deployment and migration Automation API program in [TypeScript](https://github.com/pulumi/automation-api-examples/tree/main/nodejs/databaseMigration-ts) and [Go](https://github.com/pulumi/automation-api-examples/tree/main/go/database_migration).
+See the full database deployment and migration Automation API program in [TypeScript](https://github.com/pulumi/automation-api-examples/tree/main/nodejs/databaseMigration-ts), [Go](https://github.com/pulumi/automation-api-examples/tree/main/go/database_migration) and [Python](https://github.com/pulumi/automation-api-examples/tree/main/python/database_migration).
 
 ## Cloud Framework Development
 
@@ -508,6 +586,7 @@ The Automation API is your tool to tame Cloud Engineering complexity and give yo
 
 - [Go documentation](https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/x/auto)
 - [JavaScript/TypeScript documentation](https://www.pulumi.com/docs/reference/pkg/nodejs/pulumi/pulumi/x/automation/)
+- [Python documentation]()  
 - [The Automation API examples repo](https://github.com/pulumi/automation-api-examples)
 - The list of [known issues](https://github.com/pulumi/pulumi/issues?q=is%3Aissue+is%3Aopen+label%3Aarea%2Fautomation-api). Please [file more](https://github.com/pulumi/pulumi/issues/new?assignees=&labels=needs-triage&template=bug_report.md&title=) as you find them!
 - [The Pulumi Kubernetes Operator](https://github.com/pulumi/pulumi-kubernetes-operator)
