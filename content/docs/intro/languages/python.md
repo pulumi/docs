@@ -5,7 +5,7 @@ meta_desc: An overview of how to use Python for infrastructure as code
 menu:
   intro:
     parent: languages
-    weight: 4
+    weight: 2
 
 aliases: ["/docs/reference/python/"]
 ---
