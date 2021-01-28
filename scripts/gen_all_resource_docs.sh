@@ -23,6 +23,7 @@ REPOS=(
     "digitalocean"
     "dnsimple"
     "docker"
+    "eks"
     "fastly"
     "f5bigip"
     "gcp"
