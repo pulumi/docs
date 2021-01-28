@@ -128,7 +128,7 @@ The local `docker-ffmpeg-thumb` folder contains the application files (`Dockerfi
 
 ### Setup a role
 
-Next, we define an IAM role and a policy attachment to grant AWS Lambda access to ECR, CloudWatch, and other supporting services.
+Next, we define an IAM role and a policy attachment to grant AWS Lambda access to S3 and CloudWatch.
 
 ```ts
 const role = new aws.iam.Role("thumbnailerRole", {
@@ -136,7 +136,7 @@ const role = new aws.iam.Role("thumbnailerRole", {
 });
 new aws.iam.RolePolicyAttachment("lambdaFullAccess", {
    role: role.name,
-   policyArn: aws.iam.ManagedPolicies.AWSLambdaFullAccess,
+   policyArn: aws.iam.ManagedPolicy.AWSLambdaExecute,
 });
 ```
 

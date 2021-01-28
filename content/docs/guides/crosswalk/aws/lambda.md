@@ -188,7 +188,7 @@ const docsHandlerRole = new aws.iam.Role("docsHandlerRole", {
 });
 new aws.iam.RolePolicyAttachment("zipTpsReportsFuncRoleAttach", {
    role: docsHandlerRole,
-   policyArn: aws.iam.ManagedPolicies.AWSLambdaFullAccess,
+   policyArn: aws.iam.ManagedPolicies.AWSLambdaExecute,
 });
 
 // Next, create the Lambda function itself:
