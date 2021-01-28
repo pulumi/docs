@@ -218,7 +218,7 @@ const zipFuncRole = new aws.iam.Role("zipTpsReportsFuncRole", {
 });
 new aws.iam.RolePolicyAttachment("zipTpsReportsFuncRoleAttach", {
    role: zipFuncRole,
-   policyArn: aws.iam.AWSLambdaFullAccess,
+   policyArn: aws.iam.ManagedPolicy.AWSLambdaExecute,
 });
 
 // Next, create the Lambda function itself:

@@ -194,8 +194,8 @@ examples:
               new aws.lambda.CallbackFunction<aws.s3.BucketEvent, void>("onNewVideo", {
                   // Specify appropriate policies so that this AWS lambda can run EC2 tasks.
                   policies: [
-                      aws.iam.AWSLambdaFullAccess,
-                      aws.iam.AmazonEC2ContainerServiceFullAccess,
+                      aws.iam.ManagedPolicy.AWSLambdaExecute,
+                      aws.iam.ManagedPolicy.AmazonECSFullAccess,
                   ],
                   callback: async bucketArgs => {
                       for (const record of bucketArgs.Records) {

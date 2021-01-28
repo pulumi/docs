@@ -71,7 +71,7 @@ The AWS implementation of the Cloud Framework accepts the following configuratio
 * `functionMemorySize`: (Optional) Override the Lambda function memory size for all functions.
 * `functionIncludePaths`: (Optional) Comma-separated list of additional paths (relative to the project root) to include in Lambda zip uploads for JavaScript callbacks.  E.g `./img.png,app/`.
 * `functionIncludePackages`: (Optional) Comma-separated list of additional packages (relative to the project root) to include in Lambda zip uploads for JavaScript callbacks.  E.g `body-parser,typescript`.
-* `computeIAMRolePolicyARNs`: (Optional) Set the IAM role policies to apply to compute (both Lambda and ECS) within this Pulumi program. The default is: `arn:aws:iam::aws:policy/AWSLambdaFullAccess,arn:aws:iam::aws:policy/AmazonEC2ContainerServiceFullAccess`.
+* `computeIAMRolePolicyARNs`: (Optional) Set the IAM role policies to apply to compute (both Lambda and ECS) within this Pulumi program. The default is: `arn:aws:iam::aws:policy/AWSLambda_FullAccess,arn:aws:iam::aws:policy/AmazonECS_FullAccess`.
 * `acmCertificateARN`: (Optional) ACM certificate ARN to support services HTTPS traffic.
 * `ecsClusterARN`: (Optional) ECS cluster ARN. One of `useFargate`, `ecsClusterARN`, or `ecsAutoCluster` must be provided to use container-based resources like `cloud.Service` and `cloud.Task`.
 * `ecsClusterSecurityGroup`: (Optional) ECS cluster security group that all ALBs for services within the cluster will use.
