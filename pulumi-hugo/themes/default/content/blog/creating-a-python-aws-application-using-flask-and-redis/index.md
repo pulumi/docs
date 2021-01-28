@@ -139,7 +139,7 @@ app_exec_role = aws.iam.Role("app-exec-role",
     }""")
 
 exec_policy_attachment = aws.iam.RolePolicyAttachment("app-exec-policy", role=app_exec_role.name,
-	policy_arn="arn:aws:iam::aws:policy/service-role/AmazonECSTaskExecutionRolePolicy")
+	policy_arn=aws.iam.ManagedPolicy.AMAZON_ECS_TASK_EXECUTION_ROLE_POLICY)
 ```
 
 Likewise, our ECS service will need to have a task role to manage it, along with its own set
@@ -161,10 +161,7 @@ app_task_role = aws.iam.Role("app-task-role",
     }""")
 
 task_policy_attachment = aws.iam.RolePolicyAttachment("app-access-policy", role=app_task_role.name,
-	policy_arn="arn:aws:iam::aws:policy/AmazonEC2ContainerServiceFullAccess")
-
-task_policy_attachment = aws.iam.RolePolicyAttachment("app-lambda-policy", role=app_task_role.name,
-	policy_arn="arn:aws:iam::aws:policy/AWSLambdaFullAccess")
+	policy_arn=aws.iam.ManagedPolicy.AMAZON_ECS_FULL_ACCESS)
 ```
 
 An Elastic Container Registry Repository stores the application Docker images that we want

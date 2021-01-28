@@ -75,7 +75,7 @@ Finally, each Lambda Function we want to run will need to be in our VPC, use our
 ```ts
 function efsvpcCallback(name: string, f: aws.lambda.Callback<awsx.apigateway.Request, awsx.apigateway.Response>) {
     return new aws.lambda.CallbackFunction(name, {
-        policies: [aws.iam.ManagedPolicies.AWSLambdaVPCAccessExecutionRole, aws.iam.ManagedPolicies.AWSLambdaFullAccess],
+        policies: [aws.iam.ManagedPolicy.AWSLambdaVPCAccessExecutionRole, aws.iam.ManagedPolicy.LambdaFullAccess],
         vpcConfig: {
             subnetIds: vpc.privateSubnetIds,
             securityGroupIds: [vpc.vpc.defaultSecurityGroupId],
