@@ -5,7 +5,7 @@ meta_desc: This page provides an overview of how Pulumi works and interacts with
 menu:
   intro:
     parent: concepts
-    weight: 9
+    weight: 10
 
 aliases: ["/docs/reference/how/"]
 ---

@@ -9,9 +9,7 @@ menu:
 aliases: ["/docs/reference/concepts/"]
 ---
 
-Pulumi is a modern infrastructure as code platform. It includes a CLI, runtime, libraries, and a hosted service working together to deliver a robust way of provisioning, updating, and managing cloud infrastructure.
-
-Instead of YAML or a domain-specific language (DSL), Pulumi leverages existing programming languages---TypeScript, JavaScript, Python, Go, and .NET---and their native tools, libraries, and package managers to interact with cloud resources through the Pulumi SDK.
+Pulumi is a modern infrastructure as code platform. It leverages existing programming languages---TypeScript, JavaScript, Python, Go, and .NET---and their native ecosystem to interact with cloud resources through the Pulumi SDK. A downloadable CLI, runtime, libraries, and a hosted service work together to deliver a robust way of provisioning, updating, and managing cloud infrastructure.
 
 > If this is your first time using Pulumi, you likely want to begin with [the Getting Started guide]({{< relref "/docs/get-started" >}}) for your cloud of choice. It will walk you through an [AWS]({{< relref "/docs/get-started/aws" >}}), [Azure]({{< relref "/docs/get-started/azure" >}}), [GCP]({{< relref "/docs/get-started/gcp" >}}), or [Kubernetes]({{< relref "/docs/get-started/kubernetes" >}}) deployment from start to finish.
 
@@ -240,6 +238,16 @@ The following topics provide more details on the core concepts of Pulumi and how
     </div>
 </div>
 <div class="md:flex flex-row mt-6 mb-6">
+    <div class="w-1/2 border-solid border-t-2 border-gray-200">
+        <h3 class="no-anchor pt-4"><a href="{{< relref "/docs/intro/concepts/function-serialization" >}}"><i class="fas fa-terminal pr-2"></i>Function Serialization</a></h3>
+        <p>Learn how to serialize JavaScript functions into an artifact that can be used at runtime in the cloud.</p>
+    </div>
+    <div class="w-1/2 border-solid ml-4 border-t-2 border-gray-200">
+        <h3 class="no-anchor pt-4"><a href="{{< relref "/docs/intro/concepts/logging" >}}"><i class="fas fa-clipboard-list pr-2"></i>Logging</a></h3>
+        <p>Learn about how to access log information for diagnostics and debugging.</p>
+    </div>
+</div>
+<div>
     <div class="w-full border-solid border-t-2 border-gray-200">
         <h3 class="no-anchor pt-4"><a href="{{< relref "/docs/intro/concepts/how-pulumi-works" >}}"><i class="fas fa-upload pr-2"></i>Pulumi Architecture</a></h3>
         <p>Learn about the internal Pulumi components used to performs deployments.</p>

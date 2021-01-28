@@ -118,6 +118,50 @@ var myTask = new Task("myTask", new TaskArgs
 
 {{< /chooser >}}
 
+## Getting the Current Project Programmatically
+
+The {{< pulumi-getproject >}} function gives you the currently deploying project. This can be useful for naming or tagging resources.
+
+{{< chooser language "javascript,typescript,python,go,csharp" >}}
+
+{{% choosable language javascript %}}
+
+```javascript
+let project = pulumi.getProject();
+```
+
+{{% /choosable %}}
+{{% choosable language typescript %}}
+
+```typescript
+let project = pulumi.getProject();
+```
+
+{{% /choosable %}}
+{{% choosable language python %}}
+
+```python
+project = pulumi.get_project()
+```
+
+{{% /choosable %}}
+{{% choosable language go %}}
+
+```go
+project := ctx.Project()
+```
+
+{{% /choosable %}}
+{{% choosable language csharp %}}
+
+```csharp
+var project = Deployment.Instance.ProjectName;
+```
+
+{{% /choosable %}}
+
+{{< /chooser >}}
+
 ## Stack Settings Files {#stack-settings-file}
 
 Each stack that is created in a project will have a file named `Pulumi.<stackname>.yaml` that contains the configuration specific to this stack. This file typically resides in the root of the project directory.

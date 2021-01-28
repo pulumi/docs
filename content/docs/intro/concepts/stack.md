@@ -281,6 +281,50 @@ Note: If you export an actual resource, it too will be JSON serialized. This usu
 
 Stack outputs respect secret annotations and are encrypted appropriately. If a stack contains any secret values, their plaintext values will not be shown by default. Instead, they will be displayed as [secret]({{< relref "" >}}) in the CLI. Pass `--show-secrets` to `pulumi stack output` to see the plaintext value.
 
+## Getting the Current Stack Programmatically
+
+The {{< pulumi-getstack >}} function gives you the currently deploying stack, which can be useful in naming, tagging, or accessing resources.
+
+{{< chooser language "javascript,typescript,python,go,csharp" >}}
+
+{{% choosable language javascript %}}
+
+```javascript
+let stack = pulumi.getStack();
+```
+
+{{% /choosable %}}
+{{% choosable language typescript %}}
+
+```typescript
+let stack = pulumi.getStack();
+```
+
+{{% /choosable %}}
+{{% choosable language python %}}
+
+```python
+stack = pulumi.get_stack()
+```
+
+{{% /choosable %}}
+{{% choosable language go %}}
+
+```go
+stack := ctx.Stack()
+```
+
+{{% /choosable %}}
+{{% choosable language csharp %}}
+
+```csharp
+var stack = Deployment.Instance.StackName;
+```
+
+{{% /choosable %}}
+
+{{< /chooser >}}
+
 ## Stack References {#stackreferences}
 
 Stack references allow you to access the outputs of one stack from another stack. Inter-Stack Dependencies allow one stack to reference the outputs of another stack.
