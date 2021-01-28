@@ -5,7 +5,7 @@ meta_desc: An overview of how to use .NET languages like C# and F# for infrastru
 menu:
   intro:
     parent: languages
-    weight: 1
+    weight: 3
 
 aliases: ["/dotnet/"]
 ---
