@@ -16,7 +16,7 @@ Provides an AWS Network Firewall Rule Group Resource
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
-### Stateful Inspection
+### Stateful Inspection for denying access to a domain
 {{% example csharp %}}
 ```csharp
 using Pulumi;
@@ -155,7 +155,231 @@ const example = new aws.networkfirewall.RuleGroup("example", {
 
 {{% /example %}}
 
-### Stateful Inspection compatible with intrusion detection systems like Snort or Suricata
+### Stateful Inspection for permitting packets from a source IP address
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var ips = 
+        {
+            "1.1.1.1/32",
+            "1.0.0.1/32",
+        };
+        var example = new Aws.NetworkFirewall.RuleGroup("example", new Aws.NetworkFirewall.RuleGroupArgs
+        {
+            Capacity = 50,
+            Description = "Permits http traffic from source",
+            Type = "STATEFUL",
+            RuleGroup = new Aws.NetworkFirewall.Inputs.RuleGroupRuleGroupArgs
+            {
+                RulesSource = new Aws.NetworkFirewall.Inputs.RuleGroupRuleGroupRulesSourceArgs
+                {
+                    Dynamic = 
+                    {
+                        
+                        {
+                            { "forEach", ips },
+                            { "content", 
+                            {
+                                
+                                {
+                                    { "action", "PASS" },
+                                    { "header", 
+                                    {
+                                        
+                                        {
+                                            { "destination", "ANY" },
+                                            { "destinationPort", "ANY" },
+                                            { "protocol", "HTTP" },
+                                            { "direction", "ANY" },
+                                            { "sourcePort", "ANY" },
+                                            { "source", stateful_rule.Value },
+                                        },
+                                    } },
+                                    { "ruleOption", 
+                                    {
+                                        
+                                        {
+                                            { "keyword", "sid:1" },
+                                        },
+                                    } },
+                                },
+                            } },
+                        },
+                    },
+                },
+            },
+            Tags = 
+            {
+                { "Name", "permit HTTP from source" },
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/networkfirewall"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		ips := []string{
+			"1.1.1.1/32",
+			"1.0.0.1/32",
+		}
+		_, err := networkfirewall.NewRuleGroup(ctx, "example", &networkfirewall.RuleGroupArgs{
+			Capacity:    pulumi.Int(50),
+			Description: pulumi.String("Permits http traffic from source"),
+			Type:        pulumi.String("STATEFUL"),
+			RuleGroup: &networkfirewall.RuleGroupRuleGroupArgs{
+				RulesSource: &networkfirewall.RuleGroupRuleGroupRulesSourceArgs{
+					Dynamic: pulumi.MapArray{
+						pulumi.Map{
+							"forEach": toPulumiStringArray(ips),
+							"content": pulumi.MapArray{
+								pulumi.Map{
+									"action": pulumi.String("PASS"),
+									"header": pulumi.MapArray{
+										pulumi.Map{
+											"destination":     pulumi.String("ANY"),
+											"destinationPort": pulumi.String("ANY"),
+											"protocol":        pulumi.String("HTTP"),
+											"direction":       pulumi.String("ANY"),
+											"sourcePort":      pulumi.String("ANY"),
+											"source":          pulumi.Any(stateful_rule.Value),
+										},
+									},
+									"ruleOption": pulumi.StringMapArray{
+										pulumi.StringMap{
+											"keyword": pulumi.String("sid:1"),
+										},
+									},
+								},
+							},
+						},
+					},
+				},
+			},
+			Tags: pulumi.StringMap{
+				"Name": pulumi.String("permit HTTP from source"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+func toPulumiStringArray(arr []string) pulumi.StringArray {
+	var pulumiArr pulumi.StringArray
+	for _, v := range arr {
+		pulumiArr = append(pulumiArr, pulumi.String(v))
+	}
+	return pulumiArr
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_aws as aws
+
+ips = [
+    "1.1.1.1/32",
+    "1.0.0.1/32",
+]
+example = aws.networkfirewall.RuleGroup("example",
+    capacity=50,
+    description="Permits http traffic from source",
+    type="STATEFUL",
+    rule_group=aws.networkfirewall.RuleGroupRuleGroupArgs(
+        rules_source=aws.networkfirewall.RuleGroupRuleGroupRulesSourceArgs(
+            dynamic=[{
+                "forEach": ips,
+                "content": [{
+                    "action": "PASS",
+                    "header": [{
+                        "destination": "ANY",
+                        "destinationPort": "ANY",
+                        "protocol": "HTTP",
+                        "direction": "ANY",
+                        "sourcePort": "ANY",
+                        "source": stateful_rule["value"],
+                    }],
+                    "ruleOption": [{
+                        "keyword": "sid:1",
+                    }],
+                }],
+            }],
+        ),
+    ),
+    tags={
+        "Name": "permit HTTP from source",
+    })
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const ips = [
+    "1.1.1.1/32",
+    "1.0.0.1/32",
+];
+const example = new aws.networkfirewall.RuleGroup("example", {
+    capacity: 50,
+    description: "Permits http traffic from source",
+    type: "STATEFUL",
+    ruleGroup: {
+        rulesSource: {
+            dynamic: [{
+                forEach: ips,
+                content: [{
+                    action: "PASS",
+                    header: [{
+                        destination: "ANY",
+                        destinationPort: "ANY",
+                        protocol: "HTTP",
+                        direction: "ANY",
+                        sourcePort: "ANY",
+                        source: stateful_rule.value,
+                    }],
+                    ruleOption: [{
+                        keyword: "sid:1",
+                    }],
+                }],
+            }],
+        },
+    },
+    tags: {
+        Name: "permit HTTP from source",
+    },
+});
+```
+
+{{% /example %}}
+
+### Stateful Inspection for blocking packets from going to an intended destination
 {{% example csharp %}}
 ```csharp
 using Pulumi;

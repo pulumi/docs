@@ -26,14 +26,9 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var exampleKey = new Aws.Kms.Key("exampleKey", new Aws.Kms.KeyArgs
-        {
-            Description = "domain key",
-        });
-        var exampleDomain = new Aws.CodeArtifact.Domain("exampleDomain", new Aws.CodeArtifact.DomainArgs
+        var example = new Aws.CodeArtifact.Domain("example", new Aws.CodeArtifact.DomainArgs
         {
             Domain = "example",
-            EncryptionKey = exampleKey.Arn,
         });
     }
 
@@ -48,21 +43,13 @@ package main
 
 import (
 	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/codeartifact"
-	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kms"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		exampleKey, err := kms.NewKey(ctx, "exampleKey", &kms.KeyArgs{
-			Description: pulumi.String("domain key"),
-		})
-		if err != nil {
-			return err
-		}
-		_, err = codeartifact.NewDomain(ctx, "exampleDomain", &codeartifact.DomainArgs{
-			Domain:        pulumi.String("example"),
-			EncryptionKey: exampleKey.Arn,
+		_, err := codeartifact.NewDomain(ctx, "example", &codeartifact.DomainArgs{
+			Domain: pulumi.String("example"),
 		})
 		if err != nil {
 			return err
@@ -79,10 +66,7 @@ func main() {
 import pulumi
 import pulumi_aws as aws
 
-example_key = aws.kms.Key("exampleKey", description="domain key")
-example_domain = aws.codeartifact.Domain("exampleDomain",
-    domain="example",
-    encryption_key=example_key.arn)
+example = aws.codeartifact.Domain("example", domain="example")
 ```
 
 {{% /example %}}
@@ -93,10 +77,8 @@ example_domain = aws.codeartifact.Domain("exampleDomain",
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const exampleKey = new aws.kms.Key("exampleKey", {description: "domain key"});
-const exampleDomain = new aws.codeartifact.Domain("exampleDomain", {
+const example = new aws.codeartifact.Domain("example", {
     domain: "example",
-    encryptionKey: exampleKey.arn,
 });
 ```
 
@@ -295,15 +277,15 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
     </dt>
     <dd>{{% md %}}The name of the domain to create. All domain names in an AWS Region that are in the same AWS account must be unique. The domain name is used as the prefix in DNS hostnames. Do not use sensitive information in a domain name because it is publicly discoverable.
 {{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span id="encryptionkey_csharp">
 <a href="#encryptionkey_csharp" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The encryption key for the domain. This is used to encrypt content stored in a domain. The KMS Key Amazon Resource Name (ARN).
+    <dd>{{% md %}}The encryption key for the domain. This is used to encrypt content stored in a domain. The KMS Key Amazon Resource Name (ARN). The default aws/codeartifact AWS KMS master key is used if this element is absent.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -331,15 +313,15 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
     </dt>
     <dd>{{% md %}}The name of the domain to create. All domain names in an AWS Region that are in the same AWS account must be unique. The domain name is used as the prefix in DNS hostnames. Do not use sensitive information in a domain name because it is publicly discoverable.
 {{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span id="encryptionkey_go">
 <a href="#encryptionkey_go" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The encryption key for the domain. This is used to encrypt content stored in a domain. The KMS Key Amazon Resource Name (ARN).
+    <dd>{{% md %}}The encryption key for the domain. This is used to encrypt content stored in a domain. The KMS Key Amazon Resource Name (ARN). The default aws/codeartifact AWS KMS master key is used if this element is absent.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -367,15 +349,15 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
     </dt>
     <dd>{{% md %}}The name of the domain to create. All domain names in an AWS Region that are in the same AWS account must be unique. The domain name is used as the prefix in DNS hostnames. Do not use sensitive information in a domain name because it is publicly discoverable.
 {{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span id="encryptionkey_nodejs">
 <a href="#encryptionkey_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The encryption key for the domain. This is used to encrypt content stored in a domain. The KMS Key Amazon Resource Name (ARN).
+    <dd>{{% md %}}The encryption key for the domain. This is used to encrypt content stored in a domain. The KMS Key Amazon Resource Name (ARN). The default aws/codeartifact AWS KMS master key is used if this element is absent.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -403,15 +385,15 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
     </dt>
     <dd>{{% md %}}The name of the domain to create. All domain names in an AWS Region that are in the same AWS account must be unique. The domain name is used as the prefix in DNS hostnames. Do not use sensitive information in a domain name because it is publicly discoverable.
 {{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span id="encryption_key_python">
 <a href="#encryption_key_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The encryption key for the domain. This is used to encrypt content stored in a domain. The KMS Key Amazon Resource Name (ARN).
+    <dd>{{% md %}}The encryption key for the domain. This is used to encrypt content stored in a domain. The KMS Key Amazon Resource Name (ARN). The default aws/codeartifact AWS KMS master key is used if this element is absent.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -867,7 +849,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The encryption key for the domain. This is used to encrypt content stored in a domain. The KMS Key Amazon Resource Name (ARN).
+    <dd>{{% md %}}The encryption key for the domain. This is used to encrypt content stored in a domain. The KMS Key Amazon Resource Name (ARN). The default aws/codeartifact AWS KMS master key is used if this element is absent.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -953,7 +935,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The encryption key for the domain. This is used to encrypt content stored in a domain. The KMS Key Amazon Resource Name (ARN).
+    <dd>{{% md %}}The encryption key for the domain. This is used to encrypt content stored in a domain. The KMS Key Amazon Resource Name (ARN). The default aws/codeartifact AWS KMS master key is used if this element is absent.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1039,7 +1021,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The encryption key for the domain. This is used to encrypt content stored in a domain. The KMS Key Amazon Resource Name (ARN).
+    <dd>{{% md %}}The encryption key for the domain. This is used to encrypt content stored in a domain. The KMS Key Amazon Resource Name (ARN). The default aws/codeartifact AWS KMS master key is used if this element is absent.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1125,7 +1107,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The encryption key for the domain. This is used to encrypt content stored in a domain. The KMS Key Amazon Resource Name (ARN).
+    <dd>{{% md %}}The encryption key for the domain. This is used to encrypt content stored in a domain. The KMS Key Amazon Resource Name (ARN). The default aws/codeartifact AWS KMS master key is used if this element is absent.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
