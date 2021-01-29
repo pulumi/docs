@@ -3,7 +3,7 @@ title: "Package @pulumi/venafi"
 title_tag: "Package @pulumi/venafi | Node.js SDK"
 linktitle: "@pulumi/venafi"
 meta_desc: "Explore members of the @pulumi/venafi package."
-git_sha: "509124eeffdab7dd4a8adf7eeea7a58a1e6d0d53"
+git_sha: "875a4dad5f5e90cec5a3f8c6905a5c51ee4c1aff"
 block_external_search_index: true
 ---
 
@@ -64,7 +64,7 @@ import * as venafi from "@pulumi/venafi";
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="Certificate" data-link-title="Certificate">
-    <a href="https://github.com/pulumi/pulumi-venafi/blob/509124eeffdab7dd4a8adf7eeea7a58a1e6d0d53/sdk/nodejs/certificate.ts#L38">
+    <a href="https://github.com/pulumi/pulumi-venafi/blob/875a4dad5f5e90cec5a3f8c6905a5c51ee4c1aff/sdk/nodejs/certificate.ts#L38">
         Resource <strong>Certificate</strong>
     </a>
 </h3>
@@ -102,7 +102,7 @@ const webserver = new venafi.Certificate("webserver", {
 ```
 
 <h4 class="pdoc-member-header" id="Certificate-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-venafi/blob/509124eeffdab7dd4a8adf7eeea7a58a1e6d0d53/sdk/nodejs/certificate.ts#L142"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-venafi/blob/875a4dad5f5e90cec5a3f8c6905a5c51ee4c1aff/sdk/nodejs/certificate.ts#L142"> <b>constructor</b></a>
 </h4>
 
 
@@ -116,7 +116,7 @@ Create a Certificate resource with the given unique name, arguments, and options
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Certificate-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-venafi/blob/509124eeffdab7dd4a8adf7eeea7a58a1e6d0d53/sdk/nodejs/certificate.ts#L48">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-venafi/blob/875a4dad5f5e90cec5a3f8c6905a5c51ee4c1aff/sdk/nodejs/certificate.ts#L48">method <b>get</b></a>
 </h4>
 
 
@@ -127,14 +127,14 @@ Get an existing Certificate resource's state with the given name, ID, and option
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Certificate-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-venafi/blob/509124eeffdab7dd4a8adf7eeea7a58a1e6d0d53/sdk/nodejs/certificate.ts#L38">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-venafi/blob/875a4dad5f5e90cec5a3f8c6905a5c51ee4c1aff/sdk/nodejs/certificate.ts#L38">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Certificate-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-venafi/blob/509124eeffdab7dd4a8adf7eeea7a58a1e6d0d53/sdk/nodejs/certificate.ts#L59">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-venafi/blob/875a4dad5f5e90cec5a3f8c6905a5c51ee4c1aff/sdk/nodejs/certificate.ts#L59">method <b>isInstance</b></a>
 </h4>
 
 
@@ -145,7 +145,7 @@ Returns true if the given object is an instance of Certificate.  This is designe
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Certificate-algorithm">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-venafi/blob/509124eeffdab7dd4a8adf7eeea7a58a1e6d0d53/sdk/nodejs/certificate.ts#L70">property <b>algorithm</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-venafi/blob/875a4dad5f5e90cec5a3f8c6905a5c51ee4c1aff/sdk/nodejs/certificate.ts#L70">property <b>algorithm</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>algorithm: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -154,7 +154,7 @@ Key encryption algorithm, either `RSA` or `ECDSA`.
 Defaults to `RSA`.
 
 <h4 class="pdoc-member-header" id="Certificate-certificate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-venafi/blob/509124eeffdab7dd4a8adf7eeea7a58a1e6d0d53/sdk/nodejs/certificate.ts#L74">property <b>certificate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-venafi/blob/875a4dad5f5e90cec5a3f8c6905a5c51ee4c1aff/sdk/nodejs/certificate.ts#L74">property <b>certificate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>certificate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -162,12 +162,12 @@ Defaults to `RSA`.
 The X509 certificate in PEM format.
 
 <h4 class="pdoc-member-header" id="Certificate-certificateDn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-venafi/blob/509124eeffdab7dd4a8adf7eeea7a58a1e6d0d53/sdk/nodejs/certificate.ts#L75">property <b>certificateDn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-venafi/blob/875a4dad5f5e90cec5a3f8c6905a5c51ee4c1aff/sdk/nodejs/certificate.ts#L75">property <b>certificateDn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>certificateDn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Certificate-chain">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-venafi/blob/509124eeffdab7dd4a8adf7eeea7a58a1e6d0d53/sdk/nodejs/certificate.ts#L80">property <b>chain</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-venafi/blob/875a4dad5f5e90cec5a3f8c6905a5c51ee4c1aff/sdk/nodejs/certificate.ts#L80">property <b>chain</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>chain: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -176,7 +176,7 @@ The trust chain of X509 certificate authority certificates in PEM format
 concatenated together.
 
 <h4 class="pdoc-member-header" id="Certificate-commonName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-venafi/blob/509124eeffdab7dd4a8adf7eeea7a58a1e6d0d53/sdk/nodejs/certificate.ts#L84">property <b>commonName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-venafi/blob/875a4dad5f5e90cec5a3f8c6905a5c51ee4c1aff/sdk/nodejs/certificate.ts#L84">property <b>commonName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>commonName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -184,12 +184,12 @@ concatenated together.
 The common name of the certificate.
 
 <h4 class="pdoc-member-header" id="Certificate-csrPem">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-venafi/blob/509124eeffdab7dd4a8adf7eeea7a58a1e6d0d53/sdk/nodejs/certificate.ts#L85">property <b>csrPem</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-venafi/blob/875a4dad5f5e90cec5a3f8c6905a5c51ee4c1aff/sdk/nodejs/certificate.ts#L85">property <b>csrPem</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>csrPem: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Certificate-customFields">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-venafi/blob/509124eeffdab7dd4a8adf7eeea7a58a1e6d0d53/sdk/nodejs/certificate.ts#L90">property <b>customFields</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-venafi/blob/875a4dad5f5e90cec5a3f8c6905a5c51ee4c1aff/sdk/nodejs/certificate.ts#L90">property <b>customFields</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>customFields: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -198,7 +198,7 @@ Collection of Custom Field name-value pairs to
 assign to the certificate.
 
 <h4 class="pdoc-member-header" id="Certificate-ecdsaCurve">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-venafi/blob/509124eeffdab7dd4a8adf7eeea7a58a1e6d0d53/sdk/nodejs/certificate.ts#L94">property <b>ecdsaCurve</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-venafi/blob/875a4dad5f5e90cec5a3f8c6905a5c51ee4c1aff/sdk/nodejs/certificate.ts#L94">property <b>ecdsaCurve</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ecdsaCurve: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -206,7 +206,7 @@ assign to the certificate.
 ECDSA curve to use when generating a key
 
 <h4 class="pdoc-member-header" id="Certificate-expirationWindow">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-venafi/blob/509124eeffdab7dd4a8adf7eeea7a58a1e6d0d53/sdk/nodejs/certificate.ts#L99">property <b>expirationWindow</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-venafi/blob/875a4dad5f5e90cec5a3f8c6905a5c51ee4c1aff/sdk/nodejs/certificate.ts#L99">property <b>expirationWindow</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>expirationWindow: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -215,7 +215,7 @@ Number of hours before certificate expiry
 to request a new certificate.
 
 <h4 class="pdoc-member-header" id="Certificate-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-venafi/blob/509124eeffdab7dd4a8adf7eeea7a58a1e6d0d53/sdk/nodejs/certificate.ts#L38">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-venafi/blob/875a4dad5f5e90cec5a3f8c6905a5c51ee4c1aff/sdk/nodejs/certificate.ts#L38">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -224,7 +224,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Certificate-issuerHint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-venafi/blob/509124eeffdab7dd4a8adf7eeea7a58a1e6d0d53/sdk/nodejs/certificate.ts#L105">property <b>issuerHint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-venafi/blob/875a4dad5f5e90cec5a3f8c6905a5c51ee4c1aff/sdk/nodejs/certificate.ts#L105">property <b>issuerHint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>issuerHint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -234,7 +234,7 @@ issuer when using Trust Protection Platform.  Relevant values are: "DigiCert",
 "Entrust", and "Microsoft".
 
 <h4 class="pdoc-member-header" id="Certificate-keyPassword">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-venafi/blob/509124eeffdab7dd4a8adf7eeea7a58a1e6d0d53/sdk/nodejs/certificate.ts#L109">property <b>keyPassword</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-venafi/blob/875a4dad5f5e90cec5a3f8c6905a5c51ee4c1aff/sdk/nodejs/certificate.ts#L109">property <b>keyPassword</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>keyPassword: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -242,7 +242,7 @@ issuer when using Trust Protection Platform.  Relevant values are: "DigiCert",
 The password used to encrypt the private key.
 
 <h4 class="pdoc-member-header" id="Certificate-pkcs12">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-venafi/blob/509124eeffdab7dd4a8adf7eeea7a58a1e6d0d53/sdk/nodejs/certificate.ts#L113">property <b>pkcs12</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-venafi/blob/875a4dad5f5e90cec5a3f8c6905a5c51ee4c1aff/sdk/nodejs/certificate.ts#L113">property <b>pkcs12</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>pkcs12: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -250,7 +250,7 @@ The password used to encrypt the private key.
 A base64-encoded PKCS#12 keystore secured by the `keyPassword`.
 
 <h4 class="pdoc-member-header" id="Certificate-privateKeyPem">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-venafi/blob/509124eeffdab7dd4a8adf7eeea7a58a1e6d0d53/sdk/nodejs/certificate.ts#L117">property <b>privateKeyPem</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-venafi/blob/875a4dad5f5e90cec5a3f8c6905a5c51ee4c1aff/sdk/nodejs/certificate.ts#L117">property <b>privateKeyPem</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>privateKeyPem: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -258,7 +258,7 @@ A base64-encoded PKCS#12 keystore secured by the `keyPassword`.
 The private key in PEM format.
 
 <h4 class="pdoc-member-header" id="Certificate-rsaBits">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-venafi/blob/509124eeffdab7dd4a8adf7eeea7a58a1e6d0d53/sdk/nodejs/certificate.ts#L122">property <b>rsaBits</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-venafi/blob/875a4dad5f5e90cec5a3f8c6905a5c51ee4c1aff/sdk/nodejs/certificate.ts#L122">property <b>rsaBits</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>rsaBits: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -267,7 +267,7 @@ Number of bits to use when generating an RSA key.
 Applies when `algorithm=RSA`.  Defaults to `2048`.
 
 <h4 class="pdoc-member-header" id="Certificate-sanDns">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-venafi/blob/509124eeffdab7dd4a8adf7eeea7a58a1e6d0d53/sdk/nodejs/certificate.ts#L127">property <b>sanDns</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-venafi/blob/875a4dad5f5e90cec5a3f8c6905a5c51ee4c1aff/sdk/nodejs/certificate.ts#L127">property <b>sanDns</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>sanDns: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -276,7 +276,7 @@ List of DNS names to use as alternative
 subjects of the certificate.
 
 <h4 class="pdoc-member-header" id="Certificate-sanEmails">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-venafi/blob/509124eeffdab7dd4a8adf7eeea7a58a1e6d0d53/sdk/nodejs/certificate.ts#L132">property <b>sanEmails</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-venafi/blob/875a4dad5f5e90cec5a3f8c6905a5c51ee4c1aff/sdk/nodejs/certificate.ts#L132">property <b>sanEmails</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>sanEmails: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -285,7 +285,7 @@ List of email addresses to use as
 alternative subjects of the certificate.
 
 <h4 class="pdoc-member-header" id="Certificate-sanIps">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-venafi/blob/509124eeffdab7dd4a8adf7eeea7a58a1e6d0d53/sdk/nodejs/certificate.ts#L137">property <b>sanIps</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-venafi/blob/875a4dad5f5e90cec5a3f8c6905a5c51ee4c1aff/sdk/nodejs/certificate.ts#L137">property <b>sanIps</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>sanIps: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -294,7 +294,7 @@ List of IP addresses to use as alternative
 subjects of the certificate.
 
 <h4 class="pdoc-member-header" id="Certificate-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-venafi/blob/509124eeffdab7dd4a8adf7eeea7a58a1e6d0d53/sdk/nodejs/certificate.ts#L38">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-venafi/blob/875a4dad5f5e90cec5a3f8c6905a5c51ee4c1aff/sdk/nodejs/certificate.ts#L38">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -303,7 +303,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="Certificate-validDays">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-venafi/blob/509124eeffdab7dd4a8adf7eeea7a58a1e6d0d53/sdk/nodejs/certificate.ts#L142">property <b>validDays</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-venafi/blob/875a4dad5f5e90cec5a3f8c6905a5c51ee4c1aff/sdk/nodejs/certificate.ts#L142">property <b>validDays</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>validDays: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -312,7 +312,7 @@ Desired number of days for which the new
 certificate will be valid.
 
 <h3 class="pdoc-module-header" id="Provider" data-link-title="Provider">
-    <a href="https://github.com/pulumi/pulumi-venafi/blob/509124eeffdab7dd4a8adf7eeea7a58a1e6d0d53/sdk/nodejs/provider.ts#L13">
+    <a href="https://github.com/pulumi/pulumi-venafi/blob/875a4dad5f5e90cec5a3f8c6905a5c51ee4c1aff/sdk/nodejs/provider.ts#L13">
         Resource <strong>Provider</strong>
     </a>
 </h3>
@@ -325,7 +325,7 @@ construction to achieve fine-grained programmatic control over provider settings
 [documentation](https://www.pulumi.com/docs/reference/programming-model/#providers) for more information.
 
 <h4 class="pdoc-member-header" id="Provider-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-venafi/blob/509124eeffdab7dd4a8adf7eeea7a58a1e6d0d53/sdk/nodejs/provider.ts#L26"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-venafi/blob/875a4dad5f5e90cec5a3f8c6905a5c51ee4c1aff/sdk/nodejs/provider.ts#L26"> <b>constructor</b></a>
 </h4>
 
 
@@ -339,14 +339,14 @@ Create a Provider resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Provider-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-venafi/blob/509124eeffdab7dd4a8adf7eeea7a58a1e6d0d53/sdk/nodejs/provider.ts#L13">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-venafi/blob/875a4dad5f5e90cec5a3f8c6905a5c51ee4c1aff/sdk/nodejs/provider.ts#L13">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Provider-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-venafi/blob/509124eeffdab7dd4a8adf7eeea7a58a1e6d0d53/sdk/nodejs/provider.ts#L21">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-venafi/blob/875a4dad5f5e90cec5a3f8c6905a5c51ee4c1aff/sdk/nodejs/provider.ts#L21">method <b>isInstance</b></a>
 </h4>
 
 
@@ -357,14 +357,14 @@ Returns true if the given object is an instance of Provider.  This is designed t
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Provider-register">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-venafi/blob/509124eeffdab7dd4a8adf7eeea7a58a1e6d0d53/sdk/nodejs/provider.ts#L13">method <b>register</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-venafi/blob/875a4dad5f5e90cec5a3f8c6905a5c51ee4c1aff/sdk/nodejs/provider.ts#L13">method <b>register</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'>static </span>register(provider: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;</code></pre>
 
 <h4 class="pdoc-member-header" id="Provider-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-venafi/blob/509124eeffdab7dd4a8adf7eeea7a58a1e6d0d53/sdk/nodejs/provider.ts#L13">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-venafi/blob/875a4dad5f5e90cec5a3f8c6905a5c51ee4c1aff/sdk/nodejs/provider.ts#L13">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -373,7 +373,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Provider-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-venafi/blob/509124eeffdab7dd4a8adf7eeea7a58a1e6d0d53/sdk/nodejs/provider.ts#L13">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-venafi/blob/875a4dad5f5e90cec5a3f8c6905a5c51ee4c1aff/sdk/nodejs/provider.ts#L13">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -385,7 +385,7 @@ deployments.
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="CertificateArgs" data-link-title="CertificateArgs">
-    <a href="https://github.com/pulumi/pulumi-venafi/blob/509124eeffdab7dd4a8adf7eeea7a58a1e6d0d53/sdk/nodejs/certificate.ts#L295">
+    <a href="https://github.com/pulumi/pulumi-venafi/blob/875a4dad5f5e90cec5a3f8c6905a5c51ee4c1aff/sdk/nodejs/certificate.ts#L295">
         interface <strong>CertificateArgs</strong>
     </a>
 </h3>
@@ -395,7 +395,7 @@ deployments.
 The set of arguments for constructing a Certificate resource.
 
 <h4 class="pdoc-member-header" id="CertificateArgs-algorithm">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-venafi/blob/509124eeffdab7dd4a8adf7eeea7a58a1e6d0d53/sdk/nodejs/certificate.ts#L300">property <b>algorithm</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-venafi/blob/875a4dad5f5e90cec5a3f8c6905a5c51ee4c1aff/sdk/nodejs/certificate.ts#L300">property <b>algorithm</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>algorithm?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -404,12 +404,12 @@ Key encryption algorithm, either `RSA` or `ECDSA`.
 Defaults to `RSA`.
 
 <h4 class="pdoc-member-header" id="CertificateArgs-certificateDn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-venafi/blob/509124eeffdab7dd4a8adf7eeea7a58a1e6d0d53/sdk/nodejs/certificate.ts#L301">property <b>certificateDn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-venafi/blob/875a4dad5f5e90cec5a3f8c6905a5c51ee4c1aff/sdk/nodejs/certificate.ts#L301">property <b>certificateDn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>certificateDn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="CertificateArgs-commonName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-venafi/blob/509124eeffdab7dd4a8adf7eeea7a58a1e6d0d53/sdk/nodejs/certificate.ts#L305">property <b>commonName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-venafi/blob/875a4dad5f5e90cec5a3f8c6905a5c51ee4c1aff/sdk/nodejs/certificate.ts#L305">property <b>commonName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>commonName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -417,12 +417,12 @@ Defaults to `RSA`.
 The common name of the certificate.
 
 <h4 class="pdoc-member-header" id="CertificateArgs-csrPem">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-venafi/blob/509124eeffdab7dd4a8adf7eeea7a58a1e6d0d53/sdk/nodejs/certificate.ts#L306">property <b>csrPem</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-venafi/blob/875a4dad5f5e90cec5a3f8c6905a5c51ee4c1aff/sdk/nodejs/certificate.ts#L306">property <b>csrPem</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>csrPem?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="CertificateArgs-customFields">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-venafi/blob/509124eeffdab7dd4a8adf7eeea7a58a1e6d0d53/sdk/nodejs/certificate.ts#L311">property <b>customFields</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-venafi/blob/875a4dad5f5e90cec5a3f8c6905a5c51ee4c1aff/sdk/nodejs/certificate.ts#L311">property <b>customFields</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>customFields?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -431,7 +431,7 @@ Collection of Custom Field name-value pairs to
 assign to the certificate.
 
 <h4 class="pdoc-member-header" id="CertificateArgs-ecdsaCurve">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-venafi/blob/509124eeffdab7dd4a8adf7eeea7a58a1e6d0d53/sdk/nodejs/certificate.ts#L315">property <b>ecdsaCurve</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-venafi/blob/875a4dad5f5e90cec5a3f8c6905a5c51ee4c1aff/sdk/nodejs/certificate.ts#L315">property <b>ecdsaCurve</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ecdsaCurve?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -439,7 +439,7 @@ assign to the certificate.
 ECDSA curve to use when generating a key
 
 <h4 class="pdoc-member-header" id="CertificateArgs-expirationWindow">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-venafi/blob/509124eeffdab7dd4a8adf7eeea7a58a1e6d0d53/sdk/nodejs/certificate.ts#L320">property <b>expirationWindow</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-venafi/blob/875a4dad5f5e90cec5a3f8c6905a5c51ee4c1aff/sdk/nodejs/certificate.ts#L320">property <b>expirationWindow</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>expirationWindow?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -448,7 +448,7 @@ Number of hours before certificate expiry
 to request a new certificate.
 
 <h4 class="pdoc-member-header" id="CertificateArgs-issuerHint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-venafi/blob/509124eeffdab7dd4a8adf7eeea7a58a1e6d0d53/sdk/nodejs/certificate.ts#L326">property <b>issuerHint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-venafi/blob/875a4dad5f5e90cec5a3f8c6905a5c51ee4c1aff/sdk/nodejs/certificate.ts#L326">property <b>issuerHint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>issuerHint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -458,7 +458,7 @@ issuer when using Trust Protection Platform.  Relevant values are: "DigiCert",
 "Entrust", and "Microsoft".
 
 <h4 class="pdoc-member-header" id="CertificateArgs-keyPassword">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-venafi/blob/509124eeffdab7dd4a8adf7eeea7a58a1e6d0d53/sdk/nodejs/certificate.ts#L330">property <b>keyPassword</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-venafi/blob/875a4dad5f5e90cec5a3f8c6905a5c51ee4c1aff/sdk/nodejs/certificate.ts#L330">property <b>keyPassword</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>keyPassword?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -466,7 +466,7 @@ issuer when using Trust Protection Platform.  Relevant values are: "DigiCert",
 The password used to encrypt the private key.
 
 <h4 class="pdoc-member-header" id="CertificateArgs-pkcs12">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-venafi/blob/509124eeffdab7dd4a8adf7eeea7a58a1e6d0d53/sdk/nodejs/certificate.ts#L334">property <b>pkcs12</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-venafi/blob/875a4dad5f5e90cec5a3f8c6905a5c51ee4c1aff/sdk/nodejs/certificate.ts#L334">property <b>pkcs12</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>pkcs12?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -474,7 +474,7 @@ The password used to encrypt the private key.
 A base64-encoded PKCS#12 keystore secured by the `keyPassword`.
 
 <h4 class="pdoc-member-header" id="CertificateArgs-privateKeyPem">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-venafi/blob/509124eeffdab7dd4a8adf7eeea7a58a1e6d0d53/sdk/nodejs/certificate.ts#L338">property <b>privateKeyPem</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-venafi/blob/875a4dad5f5e90cec5a3f8c6905a5c51ee4c1aff/sdk/nodejs/certificate.ts#L338">property <b>privateKeyPem</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>privateKeyPem?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -482,7 +482,7 @@ A base64-encoded PKCS#12 keystore secured by the `keyPassword`.
 The private key in PEM format.
 
 <h4 class="pdoc-member-header" id="CertificateArgs-rsaBits">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-venafi/blob/509124eeffdab7dd4a8adf7eeea7a58a1e6d0d53/sdk/nodejs/certificate.ts#L343">property <b>rsaBits</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-venafi/blob/875a4dad5f5e90cec5a3f8c6905a5c51ee4c1aff/sdk/nodejs/certificate.ts#L343">property <b>rsaBits</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>rsaBits?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -491,7 +491,7 @@ Number of bits to use when generating an RSA key.
 Applies when `algorithm=RSA`.  Defaults to `2048`.
 
 <h4 class="pdoc-member-header" id="CertificateArgs-sanDns">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-venafi/blob/509124eeffdab7dd4a8adf7eeea7a58a1e6d0d53/sdk/nodejs/certificate.ts#L348">property <b>sanDns</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-venafi/blob/875a4dad5f5e90cec5a3f8c6905a5c51ee4c1aff/sdk/nodejs/certificate.ts#L348">property <b>sanDns</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sanDns?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -500,7 +500,7 @@ List of DNS names to use as alternative
 subjects of the certificate.
 
 <h4 class="pdoc-member-header" id="CertificateArgs-sanEmails">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-venafi/blob/509124eeffdab7dd4a8adf7eeea7a58a1e6d0d53/sdk/nodejs/certificate.ts#L353">property <b>sanEmails</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-venafi/blob/875a4dad5f5e90cec5a3f8c6905a5c51ee4c1aff/sdk/nodejs/certificate.ts#L353">property <b>sanEmails</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sanEmails?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -509,7 +509,7 @@ List of email addresses to use as
 alternative subjects of the certificate.
 
 <h4 class="pdoc-member-header" id="CertificateArgs-sanIps">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-venafi/blob/509124eeffdab7dd4a8adf7eeea7a58a1e6d0d53/sdk/nodejs/certificate.ts#L358">property <b>sanIps</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-venafi/blob/875a4dad5f5e90cec5a3f8c6905a5c51ee4c1aff/sdk/nodejs/certificate.ts#L358">property <b>sanIps</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sanIps?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -518,7 +518,7 @@ List of IP addresses to use as alternative
 subjects of the certificate.
 
 <h4 class="pdoc-member-header" id="CertificateArgs-validDays">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-venafi/blob/509124eeffdab7dd4a8adf7eeea7a58a1e6d0d53/sdk/nodejs/certificate.ts#L363">property <b>validDays</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-venafi/blob/875a4dad5f5e90cec5a3f8c6905a5c51ee4c1aff/sdk/nodejs/certificate.ts#L363">property <b>validDays</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>validDays?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -527,7 +527,7 @@ Desired number of days for which the new
 certificate will be valid.
 
 <h3 class="pdoc-module-header" id="CertificateState" data-link-title="CertificateState">
-    <a href="https://github.com/pulumi/pulumi-venafi/blob/509124eeffdab7dd4a8adf7eeea7a58a1e6d0d53/sdk/nodejs/certificate.ts#L212">
+    <a href="https://github.com/pulumi/pulumi-venafi/blob/875a4dad5f5e90cec5a3f8c6905a5c51ee4c1aff/sdk/nodejs/certificate.ts#L212">
         interface <strong>CertificateState</strong>
     </a>
 </h3>
@@ -537,7 +537,7 @@ certificate will be valid.
 Input properties used for looking up and filtering Certificate resources.
 
 <h4 class="pdoc-member-header" id="CertificateState-algorithm">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-venafi/blob/509124eeffdab7dd4a8adf7eeea7a58a1e6d0d53/sdk/nodejs/certificate.ts#L217">property <b>algorithm</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-venafi/blob/875a4dad5f5e90cec5a3f8c6905a5c51ee4c1aff/sdk/nodejs/certificate.ts#L217">property <b>algorithm</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>algorithm?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -546,7 +546,7 @@ Key encryption algorithm, either `RSA` or `ECDSA`.
 Defaults to `RSA`.
 
 <h4 class="pdoc-member-header" id="CertificateState-certificate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-venafi/blob/509124eeffdab7dd4a8adf7eeea7a58a1e6d0d53/sdk/nodejs/certificate.ts#L221">property <b>certificate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-venafi/blob/875a4dad5f5e90cec5a3f8c6905a5c51ee4c1aff/sdk/nodejs/certificate.ts#L221">property <b>certificate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>certificate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -554,12 +554,12 @@ Defaults to `RSA`.
 The X509 certificate in PEM format.
 
 <h4 class="pdoc-member-header" id="CertificateState-certificateDn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-venafi/blob/509124eeffdab7dd4a8adf7eeea7a58a1e6d0d53/sdk/nodejs/certificate.ts#L222">property <b>certificateDn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-venafi/blob/875a4dad5f5e90cec5a3f8c6905a5c51ee4c1aff/sdk/nodejs/certificate.ts#L222">property <b>certificateDn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>certificateDn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="CertificateState-chain">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-venafi/blob/509124eeffdab7dd4a8adf7eeea7a58a1e6d0d53/sdk/nodejs/certificate.ts#L227">property <b>chain</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-venafi/blob/875a4dad5f5e90cec5a3f8c6905a5c51ee4c1aff/sdk/nodejs/certificate.ts#L227">property <b>chain</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>chain?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -568,7 +568,7 @@ The trust chain of X509 certificate authority certificates in PEM format
 concatenated together.
 
 <h4 class="pdoc-member-header" id="CertificateState-commonName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-venafi/blob/509124eeffdab7dd4a8adf7eeea7a58a1e6d0d53/sdk/nodejs/certificate.ts#L231">property <b>commonName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-venafi/blob/875a4dad5f5e90cec5a3f8c6905a5c51ee4c1aff/sdk/nodejs/certificate.ts#L231">property <b>commonName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>commonName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -576,12 +576,12 @@ concatenated together.
 The common name of the certificate.
 
 <h4 class="pdoc-member-header" id="CertificateState-csrPem">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-venafi/blob/509124eeffdab7dd4a8adf7eeea7a58a1e6d0d53/sdk/nodejs/certificate.ts#L232">property <b>csrPem</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-venafi/blob/875a4dad5f5e90cec5a3f8c6905a5c51ee4c1aff/sdk/nodejs/certificate.ts#L232">property <b>csrPem</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>csrPem?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="CertificateState-customFields">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-venafi/blob/509124eeffdab7dd4a8adf7eeea7a58a1e6d0d53/sdk/nodejs/certificate.ts#L237">property <b>customFields</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-venafi/blob/875a4dad5f5e90cec5a3f8c6905a5c51ee4c1aff/sdk/nodejs/certificate.ts#L237">property <b>customFields</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>customFields?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -590,7 +590,7 @@ Collection of Custom Field name-value pairs to
 assign to the certificate.
 
 <h4 class="pdoc-member-header" id="CertificateState-ecdsaCurve">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-venafi/blob/509124eeffdab7dd4a8adf7eeea7a58a1e6d0d53/sdk/nodejs/certificate.ts#L241">property <b>ecdsaCurve</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-venafi/blob/875a4dad5f5e90cec5a3f8c6905a5c51ee4c1aff/sdk/nodejs/certificate.ts#L241">property <b>ecdsaCurve</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ecdsaCurve?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -598,7 +598,7 @@ assign to the certificate.
 ECDSA curve to use when generating a key
 
 <h4 class="pdoc-member-header" id="CertificateState-expirationWindow">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-venafi/blob/509124eeffdab7dd4a8adf7eeea7a58a1e6d0d53/sdk/nodejs/certificate.ts#L246">property <b>expirationWindow</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-venafi/blob/875a4dad5f5e90cec5a3f8c6905a5c51ee4c1aff/sdk/nodejs/certificate.ts#L246">property <b>expirationWindow</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>expirationWindow?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -607,7 +607,7 @@ Number of hours before certificate expiry
 to request a new certificate.
 
 <h4 class="pdoc-member-header" id="CertificateState-issuerHint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-venafi/blob/509124eeffdab7dd4a8adf7eeea7a58a1e6d0d53/sdk/nodejs/certificate.ts#L252">property <b>issuerHint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-venafi/blob/875a4dad5f5e90cec5a3f8c6905a5c51ee4c1aff/sdk/nodejs/certificate.ts#L252">property <b>issuerHint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>issuerHint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -617,7 +617,7 @@ issuer when using Trust Protection Platform.  Relevant values are: "DigiCert",
 "Entrust", and "Microsoft".
 
 <h4 class="pdoc-member-header" id="CertificateState-keyPassword">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-venafi/blob/509124eeffdab7dd4a8adf7eeea7a58a1e6d0d53/sdk/nodejs/certificate.ts#L256">property <b>keyPassword</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-venafi/blob/875a4dad5f5e90cec5a3f8c6905a5c51ee4c1aff/sdk/nodejs/certificate.ts#L256">property <b>keyPassword</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>keyPassword?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -625,7 +625,7 @@ issuer when using Trust Protection Platform.  Relevant values are: "DigiCert",
 The password used to encrypt the private key.
 
 <h4 class="pdoc-member-header" id="CertificateState-pkcs12">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-venafi/blob/509124eeffdab7dd4a8adf7eeea7a58a1e6d0d53/sdk/nodejs/certificate.ts#L260">property <b>pkcs12</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-venafi/blob/875a4dad5f5e90cec5a3f8c6905a5c51ee4c1aff/sdk/nodejs/certificate.ts#L260">property <b>pkcs12</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>pkcs12?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -633,7 +633,7 @@ The password used to encrypt the private key.
 A base64-encoded PKCS#12 keystore secured by the `keyPassword`.
 
 <h4 class="pdoc-member-header" id="CertificateState-privateKeyPem">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-venafi/blob/509124eeffdab7dd4a8adf7eeea7a58a1e6d0d53/sdk/nodejs/certificate.ts#L264">property <b>privateKeyPem</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-venafi/blob/875a4dad5f5e90cec5a3f8c6905a5c51ee4c1aff/sdk/nodejs/certificate.ts#L264">property <b>privateKeyPem</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>privateKeyPem?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -641,7 +641,7 @@ A base64-encoded PKCS#12 keystore secured by the `keyPassword`.
 The private key in PEM format.
 
 <h4 class="pdoc-member-header" id="CertificateState-rsaBits">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-venafi/blob/509124eeffdab7dd4a8adf7eeea7a58a1e6d0d53/sdk/nodejs/certificate.ts#L269">property <b>rsaBits</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-venafi/blob/875a4dad5f5e90cec5a3f8c6905a5c51ee4c1aff/sdk/nodejs/certificate.ts#L269">property <b>rsaBits</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>rsaBits?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -650,7 +650,7 @@ Number of bits to use when generating an RSA key.
 Applies when `algorithm=RSA`.  Defaults to `2048`.
 
 <h4 class="pdoc-member-header" id="CertificateState-sanDns">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-venafi/blob/509124eeffdab7dd4a8adf7eeea7a58a1e6d0d53/sdk/nodejs/certificate.ts#L274">property <b>sanDns</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-venafi/blob/875a4dad5f5e90cec5a3f8c6905a5c51ee4c1aff/sdk/nodejs/certificate.ts#L274">property <b>sanDns</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sanDns?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -659,7 +659,7 @@ List of DNS names to use as alternative
 subjects of the certificate.
 
 <h4 class="pdoc-member-header" id="CertificateState-sanEmails">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-venafi/blob/509124eeffdab7dd4a8adf7eeea7a58a1e6d0d53/sdk/nodejs/certificate.ts#L279">property <b>sanEmails</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-venafi/blob/875a4dad5f5e90cec5a3f8c6905a5c51ee4c1aff/sdk/nodejs/certificate.ts#L279">property <b>sanEmails</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sanEmails?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -668,7 +668,7 @@ List of email addresses to use as
 alternative subjects of the certificate.
 
 <h4 class="pdoc-member-header" id="CertificateState-sanIps">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-venafi/blob/509124eeffdab7dd4a8adf7eeea7a58a1e6d0d53/sdk/nodejs/certificate.ts#L284">property <b>sanIps</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-venafi/blob/875a4dad5f5e90cec5a3f8c6905a5c51ee4c1aff/sdk/nodejs/certificate.ts#L284">property <b>sanIps</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sanIps?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -677,7 +677,7 @@ List of IP addresses to use as alternative
 subjects of the certificate.
 
 <h4 class="pdoc-member-header" id="CertificateState-validDays">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-venafi/blob/509124eeffdab7dd4a8adf7eeea7a58a1e6d0d53/sdk/nodejs/certificate.ts#L289">property <b>validDays</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-venafi/blob/875a4dad5f5e90cec5a3f8c6905a5c51ee4c1aff/sdk/nodejs/certificate.ts#L289">property <b>validDays</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>validDays?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -686,7 +686,7 @@ Desired number of days for which the new
 certificate will be valid.
 
 <h3 class="pdoc-module-header" id="getEnv" data-link-title="getEnv">
-    <a href="https://github.com/pulumi/pulumi-venafi/blob/509124eeffdab7dd4a8adf7eeea7a58a1e6d0d53/sdk/nodejs/utilities.ts#L5">
+    <a href="https://github.com/pulumi/pulumi-venafi/blob/875a4dad5f5e90cec5a3f8c6905a5c51ee4c1aff/sdk/nodejs/utilities.ts#L5">
         function <strong>getEnv</strong>
     </a>
 </h3>
@@ -695,7 +695,7 @@ certificate will be valid.
 <pre class="highlight"><code><span class='kd'></span>getEnv(vars: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h3 class="pdoc-module-header" id="getEnvBoolean" data-link-title="getEnvBoolean">
-    <a href="https://github.com/pulumi/pulumi-venafi/blob/509124eeffdab7dd4a8adf7eeea7a58a1e6d0d53/sdk/nodejs/utilities.ts#L15">
+    <a href="https://github.com/pulumi/pulumi-venafi/blob/875a4dad5f5e90cec5a3f8c6905a5c51ee4c1aff/sdk/nodejs/utilities.ts#L15">
         function <strong>getEnvBoolean</strong>
     </a>
 </h3>
@@ -704,7 +704,7 @@ certificate will be valid.
 <pre class="highlight"><code><span class='kd'></span>getEnvBoolean(vars: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h3 class="pdoc-module-header" id="getEnvNumber" data-link-title="getEnvNumber">
-    <a href="https://github.com/pulumi/pulumi-venafi/blob/509124eeffdab7dd4a8adf7eeea7a58a1e6d0d53/sdk/nodejs/utilities.ts#L30">
+    <a href="https://github.com/pulumi/pulumi-venafi/blob/875a4dad5f5e90cec5a3f8c6905a5c51ee4c1aff/sdk/nodejs/utilities.ts#L30">
         function <strong>getEnvNumber</strong>
     </a>
 </h3>
@@ -713,7 +713,7 @@ certificate will be valid.
 <pre class="highlight"><code><span class='kd'></span>getEnvNumber(vars: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h3 class="pdoc-module-header" id="getVersion" data-link-title="getVersion">
-    <a href="https://github.com/pulumi/pulumi-venafi/blob/509124eeffdab7dd4a8adf7eeea7a58a1e6d0d53/sdk/nodejs/utilities.ts#L41">
+    <a href="https://github.com/pulumi/pulumi-venafi/blob/875a4dad5f5e90cec5a3f8c6905a5c51ee4c1aff/sdk/nodejs/utilities.ts#L41">
         function <strong>getVersion</strong>
     </a>
 </h3>
@@ -722,7 +722,7 @@ certificate will be valid.
 <pre class="highlight"><code><span class='kd'></span>getVersion(): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span></code></pre>
 
 <h3 class="pdoc-module-header" id="ProviderArgs" data-link-title="ProviderArgs">
-    <a href="https://github.com/pulumi/pulumi-venafi/blob/509124eeffdab7dd4a8adf7eeea7a58a1e6d0d53/sdk/nodejs/provider.ts#L62">
+    <a href="https://github.com/pulumi/pulumi-venafi/blob/875a4dad5f5e90cec5a3f8c6905a5c51ee4c1aff/sdk/nodejs/provider.ts#L62">
         interface <strong>ProviderArgs</strong>
     </a>
 </h3>
@@ -732,7 +732,7 @@ certificate will be valid.
 The set of arguments for constructing a Provider resource.
 
 <h4 class="pdoc-member-header" id="ProviderArgs-accessToken">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-venafi/blob/509124eeffdab7dd4a8adf7eeea7a58a1e6d0d53/sdk/nodejs/provider.ts#L66">property <b>accessToken</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-venafi/blob/875a4dad5f5e90cec5a3f8c6905a5c51ee4c1aff/sdk/nodejs/provider.ts#L66">property <b>accessToken</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accessToken?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -740,7 +740,7 @@ The set of arguments for constructing a Provider resource.
 Access token for TPP, user should use this for authentication
 
 <h4 class="pdoc-member-header" id="ProviderArgs-apiKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-venafi/blob/509124eeffdab7dd4a8adf7eeea7a58a1e6d0d53/sdk/nodejs/provider.ts#L70">property <b>apiKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-venafi/blob/875a4dad5f5e90cec5a3f8c6905a5c51ee4c1aff/sdk/nodejs/provider.ts#L70">property <b>apiKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -748,7 +748,7 @@ Access token for TPP, user should use this for authentication
 API key for Venafi Cloud. Example: 142231b7-cvb0-412e-886b-6aeght0bc93d
 
 <h4 class="pdoc-member-header" id="ProviderArgs-devMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-venafi/blob/509124eeffdab7dd4a8adf7eeea7a58a1e6d0d53/sdk/nodejs/provider.ts#L75">property <b>devMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-venafi/blob/875a4dad5f5e90cec5a3f8c6905a5c51ee4c1aff/sdk/nodejs/provider.ts#L75">property <b>devMode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>devMode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -757,7 +757,7 @@ When set to true, the resulting certificate will be issued by an ephemeral, no t
 Venafi Cloud or Platform. Useful for development and testing.
 
 <h4 class="pdoc-member-header" id="ProviderArgs-tppPassword">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-venafi/blob/509124eeffdab7dd4a8adf7eeea7a58a1e6d0d53/sdk/nodejs/provider.ts#L81">property <b>tppPassword</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-venafi/blob/875a4dad5f5e90cec5a3f8c6905a5c51ee4c1aff/sdk/nodejs/provider.ts#L81">property <b>tppPassword</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -769,7 +769,7 @@ Venafi Cloud or Platform. Useful for development and testing.
 Password for WebSDK user. Example: password
 
 <h4 class="pdoc-member-header" id="ProviderArgs-tppUsername">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-venafi/blob/509124eeffdab7dd4a8adf7eeea7a58a1e6d0d53/sdk/nodejs/provider.ts#L87">property <b>tppUsername</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-venafi/blob/875a4dad5f5e90cec5a3f8c6905a5c51ee4c1aff/sdk/nodejs/provider.ts#L87">property <b>tppUsername</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -781,7 +781,7 @@ Password for WebSDK user. Example: password
 WebSDK user for Venafi Platform. Example: admin
 
 <h4 class="pdoc-member-header" id="ProviderArgs-trustBundle">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-venafi/blob/509124eeffdab7dd4a8adf7eeea7a58a1e6d0d53/sdk/nodejs/provider.ts#L92">property <b>trustBundle</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-venafi/blob/875a4dad5f5e90cec5a3f8c6905a5c51ee4c1aff/sdk/nodejs/provider.ts#L92">property <b>trustBundle</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>trustBundle?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -790,7 +790,7 @@ Use to specify a PEM-formatted file that contains certificates to be trust ancho
 Venafi Web Service. Example: trust_bundle = "${file("chain.pem")}"
 
 <h4 class="pdoc-member-header" id="ProviderArgs-url">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-venafi/blob/509124eeffdab7dd4a8adf7eeea7a58a1e6d0d53/sdk/nodejs/provider.ts#L96">property <b>url</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-venafi/blob/875a4dad5f5e90cec5a3f8c6905a5c51ee4c1aff/sdk/nodejs/provider.ts#L96">property <b>url</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>url?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -798,7 +798,7 @@ Venafi Web Service. Example: trust_bundle = "${file("chain.pem")}"
 The Venafi Web Service URL.. Example: https://tpp.venafi.example/vedsdk
 
 <h4 class="pdoc-member-header" id="ProviderArgs-zone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-venafi/blob/509124eeffdab7dd4a8adf7eeea7a58a1e6d0d53/sdk/nodejs/provider.ts#L101">property <b>zone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-venafi/blob/875a4dad5f5e90cec5a3f8c6905a5c51ee4c1aff/sdk/nodejs/provider.ts#L101">property <b>zone</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>zone?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
