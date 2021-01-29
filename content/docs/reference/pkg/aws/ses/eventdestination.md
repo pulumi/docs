@@ -1374,7 +1374,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The source for the value. It can be either `"messageTag"` or `"emailHeader"`
+    <dd>{{% md %}}The source for the value. May be any of `"messageTag"`, `"emailHeader"` or `"linkTag"`.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -1410,7 +1410,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The source for the value. It can be either `"messageTag"` or `"emailHeader"`
+    <dd>{{% md %}}The source for the value. May be any of `"messageTag"`, `"emailHeader"` or `"linkTag"`.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -1446,7 +1446,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The source for the value. It can be either `"messageTag"` or `"emailHeader"`
+    <dd>{{% md %}}The source for the value. May be any of `"messageTag"`, `"emailHeader"` or `"linkTag"`.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -1482,7 +1482,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The source for the value. It can be either `"messageTag"` or `"emailHeader"`
+    <dd>{{% md %}}The source for the value. May be any of `"messageTag"`, `"emailHeader"` or `"linkTag"`.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}

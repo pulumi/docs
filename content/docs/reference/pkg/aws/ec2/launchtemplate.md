@@ -3595,7 +3595,7 @@ This must be set with a `volume_type` of `"io1/io2"`.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The throughput to provision for a `gp3` volume, with a maximum of 1,000 MiB/s.
+    <dd>{{% md %}}The throughput to provision for a `gp3` volume in MiB/s (specified as an integer, e.g. 500), with a maximum of 1,000 MiB/s.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3685,7 +3685,7 @@ This must be set with a `volume_type` of `"io1/io2"`.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The throughput to provision for a `gp3` volume, with a maximum of 1,000 MiB/s.
+    <dd>{{% md %}}The throughput to provision for a `gp3` volume in MiB/s (specified as an integer, e.g. 500), with a maximum of 1,000 MiB/s.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3775,7 +3775,7 @@ This must be set with a `volume_type` of `"io1/io2"`.
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The throughput to provision for a `gp3` volume, with a maximum of 1,000 MiB/s.
+    <dd>{{% md %}}The throughput to provision for a `gp3` volume in MiB/s (specified as an integer, e.g. 500), with a maximum of 1,000 MiB/s.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3865,7 +3865,7 @@ This must be set with a `volume_type` of `"io1/io2"`.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The throughput to provision for a `gp3` volume, with a maximum of 1,000 MiB/s.
+    <dd>{{% md %}}The throughput to provision for a `gp3` volume in MiB/s (specified as an integer, e.g. 500), with a maximum of 1,000 MiB/s.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">

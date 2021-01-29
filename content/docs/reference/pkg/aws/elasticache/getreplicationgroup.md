@@ -216,7 +216,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}A flag that enables using an AuthToken (password) when issuing Redis commands.
+    <dd>{{% md %}}Specifies whether an AuthToken (password) is enabled.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -257,6 +257,16 @@ The following output properties are available:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The identifiers of all the nodes that are part of this replication group.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="multiazenabled_csharp">
+<a href="#multiazenabled_csharp" style="color: inherit; text-decoration: inherit;">Multi<wbr>Az<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether Multi-AZ Support is enabled for the replication group.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -371,7 +381,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}A flag that enables using an AuthToken (password) when issuing Redis commands.
+    <dd>{{% md %}}Specifies whether an AuthToken (password) is enabled.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -412,6 +422,16 @@ The following output properties are available:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The identifiers of all the nodes that are part of this replication group.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="multiazenabled_go">
+<a href="#multiazenabled_go" style="color: inherit; text-decoration: inherit;">Multi<wbr>Az<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether Multi-AZ Support is enabled for the replication group.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -526,7 +546,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}A flag that enables using an AuthToken (password) when issuing Redis commands.
+    <dd>{{% md %}}Specifies whether an AuthToken (password) is enabled.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -567,6 +587,16 @@ The following output properties are available:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The identifiers of all the nodes that are part of this replication group.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="multiazenabled_nodejs">
+<a href="#multiazenabled_nodejs" style="color: inherit; text-decoration: inherit;">multi<wbr>Az<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether Multi-AZ Support is enabled for the replication group.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -681,7 +711,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}A flag that enables using an AuthToken (password) when issuing Redis commands.
+    <dd>{{% md %}}Specifies whether an AuthToken (password) is enabled.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -722,6 +752,16 @@ The following output properties are available:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The identifiers of all the nodes that are part of this replication group.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="multi_az_enabled_python">
+<a href="#multi_az_enabled_python" style="color: inherit; text-decoration: inherit;">multi_<wbr>az_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether Multi-AZ Support is enabled for the replication group.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">

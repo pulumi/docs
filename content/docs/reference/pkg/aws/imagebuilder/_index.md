@@ -13,6 +13,7 @@ Explore the resources and functions of the imagebuilder module in the AWS packag
 <ul class="api">
     <li><a href="component" title="Component"><span class="symbol resource"></span>Component</a></li>
     <li><a href="distributionconfiguration" title="DistributionConfiguration"><span class="symbol resource"></span>DistributionConfiguration</a></li>
+    <li><a href="image" title="Image"><span class="symbol resource"></span>Image</a></li>
     <li><a href="imagepipeline" title="ImagePipeline"><span class="symbol resource"></span>ImagePipeline</a></li>
     <li><a href="imagerecipe" title="ImageRecipe"><span class="symbol resource"></span>ImageRecipe</a></li>
     <li><a href="infrastructureconfiguration" title="InfrastructureConfiguration"><span class="symbol resource"></span>InfrastructureConfiguration</a></li>
@@ -22,6 +23,7 @@ Explore the resources and functions of the imagebuilder module in the AWS packag
 <ul class="api">
     <li><a href="getcomponent" title="GetComponent"><span class="symbol function"></span>GetComponent</a></li>
     <li><a href="getdistributionconfiguration" title="GetDistributionConfiguration"><span class="symbol function"></span>GetDistributionConfiguration</a></li>
+    <li><a href="getimage" title="GetImage"><span class="symbol function"></span>GetImage</a></li>
     <li><a href="getimagepipeline" title="GetImagePipeline"><span class="symbol function"></span>GetImagePipeline</a></li>
     <li><a href="getimagerecipe" title="GetImageRecipe"><span class="symbol function"></span>GetImageRecipe</a></li>
     <li><a href="getinfrastructureconfiguration" title="GetInfrastructureConfiguration"><span class="symbol function"></span>GetInfrastructureConfiguration</a></li>
@@ -36,7 +38,7 @@ Explore the resources and functions of the imagebuilder module in the AWS packag
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
 	<dt>Version</dt>
-	<dd>3.25.1</dd>
+	<dd>3.26.0</dd>
 </dl>
 
 
